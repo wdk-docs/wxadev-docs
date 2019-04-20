@@ -1,0 +1,306 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-CN" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-CN" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>WXS响应事件 &mdash; wxadev 1.0.0 文档</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+        <script type="text/javascript" src="../../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="搜索" href="../../search.html" />
+    <link rel="next" title="基础组件" href="component.html" />
+    <link rel="prev" title="响应显示区域变化" href="resizable.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../contents.html" class="icon icon-home"> wxadev
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../dev.html">小程序简介</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../basic/index.html">基础教程</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">框架开发指南</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../structure.html">目录结构</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../config.html">小程序配置</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../sitemap.html">sitemap 配置</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../MINA.html">框架</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../app-service/index.html">逻辑层 App Service</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">视图</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="wxss.html">WXSS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="selector.html">获取界面上的节点信息</a></li>
+<li class="toctree-l3"><a class="reference internal" href="resizable.html">响应显示区域变化</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">WXS响应事件</a></li>
+<li class="toctree-l3"><a class="reference internal" href="component.html">基础组件</a></li>
+<li class="toctree-l3"><a class="reference internal" href="animation.html">动画</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../details.html">运行环境</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../plugin/index.html">插件</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ability/index.html">基础能力</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../device/index.html">硬件能力</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../open-ability/index.html">开放能力</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../guide/index.html">运行环境</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../component/index.html">组件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../devtools/index.html">开发工具</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../reference/index.html">参考资料</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../wxcloud/index.html">云开发</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api/index.html">API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api-backend/index.html">服务端开放接口</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../contents.html">wxadev</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../contents.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../index.html">框架开发指南</a> &raquo;</li>
+        
+          <li><a href="index.html">视图</a> &raquo;</li>
+        
+      <li>WXS响应事件</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/framework/view/interactive-animation.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="wxs">
+<h1>WXS响应事件<a class="headerlink" href="#wxs" title="永久链接至标题">¶</a></h1>
+<p>基础库 2.4.4 开始支持，低版本需做兼容处理。</p>
+<p>背景
+有频繁用户交互的效果在小程序上表现是比较卡顿的，例如页面有 2 个元素 A 和 B，用户在 A 上做 touchmove 手势，要求 B 也跟随移动，&lt;movable-view&gt; 就是一个典型的例子。一次 touchmove 事件的响应过程为：</p>
+<p>a、touchmove 事件从视图层（Webview）抛到逻辑层（App Service）</p>
+<p>b、逻辑层（App Service）处理 touchmove 事件，再通过 setData 来改变 B 的位置</p>
+<p>一次 touchmove 的响应需要经过 2 次的逻辑层和渲染层的通信以及一次渲染，通信的耗时比较大。此外 setData 渲染也会阻塞其它脚本执行，导致了整个用户交互的动画过程会有延迟。</p>
+<p>实现方案
+本方案基本的思路是减少通信的次数，让事件在视图层（Webview）响应。小程序的框架分为视图层（Webview）和逻辑层（App Service），这样分层的目的是管控，开发者的代码只能运行在逻辑层（App Service），而这个思路就必须要让开发者的代码运行在视图层（Webview），如下图所示的流程：</p>
+<p>使用 WXS 函数用来响应小程序事件，目前只能响应内置组件的事件，不支持自定义组件事件。WXS 函数的除了纯逻辑的运算，还可以通过封装好的ComponentDescriptor 实例来访问以及设置组件的 class 和样式，对于交互动画，设置 style 和 class 足够了。WXS 函数的例子如下：</p>
+<dl>
+<dt>const wxsFunction = function (event, ownerInstance) {</dt><dd><p>const instance = ownerInstance.selectComponent(‘.classSelector’) // 返回组件的实例
+instance.setStyle({</p>
+<blockquote>
+<div><p>‘font-size’: ‘14px’ // 支持rpx</p>
+</div></blockquote>
+<p>})
+instance.getDataset()
+instance.setClass(className)
+// …
+return false // 不往上冒泡，相当于调用了同时调用了stopPropagation和preventDefault</p>
+</dd>
+</dl>
+<p>}
+其中入参 event 是小程序事件对象基础上多了 event.instance 来表示触发事件的组件的 ComponentDescriptor 实例。ownerInstance 表示的是触发事件的组件所在的组件的 ComponentDescriptor 实例，如果触发事件的组件是在页面内的，ownerInstance 表示的是页面实例。</p>
+<p>ComponentDescriptor的定义如下：</p>
+<p>方法      参数      描述
+selectComponent selector对象      返回组件的 ComponentDescriptor 实例。
+selectAllComponents     selector对象数组    返回组件的 ComponentDescriptor 实例数组。
+setStyle        Object/string   设置组件样式，支持rpx。设置的样式优先级比组件 wxml 里面定义的样式高。不能设置最顶层页面的样式。
+addClass/removeClass/ hasClass  string  设置组件的 class。设置的 class 优先级比组件 wxml 里面定义的 class 高。不能设置最顶层页面的 class。
+getDataset      无       返回当前组件/页面的 dataset 对象
+callMethod      (funcName:string, args:object)  调用当前组件/页面在逻辑层（App Service）定义的函数。funcName表示函数名称，args表示函数的参数。
+requestAnimationFrame   Function        和原生 requestAnimationFrame 一样。用于设置动画。
+getState        无       返回一个object对象，当有局部变量需要存储起来后续使用的时候用这个方法。
+triggerEvent    (eventName, detail)     和组件的triggerEvent一致。
+WXS 运行在视图层（Webview），里面的逻辑毕竟能做的事件比较少，需要有一个机制和逻辑层（App Service）开发者的代码通信，上面的 callMethod 是 WXS 里面调用逻辑层（App Service）开发者的代码的方法，而 WxsPropObserver 是逻辑层（App Service）开发者的代码调用 WXS 逻辑的机制。</p>
+<p>使用方法
+WXML定义事件：
+&lt;wxs module=”test” src=”./test.wxs”&gt;&lt;/wxs&gt;
+&lt;view</p>
+<blockquote>
+<div><p>change:prop=”{{test.propObserver}}”
+prop=”{{propValue}}”
+bindtouchmove=”{{test.touchmove}}”
+class=”movable”</p>
+</div></blockquote>
+<p>&gt;&lt;/view&gt;
+上面的change:prop（属性前面带change:前缀）是在 prop 属性被设置的时候触发 WXS 函数，值必须用{{}}括起来。类似 Component 定义的 properties 里面的 observer 属性，在setData({propValue: newValue})调用之后会触发。</p>
+<p>注意：WXS函数必须用{{}}括起来。当 prop 的值被设置 WXS 函数就会触发，而不只是值发生改变，所以在页面初始化的时候会调用一次WxsPropObserver的函数。</p>
+<p>WXS文件test.wxs里面定义并导出事件处理函数和属性改变触发的函数：
+module.exports = {</p>
+<blockquote>
+<div><dl class="simple">
+<dt>touchmove(event, instance) {</dt><dd><p>console.log(‘log event’, JSON.stringify(event))</p>
+</dd>
+</dl>
+<p>},
+propObserver(newValue, oldValue, ownerInstance, instance) {</p>
+<blockquote>
+<div><p>console.log(‘prop observer’, newValue, oldValue)</p>
+</div></blockquote>
+<p>}</p>
+</div></blockquote>
+<p>}
+更多示例请查看在开发者工具中预览效果</p>
+<p>Tips
+目前还不支持原生组件的事件、&lt;input&gt;和&lt;textarea&gt;组件的 bindinput 事件
+1.02.1901170及以后版本的开发者工具上支持交互动画，最低版本基础库是2.4.4
+目前在WXS函数里面仅支持console.log方式打日志定位问题，注意连续的重复日志会被过滤掉。</p>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="component.html" class="btn btn-neutral float-right" title="基础组件" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="resizable.html" class="btn btn-neutral float-left" title="响应显示区域变化" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Nosy
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

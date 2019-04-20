@@ -1,0 +1,111 @@
+navigator
+===========================
+
+.. versionadded:: 1.0.0 开始支持，低版本需做兼容处理。
+
+页面链接。
+
+属性	类型	默认值	必填	说明	最低版本
+target	string	self	否	在哪个目标上发生跳转，默认当前小程序	2.0.7
+url	string		否	当前小程序内的跳转链接	1.0.0
+open-type	string	navigate	否	跳转方式	1.0.0
+delta	number	1	否	当 open-type 为 'navigateBack' 时有效，表示回退的层数	1.0.0
+app-id	string		否	当target="miniProgram"时有效，要打开的小程序 appId	2.0.7
+path	string		否	当target="miniProgram"时有效，打开的页面路径，如果为空则打开首页	2.0.7
+extra-data	object		否	当target="miniProgram"时有效，需要传递给目标小程序的数据，目标小程序可在 App.onLaunch()，App.onShow() 中获取到这份数据。详情	2.0.7
+version	string	release	否	当target="miniProgram"时有效，要打开的小程序版本	2.0.7
+hover-class	string	navigator-hover	否	指定点击时的样式类，当hover-class="none"时，没有点击态效果	1.0.0
+hover-stop-propagation	boolean	false	否	指定是否阻止本节点的祖先节点出现点击态	1.5.0
+hover-start-time	number	50	否	按住后多久出现点击态，单位毫秒	1.0.0
+hover-stay-time	number	600	否	手指松开后点击态保留时间，单位毫秒	1.0.0
+bindsuccess	string		否	当target="miniProgram"时有效，跳转小程序成功	2.0.7
+bindfail	string		否	当target="miniProgram"时有效，跳转小程序失败	2.0.7
+bindcomplete	string		否	当target="miniProgram"时有效，跳转小程序完成	2.0.7
+target 的合法值
+
+值	说明	最低版本
+self	当前小程序
+miniProgram	其它小程序
+open-type 的合法值
+
+值	说明	最低版本
+navigate	对应 wx.navigateTo 或 wx.navigateToMiniProgram 的功能
+redirect	对应 wx.redirectTo 的功能
+switchTab	对应 wx.switchTab 的功能
+reLaunch	对应 wx.reLaunch 的功能	1.1.0
+navigateBack	对应 wx.navigateBack 的功能	1.1.0
+exit	退出小程序，target="miniProgram"时生效	2.1.0
+version 的合法值
+
+值	说明	最低版本
+develop	开发版
+trial	体验版
+release	正式版，仅在当前小程序为开发版或体验版时此参数有效；如果当前小程序是正式版，则打开的小程序必定是正式版。
+使用限制
+需要用户确认跳转 从 2.3.0 版本开始，在跳转至其他小程序前，将统一增加弹窗，询问是否跳转，用户确认后才可以跳转其他小程序。如果用户点击取消，则回调 fail cancel。
+每个小程序可跳转的其他小程序数量限制为不超过 10 个 从 2.4.0 版本以及指定日期（具体待定）开始，开发者提交新版小程序代码时，如使用了跳转其他小程序功能，则需要在代码配置中声明将要跳转的小程序名单，限定不超过 10 个，否则将无法通过审核。该名单可在发布新版时更新，不支持动态修改。配置方法详见 配置。调用此接口时，所跳转的 appId 必须在配置列表中，否则回调 fail appId "${appId}" is not in navigateToMiniProgramAppIdList。
+关于调试
+在开发者工具上调用此 API 并不会真实的跳转到另外的小程序，但是开发者工具会校验本次调用跳转是否成功。详情
+开发者工具上支持被跳转的小程序处理接收参数的调试。详情
+Bug & Tip
+
+.. tip:: navigator-hover 默认为 {background-color: rgba(0, 0, 0, 0.1); opacity: 0.7;}, <navigator> 的子节点背景色应为透明色
+示例代码
+在开发者工具中预览效果
+
+
+.. code:: html
+
+
+  .navigator-hover {
+    color: blue;
+  }
+  .other-navigator-hover {
+    color: red;
+  }
+  <!-- sample.wxml -->
+  <view class="btn-area">
+    <navigator
+      url="/page/navigate/navigate?title=navigate"
+      hover-class="navigator-hover"
+    >
+      跳转到新页面
+    </navigator>
+    <navigator
+      url="../../redirect/redirect/redirect?title=redirect"
+      open-type="redirect"
+      hover-class="other-navigator-hover"
+    >
+      在当前页打开
+    </navigator>
+    <navigator
+      url="/page/index/index"
+      open-type="switchTab"
+      hover-class="other-navigator-hover"
+    >
+      切换 Tab
+    </navigator>
+    <navigator
+      target="miniProgram"
+      open-type="navigate"
+      app-id=""
+      path=""
+      extra-data=""
+      version="release"
+    >
+      打开绑定的小程序
+    </navigator>
+  </view>
+  <!-- navigator.wxml -->
+  <view style="text-align:center">{{title}}</view>
+  <view>点击左上角返回回到之前页面</view>
+  <!-- redirect.wxml -->
+  <view style="text-align:center">{{title}}</view>
+  <view>点击左上角返回回到上级页面</view>
+  Page({
+    onLoad(options) {
+      this.setData({
+        title: options.title
+      })
+    }
+  })

@@ -1,0 +1,288 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-CN" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-CN" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>编辑区 &mdash; wxadev 1.0.0 文档</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜索" href="../search.html" />
+    <link rel="next" title="调试" href="debug.html" />
+    <link rel="prev" title="界面" href="page.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../contents.html" class="icon icon-home"> wxadev
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../dev.html">小程序简介</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../basic/index.html">基础教程</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework/index.html">框架开发指南</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide/index.html">运行环境</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../component/index.html">组件</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">开发工具</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="page.html">界面</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">编辑区</a></li>
+<li class="toctree-l2"><a class="reference internal" href="debug.html">调试</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ext.html">开发辅助</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sandbox.html">开发辅助</a></li>
+<li class="toctree-l2"><a class="reference internal" href="audits.html">工具插件</a></li>
+<li class="toctree-l2"><a class="reference internal" href="notsupport.html">API 实现差异</a></li>
+<li class="toctree-l2"><a class="reference internal" href="download.html">下载</a></li>
+<li class="toctree-l2"><a class="reference internal" href="change/index.html">更新日志</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../reference/index.html">参考资料</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../wxcloud/index.html">云开发</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/index.html">API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api-backend/index.html">服务端开放接口</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../contents.html">wxadev</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../contents.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">开发工具</a> &raquo;</li>
+        
+      <li>编辑区</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/devtools/edit.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="id1">
+<h1>编辑区<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
+<p>编辑区可以对当前项目进行代码编写和文件的添加、删除以及重命名等基本操作。</p>
+<p>文件格式
+因 iOS 下仅支持 UTF8 编码格式，最新版本的开发者工具会在上传代码时候对代码文件做一次编码格式校验。</p>
+<p>文件支持
+工具目前提供了 5 种文件的编辑：wxml、wxss、js、json、wxs 以及图片文件的预览。</p>
+<p>文件操作
+新建页面有两种方式</p>
+<p>在目录树上右键，选择新建 Page，将自动生成页面所需要的 wxml、wxss、js、json</p>
+<p>在 app.json 的 pages 字段，添加需要新建的页面的路径，将会自动生成该页面所需要的文件</p>
+<p>自动保存
+编辑代码后，工具会自动帮助用户保存当前的代码编辑状态，直接关闭工具或者切换到别的项目，并不会丢失已经编辑的文件状态，但需要注意的是，只有用户主动保存文件，修改内容才会真实的写到硬盘上。</p>
+<p>如果设置中开启了 “修改文件时自动保存”（设置-编辑设置-修改文件自动保存），工具在修改文件时会自动保存到硬盘中，无需手动保存的效果。</p>
+<p>设置中开启 “编译时自动保存所有文件”（设置-编译设置-编译时自动保存所有文件），在点击编译时自动保存所有文件的效果。</p>
+<p>实时预览
+如果设置中开启了 “文件保存时自动编译小程序”（设置-编辑设置-保存时自动编译小程序），那么当 wxml、wxss、js、json 文件修改时，可以通过模拟器实时预览编辑的情况：</p>
+<p>注意：如果同时开启了 ”修改文件时自动保存“ 的设置，编译动作会有一定的延迟，来避免频繁的编译，手动点击编译按钮将立即编译。</p>
+<p>自动补全
+同大部分编辑器一样，工具提供了较为完善的自动补全</p>
+<p>js 文件编辑会帮助开发补全所有的 API 及相关的注释解释，并提供代码模板支持
+wxml 文件编辑会帮助开发者直接写出相关的标签和标签中的属性
+json 文件编辑会帮助开发者补全相关的配置，并给出实时的提示
+js 补全</p>
+<p>代码模板支持</p>
+<p>json 补全</p>
+<p>3</p>
+<p>wxml 补全</p>
+<p>3</p>
+<p>TypeScript 支持
+如果项目需要使用 TypeScript 语言开发，开发者工具在创建项目选择快速启动模板时，提供了使用 TypeScript 语言的 QuickStart 项目，可以选择创建此项目并进行后续开发。</p>
+<p>要构建并使用 TypeScript 项目，可能需要安装 npm。通过配置编译前的预置命令，可以实现在编译前运行 tsc 以将其编译到 js 文件。</p>
+<p>如需配置 TypeScript 编译选项，请参考 tsconfig.json 的配置。</p>
+<p>注：小程序仅支持运行 JS 文件，因此所有的 TS 文件都默认不会被打包上传。</p>
+<p>Git 状态展示
+如果所在的小程序工程目录（project.config.json 所在目录）存在 Git 仓库，编辑器可以展示目前的 Git 状态。</p>
+<p>目录树
+如图所示，当某些文件存在变动时，目录树的文件右侧将展示相应的图标来表明这一状态。当某一处于收起状态的目录下存在有变动的文件时，此目录的右侧亦会展示一个圆点图标表明此情况。</p>
+<p>文件图标状态的含义如下：</p>
+<p>图标      含义
+U       文件未追踪（Untracked）
+A       新文件（Added, Staged）
+M       文件有修改（Modified）
++M      文件有修改（Modified, Staged）
+C       文件有冲突（Conflict）
+D       文件被删除（Deleted）
+文件夹目录图标状态的含义如下：</p>
+<p>图标      含义
+小红点     目录下至少存在一个删除状态的文件
+小橙点     目录下至少存在一个冲突状态的文件
+小蓝点     目录下至少存在一个未追踪状态的文件
+小绿点     目录下至少存在一个修改状态的文件
+如果某一文件存在修改（Modified），可以右键点击此文件，并选择 “与上一版本比较”，则可以查看当前工作区文件与 HEAD 版本的比较。</p>
+<p>文件编辑
+存在 Git 仓库时，状态栏会展示此 Git 仓库目前的分支信息。例如，下图表明目前 Git 仓库处于 v2 分支。</p>
+<p>同时，编辑文件内容时，将会在所编辑代码左侧实时显示相对于上一版本内容的比较。</p>
+<p>样式说明如下：</p>
+<p>文件夹目录图标状态的含义如下：</p>
+<p>样式      含义
+蓝色线条    此处的代码有变动
+绿色线条    此处的代码是新增的
+红色三角箭头  此处有代码被删除
+Windows 风格回车设置
+如需忽略 Windows 风格的回车符，可以前往 “设置” - “编辑”，并勾选 “Git 比较文件内容时，忽略 Windows 风格回车符”。</p>
+<p>勾选后，在编辑文件进行内容比较时，所有 Windows 风格的回车符将被当作 Unix 风格的回车符对待。</p>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="debug.html" class="btn btn-neutral float-right" title="调试" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="page.html" class="btn btn-neutral float-left" title="界面" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Nosy
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

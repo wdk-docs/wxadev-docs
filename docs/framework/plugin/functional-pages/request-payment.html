@@ -1,0 +1,409 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-CN" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-CN" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>支付功能页 &mdash; wxadev 1.0.0 文档</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../_static/language_data.js"></script>
+        <script type="text/javascript" src="../../../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="索引" href="../../../genindex.html" />
+    <link rel="search" title="搜索" href="../../../search.html" />
+    <link rel="next" title="收货地址功能页" href="choose-address.html" />
+    <link rel="prev" title="用户信息功能页" href="user-info.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../contents.html" class="icon icon-home"> wxadev
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../dev.html">小程序简介</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../basic/index.html">基础教程</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">框架开发指南</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../structure.html">目录结构</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../config.html">小程序配置</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../sitemap.html">sitemap 配置</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../MINA.html">框架</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../app-service/index.html">逻辑层 App Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../view/index.html">视图</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../details.html">运行环境</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">插件</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../development.html">开发插件</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../using.html">使用插件</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api-limit.html">插件调用 API 的限制</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../component-limit.html">插件使用组件的限制</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">插件功能</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="functional-pages.html">插件功能页</a></li>
+<li class="toctree-l4"><a class="reference internal" href="user-info.html">用户信息功能页</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">支付功能页</a></li>
+<li class="toctree-l4"><a class="reference internal" href="choose-address.html">收货地址功能页</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../ability/index.html">基础能力</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../device/index.html">硬件能力</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../open-ability/index.html">开放能力</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../guide/index.html">运行环境</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../component/index.html">组件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../devtools/index.html">开发工具</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../reference/index.html">参考资料</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../wxcloud/index.html">云开发</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../api/index.html">API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../api-backend/index.html">服务端开放接口</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../contents.html">wxadev</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../contents.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../index.html">框架开发指南</a> &raquo;</li>
+        
+          <li><a href="../index.html">插件</a> &raquo;</li>
+        
+          <li><a href="index.html">插件功能</a> &raquo;</li>
+        
+      <li>支付功能页</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../_sources/framework/plugin/functional-pages/request-payment.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="id1">
+<h1>支付功能页<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
+<p>支付功能页用于帮助插件完成支付，相当于 wx.requestPayment 的功能。</p>
+<p>需要注意的是：插件使用支付功能，需要进行额外的权限申请，申请位置位于管理后台的“小程序插件 -&gt; 基本设置 -&gt; 支付能力”设置项中。另外，无论是否通过申请，主体为个人小程序在使用插件时，都无法正常使用插件里的支付功能。</p>
+<p>调用参数
+支付功能页使用 &lt;functional-page-navigator&gt; 进行跳转时，对应的参数 name 应为固定值 requestPayment，其他参数如下：</p>
+<p>args参数说明：</p>
+<p>参数名     类型      必填      说明
+fee     Number  是       需要显示在页面中的金额，单位为分
+paymentArgs     Object  否       任意数据，传递给功能页中的响应函数
+回调结果：</p>
+<p>回调类型    errMsg  说明
+success requestPayment:ok       调用支付成功
+fail    requestPayment:fail cancel      用户取消支付
+fail    requestPayment:fail (detail message)    调用支付失败，其中 detail message 为后台返回的详细失败原因
+代码示例：</p>
+<p>&lt;!– plugin/components/pay.wxml –&gt;
+&lt;!– 上线时，version 应改为 “release”，并确保插件所有者小程序已经发布 –&gt;
+&lt;functional-page-navigator</p>
+<blockquote>
+<div><p>version=”develop”
+name=”requestPayment”
+args=”{{ args }}”
+bind:success=”paymentSuccess”
+bind:fail=”paymentFailed”</p>
+</div></blockquote>
+<dl class="simple">
+<dt>&gt;</dt><dd><p>&lt;button class=”payment-button”&gt;支付 0.01 元&lt;/button&gt;</p>
+</dd>
+</dl>
+<p>&lt;/functional-page-navigator&gt;
+// plugin/components/pay.js
+Component({</p>
+<blockquote>
+<div><dl>
+<dt>data: {</dt><dd><dl class="simple">
+<dt>args: {</dt><dd><p>fee: 1, // 支付金额，单位为分
+paymentArgs: ‘A’ // 将传递到功能页函数的自定义参数</p>
+</dd>
+</dl>
+<p>}</p>
+</dd>
+</dl>
+<p>},
+methods: {</p>
+<blockquote>
+<div><p>// 支付成功的回调接口
+paymentSuccess(e) {</p>
+<blockquote>
+<div><p>console.log(e)</p>
+</div></blockquote>
+<p>},
+// 支付失败的回调接口
+paymentFailed(e) {</p>
+<blockquote>
+<div><p>console.log(e)</p>
+</div></blockquote>
+<p>}</p>
+</div></blockquote>
+<p>}</p>
+</div></blockquote>
+<p>})
+用户点击该 navigator 后，将跳转到如下的支付功能页：</p>
+<p>支付功能页</p>
+<p>配置功能页函数
+支付功能页需要插件开发者在插件所有者小程序中提供一个函数来响应插件中的支付调用。即，在插件中跳转到支付功能页时，这个函数就会在合适的时机被调用，来帮助完成支付。如果不提供功能页函数，功能页调用将通过 fail 事件返回失败。</p>
+<p>支付功能页函数应以导出函数的形式提供在插件所有者小程序的根目录下的 functional-pages/request-payment.js 文件中，名为 beforeRequestPayment。该函数应接收两个参数：</p>
+<p>参数名     类型      说明
+paymentArgs     Object  即通过 &lt;functional-page-navigator&gt; 的 arg 参数中的 paymentArgs 字段传递到功能页的自定义数据
+callback        Function        回调函数，调用该函数后，小程序将发起支付（类似于 wx.requestPayment）
+callback函数的参数：</p>
+<p>参数名     类型      说明
+error   Object  失败信息，若无失败，应返回 null
+requestPaymentArgs      Object  支付参数，用于调用 wx.requestPayment，参数如下
+reqeustPaymentArgs 的参数：</p>
+<p>用于发起支付，和 wx.requestPayment 的参数相同，但没有回调函数（success, fail, complete）：</p>
+<p>参数      类型      必填      说明
+timeStamp       String  是       时间戳从1970年1月1日00:00:00至今的秒数,即当前的时间
+nonceStr        String  是       随机字符串，长度为32个字符以下。
+package String  是       统一下单接口返回的 prepay_id 参数值，提交格式如：prepay_id=***
+signType        String  是       签名算法，暂支持 MD5
+paySign String  是       签名,具体签名方案参见小程序支付接口文档;
+了解更多信息，请查看微信支付接口文档</p>
+<p>功能页函数代码示例：</p>
+<p>// functional-pages/request-payment.js
+exports.beforeRequestPayment = function (paymentArgs, callback) {</p>
+<blockquote>
+<div><p>// 注意：
+// 功能页函数（这个函数）不应 require 其他非 functional-pages 目录中的文件，
+// 其他非 functional-pages 目录中的文件也不应 require 这个目录中的文件，
+// 这样的 require 调用在未来将不被支持。
+//
+// 同在 functional-pages 中的文件可以 require
+const getOpenIdURL = require(‘./URL’).getOpenIdURL
+const paymentURL = require(‘./URL’).paymentURL</p>
+<p>// 自定义的参数，此处应为从插件传递过来的 ‘A’
+const customArgument = paymentArgs.customArgument</p>
+<p>// 第一步：调用 wx.login 方法获取 code，然后在服务端调用微信接口使用 code 换取下单用户的 openId
+// 具体文档参考 <a class="reference external" href="https://mp.weixin.qq.com/debug/wxadoc/dev/api/api-login.html?t=20161230#wxloginobject">https://mp.weixin.qq.com/debug/wxadoc/dev/api/api-login.html?t=20161230#wxloginobject</a>
+wx.login({</p>
+<blockquote>
+<div><dl>
+<dt>success(data) {</dt><dd><dl>
+<dt>wx.request({</dt><dd><p>url: getOpenIdURL,
+data: {code: data.code},
+success(res) {</p>
+<blockquote>
+<div><p>// 拉取用户 openid 成功
+// 第二步：在服务端调用支付统一下单，返回支付参数。这里的开发和普通的 wx.requestPayment 相同
+// 文档可以参考 <a class="reference external" href="https://pay.weixin.qq.com/wiki/doc/api/wxa/wxa_api.php?chapter=7_4&amp;index=3">https://pay.weixin.qq.com/wiki/doc/api/wxa/wxa_api.php?chapter=7_4&amp;index=3</a>
+wx.request({</p>
+<blockquote>
+<div><p>url: paymentURL,
+data: {openid: res.data.openid},
+method: ‘POST’,
+success(res) {</p>
+<blockquote>
+<div><p>console.log(‘unified order success, response is:’, res)
+const payargs = res.data.payargs
+// 第三步：调用回调函数 callback 进行支付
+// 在 callback 中需要返回两个参数： err 和 requestPaymentArgs：
+// err 应为 null （或者一些失败信息）；
+// requestPaymentArgs 将被用于调用 wx.requestPayment，除了 success/fail/complete 不被支持外，
+// 应与 wx.requestPayment 参数相同。
+const error = null
+const requestPaymentArgs = {</p>
+<blockquote>
+<div><p>timeStamp: payargs.timeStamp,
+nonceStr: payargs.nonceStr,
+package: payargs.package,
+signType: payargs.signType,
+paySign: payargs.paySign,</p>
+</div></blockquote>
+<p>}
+callback(error, requestPaymentArgs)</p>
+</div></blockquote>
+<p>}</p>
+</div></blockquote>
+<p>})</p>
+</div></blockquote>
+<p>},
+fail(res) {</p>
+<blockquote>
+<div><p>console.log(‘拉取用户openid失败，将无法正常使用开放接口等服务’, res)
+// callback 第一个参数为错误信息，返回错误信息
+callback(res)</p>
+</div></blockquote>
+<p>}</p>
+</dd>
+</dl>
+<p>})</p>
+</dd>
+</dl>
+<p>},
+fail(err) {</p>
+<blockquote>
+<div><p>console.log(‘wx.login 接口调用失败，将无法正常使用开放接口等服务’, err)
+// callback 第一个参数为错误信息，返回错误信息
+callback(err)</p>
+</div></blockquote>
+<p>}</p>
+</div></blockquote>
+<p>})</p>
+</div></blockquote>
+<p>}
+注意：功能页函数不应 require 其他非 functional-pages 目录中的文件，其他非 functional-pages 目录中的文件也不应 require 这个目录中的文件。这样的 require 调用在未来将不被支持。</p>
+<p>这个目录和文件应当被放置在插件所有者小程序代码中（而非插件代码中），它是插件所有者小程序的一部分（而非插件的一部分）。 如果需要新增或更改这段代码，需要发布插件所有者小程序，才能在正式版中生效；需要重新预览插件所有者小程序，才能在开发版中生效。</p>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="choose-address.html" class="btn btn-neutral float-right" title="收货地址功能页" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="user-info.html" class="btn btn-neutral float-left" title="用户信息功能页" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Nosy
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

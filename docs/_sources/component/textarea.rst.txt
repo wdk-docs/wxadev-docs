@@ -1,0 +1,80 @@
+textarea
+===========================
+
+.. versionadded:: 1.0.0 开始支持，低版本需做兼容处理。
+
+多行输入框。该组件是原生组件，使用时请注意相关限制。
+
+属性	类型	默认值	必填	说明	最低版本
+value	string		否	输入框的内容	1.0.0
+placeholder	string		否	输入框为空时占位符	1.0.0
+placeholder-style	string		否	指定 placeholder 的样式，目前仅支持color,font-size和font-weight	1.0.0
+placeholder-class	string	textarea-placeholder	否	指定 placeholder 的样式类	1.0.0
+disabled	boolean	false	否	是否禁用	1.0.0
+maxlength	number	140	否	最大输入长度，设置为 -1 的时候不限制最大长度	1.0.0
+auto-focus	boolean	false	否	自动聚焦，拉起键盘。	1.0.0
+focus	boolean	false	否	获取焦点	1.0.0
+auto-height	boolean	false	否	是否自动增高，设置auto-height时，style.height不生效	1.0.0
+fixed	boolean	false	否	如果 textarea 是在一个 position:fixed 的区域，需要显示指定属性 fixed 为 true	1.0.0
+cursor-spacing	number	0	否	指定光标与键盘的距离。取textarea距离底部的距离和cursor-spacing指定的距离的最小值作为光标与键盘的距离	1.0.0
+cursor	number	-1	否	指定focus时的光标位置	1.5.0
+show-confirm-bar	boolean	true	否	是否显示键盘上方带有”完成“按钮那一栏	1.6.0
+selection-start	number	-1	否	光标起始位置，自动聚集时有效，需与selection-end搭配使用	1.9.0
+selection-end	number	-1	否	光标结束位置，自动聚集时有效，需与selection-start搭配使用	1.9.0
+adjust-position	boolean	true	否	键盘弹起时，是否自动上推页面	1.9.90
+bindfocus	eventhandle		否	输入框聚焦时触发，event.detail = { value, height }，height 为键盘高度，在基础库 1.9.90 起支持	1.0.0
+bindblur	eventhandle		否	输入框失去焦点时触发，event.detail = {value, cursor}	1.0.0
+bindlinechange	eventhandle		否	输入框行数变化时调用，event.detail = {height: 0, heightRpx: 0, lineCount: 0}	1.0.0
+bindinput	eventhandle		否	当键盘输入时，触发 input 事件，event.detail = {value, cursor, keyCode}，keyCode 为键值，目前工具还不支持返回keyCode参数。bindinput 处理函数的返回值并不会反映到 textarea 上	1.0.0
+bindconfirm	eventhandle		否	点击完成时， 触发 confirm 事件，event.detail = {value: value}	1.0.0
+Bug & Tip
+.. tip:: textarea 的 blur 事件会晚于页面上的 tap 事件，如果需要在 button 的点击事件获取 textarea，可以使用 form 的 bindsubmit。
+.. tip:: 不建议在多行文本上对用户的输入进行修改，所以 textarea 的 bindinput 处理函数并不会将返回值反映到 textarea 上。
+bug: 微信版本 6.3.30，textarea 在列表渲染时，新增加的 textarea 在自动聚焦时的位置计算错误。
+示例代码
+在开发者工具中预览效果
+
+.. code:: html
+
+  <view class="section">
+    <textarea bindblur="bindTextAreaBlur" auto-height placeholder="自动变高" />
+  </view>
+  <view class="section">
+    <textarea
+      placeholder="placeholder颜色是红色的"
+      placeholder-style="color:red;"
+    />
+  </view>
+  <view class="section">
+    <textarea placeholder="这是一个可以自动聚焦的textarea" auto-focus />
+  </view>
+  <view class="section">
+    <textarea placeholder="这个只有在按钮点击的时候才聚焦" focus="{{focus}}" />
+    <view class="btn-area">
+      <button bindtap="bindButtonTap">使得输入框获取焦点</button>
+    </view>
+  </view>
+  <view class="section">
+    <form bindsubmit="bindFormSubmit">
+      <textarea placeholder="form 中的 textarea" name="textarea" />
+      <button form-type="submit">提交</button>
+    </form>
+  </view>
+  // textarea.js
+  Page({
+    data: {
+      height: 20,
+      focus: false
+    },
+    bindButtonTap() {
+      this.setData({
+        focus: true
+      })
+    },
+    bindTextAreaBlur(e) {
+      console.log(e.detail.value)
+    },
+    bindFormSubmit(e) {
+      console.log(e.detail.value.textarea)
+    }
+  })

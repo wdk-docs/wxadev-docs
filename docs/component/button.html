@@ -1,0 +1,477 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-CN" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-CN" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>button &mdash; wxadev 1.0.0 文档</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜索" href="../search.html" />
+    <link rel="next" title="checkbox" href="checkbox.html" />
+    <link rel="prev" title="text" href="text.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../contents.html" class="icon icon-home"> wxadev
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../dev.html">小程序简介</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../basic/index.html">基础教程</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework/index.html">框架开发指南</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide/index.html">运行环境</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">组件</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="index.html#id2">视图容器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id3">基础内容</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html#id4">表单组件</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">button</a></li>
+<li class="toctree-l3"><a class="reference internal" href="checkbox.html">checkbox</a></li>
+<li class="toctree-l3"><a class="reference internal" href="checkbox-group.html">checkbox-group</a></li>
+<li class="toctree-l3"><a class="reference internal" href="form.html">form</a></li>
+<li class="toctree-l3"><a class="reference internal" href="input.html">input</a></li>
+<li class="toctree-l3"><a class="reference internal" href="label.html">label</a></li>
+<li class="toctree-l3"><a class="reference internal" href="picker.html">picker</a></li>
+<li class="toctree-l3"><a class="reference internal" href="picker-view.html">picker-view</a></li>
+<li class="toctree-l3"><a class="reference internal" href="picker-view-column.html">picker-view-column</a></li>
+<li class="toctree-l3"><a class="reference internal" href="radio.html">radio</a></li>
+<li class="toctree-l3"><a class="reference internal" href="radio-group.html">radio-group</a></li>
+<li class="toctree-l3"><a class="reference internal" href="slider.html">slider</a></li>
+<li class="toctree-l3"><a class="reference internal" href="switch.html">switch</a></li>
+<li class="toctree-l3"><a class="reference internal" href="textarea.html">textarea</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id5">导航</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id6">媒体组件</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id7">地图</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id8">画布</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id9">开放能力</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id10">原生组件说明</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id11">原生组件的使用限制</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id12">无妨碍访问</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../devtools/index.html">开发工具</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference/index.html">参考资料</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../wxcloud/index.html">云开发</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/index.html">API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api-backend/index.html">服务端开放接口</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../contents.html">wxadev</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../contents.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">组件</a> &raquo;</li>
+        
+      <li>button</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/component/button.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="button">
+<h1>button<a class="headerlink" href="#button" title="永久链接至标题">¶</a></h1>
+<div class="versionadded">
+<p><span class="versionmodified added">1.0.0 新版功能: </span>开始支持，低版本需做兼容处理。</p>
+</div>
+<p>按钮。</p>
+<p>属性      类型      默认值     必填      说明      最低版本
+size    string  default 否       按钮的大小   1.0.0
+type    string  default 否       按钮的样式类型 1.0.0
+plain   boolean false   否       按钮是否镂空，背景色透明    1.0.0
+disabled        boolean false   否       是否禁用    1.0.0
+loading boolean false   否       名称前是否带 loading 图标       1.0.0
+form-type       string          否       用于 &lt;form&gt; 组件，点击分别会触发 &lt;form&gt; 组件的 submit/reset 事件 1.0.0
+open-type       string          否       微信开放能力  1.1.0
+hover-class     string  button-hover    否       指定按钮按下去的样式类。当 hover-class=”none” 时，没有点击态效果      1.0.0
+hover-stop-propagation  boolean false   否       指定是否阻止本节点的祖先节点出现点击态     1.5.0
+hover-start-time        number  20      否       按住后多久出现点击态，单位毫秒 1.0.0
+hover-stay-time number  70      否       手指松开后点击态保留时间，单位毫秒       1.0.0
+lang    string  en      否       指定返回用户信息的语言，zh_CN 简体中文，zh_TW 繁体中文，en 英文。        1.3.0
+session-from    string          否       会话来源，open-type=”contact”时有效     1.4.0
+send-message-title      string  当前标题    否       会话内消息卡片标题，open-type=”contact”时有效        1.5.0
+send-message-path       string  当前分享路径  否       会话内消息卡片点击跳转小程序路径，open-type=”contact”时有效 1.5.0
+send-message-img        string  截图      否       会话内消息卡片图片，open-type=”contact”时有效        1.5.0
+app-parameter   string          否       打开 APP 时，向 APP 传递的参数，open-type=launchApp时有效     1.9.5
+show-message-card       boolean false   否       是否显示会话内消息卡片，设置此参数为 true，用户进入客服会话会在右下角显示”可能要发送的小程序”提示，用户点击后可以快速发送小程序消息，open-type=”contact”时有效    1.5.0
+bindgetuserinfo eventhandle             否       用户点击该按钮时，会返回获取到的用户信息，回调的detail数据与wx.getUserInfo返回的一致，open-type=”getUserInfo”时有效 1.3.0
+bindcontact     eventhandle             否       客服消息回调，open-type=”contact”时有效   1.5.0
+bindgetphonenumber      eventhandle             否       获取用户手机号回调，open-type=getPhoneNumber时有效   1.2.0
+binderror       eventhandle             否       当使用开放能力时，发生错误的回调，open-type=launchApp时有效 1.9.5
+bindopensetting eventhandle             否       在打开授权设置页后回调，open-type=openSetting时有效    2.0.7
+bindlaunchapp   eventhandle             否       打开 APP 成功的回调，open-type=launchApp时有效     2.4.4
+size 的合法值</p>
+<p>值       说明      最低版本
+default 默认大小
+mini    小尺寸</p>
+<p>type 的合法值</p>
+<p>值       说明      最低版本
+primary 绿色
+default 白色
+warn    红色
+form-type 的合法值</p>
+<p>值       说明      最低版本
+submit  提交表单
+reset   重置表单</p>
+<p>open-type 的合法值</p>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 19%" />
+<col style="width: 69%" />
+<col style="width: 12%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>值</p></th>
+<th class="head"><p>说明</p></th>
+<th class="head"><p>最低版本</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>contact</p></td>
+<td><p>打开客服会话，如果用户在会话中点击消息卡片后返回小程序，
+可以从 bindcontact 回调中获得具体信息，具体说明</p></td>
+<td><p>1.1.0</p></td>
+</tr>
+<tr class="row-odd"><td><p>share</p></td>
+<td><p>触发用户转发，使用前建议先阅读使用指引</p></td>
+<td><p>1.2.0</p></td>
+</tr>
+<tr class="row-even"><td><p>getPhoneNumber</p></td>
+<td><p>获取用户手机号，可以从bindgetphonenumber
+回调中获取到用户信息，具体说明</p></td>
+<td><p>1.2.0</p></td>
+</tr>
+<tr class="row-odd"><td><p>getUserInfo</p></td>
+<td><p>获取用户信息，可以从bindgetuserinfo
+回调中获取到用户信息</p></td>
+<td><p>1.3.0</p></td>
+</tr>
+<tr class="row-even"><td><p>launchApp</p></td>
+<td><p>打开APP，可以通过app-parameter
+属性设定向APP传的参数具体说明</p></td>
+<td><p>1.9.5</p></td>
+</tr>
+<tr class="row-odd"><td><p>openSetting</p></td>
+<td><p>打开授权设置页</p></td>
+<td><p>2.0.7</p></td>
+</tr>
+<tr class="row-even"><td><p>feedback</p></td>
+<td><p>打开“意见反馈”页面，用户可提交反馈内容并上传日志，
+开发者可以登录小程序管理后台后进入
+左侧菜单“客服反馈”页面获取到反馈内容</p></td>
+<td><p>2.1.0</p></td>
+</tr>
+</tbody>
+</table>
+<p>lang 的合法值</p>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 38%" />
+<col style="width: 62%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>值</p></th>
+<th class="head"><p>说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>en</p></td>
+<td><p>英文</p></td>
+</tr>
+<tr class="row-odd"><td><p>zh_CN</p></td>
+<td><p>简体中文</p></td>
+</tr>
+<tr class="row-even"><td><p>zh_TW</p></td>
+<td><p>繁体中文</p></td>
+</tr>
+</tbody>
+</table>
+<p>Bug &amp; Tip</p>
+<div class="admonition tip">
+<p class="admonition-title">小技巧</p>
+<p>button-hover 默认为{background-color: rgba(0, 0, 0, 0.1); opacity: 0.7;}</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">小技巧</p>
+<p>bindgetphonenumber 从1.2.0 开始支持，但是在1.5.3以下版本中无法使用wx.canIUse进行检测，建议使用基础库版本进行判断。</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">小技巧</p>
+<p>在bindgetphonenumber 等返回加密信息的回调中调用 wx.login 登录，可能会刷新登录态。此时服务器使用 code 换取的 sessionKey 不是加密时使用的 sessionKey，导致解密失败。建议开发者提前进行 login；或者在回调中先使用 checkSession 进行登录态检查，避免 login 刷新登录态。</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">小技巧</p>
+<p>从 2.1.0 起，button 可作为原生组件的子节点嵌入，以便在原生组件上使用 open-type 的能力。</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">小技巧</p>
+<p>目前设置了 form-type 的 button 只会对当前组件中的 form 有效。因而，将 button 封装在自定义组件中，而 from 在自定义组件外，将会使这个 button 的 form-type 失效。</p>
+</div>
+<p>示例代码</p>
+<p>在开发者工具中预览效果</p>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="p">.</span><span class="nc">button-hover</span> <span class="p">{</span>
+  <span class="k">background-color</span><span class="p">:</span> <span class="kc">red</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="p">.</span><span class="nc">other-button-hover</span> <span class="p">{</span>
+  <span class="k">background-color</span><span class="p">:</span> <span class="kc">blue</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">button</span>
+  <span class="na">type</span><span class="o">=</span><span class="s">&quot;default&quot;</span>
+  <span class="na">size</span><span class="o">=</span><span class="s">&quot;{{defaultSize}}&quot;</span>
+  <span class="na">loading</span><span class="o">=</span><span class="s">&quot;{{loading}}&quot;</span>
+  <span class="na">plain</span><span class="o">=</span><span class="s">&quot;{{plain}}&quot;</span>
+  <span class="na">disabled</span><span class="o">=</span><span class="s">&quot;{{disabled}}&quot;</span>
+  <span class="na">bindtap</span><span class="o">=</span><span class="s">&quot;default&quot;</span>
+  <span class="na">hover-class</span><span class="o">=</span><span class="s">&quot;other-button-hover&quot;</span>
+<span class="p">&gt;</span>
+  default
+<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">button</span>
+  <span class="na">type</span><span class="o">=</span><span class="s">&quot;primary&quot;</span>
+  <span class="na">size</span><span class="o">=</span><span class="s">&quot;{{primarySize}}&quot;</span>
+  <span class="na">loading</span><span class="o">=</span><span class="s">&quot;{{loading}}&quot;</span>
+  <span class="na">plain</span><span class="o">=</span><span class="s">&quot;{{plain}}&quot;</span>
+  <span class="na">disabled</span><span class="o">=</span><span class="s">&quot;{{disabled}}&quot;</span>
+  <span class="na">bindtap</span><span class="o">=</span><span class="s">&quot;primary&quot;</span>
+<span class="p">&gt;</span>
+  primary
+<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">button</span>
+  <span class="na">type</span><span class="o">=</span><span class="s">&quot;warn&quot;</span>
+  <span class="na">size</span><span class="o">=</span><span class="s">&quot;{{warnSize}}&quot;</span>
+  <span class="na">loading</span><span class="o">=</span><span class="s">&quot;{{loading}}&quot;</span>
+  <span class="na">plain</span><span class="o">=</span><span class="s">&quot;{{plain}}&quot;</span>
+  <span class="na">disabled</span><span class="o">=</span><span class="s">&quot;{{disabled}}&quot;</span>
+  <span class="na">bindtap</span><span class="o">=</span><span class="s">&quot;warn&quot;</span>
+<span class="p">&gt;</span>
+  warn
+<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">button</span> <span class="na">bindtap</span><span class="o">=</span><span class="s">&quot;setDisabled&quot;</span><span class="p">&gt;</span>点击设置以上按钮disabled属性<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">button</span> <span class="na">bindtap</span><span class="o">=</span><span class="s">&quot;setPlain&quot;</span><span class="p">&gt;</span>点击设置以上按钮plain属性<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">button</span> <span class="na">bindtap</span><span class="o">=</span><span class="s">&quot;setLoading&quot;</span><span class="p">&gt;</span>点击设置以上按钮loading属性<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">button</span> <span class="na">open-type</span><span class="o">=</span><span class="s">&quot;contact&quot;</span><span class="p">&gt;</span>进入客服会话<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">button</span> <span class="na">open-type</span><span class="o">=</span><span class="s">&quot;getUserInfo&quot;</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;zh_CN&quot;</span> <span class="na">bindgetuserinfo</span><span class="o">=</span><span class="s">&quot;onGotUserInfo&quot;</span><span class="p">&gt;</span>
+  获取用户信息
+<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">button</span> <span class="na">open-type</span><span class="o">=</span><span class="s">&quot;openSetting&quot;</span><span class="p">&gt;</span>打开授权设置页<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="kr">const</span> <span class="nx">types</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;default&#39;</span><span class="p">,</span> <span class="s1">&#39;primary&#39;</span><span class="p">,</span> <span class="s1">&#39;warn&#39;</span><span class="p">]</span>
+<span class="kr">const</span> <span class="nx">pageObject</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="nx">data</span><span class="o">:</span> <span class="p">{</span>
+    <span class="nx">defaultSize</span><span class="o">:</span> <span class="s1">&#39;default&#39;</span><span class="p">,</span>
+    <span class="nx">primarySize</span><span class="o">:</span> <span class="s1">&#39;default&#39;</span><span class="p">,</span>
+    <span class="nx">warnSize</span><span class="o">:</span> <span class="s1">&#39;default&#39;</span><span class="p">,</span>
+    <span class="nx">disabled</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+    <span class="nx">plain</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+    <span class="nx">loading</span><span class="o">:</span> <span class="kc">false</span>
+  <span class="p">},</span>
+  <span class="nx">setDisabled</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">setData</span><span class="p">({</span>
+      <span class="nx">disabled</span><span class="o">:</span> <span class="o">!</span><span class="k">this</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">disabled</span>
+    <span class="p">})</span>
+  <span class="p">},</span>
+  <span class="nx">setPlain</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">setData</span><span class="p">({</span>
+      <span class="nx">plain</span><span class="o">:</span> <span class="o">!</span><span class="k">this</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">plain</span>
+    <span class="p">})</span>
+  <span class="p">},</span>
+  <span class="nx">setLoading</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">setData</span><span class="p">({</span>
+      <span class="nx">loading</span><span class="o">:</span> <span class="o">!</span><span class="k">this</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">loading</span>
+    <span class="p">})</span>
+  <span class="p">},</span>
+  <span class="nx">onGotUserInfo</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">e</span><span class="p">.</span><span class="nx">detail</span><span class="p">.</span><span class="nx">errMsg</span><span class="p">)</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">e</span><span class="p">.</span><span class="nx">detail</span><span class="p">.</span><span class="nx">userInfo</span><span class="p">)</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">e</span><span class="p">.</span><span class="nx">detail</span><span class="p">.</span><span class="nx">rawData</span><span class="p">)</span>
+  <span class="p">},</span>
+<span class="p">}</span>
+
+<span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">types</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="o">++</span><span class="nx">i</span><span class="p">)</span> <span class="p">{</span>
+  <span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">type</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">pageObject</span><span class="p">[</span><span class="nx">type</span><span class="p">]</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+      <span class="kr">const</span> <span class="nx">key</span> <span class="o">=</span> <span class="nx">type</span> <span class="o">+</span> <span class="s1">&#39;Size&#39;</span>
+      <span class="kr">const</span> <span class="nx">changedData</span> <span class="o">=</span> <span class="p">{}</span>
+      <span class="nx">changedData</span><span class="p">[</span><span class="nx">key</span><span class="p">]</span> <span class="o">=</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">data</span><span class="p">[</span><span class="nx">key</span><span class="p">]</span> <span class="o">===</span> <span class="s1">&#39;default&#39;</span> <span class="o">?</span> <span class="s1">&#39;mini&#39;</span> <span class="o">:</span> <span class="s1">&#39;default&#39;</span>
+      <span class="k">this</span><span class="p">.</span><span class="nx">setData</span><span class="p">(</span><span class="nx">changedData</span><span class="p">)</span>
+    <span class="p">}</span>
+  <span class="p">}(</span><span class="nx">types</span><span class="p">[</span><span class="nx">i</span><span class="p">]))</span>
+<span class="p">}</span>
+
+<span class="nx">Page</span><span class="p">(</span><span class="nx">pageObject</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="checkbox.html" class="btn btn-neutral float-right" title="checkbox" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="text.html" class="btn btn-neutral float-left" title="text" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Nosy
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

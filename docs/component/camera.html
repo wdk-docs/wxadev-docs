@@ -1,0 +1,305 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-CN" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-CN" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>camera &mdash; wxadev 1.0.0 文档</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜索" href="../search.html" />
+    <link rel="next" title="image" href="image.html" />
+    <link rel="prev" title="音频 audio" href="audio.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../contents.html" class="icon icon-home"> wxadev
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../dev.html">小程序简介</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../basic/index.html">基础教程</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework/index.html">框架开发指南</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide/index.html">运行环境</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">组件</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="index.html#id2">视图容器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id3">基础内容</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id4">表单组件</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id5">导航</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html#id6">媒体组件</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="audio.html">音频 audio</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">camera</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id4">示例代码</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="image.html">image</a></li>
+<li class="toctree-l3"><a class="reference internal" href="live-player.html">live-player</a></li>
+<li class="toctree-l3"><a class="reference internal" href="live-pusher.html">live-pusher</a></li>
+<li class="toctree-l3"><a class="reference internal" href="video.html">video</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id7">地图</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id8">画布</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id9">开放能力</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id10">原生组件说明</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id11">原生组件的使用限制</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id12">无妨碍访问</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../devtools/index.html">开发工具</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference/index.html">参考资料</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../wxcloud/index.html">云开发</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/index.html">API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api-backend/index.html">服务端开放接口</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../contents.html">wxadev</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../contents.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">组件</a> &raquo;</li>
+        
+      <li>camera</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/component/camera.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="camera">
+<h1>camera<a class="headerlink" href="#camera" title="永久链接至标题">¶</a></h1>
+<div class="versionadded">
+<p><span class="versionmodified added">1.6.0 新版功能: </span>低版本需做 <a class="reference external" href="/dev/framework/compatibility">兼容处理</a> 。</p>
+</div>
+<p>系统相机。扫码二维码功能，需升级微信客户端至6.7.3。需要 <a class="reference external" href="/dev/framework/open-ability/authorize.html">用户授权</a> scope.camera。</p>
+<p>相关api：<a class="reference external" href="/dev/api/wx.createCameraContext.html">wx.createCameraContext</a></p>
+<p>属性      类型      默认值     必填      说明      最低版本
+mode    string  normal  否       应用模式    2.1.0
+device-position string  back    否       摄像头朝向   1.0.0
+flash   string  auto    否       闪光灯，值为auto, on, off     1.0.0
+bindstop        eventhandle             否       摄像头在非正常终止时触发，如退出后台等情况   1.0.0
+binderror       eventhandle             否       用户不允许使用摄像头时触发   1.0.0
+bindscancode    eventhandle             否       在扫码识别成功时触发，仅在 mode=”scanCode” 时生效       2.1.0
+mode 的合法值</p>
+<p>值       说明      最低版本
+normal  相机模式
+scanCode        扫码模式
+device-position 的合法值</p>
+<p>值       说明      最低版本
+front   前置
+back    后置
+flash 的合法值</p>
+<p>值       说明      最低版本
+auto    自动
+on      打开
+off     关闭
+Bug &amp; Tip</p>
+<div class="admonition tip">
+<p class="admonition-title">小技巧</p>
+<p>同一页面只能插入一个 camera 组件。</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">小技巧</p>
+<p>请注意 <a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/component/native-component.html#%E5%8E%9F%E7%94%9F%E7%BB%84%E4%BB%B6%E7%9A%84%E4%BD%BF%E7%94%A8%E9%99%90%E5%88%B6">原生组件使用限制</a></p>
+</div>
+<div class="section" id="id4">
+<h2>示例代码<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h2>
+<p><a class="reference external" href="https://developers.weixin.qq.com/s/VBZ3Jim26zYu">在开发者工具中预览效果</a></p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="c">&lt;!-- camera.wxml --&gt;</span>
+<span class="p">&lt;</span><span class="nt">camera</span>
+  <span class="na">device-position</span><span class="o">=</span><span class="s">&quot;back&quot;</span>
+  <span class="na">flash</span><span class="o">=</span><span class="s">&quot;off&quot;</span>
+  <span class="na">binderror</span><span class="o">=</span><span class="s">&quot;error&quot;</span>
+  <span class="na">style</span><span class="o">=</span><span class="s">&quot;width: 100%; height: 300px;&quot;</span>
+<span class="p">&gt;&lt;/</span><span class="nt">camera</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;primary&quot;</span> <span class="na">bindtap</span><span class="o">=</span><span class="s">&quot;takePhoto&quot;</span><span class="p">&gt;</span>拍照<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">view</span><span class="p">&gt;</span>预览<span class="p">&lt;/</span><span class="nt">view</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">image</span> <span class="na">mode</span><span class="o">=</span><span class="s">&quot;widthFix&quot;</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;{{src}}&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">image</span><span class="p">&gt;</span>
+// camera.js
+Page({
+  takePhoto() {
+    const ctx = wx.createCameraContext()
+    ctx.takePhoto({
+      quality: &#39;high&#39;,
+      success: (res) =&gt; {
+        this.setData({
+          src: res.tempImagePath
+        })
+      }
+    })
+  },
+  error(e) {
+    console.log(e.detail)
+  }
+})
+</pre></div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="image.html" class="btn btn-neutral float-right" title="image" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="audio.html" class="btn btn-neutral float-left" title="音频 audio" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Nosy
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

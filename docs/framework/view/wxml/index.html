@@ -1,0 +1,273 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-CN" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-CN" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>WXML &mdash; wxadev 1.0.0 文档</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../_static/language_data.js"></script>
+        <script type="text/javascript" src="../../../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="索引" href="../../../genindex.html" />
+    <link rel="search" title="搜索" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../contents.html" class="icon icon-home"> wxadev
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../dev.html">小程序简介</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../basic/index.html">基础教程</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../index.html">框架开发指南</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../guide/index.html">运行环境</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../component/index.html">组件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../devtools/index.html">开发工具</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../reference/index.html">参考资料</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../wxcloud/index.html">云开发</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../api/index.html">API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../api-backend/index.html">服务端开放接口</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../contents.html">wxadev</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../contents.html">Docs</a> &raquo;</li>
+        
+      <li>WXML</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../_sources/framework/view/wxml/index.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="wxml">
+<h1>WXML<a class="headerlink" href="#wxml" title="永久链接至标题">¶</a></h1>
+<p>WXML（WeiXin Markup Language）是框架设计的一套标签语言，结合基础组件、事件系统，可以构建出页面的结构。</p>
+<p>要完整了解 WXML 语法，请参考WXML 语法参考。</p>
+<p>用以下一些简单的例子来看看 WXML 具有什么能力：</p>
+<p>数据绑定
+&lt;!–wxml–&gt;
+&lt;view&gt;{{message}}&lt;/view&gt;
+// page.js
+Page({</p>
+<blockquote>
+<div><dl class="simple">
+<dt>data: {</dt><dd><p>message: ‘Hello MINA!’</p>
+</dd>
+</dl>
+<p>}</p>
+</div></blockquote>
+<p>})
+列表渲染
+&lt;!–wxml–&gt;
+&lt;view wx:for=”{{array}}”&gt;{{item}}&lt;/view&gt;
+// page.js
+Page({</p>
+<blockquote>
+<div><dl class="simple">
+<dt>data: {</dt><dd><p>array: [1, 2, 3, 4, 5]</p>
+</dd>
+</dl>
+<p>}</p>
+</div></blockquote>
+<p>})
+条件渲染
+&lt;!–wxml–&gt;
+&lt;view wx:if=”{{view == ‘WEBVIEW’}}”&gt;WEBVIEW&lt;/view&gt;
+&lt;view wx:elif=”{{view == ‘APP’}}”&gt;APP&lt;/view&gt;
+&lt;view wx:else=”{{view == ‘MINA’}}”&gt;MINA&lt;/view&gt;
+// page.js
+Page({</p>
+<blockquote>
+<div><dl class="simple">
+<dt>data: {</dt><dd><p>view: ‘MINA’</p>
+</dd>
+</dl>
+<p>}</p>
+</div></blockquote>
+<p>})
+模板
+&lt;!–wxml–&gt;
+&lt;template name=”staffName”&gt;</p>
+<blockquote>
+<div><dl class="simple">
+<dt>&lt;view&gt;</dt><dd><p>FirstName: {{firstName}}, LastName: {{lastName}}</p>
+</dd>
+</dl>
+<p>&lt;/view&gt;</p>
+</div></blockquote>
+<p>&lt;/template&gt;</p>
+<p>&lt;template is=”staffName” data=”{{…staffA}}”&gt;&lt;/template&gt;
+&lt;template is=”staffName” data=”{{…staffB}}”&gt;&lt;/template&gt;
+&lt;template is=”staffName” data=”{{…staffC}}”&gt;&lt;/template&gt;
+// page.js
+Page({</p>
+<blockquote>
+<div><dl class="simple">
+<dt>data: {</dt><dd><p>staffA: {firstName: ‘Hulk’, lastName: ‘Hu’},
+staffB: {firstName: ‘Shang’, lastName: ‘You’},
+staffC: {firstName: ‘Gideon’, lastName: ‘Lin’}</p>
+</dd>
+</dl>
+<p>}</p>
+</div></blockquote>
+<p>})
+具体的能力以及使用方式在以下章节查看：</p>
+<p>数据绑定、列表渲染、条件渲染、模板、引用</p>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Nosy
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

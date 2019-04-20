@@ -1,0 +1,280 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-CN" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-CN" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>页面路由 &mdash; wxadev 1.0.0 文档</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+        <script type="text/javascript" src="../../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="搜索" href="../../search.html" />
+    <link rel="next" title="注册页面" href="page.html" />
+    <link rel="prev" title="场景值" href="scene.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../contents.html" class="icon icon-home"> wxadev
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../dev.html">小程序简介</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../basic/index.html">基础教程</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">框架开发指南</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../structure.html">目录结构</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../config.html">小程序配置</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../sitemap.html">sitemap 配置</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../MINA.html">框架</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">逻辑层 App Service</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="scene.html">场景值</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">页面路由</a></li>
+<li class="toctree-l3"><a class="reference internal" href="page.html">注册页面</a></li>
+<li class="toctree-l3"><a class="reference internal" href="page-life-cycle.html">生命周期</a></li>
+<li class="toctree-l3"><a class="reference internal" href="module.html">模块化</a></li>
+<li class="toctree-l3"><a class="reference internal" href="app.html">注册小程序</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api.html">API</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../view/index.html">视图</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../details.html">运行环境</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../plugin/index.html">插件</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ability/index.html">基础能力</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../device/index.html">硬件能力</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../open-ability/index.html">开放能力</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../guide/index.html">运行环境</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../component/index.html">组件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../devtools/index.html">开发工具</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../reference/index.html">参考资料</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api/index.html">API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api-backend/index.html">服务端开放接口</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../contents.html">wxadev</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../contents.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../index.html">框架开发指南</a> &raquo;</li>
+        
+          <li><a href="index.html">逻辑层 App Service</a> &raquo;</li>
+        
+      <li>页面路由</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/framework/app-service/route.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="id1">
+<h1>页面路由<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
+<p>在小程序中所有页面的路由全部由框架进行管理。</p>
+<p>页面栈</p>
+<p>框架以栈的形式维护了当前的所有页面。 当发生路由切换的时候，页面栈的表现如下：</p>
+<p>路由方式    页面栈表现
+初始化     新页面入栈
+打开新页面   新页面入栈
+页面重定向   当前页面出栈，新页面入栈
+页面返回    页面不断出栈，直到目标返回页
+Tab 切换  页面全部出栈，只留下新的 Tab 页面
+重加载     页面全部出栈，只留下新的页面
+开发者可以使用 getCurrentPages 函数获取当前页面栈。</p>
+<p>路由方式</p>
+<p>对于路由的触发方式以及页面生命周期函数如下：</p>
+<p>路由方式    触发时机    路由前页面   路由后页面
+初始化     小程序打开的第一个页面             onLoad, onShow
+打开新页面   调用 API wx.navigateTo
+使用组件 &lt;navigator open-type=”navigateTo”/&gt;        onHide  onLoad, onShow
+页面重定向   调用 API wx.redirectTo
+使用组件 &lt;navigator open-type=”redirectTo”/&gt;        onUnload        onLoad, onShow
+页面返回    调用 API wx.navigateBack
+使用组件&lt;navigator open-type=”navigateBack”&gt;
+用户按左上角返回按钮      onUnload        onShow
+Tab 切换  调用 API wx.switchTab
+使用组件 &lt;navigator open-type=”switchTab”/&gt;
+用户切换 Tab                各种情况请参考下表
+重启动     调用 API wx.reLaunch
+使用组件 &lt;navigator open-type=”reLaunch”/&gt;  onUnload        onLoad, onShow</p>
+<p>Tab 切换对应的生命周期（以 A、B 页面为 Tabbar 页面，C 是从 A 页面打开的页面，D 页面是从 C 页面打开的页面为例）：</p>
+<p>当前页面    路由后页面   触发的生命周期（按顺序）</p>
+<p>A       A       Nothing happend
+A       B       A.onHide(), B.onLoad(), B.onShow()
+A       B（再次打开） A.onHide(), B.onShow()
+C       A       C.onUnload(), A.onShow()
+C       B       C.onUnload(), B.onLoad(), B.onShow()
+D       B       D.onUnload(), C.onUnload(), B.onLoad(), B.onShow()
+D（从转发进入）        A       D.onUnload(), A.onLoad(), A.onShow()
+D（从转发进入）        B       D.onUnload(), B.onLoad(), B.onShow()</p>
+<p>Tips:</p>
+<p>navigateTo, redirectTo 只能打开非 tabBar 页面。
+switchTab 只能打开 tabBar 页面。
+reLaunch 可以打开任意页面。</p>
+<p>页面底部的 tabBar 由页面决定，即只要是定义为 tabBar 的页面，底部都有 tabBar。
+调用页面路由带的参数可以在目标页面的onLoad中获取。</p>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="page.html" class="btn btn-neutral float-right" title="注册页面" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="scene.html" class="btn btn-neutral float-left" title="场景值" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Nosy
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

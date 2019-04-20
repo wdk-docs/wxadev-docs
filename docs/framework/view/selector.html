@@ -1,0 +1,309 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-CN" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-CN" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>获取界面上的节点信息 &mdash; wxadev 1.0.0 文档</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+        <script type="text/javascript" src="../../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="搜索" href="../../search.html" />
+    <link rel="next" title="响应显示区域变化" href="resizable.html" />
+    <link rel="prev" title="WXSS" href="wxss.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../contents.html" class="icon icon-home"> wxadev
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../dev.html">小程序简介</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../basic/index.html">基础教程</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">框架开发指南</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../structure.html">目录结构</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../config.html">小程序配置</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../sitemap.html">sitemap 配置</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../MINA.html">框架</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../app-service/index.html">逻辑层 App Service</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">视图</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="wxss.html">WXSS</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">获取界面上的节点信息</a></li>
+<li class="toctree-l3"><a class="reference internal" href="resizable.html">响应显示区域变化</a></li>
+<li class="toctree-l3"><a class="reference internal" href="interactive-animation.html">WXS响应事件</a></li>
+<li class="toctree-l3"><a class="reference internal" href="component.html">基础组件</a></li>
+<li class="toctree-l3"><a class="reference internal" href="animation.html">动画</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../details.html">运行环境</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../plugin/index.html">插件</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ability/index.html">基础能力</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../device/index.html">硬件能力</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../open-ability/index.html">开放能力</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../guide/index.html">运行环境</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../component/index.html">组件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../devtools/index.html">开发工具</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../reference/index.html">参考资料</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../wxcloud/index.html">云开发</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api/index.html">API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api-backend/index.html">服务端开放接口</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../contents.html">wxadev</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../contents.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../index.html">框架开发指南</a> &raquo;</li>
+        
+          <li><a href="index.html">视图</a> &raquo;</li>
+        
+      <li>获取界面上的节点信息</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/framework/view/selector.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="id1">
+<h1>获取界面上的节点信息<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
+<p>WXML节点信息
+节点信息查询 API 可以用于获取节点属性、样式、在界面上的位置等信息。</p>
+<p>最常见的用法是使用这个接口来查询某个节点的当前位置，以及界面的滚动位置。</p>
+<p>示例代码：</p>
+<p>const query = wx.createSelectorQuery()
+query.select(‘#the-id’).boundingClientRect(function (res) {</p>
+<blockquote>
+<div><p>res.top // #the-id 节点的上边界坐标（相对于显示区域）</p>
+</div></blockquote>
+<p>})
+query.selectViewport().scrollOffset(function (res) {</p>
+<blockquote>
+<div><p>res.scrollTop // 显示区域的竖直滚动位置</p>
+</div></blockquote>
+<p>})
+query.exec()
+上述示例中， #the-id 是一个节点选择器，与 CSS 的选择器相近但略有区别，请参见 SelectorQuery.select 的相关说明。</p>
+<p>在自定义组件或包含自定义组件的页面中，推荐使用 this.createSelectorQuery 来代替 wx.createSelectorQuery ，这样可以确保在正确的范围内选择节点。</p>
+<p>WXML节点布局相交状态
+节点布局相交状态 API 可用于监听两个或多个组件节点在布局位置上的相交状态。这一组API常常可以用于推断某些节点是否可以被用户看见、有多大比例可以被用户看见。</p>
+<p>这一组API涉及的主要概念如下。</p>
+<p>参照节点：监听的参照节点，取它的布局区域作为参照区域。如果有多个参照节点，则会取它们布局区域的 交集 作为参照区域。页面显示区域也可作为参照区域之一。
+目标节点：监听的目标，默认只能是一个节点（使用 selectAll 选项时，可以同时监听多个节点）。
+相交区域：目标节点的布局区域与参照区域的相交区域。
+相交比例：相交区域占参照区域的比例。
+阈值：相交比例如果达到阈值，则会触发监听器的回调函数。阈值可以有多个。
+以下示例代码可以在目标节点（用选择器 .target-class 指定）每次进入或离开页面显示区域时，触发回调函数。</p>
+<p>示例代码：</p>
+<dl>
+<dt>Page({</dt><dd><dl>
+<dt>onLoad() {</dt><dd><dl class="simple">
+<dt>wx.createIntersectionObserver().relativeToViewport().observe(‘.target-class’, (res) =&gt; {</dt><dd><p>res.id // 目标节点 id
+res.dataset // 目标节点 dataset
+res.intersectionRatio // 相交区域占目标节点的布局区域的比例
+res.intersectionRect // 相交区域
+res.intersectionRect.left // 相交区域的左边界坐标
+res.intersectionRect.top // 相交区域的上边界坐标
+res.intersectionRect.width // 相交区域的宽度
+res.intersectionRect.height // 相交区域的高度</p>
+</dd>
+</dl>
+<p>})</p>
+</dd>
+</dl>
+<p>}</p>
+</dd>
+</dl>
+<p>})
+以下示例代码可以在目标节点（用选择器 .target-class 指定）与参照节点（用选择器 .relative-class 指定）在页面显示区域内相交或相离，且相交或相离程度达到目标节点布局区域的20%和50%时，触发回调函数。</p>
+<p>示例代码：</p>
+<dl>
+<dt>Page({</dt><dd><dl>
+<dt>onLoad() {</dt><dd><dl class="simple">
+<dt>wx.createIntersectionObserver(this, {</dt><dd><p>thresholds: [0.2, 0.5]</p>
+</dd>
+<dt>}).relativeTo(‘.relative-class’).relativeToViewport().observe(‘.target-class’, (res) =&gt; {</dt><dd><p>res.intersectionRatio // 相交区域占目标节点的布局区域的比例
+res.intersectionRect // 相交区域
+res.intersectionRect.left // 相交区域的左边界坐标
+res.intersectionRect.top // 相交区域的上边界坐标
+res.intersectionRect.width // 相交区域的宽度
+res.intersectionRect.height // 相交区域的高度</p>
+</dd>
+</dl>
+<p>})</p>
+</dd>
+</dl>
+<p>}</p>
+</dd>
+</dl>
+<p>})
+注意：与页面显示区域的相交区域并不准确代表用户可见的区域，因为参与计算的区域是“布局区域”，布局区域可能会在绘制时被其他节点裁剪隐藏（如遇祖先节点中 overflow 样式为 hidden 的节点）或遮盖（如遇 fixed 定位的节点）。</p>
+<p>在自定义组件或包含自定义组件的页面中，推荐使用 this.createIntersectionObserver 来代替 wx.createIntersectionObserver ，这样可以确保在正确的范围内选择节点。</p>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="resizable.html" class="btn btn-neutral float-right" title="响应显示区域变化" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="wxss.html" class="btn btn-neutral float-left" title="WXSS" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Nosy
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

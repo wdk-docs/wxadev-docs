@@ -1,0 +1,282 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-CN" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-CN" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>框架 &mdash; wxadev 1.0.0 文档</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜索" href="../search.html" />
+    <link rel="next" title="逻辑层 App Service" href="app-service/index.html" />
+    <link rel="prev" title="sitemap 配置" href="sitemap.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../contents.html" class="icon icon-home"> wxadev
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../dev.html">小程序简介</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../basic/index.html">基础教程</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">框架开发指南</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="structure.html">目录结构</a></li>
+<li class="toctree-l2"><a class="reference internal" href="config.html">小程序配置</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sitemap.html">sitemap 配置</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">框架</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id2">响应的数据绑定</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id3">页面管理</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id4">基础组件</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#api">丰富的 API</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="app-service/index.html">逻辑层 App Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="view/index.html">视图</a></li>
+<li class="toctree-l2"><a class="reference internal" href="details.html">运行环境</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plugin/index.html">插件</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ability/index.html">基础能力</a></li>
+<li class="toctree-l2"><a class="reference internal" href="device/index.html">硬件能力</a></li>
+<li class="toctree-l2"><a class="reference internal" href="open-ability/index.html">开放能力</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../guide/index.html">运行环境</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../component/index.html">组件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../devtools/index.html">开发工具</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference/index.html">参考资料</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../wxcloud/index.html">云开发</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/index.html">API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api-backend/index.html">服务端开放接口</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../contents.html">wxadev</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../contents.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">框架开发指南</a> &raquo;</li>
+        
+      <li>框架</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/framework/MINA.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="id1">
+<h1>框架<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
+<p>小程序开发框架的目标是通过尽可能简单、高效的方式让开发者可以在微信中开发具有原生 APP 体验的服务。</p>
+<p>整个小程序框架系统分为两部分：逻辑层（App Service）和 视图层（View）。
+小程序提供了自己的视图层描述语言 WXML 和 WXSS，以及基于 JavaScript 的逻辑层框架，
+并在视图层与逻辑层间提供了数据传输和事件系统，让开发者能够专注于数据与逻辑。</p>
+<div class="section" id="id2">
+<h2>响应的数据绑定<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<p>框架的核心是一个响应的数据绑定系统，可以让数据与视图非常简单地保持同步。当做数据修改的时候，只需要在逻辑层修改数据，视图层就会做相应的更新。</p>
+<p>通过这个简单的例子来看：</p>
+<p>在开发者工具中预览效果</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="c">&lt;!-- This is our View --&gt;</span>
+<span class="p">&lt;</span><span class="nt">view</span><span class="p">&gt;</span>Hello {{name}}!<span class="p">&lt;/</span><span class="nt">view</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">button</span> <span class="na">bindtap</span><span class="o">=</span><span class="s">&quot;changeName&quot;</span><span class="p">&gt;</span>Click me!<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+// This is our App Service.
+// This is our data.
+const helloData = {
+  name: &#39;WeChat&#39;
+}
+</pre></div>
+</div>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="c1">// Register a Page.</span>
+<span class="nx">Page</span><span class="p">({</span>
+  <span class="nx">data</span><span class="o">:</span> <span class="nx">helloData</span><span class="p">,</span>
+  <span class="nx">changeName</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// sent data change to view</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">setData</span><span class="p">({</span>
+      <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;MINA&#39;</span>
+    <span class="p">})</span>
+  <span class="p">}</span>
+<span class="p">})</span>
+</pre></div>
+</div>
+<p>开发者通过框架将逻辑层数据中的 name 与视图层的 name 进行了绑定，所以在页面一打开的时候会显示 Hello WeChat!；
+当点击按钮的时候，视图层会发送 changeName 的事件给逻辑层，逻辑层找到并执行对应的事件处理函数；
+回调函数触发后，逻辑层执行 setData 的操作，将 data 中的 name 从 WeChat 变为 MINA，因为该数据和视图层已经绑定了，
+从而视图层会自动改变为 Hello MINA!。</p>
+</div>
+<div class="section" id="id3">
+<h2>页面管理<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
+<p>框架 管理了整个小程序的页面路由，可以做到页面间的无缝切换，并给以页面完整的生命周期。
+开发者需要做的只是将页面的数据、方法、生命周期函数注册到 框架 中，其他的一切复杂的操作都交由 框架 处理。</p>
+</div>
+<div class="section" id="id4">
+<h2>基础组件<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h2>
+<p>框架 提供了一套基础的组件，这些组件自带微信风格的样式以及特殊的逻辑，开发者可以通过组合基础组件，创建出强大的微信小程序 。</p>
+</div>
+<div class="section" id="api">
+<h2>丰富的 API<a class="headerlink" href="#api" title="永久链接至标题">¶</a></h2>
+<p>框架 提供丰富的微信原生 API，可以方便的调起微信提供的能力，如获取用户信息，本地存储，支付功能等。</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="app-service/index.html" class="btn btn-neutral float-right" title="逻辑层 App Service" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="sitemap.html" class="btn btn-neutral float-left" title="sitemap 配置" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Nosy
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+checkbox
+===========================
+
+.. versionadded:: 1.0.0 开始支持，低版本需做兼容处理。
+
+多选项目。
+
+属性	类型	默认值	必填	说明	最低版本
+value	string		否	<checkbox>标识，选中时触发<checkbox-group>的 change 事件，并携带 <checkbox> 的 value	1.0.0
+disabled	boolean	false	否	是否禁用	1.0.0
+checked	boolean	false	否	当前是否选中，可用来设置默认选中	1.0.0
+color	string	#09BB07	否	checkbox的颜色，同css的color	1.0.0
+示例代码
+在开发者工具中预览效果
+
+.. code:: html
+
+  <checkbox-group bindchange="checkboxChange">
+    <label class="checkbox" wx:for="{{items}}">
+      <checkbox value="{{item.name}}" checked="{{item.checked}}" />
+      {{item.value}}
+    </label>
+  </checkbox-group>
+  Page({
+    data: {
+      items: [
+        {name: 'USA', value: '美国'},
+        {name: 'CHN', value: '中国', checked: 'true'},
+        {name: 'BRA', value: '巴西'},
+        {name: 'JPN', value: '日本'},
+        {name: 'ENG', value: '英国'},
+        {name: 'TUR', value: '法国'},
+      ]
+    },
+    checkboxChange(e) {
+      console.log('checkbox发生change事件，携带value值为：', e.detail.value)
+    }
+  })

@@ -1,0 +1,45 @@
+icon
+===========================
+
+.. versionadded:: 1.0.0 开始支持，低版本需做兼容处理。
+
+图标。组件属性的长度单位默认为px，2.4.0起支持传入单位(rpx/px)。
+
+属性	类型	默认值	必填	说明	最低版本
+type	string		是	icon的类型，有效值：success, success_no_circle, info, warn, waiting, cancel, download, search, clear	1.0.0
+size	number/string	23	否	icon的大小	1.0.0
+color	string		否	icon的颜色，同css的color	1.0.0
+示例代码
+在开发者工具中预览效果
+
+.. code:: html
+
+
+  <view class="group">
+    <block wx:for="{{iconSize}}">
+      <icon type="success" size="{{item}}" />
+    </block>
+  </view>
+
+  <view class="group">
+    <block wx:for="{{iconType}}">
+      <icon type="{{item}}" size="40" />
+    </block>
+  </view>
+
+  <view class="group">
+    <block wx:for="{{iconColor}}">
+      <icon type="success" size="40" color="{{item}}" />
+    </block>
+  </view>
+  Page({
+    data: {
+      iconSize: [20, 30, 40, 50, 60, 70],
+      iconColor: [
+        'red', 'orange', 'yellow', 'green', 'rgb(0,255,255)', 'blue', 'purple'
+      ],
+      iconType: [
+        'success', 'success_no_circle', 'info', 'warn', 'waiting', 'cancel', 'download', 'search', 'clear'
+      ]
+    }
+  })

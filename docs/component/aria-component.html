@@ -1,0 +1,263 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-CN" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-CN" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>aria-component &mdash; wxadev 1.0.0 文档</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜索" href="../search.html" />
+    <link rel="next" title="开发工具" href="../devtools/index.html" />
+    <link rel="prev" title="native-component" href="native-component.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../contents.html" class="icon icon-home"> wxadev
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../dev.html">小程序简介</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../basic/index.html">基础教程</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework/index.html">框架开发指南</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide/index.html">运行环境</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">组件</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="index.html#id2">视图容器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id3">基础内容</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id4">表单组件</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id5">导航</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id6">媒体组件</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id7">地图</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id8">画布</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id9">开放能力</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id10">原生组件说明</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id11">原生组件的使用限制</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html#id12">无妨碍访问</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">aria-component</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../devtools/index.html">开发工具</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference/index.html">参考资料</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../wxcloud/index.html">云开发</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/index.html">API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api-backend/index.html">服务端开放接口</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../contents.html">wxadev</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../contents.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">组件</a> &raquo;</li>
+        
+      <li>aria-component</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/component/aria-component.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="aria-component">
+<h1>aria-component<a class="headerlink" href="#aria-component" title="永久链接至标题">¶</a></h1>
+<p>无障碍访问</p>
+<div class="versionadded">
+<p><span class="versionmodified added">2.5.0 新版功能: </span>为了更好地满足视障人士对于小程序的访问需求，支持部分ARIA标签。</p>
+</div>
+<p>无障碍特性在读屏模式下可以访问，iOS可通过设置-&gt;通用-&gt;辅助功能-&gt;旁白打开。</p>
+<p>以 <code class="docutils literal notranslate"><span class="pre">&lt;view&gt;</span></code> 组件为例，增加了 <em>aria-role</em> 和 <em>aria-label</em> 属性。 其中 <em>aria-role</em> 表示组件的角色，
+当设置为 <cite>‘img’</cite> 时，读屏模式下聚焦后系统会朗读出 ‘图像’ 。设置为 <cite>‘button’</cite> 时，聚焦后后系统朗读出’按钮’。
+aria-label表示组件附带的额外信息，聚焦后系统会自动朗读出来。</p>
+<p>小程序内置组件已经预埋了一些无障碍的属性，以下组件开发者可以补充相关的属性：</p>
+<ul class="simple">
+<li><p>button</p></li>
+<li><p>input</p></li>
+<li><p>textarea</p></li>
+<li><p>checkbox</p></li>
+<li><p>switch</p></li>
+<li><p>radio</p></li>
+<li><p>slider</p></li>
+<li><p>picker-view</p></li>
+<li><p>scroll-view</p></li>
+<li><p>progress</p></li>
+<li><p>navigator</p></li>
+<li><p>image</p></li>
+<li><p>icon</p></li>
+<li><p>view</p></li>
+<li><p>cover-view</p></li>
+<li><p>cover-image</p></li>
+<li><p>map</p></li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">小技巧</p>
+<p>安卓和iOS读屏模式下设置aria-role后朗读的内容不同系统之间会有差异
+可设置的aria-role可参看 Using Aria中的Widget Roles，部分role的设置在移动端可能无效。</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../devtools/index.html" class="btn btn-neutral float-right" title="开发工具" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="native-component.html" class="btn btn-neutral float-left" title="native-component" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Nosy
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -1,0 +1,324 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-CN" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-CN" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>独立分包 &mdash; wxadev 1.0.0 文档</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../_static/language_data.js"></script>
+        <script type="text/javascript" src="../../../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="索引" href="../../../genindex.html" />
+    <link rel="search" title="搜索" href="../../../search.html" />
+    <link rel="next" title="分包预下载" href="preload.html" />
+    <link rel="prev" title="使用分包" href="basic.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../contents.html" class="icon icon-home"> wxadev
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../dev.html">小程序简介</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../basic/index.html">基础教程</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">框架开发指南</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../structure.html">目录结构</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../config.html">小程序配置</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../sitemap.html">sitemap 配置</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../MINA.html">框架</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../app-service/index.html">逻辑层 App Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../view/index.html">视图</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../details.html">运行环境</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../plugin/index.html">插件</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">基础能力</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../network.html">网络</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../mDNS.html">局域网通信</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../storage.html">存储</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../file-system.html">文件系统</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../canvas.html">Canvas 画布</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">分包加载</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="subpackages.html">分包加载</a></li>
+<li class="toctree-l4"><a class="reference internal" href="basic.html">使用分包</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">独立分包</a></li>
+<li class="toctree-l4"><a class="reference internal" href="preload.html">分包预下载</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../server-ability/index.html">服务端能力</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../custom-tabbar.html">自定义 tabBar</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../device/index.html">硬件能力</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../open-ability/index.html">开放能力</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../guide/index.html">运行环境</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../component/index.html">组件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../devtools/index.html">开发工具</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../reference/index.html">参考资料</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../wxcloud/index.html">云开发</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../api/index.html">API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../api-backend/index.html">服务端开放接口</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../contents.html">wxadev</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../contents.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../index.html">框架开发指南</a> &raquo;</li>
+        
+          <li><a href="../index.html">基础能力</a> &raquo;</li>
+        
+          <li><a href="index.html">分包加载</a> &raquo;</li>
+        
+      <li>独立分包</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../_sources/framework/ability/subpackages/independent.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="id1">
+<h1>独立分包<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
+<p>微信客户端 6.7.2，基础库 2.3.0 及以上版本开始支持。开发者工具请使用 1.02.1808300 及以上版本，可点此下载。</p>
+<p>独立分包是小程序中一种特殊类型的分包，可以独立于主包和其他分包运行。从独立分包中页面进入小程序时，不需要下载主包。当用户进入普通分包或主包内页面时，主包才会被下载。</p>
+<p>开发者可以按需将某些具有一定功能独立性的页面配置到独立分包中。当小程序从普通的分包页面启动时，需要首先下载主包；而独立分包不依赖主包即可运行，可以很大程度上提升分包页面的启动速度。</p>
+<p>一个小程序中可以有多个独立分包。</p>
+<p>小游戏不支持独立分包。</p>
+<p>配置方法
+假设小程序目录结构如下：</p>
+<p>├── app.js
+├── app.json
+├── app.wxss
+├── moduleA
+│   └── pages
+│       ├── rabbit
+│       └── squirrel
+├── moduleB
+│   └── pages
+│       ├── pear
+│       └── pineapple
+├── pages
+│   ├── index
+│   └── logs
+└── utils
+开发者通过在app.json的subpackages字段中对应的分包配置项中定义independent字段声明对应分包为独立分包。</p>
+<dl>
+<dt>{</dt><dd><p>“pages”: [“pages/index”, “pages/logs”],
+“subpackages”: [</p>
+<blockquote>
+<div><dl class="simple">
+<dt>{</dt><dd><p>“root”: “moduleA”,
+“pages”: [“pages/rabbit”, “pages/squirrel”]</p>
+</dd>
+</dl>
+<p>},
+{</p>
+<blockquote>
+<div><p>“root”: “moduleB”,
+“pages”: [“pages/pear”, “pages/pineapple”],
+“independent”: true</p>
+</div></blockquote>
+<p>}</p>
+</div></blockquote>
+<p>]</p>
+</dd>
+</dl>
+<p>}
+限制
+独立分包属于分包的一种。普通分包的所有限制都对独立分包有效。独立分包中插件、自定义组件的处理方式同普通分包。</p>
+<p>此外，使用独立分包时要注意：</p>
+<p>独立分包中不能依赖主包和其他分包中的内容，包括js文件、template、wxss、自定义组件、插件等。主包中的app.wxss对独立分包无效，应避免在独立分包页面中使用 app.wxss 中的样式；
+App 只能在主包内定义，独立分包中不能定义 App，会造成无法预期的行为；
+独立分包中暂时不支持使用插件。
+注意事项
+（1）关于 getApp
+与普通分包不同，独立分包运行时，App 并不一定被注册，因此 getApp 也不一定可以获得 App 对象：</p>
+<p>当用户从独立分包页面启动小程序时，主包不存在，App也不存在，此时调用 getApp 获取到的是 undefined。 当用户进入普通分包或主包内页面时，主包才会被下载，App 才会被注册。
+当用户是从普通分包或主包内页面跳转到独立分包页面时，主包已经存在，此时调用 getApp 可以获取到真正的 App。
+由于这一限制，开发者无法通过 App 对象实现独立分包和小程序其他部分的全局变量共享。</p>
+<p>为了在独立分包中满足这一需求，基础库 2.2.4 版本开始 getApp支持 [allowDefault]参数，在 App 未定义时返回一个默认实现。当主包加载，App 被注册时，默认实现中定义的属性会被覆盖合并到真正的 App 中。</p>
+<p>示例代码：</p>
+<p>独立分包中
+const app = getApp({allowDefault: true}) // {}
+app.data = 456
+app.global = {}
+app.js 中
+App({</p>
+<blockquote>
+<div><p>data: 123,
+other: ‘hello’</p>
+</div></blockquote>
+<p>})</p>
+<p>console.log(getApp()) // {global: {}, data: 456, other: ‘hello’}
+（2）关于 App 生命周期
+当从独立分包启动小程序时，主包中 App 的 onLaunch 和首次 onShow 会在从独立分包页面首次进入主包或其他普通分包页面时调用。</p>
+<p>由于独立分包中无法定义 App，小程序生命周期的监听可以使用 wx.onAppShow，wx.onAppHide 完成。App 上的其他事件可以使用 wx.onError，wx.onPageNotFound 监听。</p>
+<p>低版本兼容
+在低于6.7.2版本的微信中运行时，独立分包视为普通分包处理，不具备独立运行的特性。</p>
+<p>注意：在兼容模式下，主包中的 app.wxss 可能会对独立分包中的页面产生影响，因此应避免在独立分包页面中使用 app.wxss 中的样式。</p>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="preload.html" class="btn btn-neutral float-right" title="分包预下载" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="basic.html" class="btn btn-neutral float-left" title="使用分包" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Nosy
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

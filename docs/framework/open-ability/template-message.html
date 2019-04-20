@@ -1,0 +1,294 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-CN" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-CN" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>模板消息 &mdash; wxadev 1.0.0 文档</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+        <script type="text/javascript" src="../../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="搜索" href="../../search.html" />
+    <link rel="next" title="统一服务消息" href="uniform-message.html" />
+    <link rel="prev" title="打开 App" href="launchApp.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../contents.html" class="icon icon-home"> wxadev
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../dev.html">小程序简介</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../basic/index.html">基础教程</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">框架开发指南</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../structure.html">目录结构</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../config.html">小程序配置</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../sitemap.html">sitemap 配置</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../MINA.html">框架</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../app-service/index.html">逻辑层 App Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../view/index.html">视图</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../details.html">运行环境</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../plugin/index.html">插件</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ability/index.html">基础能力</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../device/index.html">硬件能力</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">开放能力</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="login.html">小程序登录</a></li>
+<li class="toctree-l3"><a class="reference internal" href="union-id.html">UnionID 机制说明</a></li>
+<li class="toctree-l3"><a class="reference internal" href="authorize.html">授权</a></li>
+<li class="toctree-l3"><a class="reference internal" href="signature.html">开放数据校验与解密</a></li>
+<li class="toctree-l3"><a class="reference internal" href="getPhoneNumber.html">获取手机号</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bio-auth.html">生物认证</a></li>
+<li class="toctree-l3"><a class="reference internal" href="share.html">转发</a></li>
+<li class="toctree-l3"><a class="reference internal" href="updatable-message.html">动态消息</a></li>
+<li class="toctree-l3"><a class="reference internal" href="launchApp.html">打开 App</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">模板消息</a></li>
+<li class="toctree-l3"><a class="reference internal" href="uniform-message.html">统一服务消息</a></li>
+<li class="toctree-l3"><a class="reference internal" href="customer-message/index.html">客服消息</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../guide/index.html">运行环境</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../component/index.html">组件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../devtools/index.html">开发工具</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../reference/index.html">参考资料</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../wxcloud/index.html">云开发</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api/index.html">API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api-backend/index.html">服务端开放接口</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../contents.html">wxadev</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../contents.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../index.html">框架开发指南</a> &raquo;</li>
+        
+          <li><a href="index.html">开放能力</a> &raquo;</li>
+        
+      <li>模板消息</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/framework/open-ability/template-message.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="id1">
+<h1>模板消息<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
+<p>微信6.5.2及以上版本支持</p>
+<p>基于微信的通知渠道，我们为开发者提供了可以高效触达用户的模板消息能力，以便实现服务的闭环并提供更佳的体验。</p>
+<p>模板推送位置：服务通知
+模板下发条件：用户本人在微信体系内与页面有交互行为后触发，详见 下发条件说明
+模板跳转能力：点击查看详情仅能跳转下发模板的该帐号的各个页面
+使用说明
+步骤一：获取模板 ID
+有两个方法可以获取模板 ID：</p>
+<p>通过模板消息管理接口获取模板 ID（详见 模板消息管理）
+在微信公众平台手动配置获取模板 ID
+登录 <a class="reference external" href="https://mp.weixin.qq.com">https://mp.weixin.qq.com</a> 获取模板，如果没有合适的模板，可以申请添加新模板，审核通过后可使用，详见 模板审核说明</p>
+<p>步骤二：页面的 &lt;form/&gt; 组件，属性 report-submit 为 true 时，可以声明为需要发送模板消息，此时点击按钮提交表单可以获取 formId，用于发送模板消息。或者当用户完成 支付行为，可以获取 prepay_id 用于发送模板消息。
+步骤三：调用接口下发模板消息（详见 templateMessage.send ）
+使用效果</p>
+<p>模板消息管理
+获取小程序模板库标题列表
+获取模板库某个模板标题下关键词库
+组合模板并添加至帐号下的个人模板库
+获取帐号下已存在的模板列表
+删除帐号下的某个模板
+下发条件说明
+1. 支付
+当用户在小程序内完成过支付行为，可允许开发者向用户在7天内推送有限条数的模板消息（1次支付可下发3条，多次支付下发条数独立，互相不影响）</p>
+<p>2. 提交表单
+当用户在小程序内发生过提交表单行为且该表单声明为要发模板消息的，开发者需要向用户提供服务时，可允许开发者向用户在7天内推送有限条数的模板消息（1次提交表单可下发1条，多次提交下发条数独立，相互不影响）</p>
+<p>审核说明
+1. 标题
+标题不能存在相同
+标题意思不能存在过度相似
+标题必须以“提醒”或“通知”结尾
+标题不能带特殊符号、个性化字词等没有行业通用性的内容
+标题必须能体现具体服务场景
+标题不能涉及营销相关内容，包括不限于：消费优惠类、购物返利类、商品更新类、优惠券类、代金券类、红包类、会员卡类、积分类、活动类等营销倾向通知
+2. 关键词
+同一标题下，关键词不能存在相同
+同一标题下，关键词不能存在过度相似
+关键词不能带特殊符号、个性化字词等没有行业通用性的内容
+关键词内容示例必须与关键词对应匹配
+关键词不能太过宽泛，需要具有限制性，例如：“内容”这个就太宽泛，不能审核通过
+违规说明
+除不能违反运营规范外，还不能违反以下规则，包括但不限于：</p>
+<p>不允许恶意诱导用户进行触发操作，以达到可向用户下发模板目的
+不允许恶意骚扰，下发对用户造成骚扰的模板
+不允许恶意营销，下发营销目的模板
+处罚说明
+根据违规情况给予相应梯度的处罚，一般处罚规则如下：</p>
+<p>第一次违规，删除违规模板以示警告，
+第二次违规，封禁接口7天，
+第三次违规，封禁接口30天，
+第四次违规，永久封禁接口
+处罚结果及原因以站内信形式告知</p>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="uniform-message.html" class="btn btn-neutral float-right" title="统一服务消息" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="launchApp.html" class="btn btn-neutral float-left" title="打开 App" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Nosy
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -1,0 +1,3270 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-CN" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-CN" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>API &mdash; wxadev 1.0.0 文档</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜索" href="../search.html" />
+    <link rel="next" title="boolean wx.canIUse(string schema)" href="wx.canIUse.html" />
+    <link rel="prev" title="定时器" href="../reference/api/timer.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../contents.html" class="icon icon-home"> wxadev
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../dev.html">小程序简介</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../basic/index.html">基础教程</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework/index.html">框架开发指南</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide/index.html">运行环境</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../component/index.html">组件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../devtools/index.html">开发工具</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference/index.html">参考资料</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">API</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id1">基础</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="wx.canIUse.html">boolean wx.canIUse(string schema)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id2">系统</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id3">系统信息</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id4">更新</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#updatemanager">UpdateManager</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id5">小程序</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id6">生命周期</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id7">应用级事件</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id8">调试</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#logmanager">LogManager</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id9">路由</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id10">界面</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id11">交互</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id12">导航栏</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id13">背景</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#tab-bar">Tab Bar</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id14">字体</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id15">下拉刷新</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id16">滚动</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id17">动画</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#animation">Animation</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#id18">置顶</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id19">自定义组件</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id20">菜单</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id21">窗口</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id22">网络</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id23">发起请求</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#requesttask">RequestTask</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id24">下载</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#downloadtask">DownloadTask</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id25">上传</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#uploadtask">UploadTask</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#websocket">WebSocket</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#sockettask">SocketTask</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#mdns">mDNS</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id26">数据缓存</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id27">媒体</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id28">地图</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#mapcontext">MapContext</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#id29">图片</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id30">视频</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#videocontext">VideoContext</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#id31">音频</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#inneraudiocontext">InnerAudioContext</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#audiocontext">AudioContext</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#id32">背景音频</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#backgroundaudiomanager">BackgroundAudioManager</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#id33">实时音视频</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#livepushercontext">LivePusherContext</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#liveplayercontext">LivePlayerContext</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#id34">录音</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#recordermanager">RecorderManager</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#id35">相机</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#cameracontext">CameraContext</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id36">位置</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id37">转发</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id38">画布</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#canvasgradient">CanvasGradient</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#canvascontext">CanvasContext</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id39">文件</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#stats">Stats</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#filesystemmanager">FileSystemManager</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id40">开放接口</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id41">登录</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id42">小程序跳转</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id43">帐号信息</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id44">用户信息</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id45">数据上报</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id46">数据分析</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id47">支付</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id48">授权</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id49">设置</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id50">收货地址</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id51">卡券</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id52">发票</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id53">生物认证</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id54">微信运动</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id55">设备</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#wi-fi">Wi-Fi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ibeacon">iBeacon</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id56">联系人</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id57">低功耗蓝牙</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id58">蓝牙</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id59">电量</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id60">剪贴板</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#nfc">NFC</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id61">网络</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id62">屏幕</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id63">电话</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id64">加速计</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id65">罗盘</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id66">设备方向</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id67">陀螺仪</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id68">性能</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id69">扫码</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id70">振动</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#worker">Worker</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id71">Worker</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id72">第三方平台</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#wxml">WXML</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#selectorquery">SelectorQuery</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#nodesref">NodesRef</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#intersectionobserver">IntersectionObserver</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../api-backend/index.html">服务端开放接口</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../contents.html">wxadev</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../contents.html">Docs</a> &raquo;</li>
+        
+      <li>API</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/api/index.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="api">
+<h1>API<a class="headerlink" href="#api" title="永久链接至标题">¶</a></h1>
+<div class="section" id="id1">
+<h2>基础<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h2>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 18%" />
+<col style="width: 82%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>名称</p></th>
+<th class="head"><p>功能说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>wx.canIUse</p></td>
+<td><p>判断小程序的API，回调，参数，组件等是否在当前版本可用</p></td>
+</tr>
+</tbody>
+</table>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="wx.canIUse.html">boolean wx.canIUse(string schema)</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="id2">
+<h2>系统<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<div class="section" id="id3">
+<h3>系统信息<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h3>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 43%" />
+<col style="width: 57%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>名称</p></th>
+<th class="head"><p>功能说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>wx.getSystemInfoSync
+wx.getSystemInfo</p></td>
+<td><p>wx.getSystemInfo 的同步版本
+获取系统信息</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="id4">
+<h2>更新<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h2>
+<div class="section" id="updatemanager">
+<h3>UpdateManager<a class="headerlink" href="#updatemanager" title="永久链接至标题">¶</a></h3>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 47%" />
+<col style="width: 53%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>名称</p></th>
+<th class="head"><p>功能说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>UpdateManager.applyUpdate</p></td>
+<td><p>强制小程序重启并使用新版本</p></td>
+</tr>
+<tr class="row-odd"><td><p>UpdateManager.onCheckForUpdate</p></td>
+<td><p>监听向微信后台请求检查更新结果事件</p></td>
+</tr>
+<tr class="row-even"><td><p>UpdateManager.onUpdateFailed</p></td>
+<td><p>监听小程序更新失败事件</p></td>
+</tr>
+<tr class="row-odd"><td><p>UpdateManager.onUpdateReady</p></td>
+<td><p>监听小程序有版本更新事件</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="id5">
+<h2>小程序<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h2>
+<div class="section" id="id6">
+<h3>生命周期<a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h3>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 51%" />
+<col style="width: 49%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>名称</p></th>
+<th class="head"><p>功能说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>wx.getLaunchOptionsSync</p></td>
+<td><p>获取小程序启动时的参数</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id7">
+<h3>应用级事件<a class="headerlink" href="#id7" title="永久链接至标题">¶</a></h3>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 39%" />
+<col style="width: 61%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>名称</p></th>
+<th class="head"><p>功能说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>wx.onPageNotFound</p></td>
+<td><p>监听小程序要打开的页面不存在事件</p></td>
+</tr>
+<tr class="row-odd"><td><p>wx.onError</p></td>
+<td><p>监听小程序错误事件</p></td>
+</tr>
+<tr class="row-even"><td><p>wx.onAudioInterruptionEnd</p></td>
+<td><p>监听音频中断结束事件</p></td>
+</tr>
+<tr class="row-odd"><td><p>wx.onAudioInterruptionBegin</p></td>
+<td><p>监听音频因为受到系统占用而被中断开始事件</p></td>
+</tr>
+<tr class="row-even"><td><p>wx.onAppShow</p></td>
+<td><p>监听小程序切前台事件</p></td>
+</tr>
+<tr class="row-odd"><td><p>wx.onAppHide</p></td>
+<td><p>监听小程序切后台事件</p></td>
+</tr>
+<tr class="row-even"><td><p>wx.offPageNotFound</p></td>
+<td><p>取消监听小程序要打开的页面不存在事件</p></td>
+</tr>
+<tr class="row-odd"><td><p>wx.offError</p></td>
+<td><p>取消监听小程序错误事件</p></td>
+</tr>
+<tr class="row-even"><td><p>wx.offAudioInterruptionEnd</p></td>
+<td><p>取消监听音频中断结束事件</p></td>
+</tr>
+<tr class="row-odd"><td><p>wx.offAudioInterruptionBegin</p></td>
+<td><p>取消监听音频因为受到系统占用而被中断开始事件</p></td>
+</tr>
+<tr class="row-even"><td><p>wx.offAppShow</p></td>
+<td><p>取消监听小程序切前台事件</p></td>
+</tr>
+<tr class="row-odd"><td><p>wx.offAppHide</p></td>
+<td><p>取消监听小程序切后台事件</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id8">
+<h3>调试<a class="headerlink" href="#id8" title="永久链接至标题">¶</a></h3>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 46%" />
+<col style="width: 54%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>名称</p></th>
+<th class="head"><p>功能说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>wx.setEnableDebug</p></td>
+<td><p>设置是否打开调试开关</p></td>
+</tr>
+<tr class="row-odd"><td><p>wx.getLogManager</p></td>
+<td><p>获取日志管理器对象</p></td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="logmanager">
+<h4>LogManager<a class="headerlink" href="#logmanager" title="永久链接至标题">¶</a></h4>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 55%" />
+<col style="width: 45%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>名称</p></th>
+<th class="head"><p>功能说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>LogManager.debug</p></td>
+<td><p>写 debug 日志</p></td>
+</tr>
+<tr class="row-odd"><td><p>LogManager.info</p></td>
+<td><p>写 info 日志</p></td>
+</tr>
+<tr class="row-even"><td><p>LogManager.log</p></td>
+<td><p>写 log 日志</p></td>
+</tr>
+<tr class="row-odd"><td><p>LogManager.warn</p></td>
+<td><p>写 warn 日志</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="section" id="id9">
+<h2>路由<a class="headerlink" href="#id9" title="永久链接至标题">¶</a></h2>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 75%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>名称</p></th>
+<th class="head"><p>功能说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>wx.switchTab</p></td>
+<td><p>跳转到 tabBar 页面，并关闭其他所有非 tabBar 页面</p></td>
+</tr>
+<tr class="row-odd"><td><p>wx.reLaunch</p></td>
+<td><p>关闭所有页面，打开到应用内的某个页面</p></td>
+</tr>
+<tr class="row-even"><td><p>wx.redirectTo</p></td>
+<td><p>关闭当前页面，跳转到应用内的某个页面</p></td>
+</tr>
+<tr class="row-odd"><td><p>wx.navigateTo</p></td>
+<td><p>保留当前页面，跳转到应用内的某个页面</p></td>
+</tr>
+<tr class="row-even"><td><p>wx.navigateBack</p></td>
+<td><p>关闭当前页面，返回上一页面或多级页面</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id10">
+<h2>界面<a class="headerlink" href="#id10" title="永久链接至标题">¶</a></h2>
+<div class="section" id="id11">
+<h3>交互<a class="headerlink" href="#id11" title="永久链接至标题">¶</a></h3>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 49%" />
+<col style="width: 51%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>名称</p></th>
+<th class="head"><p>功能说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>wx.showToast</p></td>
+<td><p>显示消息提示框</p></td>
+</tr>
+<tr class="row-odd"><td><p>wx.showModal</p></td>
+<td><p>显示模态对话框</p></td>
+</tr>
+<tr class="row-even"><td><p>wx.showLoading</p></td>
+<td><p>显示 loading 提示框</p></td>
+</tr>
+<tr class="row-odd"><td><p>wx.showActionSheet</p></td>
+<td><p>显示操作菜单</p></td>
+</tr>
+<tr class="row-even"><td><p>wx.hideToast</p></td>
+<td><p>隐藏消息提示框</p></td>
+</tr>
+<tr class="row-odd"><td><p>wx.hideLoading</p></td>
+<td><p>隐藏 loading 提示框</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id12">
+<h3>导航栏<a class="headerlink" href="#id12" title="永久链接至标题">¶</a></h3>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 49%" />
+<col style="width: 51%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>名称</p></th>
+<th class="head"><p>功能说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>wx.showNavigationBarLoading</p></td>
+<td><p>在当前页面显示导航条加载动画</p></td>
+</tr>
+<tr class="row-odd"><td><p>wx.setNavigationBarTitle</p></td>
+<td><p>动态设置当前页面的标题</p></td>
+</tr>
+<tr class="row-even"><td><p>wx.setNavigationBarColor</p></td>
+<td><p>设置页面导航条颜色</p></td>
+</tr>
+<tr class="row-odd"><td><p>wx.hideNavigationBarLoading</p></td>
+<td><p>在当前页面隐藏导航条加载动画</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id13">
+<h3>背景<a class="headerlink" href="#id13" title="永久链接至标题">¶</a></h3>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 40%" />
+<col style="width: 60%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>名称</p></th>
+<th class="head"><p>功能说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>wx.setBackgroundTextStyle</p></td>
+<td><p>动态设置下拉背景字体、loading 图的样式</p></td>
+</tr>
+<tr class="row-odd"><td><p>wx.setBackgroundColor</p></td>
+<td><p>动态设置窗口的背景色</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="tab-bar">
+<h3>Tab Bar<a class="headerlink" href="#tab-bar" title="永久链接至标题">¶</a></h3>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 39%" />
+<col style="width: 61%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>名称</p></th>
+<th class="head"><p>功能说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>wx.showTabBarRedDot</p></td>
+<td><p>显示 tabBar 某一项的右上角的红点</p></td>
+</tr>
+<tr class="row-odd"><td><p>wx.showTabBar</p></td>
+<td><p>显示 tabBar</p></td>
+</tr>
+<tr class="row-even"><td><p>wx.setTabBarStyle</p></td>
+<td><p>动态设置 tabBar 的整体样式</p></td>
+</tr>
+<tr class="row-odd"><td><p>wx.setTabBarItem</p></td>
+<td><p>动态设置 tabBar 某一项的内容</p></td>
+</tr>
+<tr class="row-even"><td><p>wx.setTabBarBadge</p></td>
+<td><p>为 tabBar 某一项的右上角添加文本</p></td>
+</tr>
+<tr class="row-odd"><td><p>wx.removeTabBarBadge</p></td>
+<td><p>移除 tabBar 某一项右上角的文本</p></td>
+</tr>
+<tr class="row-even"><td><p>wx.hideTabBarRedDot</p></td>
+<td><p>隐藏 tabBar 某一项的右上角的红点</p></td>
+</tr>
+<tr class="row-odd"><td><p>wx.hideTabBar</p></td>
+<td><p>隐藏 tabBar</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id14">
+<h3>字体<a class="headerlink" href="#id14" title="永久链接至标题">¶</a></h3>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 49%" />
+<col style="width: 51%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>名称</p></th>
+<th class="head"><p>功能说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>wx.loadFontFace</p></td>
+<td><p>动态加载网络字体</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id15">
+<h3>下拉刷新<a class="headerlink" href="#id15" title="永久链接至标题">¶</a></h3>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 53%" />
+<col style="width: 47%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>名称</p></th>
+<th class="head"><p>功能说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>wx.stopPullDownRefresh</p></td>
+<td><p>停止当前页面下拉刷新</p></td>
+</tr>
+<tr class="row-odd"><td><p>wx.startPullDownRefresh</p></td>
+<td><p>开始下拉刷新</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id16">
+<h3>滚动<a class="headerlink" href="#id16" title="永久链接至标题">¶</a></h3>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 44%" />
+<col style="width: 56%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>名称</p></th>
+<th class="head"><p>功能说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>wx.pageScrollTo</p></td>
+<td><p>将页面滚动到目标位置</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id17">
+<h3>动画<a class="headerlink" href="#id17" title="永久链接至标题">¶</a></h3>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 42%" />
+<col style="width: 58%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>名称</p></th>
+<th class="head"><p>功能说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>wx.createAnimation</p></td>
+<td><p>创建一个动画实例 animation</p></td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="animation">
+<h4>Animation<a class="headerlink" href="#animation" title="永久链接至标题">¶</a></h4>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 46%" />
+<col style="width: 54%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>名称</p></th>
+<th class="head"><p>功能说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Animation.translateZ</p></td>
+<td><p>对 Z 轴平移</p></td>
+</tr>
+<tr class="row-odd"><td><p>Animation.translateY</p></td>
+<td><p>对 Y 轴平移</p></td>
+</tr>
+<tr class="row-even"><td><p>Animation.translateX</p></td>
+<td><p>对 X 轴平移</p></td>
+</tr>
+<tr class="row-odd"><td><p>Animation.translate3d</p></td>
+<td><p>对 xyz 坐标进行平移变换</p></td>
+</tr>
+<tr class="row-even"><td><p>Animation.translate</p></td>
+<td><p>平移变换</p></td>
+</tr>
+<tr class="row-odd"><td><p>Animation.top</p></td>
+<td><p>设置 top 值</p></td>
+</tr>
+<tr class="row-even"><td><p>Animation.step</p></td>
+<td><p>表示一组动画完成</p></td>
+</tr>
+<tr class="row-odd"><td><p>Animation.skewY</p></td>
+<td><p>对 Y 轴坐标进行倾斜</p></td>
+</tr>
+<tr class="row-even"><td><p>Animation.skewX</p></td>
+<td><p>对 X 轴坐标进行倾斜</p></td>
+</tr>
+<tr class="row-odd"><td><p>Animation.skew</p></td>
+<td><p>对 X、Y 轴坐标进行倾斜</p></td>
+</tr>
+<tr class="row-even"><td><p>Animation.scaleZ</p></td>
+<td><p>缩放 Z 轴</p></td>
+</tr>
+<tr class="row-odd"><td><p>Animation.scaleY</p></td>
+<td><p>缩放 Y 轴</p></td>
+</tr>
+<tr class="row-even"><td><p>Animation.scaleX</p></td>
+<td><p>缩放 X 轴</p></td>
+</tr>
+<tr class="row-odd"><td><p>Animation.scale3d</p></td>
+<td><p>缩放</p></td>
+</tr>
+<tr class="row-even"><td><p>Animation.scale</p></td>
+<td><p>缩放</p></td>
+</tr>
+<tr class="row-odd"><td><p>Animation.rotateZ</p></td>
+<td><p>从 Z 轴顺时针旋转一个角度</p></td>
+</tr>
+<tr class="row-even"><td><p>Animation.rotateY</p></td>
+<td><p>从 Y 轴顺时针旋转一个角度</p></td>
+</tr>
+<tr class="row-odd"><td><p>Animation.rotateX</p></td>
+<td><p>从 X 轴顺时针旋转一个角度</p></td>
+</tr>
+<tr class="row-even"><td><p>Animation.rotate3d</p></td>
+<td><p>从 X 轴顺时针旋转一个角度</p></td>
+</tr>
+<tr class="row-odd"><td><p>Animation.rotate</p></td>
+<td><p>从原点顺时针旋转一个角度</p></td>
+</tr>
+<tr class="row-even"><td><p>Animation.right</p></td>
+<td><p>设置 right 值</p></td>
+</tr>
+<tr class="row-odd"><td><p>Animation.opacity</p></td>
+<td><p>设置透明度</p></td>
+</tr>
+<tr class="row-even"><td><p>Animation.matrix3d</p></td>
+<td><p>同 transform-function matrix3d</p></td>
+</tr>
+<tr class="row-odd"><td><p>Animation.matrix</p></td>
+<td><p>同 transform-function matrix</p></td>
+</tr>
+<tr class="row-even"><td><p>Animation.backgroundColor</p></td>
+<td><p>设置背景色</p></td>
+</tr>
+<tr class="row-odd"><td><p>Animation.left</p></td>
+<td><p>设置 left 值</p></td>
+</tr>
+<tr class="row-even"><td><p>Animation.height</p></td>
+<td><p>设置高度</p></td>
+</tr>
+<tr class="row-odd"><td><p>Animation.width</p></td>
+<td><p>设置宽度</p></td>
+</tr>
+<tr class="row-even"><td><p>Animation.export</p></td>
+<td><p>导出动画队列</p></td>
+</tr>
+<tr class="row-odd"><td><p>Animation.bottom</p></td>
+<td><p>设置 bottom 值</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="id18">
+<h3>置顶<a class="headerlink" href="#id18" title="永久链接至标题">¶</a></h3>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 43%" />
+<col style="width: 57%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>名称</p></th>
+<th class="head"><p>功能说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>wx.setTopBarText</p></td>
+<td><p>动态设置置顶栏文字内容</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id19">
+<h3>自定义组件<a class="headerlink" href="#id19" title="永久链接至标题">¶</a></h3>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 27%" />
+<col style="width: 73%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>名称</p></th>
+<th class="head"><p>功能说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>wx.nextTick</p></td>
+<td><p>延迟一部分操作到下一个时间片再执行</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id20">
+<h3>菜单<a class="headerlink" href="#id20" title="永久链接至标题">¶</a></h3>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 44%" />
+<col style="width: 56%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>名称</p></th>
+<th class="head"><p>功能说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>wx.getMenuButtonBoundingClientRect</p></td>
+<td><p>获取菜单按钮（右上角胶囊按钮）的布局位置信息</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id21">
+<h3>窗口<a class="headerlink" href="#id21" title="永久链接至标题">¶</a></h3>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 43%" />
+<col style="width: 57%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>名称</p></th>
+<th class="head"><p>功能说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>wx.onWindowResize</p></td>
+<td><p>监听窗口尺寸变化事件</p></td>
+</tr>
+<tr class="row-odd"><td><p>wx.offWindowResize</p></td>
+<td><p>取消监听窗口尺寸变化事件</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="id22">
+<h2>网络<a class="headerlink" href="#id22" title="永久链接至标题">¶</a></h2>
+<div class="section" id="id23">
+<h3>发起请求<a class="headerlink" href="#id23" title="永久链接至标题">¶</a></h3>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 36%" />
+<col style="width: 64%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>名称</p></th>
+<th class="head"><p>功能说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>wx.request</p></td>
+<td><p>发起 HTTPS 网络请求</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="requesttask">
+<h3>RequestTask<a class="headerlink" href="#requesttask" title="永久链接至标题">¶</a></h3>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 47%" />
+<col style="width: 53%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>名称</p></th>
+<th class="head"><p>功能说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>RequestTask.abort</p></td>
+<td><p>中断请求任务</p></td>
+</tr>
+<tr class="row-odd"><td><p>RequestTask.offHeadersReceived</p></td>
+<td><p>取消监听 HTTP Response Header 事件</p></td>
+</tr>
+<tr class="row-even"><td><p>RequestTask.onHeadersReceived</p></td>
+<td><p>监听 HTTP Response Header 事件</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id24">
+<h3>下载<a class="headerlink" href="#id24" title="永久链接至标题">¶</a></h3>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 46%" />
+<col style="width: 54%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>名称</p></th>
+<th class="head"><p>功能说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>wx.downloadFile</p></td>
+<td><p>下载文件资源到本地</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="downloadtask">
+<h3>DownloadTask<a class="headerlink" href="#downloadtask" title="永久链接至标题">¶</a></h3>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 48%" />
+<col style="width: 52%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>名称</p></th>
+<th class="head"><p>功能说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>DownloadTask.abort</p></td>
+<td><p>中断下载任务</p></td>
+</tr>
+<tr class="row-odd"><td><p>DownloadTask.offHeadersReceived</p></td>
+<td><p>取消监听 HTTP Response Header 事件</p></td>
+</tr>
+<tr class="row-even"><td><p>DownloadTask.offProgressUpdate</p></td>
+<td><p>取消监听下载进度变化事件</p></td>
+</tr>
+<tr class="row-odd"><td><p>DownloadTask.onHeadersReceived</p></td>
+<td><p>监听 HTTP Response Header 事件</p></td>
+</tr>
+<tr class="row-even"><td><p>DownloadTask.onProgressUpdate</p></td>
+<td><p>监听下载进度变化事件</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id25">
+<h3>上传<a class="headerlink" href="#id25" title="永久链接至标题">¶</a></h3>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 38%" />
+<col style="width: 62%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>名称</p></th>
+<th class="head"><p>功能说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>wx.uploadFile</p></td>
+<td><p>将本地资源上传到服务器</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="uploadtask">
+<h3>UploadTask<a class="headerlink" href="#uploadtask" title="永久链接至标题">¶</a></h3>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 46%" />
+<col style="width: 54%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>名称</p></th>
+<th class="head"><p>功能说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>UploadTask.abort</p></td>
+<td><p>中断上传任务</p></td>
+</tr>
+<tr class="row-odd"><td><p>UploadTask.offHeadersReceived</p></td>
+<td><p>取消监听 HTTP Response Header 事件</p></td>
+</tr>
+<tr class="row-even"><td><p>UploadTask.offProgressUpdate</p></td>
+<td><p>取消监听上传进度变化事件</p></td>
+</tr>
+<tr class="row-odd"><td><p>UploadTask.onHeadersReceived</p></td>
+<td><p>监听 HTTP Response Header 事件</p></td>
+</tr>
+<tr class="row-even"><td><p>UploadTask.onProgressUpdate</p></td>
+<td><p>监听上传进度变化事件</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="websocket">
+<h3>WebSocket<a class="headerlink" href="#websocket" title="永久链接至标题">¶</a></h3>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 36%" />
+<col style="width: 64%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>名称</p></th>
+<th class="head"><p>功能说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>wx.sendSocketMessage</p></td>
+<td><p>通过 WebSocket 连接发送数据</p></td>
+</tr>
+<tr class="row-odd"><td><p>wx.onSocketOpen</p></td>
+<td><p>监听 WebSocket 连接打开事件</p></td>
+</tr>
+<tr class="row-even"><td><p>wx.onSocketMessage</p></td>
+<td><p>监听 WebSocket 接受到服务器的消息事件</p></td>
+</tr>
+<tr class="row-odd"><td><p>wx.onSocketError</p></td>
+<td><p>监听 WebSocket 错误事件</p></td>
+</tr>
+<tr class="row-even"><td><p>wx.onSocketClose</p></td>
+<td><p>监听 WebSocket 连接关闭事件</p></td>
+</tr>
+<tr class="row-odd"><td><p>wx.connectSocket</p></td>
+<td><p>创建一个 WebSocket 连接</p></td>
+</tr>
+<tr class="row-even"><td><p>wx.closeSocket</p></td>
+<td><p>关闭 WebSocket 连接</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="sockettask">
+<h3>SocketTask<a class="headerlink" href="#sockettask" title="永久链接至标题">¶</a></h3>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 36%" />
+<col style="width: 64%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>名称</p></th>
+<th class="head"><p>功能说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>SocketTask.close</p></td>
+<td><p>关闭 WebSocket 连接</p></td>
+</tr>
+<tr class="row-odd"><td><p>SocketTask.onClose</p></td>
+<td><p>监听 WebSocket 连接关闭事件</p></td>
+</tr>
+<tr class="row-even"><td><p>SocketTask.onError</p></td>
+<td><p>监听 WebSocket 错误事件</p></td>
+</tr>
+<tr class="row-odd"><td><p>SocketTask.onMessage</p></td>
+<td><p>监听 WebSocket 接受到服务器的消息事件</p></td>
+</tr>
+<tr class="row-even"><td><p>SocketTask.onOpen</p></td>
+<td><p>监听 WebSocket 连接打开事件</p></td>
+</tr>
+<tr class="row-odd"><td><p>SocketTask.send</p></td>
+<td><p>通过 WebSocket 连接发送数据</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="mdns">
+<h3>mDNS<a class="headerlink" href="#mdns" title="永久链接至标题">¶</a></h3>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 49%" />
+<col style="width: 51%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>名称</p></th>
+<th class="head"><p>功能说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>wx.stopLocalServiceDiscovery</p></td>
+<td><p>停止搜索 mDNS 服务</p></td>
+</tr>
+<tr class="row-odd"><td><p>wx.startLocalServiceDiscovery</p></td>
+<td><p>开始搜索局域网下的 mDNS 服务</p></td>
+</tr>
+<tr class="row-even"><td><p>wx.onLocalServiceResolveFail</p></td>
+<td><p>监听 mDNS 服务解析失败的事件</p></td>
+</tr>
+<tr class="row-odd"><td><p>wx.onLocalServiceLost</p></td>
+<td><p>监听 mDNS 服务离开的事件</p></td>
+</tr>
+<tr class="row-even"><td><p>wx.onLocalServiceFound</p></td>
+<td><p>监听 mDNS 服务发现的事件</p></td>
+</tr>
+<tr class="row-odd"><td><p>wx.onLocalServiceDiscoveryStop</p></td>
+<td><p>监听 mDNS 服务停止搜索的事件</p></td>
+</tr>
+<tr class="row-even"><td><p>wx.offLocalServiceResolveFail</p></td>
+<td><p>取消监听 mDNS 服务解析失败的事件</p></td>
+</tr>
+<tr class="row-odd"><td><p>wx.offLocalServiceLost</p></td>
+<td><p>取消监听 mDNS 服务离开的事件</p></td>
+</tr>
+<tr class="row-even"><td><p>wx.offLocalServiceFound</p></td>
+<td><p>取消监听 mDNS 服务发现的事件</p></td>
+</tr>
+<tr class="row-odd"><td><p>wx.offLocalServiceDiscoveryStop</p></td>
+<td><p>取消监听 mDNS 服务停止搜索的事件</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="id26">
+<h2>数据缓存<a class="headerlink" href="#id26" title="永久链接至标题">¶</a></h2>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 38%" />
+<col style="width: 62%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>名称</p></th>
+<th class="head"><p>功能说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>wx.setStorageSync</p></td>
+<td><p>wx.setStorage 的同步版本</p></td>
+</tr>
+<tr class="row-odd"><td><p>wx.setStorage</p></td>
+<td><p>将数据存储在本地缓存中指定的 key 中</p></td>
+</tr>
+<tr class="row-even"><td><p>wx.removeStorageSync</p></td>
+<td><p>wx.removeStorage 的同步版本</p></td>
+</tr>
+<tr class="row-odd"><td><p>wx.removeStorage</p></td>
+<td><p>从本地缓存中移除指定 key</p></td>
+</tr>
+<tr class="row-even"><td><p>wx.getStorageSync</p></td>
+<td><p>wx.getStorage 的同步版本</p></td>
+</tr>
+<tr class="row-odd"><td><p>wx.getStorageInfoSync</p></td>
+<td><p>wx.getStorageInfo 的同步版本</p></td>
+</tr>
+<tr class="row-even"><td><p>wx.getStorageInfo</p></td>
+<td><p>异步获取当前storage的相关信息</p></td>
+</tr>
+<tr class="row-odd"><td><p>wx.getStorage</p></td>
+<td><p>从本地缓存中异步获取指定 key 的内容</p></td>
+</tr>
+<tr class="row-even"><td><p>wx.clearStorageSync</p></td>
+<td><p>wx.clearStorage 的同步版本</p></td>
+</tr>
+<tr class="row-odd"><td><p>wx.clearStorage</p></td>
+<td><p>清理本地数据缓存</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id27">
+<h2>媒体<a class="headerlink" href="#id27" title="永久链接至标题">¶</a></h2>
+<div class="section" id="id28">
+<h3>地图<a class="headerlink" href="#id28" title="永久链接至标题">¶</a></h3>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 39%" />
+<col style="width: 61%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>名称</p></th>
+<th class="head"><p>功能说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>wx.createMapContext</p></td>
+<td><p>创建 map 上下文 MapContext 对象</p></td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="mapcontext">
+<h4>MapContext<a class="headerlink" href="#mapcontext" title="永久链接至标题">¶</a></h4>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 52%" />
+<col style="width: 48%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>名称</p></th>
+<th class="head"><p>功能说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>MapContext.getCenterLocation</p></td>
+<td><p>获取当前地图中心的经纬度</p></td>
+</tr>
+<tr class="row-odd"><td><p>MapContext.getRegion</p></td>
+<td><p>获取当前地图的视野范围</p></td>
+</tr>
+<tr class="row-even"><td><p>MapContext.getScale</p></td>
+<td><p>获取当前地图的缩放级别</p></td>
+</tr>
+<tr class="row-odd"><td><p>MapContext.includePoints</p></td>
+<td><p>缩放视野展示所有经纬度</p></td>
+</tr>
+<tr class="row-even"><td><p>MapContext.moveToLocation</p></td>
+<td><p>将地图中心移动到当前定位点</p></td>
+</tr>
+<tr class="row-odd"><td><p>MapContext.translateMarker</p></td>
+<td><p>平移marker，带动画</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="id29">
+<h3>图片<a class="headerlink" href="#id29" title="永久链接至标题">¶</a></h3>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 44%" />
+<col style="width: 56%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>名称</p></th>
+<th class="head"><p>功能说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>wx.saveImageToPhotosAlbum</p></td>
+<td><p>保存图片到系统相册</p></td>
+</tr>
+<tr class="row-odd"><td><p>wx.previewImage</p></td>
+<td><p>在新页面中全屏预览图片</p></td>
+</tr>
+<tr class="row-even"><td><p>wx.getImageInfo</p></td>
+<td><p>获取图片信息</p></td>
+</tr>
+<tr class="row-odd"><td><p>wx.compressImage</p></td>
+<td><p>压缩图片接口，可选压缩质量</p></td>
+</tr>
+<tr class="row-even"><td><p>wx.chooseMessageFile</p></td>
+<td><p>从客户端会话选择文件</p></td>
+</tr>
+<tr class="row-odd"><td><p>wx.chooseImage</p></td>
+<td><p>从本地相册选择图片或使用相机拍照</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id30">
+<h3>视频<a class="headerlink" href="#id30" title="永久链接至标题">¶</a></h3>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 42%" />
+<col style="width: 58%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>名称</p></th>
+<th class="head"><p>功能说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>wx.saveVideoToPhotosAlbum</p></td>
+<td><p>保存视频到系统相册</p></td>
+</tr>
+<tr class="row-odd"><td><p>wx.createVideoContext</p></td>
+<td><p>创建 video 上下文 VideoContext 对象</p></td>
+</tr>
+<tr class="row-even"><td><p>wx.chooseVideo</p></td>
+<td><p>拍摄视频或从手机相册中选视频</p></td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="videocontext">
+<h4>VideoContext<a class="headerlink" href="#videocontext" title="永久链接至标题">¶</a></h4>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 51%" />
+<col style="width: 49%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>名称</p></th>
+<th class="head"><p>功能说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>VideoContext.seek</p></td>
+<td><p>跳转到指定位置</p></td>
+</tr>
+<tr class="row-odd"><td><p>VideoContext.exitFullScreen</p></td>
+<td><p>退出全屏</p></td>
+</tr>
+<tr class="row-even"><td><p>VideoContext.hideStatusBar</p></td>
+<td><p>隐藏状态栏，仅在iOS全屏下有效</p></td>
+</tr>
+<tr class="row-odd"><td><p>VideoContext.pause</p></td>
+<td><p>暂停视频</p></td>
+</tr>
+<tr class="row-even"><td><p>VideoContext.play</p></td>
+<td><p>播放视频</p></td>
+</tr>
+<tr class="row-odd"><td><p>VideoContext.playbackRate</p></td>
+<td><p>设置倍速播放</p></td>
+</tr>
+<tr class="row-even"><td><p>VideoContext.requestFullScreen</p></td>
+<td><p>进入全屏</p></td>
+</tr>
+<tr class="row-odd"><td><p>VideoContext.sendDanmu</p></td>
+<td><p>发送弹幕</p></td>
+</tr>
+<tr class="row-even"><td><p>VideoContext.showStatusBar</p></td>
+<td><p>显示状态栏，仅在iOS全屏下有效</p></td>
+</tr>
+<tr class="row-odd"><td><p>VideoContext.stop</p></td>
+<td><p>停止视频</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="id31">
+<h3>音频<a class="headerlink" href="#id31" title="永久链接至标题">¶</a></h3>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 39%" />
+<col style="width: 61%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>名称</p></th>
+<th class="head"><p>功能说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>wx.stopVoice</p></td>
+<td><p>结束播放语音</p></td>
+</tr>
+<tr class="row-odd"><td><p>wx.setInnerAudioOption</p></td>
+<td><p>设置 InnerAudioContext 的播放选项</p></td>
+</tr>
+<tr class="row-even"><td><p>wx.playVoice</p></td>
+<td><p>开始播放语音</p></td>
+</tr>
+<tr class="row-odd"><td><p>wx.pauseVoice</p></td>
+<td><p>暂停正在播放的语音</p></td>
+</tr>
+<tr class="row-even"><td><p>wx.getAvailableAudioSources</p></td>
+<td><p>获取当前支持的音频输入源</p></td>
+</tr>
+<tr class="row-odd"><td><p>wx.createInnerAudioContext</p></td>
+<td><p>创建内部 audio 上下文 InnerAudioContext 对象</p></td>
+</tr>
+<tr class="row-even"><td><p>wx.createAudioContext</p></td>
+<td><p>创建 audio 上下文 AudioContext 对象</p></td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="inneraudiocontext">
+<h4>InnerAudioContext<a class="headerlink" href="#inneraudiocontext" title="永久链接至标题">¶</a></h4>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 48%" />
+<col style="width: 52%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>名称</p></th>
+<th class="head"><p>功能说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>InnerAudioContext.destroy</p></td>
+<td><p>销毁当前实例</p></td>
+</tr>
+<tr class="row-odd"><td><p>InnerAudioContext.offCanplay</p></td>
+<td><p>取消监听音频进入可以播放状态的事件</p></td>
+</tr>
+<tr class="row-even"><td><p>InnerAudioContext.offEnded</p></td>
+<td><p>取消监听音频自然播放至结束的事件</p></td>
+</tr>
+<tr class="row-odd"><td><p>InnerAudioContext.offError</p></td>
+<td><p>取消监听音频播放错误事件</p></td>
+</tr>
+<tr class="row-even"><td><p>InnerAudioContext.offPause</p></td>
+<td><p>取消监听音频暂停事件</p></td>
+</tr>
+<tr class="row-odd"><td><p>InnerAudioContext.offPlay</p></td>
+<td><p>取消监听音频播放事件</p></td>
+</tr>
+<tr class="row-even"><td><p>InnerAudioContext.offSeeked</p></td>
+<td><p>取消监听音频完成跳转操作的事件</p></td>
+</tr>
+<tr class="row-odd"><td><p>InnerAudioContext.offSeeking</p></td>
+<td><p>取消监听音频进行跳转操作的事件</p></td>
+</tr>
+<tr class="row-even"><td><p>InnerAudioContext.offStop</p></td>
+<td><p>取消监听音频停止事件</p></td>
+</tr>
+<tr class="row-odd"><td><p>InnerAudioContext.offTimeUpdate</p></td>
+<td><p>取消监听音频播放进度更新事件</p></td>
+</tr>
+<tr class="row-even"><td><p>InnerAudioContext.offWaiting</p></td>
+<td><p>取消监听音频加载中事件</p></td>
+</tr>
+<tr class="row-odd"><td><p>InnerAudioContext.onCanplay</p></td>
+<td><p>监听音频进入可以播放状态的事件</p></td>
+</tr>
+<tr class="row-even"><td><p>InnerAudioContext.onEnded</p></td>
+<td><p>监听音频自然播放至结束的事件</p></td>
+</tr>
+<tr class="row-odd"><td><p>InnerAudioContext.onError</p></td>
+<td><p>监听音频播放错误事件</p></td>
+</tr>
+<tr class="row-even"><td><p>InnerAudioContext.onPause</p></td>
+<td><p>监听音频暂停事件</p></td>
+</tr>
+<tr class="row-odd"><td><p>InnerAudioContext.onPlay</p></td>
+<td><p>监听音频播放事件</p></td>
+</tr>
+<tr class="row-even"><td><p>InnerAudioContext.onSeeked</p></td>
+<td><p>监听音频完成跳转操作的事件</p></td>
+</tr>
+<tr class="row-odd"><td><p>InnerAudioContext.onSeeking</p></td>
+<td><p>监听音频进行跳转操作的事件</p></td>
+</tr>
+<tr class="row-even"><td><p>InnerAudioContext.onStop</p></td>
+<td><p>监听音频停止事件</p></td>
+</tr>
+<tr class="row-odd"><td><p>InnerAudioContext.onTimeUpdate</p></td>
+<td><p>监听音频播放进度更新事件</p></td>
+</tr>
+<tr class="row-even"><td><p>InnerAudioContext.onWaiting</p></td>
+<td><p>监听音频加载中事件</p></td>
+</tr>
+<tr class="row-odd"><td><p>InnerAudioContext.pause</p></td>
+<td><p>暂停</p></td>
+</tr>
+<tr class="row-even"><td><p>InnerAudioContext.play</p></td>
+<td><p>播放</p></td>
+</tr>
+<tr class="row-odd"><td><p>InnerAudioContext.seek</p></td>
+<td><p>跳转到指定位置</p></td>
+</tr>
+<tr class="row-even"><td><p>InnerAudioContext.stop</p></td>
+<td><p>停止</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="audiocontext">
+<h4>AudioContext<a class="headerlink" href="#audiocontext" title="永久链接至标题">¶</a></h4>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 57%" />
+<col style="width: 43%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>名称</p></th>
+<th class="head"><p>功能说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>AudioContext.pause</p></td>
+<td><p>暂停音频</p></td>
+</tr>
+<tr class="row-odd"><td><p>AudioContext.play</p></td>
+<td><p>播放音频</p></td>
+</tr>
+<tr class="row-even"><td><p>AudioContext.seek</p></td>
+<td><p>跳转到指定位置</p></td>
+</tr>
+<tr class="row-odd"><td><p>AudioContext.setSrc</p></td>
+<td><p>设置音频地址</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="id32">
+<h3>背景音频<a class="headerlink" href="#id32" title="永久链接至标题">¶</a></h3>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 53%" />
+<col style="width: 47%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>名称</p></th>
+<th class="head"><p>功能说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>wx.stopBackgroundAudio</p></td>
+<td><p>停止播放音乐</p></td>
+</tr>
+<tr class="row-odd"><td><p>wx.seekBackgroundAudio</p></td>
+<td><p>控制音乐播放进度</p></td>
+</tr>
+<tr class="row-even"><td><p>wx.playBackgroundAudio</p></td>
+<td><p>使用后台播放器播放音乐</p></td>
+</tr>
+<tr class="row-odd"><td><p>wx.pauseBackgroundAudio</p></td>
+<td><p>暂停播放音乐</p></td>
+</tr>
+<tr class="row-even"><td><p>wx.onBackgroundAudioStop</p></td>
+<td><p>监听音乐停止事件</p></td>
+</tr>
+<tr class="row-odd"><td><p>wx.onBackgroundAudioPlay</p></td>
+<td><p>监听音乐播放事件</p></td>
+</tr>
+<tr class="row-even"><td><p>wx.onBackgroundAudioPause</p></td>
+<td><p>监听音乐暂停事件</p></td>
+</tr>
+<tr class="row-odd"><td><p>wx.getBackgroundAudioPlayerState</p></td>
+<td><p>获取后台音乐播放状态</p></td>
+</tr>
+<tr class="row-even"><td><p>wx.getBackgroundAudioManager</p></td>
+<td><p>获取全局唯一的背景音频管理器</p></td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="backgroundaudiomanager">
+<h4>BackgroundAudioManager<a class="headerlink" href="#backgroundaudiomanager" title="永久链接至标题">¶</a></h4>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 42%" />
+<col style="width: 58%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>名称</p></th>
+<th class="head"><p>功能说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>BackgroundAudioManager.onCanplay</p></td>
+<td><p>监听背景音频进入可播放状态事件</p></td>
+</tr>
+<tr class="row-odd"><td><p>BackgroundAudioManager.onEnded</p></td>
+<td><p>监听背景音频自然播放结束事件</p></td>
+</tr>
+<tr class="row-even"><td><p>BackgroundAudioManager.onError</p></td>
+<td><p>监听背景音频播放错误事件</p></td>
+</tr>
+<tr class="row-odd"><td><p>BackgroundAudioManager.onNext</p></td>
+<td><p>监听用户在系统音乐播放面板点击下一曲事件（仅iOS）</p></td>
+</tr>
+<tr class="row-even"><td><p>BackgroundAudioManager.onPause</p></td>
+<td><p>监听背景音频暂停事件</p></td>
+</tr>
+<tr class="row-odd"><td><p>BackgroundAudioManager.onPlay</p></td>
+<td><p>监听背景音频播放事件</p></td>
+</tr>
+<tr class="row-even"><td><p>BackgroundAudioManager.onPrev</p></td>
+<td><p>监听用户在系统音乐播放面板点击上一曲事件（仅iOS）</p></td>
+</tr>
+<tr class="row-odd"><td><p>BackgroundAudioManager.onSeeked</p></td>
+<td><p>监听背景音频完成跳转操作事件</p></td>
+</tr>
+<tr class="row-even"><td><p>BackgroundAudioManager.onSeeking</p></td>
+<td><p>监听背景音频开始跳转操作事件</p></td>
+</tr>
+<tr class="row-odd"><td><p>BackgroundAudioManager.onStop</p></td>
+<td><p>监听背景音频停止事件</p></td>
+</tr>
+<tr class="row-even"><td><p>BackgroundAudioManager.onTimeUpdate</p></td>
+<td><p>监听背景音频播放进度更新事件</p></td>
+</tr>
+<tr class="row-odd"><td><p>BackgroundAudioManager.onWaiting</p></td>
+<td><p>监听音频加载中事件</p></td>
+</tr>
+<tr class="row-even"><td><p>BackgroundAudioManager.pause</p></td>
+<td><p>暂停音乐</p></td>
+</tr>
+<tr class="row-odd"><td><p>BackgroundAudioManager.play</p></td>
+<td><p>播放音乐</p></td>
+</tr>
+<tr class="row-even"><td><p>BackgroundAudioManager.seek</p></td>
+<td><p>跳转到指定位置</p></td>
+</tr>
+<tr class="row-odd"><td><p>BackgroundAudioManager.stop</p></td>
+<td><p>停止音乐</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="id33">
+<h3>实时音视频<a class="headerlink" href="#id33" title="永久链接至标题">¶</a></h3>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 37%" />
+<col style="width: 63%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>名称</p></th>
+<th class="head"><p>功能说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>wx.createLivePusherContext</p></td>
+<td><p>创建 live-pusher 上下文 LivePusherContext 对象</p></td>
+</tr>
+<tr class="row-odd"><td><p>wx.createLivePlayerContext</p></td>
+<td><p>创建 live-player 上下文 LivePlayerContext 对象</p></td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="livepushercontext">
+<h4>LivePusherContext<a class="headerlink" href="#livepushercontext" title="永久链接至标题">¶</a></h4>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 67%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>名称</p></th>
+<th class="head"><p>功能说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>LivePusherContext.pause</p></td>
+<td><p>暂停推流</p></td>
+</tr>
+<tr class="row-odd"><td><p>LivePusherContext.pauseBGM</p></td>
+<td><p>暂停背景音</p></td>
+</tr>
+<tr class="row-even"><td><p>LivePusherContext.playBGM</p></td>
+<td><p>播放背景音</p></td>
+</tr>
+<tr class="row-odd"><td><p>LivePusherContext.resume</p></td>
+<td><p>恢复推流</p></td>
+</tr>
+<tr class="row-even"><td><p>LivePusherContext.resumeBGM</p></td>
+<td><p>恢复背景音</p></td>
+</tr>
+<tr class="row-odd"><td><p>LivePusherContext.setBGMVolume</p></td>
+<td><p>设置背景音音量</p></td>
+</tr>
+<tr class="row-even"><td><p>LivePusherContext.snapshot</p></td>
+<td><p>快照</p></td>
+</tr>
+<tr class="row-odd"><td><p>LivePusherContext.start</p></td>
+<td><p>播放推流</p></td>
+</tr>
+<tr class="row-even"><td><p>LivePusherContext.stop</p></td>
+<td><p>停止推流</p></td>
+</tr>
+<tr class="row-odd"><td><p>LivePusherContext.stopBGM</p></td>
+<td><p>停止背景音</p></td>
+</tr>
+<tr class="row-even"><td><p>LivePusherContext.switchCamera</p></td>
+<td><p>切换前后摄像头</p></td>
+</tr>
+<tr class="row-odd"><td><p>LivePusherContext.toggleTorch</p></td>
+<td><p>切换</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="liveplayercontext">
+<h4>LivePlayerContext<a class="headerlink" href="#liveplayercontext" title="永久链接至标题">¶</a></h4>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 79%" />
+<col style="width: 21%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>名称</p></th>
+<th class="head"><p>功能说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>LivePlayerContext.exitFullScreen</p></td>
+<td><p>退出全屏</p></td>
+</tr>
+<tr class="row-odd"><td><p>LivePlayerContext.mute</p></td>
+<td><p>静音</p></td>
+</tr>
+<tr class="row-even"><td><p>LivePlayerContext.pause</p></td>
+<td><p>暂停</p></td>
+</tr>
+<tr class="row-odd"><td><p>LivePlayerContext.play</p></td>
+<td><p>播放</p></td>
+</tr>
+<tr class="row-even"><td><p>LivePlayerContext.requestFullScreen</p></td>
+<td><p>进入全屏</p></td>
+</tr>
+<tr class="row-odd"><td><p>LivePlayerContext.resume</p></td>
+<td><p>恢复</p></td>
+</tr>
+<tr class="row-even"><td><p>LivePlayerContext.stop</p></td>
+<td><p>停止</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="id34">
+<h3>录音<a class="headerlink" href="#id34" title="永久链接至标题">¶</a></h3>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 35%" />
+<col style="width: 65%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>名称</p></th>
+<th class="head"><p>功能说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>wx.stopRecord</p></td>
+<td><p>停止录音</p></td>
+</tr>
+<tr class="row-odd"><td><p>wx.startRecord</p></td>
+<td><p>开始录音</p></td>
+</tr>
+<tr class="row-even"><td><p>wx.getRecorderManager</p></td>
+<td><p>获取全局唯一的录音管理器 RecorderManager</p></td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="recordermanager">
+<h4>RecorderManager<a class="headerlink" href="#recordermanager" title="永久链接至标题">¶</a></h4>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 47%" />
+<col style="width: 53%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>名称</p></th>
+<th class="head"><p>功能说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>RecorderManager.onError</p></td>
+<td><p>监听录音错误事件</p></td>
+</tr>
+<tr class="row-odd"><td><p>RecorderManager.onFrameRecorded</p></td>
+<td><p>监听已录制完指定帧大小的文件事件</p></td>
+</tr>
+<tr class="row-even"><td><p>RecorderManager.onInterruptionBegin</p></td>
+<td><p>监听录音因为受到系统占用而被中断开始事件</p></td>
+</tr>
+<tr class="row-odd"><td><p>RecorderManager.onInterruptionEnd</p></td>
+<td><p>监听录音中断结束事件</p></td>
+</tr>
+<tr class="row-even"><td><p>RecorderManager.onPause</p></td>
+<td><p>监听录音暂停事件</p></td>
+</tr>
+<tr class="row-odd"><td><p>RecorderManager.onResume</p></td>
+<td><p>监听录音继续事件</p></td>
+</tr>
+<tr class="row-even"><td><p>RecorderManager.onStart</p></td>
+<td><p>监听录音开始事件</p></td>
+</tr>
+<tr class="row-odd"><td><p>RecorderManager.onStop</p></td>
+<td><p>监听录音结束事件</p></td>
+</tr>
+<tr class="row-even"><td><p>RecorderManager.pause</p></td>
+<td><p>暂停录音</p></td>
+</tr>
+<tr class="row-odd"><td><p>RecorderManager.resume</p></td>
+<td><p>继续录音</p></td>
+</tr>
+<tr class="row-even"><td><p>RecorderManager.start</p></td>
+<td><p>开始录音</p></td>
+</tr>
+<tr class="row-odd"><td><p>RecorderManager.stop</p></td>
+<td><p>停止录音</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="id35">
+<h3>相机<a class="headerlink" href="#id35" title="永久链接至标题">¶</a></h3>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 38%" />
+<col style="width: 62%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>名称</p></th>
+<th class="head"><p>功能说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>wx.createCameraContext</p></td>
+<td><p>创建 camera 上下文 CameraContext 对象</p></td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="cameracontext">
+<h4>CameraContext<a class="headerlink" href="#cameracontext" title="永久链接至标题">¶</a></h4>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 73%" />
+<col style="width: 27%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>名称</p></th>
+<th class="head"><p>功能说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>CameraContext.startRecord</p></td>
+<td><p>开始录像</p></td>
+</tr>
+<tr class="row-odd"><td><p>CameraContext.stopRecord</p></td>
+<td><p>结束录像</p></td>
+</tr>
+<tr class="row-even"><td><p>CameraContext.takePhoto</p></td>
+<td><p>拍摄照片</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="section" id="id36">
+<h2>位置<a class="headerlink" href="#id36" title="永久链接至标题">¶</a></h2>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 42%" />
+<col style="width: 58%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>名称</p></th>
+<th class="head"><p>功能说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>wx.openLocation</p></td>
+<td><p>使用微信内置地图查看位置</p></td>
+</tr>
+<tr class="row-odd"><td><p>wx.getLocation</p></td>
+<td><p>获取当前的地理位置、速度</p></td>
+</tr>
+<tr class="row-even"><td><p>wx.chooseLocation</p></td>
+<td><p>打开地图选择位置</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id37">
+<h2>转发<a class="headerlink" href="#id37" title="永久链接至标题">¶</a></h2>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 45%" />
+<col style="width: 55%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>名称</p></th>
+<th class="head"><p>功能说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>wx.updateShareMenu</p></td>
+<td><p>更新转发属性</p></td>
+</tr>
+<tr class="row-odd"><td><p>wx.showShareMenu</p></td>
+<td><p>显示当前页面的转发按钮</p></td>
+</tr>
+<tr class="row-even"><td><p>wx.hideShareMenu</p></td>
+<td><p>隐藏转发按钮</p></td>
+</tr>
+<tr class="row-odd"><td><p>wx.getShareInfo</p></td>
+<td><p>获取转发详细信息</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id38">
+<h2>画布<a class="headerlink" href="#id38" title="永久链接至标题">¶</a></h2>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 34%" />
+<col style="width: 66%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>名称</p></td>
+<td><p>功能说明</p></td>
+</tr>
+<tr class="row-even"><td><p>wx.createCanvasContext</p></td>
+<td><p>创建 canvas 的绘图上下文 CanvasContext 对象</p></td>
+</tr>
+<tr class="row-odd"><td><p>wx.canvasToTempFilePath</p></td>
+<td><p>把当前画布指定区域的内容导出生成指定大小的图片</p></td>
+</tr>
+<tr class="row-even"><td><p>wx.canvasPutImageData</p></td>
+<td><p>将像素数据绘制到画布</p></td>
+</tr>
+<tr class="row-odd"><td><p>wx.canvasGetImageData</p></td>
+<td><p>获取 canvas 区域隐含的像素数据</p></td>
+</tr>
+<tr class="row-even"><td><p>Color</p></td>
+<td><p>颜色</p></td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="canvasgradient">
+<h3>CanvasGradient<a class="headerlink" href="#canvasgradient" title="永久链接至标题">¶</a></h3>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 62%" />
+<col style="width: 38%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>名称</p></th>
+<th class="head"><p>功能说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>CanvasGradient.addColorStop</p></td>
+<td><p>添加颜色的渐变点</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="canvascontext">
+<h3>CanvasContext<a class="headerlink" href="#canvascontext" title="永久链接至标题">¶</a></h3>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 38%" />
+<col style="width: 62%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>名称</p></td>
+<td><p>功能说明</p></td>
+</tr>
+<tr class="row-even"><td><p>CanvasContext.arc</p></td>
+<td><p>创建一条弧线</p></td>
+</tr>
+<tr class="row-odd"><td><p>CanvasContext.arcTo</p></td>
+<td><p>根据控制点和半径绘制圆弧路径</p></td>
+</tr>
+<tr class="row-even"><td><p>CanvasContext.beginPath</p></td>
+<td><p>开始创建一个路径</p></td>
+</tr>
+<tr class="row-odd"><td><p>CanvasContext.bezierCurveTo</p></td>
+<td><p>创建三次方贝塞尔曲线路径</p></td>
+</tr>
+<tr class="row-even"><td><p>CanvasContext.clearRect</p></td>
+<td><p>清除画布上在该矩形区域内的内容</p></td>
+</tr>
+<tr class="row-odd"><td><p>CanvasContext.clip</p></td>
+<td><p>从原始画布中剪切任意形状和尺寸</p></td>
+</tr>
+<tr class="row-even"><td><p>CanvasContext.closePath</p></td>
+<td><p>关闭一个路径</p></td>
+</tr>
+<tr class="row-odd"><td><p>CanvasContext.createCircularGradient</p></td>
+<td><p>创建一个圆形的渐变颜色</p></td>
+</tr>
+<tr class="row-even"><td><p>CanvasContext.createLinearGradient</p></td>
+<td><p>创建一个线性的渐变颜色</p></td>
+</tr>
+<tr class="row-odd"><td><p>CanvasContext.createPattern</p></td>
+<td><p>对指定的图像创建模式的方法，可在指定的方向上重复元图像</p></td>
+</tr>
+<tr class="row-even"><td><p>CanvasContext.draw</p></td>
+<td><p>将之前在绘图上下文中的描述（路径、变形、样式）画到 canvas 中</p></td>
+</tr>
+<tr class="row-odd"><td><p>CanvasContext.drawImage</p></td>
+<td><p>绘制图像到画布</p></td>
+</tr>
+<tr class="row-even"><td><p>CanvasContext.fill</p></td>
+<td><p>对当前路径中的内容进行填充</p></td>
+</tr>
+<tr class="row-odd"><td><p>CanvasContext.fillRect</p></td>
+<td><p>填充一个矩形</p></td>
+</tr>
+<tr class="row-even"><td><p>CanvasContext.fillText</p></td>
+<td><p>在画布上绘制被填充的文本</p></td>
+</tr>
+<tr class="row-odd"><td><p>CanvasContext.lineTo</p></td>
+<td><p>增加一个新点，然后创建一条从上次指定点到目标点的线</p></td>
+</tr>
+<tr class="row-even"><td><p>CanvasContext.measureText</p></td>
+<td><p>测量文本尺寸信息</p></td>
+</tr>
+<tr class="row-odd"><td><p>CanvasContext.moveTo</p></td>
+<td><p>把路径移动到画布中的指定点，不创建线条</p></td>
+</tr>
+<tr class="row-even"><td><p>CanvasContext.quadraticCurveTo</p></td>
+<td><p>创建二次贝塞尔曲线路径</p></td>
+</tr>
+<tr class="row-odd"><td><p>CanvasContext.rect</p></td>
+<td><p>创建一个矩形路径</p></td>
+</tr>
+<tr class="row-even"><td><p>CanvasContext.restore</p></td>
+<td><p>恢复之前保存的绘图上下文</p></td>
+</tr>
+<tr class="row-odd"><td><p>CanvasContext.rotate</p></td>
+<td><p>以原点为中心顺时针旋转当前坐标轴</p></td>
+</tr>
+<tr class="row-even"><td><p>CanvasContext.save</p></td>
+<td><p>保存绘图上下文</p></td>
+</tr>
+<tr class="row-odd"><td><p>CanvasContext.scale</p></td>
+<td><p>在调用后，之后创建的路径其横纵坐标会被缩放</p></td>
+</tr>
+<tr class="row-even"><td><p>CanvasContext.setFillStyle</p></td>
+<td><p>设置填充色</p></td>
+</tr>
+<tr class="row-odd"><td><p>CanvasContext.setFontSize</p></td>
+<td><p>设置字体的字号</p></td>
+</tr>
+<tr class="row-even"><td><p>CanvasContext.setGlobalAlpha</p></td>
+<td><p>设置全局画笔透明度</p></td>
+</tr>
+<tr class="row-odd"><td><p>CanvasContext.setLineCap</p></td>
+<td><p>设置线条的端点样式</p></td>
+</tr>
+<tr class="row-even"><td><p>CanvasContext.setLineDash</p></td>
+<td><p>设置虚线样式</p></td>
+</tr>
+<tr class="row-odd"><td><p>CanvasContext.setLineJoin</p></td>
+<td><p>设置线条的交点样式</p></td>
+</tr>
+<tr class="row-even"><td><p>CanvasContext.setLineWidth</p></td>
+<td><p>设置线条的宽度</p></td>
+</tr>
+<tr class="row-odd"><td><p>CanvasContext.setMiterLimit</p></td>
+<td><p>设置最大斜接长度</p></td>
+</tr>
+<tr class="row-even"><td><p>CanvasContext.setShadow</p></td>
+<td><p>设定阴影样式</p></td>
+</tr>
+<tr class="row-odd"><td><p>CanvasContext.setStrokeStyle</p></td>
+<td><p>设置描边颜色</p></td>
+</tr>
+<tr class="row-even"><td><p>CanvasContext.setTextAlign</p></td>
+<td><p>设置文字的对齐</p></td>
+</tr>
+<tr class="row-odd"><td><p>CanvasContext.setTextBaseline</p></td>
+<td><p>设置文字的竖直对齐</p></td>
+</tr>
+<tr class="row-even"><td><p>CanvasContext.setTransform</p></td>
+<td><p>使用矩阵重新设置（覆盖）当前变换的方法</p></td>
+</tr>
+<tr class="row-odd"><td><p>CanvasContext.stroke</p></td>
+<td><p>画出当前路径的边框</p></td>
+</tr>
+<tr class="row-even"><td><p>CanvasContext.strokeRect</p></td>
+<td><p>画一个矩形(非填充)</p></td>
+</tr>
+<tr class="row-odd"><td><p>CanvasContext.strokeText</p></td>
+<td><p>给定的 (x, y) 位置绘制文本描边的方法</p></td>
+</tr>
+<tr class="row-even"><td><p>CanvasContext.transform</p></td>
+<td><p>使用矩阵多次叠加当前变换的方法</p></td>
+</tr>
+<tr class="row-odd"><td><p>CanvasContext.translate</p></td>
+<td><p>对当前坐标系的原点 (0, 0) 进行变换</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="id39">
+<h2>文件<a class="headerlink" href="#id39" title="永久链接至标题">¶</a></h2>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 38%" />
+<col style="width: 62%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>名称</p></th>
+<th class="head"><p>功能说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>wx.saveFile</p></td>
+<td><p>保存文件到本地</p></td>
+</tr>
+<tr class="row-odd"><td><p>wx.removeSavedFile</p></td>
+<td><p>删除本地缓存文件</p></td>
+</tr>
+<tr class="row-even"><td><p>wx.openDocument</p></td>
+<td><p>新开页面打开文档</p></td>
+</tr>
+<tr class="row-odd"><td><p>wx.getSavedFileList</p></td>
+<td><p>获取该小程序下已保存的本地缓存文件列表</p></td>
+</tr>
+<tr class="row-even"><td><p>wx.getSavedFileInfo</p></td>
+<td><p>获取本地文件的文件信息</p></td>
+</tr>
+<tr class="row-odd"><td><p>wx.getFileSystemManager</p></td>
+<td><p>获取全局唯一的文件管理器</p></td>
+</tr>
+<tr class="row-even"><td><p>wx.getFileInfo</p></td>
+<td><p>获取文件信息</p></td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="stats">
+<h3>Stats<a class="headerlink" href="#stats" title="永久链接至标题">¶</a></h3>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 39%" />
+<col style="width: 61%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>名称</p></th>
+<th class="head"><p>功能说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Stats.isDirectory</p></td>
+<td><p>判断当前文件是否一个目录</p></td>
+</tr>
+<tr class="row-odd"><td><p>Stats.isFile</p></td>
+<td><p>判断当前文件是否一个普通文件</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="filesystemmanager">
+<h3>FileSystemManager<a class="headerlink" href="#filesystemmanager" title="永久链接至标题">¶</a></h3>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 41%" />
+<col style="width: 59%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>名称</p></th>
+<th class="head"><p>功能说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>FileSystemManager.access</p></td>
+<td><p>判断文件/目录是否存在</p></td>
+</tr>
+<tr class="row-odd"><td><p>FileSystemManager.accessSync</p></td>
+<td><p>FileSystemManager.access 的同步版本</p></td>
+</tr>
+<tr class="row-even"><td><p>FileSystemManager.appendFile</p></td>
+<td><p>在文件结尾追加内容</p></td>
+</tr>
+<tr class="row-odd"><td><p>FileSystemManager.appendFileSync</p></td>
+<td><p>FileSystemManager.appendFile 的同步版本</p></td>
+</tr>
+<tr class="row-even"><td><p>FileSystemManager.copyFile</p></td>
+<td><p>复制文件</p></td>
+</tr>
+<tr class="row-odd"><td><p>FileSystemManager.copyFileSync</p></td>
+<td><p>FileSystemManager.copyFile 的同步版本</p></td>
+</tr>
+<tr class="row-even"><td><p>FileSystemManager.getFileInfo</p></td>
+<td><p>获取该小程序下的 本地临时文件 或 本地缓存文件 信息</p></td>
+</tr>
+<tr class="row-odd"><td><p>FileSystemManager.getSavedFileList</p></td>
+<td><p>获取该小程序下已保存的本地缓存文件列表</p></td>
+</tr>
+<tr class="row-even"><td><p>FileSystemManager.mkdir</p></td>
+<td><p>创建目录</p></td>
+</tr>
+<tr class="row-odd"><td><p>FileSystemManager.mkdirSync</p></td>
+<td><p>FileSystemManager.mkdir 的同步版本</p></td>
+</tr>
+<tr class="row-even"><td><p>FileSystemManager.readdir</p></td>
+<td><p>读取目录内文件列表</p></td>
+</tr>
+<tr class="row-odd"><td><p>FileSystemManager.readdirSync</p></td>
+<td><p>FileSystemManager.readdir 的同步版本</p></td>
+</tr>
+<tr class="row-even"><td><p>FileSystemManager.readFile</p></td>
+<td><p>读取本地文件内容</p></td>
+</tr>
+<tr class="row-odd"><td><p>FileSystemManager.readFileSync</p></td>
+<td><p>FileSystemManager.readFile 的同步版本</p></td>
+</tr>
+<tr class="row-even"><td><p>FileSystemManager.removeSavedFile</p></td>
+<td><p>删除该小程序下已保存的本地缓存文件</p></td>
+</tr>
+<tr class="row-odd"><td><p>FileSystemManager.rename</p></td>
+<td><p>重命名文件</p></td>
+</tr>
+<tr class="row-even"><td><p>FileSystemManager.renameSync</p></td>
+<td><p>FileSystemManager.rename 的同步版本</p></td>
+</tr>
+<tr class="row-odd"><td><p>FileSystemManager.rmdir</p></td>
+<td><p>删除目录</p></td>
+</tr>
+<tr class="row-even"><td><p>FileSystemManager.rmdirSync</p></td>
+<td><p>FileSystemManager.rmdir 的同步版本</p></td>
+</tr>
+<tr class="row-odd"><td><p>FileSystemManager.saveFile</p></td>
+<td><p>保存临时文件到本地</p></td>
+</tr>
+<tr class="row-even"><td><p>FileSystemManager.saveFileSync</p></td>
+<td><p>FileSystemManager.saveFile 的同步版本</p></td>
+</tr>
+<tr class="row-odd"><td><p>FileSystemManager.stat</p></td>
+<td><p>获取文件 Stats 对象</p></td>
+</tr>
+<tr class="row-even"><td><p>FileSystemManager.statSync</p></td>
+<td><p>FileSystemManager.stat 的同步版本</p></td>
+</tr>
+<tr class="row-odd"><td><p>FileSystemManager.unlink</p></td>
+<td><p>删除文件</p></td>
+</tr>
+<tr class="row-even"><td><p>FileSystemManager.unlinkSync</p></td>
+<td><p>FileSystemManager.unlink 的同步版本</p></td>
+</tr>
+<tr class="row-odd"><td><p>FileSystemManager.unzip</p></td>
+<td><p>解压文件</p></td>
+</tr>
+<tr class="row-even"><td><p>FileSystemManager.writeFile</p></td>
+<td><p>写文件</p></td>
+</tr>
+<tr class="row-odd"><td><p>FileSystemManager.writeFileSync</p></td>
+<td><p>FileSystemManager.writeFile 的同步版本</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="id40">
+<h2>开放接口<a class="headerlink" href="#id40" title="永久链接至标题">¶</a></h2>
+<div class="section" id="id41">
+<h3>登录<a class="headerlink" href="#id41" title="永久链接至标题">¶</a></h3>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 36%" />
+<col style="width: 64%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>名称</p></th>
+<th class="head"><p>功能说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>wx.login</p></td>
+<td><p>调用接口获取登录凭证（code）</p></td>
+</tr>
+<tr class="row-odd"><td><p>wx.checkSession</p></td>
+<td><p>检查登录态是否过期</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id42">
+<h3>小程序跳转<a class="headerlink" href="#id42" title="永久链接至标题">¶</a></h3>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 58%" />
+<col style="width: 42%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>名称</p></th>
+<th class="head"><p>功能说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>wx.navigateToMiniProgram</p></td>
+<td><p>打开另一个小程序</p></td>
+</tr>
+<tr class="row-odd"><td><p>wx.navigateBackMiniProgram</p></td>
+<td><p>返回到上一个小程序</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id43">
+<h3>帐号信息<a class="headerlink" href="#id43" title="永久链接至标题">¶</a></h3>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 56%" />
+<col style="width: 44%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>名称</p></th>
+<th class="head"><p>功能说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>wx.getAccountInfoSync</p></td>
+<td><p>获取当前帐号信息</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id44">
+<h3>用户信息<a class="headerlink" href="#id44" title="永久链接至标题">¶</a></h3>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 53%" />
+<col style="width: 47%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>名称</p></th>
+<th class="head"><p>功能说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>wx.getUserInfo</p></td>
+<td><p>获取用户信息</p></td>
+</tr>
+<tr class="row-odd"><td><p>UserInfo</p></td>
+<td><p>用户信息</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id45">
+<h3>数据上报<a class="headerlink" href="#id45" title="永久链接至标题">¶</a></h3>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 39%" />
+<col style="width: 61%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>名称</p></th>
+<th class="head"><p>功能说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>wx.reportMonitor</p></td>
+<td><p>自定义业务数据监控上报接口</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id46">
+<h3>数据分析<a class="headerlink" href="#id46" title="永久链接至标题">¶</a></h3>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 45%" />
+<col style="width: 55%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>名称</p></th>
+<th class="head"><p>功能说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>wx.reportAnalytics</p></td>
+<td><p>自定义分析数据上报接口</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id47">
+<h3>支付<a class="headerlink" href="#id47" title="永久链接至标题">¶</a></h3>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 58%" />
+<col style="width: 42%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>名称</p></th>
+<th class="head"><p>功能说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>wx.requestPayment</p></td>
+<td><p>发起微信支付</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id48">
+<h3>授权<a class="headerlink" href="#id48" title="永久链接至标题">¶</a></h3>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 37%" />
+<col style="width: 63%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>名称</p></th>
+<th class="head"><p>功能说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>wx.authorize</p></td>
+<td><p>提前向用户发起授权请求</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id49">
+<h3>设置<a class="headerlink" href="#id49" title="永久链接至标题">¶</a></h3>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 24%" />
+<col style="width: 76%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>名称</p></th>
+<th class="head"><p>功能说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>wx.openSetting</p></td>
+<td><p>调起客户端小程序设置界面，返回用户设置的操作结果</p></td>
+</tr>
+<tr class="row-odd"><td><p>wx.getSetting</p></td>
+<td><p>获取用户的当前设置</p></td>
+</tr>
+<tr class="row-even"><td><p>AuthSetting</p></td>
+<td><p>用户授权设置信息，详情参考权限</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id50">
+<h3>收货地址<a class="headerlink" href="#id50" title="永久链接至标题">¶</a></h3>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>名称</p></th>
+<th class="head"><p>功能说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>wx.chooseAddress</p></td>
+<td><p>获取用户收货地址</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id51">
+<h3>卡券<a class="headerlink" href="#id51" title="永久链接至标题">¶</a></h3>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 37%" />
+<col style="width: 63%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>名称</p></th>
+<th class="head"><p>功能说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>wx.openCard</p></td>
+<td><p>查看微信卡包中的卡券</p></td>
+</tr>
+<tr class="row-odd"><td><p>wx.addCard</p></td>
+<td><p>批量添加卡券</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id52">
+<h3>发票<a class="headerlink" href="#id52" title="永久链接至标题">¶</a></h3>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 53%" />
+<col style="width: 47%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>名称</p></th>
+<th class="head"><p>功能说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>wx.chooseInvoiceTitle</p></td>
+<td><p>选择用户的发票抬头</p></td>
+</tr>
+<tr class="row-odd"><td><p>wx.chooseInvoice</p></td>
+<td><p>选择用户已有的发票</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id53">
+<h3>生物认证<a class="headerlink" href="#id53" title="永久链接至标题">¶</a></h3>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 48%" />
+<col style="width: 53%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>名称</p></th>
+<th class="head"><p>功能说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>wx.startSoterAuthentication</p></td>
+<td><p>开始 SOTER 生物认证</p></td>
+</tr>
+<tr class="row-odd"><td><p>wx.checkIsSupportSoterAuthentication</p></td>
+<td><p>获取本机支持的 SOTER 生物认证方式</p></td>
+</tr>
+<tr class="row-even"><td><p>wx.checkIsSoterEnrolledInDevice</p></td>
+<td><p>获取设备内是否录入如指纹等生物信息的接口</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id54">
+<h3>微信运动<a class="headerlink" href="#id54" title="永久链接至标题">¶</a></h3>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 35%" />
+<col style="width: 65%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>名称</p></th>
+<th class="head"><p>功能说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>wx.getWeRunData</p></td>
+<td><p>获取用户过去三十天微信运动步数</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="id55">
+<h2>设备<a class="headerlink" href="#id55" title="永久链接至标题">¶</a></h2>
+<div class="section" id="wi-fi">
+<h3>Wi-Fi<a class="headerlink" href="#wi-fi" title="永久链接至标题">¶</a></h3>
+</div>
+<div class="section" id="ibeacon">
+<h3>iBeacon<a class="headerlink" href="#ibeacon" title="永久链接至标题">¶</a></h3>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 44%" />
+<col style="width: 56%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>名称</p></th>
+<th class="head"><p>功能说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>wx.stopBeaconDiscovery</p></td>
+<td><p>停止搜索附近的 iBeacon 设备</p></td>
+</tr>
+<tr class="row-odd"><td><p>wx.startBeaconDiscovery</p></td>
+<td><p>开始搜索附近的 iBeacon 设备</p></td>
+</tr>
+<tr class="row-even"><td><p>wx.onBeaconUpdate</p></td>
+<td><p>监听 iBeacon 设备更新事件</p></td>
+</tr>
+<tr class="row-odd"><td><p>wx.onBeaconServiceChange</p></td>
+<td><p>监听 iBeacon 服务状态变化事件</p></td>
+</tr>
+<tr class="row-even"><td><p>wx.getBeacons</p></td>
+<td><p>获取所有已搜索到的 iBeacon 设备</p></td>
+</tr>
+</tbody>
+</table>
+<p>IBeaconInfo</p>
+</div>
+<div class="section" id="id56">
+<h3>联系人<a class="headerlink" href="#id56" title="永久链接至标题">¶</a></h3>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 48%" />
+<col style="width: 52%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>名称</p></th>
+<th class="head"><p>功能说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>wx.addPhoneContact</p></td>
+<td><p>添加手机通讯录联系人</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id57">
+<h3>低功耗蓝牙<a class="headerlink" href="#id57" title="永久链接至标题">¶</a></h3>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 40%" />
+<col style="width: 60%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>名称</p></th>
+<th class="head"><p>功能说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>wx.writeBLECharacteristicValue</p></td>
+<td><p>向低功耗蓝牙设备特征值中写入二进制数据</p></td>
+</tr>
+<tr class="row-odd"><td><p>wx.readBLECharacteristicValue</p></td>
+<td><p>读取低功耗蓝牙设备的特征值的二进制数据值</p></td>
+</tr>
+<tr class="row-even"><td><p>wx.onBLEConnectionStateChange</p></td>
+<td><p>监听低功耗蓝牙连接状态的改变事件</p></td>
+</tr>
+<tr class="row-odd"><td><p>wx.onBLECharacteristicValueChange</p></td>
+<td><p>监听低功耗蓝牙设备的特征值变化事件</p></td>
+</tr>
+<tr class="row-even"><td><p>wx.notifyBLECharacteristicValueChange</p></td>
+<td><p>启用低功耗蓝牙设备特征值变化时的 notify 功能，订阅特征值</p></td>
+</tr>
+<tr class="row-odd"><td><p>wx.getBLEDeviceServices</p></td>
+<td><p>获取蓝牙设备所有服务(service)</p></td>
+</tr>
+<tr class="row-even"><td><p>wx.getBLEDeviceCharacteristics</p></td>
+<td><p>获取蓝牙设备某个服务中所有特征值(characteristic)</p></td>
+</tr>
+<tr class="row-odd"><td><p>wx.createBLEConnection</p></td>
+<td><p>连接低功耗蓝牙设备</p></td>
+</tr>
+<tr class="row-even"><td><p>wx.closeBLEConnection</p></td>
+<td><p>断开与低功耗蓝牙设备的连接</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id58">
+<h3>蓝牙<a class="headerlink" href="#id58" title="永久链接至标题">¶</a></h3>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 44%" />
+<col style="width: 56%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>名称</p></th>
+<th class="head"><p>功能说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>wx.stopBluetoothDevicesDiscovery</p></td>
+<td><p>停止搜寻附近的蓝牙外围设备</p></td>
+</tr>
+<tr class="row-odd"><td><p>wx.startBluetoothDevicesDiscovery</p></td>
+<td><p>开始搜寻附近的蓝牙外围设备</p></td>
+</tr>
+<tr class="row-even"><td><p>wx.openBluetoothAdapter</p></td>
+<td><p>初始化蓝牙模块</p></td>
+</tr>
+<tr class="row-odd"><td><p>wx.onBluetoothDeviceFound</p></td>
+<td><p>监听寻找到新设备的事件</p></td>
+</tr>
+<tr class="row-even"><td><p>wx.onBluetoothAdapterStateChange</p></td>
+<td><p>监听蓝牙适配器状态变化事件</p></td>
+</tr>
+<tr class="row-odd"><td><p>wx.getConnectedBluetoothDevices</p></td>
+<td><p>根据 uuid 获取处于已连接状态的设备</p></td>
+</tr>
+<tr class="row-even"><td><p>wx.getBluetoothDevices</p></td>
+<td><p>获取在蓝牙模块生效期间所有已发现的蓝牙设备</p></td>
+</tr>
+<tr class="row-odd"><td><p>wx.getBluetoothAdapterState</p></td>
+<td><p>获取本机蓝牙适配器状态</p></td>
+</tr>
+<tr class="row-even"><td><p>wx.closeBluetoothAdapter</p></td>
+<td><p>关闭蓝牙模块</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id59">
+<h3>电量<a class="headerlink" href="#id59" title="永久链接至标题">¶</a></h3>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 43%" />
+<col style="width: 57%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>名称</p></th>
+<th class="head"><p>功能说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>wx.getBatteryInfoSync</p></td>
+<td><p>wx.getBatteryInfo 的同步版本</p></td>
+</tr>
+<tr class="row-odd"><td><p>wx.getBatteryInfo</p></td>
+<td><p>获取设备电量</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id60">
+<h3>剪贴板<a class="headerlink" href="#id60" title="永久链接至标题">¶</a></h3>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 49%" />
+<col style="width: 51%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>名称</p></th>
+<th class="head"><p>功能说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>wx.setClipboardData</p></td>
+<td><p>设置系统剪贴板的内容</p></td>
+</tr>
+<tr class="row-odd"><td><p>wx.getClipboardData</p></td>
+<td><p>获取系统剪贴板的内容</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="nfc">
+<h3>NFC<a class="headerlink" href="#nfc" title="永久链接至标题">¶</a></h3>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 38%" />
+<col style="width: 62%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>名称</p></th>
+<th class="head"><p>功能说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>wx.stopHCE</p></td>
+<td><p>关闭 NFC 模块</p></td>
+</tr>
+<tr class="row-odd"><td><p>wx.startHCE</p></td>
+<td><p>初始化 NFC 模块</p></td>
+</tr>
+<tr class="row-even"><td><p>wx.sendHCEMessage</p></td>
+<td><p>发送 NFC 消息</p></td>
+</tr>
+<tr class="row-odd"><td><p>wx.onHCEMessage</p></td>
+<td><p>监听接收 NFC 设备消息事件</p></td>
+</tr>
+<tr class="row-even"><td><p>wx.getHCEState</p></td>
+<td><p>判断当前设备是否支持 HCE 能力</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id61">
+<h3>网络<a class="headerlink" href="#id61" title="永久链接至标题">¶</a></h3>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 54%" />
+<col style="width: 46%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>名称</p></th>
+<th class="head"><p>功能说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>wx.onNetworkStatusChange</p></td>
+<td><p>监听网络状态变化事件</p></td>
+</tr>
+<tr class="row-odd"><td><p>wx.getNetworkType</p></td>
+<td><p>获取网络类型</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id62">
+<h3>屏幕<a class="headerlink" href="#id62" title="永久链接至标题">¶</a></h3>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 52%" />
+<col style="width: 48%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>名称</p></th>
+<th class="head"><p>功能说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>wx.setScreenBrightness</p></td>
+<td><p>设置屏幕亮度</p></td>
+</tr>
+<tr class="row-odd"><td><p>wx.setKeepScreenOn</p></td>
+<td><p>设置是否保持常亮状态</p></td>
+</tr>
+<tr class="row-even"><td><p>wx.onUserCaptureScreen</p></td>
+<td><p>监听用户主动截屏事件</p></td>
+</tr>
+<tr class="row-odd"><td><p>wx.getScreenBrightness</p></td>
+<td><p>获取屏幕亮度</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id63">
+<h3>电话<a class="headerlink" href="#id63" title="永久链接至标题">¶</a></h3>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 64%" />
+<col style="width: 36%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>名称</p></th>
+<th class="head"><p>功能说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>wx.makePhoneCall</p></td>
+<td><p>拨打电话</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id64">
+<h3>加速计<a class="headerlink" href="#id64" title="永久链接至标题">¶</a></h3>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 57%" />
+<col style="width: 43%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>名称</p></th>
+<th class="head"><p>功能说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>wx.stopAccelerometer</p></td>
+<td><p>停止监听加速度数据</p></td>
+</tr>
+<tr class="row-odd"><td><p>wx.startAccelerometer</p></td>
+<td><p>开始监听加速度数据</p></td>
+</tr>
+<tr class="row-even"><td><p>wx.onAccelerometerChange</p></td>
+<td><p>监听加速度数据事件</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id65">
+<h3>罗盘<a class="headerlink" href="#id65" title="永久链接至标题">¶</a></h3>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 48%" />
+<col style="width: 52%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>名称</p></th>
+<th class="head"><p>功能说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>wx.stopCompass</p></td>
+<td><p>停止监听罗盘数据</p></td>
+</tr>
+<tr class="row-odd"><td><p>wx.startCompass</p></td>
+<td><p>开始监听罗盘数据</p></td>
+</tr>
+<tr class="row-even"><td><p>wx.onCompassChange</p></td>
+<td><p>监听罗盘数据变化事件</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id66">
+<h3>设备方向<a class="headerlink" href="#id66" title="永久链接至标题">¶</a></h3>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 56%" />
+<col style="width: 44%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>名称</p></th>
+<th class="head"><p>功能说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>wx.stopDeviceMotionListening</p></td>
+<td><p>停止监听设备方向的变化</p></td>
+</tr>
+<tr class="row-odd"><td><p>wx.startDeviceMotionListening</p></td>
+<td><p>开始监听设备方向的变化</p></td>
+</tr>
+<tr class="row-even"><td><p>wx.onDeviceMotionChange</p></td>
+<td><p>监听设备方向变化事件</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id67">
+<h3>陀螺仪<a class="headerlink" href="#id67" title="永久链接至标题">¶</a></h3>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 48%" />
+<col style="width: 52%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>名称</p></th>
+<th class="head"><p>功能说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>wx.stopGyroscope</p></td>
+<td><p>停止监听陀螺仪数据</p></td>
+</tr>
+<tr class="row-odd"><td><p>wx.startGyroscope</p></td>
+<td><p>开始监听陀螺仪数据</p></td>
+</tr>
+<tr class="row-even"><td><p>wx.onGyroscopeChange</p></td>
+<td><p>监听陀螺仪数据变化事件</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id68">
+<h3>性能<a class="headerlink" href="#id68" title="永久链接至标题">¶</a></h3>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 48%" />
+<col style="width: 52%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>名称</p></th>
+<th class="head"><p>功能说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>wx.onMemoryWarning</p></td>
+<td><p>监听内存不足告警事件</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id69">
+<h3>扫码<a class="headerlink" href="#id69" title="永久链接至标题">¶</a></h3>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 32%" />
+<col style="width: 68%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>名称</p></th>
+<th class="head"><p>功能说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>wx.scanCode</p></td>
+<td><p>调起客户端扫码界面进行扫码</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id70">
+<h3>振动<a class="headerlink" href="#id70" title="永久链接至标题">¶</a></h3>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 67%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>名称</p></th>
+<th class="head"><p>功能说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>wx.vibrateShort</p></td>
+<td><p>使手机发生较短时间的振动（15 ms）</p></td>
+</tr>
+<tr class="row-odd"><td><p>wx.vibrateLong</p></td>
+<td><p>使手机发生较长时间的振动（400 ms)</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="worker">
+<h2>Worker<a class="headerlink" href="#worker" title="永久链接至标题">¶</a></h2>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 44%" />
+<col style="width: 56%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>名称</p></th>
+<th class="head"><p>功能说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>wx.createWorker</p></td>
+<td><p>创建一个 Worker 线程</p></td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="id71">
+<h3>Worker<a class="headerlink" href="#id71" title="永久链接至标题">¶</a></h3>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 29%" />
+<col style="width: 71%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>名称</p></th>
+<th class="head"><p>功能说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Worker.onMessage</p></td>
+<td><p>监听主线程/Worker 线程向当前线程发送的消息的事件</p></td>
+</tr>
+<tr class="row-odd"><td><p>Worker.postMessage</p></td>
+<td><p>向主线程/Worker 线程发送的消息</p></td>
+</tr>
+<tr class="row-even"><td><p>Worker.terminate</p></td>
+<td><p>结束当前 Worker 线程</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="id72">
+<h2>第三方平台<a class="headerlink" href="#id72" title="永久链接至标题">¶</a></h2>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 40%" />
+<col style="width: 60%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>名称</p></th>
+<th class="head"><p>功能说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>wx.getExtConfigSync</p></td>
+<td><p>wx.getExtConfig 的同步版本</p></td>
+</tr>
+<tr class="row-odd"><td><p>wx.getExtConfig</p></td>
+<td><p>获取第三方平台自定义的数据字段</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="wxml">
+<h2>WXML<a class="headerlink" href="#wxml" title="永久链接至标题">¶</a></h2>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 40%" />
+<col style="width: 60%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>名称</p></th>
+<th class="head"><p>功能说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>wx.createSelectorQuery</p></td>
+<td><p>返回一个 SelectorQuery 对象实例</p></td>
+</tr>
+<tr class="row-odd"><td><p>wx.createIntersectionObserver</p></td>
+<td><p>创建并返回一个 IntersectionObserver 对象实例</p></td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="selectorquery">
+<h3>SelectorQuery<a class="headerlink" href="#selectorquery" title="永久链接至标题">¶</a></h3>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 38%" />
+<col style="width: 63%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>名称</p></th>
+<th class="head"><p>功能说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>SelectorQuery.exec</p></td>
+<td><p>执行所有的请求</p></td>
+</tr>
+<tr class="row-odd"><td><p>SelectorQuery.in</p></td>
+<td><p>将选择器的选取范围更改为自定义组件 component 内</p></td>
+</tr>
+<tr class="row-even"><td><p>SelectorQuery.select</p></td>
+<td><p>在当前页面下选择第一个匹配选择器 selector 的节点</p></td>
+</tr>
+<tr class="row-odd"><td><p>SelectorQuery.selectAll</p></td>
+<td><p>在当前页面下选择匹配选择器 selector 的所有节点</p></td>
+</tr>
+<tr class="row-even"><td><p>SelectorQuery.selectViewport</p></td>
+<td><p>选择显示区域</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="nodesref">
+<h3>NodesRef<a class="headerlink" href="#nodesref" title="永久链接至标题">¶</a></h3>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 47%" />
+<col style="width: 53%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>名称</p></th>
+<th class="head"><p>功能说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>NodesRef.boundingClientRect</p></td>
+<td><p>添加节点的布局位置的查询请求</p></td>
+</tr>
+<tr class="row-odd"><td><p>NodesRef.context</p></td>
+<td><p>添加节点的 Context 对象查询请求</p></td>
+</tr>
+<tr class="row-even"><td><p>NodesRef.fields</p></td>
+<td><p>获取节点的相关信息</p></td>
+</tr>
+<tr class="row-odd"><td><p>NodesRef.scrollOffset</p></td>
+<td><p>添加节点的滚动位置查询请求</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="intersectionobserver">
+<h3>IntersectionObserver<a class="headerlink" href="#intersectionobserver" title="永久链接至标题">¶</a></h3>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 49%" />
+<col style="width: 51%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>名称</p></th>
+<th class="head"><p>功能说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>IntersectionObserver.disconnect</p></td>
+<td><p>停止监听</p></td>
+</tr>
+<tr class="row-odd"><td><p>IntersectionObserver.observe</p></td>
+<td><p>指定目标节点并开始监听相交状态变化情况</p></td>
+</tr>
+<tr class="row-even"><td><p>IntersectionObserver.relativeTo</p></td>
+<td><p>使用选择器指定一个节点，作为参照区域之一</p></td>
+</tr>
+<tr class="row-odd"><td><p>IntersectionObserver.relativeToViewport</p></td>
+<td><p>指定页面显示区域作为参照区域之一</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="wx.canIUse.html" class="btn btn-neutral float-right" title="boolean wx.canIUse(string schema)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../reference/api/timer.html" class="btn btn-neutral float-left" title="定时器" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Nosy
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -1,0 +1,256 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-CN" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-CN" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>微信物流助手（商户侧） &mdash; wxadev 1.0.0 文档</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+        <script type="text/javascript" src="../../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="搜索" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../contents.html" class="icon icon-home"> wxadev
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../dev.html">小程序简介</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../basic/index.html">基础教程</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index.html">框架开发指南</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../guide/index.html">运行环境</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../component/index.html">组件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../devtools/index.html">开发工具</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../reference/index.html">参考资料</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../wxcloud/index.html">云开发</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api/index.html">API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api-backend/index.html">服务端开放接口</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../contents.html">wxadev</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../contents.html">Docs</a> &raquo;</li>
+        
+      <li>微信物流助手（商户侧）</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/framework/open-ability/express.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="id1">
+<h1>微信物流助手（商户侧）<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
+<p>物流助手，帮助有物流需求的开发者，快速高效对接多家物流公司。对接后用户可通过微信服务通知接收实时物流状态，提升用户体验。</p>
+<p>产品优势
+小程序开发者
+节省开发成本：通过微信统一对接多家物流公司，平均1-2周调通接口，减少以往逐一对接多家物流的开发成本；
+实时跟进订单：可通过接口调取或通过事件接收订单的实时路由状态，跟踪最新路由情况；
+提升用户回访：关键物流状态会通过微信服务通知发送给用户，用户点击后可回访小程序查看该订单;
+利于数据保护：无需担心数据洞穿，利于保护和积累你的数据；
+接口完全免费：快递费为你与快递公司签约时收取，微信不收快递费及接口费；
+用户
+查收物流状态：用户在已调通物流接口的微信小程序内的订单，可以通过服务通知收到微信官方发送的订单物流状态。</p>
+<p>小程序接入步骤
+登录小程序管理后台，点击「物流助手」-「开通」，开通物流助手；
+绑定已与你有合作的物流公司帐号；
+按照本文档完成接口开发；
+下单时调用物流助手API即可。
+已经支持的快递公司基本信息
+快递公司名称  快递公司ID  服务类型ID及名称       是否支持现付  现付的BizID        快递模式
+百世快递    BEST    1（标准快递） 否       -       加盟
+德邦快递    DB      1（大件快递3.60）
+2（特准快件） 是       DB_CASH 直营
+中国邮政速递物流        EMS     6（标准快递）
+9（快递包裹） 否       -       直营
+承诺达特快   OTP     1（标准快递） 是       OTP_CASH        直营
+品骏快递    PJ      1（标准快递） 是       PJ_CASH 直营
+顺丰速运    SF      1（顺丰即日）
+2（顺丰次晨）
+3（顺丰标快）
+4（顺丰特惠） 是       SF_CASH 直营
+申通快递    STO     1（标准快递） 否       -       加盟
+圆通速递    YTO     0（普通快递）
+1（圆准达）  否       -       加盟
+韵达快递    YUNDA   0（标准快件） 否       -       加盟
+中通快递    ZTO     0（标准快件） 否       -       加盟
+打印面单
+小程序开发者下单之后，可以选择以下几种方式来打印电子面单：</p>
+<p>安装微信打单PC软件；
+使用 getOrder 拉取电子面单 html，使用热敏打印机打印；
+使用快递公司的接口；
+使用 getOrder 拉取电子面单的 waybill_data，自行构造面单并打印。
+相关接口
+获取支持的快递公司列表
+生成运单
+取消运单
+获取运单数据
+查询运单轨迹
+更新打印员
+获取打印员
+获取电子面单余额
+相关事件
+运单轨迹更新
+联系我们
+开发本接口中遇到任何问题可前往微信开放社区提问，我们会有专人第一时间解答。点击此处进入社区。</p>
+<p>社区提问时，建议参考以下格式：</p>
+<p>标题：请以【物流助手】开头
+正文：若为开发问题，请说明接口调用时间点、请求数据（注意隐私数据）和返回结果，便于我们定位问题。</p>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Nosy
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

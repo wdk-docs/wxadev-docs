@@ -1,0 +1,254 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-CN" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-CN" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>会员卡组件 &mdash; wxadev 1.0.0 文档</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../_static/language_data.js"></script>
+        <script type="text/javascript" src="../../../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="索引" href="../../../genindex.html" />
+    <link rel="search" title="搜索" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../contents.html" class="icon icon-home"> wxadev
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../dev.html">小程序简介</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../basic/index.html">基础教程</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../index.html">框架开发指南</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../guide/index.html">运行环境</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../component/index.html">组件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../devtools/index.html">开发工具</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../reference/index.html">参考资料</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../wxcloud/index.html">云开发</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../api/index.html">API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../api-backend/index.html">服务端开放接口</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../contents.html">wxadev</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../contents.html">Docs</a> &raquo;</li>
+        
+      <li>会员卡组件</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../../_sources/framework/open-ability/card/membership-card.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="id1">
+<h1>会员卡组件<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
+<p>开发者可以在小程序内调用该接口拉起会员开卡组件，方便用户快速填写会员注册信息并领卡。该接口拉起开卡组件无须提前将开卡组件和发起小程序绑定至同一个公众号，开发者直接调用即可。</p>
+<p>调用前开发者须完成以下步骤：</p>
+<p>创建一张微信会员卡并设置为一键激活模式；
+设置开卡字段；
+获取开卡组件参数；
+详情查看会员开卡组件介绍：会员开卡组件</p>
+<p>参数说明</p>
+<p>参数名     类型      是否必填    参数说明
+appId   String  是       填写 wxeb490c6f9b154ef9，固定为此appid
+extraData       Object  是       开卡组件参数，由第3步获取，包含以下三个参数
+encrypt_card_id String  是       加密 card_id，传入前须 urldecode
+outer_str       String  是       会员卡领取渠道值，会在卡券领取事件回传给商户
+biz     String  是       商户公众号标识参数，传入前须 urldecode
+success Function        否       接口调用成功的回调函数
+fail    Function        否       接口调用失败的回调函数
+complete        Function        否       接口调用结束的回调函数（调用成功、失败都会执行）
+返回参数</p>
+<p>参数名     类型      参数说明
+errMsg  String  调用结果
+示例代码</p>
+<dl class="simple">
+<dt>wx.navigateToMiniProgram({</dt><dd><p>appId: ‘wxeb490c6f9b154ef9’, // 固定为此 appid，不可改动
+extraData: data, // 包括 encrypt_card_id, outer_str, biz三个字段，须从 step3 中获得的链接中获取参数
+success() {
+},
+fail() {
+},
+complete() {
+}</p>
+</dd>
+</dl>
+<p>})
+navigateToMiniProgram接口即将废弃，新版本中请使用&lt;navigator&gt;组件来使用此功能</p>
+<dl class="simple">
+<dt>&lt;navigator</dt><dd><p>target=”miniProgram”
+app-id=”wxeb490c6f9b154ef9”
+extra-data=”{{data}}”</p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>&gt;</dt><dd><p>会员卡开卡</p>
+</dd>
+</dl>
+<p>&lt;/navigator&gt;
+返回说明</p>
+<p>在 App.onShow 里判断从会员开卡小程序返回的数据data</p>
+<p>判断 data.referrerInfo.appId 是否为开卡小程序 appId wxeb490c6f9b154ef9，如果不是则中止判断
+判断是否有 data.referrerInfo.extraData 是否有数据，如果没有，表示用户未激活直接左滑/点返回键返回，或者用户已经激活
+若用户激活成功，可以从 data.referrerInfo.extraData 中获取 activate_ticket，card_id，code 参数用于下一步操作
+Tip
+在开发者工具上调用此 API 并不会真实的跳转到另外的小程序，但是开发者工具会校验本次调用跳转是否成功详情
+开发者工具上支持被跳转的小程序处理接收参数的调试详情
+开卡组件是使用wx.navigateToMiniProgram开发的官方组件，跳转时无须绑定同一个公众号，直接调用即可</p>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Nosy
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

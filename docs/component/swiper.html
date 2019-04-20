@@ -1,0 +1,326 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-CN" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-CN" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>swiper &mdash; wxadev 1.0.0 文档</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜索" href="../search.html" />
+    <link rel="next" title="swiper-item" href="swiper-item.html" />
+    <link rel="prev" title="scroll-view" href="scroll-view.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../contents.html" class="icon icon-home"> wxadev
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../dev.html">小程序简介</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../basic/index.html">基础教程</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework/index.html">框架开发指南</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide/index.html">运行环境</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">组件</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="index.html#id2">视图容器</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="cover-image.html">cover-image</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cover-view.html">cover-view</a></li>
+<li class="toctree-l3"><a class="reference internal" href="movable-area.html">movable-area</a></li>
+<li class="toctree-l3"><a class="reference internal" href="movable-view.html">movable-view</a></li>
+<li class="toctree-l3"><a class="reference internal" href="scroll-view.html">scroll-view</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">swiper</a></li>
+<li class="toctree-l3"><a class="reference internal" href="swiper-item.html">swiper-item</a></li>
+<li class="toctree-l3"><a class="reference internal" href="view.html">view</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id3">基础内容</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id4">表单组件</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id5">导航</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id6">媒体组件</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id7">地图</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id8">画布</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id9">开放能力</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id10">原生组件说明</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id11">原生组件的使用限制</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id12">无妨碍访问</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../devtools/index.html">开发工具</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference/index.html">参考资料</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../wxcloud/index.html">云开发</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/index.html">API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api-backend/index.html">服务端开放接口</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../contents.html">wxadev</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../contents.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">组件</a> &raquo;</li>
+        
+      <li>swiper</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/component/swiper.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="swiper">
+<h1>swiper<a class="headerlink" href="#swiper" title="永久链接至标题">¶</a></h1>
+<div class="versionadded">
+<p><span class="versionmodified added">1.0.0 新版功能: </span>开始支持，低版本需做兼容处理。</p>
+</div>
+<p>滑块视图容器。其中只可放置&lt;swiper-item&gt;组件，否则会导致未定义的行为。</p>
+<p>属性      类型      默认值     必填      说明      最低版本
+indicator-dots  boolean false   否       是否显示面板指示点       1.0.0
+indicator-color color   rgba(0, 0, 0, .3)       否       指示点颜色   1.1.0
+indicator-active-color  color   #000000 否       当前选中的指示点颜色      1.1.0
+autoplay        boolean false   否       是否自动切换  1.0.0
+current number  0       否       当前所在滑块的 index   1.0.0
+interval        number  5000    否       自动切换时间间隔        1.0.0
+duration        number  500     否       滑动动画时长  1.0.0
+circular        boolean false   否       是否采用衔接滑动        1.0.0
+vertical        boolean false   否       滑动方向是否为纵向       1.0.0
+previous-margin string  “0px”   否       前边距，可用于露出前一项的一小部分，接受 px 和 rpx 值 1.9.0
+next-margin     string  “0px”   否       后边距，可用于露出后一项的一小部分，接受 px 和 rpx 值 1.9.0
+display-multiple-items  number  1       否       同时显示的滑块数量       1.9.0
+skip-hidden-item-layout boolean false   否       是否跳过未显示的滑块布局，设为 true 可优化复杂情况下的滑动性能，但会丢失隐藏状态滑块的布局信息      1.9.0
+easing-function string  “default”       否       指定 swiper 切换缓动动画类型      2.6.5
+bindchange      eventhandle             否       current 改变时会触发 change 事件，event.detail = {current, source}       1.0.0
+bindtransition  eventhandle             否       swiper-item 的位置发生改变时会触发 transition 事件，event.detail = {dx: dx, dy: dy}   2.4.3
+bindanimationfinish     eventhandle             否       动画结束时会触发 animationfinish 事件，event.detail 同上     1.9.0
+easing-function 的合法值</p>
+<p>值       说明      最低版本
+default 默认缓动函数
+linear  线性动画
+easeInCubic     缓入动画
+easeOutCubic    缓出动画
+easeInOutCubic  缓入缓出动画
+change事件 source 返回值
+从 1.4.0 开始，change事件增加 source字段，表示导致变更的原因，可能值如下：</p>
+<p>autoplay 自动播放导致swiper变化；
+touch 用户划动引起swiper变化；
+其它原因将用空字符串表示。
+Bug &amp; Tip
+.. tip:: 如果在 bindchange 的事件回调函数中使用 setData 改变 current 值，则有可能导致 setData 被不停地调用，因而通常情况下请在改变 current 值前检测 source 字段来判断是否是由于用户触摸引起。
+示例代码
+在开发者工具中预览效果</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">swiper</span>
+  <span class="na">indicator-dots</span><span class="o">=</span><span class="s">&quot;{{indicatorDots}}&quot;</span>
+  <span class="na">autoplay</span><span class="o">=</span><span class="s">&quot;{{autoplay}}&quot;</span>
+  <span class="na">interval</span><span class="o">=</span><span class="s">&quot;{{interval}}&quot;</span>
+  <span class="na">duration</span><span class="o">=</span><span class="s">&quot;{{duration}}&quot;</span>
+<span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">block</span> <span class="na">wx:for</span><span class="o">=</span><span class="s">&quot;{{imgUrls}}&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">swiper-item</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">image</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;{{item}}&quot;</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;slide-image&quot;</span> <span class="na">width</span><span class="o">=</span><span class="s">&quot;355&quot;</span> <span class="na">height</span><span class="o">=</span><span class="s">&quot;150&quot;</span> <span class="p">/&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">swiper-item</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">block</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">swiper</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">button</span> <span class="na">bindtap</span><span class="o">=</span><span class="s">&quot;changeIndicatorDots&quot;</span><span class="p">&gt;</span>indicator-dots<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">button</span> <span class="na">bindtap</span><span class="o">=</span><span class="s">&quot;changeAutoplay&quot;</span><span class="p">&gt;</span>autoplay<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">slider</span> <span class="na">bindchange</span><span class="o">=</span><span class="s">&quot;intervalChange&quot;</span> <span class="na">show-value</span> <span class="na">min</span><span class="o">=</span><span class="s">&quot;500&quot;</span> <span class="na">max</span><span class="o">=</span><span class="s">&quot;2000&quot;</span> <span class="p">/&gt;</span>
+<span class="p">&lt;</span><span class="nt">slider</span> <span class="na">bindchange</span><span class="o">=</span><span class="s">&quot;durationChange&quot;</span> <span class="na">show-value</span> <span class="na">min</span><span class="o">=</span><span class="s">&quot;1000&quot;</span> <span class="na">max</span><span class="o">=</span><span class="s">&quot;10000&quot;</span> <span class="p">/&gt;</span>
+Page({
+  data: {
+    imgUrls: [
+      &#39;https://images.unsplash.com/photo-1551334787-21e6bd3ab135?w=640&#39;,
+      &#39;https://images.unsplash.com/photo-1551214012-84f95e060dee?w=640&#39;,
+      &#39;https://images.unsplash.com/photo-1551446591-142875a901a1?w=640&#39;
+    ],
+    indicatorDots: false,
+    autoplay: false,
+    interval: 5000,
+    duration: 1000
+  },
+  changeIndicatorDots(e) {
+    this.setData({
+      indicatorDots: !this.data.indicatorDots
+    })
+  },
+  changeAutoplay(e) {
+    this.setData({
+      autoplay: !this.data.autoplay
+    })
+  },
+  intervalChange(e) {
+    this.setData({
+      interval: e.detail.value
+    })
+  },
+  durationChange(e) {
+    this.setData({
+      duration: e.detail.value
+    })
+  }
+})
+</pre></div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="swiper-item.html" class="btn btn-neutral float-right" title="swiper-item" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="scroll-view.html" class="btn btn-neutral float-left" title="scroll-view" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Nosy
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

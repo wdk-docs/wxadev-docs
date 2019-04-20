@@ -1,0 +1,292 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-CN" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-CN" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>动态消息 &mdash; wxadev 1.0.0 文档</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+        <script type="text/javascript" src="../../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="搜索" href="../../search.html" />
+    <link rel="next" title="打开 App" href="launchApp.html" />
+    <link rel="prev" title="转发" href="share.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../contents.html" class="icon icon-home"> wxadev
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../dev.html">小程序简介</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../basic/index.html">基础教程</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">框架开发指南</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../structure.html">目录结构</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../config.html">小程序配置</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../sitemap.html">sitemap 配置</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../MINA.html">框架</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../app-service/index.html">逻辑层 App Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../view/index.html">视图</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../details.html">运行环境</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../plugin/index.html">插件</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ability/index.html">基础能力</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../device/index.html">硬件能力</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">开放能力</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="login.html">小程序登录</a></li>
+<li class="toctree-l3"><a class="reference internal" href="union-id.html">UnionID 机制说明</a></li>
+<li class="toctree-l3"><a class="reference internal" href="authorize.html">授权</a></li>
+<li class="toctree-l3"><a class="reference internal" href="signature.html">开放数据校验与解密</a></li>
+<li class="toctree-l3"><a class="reference internal" href="getPhoneNumber.html">获取手机号</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bio-auth.html">生物认证</a></li>
+<li class="toctree-l3"><a class="reference internal" href="share.html">转发</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">动态消息</a></li>
+<li class="toctree-l3"><a class="reference internal" href="launchApp.html">打开 App</a></li>
+<li class="toctree-l3"><a class="reference internal" href="template-message.html">模板消息</a></li>
+<li class="toctree-l3"><a class="reference internal" href="uniform-message.html">统一服务消息</a></li>
+<li class="toctree-l3"><a class="reference internal" href="customer-message/index.html">客服消息</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../guide/index.html">运行环境</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../component/index.html">组件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../devtools/index.html">开发工具</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../reference/index.html">参考资料</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../wxcloud/index.html">云开发</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api/index.html">API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api-backend/index.html">服务端开放接口</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../contents.html">wxadev</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../contents.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../index.html">框架开发指南</a> &raquo;</li>
+        
+          <li><a href="index.html">开放能力</a> &raquo;</li>
+        
+      <li>动态消息</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/framework/open-ability/updatable-message.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="id1">
+<h1>动态消息<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
+<p>从基础库 2.4.0 开始，支持转发动态消息。动态消息对比普通消息，有以下特点：</p>
+<p>消息发出去之后，开发者可以通过后台接口修改部分消息内容。
+消息有对应的提醒按钮，用户点击提醒按钮可以订阅提醒，开发者可以通过后台修改消息状态并推送一次提醒消息给订阅了提醒的用户
+消息属性
+动态消息有状态、文字内容、文字颜色。</p>
+<p>状态
+消息有两个状态，分别有其对应的文字内容和颜色。其中状态 0 可以转移到状态 0 和 1，状态 1 无法再转移。</p>
+<p>状态      文字内容    颜色      允许转移的状态
+0       “成员正在加入，当前 {member_count}/{room_limit} 人”       #FA9D39 0, 1
+1       “已开始”   #CCCCCC 无
+状态参数
+每个状态转移的时候可以携带参数，具体参数说明如下。</p>
+<p>参数      类型      说明
+member_count    string  状态 0 时有效，文字内容模板中 member_count 的值
+room_limit      string  状态 0 时有效，文字内容模板中 room_limit 的值
+path    string  状态 1 时有效，点击「进入」启动小程序时使用的路径。对于小游戏，没有页面的概念，可以用于传递查询字符串（query），如 “?foo=bar”
+version_type    string  状态 1 时有效，状态 1 时有效，点击「进入」启动小程序时使用的版本。有效参数值为：develop（开发版），trial（体验版），release（正式版）
+使用方法
+一、创建 activity_id
+每条动态消息可以理解为一个活动，活动发起前需要通过 updatableMessage.createActivityId 接口创建 activity_id。后续转发动态消息以及更新动态消息都需要传入这个 activity_id。</p>
+<p>活动的默认有效期是 24 小时。活动结束后，消息内容会变成统一的样式：</p>
+<p>文字内容：“已结束”
+文字颜色：#00ff00
+二、在转发之前声明消息类型为动态消息
+通过调用 wx.updateShareMenu 接口，传入 isUpdatableMessage: true，以及 templateInfo、activityId 参数。其中 activityId 从步骤一中获得。</p>
+<dl>
+<dt>wx.updateShareMenu({</dt><dd><p>withShareTicket: true,
+isUpdatableMessage: true,
+activityId: ‘’, // 活动 ID
+templateInfo: {</p>
+<blockquote>
+<div><dl class="simple">
+<dt>parameterList: [{</dt><dd><p>name: ‘member_count’,
+value: ‘1’</p>
+</dd>
+<dt>}, {</dt><dd><p>name: ‘room_limit’,
+value: ‘3’</p>
+</dd>
+</dl>
+<p>}]</p>
+</div></blockquote>
+<p>}</p>
+</dd>
+</dl>
+<p>})
+三、修改动态消息内容
+动态消息发出去之后，可以通过 updatableMessage.setUpdatableMsg 修改消息内容。</p>
+<p>低版本兼容
+对于不支持动态消息的客户端版本，收到动态消息后会展示成普通消息</p>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="launchApp.html" class="btn btn-neutral float-right" title="打开 App" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="share.html" class="btn btn-neutral float-left" title="转发" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Nosy
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

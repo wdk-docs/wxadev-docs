@@ -1,0 +1,297 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-CN" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-CN" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>文件系统 &mdash; wxadev 1.0.0 文档</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+        <script type="text/javascript" src="../../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="搜索" href="../../search.html" />
+    <link rel="next" title="Canvas 画布" href="canvas.html" />
+    <link rel="prev" title="存储" href="storage.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../contents.html" class="icon icon-home"> wxadev
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../dev.html">小程序简介</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../basic/index.html">基础教程</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">框架开发指南</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../structure.html">目录结构</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../config.html">小程序配置</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../sitemap.html">sitemap 配置</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../MINA.html">框架</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../app-service/index.html">逻辑层 App Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../view/index.html">视图</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../details.html">运行环境</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../plugin/index.html">插件</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">基础能力</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="network.html">网络</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mDNS.html">局域网通信</a></li>
+<li class="toctree-l3"><a class="reference internal" href="storage.html">存储</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">文件系统</a></li>
+<li class="toctree-l3"><a class="reference internal" href="canvas.html">Canvas 画布</a></li>
+<li class="toctree-l3"><a class="reference internal" href="subpackages/index.html">分包加载</a></li>
+<li class="toctree-l3"><a class="reference internal" href="server-ability/index.html">服务端能力</a></li>
+<li class="toctree-l3"><a class="reference internal" href="custom-tabbar.html">自定义 tabBar</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../device/index.html">硬件能力</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../open-ability/index.html">开放能力</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../guide/index.html">运行环境</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../component/index.html">组件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../devtools/index.html">开发工具</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../reference/index.html">参考资料</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../wxcloud/index.html">云开发</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api/index.html">API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api-backend/index.html">服务端开放接口</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../contents.html">wxadev</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../contents.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../index.html">框架开发指南</a> &raquo;</li>
+        
+          <li><a href="index.html">基础能力</a> &raquo;</li>
+        
+      <li>文件系统</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/framework/ability/file-system.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="id1">
+<h1>文件系统<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
+<p>文件系统是小程序提供的一套以小程序和用户维度隔离的存储以及一套相应的管理接口。通过 wx.getFileSystemManager() 可以获取到全局唯一的文件系统管理器，所有文件系统的管理操作通过 FileSystemManager 来调用。</p>
+<p>const fs = wx.getFileSystemManager()
+文件主要分为两大类：</p>
+<p>代码包文件：代码包文件指的是在项目目录中添加的文件。
+本地文件：通过调用接口本地产生，或通过网络下载下来，存储到本地的文件。
+其中本地文件又分为三种：</p>
+<p>本地临时文件：临时产生，随时会被回收的文件。不限制存储大小。
+本地缓存文件：小程序通过接口把本地临时文件缓存后产生的文件，不能自定义目录和文件名。除非用户主动删除小程序，否则不会被删除。跟本地用户文件共计，普通小程序最多可存储 10MB，游戏类目的小程序最多可存储 50MB。
+本地用户文件：小程序通过接口把本地临时文件缓存后产生的文件，允许自定义目录和文件名。除非用户主动删除小程序，否则不会被删除。跟本地缓存文件共计，普通小程序最多可存储 10MB，游戏类目的小程序最多可存储 50MB。
+代码包文件
+由于代码包文件大小限制，代码包文件适用于放置首次加载时需要的文件，对于内容较大或需要动态替换的文件，不推荐用添加到代码包中，推荐在小游戏启动之后再用下载接口下载到本地。</p>
+<p>访问代码包文件
+代码包文件的访问方式是从项目根目录开始写文件路径，不支持相对路径的写法。 image.png</p>
+<p>修改代码包文件
+代码包内的文件无法在运行后动态修改或删除，修改代码包文件需要重新发布版本。</p>
+<p>本地文件
+本地文件指的是小程序被用户添加到手机后，会有一块独立的文件存储区域，以用户维度隔离。即同一台手机，每个微信用户不能访问到其他登录用户的文件，同一个用户不同 appId 之间的文件也不能互相访问。 本地文件沙盒.png</p>
+<p>本地文件的文件路径均为以下格式：</p>
+<p>{{协议名}}://文件路径
+其中，协议名在 iOS/Android 客户端为 “wxfile”，在开发者工具上为 “http”，开发者无需关注这个差异，也不应在代码中去硬编码完整文件路径。</p>
+<p>本地临时文件
+本地临时文件只能通过调用特定接口产生，不能直接写入内容。本地临时文件产生后，仅在当前生命周期内有效，重启之后即不可用。因此，不可把本地临时文件路径存储起来下次使用。如果需要下次在使用，可通过 FileSystemManager.saveFile() 或 FileSystemManager.copyFile() 接口把本地临时文件转换成本地缓存文件或本地用户文件。</p>
+<p>示例
+wx.chooseImage({</p>
+<blockquote>
+<div><dl class="simple">
+<dt>success(res) {</dt><dd><p>const tempFilePaths = res.tempFilePaths // tempFilePaths 的每一项是一个本地临时文件路径</p>
+</dd>
+</dl>
+<p>}</p>
+</div></blockquote>
+<p>})
+本地缓存文件
+本地缓存文件只能通过调用特定接口产生，不能直接写入内容。本地缓存文件产生后，重启之后仍可用。本地缓存文件只能通过 FileSystemManager.saveFile() 接口将本地临时文件保存获得。</p>
+<p>示例
+fs.saveFile({</p>
+<blockquote>
+<div><p>tempFilePath: ‘’, // 传入一个本地临时文件路径
+success(res) {</p>
+<blockquote>
+<div><p>console.log(res.savedFilePath) // res.savedFilePath 为一个本地缓存文件路径</p>
+</div></blockquote>
+<p>}</p>
+</div></blockquote>
+<p>})
+注意：本地缓存文件是最初的设计，1.7.0 版本开始，提供了功能更完整的本地用户文件，可以完全覆盖本地缓存文件的功能，如果不需要兼容低于 1.7.0 版本，可以不使用本地缓存文件。</p>
+<p>本地用户文件
+本地用户文件是从 1.7.0 版本开始新增的概念。我们提供了一个用户文件目录给开发者，开发者对这个目录有完全自由的读写权限。通过 wx.env.USER_DATA_PATH 可以获取到这个目录的路径。</p>
+<p>示例
+// 在本地用户文件目录下创建一个文件 hello.txt，写入内容 “hello, world”
+const fs = wx.getFileSystemManager()
+fs.writeFileSync(<cite>${wx.env.USER_DATA_PATH}/hello.txt</cite>, ‘hello, world’, ‘utf8’)
+读写权限
+接口、组件   读       写
+代码包文件   有       无
+本地临时文件  有       无
+本地缓存文件  有       无
+本地用户文件  有       有</p>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="canvas.html" class="btn btn-neutral float-right" title="Canvas 画布" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="storage.html" class="btn btn-neutral float-left" title="存储" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Nosy
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

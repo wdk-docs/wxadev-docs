@@ -1,0 +1,521 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-CN" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-CN" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>picker &mdash; wxadev 1.0.0 文档</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜索" href="../search.html" />
+    <link rel="next" title="picker-view" href="picker-view.html" />
+    <link rel="prev" title="label" href="label.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../contents.html" class="icon icon-home"> wxadev
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../dev.html">小程序简介</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../basic/index.html">基础教程</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework/index.html">框架开发指南</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide/index.html">运行环境</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">组件</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="index.html#id2">视图容器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id3">基础内容</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html#id4">表单组件</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="button.html">button</a></li>
+<li class="toctree-l3"><a class="reference internal" href="checkbox.html">checkbox</a></li>
+<li class="toctree-l3"><a class="reference internal" href="checkbox-group.html">checkbox-group</a></li>
+<li class="toctree-l3"><a class="reference internal" href="form.html">form</a></li>
+<li class="toctree-l3"><a class="reference internal" href="input.html">input</a></li>
+<li class="toctree-l3"><a class="reference internal" href="label.html">label</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">picker</a></li>
+<li class="toctree-l3"><a class="reference internal" href="picker-view.html">picker-view</a></li>
+<li class="toctree-l3"><a class="reference internal" href="picker-view-column.html">picker-view-column</a></li>
+<li class="toctree-l3"><a class="reference internal" href="radio.html">radio</a></li>
+<li class="toctree-l3"><a class="reference internal" href="radio-group.html">radio-group</a></li>
+<li class="toctree-l3"><a class="reference internal" href="slider.html">slider</a></li>
+<li class="toctree-l3"><a class="reference internal" href="switch.html">switch</a></li>
+<li class="toctree-l3"><a class="reference internal" href="textarea.html">textarea</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id5">导航</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id6">媒体组件</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id7">地图</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id8">画布</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id9">开放能力</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id10">原生组件说明</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id11">原生组件的使用限制</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id12">无妨碍访问</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../devtools/index.html">开发工具</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference/index.html">参考资料</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../wxcloud/index.html">云开发</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/index.html">API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api-backend/index.html">服务端开放接口</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../contents.html">wxadev</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../contents.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">组件</a> &raquo;</li>
+        
+      <li>picker</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/component/picker.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="picker">
+<h1>picker<a class="headerlink" href="#picker" title="永久链接至标题">¶</a></h1>
+<div class="versionadded">
+<p><span class="versionmodified added">1.0.0 新版功能: </span>开始支持，低版本需做兼容处理。</p>
+</div>
+<p>从底部弹起的滚动选择器。</p>
+<p>属性      类型      默认值     必填      说明      最低版本
+mode    string  selector        否       选择器类型   1.0.0
+disabled        boolean false   否       是否禁用    1.0.0
+bindcancel      eventhandle             否       取消选择时触发 1.9.90
+mode 的合法值</p>
+<p>值       说明      最低版本
+selector        普通选择器
+multiSelector   多列选择器
+time    时间选择器
+date    日期选择器
+region  省市区选择器
+除了上述通用的属性，对于不同的mode，picker拥有不同的属性。</p>
+<p>普通选择器：mode = selector
+属性名     类型      默认值     说明      最低版本
+range   array/object array      []      mode 为 selector 或 multiSelector 时，range 有效
+range-key       string          当 range 是一个 Object Array 时，通过 range-key 来指定 Object 中 key 的值作为选择器显示内容
+value   number  0       表示选择了 range 中的第几个（下标从 0 开始）
+bindchange      eventhandle             value 改变时触发 change 事件，event.detail = {value}
+时间选择器：mode = time
+属性名     类型      默认值     说明      最低版本
+value   string          表示选中的时间，格式为”hh:mm”
+start   string          表示有效时间范围的开始，字符串格式为”hh:mm”
+end     string          表示有效时间范围的结束，字符串格式为”hh:mm”
+bindchange      eventhandle             value 改变时触发 change 事件，event.detail = {value}
+日期选择器：mode = date
+属性名     类型      默认值     说明      最低版本
+value   string  0       表示选中的日期，格式为”YYYY-MM-DD”
+start   string          表示有效日期范围的开始，字符串格式为”YYYY-MM-DD”
+end     string          表示有效日期范围的结束，字符串格式为”YYYY-MM-DD”
+fields  string  day     有效值 year,month,day，表示选择器的粒度
+bindchange      eventhandle             value 改变时触发 change 事件，event.detail = {value}
+fields 有效值：*</p>
+<p>值       说明
+year    选择器粒度为年
+month   选择器粒度为月份
+day     选择器粒度为天
+省市区选择器：mode = region 1.4.0
+属性名     类型      默认值     说明      最低版本
+value   array   []      表示选中的省市区，默认选中每一列的第一个值
+custom-item     string          可为每一列的顶部添加一个自定义的项       1.5.0
+bindchange      eventhandle             value 改变时触发 change 事件，event.detail = {value, code, postcode}，其中字段 code 是统计用区划代码，postcode 是邮政编码
+示例代码
+在开发者工具中预览效果</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">view</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;section&quot;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">view</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;section__title&quot;</span><span class="p">&gt;</span>普通选择器<span class="p">&lt;/</span><span class="nt">view</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">picker</span> <span class="na">bindchange</span><span class="o">=</span><span class="s">&quot;bindPickerChange&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;{{index}}&quot;</span> <span class="na">range</span><span class="o">=</span><span class="s">&quot;{{array}}&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">view</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;picker&quot;</span><span class="p">&gt;</span>
+      当前选择：{{array[index]}}
+    <span class="p">&lt;/</span><span class="nt">view</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">picker</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">view</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">view</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;section&quot;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">view</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;section__title&quot;</span><span class="p">&gt;</span>多列选择器<span class="p">&lt;/</span><span class="nt">view</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">picker</span>
+    <span class="na">mode</span><span class="o">=</span><span class="s">&quot;multiSelector&quot;</span>
+    <span class="na">bindchange</span><span class="o">=</span><span class="s">&quot;bindMultiPickerChange&quot;</span>
+    <span class="na">bindcolumnchange</span><span class="o">=</span><span class="s">&quot;bindMultiPickerColumnChange&quot;</span>
+    <span class="na">value</span><span class="o">=</span><span class="s">&quot;{{multiIndex}}&quot;</span>
+    <span class="na">range</span><span class="o">=</span><span class="s">&quot;{{multiArray}}&quot;</span>
+  <span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">view</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;picker&quot;</span><span class="p">&gt;</span>
+      当前选择：{{multiArray[0][multiIndex[0]]}}，{{multiArray[1][multiIndex[1]]}}，{{multiArray[2][multiIndex[2]]}}
+    <span class="p">&lt;/</span><span class="nt">view</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">picker</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">view</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">view</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;section&quot;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">view</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;section__title&quot;</span><span class="p">&gt;</span>时间选择器<span class="p">&lt;/</span><span class="nt">view</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">picker</span>
+    <span class="na">mode</span><span class="o">=</span><span class="s">&quot;time&quot;</span>
+    <span class="na">value</span><span class="o">=</span><span class="s">&quot;{{time}}&quot;</span>
+    <span class="na">start</span><span class="o">=</span><span class="s">&quot;09:01&quot;</span>
+    <span class="na">end</span><span class="o">=</span><span class="s">&quot;21:01&quot;</span>
+    <span class="na">bindchange</span><span class="o">=</span><span class="s">&quot;bindTimeChange&quot;</span>
+  <span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">view</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;picker&quot;</span><span class="p">&gt;</span>
+      当前选择: {{time}}
+    <span class="p">&lt;/</span><span class="nt">view</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">picker</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">view</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">view</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;section&quot;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">view</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;section__title&quot;</span><span class="p">&gt;</span>日期选择器<span class="p">&lt;/</span><span class="nt">view</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">picker</span>
+    <span class="na">mode</span><span class="o">=</span><span class="s">&quot;date&quot;</span>
+    <span class="na">value</span><span class="o">=</span><span class="s">&quot;{{date}}&quot;</span>
+    <span class="na">start</span><span class="o">=</span><span class="s">&quot;2015-09-01&quot;</span>
+    <span class="na">end</span><span class="o">=</span><span class="s">&quot;2017-09-01&quot;</span>
+    <span class="na">bindchange</span><span class="o">=</span><span class="s">&quot;bindDateChange&quot;</span>
+  <span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">view</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;picker&quot;</span><span class="p">&gt;</span>
+      当前选择: {{date}}
+    <span class="p">&lt;/</span><span class="nt">view</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">picker</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">view</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">view</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;section&quot;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">view</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;section__title&quot;</span><span class="p">&gt;</span>省市区选择器<span class="p">&lt;/</span><span class="nt">view</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">picker</span>
+    <span class="na">mode</span><span class="o">=</span><span class="s">&quot;region&quot;</span>
+    <span class="na">bindchange</span><span class="o">=</span><span class="s">&quot;bindRegionChange&quot;</span>
+    <span class="na">value</span><span class="o">=</span><span class="s">&quot;{{region}}&quot;</span>
+    <span class="na">custom-item</span><span class="o">=</span><span class="s">&quot;{{customItem}}&quot;</span>
+  <span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">view</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;picker&quot;</span><span class="p">&gt;</span>
+      当前选择：{{region[0]}}，{{region[1]}}，{{region[2]}}
+    <span class="p">&lt;/</span><span class="nt">view</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">picker</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">view</span><span class="p">&gt;</span>
+Page({
+  data: {
+    array: [&#39;美国&#39;, &#39;中国&#39;, &#39;巴西&#39;, &#39;日本&#39;],
+    objectArray: [
+      {
+        id: 0,
+        name: &#39;美国&#39;
+      },
+      {
+        id: 1,
+        name: &#39;中国&#39;
+      },
+      {
+        id: 2,
+        name: &#39;巴西&#39;
+      },
+      {
+        id: 3,
+        name: &#39;日本&#39;
+      }
+    ],
+    index: 0,
+    multiArray: [[&#39;无脊柱动物&#39;, &#39;脊柱动物&#39;], [&#39;扁性动物&#39;, &#39;线形动物&#39;, &#39;环节动物&#39;, &#39;软体动物&#39;, &#39;节肢动物&#39;], [&#39;猪肉绦虫&#39;, &#39;吸血虫&#39;]],
+    objectMultiArray: [
+      [
+        {
+          id: 0,
+          name: &#39;无脊柱动物&#39;
+        },
+        {
+          id: 1,
+          name: &#39;脊柱动物&#39;
+        }
+      ], [
+        {
+          id: 0,
+          name: &#39;扁性动物&#39;
+        },
+        {
+          id: 1,
+          name: &#39;线形动物&#39;
+        },
+        {
+          id: 2,
+          name: &#39;环节动物&#39;
+        },
+        {
+          id: 3,
+          name: &#39;软体动物&#39;
+        },
+        {
+          id: 3,
+          name: &#39;节肢动物&#39;
+        }
+      ], [
+        {
+          id: 0,
+          name: &#39;猪肉绦虫&#39;
+        },
+        {
+          id: 1,
+          name: &#39;吸血虫&#39;
+        }
+      ]
+    ],
+    multiIndex: [0, 0, 0],
+    date: &#39;2016-09-01&#39;,
+    time: &#39;12:01&#39;,
+    region: [&#39;广东省&#39;, &#39;广州市&#39;, &#39;海珠区&#39;],
+    customItem: &#39;全部&#39;
+  },
+  bindPickerChange(e) {
+    console.log(&#39;picker发送选择改变，携带值为&#39;, e.detail.value)
+    this.setData({
+      index: e.detail.value
+    })
+  },
+  bindMultiPickerChange(e) {
+    console.log(&#39;picker发送选择改变，携带值为&#39;, e.detail.value)
+    this.setData({
+      multiIndex: e.detail.value
+    })
+  },
+  bindMultiPickerColumnChange(e) {
+    console.log(&#39;修改的列为&#39;, e.detail.column, &#39;，值为&#39;, e.detail.value)
+    const data = {
+      multiArray: this.data.multiArray,
+      multiIndex: this.data.multiIndex
+    }
+    data.multiIndex[e.detail.column] = e.detail.value
+    switch (e.detail.column) {
+      case 0:
+        switch (data.multiIndex[0]) {
+          case 0:
+            data.multiArray[1] = [&#39;扁性动物&#39;, &#39;线形动物&#39;, &#39;环节动物&#39;, &#39;软体动物&#39;, &#39;节肢动物&#39;]
+            data.multiArray[2] = [&#39;猪肉绦虫&#39;, &#39;吸血虫&#39;]
+            break
+          case 1:
+            data.multiArray[1] = [&#39;鱼&#39;, &#39;两栖动物&#39;, &#39;爬行动物&#39;]
+            data.multiArray[2] = [&#39;鲫鱼&#39;, &#39;带鱼&#39;]
+            break
+        }
+        data.multiIndex[1] = 0
+        data.multiIndex[2] = 0
+        break
+      case 1:
+        switch (data.multiIndex[0]) {
+          case 0:
+            switch (data.multiIndex[1]) {
+              case 0:
+                data.multiArray[2] = [&#39;猪肉绦虫&#39;, &#39;吸血虫&#39;]
+                break
+              case 1:
+                data.multiArray[2] = [&#39;蛔虫&#39;]
+                break
+              case 2:
+                data.multiArray[2] = [&#39;蚂蚁&#39;, &#39;蚂蟥&#39;]
+                break
+              case 3:
+                data.multiArray[2] = [&#39;河蚌&#39;, &#39;蜗牛&#39;, &#39;蛞蝓&#39;]
+                break
+              case 4:
+                data.multiArray[2] = [&#39;昆虫&#39;, &#39;甲壳动物&#39;, &#39;蛛形动物&#39;, &#39;多足动物&#39;]
+                break
+            }
+            break
+          case 1:
+            switch (data.multiIndex[1]) {
+              case 0:
+                data.multiArray[2] = [&#39;鲫鱼&#39;, &#39;带鱼&#39;]
+                break
+              case 1:
+                data.multiArray[2] = [&#39;青蛙&#39;, &#39;娃娃鱼&#39;]
+                break
+              case 2:
+                data.multiArray[2] = [&#39;蜥蜴&#39;, &#39;龟&#39;, &#39;壁虎&#39;]
+                break
+            }
+            break
+        }
+        data.multiIndex[2] = 0
+        break
+    }
+    console.log(data.multiIndex)
+    this.setData(data)
+  },
+  bindDateChange(e) {
+    console.log(&#39;picker发送选择改变，携带值为&#39;, e.detail.value)
+    this.setData({
+      date: e.detail.value
+    })
+  },
+  bindTimeChange(e) {
+    console.log(&#39;picker发送选择改变，携带值为&#39;, e.detail.value)
+    this.setData({
+      time: e.detail.value
+    })
+  },
+  bindRegionChange(e) {
+    console.log(&#39;picker发送选择改变，携带值为&#39;, e.detail.value)
+    this.setData({
+      region: e.detail.value
+    })
+  }
+})
+</pre></div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="picker-view.html" class="btn btn-neutral float-right" title="picker-view" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="label.html" class="btn btn-neutral float-left" title="label" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Nosy
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
