@@ -82,7 +82,7 @@
             
             
               <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../../dev.html">小程序简介</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../dev.html">简介</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../basic/index.html">基础教程</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../framework/index.html">框架开发指南</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../guide/index.html">运行环境</a></li>
@@ -107,7 +107,6 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../reference/index.html">参考资料</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../wxcloud/index.html">云开发</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../api/index.html">API</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../api-backend/index.html">服务端开放接口</a></li>
 </ul>
@@ -181,51 +180,66 @@
   <div class="section" id="rc-build">
 <h1>预发布版 RC Build 更新日志<a class="headerlink" href="#rc-build" title="永久链接至标题">¶</a></h1>
 <p>预发布版本，包含大的特性；通过内部测试，稳定性尚可</p>
-<p>1.02.1904091 Windows 64 、 Windows 32 、 macOS
-2019.04.09
-U 优化 背景音频的交互体验
-F 修复 HTTP 调用无法上传的问题 反馈详情
-F 修复 tabBar 字体颜色支持 rgb 格式与客户端不一致的问题
-F 修复 tabBar 被蒙层遮住的问题
-F 修复 App.onLaunch 中无法调用企业微信 api 的问题
-F 修复 wx.getBackgroundAudioManager 实现与客户端不一致的问题 反馈详情
-F 修复 navigationStyle: custom 有 &lt;web-view&gt; 组件的页面没有顶部导航栏的问题
-F 修复 命令行调用上传时 –upload-desc 会截断空格后内容的问题 反馈详情
-F 修复 代理设置本地代理，失去焦点会自动在文字前加空格的问题
-F 修复 基础库占比只在第一次预览之后才显示的问题
-2019.03.25
-F 修复 1.02.1903211 覆盖安装后文件修改无法触发编译的问题
-F 修复 1.02.1903211 出现两个企业微信模拟器插件的问题
-F 修复 1.02.1903211 公众号网页调试空白的问题
-F 修复 1.02.1903211 模拟器启动时宽度错误的问题
-2019.03.21
-A 新增 云函数本地调试 文档
-A 新增 企业微信模拟器插件 文档
-A 新增 CLI/HTTP 调用关闭项目窗口、关闭开发者工具 详情
-A 新增 小程序支持 pageOrientation: “landscape”
-A 新增 分包配置中新增的页面配置会自动生成对应的页面结构 反馈详情
-A 新增 真机调试支持调试 functionalPage
-A 新增 云控制台支持地理位置索引 文档
-U 优化 大型的小程序项目编译卡顿的问题
-U 优化 TS 版快速开始的代码结构
-F 修复 打开背景音乐播放器时无法打开设置窗口的问题
-F 修复 wx.connectSocket 超时时最大连接数控制异常的问题
-F 修复 wx.connectSocket 在无法建立连接的情况下没有错误回调的问题
-F 修复 &lt;web-view&gt; 横屏时无法显示全部的问题 反馈详情
-F 修复 wxss 中使用非数字开头的自定义属性报错的问题
-F 修复 自定义 tabBar 中调用 wx.getSystemInfo 返回的 windowHeight 不正确的问题
-F 修复 自定义分析测试功能失效的问题 反馈详情
-F 修复 没有开通云开发的 appid 选择云开发启动模板新建项目后会弹下拉提示的问题
-F 修复 弹出的模拟器，打开设置授权会出现两个状态栏的问题 反馈详情
-F 修复 wx.chooseMessageFile 在 tabBar 切换后失效的问题
-F 修复 wxss 文件中 keyframe 后有注释会导致 wxml 面板无法解析样式的问题 反馈详情
-F 修复 弹出模拟器之后 wx.getMenuButtonBoundingClient 异常的问题 反馈详情
-F 修复 wxs 无法显示相同日志的问题 反馈详情
-F 修复 wxs 报错信息没有显示的问题 反馈详情
-F 修复 tabBar 调整会先显示其他 tabBar 页面的问题 反馈详情
-F 修复 npm 构建 mqtt 包会报错的问题
-F 修复 项目列表窗口大小异常的问题
-F 修复 上传时间显示错误的问题 反馈详情</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>1.02.1904091 Windows 64 、 Windows 32 、 macOS</p></li>
+</ol>
+</div></blockquote>
+<ul class="simple">
+<li><p>2019.04.09</p>
+<ol class="arabic simple">
+<li><p>U 优化 背景音频的交互体验</p></li>
+<li><p>F 修复 HTTP 调用无法上传的问题 反馈详情</p></li>
+<li><p>F 修复 tabBar 字体颜色支持 rgb 格式与客户端不一致的问题</p></li>
+<li><p>F 修复 tabBar 被蒙层遮住的问题</p></li>
+<li><p>F 修复 App.onLaunch 中无法调用企业微信 api 的问题</p></li>
+<li><p>F 修复 wx.getBackgroundAudioManager 实现与客户端不一致的问题 反馈详情</p></li>
+<li><p>F 修复 navigationStyle: custom 有 &lt;web-view&gt; 组件的页面没有顶部导航栏的问题</p></li>
+<li><p>F 修复 命令行调用上传时 –upload-desc 会截断空格后内容的问题 反馈详情</p></li>
+<li><p>F 修复 代理设置本地代理，失去焦点会自动在文字前加空格的问题</p></li>
+<li><p>F 修复 基础库占比只在第一次预览之后才显示的问题</p></li>
+</ol>
+</li>
+<li><p>2019.03.25</p>
+<ol class="arabic simple">
+<li><p>F 修复 1.02.1903211 覆盖安装后文件修改无法触发编译的问题</p></li>
+<li><p>F 修复 1.02.1903211 出现两个企业微信模拟器插件的问题</p></li>
+<li><p>F 修复 1.02.1903211 公众号网页调试空白的问题</p></li>
+<li><p>F 修复 1.02.1903211 模拟器启动时宽度错误的问题</p></li>
+</ol>
+</li>
+<li><p>2019.03.21</p>
+<ol class="arabic simple">
+<li><p>A 新增 云函数本地调试 文档</p></li>
+<li><p>A 新增 企业微信模拟器插件 文档</p></li>
+<li><p>A 新增 CLI/HTTP 调用关闭项目窗口、关闭开发者工具 详情</p></li>
+<li><p>A 新增 小程序支持 pageOrientation: “landscape”</p></li>
+<li><p>A 新增 分包配置中新增的页面配置会自动生成对应的页面结构 反馈详情</p></li>
+<li><p>A 新增 真机调试支持调试 functionalPage</p></li>
+<li><p>A 新增 云控制台支持地理位置索引 文档</p></li>
+<li><p>U 优化 大型的小程序项目编译卡顿的问题</p></li>
+<li><p>U 优化 TS 版快速开始的代码结构</p></li>
+<li><p>F 修复 打开背景音乐播放器时无法打开设置窗口的问题</p></li>
+<li><p>F 修复 wx.connectSocket 超时时最大连接数控制异常的问题</p></li>
+<li><p>F 修复 wx.connectSocket 在无法建立连接的情况下没有错误回调的问题</p></li>
+<li><p>F 修复 &lt;web-view&gt; 横屏时无法显示全部的问题 反馈详情</p></li>
+<li><p>F 修复 wxss 中使用非数字开头的自定义属性报错的问题</p></li>
+<li><p>F 修复 自定义 tabBar 中调用 wx.getSystemInfo 返回的 windowHeight 不正确的问题</p></li>
+<li><p>F 修复 自定义分析测试功能失效的问题 反馈详情</p></li>
+<li><p>F 修复 没有开通云开发的 appid 选择云开发启动模板新建项目后会弹下拉提示的问题</p></li>
+<li><p>F 修复 弹出的模拟器，打开设置授权会出现两个状态栏的问题 反馈详情</p></li>
+<li><p>F 修复 wx.chooseMessageFile 在 tabBar 切换后失效的问题</p></li>
+<li><p>F 修复 wxss 文件中 keyframe 后有注释会导致 wxml 面板无法解析样式的问题 反馈详情</p></li>
+<li><p>F 修复 弹出模拟器之后 wx.getMenuButtonBoundingClient 异常的问题 反馈详情</p></li>
+<li><p>F 修复 wxs 无法显示相同日志的问题 反馈详情</p></li>
+<li><p>F 修复 wxs 报错信息没有显示的问题 反馈详情</p></li>
+<li><p>F 修复 tabBar 调整会先显示其他 tabBar 页面的问题 反馈详情</p></li>
+<li><p>F 修复 npm 构建 mqtt 包会报错的问题</p></li>
+<li><p>F 修复 项目列表窗口大小异常的问题</p></li>
+<li><p>F 修复 上传时间显示错误的问题 反馈详情</p></li>
+</ol>
+</li>
+</ul>
 </div>
 
 
