@@ -1,0 +1,2 @@
+:wxapi:`IntersectionObserver.disconnect`
+============================================

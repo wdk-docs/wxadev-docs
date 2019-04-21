@@ -1,9 +1,10 @@
-页面路由
-==========
+:wxfrwk:`页面路由 <app-service/route>`
+==================================================
 
 在小程序中所有页面的路由全部由框架进行管理。
 
 页面栈
+-----------------
 
 框架以栈的形式维护了当前的所有页面。 当发生路由切换的时候，页面栈的表现如下：
 
@@ -17,6 +18,8 @@ Tab 切换	页面全部出栈，只留下新的 Tab 页面
 开发者可以使用 getCurrentPages 函数获取当前页面栈。
 
 路由方式
+-----------------
+
 
 对于路由的触发方式以及页面生命周期函数如下：
 
@@ -48,11 +51,11 @@ D	B	D.onUnload(), C.onUnload(), B.onLoad(), B.onShow()
 D（从转发进入）	A	D.onUnload(), A.onLoad(), A.onShow()
 D（从转发进入）	B	D.onUnload(), B.onLoad(), B.onShow()
 
-Tips:
 
-navigateTo, redirectTo 只能打开非 tabBar 页面。
-switchTab 只能打开 tabBar 页面。
-reLaunch 可以打开任意页面。
+.. tip::
 
-页面底部的 tabBar 由页面决定，即只要是定义为 tabBar 的页面，底部都有 tabBar。
-调用页面路由带的参数可以在目标页面的onLoad中获取。
+   - navigateTo, redirectTo 只能打开非 tabBar 页面。
+   - switchTab 只能打开 tabBar 页面。
+   - reLaunch 可以打开任意页面。
+   - 页面底部的 tabBar 由页面决定，即只要是定义为 tabBar 的页面，底部都有 tabBar。
+   - 调用页面路由带的参数可以在目标页面的onLoad中获取。

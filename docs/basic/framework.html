@@ -82,27 +82,30 @@
             
             
               <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../index.html">开发指南</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../dev.html">简介</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">基础教程</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="quickstart.html">起步</a></li>
 <li class="toctree-l2"><a class="reference internal" href="code.html">代码构成</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">宿主环境</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#id2">渲染层和逻辑层</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id3">程序与页面</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id4">组件</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id4">程序与页面</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id5">组件</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#api">API</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="release.html">协同工作和发布</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../framework/index.html">框架开发指南</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../guide/index.html">运行环境</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework/index.html">框架</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../component/index.html">组件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/index.html">API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api-backend/index.html">服务端API</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../devtools/index.html">开发工具</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../reference/index.html">参考资料</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../api/index.html">API</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../api-backend/index.html">服务端开放接口</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../wxcloud/index.html">云开发</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary.html">术语</a></li>
 </ul>
 
             
@@ -178,10 +181,11 @@
 <p>首先，我们来简单了解下小程序的运行环境。小程序的运行环境分成渲染层和逻辑层，其中 WXML 模板和 WXSS 样式工作在渲染层，JS 脚本工作在逻辑层。</p>
 <p>小程序的渲染层和逻辑层分别由2个线程管理：渲染层的界面使用了WebView 进行渲染；逻辑层采用JsCore线程运行JS脚本。
 一个小程序存在多个界面，所以渲染层存在多个WebView线程，这两个线程的通信会经由微信客户端（下文中也会采用Native来代指微信客户端）做中转，逻辑层发送网络请求也经由Native转发，小程序的通信模型下图所示。</p>
-<p>有关渲染层和逻辑层的详细文档参考 小程序框架 。</p>
+<img alt="https://developers.weixin.qq.com/miniprogram/dev/image/quickstart/basic/4-1.png?t=19041921" src="https://developers.weixin.qq.com/miniprogram/dev/image/quickstart/basic/4-1.png?t=19041921" />
+<p>有关渲染层和逻辑层的详细文档参考 <a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/framework/MINA.html">小程序框架</a>  。</p>
 </div>
-<div class="section" id="id3">
-<h2>程序与页面<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
+<div class="section" id="id4">
+<h2>程序与页面<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h2>
 <p>微信客户端在打开小程序之前，会把整个小程序的代码包下载到本地。</p>
 <p>紧接着通过 app.json 的 pages 字段就可以知道你当前小程序的所有页面路径:</p>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
@@ -220,8 +224,8 @@
 <p>在渲染完界面之后，页面实例就会收到一个 onLoad 的回调，你可以在这个回调处理你的逻辑。</p>
 <p>有关于 Page 构造器更多详细的文档参考 注册页面 Page 。</p>
 </div>
-<div class="section" id="id4">
-<h2>组件<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h2>
+<div class="section" id="id5">
+<h2>组件<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h2>
 <p>小程序提供了丰富的基础组件给开发者，开发者可以像搭积木一样，组合各种组件拼合成自己的小程序。</p>
 <p>就像 HTML 的 div, p 等标签一样，在小程序里边，你只需要在 WXML 写上对应的组件标签名字就可以把该组件显示在界面上，例如，
 你需要在界面上显示地图，你只需要这样写即可：</p>

@@ -19,7 +19,7 @@ hover-start-time	number	20	否	按住后多久出现点击态，单位毫秒	1.0
 hover-stay-time	number	70	否	手指松开后点击态保留时间，单位毫秒	1.0.0
 lang	string	en	否	指定返回用户信息的语言，zh_CN 简体中文，zh_TW 繁体中文，en 英文。	1.3.0
 session-from	string		否	会话来源，open-type="contact"时有效	1.4.0
-send-message-title	string	当前标题	否	会话内消息卡片标题，open-type="contact"时有效	1.5.0
+send-message-title	string	当前:wxapi:`wx.createWorker`	否	会话内消息卡片:wxapi:`wx.createWorker`，open-type="contact"时有效	1.5.0
 send-message-path	string	当前分享路径	否	会话内消息卡片点击跳转小程序路径，open-type="contact"时有效	1.5.0
 send-message-img	string	截图	否	会话内消息卡片图片，open-type="contact"时有效	1.5.0
 app-parameter	string		否	打开 APP 时，向 APP 传递的参数，open-type=launchApp时有效	1.9.5

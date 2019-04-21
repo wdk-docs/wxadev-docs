@@ -7,7 +7,7 @@
 
 想要更具体了了关于框架、组件、API的详细内容，请参考对应的参考文档：
 
-* 小程序框架参考文档
-* 小程序组件参考文档
-* 小程序 API 参考文档
-* 小程序服务端 API 参考文档
+*  小程序 :doc:`/framework/index` 参考文档
+*  小程序 :doc:`/component/index` 参考文档
+*  小程序 :doc:`/api/index` 参考文档
+*  小程序 :doc:`/api-backend/index` 参考文档

@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>标题 &mdash; wxadev 1.0.0 文档</title>
+  <title>logistics.getOrder &mdash; wxadev 1.0.0 文档</title>
   
 
   
@@ -35,7 +35,9 @@
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="index" title="索引" href="../genindex.html" />
-    <link rel="search" title="搜索" href="../search.html" /> 
+    <link rel="search" title="搜索" href="../search.html" />
+    <link rel="next" title="logistics.getPath" href="logistics.getPath.html" />
+    <link rel="prev" title="logistics.getAllDelivery" href="logistics.getAllDelivery.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -79,17 +81,46 @@
               
             
             
-              <ul>
-<li class="toctree-l1"><a class="reference internal" href="../dev.html">小程序简介</a></li>
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../index.html">开发指南</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev.html">简介</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../basic/index.html">基础教程</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../framework/index.html">框架开发指南</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../guide/index.html">运行环境</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework/index.html">框架</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../component/index.html">组件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/index.html">API</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">服务端API</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="index.html#id1">登录</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id2">用户信息</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id3">接口调用凭证</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id4">数据分析</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id7">客服消息</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id8">模板消息</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id9">统一服务消息</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id10">动态消息</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id11">插件管理</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id12">附近的小程序</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id13">小程序码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id14">内容安全</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id15">物流助手</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html#id17">小程序使用</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="logistics.addOrder.html">logistics.addOrder</a></li>
+<li class="toctree-l3"><a class="reference internal" href="logistics.cancelOrder.html">logistics.cancelOrder</a></li>
+<li class="toctree-l3"><a class="reference internal" href="logistics.getAllDelivery.html">logistics.getAllDelivery</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">logistics.getOrder</a></li>
+<li class="toctree-l3"><a class="reference internal" href="logistics.getPath.html">logistics.getPath</a></li>
+<li class="toctree-l3"><a class="reference internal" href="logistics.getPrinter.html">logistics.getPrinter</a></li>
+<li class="toctree-l3"><a class="reference internal" href="logistics.getQuota.html">logistics.getQuota</a></li>
+<li class="toctree-l3"><a class="reference internal" href="logistics.onPathUpdate.html">logistics.onPathUpdate</a></li>
+<li class="toctree-l3"><a class="reference internal" href="logistics.updatePrinter.html">logistics.updatePrinter</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="../devtools/index.html">开发工具</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../reference/index.html">参考资料</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../wxcloud/index.html">云开发</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../api/index.html">API</a></li>
-<li class="toctree-l1"><a class="reference internal" href="index.html">服务端开放接口</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary.html">术语</a></li>
 </ul>
 
             
@@ -135,7 +166,9 @@
     
       <li><a href="../contents.html">Docs</a> &raquo;</li>
         
-      <li>标题</li>
+          <li><a href="index.html">服务端API</a> &raquo;</li>
+        
+      <li>logistics.getOrder</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -154,8 +187,8 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="id1">
-<h1>标题<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
+  <div class="section" id="logistics-getorder">
+<h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/api/logistics.getOrder.html">logistics.getOrder</a><a class="headerlink" href="#logistics-getorder" title="永久链接至标题">¶</a></h1>
 </div>
 
 
@@ -163,6 +196,15 @@
            
           </div>
           <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="logistics.getPath.html" class="btn btn-neutral float-right" title="logistics.getPath" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="logistics.getAllDelivery.html" class="btn btn-neutral float-left" title="logistics.getAllDelivery" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
   
 
   <hr/>

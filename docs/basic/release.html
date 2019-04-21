@@ -36,8 +36,8 @@
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜索" href="../search.html" />
-    <link rel="next" title="框架开发指南" href="../framework/index.html" />
-    <link rel="prev" title="小程序宿主环境" href="framework.html" /> 
+    <link rel="next" title="运行环境" href="../guide/index.html" />
+    <link rel="prev" title="宿主环境" href="framework.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -82,11 +82,12 @@
             
             
               <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../index.html">开发指南</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../dev.html">简介</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">基础教程</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="quickstart.html">起步</a></li>
-<li class="toctree-l2"><a class="reference internal" href="code.html">小程序代码构成</a></li>
-<li class="toctree-l2"><a class="reference internal" href="framework.html">小程序宿主环境</a></li>
+<li class="toctree-l2"><a class="reference internal" href="code.html">代码构成</a></li>
+<li class="toctree-l2"><a class="reference internal" href="framework.html">宿主环境</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">协同工作和发布</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#id2">协同工作</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#id3">小程序成员管理</a></li>
@@ -103,13 +104,15 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../framework/index.html">框架开发指南</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../guide/index.html">运行环境</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework/index.html">框架</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../component/index.html">组件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/index.html">API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api-backend/index.html">服务端API</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../devtools/index.html">开发工具</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../reference/index.html">参考资料</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../api/index.html">API</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../api-backend/index.html">服务端开放接口</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../wxcloud/index.html">云开发</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary.html">术语</a></li>
 </ul>
 
             
@@ -185,9 +188,11 @@
 <h2>协同工作<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
 <p>如果你只是一个人开发小程序，可以暂时先跳过这部分，如果是一个团队需要先了解一些概念。</p>
 <p>多数情况下，一个团队多人同时参与同一个小程序项目，每个角色所承担的工作或者权限不一样，中大公司的分工更为仔细。为了更形象的表达团队不同角色的关系以及权限的管理，我们通过虚拟一个项目成员组织结构来描述日常如何协同合作完成一个小程序的发布，组织关系如图5-1所示。</p>
-<p>img ​ 图5-1 虚拟小程序项目组</p>
+<img alt="https://developers.weixin.qq.com/miniprogram/dev/image/quickstart/basic/5.1.png?t=19041921" src="https://developers.weixin.qq.com/miniprogram/dev/image/quickstart/basic/5.1.png?t=19041921" />
+<p>图5-1 虚拟小程序项目组</p>
 <p>项目管理成员负责统筹整个项目的进展和风险、把控小程序对外发布的节奏，产品组提出需求，设计组与产品讨论并对需求进行抽象，设计出可视化流程与图形，输出设计方案。开发组依据设计方案，进行程序代码的编写，代码编写完成后，产品组与设计组体验小程序的整体流程，测试组编写测试用例并对小程序进行各种边界测试。项目一般的成员构成与工作流程如图5-2所示。</p>
-<p>img ​ 图5-2 提需求到发布小程序的流程</p>
+<img alt="https://developers.weixin.qq.com/miniprogram/dev/image/quickstart/basic/5.2.png?t=19041921" src="https://developers.weixin.qq.com/miniprogram/dev/image/quickstart/basic/5.2.png?t=19041921" />
+<p>图5-2 提需求到发布小程序的流程</p>
 </div>
 <div class="section" id="id3">
 <h2>小程序成员管理<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
@@ -210,19 +215,21 @@
 小程序插件   √
 游戏运营管理  √
 各权限功能说明</p>
-<p>开发者权限：可使用小程序开发者工具及开发版小程序进行开发
-体验者权限：可使用体验版小程序
-登录：可登录小程序管理后台，无需管理员确认
-数据分析：使用小程序统计模块功能查看小程序数据
-微信支付：使用小程序微信支付（虚拟支付）模块
-推广：使用小程序流量主、广告主模块
-开发管理：小程序提交审核、发布、回退
-开发设置：设置小程序服务器域名、消息推送及扫描普通链接二维码打开小程序
-暂停服务设置：暂停小程序线上服务
-解除关联公众号：可解绑小程序已关联的公众号
-小程序插件：可进行小程序插件开发管理和设置
-游戏运营管理：可使用小游戏管理后台的素材管理、游戏圈管理等功能
-需要留意，项目管理者控制整个小程序的发布、回退、下架等敏感操作，不应把敏感操作的权限分配给不相关人员</p>
+<ul class="simple">
+<li><p>开发者权限：可使用小程序开发者工具及开发版小程序进行开发</p></li>
+<li><p>体验者权限：可使用体验版小程序</p></li>
+<li><p>登录：可登录小程序管理后台，无需管理员确认</p></li>
+<li><p>数据分析：使用小程序统计模块功能查看小程序数据</p></li>
+<li><p>微信支付：使用小程序微信支付（虚拟支付）模块</p></li>
+<li><p>推广：使用小程序流量主、广告主模块</p></li>
+<li><p>开发管理：小程序提交审核、发布、回退</p></li>
+<li><p>开发设置：设置小程序服务器域名、消息推送及扫描普通链接二维码打开小程序</p></li>
+<li><p>暂停服务设置：暂停小程序线上服务</p></li>
+<li><p>解除关联公众号：可解绑小程序已关联的公众号</p></li>
+<li><p>小程序插件：可进行小程序插件开发管理和设置</p></li>
+<li><p>游戏运营管理：可使用小游戏管理后台的素材管理、游戏圈管理等功能</p></li>
+</ul>
+<p>需要留意，项目管理者控制整个小程序的发布、回退、下架等敏感操作，不应把敏感操作的权限分配给不相关人员</p>
 </div>
 <div class="section" id="id4">
 <h2>小程序的版本<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h2>
@@ -265,19 +272,16 @@
 <div class="section" id="id9">
 <h3>小程序码<a class="headerlink" href="#id9" title="永久链接至标题">¶</a></h3>
 <p>很多场景下用户会通过扫码快速进入一个小程序，在小程序设计的初期，小程序平台提供的二维码的形式。我们发现用户在扫一个二维码时，他并不知道当前这次扫码会出现什么样的服务，因为二维码的背后有可能是公众号、小程序、网页服务、支付页面、添加好友等不同的服务。为了让用户在扫码之前就有一个明确的预期，因此微信设计了小程序码，如图5-3所示。</p>
-<p>img</p>
-<p>​ 图5-3 “小程序数据助手”的小程序码</p>
+<img alt="https://developers.weixin.qq.com/miniprogram/dev/image/quickstart/basic/5.3.png?t=19041921" src="https://developers.weixin.qq.com/miniprogram/dev/image/quickstart/basic/5.3.png?t=19041921" />
+<p>​图5-3 “小程序数据助手”的小程序码</p>
 <p>小程序码在样式上更具辨识度和视觉冲击力，相对于二维码来说，小程序主题的品牌形象更加清晰明显，可以帮助开发者更好地推广小程序。在发布小程序之后，小程序管理平台会提供对应的小程序码的预览和下载，开发者可以自行下载用于线上和线下的小程序服务推广。</p>
 </div>
 </div>
 <div class="section" id="id10">
 <h2>运营数据<a class="headerlink" href="#id10" title="永久链接至标题">¶</a></h2>
-<p>有两种方式可以方便的看到小程序的运营数据</p>
-<p>方法一：</p>
-<p>登录 小程序管理后台 - 数据分析</p>
-<p>点击相应的 tab 可以看到相关的数据。</p>
-<p>方法二：</p>
-<p>使用小程序数据助手，在微信中方便的查看运营数据</p>
+<p>有两种方式可以方便的看到小程序的 <a class="reference external" href="https://developers.weixin.qq.com/miniprogram/analysis/index.html?t=19041921">运营数据</a></p>
+<p>方法一: 登录 <a class="reference external" href="https://mp.weixin.qq.com/">小程序管理后台</a> - 数据分析, 点击相应的 tab 可以看到相关的数据。</p>
+<p>方法二: 使用小程序数据助手，在微信中方便的查看运营数据</p>
 </div>
 </div>
 
@@ -289,10 +293,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../framework/index.html" class="btn btn-neutral float-right" title="框架开发指南" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="../guide/index.html" class="btn btn-neutral float-right" title="运行环境" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="framework.html" class="btn btn-neutral float-left" title="小程序宿主环境" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="framework.html" class="btn btn-neutral float-left" title="宿主环境" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

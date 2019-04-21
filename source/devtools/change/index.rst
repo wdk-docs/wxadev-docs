@@ -10,3 +10,4 @@
    stable
    upnwjs
    uplog
+   beta

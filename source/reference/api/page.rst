@@ -186,7 +186,7 @@ webViewUrl	String	页面中包含<web-view>组件时，返回当前<web-view>的
 自定义转发内容
 
 字段	说明	默认值	最低版本
-title	转发标题	当前小程序名称
+title	转发:wxapi:`wx.createWorker`	当前小程序名称
 path	转发路径	当前页面 path ，必须是以 / 开头的完整路径
 imageUrl	自定义图片路径，可以是本地文件路径、代码包文件路径或者网络图片路径。支持PNG及JPG。显示图片长宽比是 5:4。	使用默认截图	1.5.0
 示例代码
@@ -202,7 +202,7 @@ imageUrl	自定义图片路径，可以是本地文件路径、代码包文件�
         console.log(res.target)
       }
       return {
-        title: '自定义转发标题',
+        title: '自定义转发:wxapi:`wx.createWorker`',
         path: '/page/user?id=123'
       }
     }

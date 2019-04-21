@@ -36,7 +36,7 @@
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="index" title="索引" href="genindex.html" />
     <link rel="search" title="搜索" href="search.html" />
-    <link rel="next" title="简介" href="dev.html" /> 
+    <link rel="next" title="开发指南" href="index.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -81,15 +81,18 @@
             
             
               <ul>
+<li class="toctree-l1"><a class="reference internal" href="index.html">开发指南</a></li>
 <li class="toctree-l1"><a class="reference internal" href="dev.html">简介</a></li>
 <li class="toctree-l1"><a class="reference internal" href="basic/index.html">基础教程</a></li>
-<li class="toctree-l1"><a class="reference internal" href="framework/index.html">框架开发指南</a></li>
 <li class="toctree-l1"><a class="reference internal" href="guide/index.html">运行环境</a></li>
+<li class="toctree-l1"><a class="reference internal" href="framework/index.html">框架</a></li>
 <li class="toctree-l1"><a class="reference internal" href="component/index.html">组件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api/index.html">API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api-backend/index.html">服务端API</a></li>
 <li class="toctree-l1"><a class="reference internal" href="devtools/index.html">开发工具</a></li>
 <li class="toctree-l1"><a class="reference internal" href="reference/index.html">参考资料</a></li>
-<li class="toctree-l1"><a class="reference internal" href="api/index.html">API</a></li>
-<li class="toctree-l1"><a class="reference internal" href="api-backend/index.html">服务端开放接口</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wxcloud/index.html">云开发</a></li>
+<li class="toctree-l1"><a class="reference internal" href="glossary.html">术语</a></li>
 </ul>
 
             
@@ -158,6 +161,7 @@
 <h1>开发教程<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
 <div class="toctree-wrapper compound">
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="index.html">开发指南</a></li>
 <li class="toctree-l1"><a class="reference internal" href="dev.html">简介</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="dev.html#id2">技术发展史</a></li>
 <li class="toctree-l2"><a class="reference internal" href="dev.html#id3">与普通网页开发的区别</a></li>
@@ -171,11 +175,15 @@
 <li class="toctree-l2"><a class="reference internal" href="basic/release.html">协同工作和发布</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="framework/index.html">框架开发指南</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="guide/index.html">运行环境</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="guide/runtime/index.html">运行环境</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="framework/index.html">框架</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="framework/MINA.html">框架</a></li>
 <li class="toctree-l2"><a class="reference internal" href="framework/structure.html">目录结构</a></li>
 <li class="toctree-l2"><a class="reference internal" href="framework/config.html">小程序配置</a></li>
 <li class="toctree-l2"><a class="reference internal" href="framework/sitemap.html">sitemap 配置</a></li>
-<li class="toctree-l2"><a class="reference internal" href="framework/MINA.html">框架</a></li>
 <li class="toctree-l2"><a class="reference internal" href="framework/app-service/index.html">逻辑层 App Service</a></li>
 <li class="toctree-l2"><a class="reference internal" href="framework/view/index.html">视图</a></li>
 <li class="toctree-l2"><a class="reference internal" href="framework/details.html">运行环境</a></li>
@@ -183,42 +191,32 @@
 <li class="toctree-l2"><a class="reference internal" href="framework/ability/index.html">基础能力</a></li>
 <li class="toctree-l2"><a class="reference internal" href="framework/device/index.html">硬件能力</a></li>
 <li class="toctree-l2"><a class="reference internal" href="framework/open-ability/index.html">开放能力</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="guide/index.html">运行环境</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="guide/runtime/index.html">运行环境</a></li>
+<li class="toctree-l2"><a class="reference internal" href="framework/usability.html">调试</a></li>
+<li class="toctree-l2"><a class="reference internal" href="framework/usability/index.html">usability</a></li>
+<li class="toctree-l2"><a class="reference internal" href="framework/usability/index.html#id1">视图</a></li>
+<li class="toctree-l2"><a class="reference internal" href="framework/performance.html">性能</a></li>
+<li class="toctree-l2"><a class="reference internal" href="framework/performance/index.html">performance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="framework/client-lib/index.html">client-lib</a></li>
+<li class="toctree-l2"><a class="reference internal" href="framework/compatibility.html">兼容处理</a></li>
+<li class="toctree-l2"><a class="reference internal" href="framework/workers.html">workers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="framework/server-ability/index.html">server-ability</a></li>
+<li class="toctree-l2"><a class="reference internal" href="framework/release/index.html">release</a></li>
+<li class="toctree-l2"><a class="reference internal" href="framework/operating-mechanism.html">小程序运行机制</a></li>
+<li class="toctree-l2"><a class="reference internal" href="framework/custom-component/index.html">custom-component</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="component/index.html">组件</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="component/index.html#id2">视图容器</a></li>
 <li class="toctree-l2"><a class="reference internal" href="component/index.html#id3">基础内容</a></li>
-<li class="toctree-l2"><a class="reference internal" href="component/index.html#id4">表单组件</a></li>
+<li class="toctree-l2"><a class="reference internal" href="component/index.html#id4">表单</a></li>
 <li class="toctree-l2"><a class="reference internal" href="component/index.html#id5">导航</a></li>
-<li class="toctree-l2"><a class="reference internal" href="component/index.html#id6">媒体组件</a></li>
+<li class="toctree-l2"><a class="reference internal" href="component/index.html#id6">媒体</a></li>
 <li class="toctree-l2"><a class="reference internal" href="component/index.html#id7">地图</a></li>
 <li class="toctree-l2"><a class="reference internal" href="component/index.html#id8">画布</a></li>
 <li class="toctree-l2"><a class="reference internal" href="component/index.html#id9">开放能力</a></li>
 <li class="toctree-l2"><a class="reference internal" href="component/index.html#id10">原生组件说明</a></li>
-<li class="toctree-l2"><a class="reference internal" href="component/index.html#id11">原生组件的使用限制</a></li>
+<li class="toctree-l2"><a class="reference internal" href="component/index.html#ncur">原生组件的使用限制</a></li>
 <li class="toctree-l2"><a class="reference internal" href="component/index.html#id12">无妨碍访问</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="devtools/index.html">开发工具</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="devtools/page.html">界面</a></li>
-<li class="toctree-l2"><a class="reference internal" href="devtools/edit.html">编辑区</a></li>
-<li class="toctree-l2"><a class="reference internal" href="devtools/debug.html">调试</a></li>
-<li class="toctree-l2"><a class="reference internal" href="devtools/ext.html">开发辅助</a></li>
-<li class="toctree-l2"><a class="reference internal" href="devtools/sandbox.html">开发辅助</a></li>
-<li class="toctree-l2"><a class="reference internal" href="devtools/audits.html">工具插件</a></li>
-<li class="toctree-l2"><a class="reference internal" href="devtools/notsupport.html">API 实现差异</a></li>
-<li class="toctree-l2"><a class="reference internal" href="devtools/download.html">下载</a></li>
-<li class="toctree-l2"><a class="reference internal" href="devtools/change/index.html">更新日志</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="reference/index.html">参考资料</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="reference/configuration/index.html">小程序配置</a></li>
-<li class="toctree-l2"><a class="reference internal" href="reference/scene.html">场景值列表</a></li>
-<li class="toctree-l2"><a class="reference internal" href="reference/api/index.html">框架接口</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="api/index.html">API</a><ul>
@@ -242,25 +240,56 @@
 <li class="toctree-l2"><a class="reference internal" href="api/index.html#wxml">WXML</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="api-backend/index.html">服务端开放接口</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="api-backend/index.html#id2">登录</a></li>
-<li class="toctree-l2"><a class="reference internal" href="api-backend/index.html#id3">用户信息</a></li>
-<li class="toctree-l2"><a class="reference internal" href="api-backend/index.html#id4">接口调用凭证</a></li>
-<li class="toctree-l2"><a class="reference internal" href="api-backend/index.html#id5">数据分析</a></li>
-<li class="toctree-l2"><a class="reference internal" href="api-backend/index.html#id8">客服消息</a></li>
-<li class="toctree-l2"><a class="reference internal" href="api-backend/index.html#id9">模板消息</a></li>
-<li class="toctree-l2"><a class="reference internal" href="api-backend/index.html#id10">统一服务消息</a></li>
-<li class="toctree-l2"><a class="reference internal" href="api-backend/index.html#id11">动态消息</a></li>
-<li class="toctree-l2"><a class="reference internal" href="api-backend/index.html#id12">插件管理</a></li>
-<li class="toctree-l2"><a class="reference internal" href="api-backend/index.html#id13">附近的小程序</a></li>
-<li class="toctree-l2"><a class="reference internal" href="api-backend/index.html#id14">小程序码</a></li>
-<li class="toctree-l2"><a class="reference internal" href="api-backend/index.html#id15">内容安全</a></li>
-<li class="toctree-l2"><a class="reference internal" href="api-backend/index.html#id16">物流助手</a></li>
-<li class="toctree-l2"><a class="reference internal" href="api-backend/index.html#id18">小程序使用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api-backend/index.html">服务端API</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api-backend/index.html#id1">登录</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api-backend/index.html#id2">用户信息</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api-backend/index.html#id3">接口调用凭证</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api-backend/index.html#id4">数据分析</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api-backend/index.html#id7">客服消息</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api-backend/index.html#id8">模板消息</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api-backend/index.html#id9">统一服务消息</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api-backend/index.html#id10">动态消息</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api-backend/index.html#id11">插件管理</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api-backend/index.html#id12">附近的小程序</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api-backend/index.html#id13">小程序码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api-backend/index.html#id14">内容安全</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api-backend/index.html#id15">物流助手</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api-backend/index.html#id17">小程序使用</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="devtools/index.html">开发工具</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="devtools/page.html">界面</a></li>
+<li class="toctree-l2"><a class="reference internal" href="devtools/settings.html">设置页</a></li>
+<li class="toctree-l2"><a class="reference internal" href="devtools/edit.html">编辑区</a></li>
+<li class="toctree-l2"><a class="reference internal" href="devtools/debug.html">调试</a></li>
+<li class="toctree-l2"><a class="reference internal" href="devtools/ext.html">开发辅助</a></li>
+<li class="toctree-l2"><a class="reference internal" href="devtools/sandbox.html">开发辅助</a></li>
+<li class="toctree-l2"><a class="reference internal" href="devtools/audits.html">工具插件</a></li>
+<li class="toctree-l2"><a class="reference internal" href="devtools/notsupport.html">API 实现差异</a></li>
+<li class="toctree-l2"><a class="reference internal" href="devtools/download.html">下载</a></li>
+<li class="toctree-l2"><a class="reference internal" href="devtools/change/index.html">更新日志</a></li>
+<li class="toctree-l2"><a class="reference internal" href="devtools/devtools.html">:wxdt:`change/devtools`</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="reference/index.html">参考资料</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="reference/configuration/index.html">小程序配置</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference/scene.html">场景值列表</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference/api/index.html">框架接口</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="wxcloud/index.html">云开发</a></li>
+<li class="toctree-l1"><a class="reference internal" href="glossary.html">术语</a></li>
 </ul>
 </div>
+</div>
+<div class="section" id="id2">
+<h1>指数和表格<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h1>
+<ul class="simple">
+<li><p><a class="reference internal" href="genindex.html"><span class="std std-ref">索引</span></a></p></li>
+<li><p><a class="reference internal" href="py-modindex.html"><span class="std std-ref">模块索引</span></a></p></li>
+<li><p><a class="reference internal" href="search.html"><span class="std std-ref">搜索页面</span></a></p></li>
+<li><p><a class="reference internal" href="glossary.html#glossary"><span class="std std-ref">术语</span></a></p></li>
+</ul>
 </div>
 
 
@@ -271,7 +300,7 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="dev.html" class="btn btn-neutral float-right" title="简介" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="index.html" class="btn btn-neutral float-right" title="开发指南" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
     </div>

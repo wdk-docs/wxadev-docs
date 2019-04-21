@@ -1,5 +1,5 @@
-video
-==========
+:wxcomp:`video(视频) <video>`
+==========================
 
 .. versionadded:: 1.0.0 低版本需做兼容处理。
 
@@ -26,7 +26,7 @@ enable-progress-gesture	boolean	true	否	是否开启控制进度的手势	1.9.0
 object-fit	string	contain	否	当视频大小与 video 容器大小不一致时，视频的表现形式	1.0.0
 poster	string		否	视频封面的图片网络资源地址或云文件ID（2.3.0）。若 controls 属性值为 false 则设置 poster 无效	1.0.0
 show-mute-btn	boolean	false	否	是否显示静音按钮	2.4.0
-title	string		否	视频的标题，全屏时在顶部展示	2.4.0
+title	string		否	视频的:wxapi:`wx.createWorker`，全屏时在顶部展示	2.4.0
 play-btn-position	string	bottom	否	播放按钮的位置	2.4.0
 enable-play-gesture	boolean	false	否	是否开启播放手势，即双击切换播放/暂停	2.4.0
 auto-pause-if-navigate	boolean	true	否	当跳转到其它小程序页面时，是否自动暂停本页面的视频	2.5.0
@@ -105,6 +105,9 @@ VP9	x	√
       <button bindtap="bindSendDanmu">发送弹幕</button>
     </view>
   </view>
+
+.. code:: js
+
   function getRandomColor() {
     const rgb = []
     for (let i = 0; i < 3; ++i) {

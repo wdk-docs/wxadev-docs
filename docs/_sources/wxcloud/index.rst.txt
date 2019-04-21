@@ -1,14 +1,4 @@
 云开发
 =========
 
-.. toctree::
-   :maxdepth: 1
-   :glob:
-
-   basis/index
-   guide/index
-   reference/index
-   reference-client-api/index
-   reference-server-api/index
-
-
+已单独拆分文档到 <https://wdk-docs.github.io/wxcloud-docs/>

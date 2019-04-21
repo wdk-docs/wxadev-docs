@@ -1,5 +1,5 @@
 开放能力
-===============
+=============================================
 
 .. toctree::
    :maxdepth: 1
@@ -17,3 +17,10 @@
    template-message
    uniform-message
    customer-message/index
+   qr-code
+   nearby
+   express-download
+   express-delivery
+   express
+   data-analysis
+   card/index

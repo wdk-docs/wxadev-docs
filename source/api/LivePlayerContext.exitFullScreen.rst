@@ -1,0 +1,2 @@
+:wxapi:`LivePlayerContext.exitFullScreen`
+============================================

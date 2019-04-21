@@ -37,7 +37,7 @@
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜索" href="../search.html" />
     <link rel="next" title="boolean wx.canIUse(string schema)" href="wx.canIUse.html" />
-    <link rel="prev" title="定时器" href="../reference/api/timer.html" /> 
+    <link rel="prev" title="aria-component" href="../component/aria-component.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -82,165 +82,662 @@
             
             
               <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../dev.html">小程序简介</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index.html">开发指南</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev.html">简介</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../basic/index.html">基础教程</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../framework/index.html">框架开发指南</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../guide/index.html">运行环境</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework/index.html">框架</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../component/index.html">组件</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../devtools/index.html">开发工具</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../reference/index.html">参考资料</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">API</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#id1">基础</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="wx.canIUse.html">boolean wx.canIUse(string schema)</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#id2">系统</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id3">系统信息</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id3">系统信息</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="wx.getSystemInfoSync.html">wx.getSystemInfoSync</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wx.getSystemInfo.html">wx.getSystemInfo</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#id4">更新</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#updatemanager">UpdateManager</a></li>
+<li class="toctree-l3"><a class="reference internal" href="wx.getUpdateManager.html">wx.getUpdateManager</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#updatemanager">UpdateManager</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="UpdateManager.html">UpdateManager</a></li>
+<li class="toctree-l4"><a class="reference internal" href="UpdateManager.applyUpdate.html">UpdateManager.applyUpdate</a></li>
+<li class="toctree-l4"><a class="reference internal" href="UpdateManager.onCheckForUpdate.html">UpdateManager.onCheckForUpdate</a></li>
+<li class="toctree-l4"><a class="reference internal" href="UpdateManager.onUpdateFailed.html">UpdateManager.onUpdateFailed</a></li>
+<li class="toctree-l4"><a class="reference internal" href="UpdateManager.onUpdateReady.html">UpdateManager.onUpdateReady</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#id5">小程序</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id6">生命周期</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id7">应用级事件</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id6">生命周期</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="wx.getLaunchOptionsSync.html">wx.getLaunchOptionsSync</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#id7">应用级事件</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="wx.onPageNotFound.html">wx.onPageNotFound</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wx.onError.html">wx.onError</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wx.onAudioInterruptionEnd.html">wx.onAudioInterruptionEnd</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wx.onAudioInterruptionBegin.html">wx.onAudioInterruptionBegin</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wx.onAppShow.html">wx.onAppShow</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wx.onAppHide.html">wx.onAppHide</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wx.offPageNotFound.html">wx.offPageNotFound</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wx.offError.html">wx.offError</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wx.offAudioInterruptionEnd.html">wx.offAudioInterruptionEnd</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wx.offAudioInterruptionBegin.html">wx.offAudioInterruptionBegin</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wx.offAppShow.html">wx.offAppShow</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wx.offAppHide.html">wx.offAppHide</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="#id8">调试</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="wx.setEnableDebug.html">wx.createWorker</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wx.getLogManager.html">wx.getLogManager</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#logmanager">LogManager</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#id9">路由</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id9">路由</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="wx.switchTab.html">wx.switchTab</a></li>
+<li class="toctree-l3"><a class="reference internal" href="wx.reLaunch.html">wx.reLaunch</a></li>
+<li class="toctree-l3"><a class="reference internal" href="wx.redirectTo.html">wx.redirectTo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="wx.navigateTo.html">wx.navigateTo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="wx.navigateBack.html">wx.navigateBack</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="#id10">界面</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id11">交互</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id12">导航栏</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id13">背景</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#tab-bar">Tab Bar</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id14">字体</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id15">下拉刷新</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id16">滚动</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id11">交互</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="wx.showToast.html">wx.showToast</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wx.showModal.html">wx.showModal</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wx.showLoading.html">wx.createWorker</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wx.showActionSheet.html">wx.createWorker</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wx.hideToast.html">wx.hideToast</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wx.hideLoading.html">wx.hideLoading</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#id12">导航栏</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="wx.showNavigationBarLoading.html">wx.showNavigationBarLoading</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wx.setNavigationBarTitle.html">wx.setNavigationBarTitle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wx.setNavigationBarColor.html">wx.setNavigationBarColor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wx.hideNavigationBarLoading.html">wx.hideNavigationBarLoading</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#id13">背景</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="wx.setBackgroundTextStyle.html">wx.setBackgroundTextStyle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wx.setBackgroundColor.html">wx.setBackgroundColor</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#tab-bar">Tab Bar</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="wx.showTabBarRedDot.html">wx.showTabBarRedDot</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wx.showTabBar.html">wx.showTabBar</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wx.setTabBarStyle.html">wx.createWorker</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wx.setTabBarItem.html">wx.createWorker</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wx.setTabBarBadge.html">wx.createWorker</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wx.removeTabBarBadge.html">wx.removeTabBarBadge</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wx.hideTabBarRedDot.html">wx.hideTabBarRedDot</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wx.hideTabBar.html">wx.hideTabBar</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#id14">字体</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="wx.loadFontFace.html">wx.loadFontFace</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#id15">下拉刷新</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="wx.stopPullDownRefresh.html">wx.stopPullDownRefresh</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wx.startPullDownRefresh.html">wx.startPullDownRefresh</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#id16">滚动</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="wx.pageScrollTo.html">wx.pageScrollTo</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="#id17">动画</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="wx.createAnimation.html">wx.createAnimation</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#animation">Animation</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#id18">置顶</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id19">自定义组件</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id20">菜单</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id21">窗口</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id18">置顶</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="wx.setTopBarText.html">wx.createWorker</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#id19">自定义组件</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="wx.nextTick.html">wx.nextTick</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#id20">菜单</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="wx.getMenuButtonBoundingClientRect.html">wx.getMenuButtonBoundingClientRect</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#id21">窗口</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="wx.onWindowResize.html">wx.onWindowResize</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wx.offWindowResize.html">wx.offWindowResize</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#id22">网络</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id23">发起请求</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#requesttask">RequestTask</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id24">下载</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#downloadtask">DownloadTask</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id25">上传</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#uploadtask">UploadTask</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#websocket">WebSocket</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#sockettask">SocketTask</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#mdns">mDNS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id23">发起请求</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="wx.request.html">wx.request</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#id26">数据缓存</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#requesttask">RequestTask</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="RequestTask.html">RequestTask</a></li>
+<li class="toctree-l4"><a class="reference internal" href="RequestTask.abort.html">RequestTask.abort</a></li>
+<li class="toctree-l4"><a class="reference internal" href="RequestTask.offHeadersReceived.html">RequestTask.offHeadersReceived</a></li>
+<li class="toctree-l4"><a class="reference internal" href="RequestTask.onHeadersReceived.html">RequestTask.onHeadersReceived</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#id24">下载</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="wx.downloadFile.html">wx.getAccountInfoSync</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#downloadtask">DownloadTask</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="DownloadTask.html">DownloadTask</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DownloadTask.abort.html">DownloadTask.abort</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DownloadTask.offHeadersReceived.html">DownloadTask.offHeadersReceived</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DownloadTask.offProgressUpdate.html">DownloadTask.offProgressUpdate</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DownloadTask.onHeadersReceived.html">DownloadTask.onHeadersReceived</a></li>
+<li class="toctree-l4"><a class="reference internal" href="DownloadTask.onProgressUpdate.html">DownloadTask.onProgressUpdate</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#id25">上传</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="wx.uploadFile.html">wx.uploadFile</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#uploadtask">UploadTask</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="UploadTask.html">UploadTask</a></li>
+<li class="toctree-l4"><a class="reference internal" href="UploadTask.abort.html">UploadTask.abort</a></li>
+<li class="toctree-l4"><a class="reference internal" href="UploadTask.offHeadersReceived.html">UploadTask.offHeadersReceived</a></li>
+<li class="toctree-l4"><a class="reference internal" href="UploadTask.offProgressUpdate.html">wx.createWorker</a></li>
+<li class="toctree-l4"><a class="reference internal" href="UploadTask.onHeadersReceived.html">wx.createWorker</a></li>
+<li class="toctree-l4"><a class="reference internal" href="UploadTask.onProgressUpdate.html">UploadTask.onProgressUpdate</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#websocket">WebSocket</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="wx.sendSocketMessage.html">wx.sendSocketMessage</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wx.onSocketOpen.html">wx.onSocketOpen</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wx.onSocketMessage.html">wx.onSocketMessage</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wx.onSocketError.html">wx.onSocketError</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wx.onSocketClose.html">wx.onSocketClose</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wx.connectSocket.html">wx.connectSocket</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wx.closeSocket.html">wx.closeSocket</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#sockettask">SocketTask</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="SocketTask.html">SocketTask</a></li>
+<li class="toctree-l4"><a class="reference internal" href="SocketTask.close.html">SocketTask.close</a></li>
+<li class="toctree-l4"><a class="reference internal" href="SocketTask.onClose.html">SocketTask.onClose</a></li>
+<li class="toctree-l4"><a class="reference internal" href="SocketTask.onError.html">SocketTask.onError</a></li>
+<li class="toctree-l4"><a class="reference internal" href="SocketTask.onMessage.html">SocketTask.onMessage</a></li>
+<li class="toctree-l4"><a class="reference internal" href="SocketTask.onOpen.html">SocketTask.onOpen</a></li>
+<li class="toctree-l4"><a class="reference internal" href="SocketTask.send.html">SocketTask.send</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#mdns">mDNS</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="wx.stopLocalServiceDiscovery.html">wx.stopLocalServiceDiscovery</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wx.startLocalServiceDiscovery.html">wx.startLocalServiceDiscovery</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wx.onLocalServiceResolveFail.html">wx.onLocalServiceResolveFail</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wx.onLocalServiceLost.html">wx.onLocalServiceLost</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wx.onLocalServiceFound.html">wx.onLocalServiceFound</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wx.onLocalServiceDiscoveryStop.html">wx.onLocalServiceDiscoveryStop</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wx.offLocalServiceResolveFail.html">wx.offLocalServiceResolveFail</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wx.offLocalServiceLost.html">wx.offLocalServiceLost</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wx.offLocalServiceFound.html">wx.offLocalServiceFound</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wx.offLocalServiceDiscoveryStop.html">wx.offLocalServiceDiscoveryStop</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id26">数据缓存</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="wx.setStorageSync.html">wx.createWorker</a></li>
+<li class="toctree-l3"><a class="reference internal" href="wx.setStorage.html">wx.createWorker</a></li>
+<li class="toctree-l3"><a class="reference internal" href="wx.removeStorageSync.html">wx.removeStorageSync</a></li>
+<li class="toctree-l3"><a class="reference internal" href="wx.removeStorage.html">wx.removeStorage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="wx.getStorageSync.html">wx.getStorageSync</a></li>
+<li class="toctree-l3"><a class="reference internal" href="wx.getStorageInfoSync.html">wx.getStorageInfoSync</a></li>
+<li class="toctree-l3"><a class="reference internal" href="wx.getStorageInfo.html">wx.getStorageInfo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="wx.getStorage.html">wx.getStorage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="wx.clearStorageSync.html">wx.clearStorageSync</a></li>
+<li class="toctree-l3"><a class="reference internal" href="wx.clearStorage.html">wx.clearStorage</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="#id27">媒体</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#id28">地图</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="wx.createMapContext.html">wx.createMapContext</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#mapcontext">MapContext</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#id29">图片</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id29">图片</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="wx.saveImageToPhotosAlbum.html">wx.saveImageToPhotosAlbum</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wx.previewImage.html">wx.previewImage</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wx.getImageInfo.html">wx.getImageInfo</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wx.compressImage.html">wx.compressImage</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wx.chooseMessageFile.html">wx.chooseMessageFile</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wx.chooseImage.html">wx.chooseImage</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="#id30">视频</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="wx.saveVideoToPhotosAlbum.html">wx.saveVideoToPhotosAlbum</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wx.createVideoContext.html">wx.createVideoContext</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wx.chooseVideo.html">wx.chooseVideo</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#videocontext">VideoContext</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#id31">音频</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="wx.stopVoice.html">wx.stopVoice</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wx.setInnerAudioOption.html">wx.setInnerAudioOption</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wx.playVoice.html">wx.playVoice</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wx.pauseVoice.html">wx.pauseVoice</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wx.getAvailableAudioSources.html">wx.getAvailableAudioSources</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wx.createInnerAudioContext.html">wx.createInnerAudioContext</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wx.createAudioContext.html">wx.createAudioContext</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#inneraudiocontext">InnerAudioContext</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#audiocontext">AudioContext</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#id32">背景音频</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="wx.stopBackgroundAudio.html">wx.stopBackgroundAudio</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wx.seekBackgroundAudio.html">wx.seekBackgroundAudio</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wx.playBackgroundAudio.html">wx.playBackgroundAudio</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wx.pauseBackgroundAudio.html">wx.pauseBackgroundAudio</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wx.onBackgroundAudioStop.html">wx.onBackgroundAudioStop</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wx.onBackgroundAudioPlay.html">wx.onBackgroundAudioPlay</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wx.onBackgroundAudioPause.html">wx.onBackgroundAudioPause</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wx.getBackgroundAudioPlayerState.html">wx.getBackgroundAudioPlayerState</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wx.getBackgroundAudioManager.html">wx.getBackgroundAudioManager</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#backgroundaudiomanager">BackgroundAudioManager</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#id33">实时音视频</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="wx.createLivePusherContext.html">wx.createLivePusherContext</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wx.createLivePlayerContext.html">wx.createLivePlayerContext</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#livepushercontext">LivePusherContext</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#liveplayercontext">LivePlayerContext</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#id34">录音</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="wx.stopRecord.html">wx.stopRecord</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wx.startRecord.html">wx.startRecord</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wx.getRecorderManager.html">wx.getRecorderManager</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#recordermanager">RecorderManager</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#id35">相机</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="wx.createCameraContext.html">wx.createCameraContext</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#cameracontext">CameraContext</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#id36">位置</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id37">转发</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id36">位置</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="wx.openLocation.html">wx.openLocation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="wx.getLocation.html">wx.getLocation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="wx.chooseLocation.html">wx.chooseLocation</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id37">转发</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="wx.updateShareMenu.html">wx.updateShareMenu</a></li>
+<li class="toctree-l3"><a class="reference internal" href="wx.showShareMenu.html">wx.showShareMenu</a></li>
+<li class="toctree-l3"><a class="reference internal" href="wx.hideShareMenu.html">wx.hideShareMenu</a></li>
+<li class="toctree-l3"><a class="reference internal" href="wx.getShareInfo.html">wx.getShareInfo</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="#id38">画布</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#canvasgradient">CanvasGradient</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#canvascontext">CanvasContext</a></li>
+<li class="toctree-l3"><a class="reference internal" href="CanvasContext.html">wx.createWorker</a></li>
+<li class="toctree-l3"><a class="reference internal" href="wx.createCanvasContext.html">wx.createCanvasContext</a></li>
+<li class="toctree-l3"><a class="reference internal" href="wx.canvasToTempFilePath.html">wx.canvasToTempFilePath</a></li>
+<li class="toctree-l3"><a class="reference internal" href="wx.canvasPutImageData.html">wx.canvasPutImageData</a></li>
+<li class="toctree-l3"><a class="reference internal" href="wx.canvasGetImageData.html">wx.canvasGetImageData</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Color.html">Color</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#canvasgradient">CanvasGradient</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="CanvasGradient.html">wx.createWorker</a></li>
+<li class="toctree-l4"><a class="reference internal" href="CanvasGradient.addColorStop.html">video</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#canvascontext">CanvasContext</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="CanvasContext.arc.html">CanvasContext.arc</a></li>
+<li class="toctree-l4"><a class="reference internal" href="CanvasContext.arcTo.html">CanvasContext.arcTo</a></li>
+<li class="toctree-l4"><a class="reference internal" href="CanvasContext.beginPath.html">CanvasContext.beginPath</a></li>
+<li class="toctree-l4"><a class="reference internal" href="CanvasContext.bezierCurveTo.html">CanvasContext.bezierCurveTo</a></li>
+<li class="toctree-l4"><a class="reference internal" href="CanvasContext.clearRect.html">CanvasContext.clearRect</a></li>
+<li class="toctree-l4"><a class="reference internal" href="CanvasContext.clip.html">CanvasContext.clip</a></li>
+<li class="toctree-l4"><a class="reference internal" href="CanvasContext.closePath.html">CanvasContext.closePath</a></li>
+<li class="toctree-l4"><a class="reference internal" href="CanvasContext.createCircularGradient.html">video</a></li>
+<li class="toctree-l4"><a class="reference internal" href="CanvasContext.createLinearGradient.html">video</a></li>
+<li class="toctree-l4"><a class="reference internal" href="CanvasContext.createPattern.html">video</a></li>
+<li class="toctree-l4"><a class="reference internal" href="CanvasContext.draw.html">video</a></li>
+<li class="toctree-l4"><a class="reference internal" href="CanvasContext.drawImage.html">video</a></li>
+<li class="toctree-l4"><a class="reference internal" href="CanvasContext.fill.html">video</a></li>
+<li class="toctree-l4"><a class="reference internal" href="CanvasContext.fillRect.html">video</a></li>
+<li class="toctree-l4"><a class="reference internal" href="CanvasContext.fillText.html">video</a></li>
+<li class="toctree-l4"><a class="reference internal" href="CanvasContext.lineTo.html">video</a></li>
+<li class="toctree-l4"><a class="reference internal" href="CanvasContext.measureText.html">video</a></li>
+<li class="toctree-l4"><a class="reference internal" href="CanvasContext.moveTo.html">video</a></li>
+<li class="toctree-l4"><a class="reference internal" href="CanvasContext.quadraticCurveTo.html">video</a></li>
+<li class="toctree-l4"><a class="reference internal" href="CanvasContext.rect.html">video</a></li>
+<li class="toctree-l4"><a class="reference internal" href="CanvasContext.restore.html">video</a></li>
+<li class="toctree-l4"><a class="reference internal" href="CanvasContext.rotate.html">video</a></li>
+<li class="toctree-l4"><a class="reference internal" href="CanvasContext.save.html">video</a></li>
+<li class="toctree-l4"><a class="reference internal" href="CanvasContext.scale.html">video</a></li>
+<li class="toctree-l4"><a class="reference internal" href="CanvasContext.setFillStyle.html">video</a></li>
+<li class="toctree-l4"><a class="reference internal" href="CanvasContext.setFontSize.html">video</a></li>
+<li class="toctree-l4"><a class="reference internal" href="CanvasContext.setGlobalAlpha.html">video</a></li>
+<li class="toctree-l4"><a class="reference internal" href="CanvasContext.setLineCap.html">video</a></li>
+<li class="toctree-l4"><a class="reference internal" href="CanvasContext.setLineDash.html">video</a></li>
+<li class="toctree-l4"><a class="reference internal" href="CanvasContext.setLineJoin.html">video</a></li>
+<li class="toctree-l4"><a class="reference internal" href="CanvasContext.setLineWidth.html">video</a></li>
+<li class="toctree-l4"><a class="reference internal" href="CanvasContext.setMiterLimit.html">video</a></li>
+<li class="toctree-l4"><a class="reference internal" href="CanvasContext.setShadow.html">video</a></li>
+<li class="toctree-l4"><a class="reference internal" href="CanvasContext.setStrokeStyle.html">video</a></li>
+<li class="toctree-l4"><a class="reference internal" href="CanvasContext.setTextAlign.html">video</a></li>
+<li class="toctree-l4"><a class="reference internal" href="CanvasContext.setTextBaseline.html">video</a></li>
+<li class="toctree-l4"><a class="reference internal" href="CanvasContext.setTransform.html">video</a></li>
+<li class="toctree-l4"><a class="reference internal" href="CanvasContext.stroke.html">video</a></li>
+<li class="toctree-l4"><a class="reference internal" href="CanvasContext.strokeRect.html">video</a></li>
+<li class="toctree-l4"><a class="reference internal" href="CanvasContext.strokeText.html">video</a></li>
+<li class="toctree-l4"><a class="reference internal" href="CanvasContext.transform.html">video</a></li>
+<li class="toctree-l4"><a class="reference internal" href="CanvasContext.translate.html">video</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#id39">文件</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#stats">Stats</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#filesystemmanager">FileSystemManager</a></li>
+<li class="toctree-l3"><a class="reference internal" href="wx.saveFile.html">wx.saveFile</a></li>
+<li class="toctree-l3"><a class="reference internal" href="wx.removeSavedFile.html">wx.removeSavedFile</a></li>
+<li class="toctree-l3"><a class="reference internal" href="wx.openDocument.html">wx.openDocument</a></li>
+<li class="toctree-l3"><a class="reference internal" href="wx.getSavedFileList.html">wx.getSavedFileList</a></li>
+<li class="toctree-l3"><a class="reference internal" href="wx.getSavedFileInfo.html">wx.getSavedFileInfo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="wx.getFileSystemManager.html">wx.getFileSystemManager</a></li>
+<li class="toctree-l3"><a class="reference internal" href="wx.getFileInfo.html">wx.getFileInfo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#stats">Stats</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="Stats.html">Stats</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Stats.isDirectory.html">Stats.isDirectory</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Stats.isFile.html">Stats.isFile</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#filesystemmanager">FileSystemManager</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="FileSystemManager.html">FileSystemManager</a></li>
+<li class="toctree-l4"><a class="reference internal" href="FileSystemManager.access.html">FileSystemManager.access</a></li>
+<li class="toctree-l4"><a class="reference internal" href="FileSystemManager.accessSync.html">FileSystemManager.accessSync</a></li>
+<li class="toctree-l4"><a class="reference internal" href="FileSystemManager.appendFile.html">FileSystemManager.appendFile</a></li>
+<li class="toctree-l4"><a class="reference internal" href="FileSystemManager.appendFileSync.html">FileSystemManager.appendFileSync</a></li>
+<li class="toctree-l4"><a class="reference internal" href="FileSystemManager.copyFile.html">FileSystemManager.copyFile</a></li>
+<li class="toctree-l4"><a class="reference internal" href="FileSystemManager.copyFileSync.html">FileSystemManager.copyFileSync</a></li>
+<li class="toctree-l4"><a class="reference internal" href="FileSystemManager.getFileInfo.html">FileSystemManager.getFileInfo</a></li>
+<li class="toctree-l4"><a class="reference internal" href="FileSystemManager.getSavedFileList.html">FileSystemManager.getSavedFileList</a></li>
+<li class="toctree-l4"><a class="reference internal" href="FileSystemManager.mkdir.html">FileSystemManager.mkdir</a></li>
+<li class="toctree-l4"><a class="reference internal" href="FileSystemManager.mkdirSync.html">FileSystemManager.mkdirSync</a></li>
+<li class="toctree-l4"><a class="reference internal" href="FileSystemManager.readdir.html">wx.createWorker</a></li>
+<li class="toctree-l4"><a class="reference internal" href="FileSystemManager.readdirSync.html">FileSystemManager.readdirSync</a></li>
+<li class="toctree-l4"><a class="reference internal" href="FileSystemManager.readFile.html">FileSystemManager.readFile</a></li>
+<li class="toctree-l4"><a class="reference internal" href="FileSystemManager.readFileSync.html">FileSystemManager.readFileSync</a></li>
+<li class="toctree-l4"><a class="reference internal" href="FileSystemManager.removeSavedFile.html">FileSystemManager.removeSavedFile</a></li>
+<li class="toctree-l4"><a class="reference internal" href="FileSystemManager.rename.html">FileSystemManager.rename</a></li>
+<li class="toctree-l4"><a class="reference internal" href="FileSystemManager.renameSync.html">FileSystemManager.renameSync</a></li>
+<li class="toctree-l4"><a class="reference internal" href="FileSystemManager.rmdir.html">FileSystemManager.rmdir</a></li>
+<li class="toctree-l4"><a class="reference internal" href="FileSystemManager.rmdirSync.html">FileSystemManager.rmdirSync</a></li>
+<li class="toctree-l4"><a class="reference internal" href="FileSystemManager.saveFile.html">FileSystemManager.saveFile</a></li>
+<li class="toctree-l4"><a class="reference internal" href="FileSystemManager.saveFileSync.html">FileSystemManager.saveFileSync</a></li>
+<li class="toctree-l4"><a class="reference internal" href="FileSystemManager.stat.html">FileSystemManager.stat</a></li>
+<li class="toctree-l4"><a class="reference internal" href="FileSystemManager.statSync.html">FileSystemManager.statSync</a></li>
+<li class="toctree-l4"><a class="reference internal" href="FileSystemManager.unlink.html">FileSystemManager.unlink</a></li>
+<li class="toctree-l4"><a class="reference internal" href="FileSystemManager.unlinkSync.html">FileSystemManager.unlinkSync</a></li>
+<li class="toctree-l4"><a class="reference internal" href="FileSystemManager.unzip.html">FileSystemManager.unzip</a></li>
+<li class="toctree-l4"><a class="reference internal" href="FileSystemManager.writeFile.html">FileSystemManager.writeFile</a></li>
+<li class="toctree-l4"><a class="reference internal" href="FileSystemManager.writeFileSync.html">FileSystemManager.writeFileSync</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#id40">开放接口</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id41">登录</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id42">小程序跳转</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id43">帐号信息</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id44">用户信息</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id45">数据上报</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id46">数据分析</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id47">支付</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id48">授权</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id49">设置</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id50">收货地址</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id51">卡券</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id52">发票</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id53">生物认证</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id54">微信运动</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id41">登录</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="wx.login.html">wx.login</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wx.checkSession.html">wx.checkSession</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#id42">小程序跳转</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="wx.navigateToMiniProgram.html">wx.navigateToMiniProgram</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wx.navigateBackMiniProgram.html">wx.navigateBackMiniProgram</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#id43">帐号信息</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="wx.getAccountInfoSync.html">wx.getAccountInfoSync</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#id44">用户信息</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="wx.getUserInfo.html">wx.getUserInfo</a></li>
+<li class="toctree-l4"><a class="reference internal" href="UserInfo.html">UserInfo</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#id45">数据上报</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="wx.reportMonitor.html">wx.reportMonitor</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#id46">数据分析</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="wx.reportAnalytics.html">wx.reportAnalytics</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#id47">支付</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="wx.requestPayment.html">wx.requestPayment</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#id48">授权</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="wx.authorize.html">wx.authorize</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#id49">设置</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="wx.openSetting.html">wx.openSetting</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wx.getSetting.html">wx.getSetting</a></li>
+<li class="toctree-l4"><a class="reference internal" href="AuthSetting.html">AuthSetting</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#id50">收货地址</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="wx.chooseAddress.html">wx.chooseAddress</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#id51">卡券</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="wx.openCard.html">wx.openCard</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wx.addCard.html">wx.addCard</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#id52">发票</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="wx.chooseInvoiceTitle.html">wx.chooseInvoiceTitle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wx.chooseInvoice.html">wx.chooseInvoice</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#id53">生物认证</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="wx.startSoterAuthentication.html">wx.startSoterAuthentication</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wx.checkIsSupportSoterAuthentication.html">wx.checkIsSupportSoterAuthentication</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wx.checkIsSoterEnrolledInDevice.html">wx.checkIsSoterEnrolledInDevice</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#id54">微信运动</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="wx.getWeRunData.html">wx.getWeRunData</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#id55">设备</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#wi-fi">Wi-Fi</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#ibeacon">iBeacon</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id56">联系人</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id57">低功耗蓝牙</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id58">蓝牙</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id59">电量</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id60">剪贴板</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#nfc">NFC</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id61">网络</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id62">屏幕</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id63">电话</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id64">加速计</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id65">罗盘</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id66">设备方向</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id67">陀螺仪</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id68">性能</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id69">扫码</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id70">振动</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#wi-fi">Wi-Fi</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="wx.stopWifi.html">wx.stopWifi</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wx.startWifi.html">wx.startWifi</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wx.setWifiList.html">wx.createWorker</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wx.onWifiConnected.html">wx.onWifiConnected</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wx.onGetWifiList.html">wx.onGetWifiList</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wx.getWifiList.html">wx.getWifiList</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wx.getConnectedWifi.html">wx.createWorker</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wx.connectWifi.html">wx.connectWifi</a></li>
+<li class="toctree-l4"><a class="reference internal" href="WifiInfo.html">WifiInfo</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#ibeacon">iBeacon</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="wx.stopBeaconDiscovery.html">wx.stopBeaconDiscovery</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wx.startBeaconDiscovery.html">wx.startBeaconDiscovery</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wx.onBeaconUpdate.html">wx.onBeaconUpdate</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wx.onBeaconServiceChange.html">wx.onBeaconServiceChange</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wx.getBeacons.html">wx.getBeacons</a></li>
+<li class="toctree-l4"><a class="reference internal" href="IBeaconInfo.html">IBeaconInfo</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#id56">联系人</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="wx.addPhoneContact.html">wx.addPhoneContact</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#id57">低功耗蓝牙</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="wx.writeBLECharacteristicValue.html">wx.writeBLECharacteristicValue</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wx.readBLECharacteristicValue.html">wx.readBLECharacteristicValue</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wx.onBLEConnectionStateChange.html">wx.onBLEConnectionStateChange</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wx.onBLECharacteristicValueChange.html">wx.onBLECharacteristicValueChange</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wx.notifyBLECharacteristicValueChange.html">:wxapi:`wx.createWorker`</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wx.getBLEDeviceServices.html">wx.getBLEDeviceServices</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wx.getBLEDeviceCharacteristics.html">wx.getBLEDeviceCharacteristics</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wx.createBLEConnection.html">wx.createBLEConnection</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wx.closeBLEConnection.html">wx.createWorker</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#id58">蓝牙</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="wx.stopBluetoothDevicesDiscovery.html">wx.stopBluetoothDevicesDiscovery</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wx.startBluetoothDevicesDiscovery.html">wx.startBluetoothDevicesDiscovery</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wx.openBluetoothAdapter.html">wx.openBluetoothAdapter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wx.onBluetoothDeviceFound.html">wx.onBluetoothDeviceFound</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wx.onBluetoothAdapterStateChange.html">wx.onBluetoothAdapterStateChange</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wx.getConnectedBluetoothDevices.html">wx.getConnectedBluetoothDevices</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wx.getBluetoothDevices.html">wx.getBluetoothDevices</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wx.getBluetoothAdapterState.html">wx.getBluetoothAdapterState</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wx.closeBluetoothAdapter.html">wx.createWorker</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#id59">电量</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="wx.getBatteryInfoSync.html">wx.getBatteryInfoSync</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wx.getBatteryInfo.html">wx.getBatteryInfo</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#id60">剪贴板</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="wx.setClipboardData.html">wx.setClipboardData</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wx.getClipboardData.html">wx.getClipboardData</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#nfc">NFC</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="wx.stopHCE.html">wx.stopHCE</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wx.startHCE.html">wx.startHCE</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wx.sendHCEMessage.html">wx.sendHCEMessage</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wx.onHCEMessage.html">wx.onHCEMessage</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wx.getHCEState.html">wx.getHCEState</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#id61">网络</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="wx.onNetworkStatusChange.html">wx.onNetworkStatusChange</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wx.getNetworkType.html">wx.getNetworkType</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#id62">屏幕</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="wx.setScreenBrightness.html">wx.setScreenBrightness</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wx.setKeepScreenOn.html">wx.setKeepScreenOn</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wx.onUserCaptureScreen.html">wx.onUserCaptureScreen</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wx.getScreenBrightness.html">wx.getScreenBrightness</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#id63">电话</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="wx.makePhoneCall.html">wx.makePhoneCall</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#id64">加速计</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="wx.stopAccelerometer.html">wx.stopAccelerometer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wx.startAccelerometer.html">wx.startAccelerometer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wx.onAccelerometerChange.html">wx.onAccelerometerChange</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#id65">罗盘</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="wx.stopCompass.html">wx.stopCompass</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wx.startCompass.html">wx.startCompass</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wx.onCompassChange.html">wx.onCompassChange</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#id66">设备方向</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="wx.stopDeviceMotionListening.html">wx.stopDeviceMotionListening</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wx.startDeviceMotionListening.html">wx.startDeviceMotionListening</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wx.onDeviceMotionChange.html">wx.onDeviceMotionChange</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#id67">陀螺仪</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="wx.stopGyroscope.html">wx.stopGyroscope</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wx.startGyroscope.html">wx.startGyroscope</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wx.onGyroscopeChange.html">wx.onGyroscopeChange</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#id68">性能</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="wx.onMemoryWarning.html">wx.onMemoryWarning</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#id69">扫码</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="wx.scanCode.html">wx.scanCode</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#id70">振动</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="wx.vibrateShort.html">wx.vibrateShort</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wx.vibrateLong.html">wx.vibrateLong</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#worker">Worker</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id71">Worker</a></li>
+<li class="toctree-l3"><a class="reference internal" href="wx.createWorker.html">wx.createWorker</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id71">Worker</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="Worker.html">Worker</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Worker.onMessage.html">Worker.onMessage</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Worker.postMessage.html">Worker.postMessage</a></li>
+<li class="toctree-l4"><a class="reference internal" href="Worker.terminate.html">Worker.terminate</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#id72">第三方平台</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id72">第三方平台</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="wx.getExtConfigSync.html">wx.getExtConfigSync</a></li>
+<li class="toctree-l3"><a class="reference internal" href="wx.getExtConfig.html">wx.createWorker</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="#wxml">WXML</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#selectorquery">SelectorQuery</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#nodesref">NodesRef</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#intersectionobserver">IntersectionObserver</a></li>
+<li class="toctree-l3"><a class="reference internal" href="wx.createSelectorQuery.html">wx.createSelectorQuery</a></li>
+<li class="toctree-l3"><a class="reference internal" href="wx.createIntersectionObserver.html">wx.createIntersectionObserver</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#selectorquery">SelectorQuery</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="SelectorQuery.html">SelectorQuery</a></li>
+<li class="toctree-l4"><a class="reference internal" href="SelectorQuery.exec.html">SelectorQuery.exec</a></li>
+<li class="toctree-l4"><a class="reference internal" href="SelectorQuery.in.html">SelectorQuery.in</a></li>
+<li class="toctree-l4"><a class="reference internal" href="SelectorQuery.select.html">SelectorQuery.select</a></li>
+<li class="toctree-l4"><a class="reference internal" href="SelectorQuery.selectAll.html">SelectorQuery.selectAll</a></li>
+<li class="toctree-l4"><a class="reference internal" href="SelectorQuery.selectViewport.html">SelectorQuery.selectViewport</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#nodesref">NodesRef</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="NodesRef.html">NodesRef</a></li>
+<li class="toctree-l4"><a class="reference internal" href="NodesRef.boundingClientRect.html">NodesRef.boundingClientRect</a></li>
+<li class="toctree-l4"><a class="reference internal" href="NodesRef.context.html">NodesRef.context</a></li>
+<li class="toctree-l4"><a class="reference internal" href="NodesRef.fields.html">NodesRef.fields</a></li>
+<li class="toctree-l4"><a class="reference internal" href="NodesRef.scrollOffset.html">NodesRef.scrollOffset</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#intersectionobserver">IntersectionObserver</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="IntersectionObserver.html">IntersectionObserver</a></li>
+<li class="toctree-l4"><a class="reference internal" href="IntersectionObserver.disconnect.html">IntersectionObserver.disconnect</a></li>
+<li class="toctree-l4"><a class="reference internal" href="IntersectionObserver.observe.html">IntersectionObserver.observe</a></li>
+<li class="toctree-l4"><a class="reference internal" href="IntersectionObserver.relativeTo.html">IntersectionObserver.relativeTo</a></li>
+<li class="toctree-l4"><a class="reference internal" href="IntersectionObserver.relativeToViewport.html">IntersectionObserver.relativeToViewport</a></li>
+<li class="toctree-l4"><a class="reference internal" href="console.html">console</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../api-backend/index.html">服务端开放接口</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../api-backend/index.html">服务端API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../devtools/index.html">开发工具</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference/index.html">参考资料</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../wxcloud/index.html">云开发</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary.html">术语</a></li>
 </ul>
 
             
@@ -306,7 +803,7 @@
            <div itemprop="articleBody">
             
   <div class="section" id="api">
-<h1>API<a class="headerlink" href="#api" title="永久链接至标题">¶</a></h1>
+<h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/api/index.html">API</a><a class="headerlink" href="#api" title="永久链接至标题">¶</a></h1>
 <div class="section" id="id1">
 <h2>基础<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h2>
 <table class="docutils align-center">
@@ -353,10 +850,37 @@ wx.getSystemInfo</p></td>
 </tr>
 </tbody>
 </table>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="wx.getSystemInfoSync.html">wx.getSystemInfoSync</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wx.getSystemInfo.html">wx.getSystemInfo</a></li>
+</ul>
+</div>
 </div>
 </div>
 <div class="section" id="id4">
 <h2>更新<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h2>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 30%" />
+<col style="width: 70%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>名称</p></th>
+<th class="head"><p>功能说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>wx.getUpdateManager</p></td>
+<td><p>获取全局唯一的版本更新管理器，用于管理小程序更新</p></td>
+</tr>
+</tbody>
+</table>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="wx.getUpdateManager.html">wx.getUpdateManager</a></li>
+</ul>
+</div>
 <div class="section" id="updatemanager">
 <h3>UpdateManager<a class="headerlink" href="#updatemanager" title="永久链接至标题">¶</a></h3>
 <table class="docutils align-center">
@@ -384,6 +908,15 @@ wx.getSystemInfo</p></td>
 </tr>
 </tbody>
 </table>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="UpdateManager.html">UpdateManager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="UpdateManager.applyUpdate.html">UpdateManager.applyUpdate</a></li>
+<li class="toctree-l1"><a class="reference internal" href="UpdateManager.onCheckForUpdate.html">UpdateManager.onCheckForUpdate</a></li>
+<li class="toctree-l1"><a class="reference internal" href="UpdateManager.onUpdateFailed.html">UpdateManager.onUpdateFailed</a></li>
+<li class="toctree-l1"><a class="reference internal" href="UpdateManager.onUpdateReady.html">UpdateManager.onUpdateReady</a></li>
+</ul>
+</div>
 </div>
 </div>
 <div class="section" id="id5">
@@ -406,6 +939,11 @@ wx.getSystemInfo</p></td>
 </tr>
 </tbody>
 </table>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="wx.getLaunchOptionsSync.html">wx.getLaunchOptionsSync</a></li>
+</ul>
+</div>
 </div>
 <div class="section" id="id7">
 <h3>应用级事件<a class="headerlink" href="#id7" title="永久链接至标题">¶</a></h3>
@@ -458,6 +996,22 @@ wx.getSystemInfo</p></td>
 </tr>
 </tbody>
 </table>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="wx.onPageNotFound.html">wx.onPageNotFound</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wx.onError.html">wx.onError</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wx.onAudioInterruptionEnd.html">wx.onAudioInterruptionEnd</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wx.onAudioInterruptionBegin.html">wx.onAudioInterruptionBegin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wx.onAppShow.html">wx.onAppShow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wx.onAppHide.html">wx.onAppHide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wx.offPageNotFound.html">wx.offPageNotFound</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wx.offError.html">wx.offError</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wx.offAudioInterruptionEnd.html">wx.offAudioInterruptionEnd</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wx.offAudioInterruptionBegin.html">wx.offAudioInterruptionBegin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wx.offAppShow.html">wx.offAppShow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wx.offAppHide.html">wx.offAppHide</a></li>
+</ul>
+</div>
 </div>
 <div class="section" id="id8">
 <h3>调试<a class="headerlink" href="#id8" title="永久链接至标题">¶</a></h3>
@@ -480,6 +1034,12 @@ wx.getSystemInfo</p></td>
 </tr>
 </tbody>
 </table>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="wx.setEnableDebug.html">wx.createWorker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wx.getLogManager.html">wx.getLogManager</a></li>
+</ul>
+</div>
 <div class="section" id="logmanager">
 <h4>LogManager<a class="headerlink" href="#logmanager" title="永久链接至标题">¶</a></h4>
 <table class="docutils align-center">
@@ -507,6 +1067,15 @@ wx.getSystemInfo</p></td>
 </tr>
 </tbody>
 </table>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="LogManager.html">LogManager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="LogManager.debug.html">LogManager.debug</a></li>
+<li class="toctree-l1"><a class="reference internal" href="LogManager.info.html">LogManager.info</a></li>
+<li class="toctree-l1"><a class="reference internal" href="LogManager.log.html">LogManager.log</a></li>
+<li class="toctree-l1"><a class="reference internal" href="LogManager.warn.html">LogManager.warn</a></li>
+</ul>
+</div>
 </div>
 </div>
 </div>
@@ -540,6 +1109,15 @@ wx.getSystemInfo</p></td>
 </tr>
 </tbody>
 </table>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="wx.switchTab.html">wx.switchTab</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wx.reLaunch.html">wx.reLaunch</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wx.redirectTo.html">wx.redirectTo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wx.navigateTo.html">wx.navigateTo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wx.navigateBack.html">wx.navigateBack</a></li>
+</ul>
+</div>
 </div>
 <div class="section" id="id10">
 <h2>界面<a class="headerlink" href="#id10" title="永久链接至标题">¶</a></h2>
@@ -576,6 +1154,16 @@ wx.getSystemInfo</p></td>
 </tr>
 </tbody>
 </table>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="wx.showToast.html">wx.showToast</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wx.showModal.html">wx.showModal</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wx.showLoading.html">wx.createWorker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wx.showActionSheet.html">wx.createWorker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wx.hideToast.html">wx.hideToast</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wx.hideLoading.html">wx.hideLoading</a></li>
+</ul>
+</div>
 </div>
 <div class="section" id="id12">
 <h3>导航栏<a class="headerlink" href="#id12" title="永久链接至标题">¶</a></h3>
@@ -604,6 +1192,14 @@ wx.getSystemInfo</p></td>
 </tr>
 </tbody>
 </table>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="wx.showNavigationBarLoading.html">wx.showNavigationBarLoading</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wx.setNavigationBarTitle.html">wx.setNavigationBarTitle</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wx.setNavigationBarColor.html">wx.setNavigationBarColor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wx.hideNavigationBarLoading.html">wx.hideNavigationBarLoading</a></li>
+</ul>
+</div>
 </div>
 <div class="section" id="id13">
 <h3>背景<a class="headerlink" href="#id13" title="永久链接至标题">¶</a></h3>
@@ -626,6 +1222,12 @@ wx.getSystemInfo</p></td>
 </tr>
 </tbody>
 </table>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="wx.setBackgroundTextStyle.html">wx.setBackgroundTextStyle</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wx.setBackgroundColor.html">wx.setBackgroundColor</a></li>
+</ul>
+</div>
 </div>
 <div class="section" id="tab-bar">
 <h3>Tab Bar<a class="headerlink" href="#tab-bar" title="永久链接至标题">¶</a></h3>
@@ -666,6 +1268,18 @@ wx.getSystemInfo</p></td>
 </tr>
 </tbody>
 </table>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="wx.showTabBarRedDot.html">wx.showTabBarRedDot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wx.showTabBar.html">wx.showTabBar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wx.setTabBarStyle.html">wx.createWorker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wx.setTabBarItem.html">wx.createWorker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wx.setTabBarBadge.html">wx.createWorker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wx.removeTabBarBadge.html">wx.removeTabBarBadge</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wx.hideTabBarRedDot.html">wx.hideTabBarRedDot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wx.hideTabBar.html">wx.hideTabBar</a></li>
+</ul>
+</div>
 </div>
 <div class="section" id="id14">
 <h3>字体<a class="headerlink" href="#id14" title="永久链接至标题">¶</a></h3>
@@ -685,6 +1299,11 @@ wx.getSystemInfo</p></td>
 </tr>
 </tbody>
 </table>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="wx.loadFontFace.html">wx.loadFontFace</a></li>
+</ul>
+</div>
 </div>
 <div class="section" id="id15">
 <h3>下拉刷新<a class="headerlink" href="#id15" title="永久链接至标题">¶</a></h3>
@@ -707,6 +1326,12 @@ wx.getSystemInfo</p></td>
 </tr>
 </tbody>
 </table>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="wx.stopPullDownRefresh.html">wx.stopPullDownRefresh</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wx.startPullDownRefresh.html">wx.startPullDownRefresh</a></li>
+</ul>
+</div>
 </div>
 <div class="section" id="id16">
 <h3>滚动<a class="headerlink" href="#id16" title="永久链接至标题">¶</a></h3>
@@ -726,6 +1351,11 @@ wx.getSystemInfo</p></td>
 </tr>
 </tbody>
 </table>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="wx.pageScrollTo.html">wx.pageScrollTo</a></li>
+</ul>
+</div>
 </div>
 <div class="section" id="id17">
 <h3>动画<a class="headerlink" href="#id17" title="永久链接至标题">¶</a></h3>
@@ -745,6 +1375,11 @@ wx.getSystemInfo</p></td>
 </tr>
 </tbody>
 </table>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="wx.createAnimation.html">wx.createAnimation</a></li>
+</ul>
+</div>
 <div class="section" id="animation">
 <h4>Animation<a class="headerlink" href="#animation" title="永久链接至标题">¶</a></h4>
 <table class="docutils align-center">
@@ -850,6 +1485,41 @@ wx.getSystemInfo</p></td>
 </tr>
 </tbody>
 </table>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Animation.html">wx.createWorker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Animation.translateZ.html">wx.createWorker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Animation.translateY.html">wx.createWorker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Animation.translateX.html">wx.createWorker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Animation.translate3d.html">wx.createWorker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Animation.translate.html">wx.createWorker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Animation.top.html">wx.createWorker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Animation.step.html">wx.createWorker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Animation.skewY.html">wx.createWorker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Animation.skewX.html">wx.createWorker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Animation.skew.html">wx.createWorker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Animation.scaleZ.html">wx.createWorker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Animation.scaleY.html">wx.createWorker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Animation.scaleX.html">wx.createWorker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Animation.scale3d.html">wx.createWorker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Animation.scale.html">wx.createWorker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Animation.rotateZ.html">wx.createWorker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Animation.rotateY.html">wx.createWorker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Animation.rotateX.html">wx.createWorker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Animation.rotate3d.html">wx.createWorker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Animation.rotate.html">wx.createWorker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Animation.right.html">Animation.right:wxapi:<cite>Animation.opacity</cite></a></li>
+<li class="toctree-l1"><a class="reference internal" href="Animation.opacity.html">Animation.opacity</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Animation.matrix3d.html">Animation.matrix3d</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Animation.matrix.html">Animation.matrix</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Animation.backgroundColor.html">wxacode.getUnlimited</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Animation.left.html">Animation.left</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Animation.height.html">Animation.height:wxapi:<cite>Animation.export</cite></a></li>
+<li class="toctree-l1"><a class="reference internal" href="Animation.width.html">Animation.width</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Animation.export.html">Animation.export</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Animation.bottom.html">Animation.bottom</a></li>
+</ul>
+</div>
 </div>
 </div>
 <div class="section" id="id18">
@@ -870,6 +1540,11 @@ wx.getSystemInfo</p></td>
 </tr>
 </tbody>
 </table>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="wx.setTopBarText.html">wx.createWorker</a></li>
+</ul>
+</div>
 </div>
 <div class="section" id="id19">
 <h3>自定义组件<a class="headerlink" href="#id19" title="永久链接至标题">¶</a></h3>
@@ -889,6 +1564,11 @@ wx.getSystemInfo</p></td>
 </tr>
 </tbody>
 </table>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="wx.nextTick.html">wx.nextTick</a></li>
+</ul>
+</div>
 </div>
 <div class="section" id="id20">
 <h3>菜单<a class="headerlink" href="#id20" title="永久链接至标题">¶</a></h3>
@@ -908,6 +1588,11 @@ wx.getSystemInfo</p></td>
 </tr>
 </tbody>
 </table>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="wx.getMenuButtonBoundingClientRect.html">wx.getMenuButtonBoundingClientRect</a></li>
+</ul>
+</div>
 </div>
 <div class="section" id="id21">
 <h3>窗口<a class="headerlink" href="#id21" title="永久链接至标题">¶</a></h3>
@@ -930,6 +1615,12 @@ wx.getSystemInfo</p></td>
 </tr>
 </tbody>
 </table>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="wx.onWindowResize.html">wx.onWindowResize</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wx.offWindowResize.html">wx.offWindowResize</a></li>
+</ul>
+</div>
 </div>
 </div>
 <div class="section" id="id22">
@@ -952,6 +1643,11 @@ wx.getSystemInfo</p></td>
 </tr>
 </tbody>
 </table>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="wx.request.html">wx.request</a></li>
+</ul>
+</div>
 </div>
 <div class="section" id="requesttask">
 <h3>RequestTask<a class="headerlink" href="#requesttask" title="永久链接至标题">¶</a></h3>
@@ -977,6 +1673,14 @@ wx.getSystemInfo</p></td>
 </tr>
 </tbody>
 </table>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="RequestTask.html">RequestTask</a></li>
+<li class="toctree-l1"><a class="reference internal" href="RequestTask.abort.html">RequestTask.abort</a></li>
+<li class="toctree-l1"><a class="reference internal" href="RequestTask.offHeadersReceived.html">RequestTask.offHeadersReceived</a></li>
+<li class="toctree-l1"><a class="reference internal" href="RequestTask.onHeadersReceived.html">RequestTask.onHeadersReceived</a></li>
+</ul>
+</div>
 </div>
 <div class="section" id="id24">
 <h3>下载<a class="headerlink" href="#id24" title="永久链接至标题">¶</a></h3>
@@ -996,6 +1700,11 @@ wx.getSystemInfo</p></td>
 </tr>
 </tbody>
 </table>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="wx.downloadFile.html">wx.getAccountInfoSync</a></li>
+</ul>
+</div>
 </div>
 <div class="section" id="downloadtask">
 <h3>DownloadTask<a class="headerlink" href="#downloadtask" title="永久链接至标题">¶</a></h3>
@@ -1027,6 +1736,16 @@ wx.getSystemInfo</p></td>
 </tr>
 </tbody>
 </table>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="DownloadTask.html">DownloadTask</a></li>
+<li class="toctree-l1"><a class="reference internal" href="DownloadTask.abort.html">DownloadTask.abort</a></li>
+<li class="toctree-l1"><a class="reference internal" href="DownloadTask.offHeadersReceived.html">DownloadTask.offHeadersReceived</a></li>
+<li class="toctree-l1"><a class="reference internal" href="DownloadTask.offProgressUpdate.html">DownloadTask.offProgressUpdate</a></li>
+<li class="toctree-l1"><a class="reference internal" href="DownloadTask.onHeadersReceived.html">DownloadTask.onHeadersReceived</a></li>
+<li class="toctree-l1"><a class="reference internal" href="DownloadTask.onProgressUpdate.html">DownloadTask.onProgressUpdate</a></li>
+</ul>
+</div>
 </div>
 <div class="section" id="id25">
 <h3>上传<a class="headerlink" href="#id25" title="永久链接至标题">¶</a></h3>
@@ -1046,6 +1765,11 @@ wx.getSystemInfo</p></td>
 </tr>
 </tbody>
 </table>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="wx.uploadFile.html">wx.uploadFile</a></li>
+</ul>
+</div>
 </div>
 <div class="section" id="uploadtask">
 <h3>UploadTask<a class="headerlink" href="#uploadtask" title="永久链接至标题">¶</a></h3>
@@ -1077,6 +1801,16 @@ wx.getSystemInfo</p></td>
 </tr>
 </tbody>
 </table>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="UploadTask.html">UploadTask</a></li>
+<li class="toctree-l1"><a class="reference internal" href="UploadTask.abort.html">UploadTask.abort</a></li>
+<li class="toctree-l1"><a class="reference internal" href="UploadTask.offHeadersReceived.html">UploadTask.offHeadersReceived</a></li>
+<li class="toctree-l1"><a class="reference internal" href="UploadTask.offProgressUpdate.html">wx.createWorker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="UploadTask.onHeadersReceived.html">wx.createWorker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="UploadTask.onProgressUpdate.html">UploadTask.onProgressUpdate</a></li>
+</ul>
+</div>
 </div>
 <div class="section" id="websocket">
 <h3>WebSocket<a class="headerlink" href="#websocket" title="永久链接至标题">¶</a></h3>
@@ -1114,6 +1848,17 @@ wx.getSystemInfo</p></td>
 </tr>
 </tbody>
 </table>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="wx.sendSocketMessage.html">wx.sendSocketMessage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wx.onSocketOpen.html">wx.onSocketOpen</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wx.onSocketMessage.html">wx.onSocketMessage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wx.onSocketError.html">wx.onSocketError</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wx.onSocketClose.html">wx.onSocketClose</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wx.connectSocket.html">wx.connectSocket</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wx.closeSocket.html">wx.closeSocket</a></li>
+</ul>
+</div>
 </div>
 <div class="section" id="sockettask">
 <h3>SocketTask<a class="headerlink" href="#sockettask" title="永久链接至标题">¶</a></h3>
@@ -1148,6 +1893,17 @@ wx.getSystemInfo</p></td>
 </tr>
 </tbody>
 </table>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="SocketTask.html">SocketTask</a></li>
+<li class="toctree-l1"><a class="reference internal" href="SocketTask.close.html">SocketTask.close</a></li>
+<li class="toctree-l1"><a class="reference internal" href="SocketTask.onClose.html">SocketTask.onClose</a></li>
+<li class="toctree-l1"><a class="reference internal" href="SocketTask.onError.html">SocketTask.onError</a></li>
+<li class="toctree-l1"><a class="reference internal" href="SocketTask.onMessage.html">SocketTask.onMessage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="SocketTask.onOpen.html">SocketTask.onOpen</a></li>
+<li class="toctree-l1"><a class="reference internal" href="SocketTask.send.html">SocketTask.send</a></li>
+</ul>
+</div>
 </div>
 <div class="section" id="mdns">
 <h3>mDNS<a class="headerlink" href="#mdns" title="永久链接至标题">¶</a></h3>
@@ -1194,6 +1950,20 @@ wx.getSystemInfo</p></td>
 </tr>
 </tbody>
 </table>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="wx.stopLocalServiceDiscovery.html">wx.stopLocalServiceDiscovery</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wx.startLocalServiceDiscovery.html">wx.startLocalServiceDiscovery</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wx.onLocalServiceResolveFail.html">wx.onLocalServiceResolveFail</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wx.onLocalServiceLost.html">wx.onLocalServiceLost</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wx.onLocalServiceFound.html">wx.onLocalServiceFound</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wx.onLocalServiceDiscoveryStop.html">wx.onLocalServiceDiscoveryStop</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wx.offLocalServiceResolveFail.html">wx.offLocalServiceResolveFail</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wx.offLocalServiceLost.html">wx.offLocalServiceLost</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wx.offLocalServiceFound.html">wx.offLocalServiceFound</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wx.offLocalServiceDiscoveryStop.html">wx.offLocalServiceDiscoveryStop</a></li>
+</ul>
+</div>
 </div>
 </div>
 <div class="section" id="id26">
@@ -1241,6 +2011,20 @@ wx.getSystemInfo</p></td>
 </tr>
 </tbody>
 </table>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="wx.setStorageSync.html">wx.createWorker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wx.setStorage.html">wx.createWorker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wx.removeStorageSync.html">wx.removeStorageSync</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wx.removeStorage.html">wx.removeStorage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wx.getStorageSync.html">wx.getStorageSync</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wx.getStorageInfoSync.html">wx.getStorageInfoSync</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wx.getStorageInfo.html">wx.getStorageInfo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wx.getStorage.html">wx.getStorage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wx.clearStorageSync.html">wx.clearStorageSync</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wx.clearStorage.html">wx.clearStorage</a></li>
+</ul>
+</div>
 </div>
 <div class="section" id="id27">
 <h2>媒体<a class="headerlink" href="#id27" title="永久链接至标题">¶</a></h2>
@@ -1262,6 +2046,11 @@ wx.getSystemInfo</p></td>
 </tr>
 </tbody>
 </table>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="wx.createMapContext.html">wx.createMapContext</a></li>
+</ul>
+</div>
 <div class="section" id="mapcontext">
 <h4>MapContext<a class="headerlink" href="#mapcontext" title="永久链接至标题">¶</a></h4>
 <table class="docutils align-center">
@@ -1295,6 +2084,17 @@ wx.getSystemInfo</p></td>
 </tr>
 </tbody>
 </table>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="MapContext.html">MapContext</a></li>
+<li class="toctree-l1"><a class="reference internal" href="MapContext.getCenterLocation.html">MapContext.getCenterLocation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="MapContext.getRegion.html">MapContext.getRegion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="MapContext.getScale.html">MapContext.getScale</a></li>
+<li class="toctree-l1"><a class="reference internal" href="MapContext.includePoints.html">MapContext.includePoints</a></li>
+<li class="toctree-l1"><a class="reference internal" href="MapContext.moveToLocation.html">MapContext.moveToLocation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="MapContext.translateMarker.html">MapContext.translateMarker</a></li>
+</ul>
+</div>
 </div>
 </div>
 <div class="section" id="id29">
@@ -1330,6 +2130,16 @@ wx.getSystemInfo</p></td>
 </tr>
 </tbody>
 </table>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="wx.saveImageToPhotosAlbum.html">wx.saveImageToPhotosAlbum</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wx.previewImage.html">wx.previewImage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wx.getImageInfo.html">wx.getImageInfo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wx.compressImage.html">wx.compressImage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wx.chooseMessageFile.html">wx.chooseMessageFile</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wx.chooseImage.html">wx.chooseImage</a></li>
+</ul>
+</div>
 </div>
 <div class="section" id="id30">
 <h3>视频<a class="headerlink" href="#id30" title="永久链接至标题">¶</a></h3>
@@ -1355,6 +2165,13 @@ wx.getSystemInfo</p></td>
 </tr>
 </tbody>
 </table>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="wx.saveVideoToPhotosAlbum.html">wx.saveVideoToPhotosAlbum</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wx.createVideoContext.html">wx.createVideoContext</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wx.chooseVideo.html">wx.chooseVideo</a></li>
+</ul>
+</div>
 <div class="section" id="videocontext">
 <h4>VideoContext<a class="headerlink" href="#videocontext" title="永久链接至标题">¶</a></h4>
 <table class="docutils align-center">
@@ -1400,6 +2217,21 @@ wx.getSystemInfo</p></td>
 </tr>
 </tbody>
 </table>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="VideoContext.html">VideoContext</a></li>
+<li class="toctree-l1"><a class="reference internal" href="VideoContext.seek.html">VideoContext.seek</a></li>
+<li class="toctree-l1"><a class="reference internal" href="VideoContext.exitFullScreen.html">VideoContext.exitFullScreen</a></li>
+<li class="toctree-l1"><a class="reference internal" href="VideoContext.hideStatusBar.html">VideoContext.hideStatusBar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="VideoContext.pause.html">VideoContext.pause</a></li>
+<li class="toctree-l1"><a class="reference internal" href="VideoContext.play.html">VideoContext.play</a></li>
+<li class="toctree-l1"><a class="reference internal" href="VideoContext.playbackRate.html">VideoContext.playbackRate</a></li>
+<li class="toctree-l1"><a class="reference internal" href="VideoContext.requestFullScreen.html">VideoContext.requestFullScreen</a></li>
+<li class="toctree-l1"><a class="reference internal" href="VideoContext.sendDanmu.html">VideoContext.sendDanmu</a></li>
+<li class="toctree-l1"><a class="reference internal" href="VideoContext.showStatusBar.html">VideoContext.showStatusBar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="VideoContext.stop.html">VideoContext.stop</a></li>
+</ul>
+</div>
 </div>
 </div>
 <div class="section" id="id31">
@@ -1438,6 +2270,17 @@ wx.getSystemInfo</p></td>
 </tr>
 </tbody>
 </table>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="wx.stopVoice.html">wx.stopVoice</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wx.setInnerAudioOption.html">wx.setInnerAudioOption</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wx.playVoice.html">wx.playVoice</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wx.pauseVoice.html">wx.pauseVoice</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wx.getAvailableAudioSources.html">wx.getAvailableAudioSources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wx.createInnerAudioContext.html">wx.createInnerAudioContext</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wx.createAudioContext.html">wx.createAudioContext</a></li>
+</ul>
+</div>
 <div class="section" id="inneraudiocontext">
 <h4>InnerAudioContext<a class="headerlink" href="#inneraudiocontext" title="永久链接至标题">¶</a></h4>
 <table class="docutils align-center">
@@ -1528,6 +2371,37 @@ wx.getSystemInfo</p></td>
 </tr>
 </tbody>
 </table>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="AudioContext.html">AudioContext</a></li>
+<li class="toctree-l1"><a class="reference internal" href="InnerAudioContext.html">InnerAudioContext</a></li>
+<li class="toctree-l1"><a class="reference internal" href="InnerAudioContext.destroy.html">InnerAudioContext.destroy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="InnerAudioContext.offCanplay.html">InnerAudioContext.offCanplay</a></li>
+<li class="toctree-l1"><a class="reference internal" href="InnerAudioContext.offEnded.html">InnerAudioContext.offEnded</a></li>
+<li class="toctree-l1"><a class="reference internal" href="InnerAudioContext.offError.html">InnerAudioContext.offError</a></li>
+<li class="toctree-l1"><a class="reference internal" href="InnerAudioContext.offPause.html">InnerAudioContext.offPause</a></li>
+<li class="toctree-l1"><a class="reference internal" href="InnerAudioContext.offPlay.html">InnerAudioContext.offPlay</a></li>
+<li class="toctree-l1"><a class="reference internal" href="InnerAudioContext.offSeeked.html">InnerAudioContext.offSeeked</a></li>
+<li class="toctree-l1"><a class="reference internal" href="InnerAudioContext.offSeeking.html">InnerAudioContext.offSeeking</a></li>
+<li class="toctree-l1"><a class="reference internal" href="InnerAudioContext.offStop.html">InnerAudioContext.offStop</a></li>
+<li class="toctree-l1"><a class="reference internal" href="InnerAudioContext.offTimeUpdate.html">InnerAudioContext.offTimeUpdate</a></li>
+<li class="toctree-l1"><a class="reference internal" href="InnerAudioContext.offWaiting.html">InnerAudioContext.offWaiting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="InnerAudioContext.onCanplay.html">InnerAudioContext.onCanplay</a></li>
+<li class="toctree-l1"><a class="reference internal" href="InnerAudioContext.onEnded.html">InnerAudioContext.onEnded</a></li>
+<li class="toctree-l1"><a class="reference internal" href="InnerAudioContext.onError.html">InnerAudioContext.onError</a></li>
+<li class="toctree-l1"><a class="reference internal" href="InnerAudioContext.onPause.html">InnerAudioContext.onPause</a></li>
+<li class="toctree-l1"><a class="reference internal" href="InnerAudioContext.onPlay.html">InnerAudioContext.onPlay</a></li>
+<li class="toctree-l1"><a class="reference internal" href="InnerAudioContext.onSeeked.html">InnerAudioContext.onSeeked</a></li>
+<li class="toctree-l1"><a class="reference internal" href="InnerAudioContext.onSeeking.html">InnerAudioContext.onSeeking</a></li>
+<li class="toctree-l1"><a class="reference internal" href="InnerAudioContext.onStop.html">InnerAudioContext.onStop</a></li>
+<li class="toctree-l1"><a class="reference internal" href="InnerAudioContext.onTimeUpdate.html">InnerAudioContext.onTimeUpdate</a></li>
+<li class="toctree-l1"><a class="reference internal" href="InnerAudioContext.onWaiting.html">InnerAudioContext.onWaiting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="InnerAudioContext.pause.html">InnerAudioContext.pause</a></li>
+<li class="toctree-l1"><a class="reference internal" href="InnerAudioContext.play.html">InnerAudioContext.play</a></li>
+<li class="toctree-l1"><a class="reference internal" href="InnerAudioContext.seek.html">InnerAudioContext.seek</a></li>
+<li class="toctree-l1"><a class="reference internal" href="InnerAudioContext.stop.html">InnerAudioContext.stop</a></li>
+</ul>
+</div>
 </div>
 <div class="section" id="audiocontext">
 <h4>AudioContext<a class="headerlink" href="#audiocontext" title="永久链接至标题">¶</a></h4>
@@ -1556,6 +2430,14 @@ wx.getSystemInfo</p></td>
 </tr>
 </tbody>
 </table>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="AudioContext.pause.html">AudioContext.pause</a></li>
+<li class="toctree-l1"><a class="reference internal" href="AudioContext.play.html">AudioContext.play</a></li>
+<li class="toctree-l1"><a class="reference internal" href="AudioContext.seek.html">AudioContext.seek</a></li>
+<li class="toctree-l1"><a class="reference internal" href="AudioContext.setSrc.html">AudioContext.setSrc</a></li>
+</ul>
+</div>
 </div>
 </div>
 <div class="section" id="id32">
@@ -1600,6 +2482,19 @@ wx.getSystemInfo</p></td>
 </tr>
 </tbody>
 </table>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="wx.stopBackgroundAudio.html">wx.stopBackgroundAudio</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wx.seekBackgroundAudio.html">wx.seekBackgroundAudio</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wx.playBackgroundAudio.html">wx.playBackgroundAudio</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wx.pauseBackgroundAudio.html">wx.pauseBackgroundAudio</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wx.onBackgroundAudioStop.html">wx.onBackgroundAudioStop</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wx.onBackgroundAudioPlay.html">wx.onBackgroundAudioPlay</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wx.onBackgroundAudioPause.html">wx.onBackgroundAudioPause</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wx.getBackgroundAudioPlayerState.html">wx.getBackgroundAudioPlayerState</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wx.getBackgroundAudioManager.html">wx.getBackgroundAudioManager</a></li>
+</ul>
+</div>
 <div class="section" id="backgroundaudiomanager">
 <h4>BackgroundAudioManager<a class="headerlink" href="#backgroundaudiomanager" title="永久链接至标题">¶</a></h4>
 <table class="docutils align-center">
@@ -1663,6 +2558,27 @@ wx.getSystemInfo</p></td>
 </tr>
 </tbody>
 </table>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="BackgroundAudioManager.html">wx.createWorker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="BackgroundAudioManager.onCanplay.html">BackgroundAudioManager.onCanplay</a></li>
+<li class="toctree-l1"><a class="reference internal" href="BackgroundAudioManager.onEnded.html">BackgroundAudioManager.onEnded</a></li>
+<li class="toctree-l1"><a class="reference internal" href="BackgroundAudioManager.onError.html">BackgroundAudioManager.onError</a></li>
+<li class="toctree-l1"><a class="reference internal" href="BackgroundAudioManager.onNext.html">BackgroundAudioManager.onNext</a></li>
+<li class="toctree-l1"><a class="reference internal" href="BackgroundAudioManager.onPause.html">BackgroundAudioManager.onPause</a></li>
+<li class="toctree-l1"><a class="reference internal" href="BackgroundAudioManager.onPlay.html">BackgroundAudioManager.onPlay</a></li>
+<li class="toctree-l1"><a class="reference internal" href="BackgroundAudioManager.onPrev.html">BackgroundAudioManager.onPrev</a></li>
+<li class="toctree-l1"><a class="reference internal" href="BackgroundAudioManager.onSeeked.html">BackgroundAudioManager.onSeeked</a></li>
+<li class="toctree-l1"><a class="reference internal" href="BackgroundAudioManager.onSeeking.html">BackgroundAudioManager.onSeeking</a></li>
+<li class="toctree-l1"><a class="reference internal" href="BackgroundAudioManager.onStop.html">BackgroundAudioManager.onStop</a></li>
+<li class="toctree-l1"><a class="reference internal" href="BackgroundAudioManager.onTimeUpdate.html">BackgroundAudioManager.onTimeUpdate</a></li>
+<li class="toctree-l1"><a class="reference internal" href="BackgroundAudioManager.onWaiting.html">BackgroundAudioManager.onWaiting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="BackgroundAudioManager.pause.html">BackgroundAudioManager.pause</a></li>
+<li class="toctree-l1"><a class="reference internal" href="BackgroundAudioManager.play.html">BackgroundAudioManager.play</a></li>
+<li class="toctree-l1"><a class="reference internal" href="BackgroundAudioManager.seek.html">BackgroundAudioManager.seek</a></li>
+<li class="toctree-l1"><a class="reference internal" href="BackgroundAudioManager.stop.html">BackgroundAudioManager.stop</a></li>
+</ul>
+</div>
 </div>
 </div>
 <div class="section" id="id33">
@@ -1686,6 +2602,12 @@ wx.getSystemInfo</p></td>
 </tr>
 </tbody>
 </table>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="wx.createLivePusherContext.html">wx.createLivePusherContext</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wx.createLivePlayerContext.html">wx.createLivePlayerContext</a></li>
+</ul>
+</div>
 <div class="section" id="livepushercontext">
 <h4>LivePusherContext<a class="headerlink" href="#livepushercontext" title="永久链接至标题">¶</a></h4>
 <table class="docutils align-center">
@@ -1737,6 +2659,24 @@ wx.getSystemInfo</p></td>
 </tr>
 </tbody>
 </table>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="LivePlayerContext.html">LivePlayerContext</a></li>
+<li class="toctree-l1"><a class="reference internal" href="LivePusherContext.html">LivePusherContext</a></li>
+<li class="toctree-l1"><a class="reference internal" href="LivePusherContext.pause.html">LivePusherContext.pause</a></li>
+<li class="toctree-l1"><a class="reference internal" href="LivePusherContext.pauseBGM.html">LivePusherContext.pauseBGM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="LivePusherContext.playBGM.html">LivePusherContext.playBGM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="LivePusherContext.resume.html">LivePusherContext.resume</a></li>
+<li class="toctree-l1"><a class="reference internal" href="LivePusherContext.resumeBGM.html">LivePusherContext.resumeBGM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="LivePusherContext.setBGMVolume.html">LivePusherContext.setBGMVolume</a></li>
+<li class="toctree-l1"><a class="reference internal" href="LivePusherContext.snapshot.html">LivePusherContext.snapshot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="LivePusherContext.start.html">LivePusherContext.start</a></li>
+<li class="toctree-l1"><a class="reference internal" href="LivePusherContext.stop.html">LivePusherContext.stop</a></li>
+<li class="toctree-l1"><a class="reference internal" href="LivePusherContext.stopBGM.html">LivePusherContext.stopBGM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="LivePusherContext.switchCamera.html">LivePusherContext.switchCamera</a></li>
+<li class="toctree-l1"><a class="reference internal" href="LivePusherContext.toggleTorch.html">LivePusherContext.toggleTorch</a></li>
+</ul>
+</div>
 </div>
 <div class="section" id="liveplayercontext">
 <h4>LivePlayerContext<a class="headerlink" href="#liveplayercontext" title="永久链接至标题">¶</a></h4>
@@ -1774,6 +2714,17 @@ wx.getSystemInfo</p></td>
 </tr>
 </tbody>
 </table>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="LivePlayerContext.exitFullScreen.html">LivePlayerContext.exitFullScreen</a></li>
+<li class="toctree-l1"><a class="reference internal" href="LivePlayerContext.mute.html">LivePlayerContext.mute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="LivePlayerContext.pause.html">LivePlayerContext.pause</a></li>
+<li class="toctree-l1"><a class="reference internal" href="LivePlayerContext.play.html">LivePlayerContext.play</a></li>
+<li class="toctree-l1"><a class="reference internal" href="LivePlayerContext.requestFullScreen.html">LivePlayerContext.requestFullScreen</a></li>
+<li class="toctree-l1"><a class="reference internal" href="LivePlayerContext.resume.html">LivePlayerContext.resume</a></li>
+<li class="toctree-l1"><a class="reference internal" href="LivePlayerContext.stop.html">LivePlayerContext.stop</a></li>
+</ul>
+</div>
 </div>
 </div>
 <div class="section" id="id34">
@@ -1800,6 +2751,13 @@ wx.getSystemInfo</p></td>
 </tr>
 </tbody>
 </table>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="wx.stopRecord.html">wx.stopRecord</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wx.startRecord.html">wx.startRecord</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wx.getRecorderManager.html">wx.getRecorderManager</a></li>
+</ul>
+</div>
 <div class="section" id="recordermanager">
 <h4>RecorderManager<a class="headerlink" href="#recordermanager" title="永久链接至标题">¶</a></h4>
 <table class="docutils align-center">
@@ -1851,6 +2809,23 @@ wx.getSystemInfo</p></td>
 </tr>
 </tbody>
 </table>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="RecorderManager.html">RecorderManager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="RecorderManager.onError.html">RecorderManager.onError</a></li>
+<li class="toctree-l1"><a class="reference internal" href="RecorderManager.onFrameRecorded.html">RecorderManager.onFrameRecorded</a></li>
+<li class="toctree-l1"><a class="reference internal" href="RecorderManager.onInterruptionBegin.html">RecorderManager.onInterruptionBegin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="RecorderManager.onInterruptionEnd.html">RecorderManager.onInterruptionEnd</a></li>
+<li class="toctree-l1"><a class="reference internal" href="RecorderManager.onPause.html">RecorderManager.onPause</a></li>
+<li class="toctree-l1"><a class="reference internal" href="RecorderManager.onResume.html">RecorderManager.onResume</a></li>
+<li class="toctree-l1"><a class="reference internal" href="RecorderManager.onStart.html">RecorderManager.onStart</a></li>
+<li class="toctree-l1"><a class="reference internal" href="RecorderManager.onStop.html">RecorderManager.onStop</a></li>
+<li class="toctree-l1"><a class="reference internal" href="RecorderManager.pause.html">RecorderManager.pause</a></li>
+<li class="toctree-l1"><a class="reference internal" href="RecorderManager.resume.html">RecorderManager.resume</a></li>
+<li class="toctree-l1"><a class="reference internal" href="RecorderManager.start.html">RecorderManager.start</a></li>
+<li class="toctree-l1"><a class="reference internal" href="RecorderManager.stop.html">RecorderManager.stop</a></li>
+</ul>
+</div>
 </div>
 </div>
 <div class="section" id="id35">
@@ -1871,6 +2846,11 @@ wx.getSystemInfo</p></td>
 </tr>
 </tbody>
 </table>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="wx.createCameraContext.html">wx.createCameraContext</a></li>
+</ul>
+</div>
 <div class="section" id="cameracontext">
 <h4>CameraContext<a class="headerlink" href="#cameracontext" title="永久链接至标题">¶</a></h4>
 <table class="docutils align-center">
@@ -1895,6 +2875,14 @@ wx.getSystemInfo</p></td>
 </tr>
 </tbody>
 </table>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="CameraContext.html">CameraContext</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CameraContext.startRecord.html">CameraContext.startRecord</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CameraContext.stopRecord.html">CameraContext.stopRecord</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CameraContext.takePhoto.html">CameraContext.takePhoto</a></li>
+</ul>
+</div>
 </div>
 </div>
 </div>
@@ -1922,6 +2910,13 @@ wx.getSystemInfo</p></td>
 </tr>
 </tbody>
 </table>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="wx.openLocation.html">wx.openLocation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wx.getLocation.html">wx.getLocation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wx.chooseLocation.html">wx.chooseLocation</a></li>
+</ul>
+</div>
 </div>
 <div class="section" id="id37">
 <h2>转发<a class="headerlink" href="#id37" title="永久链接至标题">¶</a></h2>
@@ -1950,6 +2945,14 @@ wx.getSystemInfo</p></td>
 </tr>
 </tbody>
 </table>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="wx.updateShareMenu.html">wx.updateShareMenu</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wx.showShareMenu.html">wx.showShareMenu</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wx.hideShareMenu.html">wx.hideShareMenu</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wx.getShareInfo.html">wx.getShareInfo</a></li>
+</ul>
+</div>
 </div>
 <div class="section" id="id38">
 <h2>画布<a class="headerlink" href="#id38" title="永久链接至标题">¶</a></h2>
@@ -1979,6 +2982,16 @@ wx.getSystemInfo</p></td>
 </tr>
 </tbody>
 </table>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="CanvasContext.html">wx.createWorker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wx.createCanvasContext.html">wx.createCanvasContext</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wx.canvasToTempFilePath.html">wx.canvasToTempFilePath</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wx.canvasPutImageData.html">wx.canvasPutImageData</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wx.canvasGetImageData.html">wx.canvasGetImageData</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Color.html">Color</a></li>
+</ul>
+</div>
 <div class="section" id="canvasgradient">
 <h3>CanvasGradient<a class="headerlink" href="#canvasgradient" title="永久链接至标题">¶</a></h3>
 <table class="docutils align-center">
@@ -1997,6 +3010,12 @@ wx.getSystemInfo</p></td>
 </tr>
 </tbody>
 </table>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="CanvasGradient.html">wx.createWorker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CanvasGradient.addColorStop.html">video</a></li>
+</ul>
+</div>
 </div>
 <div class="section" id="canvascontext">
 <h3>CanvasContext<a class="headerlink" href="#canvascontext" title="永久链接至标题">¶</a></h3>
@@ -2137,6 +3156,52 @@ wx.getSystemInfo</p></td>
 </tr>
 </tbody>
 </table>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="CanvasContext.arc.html">CanvasContext.arc</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CanvasContext.arcTo.html">CanvasContext.arcTo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CanvasContext.beginPath.html">CanvasContext.beginPath</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CanvasContext.bezierCurveTo.html">CanvasContext.bezierCurveTo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CanvasContext.clearRect.html">CanvasContext.clearRect</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CanvasContext.clip.html">CanvasContext.clip</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CanvasContext.closePath.html">CanvasContext.closePath</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CanvasContext.createCircularGradient.html">video</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CanvasContext.createLinearGradient.html">video</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CanvasContext.createPattern.html">video</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CanvasContext.draw.html">video</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CanvasContext.drawImage.html">video</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CanvasContext.fill.html">video</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CanvasContext.fillRect.html">video</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CanvasContext.fillText.html">video</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CanvasContext.lineTo.html">video</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CanvasContext.measureText.html">video</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CanvasContext.moveTo.html">video</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CanvasContext.quadraticCurveTo.html">video</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CanvasContext.rect.html">video</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CanvasContext.restore.html">video</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CanvasContext.rotate.html">video</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CanvasContext.save.html">video</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CanvasContext.scale.html">video</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CanvasContext.setFillStyle.html">video</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CanvasContext.setFontSize.html">video</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CanvasContext.setGlobalAlpha.html">video</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CanvasContext.setLineCap.html">video</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CanvasContext.setLineDash.html">video</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CanvasContext.setLineJoin.html">video</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CanvasContext.setLineWidth.html">video</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CanvasContext.setMiterLimit.html">video</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CanvasContext.setShadow.html">video</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CanvasContext.setStrokeStyle.html">video</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CanvasContext.setTextAlign.html">video</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CanvasContext.setTextBaseline.html">video</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CanvasContext.setTransform.html">video</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CanvasContext.stroke.html">video</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CanvasContext.strokeRect.html">video</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CanvasContext.strokeText.html">video</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CanvasContext.transform.html">video</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CanvasContext.translate.html">video</a></li>
+</ul>
+</div>
 </div>
 </div>
 <div class="section" id="id39">
@@ -2175,6 +3240,17 @@ wx.getSystemInfo</p></td>
 </tr>
 </tbody>
 </table>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="wx.saveFile.html">wx.saveFile</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wx.removeSavedFile.html">wx.removeSavedFile</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wx.openDocument.html">wx.openDocument</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wx.getSavedFileList.html">wx.getSavedFileList</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wx.getSavedFileInfo.html">wx.getSavedFileInfo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wx.getFileSystemManager.html">wx.getFileSystemManager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wx.getFileInfo.html">wx.getFileInfo</a></li>
+</ul>
+</div>
 <div class="section" id="stats">
 <h3>Stats<a class="headerlink" href="#stats" title="永久链接至标题">¶</a></h3>
 <table class="docutils align-center">
@@ -2196,6 +3272,13 @@ wx.getSystemInfo</p></td>
 </tr>
 </tbody>
 </table>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Stats.html">Stats</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Stats.isDirectory.html">Stats.isDirectory</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Stats.isFile.html">Stats.isFile</a></li>
+</ul>
+</div>
 </div>
 <div class="section" id="filesystemmanager">
 <h3>FileSystemManager<a class="headerlink" href="#filesystemmanager" title="永久链接至标题">¶</a></h3>
@@ -2296,6 +3379,39 @@ wx.getSystemInfo</p></td>
 </tr>
 </tbody>
 </table>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="FileSystemManager.html">FileSystemManager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="FileSystemManager.access.html">FileSystemManager.access</a></li>
+<li class="toctree-l1"><a class="reference internal" href="FileSystemManager.accessSync.html">FileSystemManager.accessSync</a></li>
+<li class="toctree-l1"><a class="reference internal" href="FileSystemManager.appendFile.html">FileSystemManager.appendFile</a></li>
+<li class="toctree-l1"><a class="reference internal" href="FileSystemManager.appendFileSync.html">FileSystemManager.appendFileSync</a></li>
+<li class="toctree-l1"><a class="reference internal" href="FileSystemManager.copyFile.html">FileSystemManager.copyFile</a></li>
+<li class="toctree-l1"><a class="reference internal" href="FileSystemManager.copyFileSync.html">FileSystemManager.copyFileSync</a></li>
+<li class="toctree-l1"><a class="reference internal" href="FileSystemManager.getFileInfo.html">FileSystemManager.getFileInfo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="FileSystemManager.getSavedFileList.html">FileSystemManager.getSavedFileList</a></li>
+<li class="toctree-l1"><a class="reference internal" href="FileSystemManager.mkdir.html">FileSystemManager.mkdir</a></li>
+<li class="toctree-l1"><a class="reference internal" href="FileSystemManager.mkdirSync.html">FileSystemManager.mkdirSync</a></li>
+<li class="toctree-l1"><a class="reference internal" href="FileSystemManager.readdir.html">wx.createWorker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="FileSystemManager.readdirSync.html">FileSystemManager.readdirSync</a></li>
+<li class="toctree-l1"><a class="reference internal" href="FileSystemManager.readFile.html">FileSystemManager.readFile</a></li>
+<li class="toctree-l1"><a class="reference internal" href="FileSystemManager.readFileSync.html">FileSystemManager.readFileSync</a></li>
+<li class="toctree-l1"><a class="reference internal" href="FileSystemManager.removeSavedFile.html">FileSystemManager.removeSavedFile</a></li>
+<li class="toctree-l1"><a class="reference internal" href="FileSystemManager.rename.html">FileSystemManager.rename</a></li>
+<li class="toctree-l1"><a class="reference internal" href="FileSystemManager.renameSync.html">FileSystemManager.renameSync</a></li>
+<li class="toctree-l1"><a class="reference internal" href="FileSystemManager.rmdir.html">FileSystemManager.rmdir</a></li>
+<li class="toctree-l1"><a class="reference internal" href="FileSystemManager.rmdirSync.html">FileSystemManager.rmdirSync</a></li>
+<li class="toctree-l1"><a class="reference internal" href="FileSystemManager.saveFile.html">FileSystemManager.saveFile</a></li>
+<li class="toctree-l1"><a class="reference internal" href="FileSystemManager.saveFileSync.html">FileSystemManager.saveFileSync</a></li>
+<li class="toctree-l1"><a class="reference internal" href="FileSystemManager.stat.html">FileSystemManager.stat</a></li>
+<li class="toctree-l1"><a class="reference internal" href="FileSystemManager.statSync.html">FileSystemManager.statSync</a></li>
+<li class="toctree-l1"><a class="reference internal" href="FileSystemManager.unlink.html">FileSystemManager.unlink</a></li>
+<li class="toctree-l1"><a class="reference internal" href="FileSystemManager.unlinkSync.html">FileSystemManager.unlinkSync</a></li>
+<li class="toctree-l1"><a class="reference internal" href="FileSystemManager.unzip.html">FileSystemManager.unzip</a></li>
+<li class="toctree-l1"><a class="reference internal" href="FileSystemManager.writeFile.html">FileSystemManager.writeFile</a></li>
+<li class="toctree-l1"><a class="reference internal" href="FileSystemManager.writeFileSync.html">FileSystemManager.writeFileSync</a></li>
+</ul>
+</div>
 </div>
 </div>
 <div class="section" id="id40">
@@ -2321,6 +3437,12 @@ wx.getSystemInfo</p></td>
 </tr>
 </tbody>
 </table>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="wx.login.html">wx.login</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wx.checkSession.html">wx.checkSession</a></li>
+</ul>
+</div>
 </div>
 <div class="section" id="id42">
 <h3>小程序跳转<a class="headerlink" href="#id42" title="永久链接至标题">¶</a></h3>
@@ -2343,6 +3465,12 @@ wx.getSystemInfo</p></td>
 </tr>
 </tbody>
 </table>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="wx.navigateToMiniProgram.html">wx.navigateToMiniProgram</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wx.navigateBackMiniProgram.html">wx.navigateBackMiniProgram</a></li>
+</ul>
+</div>
 </div>
 <div class="section" id="id43">
 <h3>帐号信息<a class="headerlink" href="#id43" title="永久链接至标题">¶</a></h3>
@@ -2362,6 +3490,11 @@ wx.getSystemInfo</p></td>
 </tr>
 </tbody>
 </table>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="wx.getAccountInfoSync.html">wx.getAccountInfoSync</a></li>
+</ul>
+</div>
 </div>
 <div class="section" id="id44">
 <h3>用户信息<a class="headerlink" href="#id44" title="永久链接至标题">¶</a></h3>
@@ -2384,6 +3517,12 @@ wx.getSystemInfo</p></td>
 </tr>
 </tbody>
 </table>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="wx.getUserInfo.html">wx.getUserInfo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="UserInfo.html">UserInfo</a></li>
+</ul>
+</div>
 </div>
 <div class="section" id="id45">
 <h3>数据上报<a class="headerlink" href="#id45" title="永久链接至标题">¶</a></h3>
@@ -2403,6 +3542,11 @@ wx.getSystemInfo</p></td>
 </tr>
 </tbody>
 </table>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="wx.reportMonitor.html">wx.reportMonitor</a></li>
+</ul>
+</div>
 </div>
 <div class="section" id="id46">
 <h3>数据分析<a class="headerlink" href="#id46" title="永久链接至标题">¶</a></h3>
@@ -2422,6 +3566,11 @@ wx.getSystemInfo</p></td>
 </tr>
 </tbody>
 </table>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="wx.reportAnalytics.html">wx.reportAnalytics</a></li>
+</ul>
+</div>
 </div>
 <div class="section" id="id47">
 <h3>支付<a class="headerlink" href="#id47" title="永久链接至标题">¶</a></h3>
@@ -2441,6 +3590,11 @@ wx.getSystemInfo</p></td>
 </tr>
 </tbody>
 </table>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="wx.requestPayment.html">wx.requestPayment</a></li>
+</ul>
+</div>
 </div>
 <div class="section" id="id48">
 <h3>授权<a class="headerlink" href="#id48" title="永久链接至标题">¶</a></h3>
@@ -2460,6 +3614,11 @@ wx.getSystemInfo</p></td>
 </tr>
 </tbody>
 </table>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="wx.authorize.html">wx.authorize</a></li>
+</ul>
+</div>
 </div>
 <div class="section" id="id49">
 <h3>设置<a class="headerlink" href="#id49" title="永久链接至标题">¶</a></h3>
@@ -2485,6 +3644,13 @@ wx.getSystemInfo</p></td>
 </tr>
 </tbody>
 </table>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="wx.openSetting.html">wx.openSetting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wx.getSetting.html">wx.getSetting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="AuthSetting.html">AuthSetting</a></li>
+</ul>
+</div>
 </div>
 <div class="section" id="id50">
 <h3>收货地址<a class="headerlink" href="#id50" title="永久链接至标题">¶</a></h3>
@@ -2504,6 +3670,11 @@ wx.getSystemInfo</p></td>
 </tr>
 </tbody>
 </table>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="wx.chooseAddress.html">wx.chooseAddress</a></li>
+</ul>
+</div>
 </div>
 <div class="section" id="id51">
 <h3>卡券<a class="headerlink" href="#id51" title="永久链接至标题">¶</a></h3>
@@ -2526,6 +3697,12 @@ wx.getSystemInfo</p></td>
 </tr>
 </tbody>
 </table>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="wx.openCard.html">wx.openCard</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wx.addCard.html">wx.addCard</a></li>
+</ul>
+</div>
 </div>
 <div class="section" id="id52">
 <h3>发票<a class="headerlink" href="#id52" title="永久链接至标题">¶</a></h3>
@@ -2548,6 +3725,12 @@ wx.getSystemInfo</p></td>
 </tr>
 </tbody>
 </table>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="wx.chooseInvoiceTitle.html">wx.chooseInvoiceTitle</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wx.chooseInvoice.html">wx.chooseInvoice</a></li>
+</ul>
+</div>
 </div>
 <div class="section" id="id53">
 <h3>生物认证<a class="headerlink" href="#id53" title="永久链接至标题">¶</a></h3>
@@ -2573,6 +3756,13 @@ wx.getSystemInfo</p></td>
 </tr>
 </tbody>
 </table>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="wx.startSoterAuthentication.html">wx.startSoterAuthentication</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wx.checkIsSupportSoterAuthentication.html">wx.checkIsSupportSoterAuthentication</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wx.checkIsSoterEnrolledInDevice.html">wx.checkIsSoterEnrolledInDevice</a></li>
+</ul>
+</div>
 </div>
 <div class="section" id="id54">
 <h3>微信运动<a class="headerlink" href="#id54" title="永久链接至标题">¶</a></h3>
@@ -2592,12 +3782,70 @@ wx.getSystemInfo</p></td>
 </tr>
 </tbody>
 </table>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="wx.getWeRunData.html">wx.getWeRunData</a></li>
+</ul>
+</div>
 </div>
 </div>
 <div class="section" id="id55">
 <h2>设备<a class="headerlink" href="#id55" title="永久链接至标题">¶</a></h2>
 <div class="section" id="wi-fi">
 <h3>Wi-Fi<a class="headerlink" href="#wi-fi" title="永久链接至标题">¶</a></h3>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 40%" />
+<col style="width: 60%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>名称</p></th>
+<th class="head"><p>功能说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>wx.stopWifi</p></td>
+<td><p>关闭 Wi-Fi 模块</p></td>
+</tr>
+<tr class="row-odd"><td><p>wx.startWifi</p></td>
+<td><p>初始化 Wi-Fi 模块</p></td>
+</tr>
+<tr class="row-even"><td><p>wx.setWifiList</p></td>
+<td><p>设置 wifiList 中 AP 的相关信息</p></td>
+</tr>
+<tr class="row-odd"><td><p>wx.onWifiConnected</p></td>
+<td><p>监听连接上 Wi-Fi 的事件</p></td>
+</tr>
+<tr class="row-even"><td><p>wx.onGetWifiList</p></td>
+<td><p>监听获取到 Wi-Fi 列表数据事件</p></td>
+</tr>
+<tr class="row-odd"><td><p>wx.getWifiList</p></td>
+<td><p>请求获取 Wi-Fi 列表</p></td>
+</tr>
+<tr class="row-even"><td><p>wx.getConnectedWifi</p></td>
+<td><p>获取已连接中的 Wi-Fi 信息</p></td>
+</tr>
+<tr class="row-odd"><td><p>wx.connectWifi</p></td>
+<td><p>连接 Wi-Fi</p></td>
+</tr>
+<tr class="row-even"><td><p>WifiInfo</p></td>
+<td><p>Wifi 信息</p></td>
+</tr>
+</tbody>
+</table>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="wx.stopWifi.html">wx.stopWifi</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wx.startWifi.html">wx.startWifi</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wx.setWifiList.html">wx.createWorker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wx.onWifiConnected.html">wx.onWifiConnected</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wx.onGetWifiList.html">wx.onGetWifiList</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wx.getWifiList.html">wx.getWifiList</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wx.getConnectedWifi.html">wx.createWorker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wx.connectWifi.html">wx.connectWifi</a></li>
+<li class="toctree-l1"><a class="reference internal" href="WifiInfo.html">WifiInfo</a></li>
+</ul>
+</div>
 </div>
 <div class="section" id="ibeacon">
 <h3>iBeacon<a class="headerlink" href="#ibeacon" title="永久链接至标题">¶</a></h3>
@@ -2629,6 +3877,16 @@ wx.getSystemInfo</p></td>
 </tr>
 </tbody>
 </table>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="wx.stopBeaconDiscovery.html">wx.stopBeaconDiscovery</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wx.startBeaconDiscovery.html">wx.startBeaconDiscovery</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wx.onBeaconUpdate.html">wx.onBeaconUpdate</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wx.onBeaconServiceChange.html">wx.onBeaconServiceChange</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wx.getBeacons.html">wx.getBeacons</a></li>
+<li class="toctree-l1"><a class="reference internal" href="IBeaconInfo.html">IBeaconInfo</a></li>
+</ul>
+</div>
 <p>IBeaconInfo</p>
 </div>
 <div class="section" id="id56">
@@ -2649,6 +3907,11 @@ wx.getSystemInfo</p></td>
 </tr>
 </tbody>
 </table>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="wx.addPhoneContact.html">wx.addPhoneContact</a></li>
+</ul>
+</div>
 </div>
 <div class="section" id="id57">
 <h3>低功耗蓝牙<a class="headerlink" href="#id57" title="永久链接至标题">¶</a></h3>
@@ -2692,6 +3955,19 @@ wx.getSystemInfo</p></td>
 </tr>
 </tbody>
 </table>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="wx.writeBLECharacteristicValue.html">wx.writeBLECharacteristicValue</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wx.readBLECharacteristicValue.html">wx.readBLECharacteristicValue</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wx.onBLEConnectionStateChange.html">wx.onBLEConnectionStateChange</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wx.onBLECharacteristicValueChange.html">wx.onBLECharacteristicValueChange</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wx.notifyBLECharacteristicValueChange.html">:wxapi:`wx.createWorker`</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wx.getBLEDeviceServices.html">wx.getBLEDeviceServices</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wx.getBLEDeviceCharacteristics.html">wx.getBLEDeviceCharacteristics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wx.createBLEConnection.html">wx.createBLEConnection</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wx.closeBLEConnection.html">wx.createWorker</a></li>
+</ul>
+</div>
 </div>
 <div class="section" id="id58">
 <h3>蓝牙<a class="headerlink" href="#id58" title="永久链接至标题">¶</a></h3>
@@ -2735,6 +4011,19 @@ wx.getSystemInfo</p></td>
 </tr>
 </tbody>
 </table>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="wx.stopBluetoothDevicesDiscovery.html">wx.stopBluetoothDevicesDiscovery</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wx.startBluetoothDevicesDiscovery.html">wx.startBluetoothDevicesDiscovery</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wx.openBluetoothAdapter.html">wx.openBluetoothAdapter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wx.onBluetoothDeviceFound.html">wx.onBluetoothDeviceFound</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wx.onBluetoothAdapterStateChange.html">wx.onBluetoothAdapterStateChange</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wx.getConnectedBluetoothDevices.html">wx.getConnectedBluetoothDevices</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wx.getBluetoothDevices.html">wx.getBluetoothDevices</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wx.getBluetoothAdapterState.html">wx.getBluetoothAdapterState</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wx.closeBluetoothAdapter.html">wx.createWorker</a></li>
+</ul>
+</div>
 </div>
 <div class="section" id="id59">
 <h3>电量<a class="headerlink" href="#id59" title="永久链接至标题">¶</a></h3>
@@ -2757,6 +4046,12 @@ wx.getSystemInfo</p></td>
 </tr>
 </tbody>
 </table>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="wx.getBatteryInfoSync.html">wx.getBatteryInfoSync</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wx.getBatteryInfo.html">wx.getBatteryInfo</a></li>
+</ul>
+</div>
 </div>
 <div class="section" id="id60">
 <h3>剪贴板<a class="headerlink" href="#id60" title="永久链接至标题">¶</a></h3>
@@ -2779,6 +4074,12 @@ wx.getSystemInfo</p></td>
 </tr>
 </tbody>
 </table>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="wx.setClipboardData.html">wx.setClipboardData</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wx.getClipboardData.html">wx.getClipboardData</a></li>
+</ul>
+</div>
 </div>
 <div class="section" id="nfc">
 <h3>NFC<a class="headerlink" href="#nfc" title="永久链接至标题">¶</a></h3>
@@ -2810,6 +4111,15 @@ wx.getSystemInfo</p></td>
 </tr>
 </tbody>
 </table>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="wx.stopHCE.html">wx.stopHCE</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wx.startHCE.html">wx.startHCE</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wx.sendHCEMessage.html">wx.sendHCEMessage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wx.onHCEMessage.html">wx.onHCEMessage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wx.getHCEState.html">wx.getHCEState</a></li>
+</ul>
+</div>
 </div>
 <div class="section" id="id61">
 <h3>网络<a class="headerlink" href="#id61" title="永久链接至标题">¶</a></h3>
@@ -2832,6 +4142,12 @@ wx.getSystemInfo</p></td>
 </tr>
 </tbody>
 </table>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="wx.onNetworkStatusChange.html">wx.onNetworkStatusChange</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wx.getNetworkType.html">wx.getNetworkType</a></li>
+</ul>
+</div>
 </div>
 <div class="section" id="id62">
 <h3>屏幕<a class="headerlink" href="#id62" title="永久链接至标题">¶</a></h3>
@@ -2860,6 +4176,14 @@ wx.getSystemInfo</p></td>
 </tr>
 </tbody>
 </table>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="wx.setScreenBrightness.html">wx.setScreenBrightness</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wx.setKeepScreenOn.html">wx.setKeepScreenOn</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wx.onUserCaptureScreen.html">wx.onUserCaptureScreen</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wx.getScreenBrightness.html">wx.getScreenBrightness</a></li>
+</ul>
+</div>
 </div>
 <div class="section" id="id63">
 <h3>电话<a class="headerlink" href="#id63" title="永久链接至标题">¶</a></h3>
@@ -2879,6 +4203,11 @@ wx.getSystemInfo</p></td>
 </tr>
 </tbody>
 </table>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="wx.makePhoneCall.html">wx.makePhoneCall</a></li>
+</ul>
+</div>
 </div>
 <div class="section" id="id64">
 <h3>加速计<a class="headerlink" href="#id64" title="永久链接至标题">¶</a></h3>
@@ -2904,6 +4233,13 @@ wx.getSystemInfo</p></td>
 </tr>
 </tbody>
 </table>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="wx.stopAccelerometer.html">wx.stopAccelerometer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wx.startAccelerometer.html">wx.startAccelerometer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wx.onAccelerometerChange.html">wx.onAccelerometerChange</a></li>
+</ul>
+</div>
 </div>
 <div class="section" id="id65">
 <h3>罗盘<a class="headerlink" href="#id65" title="永久链接至标题">¶</a></h3>
@@ -2929,6 +4265,13 @@ wx.getSystemInfo</p></td>
 </tr>
 </tbody>
 </table>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="wx.stopCompass.html">wx.stopCompass</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wx.startCompass.html">wx.startCompass</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wx.onCompassChange.html">wx.onCompassChange</a></li>
+</ul>
+</div>
 </div>
 <div class="section" id="id66">
 <h3>设备方向<a class="headerlink" href="#id66" title="永久链接至标题">¶</a></h3>
@@ -2954,6 +4297,13 @@ wx.getSystemInfo</p></td>
 </tr>
 </tbody>
 </table>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="wx.stopDeviceMotionListening.html">wx.stopDeviceMotionListening</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wx.startDeviceMotionListening.html">wx.startDeviceMotionListening</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wx.onDeviceMotionChange.html">wx.onDeviceMotionChange</a></li>
+</ul>
+</div>
 </div>
 <div class="section" id="id67">
 <h3>陀螺仪<a class="headerlink" href="#id67" title="永久链接至标题">¶</a></h3>
@@ -2979,6 +4329,13 @@ wx.getSystemInfo</p></td>
 </tr>
 </tbody>
 </table>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="wx.stopGyroscope.html">wx.stopGyroscope</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wx.startGyroscope.html">wx.startGyroscope</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wx.onGyroscopeChange.html">wx.onGyroscopeChange</a></li>
+</ul>
+</div>
 </div>
 <div class="section" id="id68">
 <h3>性能<a class="headerlink" href="#id68" title="永久链接至标题">¶</a></h3>
@@ -2998,6 +4355,11 @@ wx.getSystemInfo</p></td>
 </tr>
 </tbody>
 </table>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="wx.onMemoryWarning.html">wx.onMemoryWarning</a></li>
+</ul>
+</div>
 </div>
 <div class="section" id="id69">
 <h3>扫码<a class="headerlink" href="#id69" title="永久链接至标题">¶</a></h3>
@@ -3017,6 +4379,11 @@ wx.getSystemInfo</p></td>
 </tr>
 </tbody>
 </table>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="wx.scanCode.html">wx.scanCode</a></li>
+</ul>
+</div>
 </div>
 <div class="section" id="id70">
 <h3>振动<a class="headerlink" href="#id70" title="永久链接至标题">¶</a></h3>
@@ -3039,6 +4406,12 @@ wx.getSystemInfo</p></td>
 </tr>
 </tbody>
 </table>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="wx.vibrateShort.html">wx.vibrateShort</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wx.vibrateLong.html">wx.vibrateLong</a></li>
+</ul>
+</div>
 </div>
 </div>
 <div class="section" id="worker">
@@ -3059,6 +4432,11 @@ wx.getSystemInfo</p></td>
 </tr>
 </tbody>
 </table>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="wx.createWorker.html">wx.createWorker</a></li>
+</ul>
+</div>
 <div class="section" id="id71">
 <h3>Worker<a class="headerlink" href="#id71" title="永久链接至标题">¶</a></h3>
 <table class="docutils align-center">
@@ -3083,6 +4461,14 @@ wx.getSystemInfo</p></td>
 </tr>
 </tbody>
 </table>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Worker.html">Worker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Worker.onMessage.html">Worker.onMessage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Worker.postMessage.html">Worker.postMessage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Worker.terminate.html">Worker.terminate</a></li>
+</ul>
+</div>
 </div>
 </div>
 <div class="section" id="id72">
@@ -3106,6 +4492,12 @@ wx.getSystemInfo</p></td>
 </tr>
 </tbody>
 </table>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="wx.getExtConfigSync.html">wx.getExtConfigSync</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wx.getExtConfig.html">wx.createWorker</a></li>
+</ul>
+</div>
 </div>
 <div class="section" id="wxml">
 <h2>WXML<a class="headerlink" href="#wxml" title="永久链接至标题">¶</a></h2>
@@ -3128,6 +4520,12 @@ wx.getSystemInfo</p></td>
 </tr>
 </tbody>
 </table>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="wx.createSelectorQuery.html">wx.createSelectorQuery</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wx.createIntersectionObserver.html">wx.createIntersectionObserver</a></li>
+</ul>
+</div>
 <div class="section" id="selectorquery">
 <h3>SelectorQuery<a class="headerlink" href="#selectorquery" title="永久链接至标题">¶</a></h3>
 <table class="docutils align-center">
@@ -3158,6 +4556,16 @@ wx.getSystemInfo</p></td>
 </tr>
 </tbody>
 </table>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="SelectorQuery.html">SelectorQuery</a></li>
+<li class="toctree-l1"><a class="reference internal" href="SelectorQuery.exec.html">SelectorQuery.exec</a></li>
+<li class="toctree-l1"><a class="reference internal" href="SelectorQuery.in.html">SelectorQuery.in</a></li>
+<li class="toctree-l1"><a class="reference internal" href="SelectorQuery.select.html">SelectorQuery.select</a></li>
+<li class="toctree-l1"><a class="reference internal" href="SelectorQuery.selectAll.html">SelectorQuery.selectAll</a></li>
+<li class="toctree-l1"><a class="reference internal" href="SelectorQuery.selectViewport.html">SelectorQuery.selectViewport</a></li>
+</ul>
+</div>
 </div>
 <div class="section" id="nodesref">
 <h3>NodesRef<a class="headerlink" href="#nodesref" title="永久链接至标题">¶</a></h3>
@@ -3186,6 +4594,15 @@ wx.getSystemInfo</p></td>
 </tr>
 </tbody>
 </table>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="NodesRef.html">NodesRef</a></li>
+<li class="toctree-l1"><a class="reference internal" href="NodesRef.boundingClientRect.html">NodesRef.boundingClientRect</a></li>
+<li class="toctree-l1"><a class="reference internal" href="NodesRef.context.html">NodesRef.context</a></li>
+<li class="toctree-l1"><a class="reference internal" href="NodesRef.fields.html">NodesRef.fields</a></li>
+<li class="toctree-l1"><a class="reference internal" href="NodesRef.scrollOffset.html">NodesRef.scrollOffset</a></li>
+</ul>
+</div>
 </div>
 <div class="section" id="intersectionobserver">
 <h3>IntersectionObserver<a class="headerlink" href="#intersectionobserver" title="永久链接至标题">¶</a></h3>
@@ -3214,6 +4631,20 @@ wx.getSystemInfo</p></td>
 </tr>
 </tbody>
 </table>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="IntersectionObserver.html">IntersectionObserver</a></li>
+<li class="toctree-l1"><a class="reference internal" href="IntersectionObserver.disconnect.html">IntersectionObserver.disconnect</a></li>
+<li class="toctree-l1"><a class="reference internal" href="IntersectionObserver.observe.html">IntersectionObserver.observe</a></li>
+<li class="toctree-l1"><a class="reference internal" href="IntersectionObserver.relativeTo.html">IntersectionObserver.relativeTo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="IntersectionObserver.relativeToViewport.html">IntersectionObserver.relativeToViewport</a></li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="console.html">console</a></li>
+</ul>
+</div>
 </div>
 </div>
 </div>
@@ -3229,7 +4660,7 @@ wx.getSystemInfo</p></td>
         <a href="wx.canIUse.html" class="btn btn-neutral float-right" title="boolean wx.canIUse(string schema)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="../reference/api/timer.html" class="btn btn-neutral float-left" title="定时器" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="../component/aria-component.html" class="btn btn-neutral float-left" title="aria-component" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

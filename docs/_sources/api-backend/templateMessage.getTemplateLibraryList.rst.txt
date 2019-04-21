@@ -1,2 +1,2 @@
-rst标题
+rst:wxapi:`templateMessage.getTemplateLibraryList`
 ===============

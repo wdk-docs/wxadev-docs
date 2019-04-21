@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>&lt;no title&gt; &mdash; wxadev 1.0.0 文档</title>
+  <title>兼容处理 &mdash; wxadev 1.0.0 文档</title>
   
 
   
@@ -35,7 +35,9 @@
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="index" title="索引" href="../genindex.html" />
-    <link rel="search" title="搜索" href="../search.html" /> 
+    <link rel="search" title="搜索" href="../search.html" />
+    <link rel="next" title="workers" href="workers.html" />
+    <link rel="prev" title="client-lib/version" href="client-lib/version.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -79,17 +81,48 @@
               
             
             
-              <ul>
-<li class="toctree-l1"><a class="reference internal" href="../dev.html">小程序简介</a></li>
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../index.html">开发指南</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev.html">简介</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../basic/index.html">基础教程</a></li>
-<li class="toctree-l1"><a class="reference internal" href="index.html">框架开发指南</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../guide/index.html">运行环境</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">框架</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="MINA.html">框架</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structure.html">目录结构</a></li>
+<li class="toctree-l2"><a class="reference internal" href="config.html">小程序配置</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sitemap.html">sitemap 配置</a></li>
+<li class="toctree-l2"><a class="reference internal" href="app-service/index.html">逻辑层 App Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="view/index.html">视图</a></li>
+<li class="toctree-l2"><a class="reference internal" href="details.html">运行环境</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plugin/index.html">插件</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ability/index.html">基础能力</a></li>
+<li class="toctree-l2"><a class="reference internal" href="device/index.html">硬件能力</a></li>
+<li class="toctree-l2"><a class="reference internal" href="open-ability/index.html">开放能力</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usability.html">调试</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usability/index.html">usability</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usability/index.html#id1">视图</a></li>
+<li class="toctree-l2"><a class="reference internal" href="performance.html">性能</a></li>
+<li class="toctree-l2"><a class="reference internal" href="performance/index.html">performance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="client-lib/index.html">client-lib</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">兼容处理</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id2">兼容处理</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id3">设置最低基础库版本</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="workers.html">workers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="server-ability/index.html">server-ability</a></li>
+<li class="toctree-l2"><a class="reference internal" href="release/index.html">release</a></li>
+<li class="toctree-l2"><a class="reference internal" href="operating-mechanism.html">小程序运行机制</a></li>
+<li class="toctree-l2"><a class="reference internal" href="custom-component/index.html">custom-component</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="../component/index.html">组件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/index.html">API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api-backend/index.html">服务端API</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../devtools/index.html">开发工具</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../reference/index.html">参考资料</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../wxcloud/index.html">云开发</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../api/index.html">API</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../api-backend/index.html">服务端开放接口</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary.html">术语</a></li>
 </ul>
 
             
@@ -135,7 +168,9 @@
     
       <li><a href="../contents.html">Docs</a> &raquo;</li>
         
-      <li>&lt;no title&gt;</li>
+          <li><a href="index.html">框架</a> &raquo;</li>
+        
+      <li>兼容处理</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -154,12 +189,140 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  
+  <div class="section" id="id1">
+<h1>兼容处理<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
+<div class="section" id="id2">
+<h2>兼容处理<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<p>小程序的功能不断的增加，但是旧版本的微信客户端并不支持新功能，所以在使用这些新能力的时候需要做兼容。</p>
+<p>开发者可以通过以下方式进行低版本的兼容：</p>
+<ol class="arabic simple">
+<li><p>版本号比较</p></li>
+</ol>
+<blockquote>
+<div><p>微信客户端和小程序基础库的版本号风格为 Major.Minor.Patch（主版本号.次版本号.修订版本号）。</p>
+<p>文档中会在组件，API等页面描述中带上各个功能所要求的最低基础库版本号。</p>
+<p>开发者可以在小程序中通过调用 <code class="xref js js-func docutils literal notranslate"><span class="pre">wx.getSystemInfo()</span></code> 或者 <code class="xref js js-func docutils literal notranslate"><span class="pre">wx.getSystemInfoSync()</span></code>
+获取到当前小程序运行的基础库的版本号。  通过版本号比较的方式进行运行低版本兼容逻辑。</p>
+<p>版本号比较适用于所有情况。部分场景下也可以使用后面提到的方法完成。</p>
+<p>注意：不要直接使用字符串比较的方法进行版本号比较。</p>
+<p>版本号比较可以参考以下代码：</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="kd">function</span> <span class="nx">compareVersion</span><span class="p">(</span><span class="nx">v1</span><span class="p">,</span> <span class="nx">v2</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">v1</span> <span class="o">=</span> <span class="nx">v1</span><span class="p">.</span><span class="nx">split</span><span class="p">(</span><span class="s1">&#39;.&#39;</span><span class="p">)</span>
+  <span class="nx">v2</span> <span class="o">=</span> <span class="nx">v2</span><span class="p">.</span><span class="nx">split</span><span class="p">(</span><span class="s1">&#39;.&#39;</span><span class="p">)</span>
+  <span class="kr">const</span> <span class="nx">len</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">max</span><span class="p">(</span><span class="nx">v1</span><span class="p">.</span><span class="nx">length</span><span class="p">,</span> <span class="nx">v2</span><span class="p">.</span><span class="nx">length</span><span class="p">)</span>
+
+  <span class="k">while</span> <span class="p">(</span><span class="nx">v1</span><span class="p">.</span><span class="nx">length</span> <span class="o">&lt;</span> <span class="nx">len</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">v1</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="s1">&#39;0&#39;</span><span class="p">)</span>
+  <span class="p">}</span>
+  <span class="k">while</span> <span class="p">(</span><span class="nx">v2</span><span class="p">.</span><span class="nx">length</span> <span class="o">&lt;</span> <span class="nx">len</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">v2</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="s1">&#39;0&#39;</span><span class="p">)</span>
+  <span class="p">}</span>
+
+  <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">len</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kr">const</span> <span class="nx">num1</span> <span class="o">=</span> <span class="nb">parseInt</span><span class="p">(</span><span class="nx">v1</span><span class="p">[</span><span class="nx">i</span><span class="p">])</span>
+    <span class="kr">const</span> <span class="nx">num2</span> <span class="o">=</span> <span class="nb">parseInt</span><span class="p">(</span><span class="nx">v2</span><span class="p">[</span><span class="nx">i</span><span class="p">])</span>
+
+    <span class="k">if</span> <span class="p">(</span><span class="nx">num1</span> <span class="o">&gt;</span> <span class="nx">num2</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">return</span> <span class="mi">1</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nx">num1</span> <span class="o">&lt;</span> <span class="nx">num2</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">return</span> <span class="o">-</span><span class="mi">1</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+
+  <span class="k">return</span> <span class="mi">0</span>
+<span class="p">}</span>
+
+<span class="nx">compareVersion</span><span class="p">(</span><span class="s1">&#39;1.11.0&#39;</span><span class="p">,</span> <span class="s1">&#39;1.9.9&#39;</span><span class="p">)</span> <span class="c1">// 1</span>
+<span class="kr">const</span> <span class="nx">version</span> <span class="o">=</span> <span class="nx">wx</span><span class="p">.</span><span class="nx">getSystemInfoSync</span><span class="p">().</span><span class="nx">SDKVersion</span>
+
+<span class="k">if</span> <span class="p">(</span><span class="nx">compareVersion</span><span class="p">(</span><span class="nx">version</span><span class="p">,</span> <span class="s1">&#39;1.1.0&#39;</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">wx</span><span class="p">.</span><span class="nx">openBluetoothAdapter</span><span class="p">()</span>
+<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+  <span class="c1">// 如果希望用户在最新版本的客户端上体验您的小程序，可以这样子提示</span>
+  <span class="nx">wx</span><span class="p">.</span><span class="nx">showModal</span><span class="p">({</span>
+    <span class="nx">title</span><span class="o">:</span> <span class="s1">&#39;提示&#39;</span><span class="p">,</span>
+    <span class="nx">content</span><span class="o">:</span> <span class="s1">&#39;当前微信版本过低，无法使用该功能，请升级到最新微信版本后重试。&#39;</span>
+  <span class="p">})</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div></blockquote>
+<ol class="arabic simple" start="2">
+<li><p>API 存在判断</p></li>
+</ol>
+<blockquote>
+<div><p>对于新增的 API，可以通过判断该API是否存在来判断是否支持用户使用的基础库版本。例如：</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="p">(</span><span class="nx">wx</span><span class="p">.</span><span class="nx">openBluetoothAdapter</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">wx</span><span class="p">.</span><span class="nx">openBluetoothAdapter</span><span class="p">()</span>
+<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+  <span class="c1">// 如果希望用户在最新版本的客户端上体验您的小程序，可以这样子提示</span>
+  <span class="nx">wx</span><span class="p">.</span><span class="nx">showModal</span><span class="p">({</span>
+    <span class="nx">title</span><span class="o">:</span> <span class="s1">&#39;提示&#39;</span><span class="p">,</span>
+    <span class="nx">content</span><span class="o">:</span> <span class="s1">&#39;当前微信版本过低，无法使用该功能，请升级到最新微信版本后重试。&#39;</span>
+  <span class="p">})</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div></blockquote>
+<ol class="arabic simple" start="3">
+<li><p>wx.canIUse</p></li>
+</ol>
+<blockquote>
+<div><p>除了直接通过版本号判断，也可以通过 wx.canIUse 来判断是否可以在该基础库版本下直接使用。例如：</p>
+<p>API 参数或返回值</p>
+<p>对于 API 的参数或者返回值有新增的参数，可以判断用以下代码判断。</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="nx">wx</span><span class="p">.</span><span class="nx">showModal</span><span class="p">({</span>
+  <span class="nx">success</span><span class="p">(</span><span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">wx</span><span class="p">.</span><span class="nx">canIUse</span><span class="p">(</span><span class="s1">&#39;showModal.cancel&#39;</span><span class="p">))</span> <span class="p">{</span>
+      <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">res</span><span class="p">.</span><span class="nx">cancel</span><span class="p">)</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">})</span>
+</pre></div>
+</div>
+<p>组件</p>
+<p>对于组件，新增的组件或属性在旧版本上不会被处理，不过也不会报错。如果特殊场景需要对旧版本做一些降级处理，可以这样子做。</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="nx">Page</span><span class="p">({</span>
+  <span class="nx">data</span><span class="o">:</span> <span class="p">{</span>
+    <span class="nx">canIUse</span><span class="o">:</span> <span class="nx">wx</span><span class="p">.</span><span class="nx">canIUse</span><span class="p">(</span><span class="s1">&#39;cover-view&#39;</span><span class="p">)</span>
+  <span class="p">}</span>
+<span class="p">})</span>
+</pre></div>
+</div>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">video</span> <span class="na">controls</span><span class="o">=</span><span class="s">&quot;{{!canIUse}}&quot;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">cover-view</span> <span class="na">wx:if</span><span class="o">=</span><span class="s">&quot;{{canIUse}}&quot;</span><span class="p">&gt;</span>play<span class="p">&lt;/</span><span class="nt">cover-view</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">video</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<p>canIUse 的数据文件随基础库进行更新，新版本中的新功能可能出现遗漏的情况，建议开发者在使用时提前测试。</p>
+</div></blockquote>
+</div>
+<div class="section" id="id3">
+<h2>设置最低基础库版本<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
+<p>需要 iOS 6.5.8 / 安卓 6.5.7 及以上版本微信客户端支持</p>
+<p>为便于开发者解决低版本基础库无法兼容小程序的新功能的问题，开发者可设置小程序最低基础库版本要求。</p>
+<p>开发者可以登录小程序管理后台，进入「设置 - 基本设置 - 基础库最低版本设置」进行配置。
+在配置前，开发者可查看近 30 天内访问当前小程序的用户所使用的基础库版本占比，以帮助开发者了解当前用户使用的情况。</p>
+<img alt="https://developers.weixin.qq.com/miniprogram/dev/framework/image/least-version-config.png?t=19041921" src="https://developers.weixin.qq.com/miniprogram/dev/framework/image/least-version-config.png?t=19041921" />
+<p>设置后，若用户基础库版本低于设置值，则无法正常打开小程序，并提示用户更新客户端版本。</p>
+<img alt="https://developers.weixin.qq.com/miniprogram/dev/framework/image/least-version-tips.jpg?t=19041921" src="https://developers.weixin.qq.com/miniprogram/dev/framework/image/least-version-tips.jpg?t=19041921" />
+</div>
+</div>
+
 
            </div>
            
           </div>
           <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="workers.html" class="btn btn-neutral float-right" title="workers" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="client-lib/version.html" class="btn btn-neutral float-left" title="client-lib/version" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
   
 
   <hr/>

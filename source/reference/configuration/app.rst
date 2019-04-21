@@ -53,12 +53,12 @@ pages
 
 window
 
-用于设置小程序的状态栏、导航条、标题、窗口背景色。
+用于设置小程序的状态栏、导航条、:wxapi:`wx.createWorker`、窗口背景色。
 
 属性	类型	默认值	描述	最低版本
 navigationBarBackgroundColor	HexColor	#000000	导航栏背景颜色，如 #000000
-navigationBarTextStyle	string	white	导航栏标题颜色，仅支持 black / white
-navigationBarTitleText	string		导航栏标题文字内容
+navigationBarTextStyle	string	white	导航栏:wxapi:`wx.createWorker`颜色，仅支持 black / white
+navigationBarTitleText	string		导航栏:wxapi:`wx.createWorker`文字内容
 navigationStyle	string	default	导航栏样式，仅支持以下值：
 default 默认样式
 custom 自定义导航栏，只保留右上角胶囊按钮。参见注2。	微信客户端 6.6.0

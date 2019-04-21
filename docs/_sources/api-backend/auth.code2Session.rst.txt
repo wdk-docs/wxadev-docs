@@ -1,4 +1,2 @@
-auth.code2Session
-=====================
-标题
+:wxapi:`auth.code2Session`
 ===============

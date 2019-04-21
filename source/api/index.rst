@@ -1,5 +1,5 @@
-API
-======
+:wxapi:`API <index>`
+==========================
 
 基础
 -------
@@ -29,14 +29,27 @@ API
 | wx.getSystemInfo     | 获取系统信息                |
 +----------------------+-----------------------------+
 
+.. toctree::
+   :maxdepth: 1
+   :glob:
+
+   wx.getSystemInfoSync
+   wx.getSystemInfo
+
 更新
 -------
 
-+---------------------------------------------------------------------+
-|                            名称	功能说明                             |
-+=====================================================================+
-| wx.getUpdateManager	获取全局唯一的版本更新管理器，用于管理小程序更新 |
-+---------------------------------------------------------------------+
++---------------------+--------------------------------------------------+
+|        名称         |                     功能说明                     |
++=====================+==================================================+
+| wx.getUpdateManager | 获取全局唯一的版本更新管理器，用于管理小程序更新 |
++---------------------+--------------------------------------------------+
+
+.. toctree::
+   :maxdepth: 1
+   :glob:
+
+   wx.getUpdateManager
 
 UpdateManager
 ~~~~~~~~~~~~~~~~~
@@ -53,6 +66,17 @@ UpdateManager
 | UpdateManager.onUpdateReady    | 监听小程序有版本更新事件           |
 +--------------------------------+------------------------------------+
 
+.. toctree::
+   :maxdepth: 1
+   :glob:
+
+   UpdateManager
+   UpdateManager.applyUpdate
+   UpdateManager.onCheckForUpdate
+   UpdateManager.onUpdateFailed
+   UpdateManager.onUpdateReady
+
+
 小程序
 -------
 
@@ -64,6 +88,13 @@ UpdateManager
 +=========================+========================+
 | wx.getLaunchOptionsSync | 获取小程序启动时的参数 |
 +-------------------------+------------------------+
+
+.. toctree::
+   :maxdepth: 1
+   :glob:
+
+   wx.getLaunchOptionsSync
+
 
 应用级事件
 ~~~~~~~~~~
@@ -96,6 +127,24 @@ UpdateManager
 | wx.offAppHide                | 取消监听小程序切后台事件                     |
 +------------------------------+----------------------------------------------+
 
+.. toctree::
+   :maxdepth: 1
+   :glob:
+
+   wx.onPageNotFound
+   wx.onError
+   wx.onAudioInterruptionEnd
+   wx.onAudioInterruptionBegin
+   wx.onAppShow
+   wx.onAppHide
+   wx.offPageNotFound
+   wx.offError
+   wx.offAudioInterruptionEnd
+   wx.offAudioInterruptionBegin
+   wx.offAppShow
+   wx.offAppHide
+
+
 调试
 ~~~~~~~~~~
 
@@ -106,6 +155,14 @@ UpdateManager
 +-------------------+----------------------+
 | wx.getLogManager  | 获取日志管理器对象   |
 +-------------------+----------------------+
+
+.. toctree::
+   :maxdepth: 1
+   :glob:
+
+   wx.setEnableDebug
+   wx.getLogManager
+
 
 LogManager
 ^^^^^^^^^^^^^
@@ -121,6 +178,17 @@ LogManager
 +------------------+---------------+
 | LogManager.warn  | 写 warn 日志  |
 +------------------+---------------+
+
+.. toctree::
+   :maxdepth: 1
+   :glob:
+
+   LogManager
+   LogManager.debug
+   LogManager.info
+   LogManager.log
+   LogManager.warn
+
 
 路由
 -------
@@ -138,6 +206,16 @@ LogManager
 +-----------------+--------------------------------------------------+
 | wx.navigateBack | 关闭当前页面，返回上一页面或多级页面             |
 +-----------------+--------------------------------------------------+
+
+.. toctree::
+   :maxdepth: 1
+   :glob:
+
+   wx.switchTab
+   wx.reLaunch
+   wx.redirectTo
+   wx.navigateTo
+   wx.navigateBack
 
 界面
 -------
@@ -161,6 +239,17 @@ LogManager
 | wx.hideLoading     | 隐藏 loading 提示框 |
 +--------------------+---------------------+
 
+.. toctree::
+   :maxdepth: 1
+   :glob:
+
+   wx.showToast
+   wx.showModal
+   wx.showLoading
+   wx.showActionSheet
+   wx.hideToast
+   wx.hideLoading
+
 导航栏
 ~~~~~~~~~~
 
@@ -176,6 +265,15 @@ LogManager
 | wx.hideNavigationBarLoading | 在当前页面隐藏导航条加载动画 |
 +-----------------------------+------------------------------+
 
+.. toctree::
+   :maxdepth: 1
+   :glob:
+
+   wx.showNavigationBarLoading
+   wx.setNavigationBarTitle
+   wx.setNavigationBarColor
+   wx.hideNavigationBarLoading
+
 背景
 ~~~~~~~~~~
 
@@ -186,6 +284,13 @@ LogManager
 +---------------------------+----------------------------------------+
 | wx.setBackgroundColor     | 动态设置窗口的背景色                   |
 +---------------------------+----------------------------------------+
+
+.. toctree::
+   :maxdepth: 1
+   :glob:
+
+   wx.setBackgroundTextStyle
+   wx.setBackgroundColor
 
 Tab Bar
 ~~~~~~~~~~
@@ -210,6 +315,19 @@ Tab Bar
 | wx.hideTabBar        | 隐藏 tabBar                      |
 +----------------------+----------------------------------+
 
+.. toctree::
+   :maxdepth: 1
+   :glob:
+
+   wx.showTabBarRedDot
+   wx.showTabBar
+   wx.setTabBarStyle
+   wx.setTabBarItem
+   wx.setTabBarBadge
+   wx.removeTabBarBadge
+   wx.hideTabBarRedDot
+   wx.hideTabBar
+
 字体
 ~~~~~~~~~~
 
@@ -218,6 +336,12 @@ Tab Bar
 +=================+==================+
 | wx.loadFontFace | 动态加载网络字体 |
 +-----------------+------------------+
+
+.. toctree::
+   :maxdepth: 1
+   :glob:
+
+   wx.loadFontFace
 
 下拉刷新
 ~~~~~~~~~~
@@ -230,6 +354,13 @@ Tab Bar
 | wx.startPullDownRefresh | 开始下拉刷新         |
 +-------------------------+----------------------+
 
+.. toctree::
+   :maxdepth: 1
+   :glob:
+
+   wx.stopPullDownRefresh
+   wx.startPullDownRefresh
+
 滚动
 ~~~~~~~~~~
 
@@ -239,6 +370,12 @@ Tab Bar
 | wx.pageScrollTo | 将页面滚动到目标位置 |
 +-----------------+----------------------+
 
+.. toctree::
+   :maxdepth: 1
+   :glob:
+
+   wx.pageScrollTo
+
 动画
 ~~~~~~~~~~
 
@@ -247,6 +384,12 @@ Tab Bar
 +====================+============================+
 | wx.createAnimation | 创建一个动画实例 animation |
 +--------------------+----------------------------+
+
+.. toctree::
+   :maxdepth: 1
+   :glob:
+
+   wx.createAnimation
 
 Animation
 ^^^^^^^^^^^^
@@ -315,6 +458,42 @@ Animation
 | Animation.bottom          | 设置 bottom 值                 |
 +---------------------------+--------------------------------+
 
+.. toctree::
+   :maxdepth: 1
+   :glob:
+
+   Animation
+   Animation.translateZ
+   Animation.translateY
+   Animation.translateX
+   Animation.translate3d
+   Animation.translate
+   Animation.top
+   Animation.step
+   Animation.skewY
+   Animation.skewX
+   Animation.skew
+   Animation.scaleZ
+   Animation.scaleY
+   Animation.scaleX
+   Animation.scale3d
+   Animation.scale
+   Animation.rotateZ
+   Animation.rotateY
+   Animation.rotateX
+   Animation.rotate3d
+   Animation.rotate
+   Animation.right
+   Animation.opacity
+   Animation.matrix3d
+   Animation.matrix
+   Animation.backgroundColor
+   Animation.left
+   Animation.height
+   Animation.width
+   Animation.export
+   Animation.bottom
+
 置顶
 ~~~~~~~~~~
 
@@ -323,6 +502,12 @@ Animation
 +==================+========================+
 | wx.setTopBarText | 动态设置置顶栏文字内容 |
 +------------------+------------------------+
+
+.. toctree::
+   :maxdepth: 1
+   :glob:
+
+   wx.setTopBarText
 
 自定义组件
 ~~~~~~~~~~
@@ -333,6 +518,12 @@ Animation
 | wx.nextTick | 延迟一部分操作到下一个时间片再执行 |
 +-------------+------------------------------------+
 
+.. toctree::
+   :maxdepth: 1
+   :glob:
+
+   wx.nextTick
+
 菜单
 ~~~~~~~~~~
 
@@ -341,6 +532,13 @@ Animation
 +====================================+==============================================+
 | wx.getMenuButtonBoundingClientRect | 获取菜单按钮（右上角胶囊按钮）的布局位置信息 |
 +------------------------------------+----------------------------------------------+
+
+.. toctree::
+   :maxdepth: 1
+   :glob:
+
+   wx.getMenuButtonBoundingClientRect
+
 
 窗口
 ~~~~~~~~~~
@@ -352,6 +550,14 @@ Animation
 +--------------------+--------------------------+
 | wx.offWindowResize | 取消监听窗口尺寸变化事件 |
 +--------------------+--------------------------+
+
+.. toctree::
+   :maxdepth: 1
+   :glob:
+
+   wx.onWindowResize
+   wx.offWindowResize
+
 
 
 网络
@@ -366,6 +572,13 @@ Animation
 | wx.request | 发起 HTTPS 网络请求 |
 +------------+---------------------+
 
+.. toctree::
+   :maxdepth: 1
+   :glob:
+
+   wx.request
+
+
 RequestTask
 ~~~~~~~~~~~~~~~
 
@@ -379,6 +592,16 @@ RequestTask
 | RequestTask.onHeadersReceived  | 监听 HTTP Response Header 事件     |
 +--------------------------------+------------------------------------+
 
+.. toctree::
+   :maxdepth: 1
+   :glob:
+
+   RequestTask
+   RequestTask.abort
+   RequestTask.offHeadersReceived
+   RequestTask.onHeadersReceived
+
+
 下载
 ~~~~~~~~~~
 
@@ -387,6 +610,13 @@ RequestTask
 +=================+====================+
 | wx.downloadFile | 下载文件资源到本地 |
 +-----------------+--------------------+
+
+.. toctree::
+   :maxdepth: 1
+   :glob:
+
+   wx.downloadFile
+
 
 DownloadTask
 ~~~~~~~~~~~~~~~~~~
@@ -405,6 +635,18 @@ DownloadTask
 | DownloadTask.onProgressUpdate   | 监听下载进度变化事件               |
 +---------------------------------+------------------------------------+
 
+.. toctree::
+   :maxdepth: 1
+   :glob:
+
+   DownloadTask
+   DownloadTask.abort
+   DownloadTask.offHeadersReceived
+   DownloadTask.offProgressUpdate
+   DownloadTask.onHeadersReceived
+   DownloadTask.onProgressUpdate
+
+
 上传
 ~~~~~~~~~~~~~~~~~~
 
@@ -413,6 +655,13 @@ DownloadTask
 +===============+========================+
 | wx.uploadFile | 将本地资源上传到服务器 |
 +---------------+------------------------+
+
+.. toctree::
+   :maxdepth: 1
+   :glob:
+
+   wx.uploadFile
+
 
 UploadTask
 ~~~~~~~~~~~~~~~~~~
@@ -430,6 +679,18 @@ UploadTask
 +-------------------------------+------------------------------------+
 | UploadTask.onProgressUpdate   | 监听上传进度变化事件               |
 +-------------------------------+------------------------------------+
+
+.. toctree::
+   :maxdepth: 1
+   :glob:
+
+   UploadTask
+   UploadTask.abort
+   UploadTask.offHeadersReceived
+   UploadTask.offProgressUpdate
+   UploadTask.onHeadersReceived
+   UploadTask.onProgressUpdate
+
 
 WebSocket
 ~~~~~~~~~~~~~~~~~~
@@ -452,6 +713,18 @@ WebSocket
 | wx.closeSocket       | 关闭 WebSocket 连接                   |
 +----------------------+---------------------------------------+
 
+.. toctree::
+   :maxdepth: 1
+   :glob:
+
+   wx.sendSocketMessage
+   wx.onSocketOpen
+   wx.onSocketMessage
+   wx.onSocketError
+   wx.onSocketClose
+   wx.connectSocket
+   wx.closeSocket
+
 SocketTask
 ~~~~~~~~~~~~~~~~~~
 
@@ -470,6 +743,18 @@ SocketTask
 +----------------------+---------------------------------------+
 | SocketTask.send      | 通过 WebSocket 连接发送数据           |
 +----------------------+---------------------------------------+
+
+.. toctree::
+   :maxdepth: 1
+   :glob:
+
+   SocketTask
+   SocketTask.close
+   SocketTask.onClose
+   SocketTask.onError
+   SocketTask.onMessage
+   SocketTask.onOpen
+   SocketTask.send
 
 mDNS
 ~~~~~~~~~~~~~~~~~~
@@ -498,6 +783,21 @@ mDNS
 | wx.offLocalServiceDiscoveryStop | 取消监听 mDNS 服务停止搜索的事件 |
 +---------------------------------+----------------------------------+
 
+.. toctree::
+   :maxdepth: 1
+   :glob:
+
+   wx.stopLocalServiceDiscovery
+   wx.startLocalServiceDiscovery
+   wx.onLocalServiceResolveFail
+   wx.onLocalServiceLost
+   wx.onLocalServiceFound
+   wx.onLocalServiceDiscoveryStop
+   wx.offLocalServiceResolveFail
+   wx.offLocalServiceLost
+   wx.offLocalServiceFound
+   wx.offLocalServiceDiscoveryStop
+
 数据缓存
 ---------
 
@@ -525,6 +825,21 @@ mDNS
 | wx.clearStorage       | 清理本地数据缓存                    |
 +-----------------------+-------------------------------------+
 
+.. toctree::
+   :maxdepth: 1
+   :glob:
+
+   wx.setStorageSync
+   wx.setStorage
+   wx.removeStorageSync
+   wx.removeStorage
+   wx.getStorageSync
+   wx.getStorageInfoSync
+   wx.getStorageInfo
+   wx.getStorage
+   wx.clearStorageSync
+   wx.clearStorage
+
 媒体
 -------
 
@@ -536,6 +851,13 @@ mDNS
 +=====================+=================================+
 | wx.createMapContext | 创建 map 上下文 MapContext 对象 |
 +---------------------+---------------------------------+
+
+.. toctree::
+   :maxdepth: 1
+   :glob:
+
+   wx.createMapContext
+
 
 MapContext
 ^^^^^^^^^^^^^^
@@ -556,6 +878,18 @@ MapContext
 | MapContext.translateMarker   | 平移marker，带动画         |
 +------------------------------+----------------------------+
 
+.. toctree::
+   :maxdepth: 1
+   :glob:
+
+   MapContext
+   MapContext.getCenterLocation
+   MapContext.getRegion
+   MapContext.getScale
+   MapContext.includePoints
+   MapContext.moveToLocation
+   MapContext.translateMarker
+
 图片
 ~~~~~~~~~~~~~~~~~~
 
@@ -575,6 +909,17 @@ MapContext
 | wx.chooseImage            | 从本地相册选择图片或使用相机拍照 |
 +---------------------------+----------------------------------+
 
+.. toctree::
+   :maxdepth: 1
+   :glob:
+
+   wx.saveImageToPhotosAlbum
+   wx.previewImage
+   wx.getImageInfo
+   wx.compressImage
+   wx.chooseMessageFile
+   wx.chooseImage
+
 视频
 ~~~~~~~~~~~~~~~~~~
 
@@ -587,6 +932,14 @@ MapContext
 +---------------------------+-------------------------------------+
 | wx.chooseVideo            | 拍摄视频或从手机相册中选视频        |
 +---------------------------+-------------------------------------+
+
+.. toctree::
+   :maxdepth: 1
+   :glob:
+
+   wx.saveVideoToPhotosAlbum
+   wx.createVideoContext
+   wx.chooseVideo
 
 VideoContext
 ^^^^^^^^^^^^^^^
@@ -615,6 +968,22 @@ VideoContext
 | VideoContext.stop              | 停止视频                      |
 +--------------------------------+-------------------------------+
 
+.. toctree::
+   :maxdepth: 1
+   :glob:
+
+   VideoContext
+   VideoContext.seek
+   VideoContext.exitFullScreen
+   VideoContext.hideStatusBar
+   VideoContext.pause
+   VideoContext.play
+   VideoContext.playbackRate
+   VideoContext.requestFullScreen
+   VideoContext.sendDanmu
+   VideoContext.showStatusBar
+   VideoContext.stop
+
 音频
 ~~~~~~~~~~~~~~~~~~
 
@@ -635,6 +1004,18 @@ VideoContext
 +-----------------------------+----------------------------------------------+
 | wx.createAudioContext       | 创建 audio 上下文 AudioContext 对象          |
 +-----------------------------+----------------------------------------------+
+
+.. toctree::
+   :maxdepth: 1
+   :glob:
+
+   wx.stopVoice
+   wx.setInnerAudioOption
+   wx.playVoice
+   wx.pauseVoice
+   wx.getAvailableAudioSources
+   wx.createInnerAudioContext
+   wx.createAudioContext
 
 InnerAudioContext
 ^^^^^^^^^^^^^^^^^^^^^
@@ -693,6 +1074,39 @@ InnerAudioContext
 | InnerAudioContext.stop          | 停止                               |
 +---------------------------------+------------------------------------+
 
+.. toctree::
+   :maxdepth: 1
+   :glob:
+
+   AudioContext
+   InnerAudioContext
+   InnerAudioContext.destroy
+   InnerAudioContext.offCanplay
+   InnerAudioContext.offEnded
+   InnerAudioContext.offError
+   InnerAudioContext.offPause
+   InnerAudioContext.offPlay
+   InnerAudioContext.offSeeked
+   InnerAudioContext.offSeeking
+   InnerAudioContext.offStop
+   InnerAudioContext.offTimeUpdate
+   InnerAudioContext.offWaiting
+   InnerAudioContext.onCanplay
+   InnerAudioContext.onEnded
+   InnerAudioContext.onError
+   InnerAudioContext.onPause
+   InnerAudioContext.onPlay
+   InnerAudioContext.onSeeked
+   InnerAudioContext.onSeeking
+   InnerAudioContext.onStop
+   InnerAudioContext.onTimeUpdate
+   InnerAudioContext.onWaiting
+   InnerAudioContext.pause
+   InnerAudioContext.play
+   InnerAudioContext.seek
+   InnerAudioContext.stop
+
+
 AudioContext
 ^^^^^^^^^^^^^^^^^
 
@@ -707,6 +1121,15 @@ AudioContext
 +---------------------+----------------+
 | AudioContext.setSrc | 设置音频地址   |
 +---------------------+----------------+
+
+.. toctree::
+   :maxdepth: 1
+   :glob:
+
+   AudioContext.pause
+   AudioContext.play
+   AudioContext.seek
+   AudioContext.setSrc
 
 背景音频
 ~~~~~~~~~
@@ -732,6 +1155,20 @@ AudioContext
 +----------------------------------+------------------------------+
 | wx.getBackgroundAudioManager     | 获取全局唯一的背景音频管理器 |
 +----------------------------------+------------------------------+
+
+.. toctree::
+   :maxdepth: 1
+   :glob:
+
+   wx.stopBackgroundAudio
+   wx.seekBackgroundAudio
+   wx.playBackgroundAudio
+   wx.pauseBackgroundAudio
+   wx.onBackgroundAudioStop
+   wx.onBackgroundAudioPlay
+   wx.onBackgroundAudioPause
+   wx.getBackgroundAudioPlayerState
+   wx.getBackgroundAudioManager
 
 BackgroundAudioManager
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -772,6 +1209,28 @@ BackgroundAudioManager
 | BackgroundAudioManager.stop         | 停止音乐                                          |
 +-------------------------------------+---------------------------------------------------+
 
+.. toctree::
+   :maxdepth: 1
+   :glob:
+
+   BackgroundAudioManager
+   BackgroundAudioManager.onCanplay
+   BackgroundAudioManager.onEnded
+   BackgroundAudioManager.onError
+   BackgroundAudioManager.onNext
+   BackgroundAudioManager.onPause
+   BackgroundAudioManager.onPlay
+   BackgroundAudioManager.onPrev
+   BackgroundAudioManager.onSeeked
+   BackgroundAudioManager.onSeeking
+   BackgroundAudioManager.onStop
+   BackgroundAudioManager.onTimeUpdate
+   BackgroundAudioManager.onWaiting
+   BackgroundAudioManager.pause
+   BackgroundAudioManager.play
+   BackgroundAudioManager.seek
+   BackgroundAudioManager.stop
+
 实时音视频
 ~~~~~~~~~~~~~~~~~~
 
@@ -782,6 +1241,13 @@ BackgroundAudioManager
 +----------------------------+------------------------------------------------+
 | wx.createLivePlayerContext | 创建 live-player 上下文 LivePlayerContext 对象 |
 +----------------------------+------------------------------------------------+
+
+.. toctree::
+   :maxdepth: 1
+   :glob:
+
+   wx.createLivePusherContext
+   wx.createLivePlayerContext
 
 LivePusherContext
 ^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -814,6 +1280,25 @@ LivePusherContext
 | LivePusherContext.toggleTorch  | 切换           |
 +--------------------------------+----------------+
 
+.. toctree::
+   :maxdepth: 1
+   :glob:
+
+   LivePlayerContext
+   LivePusherContext
+   LivePusherContext.pause
+   LivePusherContext.pauseBGM
+   LivePusherContext.playBGM
+   LivePusherContext.resume
+   LivePusherContext.resumeBGM
+   LivePusherContext.setBGMVolume
+   LivePusherContext.snapshot
+   LivePusherContext.start
+   LivePusherContext.stop
+   LivePusherContext.stopBGM
+   LivePusherContext.switchCamera
+   LivePusherContext.toggleTorch
+
 LivePlayerContext
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -835,6 +1320,18 @@ LivePlayerContext
 | LivePlayerContext.stop              | 停止     |
 +-------------------------------------+----------+
 
+.. toctree::
+   :maxdepth: 1
+   :glob:
+
+   LivePlayerContext.exitFullScreen
+   LivePlayerContext.mute
+   LivePlayerContext.pause
+   LivePlayerContext.play
+   LivePlayerContext.requestFullScreen
+   LivePlayerContext.resume
+   LivePlayerContext.stop
+
 录音
 ~~~~~~~~~~~~~~~~~~
 
@@ -847,6 +1344,14 @@ LivePlayerContext
 +-----------------------+------------------------------------------+
 | wx.getRecorderManager | 获取全局唯一的录音管理器 RecorderManager |
 +-----------------------+------------------------------------------+
+
+.. toctree::
+   :maxdepth: 1
+   :glob:
+
+   wx.stopRecord
+   wx.startRecord
+   wx.getRecorderManager
 
 RecorderManager
 ^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -879,6 +1384,24 @@ RecorderManager
 | RecorderManager.stop                | 停止录音                                 |
 +-------------------------------------+------------------------------------------+
 
+.. toctree::
+   :maxdepth: 1
+   :glob:
+
+   RecorderManager
+   RecorderManager.onError
+   RecorderManager.onFrameRecorded
+   RecorderManager.onInterruptionBegin
+   RecorderManager.onInterruptionEnd
+   RecorderManager.onPause
+   RecorderManager.onResume
+   RecorderManager.onStart
+   RecorderManager.onStop
+   RecorderManager.pause
+   RecorderManager.resume
+   RecorderManager.start
+   RecorderManager.stop
+
 相机
 ~~~~~~~~~~~~~~~~~~
 
@@ -887,6 +1410,12 @@ RecorderManager
 +========================+=======================================+
 | wx.createCameraContext | 创建 camera 上下文 CameraContext 对象 |
 +------------------------+---------------------------------------+
+
+.. toctree::
+   :maxdepth: 1
+   :glob:
+
+   wx.createCameraContext
 
 CameraContext
 ^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -901,6 +1430,15 @@ CameraContext
 | CameraContext.takePhoto   | 拍摄照片 |
 +---------------------------+----------+
 
+.. toctree::
+   :maxdepth: 1
+   :glob:
+
+   CameraContext
+   CameraContext.startRecord
+   CameraContext.stopRecord
+   CameraContext.takePhoto
+
 位置
 -------
 
@@ -913,6 +1451,15 @@ CameraContext
 +-------------------+--------------------------+
 | wx.chooseLocation | 打开地图选择位置         |
 +-------------------+--------------------------+
+
+.. toctree::
+   :maxdepth: 1
+   :glob:
+
+   wx.openLocation
+   wx.getLocation
+   wx.chooseLocation
+
 
 转发
 -------
@@ -928,6 +1475,15 @@ CameraContext
 +--------------------+------------------------+
 | wx.getShareInfo    | 获取转发详细信息       |
 +--------------------+------------------------+
+
+.. toctree::
+   :maxdepth: 1
+   :glob:
+
+   wx.updateShareMenu
+   wx.showShareMenu
+   wx.hideShareMenu
+   wx.getShareInfo
 
 画布
 -------
@@ -946,6 +1502,17 @@ CameraContext
 | Color                   | 颜色                                           |
 +-------------------------+------------------------------------------------+
 
+.. toctree::
+   :maxdepth: 1
+   :glob:
+
+   CanvasContext
+   wx.createCanvasContext
+   wx.canvasToTempFilePath
+   wx.canvasPutImageData
+   wx.canvasGetImageData
+   Color
+
 CanvasGradient
 ~~~~~~~~~~~~~~~~~~
 
@@ -954,6 +1521,13 @@ CanvasGradient
 +=============================+==================+
 | CanvasGradient.addColorStop | 添加颜色的渐变点 |
 +-----------------------------+------------------+
+
+.. toctree::
+   :maxdepth: 1
+   :glob:
+
+   CanvasGradient
+   CanvasGradient.addColorStop
 
 CanvasContext
 ~~~~~~~~~~~~~~~~~~
@@ -1046,6 +1620,53 @@ CanvasContext
 | CanvasContext.translate              | 对当前坐标系的原点 (0, 0) 进行变换                           |
 +--------------------------------------+--------------------------------------------------------------+
 
+.. toctree::
+   :maxdepth: 1
+   :glob:
+
+   CanvasContext.arc
+   CanvasContext.arcTo
+   CanvasContext.beginPath
+   CanvasContext.bezierCurveTo
+   CanvasContext.clearRect
+   CanvasContext.clip
+   CanvasContext.closePath
+   CanvasContext.createCircularGradient
+   CanvasContext.createLinearGradient
+   CanvasContext.createPattern
+   CanvasContext.draw
+   CanvasContext.drawImage
+   CanvasContext.fill
+   CanvasContext.fillRect
+   CanvasContext.fillText
+   CanvasContext.lineTo
+   CanvasContext.measureText
+   CanvasContext.moveTo
+   CanvasContext.quadraticCurveTo
+   CanvasContext.rect
+   CanvasContext.restore
+   CanvasContext.rotate
+   CanvasContext.save
+   CanvasContext.scale
+   CanvasContext.setFillStyle
+   CanvasContext.setFontSize
+   CanvasContext.setGlobalAlpha
+   CanvasContext.setLineCap
+   CanvasContext.setLineDash
+   CanvasContext.setLineJoin
+   CanvasContext.setLineWidth
+   CanvasContext.setMiterLimit
+   CanvasContext.setShadow
+   CanvasContext.setStrokeStyle
+   CanvasContext.setTextAlign
+   CanvasContext.setTextBaseline
+   CanvasContext.setTransform
+   CanvasContext.stroke
+   CanvasContext.strokeRect
+   CanvasContext.strokeText
+   CanvasContext.transform
+   CanvasContext.translate
+
 文件
 -------
 
@@ -1067,6 +1688,18 @@ CanvasContext
 | wx.getFileInfo          | 获取文件信息                           |
 +-------------------------+----------------------------------------+
 
+.. toctree::
+   :maxdepth: 1
+   :glob:
+
+   wx.saveFile
+   wx.removeSavedFile
+   wx.openDocument
+   wx.getSavedFileList
+   wx.getSavedFileInfo
+   wx.getFileSystemManager
+   wx.getFileInfo
+
 Stats
 ~~~~~~~~~~~~~~~~~~
 
@@ -1077,6 +1710,14 @@ Stats
 +-------------------+------------------------------+
 | Stats.isFile      | 判断当前文件是否一个普通文件 |
 +-------------------+------------------------------+
+
+.. toctree::
+   :maxdepth: 1
+   :glob:
+
+   Stats
+   Stats.isDirectory
+   Stats.isFile
 
 FileSystemManager
 ~~~~~~~~~~~~~~~~~~
@@ -1141,8 +1782,42 @@ FileSystemManager
 | FileSystemManager.writeFileSync    | FileSystemManager.writeFile 的同步版本             |
 +------------------------------------+----------------------------------------------------+
 
+.. toctree::
+   :maxdepth: 1
+   :glob:
+
+   FileSystemManager
+   FileSystemManager.access
+   FileSystemManager.accessSync
+   FileSystemManager.appendFile
+   FileSystemManager.appendFileSync
+   FileSystemManager.copyFile
+   FileSystemManager.copyFileSync
+   FileSystemManager.getFileInfo
+   FileSystemManager.getSavedFileList
+   FileSystemManager.mkdir
+   FileSystemManager.mkdirSync
+   FileSystemManager.readdir
+   FileSystemManager.readdirSync
+   FileSystemManager.readFile
+   FileSystemManager.readFileSync
+   FileSystemManager.removeSavedFile
+   FileSystemManager.rename
+   FileSystemManager.renameSync
+   FileSystemManager.rmdir
+   FileSystemManager.rmdirSync
+   FileSystemManager.saveFile
+   FileSystemManager.saveFileSync
+   FileSystemManager.stat
+   FileSystemManager.statSync
+   FileSystemManager.unlink
+   FileSystemManager.unlinkSync
+   FileSystemManager.unzip
+   FileSystemManager.writeFile
+   FileSystemManager.writeFileSync
+
 开放接口
--------
+-----------
 
 登录
 ~~~~~~~~~~~~~~~~~~
@@ -1155,6 +1830,14 @@ FileSystemManager
 | wx.checkSession | 检查登录态是否过期           |
 +-----------------+------------------------------+
 
+.. toctree::
+   :maxdepth: 1
+   :glob:
+
+   wx.login
+   wx.checkSession
+
+
 小程序跳转
 ~~~~~~~~~~~~~~~~~~
 
@@ -1166,6 +1849,13 @@ FileSystemManager
 | wx.navigateBackMiniProgram | 返回到上一个小程序 |
 +----------------------------+--------------------+
 
+.. toctree::
+   :maxdepth: 1
+   :glob:
+
+   wx.navigateToMiniProgram
+   wx.navigateBackMiniProgram
+
 帐号信息
 ~~~~~~~~~~~~~~~~~~
 
@@ -1174,6 +1864,12 @@ FileSystemManager
 +=======================+==================+
 | wx.getAccountInfoSync | 获取当前帐号信息 |
 +-----------------------+------------------+
+
+.. toctree::
+   :maxdepth: 1
+   :glob:
+
+   wx.getAccountInfoSync
 
 用户信息
 ~~~~~~~~~~~~~~~~~~
@@ -1186,6 +1882,13 @@ FileSystemManager
 | UserInfo       | 用户信息     |
 +----------------+--------------+
 
+.. toctree::
+   :maxdepth: 1
+   :glob:
+
+   wx.getUserInfo
+   UserInfo
+
 数据上报
 ~~~~~~~~~~~~~~~~~~
 
@@ -1194,6 +1897,12 @@ FileSystemManager
 +==================+============================+
 | wx.reportMonitor | 自定义业务数据监控上报接口 |
 +------------------+----------------------------+
+
+.. toctree::
+   :maxdepth: 1
+   :glob:
+
+   wx.reportMonitor
 
 数据分析
 ~~~~~~~~~~~~~~~~~~
@@ -1204,6 +1913,12 @@ FileSystemManager
 | wx.reportAnalytics | 自定义分析数据上报接口 |
 +--------------------+------------------------+
 
+.. toctree::
+   :maxdepth: 1
+   :glob:
+
+   wx.reportAnalytics
+
 支付
 ~~~~~~~~~~~~~~~~~~
 
@@ -1213,6 +1928,12 @@ FileSystemManager
 | wx.requestPayment | 发起微信支付 |
 +-------------------+--------------+
 
+.. toctree::
+   :maxdepth: 1
+   :glob:
+
+   wx.requestPayment
+
 授权
 ~~~~~~~~~~~~~~~~~~
 
@@ -1221,6 +1942,12 @@ FileSystemManager
 +==============+========================+
 | wx.authorize | 提前向用户发起授权请求 |
 +--------------+------------------------+
+
+.. toctree::
+   :maxdepth: 1
+   :glob:
+
+   wx.authorize
 
 设置
 ~~~~~~~~~~~~~~~~~~
@@ -1235,6 +1962,14 @@ FileSystemManager
 | AuthSetting    | 用户授权设置信息，详情参考权限                   |
 +----------------+--------------------------------------------------+
 
+.. toctree::
+   :maxdepth: 1
+   :glob:
+
+   wx.openSetting
+   wx.getSetting
+   AuthSetting
+
 收货地址
 ~~~~~~~~~~~~~~~~~~
 
@@ -1243,6 +1978,12 @@ FileSystemManager
 +==================+==================+
 | wx.chooseAddress | 获取用户收货地址 |
 +------------------+------------------+
+
+.. toctree::
+   :maxdepth: 1
+   :glob:
+
+   wx.chooseAddress
 
 卡券
 ~~~~~~~~~~~~~~~~~~
@@ -1255,6 +1996,13 @@ FileSystemManager
 | wx.addCard  | 批量添加卡券         |
 +-------------+----------------------+
 
+.. toctree::
+   :maxdepth: 1
+   :glob:
+
+   wx.openCard
+   wx.addCard
+
 发票
 ~~~~~~~~~~~~~~~~~~
 
@@ -1265,6 +2013,13 @@ FileSystemManager
 +-----------------------+--------------------+
 | wx.chooseInvoice      | 选择用户已有的发票 |
 +-----------------------+--------------------+
+
+.. toctree::
+   :maxdepth: 1
+   :glob:
+
+   wx.chooseInvoiceTitle
+   wx.chooseInvoice
 
 生物认证
 ~~~~~~~~~~~~~~~~~~
@@ -1279,6 +2034,14 @@ FileSystemManager
 | wx.checkIsSoterEnrolledInDevice      | 获取设备内是否录入如指纹等生物信息的接口 |
 +--------------------------------------+------------------------------------------+
 
+.. toctree::
+   :maxdepth: 1
+   :glob:
+
+   wx.startSoterAuthentication
+   wx.checkIsSupportSoterAuthentication
+   wx.checkIsSoterEnrolledInDevice
+
 微信运动
 ~~~~~~~~~~~~~~~~~~
 
@@ -1287,6 +2050,12 @@ FileSystemManager
 +=================+================================+
 | wx.getWeRunData | 获取用户过去三十天微信运动步数 |
 +-----------------+--------------------------------+
+
+.. toctree::
+   :maxdepth: 1
+   :glob:
+
+   wx.getWeRunData
 
 设备
 -------
@@ -1313,8 +2082,22 @@ Wi-Fi
 +---------------------+--------------------------------+
 | wx.connectWifi      | 连接 Wi-Fi                     |
 +---------------------+--------------------------------+
-| WifiInfo	Wifi        | 信息                           |
+| WifiInfo            | Wifi 信息                      |
 +---------------------+--------------------------------+
+
+.. toctree::
+   :maxdepth: 1
+   :glob:
+
+   wx.stopWifi
+   wx.startWifi
+   wx.setWifiList
+   wx.onWifiConnected
+   wx.onGetWifiList
+   wx.getWifiList
+   wx.getConnectedWifi
+   wx.connectWifi
+   WifiInfo
 
 iBeacon
 ~~~~~~~~~~~~~~~~~~
@@ -1333,6 +2116,17 @@ iBeacon
 | wx.getBeacons            | 获取所有已搜索到的 iBeacon 设备 |
 +--------------------------+---------------------------------+
 
+.. toctree::
+   :maxdepth: 1
+   :glob:
+
+   wx.stopBeaconDiscovery
+   wx.startBeaconDiscovery
+   wx.onBeaconUpdate
+   wx.onBeaconServiceChange
+   wx.getBeacons
+   IBeaconInfo
+
 IBeaconInfo
 
 联系人
@@ -1343,6 +2137,13 @@ IBeaconInfo
 +====================+======================+
 | wx.addPhoneContact | 添加手机通讯录联系人 |
 +--------------------+----------------------+
+
+.. toctree::
+   :maxdepth: 1
+   :glob:
+
+   wx.addPhoneContact
+
 
 低功耗蓝牙
 ~~~~~~~~~~~~~~~~~~
@@ -1369,6 +2170,21 @@ IBeaconInfo
 | wx.closeBLEConnection                 | 断开与低功耗蓝牙设备的连接                               |
 +---------------------------------------+----------------------------------------------------------+
 
+.. toctree::
+   :maxdepth: 1
+   :glob:
+
+   wx.writeBLECharacteristicValue
+   wx.readBLECharacteristicValue
+   wx.onBLEConnectionStateChange
+   wx.onBLECharacteristicValueChange
+   wx.notifyBLECharacteristicValueChange
+   wx.getBLEDeviceServices
+   wx.getBLEDeviceCharacteristics
+   wx.createBLEConnection
+   wx.closeBLEConnection
+
+
 蓝牙
 ~~~~~~~~~~~~~~~~~~
 
@@ -1394,6 +2210,21 @@ IBeaconInfo
 | wx.closeBluetoothAdapter          | 关闭蓝牙模块                               |
 +-----------------------------------+--------------------------------------------+
 
+.. toctree::
+   :maxdepth: 1
+   :glob:
+
+   wx.stopBluetoothDevicesDiscovery
+   wx.startBluetoothDevicesDiscovery
+   wx.openBluetoothAdapter
+   wx.onBluetoothDeviceFound
+   wx.onBluetoothAdapterStateChange
+   wx.getConnectedBluetoothDevices
+   wx.getBluetoothDevices
+   wx.getBluetoothAdapterState
+   wx.closeBluetoothAdapter
+
+
 电量
 ~~~~~~~~~~~~~~~~~~
 
@@ -1405,6 +2236,14 @@ IBeaconInfo
 | wx.getBatteryInfo     | 获取设备电量                 |
 +-----------------------+------------------------------+
 
+.. toctree::
+   :maxdepth: 1
+   :glob:
+
+   wx.getBatteryInfoSync
+   wx.getBatteryInfo
+
+
 剪贴板
 ~~~~~~~~~~~~~~~~~~
 
@@ -1415,6 +2254,14 @@ IBeaconInfo
 +---------------------+----------------------+
 | wx.getClipboardData | 获取系统剪贴板的内容 |
 +---------------------+----------------------+
+
+.. toctree::
+   :maxdepth: 1
+   :glob:
+
+   wx.setClipboardData
+   wx.getClipboardData
+
 
 NFC
 ~~~~~~~~~~~~~~~~~~
@@ -1433,6 +2280,16 @@ NFC
 | wx.getHCEState    | 判断当前设备是否支持 HCE 能力 |
 +-------------------+-------------------------------+
 
+.. toctree::
+   :maxdepth: 1
+   :glob:
+
+   wx.stopHCE
+   wx.startHCE
+   wx.sendHCEMessage
+   wx.onHCEMessage
+   wx.getHCEState
+
 网络
 ~~~~~~~~~~~~~~~~~~
 
@@ -1443,6 +2300,14 @@ NFC
 +--------------------------+----------------------+
 | wx.getNetworkType        | 获取网络类型         |
 +--------------------------+----------------------+
+
+.. toctree::
+   :maxdepth: 1
+   :glob:
+
+   wx.onNetworkStatusChange
+   wx.getNetworkType
+
 
 屏幕
 ~~~~~~~~~~~~~~~~~~
@@ -1459,6 +2324,15 @@ NFC
 | wx.getScreenBrightness | 获取屏幕亮度         |
 +------------------------+----------------------+
 
+.. toctree::
+   :maxdepth: 1
+   :glob:
+
+   wx.setScreenBrightness
+   wx.setKeepScreenOn
+   wx.onUserCaptureScreen
+   wx.getScreenBrightness
+
 电话
 ~~~~~~~~~~~~~~~~~~
 
@@ -1467,6 +2341,13 @@ NFC
 +==================+==========+
 | wx.makePhoneCall | 拨打电话 |
 +------------------+----------+
+
+.. toctree::
+   :maxdepth: 1
+   :glob:
+
+   wx.makePhoneCall
+
 
 加速计
 ~~~~~~~~~~~~~~~~~~
@@ -1481,6 +2362,15 @@ NFC
 | wx.onAccelerometerChange | 监听加速度数据事件 |
 +--------------------------+--------------------+
 
+.. toctree::
+   :maxdepth: 1
+   :glob:
+
+   wx.stopAccelerometer
+   wx.startAccelerometer
+   wx.onAccelerometerChange
+
+
 罗盘
 ~~~~~~~~~~~~~~~~~~
 
@@ -1493,6 +2383,15 @@ NFC
 +--------------------+----------------------+
 | wx.onCompassChange | 监听罗盘数据变化事件 |
 +--------------------+----------------------+
+
+.. toctree::
+   :maxdepth: 1
+   :glob:
+
+   wx.stopCompass
+   wx.startCompass
+   wx.onCompassChange
+
 
 设备方向
 ~~~~~~~~~~~~~~~~~~
@@ -1507,6 +2406,15 @@ NFC
 | wx.onDeviceMotionChange       | 监听设备方向变化事件   |
 +-------------------------------+------------------------+
 
+.. toctree::
+   :maxdepth: 1
+   :glob:
+
+   wx.stopDeviceMotionListening
+   wx.startDeviceMotionListening
+   wx.onDeviceMotionChange
+
+
 陀螺仪
 ~~~~~~~~~~~~~~~~~~
 
@@ -1520,6 +2428,15 @@ NFC
 | wx.onGyroscopeChange | 监听陀螺仪数据变化事件 |
 +----------------------+------------------------+
 
+.. toctree::
+   :maxdepth: 1
+   :glob:
+
+   wx.stopGyroscope
+   wx.startGyroscope
+   wx.onGyroscopeChange
+
+
 性能
 ~~~~~~~~~~~~~~~~~~
 
@@ -1529,6 +2446,13 @@ NFC
 | wx.onMemoryWarning | 监听内存不足告警事件 |
 +--------------------+----------------------+
 
+.. toctree::
+   :maxdepth: 1
+   :glob:
+
+   wx.onMemoryWarning
+
+
 扫码
 ~~~~~~~~~~~~~~~~~~
 
@@ -1537,6 +2461,13 @@ NFC
 +=============+============================+
 | wx.scanCode | 调起客户端扫码界面进行扫码 |
 +-------------+----------------------------+
+
+.. toctree::
+   :maxdepth: 1
+   :glob:
+
+   wx.scanCode
+
 
 振动
 ~~~~~~~~~~~~~~~~~~
@@ -1549,6 +2480,14 @@ NFC
 | wx.vibrateLong  | 使手机发生较长时间的振动（400 ms) |
 +-----------------+-----------------------------------+
 
+.. toctree::
+   :maxdepth: 1
+   :glob:
+
+   wx.vibrateShort
+   wx.vibrateLong
+
+
 Worker
 -------
 
@@ -1557,6 +2496,13 @@ Worker
 +=================+======================+
 | wx.createWorker | 创建一个 Worker 线程 |
 +-----------------+----------------------+
+
+.. toctree::
+   :maxdepth: 1
+   :glob:
+
+   wx.createWorker
+
 
 Worker
 ~~~~~~~~~~~~~~~~~~
@@ -1571,6 +2517,16 @@ Worker
 | Worker.terminate   | 结束当前 Worker 线程                             |
 +--------------------+--------------------------------------------------+
 
+.. toctree::
+   :maxdepth: 1
+   :glob:
+
+   Worker
+   Worker.onMessage
+   Worker.postMessage
+   Worker.terminate
+
+
 第三方平台
 -------------
 
@@ -1582,6 +2538,13 @@ Worker
 | wx.getExtConfig     | 获取第三方平台自定义的数据字段 |
 +---------------------+--------------------------------+
 
+.. toctree::
+   :maxdepth: 1
+   :glob:
+
+   wx.getExtConfigSync
+   wx.getExtConfig
+
 WXML
 -------
 
@@ -1592,6 +2555,13 @@ WXML
 +-------------------------------+----------------------------------------------+
 | wx.createIntersectionObserver | 创建并返回一个 IntersectionObserver 对象实例 |
 +-------------------------------+----------------------------------------------+
+
+.. toctree::
+   :maxdepth: 1
+   :glob:
+
+   wx.createSelectorQuery
+   wx.createIntersectionObserver
 
 SelectorQuery
 ~~~~~~~~~~~~~~~~~~
@@ -1610,6 +2580,17 @@ SelectorQuery
 | SelectorQuery.selectViewport | 选择显示区域                                     |
 +------------------------------+--------------------------------------------------+
 
+.. toctree::
+   :maxdepth: 1
+   :glob:
+
+   SelectorQuery
+   SelectorQuery.exec
+   SelectorQuery.in
+   SelectorQuery.select
+   SelectorQuery.selectAll
+   SelectorQuery.selectViewport
+
 NodesRef
 ~~~~~~~~~~~~~~~~~~
 
@@ -1624,6 +2605,16 @@ NodesRef
 +-----------------------------+---------------------------------+
 | NodesRef.scrollOffset       | 添加节点的滚动位置查询请求      |
 +-----------------------------+---------------------------------+
+
+.. toctree::
+   :maxdepth: 1
+   :glob:
+
+   NodesRef
+   NodesRef.boundingClientRect
+   NodesRef.context
+   NodesRef.fields
+   NodesRef.scrollOffset
 
 IntersectionObserver
 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -1640,3 +2631,18 @@ IntersectionObserver
 | IntersectionObserver.relativeToViewport | 指定页面显示区域作为参照区域之一         |
 +-----------------------------------------+------------------------------------------+
 
+.. toctree::
+   :maxdepth: 1
+   :glob:
+
+   IntersectionObserver
+   IntersectionObserver.disconnect
+   IntersectionObserver.observe
+   IntersectionObserver.relativeTo
+   IntersectionObserver.relativeToViewport
+
+.. toctree::
+   :maxdepth: 1
+   :glob:
+
+   console

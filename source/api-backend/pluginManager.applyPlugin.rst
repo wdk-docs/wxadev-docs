@@ -1,2 +1,2 @@
-标题
+:wxapi:`pluginManager.applyPlugin`
 ===============

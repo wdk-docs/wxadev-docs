@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>音频 audio &mdash; wxadev 1.0.0 文档</title>
+  <title>audio(音频) &mdash; wxadev 1.0.0 文档</title>
   
 
   
@@ -36,7 +36,7 @@
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜索" href="../search.html" />
-    <link rel="next" title="camera" href="camera.html" />
+    <link rel="next" title="照相机" href="camera.html" />
     <link rel="prev" title="navigator" href="navigator.html" /> 
 </head>
 
@@ -82,37 +82,39 @@
             
             
               <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../dev.html">小程序简介</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index.html">开发指南</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev.html">简介</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../basic/index.html">基础教程</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../framework/index.html">框架开发指南</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../guide/index.html">运行环境</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework/index.html">框架</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">组件</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="index.html#id2">视图容器</a></li>
 <li class="toctree-l2"><a class="reference internal" href="index.html#id3">基础内容</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#id4">表单组件</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id4">表单</a></li>
 <li class="toctree-l2"><a class="reference internal" href="index.html#id5">导航</a></li>
-<li class="toctree-l2 current"><a class="reference internal" href="index.html#id6">媒体组件</a><ul class="current">
-<li class="toctree-l3 current"><a class="current reference internal" href="#">音频 audio</a></li>
-<li class="toctree-l3"><a class="reference internal" href="camera.html">camera</a></li>
-<li class="toctree-l3"><a class="reference internal" href="image.html">image</a></li>
-<li class="toctree-l3"><a class="reference internal" href="live-player.html">live-player</a></li>
-<li class="toctree-l3"><a class="reference internal" href="live-pusher.html">live-pusher</a></li>
-<li class="toctree-l3"><a class="reference internal" href="video.html">video</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html#id6">媒体</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">audio(音频)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="camera.html">照相机</a></li>
+<li class="toctree-l3"><a class="reference internal" href="image.html">图片</a></li>
+<li class="toctree-l3"><a class="reference internal" href="live-player.html">直播播放器</a></li>
+<li class="toctree-l3"><a class="reference internal" href="live-pusher.html">直播录像机</a></li>
+<li class="toctree-l3"><a class="reference internal" href="video.html">视频</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="index.html#id7">地图</a></li>
 <li class="toctree-l2"><a class="reference internal" href="index.html#id8">画布</a></li>
 <li class="toctree-l2"><a class="reference internal" href="index.html#id9">开放能力</a></li>
 <li class="toctree-l2"><a class="reference internal" href="index.html#id10">原生组件说明</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#id11">原生组件的使用限制</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#ncur">原生组件的使用限制</a></li>
 <li class="toctree-l2"><a class="reference internal" href="index.html#id12">无妨碍访问</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../api/index.html">API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api-backend/index.html">服务端API</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../devtools/index.html">开发工具</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../reference/index.html">参考资料</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../wxcloud/index.html">云开发</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../api/index.html">API</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../api-backend/index.html">服务端开放接口</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary.html">术语</a></li>
 </ul>
 
             
@@ -160,7 +162,7 @@
         
           <li><a href="index.html">组件</a> &raquo;</li>
         
-      <li>音频 audio</li>
+      <li>audio(音频)</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -180,12 +182,12 @@
            <div itemprop="articleBody">
             
   <div class="section" id="audio">
-<h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/component/audio.html">音频 audio</a><a class="headerlink" href="#audio" title="永久链接至标题">¶</a></h1>
+<h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/component/audio.html">audio(音频)</a><a class="headerlink" href="#audio" title="永久链接至标题">¶</a></h1>
 <div class="versionadded">
 <p><span class="versionmodified added">1.0.0 新版功能: </span>低版本需做兼容处理。</p>
 </div>
 <div class="versionchanged">
-<p><span class="versionmodified changed">在 1.6.0 版更改: </span>该组件不再维护, 建议使用能力更强的 <a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/api/wx.createInnerAudioContext.html">wx.createInnerAudioContext</a> 接口</p>
+<p><span class="versionmodified changed">在 1.6.0 版更改: </span>该组件不再维护, 建议使用能力更强的 <a class="reference internal" href="../api/wx.createInnerAudioContext.html#wx.createInnerAudioContext" title="wx.createInnerAudioContext"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.createInnerAudioContext()</span></code></a> 接口</p>
 </div>
 <table class="docutils align-center">
 <colgroup>
@@ -485,7 +487,7 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="camera.html" class="btn btn-neutral float-right" title="camera" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="camera.html" class="btn btn-neutral float-right" title="照相机" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="navigator.html" class="btn btn-neutral float-left" title="navigator" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>

@@ -11,6 +11,5 @@
    file-system
    canvas
    subpackages/index
-   workers
    server-ability/index
    custom-tabbar

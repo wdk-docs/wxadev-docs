@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>标题 &mdash; wxadev 1.0.0 文档</title>
+  <title>RecorderManager &mdash; wxadev 1.0.0 文档</title>
   
 
   
@@ -35,7 +35,9 @@
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="index" title="索引" href="../genindex.html" />
-    <link rel="search" title="搜索" href="../search.html" /> 
+    <link rel="search" title="搜索" href="../search.html" />
+    <link rel="next" title="RecorderManager.onError" href="RecorderManager.onError.html" />
+    <link rel="prev" title="wx.getRecorderManager" href="wx.getRecorderManager.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -79,17 +81,55 @@
               
             
             
-              <ul>
-<li class="toctree-l1"><a class="reference internal" href="../dev.html">小程序简介</a></li>
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../index.html">开发指南</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev.html">简介</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../basic/index.html">基础教程</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../framework/index.html">框架开发指南</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../guide/index.html">运行环境</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework/index.html">框架</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../component/index.html">组件</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">API</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="index.html#id1">基础</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id2">系统</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id4">更新</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id5">小程序</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id9">路由</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id10">界面</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id22">网络</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id26">数据缓存</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html#id27">媒体</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="index.html#id28">地图</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#id29">图片</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#id30">视频</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#id31">音频</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#id32">背景音频</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#id33">实时音视频</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html#id34">录音</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="wx.stopRecord.html">wx.stopRecord</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wx.startRecord.html">wx.startRecord</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wx.getRecorderManager.html">wx.getRecorderManager</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="index.html#recordermanager">RecorderManager</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#id35">相机</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id36">位置</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id37">转发</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id38">画布</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id39">文件</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id40">开放接口</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id55">设备</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#worker">Worker</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id72">第三方平台</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#wxml">WXML</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../api-backend/index.html">服务端API</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../devtools/index.html">开发工具</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../reference/index.html">参考资料</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../wxcloud/index.html">云开发</a></li>
-<li class="toctree-l1"><a class="reference internal" href="index.html">API</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../api-backend/index.html">服务端开放接口</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary.html">术语</a></li>
 </ul>
 
             
@@ -135,7 +175,9 @@
     
       <li><a href="../contents.html">Docs</a> &raquo;</li>
         
-      <li>标题</li>
+          <li><a href="index.html">API</a> &raquo;</li>
+        
+      <li>RecorderManager</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -154,8 +196,235 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="id1">
-<h1>标题<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
+  <div class="section" id="recordermanager">
+<h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/api/RecorderManager.html">RecorderManager</a><a class="headerlink" href="#recordermanager" title="永久链接至标题">¶</a></h1>
+<dl class="class">
+<dt id="RecorderManager">
+<em class="property">class </em><code class="descname">RecorderManager</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#RecorderManager" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Label</dt>
+<dd class="field-odd"><p>全局唯一的录音管理器</p>
+</dd>
+</dl>
+</dd></dl>
+
+<div class="section" id="id1">
+<h2>方法<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h2>
+<div class="admonition seealso">
+<p class="admonition-title">参见</p>
+<p>开始录制 <a class="reference internal" href="RecorderManager.start.html#RecorderManager.start" title="RecorderManager.start"><code class="xref js js-func docutils literal notranslate"><span class="pre">RecorderManager.start()</span></code></a></p>
+</div>
+<dl class="function">
+<dt id="RecorderManager.pause">
+<code class="descclassname">RecorderManager.</code><code class="descname">pause</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#RecorderManager.pause" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Label</dt>
+<dd class="field-odd"><p>暂停录音</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="RecorderManager.resume">
+<code class="descclassname">RecorderManager.</code><code class="descname">resume</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#RecorderManager.resume" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Label</dt>
+<dd class="field-odd"><p>继续录音</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="RecorderManager.stop">
+<code class="descclassname">RecorderManager.</code><code class="descname">stop</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#RecorderManager.stop" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Label</dt>
+<dd class="field-odd"><p>停止录音</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="RecorderManager.onStart">
+<code class="descclassname">RecorderManager.</code><code class="descname">onStart</code><span class="sig-paren">(</span><em>function callback</em><span class="sig-paren">)</span><a class="headerlink" href="#RecorderManager.onStart" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Label</dt>
+<dd class="field-odd"><p>监听录音开始事件</p>
+</dd>
+<dt class="field-even">参数</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>callback</strong> (<em>function</em>) – 录音开始事件的回调函数</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="RecorderManager.onResume">
+<code class="descclassname">RecorderManager.</code><code class="descname">onResume</code><span class="sig-paren">(</span><em>function callback</em><span class="sig-paren">)</span><a class="headerlink" href="#RecorderManager.onResume" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Label</dt>
+<dd class="field-odd"><p>监听录音继续事件</p>
+</dd>
+<dt class="field-even">参数</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>callback</strong> (<em>function</em>) – 录音开始事件的回调函数</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="RecorderManager.onPause">
+<code class="descclassname">RecorderManager.</code><code class="descname">onPause</code><span class="sig-paren">(</span><em>function callback</em><span class="sig-paren">)</span><a class="headerlink" href="#RecorderManager.onPause" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Label</dt>
+<dd class="field-odd"><p>监听录音暂停事件</p>
+</dd>
+<dt class="field-even">参数</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>callback</strong> (<em>function</em>) – 录音暂停事件的回调函数</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="RecorderManager.onStop">
+<code class="descclassname">RecorderManager.</code><code class="descname">onStop</code><span class="sig-paren">(</span><em>function callback</em><span class="sig-paren">)</span><a class="headerlink" href="#RecorderManager.onStop" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Label</dt>
+<dd class="field-odd"><p>监听录音结束事件</p>
+</dd>
+<dt class="field-even">参数</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>callback</strong> (<em>function</em>) – 录音结束事件的回调函数</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="RecorderManager.onFrameRecorded">
+<code class="descclassname">RecorderManager.</code><code class="descname">onFrameRecorded</code><span class="sig-paren">(</span><em>function callback</em><span class="sig-paren">)</span><a class="headerlink" href="#RecorderManager.onFrameRecorded" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Label</dt>
+<dd class="field-odd"><p>监听已录制完指定帧大小的文件事件。如果设置了 frameSize，则会回调此事件。</p>
+</dd>
+<dt class="field-even">参数</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>callback(res)</strong> (<em>function</em>) – <p>已录制完指定帧大小的文件事件的回调函数</p>
+<ul>
+<li><p><strong>res</strong> (<em>Object</em>) -</p>
+<ul>
+<li><p><strong>frameBuffer</strong> (<em>ArrayBuffer</em>) - 录音分片数据</p></li>
+<li><p><strong>isLastFrame</strong> (<em>boolean</em>) - 当前帧是否正常录音结束前的最后一帧</p></li>
+</ul>
+</li>
+</ul>
+</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="RecorderManager.onError">
+<code class="descclassname">RecorderManager.</code><code class="descname">onError</code><span class="sig-paren">(</span><em>function callback</em><span class="sig-paren">)</span><a class="headerlink" href="#RecorderManager.onError" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Label</dt>
+<dd class="field-odd"><p>监听录音错误事件</p>
+</dd>
+<dt class="field-even">参数</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>callback(res)</strong> (<em>function</em>) – <p>录音错误事件的回调函数</p>
+<ul>
+<li><p><strong>res</strong> (<em>Object</em>) -</p>
+<ul>
+<li><p><strong>errMsg</strong> (<em>string</em>) - 错误信息</p></li>
+</ul>
+</li>
+</ul>
+</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="RecorderManager.onInterruptionBegin">
+<code class="descclassname">RecorderManager.</code><code class="descname">onInterruptionBegin</code><span class="sig-paren">(</span><em>function callback</em><span class="sig-paren">)</span><a class="headerlink" href="#RecorderManager.onInterruptionBegin" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Label</dt>
+<dd class="field-odd"><p>监听录音因为受到系统占用而被中断开始事件。
+以下场景会触发此事件：微信语音聊天、微信视频聊天。此事件触发后，录音会被暂停。
+pause 事件在此事件后触发</p>
+</dd>
+<dt class="field-even">参数</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>callback</strong> (<em>function</em>) – 录音因为受到系统占用而被中断开始事件的回调函数</p></li>
+</ul>
+</dd>
+</dl>
+<div class="versionadded">
+<p><span class="versionmodified added">2.3.0 新版功能: </span>低版本需做兼容处理。</p>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="RecorderManager.onInterruptionEnd">
+<code class="descclassname">RecorderManager.</code><code class="descname">onInterruptionEnd</code><span class="sig-paren">(</span><em>function callback</em><span class="sig-paren">)</span><a class="headerlink" href="#RecorderManager.onInterruptionEnd" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Label</dt>
+<dd class="field-odd"><p>监听录音中断结束事件。
+在收到 interruptionBegin 事件之后，小程序内所有录音会暂停，收到此事件之后才可再次录音成功。</p>
+</dd>
+<dt class="field-even">参数</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>callback</strong> (<em>function</em>) – 录音中断结束事件的回调函数</p></li>
+</ul>
+</dd>
+</dl>
+<div class="versionadded">
+<p><span class="versionmodified added">2.3.0 新版功能: </span>低版本需做兼容处理。</p>
+</div>
+</dd></dl>
+
+</div>
+<div class="section" id="id2">
+<h2>示例代码<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">const</span> <span class="n">recorderManager</span> <span class="o">=</span> <span class="n">wx</span><span class="o">.</span><span class="n">getRecorderManager</span><span class="p">()</span>
+
+<span class="n">recorderManager</span><span class="o">.</span><span class="n">onStart</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="s1">&#39;recorder start&#39;</span><span class="p">)</span>
+<span class="p">})</span>
+<span class="n">recorderManager</span><span class="o">.</span><span class="n">onPause</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="s1">&#39;recorder pause&#39;</span><span class="p">)</span>
+<span class="p">})</span>
+<span class="n">recorderManager</span><span class="o">.</span><span class="n">onStop</span><span class="p">((</span><span class="n">res</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="s1">&#39;recorder stop&#39;</span><span class="p">,</span> <span class="n">res</span><span class="p">)</span>
+  <span class="n">const</span> <span class="p">{</span><span class="n">tempFilePath</span><span class="p">}</span> <span class="o">=</span> <span class="n">res</span>
+<span class="p">})</span>
+<span class="n">recorderManager</span><span class="o">.</span><span class="n">onFrameRecorded</span><span class="p">((</span><span class="n">res</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="n">const</span> <span class="p">{</span><span class="n">frameBuffer</span><span class="p">}</span> <span class="o">=</span> <span class="n">res</span>
+  <span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="s1">&#39;frameBuffer.byteLength&#39;</span><span class="p">,</span> <span class="n">frameBuffer</span><span class="o">.</span><span class="n">byteLength</span><span class="p">)</span>
+<span class="p">})</span>
+
+<span class="n">const</span> <span class="n">options</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="n">duration</span><span class="p">:</span> <span class="mi">10000</span><span class="p">,</span>
+  <span class="n">sampleRate</span><span class="p">:</span> <span class="mi">44100</span><span class="p">,</span>
+  <span class="n">numberOfChannels</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+  <span class="n">encodeBitRate</span><span class="p">:</span> <span class="mi">192000</span><span class="p">,</span>
+  <span class="nb">format</span><span class="p">:</span> <span class="s1">&#39;aac&#39;</span><span class="p">,</span>
+  <span class="n">frameSize</span><span class="p">:</span> <span class="mi">50</span>
+<span class="p">}</span>
+
+<span class="n">recorderManager</span><span class="o">.</span><span class="n">start</span><span class="p">(</span><span class="n">options</span><span class="p">)</span>
+</pre></div>
+</div>
+</div></blockquote>
+</div>
 </div>
 
 
@@ -163,6 +432,15 @@
            
           </div>
           <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="RecorderManager.onError.html" class="btn btn-neutral float-right" title="RecorderManager.onError" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="wx.getRecorderManager.html" class="btn btn-neutral float-left" title="wx.getRecorderManager" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
   
 
   <hr/>

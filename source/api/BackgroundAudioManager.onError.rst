@@ -1,0 +1,2 @@
+:wxapi:`BackgroundAudioManager.onError`
+============================================

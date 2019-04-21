@@ -1,0 +1,2 @@
+:wxbpi:`MapContext.getCenterLocation`
+=======================

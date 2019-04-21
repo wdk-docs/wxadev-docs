@@ -11,3 +11,4 @@
    api-limit
    component-limit
    functional-pages/index
+   functional-pages

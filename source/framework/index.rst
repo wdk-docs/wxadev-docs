@@ -1,4 +1,4 @@
-框架开发指南
+框架
 ============
 
 
@@ -9,21 +9,28 @@
 想要更具体了了关于框架、组件、API的详细内容，请参考对应的参考文档：
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 3
    :glob:
 
+   MINA
    structure
    config
    sitemap
-   MINA
    app-service/index
    view/index
    details
-   custom-component
    plugin/index
    ability/index
    device/index
    open-ability/index
    usability
+   usability/index
    performance
-   client-lib
+   performance/index
+   client-lib/index
+   compatibility
+   workers
+   server-ability/index
+   release/index
+   operating-mechanism
+   custom-component/index

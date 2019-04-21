@@ -5,64 +5,62 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="zh-CN" > <!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
+
   <title>我的第一个云函数 &mdash; wxadev 1.0.0 文档</title>
-  
 
-  
-  
-  
-  
 
-  
+
+
+
+
+
+
   <script type="text/javascript" src="../../../_static/js/modernizr.min.js"></script>
-  
-    
+
+
       <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
         <script type="text/javascript" src="../../../_static/jquery.js"></script>
         <script type="text/javascript" src="../../../_static/underscore.js"></script>
         <script type="text/javascript" src="../../../_static/doctools.js"></script>
         <script type="text/javascript" src="../../../_static/language_data.js"></script>
         <script type="text/javascript" src="../../../_static/translations.js"></script>
-    
+
     <script type="text/javascript" src="../../../_static/js/theme.js"></script>
 
-    
 
-  
+
+
   <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
     <link rel="index" title="索引" href="../../../genindex.html" />
     <link rel="search" title="搜索" href="../../../search.html" />
-    <link rel="next" title="获取小程序用户信息" href="userinfo.html" />
-    <link rel="prev" title="云函数" href="index.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
 
-   
+
   <div class="wy-grid-for-nav">
-    
+
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-          
 
-          
+
+
             <a href="../../../contents.html" class="icon icon-home"> wxadev
-          
 
-          
+
+
           </a>
 
-          
-            
-            
-          
 
-          
+
+
+
+
+
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
@@ -71,79 +69,50 @@
   </form>
 </div>
 
-          
+
         </div>
 
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-              
-            
-            
-              <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../../../dev.html">小程序简介</a></li>
+
+
+
+
+
+
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../dev.html">简介</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../basic/index.html">基础教程</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../framework/index.html">框架开发指南</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../guide/index.html">运行环境</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../component/index.html">组件</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../devtools/index.html">开发工具</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../reference/index.html">参考资料</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">云开发</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="../../basis/index.html">基础</a></li>
-<li class="toctree-l2 current"><a class="reference internal" href="../index.html">指引</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="../console.html">控制台</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../init.html">初始化</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../database/index.html">数据库</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../storage/index.html">存储</a></li>
-<li class="toctree-l3 current"><a class="reference internal" href="index.html">云函数</a><ul class="current">
-<li class="toctree-l4 current"><a class="current reference internal" href="#">我的第一个云函数</a></li>
-<li class="toctree-l4"><a class="reference internal" href="userinfo.html">获取小程序用户信息</a></li>
-<li class="toctree-l4"><a class="reference internal" href="async.html">异步返回结果</a></li>
-<li class="toctree-l4"><a class="reference internal" href="npm.html">使用 npm</a></li>
-<li class="toctree-l4"><a class="reference internal" href="wx-server-sdk.html">在云函数中使用 wx-server-sdk</a></li>
-<li class="toctree-l4"><a class="reference internal" href="openapi.html">云调用</a></li>
-<li class="toctree-l4"><a class="reference internal" href="local-debug.html">云函数本地调试功能</a></li>
-<li class="toctree-l4"><a class="reference internal" href="triggers.html">定时触发器</a></li>
-<li class="toctree-l4"><a class="reference internal" href="mechanism.html">运行机制</a></li>
-<li class="toctree-l4"><a class="reference internal" href="notice.html">注意事项 &amp; FAQ</a></li>
-<li class="toctree-l4"><a class="reference internal" href="ide.html">在开发者工具中管理云函数</a></li>
-<li class="toctree-l4"><a class="reference internal" href="console.html">测试、日志与监控</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../../reference/index.html">参考</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../reference-client-api/index.html">小程序端 API</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../reference-server-api/index.html">服务端 API</a></li>
-</ul>
-</li>
 <li class="toctree-l1"><a class="reference internal" href="../../../api/index.html">API</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../api-backend/index.html">服务端</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../api-backend/index.html">服务端开放接口</a></li>
 </ul>
 
-            
-          
+
+
         </div>
       </div>
     </nav>
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
-      
+
       <nav class="wy-nav-top" aria-label="top navigation">
-        
+
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../../../contents.html">wxadev</a>
-        
+
       </nav>
 
 
       <div class="wy-nav-content">
-        
+
         <div class="rst-content">
-        
-          
+
+
 
 
 
@@ -162,36 +131,30 @@
 <div role="navigation" aria-label="breadcrumbs navigation">
 
   <ul class="wy-breadcrumbs">
-    
+
       <li><a href="../../../contents.html">Docs</a> &raquo;</li>
-        
-          <li><a href="../../index.html">云开发</a> &raquo;</li>
-        
-          <li><a href="../index.html">指引</a> &raquo;</li>
-        
-          <li><a href="index.html">云函数</a> &raquo;</li>
-        
+
       <li>我的第一个云函数</li>
-    
-    
+
+
       <li class="wy-breadcrumbs-aside">
-        
-            
+
+
             <a href="../../../_sources/wxcloud/guide/functions/getting-started.rst.txt" rel="nofollow"> View page source</a>
-          
-        
+
+
       </li>
-    
+
   </ul>
 
-  
+
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-            
+
   <div class="section" id="id1">
-<h1>我的第一个云函数<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
+<h1>我的第一个云函数<a class="headerlink" href="#id1" title="永久链接至:wxapi:`wx.createWorker`">¶</a></h1>
 <p>我们以定义一个将两个数字相加的函数作为我们第一个云函数的示例。</p>
 <p>在项目根目录找到 project.config.json 文件，新增 cloudfunctionRoot 字段，指定本地已存在的目录作为云函数的本地根目录</p>
 <p>示例：
@@ -258,19 +221,10 @@
 
 
            </div>
-           
+
           </div>
           <footer>
-  
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="userinfo.html" class="btn btn-neutral float-right" title="获取小程序用户信息" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="index.html" class="btn btn-neutral float-left" title="云函数" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
-    </div>
-  
+
 
   <hr/>
 
@@ -280,7 +234,7 @@
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
 
 </footer>
 
@@ -290,7 +244,7 @@
     </section>
 
   </div>
-  
+
 
 
   <script type="text/javascript">
@@ -299,10 +253,10 @@
       });
   </script>
 
-  
-  
-    
-   
+
+
+
+
 
 </body>
 </html>

@@ -1,0 +1,2 @@
+:wxapi:`IntersectionObserver.relativeToViewport`
+============================================

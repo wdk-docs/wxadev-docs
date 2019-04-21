@@ -1,6 +1,5 @@
-事件
-======
-
+:wxfrwk:`事件 <view/wxml/template>`
+=======================================
 什么是事件
 事件是视图层到逻辑层的通讯方式。
 事件可以将用户的行为反馈到逻辑层进行处理。
@@ -10,68 +9,83 @@
 在组件中绑定一个事件处理函数。
 如bindtap，当用户点击该组件的时候会在该页面对应的Page中找到相应的事件处理函数。
 
-<view id="tapTest" data-hi="WeChat" bindtap="tapName">Click me!</view>
+.. code::
+
+  <view id="tapTest" data-hi="WeChat" bindtap="tapName">Click me!</view>
+
 在相应的Page定义中写上相应的事件处理函数，参数是event。
-Page({
-  tapName(event) {
-    console.log(event)
-  }
-})
+
+.. code::
+
+  Page({
+    tapName(event) {
+      console.log(event)
+    }
+  })
+
 可以看到log出来的信息大致如下：
-{
-  "type": "tap",
-  "timeStamp": 895,
-  "target": {
-    "id": "tapTest",
-    "dataset": {
-      "hi": "WeChat"
-    }
-  },
-  "currentTarget": {
-    "id": "tapTest",
-    "dataset": {
-      "hi": "WeChat"
-    }
-  },
-  "detail": {
-    "x": 53,
-    "y": 14
-  },
-  "touches": [
-    {
-      "identifier": 0,
-      "pageX": 53,
-      "pageY": 14,
-      "clientX": 53,
-      "clientY": 14
-    }
-  ],
-  "changedTouches": [
-    {
-      "identifier": 0,
-      "pageX": 53,
-      "pageY": 14,
-      "clientX": 53,
-      "clientY": 14
-    }
-  ]
-}
+
+.. code::
+
+  {
+    "type": "tap",
+    "timeStamp": 895,
+    "target": {
+      "id": "tapTest",
+      "dataset": {
+        "hi": "WeChat"
+      }
+    },
+    "currentTarget": {
+      "id": "tapTest",
+      "dataset": {
+        "hi": "WeChat"
+      }
+    },
+    "detail": {
+      "x": 53,
+      "y": 14
+    },
+    "touches": [
+      {
+        "identifier": 0,
+        "pageX": 53,
+        "pageY": 14,
+        "clientX": 53,
+        "clientY": 14
+      }
+    ],
+    "changedTouches": [
+      {
+        "identifier": 0,
+        "pageX": 53,
+        "pageY": 14,
+        "clientX": 53,
+        "clientY": 14
+      }
+    ]
+  }
+
 使用WXS函数响应事件
 基础库 2.4.4 开始支持，低版本需做兼容处理。
 
 从基础库版本2.4.4开始，支持使用WXS函数绑定事件，WXS函数接受2个参数，第一个是event，在原有的event的基础上加了event.instance对象，第二个参数是ownerInstance，和event.instance一样是一个ComponentDescriptor对象。具体使用如下：
 
 在组件中绑定和注册事件处理的WXS函数。
-<wxs module="wxs" src="./test.wxs"></wxs>
-<view id="tapTest" data-hi="WeChat" bindtap="{{wxs.tapName}}">Click me!</view>
-**注：绑定的WXS函数必须用{{}}括起来**
-test.wxs文件实现tapName函数
-function tapName(event, ownerInstance) {
-  console.log('tap wechat', JSON.stringify(event))
-}
-module.exports = {
-  tapName: tapName
-}
+
+.. code::
+
+    <wxs module="wxs" src="./test.wxs"></wxs>
+    <view id="tapTest" data-hi="WeChat" bindtap="{{wxs.tapName}}">Click me!</view>
+    **注：绑定的WXS函数必须用{{}}括起来**
+    test.wxs文件实现tapName函数
+    function tapName(event, ownerInstance) {
+      console.log('tap wechat', JSON.stringify(event))
+    }
+    module.exports = {
+      tapName: tapName
+    }
+
 ownerInstance包含了一些方法，可以设置组件的样式和class，具体包含的方法以及为什么要用WXS函数响应事件，请点击查看详情。
 
 事件详解
@@ -106,50 +120,59 @@ bind事件绑定不会阻止冒泡事件向上冒泡，catch事件绑定可以�
 
 如在下边这个例子中，点击 inner view 会先后调用handleTap3和handleTap2(因为tap事件会冒泡到 middle view，而 middle view 阻止了 tap 事件冒泡，不再向父节点传递)，点击 middle view 会触发handleTap2，点击 outer view 会触发handleTap1。
 
-<view id="outer" bindtap="handleTap1">
-  outer view
-  <view id="middle" catchtap="handleTap2">
-    middle view
-    <view id="inner" bindtap="handleTap3">
-      inner view
+.. code::
+
+  <view id="outer" bindtap="handleTap1">
+    outer view
+    <view id="middle" catchtap="handleTap2">
+      middle view
+      <view id="inner" bindtap="handleTap3">
+        inner view
+      </view>
     </view>
   </view>
-</view>
+
 事件的捕获阶段
 自基础库版本 1.5.0 起，触摸类事件支持捕获阶段。捕获阶段位于冒泡阶段之前，且在捕获阶段中，事件到达节点的顺序与冒泡阶段恰好相反。需要在捕获阶段监听事件时，可以采用capture-bind、capture-catch关键字，后者将中断捕获阶段和取消冒泡阶段。
 
 在下面的代码中，点击 inner view 会先后调用handleTap2、handleTap4、handleTap3、handleTap1。
 
-<view
-  id="outer"
-  bind:touchstart="handleTap1"
-  capture-bind:touchstart="handleTap2"
->
-  outer view
+.. code::
+
   <view
-    id="inner"
-    bind:touchstart="handleTap3"
-    capture-bind:touchstart="handleTap4"
+    id="outer"
+    bind:touchstart="handleTap1"
+    capture-bind:touchstart="handleTap2"
   >
-    inner view
+    outer view
+    <view
+      id="inner"
+      bind:touchstart="handleTap3"
+      capture-bind:touchstart="handleTap4"
+    >
+      inner view
+    </view>
   </view>
-</view>
+
 如果将上面代码中的第一个capture-bind改为capture-catch，将只触发handleTap2。
 
-<view
-  id="outer"
-  bind:touchstart="handleTap1"
-  capture-catch:touchstart="handleTap2"
->
-  outer view
+.. code::
+
   <view
-    id="inner"
-    bind:touchstart="handleTap3"
-    capture-bind:touchstart="handleTap4"
+    id="outer"
+    bind:touchstart="handleTap1"
+    capture-catch:touchstart="handleTap2"
   >
-    inner view
+    outer view
+    <view
+      id="inner"
+      bind:touchstart="handleTap3"
+      capture-bind:touchstart="handleTap4"
+    >
+      inner view
+    </view>
   </view>
-</view>
+
 事件对象
 如无特殊说明，当组件触发事件时，逻辑层绑定该事件的处理函数会收到一个事件对象。
 

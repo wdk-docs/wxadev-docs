@@ -1,4 +1,2 @@
-auth.getPaidUnionId
-======================
-标题
+:wxapi:`auth.getPaidUnionId`
 ===============

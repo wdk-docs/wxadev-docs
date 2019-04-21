@@ -5,64 +5,62 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="zh-CN" > <!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
+
   <title>初始化 wx.cloud.init &mdash; wxadev 1.0.0 文档</title>
-  
 
-  
-  
-  
-  
 
-  
+
+
+
+
+
+
   <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
-  
-    
+
+
       <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
         <script type="text/javascript" src="../../_static/jquery.js"></script>
         <script type="text/javascript" src="../../_static/underscore.js"></script>
         <script type="text/javascript" src="../../_static/doctools.js"></script>
         <script type="text/javascript" src="../../_static/language_data.js"></script>
         <script type="text/javascript" src="../../_static/translations.js"></script>
-    
+
     <script type="text/javascript" src="../../_static/js/theme.js"></script>
 
-    
 
-  
+
+
   <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="index" title="索引" href="../../genindex.html" />
     <link rel="search" title="搜索" href="../../search.html" />
-    <link rel="next" title="数据库 API" href="database/index.html" />
-    <link rel="prev" title="小程序端 API" href="index.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
 
-   
+
   <div class="wy-grid-for-nav">
-    
+
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-          
 
-          
+
+
             <a href="../../contents.html" class="icon icon-home"> wxadev
-          
 
-          
+
+
           </a>
 
-          
-            
-            
-          
 
-          
+
+
+
+
+
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
@@ -71,65 +69,50 @@
   </form>
 </div>
 
-          
+
         </div>
 
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-              
-            
-            
-              <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../../dev.html">小程序简介</a></li>
+
+
+
+
+
+
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../dev.html">简介</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../basic/index.html">基础教程</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../framework/index.html">框架开发指南</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../guide/index.html">运行环境</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../component/index.html">组件</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../devtools/index.html">开发工具</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../reference/index.html">参考资料</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="../index.html">云开发</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="../basis/index.html">基础</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../guide/index.html">指引</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../reference/index.html">参考</a></li>
-<li class="toctree-l2 current"><a class="reference internal" href="index.html">小程序端 API</a><ul class="current">
-<li class="toctree-l3 current"><a class="current reference internal" href="#">初始化 wx.cloud.init</a></li>
-<li class="toctree-l3"><a class="reference internal" href="database/index.html">数据库 API</a></li>
-<li class="toctree-l3"><a class="reference internal" href="storage/index.html">存储 API</a></li>
-<li class="toctree-l3"><a class="reference internal" href="functions/index.html">云函数</a></li>
-<li class="toctree-l3"><a class="reference internal" href="component/index.html">组件支持</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../reference-server-api/index.html">服务端 API</a></li>
-</ul>
-</li>
 <li class="toctree-l1"><a class="reference internal" href="../../api/index.html">API</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../api-backend/index.html">服务端</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api-backend/index.html">服务端开放接口</a></li>
 </ul>
 
-            
-          
+
+
         </div>
       </div>
     </nav>
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
-      
+
       <nav class="wy-nav-top" aria-label="top navigation">
-        
+
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../../contents.html">wxadev</a>
-        
+
       </nav>
 
 
       <div class="wy-nav-content">
-        
+
         <div class="rst-content">
-        
-          
+
+
 
 
 
@@ -148,34 +131,30 @@
 <div role="navigation" aria-label="breadcrumbs navigation">
 
   <ul class="wy-breadcrumbs">
-    
+
       <li><a href="../../contents.html">Docs</a> &raquo;</li>
-        
-          <li><a href="../index.html">云开发</a> &raquo;</li>
-        
-          <li><a href="index.html">小程序端 API</a> &raquo;</li>
-        
+
       <li>初始化 wx.cloud.init</li>
-    
-    
+
+
       <li class="wy-breadcrumbs-aside">
-        
-            
+
+
             <a href="../../_sources/wxcloud/reference-client-api/init.rst.txt" rel="nofollow"> View page source</a>
-          
-        
+
+
       </li>
-    
+
   </ul>
 
-  
+
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-            
+
   <div class="section" id="wx-cloud-init">
-<h1>初始化 wx.cloud.init<a class="headerlink" href="#wx-cloud-init" title="永久链接至标题">¶</a></h1>
+<h1>初始化 wx.cloud.init<a class="headerlink" href="#wx-cloud-init" title="永久链接至:wxapi:`wx.createWorker`">¶</a></h1>
 <p>在调用云开发各 API 前，需先调用初始化方法 init 一次（全局只需一次）</p>
 <p>wx.cloud.init 方法的定义如下：</p>
 <dl class="function">
@@ -194,19 +173,10 @@ traceUser       boolean 否       false   是否在将用户访问记录到用�
 
 
            </div>
-           
+
           </div>
           <footer>
-  
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="database/index.html" class="btn btn-neutral float-right" title="数据库 API" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="index.html" class="btn btn-neutral float-left" title="小程序端 API" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
-    </div>
-  
+
 
   <hr/>
 
@@ -216,7 +186,7 @@ traceUser       boolean 否       false   是否在将用户访问记录到用�
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
 
 </footer>
 
@@ -226,7 +196,7 @@ traceUser       boolean 否       false   是否在将用户访问记录到用�
     </section>
 
   </div>
-  
+
 
 
   <script type="text/javascript">
@@ -235,10 +205,10 @@ traceUser       boolean 否       false   是否在将用户访问记录到用�
       });
   </script>
 
-  
-  
-    
-   
+
+
+
+
 
 </body>
 </html>

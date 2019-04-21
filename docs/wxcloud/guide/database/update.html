@@ -5,64 +5,62 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="zh-CN" > <!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
+
   <title>更新数据 &mdash; wxadev 1.0.0 文档</title>
-  
 
-  
-  
-  
-  
 
-  
+
+
+
+
+
+
   <script type="text/javascript" src="../../../_static/js/modernizr.min.js"></script>
-  
-    
+
+
       <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
         <script type="text/javascript" src="../../../_static/jquery.js"></script>
         <script type="text/javascript" src="../../../_static/underscore.js"></script>
         <script type="text/javascript" src="../../../_static/doctools.js"></script>
         <script type="text/javascript" src="../../../_static/language_data.js"></script>
         <script type="text/javascript" src="../../../_static/translations.js"></script>
-    
+
     <script type="text/javascript" src="../../../_static/js/theme.js"></script>
 
-    
 
-  
+
+
   <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
     <link rel="index" title="索引" href="../../../genindex.html" />
     <link rel="search" title="搜索" href="../../../search.html" />
-    <link rel="next" title="删除数据" href="remove.html" />
-    <link rel="prev" title="查询数组和对象" href="query-array-object.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
 
-   
+
   <div class="wy-grid-for-nav">
-    
+
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-          
 
-          
+
+
             <a href="../../../contents.html" class="icon icon-home"> wxadev
-          
 
-          
+
+
           </a>
 
-          
-            
-            
-          
 
-          
+
+
+
+
+
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
@@ -71,81 +69,50 @@
   </form>
 </div>
 
-          
+
         </div>
 
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-              
-            
-            
-              <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../../../dev.html">小程序简介</a></li>
+
+
+
+
+
+
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../dev.html">简介</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../basic/index.html">基础教程</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../framework/index.html">框架开发指南</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../guide/index.html">运行环境</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../component/index.html">组件</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../devtools/index.html">开发工具</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../reference/index.html">参考资料</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">云开发</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="../../basis/index.html">基础</a></li>
-<li class="toctree-l2 current"><a class="reference internal" href="../index.html">指引</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="../console.html">控制台</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../init.html">初始化</a></li>
-<li class="toctree-l3 current"><a class="reference internal" href="index.html">数据库</a><ul class="current">
-<li class="toctree-l4"><a class="reference internal" href="getting-started.html">上手云数据库</a></li>
-<li class="toctree-l4"><a class="reference internal" href="data-type.html">数据类型</a></li>
-<li class="toctree-l4"><a class="reference internal" href="permission.html">权限控制</a></li>
-<li class="toctree-l4"><a class="reference internal" href="init.html">初始化</a></li>
-<li class="toctree-l4"><a class="reference internal" href="add.html">插入数据 ref</a></li>
-<li class="toctree-l4"><a class="reference internal" href="read.html">查询数据</a></li>
-<li class="toctree-l4"><a class="reference internal" href="query.html">指令</a></li>
-<li class="toctree-l4"><a class="reference internal" href="query-array-object.html">查询数组和对象</a></li>
-<li class="toctree-l4 current"><a class="current reference internal" href="#">更新数据</a></li>
-<li class="toctree-l4"><a class="reference internal" href="remove.html">删除数据</a></li>
-<li class="toctree-l4"><a class="reference internal" href="indexes.html">索引管理</a></li>
-<li class="toctree-l4"><a class="reference internal" href="geo.html">地理位置</a></li>
-<li class="toctree-l4"><a class="reference internal" href="import.html">数据库导入</a></li>
-<li class="toctree-l4"><a class="reference internal" href="export.html">数据库导出</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../storage/index.html">存储</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../functions/index.html">云函数</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../../reference/index.html">参考</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../reference-client-api/index.html">小程序端 API</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../reference-server-api/index.html">服务端 API</a></li>
-</ul>
-</li>
 <li class="toctree-l1"><a class="reference internal" href="../../../api/index.html">API</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../api-backend/index.html">服务端</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../api-backend/index.html">服务端开放接口</a></li>
 </ul>
 
-            
-          
+
+
         </div>
       </div>
     </nav>
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
-      
+
       <nav class="wy-nav-top" aria-label="top navigation">
-        
+
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../../../contents.html">wxadev</a>
-        
+
       </nav>
 
 
       <div class="wy-nav-content">
-        
+
         <div class="rst-content">
-        
-          
+
+
 
 
 
@@ -164,43 +131,37 @@
 <div role="navigation" aria-label="breadcrumbs navigation">
 
   <ul class="wy-breadcrumbs">
-    
+
       <li><a href="../../../contents.html">Docs</a> &raquo;</li>
-        
-          <li><a href="../../index.html">云开发</a> &raquo;</li>
-        
-          <li><a href="../index.html">指引</a> &raquo;</li>
-        
-          <li><a href="index.html">数据库</a> &raquo;</li>
-        
+
       <li>更新数据</li>
-    
-    
+
+
       <li class="wy-breadcrumbs-aside">
-        
-            
+
+
             <a href="../../../_sources/wxcloud/guide/database/update.rst.txt" rel="nofollow"> View page source</a>
-          
-        
+
+
       </li>
-    
+
   </ul>
 
-  
+
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-            
+
   <div class="section" id="id1">
-<h1>更新数据<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
+<h1>更新数据<a class="headerlink" href="#id1" title="永久链接至:wxapi:`wx.createWorker`">¶</a></h1>
 <p>在这章节我们一起看看如何使用数据库 API 完成数据更新，在本节中我们还是沿用读取数据章节中使用的数据。</p>
 <p>更新数据主要有两个方法：</p>
 <p>API     说明
 update  局部更新一个或多个记录
 set     替换更新一个记录</p>
 <div class="section" id="id2">
-<h2>局部更新<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<h2>局部更新<a class="headerlink" href="#id2" title="永久链接至:wxapi:`wx.createWorker`">¶</a></h2>
 <p>使用 update 方法可以局部更新一个记录或一个集合中的记录，局部更新意味着只有指定的字段会得到更新，其他字段不受影响。</p>
 <p>比如我们可以用以下代码将一个待办事项置为已完成：</p>
 <div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="nx">db</span><span class="p">.</span><span class="nx">collection</span><span class="p">(</span><span class="s1">&#39;todos&#39;</span><span class="p">).</span><span class="nx">doc</span><span class="p">(</span><span class="s1">&#39;todo-identifiant-aleatoire&#39;</span><span class="p">).</span><span class="nx">update</span><span class="p">({</span>
@@ -304,7 +265,7 @@ unshift 如字段值为数组，往数组头部增加指定值
 <p>更完整详细的更新指令可以参考数据库 API 文档</p>
 </div>
 <div class="section" id="id3">
-<h2>替换更新<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
+<h2>替换更新<a class="headerlink" href="#id3" title="永久链接至:wxapi:`wx.createWorker`">¶</a></h2>
 <p>如果需要替换更新一条记录，可以在记录上使用 set 方法，替换更新意味着用传入的对象替换指定的记录：</p>
 <div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="kr">const</span> <span class="nx">_</span> <span class="o">=</span> <span class="nx">db</span><span class="p">.</span><span class="nx">command</span>
 <span class="nx">db</span><span class="p">.</span><span class="nx">collection</span><span class="p">(</span><span class="s1">&#39;todos&#39;</span><span class="p">).</span><span class="nx">doc</span><span class="p">(</span><span class="s1">&#39;todo-identifiant-aleatoire&#39;</span><span class="p">).</span><span class="nx">set</span><span class="p">({</span>
@@ -335,19 +296,10 @@ unshift 如字段值为数组，往数组头部增加指定值
 
 
            </div>
-           
+
           </div>
           <footer>
-  
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="remove.html" class="btn btn-neutral float-right" title="删除数据" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="query-array-object.html" class="btn btn-neutral float-left" title="查询数组和对象" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
-    </div>
-  
+
 
   <hr/>
 
@@ -357,7 +309,7 @@ unshift 如字段值为数组，往数组头部增加指定值
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
 
 </footer>
 
@@ -367,7 +319,7 @@ unshift 如字段值为数组，往数组头部增加指定值
     </section>
 
   </div>
-  
+
 
 
   <script type="text/javascript">
@@ -376,10 +328,10 @@ unshift 如字段值为数组，往数组头部增加指定值
       });
   </script>
 
-  
-  
-    
-   
+
+
+
+
 
 </body>
 </html>

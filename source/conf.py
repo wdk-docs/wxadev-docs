@@ -33,7 +33,8 @@ release = '1.0.0'
 extensions = [
     'sphinx.ext.extlinks',
     'recommonmark',
-    'sphinx.ext.githubpages'
+    'sphinx.ext.githubpages',
+    'sphinxcontrib.httpdomain'
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -69,7 +70,9 @@ master_doc = 'contents'
 extlinks = {
     'wxcloud': ('https://developers.weixin.qq.com/miniprogram/dev/wxcloud/%s.html', ''),
     'wxcomp': ('https://developers.weixin.qq.com/miniprogram/dev/component/%s.html', ''),
-    'wxapi': ('https://developers.weixin.qq.com/miniprogram/dev/api/%s.html', '')
+    'wxfrwk': ('https://developers.weixin.qq.com/miniprogram/dev/framework/%s.html', ''),
+    'wxapi': ('https://developers.weixin.qq.com/miniprogram/dev/api/%s.html', ''),
+    'wxbpi': ('https://developers.weixin.qq.com/miniprogram/dev/api-backend/%s.html', '')
 }
 
 source_suffix = {
@@ -77,3 +80,10 @@ source_suffix = {
     '.txt': 'restructuredtext',
     '.md': 'markdown',
 }
+
+http_index_ignore_prefixes = ['https://api.weixin.qq.com/cgi-bin/']
+http_index_shortname = 'api'
+http_index_localname = "微信小程序API"
+
+# Then you can omit all the "js:" prefixes in the directives below.
+primary_domain = 'js'

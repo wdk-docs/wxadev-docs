@@ -11,3 +11,5 @@
    interactive-animation
    component
    animation
+   wxs/index
+   wxml/index

@@ -36,7 +36,7 @@
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="index" title="索引" href="../../genindex.html" />
     <link rel="search" title="搜索" href="../../search.html" />
-    <link rel="next" title="模块" href="module.html" />
+    <link rel="next" title="模块化" href="module.html" />
     <link rel="prev" title="小程序 App" href="app.html" /> 
 </head>
 
@@ -82,15 +82,18 @@
             
             
               <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../../dev.html">小程序简介</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../index.html">开发指南</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../dev.html">简介</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../basic/index.html">基础教程</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../framework/index.html">框架开发指南</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../guide/index.html">运行环境</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../framework/index.html">框架</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../component/index.html">组件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api/index.html">API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api-backend/index.html">服务端API</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../devtools/index.html">开发工具</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">参考资料</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../configuration/index.html">小程序配置</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../scene-list.html">场景值列表</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../scene.html">场景值列表</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="index.html">框架接口</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="app.html">小程序 App</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">页面</a><ul>
@@ -98,16 +101,16 @@
 <li class="toctree-l4"><a class="reference internal" href="#pageobject-getcurrentpages">PageObject[] getCurrentPages()</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="module.html">模块</a></li>
-<li class="toctree-l3"><a class="reference internal" href="wx.html">wx.env</a></li>
+<li class="toctree-l3"><a class="reference internal" href="module.html">模块化</a></li>
+<li class="toctree-l3"><a class="reference internal" href="wx.html">wx</a></li>
 <li class="toctree-l3"><a class="reference internal" href="console.html">console</a></li>
 <li class="toctree-l3"><a class="reference internal" href="timer.html">定时器</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../api/index.html">API</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../api-backend/index.html">服务端开放接口</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../wxcloud/index.html">云开发</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary.html">术语</a></li>
 </ul>
 
             
@@ -394,7 +397,7 @@ webViewUrl      String  页面中包含&lt;web-view&gt;组件时，返回当前&
 此事件处理函数需要 return 一个 Object，用于自定义转发内容，返回内容如下：</p>
 <p>自定义转发内容</p>
 <p>字段      说明      默认值     最低版本
-title   转发标题    当前小程序名称
+title   转发:wxapi:<cite>wx.createWorker</cite>      当前小程序名称
 path    转发路径    当前页面 path ，必须是以 / 开头的完整路径
 imageUrl        自定义图片路径，可以是本地文件路径、代码包文件路径或者网络图片路径。支持PNG及JPG。显示图片长宽比是 5:4。       使用默认截图  1.5.0
 示例代码</p>
@@ -406,7 +409,7 @@ imageUrl        自定义图片路径，可以是本地文件路径、代码包�
       <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">res</span><span class="p">.</span><span class="nx">target</span><span class="p">)</span>
     <span class="p">}</span>
     <span class="k">return</span> <span class="p">{</span>
-      <span class="nx">title</span><span class="o">:</span> <span class="s1">&#39;自定义转发标题&#39;</span><span class="p">,</span>
+      <span class="nx">title</span><span class="o">:</span> <span class="s1">&#39;自定义转发:wxapi:`wx.createWorker`&#39;</span><span class="p">,</span>
       <span class="nx">path</span><span class="o">:</span> <span class="s1">&#39;/page/user?id=123&#39;</span>
     <span class="p">}</span>
   <span class="p">}</span>
@@ -549,7 +552,7 @@ Object 以 key: value 的形式表示，将 this.data 中的 key 对应的值改
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="module.html" class="btn btn-neutral float-right" title="模块" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="module.html" class="btn btn-neutral float-right" title="模块化" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="app.html" class="btn btn-neutral float-left" title="小程序 App" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>

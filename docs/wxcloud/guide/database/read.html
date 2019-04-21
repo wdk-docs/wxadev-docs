@@ -5,64 +5,62 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="zh-CN" > <!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
+
   <title>查询数据 &mdash; wxadev 1.0.0 文档</title>
-  
 
-  
-  
-  
-  
 
-  
+
+
+
+
+
+
   <script type="text/javascript" src="../../../_static/js/modernizr.min.js"></script>
-  
-    
+
+
       <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
         <script type="text/javascript" src="../../../_static/jquery.js"></script>
         <script type="text/javascript" src="../../../_static/underscore.js"></script>
         <script type="text/javascript" src="../../../_static/doctools.js"></script>
         <script type="text/javascript" src="../../../_static/language_data.js"></script>
         <script type="text/javascript" src="../../../_static/translations.js"></script>
-    
+
     <script type="text/javascript" src="../../../_static/js/theme.js"></script>
 
-    
 
-  
+
+
   <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
     <link rel="index" title="索引" href="../../../genindex.html" />
     <link rel="search" title="搜索" href="../../../search.html" />
-    <link rel="next" title="指令" href="query.html" />
-    <link rel="prev" title="插入数据 ref" href="add.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
 
-   
+
   <div class="wy-grid-for-nav">
-    
+
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-          
 
-          
+
+
             <a href="../../../contents.html" class="icon icon-home"> wxadev
-          
 
-          
+
+
           </a>
 
-          
-            
-            
-          
 
-          
+
+
+
+
+
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
@@ -71,81 +69,50 @@
   </form>
 </div>
 
-          
+
         </div>
 
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-              
-            
-            
-              <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../../../dev.html">小程序简介</a></li>
+
+
+
+
+
+
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../dev.html">简介</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../basic/index.html">基础教程</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../framework/index.html">框架开发指南</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../guide/index.html">运行环境</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../component/index.html">组件</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../devtools/index.html">开发工具</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../reference/index.html">参考资料</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">云开发</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="../../basis/index.html">基础</a></li>
-<li class="toctree-l2 current"><a class="reference internal" href="../index.html">指引</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="../console.html">控制台</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../init.html">初始化</a></li>
-<li class="toctree-l3 current"><a class="reference internal" href="index.html">数据库</a><ul class="current">
-<li class="toctree-l4"><a class="reference internal" href="getting-started.html">上手云数据库</a></li>
-<li class="toctree-l4"><a class="reference internal" href="data-type.html">数据类型</a></li>
-<li class="toctree-l4"><a class="reference internal" href="permission.html">权限控制</a></li>
-<li class="toctree-l4"><a class="reference internal" href="init.html">初始化</a></li>
-<li class="toctree-l4"><a class="reference internal" href="add.html">插入数据 ref</a></li>
-<li class="toctree-l4 current"><a class="current reference internal" href="#">查询数据</a></li>
-<li class="toctree-l4"><a class="reference internal" href="query.html">指令</a></li>
-<li class="toctree-l4"><a class="reference internal" href="query-array-object.html">查询数组和对象</a></li>
-<li class="toctree-l4"><a class="reference internal" href="update.html">更新数据</a></li>
-<li class="toctree-l4"><a class="reference internal" href="remove.html">删除数据</a></li>
-<li class="toctree-l4"><a class="reference internal" href="indexes.html">索引管理</a></li>
-<li class="toctree-l4"><a class="reference internal" href="geo.html">地理位置</a></li>
-<li class="toctree-l4"><a class="reference internal" href="import.html">数据库导入</a></li>
-<li class="toctree-l4"><a class="reference internal" href="export.html">数据库导出</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../storage/index.html">存储</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../functions/index.html">云函数</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../../reference/index.html">参考</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../reference-client-api/index.html">小程序端 API</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../reference-server-api/index.html">服务端 API</a></li>
-</ul>
-</li>
 <li class="toctree-l1"><a class="reference internal" href="../../../api/index.html">API</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../api-backend/index.html">服务端</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../api-backend/index.html">服务端开放接口</a></li>
 </ul>
 
-            
-          
+
+
         </div>
       </div>
     </nav>
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
-      
+
       <nav class="wy-nav-top" aria-label="top navigation">
-        
+
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../../../contents.html">wxadev</a>
-        
+
       </nav>
 
 
       <div class="wy-nav-content">
-        
+
         <div class="rst-content">
-        
-          
+
+
 
 
 
@@ -164,36 +131,30 @@
 <div role="navigation" aria-label="breadcrumbs navigation">
 
   <ul class="wy-breadcrumbs">
-    
+
       <li><a href="../../../contents.html">Docs</a> &raquo;</li>
-        
-          <li><a href="../../index.html">云开发</a> &raquo;</li>
-        
-          <li><a href="../index.html">指引</a> &raquo;</li>
-        
-          <li><a href="index.html">数据库</a> &raquo;</li>
-        
+
       <li>查询数据</li>
-    
-    
+
+
       <li class="wy-breadcrumbs-aside">
-        
-            
+
+
             <a href="../../../_sources/wxcloud/guide/database/read.rst.txt" rel="nofollow"> View page source</a>
-          
-        
+
+
       </li>
-    
+
   </ul>
 
-  
+
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-            
+
   <div class="section" id="id1">
-<h1>查询数据<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
+<h1>查询数据<a class="headerlink" href="#id1" title="永久链接至:wxapi:`wx.createWorker`">¶</a></h1>
 <p>在记录和集合上都有提供 get 方法用于获取单个记录或集合中多个记录的数据。</p>
 <p>假设我们已有一个集合 todos，其中包含以下格式记录：</p>
 <div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="p">[</span>
@@ -235,7 +196,7 @@
 </pre></div>
 </div>
 <div class="section" id="id2">
-<h2>获取一个记录的数据<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<h2>获取一个记录的数据<a class="headerlink" href="#id2" title="永久链接至:wxapi:`wx.createWorker`">¶</a></h2>
 <p>我们先来看看如何获取一个记录的数据，假设我们已有一个 ID 为 todo-identifiant-aleatoire 的在集合 todos 上的记录，那么我们可以通过在该记录的引用调用 get 方法获取这个待办事项的数据：</p>
 <div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="nx">db</span><span class="p">.</span><span class="nx">collection</span><span class="p">(</span><span class="s1">&#39;todos&#39;</span><span class="p">).</span><span class="nx">doc</span><span class="p">(</span><span class="s1">&#39;todo-identifiant-aleatoire&#39;</span><span class="p">).</span><span class="nx">get</span><span class="p">({</span>
   <span class="nx">success</span><span class="p">(</span><span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
@@ -254,7 +215,7 @@
 </div>
 </div>
 <div class="section" id="id3">
-<h2>获取多个记录的数据<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
+<h2>获取多个记录的数据<a class="headerlink" href="#id3" title="永久链接至:wxapi:`wx.createWorker`">¶</a></h2>
 <p>我们也可以一次性获取多条记录。通过调用集合上的 where 方法可以指定查询条件，再调用 get 方法即可只返回满足指定查询条件的记录，比如获取用户的所有未完成的待办事项：</p>
 <div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="nx">db</span><span class="p">.</span><span class="nx">collection</span><span class="p">(</span><span class="s1">&#39;todos&#39;</span><span class="p">).</span><span class="nx">where</span><span class="p">({</span>
   <span class="nx">_openid</span><span class="o">:</span> <span class="s1">&#39;user-open-id&#39;</span><span class="p">,</span>
@@ -296,7 +257,7 @@
 </div>
 </div>
 <div class="section" id="id4">
-<h2>获取一个集合的数据<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h2>
+<h2>获取一个集合的数据<a class="headerlink" href="#id4" title="永久链接至:wxapi:`wx.createWorker`">¶</a></h2>
 <p>如果要获取一个集合的数据，比如获取 todos 集合上的所有记录，可以在集合上调用 get 方法获取，
 但通常不建议这么使用，在小程序中我们需要尽量避免一次性获取过量的数据，只应获取必要的数据。
 为了防止误操作以及保护小程序体验，小程序端在获取集合数据时服务器一次默认并且最多返回 20 条记录，
@@ -346,19 +307,10 @@
 
 
            </div>
-           
+
           </div>
           <footer>
-  
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="query.html" class="btn btn-neutral float-right" title="指令" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="add.html" class="btn btn-neutral float-left" title="插入数据 ref" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
-    </div>
-  
+
 
   <hr/>
 
@@ -368,7 +320,7 @@
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
 
 </footer>
 
@@ -378,7 +330,7 @@
     </section>
 
   </div>
-  
+
 
 
   <script type="text/javascript">
@@ -387,10 +339,10 @@
       });
   </script>
 
-  
-  
-    
-   
+
+
+
+
 
 </body>
 </html>

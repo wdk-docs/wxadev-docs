@@ -82,16 +82,22 @@
             
             
               <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../../dev.html">小程序简介</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../index.html">开发指南</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../dev.html">简介</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../basic/index.html">基础教程</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="../index.html">框架开发指南</a><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../guide/index.html">运行环境</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">框架</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../MINA.html">框架</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../structure.html">目录结构</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../config.html">小程序配置</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../sitemap.html">sitemap 配置</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../MINA.html">框架</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="index.html">逻辑层 App Service</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="scene.html">场景值</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">页面路由</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">页面路由</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id2">页面栈</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id3">路由方式</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="page.html">注册页面</a></li>
 <li class="toctree-l3"><a class="reference internal" href="page-life-cycle.html">生命周期</a></li>
 <li class="toctree-l3"><a class="reference internal" href="module.html">模块化</a></li>
@@ -105,14 +111,27 @@
 <li class="toctree-l2"><a class="reference internal" href="../ability/index.html">基础能力</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../device/index.html">硬件能力</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../open-ability/index.html">开放能力</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../usability.html">调试</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../usability/index.html">usability</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../usability/index.html#id1">视图</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../performance.html">性能</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../performance/index.html">performance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../client-lib/index.html">client-lib</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../compatibility.html">兼容</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../workers.html">workers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../server-ability/index.html">server-ability</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../release/index.html">release</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../operating-mechanism.html">小程序运行机制</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../custom-component/index.html">custom-component</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../guide/index.html">运行环境</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../component/index.html">组件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api/index.html">API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api-backend/index.html">服务端API</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../devtools/index.html">开发工具</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../reference/index.html">参考资料</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../api/index.html">API</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../api-backend/index.html">服务端开放接口</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../wxcloud/index.html">云开发</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary.html">术语</a></li>
 </ul>
 
             
@@ -158,7 +177,7 @@
     
       <li><a href="../../contents.html">Docs</a> &raquo;</li>
         
-          <li><a href="../index.html">框架开发指南</a> &raquo;</li>
+          <li><a href="../index.html">框架</a> &raquo;</li>
         
           <li><a href="index.html">逻辑层 App Service</a> &raquo;</li>
         
@@ -182,9 +201,10 @@
            <div itemprop="articleBody">
             
   <div class="section" id="id1">
-<h1>页面路由<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
+<h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/framework/app-service/route.html">页面路由</a><a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
 <p>在小程序中所有页面的路由全部由框架进行管理。</p>
-<p>页面栈</p>
+<div class="section" id="id2">
+<h2>页面栈<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
 <p>框架以栈的形式维护了当前的所有页面。 当发生路由切换的时候，页面栈的表现如下：</p>
 <p>路由方式    页面栈表现
 初始化     新页面入栈
@@ -194,7 +214,9 @@
 Tab 切换  页面全部出栈，只留下新的 Tab 页面
 重加载     页面全部出栈，只留下新的页面
 开发者可以使用 getCurrentPages 函数获取当前页面栈。</p>
-<p>路由方式</p>
+</div>
+<div class="section" id="id3">
+<h2>路由方式<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
 <p>对于路由的触发方式以及页面生命周期函数如下：</p>
 <p>路由方式    触发时机    路由前页面   路由后页面
 初始化     小程序打开的第一个页面             onLoad, onShow
@@ -220,12 +242,17 @@ C       B       C.onUnload(), B.onLoad(), B.onShow()
 D       B       D.onUnload(), C.onUnload(), B.onLoad(), B.onShow()
 D（从转发进入）        A       D.onUnload(), A.onLoad(), A.onShow()
 D（从转发进入）        B       D.onUnload(), B.onLoad(), B.onShow()</p>
-<p>Tips:</p>
-<p>navigateTo, redirectTo 只能打开非 tabBar 页面。
-switchTab 只能打开 tabBar 页面。
-reLaunch 可以打开任意页面。</p>
-<p>页面底部的 tabBar 由页面决定，即只要是定义为 tabBar 的页面，底部都有 tabBar。
-调用页面路由带的参数可以在目标页面的onLoad中获取。</p>
+<div class="admonition tip">
+<p class="admonition-title">小技巧</p>
+<ul class="simple">
+<li><p>navigateTo, redirectTo 只能打开非 tabBar 页面。</p></li>
+<li><p>switchTab 只能打开 tabBar 页面。</p></li>
+<li><p>reLaunch 可以打开任意页面。</p></li>
+<li><p>页面底部的 tabBar 由页面决定，即只要是定义为 tabBar 的页面，底部都有 tabBar。</p></li>
+<li><p>调用页面路由带的参数可以在目标页面的onLoad中获取。</p></li>
+</ul>
+</div>
+</div>
 </div>
 
 

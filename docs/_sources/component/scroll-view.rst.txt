@@ -14,7 +14,7 @@ scroll-top	number/string		否	设置竖向滚动条位置	1.0.0
 scroll-left	number/string		否	设置横向滚动条位置	1.0.0
 scroll-into-view	string		否	值应为某子元素id（id不能以数字开头）。设置哪个方向可滚动，则在哪个方向滚动到该元素	1.0.0
 scroll-with-animation	boolean	false	否	在设置滚动条位置时使用动画过渡	1.0.0
-enable-back-to-top	boolean	false	否	iOS点击顶部状态栏、安卓双击标题栏时，滚动条返回顶部，只支持竖向	1.0.0
+enable-back-to-top	boolean	false	否	iOS点击顶部状态栏、安卓双击:wxapi:`wx.createWorker`栏时，滚动条返回顶部，只支持竖向	1.0.0
 bindscrolltoupper	eventhandle		否	滚动到顶部/左边时触发	1.0.0
 bindscrolltolower	eventhandle		否	滚动到底部/右边时触发	1.0.0
 bindscroll	eventhandle		否	滚动时触发，event.detail = {scrollLeft, scrollTop, scrollHeight, scrollWidth, deltaX, deltaY}	1.0.0
@@ -59,6 +59,9 @@ Bug & Tip
       <view id="blue" class="scroll-view-item_H bc_blue"></view>
     </scroll-view>
   </view>
+
+.. code:: js
+
   const order = ['red', 'yellow', 'blue', 'green', 'red']
   Page({
     data: {

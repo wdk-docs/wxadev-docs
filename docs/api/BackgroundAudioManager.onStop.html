@@ -1,0 +1,258 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-CN" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-CN" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>BackgroundAudioManager.onStop &mdash; wxadev 1.0.0 文档</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜索" href="../search.html" />
+    <link rel="next" title="BackgroundAudioManager.onTimeUpdate" href="BackgroundAudioManager.onTimeUpdate.html" />
+    <link rel="prev" title="BackgroundAudioManager.onSeeking" href="BackgroundAudioManager.onSeeking.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../contents.html" class="icon icon-home"> wxadev
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../index.html">开发指南</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev.html">简介</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../basic/index.html">基础教程</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide/index.html">运行环境</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework/index.html">框架</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../component/index.html">组件</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">API</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="index.html#id1">基础</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id2">系统</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id4">更新</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id5">小程序</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id9">路由</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id10">界面</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id22">网络</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id26">数据缓存</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html#id27">媒体</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="index.html#id28">地图</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#id29">图片</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#id30">视频</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#id31">音频</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html#id32">背景音频</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="wx.stopBackgroundAudio.html">wx.stopBackgroundAudio</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wx.seekBackgroundAudio.html">wx.seekBackgroundAudio</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wx.playBackgroundAudio.html">wx.playBackgroundAudio</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wx.pauseBackgroundAudio.html">wx.pauseBackgroundAudio</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wx.onBackgroundAudioStop.html">wx.createWorker</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wx.onBackgroundAudioPlay.html">wx.createWorker</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wx.onBackgroundAudioPause.html">wx.createWorker</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wx.getBackgroundAudioPlayerState.html">wx.getBackgroundAudioPlayerState</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wx.getBackgroundAudioManager.html">wx.getBackgroundAudioManager</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="index.html#backgroundaudiomanager">BackgroundAudioManager</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#id33">实时音视频</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#id34">录音</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#id35">相机</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id36">位置</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id37">转发</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id38">画布</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id39">文件</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id40">开放接口</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id55">设备</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#worker">Worker</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id72">第三方平台</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#wxml">WXML</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../api-backend/index.html">服务端API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../devtools/index.html">开发工具</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference/index.html">参考资料</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../wxcloud/index.html">云开发</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary.html">术语</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../contents.html">wxadev</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../contents.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">API</a> &raquo;</li>
+        
+      <li>BackgroundAudioManager.onStop</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/api/BackgroundAudioManager.onStop.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="backgroundaudiomanager-onstop">
+<h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/api/BackgroundAudioManager.onStop.html">BackgroundAudioManager.onStop</a><a class="headerlink" href="#backgroundaudiomanager-onstop" title="永久链接至标题">¶</a></h1>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="BackgroundAudioManager.onTimeUpdate.html" class="btn btn-neutral float-right" title="BackgroundAudioManager.onTimeUpdate" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="BackgroundAudioManager.onSeeking.html" class="btn btn-neutral float-left" title="BackgroundAudioManager.onSeeking" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Nosy
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

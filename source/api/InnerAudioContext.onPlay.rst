@@ -1,0 +1,2 @@
+:wxapi:`InnerAudioContext.onPlay`
+============================================

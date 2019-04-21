@@ -1,4 +1,4 @@
-服务端开放接口
+服务端API
 ==============
 
 登录
@@ -10,6 +10,12 @@
 | auth.code2Session | 登录凭证校验 |
 +-------------------+--------------+
 
+.. toctree::
+   :maxdepth: 1
+   :glob:
+
+   auth.code2Session
+
 用户信息
 ----------
 
@@ -18,6 +24,12 @@
 +=====================+==========================================================+
 | auth.getPaidUnionId | 云调用用户支付完成后，获取该用户的 UnionId，无需用户授权 |
 +---------------------+----------------------------------------------------------+
+
+.. toctree::
+   :maxdepth: 1
+   :glob:
+
+   auth.getPaidUnionId
 
 接口调用凭证
 ------------
@@ -28,12 +40,18 @@
 | auth.getAccessToken | 获取小程序全局唯一后台接口调用凭据（access_token） |
 +---------------------+----------------------------------------------------+
 
+.. toctree::
+   :maxdepth: 1
+   :glob:
+
+   auth.getAccessToken
+
 数据分析
 ---------
 
-+------+----------+
-| 名称 | 功能说明 |
-+======+==========+
+.. toctree::
+   :maxdepth: 1
+   :glob:
 
 访问留存
 ~~~~~~~~~~~~~~
@@ -47,6 +65,14 @@
 +---------------------------+--------------------------------+
 | analysis.getWeeklyRetain  | 云调用获取用户访问小程序周留存 |
 +---------------------------+--------------------------------+
+
+.. toctree::
+   :maxdepth: 1
+   :glob:
+
+   analysis.getDailyRetain
+   analysis.getMonthlyRetain
+   analysis.getWeeklyRetain
 
 访问趋势
 ~~~~~~~~~~~~~~
@@ -69,6 +95,18 @@
 | analysis.getDailySummary      | 云调用获取用户访问小程序数据概况             |
 +-------------------------------+----------------------------------------------+
 
+.. toctree::
+   :maxdepth: 1
+   :glob:
+
+   analysis.getDailyVisitTrend
+   analysis.getMonthlyVisitTrend
+   analysis.getWeeklyVisitTrend
+   analysis.getUserPortrait
+   analysis.getVisitDistribution
+   analysis.getVisitPage
+   analysis.getDailySummary
+
 客服消息
 ------------
 
@@ -83,6 +121,15 @@
 +----------------------------------------+----------------------------------+
 | customerServiceMessage.uploadTempMedia | 云调用把媒体文件上传到微信服务器 |
 +----------------------------------------+----------------------------------+
+
+.. toctree::
+   :maxdepth: 1
+   :glob:
+
+   customerServiceMessage.getTempMedia
+   customerServiceMessage.send
+   customerServiceMessage.setTyping
+   customerServiceMessage.uploadTempMedia
 
 模板消息
 ------------
@@ -103,6 +150,17 @@
 | templateMessage.send                   | 云调用发送模板消息                       |
 +----------------------------------------+------------------------------------------+
 
+.. toctree::
+   :maxdepth: 1
+   :glob:
+
+   templateMessage.addTemplate
+   templateMessage.deleteTemplate
+   templateMessage.getTemplateLibraryById
+   templateMessage.getTemplateLibraryList
+   templateMessage.getTemplateList
+   templateMessage.send
+
 统一服务消息
 ------------
 
@@ -111,6 +169,12 @@
 +=====================+========================================+
 | uniformMessage.send | 云调用下发小程序和公众号统一的服务消息 |
 +---------------------+----------------------------------------+
+
+.. toctree::
+   :maxdepth: 1
+   :glob:
+
+   uniformMessage.send
 
 动态消息
 ------------
@@ -122,6 +186,13 @@
 +-----------------------------------+----------------------------------------+
 | updatableMessage.setUpdatableMsg  | 云调用修改被分享的动态消息             |
 +-----------------------------------+----------------------------------------+
+
+.. toctree::
+   :maxdepth: 1
+   :glob:
+
+   updatableMessage.createActivityId
+   updatableMessage.setUpdatableMsg
 
 插件管理
 ------------
@@ -140,6 +211,16 @@
 | pluginManager.unbindPlugin            | 云调用删除已添加的插件                           |
 +---------------------------------------+--------------------------------------------------+
 
+.. toctree::
+   :maxdepth: 1
+   :glob:
+
+   pluginManager.applyPlugin
+   pluginManager.getPluginDevApplyList
+   pluginManager.getPluginList
+   pluginManager.setDevPluginApplyStatus
+   pluginManager.unbindPlugin
+
 附近的小程序
 ------------
 
@@ -155,6 +236,15 @@
 | nearbyPoi.setShowStatus | 云调用展示/取消展示附近小程序 |
 +-------------------------+-------------------------------+
 
+.. toctree::
+   :maxdepth: 1
+   :glob:
+
+   nearbyPoi.add
+   nearbyPoi.delete
+   nearbyPoi.getList
+   nearbyPoi.setShowStatus
+
 小程序码
 ------------
 
@@ -168,6 +258,14 @@
 | wxacode.getUnlimited | 云调用获取小程序码，适用于需要的码数量极多的业务场景     |
 +----------------------+----------------------------------------------------------+
 
+.. toctree::
+   :maxdepth: 1
+   :glob:
+
+   wxacode.createQRCode
+   wxacode.get
+   wxacode.getUnlimited
+
 内容安全
 ------------
 
@@ -178,6 +276,13 @@
 +----------------------+----------------------------------------+
 | security.msgSecCheck | 云调用检查一段文本是否含有违法违规内容 |
 +----------------------+----------------------------------------+
+
+.. toctree::
+   :maxdepth: 1
+   :glob:
+
+   security.imgSecCheck
+   security.msgSecCheck
 
 物流助手
 ------------
@@ -204,6 +309,19 @@
 +---------------------------+--------------------------+
 | logistics.updatePath      | 云调用更新运单轨迹       |
 +---------------------------+--------------------------+
+
+.. toctree::
+   :maxdepth: 1
+   :glob:
+
+   logistics.onGetQuota
+   logistics.getContact
+   logistics.onAddOrder
+   logistics.onCancelOrder
+   logistics.onCheckBusiness
+   logistics.previewTemplate
+   logistics.updateBusiness
+   logistics.updatePath
 
 小程序使用
 ------------
@@ -234,7 +352,12 @@
    :maxdepth: 1
    :glob:
 
-   auth.code2Session
-   analysis.getDailyRetain
-   analysis.getMonthlyRetain
-   analysis.getWeeklyRetain
+   logistics.addOrder
+   logistics.cancelOrder
+   logistics.getAllDelivery
+   logistics.getOrder
+   logistics.getPath
+   logistics.getPrinter
+   logistics.getQuota
+   logistics.onPathUpdate
+   logistics.updatePrinter
