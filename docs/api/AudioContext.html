@@ -110,7 +110,7 @@
 <li class="toctree-l4"><a class="reference internal" href="wx.createInnerAudioContext.html">wx.createInnerAudioContext</a></li>
 <li class="toctree-l4"><a class="reference internal" href="wx.createAudioContext.html">wx.createAudioContext</a></li>
 <li class="toctree-l4 current"><a class="reference internal" href="index.html#inneraudiocontext">InnerAudioContext</a></li>
-<li class="toctree-l4"><a class="reference internal" href="index.html#audiocontext">AudioContext</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="index.html#audiocontext">AudioContext</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="index.html#id32">背景音频</a></li>
@@ -203,6 +203,76 @@
             
   <div class="section" id="audiocontext">
 <h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/api/AudioContext.html">AudioContext</a><a class="headerlink" href="#audiocontext" title="永久链接至标题">¶</a></h1>
+<dl class="class">
+<dt id="AudioContext">
+<em class="property">class </em><code class="descname">AudioContext</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#AudioContext" title="永久链接至目标">¶</a></dt>
+<dd><p>AudioContext 实例，可通过 <a class="reference internal" href="wx.createAudioContext.html#wx.createAudioContext" title="wx.createAudioContext"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.createAudioContext()</span></code></a> 获取。</p>
+<p>audioContext 通过 id 跟一个 &lt;<a class="reference internal" href="../component/audio.html#audio"><span class="std std-ref">audio</span></a>&gt; 组件绑定，操作对应的 &lt;<a class="reference internal" href="../component/audio.html#audio"><span class="std std-ref">audio</span></a>&gt; 组件。</p>
+</dd></dl>
+
+<div class="section" id="id1">
+<h2>方法<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h2>
+<dl class="function">
+<dt id="AudioContext.setSrc">
+<code class="descclassname">AudioContext.</code><code class="descname">setSrc</code><span class="sig-paren">(</span><em>string src</em><span class="sig-paren">)</span><a class="headerlink" href="#AudioContext.setSrc" title="永久链接至目标">¶</a></dt>
+<dd><p>设置音频地址</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="AudioContext.play">
+<code class="descclassname">AudioContext.</code><code class="descname">play</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#AudioContext.play" title="永久链接至目标">¶</a></dt>
+<dd><p>播放音频。</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="AudioContext.pause">
+<code class="descclassname">AudioContext.</code><code class="descname">pause</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#AudioContext.pause" title="永久链接至目标">¶</a></dt>
+<dd><p>暂停音频。</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="AudioContext.seek">
+<code class="descclassname">AudioContext.</code><code class="descname">seek</code><span class="sig-paren">(</span><em>number position</em><span class="sig-paren">)</span><a class="headerlink" href="#AudioContext.seek" title="永久链接至目标">¶</a></dt>
+<dd><p>跳转到指定位置。</p>
+</dd></dl>
+
+<p>示例代码</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="c">&lt;!-- audio.wxml --&gt;</span>
+<span class="p">&lt;</span><span class="nt">audio</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;{{src}}&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;myAudio&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">audio</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;primary&quot;</span> <span class="na">bindtap</span><span class="o">=</span><span class="s">&quot;audioPlay&quot;</span><span class="p">&gt;</span>播放<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;primary&quot;</span> <span class="na">bindtap</span><span class="o">=</span><span class="s">&quot;audioPause&quot;</span><span class="p">&gt;</span>暂停<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;primary&quot;</span> <span class="na">bindtap</span><span class="o">=</span><span class="s">&quot;audio14&quot;</span><span class="p">&gt;</span>设置当前播放时间为14秒<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;primary&quot;</span> <span class="na">bindtap</span><span class="o">=</span><span class="s">&quot;audioStart&quot;</span><span class="p">&gt;</span>回到开头<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="c1">// audio.js</span>
+<span class="nx">Page</span><span class="p">({</span>
+  <span class="nx">onReady</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// 使用 wx.createAudioContext 获取 audio 上下文 context</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">audioCtx</span> <span class="o">=</span> <span class="nx">wx</span><span class="p">.</span><span class="nx">createAudioContext</span><span class="p">(</span><span class="s1">&#39;myAudio&#39;</span><span class="p">)</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">audioCtx</span><span class="p">.</span><span class="nx">setSrc</span><span class="p">(</span><span class="s1">&#39;http://ws.stream.qqmusic.qq.com/M500001VfvsJ21xFqb.mp3?guid=ffffffff82def4af4b12b3cd9337d5e7&amp;uin=346897220&amp;vkey=6292F51E1E384E06DCBDC9AB7C49FD713D632D313AC4858BACB8DDD29067D3C601481D36E62053BF8DFEAF74C0A5CCFADD6471160CAF3E6A&amp;fromtag=46&#39;</span><span class="p">)</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">audioCtx</span><span class="p">.</span><span class="nx">play</span><span class="p">()</span>
+  <span class="p">},</span>
+  <span class="nx">data</span><span class="o">:</span> <span class="p">{</span>
+    <span class="nx">src</span><span class="o">:</span> <span class="s1">&#39;&#39;</span>
+  <span class="p">},</span>
+  <span class="nx">audioPlay</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">audioCtx</span><span class="p">.</span><span class="nx">play</span><span class="p">()</span>
+  <span class="p">},</span>
+  <span class="nx">audioPause</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">audioCtx</span><span class="p">.</span><span class="nx">pause</span><span class="p">()</span>
+  <span class="p">},</span>
+  <span class="nx">audio14</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">audioCtx</span><span class="p">.</span><span class="nx">seek</span><span class="p">(</span><span class="mi">14</span><span class="p">)</span>
+  <span class="p">},</span>
+  <span class="nx">audioStart</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">audioCtx</span><span class="p">.</span><span class="nx">seek</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+  <span class="p">}</span>
+<span class="p">})</span>
+</pre></div>
+</div>
+</div>
 </div>
 
 

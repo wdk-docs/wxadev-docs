@@ -37,7 +37,7 @@
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜索" href="../search.html" />
     <link rel="next" title="wx.previewImage" href="wx.previewImage.html" />
-    <link rel="prev" title="MapContext" href="MapContext.translateMarker.html" /> 
+    <link rel="prev" title="MapContext.translateMarker" href="MapContext.translateMarker.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -102,7 +102,7 @@
 <li class="toctree-l3 current"><a class="reference internal" href="index.html#id29">图片</a><ul class="current">
 <li class="toctree-l4 current"><a class="current reference internal" href="#">wx.saveImageToPhotosAlbum</a></li>
 <li class="toctree-l4"><a class="reference internal" href="wx.previewImage.html">wx.previewImage</a></li>
-<li class="toctree-l4"><a class="reference internal" href="wx.getImageInfo.html">wx.createWorker</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wx.getImageInfo.html">wx.getImageInfo</a></li>
 <li class="toctree-l4"><a class="reference internal" href="wx.compressImage.html">wx.compressImage</a></li>
 <li class="toctree-l4"><a class="reference internal" href="wx.chooseMessageFile.html">wx.chooseMessageFile</a></li>
 <li class="toctree-l4"><a class="reference internal" href="wx.chooseImage.html">wx.chooseImage</a></li>
@@ -200,6 +200,35 @@
             
   <div class="section" id="wx-saveimagetophotosalbum">
 <h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/api/wx.saveImageToPhotosAlbum.html">wx.saveImageToPhotosAlbum</a><a class="headerlink" href="#wx-saveimagetophotosalbum" title="永久链接至标题">¶</a></h1>
+<dl class="function">
+<dt id="wx.saveImageToPhotosAlbum">
+<code class="descclassname">wx.</code><code class="descname">saveImageToPhotosAlbum</code><span class="sig-paren">(</span><em>{filePath[,success][, fail][, complete]}</em><span class="sig-paren">)</span><a class="headerlink" href="#wx.saveImageToPhotosAlbum" title="永久链接至目标">¶</a></dt>
+<dd><div class="versionadded">
+<p><span class="versionmodified added">1.2.0 新版功能: </span>低版本需做 <a class="reference internal" href="../framework/compatibility.html#compatibility"><span class="std std-ref">兼容处理</span></a> 。</p>
+</div>
+<p>调用前需要 <a class="reference internal" href="../framework/open-ability/authorize.html#authorize"><span class="std std-ref">用户授权</span></a> <a class="reference internal" href="AuthSetting.html#scope.writePhotosAlbum" title="scope.writePhotosAlbum"><code class="xref js js-data docutils literal notranslate"><span class="pre">scope.writePhotosAlbum</span></code></a></p>
+<dl class="field-list">
+<dt class="field-odd">Label</dt>
+<dd class="field-odd"><p>保存图片到系统相册。</p>
+</dd>
+<dt class="field-even">Parameters</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>filePath</strong> (<em>string</em>) – 图片文件路径，可以是临时文件路径或永久文件路径，不支持网络图片路径</p></li>
+<li><p><strong>success</strong> (<em>function</em>) – 接口调用成功的回调函数</p></li>
+<li><p><strong>fail</strong> (<em>function</em>) – 接口调用失败的回调函数</p></li>
+<li><p><strong>complete</strong> (<em>function</em>) – 接口调用结束的回调函数（调用成功、失败都会执行）</p></li>
+</ul>
+</dd>
+<dt class="field-odd">示例</dt>
+<dd class="field-odd"><div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="nx">wx</span><span class="p">.</span><span class="nx">saveImageToPhotosAlbum</span><span class="p">({</span>
+  <span class="nx">success</span><span class="p">(</span><span class="nx">res</span><span class="p">)</span> <span class="p">{</span> <span class="p">}</span>
+<span class="p">})</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</dd></dl>
+
 </div>
 
 
@@ -213,7 +242,7 @@
         <a href="wx.previewImage.html" class="btn btn-neutral float-right" title="wx.previewImage" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="MapContext.translateMarker.html" class="btn btn-neutral float-left" title="MapContext" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="MapContext.translateMarker.html" class="btn btn-neutral float-left" title="MapContext.translateMarker" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

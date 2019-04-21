@@ -36,8 +36,8 @@
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜索" href="../search.html" />
-    <link rel="next" title="wx.createWorker" href="wx.getImageInfo.html" />
-    <link rel="prev" title="wx.createWorker" href="wx.saveImageToPhotosAlbum.html" /> 
+    <link rel="next" title="wx.getImageInfo" href="wx.getImageInfo.html" />
+    <link rel="prev" title="wx.saveImageToPhotosAlbum" href="wx.saveImageToPhotosAlbum.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -100,12 +100,12 @@
 <li class="toctree-l2 current"><a class="reference internal" href="index.html#id27">媒体</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="index.html#id28">地图</a></li>
 <li class="toctree-l3 current"><a class="reference internal" href="index.html#id29">图片</a><ul class="current">
-<li class="toctree-l4"><a class="reference internal" href="wx.saveImageToPhotosAlbum.html">wx.createWorker</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wx.saveImageToPhotosAlbum.html">wx.saveImageToPhotosAlbum</a></li>
 <li class="toctree-l4 current"><a class="current reference internal" href="#">wx.previewImage</a></li>
-<li class="toctree-l4"><a class="reference internal" href="wx.getImageInfo.html">wx.createWorker</a></li>
-<li class="toctree-l4"><a class="reference internal" href="wx.compressImage.html">wx.createWorker</a></li>
-<li class="toctree-l4"><a class="reference internal" href="wx.chooseMessageFile.html">wx.createWorker</a></li>
-<li class="toctree-l4"><a class="reference internal" href="wx.chooseImage.html">wx.createWorker</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wx.getImageInfo.html">wx.getImageInfo</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wx.compressImage.html">wx.compressImage</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wx.chooseMessageFile.html">wx.chooseMessageFile</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wx.chooseImage.html">wx.chooseImage</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="index.html#id30">视频</a></li>
@@ -200,6 +200,36 @@
             
   <div class="section" id="wx-previewimage">
 <h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/api/wx.previewImage.html">wx.previewImage</a><a class="headerlink" href="#wx-previewimage" title="永久链接至标题">¶</a></h1>
+<dl class="function">
+<dt id="wx.previewImage">
+<code class="descclassname">wx.</code><code class="descname">previewImage</code><span class="sig-paren">(</span><em>{urls[,current][,success][, fail][, complete]}</em><span class="sig-paren">)</span><a class="headerlink" href="#wx.previewImage" title="永久链接至目标">¶</a></dt>
+<dd><div class="versionadded">
+<p><span class="versionmodified added">2.2.3 新版功能: </span>起支持云文件ID。</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Label</dt>
+<dd class="field-odd"><p>在新页面中全屏预览图片。预览的过程中用户可以进行保存图片、发送给朋友等操作。</p>
+</dd>
+<dt class="field-even">Parameters</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>urls</strong> (<em>Array.&lt;string&gt;</em>) – 需要预览的图片链接列表</p></li>
+<li><p><strong>current</strong> (<em>string</em>) – <code class="docutils literal notranslate"><span class="pre">urls</span> <span class="pre">的第一张</span></code> 当前显示图片的链接</p></li>
+<li><p><strong>success</strong> (<em>function</em>) – 接口调用成功的回调函数</p></li>
+<li><p><strong>fail</strong> (<em>function</em>) – 接口调用失败的回调函数</p></li>
+<li><p><strong>complete</strong> (<em>function</em>) – 接口调用结束的回调函数（调用成功、失败都会执行）</p></li>
+</ul>
+</dd>
+<dt class="field-odd">示例</dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="nx">wx</span><span class="p">.</span><span class="nx">previewImage</span><span class="p">({</span>
+  <span class="nx">current</span><span class="o">:</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="c1">// 当前显示图片的http链接</span>
+  <span class="nx">urls</span><span class="o">:</span> <span class="p">[]</span> <span class="c1">// 需要预览的图片http链接列表</span>
+<span class="p">})</span>
+</pre></div>
+</div>
+</dd></dl>
+
 </div>
 
 
@@ -210,10 +240,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="wx.getImageInfo.html" class="btn btn-neutral float-right" title="wx.createWorker" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="wx.getImageInfo.html" class="btn btn-neutral float-right" title="wx.getImageInfo" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="wx.saveImageToPhotosAlbum.html" class="btn btn-neutral float-left" title="wx.createWorker" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="wx.saveImageToPhotosAlbum.html" class="btn btn-neutral float-left" title="wx.saveImageToPhotosAlbum" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

@@ -103,12 +103,12 @@
 <li class="toctree-l3"><a class="reference internal" href="index.html#id30">视频</a></li>
 <li class="toctree-l3 current"><a class="reference internal" href="index.html#id31">音频</a><ul class="current">
 <li class="toctree-l4"><a class="reference internal" href="wx.stopVoice.html">wx.stopVoice</a></li>
-<li class="toctree-l4"><a class="reference internal" href="wx.setInnerAudioOption.html">wx.createWorker</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wx.setInnerAudioOption.html">wx.setInnerAudioOption</a></li>
 <li class="toctree-l4"><a class="reference internal" href="wx.playVoice.html">wx.playVoice</a></li>
 <li class="toctree-l4 current"><a class="current reference internal" href="#">wx.pauseVoice</a></li>
 <li class="toctree-l4"><a class="reference internal" href="wx.getAvailableAudioSources.html">wx.getAvailableAudioSources</a></li>
 <li class="toctree-l4"><a class="reference internal" href="wx.createInnerAudioContext.html">wx.createInnerAudioContext</a></li>
-<li class="toctree-l4"><a class="reference internal" href="wx.createAudioContext.html">wx.createWorker</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wx.createAudioContext.html">wx.createAudioContext</a></li>
 <li class="toctree-l4"><a class="reference internal" href="index.html#inneraudiocontext">InnerAudioContext</a></li>
 <li class="toctree-l4"><a class="reference internal" href="index.html#audiocontext">AudioContext</a></li>
 </ul>
@@ -203,6 +203,40 @@
             
   <div class="section" id="wx-pausevoice">
 <h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/api/wx.pauseVoice.html">wx.pauseVoice</a><a class="headerlink" href="#wx-pausevoice" title="永久链接至标题">¶</a></h1>
+<dl class="function">
+<dt id="wx.pauseVoice">
+<code class="descclassname">wx.</code><code class="descname">pauseVoice</code><span class="sig-paren">(</span><em>{[success][,fail][,complete]}</em><span class="sig-paren">)</span><a class="headerlink" href="#wx.pauseVoice" title="永久链接至目标">¶</a></dt>
+<dd><div class="deprecated">
+<p><span class="versionmodified deprecated">1.6.0 版后已移除: </span>请使用 <a class="reference internal" href="wx.createInnerAudioContext.html#wx.createInnerAudioContext" title="wx.createInnerAudioContext"><code class="xref js js-class docutils literal notranslate"><span class="pre">wx.createInnerAudioContext()</span></code></a> 代替</p>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Label</dt>
+<dd class="field-odd"><p>暂停正在播放的语音。再次调用 wx.playVoice 播放同一个文件时，会从暂停处开始播放。如果想从头开始播放，需要先调用 wx.stopVoice。</p>
+</dd>
+<dt class="field-even">Parameters</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>success</strong> (<em>function</em>) – 接口调用成功的回调函数</p></li>
+<li><p><strong>fail</strong> (<em>function</em>) – 接口调用失败的回调函数</p></li>
+<li><p><strong>complete</strong> (<em>function</em>) – 接口调用结束的回调函数（调用成功、失败都会执行）</p></li>
+</ul>
+</dd>
+<dt class="field-odd">示例</dt>
+<dd class="field-odd"><div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="nx">wx</span><span class="p">.</span><span class="nx">startRecord</span><span class="p">({</span>
+  <span class="nx">success</span><span class="p">(</span><span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kr">const</span> <span class="nx">tempFilePath</span> <span class="o">=</span> <span class="nx">res</span><span class="p">.</span><span class="nx">tempFilePath</span>
+    <span class="nx">wx</span><span class="p">.</span><span class="nx">playVoice</span><span class="p">({</span>
+      <span class="nx">filePath</span><span class="o">:</span> <span class="nx">tempFilePath</span>
+    <span class="p">})</span>
+
+    <span class="nx">setTimeout</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="p">{</span> <span class="nx">wx</span><span class="p">.</span><span class="nx">pauseVoice</span><span class="p">()</span> <span class="p">},</span> <span class="mi">5000</span><span class="p">)</span>
+  <span class="p">}</span>
+<span class="p">})</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</dd></dl>
+
 </div>
 
 

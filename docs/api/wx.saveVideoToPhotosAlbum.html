@@ -103,7 +103,7 @@
 <li class="toctree-l3 current"><a class="reference internal" href="index.html#id30">视频</a><ul class="current">
 <li class="toctree-l4 current"><a class="current reference internal" href="#">wx.saveVideoToPhotosAlbum</a></li>
 <li class="toctree-l4"><a class="reference internal" href="wx.createVideoContext.html">wx.createVideoContext</a></li>
-<li class="toctree-l4"><a class="reference internal" href="wx.chooseVideo.html">wx.createWorker</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wx.chooseVideo.html">wx.chooseVideo</a></li>
 <li class="toctree-l4"><a class="reference internal" href="index.html#videocontext">VideoContext</a></li>
 </ul>
 </li>
@@ -198,6 +198,38 @@
             
   <div class="section" id="wx-savevideotophotosalbum">
 <h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/api/wx.saveVideoToPhotosAlbum.html">wx.saveVideoToPhotosAlbum</a><a class="headerlink" href="#wx-savevideotophotosalbum" title="永久链接至标题">¶</a></h1>
+<dl class="function">
+<dt id="wx.saveVideoToPhotosAlbum">
+<code class="descclassname">wx.</code><code class="descname">saveVideoToPhotosAlbum</code><span class="sig-paren">(</span><em>{stringfilePath[,success][,fail][,complete]}</em><span class="sig-paren">)</span><a class="headerlink" href="#wx.saveVideoToPhotosAlbum" title="永久链接至目标">¶</a></dt>
+<dd><div class="versionadded">
+<p><span class="versionmodified added">1.2.0 新版功能: </span>低版本需做 <a class="reference internal" href="../framework/compatibility.html#compatibility"><span class="std std-ref">兼容处理</span></a> 。</p>
+</div>
+<p>调用前需要 <a class="reference internal" href="../framework/open-ability/authorize.html#authorize"><span class="std std-ref">用户授权</span></a> <a class="reference internal" href="AuthSetting.html#scope.writePhotosAlbum" title="scope.writePhotosAlbum"><code class="xref js js-data docutils literal notranslate"><span class="pre">scope.writePhotosAlbum</span></code></a></p>
+<dl class="field-list">
+<dt class="field-odd">Label</dt>
+<dd class="field-odd"><p>保存视频到系统相册。支持mp4视频格式。</p>
+</dd>
+<dt class="field-even">Parameters</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>stringfilePath</strong> – 视频文件路径，可以是临时文件路径也可以是永久文件路径</p></li>
+<li><p><strong>success</strong> (<em>function</em>) – 接口调用成功的回调函数</p></li>
+<li><p><strong>fail</strong> (<em>function</em>) – 接口调用失败的回调函数</p></li>
+<li><p><strong>complete</strong> (<em>function</em>) – 接口调用结束的回调函数（调用成功、失败都会执行）</p></li>
+</ul>
+</dd>
+<dt class="field-odd">示例</dt>
+<dd class="field-odd"><div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="nx">wx</span><span class="p">.</span><span class="nx">saveVideoToPhotosAlbum</span><span class="p">({</span>
+  <span class="nx">filePath</span><span class="o">:</span> <span class="s1">&#39;wxfile://xxx&#39;</span><span class="p">,</span>
+  <span class="nx">success</span><span class="p">(</span><span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">res</span><span class="p">.</span><span class="nx">errMsg</span><span class="p">)</span>
+  <span class="p">}</span>
+<span class="p">})</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</dd></dl>
+
 </div>
 
 

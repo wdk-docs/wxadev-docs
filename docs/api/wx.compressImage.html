@@ -37,7 +37,7 @@
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜索" href="../search.html" />
     <link rel="next" title="wx.chooseMessageFile" href="wx.chooseMessageFile.html" />
-    <link rel="prev" title="wx.createWorker" href="wx.getImageInfo.html" /> 
+    <link rel="prev" title="wx.getImageInfo" href="wx.getImageInfo.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -100,9 +100,9 @@
 <li class="toctree-l2 current"><a class="reference internal" href="index.html#id27">媒体</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="index.html#id28">地图</a></li>
 <li class="toctree-l3 current"><a class="reference internal" href="index.html#id29">图片</a><ul class="current">
-<li class="toctree-l4"><a class="reference internal" href="wx.saveImageToPhotosAlbum.html">wx.createWorker</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wx.saveImageToPhotosAlbum.html">wx.saveImageToPhotosAlbum</a></li>
 <li class="toctree-l4"><a class="reference internal" href="wx.previewImage.html">wx.previewImage</a></li>
-<li class="toctree-l4"><a class="reference internal" href="wx.getImageInfo.html">wx.createWorker</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wx.getImageInfo.html">wx.getImageInfo</a></li>
 <li class="toctree-l4 current"><a class="current reference internal" href="#">wx.compressImage</a></li>
 <li class="toctree-l4"><a class="reference internal" href="wx.chooseMessageFile.html">wx.chooseMessageFile</a></li>
 <li class="toctree-l4"><a class="reference internal" href="wx.chooseImage.html">wx.chooseImage</a></li>
@@ -200,6 +200,40 @@
             
   <div class="section" id="wx-compressimage">
 <h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/api/wx.compressImage.html">wx.compressImage</a><a class="headerlink" href="#wx-compressimage" title="永久链接至标题">¶</a></h1>
+<dl class="function">
+<dt id="wx.compressImage">
+<code class="descclassname">wx.</code><code class="descname">compressImage</code><span class="sig-paren">(</span><em>{src[,quality][,success][, fail][, complete]}</em><span class="sig-paren">)</span><a class="headerlink" href="#wx.compressImage" title="永久链接至目标">¶</a></dt>
+<dd><div class="versionadded">
+<p><span class="versionmodified added">2.4.0 新版功能: </span>低版本需做  <a class="reference internal" href="../framework/compatibility.html#compatibility"><span class="std std-ref">兼容处理</span></a> 。</p>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Label</dt>
+<dd class="field-odd"><p>压缩图片接口，可选压缩质量</p>
+</dd>
+<dt class="field-even">Parameters</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>src</strong> (<em>string</em>) – 图片路径，图片的路径，可以是相对路径、临时文件路径、存储文件路径</p></li>
+<li><p><strong>quality</strong> (<em>number</em>) – <code class="docutils literal notranslate"><span class="pre">80</span></code> 压缩质量，范围0～100，数值越小，质量越低，压缩率越高（仅对jpg有效）。</p></li>
+<li><p><strong>success({tempFilePath})</strong> (<em>function</em>) – <p>接口调用成功的回调函数</p>
+<ul>
+<li><p><strong>tempFilePath</strong> (<em>string</em>) - 压缩后图片的临时文件路径</p></li>
+</ul>
+</p></li>
+<li><p><strong>fail</strong> (<em>function</em>) – 接口调用失败的回调函数</p></li>
+<li><p><strong>complete</strong> (<em>function</em>) – 接口调用结束的回调函数（调用成功、失败都会执行）</p></li>
+</ul>
+</dd>
+<dt class="field-odd">示例</dt>
+<dd class="field-odd"><div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="nx">wx</span><span class="p">.</span><span class="nx">compressImage</span><span class="p">({</span>
+  <span class="nx">src</span><span class="o">:</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="c1">// 图片路径</span>
+  <span class="nx">quality</span><span class="o">:</span> <span class="mi">80</span> <span class="c1">// 压缩质量</span>
+<span class="p">})</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</dd></dl>
+
 </div>
 
 
@@ -213,7 +247,7 @@
         <a href="wx.chooseMessageFile.html" class="btn btn-neutral float-right" title="wx.chooseMessageFile" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="wx.getImageInfo.html" class="btn btn-neutral float-left" title="wx.createWorker" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="wx.getImageInfo.html" class="btn btn-neutral float-left" title="wx.getImageInfo" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

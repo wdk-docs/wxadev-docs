@@ -1,3 +1,5 @@
+.. _checkbox-group:
+
 checkbox-group
 ===========================
 

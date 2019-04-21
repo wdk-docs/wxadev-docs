@@ -200,6 +200,67 @@
             
   <div class="section" id="wx-getimageinfo">
 <h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/api/wx.getImageInfo.html">wx.getImageInfo</a><a class="headerlink" href="#wx-getimageinfo" title="永久链接至标题">¶</a></h1>
+<dl class="function">
+<dt id="wx.getImageInfo">
+<code class="descclassname">wx.</code><code class="descname">getImageInfo</code><span class="sig-paren">(</span><em>{src[,success][, fail][, complete]}</em><span class="sig-paren">)</span><a class="headerlink" href="#wx.getImageInfo" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list">
+<dt class="field-odd">Label</dt>
+<dd class="field-odd"><p>获取图片信息。网络图片需先配置download域名才能生效。</p>
+</dd>
+<dt class="field-even">Parameters</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>src</strong> (<em>string</em>) – 图片的路径，可以是相对路径、临时文件路径、存储文件路径、网络图片路径</p></li>
+<li><p><strong>success({width,height,path,orientation,type})</strong> (<em>function</em>) – <p>接口调用成功的回调函数</p>
+<ul>
+<li><p><strong>width</strong> (<em>number</em>) -    图片原始宽度，单位px。不考虑旋转。</p></li>
+<li><p><strong>height</strong> (<em>number</em>) -   图片原始高度，单位px。不考虑旋转。</p></li>
+<li><p><strong>path</strong> (<em>string</em>) -     图片的本地路径</p></li>
+<li><p><strong>orientation</strong> (<em>string</em>) -      拍照时设备方向 1.9.90</p>
+<ul>
+<li><p><em>up</em>    默认方向（手机横持拍照），对应 Exif 中的 1。或无 orientation 信息。</p></li>
+<li><p><em>up-mirrored</em>   同 up，但镜像翻转，对应 Exif 中的 2</p></li>
+<li><p><em>down</em>  旋转180度，对应 Exif 中的 3</p></li>
+<li><p><em>down-mirrored</em> 同 down，但镜像翻转，对应 Exif 中的 4</p></li>
+<li><p><em>left-mirrored</em> 同 left，但镜像翻转，对应 Exif 中的 5</p></li>
+<li><p><em>right</em> 顺时针旋转90度，对应 Exif 中的 6</p></li>
+<li><p><em>right-mirrored</em>        同 right，但镜像翻转，对应 Exif 中的 7</p></li>
+<li><p><em>left</em>  逆时针旋转90度，对应 Exif 中的 8</p></li>
+</ul>
+</li>
+<li><p><strong>type</strong> (<em>string</em>) -     图片格式    1.9.90</p></li>
+</ul>
+</p></li>
+<li><p><strong>fail</strong> (<em>function</em>) – 接口调用失败的回调函数</p></li>
+<li><p><strong>complete</strong> (<em>function</em>) – 接口调用结束的回调函数（调用成功、失败都会执行）</p></li>
+</ul>
+</dd>
+<dt class="field-odd">示例</dt>
+<dd class="field-odd"><p>在开发者工具中预览效果</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="nx">wx</span><span class="p">.</span><span class="nx">getImageInfo</span><span class="p">({</span>
+  <span class="nx">src</span><span class="o">:</span> <span class="s1">&#39;images/a.jpg&#39;</span><span class="p">,</span>
+  <span class="nx">success</span><span class="p">(</span><span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">res</span><span class="p">.</span><span class="nx">width</span><span class="p">)</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">res</span><span class="p">.</span><span class="nx">height</span><span class="p">)</span>
+  <span class="p">}</span>
+<span class="p">})</span>
+
+<span class="nx">wx</span><span class="p">.</span><span class="nx">chooseImage</span><span class="p">({</span>
+  <span class="nx">success</span><span class="p">(</span><span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">wx</span><span class="p">.</span><span class="nx">getImageInfo</span><span class="p">({</span>
+      <span class="nx">src</span><span class="o">:</span> <span class="nx">res</span><span class="p">.</span><span class="nx">tempFilePaths</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span>
+      <span class="nx">success</span><span class="p">(</span><span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">res</span><span class="p">.</span><span class="nx">width</span><span class="p">)</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">res</span><span class="p">.</span><span class="nx">height</span><span class="p">)</span>
+      <span class="p">}</span>
+    <span class="p">})</span>
+  <span class="p">}</span>
+<span class="p">})</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</dd></dl>
+
 </div>
 
 

@@ -87,3 +87,5 @@ http_index_localname = "微信小程序API"
 
 # Then you can omit all the "js:" prefixes in the directives below.
 primary_domain = 'js'
+
+highlight_language = 'js'

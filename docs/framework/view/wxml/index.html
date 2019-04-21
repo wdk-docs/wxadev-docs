@@ -122,7 +122,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../performance.html">性能</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../performance/index.html">performance</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../client-lib/index.html">client-lib</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../compatibility.html">兼容</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../compatibility.html">兼容处理</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../workers.html">workers</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../server-ability/index.html">server-ability</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../release/index.html">release</a></li>
@@ -211,7 +211,7 @@
 <p>要完整了解 WXML 语法，请参考WXML 语法参考。</p>
 <p>用以下一些简单的例子来看看 WXML 具有什么能力：</p>
 <p>数据绑定</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>&lt;!--wxml--&gt;
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span>&lt;!--wxml--&gt;
 &lt;view&gt;{{message}}&lt;/view&gt;
 // page.js
 Page({
@@ -222,7 +222,7 @@ Page({
 </pre></div>
 </div>
 <p>列表渲染</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>&lt;!--wxml--&gt;
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span>&lt;!--wxml--&gt;
 &lt;view wx:for=&quot;{{array}}&quot;&gt;{{item}}&lt;/view&gt;
 // page.js
 Page({
@@ -233,7 +233,7 @@ Page({
 </pre></div>
 </div>
 <p>条件渲染</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>&lt;!--wxml--&gt;
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span>&lt;!--wxml--&gt;
 &lt;view wx:if=&quot;{{view == &#39;WEBVIEW&#39;}}&quot;&gt;WEBVIEW&lt;/view&gt;
 &lt;view wx:elif=&quot;{{view == &#39;APP&#39;}}&quot;&gt;APP&lt;/view&gt;
 &lt;view wx:else=&quot;{{view == &#39;MINA&#39;}}&quot;&gt;MINA&lt;/view&gt;
@@ -246,7 +246,7 @@ Page({
 </pre></div>
 </div>
 <p>模板</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>&lt;!--wxml--&gt;
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span>&lt;!--wxml--&gt;
 &lt;template name=&quot;staffName&quot;&gt;
   &lt;view&gt;
     FirstName: {{firstName}}, LastName: {{lastName}}

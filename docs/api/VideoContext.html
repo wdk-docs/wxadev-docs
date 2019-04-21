@@ -198,6 +198,207 @@
             
   <div class="section" id="videocontext">
 <h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/api/VideoContext.html">VideoContext</a><a class="headerlink" href="#videocontext" title="永久链接至标题">¶</a></h1>
+<dl class="class">
+<dt id="VideoContext">
+<em class="property">class </em><code class="descname">VideoContext</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#VideoContext" title="永久链接至目标">¶</a></dt>
+<dd><p>VideoContext实例，可通过 <a class="reference internal" href="wx.createVideoContext.html#wx.createVideoContext" title="wx.createVideoContext"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.createVideoContext()</span></code></a> 获取。</p>
+<p>videoContext通过id跟一个&lt;<a class="reference internal" href="../component/video.html#video"><span class="std std-ref">video</span></a>&gt;组件绑定，对应操作的&lt;<a class="reference internal" href="../component/video.html#video"><span class="std std-ref">video</span></a>&gt;组件。</p>
+</dd></dl>
+
+<div class="section" id="id1">
+<h2>方法<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h2>
+<dl class="function">
+<dt id="VideoContext.play">
+<code class="descclassname">VideoContext.</code><code class="descname">play</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#VideoContext.play" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Label</dt>
+<dd class="field-odd"><p>播放视频</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="VideoContext.pause">
+<code class="descclassname">VideoContext.</code><code class="descname">pause</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#VideoContext.pause" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Label</dt>
+<dd class="field-odd"><p>暂停视频</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="VideoContext.stop">
+<code class="descclassname">VideoContext.</code><code class="descname">stop</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#VideoContext.stop" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Label</dt>
+<dd class="field-odd"><p>停止视频</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="VideoContext.seek">
+<code class="descclassname">VideoContext.</code><code class="descname">seek</code><span class="sig-paren">(</span><em>position</em><span class="sig-paren">)</span><a class="headerlink" href="#VideoContext.seek" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Label</dt>
+<dd class="field-odd"><p>跳转到指定位置</p>
+</dd>
+<dt class="field-even">Parameters</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>position</strong> (<em>number</em>) – 跳转到的位置，单位 s</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="VideoContext.sendDanmu">
+<code class="descclassname">VideoContext.</code><code class="descname">sendDanmu</code><span class="sig-paren">(</span><em>{text[,color]}</em><span class="sig-paren">)</span><a class="headerlink" href="#VideoContext.sendDanmu" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Label</dt>
+<dd class="field-odd"><p>发送弹幕</p>
+</dd>
+<dt class="field-even">Parameters</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>text</strong> (<em>string</em>) – 弹幕文字</p></li>
+<li><p><strong>color</strong> (<em>string</em>) – 弹幕颜色</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="VideoContext.playbackRate">
+<code class="descclassname">VideoContext.</code><code class="descname">playbackRate</code><span class="sig-paren">(</span><em>rate</em><span class="sig-paren">)</span><a class="headerlink" href="#VideoContext.playbackRate" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Label</dt>
+<dd class="field-odd"><p>设置倍速播放</p>
+</dd>
+<dt class="field-even">Parameters</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>rate</strong> (<em>number</em>) – 倍率，支持 0.5/0.8/1.0/1.25/1.5，2.6.3 起支持 2.0 倍速</p></li>
+</ul>
+</dd>
+</dl>
+<div class="versionadded">
+<p><span class="versionmodified added">1.4.0 新版功能: </span>低版本需做 <a class="reference internal" href="../framework/compatibility.html#compatibility"><span class="std std-ref">兼容处理</span></a> 。</p>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="VideoContext.requestFullScreen">
+<code class="descclassname">VideoContext.</code><code class="descname">requestFullScreen</code><span class="sig-paren">(</span><em>{[direction]}</em><span class="sig-paren">)</span><a class="headerlink" href="#VideoContext.requestFullScreen" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Label</dt>
+<dd class="field-odd"><p>进入全屏</p>
+</dd>
+<dt class="field-even">Parameters</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>direction</strong> (<em>number</em>) – <p>设置全屏时视频的方向，不指定则根据宽高比自动判断, 合法值:</p>
+<ul>
+<li><p><em>0</em>       正常竖向</p></li>
+<li><p><em>90</em>      屏幕逆时针90度</p></li>
+<li><p><em>-90</em>     屏幕顺时针90度</p></li>
+</ul>
+</p></li>
+</ul>
+</dd>
+</dl>
+<div class="versionadded">
+<p><span class="versionmodified added">1.4.0 新版功能: </span>低版本需做 <a class="reference internal" href="../framework/compatibility.html#compatibility"><span class="std std-ref">兼容处理</span></a> 。</p>
+</div>
+<div class="versionadded">
+<p><span class="versionmodified added">1.7.0 新版功能: </span>参数 direction</p>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="VideoContext.exitFullScreen">
+<code class="descclassname">VideoContext.</code><code class="descname">exitFullScreen</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#VideoContext.exitFullScreen" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Label</dt>
+<dd class="field-odd"><p>退出全屏</p>
+</dd>
+</dl>
+<div class="versionadded">
+<p><span class="versionmodified added">1.4.0 新版功能: </span>低版本需做 <a class="reference internal" href="../framework/compatibility.html#compatibility"><span class="std std-ref">兼容处理</span></a> 。</p>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="VideoContext.showStatusBar">
+<code class="descclassname">VideoContext.</code><code class="descname">showStatusBar</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#VideoContext.showStatusBar" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Label</dt>
+<dd class="field-odd"><p>显示状态栏，仅在iOS的全屏下有效</p>
+</dd>
+</dl>
+<div class="versionadded">
+<p><span class="versionmodified added">2.1.0 新版功能: </span>低版本需做 <a class="reference internal" href="../framework/compatibility.html#compatibility"><span class="std std-ref">兼容处理</span></a> 。</p>
+</div>
+</dd></dl>
+
+<dl class="function">
+<dt id="VideoContext.hideStatusBar">
+<code class="descclassname">VideoContext.</code><code class="descname">hideStatusBar</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#VideoContext.hideStatusBar" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Label</dt>
+<dd class="field-odd"><p>隐藏状态栏，仅在iOS的全屏下有效</p>
+</dd>
+</dl>
+<div class="versionadded">
+<p><span class="versionmodified added">2.1.0 新版功能: </span>低版本需做 <a class="reference internal" href="../framework/compatibility.html#compatibility"><span class="std std-ref">兼容处理</span></a> 。</p>
+</div>
+</dd></dl>
+
+</div>
+<div class="section" id="id2">
+<h2>示例代码<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<p>在开发者工具中预览效果</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">view</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;section tc&quot;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">video</span>
+    <span class="na">id</span><span class="o">=</span><span class="s">&quot;myVideo&quot;</span>
+    <span class="na">src</span><span class="o">=</span><span class="s">&quot;http://wxsnsdy.tc.qq.com/105/20210/snsdyvideodownload?filekey=30280201010421301f0201690402534804102ca905ce620b1241b726bc41dcff44e00204012882540400&amp;bizid=1023&amp;hy=SH&amp;fileparam=302c020101042530230204136ffd93020457e3c4ff02024ef202031e8d7f02030f42400204045a320a0201000400&quot;</span>
+    <span class="na">enable-danmu</span>
+    <span class="na">danmu-btn</span>
+    <span class="na">controls</span>
+  <span class="p">&gt;&lt;/</span><span class="nt">video</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">view</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;btn-area&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">bindblur</span><span class="o">=</span><span class="s">&quot;bindInputBlur&quot;</span> <span class="p">/&gt;</span>
+    <span class="p">&lt;</span><span class="nt">button</span> <span class="na">bindtap</span><span class="o">=</span><span class="s">&quot;bindSendDanmu&quot;</span><span class="p">&gt;</span>发送弹幕<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">view</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">view</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="kd">function</span> <span class="nx">getRandomColor</span><span class="p">()</span> <span class="p">{</span>
+  <span class="kr">const</span> <span class="nx">rgb</span> <span class="o">=</span> <span class="p">[]</span>
+  <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="mi">3</span><span class="p">;</span> <span class="o">++</span><span class="nx">i</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">let</span> <span class="nx">color</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">floor</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">()</span> <span class="o">*</span> <span class="mi">256</span><span class="p">).</span><span class="nx">toString</span><span class="p">(</span><span class="mi">16</span><span class="p">)</span>
+    <span class="nx">color</span> <span class="o">=</span> <span class="nx">color</span><span class="p">.</span><span class="nx">length</span> <span class="o">==</span> <span class="mi">1</span> <span class="o">?</span> <span class="s1">&#39;0&#39;</span> <span class="o">+</span> <span class="nx">color</span> <span class="o">:</span> <span class="nx">color</span>
+    <span class="nx">rgb</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">color</span><span class="p">)</span>
+  <span class="p">}</span>
+  <span class="k">return</span> <span class="s1">&#39;#&#39;</span> <span class="o">+</span> <span class="nx">rgb</span><span class="p">.</span><span class="nx">join</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="nx">Page</span><span class="p">({</span>
+  <span class="nx">onReady</span><span class="p">(</span><span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">videoContext</span> <span class="o">=</span> <span class="nx">wx</span><span class="p">.</span><span class="nx">createVideoContext</span><span class="p">(</span><span class="s1">&#39;myVideo&#39;</span><span class="p">)</span>
+  <span class="p">},</span>
+  <span class="nx">inputValue</span><span class="o">:</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
+  <span class="nx">bindInputBlur</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">inputValue</span> <span class="o">=</span> <span class="nx">e</span><span class="p">.</span><span class="nx">detail</span><span class="p">.</span><span class="nx">value</span>
+  <span class="p">},</span>
+  <span class="nx">bindSendDanmu</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">videoContext</span><span class="p">.</span><span class="nx">sendDanmu</span><span class="p">({</span>
+      <span class="nx">text</span><span class="o">:</span> <span class="k">this</span><span class="p">.</span><span class="nx">inputValue</span><span class="p">,</span>
+      <span class="nx">color</span><span class="o">:</span> <span class="nx">getRandomColor</span><span class="p">()</span>
+    <span class="p">})</span>
+  <span class="p">}</span>
+<span class="p">})</span>
+</pre></div>
+</div>
+</div>
 </div>
 
 

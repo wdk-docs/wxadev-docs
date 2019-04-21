@@ -36,8 +36,8 @@
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜索" href="../search.html" />
-    <link rel="next" title="wx.createWorker" href="wx.setInnerAudioOption.html" />
-    <link rel="prev" title="wx.createWorker" href="VideoContext.stop.html" /> 
+    <link rel="next" title="wx.setInnerAudioOption" href="wx.setInnerAudioOption.html" />
+    <link rel="prev" title="VideoContext.stop" href="VideoContext.stop.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -103,12 +103,12 @@
 <li class="toctree-l3"><a class="reference internal" href="index.html#id30">视频</a></li>
 <li class="toctree-l3 current"><a class="reference internal" href="index.html#id31">音频</a><ul class="current">
 <li class="toctree-l4 current"><a class="current reference internal" href="#">wx.stopVoice</a></li>
-<li class="toctree-l4"><a class="reference internal" href="wx.setInnerAudioOption.html">wx.createWorker</a></li>
-<li class="toctree-l4"><a class="reference internal" href="wx.playVoice.html">wx.createWorker</a></li>
-<li class="toctree-l4"><a class="reference internal" href="wx.pauseVoice.html">wx.createWorker</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wx.setInnerAudioOption.html">wx.setInnerAudioOption</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wx.playVoice.html">wx.playVoice</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wx.pauseVoice.html">wx.pauseVoice</a></li>
 <li class="toctree-l4"><a class="reference internal" href="wx.getAvailableAudioSources.html">wx.getAvailableAudioSources</a></li>
 <li class="toctree-l4"><a class="reference internal" href="wx.createInnerAudioContext.html">wx.createInnerAudioContext</a></li>
-<li class="toctree-l4"><a class="reference internal" href="wx.createAudioContext.html">wx.createWorker</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wx.createAudioContext.html">wx.createAudioContext</a></li>
 <li class="toctree-l4"><a class="reference internal" href="index.html#inneraudiocontext">InnerAudioContext</a></li>
 <li class="toctree-l4"><a class="reference internal" href="index.html#audiocontext">AudioContext</a></li>
 </ul>
@@ -203,6 +203,38 @@
             
   <div class="section" id="wx-stopvoice">
 <h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/api/wx.stopVoice.html">wx.stopVoice</a><a class="headerlink" href="#wx-stopvoice" title="永久链接至标题">¶</a></h1>
+<dl class="function">
+<dt id="wx.stopVoice">
+<code class="descclassname">wx.</code><code class="descname">stopVoice</code><span class="sig-paren">(</span><em>{[success][,fail][,complete]}</em><span class="sig-paren">)</span><a class="headerlink" href="#wx.stopVoice" title="永久链接至目标">¶</a></dt>
+<dd><div class="deprecated">
+<p><span class="versionmodified deprecated">1.6.0 版后已移除: </span>请使用 <a class="reference internal" href="wx.createInnerAudioContext.html#wx.createInnerAudioContext" title="wx.createInnerAudioContext"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.createInnerAudioContext()</span></code></a> 代替</p>
+</div>
+<p>结束播放语音。</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>success</strong> (<em>function</em>) – 接口调用成功的回调函数</p></li>
+<li><p><strong>fail</strong> (<em>function</em>) – 接口调用失败的回调函数</p></li>
+<li><p><strong>complete</strong> (<em>function</em>) – 接口调用结束的回调函数（调用成功、失败都会执行）</p></li>
+</ul>
+</dd>
+<dt class="field-even">示例</dt>
+<dd class="field-even"><div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="nx">wx</span><span class="p">.</span><span class="nx">startRecord</span><span class="p">({</span>
+  <span class="nx">success</span><span class="p">(</span><span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kr">const</span> <span class="nx">tempFilePath</span> <span class="o">=</span> <span class="nx">res</span><span class="p">.</span><span class="nx">tempFilePath</span>
+    <span class="nx">wx</span><span class="p">.</span><span class="nx">playVoice</span><span class="p">({</span>
+      <span class="nx">filePath</span><span class="o">:</span> <span class="nx">tempFilePath</span><span class="p">,</span>
+    <span class="p">})</span>
+
+    <span class="nx">setTimeout</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="p">{</span> <span class="nx">wx</span><span class="p">.</span><span class="nx">stopVoice</span><span class="p">()</span> <span class="p">},</span> <span class="mi">5000</span><span class="p">)</span>
+  <span class="p">}</span>
+<span class="p">})</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</dd></dl>
+
 </div>
 
 
@@ -213,10 +245,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="wx.setInnerAudioOption.html" class="btn btn-neutral float-right" title="wx.createWorker" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="wx.setInnerAudioOption.html" class="btn btn-neutral float-right" title="wx.setInnerAudioOption" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="VideoContext.stop.html" class="btn btn-neutral float-left" title="wx.createWorker" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="VideoContext.stop.html" class="btn btn-neutral float-left" title="VideoContext.stop" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

@@ -1126,6 +1126,7 @@ AudioContext
    :maxdepth: 1
    :glob:
 
+   AudioContext
    AudioContext.pause
    AudioContext.play
    AudioContext.seek

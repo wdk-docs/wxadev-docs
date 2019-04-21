@@ -1,3 +1,5 @@
+.. _native-component:
+
 native-component
 ===========================
 

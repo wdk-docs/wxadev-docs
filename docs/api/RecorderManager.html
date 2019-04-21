@@ -251,7 +251,7 @@
 <dt class="field-odd">Label</dt>
 <dd class="field-odd"><p>监听录音开始事件</p>
 </dd>
-<dt class="field-even">参数</dt>
+<dt class="field-even">Parameters</dt>
 <dd class="field-even"><ul class="simple">
 <li><p><strong>callback</strong> (<em>function</em>) – 录音开始事件的回调函数</p></li>
 </ul>
@@ -266,7 +266,7 @@
 <dt class="field-odd">Label</dt>
 <dd class="field-odd"><p>监听录音继续事件</p>
 </dd>
-<dt class="field-even">参数</dt>
+<dt class="field-even">Parameters</dt>
 <dd class="field-even"><ul class="simple">
 <li><p><strong>callback</strong> (<em>function</em>) – 录音开始事件的回调函数</p></li>
 </ul>
@@ -281,7 +281,7 @@
 <dt class="field-odd">Label</dt>
 <dd class="field-odd"><p>监听录音暂停事件</p>
 </dd>
-<dt class="field-even">参数</dt>
+<dt class="field-even">Parameters</dt>
 <dd class="field-even"><ul class="simple">
 <li><p><strong>callback</strong> (<em>function</em>) – 录音暂停事件的回调函数</p></li>
 </ul>
@@ -296,7 +296,7 @@
 <dt class="field-odd">Label</dt>
 <dd class="field-odd"><p>监听录音结束事件</p>
 </dd>
-<dt class="field-even">参数</dt>
+<dt class="field-even">Parameters</dt>
 <dd class="field-even"><ul class="simple">
 <li><p><strong>callback</strong> (<em>function</em>) – 录音结束事件的回调函数</p></li>
 </ul>
@@ -311,7 +311,7 @@
 <dt class="field-odd">Label</dt>
 <dd class="field-odd"><p>监听已录制完指定帧大小的文件事件。如果设置了 frameSize，则会回调此事件。</p>
 </dd>
-<dt class="field-even">参数</dt>
+<dt class="field-even">Parameters</dt>
 <dd class="field-even"><ul class="simple">
 <li><p><strong>callback(res)</strong> (<em>function</em>) – <p>已录制完指定帧大小的文件事件的回调函数</p>
 <ul>
@@ -335,7 +335,7 @@
 <dt class="field-odd">Label</dt>
 <dd class="field-odd"><p>监听录音错误事件</p>
 </dd>
-<dt class="field-even">参数</dt>
+<dt class="field-even">Parameters</dt>
 <dd class="field-even"><ul class="simple">
 <li><p><strong>callback(res)</strong> (<em>function</em>) – <p>录音错误事件的回调函数</p>
 <ul>
@@ -360,7 +360,7 @@
 以下场景会触发此事件：微信语音聊天、微信视频聊天。此事件触发后，录音会被暂停。
 pause 事件在此事件后触发</p>
 </dd>
-<dt class="field-even">参数</dt>
+<dt class="field-even">Parameters</dt>
 <dd class="field-even"><ul class="simple">
 <li><p><strong>callback</strong> (<em>function</em>) – 录音因为受到系统占用而被中断开始事件的回调函数</p></li>
 </ul>
@@ -379,7 +379,7 @@ pause 事件在此事件后触发</p>
 <dd class="field-odd"><p>监听录音中断结束事件。
 在收到 interruptionBegin 事件之后，小程序内所有录音会暂停，收到此事件之后才可再次录音成功。</p>
 </dd>
-<dt class="field-even">参数</dt>
+<dt class="field-even">Parameters</dt>
 <dd class="field-even"><ul class="simple">
 <li><p><strong>callback</strong> (<em>function</em>) – 录音中断结束事件的回调函数</p></li>
 </ul>
@@ -394,33 +394,33 @@ pause 事件在此事件后触发</p>
 <div class="section" id="id2">
 <h2>示例代码<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
 <blockquote>
-<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">const</span> <span class="n">recorderManager</span> <span class="o">=</span> <span class="n">wx</span><span class="o">.</span><span class="n">getRecorderManager</span><span class="p">()</span>
+<div><div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="kr">const</span> <span class="nx">recorderManager</span> <span class="o">=</span> <span class="nx">wx</span><span class="p">.</span><span class="nx">getRecorderManager</span><span class="p">()</span>
 
-<span class="n">recorderManager</span><span class="o">.</span><span class="n">onStart</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="p">{</span>
-  <span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="s1">&#39;recorder start&#39;</span><span class="p">)</span>
+<span class="nx">recorderManager</span><span class="p">.</span><span class="nx">onStart</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;recorder start&#39;</span><span class="p">)</span>
 <span class="p">})</span>
-<span class="n">recorderManager</span><span class="o">.</span><span class="n">onPause</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="p">{</span>
-  <span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="s1">&#39;recorder pause&#39;</span><span class="p">)</span>
+<span class="nx">recorderManager</span><span class="p">.</span><span class="nx">onPause</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;recorder pause&#39;</span><span class="p">)</span>
 <span class="p">})</span>
-<span class="n">recorderManager</span><span class="o">.</span><span class="n">onStop</span><span class="p">((</span><span class="n">res</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
-  <span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="s1">&#39;recorder stop&#39;</span><span class="p">,</span> <span class="n">res</span><span class="p">)</span>
-  <span class="n">const</span> <span class="p">{</span><span class="n">tempFilePath</span><span class="p">}</span> <span class="o">=</span> <span class="n">res</span>
+<span class="nx">recorderManager</span><span class="p">.</span><span class="nx">onStop</span><span class="p">((</span><span class="nx">res</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;recorder stop&#39;</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span>
+  <span class="kr">const</span> <span class="p">{</span><span class="nx">tempFilePath</span><span class="p">}</span> <span class="o">=</span> <span class="nx">res</span>
 <span class="p">})</span>
-<span class="n">recorderManager</span><span class="o">.</span><span class="n">onFrameRecorded</span><span class="p">((</span><span class="n">res</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
-  <span class="n">const</span> <span class="p">{</span><span class="n">frameBuffer</span><span class="p">}</span> <span class="o">=</span> <span class="n">res</span>
-  <span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="s1">&#39;frameBuffer.byteLength&#39;</span><span class="p">,</span> <span class="n">frameBuffer</span><span class="o">.</span><span class="n">byteLength</span><span class="p">)</span>
+<span class="nx">recorderManager</span><span class="p">.</span><span class="nx">onFrameRecorded</span><span class="p">((</span><span class="nx">res</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+  <span class="kr">const</span> <span class="p">{</span><span class="nx">frameBuffer</span><span class="p">}</span> <span class="o">=</span> <span class="nx">res</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;frameBuffer.byteLength&#39;</span><span class="p">,</span> <span class="nx">frameBuffer</span><span class="p">.</span><span class="nx">byteLength</span><span class="p">)</span>
 <span class="p">})</span>
 
-<span class="n">const</span> <span class="n">options</span> <span class="o">=</span> <span class="p">{</span>
-  <span class="n">duration</span><span class="p">:</span> <span class="mi">10000</span><span class="p">,</span>
-  <span class="n">sampleRate</span><span class="p">:</span> <span class="mi">44100</span><span class="p">,</span>
-  <span class="n">numberOfChannels</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
-  <span class="n">encodeBitRate</span><span class="p">:</span> <span class="mi">192000</span><span class="p">,</span>
-  <span class="nb">format</span><span class="p">:</span> <span class="s1">&#39;aac&#39;</span><span class="p">,</span>
-  <span class="n">frameSize</span><span class="p">:</span> <span class="mi">50</span>
+<span class="kr">const</span> <span class="nx">options</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="nx">duration</span><span class="o">:</span> <span class="mi">10000</span><span class="p">,</span>
+  <span class="nx">sampleRate</span><span class="o">:</span> <span class="mi">44100</span><span class="p">,</span>
+  <span class="nx">numberOfChannels</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+  <span class="nx">encodeBitRate</span><span class="o">:</span> <span class="mi">192000</span><span class="p">,</span>
+  <span class="nx">format</span><span class="o">:</span> <span class="s1">&#39;aac&#39;</span><span class="p">,</span>
+  <span class="nx">frameSize</span><span class="o">:</span> <span class="mi">50</span>
 <span class="p">}</span>
 
-<span class="n">recorderManager</span><span class="o">.</span><span class="n">start</span><span class="p">(</span><span class="n">options</span><span class="p">)</span>
+<span class="nx">recorderManager</span><span class="p">.</span><span class="nx">start</span><span class="p">(</span><span class="nx">options</span><span class="p">)</span>
 </pre></div>
 </div>
 </div></blockquote>

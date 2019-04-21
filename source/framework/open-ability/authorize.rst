@@ -1,3 +1,5 @@
+.. _authorize:
+
 :wxfrwk:`用户授权 <open-ability/authorize>`
 =============================================
 

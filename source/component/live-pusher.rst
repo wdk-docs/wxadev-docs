@@ -1,3 +1,5 @@
+.. _live-pusher:
+
 :wxcomp:`live-pusher(直播录像机) <live-pusher>`
 ================================================
 

@@ -36,7 +36,7 @@
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜索" href="../search.html" />
-    <link rel="next" title="wx.createWorker" href="VideoContext.html" />
+    <link rel="next" title="VideoContext" href="VideoContext.html" />
     <link rel="prev" title="wx.createVideoContext" href="wx.createVideoContext.html" /> 
 </head>
 
@@ -198,6 +198,57 @@
             
   <div class="section" id="wx-choosevideo">
 <h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/api/wx.chooseVideo.html">wx.chooseVideo</a><a class="headerlink" href="#wx-choosevideo" title="永久链接至标题">¶</a></h1>
+<dl class="function">
+<dt id="wx.chooseVideo">
+<code class="descclassname">wx.</code><code class="descname">chooseVideo</code><span class="sig-paren">(</span><em>{[sourceType][,compressed][,maxDuration][,camera][,success][,fail][,complete]}</em><span class="sig-paren">)</span><a class="headerlink" href="#wx.chooseVideo" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list">
+<dt class="field-odd">Label</dt>
+<dd class="field-odd"><p>拍摄视频或从手机相册中选视频。</p>
+</dd>
+<dt class="field-even">Parameters</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>sourceType</strong> (<em>Array.&lt;string&gt;</em>) – <p>[‘album’, ‘camera’]     视频选择的来源</p>
+<ul>
+<li><p><em>album</em>   从相册选择视频</p></li>
+<li><p><em>camera</em>  使用相机拍摄视频</p></li>
+</ul>
+</p></li>
+<li><p><strong>compressed</strong> (<em>boolean</em>) – <code class="docutils literal notranslate"><span class="pre">true</span></code> 是否压缩所选择的视频文件   1.6.0</p></li>
+<li><p><strong>maxDuration</strong> (<em>number</em>) – <code class="docutils literal notranslate"><span class="pre">60</span></code>  拍摄视频最长拍摄时间，单位秒</p></li>
+<li><p><strong>camera</strong> (<em>string</em>) – <p><code class="docutils literal notranslate"><span class="pre">'back'</span></code>      默认拉起的是前置或者后置摄像头。部分 Android 手机下由于系统 ROM 不支持无法生效</p>
+<ul>
+<li><p><em>back</em>    默认拉起后置摄像头</p></li>
+<li><p><em>front</em>   默认拉起前置摄像头</p></li>
+</ul>
+</p></li>
+<li><p><strong>success({tempFilePath,duration,size,height,width})</strong> (<em>function</em>) – <p>接口调用成功的回调函数</p>
+<ul>
+<li><p><strong>tempFilePath</strong>  (<em>string</em>) -    选定视频的临时文件路径</p></li>
+<li><p><strong>duration</strong>      (<em>number</em>) -    选定视频的时间长度</p></li>
+<li><p><strong>size</strong>  (<em>number</em>) -    选定视频的数据量大小</p></li>
+<li><p><strong>height</strong>        (<em>number</em>) -    返回选定视频的高度</p></li>
+<li><p><strong>width</strong> (<em>number</em>) -    返回选定视频的宽度</p></li>
+</ul>
+</p></li>
+<li><p><strong>fail</strong> (<em>function</em>) – 接口调用失败的回调函数</p></li>
+<li><p><strong>complete</strong> (<em>function</em>) – 接口调用结束的回调函数（调用成功、失败都会执行）</p></li>
+</ul>
+</dd>
+<dt class="field-odd">示例</dt>
+<dd class="field-odd"><div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="nx">wx</span><span class="p">.</span><span class="nx">chooseVideo</span><span class="p">({</span>
+  <span class="nx">sourceType</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;album&#39;</span><span class="p">,</span> <span class="s1">&#39;camera&#39;</span><span class="p">],</span>
+  <span class="nx">maxDuration</span><span class="o">:</span> <span class="mi">60</span><span class="p">,</span>
+  <span class="nx">camera</span><span class="o">:</span> <span class="s1">&#39;back&#39;</span><span class="p">,</span>
+  <span class="nx">success</span><span class="p">(</span><span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">res</span><span class="p">.</span><span class="nx">tempFilePath</span><span class="p">)</span>
+  <span class="p">}</span>
+<span class="p">})</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</dd></dl>
+
 </div>
 
 
@@ -208,7 +259,7 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="VideoContext.html" class="btn btn-neutral float-right" title="wx.createWorker" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="VideoContext.html" class="btn btn-neutral float-right" title="VideoContext" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="wx.createVideoContext.html" class="btn btn-neutral float-left" title="wx.createVideoContext" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>

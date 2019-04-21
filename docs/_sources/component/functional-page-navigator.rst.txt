@@ -1,3 +1,5 @@
+.. _functional-page-navigator:
+
 functional-page-navigator
 ===========================
 

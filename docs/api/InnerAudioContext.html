@@ -715,15 +715,15 @@
 </tbody>
 </table>
 <p>示例代码</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">const</span> <span class="n">innerAudioContext</span> <span class="o">=</span> <span class="n">wx</span><span class="o">.</span><span class="n">createInnerAudioContext</span><span class="p">()</span>
-<span class="n">innerAudioContext</span><span class="o">.</span><span class="n">autoplay</span> <span class="o">=</span> <span class="n">true</span>
-<span class="n">innerAudioContext</span><span class="o">.</span><span class="n">src</span> <span class="o">=</span> <span class="s1">&#39;http://ws.stream.qqmusic.qq.com/M500001VfvsJ21xFqb.mp3?guid=ffffffff82def4af4b12b3cd9337d5e7&amp;uin=346897220&amp;vkey=6292F51E1E384E061FF02C31F716658E5C81F5594D561F2E88B854E81CAAB7806D5E4F103E55D33C16F3FAC506D1AB172DE8600B37E43FAD&amp;fromtag=46&#39;</span>
-<span class="n">innerAudioContext</span><span class="o">.</span><span class="n">onPlay</span><span class="p">(()</span> <span class="o">=&gt;</span> <span class="p">{</span>
-  <span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="s1">&#39;开始播放&#39;</span><span class="p">)</span>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="kr">const</span> <span class="nx">innerAudioContext</span> <span class="o">=</span> <span class="nx">wx</span><span class="p">.</span><span class="nx">createInnerAudioContext</span><span class="p">()</span>
+<span class="nx">innerAudioContext</span><span class="p">.</span><span class="nx">autoplay</span> <span class="o">=</span> <span class="kc">true</span>
+<span class="nx">innerAudioContext</span><span class="p">.</span><span class="nx">src</span> <span class="o">=</span> <span class="s1">&#39;http://ws.stream.qqmusic.qq.com/M500001VfvsJ21xFqb.mp3?guid=ffffffff82def4af4b12b3cd9337d5e7&amp;uin=346897220&amp;vkey=6292F51E1E384E061FF02C31F716658E5C81F5594D561F2E88B854E81CAAB7806D5E4F103E55D33C16F3FAC506D1AB172DE8600B37E43FAD&amp;fromtag=46&#39;</span>
+<span class="nx">innerAudioContext</span><span class="p">.</span><span class="nx">onPlay</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;开始播放&#39;</span><span class="p">)</span>
 <span class="p">})</span>
-<span class="n">innerAudioContext</span><span class="o">.</span><span class="n">onError</span><span class="p">((</span><span class="n">res</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
-  <span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">res</span><span class="o">.</span><span class="n">errMsg</span><span class="p">)</span>
-  <span class="n">console</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">res</span><span class="o">.</span><span class="n">errCode</span><span class="p">)</span>
+<span class="nx">innerAudioContext</span><span class="p">.</span><span class="nx">onError</span><span class="p">((</span><span class="nx">res</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">res</span><span class="p">.</span><span class="nx">errMsg</span><span class="p">)</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">res</span><span class="p">.</span><span class="nx">errCode</span><span class="p">)</span>
 <span class="p">})</span>
 </pre></div>
 </div>

@@ -1,3 +1,5 @@
+.. _picker-view-column:
+
 picker-view-column
 =====================
 

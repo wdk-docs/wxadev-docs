@@ -1,3 +1,5 @@
+.. _movable-area:
+
 movable-area
 ===========================
 

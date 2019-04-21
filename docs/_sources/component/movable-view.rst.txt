@@ -1,3 +1,5 @@
+.. _movable-view:
+
 movable-view
 ===========================
 

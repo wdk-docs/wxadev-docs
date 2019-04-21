@@ -37,7 +37,7 @@
     <link rel="index" title="索引" href="../../genindex.html" />
     <link rel="search" title="搜索" href="../../search.html" />
     <link rel="next" title="获取手机号" href="getPhoneNumber.html" />
-    <link rel="prev" title="授权" href="authorize.html" /> 
+    <link rel="prev" title="用户授权" href="authorize.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -100,7 +100,7 @@
 <li class="toctree-l2 current"><a class="reference internal" href="index.html">开放能力</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="login.html">小程序登录</a></li>
 <li class="toctree-l3"><a class="reference internal" href="union-id.html">UnionID 机制</a></li>
-<li class="toctree-l3"><a class="reference internal" href="authorize.html">授权</a></li>
+<li class="toctree-l3"><a class="reference internal" href="authorize.html">用户授权</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">开放数据校验与解密</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#id2">数据签名校验</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#id3">加密数据解密算法</a></li>
@@ -130,7 +130,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../performance.html">性能</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../performance/index.html">performance</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../client-lib/index.html">client-lib</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../compatibility.html">兼容</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../compatibility.html">兼容处理</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../workers.html">workers</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../server-ability/index.html">server-ability</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../release/index.html">release</a></li>
@@ -243,15 +243,15 @@
 </pre></div>
 </div>
 <p>用户的 session-key:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">HyVFkGl5F5OQWJZZaNzBBg</span><span class="o">==</span>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="nx">HyVFkGl5F5OQWJZZaNzBBg</span><span class="o">==</span>
 </pre></div>
 </div>
 <p>用于签名的字符串为:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="s2">&quot;nickName&quot;</span><span class="p">:</span><span class="s2">&quot;Band&quot;</span><span class="p">,</span><span class="s2">&quot;gender&quot;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="s2">&quot;language&quot;</span><span class="p">:</span><span class="s2">&quot;zh_CN&quot;</span><span class="p">,</span><span class="s2">&quot;city&quot;</span><span class="p">:</span><span class="s2">&quot;Guangzhou&quot;</span><span class="p">,</span><span class="s2">&quot;province&quot;</span><span class="p">:</span><span class="s2">&quot;Guangdong&quot;</span><span class="p">,</span><span class="s2">&quot;country&quot;</span><span class="p">:</span><span class="s2">&quot;CN&quot;</span><span class="p">,</span><span class="s2">&quot;avatarUrl&quot;</span><span class="p">:</span><span class="s2">&quot;http://wx.qlogo.cn/mmopen/vi_32/1vZvI39NWFQ9XM4LtQpFrQJ1xlgZxx3w7bQxKARol6503Iuswjjn6nIGBiaycAjAtpujxyzYsrztuuICqIM5ibXQ/0&quot;</span><span class="p">}</span><span class="n">HyVFkGl5F5OQWJZZaNzBBg</span><span class="o">==</span>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="s2">&quot;nickName&quot;</span><span class="o">:</span><span class="s2">&quot;Band&quot;</span><span class="p">,</span><span class="s2">&quot;gender&quot;</span><span class="o">:</span><span class="mi">1</span><span class="p">,</span><span class="s2">&quot;language&quot;</span><span class="o">:</span><span class="s2">&quot;zh_CN&quot;</span><span class="p">,</span><span class="s2">&quot;city&quot;</span><span class="o">:</span><span class="s2">&quot;Guangzhou&quot;</span><span class="p">,</span><span class="s2">&quot;province&quot;</span><span class="o">:</span><span class="s2">&quot;Guangdong&quot;</span><span class="p">,</span><span class="s2">&quot;country&quot;</span><span class="o">:</span><span class="s2">&quot;CN&quot;</span><span class="p">,</span><span class="s2">&quot;avatarUrl&quot;</span><span class="o">:</span><span class="s2">&quot;http://wx.qlogo.cn/mmopen/vi_32/1vZvI39NWFQ9XM4LtQpFrQJ1xlgZxx3w7bQxKARol6503Iuswjjn6nIGBiaycAjAtpujxyzYsrztuuICqIM5ibXQ/0&quot;</span><span class="p">}</span><span class="nx">HyVFkGl5F5OQWJZZaNzBBg</span><span class="o">==</span>
 </pre></div>
 </div>
 <p>使用sha1得到的结果为:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mf">75e81</span><span class="n">ceda165f4ffa64f4068af58c64b8f54b88c</span>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="mi">75</span><span class="nx">e81ceda165f4ffa64f4068af58c64b8f54b88c</span>
 </pre></div>
 </div>
 </div>
@@ -341,7 +341,7 @@
         <a href="getPhoneNumber.html" class="btn btn-neutral float-right" title="获取手机号" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="authorize.html" class="btn btn-neutral float-left" title="授权" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="authorize.html" class="btn btn-neutral float-left" title="用户授权" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

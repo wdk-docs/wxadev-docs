@@ -1,3 +1,5 @@
+.. _offical-account:
+
 official-account
 ===========================
 

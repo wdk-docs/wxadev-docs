@@ -220,13 +220,13 @@ Object res
 属性      类型      说明
 tempFilePath    string  录音文件的临时路径</p>
 <p>示例代码</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">wx</span><span class="o">.</span><span class="n">startRecord</span><span class="p">({</span>
-  <span class="n">success</span><span class="p">(</span><span class="n">res</span><span class="p">)</span> <span class="p">{</span>
-    <span class="n">const</span> <span class="n">tempFilePath</span> <span class="o">=</span> <span class="n">res</span><span class="o">.</span><span class="n">tempFilePath</span>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="nx">wx</span><span class="p">.</span><span class="nx">startRecord</span><span class="p">({</span>
+  <span class="nx">success</span><span class="p">(</span><span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kr">const</span> <span class="nx">tempFilePath</span> <span class="o">=</span> <span class="nx">res</span><span class="p">.</span><span class="nx">tempFilePath</span>
   <span class="p">}</span>
 <span class="p">})</span>
-<span class="n">setTimeout</span><span class="p">(</span><span class="n">function</span> <span class="p">()</span> <span class="p">{</span>
-  <span class="n">wx</span><span class="o">.</span><span class="n">stopRecord</span><span class="p">()</span> <span class="o">//</span> <span class="n">结束录音</span>
+<span class="nx">setTimeout</span><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+  <span class="nx">wx</span><span class="p">.</span><span class="nx">stopRecord</span><span class="p">()</span> <span class="c1">// 结束录音</span>
 <span class="p">},</span> <span class="mi">10000</span><span class="p">)</span>
 </pre></div>
 </div>
