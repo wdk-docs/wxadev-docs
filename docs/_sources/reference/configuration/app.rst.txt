@@ -45,7 +45,7 @@ pages
 
 则需要在 app.json 中写
 
-.. code:: json
+.. code::
 
   {
     "pages": ["pages/index/index", "pages/logs/logs"]
@@ -53,12 +53,12 @@ pages
 
 window
 
-用于设置小程序的状态栏、导航条、:wxapi:`wx.createWorker`、窗口背景色。
+用于设置小程序的状态栏、导航条、标题、窗口背景色。
 
 属性	类型	默认值	描述	最低版本
 navigationBarBackgroundColor	HexColor	#000000	导航栏背景颜色，如 #000000
-navigationBarTextStyle	string	white	导航栏:wxapi:`wx.createWorker`颜色，仅支持 black / white
-navigationBarTitleText	string		导航栏:wxapi:`wx.createWorker`文字内容
+navigationBarTextStyle	string	white	导航栏标题颜色，仅支持 black / white
+navigationBarTitleText	string		导航栏标题文字内容
 navigationStyle	string	default	导航栏样式，仅支持以下值：
 default 默认样式
 custom 自定义导航栏，只保留右上角胶囊按钮。参见注2。	微信客户端 6.6.0
@@ -79,7 +79,7 @@ pageOrientation	string	portrait	屏幕旋转设置，支持 auto / portrait / la
 开启 custom 后，低版本客户端需要做好兼容。开发者工具基础库版本切到 1.7.0（不代表最低版本，只供调试用）可方便切到旧视觉
 如：
 
-.. code:: json
+.. code::
 
   {
     "window": {
@@ -150,7 +150,7 @@ requiredBackgroundModes
 audio: 后台音乐播放
 如：
 
-.. code:: json
+.. code::
 
   {
     "pages": ["pages/index/index"],
@@ -197,7 +197,7 @@ PermissionObject 结构
 desc	string	是		小程序获取权限时展示的接口用途说明。最长30个字符
 如：
 
-.. code:: json
+.. code::
 
   {
     "pages": ["pages/index/index"],
@@ -211,7 +211,7 @@ desc	string	是		小程序获取权限时展示的接口用途说明。最长30�
 
 配置示例
 
-.. code:: json
+.. code::
 
   {
     "pages": ["pages/index/index", "pages/logs/index"],

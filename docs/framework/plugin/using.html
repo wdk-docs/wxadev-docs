@@ -126,6 +126,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../devtools/index.html">开发工具</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../reference/index.html">参考资料</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../wxcloud/index.html">云开发</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../wxwork/index.html">企业微信兼容</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../glossary.html">术语</a></li>
 </ul>
 
@@ -202,48 +203,36 @@
 <p>引入插件代码包
 使用插件前，使用者要在 app.json 中声明需要使用的插件，例如：</p>
 <p>代码示例：</p>
-<dl>
-<dt>{</dt><dd><dl>
-<dt>“plugins”: {</dt><dd><dl class="simple">
-<dt>“myPlugin”: {</dt><dd><p>“version”: “1.0.0”,
-“provider”: “wxidxxxxxxxxxxxxxxxx”</p>
-</dd>
-</dl>
-<p>}</p>
-</dd>
-</dl>
-<p>}</p>
-</dd>
-</dl>
-<p>}
-如上例所示， plugins 定义段中可以包含多个插件声明，每个插件声明以一个使用者自定义的插件引用名作为标识，并指明插件的 appid 和需要使用的版本号。其中，引用名（如上例中的 myPlugin）由使用者自定义，无需和插件开发者保持一致或与开发者协调。在后续的插件使用中，该引用名将被用于表示该插件。</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="s2">&quot;plugins&quot;</span><span class="o">:</span> <span class="p">{</span>
+    <span class="s2">&quot;myPlugin&quot;</span><span class="o">:</span> <span class="p">{</span>
+      <span class="s2">&quot;version&quot;</span><span class="o">:</span> <span class="s2">&quot;1.0.0&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;provider&quot;</span><span class="o">:</span> <span class="s2">&quot;wxidxxxxxxxxxxxxxxxx&quot;</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>如上例所示， plugins 定义段中可以包含多个插件声明，每个插件声明以一个使用者自定义的插件引用名作为标识，并指明插件的 appid 和需要使用的版本号。其中，引用名（如上例中的 myPlugin）由使用者自定义，无需和插件开发者保持一致或与开发者协调。在后续的插件使用中，该引用名将被用于表示该插件。</p>
 <p>在分包内引入插件代码包
 如果插件只在一个分包内用到，可以将插件仅放在这个分包内，例如：</p>
-<dl>
-<dt>{</dt><dd><dl>
-<dt>“subpackages”: [</dt><dd><dl>
-<dt>{</dt><dd><p>“root”: “packageA”,
-“pages”: [“pages/cat”, “pages/dog”],
-“plugins”: {</p>
-<blockquote>
-<div><dl class="simple">
-<dt>“myPlugin”: {</dt><dd><p>“version”: “1.0.0”,
-“provider”: “wxidxxxxxxxxxxxxxxxx”</p>
-</dd>
-</dl>
-<p>}</p>
-</div></blockquote>
-<p>}</p>
-</dd>
-</dl>
-<p>}</p>
-</dd>
-</dl>
-<p>]</p>
-</dd>
-</dl>
-<p>}
-在分包内使用插件有如下限制：</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="s2">&quot;subpackages&quot;</span><span class="o">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+      <span class="s2">&quot;root&quot;</span><span class="o">:</span> <span class="s2">&quot;packageA&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;pages&quot;</span><span class="o">:</span> <span class="p">[</span><span class="s2">&quot;pages/cat&quot;</span><span class="p">,</span> <span class="s2">&quot;pages/dog&quot;</span><span class="p">],</span>
+      <span class="s2">&quot;plugins&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;myPlugin&quot;</span><span class="o">:</span> <span class="p">{</span>
+          <span class="s2">&quot;version&quot;</span><span class="o">:</span> <span class="s2">&quot;1.0.0&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;provider&quot;</span><span class="o">:</span> <span class="s2">&quot;wxidxxxxxxxxxxxxxxxx&quot;</span>
+        <span class="p">}</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+  <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>在分包内使用插件有如下限制：</p>
 <p>仅能在这个分包内使用该插件；
 同一个插件不能被多个分包同时引用；
 目前，还不能从分包外的页面直接跳入分包内的插件页面，需要先跳入分包内的非插件页面、再跳入同一分包内的插件页面。
@@ -252,28 +241,26 @@
 <p>自定义组件
 使用插件提供的自定义组件，和使用普通自定义组件的方式相仿。在 json 文件定义需要引入的自定义组件时，使用 plugin:// 协议指明插件的引用名和自定义组件名，例如：</p>
 <p>代码示例：</p>
-<dl>
-<dt>{</dt><dd><dl class="simple">
-<dt>“usingComponents”: {</dt><dd><p>“hello-component”: “plugin://myPlugin/hello-component”</p>
-</dd>
-</dl>
-<p>}</p>
-</dd>
-</dl>
-<p>}
-出于对插件的保护，插件提供的自定义组件在使用上有一定的限制：</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="s2">&quot;usingComponents&quot;</span><span class="o">:</span> <span class="p">{</span>
+    <span class="s2">&quot;hello-component&quot;</span><span class="o">:</span> <span class="s2">&quot;plugin://myPlugin/hello-component&quot;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>出于对插件的保护，插件提供的自定义组件在使用上有一定的限制：</p>
 <p>默认情况下，页面中的 this.selectComponent 接口无法获得插件的自定义组件实例对象；
 wx.createSelectorQuery 等接口的 &gt;&gt;&gt; 选择器无法选入插件内部。
 页面
 插件的页面从小程序基础库版本 2.1.0 开始支持。</p>
 <p>需要跳转到插件页面时，url 使用 plugin:// 前缀，形如 plugin://PLUGIN_NAME/PLUGIN_PAGE， 如：</p>
 <p>代码示例：</p>
-<dl class="simple">
-<dt>&lt;navigator url=”plugin://myPlugin/hello-page”&gt;</dt><dd><p>Go to pages/hello-page!</p>
-</dd>
-</dl>
-<p>&lt;/navigator&gt;
-js 接口
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">navigator</span> <span class="na">url</span><span class="o">=</span><span class="s">&quot;plugin://myPlugin/hello-page&quot;</span><span class="p">&gt;</span>
+  Go to pages/hello-page!
+<span class="p">&lt;/</span><span class="nt">navigator</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<p>js 接口
 使用插件的 js 接口时，可以使用 requirePlugin 方法。例如，插件提供一个名为 hello 的方法和一个名为 world 的变量，则可以像下面这样调用：</p>
 <p>const myPluginInterface = requirePlugin(‘myPlugin’)</p>
 <p>myPluginInterface.hello()

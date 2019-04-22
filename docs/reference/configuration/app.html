@@ -103,6 +103,7 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../wxcloud/index.html">云开发</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../wxwork/index.html">企业微信兼容</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../glossary.html">术语</a></li>
 </ul>
 
@@ -212,17 +213,17 @@ permission      Object  否       小程序接口权限相关设置     微信�
 </pre></div>
 </div>
 <p>则需要在 app.json 中写</p>
-<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
-  <span class="nt">&quot;pages&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;pages/index/index&quot;</span><span class="p">,</span> <span class="s2">&quot;pages/logs/logs&quot;</span><span class="p">]</span>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="s2">&quot;pages&quot;</span><span class="o">:</span> <span class="p">[</span><span class="s2">&quot;pages/index/index&quot;</span><span class="p">,</span> <span class="s2">&quot;pages/logs/logs&quot;</span><span class="p">]</span>
 <span class="p">}</span>
 </pre></div>
 </div>
 <p>window</p>
-<p>用于设置小程序的状态栏、导航条、<a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/api/wx.createWorker.html">wx.createWorker</a>、窗口背景色。</p>
+<p>用于设置小程序的状态栏、导航条、标题、窗口背景色。</p>
 <p>属性      类型      默认值     描述      最低版本
 navigationBarBackgroundColor    HexColor        #000000 导航栏背景颜色，如 #000000
-navigationBarTextStyle  string  white   导航栏:wxapi:<a href="#id2"><span class="problematic" id="id3">`</span></a>wx.createWorker`颜色，仅支持 black / white
-navigationBarTitleText  string          导航栏:wxapi:<a href="#id4"><span class="problematic" id="id5">`</span></a>wx.createWorker`文字内容
+navigationBarTextStyle  string  white   导航栏标题颜色，仅支持 black / white
+navigationBarTitleText  string          导航栏标题文字内容
 navigationStyle string  default 导航栏样式，仅支持以下值：
 default 默认样式
 custom 自定义导航栏，只保留右上角胶囊按钮。参见注2。  微信客户端 6.6.0
@@ -242,13 +243,13 @@ pageOrientation string  portrait        屏幕旋转设置，支持 auto / portr
 客户端 6.7.2 版本开始，navigationStyle: custom 对 &lt;web-view&gt; 组件无效
 开启 custom 后，低版本客户端需要做好兼容。开发者工具基础库版本切到 1.7.0（不代表最低版本，只供调试用）可方便切到旧视觉
 如：</p>
-<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
-  <span class="nt">&quot;window&quot;</span><span class="p">:</span> <span class="p">{</span>
-    <span class="nt">&quot;navigationBarBackgroundColor&quot;</span><span class="p">:</span> <span class="s2">&quot;#ffffff&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;navigationBarTextStyle&quot;</span><span class="p">:</span> <span class="s2">&quot;black&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;navigationBarTitleText&quot;</span><span class="p">:</span> <span class="s2">&quot;微信接口功能演示&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;backgroundColor&quot;</span><span class="p">:</span> <span class="s2">&quot;#eeeeee&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;backgroundTextStyle&quot;</span><span class="p">:</span> <span class="s2">&quot;light&quot;</span>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="s2">&quot;window&quot;</span><span class="o">:</span> <span class="p">{</span>
+    <span class="s2">&quot;navigationBarBackgroundColor&quot;</span><span class="o">:</span> <span class="s2">&quot;#ffffff&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;navigationBarTextStyle&quot;</span><span class="o">:</span> <span class="s2">&quot;black&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;navigationBarTitleText&quot;</span><span class="o">:</span> <span class="s2">&quot;微信接口功能演示&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;backgroundColor&quot;</span><span class="o">:</span> <span class="s2">&quot;#eeeeee&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;backgroundTextStyle&quot;</span><span class="o">:</span> <span class="s2">&quot;light&quot;</span>
   <span class="p">}</span>
 <span class="p">}</span>
 </pre></div>
@@ -295,9 +296,9 @@ debug
 <p>申明需要后台运行的能力，类型为数组。目前支持以下项目：</p>
 <p>audio: 后台音乐播放
 如：</p>
-<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
-  <span class="nt">&quot;pages&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;pages/index/index&quot;</span><span class="p">],</span>
-  <span class="nt">&quot;requiredBackgroundModes&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;audio&quot;</span><span class="p">]</span>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="s2">&quot;pages&quot;</span><span class="o">:</span> <span class="p">[</span><span class="s2">&quot;pages/index/index&quot;</span><span class="p">],</span>
+  <span class="s2">&quot;requiredBackgroundModes&quot;</span><span class="o">:</span> <span class="p">[</span><span class="s2">&quot;audio&quot;</span><span class="p">]</span>
 <span class="p">}</span>
 </pre></div>
 </div>
@@ -326,40 +327,40 @@ PermissionObject 结构</p>
 <p>属性      类型      必填      默认值     说明
 desc    string  是               小程序获取权限时展示的接口用途说明。最长30个字符
 如：</p>
-<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
-  <span class="nt">&quot;pages&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;pages/index/index&quot;</span><span class="p">],</span>
-  <span class="nt">&quot;permission&quot;</span><span class="p">:</span> <span class="p">{</span>
-    <span class="nt">&quot;scope.userLocation&quot;</span><span class="p">:</span> <span class="p">{</span>
-      <span class="nt">&quot;desc&quot;</span><span class="p">:</span> <span class="s2">&quot;你的位置信息将用于小程序位置接口的效果展示&quot;</span>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="s2">&quot;pages&quot;</span><span class="o">:</span> <span class="p">[</span><span class="s2">&quot;pages/index/index&quot;</span><span class="p">],</span>
+  <span class="s2">&quot;permission&quot;</span><span class="o">:</span> <span class="p">{</span>
+    <span class="s2">&quot;scope.userLocation&quot;</span><span class="o">:</span> <span class="p">{</span>
+      <span class="s2">&quot;desc&quot;</span><span class="o">:</span> <span class="s2">&quot;你的位置信息将用于小程序位置接口的效果展示&quot;</span>
     <span class="p">}</span>
   <span class="p">}</span>
 <span class="p">}</span>
 </pre></div>
 </div>
 <p>配置示例</p>
-<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
-  <span class="nt">&quot;pages&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;pages/index/index&quot;</span><span class="p">,</span> <span class="s2">&quot;pages/logs/index&quot;</span><span class="p">],</span>
-  <span class="nt">&quot;window&quot;</span><span class="p">:</span> <span class="p">{</span>
-    <span class="nt">&quot;navigationBarTitleText&quot;</span><span class="p">:</span> <span class="s2">&quot;Demo&quot;</span>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="s2">&quot;pages&quot;</span><span class="o">:</span> <span class="p">[</span><span class="s2">&quot;pages/index/index&quot;</span><span class="p">,</span> <span class="s2">&quot;pages/logs/index&quot;</span><span class="p">],</span>
+  <span class="s2">&quot;window&quot;</span><span class="o">:</span> <span class="p">{</span>
+    <span class="s2">&quot;navigationBarTitleText&quot;</span><span class="o">:</span> <span class="s2">&quot;Demo&quot;</span>
   <span class="p">},</span>
-  <span class="nt">&quot;tabBar&quot;</span><span class="p">:</span> <span class="p">{</span>
-    <span class="nt">&quot;list&quot;</span><span class="p">:</span> <span class="p">[</span>
+  <span class="s2">&quot;tabBar&quot;</span><span class="o">:</span> <span class="p">{</span>
+    <span class="s2">&quot;list&quot;</span><span class="o">:</span> <span class="p">[</span>
       <span class="p">{</span>
-        <span class="nt">&quot;pagePath&quot;</span><span class="p">:</span> <span class="s2">&quot;pages/index/index&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;text&quot;</span><span class="p">:</span> <span class="s2">&quot;首页&quot;</span>
+        <span class="s2">&quot;pagePath&quot;</span><span class="o">:</span> <span class="s2">&quot;pages/index/index&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;text&quot;</span><span class="o">:</span> <span class="s2">&quot;首页&quot;</span>
       <span class="p">},</span>
       <span class="p">{</span>
-        <span class="nt">&quot;pagePath&quot;</span><span class="p">:</span> <span class="s2">&quot;pages/logs/logs&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;text&quot;</span><span class="p">:</span> <span class="s2">&quot;日志&quot;</span>
+        <span class="s2">&quot;pagePath&quot;</span><span class="o">:</span> <span class="s2">&quot;pages/logs/logs&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;text&quot;</span><span class="o">:</span> <span class="s2">&quot;日志&quot;</span>
       <span class="p">}</span>
     <span class="p">]</span>
   <span class="p">},</span>
-  <span class="nt">&quot;networkTimeout&quot;</span><span class="p">:</span> <span class="p">{</span>
-    <span class="nt">&quot;request&quot;</span><span class="p">:</span> <span class="mi">10000</span><span class="p">,</span>
-    <span class="nt">&quot;downloadFile&quot;</span><span class="p">:</span> <span class="mi">10000</span>
+  <span class="s2">&quot;networkTimeout&quot;</span><span class="o">:</span> <span class="p">{</span>
+    <span class="s2">&quot;request&quot;</span><span class="o">:</span> <span class="mi">10000</span><span class="p">,</span>
+    <span class="s2">&quot;downloadFile&quot;</span><span class="o">:</span> <span class="mi">10000</span>
   <span class="p">},</span>
-  <span class="nt">&quot;debug&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-  <span class="nt">&quot;navigateToMiniProgramAppIdList&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;wxe5f52902cf4de896&quot;</span><span class="p">]</span>
+  <span class="s2">&quot;debug&quot;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+  <span class="s2">&quot;navigateToMiniProgramAppIdList&quot;</span><span class="o">:</span> <span class="p">[</span><span class="s2">&quot;wxe5f52902cf4de896&quot;</span><span class="p">]</span>
 <span class="p">}</span>
 </pre></div>
 </div>

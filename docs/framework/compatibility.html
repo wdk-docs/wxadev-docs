@@ -122,6 +122,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../devtools/index.html">开发工具</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../reference/index.html">参考资料</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../wxcloud/index.html">云开发</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../wxwork/index.html">企业微信兼容</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../glossary.html">术语</a></li>
 </ul>
 
@@ -201,7 +202,7 @@
 <blockquote>
 <div><p>微信客户端和小程序基础库的版本号风格为 Major.Minor.Patch（主版本号.次版本号.修订版本号）。</p>
 <p>文档中会在组件，API等页面描述中带上各个功能所要求的最低基础库版本号。</p>
-<p>开发者可以在小程序中通过调用 <code class="xref js js-func docutils literal notranslate"><span class="pre">wx.getSystemInfo()</span></code> 或者 <code class="xref js js-func docutils literal notranslate"><span class="pre">wx.getSystemInfoSync()</span></code>
+<p>开发者可以在小程序中通过调用 <a class="reference internal" href="../api/wx.getSystemInfo.html#wx.getSystemInfo" title="wx.getSystemInfo"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.getSystemInfo()</span></code></a> 或者 <code class="xref js js-func docutils literal notranslate"><span class="pre">wx.getSystemInfoSync()</span></code>
 获取到当前小程序运行的基础库的版本号。  通过版本号比较的方式进行运行低版本兼容逻辑。</p>
 <p>版本号比较适用于所有情况。部分场景下也可以使用后面提到的方法完成。</p>
 <p>注意：不要直接使用字符串比较的方法进行版本号比较。</p>

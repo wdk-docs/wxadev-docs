@@ -9,33 +9,39 @@
 
 代码示例：
 
-{
-  "plugins": {
-    "myPlugin": {
-      "version": "1.0.0",
-      "provider": "wxidxxxxxxxxxxxxxxxx"
+.. code::
+
+  {
+    "plugins": {
+      "myPlugin": {
+        "version": "1.0.0",
+        "provider": "wxidxxxxxxxxxxxxxxxx"
+      }
     }
   }
-}
+
 如上例所示， plugins 定义段中可以包含多个插件声明，每个插件声明以一个使用者自定义的插件引用名作为标识，并指明插件的 appid 和需要使用的版本号。其中，引用名（如上例中的 myPlugin）由使用者自定义，无需和插件开发者保持一致或与开发者协调。在后续的插件使用中，该引用名将被用于表示该插件。
 
 在分包内引入插件代码包
 如果插件只在一个分包内用到，可以将插件仅放在这个分包内，例如：
 
-{
-  "subpackages": [
-    {
-      "root": "packageA",
-      "pages": ["pages/cat", "pages/dog"],
-      "plugins": {
-        "myPlugin": {
-          "version": "1.0.0",
-          "provider": "wxidxxxxxxxxxxxxxxxx"
+.. code::
+
+  {
+    "subpackages": [
+      {
+        "root": "packageA",
+        "pages": ["pages/cat", "pages/dog"],
+        "plugins": {
+          "myPlugin": {
+            "version": "1.0.0",
+            "provider": "wxidxxxxxxxxxxxxxxxx"
+          }
         }
       }
-    }
-  ]
-}
+    ]
+  }
+
 在分包内使用插件有如下限制：
 
 仅能在这个分包内使用该插件；
@@ -49,11 +55,14 @@
 
 代码示例：
 
-{
-  "usingComponents": {
-    "hello-component": "plugin://myPlugin/hello-component"
+.. code::
+
+  {
+    "usingComponents": {
+      "hello-component": "plugin://myPlugin/hello-component"
+    }
   }
-}
+
 出于对插件的保护，插件提供的自定义组件在使用上有一定的限制：
 
 默认情况下，页面中的 this.selectComponent 接口无法获得插件的自定义组件实例对象；
@@ -65,9 +74,12 @@ wx.createSelectorQuery 等接口的 >>> 选择器无法选入插件内部。
 
 代码示例：
 
-<navigator url="plugin://myPlugin/hello-page">
-  Go to pages/hello-page!
-</navigator>
+.. code:: html
+
+  <navigator url="plugin://myPlugin/hello-page">
+    Go to pages/hello-page!
+  </navigator>
+
 js 接口
 使用插件的 js 接口时，可以使用 requirePlugin 方法。例如，插件提供一个名为 hello 的方法和一个名为 world 的变量，则可以像下面这样调用：
 

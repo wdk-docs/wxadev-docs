@@ -136,6 +136,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../../devtools/index.html">开发工具</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../reference/index.html">参考资料</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../wxcloud/index.html">云开发</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../wxwork/index.html">企业微信兼容</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../glossary.html">术语</a></li>
 </ul>
 
@@ -395,22 +396,7 @@ dataset Object  当前组件上由data-开头的自定义属性组成的集合
 <p>dataset
 在组件中可以定义数据，这些数据将会通过事件传递给 SERVICE。 书写方式： 以data-开头，多个单词由连字符-链接，不能有大写(大写会自动转成小写)如data-element-type，最终在 event.currentTarget.dataset 中会将连字符转成驼峰elementType。</p>
 <p>示例：</p>
-<dl class="simple">
-<dt>&lt;view data-alpha-beta=”1” data-alphaBeta=”2” bindtap=”bindViewTap”&gt;</dt><dd><p>DataSet Test</p>
-</dd>
-</dl>
-<p>&lt;/view&gt;
-Page({</p>
-<blockquote>
-<div><dl class="simple">
-<dt>bindViewTap(event) {</dt><dd><p>event.currentTarget.dataset.alphaBeta === 1 // - 会转为驼峰写法
-event.currentTarget.dataset.alphabeta === 2 // 大写会转为小写</p>
-</dd>
-</dl>
-<p>}</p>
-</div></blockquote>
-<p>})
-touches
+<p>touches
 touches 是一个数组，每个元素为一个 Touch 对象（canvas 触摸事件中携带的 touches 是 CanvasTouch 数组）。 表示当前停留在屏幕上的触摸点。</p>
 <p>Touch 对象
 属性      类型      说明

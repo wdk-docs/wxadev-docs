@@ -1,3 +1,7 @@
+import sys
+
+sys.setrecursionlimit(2000)
+
 # Configuration file for the Sphinx documentation builder.
 #
 # This file only contains a selection of the most common options. For a full
@@ -72,7 +76,9 @@ extlinks = {
     'wxcomp': ('https://developers.weixin.qq.com/miniprogram/dev/component/%s.html', ''),
     'wxfrwk': ('https://developers.weixin.qq.com/miniprogram/dev/framework/%s.html', ''),
     'wxapi': ('https://developers.weixin.qq.com/miniprogram/dev/api/%s.html', ''),
-    'wxbpi': ('https://developers.weixin.qq.com/miniprogram/dev/api-backend/%s.html', '')
+    'wxbpi': ('https://developers.weixin.qq.com/miniprogram/dev/api-backend/%s.html', ''),
+    'wxwork': ('https://developers.weixin.qq.com/miniprogram/dev/dev_wxwork/%s.html', ''),
+    'wework': ('https://work.weixin.qq.com/api/doc#90000/%s', '')
 }
 
 source_suffix = {
@@ -81,7 +87,10 @@ source_suffix = {
     '.md': 'markdown',
 }
 
-http_index_ignore_prefixes = ['https://api.weixin.qq.com/cgi-bin/']
+http_index_ignore_prefixes = [
+    'https://api.weixin.qq.com/cgi-bin/',
+    'https://qyapi.weixin.qq.com/cgi-bin/'
+]
 http_index_shortname = 'api'
 http_index_localname = "微信小程序API"
 

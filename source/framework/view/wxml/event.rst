@@ -221,15 +221,18 @@ dataset
 
 示例：
 
-<view data-alpha-beta="1" data-alphaBeta="2" bindtap="bindViewTap">
-  DataSet Test
-</view>
-Page({
-  bindViewTap(event) {
-    event.currentTarget.dataset.alphaBeta === 1 // - 会转为驼峰写法
-    event.currentTarget.dataset.alphabeta === 2 // 大写会转为小写
-  }
-})
+.. code: html
+
+  <view data-alpha-beta="1" data-alphaBeta="2" bindtap="bindViewTap">
+    DataSet Test
+  </view>
+  Page({
+    bindViewTap(event) {
+      event.currentTarget.dataset.alphaBeta === 1 // - 会转为驼峰写法
+      event.currentTarget.dataset.alphabeta === 2 // 大写会转为小写
+    }
+  })
+
 touches
 touches 是一个数组，每个元素为一个 Touch 对象（canvas 触摸事件中携带的 touches 是 CanvasTouch 数组）。 表示当前停留在屏幕上的触摸点。
 

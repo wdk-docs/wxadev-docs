@@ -737,6 +737,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../devtools/index.html">开发工具</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../reference/index.html">参考资料</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../wxcloud/index.html">云开发</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../wxwork/index.html">企业微信兼容</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../glossary.html">术语</a></li>
 </ul>
 
@@ -808,8 +809,8 @@
 <h2>基础<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h2>
 <table class="docutils align-center">
 <colgroup>
-<col style="width: 18%" />
-<col style="width: 82%" />
+<col style="width: 27%" />
+<col style="width: 73%" />
 </colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>名称</p></th>
@@ -817,15 +818,12 @@
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p>wx.canIUse</p></td>
+<tr class="row-even"><td><p><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.canIUse()</span></code></p></td>
 <td><p>判断小程序的API，回调，参数，组件等是否在当前版本可用</p></td>
 </tr>
 </tbody>
 </table>
 <div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="wx.canIUse.html">boolean wx.canIUse(string schema)</a></li>
-</ul>
 </div>
 </div>
 <div class="section" id="id2">
@@ -834,8 +832,8 @@
 <h3>系统信息<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h3>
 <table class="docutils align-center">
 <colgroup>
-<col style="width: 43%" />
-<col style="width: 57%" />
+<col style="width: 51%" />
+<col style="width: 49%" />
 </colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>名称</p></th>
@@ -843,18 +841,15 @@
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p>wx.getSystemInfoSync
-wx.getSystemInfo</p></td>
-<td><p>wx.getSystemInfo 的同步版本
-获取系统信息</p></td>
+<tr class="row-even"><td><p><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.getSystemInfoSync()</span></code></p></td>
+<td><p>wx.getSystemInfo 的同步版本</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="wx.getSystemInfo.html#wx.getSystemInfo" title="wx.getSystemInfo"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.getSystemInfo()</span></code></a></p></td>
+<td><p>获取系统信息</p></td>
 </tr>
 </tbody>
 </table>
 <div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="wx.getSystemInfoSync.html">wx.getSystemInfoSync</a></li>
-<li class="toctree-l1"><a class="reference internal" href="wx.getSystemInfo.html">wx.getSystemInfo</a></li>
-</ul>
 </div>
 </div>
 </div>
@@ -862,8 +857,8 @@ wx.getSystemInfo</p></td>
 <h2>更新<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h2>
 <table class="docutils align-center">
 <colgroup>
-<col style="width: 30%" />
-<col style="width: 70%" />
+<col style="width: 37%" />
+<col style="width: 63%" />
 </colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>名称</p></th>
@@ -871,22 +866,19 @@ wx.getSystemInfo</p></td>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p>wx.getUpdateManager</p></td>
+<tr class="row-even"><td><p><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.getUpdateManager()</span></code></p></td>
 <td><p>获取全局唯一的版本更新管理器，用于管理小程序更新</p></td>
 </tr>
 </tbody>
 </table>
 <div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="wx.getUpdateManager.html">wx.getUpdateManager</a></li>
-</ul>
 </div>
 <div class="section" id="updatemanager">
 <h3>UpdateManager<a class="headerlink" href="#updatemanager" title="永久链接至标题">¶</a></h3>
 <table class="docutils align-center">
 <colgroup>
-<col style="width: 47%" />
 <col style="width: 53%" />
+<col style="width: 47%" />
 </colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>名称</p></th>
@@ -894,28 +886,21 @@ wx.getSystemInfo</p></td>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p>UpdateManager.applyUpdate</p></td>
+<tr class="row-even"><td><p><code class="xref js js-func docutils literal notranslate"><span class="pre">UpdateManager.applyUpdate()</span></code></p></td>
 <td><p>强制小程序重启并使用新版本</p></td>
 </tr>
-<tr class="row-odd"><td><p>UpdateManager.onCheckForUpdate</p></td>
+<tr class="row-odd"><td><p><code class="xref js js-func docutils literal notranslate"><span class="pre">UpdateManager.onCheckForUpdate()</span></code></p></td>
 <td><p>监听向微信后台请求检查更新结果事件</p></td>
 </tr>
-<tr class="row-even"><td><p>UpdateManager.onUpdateFailed</p></td>
+<tr class="row-even"><td><p><code class="xref js js-func docutils literal notranslate"><span class="pre">UpdateManager.onUpdateFailed()</span></code></p></td>
 <td><p>监听小程序更新失败事件</p></td>
 </tr>
-<tr class="row-odd"><td><p>UpdateManager.onUpdateReady</p></td>
+<tr class="row-odd"><td><p><code class="xref js js-func docutils literal notranslate"><span class="pre">UpdateManager.onUpdateReady()</span></code></p></td>
 <td><p>监听小程序有版本更新事件</p></td>
 </tr>
 </tbody>
 </table>
 <div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="UpdateManager.html">UpdateManager</a></li>
-<li class="toctree-l1"><a class="reference internal" href="UpdateManager.applyUpdate.html">UpdateManager.applyUpdate</a></li>
-<li class="toctree-l1"><a class="reference internal" href="UpdateManager.onCheckForUpdate.html">UpdateManager.onCheckForUpdate</a></li>
-<li class="toctree-l1"><a class="reference internal" href="UpdateManager.onUpdateFailed.html">UpdateManager.onUpdateFailed</a></li>
-<li class="toctree-l1"><a class="reference internal" href="UpdateManager.onUpdateReady.html">UpdateManager.onUpdateReady</a></li>
-</ul>
 </div>
 </div>
 </div>
@@ -940,9 +925,6 @@ wx.getSystemInfo</p></td>
 </tbody>
 </table>
 <div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="wx.getLaunchOptionsSync.html">wx.getLaunchOptionsSync</a></li>
-</ul>
 </div>
 </div>
 <div class="section" id="id7">
@@ -997,20 +979,6 @@ wx.getSystemInfo</p></td>
 </tbody>
 </table>
 <div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="wx.onPageNotFound.html">wx.onPageNotFound</a></li>
-<li class="toctree-l1"><a class="reference internal" href="wx.onError.html">wx.onError</a></li>
-<li class="toctree-l1"><a class="reference internal" href="wx.onAudioInterruptionEnd.html">wx.onAudioInterruptionEnd</a></li>
-<li class="toctree-l1"><a class="reference internal" href="wx.onAudioInterruptionBegin.html">wx.onAudioInterruptionBegin</a></li>
-<li class="toctree-l1"><a class="reference internal" href="wx.onAppShow.html">wx.onAppShow</a></li>
-<li class="toctree-l1"><a class="reference internal" href="wx.onAppHide.html">wx.onAppHide</a></li>
-<li class="toctree-l1"><a class="reference internal" href="wx.offPageNotFound.html">wx.offPageNotFound</a></li>
-<li class="toctree-l1"><a class="reference internal" href="wx.offError.html">wx.offError</a></li>
-<li class="toctree-l1"><a class="reference internal" href="wx.offAudioInterruptionEnd.html">wx.offAudioInterruptionEnd</a></li>
-<li class="toctree-l1"><a class="reference internal" href="wx.offAudioInterruptionBegin.html">wx.offAudioInterruptionBegin</a></li>
-<li class="toctree-l1"><a class="reference internal" href="wx.offAppShow.html">wx.offAppShow</a></li>
-<li class="toctree-l1"><a class="reference internal" href="wx.offAppHide.html">wx.offAppHide</a></li>
-</ul>
 </div>
 </div>
 <div class="section" id="id8">
@@ -1035,10 +1003,6 @@ wx.getSystemInfo</p></td>
 </tbody>
 </table>
 <div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="wx.setEnableDebug.html">wx.createWorker</a></li>
-<li class="toctree-l1"><a class="reference internal" href="wx.getLogManager.html">wx.getLogManager</a></li>
-</ul>
 </div>
 <div class="section" id="logmanager">
 <h4>LogManager<a class="headerlink" href="#logmanager" title="永久链接至标题">¶</a></h4>
@@ -1068,13 +1032,6 @@ wx.getSystemInfo</p></td>
 </tbody>
 </table>
 <div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="LogManager.html">LogManager</a></li>
-<li class="toctree-l1"><a class="reference internal" href="LogManager.debug.html">LogManager.debug</a></li>
-<li class="toctree-l1"><a class="reference internal" href="LogManager.info.html">LogManager.info</a></li>
-<li class="toctree-l1"><a class="reference internal" href="LogManager.log.html">LogManager.log</a></li>
-<li class="toctree-l1"><a class="reference internal" href="LogManager.warn.html">LogManager.warn</a></li>
-</ul>
 </div>
 </div>
 </div>
@@ -1110,13 +1067,6 @@ wx.getSystemInfo</p></td>
 </tbody>
 </table>
 <div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="wx.switchTab.html">wx.switchTab</a></li>
-<li class="toctree-l1"><a class="reference internal" href="wx.reLaunch.html">wx.reLaunch</a></li>
-<li class="toctree-l1"><a class="reference internal" href="wx.redirectTo.html">wx.redirectTo</a></li>
-<li class="toctree-l1"><a class="reference internal" href="wx.navigateTo.html">wx.navigateTo</a></li>
-<li class="toctree-l1"><a class="reference internal" href="wx.navigateBack.html">wx.navigateBack</a></li>
-</ul>
 </div>
 </div>
 <div class="section" id="id10">
@@ -1155,14 +1105,6 @@ wx.getSystemInfo</p></td>
 </tbody>
 </table>
 <div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="wx.showToast.html">wx.showToast</a></li>
-<li class="toctree-l1"><a class="reference internal" href="wx.showModal.html">wx.showModal</a></li>
-<li class="toctree-l1"><a class="reference internal" href="wx.showLoading.html">wx.createWorker</a></li>
-<li class="toctree-l1"><a class="reference internal" href="wx.showActionSheet.html">wx.createWorker</a></li>
-<li class="toctree-l1"><a class="reference internal" href="wx.hideToast.html">wx.hideToast</a></li>
-<li class="toctree-l1"><a class="reference internal" href="wx.hideLoading.html">wx.hideLoading</a></li>
-</ul>
 </div>
 </div>
 <div class="section" id="id12">
@@ -1193,12 +1135,6 @@ wx.getSystemInfo</p></td>
 </tbody>
 </table>
 <div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="wx.showNavigationBarLoading.html">wx.showNavigationBarLoading</a></li>
-<li class="toctree-l1"><a class="reference internal" href="wx.setNavigationBarTitle.html">wx.setNavigationBarTitle</a></li>
-<li class="toctree-l1"><a class="reference internal" href="wx.setNavigationBarColor.html">wx.setNavigationBarColor</a></li>
-<li class="toctree-l1"><a class="reference internal" href="wx.hideNavigationBarLoading.html">wx.hideNavigationBarLoading</a></li>
-</ul>
 </div>
 </div>
 <div class="section" id="id13">
@@ -1223,10 +1159,6 @@ wx.getSystemInfo</p></td>
 </tbody>
 </table>
 <div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="wx.setBackgroundTextStyle.html">wx.setBackgroundTextStyle</a></li>
-<li class="toctree-l1"><a class="reference internal" href="wx.setBackgroundColor.html">wx.setBackgroundColor</a></li>
-</ul>
 </div>
 </div>
 <div class="section" id="tab-bar">
@@ -1269,16 +1201,6 @@ wx.getSystemInfo</p></td>
 </tbody>
 </table>
 <div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="wx.showTabBarRedDot.html">wx.showTabBarRedDot</a></li>
-<li class="toctree-l1"><a class="reference internal" href="wx.showTabBar.html">wx.showTabBar</a></li>
-<li class="toctree-l1"><a class="reference internal" href="wx.setTabBarStyle.html">wx.createWorker</a></li>
-<li class="toctree-l1"><a class="reference internal" href="wx.setTabBarItem.html">wx.createWorker</a></li>
-<li class="toctree-l1"><a class="reference internal" href="wx.setTabBarBadge.html">wx.createWorker</a></li>
-<li class="toctree-l1"><a class="reference internal" href="wx.removeTabBarBadge.html">wx.removeTabBarBadge</a></li>
-<li class="toctree-l1"><a class="reference internal" href="wx.hideTabBarRedDot.html">wx.hideTabBarRedDot</a></li>
-<li class="toctree-l1"><a class="reference internal" href="wx.hideTabBar.html">wx.hideTabBar</a></li>
-</ul>
 </div>
 </div>
 <div class="section" id="id14">
@@ -1300,9 +1222,6 @@ wx.getSystemInfo</p></td>
 </tbody>
 </table>
 <div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="wx.loadFontFace.html">wx.loadFontFace</a></li>
-</ul>
 </div>
 </div>
 <div class="section" id="id15">
@@ -1327,10 +1246,6 @@ wx.getSystemInfo</p></td>
 </tbody>
 </table>
 <div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="wx.stopPullDownRefresh.html">wx.stopPullDownRefresh</a></li>
-<li class="toctree-l1"><a class="reference internal" href="wx.startPullDownRefresh.html">wx.startPullDownRefresh</a></li>
-</ul>
 </div>
 </div>
 <div class="section" id="id16">
@@ -1352,9 +1267,6 @@ wx.getSystemInfo</p></td>
 </tbody>
 </table>
 <div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="wx.pageScrollTo.html">wx.pageScrollTo</a></li>
-</ul>
 </div>
 </div>
 <div class="section" id="id17">
@@ -1376,9 +1288,6 @@ wx.getSystemInfo</p></td>
 </tbody>
 </table>
 <div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="wx.createAnimation.html">wx.createAnimation</a></li>
-</ul>
 </div>
 <div class="section" id="animation">
 <h4>Animation<a class="headerlink" href="#animation" title="永久链接至标题">¶</a></h4>
@@ -1486,39 +1395,6 @@ wx.getSystemInfo</p></td>
 </tbody>
 </table>
 <div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="Animation.html">wx.createWorker</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Animation.translateZ.html">wx.createWorker</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Animation.translateY.html">wx.createWorker</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Animation.translateX.html">wx.createWorker</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Animation.translate3d.html">wx.createWorker</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Animation.translate.html">wx.createWorker</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Animation.top.html">wx.createWorker</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Animation.step.html">wx.createWorker</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Animation.skewY.html">wx.createWorker</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Animation.skewX.html">wx.createWorker</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Animation.skew.html">wx.createWorker</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Animation.scaleZ.html">wx.createWorker</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Animation.scaleY.html">wx.createWorker</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Animation.scaleX.html">wx.createWorker</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Animation.scale3d.html">wx.createWorker</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Animation.scale.html">wx.createWorker</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Animation.rotateZ.html">wx.createWorker</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Animation.rotateY.html">wx.createWorker</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Animation.rotateX.html">wx.createWorker</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Animation.rotate3d.html">wx.createWorker</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Animation.rotate.html">wx.createWorker</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Animation.right.html">Animation.right:wxapi:<cite>Animation.opacity</cite></a></li>
-<li class="toctree-l1"><a class="reference internal" href="Animation.opacity.html">Animation.opacity</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Animation.matrix3d.html">Animation.matrix3d</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Animation.matrix.html">Animation.matrix</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Animation.backgroundColor.html">wxacode.getUnlimited</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Animation.left.html">Animation.left</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Animation.height.html">Animation.height:wxapi:<cite>Animation.export</cite></a></li>
-<li class="toctree-l1"><a class="reference internal" href="Animation.width.html">Animation.width</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Animation.export.html">Animation.export</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Animation.bottom.html">Animation.bottom</a></li>
-</ul>
 </div>
 </div>
 </div>
@@ -1541,9 +1417,6 @@ wx.getSystemInfo</p></td>
 </tbody>
 </table>
 <div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="wx.setTopBarText.html">wx.createWorker</a></li>
-</ul>
 </div>
 </div>
 <div class="section" id="id19">
@@ -1565,9 +1438,6 @@ wx.getSystemInfo</p></td>
 </tbody>
 </table>
 <div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="wx.nextTick.html">wx.nextTick</a></li>
-</ul>
 </div>
 </div>
 <div class="section" id="id20">
@@ -1589,9 +1459,6 @@ wx.getSystemInfo</p></td>
 </tbody>
 </table>
 <div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="wx.getMenuButtonBoundingClientRect.html">wx.getMenuButtonBoundingClientRect</a></li>
-</ul>
 </div>
 </div>
 <div class="section" id="id21">
@@ -1616,10 +1483,6 @@ wx.getSystemInfo</p></td>
 </tbody>
 </table>
 <div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="wx.onWindowResize.html">wx.onWindowResize</a></li>
-<li class="toctree-l1"><a class="reference internal" href="wx.offWindowResize.html">wx.offWindowResize</a></li>
-</ul>
 </div>
 </div>
 </div>
@@ -1644,9 +1507,6 @@ wx.getSystemInfo</p></td>
 </tbody>
 </table>
 <div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="wx.request.html">wx.request</a></li>
-</ul>
 </div>
 </div>
 <div class="section" id="requesttask">
@@ -1674,12 +1534,6 @@ wx.getSystemInfo</p></td>
 </tbody>
 </table>
 <div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="RequestTask.html">RequestTask</a></li>
-<li class="toctree-l1"><a class="reference internal" href="RequestTask.abort.html">RequestTask.abort</a></li>
-<li class="toctree-l1"><a class="reference internal" href="RequestTask.offHeadersReceived.html">RequestTask.offHeadersReceived</a></li>
-<li class="toctree-l1"><a class="reference internal" href="RequestTask.onHeadersReceived.html">RequestTask.onHeadersReceived</a></li>
-</ul>
 </div>
 </div>
 <div class="section" id="id24">
@@ -1701,9 +1555,6 @@ wx.getSystemInfo</p></td>
 </tbody>
 </table>
 <div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="wx.downloadFile.html">wx.getAccountInfoSync</a></li>
-</ul>
 </div>
 </div>
 <div class="section" id="downloadtask">
@@ -1737,14 +1588,6 @@ wx.getSystemInfo</p></td>
 </tbody>
 </table>
 <div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="DownloadTask.html">DownloadTask</a></li>
-<li class="toctree-l1"><a class="reference internal" href="DownloadTask.abort.html">DownloadTask.abort</a></li>
-<li class="toctree-l1"><a class="reference internal" href="DownloadTask.offHeadersReceived.html">DownloadTask.offHeadersReceived</a></li>
-<li class="toctree-l1"><a class="reference internal" href="DownloadTask.offProgressUpdate.html">DownloadTask.offProgressUpdate</a></li>
-<li class="toctree-l1"><a class="reference internal" href="DownloadTask.onHeadersReceived.html">DownloadTask.onHeadersReceived</a></li>
-<li class="toctree-l1"><a class="reference internal" href="DownloadTask.onProgressUpdate.html">DownloadTask.onProgressUpdate</a></li>
-</ul>
 </div>
 </div>
 <div class="section" id="id25">
@@ -1766,9 +1609,6 @@ wx.getSystemInfo</p></td>
 </tbody>
 </table>
 <div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="wx.uploadFile.html">wx.uploadFile</a></li>
-</ul>
 </div>
 </div>
 <div class="section" id="uploadtask">
@@ -1802,14 +1642,6 @@ wx.getSystemInfo</p></td>
 </tbody>
 </table>
 <div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="UploadTask.html">UploadTask</a></li>
-<li class="toctree-l1"><a class="reference internal" href="UploadTask.abort.html">UploadTask.abort</a></li>
-<li class="toctree-l1"><a class="reference internal" href="UploadTask.offHeadersReceived.html">UploadTask.offHeadersReceived</a></li>
-<li class="toctree-l1"><a class="reference internal" href="UploadTask.offProgressUpdate.html">wx.createWorker</a></li>
-<li class="toctree-l1"><a class="reference internal" href="UploadTask.onHeadersReceived.html">wx.createWorker</a></li>
-<li class="toctree-l1"><a class="reference internal" href="UploadTask.onProgressUpdate.html">UploadTask.onProgressUpdate</a></li>
-</ul>
 </div>
 </div>
 <div class="section" id="websocket">
@@ -1849,15 +1681,6 @@ wx.getSystemInfo</p></td>
 </tbody>
 </table>
 <div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="wx.sendSocketMessage.html">wx.sendSocketMessage</a></li>
-<li class="toctree-l1"><a class="reference internal" href="wx.onSocketOpen.html">wx.onSocketOpen</a></li>
-<li class="toctree-l1"><a class="reference internal" href="wx.onSocketMessage.html">wx.onSocketMessage</a></li>
-<li class="toctree-l1"><a class="reference internal" href="wx.onSocketError.html">wx.onSocketError</a></li>
-<li class="toctree-l1"><a class="reference internal" href="wx.onSocketClose.html">wx.onSocketClose</a></li>
-<li class="toctree-l1"><a class="reference internal" href="wx.connectSocket.html">wx.connectSocket</a></li>
-<li class="toctree-l1"><a class="reference internal" href="wx.closeSocket.html">wx.closeSocket</a></li>
-</ul>
 </div>
 </div>
 <div class="section" id="sockettask">
@@ -1894,15 +1717,6 @@ wx.getSystemInfo</p></td>
 </tbody>
 </table>
 <div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="SocketTask.html">SocketTask</a></li>
-<li class="toctree-l1"><a class="reference internal" href="SocketTask.close.html">SocketTask.close</a></li>
-<li class="toctree-l1"><a class="reference internal" href="SocketTask.onClose.html">SocketTask.onClose</a></li>
-<li class="toctree-l1"><a class="reference internal" href="SocketTask.onError.html">SocketTask.onError</a></li>
-<li class="toctree-l1"><a class="reference internal" href="SocketTask.onMessage.html">SocketTask.onMessage</a></li>
-<li class="toctree-l1"><a class="reference internal" href="SocketTask.onOpen.html">SocketTask.onOpen</a></li>
-<li class="toctree-l1"><a class="reference internal" href="SocketTask.send.html">SocketTask.send</a></li>
-</ul>
 </div>
 </div>
 <div class="section" id="mdns">
@@ -1951,18 +1765,6 @@ wx.getSystemInfo</p></td>
 </tbody>
 </table>
 <div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="wx.stopLocalServiceDiscovery.html">wx.stopLocalServiceDiscovery</a></li>
-<li class="toctree-l1"><a class="reference internal" href="wx.startLocalServiceDiscovery.html">wx.startLocalServiceDiscovery</a></li>
-<li class="toctree-l1"><a class="reference internal" href="wx.onLocalServiceResolveFail.html">wx.onLocalServiceResolveFail</a></li>
-<li class="toctree-l1"><a class="reference internal" href="wx.onLocalServiceLost.html">wx.onLocalServiceLost</a></li>
-<li class="toctree-l1"><a class="reference internal" href="wx.onLocalServiceFound.html">wx.onLocalServiceFound</a></li>
-<li class="toctree-l1"><a class="reference internal" href="wx.onLocalServiceDiscoveryStop.html">wx.onLocalServiceDiscoveryStop</a></li>
-<li class="toctree-l1"><a class="reference internal" href="wx.offLocalServiceResolveFail.html">wx.offLocalServiceResolveFail</a></li>
-<li class="toctree-l1"><a class="reference internal" href="wx.offLocalServiceLost.html">wx.offLocalServiceLost</a></li>
-<li class="toctree-l1"><a class="reference internal" href="wx.offLocalServiceFound.html">wx.offLocalServiceFound</a></li>
-<li class="toctree-l1"><a class="reference internal" href="wx.offLocalServiceDiscoveryStop.html">wx.offLocalServiceDiscoveryStop</a></li>
-</ul>
 </div>
 </div>
 </div>
@@ -2012,51 +1814,20 @@ wx.getSystemInfo</p></td>
 </tbody>
 </table>
 <div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="wx.setStorageSync.html">wx.createWorker</a></li>
-<li class="toctree-l1"><a class="reference internal" href="wx.setStorage.html">wx.createWorker</a></li>
-<li class="toctree-l1"><a class="reference internal" href="wx.removeStorageSync.html">wx.removeStorageSync</a></li>
-<li class="toctree-l1"><a class="reference internal" href="wx.removeStorage.html">wx.removeStorage</a></li>
-<li class="toctree-l1"><a class="reference internal" href="wx.getStorageSync.html">wx.getStorageSync</a></li>
-<li class="toctree-l1"><a class="reference internal" href="wx.getStorageInfoSync.html">wx.getStorageInfoSync</a></li>
-<li class="toctree-l1"><a class="reference internal" href="wx.getStorageInfo.html">wx.getStorageInfo</a></li>
-<li class="toctree-l1"><a class="reference internal" href="wx.getStorage.html">wx.getStorage</a></li>
-<li class="toctree-l1"><a class="reference internal" href="wx.clearStorageSync.html">wx.clearStorageSync</a></li>
-<li class="toctree-l1"><a class="reference internal" href="wx.clearStorage.html">wx.clearStorage</a></li>
-</ul>
 </div>
 </div>
 <div class="section" id="id27">
 <h2>媒体<a class="headerlink" href="#id27" title="永久链接至标题">¶</a></h2>
 <div class="section" id="id28">
 <h3>地图<a class="headerlink" href="#id28" title="永久链接至标题">¶</a></h3>
-<table class="docutils align-center">
-<colgroup>
-<col style="width: 39%" />
-<col style="width: 61%" />
-</colgroup>
-<thead>
-<tr class="row-odd"><th class="head"><p>名称</p></th>
-<th class="head"><p>功能说明</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>wx.createMapContext</p></td>
-<td><p>创建 map 上下文 MapContext 对象</p></td>
-</tr>
-</tbody>
-</table>
 <div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="wx.createMapContext.html">wx.createMapContext</a></li>
-</ul>
 </div>
 <div class="section" id="mapcontext">
 <h4>MapContext<a class="headerlink" href="#mapcontext" title="永久链接至标题">¶</a></h4>
 <table class="docutils align-center">
 <colgroup>
-<col style="width: 52%" />
-<col style="width: 48%" />
+<col style="width: 58%" />
+<col style="width: 42%" />
 </colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>名称</p></th>
@@ -2064,116 +1835,32 @@ wx.getSystemInfo</p></td>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p>MapContext.getCenterLocation</p></td>
+<tr class="row-even"><td><p><code class="xref js js-func docutils literal notranslate"><span class="pre">MapContext.getCenterLocation()</span></code></p></td>
 <td><p>获取当前地图中心的经纬度</p></td>
 </tr>
-<tr class="row-odd"><td><p>MapContext.getRegion</p></td>
+<tr class="row-odd"><td><p><code class="xref js js-func docutils literal notranslate"><span class="pre">MapContext.getRegion()</span></code></p></td>
 <td><p>获取当前地图的视野范围</p></td>
 </tr>
-<tr class="row-even"><td><p>MapContext.getScale</p></td>
+<tr class="row-even"><td><p><code class="xref js js-func docutils literal notranslate"><span class="pre">MapContext.getScale()</span></code></p></td>
 <td><p>获取当前地图的缩放级别</p></td>
 </tr>
-<tr class="row-odd"><td><p>MapContext.includePoints</p></td>
+<tr class="row-odd"><td><p><code class="xref js js-func docutils literal notranslate"><span class="pre">MapContext.includePoints()</span></code></p></td>
 <td><p>缩放视野展示所有经纬度</p></td>
 </tr>
-<tr class="row-even"><td><p>MapContext.moveToLocation</p></td>
+<tr class="row-even"><td><p><code class="xref js js-func docutils literal notranslate"><span class="pre">MapContext.moveToLocation()</span></code></p></td>
 <td><p>将地图中心移动到当前定位点</p></td>
 </tr>
-<tr class="row-odd"><td><p>MapContext.translateMarker</p></td>
+<tr class="row-odd"><td><p><code class="xref js js-func docutils literal notranslate"><span class="pre">MapContext.translateMarker()</span></code></p></td>
 <td><p>平移marker，带动画</p></td>
 </tr>
 </tbody>
 </table>
 <div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="MapContext.html">MapContext</a></li>
-<li class="toctree-l1"><a class="reference internal" href="MapContext.getCenterLocation.html">MapContext.getCenterLocation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="MapContext.getRegion.html">MapContext.getRegion</a></li>
-<li class="toctree-l1"><a class="reference internal" href="MapContext.getScale.html">MapContext.getScale</a></li>
-<li class="toctree-l1"><a class="reference internal" href="MapContext.includePoints.html">MapContext.includePoints</a></li>
-<li class="toctree-l1"><a class="reference internal" href="MapContext.moveToLocation.html">MapContext.moveToLocation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="MapContext.translateMarker.html">MapContext.translateMarker</a></li>
-</ul>
 </div>
 </div>
 </div>
 <div class="section" id="id29">
 <h3>图片<a class="headerlink" href="#id29" title="永久链接至标题">¶</a></h3>
-<table class="docutils align-center">
-<colgroup>
-<col style="width: 44%" />
-<col style="width: 56%" />
-</colgroup>
-<thead>
-<tr class="row-odd"><th class="head"><p>名称</p></th>
-<th class="head"><p>功能说明</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>wx.saveImageToPhotosAlbum</p></td>
-<td><p>保存图片到系统相册</p></td>
-</tr>
-<tr class="row-odd"><td><p>wx.previewImage</p></td>
-<td><p>在新页面中全屏预览图片</p></td>
-</tr>
-<tr class="row-even"><td><p>wx.getImageInfo</p></td>
-<td><p>获取图片信息</p></td>
-</tr>
-<tr class="row-odd"><td><p>wx.compressImage</p></td>
-<td><p>压缩图片接口，可选压缩质量</p></td>
-</tr>
-<tr class="row-even"><td><p>wx.chooseMessageFile</p></td>
-<td><p>从客户端会话选择文件</p></td>
-</tr>
-<tr class="row-odd"><td><p>wx.chooseImage</p></td>
-<td><p>从本地相册选择图片或使用相机拍照</p></td>
-</tr>
-</tbody>
-</table>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="wx.saveImageToPhotosAlbum.html">wx.saveImageToPhotosAlbum</a></li>
-<li class="toctree-l1"><a class="reference internal" href="wx.previewImage.html">wx.previewImage</a></li>
-<li class="toctree-l1"><a class="reference internal" href="wx.getImageInfo.html">wx.getImageInfo</a></li>
-<li class="toctree-l1"><a class="reference internal" href="wx.compressImage.html">wx.compressImage</a></li>
-<li class="toctree-l1"><a class="reference internal" href="wx.chooseMessageFile.html">wx.chooseMessageFile</a></li>
-<li class="toctree-l1"><a class="reference internal" href="wx.chooseImage.html">wx.chooseImage</a></li>
-</ul>
-</div>
-</div>
-<div class="section" id="id30">
-<h3>视频<a class="headerlink" href="#id30" title="永久链接至标题">¶</a></h3>
-<table class="docutils align-center">
-<colgroup>
-<col style="width: 42%" />
-<col style="width: 58%" />
-</colgroup>
-<thead>
-<tr class="row-odd"><th class="head"><p>名称</p></th>
-<th class="head"><p>功能说明</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>wx.saveVideoToPhotosAlbum</p></td>
-<td><p>保存视频到系统相册</p></td>
-</tr>
-<tr class="row-odd"><td><p>wx.createVideoContext</p></td>
-<td><p>创建 video 上下文 VideoContext 对象</p></td>
-</tr>
-<tr class="row-even"><td><p>wx.chooseVideo</p></td>
-<td><p>拍摄视频或从手机相册中选视频</p></td>
-</tr>
-</tbody>
-</table>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="wx.saveVideoToPhotosAlbum.html">wx.saveVideoToPhotosAlbum</a></li>
-<li class="toctree-l1"><a class="reference internal" href="wx.createVideoContext.html">wx.createVideoContext</a></li>
-<li class="toctree-l1"><a class="reference internal" href="wx.chooseVideo.html">wx.chooseVideo</a></li>
-</ul>
-</div>
-<div class="section" id="videocontext">
-<h4>VideoContext<a class="headerlink" href="#videocontext" title="永久链接至标题">¶</a></h4>
 <table class="docutils align-center">
 <colgroup>
 <col style="width: 51%" />
@@ -2185,742 +1872,106 @@ wx.getSystemInfo</p></td>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p>VideoContext.seek</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="wx.saveImageToPhotosAlbum.html#wx.saveImageToPhotosAlbum" title="wx.saveImageToPhotosAlbum"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.saveImageToPhotosAlbum()</span></code></a></p></td>
+<td><p>保存图片到系统相册</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="wx.previewImage.html#wx.previewImage" title="wx.previewImage"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.previewImage()</span></code></a></p></td>
+<td><p>在新页面中全屏预览图片</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="wx.getImageInfo.html#wx.getImageInfo" title="wx.getImageInfo"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.getImageInfo()</span></code></a></p></td>
+<td><p>获取图片信息</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="wx.compressImage.html#wx.compressImage" title="wx.compressImage"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.compressImage()</span></code></a></p></td>
+<td><p>压缩图片接口，可选压缩质量</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="wx.chooseMessageFile.html#wx.chooseMessageFile" title="wx.chooseMessageFile"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.chooseMessageFile()</span></code></a></p></td>
+<td><p>从客户端会话选择文件</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="wx.chooseImage.html#wx.chooseImage" title="wx.chooseImage"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.chooseImage()</span></code></a></p></td>
+<td><p>从本地相册选择图片或使用相机拍照</p></td>
+</tr>
+</tbody>
+</table>
+<div class="toctree-wrapper compound">
+</div>
+</div>
+<div class="section" id="id30">
+<h3>视频<a class="headerlink" href="#id30" title="永久链接至标题">¶</a></h3>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 49%" />
+<col style="width: 51%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>名称</p></th>
+<th class="head"><p>功能说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="wx.saveVideoToPhotosAlbum.html#wx.saveVideoToPhotosAlbum" title="wx.saveVideoToPhotosAlbum"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.saveVideoToPhotosAlbum()</span></code></a></p></td>
+<td><p>保存视频到系统相册</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="wx.createVideoContext.html#wx.createVideoContext" title="wx.createVideoContext"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.createVideoContext()</span></code></a></p></td>
+<td><p>创建 video 上下文 VideoContext 对象</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="wx.chooseVideo.html#wx.chooseVideo" title="wx.chooseVideo"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.chooseVideo()</span></code></a></p></td>
+<td><p>拍摄视频或从手机相册中选视频</p></td>
+</tr>
+</tbody>
+</table>
+<div class="toctree-wrapper compound">
+</div>
+<div class="section" id="videocontext">
+<h4>VideoContext<a class="headerlink" href="#videocontext" title="永久链接至标题">¶</a></h4>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 56%" />
+<col style="width: 44%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>名称</p></th>
+<th class="head"><p>功能说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="VideoContext.html#VideoContext.seek" title="VideoContext.seek"><code class="xref js js-func docutils literal notranslate"><span class="pre">VideoContext.seek()</span></code></a></p></td>
 <td><p>跳转到指定位置</p></td>
 </tr>
-<tr class="row-odd"><td><p>VideoContext.exitFullScreen</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="VideoContext.html#VideoContext.exitFullScreen" title="VideoContext.exitFullScreen"><code class="xref js js-func docutils literal notranslate"><span class="pre">VideoContext.exitFullScreen()</span></code></a></p></td>
 <td><p>退出全屏</p></td>
 </tr>
-<tr class="row-even"><td><p>VideoContext.hideStatusBar</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="VideoContext.html#VideoContext.hideStatusBar" title="VideoContext.hideStatusBar"><code class="xref js js-func docutils literal notranslate"><span class="pre">VideoContext.hideStatusBar()</span></code></a></p></td>
 <td><p>隐藏状态栏，仅在iOS全屏下有效</p></td>
 </tr>
-<tr class="row-odd"><td><p>VideoContext.pause</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="VideoContext.html#VideoContext.pause" title="VideoContext.pause"><code class="xref js js-func docutils literal notranslate"><span class="pre">VideoContext.pause()</span></code></a></p></td>
 <td><p>暂停视频</p></td>
 </tr>
-<tr class="row-even"><td><p>VideoContext.play</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="VideoContext.html#VideoContext.play" title="VideoContext.play"><code class="xref js js-func docutils literal notranslate"><span class="pre">VideoContext.play()</span></code></a></p></td>
 <td><p>播放视频</p></td>
 </tr>
-<tr class="row-odd"><td><p>VideoContext.playbackRate</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="VideoContext.html#VideoContext.playbackRate" title="VideoContext.playbackRate"><code class="xref js js-func docutils literal notranslate"><span class="pre">VideoContext.playbackRate()</span></code></a></p></td>
 <td><p>设置倍速播放</p></td>
 </tr>
-<tr class="row-even"><td><p>VideoContext.requestFullScreen</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="VideoContext.html#VideoContext.requestFullScreen" title="VideoContext.requestFullScreen"><code class="xref js js-func docutils literal notranslate"><span class="pre">VideoContext.requestFullScreen()</span></code></a></p></td>
 <td><p>进入全屏</p></td>
 </tr>
-<tr class="row-odd"><td><p>VideoContext.sendDanmu</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="VideoContext.html#VideoContext.sendDanmu" title="VideoContext.sendDanmu"><code class="xref js js-func docutils literal notranslate"><span class="pre">VideoContext.sendDanmu()</span></code></a></p></td>
 <td><p>发送弹幕</p></td>
 </tr>
-<tr class="row-even"><td><p>VideoContext.showStatusBar</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="VideoContext.html#VideoContext.showStatusBar" title="VideoContext.showStatusBar"><code class="xref js js-func docutils literal notranslate"><span class="pre">VideoContext.showStatusBar()</span></code></a></p></td>
 <td><p>显示状态栏，仅在iOS全屏下有效</p></td>
 </tr>
-<tr class="row-odd"><td><p>VideoContext.stop</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="VideoContext.html#VideoContext.stop" title="VideoContext.stop"><code class="xref js js-func docutils literal notranslate"><span class="pre">VideoContext.stop()</span></code></a></p></td>
 <td><p>停止视频</p></td>
 </tr>
 </tbody>
 </table>
 <div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="VideoContext.html">VideoContext</a></li>
-<li class="toctree-l1"><a class="reference internal" href="VideoContext.seek.html">VideoContext.seek</a></li>
-<li class="toctree-l1"><a class="reference internal" href="VideoContext.exitFullScreen.html">VideoContext.exitFullScreen</a></li>
-<li class="toctree-l1"><a class="reference internal" href="VideoContext.hideStatusBar.html">VideoContext.hideStatusBar</a></li>
-<li class="toctree-l1"><a class="reference internal" href="VideoContext.pause.html">VideoContext.pause</a></li>
-<li class="toctree-l1"><a class="reference internal" href="VideoContext.play.html">VideoContext.play</a></li>
-<li class="toctree-l1"><a class="reference internal" href="VideoContext.playbackRate.html">VideoContext.playbackRate</a></li>
-<li class="toctree-l1"><a class="reference internal" href="VideoContext.requestFullScreen.html">VideoContext.requestFullScreen</a></li>
-<li class="toctree-l1"><a class="reference internal" href="VideoContext.sendDanmu.html">VideoContext.sendDanmu</a></li>
-<li class="toctree-l1"><a class="reference internal" href="VideoContext.showStatusBar.html">VideoContext.showStatusBar</a></li>
-<li class="toctree-l1"><a class="reference internal" href="VideoContext.stop.html">VideoContext.stop</a></li>
-</ul>
 </div>
 </div>
 </div>
 <div class="section" id="id31">
 <h3>音频<a class="headerlink" href="#id31" title="永久链接至标题">¶</a></h3>
-<table class="docutils align-center">
-<colgroup>
-<col style="width: 39%" />
-<col style="width: 61%" />
-</colgroup>
-<thead>
-<tr class="row-odd"><th class="head"><p>名称</p></th>
-<th class="head"><p>功能说明</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>wx.stopVoice</p></td>
-<td><p>结束播放语音</p></td>
-</tr>
-<tr class="row-odd"><td><p>wx.setInnerAudioOption</p></td>
-<td><p>设置 InnerAudioContext 的播放选项</p></td>
-</tr>
-<tr class="row-even"><td><p>wx.playVoice</p></td>
-<td><p>开始播放语音</p></td>
-</tr>
-<tr class="row-odd"><td><p>wx.pauseVoice</p></td>
-<td><p>暂停正在播放的语音</p></td>
-</tr>
-<tr class="row-even"><td><p>wx.getAvailableAudioSources</p></td>
-<td><p>获取当前支持的音频输入源</p></td>
-</tr>
-<tr class="row-odd"><td><p>wx.createInnerAudioContext</p></td>
-<td><p>创建内部 audio 上下文 InnerAudioContext 对象</p></td>
-</tr>
-<tr class="row-even"><td><p>wx.createAudioContext</p></td>
-<td><p>创建 audio 上下文 AudioContext 对象</p></td>
-</tr>
-</tbody>
-</table>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="wx.stopVoice.html">wx.stopVoice</a></li>
-<li class="toctree-l1"><a class="reference internal" href="wx.setInnerAudioOption.html">wx.setInnerAudioOption</a></li>
-<li class="toctree-l1"><a class="reference internal" href="wx.playVoice.html">wx.playVoice</a></li>
-<li class="toctree-l1"><a class="reference internal" href="wx.pauseVoice.html">wx.pauseVoice</a></li>
-<li class="toctree-l1"><a class="reference internal" href="wx.getAvailableAudioSources.html">wx.getAvailableAudioSources</a></li>
-<li class="toctree-l1"><a class="reference internal" href="wx.createInnerAudioContext.html">wx.createInnerAudioContext</a></li>
-<li class="toctree-l1"><a class="reference internal" href="wx.createAudioContext.html">wx.createAudioContext</a></li>
-</ul>
-</div>
-<div class="section" id="inneraudiocontext">
-<h4>InnerAudioContext<a class="headerlink" href="#inneraudiocontext" title="永久链接至标题">¶</a></h4>
-<table class="docutils align-center">
-<colgroup>
-<col style="width: 48%" />
-<col style="width: 52%" />
-</colgroup>
-<thead>
-<tr class="row-odd"><th class="head"><p>名称</p></th>
-<th class="head"><p>功能说明</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>InnerAudioContext.destroy</p></td>
-<td><p>销毁当前实例</p></td>
-</tr>
-<tr class="row-odd"><td><p>InnerAudioContext.offCanplay</p></td>
-<td><p>取消监听音频进入可以播放状态的事件</p></td>
-</tr>
-<tr class="row-even"><td><p>InnerAudioContext.offEnded</p></td>
-<td><p>取消监听音频自然播放至结束的事件</p></td>
-</tr>
-<tr class="row-odd"><td><p>InnerAudioContext.offError</p></td>
-<td><p>取消监听音频播放错误事件</p></td>
-</tr>
-<tr class="row-even"><td><p>InnerAudioContext.offPause</p></td>
-<td><p>取消监听音频暂停事件</p></td>
-</tr>
-<tr class="row-odd"><td><p>InnerAudioContext.offPlay</p></td>
-<td><p>取消监听音频播放事件</p></td>
-</tr>
-<tr class="row-even"><td><p>InnerAudioContext.offSeeked</p></td>
-<td><p>取消监听音频完成跳转操作的事件</p></td>
-</tr>
-<tr class="row-odd"><td><p>InnerAudioContext.offSeeking</p></td>
-<td><p>取消监听音频进行跳转操作的事件</p></td>
-</tr>
-<tr class="row-even"><td><p>InnerAudioContext.offStop</p></td>
-<td><p>取消监听音频停止事件</p></td>
-</tr>
-<tr class="row-odd"><td><p>InnerAudioContext.offTimeUpdate</p></td>
-<td><p>取消监听音频播放进度更新事件</p></td>
-</tr>
-<tr class="row-even"><td><p>InnerAudioContext.offWaiting</p></td>
-<td><p>取消监听音频加载中事件</p></td>
-</tr>
-<tr class="row-odd"><td><p>InnerAudioContext.onCanplay</p></td>
-<td><p>监听音频进入可以播放状态的事件</p></td>
-</tr>
-<tr class="row-even"><td><p>InnerAudioContext.onEnded</p></td>
-<td><p>监听音频自然播放至结束的事件</p></td>
-</tr>
-<tr class="row-odd"><td><p>InnerAudioContext.onError</p></td>
-<td><p>监听音频播放错误事件</p></td>
-</tr>
-<tr class="row-even"><td><p>InnerAudioContext.onPause</p></td>
-<td><p>监听音频暂停事件</p></td>
-</tr>
-<tr class="row-odd"><td><p>InnerAudioContext.onPlay</p></td>
-<td><p>监听音频播放事件</p></td>
-</tr>
-<tr class="row-even"><td><p>InnerAudioContext.onSeeked</p></td>
-<td><p>监听音频完成跳转操作的事件</p></td>
-</tr>
-<tr class="row-odd"><td><p>InnerAudioContext.onSeeking</p></td>
-<td><p>监听音频进行跳转操作的事件</p></td>
-</tr>
-<tr class="row-even"><td><p>InnerAudioContext.onStop</p></td>
-<td><p>监听音频停止事件</p></td>
-</tr>
-<tr class="row-odd"><td><p>InnerAudioContext.onTimeUpdate</p></td>
-<td><p>监听音频播放进度更新事件</p></td>
-</tr>
-<tr class="row-even"><td><p>InnerAudioContext.onWaiting</p></td>
-<td><p>监听音频加载中事件</p></td>
-</tr>
-<tr class="row-odd"><td><p>InnerAudioContext.pause</p></td>
-<td><p>暂停</p></td>
-</tr>
-<tr class="row-even"><td><p>InnerAudioContext.play</p></td>
-<td><p>播放</p></td>
-</tr>
-<tr class="row-odd"><td><p>InnerAudioContext.seek</p></td>
-<td><p>跳转到指定位置</p></td>
-</tr>
-<tr class="row-even"><td><p>InnerAudioContext.stop</p></td>
-<td><p>停止</p></td>
-</tr>
-</tbody>
-</table>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="AudioContext.html">AudioContext</a></li>
-<li class="toctree-l1"><a class="reference internal" href="InnerAudioContext.html">InnerAudioContext</a></li>
-<li class="toctree-l1"><a class="reference internal" href="InnerAudioContext.destroy.html">InnerAudioContext.destroy</a></li>
-<li class="toctree-l1"><a class="reference internal" href="InnerAudioContext.offCanplay.html">InnerAudioContext.offCanplay</a></li>
-<li class="toctree-l1"><a class="reference internal" href="InnerAudioContext.offEnded.html">InnerAudioContext.offEnded</a></li>
-<li class="toctree-l1"><a class="reference internal" href="InnerAudioContext.offError.html">InnerAudioContext.offError</a></li>
-<li class="toctree-l1"><a class="reference internal" href="InnerAudioContext.offPause.html">InnerAudioContext.offPause</a></li>
-<li class="toctree-l1"><a class="reference internal" href="InnerAudioContext.offPlay.html">InnerAudioContext.offPlay</a></li>
-<li class="toctree-l1"><a class="reference internal" href="InnerAudioContext.offSeeked.html">InnerAudioContext.offSeeked</a></li>
-<li class="toctree-l1"><a class="reference internal" href="InnerAudioContext.offSeeking.html">InnerAudioContext.offSeeking</a></li>
-<li class="toctree-l1"><a class="reference internal" href="InnerAudioContext.offStop.html">InnerAudioContext.offStop</a></li>
-<li class="toctree-l1"><a class="reference internal" href="InnerAudioContext.offTimeUpdate.html">InnerAudioContext.offTimeUpdate</a></li>
-<li class="toctree-l1"><a class="reference internal" href="InnerAudioContext.offWaiting.html">InnerAudioContext.offWaiting</a></li>
-<li class="toctree-l1"><a class="reference internal" href="InnerAudioContext.onCanplay.html">InnerAudioContext.onCanplay</a></li>
-<li class="toctree-l1"><a class="reference internal" href="InnerAudioContext.onEnded.html">InnerAudioContext.onEnded</a></li>
-<li class="toctree-l1"><a class="reference internal" href="InnerAudioContext.onError.html">InnerAudioContext.onError</a></li>
-<li class="toctree-l1"><a class="reference internal" href="InnerAudioContext.onPause.html">InnerAudioContext.onPause</a></li>
-<li class="toctree-l1"><a class="reference internal" href="InnerAudioContext.onPlay.html">InnerAudioContext.onPlay</a></li>
-<li class="toctree-l1"><a class="reference internal" href="InnerAudioContext.onSeeked.html">InnerAudioContext.onSeeked</a></li>
-<li class="toctree-l1"><a class="reference internal" href="InnerAudioContext.onSeeking.html">InnerAudioContext.onSeeking</a></li>
-<li class="toctree-l1"><a class="reference internal" href="InnerAudioContext.onStop.html">InnerAudioContext.onStop</a></li>
-<li class="toctree-l1"><a class="reference internal" href="InnerAudioContext.onTimeUpdate.html">InnerAudioContext.onTimeUpdate</a></li>
-<li class="toctree-l1"><a class="reference internal" href="InnerAudioContext.onWaiting.html">InnerAudioContext.onWaiting</a></li>
-<li class="toctree-l1"><a class="reference internal" href="InnerAudioContext.pause.html">InnerAudioContext.pause</a></li>
-<li class="toctree-l1"><a class="reference internal" href="InnerAudioContext.play.html">InnerAudioContext.play</a></li>
-<li class="toctree-l1"><a class="reference internal" href="InnerAudioContext.seek.html">InnerAudioContext.seek</a></li>
-<li class="toctree-l1"><a class="reference internal" href="InnerAudioContext.stop.html">InnerAudioContext.stop</a></li>
-</ul>
-</div>
-</div>
-<div class="section" id="audiocontext">
-<h4>AudioContext<a class="headerlink" href="#audiocontext" title="永久链接至标题">¶</a></h4>
-<table class="docutils align-center">
-<colgroup>
-<col style="width: 57%" />
-<col style="width: 43%" />
-</colgroup>
-<thead>
-<tr class="row-odd"><th class="head"><p>名称</p></th>
-<th class="head"><p>功能说明</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>AudioContext.pause</p></td>
-<td><p>暂停音频</p></td>
-</tr>
-<tr class="row-odd"><td><p>AudioContext.play</p></td>
-<td><p>播放音频</p></td>
-</tr>
-<tr class="row-even"><td><p>AudioContext.seek</p></td>
-<td><p>跳转到指定位置</p></td>
-</tr>
-<tr class="row-odd"><td><p>AudioContext.setSrc</p></td>
-<td><p>设置音频地址</p></td>
-</tr>
-</tbody>
-</table>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="AudioContext.html">AudioContext</a></li>
-<li class="toctree-l1"><a class="reference internal" href="AudioContext.pause.html">AudioContext.pause</a></li>
-<li class="toctree-l1"><a class="reference internal" href="AudioContext.play.html">AudioContext.play</a></li>
-<li class="toctree-l1"><a class="reference internal" href="AudioContext.seek.html">AudioContext.seek</a></li>
-<li class="toctree-l1"><a class="reference internal" href="AudioContext.setSrc.html">AudioContext.setSrc</a></li>
-</ul>
-</div>
-</div>
-</div>
-<div class="section" id="id32">
-<h3>背景音频<a class="headerlink" href="#id32" title="永久链接至标题">¶</a></h3>
-<table class="docutils align-center">
-<colgroup>
-<col style="width: 53%" />
-<col style="width: 47%" />
-</colgroup>
-<thead>
-<tr class="row-odd"><th class="head"><p>名称</p></th>
-<th class="head"><p>功能说明</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>wx.stopBackgroundAudio</p></td>
-<td><p>停止播放音乐</p></td>
-</tr>
-<tr class="row-odd"><td><p>wx.seekBackgroundAudio</p></td>
-<td><p>控制音乐播放进度</p></td>
-</tr>
-<tr class="row-even"><td><p>wx.playBackgroundAudio</p></td>
-<td><p>使用后台播放器播放音乐</p></td>
-</tr>
-<tr class="row-odd"><td><p>wx.pauseBackgroundAudio</p></td>
-<td><p>暂停播放音乐</p></td>
-</tr>
-<tr class="row-even"><td><p>wx.onBackgroundAudioStop</p></td>
-<td><p>监听音乐停止事件</p></td>
-</tr>
-<tr class="row-odd"><td><p>wx.onBackgroundAudioPlay</p></td>
-<td><p>监听音乐播放事件</p></td>
-</tr>
-<tr class="row-even"><td><p>wx.onBackgroundAudioPause</p></td>
-<td><p>监听音乐暂停事件</p></td>
-</tr>
-<tr class="row-odd"><td><p>wx.getBackgroundAudioPlayerState</p></td>
-<td><p>获取后台音乐播放状态</p></td>
-</tr>
-<tr class="row-even"><td><p>wx.getBackgroundAudioManager</p></td>
-<td><p>获取全局唯一的背景音频管理器</p></td>
-</tr>
-</tbody>
-</table>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="wx.stopBackgroundAudio.html">wx.stopBackgroundAudio</a></li>
-<li class="toctree-l1"><a class="reference internal" href="wx.seekBackgroundAudio.html">wx.seekBackgroundAudio</a></li>
-<li class="toctree-l1"><a class="reference internal" href="wx.playBackgroundAudio.html">wx.playBackgroundAudio</a></li>
-<li class="toctree-l1"><a class="reference internal" href="wx.pauseBackgroundAudio.html">wx.pauseBackgroundAudio</a></li>
-<li class="toctree-l1"><a class="reference internal" href="wx.onBackgroundAudioStop.html">wx.onBackgroundAudioStop</a></li>
-<li class="toctree-l1"><a class="reference internal" href="wx.onBackgroundAudioPlay.html">wx.onBackgroundAudioPlay</a></li>
-<li class="toctree-l1"><a class="reference internal" href="wx.onBackgroundAudioPause.html">wx.onBackgroundAudioPause</a></li>
-<li class="toctree-l1"><a class="reference internal" href="wx.getBackgroundAudioPlayerState.html">wx.getBackgroundAudioPlayerState</a></li>
-<li class="toctree-l1"><a class="reference internal" href="wx.getBackgroundAudioManager.html">wx.getBackgroundAudioManager</a></li>
-</ul>
-</div>
-<div class="section" id="backgroundaudiomanager">
-<h4>BackgroundAudioManager<a class="headerlink" href="#backgroundaudiomanager" title="永久链接至标题">¶</a></h4>
-<table class="docutils align-center">
-<colgroup>
-<col style="width: 42%" />
-<col style="width: 58%" />
-</colgroup>
-<thead>
-<tr class="row-odd"><th class="head"><p>名称</p></th>
-<th class="head"><p>功能说明</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>BackgroundAudioManager.onCanplay</p></td>
-<td><p>监听背景音频进入可播放状态事件</p></td>
-</tr>
-<tr class="row-odd"><td><p>BackgroundAudioManager.onEnded</p></td>
-<td><p>监听背景音频自然播放结束事件</p></td>
-</tr>
-<tr class="row-even"><td><p>BackgroundAudioManager.onError</p></td>
-<td><p>监听背景音频播放错误事件</p></td>
-</tr>
-<tr class="row-odd"><td><p>BackgroundAudioManager.onNext</p></td>
-<td><p>监听用户在系统音乐播放面板点击下一曲事件（仅iOS）</p></td>
-</tr>
-<tr class="row-even"><td><p>BackgroundAudioManager.onPause</p></td>
-<td><p>监听背景音频暂停事件</p></td>
-</tr>
-<tr class="row-odd"><td><p>BackgroundAudioManager.onPlay</p></td>
-<td><p>监听背景音频播放事件</p></td>
-</tr>
-<tr class="row-even"><td><p>BackgroundAudioManager.onPrev</p></td>
-<td><p>监听用户在系统音乐播放面板点击上一曲事件（仅iOS）</p></td>
-</tr>
-<tr class="row-odd"><td><p>BackgroundAudioManager.onSeeked</p></td>
-<td><p>监听背景音频完成跳转操作事件</p></td>
-</tr>
-<tr class="row-even"><td><p>BackgroundAudioManager.onSeeking</p></td>
-<td><p>监听背景音频开始跳转操作事件</p></td>
-</tr>
-<tr class="row-odd"><td><p>BackgroundAudioManager.onStop</p></td>
-<td><p>监听背景音频停止事件</p></td>
-</tr>
-<tr class="row-even"><td><p>BackgroundAudioManager.onTimeUpdate</p></td>
-<td><p>监听背景音频播放进度更新事件</p></td>
-</tr>
-<tr class="row-odd"><td><p>BackgroundAudioManager.onWaiting</p></td>
-<td><p>监听音频加载中事件</p></td>
-</tr>
-<tr class="row-even"><td><p>BackgroundAudioManager.pause</p></td>
-<td><p>暂停音乐</p></td>
-</tr>
-<tr class="row-odd"><td><p>BackgroundAudioManager.play</p></td>
-<td><p>播放音乐</p></td>
-</tr>
-<tr class="row-even"><td><p>BackgroundAudioManager.seek</p></td>
-<td><p>跳转到指定位置</p></td>
-</tr>
-<tr class="row-odd"><td><p>BackgroundAudioManager.stop</p></td>
-<td><p>停止音乐</p></td>
-</tr>
-</tbody>
-</table>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="BackgroundAudioManager.html">wx.createWorker</a></li>
-<li class="toctree-l1"><a class="reference internal" href="BackgroundAudioManager.onCanplay.html">BackgroundAudioManager.onCanplay</a></li>
-<li class="toctree-l1"><a class="reference internal" href="BackgroundAudioManager.onEnded.html">BackgroundAudioManager.onEnded</a></li>
-<li class="toctree-l1"><a class="reference internal" href="BackgroundAudioManager.onError.html">BackgroundAudioManager.onError</a></li>
-<li class="toctree-l1"><a class="reference internal" href="BackgroundAudioManager.onNext.html">BackgroundAudioManager.onNext</a></li>
-<li class="toctree-l1"><a class="reference internal" href="BackgroundAudioManager.onPause.html">BackgroundAudioManager.onPause</a></li>
-<li class="toctree-l1"><a class="reference internal" href="BackgroundAudioManager.onPlay.html">BackgroundAudioManager.onPlay</a></li>
-<li class="toctree-l1"><a class="reference internal" href="BackgroundAudioManager.onPrev.html">BackgroundAudioManager.onPrev</a></li>
-<li class="toctree-l1"><a class="reference internal" href="BackgroundAudioManager.onSeeked.html">BackgroundAudioManager.onSeeked</a></li>
-<li class="toctree-l1"><a class="reference internal" href="BackgroundAudioManager.onSeeking.html">BackgroundAudioManager.onSeeking</a></li>
-<li class="toctree-l1"><a class="reference internal" href="BackgroundAudioManager.onStop.html">BackgroundAudioManager.onStop</a></li>
-<li class="toctree-l1"><a class="reference internal" href="BackgroundAudioManager.onTimeUpdate.html">BackgroundAudioManager.onTimeUpdate</a></li>
-<li class="toctree-l1"><a class="reference internal" href="BackgroundAudioManager.onWaiting.html">BackgroundAudioManager.onWaiting</a></li>
-<li class="toctree-l1"><a class="reference internal" href="BackgroundAudioManager.pause.html">BackgroundAudioManager.pause</a></li>
-<li class="toctree-l1"><a class="reference internal" href="BackgroundAudioManager.play.html">BackgroundAudioManager.play</a></li>
-<li class="toctree-l1"><a class="reference internal" href="BackgroundAudioManager.seek.html">BackgroundAudioManager.seek</a></li>
-<li class="toctree-l1"><a class="reference internal" href="BackgroundAudioManager.stop.html">BackgroundAudioManager.stop</a></li>
-</ul>
-</div>
-</div>
-</div>
-<div class="section" id="id33">
-<h3>实时音视频<a class="headerlink" href="#id33" title="永久链接至标题">¶</a></h3>
-<table class="docutils align-center">
-<colgroup>
-<col style="width: 37%" />
-<col style="width: 63%" />
-</colgroup>
-<thead>
-<tr class="row-odd"><th class="head"><p>名称</p></th>
-<th class="head"><p>功能说明</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>wx.createLivePusherContext</p></td>
-<td><p>创建 live-pusher 上下文 LivePusherContext 对象</p></td>
-</tr>
-<tr class="row-odd"><td><p>wx.createLivePlayerContext</p></td>
-<td><p>创建 live-player 上下文 LivePlayerContext 对象</p></td>
-</tr>
-</tbody>
-</table>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="wx.createLivePusherContext.html">wx.createLivePusherContext</a></li>
-<li class="toctree-l1"><a class="reference internal" href="wx.createLivePlayerContext.html">wx.createLivePlayerContext</a></li>
-</ul>
-</div>
-<div class="section" id="livepushercontext">
-<h4>LivePusherContext<a class="headerlink" href="#livepushercontext" title="永久链接至标题">¶</a></h4>
-<table class="docutils align-center">
-<colgroup>
-<col style="width: 67%" />
-<col style="width: 33%" />
-</colgroup>
-<thead>
-<tr class="row-odd"><th class="head"><p>名称</p></th>
-<th class="head"><p>功能说明</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>LivePusherContext.pause</p></td>
-<td><p>暂停推流</p></td>
-</tr>
-<tr class="row-odd"><td><p>LivePusherContext.pauseBGM</p></td>
-<td><p>暂停背景音</p></td>
-</tr>
-<tr class="row-even"><td><p>LivePusherContext.playBGM</p></td>
-<td><p>播放背景音</p></td>
-</tr>
-<tr class="row-odd"><td><p>LivePusherContext.resume</p></td>
-<td><p>恢复推流</p></td>
-</tr>
-<tr class="row-even"><td><p>LivePusherContext.resumeBGM</p></td>
-<td><p>恢复背景音</p></td>
-</tr>
-<tr class="row-odd"><td><p>LivePusherContext.setBGMVolume</p></td>
-<td><p>设置背景音音量</p></td>
-</tr>
-<tr class="row-even"><td><p>LivePusherContext.snapshot</p></td>
-<td><p>快照</p></td>
-</tr>
-<tr class="row-odd"><td><p>LivePusherContext.start</p></td>
-<td><p>播放推流</p></td>
-</tr>
-<tr class="row-even"><td><p>LivePusherContext.stop</p></td>
-<td><p>停止推流</p></td>
-</tr>
-<tr class="row-odd"><td><p>LivePusherContext.stopBGM</p></td>
-<td><p>停止背景音</p></td>
-</tr>
-<tr class="row-even"><td><p>LivePusherContext.switchCamera</p></td>
-<td><p>切换前后摄像头</p></td>
-</tr>
-<tr class="row-odd"><td><p>LivePusherContext.toggleTorch</p></td>
-<td><p>切换</p></td>
-</tr>
-</tbody>
-</table>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="LivePlayerContext.html">LivePlayerContext</a></li>
-<li class="toctree-l1"><a class="reference internal" href="LivePusherContext.html">LivePusherContext</a></li>
-<li class="toctree-l1"><a class="reference internal" href="LivePusherContext.pause.html">LivePusherContext.pause</a></li>
-<li class="toctree-l1"><a class="reference internal" href="LivePusherContext.pauseBGM.html">LivePusherContext.pauseBGM</a></li>
-<li class="toctree-l1"><a class="reference internal" href="LivePusherContext.playBGM.html">LivePusherContext.playBGM</a></li>
-<li class="toctree-l1"><a class="reference internal" href="LivePusherContext.resume.html">LivePusherContext.resume</a></li>
-<li class="toctree-l1"><a class="reference internal" href="LivePusherContext.resumeBGM.html">LivePusherContext.resumeBGM</a></li>
-<li class="toctree-l1"><a class="reference internal" href="LivePusherContext.setBGMVolume.html">LivePusherContext.setBGMVolume</a></li>
-<li class="toctree-l1"><a class="reference internal" href="LivePusherContext.snapshot.html">LivePusherContext.snapshot</a></li>
-<li class="toctree-l1"><a class="reference internal" href="LivePusherContext.start.html">LivePusherContext.start</a></li>
-<li class="toctree-l1"><a class="reference internal" href="LivePusherContext.stop.html">LivePusherContext.stop</a></li>
-<li class="toctree-l1"><a class="reference internal" href="LivePusherContext.stopBGM.html">LivePusherContext.stopBGM</a></li>
-<li class="toctree-l1"><a class="reference internal" href="LivePusherContext.switchCamera.html">LivePusherContext.switchCamera</a></li>
-<li class="toctree-l1"><a class="reference internal" href="LivePusherContext.toggleTorch.html">LivePusherContext.toggleTorch</a></li>
-</ul>
-</div>
-</div>
-<div class="section" id="liveplayercontext">
-<h4>LivePlayerContext<a class="headerlink" href="#liveplayercontext" title="永久链接至标题">¶</a></h4>
-<table class="docutils align-center">
-<colgroup>
-<col style="width: 79%" />
-<col style="width: 21%" />
-</colgroup>
-<thead>
-<tr class="row-odd"><th class="head"><p>名称</p></th>
-<th class="head"><p>功能说明</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>LivePlayerContext.exitFullScreen</p></td>
-<td><p>退出全屏</p></td>
-</tr>
-<tr class="row-odd"><td><p>LivePlayerContext.mute</p></td>
-<td><p>静音</p></td>
-</tr>
-<tr class="row-even"><td><p>LivePlayerContext.pause</p></td>
-<td><p>暂停</p></td>
-</tr>
-<tr class="row-odd"><td><p>LivePlayerContext.play</p></td>
-<td><p>播放</p></td>
-</tr>
-<tr class="row-even"><td><p>LivePlayerContext.requestFullScreen</p></td>
-<td><p>进入全屏</p></td>
-</tr>
-<tr class="row-odd"><td><p>LivePlayerContext.resume</p></td>
-<td><p>恢复</p></td>
-</tr>
-<tr class="row-even"><td><p>LivePlayerContext.stop</p></td>
-<td><p>停止</p></td>
-</tr>
-</tbody>
-</table>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="LivePlayerContext.exitFullScreen.html">LivePlayerContext.exitFullScreen</a></li>
-<li class="toctree-l1"><a class="reference internal" href="LivePlayerContext.mute.html">LivePlayerContext.mute</a></li>
-<li class="toctree-l1"><a class="reference internal" href="LivePlayerContext.pause.html">LivePlayerContext.pause</a></li>
-<li class="toctree-l1"><a class="reference internal" href="LivePlayerContext.play.html">LivePlayerContext.play</a></li>
-<li class="toctree-l1"><a class="reference internal" href="LivePlayerContext.requestFullScreen.html">LivePlayerContext.requestFullScreen</a></li>
-<li class="toctree-l1"><a class="reference internal" href="LivePlayerContext.resume.html">LivePlayerContext.resume</a></li>
-<li class="toctree-l1"><a class="reference internal" href="LivePlayerContext.stop.html">LivePlayerContext.stop</a></li>
-</ul>
-</div>
-</div>
-</div>
-<div class="section" id="id34">
-<h3>录音<a class="headerlink" href="#id34" title="永久链接至标题">¶</a></h3>
-<table class="docutils align-center">
-<colgroup>
-<col style="width: 35%" />
-<col style="width: 65%" />
-</colgroup>
-<thead>
-<tr class="row-odd"><th class="head"><p>名称</p></th>
-<th class="head"><p>功能说明</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>wx.stopRecord</p></td>
-<td><p>停止录音</p></td>
-</tr>
-<tr class="row-odd"><td><p>wx.startRecord</p></td>
-<td><p>开始录音</p></td>
-</tr>
-<tr class="row-even"><td><p>wx.getRecorderManager</p></td>
-<td><p>获取全局唯一的录音管理器 RecorderManager</p></td>
-</tr>
-</tbody>
-</table>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="wx.stopRecord.html">wx.stopRecord</a></li>
-<li class="toctree-l1"><a class="reference internal" href="wx.startRecord.html">wx.startRecord</a></li>
-<li class="toctree-l1"><a class="reference internal" href="wx.getRecorderManager.html">wx.getRecorderManager</a></li>
-</ul>
-</div>
-<div class="section" id="recordermanager">
-<h4>RecorderManager<a class="headerlink" href="#recordermanager" title="永久链接至标题">¶</a></h4>
-<table class="docutils align-center">
-<colgroup>
-<col style="width: 47%" />
-<col style="width: 53%" />
-</colgroup>
-<thead>
-<tr class="row-odd"><th class="head"><p>名称</p></th>
-<th class="head"><p>功能说明</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>RecorderManager.onError</p></td>
-<td><p>监听录音错误事件</p></td>
-</tr>
-<tr class="row-odd"><td><p>RecorderManager.onFrameRecorded</p></td>
-<td><p>监听已录制完指定帧大小的文件事件</p></td>
-</tr>
-<tr class="row-even"><td><p>RecorderManager.onInterruptionBegin</p></td>
-<td><p>监听录音因为受到系统占用而被中断开始事件</p></td>
-</tr>
-<tr class="row-odd"><td><p>RecorderManager.onInterruptionEnd</p></td>
-<td><p>监听录音中断结束事件</p></td>
-</tr>
-<tr class="row-even"><td><p>RecorderManager.onPause</p></td>
-<td><p>监听录音暂停事件</p></td>
-</tr>
-<tr class="row-odd"><td><p>RecorderManager.onResume</p></td>
-<td><p>监听录音继续事件</p></td>
-</tr>
-<tr class="row-even"><td><p>RecorderManager.onStart</p></td>
-<td><p>监听录音开始事件</p></td>
-</tr>
-<tr class="row-odd"><td><p>RecorderManager.onStop</p></td>
-<td><p>监听录音结束事件</p></td>
-</tr>
-<tr class="row-even"><td><p>RecorderManager.pause</p></td>
-<td><p>暂停录音</p></td>
-</tr>
-<tr class="row-odd"><td><p>RecorderManager.resume</p></td>
-<td><p>继续录音</p></td>
-</tr>
-<tr class="row-even"><td><p>RecorderManager.start</p></td>
-<td><p>开始录音</p></td>
-</tr>
-<tr class="row-odd"><td><p>RecorderManager.stop</p></td>
-<td><p>停止录音</p></td>
-</tr>
-</tbody>
-</table>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="RecorderManager.html">RecorderManager</a></li>
-<li class="toctree-l1"><a class="reference internal" href="RecorderManager.onError.html">RecorderManager.onError</a></li>
-<li class="toctree-l1"><a class="reference internal" href="RecorderManager.onFrameRecorded.html">RecorderManager.onFrameRecorded</a></li>
-<li class="toctree-l1"><a class="reference internal" href="RecorderManager.onInterruptionBegin.html">RecorderManager.onInterruptionBegin</a></li>
-<li class="toctree-l1"><a class="reference internal" href="RecorderManager.onInterruptionEnd.html">RecorderManager.onInterruptionEnd</a></li>
-<li class="toctree-l1"><a class="reference internal" href="RecorderManager.onPause.html">RecorderManager.onPause</a></li>
-<li class="toctree-l1"><a class="reference internal" href="RecorderManager.onResume.html">RecorderManager.onResume</a></li>
-<li class="toctree-l1"><a class="reference internal" href="RecorderManager.onStart.html">RecorderManager.onStart</a></li>
-<li class="toctree-l1"><a class="reference internal" href="RecorderManager.onStop.html">RecorderManager.onStop</a></li>
-<li class="toctree-l1"><a class="reference internal" href="RecorderManager.pause.html">RecorderManager.pause</a></li>
-<li class="toctree-l1"><a class="reference internal" href="RecorderManager.resume.html">RecorderManager.resume</a></li>
-<li class="toctree-l1"><a class="reference internal" href="RecorderManager.start.html">RecorderManager.start</a></li>
-<li class="toctree-l1"><a class="reference internal" href="RecorderManager.stop.html">RecorderManager.stop</a></li>
-</ul>
-</div>
-</div>
-</div>
-<div class="section" id="id35">
-<h3>相机<a class="headerlink" href="#id35" title="永久链接至标题">¶</a></h3>
-<table class="docutils align-center">
-<colgroup>
-<col style="width: 38%" />
-<col style="width: 62%" />
-</colgroup>
-<thead>
-<tr class="row-odd"><th class="head"><p>名称</p></th>
-<th class="head"><p>功能说明</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>wx.createCameraContext</p></td>
-<td><p>创建 camera 上下文 CameraContext 对象</p></td>
-</tr>
-</tbody>
-</table>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="wx.createCameraContext.html">wx.createCameraContext</a></li>
-</ul>
-</div>
-<div class="section" id="cameracontext">
-<h4>CameraContext<a class="headerlink" href="#cameracontext" title="永久链接至标题">¶</a></h4>
-<table class="docutils align-center">
-<colgroup>
-<col style="width: 73%" />
-<col style="width: 27%" />
-</colgroup>
-<thead>
-<tr class="row-odd"><th class="head"><p>名称</p></th>
-<th class="head"><p>功能说明</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>CameraContext.startRecord</p></td>
-<td><p>开始录像</p></td>
-</tr>
-<tr class="row-odd"><td><p>CameraContext.stopRecord</p></td>
-<td><p>结束录像</p></td>
-</tr>
-<tr class="row-even"><td><p>CameraContext.takePhoto</p></td>
-<td><p>拍摄照片</p></td>
-</tr>
-</tbody>
-</table>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="CameraContext.html">CameraContext</a></li>
-<li class="toctree-l1"><a class="reference internal" href="CameraContext.startRecord.html">CameraContext.startRecord</a></li>
-<li class="toctree-l1"><a class="reference internal" href="CameraContext.stopRecord.html">CameraContext.stopRecord</a></li>
-<li class="toctree-l1"><a class="reference internal" href="CameraContext.takePhoto.html">CameraContext.takePhoto</a></li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-<div class="section" id="id36">
-<h2>位置<a class="headerlink" href="#id36" title="永久链接至标题">¶</a></h2>
-<table class="docutils align-center">
-<colgroup>
-<col style="width: 42%" />
-<col style="width: 58%" />
-</colgroup>
-<thead>
-<tr class="row-odd"><th class="head"><p>名称</p></th>
-<th class="head"><p>功能说明</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>wx.openLocation</p></td>
-<td><p>使用微信内置地图查看位置</p></td>
-</tr>
-<tr class="row-odd"><td><p>wx.getLocation</p></td>
-<td><p>获取当前的地理位置、速度</p></td>
-</tr>
-<tr class="row-even"><td><p>wx.chooseLocation</p></td>
-<td><p>打开地图选择位置</p></td>
-</tr>
-</tbody>
-</table>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="wx.openLocation.html">wx.openLocation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="wx.getLocation.html">wx.getLocation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="wx.chooseLocation.html">wx.chooseLocation</a></li>
-</ul>
-</div>
-</div>
-<div class="section" id="id37">
-<h2>转发<a class="headerlink" href="#id37" title="永久链接至标题">¶</a></h2>
 <table class="docutils align-center">
 <colgroup>
 <col style="width: 45%" />
@@ -2932,66 +1983,599 @@ wx.getSystemInfo</p></td>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p>wx.updateShareMenu</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="wx.stopVoice.html#wx.stopVoice" title="wx.stopVoice"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.stopVoice()</span></code></a></p></td>
+<td><p>结束播放语音</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="wx.setInnerAudioOption.html#wx.setInnerAudioOption" title="wx.setInnerAudioOption"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.setInnerAudioOption()</span></code></a></p></td>
+<td><p>设置 InnerAudioContext 的播放选项</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="wx.playVoice.html#wx.playVoice" title="wx.playVoice"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.playVoice()</span></code></a></p></td>
+<td><p>开始播放语音</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="wx.pauseVoice.html#wx.pauseVoice" title="wx.pauseVoice"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.pauseVoice()</span></code></a></p></td>
+<td><p>暂停正在播放的语音</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="wx.getAvailableAudioSources.html#wx.getAvailableAudioSources" title="wx.getAvailableAudioSources"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.getAvailableAudioSources()</span></code></a></p></td>
+<td><p>获取当前支持的音频输入源</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="wx.createInnerAudioContext.html#wx.createInnerAudioContext" title="wx.createInnerAudioContext"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.createInnerAudioContext()</span></code></a></p></td>
+<td><p>创建内部 audio 上下文 InnerAudioContext 对象</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="wx.createAudioContext.html#wx.createAudioContext" title="wx.createAudioContext"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.createAudioContext()</span></code></a></p></td>
+<td><p>创建 audio 上下文 AudioContext 对象</p></td>
+</tr>
+</tbody>
+</table>
+<div class="toctree-wrapper compound">
+</div>
+<div class="section" id="inneraudiocontext">
+<h4>InnerAudioContext<a class="headerlink" href="#inneraudiocontext" title="永久链接至标题">¶</a></h4>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 53%" />
+<col style="width: 47%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>名称</p></th>
+<th class="head"><p>功能说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="InnerAudioContext.html#InnerAudioContext.destroy" title="InnerAudioContext.destroy"><code class="xref js js-func docutils literal notranslate"><span class="pre">InnerAudioContext.destroy()</span></code></a></p></td>
+<td><p>销毁当前实例</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="InnerAudioContext.html#InnerAudioContext.offCanplay" title="InnerAudioContext.offCanplay"><code class="xref js js-func docutils literal notranslate"><span class="pre">InnerAudioContext.offCanplay()</span></code></a></p></td>
+<td><p>取消监听音频进入可以播放状态的事件</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="InnerAudioContext.html#InnerAudioContext.offEnded" title="InnerAudioContext.offEnded"><code class="xref js js-func docutils literal notranslate"><span class="pre">InnerAudioContext.offEnded()</span></code></a></p></td>
+<td><p>取消监听音频自然播放至结束的事件</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="InnerAudioContext.html#InnerAudioContext.offError" title="InnerAudioContext.offError"><code class="xref js js-func docutils literal notranslate"><span class="pre">InnerAudioContext.offError()</span></code></a></p></td>
+<td><p>取消监听音频播放错误事件</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="InnerAudioContext.html#InnerAudioContext.offPause" title="InnerAudioContext.offPause"><code class="xref js js-func docutils literal notranslate"><span class="pre">InnerAudioContext.offPause()</span></code></a></p></td>
+<td><p>取消监听音频暂停事件</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="InnerAudioContext.html#InnerAudioContext.offPlay" title="InnerAudioContext.offPlay"><code class="xref js js-func docutils literal notranslate"><span class="pre">InnerAudioContext.offPlay()</span></code></a></p></td>
+<td><p>取消监听音频播放事件</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="InnerAudioContext.html#InnerAudioContext.offSeeked" title="InnerAudioContext.offSeeked"><code class="xref js js-func docutils literal notranslate"><span class="pre">InnerAudioContext.offSeeked()</span></code></a></p></td>
+<td><p>取消监听音频完成跳转操作的事件</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="InnerAudioContext.html#InnerAudioContext.offSeeking" title="InnerAudioContext.offSeeking"><code class="xref js js-func docutils literal notranslate"><span class="pre">InnerAudioContext.offSeeking()</span></code></a></p></td>
+<td><p>取消监听音频进行跳转操作的事件</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="InnerAudioContext.html#InnerAudioContext.offStop" title="InnerAudioContext.offStop"><code class="xref js js-func docutils literal notranslate"><span class="pre">InnerAudioContext.offStop()</span></code></a></p></td>
+<td><p>取消监听音频停止事件</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="InnerAudioContext.html#InnerAudioContext.offTimeUpdate" title="InnerAudioContext.offTimeUpdate"><code class="xref js js-func docutils literal notranslate"><span class="pre">InnerAudioContext.offTimeUpdate()</span></code></a></p></td>
+<td><p>取消监听音频播放进度更新事件</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="InnerAudioContext.html#InnerAudioContext.offWaiting" title="InnerAudioContext.offWaiting"><code class="xref js js-func docutils literal notranslate"><span class="pre">InnerAudioContext.offWaiting()</span></code></a></p></td>
+<td><p>取消监听音频加载中事件</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="InnerAudioContext.html#InnerAudioContext.onCanplay" title="InnerAudioContext.onCanplay"><code class="xref js js-func docutils literal notranslate"><span class="pre">InnerAudioContext.onCanplay()</span></code></a></p></td>
+<td><p>监听音频进入可以播放状态的事件</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="InnerAudioContext.html#InnerAudioContext.onEnded" title="InnerAudioContext.onEnded"><code class="xref js js-func docutils literal notranslate"><span class="pre">InnerAudioContext.onEnded()</span></code></a></p></td>
+<td><p>监听音频自然播放至结束的事件</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="InnerAudioContext.html#InnerAudioContext.onError" title="InnerAudioContext.onError"><code class="xref js js-func docutils literal notranslate"><span class="pre">InnerAudioContext.onError()</span></code></a></p></td>
+<td><p>监听音频播放错误事件</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="InnerAudioContext.html#InnerAudioContext.onPause" title="InnerAudioContext.onPause"><code class="xref js js-func docutils literal notranslate"><span class="pre">InnerAudioContext.onPause()</span></code></a></p></td>
+<td><p>监听音频暂停事件</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="InnerAudioContext.html#InnerAudioContext.onPlay" title="InnerAudioContext.onPlay"><code class="xref js js-func docutils literal notranslate"><span class="pre">InnerAudioContext.onPlay()</span></code></a></p></td>
+<td><p>监听音频播放事件</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="InnerAudioContext.html#InnerAudioContext.onSeeked" title="InnerAudioContext.onSeeked"><code class="xref js js-func docutils literal notranslate"><span class="pre">InnerAudioContext.onSeeked()</span></code></a></p></td>
+<td><p>监听音频完成跳转操作的事件</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="InnerAudioContext.html#InnerAudioContext.onSeeking" title="InnerAudioContext.onSeeking"><code class="xref js js-func docutils literal notranslate"><span class="pre">InnerAudioContext.onSeeking()</span></code></a></p></td>
+<td><p>监听音频进行跳转操作的事件</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="InnerAudioContext.html#InnerAudioContext.onStop" title="InnerAudioContext.onStop"><code class="xref js js-func docutils literal notranslate"><span class="pre">InnerAudioContext.onStop()</span></code></a></p></td>
+<td><p>监听音频停止事件</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="InnerAudioContext.html#InnerAudioContext.onTimeUpdate" title="InnerAudioContext.onTimeUpdate"><code class="xref js js-func docutils literal notranslate"><span class="pre">InnerAudioContext.onTimeUpdate()</span></code></a></p></td>
+<td><p>监听音频播放进度更新事件</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="InnerAudioContext.html#InnerAudioContext.onWaiting" title="InnerAudioContext.onWaiting"><code class="xref js js-func docutils literal notranslate"><span class="pre">InnerAudioContext.onWaiting()</span></code></a></p></td>
+<td><p>监听音频加载中事件</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="InnerAudioContext.html#InnerAudioContext.pause" title="InnerAudioContext.pause"><code class="xref js js-func docutils literal notranslate"><span class="pre">InnerAudioContext.pause()</span></code></a></p></td>
+<td><p>暂停</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="InnerAudioContext.html#InnerAudioContext.play" title="InnerAudioContext.play"><code class="xref js js-func docutils literal notranslate"><span class="pre">InnerAudioContext.play()</span></code></a></p></td>
+<td><p>播放</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="InnerAudioContext.html#InnerAudioContext.seek" title="InnerAudioContext.seek"><code class="xref js js-func docutils literal notranslate"><span class="pre">InnerAudioContext.seek()</span></code></a></p></td>
+<td><p>跳转到指定位置</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="InnerAudioContext.html#InnerAudioContext.stop" title="InnerAudioContext.stop"><code class="xref js js-func docutils literal notranslate"><span class="pre">InnerAudioContext.stop()</span></code></a></p></td>
+<td><p>停止</p></td>
+</tr>
+</tbody>
+</table>
+<div class="toctree-wrapper compound">
+</div>
+</div>
+<div class="section" id="audiocontext">
+<h4>AudioContext<a class="headerlink" href="#audiocontext" title="永久链接至标题">¶</a></h4>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 64%" />
+<col style="width: 36%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>名称</p></th>
+<th class="head"><p>功能说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="AudioContext.html#AudioContext.pause" title="AudioContext.pause"><code class="xref js js-func docutils literal notranslate"><span class="pre">AudioContext.pause()</span></code></a></p></td>
+<td><p>暂停音频</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="AudioContext.html#AudioContext.play" title="AudioContext.play"><code class="xref js js-func docutils literal notranslate"><span class="pre">AudioContext.play()</span></code></a></p></td>
+<td><p>播放音频</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="AudioContext.html#AudioContext.seek" title="AudioContext.seek"><code class="xref js js-func docutils literal notranslate"><span class="pre">AudioContext.seek()</span></code></a></p></td>
+<td><p>跳转到指定位置</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="AudioContext.html#AudioContext.setSrc" title="AudioContext.setSrc"><code class="xref js js-func docutils literal notranslate"><span class="pre">AudioContext.setSrc()</span></code></a></p></td>
+<td><p>设置音频地址</p></td>
+</tr>
+</tbody>
+</table>
+<div class="toctree-wrapper compound">
+</div>
+</div>
+</div>
+<div class="section" id="id32">
+<h3>背景音频<a class="headerlink" href="#id32" title="永久链接至标题">¶</a></h3>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 58%" />
+<col style="width: 42%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>名称</p></th>
+<th class="head"><p>功能说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.stopBackgroundAudio()</span></code></p></td>
+<td><p>停止播放音乐</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.seekBackgroundAudio()</span></code></p></td>
+<td><p>控制音乐播放进度</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.playBackgroundAudio()</span></code></p></td>
+<td><p>使用后台播放器播放音乐</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.pauseBackgroundAudio()</span></code></p></td>
+<td><p>暂停播放音乐</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.onBackgroundAudioStop()</span></code></p></td>
+<td><p>监听音乐停止事件</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.onBackgroundAudioPlay()</span></code></p></td>
+<td><p>监听音乐播放事件</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.onBackgroundAudioPause()</span></code></p></td>
+<td><p>监听音乐暂停事件</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.getBackgroundAudioPlayerState()</span></code></p></td>
+<td><p>获取后台音乐播放状态</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.getBackgroundAudioManager()</span></code></p></td>
+<td><p>获取全局唯一的背景音频管理器</p></td>
+</tr>
+</tbody>
+</table>
+<div class="toctree-wrapper compound">
+</div>
+<div class="section" id="backgroundaudiomanager">
+<h4>BackgroundAudioManager<a class="headerlink" href="#backgroundaudiomanager" title="永久链接至标题">¶</a></h4>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 47%" />
+<col style="width: 53%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>名称</p></th>
+<th class="head"><p>功能说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="xref js js-func docutils literal notranslate"><span class="pre">BackgroundAudioManager.onCanplay()</span></code></p></td>
+<td><p>监听背景音频进入可播放状态事件</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref js js-func docutils literal notranslate"><span class="pre">BackgroundAudioManager.onEnded()</span></code></p></td>
+<td><p>监听背景音频自然播放结束事件</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref js js-func docutils literal notranslate"><span class="pre">BackgroundAudioManager.onError()</span></code></p></td>
+<td><p>监听背景音频播放错误事件</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref js js-func docutils literal notranslate"><span class="pre">BackgroundAudioManager.onNext()</span></code></p></td>
+<td><p>监听用户在系统音乐播放面板点击下一曲事件（仅iOS）</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref js js-func docutils literal notranslate"><span class="pre">BackgroundAudioManager.onPause()</span></code></p></td>
+<td><p>监听背景音频暂停事件</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref js js-func docutils literal notranslate"><span class="pre">BackgroundAudioManager.onPlay()</span></code></p></td>
+<td><p>监听背景音频播放事件</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref js js-func docutils literal notranslate"><span class="pre">BackgroundAudioManager.onPrev()</span></code></p></td>
+<td><p>监听用户在系统音乐播放面板点击上一曲事件（仅iOS）</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref js js-func docutils literal notranslate"><span class="pre">BackgroundAudioManager.onSeeked()</span></code></p></td>
+<td><p>监听背景音频完成跳转操作事件</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref js js-func docutils literal notranslate"><span class="pre">BackgroundAudioManager.onSeeking()</span></code></p></td>
+<td><p>监听背景音频开始跳转操作事件</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref js js-func docutils literal notranslate"><span class="pre">BackgroundAudioManager.onStop()</span></code></p></td>
+<td><p>监听背景音频停止事件</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref js js-func docutils literal notranslate"><span class="pre">BackgroundAudioManager.onTimeUpdate()</span></code></p></td>
+<td><p>监听背景音频播放进度更新事件</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref js js-func docutils literal notranslate"><span class="pre">BackgroundAudioManager.onWaiting()</span></code></p></td>
+<td><p>监听音频加载中事件</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref js js-func docutils literal notranslate"><span class="pre">BackgroundAudioManager.pause()</span></code></p></td>
+<td><p>暂停音乐</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref js js-func docutils literal notranslate"><span class="pre">BackgroundAudioManager.play()</span></code></p></td>
+<td><p>播放音乐</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref js js-func docutils literal notranslate"><span class="pre">BackgroundAudioManager.seek()</span></code></p></td>
+<td><p>跳转到指定位置</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref js js-func docutils literal notranslate"><span class="pre">BackgroundAudioManager.stop()</span></code></p></td>
+<td><p>停止音乐</p></td>
+</tr>
+</tbody>
+</table>
+<div class="toctree-wrapper compound">
+</div>
+</div>
+</div>
+<div class="section" id="id33">
+<h3>实时音视频<a class="headerlink" href="#id33" title="永久链接至标题">¶</a></h3>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 43%" />
+<col style="width: 57%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>名称</p></th>
+<th class="head"><p>功能说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.createLivePusherContext()</span></code></p></td>
+<td><p>创建 live-pusher 上下文 LivePusherContext 对象</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.createLivePlayerContext()</span></code></p></td>
+<td><p>创建 live-player 上下文 LivePlayerContext 对象</p></td>
+</tr>
+</tbody>
+</table>
+<div class="toctree-wrapper compound">
+</div>
+<div class="section" id="livepushercontext">
+<h4>LivePusherContext<a class="headerlink" href="#livepushercontext" title="永久链接至标题">¶</a></h4>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 71%" />
+<col style="width: 29%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>名称</p></th>
+<th class="head"><p>功能说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="xref js js-func docutils literal notranslate"><span class="pre">LivePusherContext.pause()</span></code></p></td>
+<td><p>暂停推流</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref js js-func docutils literal notranslate"><span class="pre">LivePusherContext.pauseBGM()</span></code></p></td>
+<td><p>暂停背景音</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref js js-func docutils literal notranslate"><span class="pre">LivePusherContext.playBGM()</span></code></p></td>
+<td><p>播放背景音</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref js js-func docutils literal notranslate"><span class="pre">LivePusherContext.resume()</span></code></p></td>
+<td><p>恢复推流</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref js js-func docutils literal notranslate"><span class="pre">LivePusherContext.resumeBGM()</span></code></p></td>
+<td><p>恢复背景音</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref js js-func docutils literal notranslate"><span class="pre">LivePusherContext.setBGMVolume()</span></code></p></td>
+<td><p>设置背景音音量</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref js js-func docutils literal notranslate"><span class="pre">LivePusherContext.snapshot()</span></code></p></td>
+<td><p>快照</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref js js-func docutils literal notranslate"><span class="pre">LivePusherContext.start()</span></code></p></td>
+<td><p>播放推流</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref js js-func docutils literal notranslate"><span class="pre">LivePusherContext.stop()</span></code></p></td>
+<td><p>停止推流</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref js js-func docutils literal notranslate"><span class="pre">LivePusherContext.stopBGM()</span></code></p></td>
+<td><p>停止背景音</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref js js-func docutils literal notranslate"><span class="pre">LivePusherContext.switchCamera()</span></code></p></td>
+<td><p>切换前后摄像头</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref js js-func docutils literal notranslate"><span class="pre">LivePusherContext.toggleTorch()</span></code></p></td>
+<td><p>切换</p></td>
+</tr>
+</tbody>
+</table>
+<div class="toctree-wrapper compound">
+</div>
+</div>
+<div class="section" id="liveplayercontext">
+<h4>LivePlayerContext<a class="headerlink" href="#liveplayercontext" title="永久链接至标题">¶</a></h4>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 82%" />
+<col style="width: 18%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>名称</p></th>
+<th class="head"><p>功能说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="xref js js-func docutils literal notranslate"><span class="pre">LivePlayerContext.exitFullScreen()</span></code></p></td>
+<td><p>退出全屏</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref js js-func docutils literal notranslate"><span class="pre">LivePlayerContext.mute()</span></code></p></td>
+<td><p>静音</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref js js-func docutils literal notranslate"><span class="pre">LivePlayerContext.pause()</span></code></p></td>
+<td><p>暂停</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref js js-func docutils literal notranslate"><span class="pre">LivePlayerContext.play()</span></code></p></td>
+<td><p>播放</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref js js-func docutils literal notranslate"><span class="pre">LivePlayerContext.requestFullScreen()</span></code></p></td>
+<td><p>进入全屏</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref js js-func docutils literal notranslate"><span class="pre">LivePlayerContext.resume()</span></code></p></td>
+<td><p>恢复</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref js js-func docutils literal notranslate"><span class="pre">LivePlayerContext.stop()</span></code></p></td>
+<td><p>停止</p></td>
+</tr>
+</tbody>
+</table>
+<div class="toctree-wrapper compound">
+</div>
+</div>
+</div>
+<div class="section" id="id34">
+<h3>录音<a class="headerlink" href="#id34" title="永久链接至标题">¶</a></h3>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 42%" />
+<col style="width: 58%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>名称</p></th>
+<th class="head"><p>功能说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="wx.stopRecord.html#wx.stopRecord" title="wx.stopRecord"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.stopRecord()</span></code></a></p></td>
+<td><p>停止录音</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="wx.startRecord.html#wx.startRecord" title="wx.startRecord"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.startRecord()</span></code></a></p></td>
+<td><p>开始录音</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="wx.getRecorderManager.html#wx.getRecorderManager" title="wx.getRecorderManager"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.getRecorderManager()</span></code></a></p></td>
+<td><p>获取全局唯一的录音管理器 RecorderManager</p></td>
+</tr>
+</tbody>
+</table>
+<div class="toctree-wrapper compound">
+</div>
+<div class="section" id="recordermanager">
+<h4>RecorderManager<a class="headerlink" href="#recordermanager" title="永久链接至标题">¶</a></h4>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 52%" />
+<col style="width: 48%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>名称</p></th>
+<th class="head"><p>功能说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="RecorderManager.html#RecorderManager.onError" title="RecorderManager.onError"><code class="xref js js-func docutils literal notranslate"><span class="pre">RecorderManager.onError()</span></code></a></p></td>
+<td><p>监听录音错误事件</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="RecorderManager.html#RecorderManager.onFrameRecorded" title="RecorderManager.onFrameRecorded"><code class="xref js js-func docutils literal notranslate"><span class="pre">RecorderManager.onFrameRecorded()</span></code></a></p></td>
+<td><p>监听已录制完指定帧大小的文件事件</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="RecorderManager.html#RecorderManager.onInterruptionBegin" title="RecorderManager.onInterruptionBegin"><code class="xref js js-func docutils literal notranslate"><span class="pre">RecorderManager.onInterruptionBegin()</span></code></a></p></td>
+<td><p>监听录音因为受到系统占用而被中断开始事件</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="RecorderManager.html#RecorderManager.onInterruptionEnd" title="RecorderManager.onInterruptionEnd"><code class="xref js js-func docutils literal notranslate"><span class="pre">RecorderManager.onInterruptionEnd()</span></code></a></p></td>
+<td><p>监听录音中断结束事件</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="RecorderManager.html#RecorderManager.onPause" title="RecorderManager.onPause"><code class="xref js js-func docutils literal notranslate"><span class="pre">RecorderManager.onPause()</span></code></a></p></td>
+<td><p>监听录音暂停事件</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="RecorderManager.html#RecorderManager.onResume" title="RecorderManager.onResume"><code class="xref js js-func docutils literal notranslate"><span class="pre">RecorderManager.onResume()</span></code></a></p></td>
+<td><p>监听录音继续事件</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="RecorderManager.html#RecorderManager.onStart" title="RecorderManager.onStart"><code class="xref js js-func docutils literal notranslate"><span class="pre">RecorderManager.onStart()</span></code></a></p></td>
+<td><p>监听录音开始事件</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="RecorderManager.html#RecorderManager.onStop" title="RecorderManager.onStop"><code class="xref js js-func docutils literal notranslate"><span class="pre">RecorderManager.onStop()</span></code></a></p></td>
+<td><p>监听录音结束事件</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="RecorderManager.html#RecorderManager.pause" title="RecorderManager.pause"><code class="xref js js-func docutils literal notranslate"><span class="pre">RecorderManager.pause()</span></code></a></p></td>
+<td><p>暂停录音</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="RecorderManager.html#RecorderManager.resume" title="RecorderManager.resume"><code class="xref js js-func docutils literal notranslate"><span class="pre">RecorderManager.resume()</span></code></a></p></td>
+<td><p>继续录音</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="RecorderManager.start.html#RecorderManager.start" title="RecorderManager.start"><code class="xref js js-func docutils literal notranslate"><span class="pre">RecorderManager.start()</span></code></a></p></td>
+<td><p>开始录音</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="RecorderManager.html#RecorderManager.stop" title="RecorderManager.stop"><code class="xref js js-func docutils literal notranslate"><span class="pre">RecorderManager.stop()</span></code></a></p></td>
+<td><p>停止录音</p></td>
+</tr>
+</tbody>
+</table>
+<div class="toctree-wrapper compound">
+</div>
+</div>
+</div>
+<div class="section" id="id35">
+<h3>相机<a class="headerlink" href="#id35" title="永久链接至标题">¶</a></h3>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 45%" />
+<col style="width: 55%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>名称</p></th>
+<th class="head"><p>功能说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="wx.createCameraContext.html#wx.createCameraContext" title="wx.createCameraContext"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.createCameraContext()</span></code></a></p></td>
+<td><p>创建 camera 上下文 CameraContext 对象</p></td>
+</tr>
+</tbody>
+</table>
+<div class="toctree-wrapper compound">
+</div>
+<div class="section" id="cameracontext">
+<h4>CameraContext<a class="headerlink" href="#cameracontext" title="永久链接至标题">¶</a></h4>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 78%" />
+<col style="width: 22%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>名称</p></th>
+<th class="head"><p>功能说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="CameraContext.startRecord.html#CameraContext.startRecord" title="CameraContext.startRecord"><code class="xref js js-func docutils literal notranslate"><span class="pre">CameraContext.startRecord()</span></code></a></p></td>
+<td><p>开始录像</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="CameraContext.stopRecord.html#CameraContext.stopRecord" title="CameraContext.stopRecord"><code class="xref js js-func docutils literal notranslate"><span class="pre">CameraContext.stopRecord()</span></code></a></p></td>
+<td><p>结束录像</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="CameraContext.takePhoto.html#CameraContext.takePhoto" title="CameraContext.takePhoto"><code class="xref js js-func docutils literal notranslate"><span class="pre">CameraContext.takePhoto()</span></code></a></p></td>
+<td><p>拍摄照片</p></td>
+</tr>
+</tbody>
+</table>
+<div class="toctree-wrapper compound">
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="id36">
+<h2>位置<a class="headerlink" href="#id36" title="永久链接至标题">¶</a></h2>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 51%" />
+<col style="width: 49%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>名称</p></th>
+<th class="head"><p>功能说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.openLocation()</span></code></p></td>
+<td><p>使用微信内置地图查看位置</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.getLocation()</span></code></p></td>
+<td><p>获取当前的地理位置、速度</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.chooseLocation()</span></code></p></td>
+<td><p>打开地图选择位置</p></td>
+</tr>
+</tbody>
+</table>
+<div class="toctree-wrapper compound">
+</div>
+</div>
+<div class="section" id="id37">
+<h2>转发<a class="headerlink" href="#id37" title="永久链接至标题">¶</a></h2>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 54%" />
+<col style="width: 46%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>名称</p></th>
+<th class="head"><p>功能说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.updateShareMenu()</span></code></p></td>
 <td><p>更新转发属性</p></td>
 </tr>
-<tr class="row-odd"><td><p>wx.showShareMenu</p></td>
+<tr class="row-odd"><td><p><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.showShareMenu()</span></code></p></td>
 <td><p>显示当前页面的转发按钮</p></td>
 </tr>
-<tr class="row-even"><td><p>wx.hideShareMenu</p></td>
+<tr class="row-even"><td><p><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.hideShareMenu()</span></code></p></td>
 <td><p>隐藏转发按钮</p></td>
 </tr>
-<tr class="row-odd"><td><p>wx.getShareInfo</p></td>
+<tr class="row-odd"><td><p><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.getShareInfo()</span></code></p></td>
 <td><p>获取转发详细信息</p></td>
 </tr>
 </tbody>
 </table>
 <div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="wx.updateShareMenu.html">wx.updateShareMenu</a></li>
-<li class="toctree-l1"><a class="reference internal" href="wx.showShareMenu.html">wx.showShareMenu</a></li>
-<li class="toctree-l1"><a class="reference internal" href="wx.hideShareMenu.html">wx.hideShareMenu</a></li>
-<li class="toctree-l1"><a class="reference internal" href="wx.getShareInfo.html">wx.getShareInfo</a></li>
-</ul>
 </div>
 </div>
 <div class="section" id="id38">
 <h2>画布<a class="headerlink" href="#id38" title="永久链接至标题">¶</a></h2>
 <table class="docutils align-center">
 <colgroup>
-<col style="width: 34%" />
-<col style="width: 66%" />
+<col style="width: 41%" />
+<col style="width: 59%" />
 </colgroup>
 <tbody>
 <tr class="row-odd"><td><p>名称</p></td>
 <td><p>功能说明</p></td>
 </tr>
-<tr class="row-even"><td><p>wx.createCanvasContext</p></td>
+<tr class="row-even"><td><p><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.createCanvasContext()</span></code></p></td>
 <td><p>创建 canvas 的绘图上下文 CanvasContext 对象</p></td>
 </tr>
-<tr class="row-odd"><td><p>wx.canvasToTempFilePath</p></td>
+<tr class="row-odd"><td><p><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.canvasToTempFilePath()</span></code></p></td>
 <td><p>把当前画布指定区域的内容导出生成指定大小的图片</p></td>
 </tr>
-<tr class="row-even"><td><p>wx.canvasPutImageData</p></td>
+<tr class="row-even"><td><p><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.canvasPutImageData()</span></code></p></td>
 <td><p>将像素数据绘制到画布</p></td>
 </tr>
-<tr class="row-odd"><td><p>wx.canvasGetImageData</p></td>
+<tr class="row-odd"><td><p><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.canvasGetImageData()</span></code></p></td>
 <td><p>获取 canvas 区域隐含的像素数据</p></td>
 </tr>
-<tr class="row-even"><td><p>Color</p></td>
+<tr class="row-even"><td><p><code class="xref js js-func docutils literal notranslate"><span class="pre">Color()</span></code></p></td>
 <td><p>颜色</p></td>
 </tr>
 </tbody>
 </table>
 <div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="CanvasContext.html">wx.createWorker</a></li>
-<li class="toctree-l1"><a class="reference internal" href="wx.createCanvasContext.html">wx.createCanvasContext</a></li>
-<li class="toctree-l1"><a class="reference internal" href="wx.canvasToTempFilePath.html">wx.canvasToTempFilePath</a></li>
-<li class="toctree-l1"><a class="reference internal" href="wx.canvasPutImageData.html">wx.canvasPutImageData</a></li>
-<li class="toctree-l1"><a class="reference internal" href="wx.canvasGetImageData.html">wx.canvasGetImageData</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Color.html">Color</a></li>
-</ul>
 </div>
 <div class="section" id="canvasgradient">
 <h3>CanvasGradient<a class="headerlink" href="#canvasgradient" title="永久链接至标题">¶</a></h3>
@@ -3012,10 +2596,6 @@ wx.getSystemInfo</p></td>
 </tbody>
 </table>
 <div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="CanvasGradient.html">wx.createWorker</a></li>
-<li class="toctree-l1"><a class="reference internal" href="CanvasGradient.addColorStop.html">video</a></li>
-</ul>
 </div>
 </div>
 <div class="section" id="canvascontext">
@@ -3158,50 +2738,6 @@ wx.getSystemInfo</p></td>
 </tbody>
 </table>
 <div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="CanvasContext.arc.html">CanvasContext.arc</a></li>
-<li class="toctree-l1"><a class="reference internal" href="CanvasContext.arcTo.html">CanvasContext.arcTo</a></li>
-<li class="toctree-l1"><a class="reference internal" href="CanvasContext.beginPath.html">CanvasContext.beginPath</a></li>
-<li class="toctree-l1"><a class="reference internal" href="CanvasContext.bezierCurveTo.html">CanvasContext.bezierCurveTo</a></li>
-<li class="toctree-l1"><a class="reference internal" href="CanvasContext.clearRect.html">CanvasContext.clearRect</a></li>
-<li class="toctree-l1"><a class="reference internal" href="CanvasContext.clip.html">CanvasContext.clip</a></li>
-<li class="toctree-l1"><a class="reference internal" href="CanvasContext.closePath.html">CanvasContext.closePath</a></li>
-<li class="toctree-l1"><a class="reference internal" href="CanvasContext.createCircularGradient.html">video</a></li>
-<li class="toctree-l1"><a class="reference internal" href="CanvasContext.createLinearGradient.html">video</a></li>
-<li class="toctree-l1"><a class="reference internal" href="CanvasContext.createPattern.html">video</a></li>
-<li class="toctree-l1"><a class="reference internal" href="CanvasContext.draw.html">video</a></li>
-<li class="toctree-l1"><a class="reference internal" href="CanvasContext.drawImage.html">video</a></li>
-<li class="toctree-l1"><a class="reference internal" href="CanvasContext.fill.html">video</a></li>
-<li class="toctree-l1"><a class="reference internal" href="CanvasContext.fillRect.html">video</a></li>
-<li class="toctree-l1"><a class="reference internal" href="CanvasContext.fillText.html">video</a></li>
-<li class="toctree-l1"><a class="reference internal" href="CanvasContext.lineTo.html">video</a></li>
-<li class="toctree-l1"><a class="reference internal" href="CanvasContext.measureText.html">video</a></li>
-<li class="toctree-l1"><a class="reference internal" href="CanvasContext.moveTo.html">video</a></li>
-<li class="toctree-l1"><a class="reference internal" href="CanvasContext.quadraticCurveTo.html">video</a></li>
-<li class="toctree-l1"><a class="reference internal" href="CanvasContext.rect.html">video</a></li>
-<li class="toctree-l1"><a class="reference internal" href="CanvasContext.restore.html">video</a></li>
-<li class="toctree-l1"><a class="reference internal" href="CanvasContext.rotate.html">video</a></li>
-<li class="toctree-l1"><a class="reference internal" href="CanvasContext.save.html">video</a></li>
-<li class="toctree-l1"><a class="reference internal" href="CanvasContext.scale.html">video</a></li>
-<li class="toctree-l1"><a class="reference internal" href="CanvasContext.setFillStyle.html">video</a></li>
-<li class="toctree-l1"><a class="reference internal" href="CanvasContext.setFontSize.html">video</a></li>
-<li class="toctree-l1"><a class="reference internal" href="CanvasContext.setGlobalAlpha.html">video</a></li>
-<li class="toctree-l1"><a class="reference internal" href="CanvasContext.setLineCap.html">video</a></li>
-<li class="toctree-l1"><a class="reference internal" href="CanvasContext.setLineDash.html">video</a></li>
-<li class="toctree-l1"><a class="reference internal" href="CanvasContext.setLineJoin.html">video</a></li>
-<li class="toctree-l1"><a class="reference internal" href="CanvasContext.setLineWidth.html">video</a></li>
-<li class="toctree-l1"><a class="reference internal" href="CanvasContext.setMiterLimit.html">video</a></li>
-<li class="toctree-l1"><a class="reference internal" href="CanvasContext.setShadow.html">video</a></li>
-<li class="toctree-l1"><a class="reference internal" href="CanvasContext.setStrokeStyle.html">video</a></li>
-<li class="toctree-l1"><a class="reference internal" href="CanvasContext.setTextAlign.html">video</a></li>
-<li class="toctree-l1"><a class="reference internal" href="CanvasContext.setTextBaseline.html">video</a></li>
-<li class="toctree-l1"><a class="reference internal" href="CanvasContext.setTransform.html">video</a></li>
-<li class="toctree-l1"><a class="reference internal" href="CanvasContext.stroke.html">video</a></li>
-<li class="toctree-l1"><a class="reference internal" href="CanvasContext.strokeRect.html">video</a></li>
-<li class="toctree-l1"><a class="reference internal" href="CanvasContext.strokeText.html">video</a></li>
-<li class="toctree-l1"><a class="reference internal" href="CanvasContext.transform.html">video</a></li>
-<li class="toctree-l1"><a class="reference internal" href="CanvasContext.translate.html">video</a></li>
-</ul>
 </div>
 </div>
 </div>
@@ -3242,15 +2778,6 @@ wx.getSystemInfo</p></td>
 </tbody>
 </table>
 <div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="wx.saveFile.html">wx.saveFile</a></li>
-<li class="toctree-l1"><a class="reference internal" href="wx.removeSavedFile.html">wx.removeSavedFile</a></li>
-<li class="toctree-l1"><a class="reference internal" href="wx.openDocument.html">wx.openDocument</a></li>
-<li class="toctree-l1"><a class="reference internal" href="wx.getSavedFileList.html">wx.getSavedFileList</a></li>
-<li class="toctree-l1"><a class="reference internal" href="wx.getSavedFileInfo.html">wx.getSavedFileInfo</a></li>
-<li class="toctree-l1"><a class="reference internal" href="wx.getFileSystemManager.html">wx.getFileSystemManager</a></li>
-<li class="toctree-l1"><a class="reference internal" href="wx.getFileInfo.html">wx.getFileInfo</a></li>
-</ul>
 </div>
 <div class="section" id="stats">
 <h3>Stats<a class="headerlink" href="#stats" title="永久链接至标题">¶</a></h3>
@@ -3274,11 +2801,6 @@ wx.getSystemInfo</p></td>
 </tbody>
 </table>
 <div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="Stats.html">Stats</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Stats.isDirectory.html">Stats.isDirectory</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Stats.isFile.html">Stats.isFile</a></li>
-</ul>
 </div>
 </div>
 <div class="section" id="filesystemmanager">
@@ -3381,37 +2903,6 @@ wx.getSystemInfo</p></td>
 </tbody>
 </table>
 <div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="FileSystemManager.html">FileSystemManager</a></li>
-<li class="toctree-l1"><a class="reference internal" href="FileSystemManager.access.html">FileSystemManager.access</a></li>
-<li class="toctree-l1"><a class="reference internal" href="FileSystemManager.accessSync.html">FileSystemManager.accessSync</a></li>
-<li class="toctree-l1"><a class="reference internal" href="FileSystemManager.appendFile.html">FileSystemManager.appendFile</a></li>
-<li class="toctree-l1"><a class="reference internal" href="FileSystemManager.appendFileSync.html">FileSystemManager.appendFileSync</a></li>
-<li class="toctree-l1"><a class="reference internal" href="FileSystemManager.copyFile.html">FileSystemManager.copyFile</a></li>
-<li class="toctree-l1"><a class="reference internal" href="FileSystemManager.copyFileSync.html">FileSystemManager.copyFileSync</a></li>
-<li class="toctree-l1"><a class="reference internal" href="FileSystemManager.getFileInfo.html">FileSystemManager.getFileInfo</a></li>
-<li class="toctree-l1"><a class="reference internal" href="FileSystemManager.getSavedFileList.html">FileSystemManager.getSavedFileList</a></li>
-<li class="toctree-l1"><a class="reference internal" href="FileSystemManager.mkdir.html">FileSystemManager.mkdir</a></li>
-<li class="toctree-l1"><a class="reference internal" href="FileSystemManager.mkdirSync.html">FileSystemManager.mkdirSync</a></li>
-<li class="toctree-l1"><a class="reference internal" href="FileSystemManager.readdir.html">wx.createWorker</a></li>
-<li class="toctree-l1"><a class="reference internal" href="FileSystemManager.readdirSync.html">FileSystemManager.readdirSync</a></li>
-<li class="toctree-l1"><a class="reference internal" href="FileSystemManager.readFile.html">FileSystemManager.readFile</a></li>
-<li class="toctree-l1"><a class="reference internal" href="FileSystemManager.readFileSync.html">FileSystemManager.readFileSync</a></li>
-<li class="toctree-l1"><a class="reference internal" href="FileSystemManager.removeSavedFile.html">FileSystemManager.removeSavedFile</a></li>
-<li class="toctree-l1"><a class="reference internal" href="FileSystemManager.rename.html">FileSystemManager.rename</a></li>
-<li class="toctree-l1"><a class="reference internal" href="FileSystemManager.renameSync.html">FileSystemManager.renameSync</a></li>
-<li class="toctree-l1"><a class="reference internal" href="FileSystemManager.rmdir.html">FileSystemManager.rmdir</a></li>
-<li class="toctree-l1"><a class="reference internal" href="FileSystemManager.rmdirSync.html">FileSystemManager.rmdirSync</a></li>
-<li class="toctree-l1"><a class="reference internal" href="FileSystemManager.saveFile.html">FileSystemManager.saveFile</a></li>
-<li class="toctree-l1"><a class="reference internal" href="FileSystemManager.saveFileSync.html">FileSystemManager.saveFileSync</a></li>
-<li class="toctree-l1"><a class="reference internal" href="FileSystemManager.stat.html">FileSystemManager.stat</a></li>
-<li class="toctree-l1"><a class="reference internal" href="FileSystemManager.statSync.html">FileSystemManager.statSync</a></li>
-<li class="toctree-l1"><a class="reference internal" href="FileSystemManager.unlink.html">FileSystemManager.unlink</a></li>
-<li class="toctree-l1"><a class="reference internal" href="FileSystemManager.unlinkSync.html">FileSystemManager.unlinkSync</a></li>
-<li class="toctree-l1"><a class="reference internal" href="FileSystemManager.unzip.html">FileSystemManager.unzip</a></li>
-<li class="toctree-l1"><a class="reference internal" href="FileSystemManager.writeFile.html">FileSystemManager.writeFile</a></li>
-<li class="toctree-l1"><a class="reference internal" href="FileSystemManager.writeFileSync.html">FileSystemManager.writeFileSync</a></li>
-</ul>
 </div>
 </div>
 </div>
@@ -3439,10 +2930,6 @@ wx.getSystemInfo</p></td>
 </tbody>
 </table>
 <div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="wx.login.html">wx.login</a></li>
-<li class="toctree-l1"><a class="reference internal" href="wx.checkSession.html">wx.checkSession</a></li>
-</ul>
 </div>
 </div>
 <div class="section" id="id42">
@@ -3467,10 +2954,6 @@ wx.getSystemInfo</p></td>
 </tbody>
 </table>
 <div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="wx.navigateToMiniProgram.html">wx.navigateToMiniProgram</a></li>
-<li class="toctree-l1"><a class="reference internal" href="wx.navigateBackMiniProgram.html">wx.navigateBackMiniProgram</a></li>
-</ul>
 </div>
 </div>
 <div class="section" id="id43">
@@ -3492,9 +2975,6 @@ wx.getSystemInfo</p></td>
 </tbody>
 </table>
 <div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="wx.getAccountInfoSync.html">wx.getAccountInfoSync</a></li>
-</ul>
 </div>
 </div>
 <div class="section" id="id44">
@@ -3519,10 +2999,6 @@ wx.getSystemInfo</p></td>
 </tbody>
 </table>
 <div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="wx.getUserInfo.html">wx.getUserInfo</a></li>
-<li class="toctree-l1"><a class="reference internal" href="UserInfo.html">UserInfo</a></li>
-</ul>
 </div>
 </div>
 <div class="section" id="id45">
@@ -3544,9 +3020,6 @@ wx.getSystemInfo</p></td>
 </tbody>
 </table>
 <div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="wx.reportMonitor.html">wx.reportMonitor</a></li>
-</ul>
 </div>
 </div>
 <div class="section" id="id46">
@@ -3568,9 +3041,6 @@ wx.getSystemInfo</p></td>
 </tbody>
 </table>
 <div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="wx.reportAnalytics.html">wx.reportAnalytics</a></li>
-</ul>
 </div>
 </div>
 <div class="section" id="id47">
@@ -3592,9 +3062,6 @@ wx.getSystemInfo</p></td>
 </tbody>
 </table>
 <div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="wx.requestPayment.html">wx.requestPayment</a></li>
-</ul>
 </div>
 </div>
 <div class="section" id="id48">
@@ -3616,9 +3083,6 @@ wx.getSystemInfo</p></td>
 </tbody>
 </table>
 <div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="wx.authorize.html">wx.authorize</a></li>
-</ul>
 </div>
 </div>
 <div class="section" id="id49">
@@ -3646,11 +3110,6 @@ wx.getSystemInfo</p></td>
 </tbody>
 </table>
 <div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="wx.openSetting.html">wx.openSetting</a></li>
-<li class="toctree-l1"><a class="reference internal" href="wx.getSetting.html">wx.getSetting</a></li>
-<li class="toctree-l1"><a class="reference internal" href="AuthSetting.html">AuthSetting</a></li>
-</ul>
 </div>
 </div>
 <div class="section" id="id50">
@@ -3672,9 +3131,6 @@ wx.getSystemInfo</p></td>
 </tbody>
 </table>
 <div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="wx.chooseAddress.html">wx.chooseAddress</a></li>
-</ul>
 </div>
 </div>
 <div class="section" id="id51">
@@ -3699,10 +3155,6 @@ wx.getSystemInfo</p></td>
 </tbody>
 </table>
 <div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="wx.openCard.html">wx.openCard</a></li>
-<li class="toctree-l1"><a class="reference internal" href="wx.addCard.html">wx.addCard</a></li>
-</ul>
 </div>
 </div>
 <div class="section" id="id52">
@@ -3727,10 +3179,6 @@ wx.getSystemInfo</p></td>
 </tbody>
 </table>
 <div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="wx.chooseInvoiceTitle.html">wx.chooseInvoiceTitle</a></li>
-<li class="toctree-l1"><a class="reference internal" href="wx.chooseInvoice.html">wx.chooseInvoice</a></li>
-</ul>
 </div>
 </div>
 <div class="section" id="id53">
@@ -3758,11 +3206,6 @@ wx.getSystemInfo</p></td>
 </tbody>
 </table>
 <div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="wx.startSoterAuthentication.html">wx.startSoterAuthentication</a></li>
-<li class="toctree-l1"><a class="reference internal" href="wx.checkIsSupportSoterAuthentication.html">wx.checkIsSupportSoterAuthentication</a></li>
-<li class="toctree-l1"><a class="reference internal" href="wx.checkIsSoterEnrolledInDevice.html">wx.checkIsSoterEnrolledInDevice</a></li>
-</ul>
 </div>
 </div>
 <div class="section" id="id54">
@@ -3784,9 +3227,6 @@ wx.getSystemInfo</p></td>
 </tbody>
 </table>
 <div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="wx.getWeRunData.html">wx.getWeRunData</a></li>
-</ul>
 </div>
 </div>
 </div>
@@ -3835,17 +3275,6 @@ wx.getSystemInfo</p></td>
 </tbody>
 </table>
 <div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="wx.stopWifi.html">wx.stopWifi</a></li>
-<li class="toctree-l1"><a class="reference internal" href="wx.startWifi.html">wx.startWifi</a></li>
-<li class="toctree-l1"><a class="reference internal" href="wx.setWifiList.html">wx.createWorker</a></li>
-<li class="toctree-l1"><a class="reference internal" href="wx.onWifiConnected.html">wx.onWifiConnected</a></li>
-<li class="toctree-l1"><a class="reference internal" href="wx.onGetWifiList.html">wx.onGetWifiList</a></li>
-<li class="toctree-l1"><a class="reference internal" href="wx.getWifiList.html">wx.getWifiList</a></li>
-<li class="toctree-l1"><a class="reference internal" href="wx.getConnectedWifi.html">wx.createWorker</a></li>
-<li class="toctree-l1"><a class="reference internal" href="wx.connectWifi.html">wx.connectWifi</a></li>
-<li class="toctree-l1"><a class="reference internal" href="WifiInfo.html">WifiInfo</a></li>
-</ul>
 </div>
 </div>
 <div class="section" id="ibeacon">
@@ -3879,14 +3308,6 @@ wx.getSystemInfo</p></td>
 </tbody>
 </table>
 <div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="wx.stopBeaconDiscovery.html">wx.stopBeaconDiscovery</a></li>
-<li class="toctree-l1"><a class="reference internal" href="wx.startBeaconDiscovery.html">wx.startBeaconDiscovery</a></li>
-<li class="toctree-l1"><a class="reference internal" href="wx.onBeaconUpdate.html">wx.onBeaconUpdate</a></li>
-<li class="toctree-l1"><a class="reference internal" href="wx.onBeaconServiceChange.html">wx.onBeaconServiceChange</a></li>
-<li class="toctree-l1"><a class="reference internal" href="wx.getBeacons.html">wx.getBeacons</a></li>
-<li class="toctree-l1"><a class="reference internal" href="IBeaconInfo.html">IBeaconInfo</a></li>
-</ul>
 </div>
 <p>IBeaconInfo</p>
 </div>
@@ -3909,9 +3330,6 @@ wx.getSystemInfo</p></td>
 </tbody>
 </table>
 <div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="wx.addPhoneContact.html">wx.addPhoneContact</a></li>
-</ul>
 </div>
 </div>
 <div class="section" id="id57">
@@ -3957,17 +3375,6 @@ wx.getSystemInfo</p></td>
 </tbody>
 </table>
 <div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="wx.writeBLECharacteristicValue.html">wx.writeBLECharacteristicValue</a></li>
-<li class="toctree-l1"><a class="reference internal" href="wx.readBLECharacteristicValue.html">wx.readBLECharacteristicValue</a></li>
-<li class="toctree-l1"><a class="reference internal" href="wx.onBLEConnectionStateChange.html">wx.onBLEConnectionStateChange</a></li>
-<li class="toctree-l1"><a class="reference internal" href="wx.onBLECharacteristicValueChange.html">wx.onBLECharacteristicValueChange</a></li>
-<li class="toctree-l1"><a class="reference internal" href="wx.notifyBLECharacteristicValueChange.html">:wxapi:`wx.createWorker`</a></li>
-<li class="toctree-l1"><a class="reference internal" href="wx.getBLEDeviceServices.html">wx.getBLEDeviceServices</a></li>
-<li class="toctree-l1"><a class="reference internal" href="wx.getBLEDeviceCharacteristics.html">wx.getBLEDeviceCharacteristics</a></li>
-<li class="toctree-l1"><a class="reference internal" href="wx.createBLEConnection.html">wx.createBLEConnection</a></li>
-<li class="toctree-l1"><a class="reference internal" href="wx.closeBLEConnection.html">wx.createWorker</a></li>
-</ul>
 </div>
 </div>
 <div class="section" id="id58">
@@ -4013,17 +3420,6 @@ wx.getSystemInfo</p></td>
 </tbody>
 </table>
 <div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="wx.stopBluetoothDevicesDiscovery.html">wx.stopBluetoothDevicesDiscovery</a></li>
-<li class="toctree-l1"><a class="reference internal" href="wx.startBluetoothDevicesDiscovery.html">wx.startBluetoothDevicesDiscovery</a></li>
-<li class="toctree-l1"><a class="reference internal" href="wx.openBluetoothAdapter.html">wx.openBluetoothAdapter</a></li>
-<li class="toctree-l1"><a class="reference internal" href="wx.onBluetoothDeviceFound.html">wx.onBluetoothDeviceFound</a></li>
-<li class="toctree-l1"><a class="reference internal" href="wx.onBluetoothAdapterStateChange.html">wx.onBluetoothAdapterStateChange</a></li>
-<li class="toctree-l1"><a class="reference internal" href="wx.getConnectedBluetoothDevices.html">wx.getConnectedBluetoothDevices</a></li>
-<li class="toctree-l1"><a class="reference internal" href="wx.getBluetoothDevices.html">wx.getBluetoothDevices</a></li>
-<li class="toctree-l1"><a class="reference internal" href="wx.getBluetoothAdapterState.html">wx.getBluetoothAdapterState</a></li>
-<li class="toctree-l1"><a class="reference internal" href="wx.closeBluetoothAdapter.html">wx.createWorker</a></li>
-</ul>
 </div>
 </div>
 <div class="section" id="id59">
@@ -4048,10 +3444,6 @@ wx.getSystemInfo</p></td>
 </tbody>
 </table>
 <div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="wx.getBatteryInfoSync.html">wx.getBatteryInfoSync</a></li>
-<li class="toctree-l1"><a class="reference internal" href="wx.getBatteryInfo.html">wx.getBatteryInfo</a></li>
-</ul>
 </div>
 </div>
 <div class="section" id="id60">
@@ -4076,10 +3468,6 @@ wx.getSystemInfo</p></td>
 </tbody>
 </table>
 <div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="wx.setClipboardData.html">wx.setClipboardData</a></li>
-<li class="toctree-l1"><a class="reference internal" href="wx.getClipboardData.html">wx.getClipboardData</a></li>
-</ul>
 </div>
 </div>
 <div class="section" id="nfc">
@@ -4113,13 +3501,6 @@ wx.getSystemInfo</p></td>
 </tbody>
 </table>
 <div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="wx.stopHCE.html">wx.stopHCE</a></li>
-<li class="toctree-l1"><a class="reference internal" href="wx.startHCE.html">wx.startHCE</a></li>
-<li class="toctree-l1"><a class="reference internal" href="wx.sendHCEMessage.html">wx.sendHCEMessage</a></li>
-<li class="toctree-l1"><a class="reference internal" href="wx.onHCEMessage.html">wx.onHCEMessage</a></li>
-<li class="toctree-l1"><a class="reference internal" href="wx.getHCEState.html">wx.getHCEState</a></li>
-</ul>
 </div>
 </div>
 <div class="section" id="id61">
@@ -4144,10 +3525,6 @@ wx.getSystemInfo</p></td>
 </tbody>
 </table>
 <div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="wx.onNetworkStatusChange.html">wx.onNetworkStatusChange</a></li>
-<li class="toctree-l1"><a class="reference internal" href="wx.getNetworkType.html">wx.getNetworkType</a></li>
-</ul>
 </div>
 </div>
 <div class="section" id="id62">
@@ -4178,12 +3555,6 @@ wx.getSystemInfo</p></td>
 </tbody>
 </table>
 <div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="wx.setScreenBrightness.html">wx.setScreenBrightness</a></li>
-<li class="toctree-l1"><a class="reference internal" href="wx.setKeepScreenOn.html">wx.setKeepScreenOn</a></li>
-<li class="toctree-l1"><a class="reference internal" href="wx.onUserCaptureScreen.html">wx.onUserCaptureScreen</a></li>
-<li class="toctree-l1"><a class="reference internal" href="wx.getScreenBrightness.html">wx.getScreenBrightness</a></li>
-</ul>
 </div>
 </div>
 <div class="section" id="id63">
@@ -4205,9 +3576,6 @@ wx.getSystemInfo</p></td>
 </tbody>
 </table>
 <div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="wx.makePhoneCall.html">wx.makePhoneCall</a></li>
-</ul>
 </div>
 </div>
 <div class="section" id="id64">
@@ -4235,11 +3603,6 @@ wx.getSystemInfo</p></td>
 </tbody>
 </table>
 <div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="wx.stopAccelerometer.html">wx.stopAccelerometer</a></li>
-<li class="toctree-l1"><a class="reference internal" href="wx.startAccelerometer.html">wx.startAccelerometer</a></li>
-<li class="toctree-l1"><a class="reference internal" href="wx.onAccelerometerChange.html">wx.onAccelerometerChange</a></li>
-</ul>
 </div>
 </div>
 <div class="section" id="id65">
@@ -4267,11 +3630,6 @@ wx.getSystemInfo</p></td>
 </tbody>
 </table>
 <div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="wx.stopCompass.html">wx.stopCompass</a></li>
-<li class="toctree-l1"><a class="reference internal" href="wx.startCompass.html">wx.startCompass</a></li>
-<li class="toctree-l1"><a class="reference internal" href="wx.onCompassChange.html">wx.onCompassChange</a></li>
-</ul>
 </div>
 </div>
 <div class="section" id="id66">
@@ -4299,11 +3657,6 @@ wx.getSystemInfo</p></td>
 </tbody>
 </table>
 <div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="wx.stopDeviceMotionListening.html">wx.stopDeviceMotionListening</a></li>
-<li class="toctree-l1"><a class="reference internal" href="wx.startDeviceMotionListening.html">wx.startDeviceMotionListening</a></li>
-<li class="toctree-l1"><a class="reference internal" href="wx.onDeviceMotionChange.html">wx.onDeviceMotionChange</a></li>
-</ul>
 </div>
 </div>
 <div class="section" id="id67">
@@ -4331,11 +3684,6 @@ wx.getSystemInfo</p></td>
 </tbody>
 </table>
 <div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="wx.stopGyroscope.html">wx.stopGyroscope</a></li>
-<li class="toctree-l1"><a class="reference internal" href="wx.startGyroscope.html">wx.startGyroscope</a></li>
-<li class="toctree-l1"><a class="reference internal" href="wx.onGyroscopeChange.html">wx.onGyroscopeChange</a></li>
-</ul>
 </div>
 </div>
 <div class="section" id="id68">
@@ -4357,9 +3705,6 @@ wx.getSystemInfo</p></td>
 </tbody>
 </table>
 <div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="wx.onMemoryWarning.html">wx.onMemoryWarning</a></li>
-</ul>
 </div>
 </div>
 <div class="section" id="id69">
@@ -4381,9 +3726,6 @@ wx.getSystemInfo</p></td>
 </tbody>
 </table>
 <div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="wx.scanCode.html">wx.scanCode</a></li>
-</ul>
 </div>
 </div>
 <div class="section" id="id70">
@@ -4408,10 +3750,6 @@ wx.getSystemInfo</p></td>
 </tbody>
 </table>
 <div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="wx.vibrateShort.html">wx.vibrateShort</a></li>
-<li class="toctree-l1"><a class="reference internal" href="wx.vibrateLong.html">wx.vibrateLong</a></li>
-</ul>
 </div>
 </div>
 </div>
@@ -4434,9 +3772,6 @@ wx.getSystemInfo</p></td>
 </tbody>
 </table>
 <div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="wx.createWorker.html">wx.createWorker</a></li>
-</ul>
 </div>
 <div class="section" id="id71">
 <h3>Worker<a class="headerlink" href="#id71" title="永久链接至标题">¶</a></h3>
@@ -4463,12 +3798,6 @@ wx.getSystemInfo</p></td>
 </tbody>
 </table>
 <div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="Worker.html">Worker</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Worker.onMessage.html">Worker.onMessage</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Worker.postMessage.html">Worker.postMessage</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Worker.terminate.html">Worker.terminate</a></li>
-</ul>
 </div>
 </div>
 </div>
@@ -4494,10 +3823,6 @@ wx.getSystemInfo</p></td>
 </tbody>
 </table>
 <div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="wx.getExtConfigSync.html">wx.getExtConfigSync</a></li>
-<li class="toctree-l1"><a class="reference internal" href="wx.getExtConfig.html">wx.createWorker</a></li>
-</ul>
 </div>
 </div>
 <div class="section" id="wxml">
@@ -4522,10 +3847,6 @@ wx.getSystemInfo</p></td>
 </tbody>
 </table>
 <div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="wx.createSelectorQuery.html">wx.createSelectorQuery</a></li>
-<li class="toctree-l1"><a class="reference internal" href="wx.createIntersectionObserver.html">wx.createIntersectionObserver</a></li>
-</ul>
 </div>
 <div class="section" id="selectorquery">
 <h3>SelectorQuery<a class="headerlink" href="#selectorquery" title="永久链接至标题">¶</a></h3>
@@ -4558,14 +3879,6 @@ wx.getSystemInfo</p></td>
 </tbody>
 </table>
 <div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="SelectorQuery.html">SelectorQuery</a></li>
-<li class="toctree-l1"><a class="reference internal" href="SelectorQuery.exec.html">SelectorQuery.exec</a></li>
-<li class="toctree-l1"><a class="reference internal" href="SelectorQuery.in.html">SelectorQuery.in</a></li>
-<li class="toctree-l1"><a class="reference internal" href="SelectorQuery.select.html">SelectorQuery.select</a></li>
-<li class="toctree-l1"><a class="reference internal" href="SelectorQuery.selectAll.html">SelectorQuery.selectAll</a></li>
-<li class="toctree-l1"><a class="reference internal" href="SelectorQuery.selectViewport.html">SelectorQuery.selectViewport</a></li>
-</ul>
 </div>
 </div>
 <div class="section" id="nodesref">
@@ -4596,13 +3909,6 @@ wx.getSystemInfo</p></td>
 </tbody>
 </table>
 <div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="NodesRef.html">NodesRef</a></li>
-<li class="toctree-l1"><a class="reference internal" href="NodesRef.boundingClientRect.html">NodesRef.boundingClientRect</a></li>
-<li class="toctree-l1"><a class="reference internal" href="NodesRef.context.html">NodesRef.context</a></li>
-<li class="toctree-l1"><a class="reference internal" href="NodesRef.fields.html">NodesRef.fields</a></li>
-<li class="toctree-l1"><a class="reference internal" href="NodesRef.scrollOffset.html">NodesRef.scrollOffset</a></li>
-</ul>
 </div>
 </div>
 <div class="section" id="intersectionobserver">
@@ -4633,18 +3939,8 @@ wx.getSystemInfo</p></td>
 </tbody>
 </table>
 <div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="IntersectionObserver.html">IntersectionObserver</a></li>
-<li class="toctree-l1"><a class="reference internal" href="IntersectionObserver.disconnect.html">IntersectionObserver.disconnect</a></li>
-<li class="toctree-l1"><a class="reference internal" href="IntersectionObserver.observe.html">IntersectionObserver.observe</a></li>
-<li class="toctree-l1"><a class="reference internal" href="IntersectionObserver.relativeTo.html">IntersectionObserver.relativeTo</a></li>
-<li class="toctree-l1"><a class="reference internal" href="IntersectionObserver.relativeToViewport.html">IntersectionObserver.relativeToViewport</a></li>
-</ul>
 </div>
 <div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="console.html">console</a></li>
-</ul>
 </div>
 </div>
 </div>

@@ -14,3 +14,6 @@
    api
     https://api.weixin.qq.com/cgi-bin/
 
+   qyapi
+    https://qyapi.weixin.qq.com/cgi-bin/
+

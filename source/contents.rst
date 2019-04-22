@@ -16,6 +16,7 @@
    devtools/index
    reference/index
    wxcloud/index
+   wxwork/index
 
    glossary
 
