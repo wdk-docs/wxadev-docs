@@ -36,7 +36,7 @@
   <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
     <link rel="index" title="索引" href="../../../genindex.html" />
     <link rel="search" title="搜索" href="../../../search.html" />
-    <link rel="next" title="获取企业成员信息" href="../corpmemberinfo/index.html" />
+    <link rel="next" title="获取成员信息" href="../corpmemberinfo/index.html" />
     <link rel="prev" title="wx.getSystemInfoSync" href="wx.getSystemInfoSync.html" /> 
 </head>
 
@@ -93,9 +93,9 @@
 <li class="toctree-l1"><a class="reference internal" href="../../../devtools/index.html">开发工具</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../reference/index.html">参考资料</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../wxcloud/index.html">云开发</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">企业微信兼容</a><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">企业微信</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../../doc/index.html">文档概述</a></li>
-<li class="toctree-l2 current"><a class="reference internal" href="../index.html">企业微信专有接口</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">接口</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="../login/index.html">登录</a></li>
 <li class="toctree-l3 current"><a class="reference internal" href="index.html">基础接口</a><ul class="current">
 <li class="toctree-l4"><a class="reference internal" href="wx.getSystemInfo.html">wx.getSystemInfo</a></li>
@@ -103,7 +103,7 @@
 <li class="toctree-l4 current"><a class="current reference internal" href="#">wx.qy.canIUse</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../corpmemberinfo/index.html">获取企业成员信息</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../corpmemberinfo/index.html">获取成员信息</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../contact/index.html">企业通讯录与会话</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../nfc/index.html">NFC接口</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../miniprogram-msg.html">发送小程序消息</a></li>
@@ -157,9 +157,9 @@
     
       <li><a href="../../../contents.html">Docs</a> &raquo;</li>
         
-          <li><a href="../../index.html">企业微信兼容</a> &raquo;</li>
+          <li><a href="../../index.html">企业微信</a> &raquo;</li>
         
-          <li><a href="../index.html">企业微信专有接口</a> &raquo;</li>
+          <li><a href="../index.html">接口</a> &raquo;</li>
         
           <li><a href="index.html">基础接口</a> &raquo;</li>
         
@@ -184,6 +184,44 @@
             
   <div class="section" id="wx-qy-caniuse">
 <h1>wx.qy.canIUse<a class="headerlink" href="#wx-qy-caniuse" title="永久链接至标题">¶</a></h1>
+<dl class="function">
+<dt id="wx.qy.canIUse">
+<code class="descclassname">wx.qy.</code><code class="descname">canIUse</code><span class="sig-paren">(</span><em>schema</em><span class="sig-paren">)</span><a class="headerlink" href="#wx.qy.canIUse" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list">
+<dt class="field-odd">Label</dt>
+<dd class="field-odd"><p>判断企业微信专有接口、回调、参数等是否在当前版本可用。</p>
+</dd>
+<dt class="field-even">参数</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>schema</strong> (<em>string</em>) – <p>使用 ${API}.${method}.${param}.${options} 或者 ${component}.${attribute}.${option} 方式来调用</p>
+<ul>
+<li><p><em>${API}</em> 代表 API 名字</p></li>
+<li><p><em>${method}</em> 代表调用方式，有效值为return, success, object, callback</p></li>
+<li><p><em>${param}</em> 代表参数或者返回值</p></li>
+<li><p><em>${options}</em> 代表参数的可选值</p></li>
+</ul>
+</p></li>
+</ul>
+</dd>
+<dt class="field-odd">返回类型</dt>
+<dd class="field-odd"><p>boolean</p>
+</dd>
+<dt class="field-even">返回</dt>
+<dd class="field-even"><p>布尔值</p>
+</dd>
+<dt class="field-odd">注意</dt>
+<dd class="field-odd"><p><a class="reference internal" href="../../../api/wx.canIUse.html#wx.canIUse" title="wx.canIUse"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.canIUse()</span></code></a> 判断的是微信小程序通用接口（即wx.[接口名]）是否在当前版本可用。</p>
+</dd>
+<dt class="field-even">示例</dt>
+<dd class="field-even"><div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="nx">wx</span><span class="p">.</span><span class="nx">qy</span><span class="p">.</span><span class="nx">canIUse</span><span class="p">(</span><span class="s1">&#39;login.success.code&#39;</span><span class="p">)</span>
+<span class="nx">wx</span><span class="p">.</span><span class="nx">qy</span><span class="p">.</span><span class="nx">canIUse</span><span class="p">(</span><span class="s1">&#39;getNFCReaderState&#39;</span><span class="p">)</span>
+<span class="nx">wx</span><span class="p">.</span><span class="nx">qy</span><span class="p">.</span><span class="nx">canIUse</span><span class="p">(</span><span class="s1">&#39;getAvatar.success.avatar&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</dd></dl>
+
 </div>
 
 
@@ -194,7 +232,7 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../corpmemberinfo/index.html" class="btn btn-neutral float-right" title="获取企业成员信息" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="../corpmemberinfo/index.html" class="btn btn-neutral float-right" title="获取成员信息" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="wx.getSystemInfoSync.html" class="btn btn-neutral float-left" title="wx.getSystemInfoSync" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>

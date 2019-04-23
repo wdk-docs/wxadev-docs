@@ -93,12 +93,12 @@
 <li class="toctree-l1"><a class="reference internal" href="../../../devtools/index.html">开发工具</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../reference/index.html">参考资料</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../wxcloud/index.html">云开发</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">企业微信兼容</a><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">企业微信</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../../doc/index.html">文档概述</a></li>
-<li class="toctree-l2 current"><a class="reference internal" href="../index.html">企业微信专有接口</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">接口</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="../login/index.html">登录</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../foundation/index.html">基础接口</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../corpmemberinfo/index.html">获取企业成员信息</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../corpmemberinfo/index.html">获取成员信息</a></li>
 <li class="toctree-l3 current"><a class="reference internal" href="index.html">企业通讯录与会话</a><ul class="current">
 <li class="toctree-l4"><a class="reference internal" href="wx.qy.selectEnterpriseContact.html">wx.qy.selectEnterpriseContact</a></li>
 <li class="toctree-l4 current"><a class="current reference internal" href="#">wx.qy.openEnterpriseChat</a></li>
@@ -159,9 +159,9 @@
     
       <li><a href="../../../contents.html">Docs</a> &raquo;</li>
         
-          <li><a href="../../index.html">企业微信兼容</a> &raquo;</li>
+          <li><a href="../../index.html">企业微信</a> &raquo;</li>
         
-          <li><a href="../index.html">企业微信专有接口</a> &raquo;</li>
+          <li><a href="../index.html">接口</a> &raquo;</li>
         
           <li><a href="index.html">企业通讯录与会话</a> &raquo;</li>
         
@@ -185,7 +185,51 @@
            <div itemprop="articleBody">
             
   <div class="section" id="wx-qy-openenterprisechat">
-<h1>wx.qy.openEnterpriseChat<a class="headerlink" href="#wx-qy-openenterprisechat" title="永久链接至标题">¶</a></h1>
+<h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/dev_wxwork/dev-doc/qywx-api/contact/wxqyopenenterprisechat.html">wx.qy.openEnterpriseChat</a><a class="headerlink" href="#wx-qy-openenterprisechat" title="永久链接至标题">¶</a></h1>
+<dl class="function">
+<dt id="wx.qy.openEnterpriseChat">
+<code class="descclassname">wx.qy.</code><code class="descname">openEnterpriseChat</code><span class="sig-paren">(</span><em>{groupName[, userIds][, externalUserIds][, success][, fail][, complete]}</em><span class="sig-paren">)</span><a class="headerlink" href="#wx.qy.openEnterpriseChat" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list">
+<dt class="field-odd">Label</dt>
+<dd class="field-odd"><p>打开通讯录选人功能</p>
+</dd>
+<dt class="field-even">参数</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>groupName</strong> (<em>string</em>) – 会话名称。单聊时该参数传入空字符串”“即可</p></li>
+<li><p><strong>userIds</strong> (<em>string</em>) – (userIds和externalUserIds至少填一个)参与会话的企业成员列表，格式为 <code class="docutils literal notranslate"><span class="pre">userid1;userid2;...</span></code> ，用分号隔开。</p></li>
+<li><p><strong>externalUserIds</strong> (<em>string</em>) – (userIds和externalUserIds至少填一个) 参与会话的外部联系人列表，格式为userId1;userId2;…，用分号隔开。</p></li>
+<li><p><strong>success</strong> (<em>function</em>) – 接口调用成功的回调函数</p></li>
+<li><p><strong>fail</strong> (<em>function</em>) – 接口调用失败的回调函数</p></li>
+<li><p><strong>complete</strong> (<em>function</em>) – 接口调用结束的回调函数(调用成功、失败都会执行)</p></li>
+</ul>
+</dd>
+<dt class="field-odd">调用前提</dt>
+<dd class="field-odd"><ol class="arabic simple">
+<li><p>必须先调用过wx.qy.login，且session_key未过期，开发者可调用checkSession 检查当前登录态</p></li>
+<li><p>当前成员必须在应用的可见范围</p></li>
+<li><p>externalUserIds由外部联系人选人接口selectExternalContact获得</p></li>
+<li><p>由于目前暂不支持包含微信联系人的群聊，所以externalUserIds中最多只能有一个微信联系人，而且一旦externalUserIds中有微信联系人，就不能再传userIds参数。</p></li>
+</ol>
+</dd>
+<dt class="field-even">示例代码</dt>
+<dd class="field-even"><div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="nx">wx</span><span class="p">.</span><span class="nx">qy</span><span class="p">.</span><span class="nx">openEnterpriseChat</span><span class="p">({</span>
+  <span class="c1">// 注意：userIds和externalUserIds至少选填一个，且userIds+openIds总数不能超过2000。</span>
+  <span class="nx">userIds</span><span class="o">:</span> <span class="s1">&#39;zhangshan;lisi;wangwu&#39;</span><span class="p">,</span> <span class="c1">// 参与会话的企业成员列表，格式为userid1;userid2;...，用分号隔开。</span>
+  <span class="nx">externalUserIds</span><span class="o">:</span> <span class="s1">&#39;wmEAlECwAAHrbWYDOK5u3Af13xlYDDNQ;wmEAlECwAAHrbWYDOK5u3Af13xlYDDNT&#39;</span><span class="p">,</span> <span class="c1">// 参与会话的外部联系人列表，格式为userId1;userId2;…，用分号隔开。</span>
+  <span class="nx">groupName</span><span class="o">:</span> <span class="s1">&#39;讨论组&#39;</span><span class="p">,</span> <span class="c1">// 必填，会话名称。单聊时该参数传入空字符串&quot;&quot;即可。</span>
+  <span class="nx">success</span><span class="p">(</span><span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// 回调</span>
+  <span class="p">},</span>
+  <span class="nx">fail</span><span class="p">(</span><span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// 失败处理</span>
+  <span class="p">}</span>
+<span class="p">})</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</dd></dl>
+
 </div>
 
 

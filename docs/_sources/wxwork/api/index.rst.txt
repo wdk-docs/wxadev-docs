@@ -1,6 +1,6 @@
 .. _qywx-api:
 
-:wxwork:`企业微信专有接口 <dev-doc/qywx-api>`
+:wxwork:`接口 <dev-doc/qywx-api>`
 ==============================================
 
 

@@ -1,18 +1,23 @@
 :wxwork:`code2Session <dev-doc/qywx-api/login/code2session>`
-======================================================
+====================================================================
 
 ::
 
   会话密钥 session_key 是对用户数据进行加密签名的密钥，为了应用自身的数据安全，
   开发者服务器不应该把会话密钥下发到小程序，也不应该对外提供这个密钥。
 
-临时登录凭证校验接口是一个后台HTTPS 接口，开发者服务器使用临时登录凭证code获取 session_key、用户userid以及用户所在企业的corpid等信息。
+临时登录凭证校验接口是一个后台HTTPS 接口，
+开发者服务器使用临时登录凭证code获取 session_key、用户userid以及用户所在企业的corpid等信息。
 
 如果你是第三方服务商开发者，请参见第三方小程序，和此接口的主要区别在于请求地址不同。
 
 **登录流程示意图**
 
 .. image:: https://p.qpic.cn/pic_wework/2037829553/1d1bc71204c483503a4ca9747538a64e0ae8643e76a41d7e/0?t=19042217
+
+
+.. index::
+   single: miniprogram/jscode2session
 
 .. http:get:: <qyapi>/miniprogram/jscode2session
 

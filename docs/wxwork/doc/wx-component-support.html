@@ -36,7 +36,7 @@
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="index" title="索引" href="../../genindex.html" />
     <link rel="search" title="搜索" href="../../search.html" />
-    <link rel="next" title="企业微信专有接口" href="../api/index.html" />
+    <link rel="next" title="接口" href="../api/index.html" />
     <link rel="prev" title="微信小程序API支持情况" href="wx-api-support.html" /> 
 </head>
 
@@ -93,16 +93,26 @@
 <li class="toctree-l1"><a class="reference internal" href="../../devtools/index.html">开发工具</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../reference/index.html">参考资料</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../wxcloud/index.html">云开发</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="../index.html">企业微信兼容</a><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">企业微信</a><ul class="current">
 <li class="toctree-l2 current"><a class="reference internal" href="index.html">文档概述</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="notice.html">开发前须知</a></li>
 <li class="toctree-l3"><a class="reference internal" href="third-party-services.html">第三方小程序（服务商）</a></li>
 <li class="toctree-l3"><a class="reference internal" href="devtool-plugin.html">开发者工具插件支持</a></li>
 <li class="toctree-l3"><a class="reference internal" href="wx-api-support.html">微信小程序API支持情况</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">微信小程序组件支持情况</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">微信小程序组件支持情况</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#view-container">视图容器(View Container)：</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#basic-content">基础内容(Basic Content)：</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#form">表单(Form)：</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#navigation">导航(Navigation)：</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#media">多媒体(Media)：</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#map">地图(Map)：</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#canvas">画布(Canvas)：</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#open-ability">开放能力(Open Ability)：</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../api/index.html">企业微信专有接口</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../api/index.html">接口</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../glossary.html">术语</a></li>
@@ -151,7 +161,7 @@
     
       <li><a href="../../contents.html">Docs</a> &raquo;</li>
         
-          <li><a href="../index.html">企业微信兼容</a> &raquo;</li>
+          <li><a href="../index.html">企业微信</a> &raquo;</li>
         
           <li><a href="index.html">文档概述</a> &raquo;</li>
         
@@ -176,21 +186,26 @@
             
   <div class="section" id="id1">
 <h1>微信小程序组件支持情况<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
-<p>视图容器(View Container)：</p>
+<div class="section" id="view-container">
+<h2>视图容器(View Container)：<a class="headerlink" href="#view-container" title="永久链接至标题">¶</a></h2>
 <p>组件名     说明      企业微信支持情况
 view    视图容器    支持
 scroll-view     可滚动视图容器 支持
 swiper  滑块视图容器  支持
 movable-view/movable-area       可移动的视图容器        支持
 cover-view      覆盖在原生组件之上的文本视图  支持
-cover-image     覆盖在原生组件之上的图片视图  支持
-基础内容(Basic Content)：</p>
+cover-image     覆盖在原生组件之上的图片视图  支持</p>
+</div>
+<div class="section" id="basic-content">
+<h2>基础内容(Basic Content)：<a class="headerlink" href="#basic-content" title="永久链接至标题">¶</a></h2>
 <p>组件名     说明      企业微信支持情况
 icon    图标      支持
 text    文字      支持
 rich-text       富文本     支持
-progress        进度条     支持
-表单(Form)：</p>
+progress        进度条     支持</p>
+</div>
+<div class="section" id="form">
+<h2>表单(Form)：<a class="headerlink" href="#form" title="永久链接至标题">¶</a></h2>
 <p>标签名     说明      企业微信支持情况
 button  按钮      支持
 checkbox        多项选择器   支持
@@ -202,31 +217,42 @@ picker-view     内嵌列表选择器 支持
 radio   单项选择器   支持
 slider  滚动选择器   支持
 switch  开关选择器   支持
-textarea        多行输入框   支持
-导航(Navigation)：</p>
+textarea        多行输入框   支持</p>
+</div>
+<div class="section" id="navigation">
+<h2>导航(Navigation)：<a class="headerlink" href="#navigation" title="永久链接至标题">¶</a></h2>
 <p>组件名     说明      企业微信支持情况
 navigator       页面链接    支持
-functional-page-navigator       跳转到插件功能页        支持
-多媒体(Media)：</p>
+functional-page-navigator       跳转到插件功能页        支持</p>
+</div>
+<div class="section" id="media">
+<h2>多媒体(Media)：<a class="headerlink" href="#media" title="永久链接至标题">¶</a></h2>
 <p>组件名     说明      企业微信支持情况
 audio   音频      部分支持
 image   图片      支持
 video   视频      部分支持
 camera  系统相机    不支持
 live-player     实时音视频播放 支持
-live-pusher     实时音视频录制 支持
-地图(Map)：</p>
+live-pusher     实时音视频录制 支持</p>
+</div>
+<div class="section" id="map">
+<h2>地图(Map)：<a class="headerlink" href="#map" title="永久链接至标题">¶</a></h2>
 <p>组件名     说明      企业微信支持情况
-map     地图      部分支持
-画布(Canvas)：</p>
+map     地图      部分支持</p>
+</div>
+<div class="section" id="canvas">
+<h2>画布(Canvas)：<a class="headerlink" href="#canvas" title="永久链接至标题">¶</a></h2>
 <p>组件名     说明      企业微信支持情况
-canvas  画布      部分支持
-开放能力(Open Ability)：</p>
+canvas  画布      部分支持</p>
+</div>
+<div class="section" id="open-ability">
+<h2>开放能力(Open Ability)：<a class="headerlink" href="#open-ability" title="永久链接至标题">¶</a></h2>
 <p>组件名     说明      企业微信支持情况
 open-data       展示微信开放的数据       不支持
 web-view        承载网页的容器 部分支持
 ad      广告      支持
 official-account        关注公众号   不支持</p>
+</div>
 </div>
 
 
@@ -237,7 +263,7 @@ official-account        关注公众号   不支持</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../api/index.html" class="btn btn-neutral float-right" title="企业微信专有接口" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="../api/index.html" class="btn btn-neutral float-right" title="接口" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="wx-api-support.html" class="btn btn-neutral float-left" title="微信小程序API支持情况" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>

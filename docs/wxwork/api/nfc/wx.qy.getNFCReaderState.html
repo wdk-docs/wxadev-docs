@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>wx.qy.getMobile &mdash; wxadev 1.0.0 文档</title>
+  <title>wx.qy.getNFCReaderState &mdash; wxadev 1.0.0 文档</title>
   
 
   
@@ -36,8 +36,8 @@
   <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
     <link rel="index" title="索引" href="../../../genindex.html" />
     <link rel="search" title="搜索" href="../../../search.html" />
-    <link rel="next" title="wx.qy.getEmail" href="wx.qy.getEmail.html" />
-    <link rel="prev" title="wx.qy.getQrCode" href="wx.qy.getQrCode.html" /> 
+    <link rel="next" title="wx.qy.startNFCReader" href="wx.qy.startNFCReader.html" />
+    <link rel="prev" title="NFC接口" href="index.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -98,16 +98,15 @@
 <li class="toctree-l2 current"><a class="reference internal" href="../index.html">接口</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="../login/index.html">登录</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../foundation/index.html">基础接口</a></li>
-<li class="toctree-l3 current"><a class="reference internal" href="index.html">获取成员信息</a><ul class="current">
-<li class="toctree-l4"><a class="reference internal" href="wx.qy.getEnterpriseUserInfo.html">wx.qy.getEnterpriseUserInfo</a></li>
-<li class="toctree-l4"><a class="reference internal" href="wx.qy.getAvatar.html">wx.qy.getAvatar</a></li>
-<li class="toctree-l4"><a class="reference internal" href="wx.qy.getQrCode.html">wx.qy.getQrCode</a></li>
-<li class="toctree-l4 current"><a class="current reference internal" href="#">wx.qy.getMobile</a></li>
-<li class="toctree-l4"><a class="reference internal" href="wx.qy.getEmail.html">wx.qy.getEmail</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../corpmemberinfo/index.html">获取成员信息</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../contact/index.html">企业通讯录与会话</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">NFC接口</a><ul class="current">
+<li class="toctree-l4 current"><a class="current reference internal" href="#">wx.qy.getNFCReaderState</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wx.qy.startNFCReader.html">wx.qy.startNFCReader</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wx.qy.stopNFCReader.html">wx.qy.stopNFCReader</a></li>
+<li class="toctree-l4"><a class="reference internal" href="onNFCReadMessage.html">onNFCReadMessage</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../contact/index.html">企业通讯录与会话</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../nfc/index.html">NFC接口</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../miniprogram-msg.html">发送小程序消息</a></li>
 </ul>
 </li>
@@ -163,15 +162,15 @@
         
           <li><a href="../index.html">接口</a> &raquo;</li>
         
-          <li><a href="index.html">获取成员信息</a> &raquo;</li>
+          <li><a href="index.html">NFC接口</a> &raquo;</li>
         
-      <li>wx.qy.getMobile</li>
+      <li>wx.qy.getNFCReaderState</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="../../../_sources/wxwork/api/corpmemberinfo/wx.qy.getMobile.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../../../_sources/wxwork/api/nfc/wx.qy.getNFCReaderState.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -184,53 +183,58 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="wx-qy-getmobile">
-<h1>wx.qy.getMobile<a class="headerlink" href="#wx-qy-getmobile" title="永久链接至标题">¶</a></h1>
-<blockquote>
-<div><dl class="function">
-<dt id="wx.qy.getMobile">
-<code class="descclassname">wx.qy.</code><code class="descname">getMobile</code><span class="sig-paren">(</span><em>{[timeout][, success][, fail][, complete]}</em><span class="sig-paren">)</span><a class="headerlink" href="#wx.qy.getMobile" title="永久链接至目标">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="field-list">
-<dt class="field-odd">label</dt>
-<dd class="field-odd"><p>获取企业成员手机号</p>
+  <div class="section" id="wx-qy-getnfcreaderstate">
+<h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/dev_wxwork/dev-doc/qywx-api/nfc/wxqygetnfcreaderstate.html">wx.qy.getNFCReaderState</a><a class="headerlink" href="#wx-qy-getnfcreaderstate" title="永久链接至标题">¶</a></h1>
+<dl class="function">
+<dt id="wx.qy.getNFCReaderState">
+<code class="descclassname">wx.qy.</code><code class="descname">getNFCReaderState</code><span class="sig-paren">(</span><em>{[success][, fail][, complete]}</em><span class="sig-paren">)</span><a class="headerlink" href="#wx.qy.getNFCReaderState" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list">
+<dt class="field-odd">Label</dt>
+<dd class="field-odd"><p>判断当前设备是否支持 NFC 能力</p>
 </dd>
-<dt class="field-even">param Number timeout</dt>
-<dd class="field-even"><p>超时时间，单位 ms</p>
-</dd>
-<dt class="field-odd">param function success({encryptedData,iv})</dt>
-<dd class="field-odd"><p>接口调用成功的回调函数</p>
-<ul class="simple">
-<li><p><strong>encryptedData</strong> (<em>String</em>) -    包括敏感数据在内的完整用户信息的加密数据，详细见加密数据解密算法</p></li>
-<li><p><strong>iv</strong>    (<em>String</em>) -    加密算法的初始向量，详细见加密数据解密算法</p></li>
+<dt class="field-even">参数</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>success({errcode,errmsg})</strong> (<em>function</em>) – <p>接口调用成功的回调函数</p>
+<ul>
+<li><p><strong>errcode</strong> (<em>number</em>) - 错误码</p>
+<ul>
+<li><p><em>0</em> 正常</p></li>
+<li><p><em>13000</em> 当前设备不支持NFC</p></li>
+</ul>
+</li>
+<li><p><strong>errmsg</strong> (<em>string</em>) - 错误信息</p>
+<ul>
+<li><p><em>ok</em> 正常</p></li>
+</ul>
+</li>
+</ul>
+</p></li>
+<li><p><strong>fail</strong> (<em>function</em>) – 接口调用失败的回调函数</p></li>
+<li><p><strong>complete</strong> (<em>function</em>) – 接口调用结束的回调函数（调用成功、失败都会执行）</p></li>
 </ul>
 </dd>
-<dt class="field-even">param function fail</dt>
-<dd class="field-even"><p>接口调用失败的回调函数</p>
+<dt class="field-odd">前提</dt>
+<dd class="field-odd"><p>需要用户授权</p>
 </dd>
-<dt class="field-odd">param function complete</dt>
-<dd class="field-odd"><p>接口调用结束的回调函数（调用成功、失败都会执行）</p>
-</dd>
-<dt class="field-even">前提</dt>
-<dd class="field-even"><ol class="arabic simple">
-<li><p>必须先调用过 <a class="reference internal" href="../login/wx.qy.login.html#wx.qy.login" title="wx.qy.login"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.qy.login()</span></code></a>，且 session_key 未过期，开发者可调用 <a class="reference internal" href="../login/wx.qy.checkSession.html#wx.qy.checkSession" title="wx.qy.checkSession"><code class="xref js js-func docutils literal notranslate"><span class="pre">checkSession</span></code></a> 检查当前登录态</p></li>
-<li><p>要求用户在应用可见范围内，且每次调用都需要用户同意确认</p></li>
-<li><p>获取的是当前企业成员在企业通讯录中的手机号</p></li>
-</ol>
-</dd>
-<dt class="field-odd">示例</dt>
-<dd class="field-odd"><div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="nx">wx</span><span class="p">.</span><span class="nx">qy</span><span class="p">.</span><span class="nx">getMobile</span> <span class="p">({</span>
-  <span class="nx">success</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">res</span><span class="p">.</span><span class="nx">encryptedData</span><span class="p">)</span>
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">res</span><span class="p">.</span><span class="nx">iv</span><span class="p">)</span>
+<dt class="field-even">示例</dt>
+<dd class="field-even"><div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="nx">wx</span><span class="p">.</span><span class="nx">qy</span><span class="p">.</span><span class="nx">getNFCReaderState</span><span class="p">({</span>
+  <span class="nx">success</span><span class="o">:</span> <span class="p">(</span><span class="nx">res</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">res</span><span class="p">))</span>
+    <span class="c1">// todo what you want</span>
+  <span class="p">},</span>
+  <span class="nx">fail</span><span class="o">:</span> <span class="p">(</span><span class="nx">res</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+    <span class="nx">wx</span><span class="p">.</span><span class="nx">showModal</span><span class="p">({</span>
+      <span class="nx">title</span><span class="o">:</span> <span class="s1">&#39;NFC-Not-Support&#39;</span><span class="p">,</span>
+      <span class="nx">content</span><span class="o">:</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">res</span><span class="p">),</span>
+    <span class="p">})</span>
   <span class="p">}</span>
 <span class="p">})</span>
 </pre></div>
 </div>
 </dd>
 </dl>
-</div></blockquote>
+</dd></dl>
+
 </div>
 
 
@@ -241,10 +245,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="wx.qy.getEmail.html" class="btn btn-neutral float-right" title="wx.qy.getEmail" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="wx.qy.startNFCReader.html" class="btn btn-neutral float-right" title="wx.qy.startNFCReader" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="wx.qy.getQrCode.html" class="btn btn-neutral float-left" title="wx.qy.getQrCode" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="index.html" class="btn btn-neutral float-left" title="NFC接口" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

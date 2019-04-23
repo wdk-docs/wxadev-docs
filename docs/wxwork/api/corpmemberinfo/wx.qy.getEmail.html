@@ -93,12 +93,12 @@
 <li class="toctree-l1"><a class="reference internal" href="../../../devtools/index.html">开发工具</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../reference/index.html">参考资料</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../wxcloud/index.html">云开发</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">企业微信兼容</a><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">企业微信</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../../doc/index.html">文档概述</a></li>
-<li class="toctree-l2 current"><a class="reference internal" href="../index.html">企业微信专有接口</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">接口</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="../login/index.html">登录</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../foundation/index.html">基础接口</a></li>
-<li class="toctree-l3 current"><a class="reference internal" href="index.html">获取企业成员信息</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">获取成员信息</a><ul class="current">
 <li class="toctree-l4"><a class="reference internal" href="wx.qy.getEnterpriseUserInfo.html">wx.qy.getEnterpriseUserInfo</a></li>
 <li class="toctree-l4"><a class="reference internal" href="wx.qy.getAvatar.html">wx.qy.getAvatar</a></li>
 <li class="toctree-l4"><a class="reference internal" href="wx.qy.getQrCode.html">wx.qy.getQrCode</a></li>
@@ -159,11 +159,11 @@
     
       <li><a href="../../../contents.html">Docs</a> &raquo;</li>
         
-          <li><a href="../../index.html">企业微信兼容</a> &raquo;</li>
+          <li><a href="../../index.html">企业微信</a> &raquo;</li>
         
-          <li><a href="../index.html">企业微信专有接口</a> &raquo;</li>
+          <li><a href="../index.html">接口</a> &raquo;</li>
         
-          <li><a href="index.html">获取企业成员信息</a> &raquo;</li>
+          <li><a href="index.html">获取成员信息</a> &raquo;</li>
         
       <li>wx.qy.getEmail</li>
     
@@ -186,6 +186,57 @@
             
   <div class="section" id="wx-qy-getemail">
 <h1>wx.qy.getEmail<a class="headerlink" href="#wx-qy-getemail" title="永久链接至标题">¶</a></h1>
+<dl class="function">
+<dt id="wx.qy.getEmail">
+<code class="descclassname">wx.qy.</code><code class="descname">getEmail</code><span class="sig-paren">(</span><em>{[timeout][, success][, fail][, complete]}</em><span class="sig-paren">)</span><a class="headerlink" href="#wx.qy.getEmail" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list">
+<dt class="field-odd">Label</dt>
+<dd class="field-odd"><p>获取企业成员邮箱地址</p>
+</dd>
+<dt class="field-even">参数</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>timeout</strong> (<em>number</em>) – 超时时间，单位 ms</p></li>
+<li><p><strong>success({encryptedData,iv})</strong> (<em>function</em>) – <p>接口调用成功的回调函数</p>
+<ul>
+<li><p><strong>encryptedData</strong> <em>(string)</em> -    包括敏感数据在内的完整用户信息的加密数据，详细见加密数据解密算法, 解密后JSON:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><strong>email</strong>     (<em>string</em>) -    当前企业成员的邮箱地址</p></li>
+<li><p><strong>watermark</strong> (<em>object</em>) - 数据水印，应用可以依此校验数据的有效性</p>
+<ul>
+<li><p><strong>appid</strong>   (<em>String</em>) -    敏感数据归属的小程序appid，开发者可校验此参数与自身appid是否一致，注意此appid不是企业微信的corpid</p></li>
+<li><p><strong>timestamp</strong>       (<em>DateInt</em>) -   敏感数据获取的时间戳, 开发者可以用于数据时效性校验</p></li>
+</ul>
+</li>
+</ul>
+</div></blockquote>
+</li>
+<li><p><strong>iv</strong>    <em>(string)</em> -    加密算法的初始向量，详细见加密数据解密算法</p></li>
+</ul>
+</p></li>
+<li><p><strong>fail</strong> (<em>function</em>) – 接口调用失败的回调函数</p></li>
+<li><p><strong>complete</strong> (<em>function</em>) – 接口调用结束的回调函数（调用成功、失败都会执行）</p></li>
+</ul>
+</dd>
+<dt class="field-odd">调用前提</dt>
+<dd class="field-odd"><ol class="arabic simple">
+<li><p>必须先调用过 <a class="reference internal" href="../login/wx.qy.login.html#wx.qy.login" title="wx.qy.login"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.qy.login()</span></code></a>，且session_key未过期，开发者可调用 <a class="reference internal" href="../login/wx.qy.checkSession.html#wx.qy.checkSession" title="wx.qy.checkSession"><code class="xref js js-func docutils literal notranslate"><span class="pre">checkSession</span></code></a> 检查当前登录态</p></li>
+<li><p>要求用户在应用可见范围内，且每次调用都需要用户同意确认</p></li>
+</ol>
+</dd>
+<dt class="field-even">示例代码</dt>
+<dd class="field-even"><div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="nx">wx</span><span class="p">.</span><span class="nx">qy</span><span class="p">.</span><span class="nx">getEmail</span> <span class="p">({</span>
+  <span class="nx">success</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">res</span><span class="p">.</span><span class="nx">encryptedData</span><span class="p">)</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">res</span><span class="p">.</span><span class="nx">iv</span><span class="p">)</span>
+  <span class="p">}</span>
+<span class="p">})</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</dd></dl>
+
 </div>
 
 

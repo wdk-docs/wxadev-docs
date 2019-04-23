@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>企业微信专有接口 &mdash; wxadev 1.0.0 文档</title>
+  <title>接口 &mdash; wxadev 1.0.0 文档</title>
   
 
   
@@ -93,12 +93,12 @@
 <li class="toctree-l1"><a class="reference internal" href="../../devtools/index.html">开发工具</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../reference/index.html">参考资料</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../wxcloud/index.html">云开发</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="../index.html">企业微信兼容</a><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">企业微信</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../doc/index.html">文档概述</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">企业微信专有接口</a><ul>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">接口</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="login/index.html">登录</a></li>
 <li class="toctree-l3"><a class="reference internal" href="foundation/index.html">基础接口</a></li>
-<li class="toctree-l3"><a class="reference internal" href="corpmemberinfo/index.html">获取企业成员信息</a></li>
+<li class="toctree-l3"><a class="reference internal" href="corpmemberinfo/index.html">获取成员信息</a></li>
 <li class="toctree-l3"><a class="reference internal" href="contact/index.html">企业通讯录与会话</a></li>
 <li class="toctree-l3"><a class="reference internal" href="nfc/index.html">NFC接口</a></li>
 <li class="toctree-l3"><a class="reference internal" href="miniprogram-msg.html">发送小程序消息</a></li>
@@ -152,9 +152,9 @@
     
       <li><a href="../../contents.html">Docs</a> &raquo;</li>
         
-          <li><a href="../index.html">企业微信兼容</a> &raquo;</li>
+          <li><a href="../index.html">企业微信</a> &raquo;</li>
         
-      <li>企业微信专有接口</li>
+      <li>接口</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -174,7 +174,7 @@
            <div itemprop="articleBody">
             
   <div class="section" id="qywx-api">
-<span id="id1"></span><h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/dev_wxwork/dev-doc/qywx-api.html">企业微信专有接口</a><a class="headerlink" href="#qywx-api" title="永久链接至标题">¶</a></h1>
+<span id="id1"></span><h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/dev_wxwork/dev-doc/qywx-api.html">接口</a><a class="headerlink" href="#qywx-api" title="永久链接至标题">¶</a></h1>
 <p>企业微信专有接口是指企业微信在微信小程序基础库的基础上进行的二次能力扩展，主要在逻辑层扩展，渲染层与微信小程序基本保持一致。</p>
 <p>扩展的接口可以让小程序在企业微信环境运行时获得更多和企业微信相关的能力，比如微信小程序提供了wx.login接口用于获取用户在微信环境中的用户openid信息，企业微信提供了wx.qy.login接口用于获取用户的userid信息，这样使得一个小程序在企业微信与微信消息互通的场景中，可以根据运行环境获得两种身份态。</p>
 <p><strong>兼容处理</strong></p>
@@ -193,7 +193,7 @@
 <li class="toctree-l2"><a class="reference internal" href="foundation/wx.qy.canIUse.html">wx.qy.canIUse</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="corpmemberinfo/index.html">获取企业成员信息</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="corpmemberinfo/index.html">获取成员信息</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="corpmemberinfo/wx.qy.getEnterpriseUserInfo.html">wx.qy.getEnterpriseUserInfo</a></li>
 <li class="toctree-l2"><a class="reference internal" href="corpmemberinfo/wx.qy.getAvatar.html">wx.qy.getAvatar</a></li>
 <li class="toctree-l2"><a class="reference internal" href="corpmemberinfo/wx.qy.getQrCode.html">wx.qy.getQrCode</a></li>
@@ -210,6 +210,7 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="nfc/index.html">NFC接口</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="nfc/wx.qy.getNFCReaderState.html">wx.qy.getNFCReaderState</a></li>
 <li class="toctree-l2"><a class="reference internal" href="nfc/wx.qy.startNFCReader.html">wx.qy.startNFCReader</a></li>
 <li class="toctree-l2"><a class="reference internal" href="nfc/wx.qy.stopNFCReader.html">wx.qy.stopNFCReader</a></li>
 <li class="toctree-l2"><a class="reference internal" href="nfc/onNFCReadMessage.html">onNFCReadMessage</a></li>

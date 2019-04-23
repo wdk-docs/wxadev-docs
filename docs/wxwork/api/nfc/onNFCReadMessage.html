@@ -93,14 +93,15 @@
 <li class="toctree-l1"><a class="reference internal" href="../../../devtools/index.html">开发工具</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../reference/index.html">参考资料</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../wxcloud/index.html">云开发</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">企业微信兼容</a><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">企业微信</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../../doc/index.html">文档概述</a></li>
-<li class="toctree-l2 current"><a class="reference internal" href="../index.html">企业微信专有接口</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">接口</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="../login/index.html">登录</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../foundation/index.html">基础接口</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../corpmemberinfo/index.html">获取企业成员信息</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../corpmemberinfo/index.html">获取成员信息</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../contact/index.html">企业通讯录与会话</a></li>
 <li class="toctree-l3 current"><a class="reference internal" href="index.html">NFC接口</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="wx.qy.getNFCReaderState.html">wx.qy.getNFCReaderState</a></li>
 <li class="toctree-l4"><a class="reference internal" href="wx.qy.startNFCReader.html">wx.qy.startNFCReader</a></li>
 <li class="toctree-l4"><a class="reference internal" href="wx.qy.stopNFCReader.html">wx.qy.stopNFCReader</a></li>
 <li class="toctree-l4 current"><a class="current reference internal" href="#">onNFCReadMessage</a></li>
@@ -157,9 +158,9 @@
     
       <li><a href="../../../contents.html">Docs</a> &raquo;</li>
         
-          <li><a href="../../index.html">企业微信兼容</a> &raquo;</li>
+          <li><a href="../../index.html">企业微信</a> &raquo;</li>
         
-          <li><a href="../index.html">企业微信专有接口</a> &raquo;</li>
+          <li><a href="../index.html">接口</a> &raquo;</li>
         
           <li><a href="index.html">NFC接口</a> &raquo;</li>
         
@@ -183,7 +184,60 @@
            <div itemprop="articleBody">
             
   <div class="section" id="onnfcreadmessage">
-<h1>onNFCReadMessage<a class="headerlink" href="#onnfcreadmessage" title="永久链接至标题">¶</a></h1>
+<h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/dev_wxwork/dev-doc/qywx-api/nfc/onNFCReadMessage.html">onNFCReadMessage</a><a class="headerlink" href="#onnfcreadmessage" title="永久链接至标题">¶</a></h1>
+<dl class="function">
+<dt id="onNFCReadMessage">
+<code class="descname">onNFCReadMessage</code><span class="sig-paren">(</span><em>callback</em><span class="sig-paren">)</span><a class="headerlink" href="#onNFCReadMessage" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list">
+<dt class="field-odd">Label</dt>
+<dd class="field-odd"><p>监听NFC设备的消息回调。当用户离开小程序后，此接口无效。</p>
+</dd>
+<dt class="field-even">参数</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>callback({messageType, data})</strong> (<em>function</em>) – <p>NFC设备有事件时的回调函数</p>
+<ul>
+<li><p><strong>messageType</strong>   (<em>number</em>) -    消息类型如下:</p>
+<ul>
+<li><p><em>1</em> -   小程序在前台，当检测到 NFC 标签时回调</p></li>
+<li><p><em>2</em> -   小程序退到后台，当用户不可见时，自动停止 NFC</p></li>
+</ul>
+</li>
+<li><p><strong>data</strong> (<em>object</em>) - 消息数据</p>
+<ul>
+<li><p><strong>hex</strong> (<em>string</em>) -    十六进制 id 序列</p></li>
+<li><p><strong>reversed_hex</strong>        (<em>string</em>) -    字节反转十六进制 id 序列</p></li>
+<li><p><strong>dec</strong> (<em>number</em>) -    十进制 id 数值</p></li>
+<li><p><strong>reversed_dec</strong>        (<em>number</em>) -    字节反转十进制 id 数值</p></li>
+</ul>
+</li>
+</ul>
+</p></li>
+</ul>
+</dd>
+<dt class="field-odd">示例</dt>
+<dd class="field-odd"><div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="nx">Page</span><span class="p">({</span>
+  <span class="nx">onNFCReadMessage</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">e</span><span class="p">))</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">e</span><span class="p">.</span><span class="nx">messageType</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+      <span class="nx">wx</span><span class="p">.</span><span class="nx">showModal</span><span class="p">({</span>
+        <span class="nx">title</span><span class="o">:</span> <span class="s1">&#39;NFC-Id&#39;</span><span class="p">,</span>
+        <span class="nx">content</span><span class="o">:</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">e</span><span class="p">),</span>
+      <span class="p">})</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nx">e</span><span class="p">.</span><span class="nx">messageType</span> <span class="o">==</span> <span class="mi">2</span><span class="p">)</span> <span class="p">{</span>
+      <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Auto-Stop&#39;</span><span class="p">)</span>
+      <span class="nx">wx</span><span class="p">.</span><span class="nx">showModal</span><span class="p">({</span>
+        <span class="nx">title</span><span class="o">:</span> <span class="s1">&#39;NFC-Auto-Stop&#39;</span><span class="p">,</span>
+        <span class="nx">content</span><span class="o">:</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">e</span><span class="p">),</span>
+      <span class="p">})</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">})</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</dd></dl>
+
 </div>
 
 

@@ -93,16 +93,20 @@
 <li class="toctree-l1"><a class="reference internal" href="../../devtools/index.html">开发工具</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../reference/index.html">参考资料</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../wxcloud/index.html">云开发</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="../index.html">企业微信兼容</a><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">企业微信</a><ul class="current">
 <li class="toctree-l2 current"><a class="reference internal" href="index.html">文档概述</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="notice.html">开发前须知</a></li>
 <li class="toctree-l3"><a class="reference internal" href="third-party-services.html">第三方小程序（服务商）</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">开发者工具插件支持</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">开发者工具插件支持</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id2">插件安装</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id3">开发调试</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="wx-api-support.html">微信小程序API支持情况</a></li>
 <li class="toctree-l3"><a class="reference internal" href="wx-component-support.html">微信小程序组件支持情况</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../api/index.html">企业微信专有接口</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/index.html">接口</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../glossary.html">术语</a></li>
@@ -151,7 +155,7 @@
     
       <li><a href="../../contents.html">Docs</a> &raquo;</li>
         
-          <li><a href="../index.html">企业微信兼容</a> &raquo;</li>
+          <li><a href="../index.html">企业微信</a> &raquo;</li>
         
           <li><a href="index.html">文档概述</a> &raquo;</li>
         
@@ -176,21 +180,56 @@
             
   <div class="section" id="id1">
 <h1>开发者工具插件支持<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
+<div class="section" id="id2">
+<h2>插件安装<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
 <p>开发企业微信小程序可以通过在微信小程序开发者工具(版本号1.02.1903211以上)安装企业微信插件的方式得到支持，安装步骤：</p>
-<p>1、选择工具 -&gt; 插件菜单</p>
+<ol class="arabic simple">
+<li><p>选择工具 -&gt; 插件菜单</p></li>
+</ol>
+<blockquote>
+<div><img alt="https://rescdn.qqmail.com/node/wework/images/devtool_qywx_plugin_1.7c0c1a0ed1.png?t=19042222" src="https://rescdn.qqmail.com/node/wework/images/devtool_qywx_plugin_1.7c0c1a0ed1.png?t=19042222" />
 <p>选择菜单</p>
-<p>2、安装企业微信小程序模拟器插件</p>
+</div></blockquote>
+<ol class="arabic simple" start="2">
+<li><p>安装企业微信小程序模拟器插件</p></li>
+</ol>
+<blockquote>
+<div><img alt="https://rescdn.qqmail.com/node/wework/images/devtool_qywx_plugin_2.30dcdb1927.png?t=19042222" src="https://rescdn.qqmail.com/node/wework/images/devtool_qywx_plugin_2.30dcdb1927.png?t=19042222" />
 <p>安装插件</p>
-<p>开发调试
-1、切换开发模式到企业微信小程序模式</p>
+</div></blockquote>
+</div>
+<div class="section" id="id3">
+<h2>开发调试<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
+<ol class="arabic simple">
+<li><p>切换开发模式到企业微信小程序模式</p></li>
+</ol>
+<blockquote>
+<div><img alt="https://rescdn.qqmail.com/node/wework/images/devtool_qywx_plugin_3.070b0b8267.png?t=19042222" src="https://rescdn.qqmail.com/node/wework/images/devtool_qywx_plugin_3.070b0b8267.png?t=19042222" />
 <p>切换开发模式</p>
-<p>2、在企业微信真机预览小程序</p>
+</div></blockquote>
+<ol class="arabic simple" start="2">
+<li><p>在企业微信真机预览小程序</p></li>
+</ol>
+<blockquote>
+<div><img alt="https://rescdn.qqmail.com/node/wework/images/devtool_qywx_plugin_4.65767b7177.png?t=19042222" src="https://rescdn.qqmail.com/node/wework/images/devtool_qywx_plugin_4.65767b7177.png?t=19042222" />
 <p>预览小程序</p>
-<p>3、选择企业</p>
-<p>如果开发者有多个企业，可以通过“模拟操作”下拉菜单中点击“选择企业”菜单进行企业切换。
-对于没有企业微信的开发者，可以在“选择企业”中选择“企业微信测试企业”来进行提审前的开发调试。测试企业的corpid固定为：ww17f8d10783494584，secret固定为：i5t-rh8bXeNCgihcYPrG9ZPpWkivzPJ69sv570osk6I，在开发调试code2session接口会使用到。
-4、开始开发</p>
-<p>切换到企业微信模式以后，小程序的运行时环境将切换到企业微信的运行时环境，不仅可以调用企业微信支持的API和组件，也可以调用企业微信专有的部分接口。</p>
+</div></blockquote>
+<ol class="arabic simple" start="3">
+<li><p>选择企业</p></li>
+</ol>
+<blockquote>
+<div><ul class="simple">
+<li><p>如果开发者有多个企业，可以通过“模拟操作”下拉菜单中点击“选择企业”菜单进行企业切换。</p></li>
+<li><p>对于没有企业微信的开发者，可以在“选择企业”中选择“企业微信测试企业”来进行提审前的开发调试。测试企业的corpid固定为：ww17f8d10783494584，secret固定为：i5t-rh8bXeNCgihcYPrG9ZPpWkivzPJ69sv570osk6I，在开发调试code2session接口会使用到。</p></li>
+</ul>
+</div></blockquote>
+<ol class="arabic simple" start="4">
+<li><p>开始开发</p></li>
+</ol>
+<blockquote>
+<div><p>切换到企业微信模式以后，小程序的运行时环境将切换到企业微信的运行时环境，不仅可以调用企业微信支持的API和组件，也可以调用企业微信专有的部分接口。</p>
+</div></blockquote>
+</div>
 </div>
 
 

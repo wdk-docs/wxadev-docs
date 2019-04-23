@@ -93,16 +93,20 @@
 <li class="toctree-l1"><a class="reference internal" href="../../devtools/index.html">开发工具</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../reference/index.html">参考资料</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../wxcloud/index.html">云开发</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="../index.html">企业微信兼容</a><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">企业微信</a><ul class="current">
 <li class="toctree-l2 current"><a class="reference internal" href="index.html">文档概述</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="notice.html">开发前须知</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">第三方小程序（服务商）</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">第三方小程序（服务商）</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id2">第三方小程序登录流程示意图</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id3">第三方登录凭证校验</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="devtool-plugin.html">开发者工具插件支持</a></li>
 <li class="toctree-l3"><a class="reference internal" href="wx-api-support.html">微信小程序API支持情况</a></li>
 <li class="toctree-l3"><a class="reference internal" href="wx-component-support.html">微信小程序组件支持情况</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../api/index.html">企业微信专有接口</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/index.html">接口</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../glossary.html">术语</a></li>
@@ -151,7 +155,7 @@
     
       <li><a href="../../contents.html">Docs</a> &raquo;</li>
         
-          <li><a href="../index.html">企业微信兼容</a> &raquo;</li>
+          <li><a href="../index.html">企业微信</a> &raquo;</li>
         
           <li><a href="index.html">文档概述</a> &raquo;</li>
         
@@ -178,48 +182,46 @@
 <h1>第三方小程序（服务商）<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
 <p>企业微信的第三方服务商也可以开发小程序并关联到第三方应用，发布之后即可让企业授权安装并使用（参见第三方应用授权安装流程）</p>
 <p>第三方小程序的登录流程与企业自建应用有些差异，主要差异是jscode2session接口调用方式有所区别，详见下文</p>
-<p>第三方小程序登录流程示意图
-图片描述</p>
+<div class="section" id="id2">
+<h2>第三方小程序登录流程示意图<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<img alt="https://p.qpic.cn/pic_wework/3685288192/9f993793ca07f7b6a9f4359d7ba58998ced701fabcda2bdf/0?t=19042222" src="https://p.qpic.cn/pic_wework/3685288192/9f993793ca07f7b6a9f4359d7ba58998ced701fabcda2bdf/0?t=19042222" />
+<p>图片描述</p>
 <p>流程说明：</p>
 <p>小程序调用 wx.qy.login() 获取 临时登录凭证code ，并回传到服务商服务器。
 服务商服务器以code换取 用户唯一标识 userid 、用户所在企业corpid 和 会话密钥 session_key。
 此步骤以后服务商后台可以根据用户标识来生成自定义登录态，用于后续业务逻辑中前后端交互时识别用户身份。</p>
-<p>第三方登录凭证校验
-接口地址</p>
-<p><a class="reference external" href="https://qyapi.weixin.qq.com/cgi-bin/service/miniprogram/jscode2session?suite_access_token=SUITE_ACCESS_TOKEN&amp;js_code=CODE&amp;grant_type=authorization_code">https://qyapi.weixin.qq.com/cgi-bin/service/miniprogram/jscode2session?suite_access_token=SUITE_ACCESS_TOKEN&amp;js_code=CODE&amp;grant_type=authorization_code</a></p>
-<p>注意：
-第三方请求jscode2session的url与企业自建应用不同，url中增加了/service/，参数为suite_access_token，而非access_token，请开发者注意区分。</p>
-<p>请求参数</p>
-<p>参数      是否必须    说明
-suite_access_token      是       第三方应用凭证，获取方法见获取第三方应用凭证。要求必须由该小程序关联的第三方应用的secret获取
-js_code 是       登录时获取的 code
-grant_type      是       此处固定为authorization_code</p>
-<p>返回说明</p>
-<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="c1">//正常返回的JSON数据包</span>
-<span class="p">{</span>
-    <span class="s2">&quot;corpid&quot;</span><span class="o">:</span> <span class="s2">&quot;CORPID&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;userid&quot;</span><span class="o">:</span> <span class="s2">&quot;USERID&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;session_key&quot;</span><span class="o">:</span> <span class="s2">&quot;kJtdi6RF+Dv67QkbLlPGjw==&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;errcode&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
-    <span class="s2">&quot;errmsg&quot;</span><span class="o">:</span> <span class="s2">&quot;ok&quot;</span>
-<span class="p">}</span>
-
-<span class="c1">//错误时返回JSON数据包(示例为Code无效)</span>
-<span class="p">{</span>
-    <span class="s2">&quot;errcode&quot;</span><span class="o">:</span> <span class="mi">40029</span><span class="p">,</span>
-    <span class="s2">&quot;errmsg&quot;</span><span class="o">:</span> <span class="s2">&quot;invalid code&quot;</span>
-<span class="p">}</span>
-</pre></div>
 </div>
-<p>参数说明</p>
-<p>参数      说明
-corpid  用户所属企业的corpid
-userid  用户在企业内的UserID，对应管理端的帐号，企业内唯一。注意：如果用户所在企业并没有安装此小程序应用，则返回加密的userid
-session_key     会话密钥
-errcode 返回码
-errmsg  对返回码的文本描述内容
-errcode错误码</p>
-<p>更多错误码的说明请查看企业微信全局错误码说明</p>
+<div class="section" id="id3">
+<h2>第三方登录凭证校验<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
+<p>接口地址</p>
+<dl class="get">
+<dt id="get--qyapi--service-miniprogram-jscode2session">
+<code class="descname">GET </code><code class="descname">&lt;qyapi&gt;/service/miniprogram/jscode2session</code><a class="headerlink" href="#get--qyapi--service-miniprogram-jscode2session" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Query Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>suite_access_token</strong> – <strong>必选</strong>   第三方应用凭证，获取方法见获取第三方应用凭证。要求必须由该小程序关联的第三方应用的secret获取</p></li>
+<li><p><strong>js_code</strong> – <strong>必选</strong>  登录时获取的 code</p></li>
+<li><p><strong>grant_type</strong> – <strong>必选</strong>   此处固定为 <code class="docutils literal notranslate"><span class="pre">authorization_code</span></code></p></li>
+</ul>
+</dd>
+<dt class="field-even">Response JSON Object</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>corpid</strong> (<em>string</em>) – 用户所属企业的corpid</p></li>
+<li><p><strong>userid</strong> (<em>string</em>) – 用户在企业内的UserID，对应管理端的帐号，企业内唯一。注意：如果该企业没有关联该小程序，则此处返回加密的userid</p></li>
+<li><p><strong>session_key</strong> (<em>string</em>) – 会话密钥</p></li>
+<li><p><strong>errcode</strong> (<em>number</em>) – 错误码，真确时候返回 <code class="docutils literal notranslate"><span class="pre">0</span></code>。 更多错误码的说明请查看 <a class="reference external" href="https://work.weixin.qq.com/api/doc#90000/90139/90313">企业微信全局错误码说明</a></p></li>
+<li><p><strong>errmsg</strong> (<em>number</em>) – 错误信息，正确时候返回 <code class="docutils literal notranslate"><span class="pre">ok</span></code>。</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<div class="admonition note">
+<p class="admonition-title">注解</p>
+<p>第三方请求jscode2session的url与企业自建应用不同，url中增加了/service/，参数为suite_access_token，而非access_token，请开发者注意区分。</p>
+</div>
+</div>
 </div>
 
 

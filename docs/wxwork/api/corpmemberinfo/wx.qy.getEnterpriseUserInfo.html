@@ -37,7 +37,7 @@
     <link rel="index" title="索引" href="../../../genindex.html" />
     <link rel="search" title="搜索" href="../../../search.html" />
     <link rel="next" title="wx.qy.getAvatar" href="wx.qy.getAvatar.html" />
-    <link rel="prev" title="获取企业成员信息" href="index.html" /> 
+    <link rel="prev" title="获取成员信息" href="index.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -93,12 +93,12 @@
 <li class="toctree-l1"><a class="reference internal" href="../../../devtools/index.html">开发工具</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../reference/index.html">参考资料</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../wxcloud/index.html">云开发</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">企业微信兼容</a><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">企业微信</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../../doc/index.html">文档概述</a></li>
-<li class="toctree-l2 current"><a class="reference internal" href="../index.html">企业微信专有接口</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">接口</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="../login/index.html">登录</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../foundation/index.html">基础接口</a></li>
-<li class="toctree-l3 current"><a class="reference internal" href="index.html">获取企业成员信息</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">获取成员信息</a><ul class="current">
 <li class="toctree-l4 current"><a class="current reference internal" href="#">wx.qy.getEnterpriseUserInfo</a></li>
 <li class="toctree-l4"><a class="reference internal" href="wx.qy.getAvatar.html">wx.qy.getAvatar</a></li>
 <li class="toctree-l4"><a class="reference internal" href="wx.qy.getQrCode.html">wx.qy.getQrCode</a></li>
@@ -159,11 +159,11 @@
     
       <li><a href="../../../contents.html">Docs</a> &raquo;</li>
         
-          <li><a href="../../index.html">企业微信兼容</a> &raquo;</li>
+          <li><a href="../../index.html">企业微信</a> &raquo;</li>
         
-          <li><a href="../index.html">企业微信专有接口</a> &raquo;</li>
+          <li><a href="../index.html">接口</a> &raquo;</li>
         
-          <li><a href="index.html">获取企业成员信息</a> &raquo;</li>
+          <li><a href="index.html">获取成员信息</a> &raquo;</li>
         
       <li>wx.qy.getEnterpriseUserInfo</li>
     
@@ -186,6 +186,69 @@
             
   <div class="section" id="wx-qy-getenterpriseuserinfo">
 <h1>wx.qy.getEnterpriseUserInfo<a class="headerlink" href="#wx-qy-getenterpriseuserinfo" title="永久链接至标题">¶</a></h1>
+<dl class="function">
+<dt id="wx.qy.getEnterpriseUserInfo">
+<code class="descclassname">wx.qy.</code><code class="descname">getEnterpriseUserInfo</code><span class="sig-paren">(</span><em>{[timeout][, success][, fail][, complete]}</em><span class="sig-paren">)</span><a class="headerlink" href="#wx.qy.getEnterpriseUserInfo" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list">
+<dt class="field-odd">Label</dt>
+<dd class="field-odd"><p>获取企业成员基本信息</p>
+</dd>
+<dt class="field-even">参数</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>timeout</strong> (<em>number</em>) – 超时时间，单位 ms</p></li>
+<li><p><strong>success({userInfo,rawData,signature,encryptedData,iv})</strong> (<em>funciton</em>) – <p>接口调用成功的回调函数</p>
+<ul>
+<li><p><strong>userInfo</strong> (<em>object</em>) - 用户信息对象，不包含userid、手机号、头像等敏感信息</p>
+<ul class="simple">
+<li><p><strong>name</strong>        (<em>string</em>) -    企业成员姓名</p></li>
+<li><p><strong>gender</strong>      (<em>number</em>) -    企业成员的性别，0表示未定义，1表示男性，2表示女性</p></li>
+<li><p><strong>language</strong>    (<em>string</em>) -    用户的语言，简体中文为zh_CN</p></li>
+</ul>
+</li>
+<li><p><strong>rawData</strong>       (<em>string</em>) -    不包括敏感信息的原始数据字符串，用于计算签名。</p></li>
+<li><p><strong>signature</strong>     (<em>string</em>) -    使用 sha1( rawData + sessionkey ) 得到字符串，用于校验用户信息，参考文档 signature。</p></li>
+<li><p><strong>encryptedData</strong> (<em>string</em>) - 包括敏感数据在内的完整用户信息的加密数据，解码JSON如下:</p>
+<p>解密时使用的appid为小程序的appid，而非企业的corpid</p>
+<ul class="simple">
+<li><p><strong>corpid</strong>      (<em>string</em>) -    用户所属企业的corpid</p></li>
+<li><p><strong>userid</strong>      (<em>string</em>) -    企业成员UserID，对应管理端的帐号。注意：如果该企业没有关联该小程序，则此处返回加密的userid</p></li>
+<li><p><strong>name</strong>        (<em>string</em>) -    企业成员姓名</p></li>
+<li><p><strong>gender</strong>      (<em>number</em>) -    企业成员的性别，0表示未定义，1表示男性，2表示女性</p></li>
+<li><p><strong>watermark</strong> (<em>object</em>) -              数据水印，应用可以依此校验数据的有效性</p>
+<ul>
+<li><p><strong>appid</strong>     (<em>string</em>) -    敏感数据归属的小程序appid，开发者可校验此参数与自身appid是否一致，注意此appid不是企业微信的corpid</p></li>
+<li><p><strong>timestamp</strong> (<em>DateInt</em>) -   敏感数据获取的时间戳, 开发者可以用于数据时效性校验</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>iv</strong>    (<em>string</em>) -    加密算法的初始向量，详细见加密数据解密算法</p></li>
+</ul>
+</p></li>
+<li><p><strong>fail</strong> (<em>funciton</em>) – 接口调用失败的回调函数</p></li>
+<li><p><strong>complete</strong> (<em>funciton</em>) – 接口调用结束的回调函数（调用成功、失败都会执行）</p></li>
+</ul>
+</dd>
+<dt class="field-odd">前提</dt>
+<dd class="field-odd"><ol class="arabic simple">
+<li><p>必须先调用过 <a class="reference internal" href="../login/wx.qy.login.html#wx.qy.login" title="wx.qy.login"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.qy.login()</span></code></a> ，且session_key未过期，开发者可调用 <a class="reference internal" href="../login/wx.qy.checkSession.html#wx.qy.checkSession" title="wx.qy.checkSession"><code class="xref js js-func docutils literal notranslate"><span class="pre">checkSession</span></code></a> 检查当前登录态。</p></li>
+<li><p>用户在应用可见范围内时可以静默获取，否则需要用户同意确认。</p></li>
+</ol>
+</dd>
+<dt class="field-even">示例</dt>
+<dd class="field-even"><div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="nx">wx</span><span class="p">.</span><span class="nx">qy</span><span class="p">.</span><span class="nx">getEnterpriseUserInfo</span> <span class="p">({</span>
+  <span class="nx">success</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">userInfo</span> <span class="o">=</span> <span class="nx">res</span><span class="p">.</span><span class="nx">userInfo</span>
+    <span class="kd">var</span> <span class="nx">name</span> <span class="o">=</span> <span class="nx">userInfo</span><span class="p">.</span><span class="nx">name</span>
+    <span class="kd">var</span> <span class="nx">gender</span> <span class="o">=</span> <span class="nx">userInfo</span><span class="p">.</span><span class="nx">gender</span> <span class="c1">//性别 0：未知、1：男、2：女</span>
+  <span class="p">}</span>
+<span class="p">})</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</dd></dl>
+
 </div>
 
 
@@ -199,7 +262,7 @@
         <a href="wx.qy.getAvatar.html" class="btn btn-neutral float-right" title="wx.qy.getAvatar" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="index.html" class="btn btn-neutral float-left" title="获取企业成员信息" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="index.html" class="btn btn-neutral float-left" title="获取成员信息" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

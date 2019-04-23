@@ -93,9 +93,9 @@
 <li class="toctree-l1"><a class="reference internal" href="../../../devtools/index.html">开发工具</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../reference/index.html">参考资料</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../wxcloud/index.html">云开发</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">企业微信兼容</a><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">企业微信</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../../doc/index.html">文档概述</a></li>
-<li class="toctree-l2 current"><a class="reference internal" href="../index.html">企业微信专有接口</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">接口</a><ul class="current">
 <li class="toctree-l3 current"><a class="reference internal" href="index.html">登录</a><ul class="current">
 <li class="toctree-l4"><a class="reference internal" href="wx.qy.login.html">wx.qy.login</a></li>
 <li class="toctree-l4"><a class="reference internal" href="code2Session.html">code2Session</a></li>
@@ -157,9 +157,9 @@
     
       <li><a href="../../../contents.html">Docs</a> &raquo;</li>
         
-          <li><a href="../../index.html">企业微信兼容</a> &raquo;</li>
+          <li><a href="../../index.html">企业微信</a> &raquo;</li>
         
-          <li><a href="../index.html">企业微信专有接口</a> &raquo;</li>
+          <li><a href="../index.html">接口</a> &raquo;</li>
         
           <li><a href="index.html">登录</a> &raquo;</li>
         
@@ -184,6 +184,44 @@
             
   <div class="section" id="wx-qy-checksession">
 <h1>wx.qy.checkSession<a class="headerlink" href="#wx-qy-checksession" title="永久链接至标题">¶</a></h1>
+<dl class="function">
+<dt id="wx.qy.checkSession">
+<code class="descclassname">wx.qy.</code><code class="descname">checkSession</code><span class="sig-paren">(</span><em>{[timeout][, success][, fail][, complete]}</em><span class="sig-paren">)</span><a class="headerlink" href="#wx.qy.checkSession" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list">
+<dt class="field-odd">Label</dt>
+<dd class="field-odd"><p>校验用户当前 session_key 是否有效</p>
+</dd>
+<dt class="field-even">参数</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>success({errMsg,expireIn})</strong> (<em>function</em>) – <p>接口调用成功的回调函数，session_key未过期</p>
+<ul>
+<li><p><strong>errMsg</strong>        (<em>String</em>) -    调用结果</p></li>
+<li><p><strong>expireIn</strong>      (<em>Number</em>) -    session过期时间</p></li>
+</ul>
+</p></li>
+<li><p><strong>fail</strong> (<em>function</em>) – 接口调用失败的回调函数，session_key已过期</p></li>
+<li><p><strong>complete</strong> (<em>function</em>) – 接口调用结束的回调函数（调用成功、失败都会执行）</p></li>
+</ul>
+</dd>
+<dt class="field-odd">示例代码</dt>
+<dd class="field-odd"><div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="nx">wx</span><span class="p">.</span><span class="nx">qy</span><span class="p">.</span><span class="nx">checkSession</span><span class="p">({</span>
+  <span class="nx">success</span><span class="p">()</span> <span class="p">{</span>
+    <span class="c1">// session_key 未过期，并且在本生命周期一直有效</span>
+  <span class="p">},</span>
+  <span class="nx">fail</span><span class="p">()</span> <span class="p">{</span>
+    <span class="c1">// session_key 已经失效，需要重新执行登录流程</span>
+    <span class="nx">wx</span><span class="p">.</span><span class="nx">qy</span><span class="p">.</span><span class="nx">login</span><span class="p">()</span> <span class="c1">// 重新登录</span>
+  <span class="p">}</span>
+<span class="p">})</span>
+</pre></div>
+</div>
+</dd>
+<dt class="field-even">注意事项</dt>
+<dd class="field-even"><p>如果有重新登录，需要调用 jscode2session 接口后，session_key 才会有效</p>
+</dd>
+</dl>
+</dd></dl>
+
 </div>
 
 

@@ -93,9 +93,9 @@
 <li class="toctree-l1"><a class="reference internal" href="../../../devtools/index.html">开发工具</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../reference/index.html">参考资料</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../wxcloud/index.html">云开发</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">企业微信兼容</a><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">企业微信</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../../doc/index.html">文档概述</a></li>
-<li class="toctree-l2 current"><a class="reference internal" href="../index.html">企业微信专有接口</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">接口</a><ul class="current">
 <li class="toctree-l3 current"><a class="reference internal" href="index.html">登录</a><ul class="current">
 <li class="toctree-l4 current"><a class="current reference internal" href="#">wx.qy.login</a></li>
 <li class="toctree-l4"><a class="reference internal" href="code2Session.html">code2Session</a></li>
@@ -103,7 +103,7 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../foundation/index.html">基础接口</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../corpmemberinfo/index.html">获取企业成员信息</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../corpmemberinfo/index.html">获取成员信息</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../contact/index.html">企业通讯录与会话</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../nfc/index.html">NFC接口</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../miniprogram-msg.html">发送小程序消息</a></li>
@@ -157,9 +157,9 @@
     
       <li><a href="../../../contents.html">Docs</a> &raquo;</li>
         
-          <li><a href="../../index.html">企业微信兼容</a> &raquo;</li>
+          <li><a href="../../index.html">企业微信</a> &raquo;</li>
         
-          <li><a href="../index.html">企业微信专有接口</a> &raquo;</li>
+          <li><a href="../index.html">接口</a> &raquo;</li>
         
           <li><a href="index.html">登录</a> &raquo;</li>
         
@@ -184,6 +184,54 @@
             
   <div class="section" id="wx-qy-login">
 <h1>wx.qy.login<a class="headerlink" href="#wx-qy-login" title="永久链接至标题">¶</a></h1>
+<dl class="function">
+<dt id="wx.qy.login">
+<code class="descclassname">wx.qy.</code><code class="descname">login</code><span class="sig-paren">(</span><em>{[timeout][, success][, fail][, complete]}</em><span class="sig-paren">)</span><a class="headerlink" href="#wx.qy.login" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list">
+<dt class="field-odd">Label</dt>
+<dd class="field-odd"><p>获取企业微信派发的临时登录凭证</p>
+</dd>
+<dt class="field-even">参数</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>timeout</strong> (<em>number</em>) – 超时时间，单位 ms</p></li>
+<li><p><strong>success</strong> (<em>function</em>) – <p>接口调用成功的回调函数</p>
+<ul>
+<li><p><strong>errMsg</strong>        (<em>string</em>) -    调用结果</p></li>
+<li><p><strong>code</strong>  (<em>string</em>) -    用户登录凭证（有效期五分钟）。开发者需要在开发者服务器后台调用 api，使用 code 换取 userid 和 session_key 等信息</p></li>
+</ul>
+</p></li>
+<li><p><strong>fail</strong> (<em>function</em>) – 接口调用失败的回调函数</p></li>
+<li><p><strong>complete</strong> (<em>function</em>) – 接口调用结束的回调函数（调用成功、失败都会执行）</p></li>
+</ul>
+</dd>
+<dt class="field-odd">示例代码</dt>
+<dd class="field-odd"><div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="c1">// app.js</span>
+
+<span class="nx">App</span><span class="p">({</span>
+  <span class="nx">onLaunch</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">wx</span><span class="p">.</span><span class="nx">qy</span><span class="p">.</span><span class="nx">login</span><span class="p">({</span>
+      <span class="nx">success</span><span class="p">(</span><span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="nx">res</span><span class="p">.</span><span class="nx">code</span><span class="p">)</span> <span class="p">{</span>
+          <span class="c1">// 发起网络请求</span>
+          <span class="nx">wx</span><span class="p">.</span><span class="nx">request</span><span class="p">({</span>
+            <span class="nx">url</span><span class="o">:</span> <span class="s1">&#39;https://test.com/onLogin&#39;</span><span class="p">,</span>
+            <span class="nx">data</span><span class="o">:</span> <span class="p">{</span>
+              <span class="nx">code</span><span class="o">:</span> <span class="nx">res</span><span class="p">.</span><span class="nx">code</span>
+            <span class="p">}</span>
+          <span class="p">})</span>
+        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+          <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;登录失败！&#39;</span> <span class="o">+</span> <span class="nx">res</span><span class="p">.</span><span class="nx">errMsg</span><span class="p">)</span>
+        <span class="p">}</span>
+      <span class="p">}</span>
+    <span class="p">})</span>
+  <span class="p">}</span>
+<span class="p">})</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</dd></dl>
+
 </div>
 
 

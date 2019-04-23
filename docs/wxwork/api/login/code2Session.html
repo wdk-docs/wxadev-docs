@@ -93,9 +93,9 @@
 <li class="toctree-l1"><a class="reference internal" href="../../../devtools/index.html">开发工具</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../reference/index.html">参考资料</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../wxcloud/index.html">云开发</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">企业微信兼容</a><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">企业微信</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../../doc/index.html">文档概述</a></li>
-<li class="toctree-l2 current"><a class="reference internal" href="../index.html">企业微信专有接口</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">接口</a><ul class="current">
 <li class="toctree-l3 current"><a class="reference internal" href="index.html">登录</a><ul class="current">
 <li class="toctree-l4"><a class="reference internal" href="wx.qy.login.html">wx.qy.login</a></li>
 <li class="toctree-l4 current"><a class="current reference internal" href="#">code2Session</a></li>
@@ -103,7 +103,7 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../foundation/index.html">基础接口</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../corpmemberinfo/index.html">获取企业成员信息</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../corpmemberinfo/index.html">获取成员信息</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../contact/index.html">企业通讯录与会话</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../nfc/index.html">NFC接口</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../miniprogram-msg.html">发送小程序消息</a></li>
@@ -157,9 +157,9 @@
     
       <li><a href="../../../contents.html">Docs</a> &raquo;</li>
         
-          <li><a href="../../index.html">企业微信兼容</a> &raquo;</li>
+          <li><a href="../../index.html">企业微信</a> &raquo;</li>
         
-          <li><a href="../index.html">企业微信专有接口</a> &raquo;</li>
+          <li><a href="../index.html">接口</a> &raquo;</li>
         
           <li><a href="index.html">登录</a> &raquo;</li>
         
@@ -188,11 +188,12 @@
 开发者服务器不应该把会话密钥下发到小程序，也不应该对外提供这个密钥。
 </pre></div>
 </div>
-<p>临时登录凭证校验接口是一个后台HTTPS 接口，开发者服务器使用临时登录凭证code获取 session_key、用户userid以及用户所在企业的corpid等信息。</p>
+<p>临时登录凭证校验接口是一个后台HTTPS 接口，
+开发者服务器使用临时登录凭证code获取 session_key、用户userid以及用户所在企业的corpid等信息。</p>
 <p>如果你是第三方服务商开发者，请参见第三方小程序，和此接口的主要区别在于请求地址不同。</p>
 <p><strong>登录流程示意图</strong></p>
 <img alt="https://p.qpic.cn/pic_wework/2037829553/1d1bc71204c483503a4ca9747538a64e0ae8643e76a41d7e/0?t=19042217" src="https://p.qpic.cn/pic_wework/2037829553/1d1bc71204c483503a4ca9747538a64e0ae8643e76a41d7e/0?t=19042217" />
-<dl class="get">
+<span class="target" id="index-0"></span><dl class="get">
 <dt id="get--qyapi--miniprogram-jscode2session">
 <code class="descname">GET </code><code class="descname">&lt;qyapi&gt;/miniprogram/jscode2session</code><a class="headerlink" href="#get--qyapi--miniprogram-jscode2session" title="永久链接至目标">¶</a></dt>
 <dd><dl class="field-list simple">

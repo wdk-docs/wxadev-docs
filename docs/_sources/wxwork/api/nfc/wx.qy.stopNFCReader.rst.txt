@@ -1,2 +1,34 @@
-wx.qy.stopNFCReader
-===================================================
+:wxwork:`wx.qy.stopNFCReader <dev-doc/qywx-api/nfc/wxqygetnfcstopnfcreader>`
+======================================================================================================
+
+.. function:: wx.qy.stopNFCReader({[success][, fail][, complete]})
+
+  :label: 关闭 NFC 模块，仅支持安卓系统
+  :param function success({errcode,errmsg}):	接口调用成功的回调函数
+
+    - **errcode** (*number*) - 错误码
+
+      - *0* 正常
+
+    - **errmsg** (*string*) - 错误信息
+
+      - *ok* 正常
+
+  :param function fail:	接口调用失败的回调函数
+  :param function complete:	接口调用结束的回调函数（调用成功、失败都会执行）
+  :前提: 需要用户授权
+  :示例:
+
+    .. code::
+
+      wx.qy.stopNFCReader({
+        success: (res) => {
+          wx.showModal({
+            title: 'NFC-Stop',
+            content: JSON.stringify(res),
+          })
+        },
+        fail: (res) => {
+          console.log(JSON.stringify(res))
+        }
+      })

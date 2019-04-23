@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>boolean wx.canIUse(string schema) &mdash; wxadev 1.0.0 文档</title>
+  <title>wx.canIUse &mdash; wxadev 1.0.0 文档</title>
   
 
   
@@ -90,13 +90,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../component/index.html">组件</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">API</a><ul class="current">
 <li class="toctree-l2 current"><a class="reference internal" href="index.html#id1">基础</a><ul class="current">
-<li class="toctree-l3 current"><a class="current reference internal" href="#">boolean wx.canIUse(string schema)</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#id1">参数</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id2">返回值</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id3">参数说明</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id4">示例代码</a></li>
-</ul>
-</li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">wx.canIUse</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="index.html#id2">系统</a></li>
@@ -122,7 +116,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../devtools/index.html">开发工具</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../reference/index.html">参考资料</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../wxcloud/index.html">云开发</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../wxwork/index.html">企业微信兼容</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../wxwork/index.html">企业微信</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../glossary.html">术语</a></li>
 </ul>
 
@@ -171,7 +165,7 @@
         
           <li><a href="index.html">API</a> &raquo;</li>
         
-      <li>boolean wx.canIUse(string schema)</li>
+      <li>wx.canIUse</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -190,34 +184,38 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="boolean-wx-caniuse-string-schema">
-<h1>boolean wx.canIUse(string schema)<a class="headerlink" href="#boolean-wx-caniuse-string-schema" title="永久链接至标题">¶</a></h1>
-<p>判断小程序的API，回调，参数，组件等是否在当前版本可用</p>
-<p>基础库 1.1.1 开始支持，低版本需做兼容处理。</p>
-<p>判断小程序的API，回调，参数，组件等是否在当前版本可用。</p>
-<div class="section" id="id1">
-<h2>参数<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h2>
-<p>string schema</p>
-<p>使用 ${API}.${method}.${param}.${options} 或者 ${component}.${attribute}.${option} 方式来调用</p>
-</div>
-<div class="section" id="id2">
-<h2>返回值<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
-<p>boolean</p>
-<p>当前版本是否可用</p>
-</div>
-<div class="section" id="id3">
-<h2>参数说明<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
-<p>${API} 代表 API 名字
-${method} 代表调用方式，有效值为return, success, object, callback
-${param} 代表参数或者返回值
-${options} 代表参数的可选值
-${component} 代表组件名字
-${attribute} 代表组件属性
-${option} 代表组件属性的可选值</p>
-</div>
-<div class="section" id="id4">
-<h2>示例代码<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h2>
-<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="nx">wx</span><span class="p">.</span><span class="nx">canIUse</span><span class="p">(</span><span class="s1">&#39;openBluetoothAdapter&#39;</span><span class="p">)</span>
+  <div class="section" id="wx-caniuse">
+<h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/api/wx.canIUse.html">wx.canIUse</a><a class="headerlink" href="#wx-caniuse" title="永久链接至标题">¶</a></h1>
+<dl class="function">
+<dt id="wx.canIUse">
+<code class="descclassname">wx.</code><code class="descname">canIUse</code><span class="sig-paren">(</span><em>schema</em><span class="sig-paren">)</span><a class="headerlink" href="#wx.canIUse" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list">
+<dt class="field-odd">Label</dt>
+<dd class="field-odd"><p>判断小程序的API，回调，参数，组件等是否在当前版本可用</p>
+</dd>
+<dt class="field-even">参数</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>schema</strong> (<em>string</em>) – <p>使用 ${API}.${method}.${param}.${options} 或者 ${component}.${attribute}.${option} 方式来调用</p>
+<ul>
+<li><p><em>${API}</em> 代表 API 名字</p></li>
+<li><p><em>${method}</em> 代表调用方式，有效值为return, success, object, callback</p></li>
+<li><p><em>${param}</em> 代表参数或者返回值</p></li>
+<li><p><em>${options}</em> 代表参数的可选值</p></li>
+<li><p><em>${component}</em> 代表组件名字</p></li>
+<li><p><em>${attribute}</em> 代表组件属性</p></li>
+<li><p><em>${option}</em> 代表组件属性的可选值</p></li>
+</ul>
+</p></li>
+</ul>
+</dd>
+<dt class="field-odd">返回类型</dt>
+<dd class="field-odd"><p>boolean</p>
+</dd>
+<dt class="field-even">返回</dt>
+<dd class="field-even"><p>布尔值 当前版本是否可用</p>
+</dd>
+<dt class="field-odd">示例代码</dt>
+<dd class="field-odd"><div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="nx">wx</span><span class="p">.</span><span class="nx">canIUse</span><span class="p">(</span><span class="s1">&#39;openBluetoothAdapter&#39;</span><span class="p">)</span>
 <span class="nx">wx</span><span class="p">.</span><span class="nx">canIUse</span><span class="p">(</span><span class="s1">&#39;getSystemInfoSync.return.screenWidth&#39;</span><span class="p">)</span>
 <span class="nx">wx</span><span class="p">.</span><span class="nx">canIUse</span><span class="p">(</span><span class="s1">&#39;getSystemInfo.success.screenWidth&#39;</span><span class="p">)</span>
 <span class="nx">wx</span><span class="p">.</span><span class="nx">canIUse</span><span class="p">(</span><span class="s1">&#39;showToast.object.image&#39;</span><span class="p">)</span>
@@ -229,7 +227,10 @@ ${option} 代表组件属性的可选值</p>
 <span class="nx">wx</span><span class="p">.</span><span class="nx">canIUse</span><span class="p">(</span><span class="s1">&#39;button.open-type.contact&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-</div>
+</dd>
+</dl>
+</dd></dl>
+
 </div>
 
 

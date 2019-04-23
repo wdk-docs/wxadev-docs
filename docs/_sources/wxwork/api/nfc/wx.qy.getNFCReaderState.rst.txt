@@ -1,14 +1,15 @@
-:wxwork:`wx.qy.stopNFCReader <dev-doc/qywx-api/nfc/wxqygetnfcstopnfcreader>`
+:wxwork:`wx.qy.getNFCReaderState <dev-doc/qywx-api/nfc/wxqygetnfcreaderstate>`
 ======================================================================================================
 
-.. function:: wx.qy.stopNFCReader({[success][, fail][, complete]})
+.. function:: wx.qy.getNFCReaderState({[success][, fail][, complete]})
 
-  :label: 关闭 NFC 模块，仅支持安卓系统
+  :label: 判断当前设备是否支持 NFC 能力
   :param function success({errcode,errmsg}):	接口调用成功的回调函数
 
     - **errcode** (*number*) - 错误码
 
       - *0* 正常
+      - *13000* 当前设备不支持NFC
 
     - **errmsg** (*string*) - 错误信息
 
@@ -21,14 +22,15 @@
 
     .. code::
 
-      wx.qy.stopNFCReader({
+      wx.qy.getNFCReaderState({
         success: (res) => {
-          wx.showModal({
-            title: 'NFC-Stop',
-            content: JSON.stringify(res),
-          })
+          console.log(JSON.stringify(res))
+          // todo what you want
         },
         fail: (res) => {
-          console.log(JSON.stringify(res))
+          wx.showModal({
+            title: 'NFC-Not-Support',
+            content: JSON.stringify(res),
+          })
         }
       })
