@@ -1,2 +1,2 @@
-:wxapi:`analysis.getWeeklyRetain`
-===============
+:wxbpi:`analysis.getWeeklyRetain`
+===================================================

@@ -1,2 +1,2 @@
-:wxapi:`pluginManager.setDevPluginApplyStatus`
-===============
+:wxbpi:`pluginManager.setDevPluginApplyStatus`
+============================================================

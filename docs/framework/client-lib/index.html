@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>client-lib &mdash; wxadev 1.0.0 文档</title>
+  <title>基础库 &mdash; wxadev 1.0.0 文档</title>
   
 
   
@@ -36,8 +36,8 @@
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="index" title="索引" href="../../genindex.html" />
     <link rel="search" title="搜索" href="../../search.html" />
-    <link rel="next" title="client-lib/client" href="client.html" />
-    <link rel="prev" title="performance/tools" href="../performance/tools.html" /> 
+    <link rel="next" title="基础库" href="client-lib.html" />
+    <link rel="prev" title="分析工具" href="../performance/tools.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -92,29 +92,26 @@
 <li class="toctree-l2"><a class="reference internal" href="../config.html">小程序配置</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../sitemap.html">sitemap 配置</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../app-service/index.html">逻辑层 App Service</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../view/index.html">视图</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../view/index.html">视图层 View</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../details.html">运行环境</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../plugin/index.html">插件</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../ability/index.html">基础能力</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../device/index.html">硬件能力</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../open-ability/index.html">开放能力</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../usability.html">调试</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../usability/index.html">usability</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../usability/index.html#id1">视图</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../performance.html">性能</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../performance/index.html">performance</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">client-lib</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="client.html">client-lib/client</a></li>
-<li class="toctree-l3"><a class="reference internal" href="client-lib.html">client-lib/client-lib</a></li>
-<li class="toctree-l3"><a class="reference internal" href="version.html">client-lib/version</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../usability/index.html">可用性</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../performance/index.html">性能</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">基础库</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="client-lib.html">基础库</a></li>
+<li class="toctree-l3"><a class="reference internal" href="version.html">基础库版本分布</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../compatibility.html">兼容处理</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../workers.html">workers</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../server-ability/index.html">server-ability</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../release/index.html">release</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../operating-mechanism.html">小程序运行机制</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../custom-component/index.html">custom-component</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../workers.html">多线程 Worker</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../server-ability/index.html">后端能力</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../release/index.html">版本更新</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../operating-mechanism.html">运行机制</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../custom-component/index.html">自定义组件</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../component/index.html">组件</a></li>
@@ -125,6 +122,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../wxcloud/index.html">云开发</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../wxwork/index.html">企业微信</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../glossary.html">术语</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../rst.html">定义</a></li>
 </ul>
 
             
@@ -172,7 +170,7 @@
         
           <li><a href="../index.html">框架</a> &raquo;</li>
         
-      <li>client-lib</li>
+      <li>基础库</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -191,13 +189,33 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="client-lib">
-<h1>client-lib<a class="headerlink" href="#client-lib" title="永久链接至标题">¶</a></h1>
+  <div class="section" id="id1">
+<h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/framework/client-lib/index.html">基础库</a><a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
+<p><strong>基础库更新</strong></p>
+<p>为了避免新版本的基础库给线上小程序带来未知的影响，微信客户端都是携带 上一个稳定版 的基础库发布的。</p>
+<p>在新版本客户端发布后，再通过后台灰度新版本基础库，灰度时长一般为 12 ～ 24 小时，在灰度结束后，用户设备上才会有新版本的基础库。</p>
+<p>以微信 6.5.8 为例，客户端在发布时携带的是 1.1.1 基础库（6.5.7 上已全量的稳定版）发布，在 6.5.8 发布后，
+我们再通过后台灰度 1.2.0 基础库。</p>
+<p>查看基础库版本分布</p>
+<p><strong>基础库与客户端之间的关系</strong></p>
+<p>小程序的能力需要微信客户端来支撑，每一个基础库都只能在对应的客户端版本上运行，高版本的基础库无法兼容低版本的微信客户端。通常：</p>
+<ul class="simple">
+<li><p>第 1（major）、2（minor）位版本号更新通常需要依赖新版本的客户端，
+如：基础库 v2.1.3 运行在 v6.6.7 客户端，基础库 v2.2.0 需要 v6.7.0 客户端。</p></li>
+<li><p>第 3（patch） 位版本号的更新一般不需要依赖客户端更新，
+如：基础库v2.1.0 ~ v2.1.3 都运行在 v6.6.7 客户端，新版本发布会覆盖旧版本。</p></li>
+</ul>
+<p>关于基础库的兼容方法，可以查看「兼容处理」章节。</p>
+<p>查看基础库与客户端版本对应关系</p>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="client.html">client-lib/client</a></li>
-<li class="toctree-l1"><a class="reference internal" href="client-lib.html">client-lib/client-lib</a></li>
-<li class="toctree-l1"><a class="reference internal" href="version.html">client-lib/version</a></li>
+<li class="toctree-l1"><a class="reference internal" href="client-lib.html">基础库</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="client-lib.html#id2">基础库与客户端之间的关系</a></li>
+<li class="toctree-l2"><a class="reference internal" href="client-lib.html#id3">基础库更新时机</a></li>
+<li class="toctree-l2"><a class="reference internal" href="client-lib.html#id4">基础库版本分布</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="version.html">基础库版本分布</a></li>
 </ul>
 </div>
 </div>
@@ -210,10 +228,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="client.html" class="btn btn-neutral float-right" title="client-lib/client" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="client-lib.html" class="btn btn-neutral float-right" title="基础库" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="../performance/tools.html" class="btn btn-neutral float-left" title="performance/tools" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="../performance/tools.html" class="btn btn-neutral float-left" title="分析工具" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

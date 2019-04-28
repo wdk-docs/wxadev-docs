@@ -1,2 +1,3 @@
-:wxapi:`templateMessage.deleteTemplate`
-===============
+:wxbpi:`templateMessage.deleteTemplate`
+============================================================
+

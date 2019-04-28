@@ -1,12 +1,11 @@
-custom-component
+自定义组件
 ====================
 
-
-
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 3
    :glob:
 
+   create
    behaviors
    component
    custom-component

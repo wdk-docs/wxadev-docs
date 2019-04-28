@@ -37,7 +37,7 @@
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜索" href="../search.html" />
     <link rel="next" title="LogManager.debug" href="LogManager.debug.html" />
-    <link rel="prev" title="wx.getLogManager" href="wx.getLogManager.html" /> 
+    <link rel="prev" title="&lt;no title&gt;" href="console.warn.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -89,25 +89,29 @@
 <li class="toctree-l1"><a class="reference internal" href="../framework/index.html">框架</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../component/index.html">组件</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">API</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="index.html#id1">基础</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#id2">系统</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#id4">更新</a></li>
-<li class="toctree-l2 current"><a class="reference internal" href="index.html#id5">小程序</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="index.html#id6">生命周期</a></li>
-<li class="toctree-l3"><a class="reference internal" href="index.html#id7">应用级事件</a></li>
-<li class="toctree-l3 current"><a class="reference internal" href="index.html#id8">调试</a><ul class="current">
-<li class="toctree-l4"><a class="reference internal" href="wx.setEnableDebug.html">wx.createWorker</a></li>
-<li class="toctree-l4"><a class="reference internal" href="wx.getLogManager.html">wx.getLogManager</a></li>
-<li class="toctree-l4 current"><a class="reference internal" href="index.html#logmanager">LogManager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id2">基础</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id3">系统</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id5">更新</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id6">小程序</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html#id9">调试</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="wx.setEnableDebug.html">wx.setEnableDebug</a></li>
+<li class="toctree-l3"><a class="reference internal" href="wx.getLogManager.html">wx.getLogManager</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#console">console</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html#logmanager">LogManager</a><ul class="current">
+<li class="toctree-l4 current"><a class="current reference internal" href="#">LogManager</a></li>
+<li class="toctree-l4"><a class="reference internal" href="LogManager.debug.html">LogManager.debug</a></li>
+<li class="toctree-l4"><a class="reference internal" href="LogManager.info.html">LogManager.info</a></li>
+<li class="toctree-l4"><a class="reference internal" href="LogManager.log.html">LogManager.log</a></li>
+<li class="toctree-l4"><a class="reference internal" href="LogManager.warn.html">LogManager.warn</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#id9">路由</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#id10">界面</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#id22">网络</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#id26">数据缓存</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#id27">媒体</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id10">路由</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id11">界面</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id23">网络</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id27">数据缓存</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id28">媒体</a></li>
 <li class="toctree-l2"><a class="reference internal" href="index.html#id36">位置</a></li>
 <li class="toctree-l2"><a class="reference internal" href="index.html#id37">转发</a></li>
 <li class="toctree-l2"><a class="reference internal" href="index.html#id38">画布</a></li>
@@ -123,8 +127,9 @@
 <li class="toctree-l1"><a class="reference internal" href="../devtools/index.html">开发工具</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../reference/index.html">参考资料</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../wxcloud/index.html">云开发</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../wxwork/index.html">企业微信兼容</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../wxwork/index.html">企业微信</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../glossary.html">术语</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst.html">定义</a></li>
 </ul>
 
             
@@ -193,6 +198,21 @@
             
   <div class="section" id="logmanager">
 <h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/api/LogManager.html">LogManager</a><a class="headerlink" href="#logmanager" title="永久链接至标题">¶</a></h1>
+<p>LogManager
+日志管理器实例，可以通过 wx.getLogManager 获取。</p>
+<p>方法
+LogManager.debug()
+写 debug 日志</p>
+<p>LogManager.info()
+写 info 日志</p>
+<p>LogManager.log()
+写 log 日志</p>
+<p>LogManager.warn()
+写 warn 日志</p>
+<p>使用说明
+最多保存5M的日志内容，超过5M后，旧的日志内容会被删除。
+用户可以通过使用 &lt;Button&gt; 组件的 open-type=”feedback” 来上传打印的日志。开发者可以通过小程序管理后台左侧菜单“反馈管理”页面查看。</p>
+<p>基础库默认会把 App、Page 的生命周期函数和 wx 命名空间下的函数调用写入日志。</p>
 </div>
 
 
@@ -206,7 +226,7 @@
         <a href="LogManager.debug.html" class="btn btn-neutral float-right" title="LogManager.debug" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="wx.getLogManager.html" class="btn btn-neutral float-left" title="wx.getLogManager" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="console.warn.html" class="btn btn-neutral float-left" title="&lt;no title&gt;" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

@@ -1,2 +1,2 @@
-:wxapi:`wxacode.createQRCode`
-===============
+:wxbpi:`wxacode.createQRCode`
+============================================================

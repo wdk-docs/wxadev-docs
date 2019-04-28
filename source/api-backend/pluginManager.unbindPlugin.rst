@@ -1,2 +1,2 @@
-:wxapi:`pluginManager.unbindPlugin`
-===============
+:wxbpi:`pluginManager.unbindPlugin`
+============================================================

@@ -1,2 +1,2 @@
-rst:wxapi:`templateMessage.getTemplateLibraryList`
-===============
+rst:wxbpi:`templateMessage.getTemplateLibraryList`
+============================================================

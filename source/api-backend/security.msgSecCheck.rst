@@ -1,2 +1,2 @@
-:wxapi:`security.msgSecCheck`
-===============
+:wxbpi:`security.msgSecCheck`
+============================================================

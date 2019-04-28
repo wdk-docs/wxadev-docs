@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>视图 &mdash; wxadev 1.0.0 文档</title>
+  <title>视图层 View &mdash; wxadev 1.0.0 文档</title>
   
 
   
@@ -36,7 +36,7 @@
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="index" title="索引" href="../../genindex.html" />
     <link rel="search" title="搜索" href="../../search.html" />
-    <link rel="next" title="WXSS" href="wxss.html" />
+    <link rel="next" title="WXML" href="wxml/index.html" />
     <link rel="prev" title="API" href="../app-service/api.html" /> 
 </head>
 
@@ -92,15 +92,15 @@
 <li class="toctree-l2"><a class="reference internal" href="../config.html">小程序配置</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../sitemap.html">sitemap 配置</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../app-service/index.html">逻辑层 App Service</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">视图</a><ul>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">视图层 View</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="wxml/index.html">WXML</a></li>
 <li class="toctree-l3"><a class="reference internal" href="wxss.html">WXSS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="wxs/index.html">WXS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="interactive-animation.html">频繁交互</a></li>
+<li class="toctree-l3"><a class="reference internal" href="component.html">基础组件</a></li>
 <li class="toctree-l3"><a class="reference internal" href="selector.html">获取界面上的节点信息</a></li>
 <li class="toctree-l3"><a class="reference internal" href="resizable.html">响应显示区域变化</a></li>
-<li class="toctree-l3"><a class="reference internal" href="interactive-animation.html">WXS响应事件</a></li>
-<li class="toctree-l3"><a class="reference internal" href="component.html">基础组件</a></li>
 <li class="toctree-l3"><a class="reference internal" href="animation.html">动画</a></li>
-<li class="toctree-l3"><a class="reference internal" href="wxs/index.html">WXS</a></li>
-<li class="toctree-l3"><a class="reference internal" href="wxml/index.html">WXML</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../details.html">运行环境</a></li>
@@ -109,17 +109,15 @@
 <li class="toctree-l2"><a class="reference internal" href="../device/index.html">硬件能力</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../open-ability/index.html">开放能力</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../usability.html">调试</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../usability/index.html">usability</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../usability/index.html#id1">视图</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../performance.html">性能</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../performance/index.html">performance</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../client-lib/index.html">client-lib</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../usability/index.html">可用性</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../performance/index.html">性能</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../client-lib/index.html">基础库</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../compatibility.html">兼容处理</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../workers.html">workers</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../server-ability/index.html">server-ability</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../release/index.html">release</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../operating-mechanism.html">小程序运行机制</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../custom-component/index.html">custom-component</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../workers.html">多线程 Worker</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../server-ability/index.html">后端能力</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../release/index.html">版本更新</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../operating-mechanism.html">运行机制</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../custom-component/index.html">自定义组件</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../component/index.html">组件</a></li>
@@ -130,6 +128,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../wxcloud/index.html">云开发</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../wxwork/index.html">企业微信</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../glossary.html">术语</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../rst.html">定义</a></li>
 </ul>
 
             
@@ -177,7 +176,7 @@
         
           <li><a href="../index.html">框架</a> &raquo;</li>
         
-      <li>视图</li>
+      <li>视图层 View</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -196,18 +195,144 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="id1">
-<h1>视图<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
+  <div class="section" id="view">
+<h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/framework/view/index.html">视图层 View</a><a class="headerlink" href="#view" title="永久链接至标题">¶</a></h1>
+<p>框架的视图层由 <a class="reference internal" href="wxml/index.html#wxml"><span class="std std-ref">WXML</span></a> 与 <a class="reference internal" href="wxs/index.html#wxs"><span class="std std-ref">WXS</span></a> 编写，由组件来进行展示。</p>
+<p>将逻辑层的数据反应成视图，同时将视图层的事件发送给逻辑层。</p>
+<p><a class="reference internal" href="wxml/index.html#wxml"><span class="std std-ref">WXML</span></a> (WeiXin Markup language) 用于描述页面的结构。</p>
+<p><a class="reference internal" href="wxs/index.html#wxs"><span class="std std-ref">WXS</span></a> (WeiXin Script) 是小程序的一套脚本语言，结合 WXML，可以构建出页面的结构。</p>
+<p><a class="reference internal" href="wxss.html#wxss"><span class="std std-ref">WXSS</span></a> (WeiXin Style Sheet) 用于描述页面的样式。</p>
+<p>组件(Component)是视图的基本组成单元。</p>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="wxss.html">WXSS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wxml/index.html">WXML</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="wxml/data.html">数据绑定</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="wxml/data.html#id2">简单绑定</a></li>
+<li class="toctree-l3"><a class="reference internal" href="wxml/data.html#id7">运算</a></li>
+<li class="toctree-l3"><a class="reference internal" href="wxml/data.html#id13">组合</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="wxml/list.html">wx:for 列表渲染</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="wxml/list.html#id2">wx:for</a></li>
+<li class="toctree-l3"><a class="reference internal" href="wxml/list.html#block-wx-for">block wx:for</a></li>
+<li class="toctree-l3"><a class="reference internal" href="wxml/list.html#wx-key">wx:key</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="wxml/conditional.html">wx:if 条件渲染</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="wxml/conditional.html#id1">wx:if</a></li>
+<li class="toctree-l3"><a class="reference internal" href="wxml/conditional.html#block-wx-if">block wx:if</a></li>
+<li class="toctree-l3"><a class="reference internal" href="wxml/conditional.html#wx-if-vs-hidden">wx:if vs hidden</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="wxml/template.html">template 模板</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="wxml/template.html#id1">定义模板</a></li>
+<li class="toctree-l3"><a class="reference internal" href="wxml/template.html#id2">使用模板</a></li>
+<li class="toctree-l3"><a class="reference internal" href="wxml/template.html#id3">模板的作用域</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="wxml/import.html">import 引用</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="wxml/import.html#id1">import</a></li>
+<li class="toctree-l3"><a class="reference internal" href="wxml/import.html#id2">import 的作用域</a></li>
+<li class="toctree-l3"><a class="reference internal" href="wxml/import.html#include">include</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="wxml/event.html">bindtap 事件</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="wxml/event.html#id1">什么是事件</a></li>
+<li class="toctree-l3"><a class="reference internal" href="wxml/event.html#id2">事件的使用方式</a></li>
+<li class="toctree-l3"><a class="reference internal" href="wxml/event.html#wxs">使用WXS函数响应事件</a></li>
+<li class="toctree-l3"><a class="reference internal" href="wxml/event.html#id3">事件详解</a></li>
+<li class="toctree-l3"><a class="reference internal" href="wxml/event.html#id5">事件绑定和冒泡</a></li>
+<li class="toctree-l3"><a class="reference internal" href="wxml/event.html#id6">事件的捕获阶段</a></li>
+<li class="toctree-l3"><a class="reference internal" href="wxml/event.html#id7">事件对象</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="wxss.html">WXSS</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="wxss.html#id2">尺寸单位</a></li>
+<li class="toctree-l2"><a class="reference internal" href="wxss.html#id3">内联样式</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="wxs/index.html">WXS</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="wxs/module.html">模块</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="wxs/module.html#id2">模块</a></li>
+<li class="toctree-l3"><a class="reference internal" href="wxs/module.html#wxs">.wxs 文件</a></li>
+<li class="toctree-l3"><a class="reference internal" href="wxs/module.html#module">module 对象</a></li>
+<li class="toctree-l3"><a class="reference internal" href="wxs/module.html#require">require函数</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="wxs/variate.html">变量</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="wxs/variate.html#id2">概念</a></li>
+<li class="toctree-l3"><a class="reference internal" href="wxs/variate.html#id3">变量名</a></li>
+<li class="toctree-l3"><a class="reference internal" href="wxs/variate.html#id4">保留标识符</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="wxs/annotation.html">注释</a></li>
+<li class="toctree-l2"><a class="reference internal" href="wxs/operator.html">运算符</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="wxs/operator.html#id2">基本运算符</a></li>
+<li class="toctree-l3"><a class="reference internal" href="wxs/operator.html#id3">一元运算符</a></li>
+<li class="toctree-l3"><a class="reference internal" href="wxs/operator.html#id4">位运算符</a></li>
+<li class="toctree-l3"><a class="reference internal" href="wxs/operator.html#id5">比较运算符</a></li>
+<li class="toctree-l3"><a class="reference internal" href="wxs/operator.html#id6">等值运算符</a></li>
+<li class="toctree-l3"><a class="reference internal" href="wxs/operator.html#id7">赋值运算符</a></li>
+<li class="toctree-l3"><a class="reference internal" href="wxs/operator.html#id8">二元逻辑运算符</a></li>
+<li class="toctree-l3"><a class="reference internal" href="wxs/operator.html#id9">其他运算符</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="wxs/statement.html">语句</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="wxs/statement.html#id2">如果语句</a></li>
+<li class="toctree-l3"><a class="reference internal" href="wxs/statement.html#id3">切换语句</a></li>
+<li class="toctree-l3"><a class="reference internal" href="wxs/statement.html#id4">用语句</a></li>
+<li class="toctree-l3"><a class="reference internal" href="wxs/statement.html#id5">语句</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="wxs/datatype.html">数据类型</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="wxs/datatype.html#number">number</a></li>
+<li class="toctree-l3"><a class="reference internal" href="wxs/datatype.html#string">string</a></li>
+<li class="toctree-l3"><a class="reference internal" href="wxs/datatype.html#boolean">boolean</a></li>
+<li class="toctree-l3"><a class="reference internal" href="wxs/datatype.html#object">object</a></li>
+<li class="toctree-l3"><a class="reference internal" href="wxs/datatype.html#function">function</a></li>
+<li class="toctree-l3"><a class="reference internal" href="wxs/datatype.html#array">array</a></li>
+<li class="toctree-l3"><a class="reference internal" href="wxs/datatype.html#date">date</a></li>
+<li class="toctree-l3"><a class="reference internal" href="wxs/datatype.html#regexp">regexp</a></li>
+<li class="toctree-l3"><a class="reference internal" href="wxs/datatype.html#constructor">constructor 属性</a></li>
+<li class="toctree-l3"><a class="reference internal" href="wxs/datatype.html#typeof">typeof</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="wxs/basiclibrary.html">基础类库</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="wxs/basiclibrary.html#console">console</a></li>
+<li class="toctree-l3"><a class="reference internal" href="wxs/basiclibrary.html#math">Math</a></li>
+<li class="toctree-l3"><a class="reference internal" href="wxs/basiclibrary.html#json">JSON</a></li>
+<li class="toctree-l3"><a class="reference internal" href="wxs/basiclibrary.html#number">Number</a></li>
+<li class="toctree-l3"><a class="reference internal" href="wxs/basiclibrary.html#date">Date</a></li>
+<li class="toctree-l3"><a class="reference internal" href="wxs/basiclibrary.html#global">Global</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="interactive-animation.html">频繁交互</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="interactive-animation.html#id2">背景</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interactive-animation.html#id3">实现方案</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interactive-animation.html#id4">使用方法</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="component.html">基础组件</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="component.html#id2">属性类型</a></li>
+<li class="toctree-l2"><a class="reference internal" href="component.html#id3">公共属性</a></li>
+<li class="toctree-l2"><a class="reference internal" href="component.html#id4">特殊属性</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="selector.html">获取界面上的节点信息</a></li>
-<li class="toctree-l1"><a class="reference internal" href="resizable.html">响应显示区域变化</a></li>
-<li class="toctree-l1"><a class="reference internal" href="interactive-animation.html">WXS响应事件</a></li>
-<li class="toctree-l1"><a class="reference internal" href="component.html">基础组件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="resizable.html">响应显示区域变化</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="resizable.html#id2">显示区域尺寸</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="resizable.html#id3">在手机上启用屏幕旋转支持</a></li>
+<li class="toctree-l3"><a class="reference internal" href="resizable.html#ipad">在 iPad 上启用屏幕旋转支持</a></li>
+<li class="toctree-l3"><a class="reference internal" href="resizable.html#id4">屏幕旋转事件</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="animation.html">动画</a></li>
-<li class="toctree-l1"><a class="reference internal" href="wxs/index.html">WXS</a></li>
-<li class="toctree-l1"><a class="reference internal" href="wxml/index.html">WXML</a></li>
 </ul>
 </div>
 </div>
@@ -220,7 +345,7 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="wxss.html" class="btn btn-neutral float-right" title="WXSS" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="wxml/index.html" class="btn btn-neutral float-right" title="WXML" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="../app-service/api.html" class="btn btn-neutral float-left" title="API" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>

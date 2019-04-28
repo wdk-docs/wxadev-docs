@@ -166,7 +166,7 @@ onPageScroll(Object object)
 属性	类型	说明
 scrollTop	Number	页面在垂直方向已滚动的距离（单位px）
 
-.. note:: 请只在需要的时候才在 page 中定义此方法，不要定义空方法。以减少不必要的事件派发对渲染层-逻辑层通信的影响。 注意：请避免在 onPageScroll 中过于频繁的执行 setData 等引起逻辑层-渲染层通信的操作。尤其是每次传输大量数据，会影响通信耗时。
+.. attention:: 请只在需要的时候才在 page 中定义此方法，不要定义空方法。以减少不必要的事件派发对渲染层-逻辑层通信的影响。 注意：请避免在 onPageScroll 中过于频繁的执行 setData 等引起逻辑层-渲染层通信的操作。尤其是每次传输大量数据，会影响通信耗时。
 
 onShareAppMessage(Object object)
 监听用户点击页面内转发按钮（<button> 组件 open-type="share"）或右上角菜单“转发”按钮的行为，并自定义转发内容。
@@ -209,12 +209,12 @@ imageUrl	自定义图片路径，可以是本地文件路径、代码包文件�
   })
 
 onResize(Object object)
-基础库 2.4.0 开始支持，低版本需做兼容处理。
+基础库 2.4.0 开始支持，低版本需做 :ref:`compatibility` 。
 
 小程序屏幕旋转时触发。详见 响应显示区域变化
 
 onTabItemTap(Object object)
-基础库 1.9.0 开始支持，低版本需做兼容处理。
+基础库 1.9.0 开始支持，低版本需做 :ref:`compatibility` 。
 
 点击 tab 时触发
 
@@ -256,7 +256,7 @@ Page 中还可以定义组件事件处理函数。在渲染层的组件中加入
   })
 
 Page.route
-基础库 1.2.0 开始支持，低版本需做兼容处理。
+基础库 1.2.0 开始支持，低版本需做 :ref:`compatibility` 。
 
 到当前页面的路径，类型为String。
 
@@ -352,7 +352,7 @@ PageObject[] getCurrentPages()
 
 获取当前页面栈。数组中第一个元素为首页，最后一个元素为当前页面。
 
-.. note::
+.. attention::
 
    不要尝试修改页面栈，会导致路由以及页面状态错误。
    不要在 App.onLaunch 的时候调用 getCurrentPages，此时 page 还没有生成。

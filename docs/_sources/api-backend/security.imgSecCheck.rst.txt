@@ -1,2 +1,2 @@
-:wxapi:`security.imgSecCheck`
-===============
+:wxbpi:`security.imgSecCheck`
+============================================================

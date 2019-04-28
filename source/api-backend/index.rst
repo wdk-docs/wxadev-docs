@@ -1,5 +1,7 @@
-服务端API
-==============
+.. _api-backend:
+
+:wxbpi:`服务端API <index>`
+===================================================
 
 登录
 -------
@@ -12,22 +14,22 @@
 
 .. toctree::
    :maxdepth: 1
-   :glob:
+   :hidden:
 
    auth.code2Session
 
 用户信息
 ----------
 
-+---------------------+----------------------------------------------------------+
-|        名称         |                         功能说明                         |
-+=====================+==========================================================+
-| auth.getPaidUnionId | 云调用用户支付完成后，获取该用户的 UnionId，无需用户授权 |
-+---------------------+----------------------------------------------------------+
++----------------------------+----------------------------------------------------------+
+|            名称            |                         功能说明                         |
++============================+==========================================================+
+| :ref:`auth.getPaidUnionId` | 云调用用户支付完成后，获取该用户的 UnionId，无需用户授权 |
++----------------------------+----------------------------------------------------------+
 
 .. toctree::
    :maxdepth: 1
-   :glob:
+   :hidden:
 
    auth.getPaidUnionId
 
@@ -42,7 +44,7 @@
 
 .. toctree::
    :maxdepth: 1
-   :glob:
+   :hidden:
 
    auth.getAccessToken
 
@@ -51,7 +53,7 @@
 
 .. toctree::
    :maxdepth: 1
-   :glob:
+   :hidden:
 
 访问留存
 ~~~~~~~~~~~~~~
@@ -68,7 +70,7 @@
 
 .. toctree::
    :maxdepth: 1
-   :glob:
+   :hidden:
 
    analysis.getDailyRetain
    analysis.getMonthlyRetain
@@ -97,7 +99,7 @@
 
 .. toctree::
    :maxdepth: 1
-   :glob:
+   :hidden:
 
    analysis.getDailyVisitTrend
    analysis.getMonthlyVisitTrend
@@ -124,7 +126,7 @@
 
 .. toctree::
    :maxdepth: 1
-   :glob:
+   :hidden:
 
    customerServiceMessage.getTempMedia
    customerServiceMessage.send
@@ -152,7 +154,7 @@
 
 .. toctree::
    :maxdepth: 1
-   :glob:
+   :hidden:
 
    templateMessage.addTemplate
    templateMessage.deleteTemplate
@@ -172,7 +174,7 @@
 
 .. toctree::
    :maxdepth: 1
-   :glob:
+   :hidden:
 
    uniformMessage.send
 
@@ -189,7 +191,7 @@
 
 .. toctree::
    :maxdepth: 1
-   :glob:
+   :hidden:
 
    updatableMessage.createActivityId
    updatableMessage.setUpdatableMsg
@@ -213,7 +215,7 @@
 
 .. toctree::
    :maxdepth: 1
-   :glob:
+   :hidden:
 
    pluginManager.applyPlugin
    pluginManager.getPluginDevApplyList
@@ -238,7 +240,7 @@
 
 .. toctree::
    :maxdepth: 1
-   :glob:
+   :hidden:
 
    nearbyPoi.add
    nearbyPoi.delete
@@ -260,7 +262,7 @@
 
 .. toctree::
    :maxdepth: 1
-   :glob:
+   :hidden:
 
    wxacode.createQRCode
    wxacode.get
@@ -279,7 +281,7 @@
 
 .. toctree::
    :maxdepth: 1
-   :glob:
+   :hidden:
 
    security.imgSecCheck
    security.msgSecCheck
@@ -312,7 +314,7 @@
 
 .. toctree::
    :maxdepth: 1
-   :glob:
+   :hidden:
 
    logistics.onGetQuota
    logistics.getContact
@@ -324,7 +326,7 @@
    logistics.updatePath
 
 小程序使用
-------------
+~~~~~~~~~~~~~~
 
 +--------------------------+------------------------------+
 |           名称           |           功能说明           |
@@ -350,7 +352,7 @@
 
 .. toctree::
    :maxdepth: 1
-   :glob:
+   :hidden:
 
    logistics.addOrder
    logistics.cancelOrder
@@ -361,3 +363,18 @@
    logistics.getQuota
    logistics.onPathUpdate
    logistics.updatePrinter
+
+生物认证
+------------------------
+
++-----------------------+-----------------------------------+
+|         名称          |             功能说明              |
++=======================+===================================+
+| soter.verifySignature | 云调用 SOTER 生物认证秘钥签名验证 |
++-----------------------+-----------------------------------+
+
+.. toctree::
+   :maxdepth: 1
+   :hidden:
+
+   soter.verifySignature

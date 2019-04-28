@@ -1,39 +1,58 @@
 .. _cover-view:
 
-cover-view
+:wx_comp:`cover-view`
 ===========================
 
-.. versionadded:: 1.4.0 开始支持，低版本需做兼容处理。
+.. versionadded:: 1.4.0 低版本需做 :ref:`compatibility` 。
 
 覆盖在原生组件之上的文本视图。
 
-可覆盖的原生组件包括 map、video、canvas、camera、live-player、live-pusher
+可覆盖的原生组件包括 :doc:`map`、:doc:`video`、:doc:`canvas`、:doc:`camera`、:doc:`live-player`、:doc:`live-pusher`
 
-只支持嵌套 cover-view、cover-image，可在 cover-view 中使用 button。组件属性的长度单位默认为px，2.4.0起支持传入单位(rpx/px)。
+只支持嵌套 :doc:`cover-view`、:doc:`cover-image`，可在 :doc:`cover-view` 中使用 :doc:`button`。
+组件属性的长度单位默认为px，2.4.0起支持传入单位(rpx/px)。
 
-属性	类型	默认值	必填	说明	最低版本
-scroll-top	number/string		否	设置顶部滚动偏移量，仅在设置了 overflow-y: scroll 成为滚动元素后生效	2.1.0
-Bug & Tip
++------------+---------------+--------+------+----------------------------------------------------------------------+----------+
+| 属性       | 类型          | 默认值 | 必填 | 说明                                                                 | 最低版本 |
++------------+---------------+--------+------+----------------------------------------------------------------------+----------+
+| scroll-top | number/string |        | 否   | 设置顶部滚动偏移量，仅在设置了 overflow-y: scroll 成为滚动元素后生效 | 2.1.0    |
++------------+---------------+--------+------+----------------------------------------------------------------------+----------+
+
+
 .. tip:: <cover-view>和<cover-image>的aria-role仅可设置为button，读屏模式下才可以点击，并朗读出“按钮”；为空时可以聚焦，但不可点击
-.. tip:: 基础库 2.2.4 起支持 touch 相关事件，也可使用 hover-class 设置点击态
-.. tip:: 基础库 2.1.0 起支持设置 scale rotate 的 css 样式，包括 transition 动画
-.. tip:: 基础库 1.9.90 起 cover-view 支持 overflow: scroll，但不支持动态更新 overflow
-.. tip:: 基础库 1.9.90 起最外层 cover-view 支持 position: fixed
-.. tip:: 基础库 1.9.0 起支持插在 view 等标签下。在此之前只可嵌套在原生组件map、video、canvas、camera内，避免嵌套在其他组件内。
-.. tip:: 基础库 1.6.0 起支持css transition动画，transition-property只支持transform (translateX, translateY)与opacity。
-.. tip:: 基础库 1.6.0 起支持css opacity。
-.. tip:: 事件模型遵循冒泡模型，但不会冒泡到原生组件。
-.. tip:: 文本建议都套上cover-view标签，避免排版错误。
-.. tip:: 只支持基本的定位、布局、文本样式。不支持设置单边的border、background-image、shadow、overflow: visible等。
-.. tip:: 建议子节点不要溢出父节点
-.. tip:: 默认设置的样式有：white-space: nowrap; line-height: 1.2; display: block;
-bug: 自定义组件嵌套 cover-view 时，自定义组件的 slot 及其父节点暂不支持通过 wx:if 控制显隐，否则会导致 cover-view 不显示
-示例代码
-在开发者工具中预览效果
 
+.. tip:: .. versionadded:: 2.2.4 touch 相关事件，也可使用 hover-class 设置点击态
+
+.. tip:: .. versionadded:: 2.1.0 起支持设置 scale rotate 的 css 样式，包括 transition 动画
+
+.. tip:: .. versionadded:: 1.9.90 cover-view 支持 overflow: scroll，但不支持动态更新 overflow
+
+.. tip:: .. versionadded:: 1.9.90 最外层 cover-view 支持 position: fixed
+
+.. tip:: .. versionadded:: 1.9.0 支持插在 view 等标签下。在此之前只可嵌套在原生组件map、video、canvas、camera内，避免嵌套在其他组件内。
+
+.. tip:: .. versionadded:: 1.6.0 支持css transition动画，transition-property只支持transform (translateX, translateY)与opacity。
+
+.. tip:: .. versionadded:: 1.6.0 支持css opacity。
+
+.. tip:: 事件模型遵循冒泡模型，但不会冒泡到原生组件。
+
+.. tip:: 文本建议都套上cover-view标签，避免排版错误。
+
+.. tip:: 只支持基本的定位、布局、文本样式。不支持设置单边的border、background-image、shadow、overflow: visible等。
+
+.. tip:: 建议子节点不要溢出父节点
+
+.. tip:: 默认设置的样式有：white-space: nowrap; line-height: 1.2; display: block;
+
+.. warning:: bug 自定义组件嵌套 cover-view 时，自定义组件的 slot 及其父节点暂不支持通过 wx:if 控制显隐，
+         否则会导致 cover-view 不显示
+
+示例代码
+
+:download:`在开发者工具中预览效果`
 
 .. code:: html
-
 
   <video
     id="myVideo"
@@ -51,6 +70,9 @@ bug: 自定义组件嵌套 cover-view 时，自定义组件的 slot 及其父节
       <cover-view class="time">00:00</cover-view>
     </cover-view>
   </video>
+
+.. code:: css
+
   .controls {
     position: relative;
     top: 50%;
@@ -75,6 +97,9 @@ bug: 自定义组件嵌套 cover-view 时，自定义组件的 slot 及其父节
     height: 40px;
     margin: 5px auto;
   }
+
+.. code:: js
+
   Page({
     onReady() {
       this.videoCtx = wx.createVideoContext('myVideo')

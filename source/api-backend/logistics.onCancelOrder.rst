@@ -1,2 +1,2 @@
-:wxapi:`logistics.onCancelOrder`
-===============
+:wxbpi:`logistics.onCancelOrder`
+============================================================

@@ -5,7 +5,7 @@
 通常开发者希望转发出去的小程序被二次打开的时候能够获取到一些信息，例如群的标识。现在通过调用 wx.showShareMenu 并且设置 withShareTicket 为 true ，当用户将小程序转发到任一群聊之后，此转发卡片在群聊中被其他用户打开时，可以在 App.onLaunch 或 App.onShow 获取到一个 shareTicket。通过调用 wx.getShareInfo 接口传入此 shareTicket 可以获取到转发信息。
 
 页面内发起转发
-基础库 1.2.0 开始支持，低版本需做兼容处理。
+基础库 1.2.0 开始支持，低版本需做 :ref:`compatibility` 。
 
 通过给 button 组件设置属性 open-type="share"，可以在用户点击按钮后触发 Page.onShareAppMessage 事件，如果当前页面没有定义此事件，则点击后无效果。相关组件：<button>
 

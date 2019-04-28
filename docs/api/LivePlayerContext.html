@@ -89,28 +89,29 @@
 <li class="toctree-l1"><a class="reference internal" href="../framework/index.html">框架</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../component/index.html">组件</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">API</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="index.html#id1">基础</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#id2">系统</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#id4">更新</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#id5">小程序</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#id9">路由</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#id10">界面</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#id22">网络</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#id26">数据缓存</a></li>
-<li class="toctree-l2 current"><a class="reference internal" href="index.html#id27">媒体</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="index.html#id28">地图</a></li>
-<li class="toctree-l3"><a class="reference internal" href="index.html#id29">图片</a></li>
-<li class="toctree-l3"><a class="reference internal" href="index.html#id30">视频</a></li>
-<li class="toctree-l3"><a class="reference internal" href="index.html#id31">音频</a></li>
-<li class="toctree-l3"><a class="reference internal" href="index.html#id32">背景音频</a></li>
-<li class="toctree-l3 current"><a class="reference internal" href="index.html#id33">实时音视频</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="index.html#id2">基础</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id3">系统</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id5">更新</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id6">小程序</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id9">调试</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id10">路由</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id11">界面</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id23">网络</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id27">数据缓存</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html#id28">媒体</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="index.html#id29">地图</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#id30">图片</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#id31">视频</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#id32">音频</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#id33">背景音频</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html#id34">实时音视频</a><ul class="current">
 <li class="toctree-l4"><a class="reference internal" href="wx.createLivePusherContext.html">wx.createLivePusherContext</a></li>
 <li class="toctree-l4"><a class="reference internal" href="wx.createLivePlayerContext.html">wx.createLivePlayerContext</a></li>
 <li class="toctree-l4 current"><a class="reference internal" href="index.html#livepushercontext">LivePusherContext</a></li>
 <li class="toctree-l4"><a class="reference internal" href="index.html#liveplayercontext">LivePlayerContext</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="index.html#id34">录音</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#recordermanager">录音 RecorderManager</a></li>
 <li class="toctree-l3"><a class="reference internal" href="index.html#id35">相机</a></li>
 </ul>
 </li>
@@ -129,8 +130,9 @@
 <li class="toctree-l1"><a class="reference internal" href="../devtools/index.html">开发工具</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../reference/index.html">参考资料</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../wxcloud/index.html">云开发</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../wxwork/index.html">企业微信兼容</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../wxwork/index.html">企业微信</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../glossary.html">术语</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst.html">定义</a></li>
 </ul>
 
             
@@ -199,6 +201,149 @@
             
   <div class="section" id="liveplayercontext">
 <h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/api/LivePlayerContext.html">LivePlayerContext</a><a class="headerlink" href="#liveplayercontext" title="永久链接至标题">¶</a></h1>
+<dl class="class">
+<dt id="LivePlayerContext">
+<em class="property">class </em><code class="descname">LivePlayerContext</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#LivePlayerContext" title="永久链接至目标">¶</a></dt>
+<dd><p>LivePlayerContext 实例，可通过 <a class="reference internal" href="wx.createLivePlayerContext.html#wx.createLivePlayerContext" title="wx.createLivePlayerContext"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.createLivePlayerContext()</span></code></a> 获取。</p>
+<p>livePlayerContext 通过 id 跟一个 &lt;<span class="xref std std-doc">live-player</span>&gt; 组件绑定，操作对应的 &lt;<span class="xref std std-doc">live-player</span>&gt; 组件。</p>
+</dd></dl>
+
+<div class="section" id="id1">
+<h2>方法<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h2>
+<dl class="function">
+<dt id="LivePlayerContext.play">
+<code class="descclassname">LivePlayerContext.</code><code class="descname">play</code><span class="sig-paren">(</span><em>{[success][, fail][, complete]}</em><span class="sig-paren">)</span><a class="headerlink" href="#LivePlayerContext.play" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Label</dt>
+<dd class="field-odd"><p>播放</p>
+</dd>
+<dt class="field-even">Parameters</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>success</strong> (<em>function</em>) – 接口调用成功的回调函数</p></li>
+<li><p><strong>fail</strong> (<em>function</em>) – 接口调用失败的回调函数</p></li>
+<li><p><strong>complete</strong> (<em>function</em>) – 接口调用结束的回调函数（调用成功、失败都会执行）</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="LivePlayerContext.stop">
+<code class="descclassname">LivePlayerContext.</code><code class="descname">stop</code><span class="sig-paren">(</span><em>{[success][, fail][, complete]}</em><span class="sig-paren">)</span><a class="headerlink" href="#LivePlayerContext.stop" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Label</dt>
+<dd class="field-odd"><p>停止</p>
+</dd>
+<dt class="field-even">Parameters</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>success</strong> (<em>function</em>) – 接口调用成功的回调函数</p></li>
+<li><p><strong>fail</strong> (<em>function</em>) – 接口调用失败的回调函数</p></li>
+<li><p><strong>complete</strong> (<em>function</em>) – 接口调用结束的回调函数（调用成功、失败都会执行）</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="LivePlayerContext.mute">
+<code class="descclassname">LivePlayerContext.</code><code class="descname">mute</code><span class="sig-paren">(</span><em>{[success][, fail][, complete]}</em><span class="sig-paren">)</span><a class="headerlink" href="#LivePlayerContext.mute" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Label</dt>
+<dd class="field-odd"><p>静音</p>
+</dd>
+<dt class="field-even">Parameters</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>success</strong> (<em>function</em>) – 接口调用成功的回调函数</p></li>
+<li><p><strong>fail</strong> (<em>function</em>) – 接口调用失败的回调函数</p></li>
+<li><p><strong>complete</strong> (<em>function</em>) – 接口调用结束的回调函数（调用成功、失败都会执行）</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="LivePlayerContext.pause">
+<code class="descclassname">LivePlayerContext.</code><code class="descname">pause</code><span class="sig-paren">(</span><em>{[success][, fail][, complete]}</em><span class="sig-paren">)</span><a class="headerlink" href="#LivePlayerContext.pause" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Label</dt>
+<dd class="field-odd"><p>暂停</p>
+</dd>
+<dt class="field-even">Parameters</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>success</strong> (<em>function</em>) – 接口调用成功的回调函数</p></li>
+<li><p><strong>fail</strong> (<em>function</em>) – 接口调用失败的回调函数</p></li>
+<li><p><strong>complete</strong> (<em>function</em>) – 接口调用结束的回调函数（调用成功、失败都会执行）</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="LivePlayerContext.resume">
+<code class="descclassname">LivePlayerContext.</code><code class="descname">resume</code><span class="sig-paren">(</span><em>{[success][, fail][, complete]}</em><span class="sig-paren">)</span><a class="headerlink" href="#LivePlayerContext.resume" title="永久链接至目标">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="simple">
+<dt>基础库 1.9.90 开始支持，低版本需做 <a class="reference internal" href="../framework/compatibility.html#compatibility"><span class="std std-ref">兼容处理</span></a> 。</dt><dd><dl class="field-list simple">
+<dt class="field-odd">label</dt>
+<dd class="field-odd"><p>恢复</p>
+</dd>
+<dt class="field-even">param function success</dt>
+<dd class="field-even"><p>接口调用成功的回调函数</p>
+</dd>
+<dt class="field-odd">param function fail</dt>
+<dd class="field-odd"><p>接口调用失败的回调函数</p>
+</dd>
+<dt class="field-even">param function complete</dt>
+<dd class="field-even"><p>接口调用结束的回调函数（调用成功、失败都会执行）</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<dl class="function">
+<dt id="LivePlayerContext.requestFullScreen">
+<code class="descclassname">LivePlayerContext.</code><code class="descname">requestFullScreen</code><span class="sig-paren">(</span><em>{[direction][, success][, fail][, complete]}</em><span class="sig-paren">)</span><a class="headerlink" href="#LivePlayerContext.requestFullScreen" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Label</dt>
+<dd class="field-odd"><p>进入全屏</p>
+</dd>
+<dt class="field-even">Parameters</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>direction</strong> (<em>number</em>) – <p><code class="docutils literal notranslate"><span class="pre">0</span></code>        设置全屏时的方向</p>
+<ul>
+<li><p><em>0</em>       正常竖向</p></li>
+<li><p><em>90</em>      屏幕逆时针90度</p></li>
+<li><p><em>-90</em>     屏幕顺时针90度</p></li>
+</ul>
+</p></li>
+<li><p><strong>success</strong> (<em>function</em>) – 接口调用成功的回调函数</p></li>
+<li><p><strong>fail</strong> (<em>function</em>) – 接口调用失败的回调函数</p></li>
+<li><p><strong>complete</strong> (<em>function</em>) – 接口调用结束的回调函数（调用成功、失败都会执行）</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="LivePlayerContext.exitFullScreen">
+<code class="descclassname">LivePlayerContext.</code><code class="descname">exitFullScreen</code><span class="sig-paren">(</span><em>{[success][, fail][, complete]}</em><span class="sig-paren">)</span><a class="headerlink" href="#LivePlayerContext.exitFullScreen" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Label</dt>
+<dd class="field-odd"><p>退出全屏</p>
+</dd>
+<dt class="field-even">Parameters</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>success</strong> (<em>function</em>) – 接口调用成功的回调函数</p></li>
+<li><p><strong>fail</strong> (<em>function</em>) – 接口调用失败的回调函数</p></li>
+<li><p><strong>complete</strong> (<em>function</em>) – 接口调用结束的回调函数（调用成功、失败都会执行）</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<p>示例代码</p>
+<p>在开发者工具中预览效果</p>
+</div>
 </div>
 
 

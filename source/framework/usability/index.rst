@@ -1,8 +1,5 @@
-usability
-============
-
-视图
-=====
+:wxfrwk:`可用性 <usability/index>`
+====================================
 
 .. toctree::
    :maxdepth: 1

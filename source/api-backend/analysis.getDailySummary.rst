@@ -1,2 +1,2 @@
-:wxapi:`analysis.getDailySummary`
-===============
+:wxbpi:`analysis.getDailySummary`
+===================================================

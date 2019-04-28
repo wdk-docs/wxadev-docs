@@ -1,2 +1,2 @@
-:wxapi:`logistics.updatePath`
-===============
+:wxbpi:`logistics.updatePath`
+============================================================

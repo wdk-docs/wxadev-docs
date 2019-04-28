@@ -1,22 +1,27 @@
 .. _label:
 
-label
+:wx_comp:`label`
 ===========================
 
-.. versionadded:: 1.0.0 开始支持，低版本需做兼容处理。
+.. versionadded:: 1.0.0 开始支持，低版本需做 :ref:`compatibility` 。
 
 用来改进表单组件的可用性。
 
-使用for属性找到对应的id，或者将控件放在该标签下，当点击时，就会触发对应的控件。 for优先级高于内部控件，内部有多个控件的时候默认触发第一个控件。 目前可以绑定的控件有：button, checkbox, radio, switch。
+使用for属性找到对应的id，或者将控件放在该标签下，当点击时，就会触发对应的控件。
+for优先级高于内部控件，内部有多个控件的时候默认触发第一个控件。
+目前可以绑定的控件有：button, checkbox, radio, switch。
 
-属性	类型	默认值	必填	说明	最低版本
-for	string		否	绑定控件的 id	1.0.0
++------+--------+--------+------------+------+----------+
+| 属性 |  类型  | 默认值 |    必填    | 说明 | 最低版本 |
++======+========+========+============+======+==========+
+| for  | string | 否     | 绑定控件的 | id   | 1.0.0    |
++------+--------+--------+------------+------+----------+
+
 示例代码
+
 在开发者工具中预览效果
 
-
 .. code:: html
-
 
   <view class="section section_gap">
     <view class="section__title">表单组件在label内</view>
@@ -62,6 +67,9 @@ for	string		否	绑定控件的 id	1.0.0
       </view>
     </radio-group>
   </view>
+
+.. code:: js
+
   Page({
     data: {
       checkboxItems: [
@@ -107,6 +115,9 @@ for	string		否	绑定控件的 id	1.0.0
       this.setData(changed)
     }
   })
+
+.. code:: css
+
   .label-1,
   .label-2 {
     margin-bottom: 15px;

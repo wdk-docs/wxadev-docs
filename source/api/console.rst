@@ -56,7 +56,7 @@
 
     .. tip:: 仅在工具中有效，在 vConsole 中为空函数实现。
 
-.. note::
+.. attention::
 
     - 由于 vConsole 功能有限，以及不同客户端对 console 方法的支持情况有差异，建议开发者在小程序中只使用本文档中提供的方法。
     - 部分内容展示的限制请参见 :doc:`/api/usability`

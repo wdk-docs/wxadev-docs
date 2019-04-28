@@ -36,8 +36,8 @@
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜索" href="../search.html" />
-    <link rel="next" title="服务端API" href="../api-backend/index.html" />
-    <link rel="prev" title="IntersectionObserver.relativeToViewport" href="IntersectionObserver.relativeToViewport.html" /> 
+    <link rel="next" title="console.debug" href="console.debug.html" />
+    <link rel="prev" title="wx.getLogManager" href="wx.getLogManager.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -89,15 +89,30 @@
 <li class="toctree-l1"><a class="reference internal" href="../framework/index.html">框架</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../component/index.html">组件</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">API</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="index.html#id1">基础</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#id2">系统</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#id4">更新</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#id5">小程序</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#id9">路由</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#id10">界面</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#id22">网络</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#id26">数据缓存</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#id27">媒体</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id2">基础</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id3">系统</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id5">更新</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id6">小程序</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html#id9">调试</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="wx.setEnableDebug.html">wx.setEnableDebug</a></li>
+<li class="toctree-l3"><a class="reference internal" href="wx.getLogManager.html">wx.getLogManager</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html#console">console</a><ul class="current">
+<li class="toctree-l4 current"><a class="current reference internal" href="#">console</a></li>
+<li class="toctree-l4"><a class="reference internal" href="console.debug.html">console.debug</a></li>
+<li class="toctree-l4"><a class="reference internal" href="console.error.html">console.error</a></li>
+<li class="toctree-l4"><a class="reference internal" href="console.group.html">console.group</a></li>
+<li class="toctree-l4"><a class="reference internal" href="console.groupEnd.html">console.groupEnd</a></li>
+<li class="toctree-l4"><a class="reference internal" href="console.info.html">console.info</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#logmanager">LogManager</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id10">路由</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id11">界面</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id23">网络</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id27">数据缓存</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id28">媒体</a></li>
 <li class="toctree-l2"><a class="reference internal" href="index.html#id36">位置</a></li>
 <li class="toctree-l2"><a class="reference internal" href="index.html#id37">转发</a></li>
 <li class="toctree-l2"><a class="reference internal" href="index.html#id38">画布</a></li>
@@ -106,30 +121,16 @@
 <li class="toctree-l2"><a class="reference internal" href="index.html#id55">设备</a></li>
 <li class="toctree-l2"><a class="reference internal" href="index.html#worker">Worker</a></li>
 <li class="toctree-l2"><a class="reference internal" href="index.html#id72">第三方平台</a></li>
-<li class="toctree-l2 current"><a class="reference internal" href="index.html#wxml">WXML</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="wx.createSelectorQuery.html">wx.createSelectorQuery</a></li>
-<li class="toctree-l3"><a class="reference internal" href="wx.createIntersectionObserver.html">wx.createIntersectionObserver</a></li>
-<li class="toctree-l3"><a class="reference internal" href="index.html#selectorquery">SelectorQuery</a></li>
-<li class="toctree-l3"><a class="reference internal" href="index.html#nodesref">NodesRef</a></li>
-<li class="toctree-l3 current"><a class="reference internal" href="index.html#intersectionobserver">IntersectionObserver</a><ul class="current">
-<li class="toctree-l4"><a class="reference internal" href="IntersectionObserver.html">IntersectionObserver</a></li>
-<li class="toctree-l4"><a class="reference internal" href="IntersectionObserver.disconnect.html">IntersectionObserver.disconnect</a></li>
-<li class="toctree-l4"><a class="reference internal" href="IntersectionObserver.observe.html">IntersectionObserver.observe</a></li>
-<li class="toctree-l4"><a class="reference internal" href="IntersectionObserver.relativeTo.html">IntersectionObserver.relativeTo</a></li>
-<li class="toctree-l4"><a class="reference internal" href="IntersectionObserver.relativeToViewport.html">IntersectionObserver.relativeToViewport</a></li>
-<li class="toctree-l4 current"><a class="current reference internal" href="#">console</a></li>
-</ul>
-</li>
-</ul>
-</li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#wxml">WXML</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../api-backend/index.html">服务端API</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../devtools/index.html">开发工具</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../reference/index.html">参考资料</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../wxcloud/index.html">云开发</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../wxwork/index.html">企业微信兼容</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../wxwork/index.html">企业微信</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../glossary.html">术语</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst.html">定义</a></li>
 </ul>
 
             
@@ -306,8 +307,8 @@
 </div>
 </dd></dl>
 
-<div class="admonition note">
-<p class="admonition-title">注解</p>
+<div class="admonition attention">
+<p class="admonition-title">注意</p>
 <ul class="simple">
 <li><p>由于 vConsole 功能有限，以及不同客户端对 console 方法的支持情况有差异，建议开发者在小程序中只使用本文档中提供的方法。</p></li>
 <li><p>部分内容展示的限制请参见 <span class="xref std std-doc">/api/usability</span></p></li>
@@ -324,10 +325,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../api-backend/index.html" class="btn btn-neutral float-right" title="服务端API" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="console.debug.html" class="btn btn-neutral float-right" title="console.debug" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="IntersectionObserver.relativeToViewport.html" class="btn btn-neutral float-left" title="IntersectionObserver.relativeToViewport" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="wx.getLogManager.html" class="btn btn-neutral float-left" title="wx.getLogManager" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

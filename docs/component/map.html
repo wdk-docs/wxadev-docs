@@ -109,8 +109,9 @@
 <li class="toctree-l1"><a class="reference internal" href="../devtools/index.html">开发工具</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../reference/index.html">参考资料</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../wxcloud/index.html">云开发</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../wxwork/index.html">企业微信兼容</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../wxwork/index.html">企业微信</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../glossary.html">术语</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst.html">定义</a></li>
 </ul>
 
             
@@ -178,39 +179,211 @@
            <div itemprop="articleBody">
             
   <div class="section" id="map">
-<span id="id1"></span><h1>map<a class="headerlink" href="#map" title="永久链接至标题">¶</a></h1>
+<span id="id1"></span><h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/component/map.html">map</a><a class="headerlink" href="#map" title="永久链接至标题">¶</a></h1>
 <div class="versionadded">
-<p><span class="versionmodified added">1.0.0 新版功能: </span>开始支持，低版本需做兼容处理。</p>
+<p><span class="versionmodified added">1.0.0 新版功能: </span>低版本需做 <a class="reference internal" href="../framework/compatibility.html#compatibility"><span class="std std-ref">兼容处理</span></a> 。</p>
 </div>
-<p>地图。相关api wx.createMapContext。 个性化地图能力可在小程序后台“设置-开发者工具-腾讯位置服务”申请开通。设置subkey后，小程序内的地图组件均会使用该底图效果。详见《小程序个性地图使用指南》 组件属性的长度单位默认为px，2.4.0起支持传入单位(rpx/px)。</p>
-<p>属性      类型      默认值     必填      说明      最低版本
-longitude       number          是       中心经度    1.0.0
-latitude        number          是       中心纬度    1.0.0
-scale   number  16      否       缩放级别，取值范围为5-18  1.0.0
-markers Array.&lt;marker&gt;          否       标记点     1.0.0
-covers  Array.&lt;cover&gt;           否       即将移除，请使用 markers        1.0.0
-polyline        Array.&lt;polyline&gt;                否       路线      1.0.0
-circles Array.&lt;circle&gt;          否       圆       1.0.0
-controls        Array.&lt;control&gt;         否       控件（即将废弃，建议使用 cover-view 代替）     1.0.0
-include-points  Array.&lt;point&gt;           否       缩放视野以包含所有给定的坐标点 1.0.0
-show-location   boolean false   否       显示带有方向的当前定位点    1.0.0
-polygons        Array.&lt;polygon&gt;         否       多边形     2.3.0
-subkey  string          否       个性化地图使用的key，仅初始化地图时有效   2.3.0
-enable-3D       boolean false   否       展示3D楼块(工具暂不支持）  2.3.0
-show-compass    boolean false   否       显示指南针   2.3.0
-enable-overlooking      boolean false   否       开启俯视    2.3.0
-enable-zoom     boolean true    否       是否支持缩放  2.3.0
-enable-scroll   boolean true    否       是否支持拖动  2.3.0
-enable-rotate   boolean false   否       是否支持旋转  2.3.0
-bindtap eventhandle             否       点击地图时触发 1.0.0
-bindmarkertap   eventhandle             否       点击标记点时触发，会返回marker的id   1.0.0
-bindcontroltap  eventhandle             否       点击控件时触发，会返回control的id   1.0.0
-bindcallouttap  eventhandle             否       点击标记点对应的气泡时触发，会返回marker的id      1.2.0
-bindupdated     eventhandle             否       在地图渲染更新完成时触发    1.6.0
-bindregionchange        eventhandle             否       视野发生变化时触发       2.3.0
-bindpoitap      eventhandle             否       点击地图poi点时触发     2.3.0
-marker
-标记点用于在地图上显示标记的位置</p>
+<p>地图。相关api <a class="reference internal" href="../api/wx.createMapContext.html#wx.createMapContext" title="wx.createMapContext"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.createMapContext()</span></code></a> 。</p>
+<p>个性化地图能力可在小程序后台“设置-开发者工具-腾讯位置服务”申请开通。
+设置subkey后，小程序内的地图组件均会使用该底图效果。详见《小程序个性地图使用指南》
+组件属性的长度单位默认为px，2.4.0起支持传入单位(rpx/px)。</p>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 19%" />
+<col style="width: 17%" />
+<col style="width: 7%" />
+<col style="width: 6%" />
+<col style="width: 43%" />
+<col style="width: 9%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>属性</p></th>
+<th class="head"><p>类型</p></th>
+<th class="head"><p>默认值</p></th>
+<th class="head"><p>必填</p></th>
+<th class="head"><p>说明</p></th>
+<th class="head"><p>最低版本</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>longitude</p></td>
+<td><p>number</p></td>
+<td></td>
+<td><p>是</p></td>
+<td><p>中心经度</p></td>
+<td><p>1.0.0</p></td>
+</tr>
+<tr class="row-odd"><td><p>latitude</p></td>
+<td><p>number</p></td>
+<td></td>
+<td><p>是</p></td>
+<td><p>中心纬度</p></td>
+<td><p>1.0.0</p></td>
+</tr>
+<tr class="row-even"><td><p>scale</p></td>
+<td><p>number</p></td>
+<td><p>16</p></td>
+<td><p>否</p></td>
+<td><p>缩放级别，取值范围为5-18</p></td>
+<td><p>1.0.0</p></td>
+</tr>
+<tr class="row-odd"><td><p>markers</p></td>
+<td><p>Array.&lt;marker&gt;</p></td>
+<td></td>
+<td><p>否</p></td>
+<td><p>标记点</p></td>
+<td><p>1.0.0</p></td>
+</tr>
+<tr class="row-even"><td><p>covers</p></td>
+<td><p>Array.&lt;cover&gt;</p></td>
+<td></td>
+<td><p>否</p></td>
+<td><p>即将移除，请使用 markers</p></td>
+<td><p>1.0.0</p></td>
+</tr>
+<tr class="row-odd"><td><p>polyline</p></td>
+<td><p>Array.&lt;polyline&gt;</p></td>
+<td></td>
+<td><p>否</p></td>
+<td><p>路线</p></td>
+<td><p>1.0.0</p></td>
+</tr>
+<tr class="row-even"><td><p>circles</p></td>
+<td><p>Array.&lt;circle&gt;</p></td>
+<td></td>
+<td><p>否</p></td>
+<td><p>圆</p></td>
+<td><p>1.0.0</p></td>
+</tr>
+<tr class="row-odd"><td><p>controls</p></td>
+<td><p>Array.&lt;control&gt;</p></td>
+<td></td>
+<td><p>否</p></td>
+<td><p>控件（即将废弃，建议使用 cover-view 代替）</p></td>
+<td><p>1.0.0</p></td>
+</tr>
+<tr class="row-even"><td><p>include-points</p></td>
+<td><p>Array.&lt;point&gt;</p></td>
+<td></td>
+<td><p>否</p></td>
+<td><p>缩放视野以包含所有给定的坐标点</p></td>
+<td><p>1.0.0</p></td>
+</tr>
+<tr class="row-odd"><td><p>show-location</p></td>
+<td><p>boolean</p></td>
+<td><p>false</p></td>
+<td><p>否</p></td>
+<td><p>显示带有方向的当前定位点</p></td>
+<td><p>1.0.0</p></td>
+</tr>
+<tr class="row-even"><td><p>polygons</p></td>
+<td><p>Array.&lt;polygon&gt;</p></td>
+<td></td>
+<td><p>否</p></td>
+<td><p>多边形</p></td>
+<td><p>2.3.0</p></td>
+</tr>
+<tr class="row-odd"><td><p>subkey</p></td>
+<td><p>string</p></td>
+<td></td>
+<td><p>否</p></td>
+<td><p>个性化地图使用的key，仅初始化地图时有效</p></td>
+<td><p>2.3.0</p></td>
+</tr>
+<tr class="row-even"><td><p>enable-3D</p></td>
+<td><p>boolean</p></td>
+<td><p>false</p></td>
+<td><p>否</p></td>
+<td><p>展示3D楼块(工具暂不支持）</p></td>
+<td><p>2.3.0</p></td>
+</tr>
+<tr class="row-odd"><td><p>show-compass</p></td>
+<td><p>boolean</p></td>
+<td><p>false</p></td>
+<td><p>否</p></td>
+<td><p>显示指南针</p></td>
+<td><p>2.3.0</p></td>
+</tr>
+<tr class="row-even"><td><p>enable-overlooking</p></td>
+<td><p>boolean</p></td>
+<td><p>false</p></td>
+<td><p>否</p></td>
+<td><p>开启俯视</p></td>
+<td><p>2.3.0</p></td>
+</tr>
+<tr class="row-odd"><td><p>enable-zoom</p></td>
+<td><p>boolean</p></td>
+<td><p>true</p></td>
+<td><p>否</p></td>
+<td><p>是否支持缩放</p></td>
+<td><p>2.3.0</p></td>
+</tr>
+<tr class="row-even"><td><p>enable-scroll</p></td>
+<td><p>boolean</p></td>
+<td><p>true</p></td>
+<td><p>否</p></td>
+<td><p>是否支持拖动</p></td>
+<td><p>2.3.0</p></td>
+</tr>
+<tr class="row-odd"><td><p>enable-rotate</p></td>
+<td><p>boolean</p></td>
+<td><p>false</p></td>
+<td><p>否</p></td>
+<td><p>是否支持旋转</p></td>
+<td><p>2.3.0</p></td>
+</tr>
+<tr class="row-even"><td><p>bindtap</p></td>
+<td><p>eventhandle</p></td>
+<td></td>
+<td><p>否</p></td>
+<td><p>点击地图时触发</p></td>
+<td><p>1.0.0</p></td>
+</tr>
+<tr class="row-odd"><td><p>bindmarkertap</p></td>
+<td><p>eventhandle</p></td>
+<td></td>
+<td><p>否</p></td>
+<td><p>点击标记点时触发，会返回marker的id</p></td>
+<td><p>1.0.0</p></td>
+</tr>
+<tr class="row-even"><td><p>bindcontroltap</p></td>
+<td><p>eventhandle</p></td>
+<td></td>
+<td><p>否</p></td>
+<td><p>点击控件时触发，会返回control的id</p></td>
+<td><p>1.0.0</p></td>
+</tr>
+<tr class="row-odd"><td><p>bindcallouttap</p></td>
+<td><p>eventhandle</p></td>
+<td></td>
+<td><p>否</p></td>
+<td><p>点击标记点对应的气泡时触发，会返回marker的id</p></td>
+<td><p>1.2.0</p></td>
+</tr>
+<tr class="row-even"><td><p>bindupdated</p></td>
+<td><p>eventhandle</p></td>
+<td></td>
+<td><p>否</p></td>
+<td><p>在地图渲染更新完成时触发</p></td>
+<td><p>1.6.0</p></td>
+</tr>
+<tr class="row-odd"><td><p>bindregionchange</p></td>
+<td><p>eventhandle</p></td>
+<td></td>
+<td><p>否</p></td>
+<td><p>视野发生变化时触发</p></td>
+<td><p>2.3.0</p></td>
+</tr>
+<tr class="row-even"><td><p>bindpoitap</p></td>
+<td><p>eventhandle</p></td>
+<td></td>
+<td><p>否</p></td>
+<td><p>点击地图poi点时触发</p></td>
+<td><p>2.3.0</p></td>
+</tr>
+</tbody>
+</table>
+<p>marker 标记点用于在地图上显示标记的位置</p>
 <p>属性      说明      类型      必填      备注      最低版本
 id      标记点 id  number  否       marker 点击事件回调会返回此 id。建议为每个 marker 设置上 number 类型 id，保证更新 marker 时有更好的性能。
 latitude        纬度      number  是       浮点数，范围 -90 ~ 90
@@ -225,9 +398,9 @@ height  标注图标高度  number/string   否       默认为图片实际高�
 callout 自定义标记点上方的气泡窗口   Object  否       支持的属性见下表，可识别换行符。        1.2.0
 label   为标记点旁边增加标签      Object  否       支持的属性见下表，可识别换行符。        1.2.0
 anchor  经纬度在标注图标的锚点，默认底边中点      Object  否       {x, y}，x 表示横向(0-1)，y 表示竖向(0-1)。{x: .5, y: 1} 表示底边中点     1.2.0
-aria-label      无障碍访问，（属性）元素的额外描述       string  否               2.5.0
-marker 上的气泡 callout
-属性      说明      类型      最低版本
+aria-label      无障碍访问，（属性）元素的额外描述       string  否               2.5.0</p>
+<p>marker 上的气泡 callout</p>
+<p>属性      说明      类型      最低版本
 content 文本      string  1.2.0
 color   文本颜色    string  1.2.0
 fontSize        文字大小    number  1.2.0
@@ -237,9 +410,9 @@ borderColor     边框颜色    string  2.3.0
 bgColor 背景色     string  1.2.0
 padding 文本边缘留白  number  1.2.0
 display ‘BYCLICK’:点击显示; ‘ALWAYS’:常显     string  1.2.0
-textAlign       文本对齐方式。有效值: left, right, center string  1.6.0
-marker 上的气泡 label
-属性      说明      类型      最低版本
+textAlign       文本对齐方式。有效值: left, right, center string  1.6.0</p>
+<p>marker 上的气泡 label</p>
+<p>属性      说明      类型      最低版本
 content 文本      string  1.2.0
 color   文本颜色    string  1.2.0
 fontSize        文字大小    number  1.2.0
@@ -252,9 +425,8 @@ borderColor     边框颜色    string  1.6.0
 borderRadius    边框圆角    number  1.6.0
 bgColor 背景色     string  1.6.0
 padding 文本边缘留白  number  1.6.0
-textAlign       文本对齐方式。有效值: left, right, center string  1.6.0
-polyline
-指定一系列坐标点，从数组第一项连线至最后一项</p>
+textAlign       文本对齐方式。有效值: left, right, center string  1.6.0</p>
+<p>polyline 指定一系列坐标点，从数组第一项连线至最后一项</p>
 <p>属性      说明      类型      必填      备注      最低版本
 points  经纬度数组   array   是       [{latitude: 0, longitude: 0}]
 color   线的颜色    string  否       十六进制
@@ -263,42 +435,38 @@ dottedLine      是否虚线    boolean 否       默认 false
 arrowLine       带箭头的线   boolean 否       默认 false，开发者工具暂不支持该属性   1.2.0
 arrowIconPath   更换箭头图标  string  否       在 arrowLine 为 true 时生效  1.6.0
 borderColor     线的边框颜色  string  否               1.2.0
-borderWidth     线的厚度    number  否               1.2.0
-polygon
-指定一系列坐标点，根据 points 坐标数据生成闭合多边形</p>
+borderWidth     线的厚度    number  否               1.2.0</p>
+<p>polygon 指定一系列坐标点，根据 points 坐标数据生成闭合多边形</p>
 <p>属性      说明      类型      必填      备注      最低版本
 points  经纬度数组   array   是       [{latitude: 0, longitude: 0}]   2.3.0
 strokeWidth     描边的宽度   number  否               2.3.0
 strokeColor     描边的颜色   string  否       十六进制    2.3.0
 fillColor       填充颜色    string  否       十六进制
-zIndex  设置多边形Z轴数值       number  否               2.3.0
-circle
-在地图上显示圆</p>
+zIndex  设置多边形Z轴数值       number  否               2.3.0</p>
+<p>circle 在地图上显示圆</p>
 <p>属性      说明      类型      必填      备注
 latitude        纬度      number  是       浮点数，范围 -90 ~ 90
 longitude       经度      number  是       浮点数，范围 -180 ~ 180
 color   描边的颜色   string  否       十六进制
 fillColor       填充颜色    string  否       十六进制
 radius  半径      number  是
-strokeWidth     描边的宽度   number  否
-control
-在地图上显示控件，控件不随着地图移动。即将废弃，请使用 cover-view</p>
+strokeWidth     描边的宽度   number  否</p>
+<p>control 在地图上显示控件，控件不随着地图移动。即将废弃，请使用 cover-view</p>
 <p>属性      说明      类型      必填      备注
 id      控件id    number  否       在控件点击事件回调会返回此id
 position        控件在地图的位置        object  是       控件相对地图位置
 iconPath        显示的图标   string  是       项目目录下的图片路径，支持相对路径写法，以’/’开头则表示相对小程序根目录；也支持临时路径
-clickable       是否可点击   boolean 否       默认不可点击
-position
-属性      说明      类型      必填      备注
+clickable       是否可点击   boolean 否       默认不可点击</p>
+<p>position</p>
+<p>属性      说明      类型      必填      备注
 left    距离地图的左边界多远      number  否       默认为0
 top     距离地图的上边界多远      number  否       默认为0
 width   控件宽度    number  否       默认为图片宽度
-height  控件高度    number  否       默认为图片高度
-bindregionchange 返回值
-属性      说明      类型      备注
+height  控件高度    number  否       默认为图片高度</p>
+<p>bindregionchange 返回值</p>
+<p>属性      说明      类型      备注
 type    视野变化开始、结束时触发    string  视野变化开始为begin，结束为end
-causedBy        导致视野变化的原因       string  拖动地图导致(drag)、缩放导致(scale)、调用接口导致(update)
-Bug &amp; Tip</p>
+causedBy        导致视野变化的原因       string  拖动地图导致(drag)、缩放导致(scale)、调用接口导致(update)</p>
 <div class="admonition tip">
 <p class="admonition-title">小技巧</p>
 <p>个性化地图暂不支持工具中调试。请先使用微信客户端进行测试。</p>
@@ -319,8 +487,8 @@ Bug &amp; Tip</p>
 <p class="admonition-title">小技巧</p>
 <p>请注意原生组件使用限制。</p>
 </div>
-<p>示例代码
-在开发者工具中预览效果</p>
+<p>示例代码</p>
+<p>在开发者工具中预览效果</p>
 <div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="c">&lt;!-- map.wxml --&gt;</span>
 <span class="p">&lt;</span><span class="nt">map</span>
   <span class="na">id</span><span class="o">=</span><span class="s">&quot;map&quot;</span>
@@ -336,51 +504,53 @@ Bug &amp; Tip</p>
   <span class="na">show-location</span>
   <span class="na">style</span><span class="o">=</span><span class="s">&quot;width: 100%; height: 300px;&quot;</span>
 <span class="p">&gt;&lt;/</span><span class="nt">map</span><span class="p">&gt;</span>
-// map.js
-Page({
-  data: {
-    markers: [{
-      iconPath: &#39;/resources/others.png&#39;,
-      id: 0,
-      latitude: 23.099994,
-      longitude: 113.324520,
-      width: 50,
-      height: 50
-    }],
-    polyline: [{
-      points: [{
-        longitude: 113.3245211,
-        latitude: 23.10229
-      }, {
-        longitude: 113.324520,
-        latitude: 23.21229
-      }],
-      color: &#39;#FF0000DD&#39;,
-      width: 2,
-      dottedLine: true
-    }],
-    controls: [{
-      id: 1,
-      iconPath: &#39;/resources/location.png&#39;,
-      position: {
-        left: 0,
-        top: 300 - 50,
-        width: 50,
-        height: 50
-      },
-      clickable: true
-    }]
-  },
-  regionchange(e) {
-    console.log(e.type)
-  },
-  markertap(e) {
-    console.log(e.markerId)
-  },
-  controltap(e) {
-    console.log(e.controlId)
-  }
-})
+</pre></div>
+</div>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="c1">// map.js</span>
+<span class="nx">Page</span><span class="p">({</span>
+  <span class="nx">data</span><span class="o">:</span> <span class="p">{</span>
+    <span class="nx">markers</span><span class="o">:</span> <span class="p">[{</span>
+      <span class="nx">iconPath</span><span class="o">:</span> <span class="s1">&#39;/resources/others.png&#39;</span><span class="p">,</span>
+      <span class="nx">id</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+      <span class="nx">latitude</span><span class="o">:</span> <span class="mf">23.099994</span><span class="p">,</span>
+      <span class="nx">longitude</span><span class="o">:</span> <span class="mf">113.324520</span><span class="p">,</span>
+      <span class="nx">width</span><span class="o">:</span> <span class="mi">50</span><span class="p">,</span>
+      <span class="nx">height</span><span class="o">:</span> <span class="mi">50</span>
+    <span class="p">}],</span>
+    <span class="nx">polyline</span><span class="o">:</span> <span class="p">[{</span>
+      <span class="nx">points</span><span class="o">:</span> <span class="p">[{</span>
+        <span class="nx">longitude</span><span class="o">:</span> <span class="mf">113.3245211</span><span class="p">,</span>
+        <span class="nx">latitude</span><span class="o">:</span> <span class="mf">23.10229</span>
+      <span class="p">},</span> <span class="p">{</span>
+        <span class="nx">longitude</span><span class="o">:</span> <span class="mf">113.324520</span><span class="p">,</span>
+        <span class="nx">latitude</span><span class="o">:</span> <span class="mf">23.21229</span>
+      <span class="p">}],</span>
+      <span class="nx">color</span><span class="o">:</span> <span class="s1">&#39;#FF0000DD&#39;</span><span class="p">,</span>
+      <span class="nx">width</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
+      <span class="nx">dottedLine</span><span class="o">:</span> <span class="kc">true</span>
+    <span class="p">}],</span>
+    <span class="nx">controls</span><span class="o">:</span> <span class="p">[{</span>
+      <span class="nx">id</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+      <span class="nx">iconPath</span><span class="o">:</span> <span class="s1">&#39;/resources/location.png&#39;</span><span class="p">,</span>
+      <span class="nx">position</span><span class="o">:</span> <span class="p">{</span>
+        <span class="nx">left</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="nx">top</span><span class="o">:</span> <span class="mi">300</span> <span class="o">-</span> <span class="mi">50</span><span class="p">,</span>
+        <span class="nx">width</span><span class="o">:</span> <span class="mi">50</span><span class="p">,</span>
+        <span class="nx">height</span><span class="o">:</span> <span class="mi">50</span>
+      <span class="p">},</span>
+      <span class="nx">clickable</span><span class="o">:</span> <span class="kc">true</span>
+    <span class="p">}]</span>
+  <span class="p">},</span>
+  <span class="nx">regionchange</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">e</span><span class="p">.</span><span class="nx">type</span><span class="p">)</span>
+  <span class="p">},</span>
+  <span class="nx">markertap</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">e</span><span class="p">.</span><span class="nx">markerId</span><span class="p">)</span>
+  <span class="p">},</span>
+  <span class="nx">controltap</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">e</span><span class="p">.</span><span class="nx">controlId</span><span class="p">)</span>
+  <span class="p">}</span>
+<span class="p">})</span>
 </pre></div>
 </div>
 </div>

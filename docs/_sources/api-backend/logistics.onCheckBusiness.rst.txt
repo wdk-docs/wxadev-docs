@@ -1,2 +1,2 @@
-:wxapi:`logistics.onCheckBusiness`
-===============
+:wxbpi:`logistics.onCheckBusiness`
+============================================================

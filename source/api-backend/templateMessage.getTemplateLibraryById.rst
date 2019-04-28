@@ -1,2 +1,2 @@
-:wxapi:`templateMessage.getTemplateLibraryById`
-===============
+:wxbpi:`templateMessage.getTemplateLibraryById`
+============================================================

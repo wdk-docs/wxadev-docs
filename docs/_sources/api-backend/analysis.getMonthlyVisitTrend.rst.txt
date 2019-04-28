@@ -1,2 +1,2 @@
-:wxapi:`analysis.getMonthlyVisitTrend`
-===============
+:wxbpi:`analysis.getMonthlyVisitTrend`
+===================================================

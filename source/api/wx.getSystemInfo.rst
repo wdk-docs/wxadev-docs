@@ -3,7 +3,7 @@
 
 .. function:: wx.getSystemInfo({[success][,fail][,complete]})
 
-  :lable: 获取系统信息
+  :lable: 获取系统信息 同步版本 :func:`wx.getSystemInfoSync`
 
   :param function success({...}): 接口调用成功的回调函数
 

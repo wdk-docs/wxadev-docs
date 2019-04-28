@@ -1,2 +1,2 @@
-:wxapi:`analysis.getUserPortrait`
-===============
+:wxbpi:`analysis.getUserPortrait`
+===================================================

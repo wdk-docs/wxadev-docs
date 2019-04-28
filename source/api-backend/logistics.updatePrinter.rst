@@ -1,2 +1,2 @@
-:wxapi:`logistics.updatePrinter`
-===============
+:wxbpi:`logistics.updatePrinter`
+============================================================

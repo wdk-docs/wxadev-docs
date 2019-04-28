@@ -37,7 +37,7 @@
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜索" href="../search.html" />
     <link rel="next" title="auth.code2Session" href="auth.code2Session.html" />
-    <link rel="prev" title="console" href="../api/console.html" /> 
+    <link rel="prev" title="IntersectionObserver.relativeToViewport" href="../api/IntersectionObserver.relativeToViewport.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -132,7 +132,7 @@
 <li class="toctree-l3"><a class="reference internal" href="templateMessage.addTemplate.html">templateMessage.addTemplate</a></li>
 <li class="toctree-l3"><a class="reference internal" href="templateMessage.deleteTemplate.html">templateMessage.deleteTemplate</a></li>
 <li class="toctree-l3"><a class="reference internal" href="templateMessage.getTemplateLibraryById.html">templateMessage.getTemplateLibraryById</a></li>
-<li class="toctree-l3"><a class="reference internal" href="templateMessage.getTemplateLibraryList.html">rst:wxapi:<cite>templateMessage.getTemplateLibraryList</cite></a></li>
+<li class="toctree-l3"><a class="reference internal" href="templateMessage.getTemplateLibraryList.html">rst:wxbpi:<cite>templateMessage.getTemplateLibraryList</cite></a></li>
 <li class="toctree-l3"><a class="reference internal" href="templateMessage.getTemplateList.html">templateMessage.getTemplateList</a></li>
 <li class="toctree-l3"><a class="reference internal" href="templateMessage.send.html">templateMessage.send</a></li>
 </ul>
@@ -184,18 +184,22 @@
 <li class="toctree-l4"><a class="reference internal" href="logistics.updatePath.html">logistics.updatePath</a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="#id17">小程序使用</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="logistics.addOrder.html">logistics.addOrder</a></li>
+<li class="toctree-l4"><a class="reference internal" href="logistics.cancelOrder.html">logistics.cancelOrder</a></li>
+<li class="toctree-l4"><a class="reference internal" href="logistics.getAllDelivery.html">logistics.getAllDelivery</a></li>
+<li class="toctree-l4"><a class="reference internal" href="logistics.getOrder.html">logistics.getOrder</a></li>
+<li class="toctree-l4"><a class="reference internal" href="logistics.getPath.html">logistics.getPath</a></li>
+<li class="toctree-l4"><a class="reference internal" href="logistics.getPrinter.html">logistics.getPrinter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="logistics.getQuota.html">logistics.getQuota</a></li>
+<li class="toctree-l4"><a class="reference internal" href="logistics.onPathUpdate.html">logistics.onPathUpdate</a></li>
+<li class="toctree-l4"><a class="reference internal" href="logistics.updatePrinter.html">logistics.updatePrinter</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#id17">小程序使用</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="logistics.addOrder.html">logistics.addOrder</a></li>
-<li class="toctree-l3"><a class="reference internal" href="logistics.cancelOrder.html">logistics.cancelOrder</a></li>
-<li class="toctree-l3"><a class="reference internal" href="logistics.getAllDelivery.html">logistics.getAllDelivery</a></li>
-<li class="toctree-l3"><a class="reference internal" href="logistics.getOrder.html">logistics.getOrder</a></li>
-<li class="toctree-l3"><a class="reference internal" href="logistics.getPath.html">logistics.getPath</a></li>
-<li class="toctree-l3"><a class="reference internal" href="logistics.getPrinter.html">logistics.getPrinter</a></li>
-<li class="toctree-l3"><a class="reference internal" href="logistics.getQuota.html">logistics.getQuota</a></li>
-<li class="toctree-l3"><a class="reference internal" href="logistics.onPathUpdate.html">logistics.onPathUpdate</a></li>
-<li class="toctree-l3"><a class="reference internal" href="logistics.updatePrinter.html">logistics.updatePrinter</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id18">生物认证</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="soter.verifySignature.html">soter.verifySignature</a></li>
 </ul>
 </li>
 </ul>
@@ -205,6 +209,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../wxcloud/index.html">云开发</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../wxwork/index.html">企业微信</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../glossary.html">术语</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst.html">定义</a></li>
 </ul>
 
             
@@ -270,7 +275,7 @@
            <div itemprop="articleBody">
             
   <div class="section" id="api">
-<h1>服务端API<a class="headerlink" href="#api" title="永久链接至标题">¶</a></h1>
+<span id="api-backend"></span><h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/api-backend/index.html">服务端API</a><a class="headerlink" href="#api" title="永久链接至标题">¶</a></h1>
 <div class="section" id="id1">
 <h2>登录<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h2>
 <table class="docutils align-center">
@@ -290,17 +295,14 @@
 </tbody>
 </table>
 <div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="auth.code2Session.html">auth.code2Session</a></li>
-</ul>
 </div>
 </div>
 <div class="section" id="id2">
 <h2>用户信息<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
 <table class="docutils align-center">
 <colgroup>
-<col style="width: 27%" />
-<col style="width: 73%" />
+<col style="width: 33%" />
+<col style="width: 67%" />
 </colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>名称</p></th>
@@ -308,15 +310,12 @@
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p>auth.getPaidUnionId</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="auth.getPaidUnionId.html#auth-getpaidunionid"><span class="std std-ref">auth.getPaidUnionId</span></a></p></td>
 <td><p>云调用用户支付完成后，获取该用户的 UnionId，无需用户授权</p></td>
 </tr>
 </tbody>
 </table>
 <div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="auth.getPaidUnionId.html">auth.getPaidUnionId</a></li>
-</ul>
 </div>
 </div>
 <div class="section" id="id3">
@@ -338,9 +337,6 @@
 </tbody>
 </table>
 <div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="auth.getAccessToken.html">auth.getAccessToken</a></li>
-</ul>
 </div>
 </div>
 <div class="section" id="id4">
@@ -372,11 +368,6 @@
 </tbody>
 </table>
 <div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="analysis.getDailyRetain.html">analysis.getDailyRetain</a></li>
-<li class="toctree-l1"><a class="reference internal" href="analysis.getMonthlyRetain.html">analysis.getMonthlyRetain</a></li>
-<li class="toctree-l1"><a class="reference internal" href="analysis.getWeeklyRetain.html">analysis.getWeeklyRetain</a></li>
-</ul>
 </div>
 </div>
 <div class="section" id="id6">
@@ -416,15 +407,6 @@
 </tbody>
 </table>
 <div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="analysis.getDailyVisitTrend.html">analysis.getDailyVisitTrend</a></li>
-<li class="toctree-l1"><a class="reference internal" href="analysis.getMonthlyVisitTrend.html">analysis.getMonthlyVisitTrend</a></li>
-<li class="toctree-l1"><a class="reference internal" href="analysis.getWeeklyVisitTrend.html">analysis.getWeeklyVisitTrend</a></li>
-<li class="toctree-l1"><a class="reference internal" href="analysis.getUserPortrait.html">analysis.getUserPortrait</a></li>
-<li class="toctree-l1"><a class="reference internal" href="analysis.getVisitDistribution.html">analysis.getVisitDistribution</a></li>
-<li class="toctree-l1"><a class="reference internal" href="analysis.getVisitPage.html">analysis.getVisitPage</a></li>
-<li class="toctree-l1"><a class="reference internal" href="analysis.getDailySummary.html">analysis.getDailySummary</a></li>
-</ul>
 </div>
 </div>
 </div>
@@ -456,12 +438,6 @@
 </tbody>
 </table>
 <div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="customerServiceMessage.getTempMedia.html">customerServiceMessage.getTempMedia</a></li>
-<li class="toctree-l1"><a class="reference internal" href="customerServiceMessage.send.html">customerServiceMessage.send</a></li>
-<li class="toctree-l1"><a class="reference internal" href="customerServiceMessage.setTyping.html">customerServiceMessage.setTyping</a></li>
-<li class="toctree-l1"><a class="reference internal" href="customerServiceMessage.uploadTempMedia.html">customerServiceMessage.uploadTempMedia</a></li>
-</ul>
 </div>
 </div>
 <div class="section" id="id8">
@@ -498,14 +474,6 @@
 </tbody>
 </table>
 <div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="templateMessage.addTemplate.html">templateMessage.addTemplate</a></li>
-<li class="toctree-l1"><a class="reference internal" href="templateMessage.deleteTemplate.html">templateMessage.deleteTemplate</a></li>
-<li class="toctree-l1"><a class="reference internal" href="templateMessage.getTemplateLibraryById.html">templateMessage.getTemplateLibraryById</a></li>
-<li class="toctree-l1"><a class="reference internal" href="templateMessage.getTemplateLibraryList.html">rst:wxapi:<cite>templateMessage.getTemplateLibraryList</cite></a></li>
-<li class="toctree-l1"><a class="reference internal" href="templateMessage.getTemplateList.html">templateMessage.getTemplateList</a></li>
-<li class="toctree-l1"><a class="reference internal" href="templateMessage.send.html">templateMessage.send</a></li>
-</ul>
 </div>
 </div>
 <div class="section" id="id9">
@@ -527,9 +495,6 @@
 </tbody>
 </table>
 <div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="uniformMessage.send.html">下发统一服务消息 uniformMessage.send</a></li>
-</ul>
 </div>
 </div>
 <div class="section" id="id10">
@@ -554,10 +519,6 @@
 </tbody>
 </table>
 <div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="updatableMessage.createActivityId.html">updatableMessage.createActivityId</a></li>
-<li class="toctree-l1"><a class="reference internal" href="updatableMessage.setUpdatableMsg.html">updatableMessage.setUpdatableMsg</a></li>
-</ul>
 </div>
 </div>
 <div class="section" id="id11">
@@ -591,13 +552,6 @@
 </tbody>
 </table>
 <div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="pluginManager.applyPlugin.html">pluginManager.applyPlugin</a></li>
-<li class="toctree-l1"><a class="reference internal" href="pluginManager.getPluginDevApplyList.html">pluginManager.getPluginDevApplyList</a></li>
-<li class="toctree-l1"><a class="reference internal" href="pluginManager.getPluginList.html">pluginManager.getPluginList</a></li>
-<li class="toctree-l1"><a class="reference internal" href="pluginManager.setDevPluginApplyStatus.html">pluginManager.setDevPluginApplyStatus</a></li>
-<li class="toctree-l1"><a class="reference internal" href="pluginManager.unbindPlugin.html">pluginManager.unbindPlugin</a></li>
-</ul>
 </div>
 </div>
 <div class="section" id="id12">
@@ -628,12 +582,6 @@
 </tbody>
 </table>
 <div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="nearbyPoi.add.html">nearbyPoi.add</a></li>
-<li class="toctree-l1"><a class="reference internal" href="nearbyPoi.delete.html">nearbyPoi.delete</a></li>
-<li class="toctree-l1"><a class="reference internal" href="nearbyPoi.getList.html">nearbyPoi.getList</a></li>
-<li class="toctree-l1"><a class="reference internal" href="nearbyPoi.setShowStatus.html">nearbyPoi.setShowStatus</a></li>
-</ul>
 </div>
 </div>
 <div class="section" id="id13">
@@ -661,11 +609,6 @@
 </tbody>
 </table>
 <div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="wxacode.createQRCode.html">wxacode.createQRCode</a></li>
-<li class="toctree-l1"><a class="reference internal" href="wxacode.get.html">wxacode.get</a></li>
-<li class="toctree-l1"><a class="reference internal" href="wxacode.getUnlimited.html">wxacode.getUnlimited</a></li>
-</ul>
 </div>
 </div>
 <div class="section" id="id14">
@@ -690,10 +633,6 @@
 </tbody>
 </table>
 <div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="security.imgSecCheck.html">security.imgSecCheck</a></li>
-<li class="toctree-l1"><a class="reference internal" href="security.msgSecCheck.html">security.msgSecCheck</a></li>
-</ul>
 </div>
 </div>
 <div class="section" id="id15">
@@ -738,21 +677,10 @@
 </tbody>
 </table>
 <div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="logistics.onGetQuota.html">logistics.onGetQuota</a></li>
-<li class="toctree-l1"><a class="reference internal" href="logistics.getContact.html">logistics.getContact</a></li>
-<li class="toctree-l1"><a class="reference internal" href="logistics.onAddOrder.html">logistics.onAddOrder</a></li>
-<li class="toctree-l1"><a class="reference internal" href="logistics.onCancelOrder.html">logistics.onCancelOrder</a></li>
-<li class="toctree-l1"><a class="reference internal" href="logistics.onCheckBusiness.html">logistics.onCheckBusiness</a></li>
-<li class="toctree-l1"><a class="reference internal" href="logistics.previewTemplate.html">logistics.previewTemplate</a></li>
-<li class="toctree-l1"><a class="reference internal" href="logistics.updateBusiness.html">logistics.updateBusiness</a></li>
-<li class="toctree-l1"><a class="reference internal" href="logistics.updatePath.html">logistics.updatePath</a></li>
-</ul>
-</div>
 </div>
 </div>
 <div class="section" id="id17">
-<h2>小程序使用<a class="headerlink" href="#id17" title="永久链接至标题">¶</a></h2>
+<h3>小程序使用<a class="headerlink" href="#id17" title="永久链接至标题">¶</a></h3>
 <table class="docutils align-center">
 <colgroup>
 <col style="width: 46%" />
@@ -794,17 +722,28 @@
 </tbody>
 </table>
 <div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="logistics.addOrder.html">logistics.addOrder</a></li>
-<li class="toctree-l1"><a class="reference internal" href="logistics.cancelOrder.html">logistics.cancelOrder</a></li>
-<li class="toctree-l1"><a class="reference internal" href="logistics.getAllDelivery.html">logistics.getAllDelivery</a></li>
-<li class="toctree-l1"><a class="reference internal" href="logistics.getOrder.html">logistics.getOrder</a></li>
-<li class="toctree-l1"><a class="reference internal" href="logistics.getPath.html">logistics.getPath</a></li>
-<li class="toctree-l1"><a class="reference internal" href="logistics.getPrinter.html">logistics.getPrinter</a></li>
-<li class="toctree-l1"><a class="reference internal" href="logistics.getQuota.html">logistics.getQuota</a></li>
-<li class="toctree-l1"><a class="reference internal" href="logistics.onPathUpdate.html">logistics.onPathUpdate</a></li>
-<li class="toctree-l1"><a class="reference internal" href="logistics.updatePrinter.html">logistics.updatePrinter</a></li>
-</ul>
+</div>
+</div>
+</div>
+<div class="section" id="id18">
+<h2>生物认证<a class="headerlink" href="#id18" title="永久链接至标题">¶</a></h2>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 40%" />
+<col style="width: 60%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>名称</p></th>
+<th class="head"><p>功能说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>soter.verifySignature</p></td>
+<td><p>云调用 SOTER 生物认证秘钥签名验证</p></td>
+</tr>
+</tbody>
+</table>
+<div class="toctree-wrapper compound">
 </div>
 </div>
 </div>
@@ -820,7 +759,7 @@
         <a href="auth.code2Session.html" class="btn btn-neutral float-right" title="auth.code2Session" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="../api/console.html" class="btn btn-neutral float-left" title="console" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="../api/IntersectionObserver.relativeToViewport.html" class="btn btn-neutral float-left" title="IntersectionObserver.relativeToViewport" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

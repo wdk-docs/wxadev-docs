@@ -1,14 +1,14 @@
-wx.getSystemInfo
-====================================================================
+:wxwork:`wx.getSystemInfo <dev-doc/qywx-api/foundation/wxgetsysteminfo>`
+=============================================================================
 
-.. function:: wx.getSystemInfo({[success][, fail][, complete]})
+.. function:: wxwork wx.getSystemInfo({[success][, fail][, complete]})
 
   小程序可以在微信和企业微信中调用此接口，但是在企业微信中调用此接口时，
   会额外返回一个 environment 字段（微信中不返回），
   如此字段值为 wxwork，则表示当前小程序运行在企业微信环境中。
 
   :label: 获取系统信息
-  :param function success:	接口调用成功的回调函数
+  :param function success(res):	接口调用成功的回调函数
 
     - **brand**	string	设备品牌
     - **model**	string	设备型号

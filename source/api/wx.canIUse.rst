@@ -4,7 +4,7 @@
 
 .. function:: wx.canIUse(schema)
 
-   .. versionadded: 基础库1.1.1开始支持，低版本需做兼容处理。
+   .. versionadded: 基础库1.1.1开始支持，低版本需做 :ref:`compatibility` 。
 
    :label: 判断小程序的API，回调，参数，组件等是否在当前版本可用
 

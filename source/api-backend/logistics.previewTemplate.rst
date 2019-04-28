@@ -1,2 +1,2 @@
-:wxapi:`logistics.previewTemplate`
-===============
+:wxbpi:`logistics.previewTemplate`
+============================================================

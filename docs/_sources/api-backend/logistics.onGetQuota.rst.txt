@@ -1,2 +1,2 @@
-:wxapi:`logistics.onGetQuota`
-===============
+:wxbpi:`logistics.onGetQuota`
+============================================================

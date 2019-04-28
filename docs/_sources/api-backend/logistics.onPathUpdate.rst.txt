@@ -1,2 +1,2 @@
-:wxapi:`logistics.onPathUpdate`
-===============
+:wxbpi:`logistics.onPathUpdate`
+============================================================

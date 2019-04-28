@@ -1,2 +1,2 @@
-:wxapi:`logistics.updateBusiness`
-===============
+:wxbpi:`logistics.updateBusiness`
+============================================================

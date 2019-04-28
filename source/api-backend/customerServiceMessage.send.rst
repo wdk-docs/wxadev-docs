@@ -1,2 +1,2 @@
-:wxapi:`customerServiceMessage.send`
-===============
+:wxbpi:`customerServiceMessage.send`
+===================================================

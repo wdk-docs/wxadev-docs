@@ -122,8 +122,9 @@
 <li class="toctree-l1"><a class="reference internal" href="../devtools/index.html">开发工具</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../reference/index.html">参考资料</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../wxcloud/index.html">云开发</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../wxwork/index.html">企业微信兼容</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../wxwork/index.html">企业微信</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../glossary.html">术语</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst.html">定义</a></li>
 </ul>
 
             
@@ -191,159 +192,191 @@
            <div itemprop="articleBody">
             
   <div class="section" id="label">
-<span id="id1"></span><h1>label<a class="headerlink" href="#label" title="永久链接至标题">¶</a></h1>
+<span id="id1"></span><h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/component/label.html">label</a><a class="headerlink" href="#label" title="永久链接至标题">¶</a></h1>
 <div class="versionadded">
-<p><span class="versionmodified added">1.0.0 新版功能: </span>开始支持，低版本需做兼容处理。</p>
+<p><span class="versionmodified added">1.0.0 新版功能: </span>开始支持，低版本需做 <a class="reference internal" href="../framework/compatibility.html#compatibility"><span class="std std-ref">兼容处理</span></a> 。</p>
 </div>
 <p>用来改进表单组件的可用性。</p>
-<p>使用for属性找到对应的id，或者将控件放在该标签下，当点击时，就会触发对应的控件。 for优先级高于内部控件，内部有多个控件的时候默认触发第一个控件。 目前可以绑定的控件有：button, checkbox, radio, switch。</p>
-<p>属性      类型      默认值     必填      说明      最低版本
-for     string          否       绑定控件的 id        1.0.0
-示例代码
-在开发者工具中预览效果</p>
-<div class="highlight-html notranslate"><div class="highlight"><pre><span></span>&lt;view class=&quot;section section_gap&quot;&gt;
-  &lt;view class=&quot;section__title&quot;&gt;表单组件在label内&lt;/view&gt;
-  &lt;checkbox-group class=&quot;group&quot; bindchange=&quot;checkboxChange&quot;&gt;
-    &lt;view class=&quot;label-1&quot; wx:for=&quot;{{checkboxItems}}&quot;&gt;
-      &lt;label&gt;
-        &lt;checkbox
-          hidden
-          value=&quot;{{item.name}}&quot;
-          checked=&quot;{{item.checked}}&quot;
-        &gt;&lt;/checkbox&gt;
-        &lt;view class=&quot;label-1__icon&quot;&gt;
-          &lt;view
-            class=&quot;label-1__icon-checked&quot;
-            style=&quot;opacity:{{item.checked ? 1: 0}}&quot;
-          &gt;&lt;/view&gt;
-        &lt;/view&gt;
-        &lt;text class=&quot;label-1__text&quot;&gt;{{item.value}}&lt;/text&gt;
-      &lt;/label&gt;
-    &lt;/view&gt;
-  &lt;/checkbox-group&gt;
-&lt;/view&gt;
+<p>使用for属性找到对应的id，或者将控件放在该标签下，当点击时，就会触发对应的控件。
+for优先级高于内部控件，内部有多个控件的时候默认触发第一个控件。
+目前可以绑定的控件有：button, checkbox, radio, switch。</p>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 12%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 24%" />
+<col style="width: 12%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>属性</p></th>
+<th class="head"><p>类型</p></th>
+<th class="head"><p>默认值</p></th>
+<th class="head"><p>必填</p></th>
+<th class="head"><p>说明</p></th>
+<th class="head"><p>最低版本</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>for</p></td>
+<td><p>string</p></td>
+<td><p>否</p></td>
+<td><p>绑定控件的</p></td>
+<td><p>id</p></td>
+<td><p>1.0.0</p></td>
+</tr>
+</tbody>
+</table>
+<p>示例代码</p>
+<p>在开发者工具中预览效果</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">view</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;section section_gap&quot;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">view</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;section__title&quot;</span><span class="p">&gt;</span>表单组件在label内<span class="p">&lt;/</span><span class="nt">view</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">checkbox-group</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;group&quot;</span> <span class="na">bindchange</span><span class="o">=</span><span class="s">&quot;checkboxChange&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">view</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;label-1&quot;</span> <span class="na">wx:for</span><span class="o">=</span><span class="s">&quot;{{checkboxItems}}&quot;</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">label</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">checkbox</span>
+          <span class="na">hidden</span>
+          <span class="na">value</span><span class="o">=</span><span class="s">&quot;{{item.name}}&quot;</span>
+          <span class="na">checked</span><span class="o">=</span><span class="s">&quot;{{item.checked}}&quot;</span>
+        <span class="p">&gt;&lt;/</span><span class="nt">checkbox</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">view</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;label-1__icon&quot;</span><span class="p">&gt;</span>
+          <span class="p">&lt;</span><span class="nt">view</span>
+            <span class="na">class</span><span class="o">=</span><span class="s">&quot;label-1__icon-checked&quot;</span>
+            <span class="na">style</span><span class="o">=</span><span class="s">&quot;opacity:{{item.checked ? 1: 0}}&quot;</span>
+          <span class="p">&gt;&lt;/</span><span class="nt">view</span><span class="p">&gt;</span>
+        <span class="p">&lt;/</span><span class="nt">view</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">text</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;label-1__text&quot;</span><span class="p">&gt;</span>{{item.value}}<span class="p">&lt;/</span><span class="nt">text</span><span class="p">&gt;</span>
+      <span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">view</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">checkbox-group</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">view</span><span class="p">&gt;</span>
 
-&lt;view class=&quot;section section_gap&quot;&gt;
-  &lt;view class=&quot;section__title&quot;&gt;label用for标识表单组件&lt;/view&gt;
-  &lt;radio-group class=&quot;group&quot; bindchange=&quot;radioChange&quot;&gt;
-    &lt;view class=&quot;label-2&quot; wx:for=&quot;{{radioItems}}&quot;&gt;
-      &lt;radio
-        id=&quot;{{item.name}}&quot;
-        hidden
-        value=&quot;{{item.name}}&quot;
-        checked=&quot;{{item.checked}}&quot;
-      &gt;&lt;/radio&gt;
-      &lt;view class=&quot;label-2__icon&quot;&gt;
-        &lt;view
-          class=&quot;label-2__icon-checked&quot;
-          style=&quot;opacity:{{item.checked ? 1: 0}}&quot;
-        &gt;&lt;/view&gt;
-      &lt;/view&gt;
-      &lt;label class=&quot;label-2__text&quot; for=&quot;{{item.name}}&quot;&gt;
-        &lt;text&gt;{{item.name}}&lt;/text&gt;
-      &lt;/label&gt;
-    &lt;/view&gt;
-  &lt;/radio-group&gt;
-&lt;/view&gt;
-Page({
-  data: {
-    checkboxItems: [
-      {name: &#39;USA&#39;, value: &#39;美国&#39;},
-      {name: &#39;CHN&#39;, value: &#39;中国&#39;, checked: &#39;true&#39;},
-      {name: &#39;BRA&#39;, value: &#39;巴西&#39;},
-      {name: &#39;JPN&#39;, value: &#39;日本&#39;, checked: &#39;true&#39;},
-      {name: &#39;ENG&#39;, value: &#39;英国&#39;},
-      {name: &#39;TUR&#39;, value: &#39;法国&#39;},
-    ],
-    radioItems: [
-      {name: &#39;USA&#39;, value: &#39;美国&#39;},
-      {name: &#39;CHN&#39;, value: &#39;中国&#39;, checked: &#39;true&#39;},
-      {name: &#39;BRA&#39;, value: &#39;巴西&#39;},
-      {name: &#39;JPN&#39;, value: &#39;日本&#39;},
-      {name: &#39;ENG&#39;, value: &#39;英国&#39;},
-      {name: &#39;TUR&#39;, value: &#39;法国&#39;},
-    ],
-    hidden: false
-  },
-  checkboxChange(e) {
-    const checked = e.detail.value
-    const changed = {}
-    for (let i = 0; i &lt; this.data.checkboxItems.length; i++) {
-      if (checked.indexOf(this.data.checkboxItems[i].name) !== -1) {
-        changed[&#39;checkboxItems[&#39; + i + &#39;].checked&#39;] = true
-      } else {
-        changed[&#39;checkboxItems[&#39; + i + &#39;].checked&#39;] = false
-      }
-    }
-    this.setData(changed)
-  },
-  radioChange(e) {
-    const checked = e.detail.value
-    const changed = {}
-    for (let i = 0; i &lt; this.data.radioItems.length; i++) {
-      if (checked.indexOf(this.data.radioItems[i].name) !== -1) {
-        changed[&#39;radioItems[&#39; + i + &#39;].checked&#39;] = true
-      } else {
-        changed[&#39;radioItems[&#39; + i + &#39;].checked&#39;] = false
-      }
-    }
-    this.setData(changed)
-  }
-})
-.label-1,
-.label-2 {
-  margin-bottom: 15px;
-}
-.label-1__text,
-.label-2__text {
-  display: inline-block;
-  vertical-align: middle;
-}
+<span class="p">&lt;</span><span class="nt">view</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;section section_gap&quot;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">view</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;section__title&quot;</span><span class="p">&gt;</span>label用for标识表单组件<span class="p">&lt;/</span><span class="nt">view</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">radio-group</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;group&quot;</span> <span class="na">bindchange</span><span class="o">=</span><span class="s">&quot;radioChange&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">view</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;label-2&quot;</span> <span class="na">wx:for</span><span class="o">=</span><span class="s">&quot;{{radioItems}}&quot;</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">radio</span>
+        <span class="na">id</span><span class="o">=</span><span class="s">&quot;{{item.name}}&quot;</span>
+        <span class="na">hidden</span>
+        <span class="na">value</span><span class="o">=</span><span class="s">&quot;{{item.name}}&quot;</span>
+        <span class="na">checked</span><span class="o">=</span><span class="s">&quot;{{item.checked}}&quot;</span>
+      <span class="p">&gt;&lt;/</span><span class="nt">radio</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">view</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;label-2__icon&quot;</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">view</span>
+          <span class="na">class</span><span class="o">=</span><span class="s">&quot;label-2__icon-checked&quot;</span>
+          <span class="na">style</span><span class="o">=</span><span class="s">&quot;opacity:{{item.checked ? 1: 0}}&quot;</span>
+        <span class="p">&gt;&lt;/</span><span class="nt">view</span><span class="p">&gt;</span>
+      <span class="p">&lt;/</span><span class="nt">view</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">label</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;label-2__text&quot;</span> <span class="na">for</span><span class="o">=</span><span class="s">&quot;{{item.name}}&quot;</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">text</span><span class="p">&gt;</span>{{item.name}}<span class="p">&lt;/</span><span class="nt">text</span><span class="p">&gt;</span>
+      <span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">view</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">radio-group</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">view</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="nx">Page</span><span class="p">({</span>
+  <span class="nx">data</span><span class="o">:</span> <span class="p">{</span>
+    <span class="nx">checkboxItems</span><span class="o">:</span> <span class="p">[</span>
+      <span class="p">{</span><span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;USA&#39;</span><span class="p">,</span> <span class="nx">value</span><span class="o">:</span> <span class="s1">&#39;美国&#39;</span><span class="p">},</span>
+      <span class="p">{</span><span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;CHN&#39;</span><span class="p">,</span> <span class="nx">value</span><span class="o">:</span> <span class="s1">&#39;中国&#39;</span><span class="p">,</span> <span class="nx">checked</span><span class="o">:</span> <span class="s1">&#39;true&#39;</span><span class="p">},</span>
+      <span class="p">{</span><span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;BRA&#39;</span><span class="p">,</span> <span class="nx">value</span><span class="o">:</span> <span class="s1">&#39;巴西&#39;</span><span class="p">},</span>
+      <span class="p">{</span><span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;JPN&#39;</span><span class="p">,</span> <span class="nx">value</span><span class="o">:</span> <span class="s1">&#39;日本&#39;</span><span class="p">,</span> <span class="nx">checked</span><span class="o">:</span> <span class="s1">&#39;true&#39;</span><span class="p">},</span>
+      <span class="p">{</span><span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;ENG&#39;</span><span class="p">,</span> <span class="nx">value</span><span class="o">:</span> <span class="s1">&#39;英国&#39;</span><span class="p">},</span>
+      <span class="p">{</span><span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;TUR&#39;</span><span class="p">,</span> <span class="nx">value</span><span class="o">:</span> <span class="s1">&#39;法国&#39;</span><span class="p">},</span>
+    <span class="p">],</span>
+    <span class="nx">radioItems</span><span class="o">:</span> <span class="p">[</span>
+      <span class="p">{</span><span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;USA&#39;</span><span class="p">,</span> <span class="nx">value</span><span class="o">:</span> <span class="s1">&#39;美国&#39;</span><span class="p">},</span>
+      <span class="p">{</span><span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;CHN&#39;</span><span class="p">,</span> <span class="nx">value</span><span class="o">:</span> <span class="s1">&#39;中国&#39;</span><span class="p">,</span> <span class="nx">checked</span><span class="o">:</span> <span class="s1">&#39;true&#39;</span><span class="p">},</span>
+      <span class="p">{</span><span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;BRA&#39;</span><span class="p">,</span> <span class="nx">value</span><span class="o">:</span> <span class="s1">&#39;巴西&#39;</span><span class="p">},</span>
+      <span class="p">{</span><span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;JPN&#39;</span><span class="p">,</span> <span class="nx">value</span><span class="o">:</span> <span class="s1">&#39;日本&#39;</span><span class="p">},</span>
+      <span class="p">{</span><span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;ENG&#39;</span><span class="p">,</span> <span class="nx">value</span><span class="o">:</span> <span class="s1">&#39;英国&#39;</span><span class="p">},</span>
+      <span class="p">{</span><span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;TUR&#39;</span><span class="p">,</span> <span class="nx">value</span><span class="o">:</span> <span class="s1">&#39;法国&#39;</span><span class="p">},</span>
+    <span class="p">],</span>
+    <span class="nx">hidden</span><span class="o">:</span> <span class="kc">false</span>
+  <span class="p">},</span>
+  <span class="nx">checkboxChange</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kr">const</span> <span class="nx">checked</span> <span class="o">=</span> <span class="nx">e</span><span class="p">.</span><span class="nx">detail</span><span class="p">.</span><span class="nx">value</span>
+    <span class="kr">const</span> <span class="nx">changed</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="k">this</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">checkboxItems</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">if</span> <span class="p">(</span><span class="nx">checked</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">checkboxItems</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">name</span><span class="p">)</span> <span class="o">!==</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">changed</span><span class="p">[</span><span class="s1">&#39;checkboxItems[&#39;</span> <span class="o">+</span> <span class="nx">i</span> <span class="o">+</span> <span class="s1">&#39;].checked&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">true</span>
+      <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+        <span class="nx">changed</span><span class="p">[</span><span class="s1">&#39;checkboxItems[&#39;</span> <span class="o">+</span> <span class="nx">i</span> <span class="o">+</span> <span class="s1">&#39;].checked&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">false</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">setData</span><span class="p">(</span><span class="nx">changed</span><span class="p">)</span>
+  <span class="p">},</span>
+  <span class="nx">radioChange</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kr">const</span> <span class="nx">checked</span> <span class="o">=</span> <span class="nx">e</span><span class="p">.</span><span class="nx">detail</span><span class="p">.</span><span class="nx">value</span>
+    <span class="kr">const</span> <span class="nx">changed</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="k">this</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">radioItems</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">if</span> <span class="p">(</span><span class="nx">checked</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">radioItems</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">name</span><span class="p">)</span> <span class="o">!==</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">changed</span><span class="p">[</span><span class="s1">&#39;radioItems[&#39;</span> <span class="o">+</span> <span class="nx">i</span> <span class="o">+</span> <span class="s1">&#39;].checked&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">true</span>
+      <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+        <span class="nx">changed</span><span class="p">[</span><span class="s1">&#39;radioItems[&#39;</span> <span class="o">+</span> <span class="nx">i</span> <span class="o">+</span> <span class="s1">&#39;].checked&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">false</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">setData</span><span class="p">(</span><span class="nx">changed</span><span class="p">)</span>
+  <span class="p">}</span>
+<span class="p">})</span>
+</pre></div>
+</div>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="p">.</span><span class="nc">label-1</span><span class="o">,</span>
+<span class="p">.</span><span class="nc">label-2</span> <span class="p">{</span>
+  <span class="k">margin-bottom</span><span class="p">:</span> <span class="mi">15</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="p">.</span><span class="nc">label-1__text</span><span class="o">,</span>
+<span class="p">.</span><span class="nc">label-2__text</span> <span class="p">{</span>
+  <span class="k">display</span><span class="p">:</span> <span class="kc">inline-block</span><span class="p">;</span>
+  <span class="k">vertical-align</span><span class="p">:</span> <span class="kc">middle</span><span class="p">;</span>
+<span class="p">}</span>
 
-.label-1__icon {
-  position: relative;
-  margin-right: 10px;
-  display: inline-block;
-  vertical-align: middle;
-  width: 18px;
-  height: 18px;
-  background: #fcfff4;
-}
+<span class="p">.</span><span class="nc">label-1__icon</span> <span class="p">{</span>
+  <span class="k">position</span><span class="p">:</span> <span class="kc">relative</span><span class="p">;</span>
+  <span class="k">margin-right</span><span class="p">:</span> <span class="mi">10</span><span class="kt">px</span><span class="p">;</span>
+  <span class="k">display</span><span class="p">:</span> <span class="kc">inline-block</span><span class="p">;</span>
+  <span class="k">vertical-align</span><span class="p">:</span> <span class="kc">middle</span><span class="p">;</span>
+  <span class="k">width</span><span class="p">:</span> <span class="mi">18</span><span class="kt">px</span><span class="p">;</span>
+  <span class="k">height</span><span class="p">:</span> <span class="mi">18</span><span class="kt">px</span><span class="p">;</span>
+  <span class="k">background</span><span class="p">:</span> <span class="mh">#fcfff4</span><span class="p">;</span>
+<span class="p">}</span>
 
-.label-1__icon-checked {
-  position: absolute;
-  top: 3px;
-  left: 3px;
-  width: 12px;
-  height: 12px;
-  background: #1aad19;
-}
+<span class="p">.</span><span class="nc">label-1__icon-checked</span> <span class="p">{</span>
+  <span class="k">position</span><span class="p">:</span> <span class="kc">absolute</span><span class="p">;</span>
+  <span class="k">top</span><span class="p">:</span> <span class="mi">3</span><span class="kt">px</span><span class="p">;</span>
+  <span class="k">left</span><span class="p">:</span> <span class="mi">3</span><span class="kt">px</span><span class="p">;</span>
+  <span class="k">width</span><span class="p">:</span> <span class="mi">12</span><span class="kt">px</span><span class="p">;</span>
+  <span class="k">height</span><span class="p">:</span> <span class="mi">12</span><span class="kt">px</span><span class="p">;</span>
+  <span class="k">background</span><span class="p">:</span> <span class="mh">#1aad19</span><span class="p">;</span>
+<span class="p">}</span>
 
-.label-2__icon {
-  position: relative;
-  display: inline-block;
-  vertical-align: middle;
-  margin-right: 10px;
-  width: 18px;
-  height: 18px;
-  background: #fcfff4;
-  border-radius: 50px;
-}
+<span class="p">.</span><span class="nc">label-2__icon</span> <span class="p">{</span>
+  <span class="k">position</span><span class="p">:</span> <span class="kc">relative</span><span class="p">;</span>
+  <span class="k">display</span><span class="p">:</span> <span class="kc">inline-block</span><span class="p">;</span>
+  <span class="k">vertical-align</span><span class="p">:</span> <span class="kc">middle</span><span class="p">;</span>
+  <span class="k">margin-right</span><span class="p">:</span> <span class="mi">10</span><span class="kt">px</span><span class="p">;</span>
+  <span class="k">width</span><span class="p">:</span> <span class="mi">18</span><span class="kt">px</span><span class="p">;</span>
+  <span class="k">height</span><span class="p">:</span> <span class="mi">18</span><span class="kt">px</span><span class="p">;</span>
+  <span class="k">background</span><span class="p">:</span> <span class="mh">#fcfff4</span><span class="p">;</span>
+  <span class="k">border-radius</span><span class="p">:</span> <span class="mi">50</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
 
-.label-2__icon-checked {
-  position: absolute;
-  left: 3px;
-  top: 3px;
-  width: 12px;
-  height: 12px;
-  background: #1aad19;
-  border-radius: 50%;
-}
+<span class="p">.</span><span class="nc">label-2__icon-checked</span> <span class="p">{</span>
+  <span class="k">position</span><span class="p">:</span> <span class="kc">absolute</span><span class="p">;</span>
+  <span class="k">left</span><span class="p">:</span> <span class="mi">3</span><span class="kt">px</span><span class="p">;</span>
+  <span class="k">top</span><span class="p">:</span> <span class="mi">3</span><span class="kt">px</span><span class="p">;</span>
+  <span class="k">width</span><span class="p">:</span> <span class="mi">12</span><span class="kt">px</span><span class="p">;</span>
+  <span class="k">height</span><span class="p">:</span> <span class="mi">12</span><span class="kt">px</span><span class="p">;</span>
+  <span class="k">background</span><span class="p">:</span> <span class="mh">#1aad19</span><span class="p">;</span>
+  <span class="k">border-radius</span><span class="p">:</span> <span class="mi">50</span><span class="kt">%</span><span class="p">;</span>
+<span class="p">}</span>
 
-.label-4_text {
-  text-align: center;
-  margin-top: 15px;
-}
+<span class="p">.</span><span class="nc">label-4_text</span> <span class="p">{</span>
+  <span class="k">text-align</span><span class="p">:</span> <span class="kc">center</span><span class="p">;</span>
+  <span class="k">margin-top</span><span class="p">:</span> <span class="mi">15</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
 </pre></div>
 </div>
 </div>

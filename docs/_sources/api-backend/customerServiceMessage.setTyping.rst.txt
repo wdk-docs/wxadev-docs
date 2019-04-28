@@ -1,2 +1,2 @@
-:wxapi:`customerServiceMessage.setTyping`
-===============
+:wxbpi:`customerServiceMessage.setTyping`
+===================================================

@@ -3,7 +3,7 @@
 
 .. function:: wx.setInnerAudioOption({[mixWithOther][,obeyMuteSwitch][,success][,fail][,complete]})
 
-  .. versionadded:: 2.3.0 低版本需做兼容处理。
+  .. versionadded:: 2.3.0 低版本需做 :ref:`compatibility` 。
 
   :label: 设置 :class:`InnerAudioContext` 的播放选项。设置之后对当前小程序全局生效。
 

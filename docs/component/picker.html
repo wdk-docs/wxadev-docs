@@ -122,8 +122,9 @@
 <li class="toctree-l1"><a class="reference internal" href="../devtools/index.html">开发工具</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../reference/index.html">参考资料</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../wxcloud/index.html">云开发</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../wxwork/index.html">企业微信兼容</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../wxwork/index.html">企业微信</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../glossary.html">术语</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst.html">定义</a></li>
 </ul>
 
             
@@ -191,54 +192,147 @@
            <div itemprop="articleBody">
             
   <div class="section" id="picker">
-<span id="id1"></span><h1>picker<a class="headerlink" href="#picker" title="永久链接至标题">¶</a></h1>
+<span id="id1"></span><h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/component/picker.html">picker</a><a class="headerlink" href="#picker" title="永久链接至标题">¶</a></h1>
 <div class="versionadded">
-<p><span class="versionmodified added">1.0.0 新版功能: </span>开始支持，低版本需做兼容处理。</p>
+<p><span class="versionmodified added">1.0.0 新版功能: </span>开始支持，低版本需做 <a class="reference internal" href="../framework/compatibility.html#compatibility"><span class="std std-ref">兼容处理</span></a> 。</p>
 </div>
 <p>从底部弹起的滚动选择器。</p>
-<p>属性      类型      默认值     必填      说明      最低版本
-mode    string  selector        否       选择器类型   1.0.0
-disabled        boolean false   否       是否禁用    1.0.0
-bindcancel      eventhandle             否       取消选择时触发 1.9.90
-mode 的合法值</p>
-<p>值       说明      最低版本
-selector        普通选择器
-multiSelector   多列选择器
-time    时间选择器
-date    日期选择器
-region  省市区选择器
-除了上述通用的属性，对于不同的mode，picker拥有不同的属性。</p>
-<p>普通选择器：mode = selector
-属性名     类型      默认值     说明      最低版本
-range   array/object array      []      mode 为 selector 或 multiSelector 时，range 有效
-range-key       string          当 range 是一个 Object Array 时，通过 range-key 来指定 Object 中 key 的值作为选择器显示内容
-value   number  0       表示选择了 range 中的第几个（下标从 0 开始）
-bindchange      eventhandle             value 改变时触发 change 事件，event.detail = {value}
-时间选择器：mode = time
-属性名     类型      默认值     说明      最低版本
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 18%" />
+<col style="width: 19%" />
+<col style="width: 15%" />
+<col style="width: 9%" />
+<col style="width: 24%" />
+<col style="width: 15%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>属性</p></th>
+<th class="head"><p>类型</p></th>
+<th class="head"><p>默认值</p></th>
+<th class="head"><p>必填</p></th>
+<th class="head"><p>说明</p></th>
+<th class="head"><p>最低版本</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>mode</p></td>
+<td><p>string</p></td>
+<td><p>selector</p></td>
+<td><p>否</p></td>
+<td><p>选择器类型</p></td>
+<td><p>1.0.0</p></td>
+</tr>
+<tr class="row-odd"><td><p>disabled</p></td>
+<td><p>boolean</p></td>
+<td><p>false</p></td>
+<td><p>否</p></td>
+<td><p>是否禁用</p></td>
+<td><p>1.0.0</p></td>
+</tr>
+<tr class="row-even"><td><p>bindcancel</p></td>
+<td><p>eventhandle</p></td>
+<td></td>
+<td><p>否</p></td>
+<td><p>取消选择时触发</p></td>
+<td><p>1.9.90</p></td>
+</tr>
+</tbody>
+</table>
+<p>mode 的合法值</p>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 52%" />
+<col style="width: 48%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>值</p></th>
+<th class="head"><p>说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>selector</p></td>
+<td><p>普通选择器</p></td>
+</tr>
+<tr class="row-odd"><td><p>multiSelector</p></td>
+<td><p>多列选择器</p></td>
+</tr>
+<tr class="row-even"><td><p>time</p></td>
+<td><p>时间选择器</p></td>
+</tr>
+<tr class="row-odd"><td><p>date</p></td>
+<td><p>日期选择器</p></td>
+</tr>
+<tr class="row-even"><td><p>region</p></td>
+<td><p>省市区选择器</p></td>
+</tr>
+</tbody>
+</table>
+<p>除了上述通用的属性，对于不同的mode，picker拥有不同的属性。</p>
+<p>普通选择器：mode = selector</p>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 9%" />
+<col style="width: 11%" />
+<col style="width: 6%" />
+<col style="width: 73%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>属性名</p></th>
+<th class="head"><p>类型</p></th>
+<th class="head"><p>默认值</p></th>
+<th class="head"><p>说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>range</p></td>
+<td><p>array/object
+array</p></td>
+<td><p>[]</p></td>
+<td><p>mode 为 selector 或 multiSelector 时，range 有效</p></td>
+</tr>
+<tr class="row-odd"><td><p>range-key</p></td>
+<td><p>string</p></td>
+<td></td>
+<td><p>当 range 是一个 Object Array 时，通过 range-key 来指定 Object 中 key 的值作为选择器显示内容</p></td>
+</tr>
+<tr class="row-even"><td><p>value</p></td>
+<td><p>number</p></td>
+<td><p>0</p></td>
+<td><p>表示选择了 range 中的第几个（下标从 0 开始）</p></td>
+</tr>
+<tr class="row-odd"><td><p>bindchange</p></td>
+<td><p>eventhandle</p></td>
+<td></td>
+<td><p>value 改变时触发 change 事件，event.detail = {value}</p></td>
+</tr>
+</tbody>
+</table>
+<p>时间选择器：mode = time</p>
+<p>属性名     类型      默认值     说明      最低版本
 value   string          表示选中的时间，格式为”hh:mm”
 start   string          表示有效时间范围的开始，字符串格式为”hh:mm”
 end     string          表示有效时间范围的结束，字符串格式为”hh:mm”
-bindchange      eventhandle             value 改变时触发 change 事件，event.detail = {value}
-日期选择器：mode = date
-属性名     类型      默认值     说明      最低版本
+bindchange      eventhandle             value 改变时触发 change 事件，event.detail = {value}</p>
+<p>日期选择器：mode = date</p>
+<p>属性名     类型      默认值     说明      最低版本
 value   string  0       表示选中的日期，格式为”YYYY-MM-DD”
 start   string          表示有效日期范围的开始，字符串格式为”YYYY-MM-DD”
 end     string          表示有效日期范围的结束，字符串格式为”YYYY-MM-DD”
 fields  string  day     有效值 year,month,day，表示选择器的粒度
-bindchange      eventhandle             value 改变时触发 change 事件，event.detail = {value}
-fields 有效值：*</p>
+bindchange      eventhandle             value 改变时触发 change 事件，event.detail = {value}</p>
+<p>fields 有效值：*</p>
 <p>值       说明
 year    选择器粒度为年
 month   选择器粒度为月份
-day     选择器粒度为天
-省市区选择器：mode = region 1.4.0
-属性名     类型      默认值     说明      最低版本
+day     选择器粒度为天</p>
+<p>省市区选择器：mode = region 1.4.0</p>
+<p>属性名     类型      默认值     说明      最低版本
 value   array   []      表示选中的省市区，默认选中每一列的第一个值
 custom-item     string          可为每一列的顶部添加一个自定义的项       1.5.0
-bindchange      eventhandle             value 改变时触发 change 事件，event.detail = {value, code, postcode}，其中字段 code 是统计用区划代码，postcode 是邮政编码
-示例代码
-在开发者工具中预览效果</p>
+bindchange      eventhandle             value 改变时触发 change 事件，event.detail = {value, code, postcode}，其中字段 code 是统计用区划代码，postcode 是邮政编码</p>
+<p>示例代码</p>
+<p>在开发者工具中预览效果</p>
 <div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">view</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;section&quot;</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">view</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;section__title&quot;</span><span class="p">&gt;</span>普通选择器<span class="p">&lt;/</span><span class="nt">view</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">picker</span> <span class="na">bindchange</span><span class="o">=</span><span class="s">&quot;bindPickerChange&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;{{index}}&quot;</span> <span class="na">range</span><span class="o">=</span><span class="s">&quot;{{array}}&quot;</span><span class="p">&gt;</span>
@@ -303,171 +397,173 @@ bindchange      eventhandle             value 改变时触发 change 事件，ev
     <span class="p">&lt;/</span><span class="nt">view</span><span class="p">&gt;</span>
   <span class="p">&lt;/</span><span class="nt">picker</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">view</span><span class="p">&gt;</span>
-Page({
-  data: {
-    array: [&#39;美国&#39;, &#39;中国&#39;, &#39;巴西&#39;, &#39;日本&#39;],
-    objectArray: [
-      {
-        id: 0,
-        name: &#39;美国&#39;
-      },
-      {
-        id: 1,
-        name: &#39;中国&#39;
-      },
-      {
-        id: 2,
-        name: &#39;巴西&#39;
-      },
-      {
-        id: 3,
-        name: &#39;日本&#39;
-      }
-    ],
-    index: 0,
-    multiArray: [[&#39;无脊柱动物&#39;, &#39;脊柱动物&#39;], [&#39;扁性动物&#39;, &#39;线形动物&#39;, &#39;环节动物&#39;, &#39;软体动物&#39;, &#39;节肢动物&#39;], [&#39;猪肉绦虫&#39;, &#39;吸血虫&#39;]],
-    objectMultiArray: [
-      [
-        {
-          id: 0,
-          name: &#39;无脊柱动物&#39;
-        },
-        {
-          id: 1,
-          name: &#39;脊柱动物&#39;
-        }
-      ], [
-        {
-          id: 0,
-          name: &#39;扁性动物&#39;
-        },
-        {
-          id: 1,
-          name: &#39;线形动物&#39;
-        },
-        {
-          id: 2,
-          name: &#39;环节动物&#39;
-        },
-        {
-          id: 3,
-          name: &#39;软体动物&#39;
-        },
-        {
-          id: 3,
-          name: &#39;节肢动物&#39;
-        }
-      ], [
-        {
-          id: 0,
-          name: &#39;猪肉绦虫&#39;
-        },
-        {
-          id: 1,
-          name: &#39;吸血虫&#39;
-        }
-      ]
-    ],
-    multiIndex: [0, 0, 0],
-    date: &#39;2016-09-01&#39;,
-    time: &#39;12:01&#39;,
-    region: [&#39;广东省&#39;, &#39;广州市&#39;, &#39;海珠区&#39;],
-    customItem: &#39;全部&#39;
-  },
-  bindPickerChange(e) {
-    console.log(&#39;picker发送选择改变，携带值为&#39;, e.detail.value)
-    this.setData({
-      index: e.detail.value
-    })
-  },
-  bindMultiPickerChange(e) {
-    console.log(&#39;picker发送选择改变，携带值为&#39;, e.detail.value)
-    this.setData({
-      multiIndex: e.detail.value
-    })
-  },
-  bindMultiPickerColumnChange(e) {
-    console.log(&#39;修改的列为&#39;, e.detail.column, &#39;，值为&#39;, e.detail.value)
-    const data = {
-      multiArray: this.data.multiArray,
-      multiIndex: this.data.multiIndex
-    }
-    data.multiIndex[e.detail.column] = e.detail.value
-    switch (e.detail.column) {
-      case 0:
-        switch (data.multiIndex[0]) {
-          case 0:
-            data.multiArray[1] = [&#39;扁性动物&#39;, &#39;线形动物&#39;, &#39;环节动物&#39;, &#39;软体动物&#39;, &#39;节肢动物&#39;]
-            data.multiArray[2] = [&#39;猪肉绦虫&#39;, &#39;吸血虫&#39;]
-            break
-          case 1:
-            data.multiArray[1] = [&#39;鱼&#39;, &#39;两栖动物&#39;, &#39;爬行动物&#39;]
-            data.multiArray[2] = [&#39;鲫鱼&#39;, &#39;带鱼&#39;]
-            break
-        }
-        data.multiIndex[1] = 0
-        data.multiIndex[2] = 0
-        break
-      case 1:
-        switch (data.multiIndex[0]) {
-          case 0:
-            switch (data.multiIndex[1]) {
-              case 0:
-                data.multiArray[2] = [&#39;猪肉绦虫&#39;, &#39;吸血虫&#39;]
-                break
-              case 1:
-                data.multiArray[2] = [&#39;蛔虫&#39;]
-                break
-              case 2:
-                data.multiArray[2] = [&#39;蚂蚁&#39;, &#39;蚂蟥&#39;]
-                break
-              case 3:
-                data.multiArray[2] = [&#39;河蚌&#39;, &#39;蜗牛&#39;, &#39;蛞蝓&#39;]
-                break
-              case 4:
-                data.multiArray[2] = [&#39;昆虫&#39;, &#39;甲壳动物&#39;, &#39;蛛形动物&#39;, &#39;多足动物&#39;]
-                break
-            }
-            break
-          case 1:
-            switch (data.multiIndex[1]) {
-              case 0:
-                data.multiArray[2] = [&#39;鲫鱼&#39;, &#39;带鱼&#39;]
-                break
-              case 1:
-                data.multiArray[2] = [&#39;青蛙&#39;, &#39;娃娃鱼&#39;]
-                break
-              case 2:
-                data.multiArray[2] = [&#39;蜥蜴&#39;, &#39;龟&#39;, &#39;壁虎&#39;]
-                break
-            }
-            break
-        }
-        data.multiIndex[2] = 0
-        break
-    }
-    console.log(data.multiIndex)
-    this.setData(data)
-  },
-  bindDateChange(e) {
-    console.log(&#39;picker发送选择改变，携带值为&#39;, e.detail.value)
-    this.setData({
-      date: e.detail.value
-    })
-  },
-  bindTimeChange(e) {
-    console.log(&#39;picker发送选择改变，携带值为&#39;, e.detail.value)
-    this.setData({
-      time: e.detail.value
-    })
-  },
-  bindRegionChange(e) {
-    console.log(&#39;picker发送选择改变，携带值为&#39;, e.detail.value)
-    this.setData({
-      region: e.detail.value
-    })
-  }
-})
+</pre></div>
+</div>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="nx">Page</span><span class="p">({</span>
+  <span class="nx">data</span><span class="o">:</span> <span class="p">{</span>
+    <span class="nx">array</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;美国&#39;</span><span class="p">,</span> <span class="s1">&#39;中国&#39;</span><span class="p">,</span> <span class="s1">&#39;巴西&#39;</span><span class="p">,</span> <span class="s1">&#39;日本&#39;</span><span class="p">],</span>
+    <span class="nx">objectArray</span><span class="o">:</span> <span class="p">[</span>
+      <span class="p">{</span>
+        <span class="nx">id</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;美国&#39;</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+        <span class="nx">id</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;中国&#39;</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+        <span class="nx">id</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
+        <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;巴西&#39;</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+        <span class="nx">id</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>
+        <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;日本&#39;</span>
+      <span class="p">}</span>
+    <span class="p">],</span>
+    <span class="nx">index</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="nx">multiArray</span><span class="o">:</span> <span class="p">[[</span><span class="s1">&#39;无脊柱动物&#39;</span><span class="p">,</span> <span class="s1">&#39;脊柱动物&#39;</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;扁性动物&#39;</span><span class="p">,</span> <span class="s1">&#39;线形动物&#39;</span><span class="p">,</span> <span class="s1">&#39;环节动物&#39;</span><span class="p">,</span> <span class="s1">&#39;软体动物&#39;</span><span class="p">,</span> <span class="s1">&#39;节肢动物&#39;</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;猪肉绦虫&#39;</span><span class="p">,</span> <span class="s1">&#39;吸血虫&#39;</span><span class="p">]],</span>
+    <span class="nx">objectMultiArray</span><span class="o">:</span> <span class="p">[</span>
+      <span class="p">[</span>
+        <span class="p">{</span>
+          <span class="nx">id</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+          <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;无脊柱动物&#39;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nx">id</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+          <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;脊柱动物&#39;</span>
+        <span class="p">}</span>
+      <span class="p">],</span> <span class="p">[</span>
+        <span class="p">{</span>
+          <span class="nx">id</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+          <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;扁性动物&#39;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nx">id</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+          <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;线形动物&#39;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nx">id</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
+          <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;环节动物&#39;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nx">id</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>
+          <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;软体动物&#39;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nx">id</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>
+          <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;节肢动物&#39;</span>
+        <span class="p">}</span>
+      <span class="p">],</span> <span class="p">[</span>
+        <span class="p">{</span>
+          <span class="nx">id</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+          <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;猪肉绦虫&#39;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+          <span class="nx">id</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+          <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;吸血虫&#39;</span>
+        <span class="p">}</span>
+      <span class="p">]</span>
+    <span class="p">],</span>
+    <span class="nx">multiIndex</span><span class="o">:</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+    <span class="nx">date</span><span class="o">:</span> <span class="s1">&#39;2016-09-01&#39;</span><span class="p">,</span>
+    <span class="nx">time</span><span class="o">:</span> <span class="s1">&#39;12:01&#39;</span><span class="p">,</span>
+    <span class="nx">region</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;广东省&#39;</span><span class="p">,</span> <span class="s1">&#39;广州市&#39;</span><span class="p">,</span> <span class="s1">&#39;海珠区&#39;</span><span class="p">],</span>
+    <span class="nx">customItem</span><span class="o">:</span> <span class="s1">&#39;全部&#39;</span>
+  <span class="p">},</span>
+  <span class="nx">bindPickerChange</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;picker发送选择改变，携带值为&#39;</span><span class="p">,</span> <span class="nx">e</span><span class="p">.</span><span class="nx">detail</span><span class="p">.</span><span class="nx">value</span><span class="p">)</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">setData</span><span class="p">({</span>
+      <span class="nx">index</span><span class="o">:</span> <span class="nx">e</span><span class="p">.</span><span class="nx">detail</span><span class="p">.</span><span class="nx">value</span>
+    <span class="p">})</span>
+  <span class="p">},</span>
+  <span class="nx">bindMultiPickerChange</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;picker发送选择改变，携带值为&#39;</span><span class="p">,</span> <span class="nx">e</span><span class="p">.</span><span class="nx">detail</span><span class="p">.</span><span class="nx">value</span><span class="p">)</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">setData</span><span class="p">({</span>
+      <span class="nx">multiIndex</span><span class="o">:</span> <span class="nx">e</span><span class="p">.</span><span class="nx">detail</span><span class="p">.</span><span class="nx">value</span>
+    <span class="p">})</span>
+  <span class="p">},</span>
+  <span class="nx">bindMultiPickerColumnChange</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;修改的列为&#39;</span><span class="p">,</span> <span class="nx">e</span><span class="p">.</span><span class="nx">detail</span><span class="p">.</span><span class="nx">column</span><span class="p">,</span> <span class="s1">&#39;，值为&#39;</span><span class="p">,</span> <span class="nx">e</span><span class="p">.</span><span class="nx">detail</span><span class="p">.</span><span class="nx">value</span><span class="p">)</span>
+    <span class="kr">const</span> <span class="nx">data</span> <span class="o">=</span> <span class="p">{</span>
+      <span class="nx">multiArray</span><span class="o">:</span> <span class="k">this</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">multiArray</span><span class="p">,</span>
+      <span class="nx">multiIndex</span><span class="o">:</span> <span class="k">this</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">multiIndex</span>
+    <span class="p">}</span>
+    <span class="nx">data</span><span class="p">.</span><span class="nx">multiIndex</span><span class="p">[</span><span class="nx">e</span><span class="p">.</span><span class="nx">detail</span><span class="p">.</span><span class="nx">column</span><span class="p">]</span> <span class="o">=</span> <span class="nx">e</span><span class="p">.</span><span class="nx">detail</span><span class="p">.</span><span class="nx">value</span>
+    <span class="k">switch</span> <span class="p">(</span><span class="nx">e</span><span class="p">.</span><span class="nx">detail</span><span class="p">.</span><span class="nx">column</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">case</span> <span class="mi">0</span><span class="o">:</span>
+        <span class="k">switch</span> <span class="p">(</span><span class="nx">data</span><span class="p">.</span><span class="nx">multiIndex</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="p">{</span>
+          <span class="k">case</span> <span class="mi">0</span><span class="o">:</span>
+            <span class="nx">data</span><span class="p">.</span><span class="nx">multiArray</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;扁性动物&#39;</span><span class="p">,</span> <span class="s1">&#39;线形动物&#39;</span><span class="p">,</span> <span class="s1">&#39;环节动物&#39;</span><span class="p">,</span> <span class="s1">&#39;软体动物&#39;</span><span class="p">,</span> <span class="s1">&#39;节肢动物&#39;</span><span class="p">]</span>
+            <span class="nx">data</span><span class="p">.</span><span class="nx">multiArray</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;猪肉绦虫&#39;</span><span class="p">,</span> <span class="s1">&#39;吸血虫&#39;</span><span class="p">]</span>
+            <span class="k">break</span>
+          <span class="k">case</span> <span class="mi">1</span><span class="o">:</span>
+            <span class="nx">data</span><span class="p">.</span><span class="nx">multiArray</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;鱼&#39;</span><span class="p">,</span> <span class="s1">&#39;两栖动物&#39;</span><span class="p">,</span> <span class="s1">&#39;爬行动物&#39;</span><span class="p">]</span>
+            <span class="nx">data</span><span class="p">.</span><span class="nx">multiArray</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;鲫鱼&#39;</span><span class="p">,</span> <span class="s1">&#39;带鱼&#39;</span><span class="p">]</span>
+            <span class="k">break</span>
+        <span class="p">}</span>
+        <span class="nx">data</span><span class="p">.</span><span class="nx">multiIndex</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="nx">data</span><span class="p">.</span><span class="nx">multiIndex</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">break</span>
+      <span class="k">case</span> <span class="mi">1</span><span class="o">:</span>
+        <span class="k">switch</span> <span class="p">(</span><span class="nx">data</span><span class="p">.</span><span class="nx">multiIndex</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="p">{</span>
+          <span class="k">case</span> <span class="mi">0</span><span class="o">:</span>
+            <span class="k">switch</span> <span class="p">(</span><span class="nx">data</span><span class="p">.</span><span class="nx">multiIndex</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span> <span class="p">{</span>
+              <span class="k">case</span> <span class="mi">0</span><span class="o">:</span>
+                <span class="nx">data</span><span class="p">.</span><span class="nx">multiArray</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;猪肉绦虫&#39;</span><span class="p">,</span> <span class="s1">&#39;吸血虫&#39;</span><span class="p">]</span>
+                <span class="k">break</span>
+              <span class="k">case</span> <span class="mi">1</span><span class="o">:</span>
+                <span class="nx">data</span><span class="p">.</span><span class="nx">multiArray</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;蛔虫&#39;</span><span class="p">]</span>
+                <span class="k">break</span>
+              <span class="k">case</span> <span class="mi">2</span><span class="o">:</span>
+                <span class="nx">data</span><span class="p">.</span><span class="nx">multiArray</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;蚂蚁&#39;</span><span class="p">,</span> <span class="s1">&#39;蚂蟥&#39;</span><span class="p">]</span>
+                <span class="k">break</span>
+              <span class="k">case</span> <span class="mi">3</span><span class="o">:</span>
+                <span class="nx">data</span><span class="p">.</span><span class="nx">multiArray</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;河蚌&#39;</span><span class="p">,</span> <span class="s1">&#39;蜗牛&#39;</span><span class="p">,</span> <span class="s1">&#39;蛞蝓&#39;</span><span class="p">]</span>
+                <span class="k">break</span>
+              <span class="k">case</span> <span class="mi">4</span><span class="o">:</span>
+                <span class="nx">data</span><span class="p">.</span><span class="nx">multiArray</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;昆虫&#39;</span><span class="p">,</span> <span class="s1">&#39;甲壳动物&#39;</span><span class="p">,</span> <span class="s1">&#39;蛛形动物&#39;</span><span class="p">,</span> <span class="s1">&#39;多足动物&#39;</span><span class="p">]</span>
+                <span class="k">break</span>
+            <span class="p">}</span>
+            <span class="k">break</span>
+          <span class="k">case</span> <span class="mi">1</span><span class="o">:</span>
+            <span class="k">switch</span> <span class="p">(</span><span class="nx">data</span><span class="p">.</span><span class="nx">multiIndex</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span> <span class="p">{</span>
+              <span class="k">case</span> <span class="mi">0</span><span class="o">:</span>
+                <span class="nx">data</span><span class="p">.</span><span class="nx">multiArray</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;鲫鱼&#39;</span><span class="p">,</span> <span class="s1">&#39;带鱼&#39;</span><span class="p">]</span>
+                <span class="k">break</span>
+              <span class="k">case</span> <span class="mi">1</span><span class="o">:</span>
+                <span class="nx">data</span><span class="p">.</span><span class="nx">multiArray</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;青蛙&#39;</span><span class="p">,</span> <span class="s1">&#39;娃娃鱼&#39;</span><span class="p">]</span>
+                <span class="k">break</span>
+              <span class="k">case</span> <span class="mi">2</span><span class="o">:</span>
+                <span class="nx">data</span><span class="p">.</span><span class="nx">multiArray</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;蜥蜴&#39;</span><span class="p">,</span> <span class="s1">&#39;龟&#39;</span><span class="p">,</span> <span class="s1">&#39;壁虎&#39;</span><span class="p">]</span>
+                <span class="k">break</span>
+            <span class="p">}</span>
+            <span class="k">break</span>
+        <span class="p">}</span>
+        <span class="nx">data</span><span class="p">.</span><span class="nx">multiIndex</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">break</span>
+    <span class="p">}</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">data</span><span class="p">.</span><span class="nx">multiIndex</span><span class="p">)</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">setData</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span>
+  <span class="p">},</span>
+  <span class="nx">bindDateChange</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;picker发送选择改变，携带值为&#39;</span><span class="p">,</span> <span class="nx">e</span><span class="p">.</span><span class="nx">detail</span><span class="p">.</span><span class="nx">value</span><span class="p">)</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">setData</span><span class="p">({</span>
+      <span class="nx">date</span><span class="o">:</span> <span class="nx">e</span><span class="p">.</span><span class="nx">detail</span><span class="p">.</span><span class="nx">value</span>
+    <span class="p">})</span>
+  <span class="p">},</span>
+  <span class="nx">bindTimeChange</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;picker发送选择改变，携带值为&#39;</span><span class="p">,</span> <span class="nx">e</span><span class="p">.</span><span class="nx">detail</span><span class="p">.</span><span class="nx">value</span><span class="p">)</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">setData</span><span class="p">({</span>
+      <span class="nx">time</span><span class="o">:</span> <span class="nx">e</span><span class="p">.</span><span class="nx">detail</span><span class="p">.</span><span class="nx">value</span>
+    <span class="p">})</span>
+  <span class="p">},</span>
+  <span class="nx">bindRegionChange</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;picker发送选择改变，携带值为&#39;</span><span class="p">,</span> <span class="nx">e</span><span class="p">.</span><span class="nx">detail</span><span class="p">.</span><span class="nx">value</span><span class="p">)</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">setData</span><span class="p">({</span>
+      <span class="nx">region</span><span class="o">:</span> <span class="nx">e</span><span class="p">.</span><span class="nx">detail</span><span class="p">.</span><span class="nx">value</span>
+    <span class="p">})</span>
+  <span class="p">}</span>
+<span class="p">})</span>
 </pre></div>
 </div>
 </div>

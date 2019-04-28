@@ -1,2 +1,2 @@
-:wxapi:`logistics.getContact`
-===============
+:wxbpi:`logistics.getContact`
+============================================================

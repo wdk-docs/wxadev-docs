@@ -1,24 +1,29 @@
 .. _movable-area:
 
-movable-area
+:wx_comp:`movable-area`
 ===========================
 
-.. versionadded:: 1.2.0 开始支持，低版本需做兼容处理。
+.. versionadded:: 1.2.0 低版本需做 :ref:`compatibility` 。
 
-<movable-view>的可移动区域。
+<:doc:`movable-view`> 的可移动区域。
 
-属性	类型	默认值	必填	说明	最低版本
-scale-area	Boolean	false	否	当里面的movable-view设置为支持双指缩放时，设置此值可将缩放手势生效区域修改为整个movable-area	1.9.90
-Bug & Tip
++------------+---------+--------+------+---------------------------------------------------------------------------------------------+----------+
+|    属性    |  类型   | 默认值 | 必填 |                                            说明                                             | 最低版本 |
++============+=========+========+======+=============================================================================================+==========+
+| scale-area | Boolean | false  | 否   | 当里面的movable-view设置为支持双指缩放时，设置此值可将缩放手势生效区域修改为整个ovable-area | 1.9.90   |
++------------+---------+--------+------+---------------------------------------------------------------------------------------------+----------+
+
 .. tip:: movable-area 必须设置width和height属性，不设置默认为10px**
+
 .. tip:: 当movable-view小于movable-area时，movable-view的移动范围是在movable-area内；
+
 .. tip:: 当movable-view大于movable-area时，movable-view的移动范围必须包含movable-area（x轴方向和y轴方向分开考虑）
+
 示例代码
+
 在开发者工具中预览效果
 
-
 .. code:: html
-
 
   <view class="section">
     <view class="section__title">movable-view区域小于movable-area</view>
@@ -57,6 +62,9 @@ Bug & Tip
       ></movable-view>
     </movable-area>
   </view>
+
+.. code:: js
+
   Page({
     data: {
       x: 0,

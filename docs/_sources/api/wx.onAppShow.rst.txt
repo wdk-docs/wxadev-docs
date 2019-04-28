@@ -1,2 +1,37 @@
 :wxapi:`wx.onAppShow`
-===============
+=============================
+
+
+.. function:: wx.onAppShow(function callback)
+
+基础库 2.1.2 开始支持，低版本需做 :ref:`compatibility` 。
+
+监听小程序切前台事件。该事件与 App.onShow 的回调参数一致。
+
+参数
+function callback
+小程序切前台事件的回调函数
+
+参数
+Object res
+属性	类型	说明
+path	string	小程序切前台的路径
+scene	number	小程序切前台的场景值
+query	Object	小程序切前台的 query 参数
+shareTicket	string	shareTicket，详见获取更多转发信息
+referrerInfo	Object	来源信息。从另一个小程序、公众号或 App 进入小程序时返回。否则返回 {}。(参见后文注意)
+referrerInfo 的结构
+
+属性	类型	说明
+appId	string	来源小程序、公众号或 App 的 appId
+extraData	Object	来源小程序传过来的数据，scene=1037或1038时支持
+返回有效 referrerInfo 的场景
+场景值	场景	appId含义
+1020	公众号 profile 页相关小程序列表	来源公众号
+1035	公众号自定义菜单	来源公众号
+1036	App 分享消息卡片	来源App
+1037	小程序打开小程序	来源小程序
+1038	从另一个小程序返回	来源小程序
+1043	公众号模板消息	来源公众号
+注意
+部分版本在无referrerInfo的时候会返回 undefined，建议使用 options.referrerInfo && options.referrerInfo.appId 进行判断。

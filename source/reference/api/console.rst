@@ -9,7 +9,7 @@ console.groupEnd()
 
 结束由 console.group 创建的分组
 
-.. note:: 由于 vConsole 功能有限，以及不同客户端对 console 方法的支持情况有差异，建议开发者在小程序中只使用本文档中提供的方法。
+.. attention:: 由于 vConsole 功能有限，以及不同客户端对 console 方法的支持情况有差异，建议开发者在小程序中只使用本文档中提供的方法。
    部分内容展示的限制请参见调试
 
 console.debug()

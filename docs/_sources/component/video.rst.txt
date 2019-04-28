@@ -1,9 +1,9 @@
 .. _video:
 
-:wxcomp:`video <video>`
+:wx_comp:`video <video>`
 ==============================
 
-.. versionadded:: 1.0.0 低版本需做兼容处理。
+.. versionadded:: 1.0.0 低版本需做 :ref:`compatibility` 。
 
 视频。相关 api：:func:`wx.createVideoContext`
 

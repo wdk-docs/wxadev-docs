@@ -36,7 +36,7 @@
     :>json number errcode: 错误码，真确时候返回 ``0``。 更多错误码的说明请查看 :wework:`企业微信全局错误码说明 <90139/90313>`
     :>json number errmsg: 错误信息，正确时候返回 ``ok``。
 
-.. note::
+.. attention::
 
     第三方请求jscode2session的url与企业自建应用不同，url中增加了/service/，参数为suite_access_token，而非access_token，请开发者注意区分。
 

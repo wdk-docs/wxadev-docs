@@ -1,2 +1,2 @@
-:wxapi:`customerServiceMessage.uploadTempMedia`
-===============
+:wxbpi:`customerServiceMessage.uploadTempMedia`
+=====================================================

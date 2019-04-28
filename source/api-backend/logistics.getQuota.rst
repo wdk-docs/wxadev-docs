@@ -1,2 +1,2 @@
-:wxapi:`logistics.getQuota`
-===============
+:wxbpi:`logistics.getQuota`
+============================================================

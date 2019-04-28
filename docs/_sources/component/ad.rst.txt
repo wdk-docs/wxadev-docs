@@ -1,9 +1,9 @@
 .. _ad:
 
-ad
+:wx_comp:`ad`
 ===========================
 
-.. versionadded:: 1.9.94 低版本需做兼容处理
+.. versionadded:: 1.9.94 低版本需做 :ref:`compatibility`
 
 广告。目前暂时以邀请制开放申请，请留意后续模板消息的通知
 

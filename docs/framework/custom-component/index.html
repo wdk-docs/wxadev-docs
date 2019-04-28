@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>custom-component &mdash; wxadev 1.0.0 文档</title>
+  <title>自定义组件 &mdash; wxadev 1.0.0 文档</title>
   
 
   
@@ -36,8 +36,8 @@
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="index" title="索引" href="../../genindex.html" />
     <link rel="search" title="搜索" href="../../search.html" />
-    <link rel="next" title="custom-component/behaviors" href="behaviors.html" />
-    <link rel="prev" title="小程序运行机制" href="../operating-mechanism.html" /> 
+    <link rel="next" title="自定义组件" href="create.html" />
+    <link rel="prev" title="运行机制" href="../operating-mechanism.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -92,24 +92,23 @@
 <li class="toctree-l2"><a class="reference internal" href="../config.html">小程序配置</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../sitemap.html">sitemap 配置</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../app-service/index.html">逻辑层 App Service</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../view/index.html">视图</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../view/index.html">视图层 View</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../details.html">运行环境</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../plugin/index.html">插件</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../ability/index.html">基础能力</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../device/index.html">硬件能力</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../open-ability/index.html">开放能力</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../usability.html">调试</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../usability/index.html">usability</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../usability/index.html#id1">视图</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../performance.html">性能</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../performance/index.html">performance</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../client-lib/index.html">client-lib</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../usability/index.html">可用性</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../performance/index.html">性能</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../client-lib/index.html">基础库</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../compatibility.html">兼容处理</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../workers.html">workers</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../server-ability/index.html">server-ability</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../release/index.html">release</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../operating-mechanism.html">小程序运行机制</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">custom-component</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../workers.html">多线程 Worker</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../server-ability/index.html">后端能力</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../release/index.html">版本更新</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../operating-mechanism.html">运行机制</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">自定义组件</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="create.html">自定义组件</a></li>
 <li class="toctree-l3"><a class="reference internal" href="behaviors.html">custom-component/behaviors</a></li>
 <li class="toctree-l3"><a class="reference internal" href="component.html">Component构造器</a></li>
 <li class="toctree-l3"><a class="reference internal" href="custom-component.html">custom-component/custom-component</a></li>
@@ -134,6 +133,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../wxcloud/index.html">云开发</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../wxwork/index.html">企业微信</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../glossary.html">术语</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../rst.html">定义</a></li>
 </ul>
 
             
@@ -181,7 +181,7 @@
         
           <li><a href="../index.html">框架</a> &raquo;</li>
         
-      <li>custom-component</li>
+      <li>自定义组件</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -200,10 +200,11 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="custom-component">
-<h1>custom-component<a class="headerlink" href="#custom-component" title="永久链接至标题">¶</a></h1>
+  <div class="section" id="id1">
+<h1>自定义组件<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
 <div class="toctree-wrapper compound">
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="create.html">自定义组件</a></li>
 <li class="toctree-l1"><a class="reference internal" href="behaviors.html">custom-component/behaviors</a></li>
 <li class="toctree-l1"><a class="reference internal" href="component.html">Component构造器</a></li>
 <li class="toctree-l1"><a class="reference internal" href="custom-component.html">custom-component/custom-component</a></li>
@@ -228,10 +229,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="behaviors.html" class="btn btn-neutral float-right" title="custom-component/behaviors" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="create.html" class="btn btn-neutral float-right" title="自定义组件" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="../operating-mechanism.html" class="btn btn-neutral float-left" title="小程序运行机制" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="../operating-mechanism.html" class="btn btn-neutral float-left" title="运行机制" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

@@ -70,7 +70,7 @@ onPageNotFound	function		否	页面不存在监听函数。
 
   onPageNotFound(Object object)
 
-基础库 1.9.90 开始支持，低版本需做兼容处理。
+基础库 1.9.90 开始支持，低版本需做 :ref:`compatibility` 。
 
 小程序要打开的页面不存在时触发。也可以使用 wx.onPageNotFound 绑定监听。注意事项请参考 wx.onPageNotFound。
 
@@ -107,7 +107,7 @@ allowDefault	boolean	false	否	在 App 未定义时返回默认实现。当App�
   const appInstance = getApp()
   console.log(appInstance.globalData) // I am global data
 
-.. note::
+.. attention::
 
    不要在定义于 App 内的函数中，或调用 App 前调用 getApp ，使用 this 就可以拿到 app 实例。
    通过 getApp 获取实例之后，不要私自调用生命周期函数。

@@ -1,2 +1,2 @@
-:wxapi:`pluginManager.getPluginDevApplyList`
-===============
+:wxbpi:`pluginManager.getPluginDevApplyList`
+============================================================

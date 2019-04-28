@@ -1,2 +1,2 @@
-:wxapi:`analysis.getWeeklyVisitTrend`
-===============
+:wxbpi:`analysis.getWeeklyVisitTrend`
+===================================================

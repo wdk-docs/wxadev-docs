@@ -1,57 +1,88 @@
 .. _picker:
 
-picker
+:wx_comp:`picker`
 ===========================
 
-.. versionadded:: 1.0.0 开始支持，低版本需做兼容处理。
+.. versionadded:: 1.0.0 开始支持，低版本需做 :ref:`compatibility` 。
 
 从底部弹起的滚动选择器。
 
-属性	类型	默认值	必填	说明	最低版本
-mode	string	selector	否	选择器类型	1.0.0
-disabled	boolean	false	否	是否禁用	1.0.0
-bindcancel	eventhandle		否	取消选择时触发	1.9.90
++------------+-------------+----------+------+----------------+----------+
+|    属性    |    类型     |  默认值  | 必填 |      说明      | 最低版本 |
++============+=============+==========+======+================+==========+
+| mode       | string      | selector | 否   | 选择器类型     | 1.0.0    |
++------------+-------------+----------+------+----------------+----------+
+| disabled   | boolean     | false    | 否   | 是否禁用       | 1.0.0    |
++------------+-------------+----------+------+----------------+----------+
+| bindcancel | eventhandle |          | 否   | 取消选择时触发 | 1.9.90   |
++------------+-------------+----------+------+----------------+----------+
+
 mode 的合法值
 
-值	说明	最低版本
-selector	普通选择器
-multiSelector	多列选择器
-time	时间选择器
-date	日期选择器
-region	省市区选择器
++---------------+--------------+
+|      值       |     说明     |
++===============+==============+
+| selector      | 普通选择器   |
++---------------+--------------+
+| multiSelector | 多列选择器   |
++---------------+--------------+
+| time          | 时间选择器   |
++---------------+--------------+
+| date          | 日期选择器   |
++---------------+--------------+
+| region        | 省市区选择器 |
++---------------+--------------+
+
 除了上述通用的属性，对于不同的mode，picker拥有不同的属性。
 
 普通选择器：mode = selector
-属性名	类型	默认值	说明	最低版本
-range	array/object array	[]	mode 为 selector 或 multiSelector 时，range 有效
-range-key	string		当 range 是一个 Object Array 时，通过 range-key 来指定 Object 中 key 的值作为选择器显示内容
-value	number	0	表示选择了 range 中的第几个（下标从 0 开始）
-bindchange	eventhandle		value 改变时触发 change 事件，event.detail = {value}
+
++------------+--------------+--------+---------------------------------------------------------------------------------------------+
+|   属性名   |     类型     | 默认值 |                                            说明                                             |
++============+==============+========+=============================================================================================+
+| range      | array/object |        |                                                                                             |
+|            | array        | []     | mode 为 selector 或 multiSelector 时，range 有效                                            |
++------------+--------------+--------+---------------------------------------------------------------------------------------------+
+| range-key  | string       |        | 当 range 是一个 Object Array 时，通过 range-key 来指定 Object 中 key 的值作为选择器显示内容 |
++------------+--------------+--------+---------------------------------------------------------------------------------------------+
+| value      | number       | 0      | 表示选择了 range 中的第几个（下标从 0 开始）                                                |
++------------+--------------+--------+---------------------------------------------------------------------------------------------+
+| bindchange | eventhandle  |        | value 改变时触发 change 事件，event.detail = {value}                                        |
++------------+--------------+--------+---------------------------------------------------------------------------------------------+
+
 时间选择器：mode = time
+
 属性名	类型	默认值	说明	最低版本
 value	string		表示选中的时间，格式为"hh:mm"
 start	string		表示有效时间范围的开始，字符串格式为"hh:mm"
 end	string		表示有效时间范围的结束，字符串格式为"hh:mm"
 bindchange	eventhandle		value 改变时触发 change 事件，event.detail = {value}
+
 日期选择器：mode = date
+
 属性名	类型	默认值	说明	最低版本
 value	string	0	表示选中的日期，格式为"YYYY-MM-DD"
 start	string		表示有效日期范围的开始，字符串格式为"YYYY-MM-DD"
 end	string		表示有效日期范围的结束，字符串格式为"YYYY-MM-DD"
 fields	string	day	有效值 year,month,day，表示选择器的粒度
 bindchange	eventhandle		value 改变时触发 change 事件，event.detail = {value}
+
 fields 有效值：*
 
 值	说明
 year	选择器粒度为年
 month	选择器粒度为月份
 day	选择器粒度为天
+
 省市区选择器：mode = region 1.4.0
+
 属性名	类型	默认值	说明	最低版本
 value	array	[]	表示选中的省市区，默认选中每一列的第一个值
 custom-item	string		可为每一列的顶部添加一个自定义的项	1.5.0
 bindchange	eventhandle		value 改变时触发 change 事件，event.detail = {value, code, postcode}，其中字段 code 是统计用区划代码，postcode 是邮政编码
+
 示例代码
+
 在开发者工具中预览效果
 
 .. code:: html
@@ -121,6 +152,9 @@ bindchange	eventhandle		value 改变时触发 change 事件，event.detail = {va
       </view>
     </picker>
   </view>
+
+.. code:: js
+
   Page({
     data: {
       array: ['美国', '中国', '巴西', '日本'],

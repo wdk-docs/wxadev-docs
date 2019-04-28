@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>release &mdash; wxadev 1.0.0 文档</title>
+  <title>版本更新 &mdash; wxadev 1.0.0 文档</title>
   
 
   
@@ -36,8 +36,8 @@
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="index" title="索引" href="../../genindex.html" />
     <link rel="search" title="搜索" href="../../search.html" />
-    <link rel="next" title="调试" href="v0.html" />
-    <link rel="prev" title="调试" href="../server-ability/message-push.html" /> 
+    <link rel="next" title="基础库更新日志 (v0.x版本)" href="v0.html" />
+    <link rel="prev" title="消息推送" href="../server-ability/message-push.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -92,29 +92,27 @@
 <li class="toctree-l2"><a class="reference internal" href="../config.html">小程序配置</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../sitemap.html">sitemap 配置</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../app-service/index.html">逻辑层 App Service</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../view/index.html">视图</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../view/index.html">视图层 View</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../details.html">运行环境</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../plugin/index.html">插件</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../ability/index.html">基础能力</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../device/index.html">硬件能力</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../open-ability/index.html">开放能力</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../usability.html">调试</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../usability/index.html">usability</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../usability/index.html#id1">视图</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../performance.html">性能</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../performance/index.html">performance</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../client-lib/index.html">client-lib</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../usability/index.html">可用性</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../performance/index.html">性能</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../client-lib/index.html">基础库</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../compatibility.html">兼容处理</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../workers.html">workers</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../server-ability/index.html">server-ability</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">release</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="v0.html">调试</a></li>
-<li class="toctree-l3"><a class="reference internal" href="v1.html">调试</a></li>
-<li class="toctree-l3"><a class="reference internal" href="v2.html">调试</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../workers.html">多线程 Worker</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../server-ability/index.html">后端能力</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">版本更新</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="v0.html">基础库更新日志 (v0.x版本)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="v1.html">基础库更新日志 (v1.x版本)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="v2.html">基础库更新日志 (v2.x版本)</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../operating-mechanism.html">小程序运行机制</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../custom-component/index.html">custom-component</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../operating-mechanism.html">运行机制</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../custom-component/index.html">自定义组件</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../component/index.html">组件</a></li>
@@ -125,6 +123,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../wxcloud/index.html">云开发</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../wxwork/index.html">企业微信</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../glossary.html">术语</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../rst.html">定义</a></li>
 </ul>
 
             
@@ -172,7 +171,7 @@
         
           <li><a href="../index.html">框架</a> &raquo;</li>
         
-      <li>release</li>
+      <li>版本更新</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -191,13 +190,16 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="release">
-<h1>release<a class="headerlink" href="#release" title="永久链接至标题">¶</a></h1>
+  <div class="section" id="id1">
+<h1>版本更新<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="v0.html">调试</a></li>
-<li class="toctree-l1"><a class="reference internal" href="v1.html">调试</a></li>
-<li class="toctree-l1"><a class="reference internal" href="v2.html">调试</a></li>
+<li class="toctree-l1"><a class="reference internal" href="v0.html">基础库更新日志 (v0.x版本)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="v1.html">基础库更新日志 (v1.x版本)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="v2.html">基础库更新日志 (v2.x版本)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="v2.html#id1">最新版本</a></li>
+</ul>
+</li>
 </ul>
 </div>
 </div>
@@ -210,10 +212,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="v0.html" class="btn btn-neutral float-right" title="调试" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="v0.html" class="btn btn-neutral float-right" title="基础库更新日志 (v0.x版本)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="../server-ability/message-push.html" class="btn btn-neutral float-left" title="调试" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="../server-ability/message-push.html" class="btn btn-neutral float-left" title="消息推送" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

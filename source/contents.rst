@@ -19,6 +19,7 @@
    wxwork/index
 
    glossary
+   rst
 
 指数和表格
 ==================

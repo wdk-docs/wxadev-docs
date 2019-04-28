@@ -1,9 +1,11 @@
-WXS
-=====
+.. _wxs:
+
+:wxfrwk:`WXS <view/wxs/index>`
+=========================================
 
 WXS（WeiXin Script）是小程序的一套脚本语言，结合 WXML，可以构建出页面的结构。
 
-.. note::
+.. attention::
 
     - WXS 不依赖于运行时的基础库版本，可以在所有版本的小程序中运行。
     - WXS 与 JavaScript 是不同的语言，有自己的语法，并不和 JavaScript 一致。
@@ -15,7 +17,7 @@ WXS（WeiXin Script）是小程序的一套脚本语言，结合 WXML，可以�
 
 页面渲染
 
-.. code::
+.. code:: html
 
     <!--wxml-->
     <wxs module="m1">
@@ -39,7 +41,7 @@ WXS（WeiXin Script）是小程序的一套脚本语言，结合 WXML，可以�
       }
     })
 
-.. code::
+.. code:: html
 
     <!--wxml-->
     <!-- 下面的 getMax 函数，接受一个数组，且返回数组中最大的元素的值 -->
@@ -60,7 +62,7 @@ WXS（WeiXin Script）是小程序的一套脚本语言，结合 WXML，可以�
    :maxdepth: 1
    :glob:
 
-   wxs-module
+   module
    variate
    annotation
    operator

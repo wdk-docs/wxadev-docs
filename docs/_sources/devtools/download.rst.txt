@@ -1,5 +1,8 @@
-下载
-=======
+.. _dt-download:
+
+:wxdt:`下载 <download>`
+=========================
+
 
 Windows 仅支持 Windows 7 及以上版本。
 

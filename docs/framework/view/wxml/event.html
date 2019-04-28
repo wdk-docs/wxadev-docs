@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>事件 &mdash; wxadev 1.0.0 文档</title>
+  <title>bindtap 事件 &mdash; wxadev 1.0.0 文档</title>
   
 
   
@@ -36,8 +36,8 @@
   <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
     <link rel="index" title="索引" href="../../../genindex.html" />
     <link rel="search" title="搜索" href="../../../search.html" />
-    <link rel="next" title="view/wxml/import" href="import.html" />
-    <link rel="prev" title="view/wxml/data" href="data.html" /> 
+    <link rel="next" title="WXSS" href="../wxss.html" />
+    <link rel="prev" title="import 引用" href="import.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -92,23 +92,23 @@
 <li class="toctree-l2"><a class="reference internal" href="../../config.html">小程序配置</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../sitemap.html">sitemap 配置</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../app-service/index.html">逻辑层 App Service</a></li>
-<li class="toctree-l2 current"><a class="reference internal" href="../index.html">视图</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="../wxss.html">WXSS</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../selector.html">获取界面上的节点信息</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../resizable.html">响应显示区域变化</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../interactive-animation.html">WXS响应事件</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../component.html">基础组件</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../animation.html">动画</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../wxs/index.html">WXS</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">视图层 View</a><ul class="current">
 <li class="toctree-l3 current"><a class="reference internal" href="index.html">WXML</a><ul class="current">
-<li class="toctree-l4"><a class="reference internal" href="conditional.html">view/wxml/conditional</a></li>
-<li class="toctree-l4"><a class="reference internal" href="data.html">view/wxml/data</a></li>
-<li class="toctree-l4 current"><a class="current reference internal" href="#">事件</a></li>
-<li class="toctree-l4"><a class="reference internal" href="import.html">view/wxml/import</a></li>
-<li class="toctree-l4"><a class="reference internal" href="list.html">view/wxml/list</a></li>
-<li class="toctree-l4"><a class="reference internal" href="template.html">view/wxml/template</a></li>
+<li class="toctree-l4"><a class="reference internal" href="data.html">数据绑定</a></li>
+<li class="toctree-l4"><a class="reference internal" href="list.html">wx:for 列表渲染</a></li>
+<li class="toctree-l4"><a class="reference internal" href="conditional.html">wx:if 条件渲染</a></li>
+<li class="toctree-l4"><a class="reference internal" href="template.html">template 模板</a></li>
+<li class="toctree-l4"><a class="reference internal" href="import.html">import 引用</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">bindtap 事件</a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="../wxss.html">WXSS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../wxs/index.html">WXS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../interactive-animation.html">频繁交互</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../component.html">基础组件</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../selector.html">获取界面上的节点信息</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../resizable.html">响应显示区域变化</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../animation.html">动画</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../details.html">运行环境</a></li>
@@ -117,17 +117,15 @@
 <li class="toctree-l2"><a class="reference internal" href="../../device/index.html">硬件能力</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../open-ability/index.html">开放能力</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../usability.html">调试</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../usability/index.html">usability</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../usability/index.html#id1">视图</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../performance.html">性能</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../performance/index.html">performance</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../client-lib/index.html">client-lib</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../usability/index.html">可用性</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../performance/index.html">性能</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../client-lib/index.html">基础库</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../compatibility.html">兼容处理</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../workers.html">workers</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../server-ability/index.html">server-ability</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../release/index.html">release</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../operating-mechanism.html">小程序运行机制</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../custom-component/index.html">custom-component</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../workers.html">多线程 Worker</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../server-ability/index.html">后端能力</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../release/index.html">版本更新</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../operating-mechanism.html">运行机制</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../custom-component/index.html">自定义组件</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../../component/index.html">组件</a></li>
@@ -136,8 +134,9 @@
 <li class="toctree-l1"><a class="reference internal" href="../../../devtools/index.html">开发工具</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../reference/index.html">参考资料</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../wxcloud/index.html">云开发</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../wxwork/index.html">企业微信兼容</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../wxwork/index.html">企业微信</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../glossary.html">术语</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../rst.html">定义</a></li>
 </ul>
 
             
@@ -185,11 +184,11 @@
         
           <li><a href="../../index.html">框架</a> &raquo;</li>
         
-          <li><a href="../index.html">视图</a> &raquo;</li>
+          <li><a href="../index.html">视图层 View</a> &raquo;</li>
         
           <li><a href="index.html">WXML</a> &raquo;</li>
         
-      <li>事件</li>
+      <li>bindtap 事件</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -208,20 +207,29 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="id1">
-<h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/framework/view/wxml/template.html">事件</a><a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
-<p>什么是事件
-事件是视图层到逻辑层的通讯方式。
-事件可以将用户的行为反馈到逻辑层进行处理。
-事件可以绑定在组件上，当达到触发事件，就会执行逻辑层中对应的事件处理函数。
-事件对象可以携带额外信息，如 id, dataset, touches。
-事件的使用方式
-在组件中绑定一个事件处理函数。
-如bindtap，当用户点击该组件的时候会在该页面对应的Page中找到相应的事件处理函数。</p>
-<div class="highlight-js notranslate"><div class="highlight"><pre><span></span>&lt;view id=&quot;tapTest&quot; data-hi=&quot;WeChat&quot; bindtap=&quot;tapName&quot;&gt;Click me!&lt;/view&gt;
+  <div class="section" id="bindtap">
+<span id="wxml-event"></span><h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/framework/view/wxml/event.html">bindtap 事件</a><a class="headerlink" href="#bindtap" title="永久链接至标题">¶</a></h1>
+<div class="section" id="id1">
+<h2>什么是事件<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h2>
+<ul class="simple">
+<li><p>事件是视图层到逻辑层的通讯方式。</p></li>
+<li><p>事件可以将用户的行为反馈到逻辑层进行处理。</p></li>
+<li><p>事件可以绑定在组件上，当达到触发事件，就会执行逻辑层中对应的事件处理函数。</p></li>
+<li><p>事件对象可以携带额外信息，如 id, dataset, touches。</p></li>
+</ul>
+</div>
+<div class="section" id="id2">
+<h2>事件的使用方式<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<ul class="simple">
+<li><p>在组件中绑定一个事件处理函数。</p></li>
+</ul>
+<p>如bindtap，当用户点击该组件的时候会在该页面对应的Page中找到相应的事件处理函数。</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">view</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;tapTest&quot;</span> <span class="na">data-hi</span><span class="o">=</span><span class="s">&quot;WeChat&quot;</span> <span class="na">bindtap</span><span class="o">=</span><span class="s">&quot;tapName&quot;</span><span class="p">&gt;</span>Click me!<span class="p">&lt;/</span><span class="nt">view</span><span class="p">&gt;</span>
 </pre></div>
 </div>
-<p>在相应的Page定义中写上相应的事件处理函数，参数是event。</p>
+<ul class="simple">
+<li><p>在相应的Page定义中写上相应的事件处理函数，参数是event。</p></li>
+</ul>
 <div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="nx">Page</span><span class="p">({</span>
   <span class="nx">tapName</span><span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">{</span>
     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">event</span><span class="p">)</span>
@@ -230,188 +238,458 @@
 </pre></div>
 </div>
 <p>可以看到log出来的信息大致如下：</p>
-<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
-  <span class="s2">&quot;type&quot;</span><span class="o">:</span> <span class="s2">&quot;tap&quot;</span><span class="p">,</span>
-  <span class="s2">&quot;timeStamp&quot;</span><span class="o">:</span> <span class="mi">895</span><span class="p">,</span>
-  <span class="s2">&quot;target&quot;</span><span class="o">:</span> <span class="p">{</span>
-    <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="s2">&quot;tapTest&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;dataset&quot;</span><span class="o">:</span> <span class="p">{</span>
-      <span class="s2">&quot;hi&quot;</span><span class="o">:</span> <span class="s2">&quot;WeChat&quot;</span>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;tap&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;timeStamp&quot;</span><span class="p">:</span> <span class="mi">895</span><span class="p">,</span>
+  <span class="nt">&quot;target&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;tapTest&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;dataset&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;hi&quot;</span><span class="p">:</span> <span class="s2">&quot;WeChat&quot;</span>
     <span class="p">}</span>
   <span class="p">},</span>
-  <span class="s2">&quot;currentTarget&quot;</span><span class="o">:</span> <span class="p">{</span>
-    <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="s2">&quot;tapTest&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;dataset&quot;</span><span class="o">:</span> <span class="p">{</span>
-      <span class="s2">&quot;hi&quot;</span><span class="o">:</span> <span class="s2">&quot;WeChat&quot;</span>
+  <span class="nt">&quot;currentTarget&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;tapTest&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;dataset&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;hi&quot;</span><span class="p">:</span> <span class="s2">&quot;WeChat&quot;</span>
     <span class="p">}</span>
   <span class="p">},</span>
-  <span class="s2">&quot;detail&quot;</span><span class="o">:</span> <span class="p">{</span>
-    <span class="s2">&quot;x&quot;</span><span class="o">:</span> <span class="mi">53</span><span class="p">,</span>
-    <span class="s2">&quot;y&quot;</span><span class="o">:</span> <span class="mi">14</span>
+  <span class="nt">&quot;detail&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;x&quot;</span><span class="p">:</span> <span class="mi">53</span><span class="p">,</span>
+    <span class="nt">&quot;y&quot;</span><span class="p">:</span> <span class="mi">14</span>
   <span class="p">},</span>
-  <span class="s2">&quot;touches&quot;</span><span class="o">:</span> <span class="p">[</span>
+  <span class="nt">&quot;touches&quot;</span><span class="p">:</span> <span class="p">[</span>
     <span class="p">{</span>
-      <span class="s2">&quot;identifier&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
-      <span class="s2">&quot;pageX&quot;</span><span class="o">:</span> <span class="mi">53</span><span class="p">,</span>
-      <span class="s2">&quot;pageY&quot;</span><span class="o">:</span> <span class="mi">14</span><span class="p">,</span>
-      <span class="s2">&quot;clientX&quot;</span><span class="o">:</span> <span class="mi">53</span><span class="p">,</span>
-      <span class="s2">&quot;clientY&quot;</span><span class="o">:</span> <span class="mi">14</span>
+      <span class="nt">&quot;identifier&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+      <span class="nt">&quot;pageX&quot;</span><span class="p">:</span> <span class="mi">53</span><span class="p">,</span>
+      <span class="nt">&quot;pageY&quot;</span><span class="p">:</span> <span class="mi">14</span><span class="p">,</span>
+      <span class="nt">&quot;clientX&quot;</span><span class="p">:</span> <span class="mi">53</span><span class="p">,</span>
+      <span class="nt">&quot;clientY&quot;</span><span class="p">:</span> <span class="mi">14</span>
     <span class="p">}</span>
   <span class="p">],</span>
-  <span class="s2">&quot;changedTouches&quot;</span><span class="o">:</span> <span class="p">[</span>
+  <span class="nt">&quot;changedTouches&quot;</span><span class="p">:</span> <span class="p">[</span>
     <span class="p">{</span>
-      <span class="s2">&quot;identifier&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
-      <span class="s2">&quot;pageX&quot;</span><span class="o">:</span> <span class="mi">53</span><span class="p">,</span>
-      <span class="s2">&quot;pageY&quot;</span><span class="o">:</span> <span class="mi">14</span><span class="p">,</span>
-      <span class="s2">&quot;clientX&quot;</span><span class="o">:</span> <span class="mi">53</span><span class="p">,</span>
-      <span class="s2">&quot;clientY&quot;</span><span class="o">:</span> <span class="mi">14</span>
+      <span class="nt">&quot;identifier&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+      <span class="nt">&quot;pageX&quot;</span><span class="p">:</span> <span class="mi">53</span><span class="p">,</span>
+      <span class="nt">&quot;pageY&quot;</span><span class="p">:</span> <span class="mi">14</span><span class="p">,</span>
+      <span class="nt">&quot;clientX&quot;</span><span class="p">:</span> <span class="mi">53</span><span class="p">,</span>
+      <span class="nt">&quot;clientY&quot;</span><span class="p">:</span> <span class="mi">14</span>
     <span class="p">}</span>
   <span class="p">]</span>
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>使用WXS函数响应事件
-基础库 2.4.4 开始支持，低版本需做兼容处理。</p>
-<p>从基础库版本2.4.4开始，支持使用WXS函数绑定事件，WXS函数接受2个参数，第一个是event，在原有的event的基础上加了event.instance对象，第二个参数是ownerInstance，和event.instance一样是一个ComponentDescriptor对象。具体使用如下：</p>
+</div>
+<div class="section" id="wxs">
+<h2>使用WXS函数响应事件<a class="headerlink" href="#wxs" title="永久链接至标题">¶</a></h2>
+<div class="versionadded">
+<p><span class="versionmodified added">2.4.4 新版功能: </span>低版本需做 <a class="reference internal" href="../../compatibility.html#compatibility"><span class="std std-ref">兼容处理</span></a> 。</p>
+</div>
+<p>从基础库版本2.4.4开始，支持使用WXS函数绑定事件，WXS函数接受2个参数，第一个是event，
+在原有的event的基础上加了event.instance对象，第二个参数是ownerInstance，和event.instance一样是一个ComponentDescriptor对象。具体使用如下：</p>
 <p>在组件中绑定和注册事件处理的WXS函数。</p>
-<div class="highlight-js notranslate"><div class="highlight"><pre><span></span>&lt;wxs module=&quot;wxs&quot; src=&quot;./test.wxs&quot;&gt;&lt;/wxs&gt;
-&lt;view id=&quot;tapTest&quot; data-hi=&quot;WeChat&quot; bindtap=&quot;{{wxs.tapName}}&quot;&gt;Click me!&lt;/view&gt;
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">wxs</span> <span class="na">module</span><span class="o">=</span><span class="s">&quot;wxs&quot;</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;./test.wxs&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">wxs</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">view</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;tapTest&quot;</span> <span class="na">data-hi</span><span class="o">=</span><span class="s">&quot;WeChat&quot;</span> <span class="na">bindtap</span><span class="o">=</span><span class="s">&quot;{{wxs.tapName}}&quot;</span><span class="p">&gt;</span>Click me!<span class="p">&lt;/</span><span class="nt">view</span><span class="p">&gt;</span>
 **注：绑定的WXS函数必须用{{}}括起来**
-test.wxs文件实现tapName函数
-function tapName(event, ownerInstance) {
-  console.log(&#39;tap wechat&#39;, JSON.stringify(event))
-}
-module.exports = {
-  tapName: tapName
-}
+</pre></div>
+</div>
+<p>test.wxs文件实现tapName函数</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="kd">function</span> <span class="nx">tapName</span><span class="p">(</span><span class="nx">event</span><span class="p">,</span> <span class="nx">ownerInstance</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;tap wechat&#39;</span><span class="p">,</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">event</span><span class="p">))</span>
+<span class="p">}</span>
+<span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="nx">tapName</span><span class="o">:</span> <span class="nx">tapName</span>
+<span class="p">}</span>
 </pre></div>
 </div>
 <p>ownerInstance包含了一些方法，可以设置组件的样式和class，具体包含的方法以及为什么要用WXS函数响应事件，请点击查看详情。</p>
-<p>事件详解
-事件分类
-事件分为冒泡事件和非冒泡事件：</p>
-<p>冒泡事件：当一个组件上的事件被触发后，该事件会向父节点传递。
-非冒泡事件：当一个组件上的事件被触发后，该事件不会向父节点传递。
-WXML的冒泡事件列表：</p>
-<p>类型      触发条件    最低版本
-touchstart      手指触摸动作开始
-touchmove       手指触摸后移动
-touchcancel     手指触摸动作被打断，如来电提醒，弹窗
-touchend        手指触摸动作结束
-tap     手指触摸后马上离开
-longpress       手指触摸后，超过350ms再离开，如果指定了事件回调函数并触发了这个事件，tap事件将不被触发 1.5.0
-longtap 手指触摸后，超过350ms再离开（推荐使用longpress事件代替）
-transitionend   会在 WXSS transition 或 wx.createAnimation 动画结束后触发
-animationstart  会在一个 WXSS animation 动画开始时触发
-animationiteration      会在一个 WXSS animation 一次迭代结束时触发
-animationend    会在一个 WXSS animation 动画完成时触发
-touchforcechange        在支持 3D Touch 的 iPhone 设备，重按时会触发 1.9.90
-注：除上表之外的其他组件自定义事件如无特殊声明都是非冒泡事件，如&lt;form/&gt;的submit事件，&lt;input/&gt;的input事件，&lt;scroll-view/&gt;的scroll事件，(详见各个组件)</p>
-<p>事件绑定和冒泡
-事件绑定的写法同组件的属性，以 key、value 的形式。</p>
-<p>key 以bind或catch开头，然后跟上事件的类型，如bindtap、catchtouchstart。自基础库版本 1.5.0 起，在非原生组件中，bind和catch后可以紧跟一个冒号，其含义不变，如bind:tap、catch:touchstart。
-value 是一个字符串，需要在对应的 Page 中定义同名的函数。不然当触发事件的时候会报错。
-bind事件绑定不会阻止冒泡事件向上冒泡，catch事件绑定可以阻止冒泡事件向上冒泡。</p>
-<p>如在下边这个例子中，点击 inner view 会先后调用handleTap3和handleTap2(因为tap事件会冒泡到 middle view，而 middle view 阻止了 tap 事件冒泡，不再向父节点传递)，点击 middle view 会触发handleTap2，点击 outer view 会触发handleTap1。</p>
-<div class="highlight-js notranslate"><div class="highlight"><pre><span></span>&lt;view id=&quot;outer&quot; bindtap=&quot;handleTap1&quot;&gt;
+</div>
+<div class="section" id="id3">
+<h2>事件详解<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
+<div class="section" id="id4">
+<h3>事件分类<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h3>
+<p>事件分为冒泡事件和非冒泡事件：</p>
+<ul class="simple">
+<li><p>冒泡事件：当一个组件上的事件被触发后，该事件会向父节点传递。</p></li>
+<li><p>非冒泡事件：当一个组件上的事件被触发后，该事件不会向父节点传递。</p></li>
+</ul>
+<p>WXML的冒泡事件列表：</p>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 17%" />
+<col style="width: 75%" />
+<col style="width: 8%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>类型</p></th>
+<th class="head"><p>触发条件</p></th>
+<th class="head"><p>最低版本</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>touchstart</p></td>
+<td><p>手指触摸动作开始</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>touchmove</p></td>
+<td><p>手指触摸后移动</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>touchcancel</p></td>
+<td><p>手指触摸动作被打断，如来电提醒，弹窗</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>touchend</p></td>
+<td><p>手指触摸动作结束</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>tap</p></td>
+<td><p>手指触摸后马上离开</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>longpress</p></td>
+<td><p>手指触摸后，超过350ms再离开，如果指定了事件回调函数并触发了这个事件，tap事件将不被触发</p></td>
+<td><p>1.5.0</p></td>
+</tr>
+<tr class="row-even"><td><p>longtap</p></td>
+<td><p>手指触摸后，超过350ms再离开（推荐使用longpress事件代替）</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>transitionend</p></td>
+<td><p>会在 WXSS transition 或 wx.createAnimation 动画结束后触发</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>animationstart</p></td>
+<td><p>会在一个 WXSS animation 动画开始时触发</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>animationiteration</p></td>
+<td><p>会在一个 WXSS animation 一次迭代结束时触发</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>animationend</p></td>
+<td><p>会在一个 WXSS animation 动画完成时触发</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>touchforcechange</p></td>
+<td><p>在支持 3D Touch 的 iPhone 设备，重按时会触发</p></td>
+<td><p>1.9.90</p></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition attention">
+<p class="admonition-title">注意</p>
+<p>除上表之外的其他组件自定义事件如无特殊声明都是非冒泡事件，
+如&lt;form/&gt;的submit事件，&lt;input/&gt;的input事件，&lt;scroll-view/&gt;的scroll事件，(详见各个组件)</p>
+</div>
+</div>
+</div>
+<div class="section" id="id5">
+<h2>事件绑定和冒泡<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h2>
+<p>事件绑定的写法同组件的属性，以 key、value 的形式。</p>
+<ul class="simple">
+<li><p>key 以bind或catch开头，然后跟上事件的类型，如bindtap、catchtouchstart。
+自基础库版本 1.5.0 起，在非原生组件中，bind和catch后可以紧跟一个冒号，其含义不变，如bind:tap、catch:touchstart。</p></li>
+<li><p>value 是一个字符串，需要在对应的 Page 中定义同名的函数。不然当触发事件的时候会报错。
+bind事件绑定不会阻止冒泡事件向上冒泡，catch事件绑定可以阻止冒泡事件向上冒泡。</p></li>
+</ul>
+<p>如在下边这个例子中，点击 inner view 会先后调用handleTap3和handleTap2(因为tap事件会冒泡到 middle view，
+而 middle view 阻止了 tap 事件冒泡，不再向父节点传递)，
+点击 middle view 会触发handleTap2，点击 outer view 会触发handleTap1。</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">view</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;outer&quot;</span> <span class="na">bindtap</span><span class="o">=</span><span class="s">&quot;handleTap1&quot;</span><span class="p">&gt;</span>
   outer view
-  &lt;view id=&quot;middle&quot; catchtap=&quot;handleTap2&quot;&gt;
+  <span class="p">&lt;</span><span class="nt">view</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;middle&quot;</span> <span class="na">catchtap</span><span class="o">=</span><span class="s">&quot;handleTap2&quot;</span><span class="p">&gt;</span>
     middle view
-    &lt;view id=&quot;inner&quot; bindtap=&quot;handleTap3&quot;&gt;
+    <span class="p">&lt;</span><span class="nt">view</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;inner&quot;</span> <span class="na">bindtap</span><span class="o">=</span><span class="s">&quot;handleTap3&quot;</span><span class="p">&gt;</span>
       inner view
-    &lt;/view&gt;
-  &lt;/view&gt;
-&lt;/view&gt;
+    <span class="p">&lt;/</span><span class="nt">view</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">view</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">view</span><span class="p">&gt;</span>
 </pre></div>
 </div>
-<p>事件的捕获阶段
-自基础库版本 1.5.0 起，触摸类事件支持捕获阶段。捕获阶段位于冒泡阶段之前，且在捕获阶段中，事件到达节点的顺序与冒泡阶段恰好相反。需要在捕获阶段监听事件时，可以采用capture-bind、capture-catch关键字，后者将中断捕获阶段和取消冒泡阶段。</p>
+</div>
+<div class="section" id="id6">
+<h2>事件的捕获阶段<a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h2>
+<p>自基础库版本 1.5.0 起，触摸类事件支持捕获阶段。捕获阶段位于冒泡阶段之前，且在捕获阶段中，
+事件到达节点的顺序与冒泡阶段恰好相反。需要在捕获阶段监听事件时，可以采用capture-bind、capture-catch关键字，
+后者将中断捕获阶段和取消冒泡阶段。</p>
 <p>在下面的代码中，点击 inner view 会先后调用handleTap2、handleTap4、handleTap3、handleTap1。</p>
-<div class="highlight-js notranslate"><div class="highlight"><pre><span></span>&lt;view
-  id=&quot;outer&quot;
-  bind:touchstart=&quot;handleTap1&quot;
-  capture-bind:touchstart=&quot;handleTap2&quot;
-&gt;
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">view</span>
+  <span class="na">id</span><span class="o">=</span><span class="s">&quot;outer&quot;</span>
+  <span class="na">bind:touchstart</span><span class="o">=</span><span class="s">&quot;handleTap1&quot;</span>
+  <span class="na">capture-bind:touchstart</span><span class="o">=</span><span class="s">&quot;handleTap2&quot;</span>
+<span class="p">&gt;</span>
   outer view
-  &lt;view
-    id=&quot;inner&quot;
-    bind:touchstart=&quot;handleTap3&quot;
-    capture-bind:touchstart=&quot;handleTap4&quot;
-  &gt;
+  <span class="p">&lt;</span><span class="nt">view</span>
+    <span class="na">id</span><span class="o">=</span><span class="s">&quot;inner&quot;</span>
+    <span class="na">bind:touchstart</span><span class="o">=</span><span class="s">&quot;handleTap3&quot;</span>
+    <span class="na">capture-bind:touchstart</span><span class="o">=</span><span class="s">&quot;handleTap4&quot;</span>
+  <span class="p">&gt;</span>
     inner view
-  &lt;/view&gt;
-&lt;/view&gt;
+  <span class="p">&lt;/</span><span class="nt">view</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">view</span><span class="p">&gt;</span>
 </pre></div>
 </div>
 <p>如果将上面代码中的第一个capture-bind改为capture-catch，将只触发handleTap2。</p>
-<div class="highlight-js notranslate"><div class="highlight"><pre><span></span>&lt;view
-  id=&quot;outer&quot;
-  bind:touchstart=&quot;handleTap1&quot;
-  capture-catch:touchstart=&quot;handleTap2&quot;
-&gt;
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">view</span>
+  <span class="na">id</span><span class="o">=</span><span class="s">&quot;outer&quot;</span>
+  <span class="na">bind:touchstart</span><span class="o">=</span><span class="s">&quot;handleTap1&quot;</span>
+  <span class="na">capture-catch:touchstart</span><span class="o">=</span><span class="s">&quot;handleTap2&quot;</span>
+<span class="p">&gt;</span>
   outer view
-  &lt;view
-    id=&quot;inner&quot;
-    bind:touchstart=&quot;handleTap3&quot;
-    capture-bind:touchstart=&quot;handleTap4&quot;
-  &gt;
+  <span class="p">&lt;</span><span class="nt">view</span>
+    <span class="na">id</span><span class="o">=</span><span class="s">&quot;inner&quot;</span>
+    <span class="na">bind:touchstart</span><span class="o">=</span><span class="s">&quot;handleTap3&quot;</span>
+    <span class="na">capture-bind:touchstart</span><span class="o">=</span><span class="s">&quot;handleTap4&quot;</span>
+  <span class="p">&gt;</span>
     inner view
-  &lt;/view&gt;
-&lt;/view&gt;
+  <span class="p">&lt;/</span><span class="nt">view</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">view</span><span class="p">&gt;</span>
 </pre></div>
 </div>
-<p>事件对象
-如无特殊说明，当组件触发事件时，逻辑层绑定该事件的处理函数会收到一个事件对象。</p>
+</div>
+<div class="section" id="id7">
+<h2>事件对象<a class="headerlink" href="#id7" title="永久链接至标题">¶</a></h2>
+<p>如无特殊说明，当组件触发事件时，逻辑层绑定该事件的处理函数会收到一个事件对象。</p>
 <p>BaseEvent 基础事件对象属性列表：</p>
-<p>属性      类型      说明
-type    String  事件类型
-timeStamp       Integer 事件生成时的时间戳
-target  Object  触发事件的组件的一些属性值集合
-currentTarget   Object  当前组件的一些属性值集合
-CustomEvent 自定义事件对象属性列表（继承 BaseEvent）：</p>
-<p>属性      类型      说明
-detail  Object  额外的信息
-TouchEvent 触摸事件对象属性列表（继承 BaseEvent）：</p>
-<p>属性      类型      说明
-touches Array   触摸事件，当前停留在屏幕中的触摸点信息的数组
-changedTouches  Array   触摸事件，当前变化的触摸点信息的数组
-特殊事件： &lt;canvas&gt; 中的触摸事件不可冒泡，所以没有 currentTarget。</p>
-<p>type
-代表事件的类型。</p>
-<p>timeStamp
-页面打开到触发事件所经过的毫秒数。</p>
-<p>target
-触发事件的源组件。</p>
-<p>属性      类型      说明
-id      String  事件源组件的id
-tagName String  当前组件的类型
-dataset Object  事件源组件上由data-开头的自定义属性组成的集合
-currentTarget
-事件绑定的当前组件。</p>
-<p>属性      类型      说明
-id      String  当前组件的id
-tagName String  当前组件的类型
-dataset Object  当前组件上由data-开头的自定义属性组成的集合
-说明： target 和 currentTarget 可以参考上例中，点击 inner view 时，handleTap3 收到的事件对象 target 和 currentTarget 都是 inner，而 handleTap2 收到的事件对象 target 就是 inner，currentTarget 就是 middle。</p>
-<p>dataset
-在组件中可以定义数据，这些数据将会通过事件传递给 SERVICE。 书写方式： 以data-开头，多个单词由连字符-链接，不能有大写(大写会自动转成小写)如data-element-type，最终在 event.currentTarget.dataset 中会将连字符转成驼峰elementType。</p>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 27%" />
+<col style="width: 16%" />
+<col style="width: 57%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>属性</p></th>
+<th class="head"><p>类型</p></th>
+<th class="head"><p>说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>type</p></td>
+<td><p>String</p></td>
+<td><p>事件类型</p></td>
+</tr>
+<tr class="row-odd"><td><p>timeStamp</p></td>
+<td><p>Integer</p></td>
+<td><p>事件生成时的时间戳</p></td>
+</tr>
+<tr class="row-even"><td><p>target</p></td>
+<td><p>Object</p></td>
+<td><p>触发事件的组件的一些属性值集合</p></td>
+</tr>
+<tr class="row-odd"><td><p>currentTarget</p></td>
+<td><p>Object</p></td>
+<td><p>当前组件的一些属性值集合</p></td>
+</tr>
+</tbody>
+</table>
+<p>CustomEvent 自定义事件对象属性列表（继承 BaseEvent）：</p>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 29%" />
+<col style="width: 29%" />
+<col style="width: 43%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>属性</p></th>
+<th class="head"><p>类型</p></th>
+<th class="head"><p>说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>detail</p></td>
+<td><p>Object</p></td>
+<td><p>额外的信息</p></td>
+</tr>
+</tbody>
+</table>
+<p>TouchEvent 触摸事件对象属性列表（继承 BaseEvent）：</p>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 23%" />
+<col style="width: 10%" />
+<col style="width: 67%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>属性</p></th>
+<th class="head"><p>类型</p></th>
+<th class="head"><p>说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>touches</p></td>
+<td><p>Array</p></td>
+<td><p>触摸事件，当前停留在屏幕中的触摸点信息的数组</p></td>
+</tr>
+<tr class="row-odd"><td><p>changedTouches</p></td>
+<td><p>Array</p></td>
+<td><p>触摸事件，当前变化的触摸点信息的数组</p></td>
+</tr>
+</tbody>
+</table>
+<p>特殊事件： &lt;canvas&gt; 中的触摸事件不可冒泡，所以没有 currentTarget。</p>
+<div class="section" id="type">
+<h3>type<a class="headerlink" href="#type" title="永久链接至标题">¶</a></h3>
+<p>代表事件的类型。</p>
+</div>
+<div class="section" id="timestamp">
+<h3>timeStamp<a class="headerlink" href="#timestamp" title="永久链接至标题">¶</a></h3>
+<p>页面打开到触发事件所经过的毫秒数。</p>
+</div>
+<div class="section" id="target">
+<h3>target<a class="headerlink" href="#target" title="永久链接至标题">¶</a></h3>
+<p>触发事件的源组件。</p>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 13%" />
+<col style="width: 73%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>属性</p></th>
+<th class="head"><p>类型</p></th>
+<th class="head"><p>说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>id</p></td>
+<td><p>String</p></td>
+<td><p>事件源组件的id</p></td>
+</tr>
+<tr class="row-odd"><td><p>tagName</p></td>
+<td><p>String</p></td>
+<td><p>当前组件的类型</p></td>
+</tr>
+<tr class="row-even"><td><p>dataset</p></td>
+<td><p>Object</p></td>
+<td><p>事件源组件上由data-开头的自定义属性组成的集合</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="currenttarget">
+<h3>currentTarget<a class="headerlink" href="#currenttarget" title="永久链接至标题">¶</a></h3>
+<p>事件绑定的当前组件。</p>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 15%" />
+<col style="width: 13%" />
+<col style="width: 73%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>属性</p></th>
+<th class="head"><p>类型</p></th>
+<th class="head"><p>说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>id</p></td>
+<td><p>String</p></td>
+<td><p>当前组件的id</p></td>
+</tr>
+<tr class="row-odd"><td><p>tagName</p></td>
+<td><p>String</p></td>
+<td><p>当前组件的类型</p></td>
+</tr>
+<tr class="row-even"><td><p>dataset</p></td>
+<td><p>Object</p></td>
+<td><p>当前组件上由data-开头的自定义属性组成的集合</p></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition attention">
+<p class="admonition-title">注意</p>
+<p>target 和 currentTarget 可以参考上例中，点击 inner view 时，
+handleTap3 收到的事件对象 target 和 currentTarget 都是 inner，</p>
+</div>
+<p>而 handleTap2 收到的事件对象 target 就是 inner，currentTarget 就是 middle。</p>
+</div>
+<div class="section" id="dataset">
+<h3>dataset<a class="headerlink" href="#dataset" title="永久链接至标题">¶</a></h3>
+<p>在组件中可以定义数据，这些数据将会通过事件传递给 SERVICE。
+书写方式： 以data-开头，多个单词由连字符-链接，不能有大写(大写会自动转成小写)如data-element-type，
+最终在 event.currentTarget.dataset 中会将连字符转成驼峰elementType。</p>
 <p>示例：</p>
-<p>touches
-touches 是一个数组，每个元素为一个 Touch 对象（canvas 触摸事件中携带的 touches 是 CanvasTouch 数组）。 表示当前停留在屏幕上的触摸点。</p>
-<p>Touch 对象
-属性      类型      说明
-identifier      Number  触摸点的标识符
-pageX, pageY    Number  距离文档左上角的距离，文档的左上角为原点 ，横向为X轴，纵向为Y轴
-clientX, clientY        Number  距离页面可显示区域（屏幕除去导航条）左上角距离，横向为X轴，纵向为Y轴
-CanvasTouch 对象
-属性      类型      说明      特殊说明
-identifier      Number  触摸点的标识符
-x, y    Number  距离 Canvas 左上角的距离，Canvas 的左上角为原点 ，横向为X轴，纵向为Y轴
-changedTouches
-changedTouches 数据格式同 touches。 表示有变化的触摸点，如从无变有（touchstart），位置变化（touchmove），从有变无（touchend、touchcancel）。</p>
-<p>detail
-自定义事件所携带的数据，如表单组件的提交事件会携带用户的输入，媒体的错误事件会携带错误信息，详见组件定义中各个事件的定义。</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="nx">Page</span><span class="p">({</span>
+  <span class="nx">bindViewTap</span><span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">event</span><span class="p">.</span><span class="nx">currentTarget</span><span class="p">.</span><span class="nx">dataset</span><span class="p">.</span><span class="nx">alphaBeta</span> <span class="o">===</span> <span class="mi">1</span> <span class="c1">// - 会转为驼峰写法</span>
+    <span class="nx">event</span><span class="p">.</span><span class="nx">currentTarget</span><span class="p">.</span><span class="nx">dataset</span><span class="p">.</span><span class="nx">alphabeta</span> <span class="o">===</span> <span class="mi">2</span> <span class="c1">// 大写会转为小写</span>
+  <span class="p">}</span>
+<span class="p">})</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="touches">
+<h3>touches<a class="headerlink" href="#touches" title="永久链接至标题">¶</a></h3>
+<p>touches 是一个数组，每个元素为一个 Touch 对象（canvas 触摸事件中携带的 touches 是 CanvasTouch 数组）。
+表示当前停留在屏幕上的触摸点。</p>
+</div>
+<div class="section" id="touch">
+<h3>Touch 对象<a class="headerlink" href="#touch" title="永久链接至标题">¶</a></h3>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 19%" />
+<col style="width: 8%" />
+<col style="width: 73%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>属性</p></th>
+<th class="head"><p>类型</p></th>
+<th class="head"><p>说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>identifier</p></td>
+<td><p>Number</p></td>
+<td><p>触摸点的标识符</p></td>
+</tr>
+<tr class="row-odd"><td><p>pageX, pageY</p></td>
+<td><p>Number</p></td>
+<td><p>距离文档左上角的距离，文档的左上角为原点 ，横向为X轴，纵向为Y轴</p></td>
+</tr>
+<tr class="row-even"><td><p>clientX, clientY</p></td>
+<td><p>Number</p></td>
+<td><p>距离页面可显示区域（屏幕除去导航条）左上角距离，横向为X轴，纵向为Y轴</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="canvastouch">
+<h3>CanvasTouch 对象<a class="headerlink" href="#canvastouch" title="永久链接至标题">¶</a></h3>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 13%" />
+<col style="width: 9%" />
+<col style="width: 78%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>属性</p></th>
+<th class="head"><p>类型</p></th>
+<th class="head"><p>说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>identifier</p></td>
+<td><p>Number</p></td>
+<td><p>触摸点的标识符</p></td>
+</tr>
+<tr class="row-odd"><td><p>x, y</p></td>
+<td><p>Number</p></td>
+<td><p>距离 Canvas 左上角的距离，Canvas 的左上角为原点 ，横向为X轴，纵向为Y轴</p></td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="changedtouches">
+<h4>changedTouches<a class="headerlink" href="#changedtouches" title="永久链接至标题">¶</a></h4>
+<p>changedTouches 数据格式同 touches。 表示有变化的触摸点，如从无变有（touchstart），
+位置变化（touchmove），从有变无（touchend、touchcancel）。</p>
+</div>
+</div>
+<div class="section" id="detail">
+<h3>detail<a class="headerlink" href="#detail" title="永久链接至标题">¶</a></h3>
+<p>自定义事件所携带的数据，如表单组件的提交事件会携带用户的输入，媒体的错误事件会携带错误信息，详见组件定义中各个事件的定义。</p>
 <p>点击事件的detail 带有的 x, y 同 pageX, pageY 代表距离文档左上角的距离。</p>
+</div>
+</div>
 </div>
 
 
@@ -422,10 +700,10 @@ changedTouches 数据格式同 touches。 表示有变化的触摸点，如从�
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="import.html" class="btn btn-neutral float-right" title="view/wxml/import" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="../wxss.html" class="btn btn-neutral float-right" title="WXSS" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="data.html" class="btn btn-neutral float-left" title="view/wxml/data" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="import.html" class="btn btn-neutral float-left" title="import 引用" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

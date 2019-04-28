@@ -112,6 +112,7 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../../glossary.html">术语</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../rst.html">定义</a></li>
 </ul>
 
             
@@ -197,30 +198,38 @@
 <dt id="get--qyapi--miniprogram-jscode2session">
 <code class="descname">GET </code><code class="descname">&lt;qyapi&gt;/miniprogram/jscode2session</code><a class="headerlink" href="#get--qyapi--miniprogram-jscode2session" title="永久链接至目标">¶</a></dt>
 <dd><dl class="field-list simple">
-<dt class="field-odd">Query Parameters</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>access_token</strong> – 必选 调用接口凭证(注意，此处的access_token 是企业微信应用的access_token，获取方法参见“获取access_token”。要求必须由该小程序关联的应用的secret获取</p></li>
-<li><p><strong>js_code</strong> – 必选 登录时获取的 code</p></li>
-<li><p><strong>grant_type</strong> – 必选 此处固定为 <code class="docutils literal notranslate"><span class="pre">authorization_code</span></code></p></li>
-</ul>
+<dt class="field-odd">Query access_token</dt>
+<dd class="field-odd"><p>必选 调用接口凭证(注意，此处的access_token 是企业微信应用的access_token，获取方法参见“获取access_token”。要求必须由该小程序关联的应用的secret获取</p>
+</dd>
+<dt class="field-even">Query js_code</dt>
+<dd class="field-even"><p>必选 登录时获取的 code</p>
+</dd>
+<dt class="field-odd">Query grant_type</dt>
+<dd class="field-odd"><p>必选 此处固定为 <code class="docutils literal notranslate"><span class="pre">authorization_code</span></code></p>
 </dd>
 <dt class="field-even">权限说明</dt>
 <dd class="field-even"><p>access_token必须是与小程序关联的应用secret所获得。</p>
 </dd>
-<dt class="field-odd">Response JSON Object</dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>corpid</strong> (<em>string</em>) – 用户所属企业的corpid</p></li>
-<li><p><strong>userid</strong> (<em>string</em>) – 用户在企业内的UserID，对应管理端的帐号，企业内唯一。注意：如果该企业没有关联该小程序，则此处返回加密的userid</p></li>
-<li><p><strong>session_key</strong> (<em>string</em>) – 会话密钥</p></li>
-<li><p><strong>errcode</strong> (<em>number</em>) – 错误码，真确时候返回 <code class="docutils literal notranslate"><span class="pre">0</span></code></p></li>
-<li><p><strong>errmsg</strong> (<em>number</em>) – 错误信息，正确时候返回 <code class="docutils literal notranslate"><span class="pre">ok</span></code>。更多错误码的说明请查看 <a class="reference external" href="https://work.weixin.qq.com/api/doc#90000/90139/90313">企业微信全局错误码说明</a>。</p></li>
-</ul>
+<dt class="field-odd">&gt;json string corpid</dt>
+<dd class="field-odd"><p>用户所属企业的corpid</p>
+</dd>
+<dt class="field-even">&gt;json string userid</dt>
+<dd class="field-even"><p>用户在企业内的UserID，对应管理端的帐号，企业内唯一。注意：如果该企业没有关联该小程序，则此处返回加密的userid</p>
+</dd>
+<dt class="field-odd">&gt;json string session_key</dt>
+<dd class="field-odd"><p>会话密钥</p>
+</dd>
+<dt class="field-even">&gt;json number errcode</dt>
+<dd class="field-even"><p>错误码，真确时候返回 <code class="docutils literal notranslate"><span class="pre">0</span></code></p>
+</dd>
+<dt class="field-odd">&gt;json number errmsg</dt>
+<dd class="field-odd"><p>错误信息，正确时候返回 <code class="docutils literal notranslate"><span class="pre">ok</span></code>。更多错误码的说明请查看 <a class="reference external" href="https://work.weixin.qq.com/api/doc#90000/90139/90313">企业微信全局错误码说明</a>。</p>
 </dd>
 </dl>
 </dd></dl>
 
-<div class="admonition note">
-<p class="admonition-title">注解</p>
+<div class="admonition attention">
+<p class="admonition-title">注意</p>
 <ol class="arabic simple">
 <li><p>企业微信的jscode2session请求url与微信的不同</p></li>
 <li><p>企业微信的jscode2session返回的是userid，而微信返回的是openid</p></li>

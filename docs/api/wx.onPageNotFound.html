@@ -109,22 +109,22 @@
 <li class="toctree-l4"><a class="reference internal" href="wx.offAppHide.html">wx.offAppHide</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="index.html#id8">调试</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id8">调试</a></li>
 <li class="toctree-l2"><a class="reference internal" href="index.html#id9">路由</a></li>
 <li class="toctree-l2"><a class="reference internal" href="index.html#id10">界面</a></li>
 <li class="toctree-l2"><a class="reference internal" href="index.html#id22">网络</a></li>
 <li class="toctree-l2"><a class="reference internal" href="index.html#id26">数据缓存</a></li>
 <li class="toctree-l2"><a class="reference internal" href="index.html#id27">媒体</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#id36">位置</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#id37">转发</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#id38">画布</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#id39">文件</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#id40">开放接口</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#id55">设备</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id35">位置</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id36">转发</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id37">画布</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id38">文件</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id39">开放接口</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id54">设备</a></li>
 <li class="toctree-l2"><a class="reference internal" href="index.html#worker">Worker</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#id72">第三方平台</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id71">第三方平台</a></li>
 <li class="toctree-l2"><a class="reference internal" href="index.html#wxml">WXML</a></li>
 </ul>
 </li>
@@ -132,8 +132,9 @@
 <li class="toctree-l1"><a class="reference internal" href="../devtools/index.html">开发工具</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../reference/index.html">参考资料</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../wxcloud/index.html">云开发</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../wxwork/index.html">企业微信兼容</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../wxwork/index.html">企业微信</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../glossary.html">术语</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst.html">定义</a></li>
 </ul>
 
             
@@ -202,6 +203,26 @@
             
   <div class="section" id="wx-onpagenotfound">
 <h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/api/wx.onPageNotFound.html">wx.onPageNotFound</a><a class="headerlink" href="#wx-onpagenotfound" title="永久链接至标题">¶</a></h1>
+<dl class="function">
+<dt id="wx.onPageNotFound">
+<code class="descclassname">wx.</code><code class="descname">onPageNotFound</code><span class="sig-paren">(</span><em>function callback</em><span class="sig-paren">)</span><a class="headerlink" href="#wx.onPageNotFound" title="永久链接至目标">¶</a></dt>
+<dd></dd></dl>
+
+<p>基础库 2.1.2 开始支持，低版本需做 <a class="reference internal" href="../framework/compatibility.html#compatibility"><span class="std std-ref">兼容处理</span></a> 。</p>
+<p>监听小程序要打开的页面不存在事件。该事件与 App.onPageNotFound 的回调时机一致。</p>
+<p>参数
+function callback
+小程序要打开的页面不存在事件的回调函数</p>
+<p>参数
+Object res
+属性      类型      说明
+path    string  不存在页面的路径
+query   Object  打开不存在页面的 query 参数
+isEntryPage     boolean 是否本次启动的首个页面（例如从分享等入口进来，首个页面是开发者配置的分享页面）
+注意
+开发者可以在回调中进行页面重定向，但必须在回调中同步处理，异步处理（例如 setTimeout 异步执行）无效。
+若开发者没有调用 wx.onPageNotFound 绑定监听，也没有声明 App.onPageNotFound，当跳转页面不存在时，将推入微信客户端原生的页面不存在提示页面。
+如果回调中又重定向到另一个不存在的页面，将推入微信客户端原生的页面不存在提示页面，并且不再第二次回调。</p>
 </div>
 
 

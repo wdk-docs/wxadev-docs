@@ -31,7 +31,7 @@
   :>json number errcode: 错误码，真确时候返回 ``0``
   :>json number errmsg: 错误信息，正确时候返回 ``ok``。更多错误码的说明请查看 :wework:`企业微信全局错误码说明 <90139/90313>`。
 
-.. note::
+.. attention::
 
   1. 企业微信的jscode2session请求url与微信的不同
   2. 企业微信的jscode2session返回的是userid，而微信返回的是openid

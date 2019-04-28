@@ -1,2 +1,2 @@
-:wxapi:`logistics.getPrinter`
-===============
+:wxbpi:`logistics.getPrinter`
+============================================================

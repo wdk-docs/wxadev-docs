@@ -1,2 +1,2 @@
-:wxapi:`updatableMessage.createActivityId`
-===============
+:wxbpi:`updatableMessage.createActivityId`
+============================================================

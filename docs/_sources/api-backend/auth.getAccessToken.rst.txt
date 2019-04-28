@@ -1,2 +1,2 @@
-:wxapi:`auth.getAccessToken`
-===============
+:wxbpi:`auth.getAccessToken`
+====================================

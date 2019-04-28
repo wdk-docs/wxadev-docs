@@ -1,2 +1,2 @@
-:wxapi:`analysis.getVisitPage`
-===============
+:wxbpi:`analysis.getVisitPage`
+===================================================

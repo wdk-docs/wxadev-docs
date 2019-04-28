@@ -1,2 +1,2 @@
-:wxapi:`templateMessage.send`
-===============
+:wxbpi:`templateMessage.send`
+============================================================

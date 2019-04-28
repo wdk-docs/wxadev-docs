@@ -1,2 +1,2 @@
-:wxapi:`auth.code2Session`
-===============
+:wxbpi:`auth.code2Session`
+===============================

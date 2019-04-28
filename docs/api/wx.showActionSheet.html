@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>wx.createWorker &mdash; wxadev 1.0.0 文档</title>
+  <title>wx.showActionSheet &mdash; wxadev 1.0.0 文档</title>
   
 
   
@@ -93,13 +93,14 @@
 <li class="toctree-l2"><a class="reference internal" href="index.html#id2">系统</a></li>
 <li class="toctree-l2"><a class="reference internal" href="index.html#id4">更新</a></li>
 <li class="toctree-l2"><a class="reference internal" href="index.html#id5">小程序</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id8">调试</a></li>
 <li class="toctree-l2"><a class="reference internal" href="index.html#id9">路由</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="index.html#id10">界面</a><ul class="current">
 <li class="toctree-l3 current"><a class="reference internal" href="index.html#id11">交互</a><ul class="current">
 <li class="toctree-l4"><a class="reference internal" href="wx.showToast.html">wx.showToast</a></li>
 <li class="toctree-l4"><a class="reference internal" href="wx.showModal.html">wx.showModal</a></li>
 <li class="toctree-l4"><a class="reference internal" href="wx.showLoading.html">wx.createWorker</a></li>
-<li class="toctree-l4 current"><a class="current reference internal" href="#">wx.createWorker</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">wx.showActionSheet</a></li>
 <li class="toctree-l4"><a class="reference internal" href="wx.hideToast.html">wx.hideToast</a></li>
 <li class="toctree-l4"><a class="reference internal" href="wx.hideLoading.html">wx.hideLoading</a></li>
 </ul>
@@ -120,14 +121,14 @@
 <li class="toctree-l2"><a class="reference internal" href="index.html#id22">网络</a></li>
 <li class="toctree-l2"><a class="reference internal" href="index.html#id26">数据缓存</a></li>
 <li class="toctree-l2"><a class="reference internal" href="index.html#id27">媒体</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#id36">位置</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#id37">转发</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#id38">画布</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#id39">文件</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#id40">开放接口</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#id55">设备</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id35">位置</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id36">转发</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id37">画布</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id38">文件</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id39">开放接口</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id54">设备</a></li>
 <li class="toctree-l2"><a class="reference internal" href="index.html#worker">Worker</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#id72">第三方平台</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id71">第三方平台</a></li>
 <li class="toctree-l2"><a class="reference internal" href="index.html#wxml">WXML</a></li>
 </ul>
 </li>
@@ -135,8 +136,9 @@
 <li class="toctree-l1"><a class="reference internal" href="../devtools/index.html">开发工具</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../reference/index.html">参考资料</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../wxcloud/index.html">云开发</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../wxwork/index.html">企业微信兼容</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../wxwork/index.html">企业微信</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../glossary.html">术语</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst.html">定义</a></li>
 </ul>
 
             
@@ -184,7 +186,7 @@
         
           <li><a href="index.html">API</a> &raquo;</li>
         
-      <li>wx.createWorker</li>
+      <li>wx.showActionSheet</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -203,8 +205,52 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="wx-createworker">
-<h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/api/wx.createWorker.html">wx.createWorker</a><a class="headerlink" href="#wx-createworker" title="永久链接至标题">¶</a></h1>
+  <div class="section" id="wx-showactionsheet">
+<h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/api/wx.showActionSheet.html">wx.showActionSheet</a><a class="headerlink" href="#wx-showactionsheet" title="永久链接至标题">¶</a></h1>
+<dl class="function">
+<dt id="wx.showActionSheet">
+<code class="descclassname">wx.</code><code class="descname">showActionSheet</code><span class="sig-paren">(</span><em>{itemList[, itemColor][, success][, fail][, complete]}</em><span class="sig-paren">)</span><a class="headerlink" href="#wx.showActionSheet" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list">
+<dt class="field-odd">Label</dt>
+<dd class="field-odd"><p>显示操作菜单</p>
+</dd>
+<dt class="field-even">参数</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>itemList</strong> (<em>Array.&lt;string&gt;</em>) – 按钮的文字数组，数组长度最大为 <strong>6</strong></p></li>
+<li><p><strong>itemColor</strong> (<em>string</em>) – <code class="docutils literal notranslate"><span class="pre">#000000</span></code>  按钮的文字颜色</p></li>
+<li><p><strong>success({tapIndex})</strong> (<em>function</em>) – <p>接口调用成功的回调函数</p>
+<ul>
+<li><p><strong>tapIndex</strong> (<em>number</em>) - 用户点击的按钮序号，从上到下的顺序，从0开始</p></li>
+</ul>
+</p></li>
+<li><p><strong>fail</strong> (<em>function</em>) – 接口调用失败的回调函数</p></li>
+<li><p><strong>complete</strong> (<em>function</em>) – 接口调用结束的回调函数（调用成功、失败都会执行）</p></li>
+</ul>
+</dd>
+<dt class="field-odd">示例</dt>
+<dd class="field-odd"><div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="nx">wx</span><span class="p">.</span><span class="nx">showActionSheet</span><span class="p">({</span>
+  <span class="nx">itemList</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="s1">&#39;C&#39;</span><span class="p">],</span>
+  <span class="nx">success</span><span class="p">(</span><span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">res</span><span class="p">.</span><span class="nx">tapIndex</span><span class="p">)</span>
+  <span class="p">},</span>
+  <span class="nx">fail</span><span class="p">(</span><span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">res</span><span class="p">.</span><span class="nx">errMsg</span><span class="p">)</span>
+  <span class="p">}</span>
+<span class="p">})</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</dd></dl>
+
+<div class="admonition attention">
+<p class="admonition-title">注意</p>
+<ul class="simple">
+<li><p>Android 6.7.2 以下版本，点击取消或蒙层时，回调 fail, errMsg 为 “fail cancel”；</p></li>
+<li><p>Android 6.7.2 及以上版本 和 iOS 点击蒙层不会关闭模态弹窗，
+所以尽量避免使用「取消」分支中实现业务逻辑</p></li>
+</ul>
+</div>
 </div>
 
 

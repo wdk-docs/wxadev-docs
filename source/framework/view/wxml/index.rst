@@ -1,5 +1,7 @@
-WXML
-======
+.. _wxml:
+
+:wxfrwk:`WXML <view/wxml/index>`
+======================================
 
 WXML（WeiXin Markup Language）是框架设计的一套标签语言，结合基础组件、事件系统，可以构建出页面的结构。
 
@@ -7,12 +9,15 @@ WXML（WeiXin Markup Language）是框架设计的一套标签语言，结合基
 
 用以下一些简单的例子来看看 WXML 具有什么能力：
 
-数据绑定
+**数据绑定**
 
-.. code::
+.. code:: html
 
   <!--wxml-->
   <view>{{message}}</view>
+
+.. code:: js
+
   // page.js
   Page({
     data: {
@@ -20,12 +25,15 @@ WXML（WeiXin Markup Language）是框架设计的一套标签语言，结合基
     }
   })
 
-列表渲染
+**列表渲染**
 
-.. code::
+.. code:: html
 
   <!--wxml-->
   <view wx:for="{{array}}">{{item}}</view>
+
+.. code:: js
+
   // page.js
   Page({
     data: {
@@ -33,14 +41,17 @@ WXML（WeiXin Markup Language）是框架设计的一套标签语言，结合基
     }
   })
 
-条件渲染
+**条件渲染**
 
-.. code::
+.. code:: html
 
   <!--wxml-->
   <view wx:if="{{view == 'WEBVIEW'}}">WEBVIEW</view>
   <view wx:elif="{{view == 'APP'}}">APP</view>
   <view wx:else="{{view == 'MINA'}}">MINA</view>
+
+.. code:: js
+
   // page.js
   Page({
     data: {
@@ -48,9 +59,9 @@ WXML（WeiXin Markup Language）是框架设计的一套标签语言，结合基
     }
   })
 
-模板
+**模板**
 
-.. code::
+.. code:: html
 
   <!--wxml-->
   <template name="staffName">
@@ -77,15 +88,19 @@ WXML（WeiXin Markup Language）是框架设计的一套标签语言，结合基
 
 具体的能力以及使用方式在以下章节查看：
 
-数据绑定、列表渲染、条件渲染、模板、引用
+.. :ref:`wxml-data` 、
+.. :ref:`wxml-list` 、
+.. :ref:`wxml-conditional` 、
+.. :ref:`wxml-template` 、
+.. :ref:`wxml-import` 、
+.. :ref:`wxml-event`
 
 .. toctree::
-   :maxdepth: 1
-   :glob:
+   :maxdepth: 2
 
-   conditional
    data
-   event
-   import
    list
+   conditional
    template
+   import
+   event

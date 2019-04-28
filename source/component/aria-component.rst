@@ -1,7 +1,7 @@
 .. _aria:
 
 
-aria-component
+:wx_comp:`aria-component`
 ===========================
 
 无障碍访问

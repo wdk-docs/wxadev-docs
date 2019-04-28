@@ -1,2 +1,2 @@
-:wxapi:`logistics.getAllDelivery`
-===============
+:wxbpi:`logistics.getAllDelivery`
+============================================================

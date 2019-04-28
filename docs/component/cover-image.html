@@ -116,8 +116,9 @@
 <li class="toctree-l1"><a class="reference internal" href="../devtools/index.html">开发工具</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../reference/index.html">参考资料</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../wxcloud/index.html">云开发</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../wxwork/index.html">企业微信兼容</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../wxwork/index.html">企业微信</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../glossary.html">术语</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst.html">定义</a></li>
 </ul>
 
             
@@ -185,15 +186,51 @@
            <div itemprop="articleBody">
             
   <div class="section" id="cover-image">
-<span id="id1"></span><h1>cover-image<a class="headerlink" href="#cover-image" title="永久链接至标题">¶</a></h1>
+<span id="id1"></span><h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/component/cover-image.html">cover-image</a><a class="headerlink" href="#cover-image" title="永久链接至标题">¶</a></h1>
 <div class="versionadded">
-<p><span class="versionmodified added">1.4.0 新版功能: </span>开始支持，低版本需做兼容处理。</p>
+<p><span class="versionmodified added">1.4.0 新版功能: </span>开始支持，低版本需做 <a class="reference internal" href="../framework/compatibility.html#compatibility"><span class="std std-ref">兼容处理</span></a> 。</p>
 </div>
-<p>覆盖在原生组件之上的图片视图。可覆盖的原生组件同&lt;cover-view&gt;，支持嵌套在&lt;cover-view&gt;里。</p>
-<p>属性      类型      默认值     必填      说明      最低版本
-src     string          否       图标路径，支持临时路径、网络地址（1.6.0起支持）、云文件ID（2.2.3起支持）。暂不支持base64格式。        1.4.0
-bindload        eventhandle             否       图片加载成功时触发       2.1.0
-binderror       eventhandle             否       图片加载失败时触发       2.1.0</p>
+<p>覆盖在原生组件之上的图片视图。可覆盖的原生组件同&lt;<a class="reference internal" href="cover-view.html"><span class="doc">cover-view</span></a>&gt;，支持嵌套在&lt;<a class="reference internal" href="cover-view.html"><span class="doc">cover-view</span></a>&gt;里。</p>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 8%" />
+<col style="width: 9%" />
+<col style="width: 6%" />
+<col style="width: 4%" />
+<col style="width: 67%" />
+<col style="width: 7%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>属性</p></td>
+<td><p>类型</p></td>
+<td><p>默认值</p></td>
+<td><p>必填</p></td>
+<td><p>说明</p></td>
+<td><p>最低版本</p></td>
+</tr>
+<tr class="row-even"><td><p>src</p></td>
+<td><p>string</p></td>
+<td></td>
+<td><p>否</p></td>
+<td><p>图标路径，支持临时路径、网络地址（1.6.0起支持）、云文件ID（2.2.3起支持）。暂不支持base64格式。</p></td>
+<td><p>1.4.0</p></td>
+</tr>
+<tr class="row-odd"><td><p>bindload</p></td>
+<td><p>eventhandle</p></td>
+<td></td>
+<td><p>否</p></td>
+<td><p>图片加载成功时触发</p></td>
+<td><p>2.1.0</p></td>
+</tr>
+<tr class="row-even"><td><p>binderror</p></td>
+<td><p>eventhandle</p></td>
+<td></td>
+<td><p>否</p></td>
+<td><p>图片加载失败时触发</p></td>
+<td><p>2.1.0</p></td>
+</tr>
+</tbody>
+</table>
 </div>
 
 

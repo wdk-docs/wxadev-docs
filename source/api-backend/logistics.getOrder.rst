@@ -1,2 +1,2 @@
-:wxapi:`logistics.getOrder`
-===============
+:wxbpi:`logistics.getOrder`
+===================================================

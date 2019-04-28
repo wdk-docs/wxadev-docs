@@ -1,2 +1,2 @@
-:wxapi:`pluginManager.applyPlugin`
-===============
+:wxbpi:`pluginManager.applyPlugin`
+============================================================

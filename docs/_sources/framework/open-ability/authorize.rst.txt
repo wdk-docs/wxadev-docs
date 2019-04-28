@@ -54,7 +54,7 @@ scope 列表
 | scope.camera           | <camera /> 组件                                      | 摄像头       |
 +------------------------+------------------------------------------------------+--------------+
 
-.. note::
+.. attention::
 
   #. wx.authorize({scope: "scope.userInfo"})，不会弹出授权窗口，请使用 <button open-type="getUserInfo"/>
   #. 需要授权 scope.userLocation 时必须配置地理位置用途说明。

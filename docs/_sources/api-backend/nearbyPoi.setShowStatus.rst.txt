@@ -1,2 +1,2 @@
-:wxapi:`nearbyPoi.setShowStatus`
-===============
+:wxbpi:`nearbyPoi.setShowStatus`
+============================================================

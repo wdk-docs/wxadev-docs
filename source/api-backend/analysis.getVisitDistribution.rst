@@ -1,2 +1,2 @@
-:wxapi:`analysis.getVisitDistribution`
-===============
+:wxbpi:`analysis.getVisitDistribution`
+===================================================

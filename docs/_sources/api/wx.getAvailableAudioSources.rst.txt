@@ -3,7 +3,7 @@
 
 .. function:: wx.getAvailableAudioSources({[success][,fail][,complete  ]})
 
-   .. versionadded: 2.1.0 低版本需做兼容处理。
+   .. versionadded: 2.1.0 低版本需做 :ref:`compatibility` 。
 
    :label: 获取当前支持的音频输入源
    :param function success(res): 接口调用成功的回调函数

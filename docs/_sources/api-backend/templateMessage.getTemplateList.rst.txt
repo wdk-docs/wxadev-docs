@@ -1,2 +1,2 @@
-:wxapi:`templateMessage.getTemplateList`
-===============
+:wxbpi:`templateMessage.getTemplateList`
+============================================================

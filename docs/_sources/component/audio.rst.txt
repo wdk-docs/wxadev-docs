@@ -1,10 +1,10 @@
 
 .. _audio:
 
-:wxcomp:`audio <audio>`
+:wx_comp:`audio`
 ============================================================
 
-.. versionadded::  1.0.0 低版本需做兼容处理。
+.. versionadded::  1.0.0 低版本需做 :ref:`compatibility` 。
 
 .. versionchanged:: 1.6.0 该组件不再维护, 建议使用能力更强的 :func:`wx.createInnerAudioContext` 接口
 

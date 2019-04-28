@@ -1,6 +1,14 @@
 :wxapi:`RecorderManager`
 ============================================
 
+.. js:function:: wx.getRecorderManager()
+
+  .. versionadded:: 1.6.0 低版本需做 :ref:`compatibility` 。
+
+  获取全局唯一的录音管理器 :class:`RecorderManager`
+
+  :return: :class:`RecorderManager`
+
 .. class:: RecorderManager
 
   :label: 全局唯一的录音管理器
@@ -65,20 +73,20 @@
 
 .. function:: RecorderManager.onInterruptionBegin(function callback)
 
+  .. versionadded:: 2.3.0 低版本需做 :ref:`compatibility` 。
+
   :label: 监听录音因为受到系统占用而被中断开始事件。
     以下场景会触发此事件：微信语音聊天、微信视频聊天。此事件触发后，录音会被暂停。
     pause 事件在此事件后触发
   :param function callback: 录音因为受到系统占用而被中断开始事件的回调函数
 
-  .. versionadded:: 2.3.0 低版本需做兼容处理。
-
 .. function:: RecorderManager.onInterruptionEnd(function callback)
+
+  .. versionadded:: 2.3.0 低版本需做 :ref:`compatibility` 。
 
   :label: 监听录音中断结束事件。
     在收到 interruptionBegin 事件之后，小程序内所有录音会暂停，收到此事件之后才可再次录音成功。
   :param function callback: 录音中断结束事件的回调函数
-
-  .. versionadded:: 2.3.0 低版本需做兼容处理。
 
 示例代码
 -------------

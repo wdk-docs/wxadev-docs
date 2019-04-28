@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>workers &mdash; wxadev 1.0.0 文档</title>
+  <title>多线程 Worker &mdash; wxadev 1.0.0 文档</title>
   
 
   
@@ -36,7 +36,7 @@
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜索" href="../search.html" />
-    <link rel="next" title="server-ability" href="server-ability/index.html" />
+    <link rel="next" title="后端能力" href="server-ability/index.html" />
     <link rel="prev" title="兼容处理" href="compatibility.html" /> 
 </head>
 
@@ -92,24 +92,22 @@
 <li class="toctree-l2"><a class="reference internal" href="config.html">小程序配置</a></li>
 <li class="toctree-l2"><a class="reference internal" href="sitemap.html">sitemap 配置</a></li>
 <li class="toctree-l2"><a class="reference internal" href="app-service/index.html">逻辑层 App Service</a></li>
-<li class="toctree-l2"><a class="reference internal" href="view/index.html">视图</a></li>
+<li class="toctree-l2"><a class="reference internal" href="view/index.html">视图层 View</a></li>
 <li class="toctree-l2"><a class="reference internal" href="details.html">运行环境</a></li>
 <li class="toctree-l2"><a class="reference internal" href="plugin/index.html">插件</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ability/index.html">基础能力</a></li>
 <li class="toctree-l2"><a class="reference internal" href="device/index.html">硬件能力</a></li>
 <li class="toctree-l2"><a class="reference internal" href="open-ability/index.html">开放能力</a></li>
 <li class="toctree-l2"><a class="reference internal" href="usability.html">调试</a></li>
-<li class="toctree-l2"><a class="reference internal" href="usability/index.html">usability</a></li>
-<li class="toctree-l2"><a class="reference internal" href="usability/index.html#id1">视图</a></li>
-<li class="toctree-l2"><a class="reference internal" href="performance.html">性能</a></li>
-<li class="toctree-l2"><a class="reference internal" href="performance/index.html">performance</a></li>
-<li class="toctree-l2"><a class="reference internal" href="client-lib/index.html">client-lib</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usability/index.html">可用性</a></li>
+<li class="toctree-l2"><a class="reference internal" href="performance/index.html">性能</a></li>
+<li class="toctree-l2"><a class="reference internal" href="client-lib/index.html">基础库</a></li>
 <li class="toctree-l2"><a class="reference internal" href="compatibility.html">兼容处理</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">workers</a></li>
-<li class="toctree-l2"><a class="reference internal" href="server-ability/index.html">server-ability</a></li>
-<li class="toctree-l2"><a class="reference internal" href="release/index.html">release</a></li>
-<li class="toctree-l2"><a class="reference internal" href="operating-mechanism.html">小程序运行机制</a></li>
-<li class="toctree-l2"><a class="reference internal" href="custom-component/index.html">custom-component</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">多线程 Worker</a></li>
+<li class="toctree-l2"><a class="reference internal" href="server-ability/index.html">后端能力</a></li>
+<li class="toctree-l2"><a class="reference internal" href="release/index.html">版本更新</a></li>
+<li class="toctree-l2"><a class="reference internal" href="operating-mechanism.html">运行机制</a></li>
+<li class="toctree-l2"><a class="reference internal" href="custom-component/index.html">自定义组件</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../component/index.html">组件</a></li>
@@ -118,8 +116,9 @@
 <li class="toctree-l1"><a class="reference internal" href="../devtools/index.html">开发工具</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../reference/index.html">参考资料</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../wxcloud/index.html">云开发</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../wxwork/index.html">企业微信兼容</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../wxwork/index.html">企业微信</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../glossary.html">术语</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst.html">定义</a></li>
 </ul>
 
             
@@ -167,7 +166,7 @@
         
           <li><a href="index.html">框架</a> &raquo;</li>
         
-      <li>workers</li>
+      <li>多线程 Worker</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -186,8 +185,65 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="workers">
-<h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/framework/workers.html">workers</a><a class="headerlink" href="#workers" title="永久链接至标题">¶</a></h1>
+  <div class="section" id="worker">
+<h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/framework/workers.html">多线程 Worker</a><a class="headerlink" href="#worker" title="永久链接至标题">¶</a></h1>
+<p>多线程 Worker
+一些异步处理的任务，可以放置于 Worker 中运行，待运行结束后，再把结果返回到小程序主线程。Worker 运行于一个单独的全局上下文与线程中，不能直接调用主线程的方法。</p>
+<p>Worker 与主线程之间的数据传输，双方使用 Worker.postMessage() 来发送数据，Worker.onMessage() 来接收数据，传输的数据并不是直接共享，而是被复制的。</p>
+<p>使用流程
+在开发者工具中预览效果</p>
+<p>1. 配置 Worker 信息
+在 app.json 中可配置 Worker 代码放置的目录，目录下的代码将被打包成一个文件：</p>
+<p>配置示例：</p>
+<dl class="simple">
+<dt>{</dt><dd><p>“workers”: “workers”</p>
+</dd>
+</dl>
+<p>}
+2. 添加 Worker 代码文件
+根据步骤 1 中的配置，在代码目录下新建以下两个入口文件：</p>
+<p>workers/request/index.js
+workers/request/utils.js
+workers/response/index.js
+添加后，目录结构如下：</p>
+<p>├── app.js
+├── app.json
+├── project.config.json
+└── workers</p>
+<blockquote>
+<div><p>├── request
+│   ├── index.js
+│   └── utils.js
+└── response</p>
+<blockquote>
+<div><p>└── index.js</p>
+</div></blockquote>
+</div></blockquote>
+<p>3. 编写 Worker 代码
+在 workers/request/index.js 编写 Worker 响应代码</p>
+<p>const utils = require(‘./utils’)</p>
+<p>// 在 Worker 线程执行上下文会全局暴露一个 worker 对象，直接调用 worker.onMeesage/postMessage 即可
+worker.onMessage(function (res) {</p>
+<blockquote>
+<div><p>console.log(res)</p>
+</div></blockquote>
+<p>})
+4. 在主线程中初始化 Worker
+在主线程的代码 app.js 中初始化 Worker</p>
+<p>const worker = wx.createWorker(‘workers/request/index.js’) // 文件名指定 worker 的入口文件路径，绝对路径
+5. 主线程向 Worker 发送消息
+worker.postMessage({</p>
+<blockquote>
+<div><p>msg: ‘hello worker’</p>
+</div></blockquote>
+<p>})
+worker 对象的其它接口请看 worker接口说明</p>
+<p>注意事项
+Worker 最大并发数量限制为 1 个，创建下一个前请用 Worker.terminate() 结束当前 Worker
+Worker 内代码只能 require 指定 Worker 路径内的文件，无法引用其它路径
+Worker 的入口文件由 wx.createWorker() 时指定，开发者可动态指定 Worker 入口文件
+Worker 内不支持 wx 系列的 API
+Workers 之间不支持发送消息</p>
 </div>
 
 
@@ -198,7 +254,7 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="server-ability/index.html" class="btn btn-neutral float-right" title="server-ability" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="server-ability/index.html" class="btn btn-neutral float-right" title="后端能力" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="compatibility.html" class="btn btn-neutral float-left" title="兼容处理" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>

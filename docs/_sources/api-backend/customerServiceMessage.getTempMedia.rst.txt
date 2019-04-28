@@ -1,2 +1,2 @@
-:wxapi:`customerServiceMessage.getTempMedia`
-===============
+:wxbpi:`customerServiceMessage.getTempMedia`
+===================================================

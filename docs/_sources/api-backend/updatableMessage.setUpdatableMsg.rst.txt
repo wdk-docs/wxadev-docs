@@ -1,2 +1,2 @@
-:wxapi:`updatableMessage.setUpdatableMsg`
-===============
+:wxbpi:`updatableMessage.setUpdatableMsg`
+============================================================

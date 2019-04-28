@@ -37,7 +37,7 @@
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜索" href="../search.html" />
     <link rel="next" title="wx.onPageNotFound" href="wx.onPageNotFound.html" />
-    <link rel="prev" title="UpdateManager.onUpdateReady" href="UpdateManager.onUpdateReady.html" /> 
+    <link rel="prev" title="UpdateManager" href="UpdateManager.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -89,23 +89,23 @@
 <li class="toctree-l1"><a class="reference internal" href="../framework/index.html">框架</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../component/index.html">组件</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">API</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="index.html#id1">基础</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#id2">系统</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#id4">更新</a></li>
-<li class="toctree-l2 current"><a class="reference internal" href="index.html#id5">小程序</a><ul class="current">
-<li class="toctree-l3 current"><a class="reference internal" href="index.html#id6">生命周期</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="index.html#id2">基础</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id3">系统</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id5">更新</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html#id6">小程序</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="index.html#id7">生命周期</a><ul class="current">
 <li class="toctree-l4 current"><a class="current reference internal" href="#">wx.getLaunchOptionsSync</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="index.html#id7">应用级事件</a></li>
-<li class="toctree-l3"><a class="reference internal" href="index.html#id8">调试</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#id8">应用级事件</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#id9">路由</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#id10">界面</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#id22">网络</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#id26">数据缓存</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#id27">媒体</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id9">调试</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id10">路由</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id11">界面</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id23">网络</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id27">数据缓存</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id28">媒体</a></li>
 <li class="toctree-l2"><a class="reference internal" href="index.html#id36">位置</a></li>
 <li class="toctree-l2"><a class="reference internal" href="index.html#id37">转发</a></li>
 <li class="toctree-l2"><a class="reference internal" href="index.html#id38">画布</a></li>
@@ -121,8 +121,9 @@
 <li class="toctree-l1"><a class="reference internal" href="../devtools/index.html">开发工具</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../reference/index.html">参考资料</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../wxcloud/index.html">云开发</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../wxwork/index.html">企业微信兼容</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../wxwork/index.html">企业微信</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../glossary.html">术语</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst.html">定义</a></li>
 </ul>
 
             
@@ -191,6 +192,36 @@
             
   <div class="section" id="wx-getlaunchoptionssync">
 <h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/api/wx.getLaunchOptionsSync.html">wx.getLaunchOptionsSync</a><a class="headerlink" href="#wx-getlaunchoptionssync" title="永久链接至标题">¶</a></h1>
+<dl class="function">
+<dt id="wx.getLaunchOptionsSync">
+<code class="descclassname">wx.</code><code class="descname">getLaunchOptionsSync</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#wx.getLaunchOptionsSync" title="永久链接至目标">¶</a></dt>
+<dd></dd></dl>
+
+<p>基础库 2.1.2 开始支持，低版本需做 <a class="reference internal" href="../framework/compatibility.html#compatibility"><span class="std std-ref">兼容处理</span></a> 。</p>
+<p>获取小程序启动时的参数。与 App.onLaunch 的回调参数一致。</p>
+<p>返回值
+Object
+启动参数</p>
+<p>属性      类型      说明
+path    string  启动小程序的路径
+scene   number  启动小程序的场景值
+query   Object  启动小程序的 query 参数
+shareTicket     string  shareTicket，详见获取更多转发信息
+referrerInfo    Object  来源信息。从另一个小程序、公众号或 App 进入小程序时返回。否则返回 {}。(参见后文注意)
+referrerInfo 的结构</p>
+<p>属性      类型      说明
+appId   string  来源小程序、公众号或 App 的 appId
+extraData       Object  来源小程序传过来的数据，scene=1037或1038时支持
+返回有效 referrerInfo 的场景
+场景值     场景      appId含义
+1020    公众号 profile 页相关小程序列表    来源公众号
+1035    公众号自定义菜单        来源公众号
+1036    App 分享消息卡片      来源App
+1037    小程序打开小程序        来源小程序
+1038    从另一个小程序返回       来源小程序
+1043    公众号模板消息 来源公众号
+注意
+部分版本在无referrerInfo的时候会返回 undefined，建议使用 options.referrerInfo &amp;&amp; options.referrerInfo.appId 进行判断。</p>
 </div>
 
 
@@ -204,7 +235,7 @@
         <a href="wx.onPageNotFound.html" class="btn btn-neutral float-right" title="wx.onPageNotFound" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="UpdateManager.onUpdateReady.html" class="btn btn-neutral float-left" title="UpdateManager.onUpdateReady" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="UpdateManager.html" class="btn btn-neutral float-left" title="UpdateManager" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

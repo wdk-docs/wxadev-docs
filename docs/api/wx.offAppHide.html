@@ -36,7 +36,7 @@
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜索" href="../search.html" />
-    <link rel="next" title="wx.createWorker" href="wx.setEnableDebug.html" />
+    <link rel="next" title="wx.setEnableDebug" href="wx.setEnableDebug.html" />
     <link rel="prev" title="wx.offAppShow" href="wx.offAppShow.html" /> 
 </head>
 
@@ -89,12 +89,12 @@
 <li class="toctree-l1"><a class="reference internal" href="../framework/index.html">框架</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../component/index.html">组件</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">API</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="index.html#id1">基础</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#id2">系统</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#id4">更新</a></li>
-<li class="toctree-l2 current"><a class="reference internal" href="index.html#id5">小程序</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="index.html#id6">生命周期</a></li>
-<li class="toctree-l3 current"><a class="reference internal" href="index.html#id7">应用级事件</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="index.html#id2">基础</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id3">系统</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id5">更新</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html#id6">小程序</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="index.html#id7">生命周期</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html#id8">应用级事件</a><ul class="current">
 <li class="toctree-l4"><a class="reference internal" href="wx.onPageNotFound.html">wx.onPageNotFound</a></li>
 <li class="toctree-l4"><a class="reference internal" href="wx.onError.html">wx.onError</a></li>
 <li class="toctree-l4"><a class="reference internal" href="wx.onAudioInterruptionEnd.html">wx.onAudioInterruptionEnd</a></li>
@@ -109,14 +109,14 @@
 <li class="toctree-l4 current"><a class="current reference internal" href="#">wx.offAppHide</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="index.html#id8">调试</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#id9">路由</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#id10">界面</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#id22">网络</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#id26">数据缓存</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#id27">媒体</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id9">调试</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id10">路由</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id11">界面</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id23">网络</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id27">数据缓存</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id28">媒体</a></li>
 <li class="toctree-l2"><a class="reference internal" href="index.html#id36">位置</a></li>
 <li class="toctree-l2"><a class="reference internal" href="index.html#id37">转发</a></li>
 <li class="toctree-l2"><a class="reference internal" href="index.html#id38">画布</a></li>
@@ -132,8 +132,9 @@
 <li class="toctree-l1"><a class="reference internal" href="../devtools/index.html">开发工具</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../reference/index.html">参考资料</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../wxcloud/index.html">云开发</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../wxwork/index.html">企业微信兼容</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../wxwork/index.html">企业微信</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../glossary.html">术语</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst.html">定义</a></li>
 </ul>
 
             
@@ -202,6 +203,12 @@
             
   <div class="section" id="wx-offapphide">
 <h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/api/wx.offAppHide.html">wx.offAppHide</a><a class="headerlink" href="#wx-offapphide" title="永久链接至标题">¶</a></h1>
+<p>wx.offAppHide(function callback)
+基础库 2.1.2 开始支持，低版本需做 <a class="reference internal" href="../framework/compatibility.html#compatibility"><span class="std std-ref">兼容处理</span></a> 。</p>
+<p>取消监听小程序切后台事件</p>
+<p>参数
+function callback
+小程序切后台事件的回调函数</p>
 </div>
 
 
@@ -212,7 +219,7 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="wx.setEnableDebug.html" class="btn btn-neutral float-right" title="wx.createWorker" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="wx.setEnableDebug.html" class="btn btn-neutral float-right" title="wx.setEnableDebug" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="wx.offAppShow.html" class="btn btn-neutral float-left" title="wx.offAppShow" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>

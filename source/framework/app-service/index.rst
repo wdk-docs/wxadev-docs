@@ -15,7 +15,7 @@
 提供丰富的 API，如微信用户数据，扫一扫，支付等微信特有能力。
 提供模块化能力，每个页面有独立的作用域。
 
-.. note:: 小程序框架的逻辑层并非运行在浏览器中，因此 JavaScript 在 web 中一些能力都无法使用，如 window，document 等。
+.. attention:: 小程序框架的逻辑层并非运行在浏览器中，因此 JavaScript 在 web 中一些能力都无法使用，如 window，document 等。
 
 
 .. toctree::

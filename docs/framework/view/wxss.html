@@ -36,8 +36,8 @@
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="index" title="索引" href="../../genindex.html" />
     <link rel="search" title="搜索" href="../../search.html" />
-    <link rel="next" title="获取界面上的节点信息" href="selector.html" />
-    <link rel="prev" title="视图" href="index.html" /> 
+    <link rel="next" title="WXS" href="wxs/index.html" />
+    <link rel="prev" title="bindtap 事件" href="wxml/event.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -92,15 +92,19 @@
 <li class="toctree-l2"><a class="reference internal" href="../config.html">小程序配置</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../sitemap.html">sitemap 配置</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../app-service/index.html">逻辑层 App Service</a></li>
-<li class="toctree-l2 current"><a class="reference internal" href="index.html">视图</a><ul class="current">
-<li class="toctree-l3 current"><a class="current reference internal" href="#">WXSS</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">视图层 View</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="wxml/index.html">WXML</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">WXSS</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id2">尺寸单位</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id3">内联样式</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="wxs/index.html">WXS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="interactive-animation.html">频繁交互</a></li>
+<li class="toctree-l3"><a class="reference internal" href="component.html">基础组件</a></li>
 <li class="toctree-l3"><a class="reference internal" href="selector.html">获取界面上的节点信息</a></li>
 <li class="toctree-l3"><a class="reference internal" href="resizable.html">响应显示区域变化</a></li>
-<li class="toctree-l3"><a class="reference internal" href="interactive-animation.html">WXS响应事件</a></li>
-<li class="toctree-l3"><a class="reference internal" href="component.html">基础组件</a></li>
 <li class="toctree-l3"><a class="reference internal" href="animation.html">动画</a></li>
-<li class="toctree-l3"><a class="reference internal" href="wxs/index.html">WXS</a></li>
-<li class="toctree-l3"><a class="reference internal" href="wxml/index.html">WXML</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../details.html">运行环境</a></li>
@@ -109,17 +113,15 @@
 <li class="toctree-l2"><a class="reference internal" href="../device/index.html">硬件能力</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../open-ability/index.html">开放能力</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../usability.html">调试</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../usability/index.html">usability</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../usability/index.html#id1">视图</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../performance.html">性能</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../performance/index.html">performance</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../client-lib/index.html">client-lib</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../usability/index.html">可用性</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../performance/index.html">性能</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../client-lib/index.html">基础库</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../compatibility.html">兼容处理</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../workers.html">workers</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../server-ability/index.html">server-ability</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../release/index.html">release</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../operating-mechanism.html">小程序运行机制</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../custom-component/index.html">custom-component</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../workers.html">多线程 Worker</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../server-ability/index.html">后端能力</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../release/index.html">版本更新</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../operating-mechanism.html">运行机制</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../custom-component/index.html">自定义组件</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../component/index.html">组件</a></li>
@@ -128,8 +130,9 @@
 <li class="toctree-l1"><a class="reference internal" href="../../devtools/index.html">开发工具</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../reference/index.html">参考资料</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../wxcloud/index.html">云开发</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../wxwork/index.html">企业微信兼容</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../wxwork/index.html">企业微信</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../glossary.html">术语</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../rst.html">定义</a></li>
 </ul>
 
             
@@ -177,7 +180,7 @@
         
           <li><a href="../index.html">框架</a> &raquo;</li>
         
-          <li><a href="index.html">视图</a> &raquo;</li>
+          <li><a href="index.html">视图层 View</a> &raquo;</li>
         
       <li>WXSS</li>
     
@@ -199,20 +202,41 @@
            <div itemprop="articleBody">
             
   <div class="section" id="wxss">
-<h1>WXSS<a class="headerlink" href="#wxss" title="永久链接至标题">¶</a></h1>
+<span id="id1"></span><h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/framework/view/wxss.html">WXSS</a><a class="headerlink" href="#wxss" title="永久链接至标题">¶</a></h1>
 <p>WXSS (WeiXin Style Sheets)是一套样式语言，用于描述 WXML 的组件样式。</p>
 <p>WXSS 用来决定 WXML 的组件应该怎么显示。</p>
 <p>为了适应广大的前端开发者，WXSS 具有 CSS 大部分特性。同时为了更适合开发微信小程序，WXSS 对 CSS 进行了扩充以及修改。</p>
 <p>与 CSS 相比，WXSS 扩展的特性有：</p>
-<p>尺寸单位</p>
-<p>样式导入</p>
-<p>尺寸单位</p>
-<p>rpx（responsive pixel）: 可以根据屏幕宽度进行自适应。规定屏幕宽为750rpx。如在 iPhone6 上，屏幕宽度为375px，共有750个物理像素，则750rpx = 375px = 750物理像素，1rpx = 0.5px = 1物理像素。
-设备      rpx换算px (屏幕宽度/750)      px换算rpx (750/屏幕宽度)
-iPhone5 1rpx = 0.42px   1px = 2.34rpx
-iPhone6 1rpx = 0.5px    1px = 2rpx
-iPhone6 Plus    1rpx = 0.552px  1px = 1.81rpx</p>
-<p>建议： 开发微信小程序时设计师可以用 iPhone6 作为视觉稿的标准。</p>
+<ul class="simple">
+<li><p>尺寸单位</p></li>
+<li><p>样式导入</p></li>
+</ul>
+<div class="section" id="id2">
+<h2>尺寸单位<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<p>rpx（responsive pixel）: 可以根据屏幕宽度进行自适应。规定屏幕宽为750rpx。
+如在 iPhone6 上，屏幕宽度为375px，共有750个物理像素，
+则750rpx = 375px = 750物理像素，1rpx = 0.5px = 1物理像素。
+设备      rpx换算px (屏幕宽度/750)      px换算rpx (750/屏幕宽度)</p>
+<table class="hlist"><tr><td><ul class="simple">
+<li><p><strong>iPhone5</strong></p></li>
+<li><p>1rpx = 0.42px</p></li>
+<li><p>1px = 2.34rpx</p></li>
+</ul>
+</td><td><ul class="simple">
+<li><p><strong>iPhone6</strong></p></li>
+<li><p>1rpx = 0.5px</p></li>
+<li><p>1px = 2rpx</p></li>
+</ul>
+</td><td><ul class="simple">
+<li><p><strong>iPhone6 Plus</strong></p></li>
+<li><p>1rpx = 0.552px</p></li>
+<li><p>1px = 1.81rpx</p></li>
+</ul>
+</td></tr></table>
+<div class="admonition attention">
+<p class="admonition-title">注意</p>
+<p>开发微信小程序时设计师可以用 iPhone6 作为视觉稿的标准。</p>
+</div>
 <div class="admonition tip">
 <p class="admonition-title">小技巧</p>
 <p>在较小的屏幕上不可避免的会有一些毛刺，请在开发时尽量避免这种情况。</p>
@@ -230,7 +254,9 @@ iPhone6 Plus    1rpx = 0.552px  1px = 1.81rpx</p>
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>内联样式</p>
+</div>
+<div class="section" id="id3">
+<h2>内联样式<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
 <p>框架组件上支持使用 style、class 属性来控制组件的样式。</p>
 <p>style：静态的样式统一写到 class 中。style 接收动态的样式，在运行时会进行解析，请尽量避免将静态的样式写进 style 中，以免影响渲染速度。</p>
 <div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">view</span> <span class="na">style</span><span class="o">=</span><span class="s">&quot;color:{{color}};&quot;</span> <span class="p">/&gt;</span>
@@ -250,7 +276,9 @@ element, element        view, checkbox  选择所有文档的 view 组件和所�
 ::after view::after     在 view 组件后边插入内容
 ::before        view::before    在 view 组件前边插入内容</p>
 <p>全局样式与局部样式</p>
-<p>定义在 app.wxss 中的样式为全局样式，作用于每一个页面。在 page 的 wxss 文件中定义的样式为局部样式，只作用在对应的页面，并会覆盖 app.wxss 中相同的选择器。</p>
+<p>定义在 app.wxss 中的样式为全局样式，作用于每一个页面。在 page 的 wxss 文件中定义的样式为局部样式，
+只作用在对应的页面，并会覆盖 app.wxss 中相同的选择器。</p>
+</div>
 </div>
 
 
@@ -261,10 +289,10 @@ element, element        view, checkbox  选择所有文档的 view 组件和所�
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="selector.html" class="btn btn-neutral float-right" title="获取界面上的节点信息" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="wxs/index.html" class="btn btn-neutral float-right" title="WXS" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="index.html" class="btn btn-neutral float-left" title="视图" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="wxml/event.html" class="btn btn-neutral float-left" title="bindtap 事件" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
