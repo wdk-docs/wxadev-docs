@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>logistics.onPathUpdate &mdash; wxadev 1.0.0 文档</title>
+  <title>运单轨迹更新事件 &mdash; wxadev 1.0.0 文档</title>
   
 
   
@@ -36,8 +36,8 @@
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜索" href="../search.html" />
-    <link rel="next" title="logistics.updatePrinter" href="logistics.updatePrinter.html" />
-    <link rel="prev" title="logistics.getQuota" href="logistics.getQuota.html" /> 
+    <link rel="next" title="生成运单" href="logistics.addOrder.html" />
+    <link rel="prev" title="security.msgSecCheck" href="security.msgSecCheck.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -103,19 +103,19 @@
 <li class="toctree-l2"><a class="reference internal" href="index.html#id13">小程序码</a></li>
 <li class="toctree-l2"><a class="reference internal" href="index.html#id14">内容安全</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="index.html#id15">物流助手</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="index.html#id16">服务提供方使用</a></li>
-<li class="toctree-l3 current"><a class="reference internal" href="index.html#id17">小程序使用</a><ul class="current">
-<li class="toctree-l4"><a class="reference internal" href="logistics.addOrder.html">logistics.addOrder</a></li>
-<li class="toctree-l4"><a class="reference internal" href="logistics.cancelOrder.html">logistics.cancelOrder</a></li>
-<li class="toctree-l4"><a class="reference internal" href="logistics.getAllDelivery.html">logistics.getAllDelivery</a></li>
-<li class="toctree-l4"><a class="reference internal" href="logistics.getOrder.html">logistics.getOrder</a></li>
-<li class="toctree-l4"><a class="reference internal" href="logistics.getPath.html">logistics.getPath</a></li>
-<li class="toctree-l4"><a class="reference internal" href="logistics.getPrinter.html">logistics.getPrinter</a></li>
-<li class="toctree-l4"><a class="reference internal" href="logistics.getQuota.html">logistics.getQuota</a></li>
-<li class="toctree-l4 current"><a class="current reference internal" href="#">logistics.onPathUpdate</a></li>
-<li class="toctree-l4"><a class="reference internal" href="logistics.updatePrinter.html">logistics.updatePrinter</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html#id16">小程序使用</a><ul class="current">
+<li class="toctree-l4 current"><a class="current reference internal" href="#">运单轨迹更新事件</a></li>
+<li class="toctree-l4"><a class="reference internal" href="logistics.addOrder.html">生成运单</a></li>
+<li class="toctree-l4"><a class="reference internal" href="logistics.cancelOrder.html">取消运单</a></li>
+<li class="toctree-l4"><a class="reference internal" href="logistics.getAllDelivery.html">获取支持的快递公司列表</a></li>
+<li class="toctree-l4"><a class="reference internal" href="logistics.getOrder.html">获取运单数据</a></li>
+<li class="toctree-l4"><a class="reference internal" href="logistics.getPath.html">查询运单轨迹</a></li>
+<li class="toctree-l4"><a class="reference internal" href="logistics.getQuota.html">获取电子面单余额</a></li>
+<li class="toctree-l4"><a class="reference internal" href="logistics.updatePrinter.html">更新打印员</a></li>
+<li class="toctree-l4"><a class="reference internal" href="logistics.getPrinter.html">获取打印员</a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#id17">服务提供方使用</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="index.html#id18">生物认证</a></li>
@@ -174,7 +174,7 @@
         
           <li><a href="index.html">服务端API</a> &raquo;</li>
         
-      <li>logistics.onPathUpdate</li>
+      <li>运单轨迹更新事件</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -193,8 +193,108 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="logistics-onpathupdate">
-<h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/api-backend/logistics.onPathUpdate.html">logistics.onPathUpdate</a><a class="headerlink" href="#logistics-onpathupdate" title="永久链接至标题">¶</a></h1>
+  <div class="section" id="id1">
+<h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/api-backend/logistics.onPathUpdate.html">运单轨迹更新事件</a><a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
+<p>logistics.onPathUpdate</p>
+<p>本文档描述服务器端接收的消息或事件，详细说明参见消息推送。</p>
+<p>当运单轨迹有更新时，会产生如下数据包。收到事件之后，回复success或者空串即可。</p>
+<p>一、HTTPS 调用
+消息参数
+Object
+属性      类型      说明
+ToUserName      string  小程序的原始ID
+FromUserName    string  发送者的openid
+CreateTime      number  消息创建时间（整型）
+MsgType string  固定 event
+Event   string  固定 add_express_path
+DeliveryID      string  快递公司ID
+WayBillId       string  运单ID
+Version number  轨迹版本号（整型）
+Count   number  轨迹节点数（整型）
+Actions Array.&lt;Object&gt;  轨迹列表
+Actions 的结构</p>
+<p>属性      类型      说明
+ActionTime      number  轨迹节点 Unix 时间戳
+ActionType      number  轨迹节点类型
+ActionMsg       string  轨迹节点详情
+ActionType 的合法值</p>
+<p>值       说明      最低版本
+100001  揽件阶段-揽件成功
+100002  揽件阶段-揽件失败
+100003  揽件阶段-分配业务员
+200001  运输阶段-更新运输轨迹
+300002  派送阶段-开始派送
+300003  派送阶段-签收成功
+300004  派送阶段-签收失败
+400001  异常阶段-订单取消
+400002  异常阶段-订单滞留
+消息数据包示例
+XML 格式</p>
+<dl>
+<dt>&lt;xml&gt;</dt><dd><p>&lt;ToUserName&gt;&lt;![CDATA[toUser]]&gt;&lt;/ToUserName&gt;
+&lt;FromUserName&gt;&lt;![CDATA[fromUser]]&gt;&lt;/FromUserName&gt;
+&lt;CreateTime&gt;1546924844&lt;/CreateTime&gt;
+&lt;MsgType&gt;&lt;![CDATA[event]]&gt;&lt;/MsgType&gt;
+&lt;Event&gt;&lt;![CDATA[add_express_path]]&gt;&lt;/Event&gt;
+&lt;DeliveryID&gt;&lt;![CDATA[SF]]&gt;&lt;/DeliveryID&gt;
+&lt;WayBillId&gt;&lt;![CDATA[123456789]]&gt;&lt;/WayBillId&gt;
+&lt;Version&gt;3&lt;/Version&gt;
+&lt;Count&gt;3&lt;/Count&gt;
+&lt;Actions&gt;</p>
+<blockquote>
+<div><p>&lt;ActionTime&gt;1546924840&lt;/ActionTime&gt;
+&lt;ActionType&gt;100001&lt;/ActionType&gt;
+&lt;ActionMsg&gt;&lt;![CDATA[小哥A揽件成功]]&gt;&lt;/ActionMsg&gt;</p>
+</div></blockquote>
+<p>&lt;/Actions&gt;
+&lt;Actions&gt;</p>
+<blockquote>
+<div><p>&lt;ActionTime&gt;1546924841&lt;/ActionTime&gt;
+&lt;ActionType&gt;200001&lt;/ActionType&gt;
+&lt;ActionMsg&gt;&lt;![CDATA[到达广州集包地]]&gt;&lt;/ActionMsg&gt;</p>
+</div></blockquote>
+<p>&lt;/Actions&gt;
+&lt;Actions&gt;</p>
+<blockquote>
+<div><p>&lt;ActionTime&gt;1546924842&lt;/ActionTime&gt;
+&lt;ActionType&gt;200001&lt;/ActionType&gt;
+&lt;ActionMsg&gt;&lt;![CDATA[运往目的地]]&gt;&lt;/ActionMsg&gt;</p>
+</div></blockquote>
+<p>&lt;/Actions&gt;</p>
+</dd>
+</dl>
+<p>&lt;/xml&gt;
+JSON 格式</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;ToUserName&quot;</span><span class="p">:</span> <span class="s2">&quot;toUser&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;FromUserName&quot;</span><span class="p">:</span> <span class="s2">&quot;fromUser&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;CreateTime&quot;</span><span class="p">:</span> <span class="mi">1546924844</span><span class="p">,</span>
+  <span class="nt">&quot;MsgType&quot;</span><span class="p">:</span> <span class="s2">&quot;event&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;Event&quot;</span><span class="p">:</span> <span class="s2">&quot;add_express_path&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;DeliveryID&quot;</span><span class="p">:</span> <span class="s2">&quot;SF&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;WayBillId&quot;</span><span class="p">:</span> <span class="s2">&quot;123456789&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;Version&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+  <span class="nt">&quot;Count&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+  <span class="nt">&quot;Actions&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+      <span class="nt">&quot;ActionTime&quot;</span><span class="p">:</span> <span class="mi">1546924840</span><span class="p">,</span>
+      <span class="nt">&quot;ActionType&quot;</span><span class="p">:</span> <span class="mi">100001</span><span class="p">,</span>
+      <span class="nt">&quot;ActionMsg&quot;</span><span class="p">:</span> <span class="s2">&quot;小哥A揽件成功&quot;</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="nt">&quot;ActionTime&quot;</span><span class="p">:</span> <span class="mi">1546924841</span><span class="p">,</span>
+      <span class="nt">&quot;ActionType&quot;</span><span class="p">:</span> <span class="mi">200001</span><span class="p">,</span>
+      <span class="nt">&quot;ActionMsg&quot;</span><span class="p">:</span> <span class="s2">&quot;到达广州集包地&quot;</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="nt">&quot;ActionTime&quot;</span><span class="p">:</span> <span class="mi">1546924842</span><span class="p">,</span>
+      <span class="nt">&quot;ActionType&quot;</span><span class="p">:</span> <span class="mi">200001</span><span class="p">,</span>
+      <span class="nt">&quot;ActionMsg&quot;</span><span class="p">:</span> <span class="s2">&quot;运往目的地&quot;</span>
+    <span class="p">}</span>
+  <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
 </div>
 
 
@@ -205,10 +305,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="logistics.updatePrinter.html" class="btn btn-neutral float-right" title="logistics.updatePrinter" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="logistics.addOrder.html" class="btn btn-neutral float-right" title="生成运单" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="logistics.getQuota.html" class="btn btn-neutral float-left" title="logistics.getQuota" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="security.msgSecCheck.html" class="btn btn-neutral float-left" title="security.msgSecCheck" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

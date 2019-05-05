@@ -36,7 +36,7 @@
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="index" title="索引" href="../../genindex.html" />
     <link rel="search" title="搜索" href="../../search.html" />
-    <link rel="next" title="微信物流助手（商户侧）" href="express.html" />
+    <link rel="next" title="数据分析接口" href="data-analysis.html" />
     <link rel="prev" title="物流助手-打单软件" href="express-download.html" /> 
 </head>
 
@@ -112,9 +112,16 @@
 <li class="toctree-l3"><a class="reference internal" href="customer-message/index.html">客服消息</a></li>
 <li class="toctree-l3"><a class="reference internal" href="qr-code.html">获取小程序码</a></li>
 <li class="toctree-l3"><a class="reference internal" href="nearby.html">附近的小程序</a></li>
-<li class="toctree-l3"><a class="reference internal" href="express-download.html">物流助手-打单软件</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">微信物流助手（快递侧）</a></li>
 <li class="toctree-l3"><a class="reference internal" href="express.html">微信物流助手（商户侧）</a></li>
+<li class="toctree-l3"><a class="reference internal" href="express-download.html">物流助手-打单软件</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">微信物流助手（快递侧）</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id2">产品优势</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id3">接入说明</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id4">接入准备</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id5">相关接口</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id6">相关事件</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="data-analysis.html">数据分析接口</a></li>
 <li class="toctree-l3"><a class="reference internal" href="card/index.html">card</a></li>
 </ul>
@@ -211,30 +218,60 @@
   <div class="section" id="id1">
 <h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/express-delivery.html">微信物流助手（快递侧）</a><a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
 <p>物流助手，帮助有物流需求的开发者，快速高效对接多家物流公司。对接后用户可通过微信服务通知接收实时物流状态，提升用户体验。</p>
-<p>产品优势
-承接微信生态订单：通过微信统一接口，一次性服务微信生态内有寄件需求的商户。
-提升用户回访：关键物流状态会通过微信服务通知发送给用户，用户点击后可回访快递公司小程序查看该订单的物流状态或进行后续操作。
-接入说明
-目前物流助手采用定向邀请方式接入物流公司。</p>
-<p>接入准备
-1. 小程序
-用户收到轨迹更新消息后，可以间接跳转到快递小程序的轨迹详情页。至少需要提供两个页面：</p>
-<p>快递轨迹详情页，路径可以参考pages/info/info?from=wx&amp;no=12345678901234。微信做跳转时，会传入运单号。
-快递投诉页面
-2. 小程序事件服务
-事件服务用于接收微信的推送，目前有审核商户、查询余额、下单、取消运单等事件。</p>
-<p>3. 面单模板和示例
-标注各个区域的尺寸、字号等。可参考模板示例</p>
-<p>相关接口
-获取面单联系人信息
-预览面单模板
-更新商户审核结果
-更新运单轨迹
-相关事件
-请求下单
-取消订单
-审核商户
-查询商户余额</p>
+<div class="section" id="id2">
+<h2>产品优势<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<ol class="arabic simple">
+<li><p>承接微信生态订单：通过微信统一接口，一次性服务微信生态内有寄件需求的商户。</p></li>
+<li><p>提升用户回访：关键物流状态会通过微信服务通知发送给用户，用户点击后可回访快递公司小程序查看该订单的物流状态或进行后续操作。</p></li>
+</ol>
+</div>
+<div class="section" id="id3">
+<h2>接入说明<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
+<p>目前物流助手采用定向邀请方式接入物流公司。</p>
+</div>
+<div class="section" id="id4">
+<h2>接入准备<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h2>
+<ol class="arabic simple">
+<li><p>小程序</p></li>
+</ol>
+<blockquote>
+<div><p>用户收到轨迹更新消息后，可以间接跳转到快递小程序的轨迹详情页。至少需要提供两个页面：</p>
+<ol class="arabic simple">
+<li><p>快递轨迹详情页，路径可以参考pages/info/info?from=wx&amp;no=12345678901234。微信做跳转时，会传入运单号。</p></li>
+<li><p>快递投诉页面</p></li>
+</ol>
+</div></blockquote>
+<ol class="arabic simple" start="2">
+<li><p>小程序事件服务</p></li>
+</ol>
+<blockquote>
+<div><p>事件服务用于接收微信的推送，目前有审核商户、查询余额、下单、取消运单等事件。</p>
+</div></blockquote>
+<ol class="arabic simple" start="3">
+<li><p>面单模板和示例</p></li>
+</ol>
+<blockquote>
+<div><p>标注各个区域的尺寸、字号等。可参考模板示例</p>
+</div></blockquote>
+</div>
+<div class="section" id="id5">
+<h2>相关接口<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h2>
+<ul class="simple">
+<li><p>获取面单联系人信息</p></li>
+<li><p>预览面单模板</p></li>
+<li><p>更新商户审核结果</p></li>
+<li><p>更新运单轨迹</p></li>
+</ul>
+</div>
+<div class="section" id="id6">
+<h2>相关事件<a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h2>
+<ul class="simple">
+<li><p>请求下单</p></li>
+<li><p>取消订单</p></li>
+<li><p>审核商户</p></li>
+<li><p>查询商户余额</p></li>
+</ul>
+</div>
 </div>
 
 
@@ -245,7 +282,7 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="express.html" class="btn btn-neutral float-right" title="微信物流助手（商户侧）" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="data-analysis.html" class="btn btn-neutral float-right" title="数据分析接口" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="express-download.html" class="btn btn-neutral float-left" title="物流助手-打单软件" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>

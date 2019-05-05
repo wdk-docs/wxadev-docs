@@ -37,7 +37,7 @@ HTTPS 调用
       - **89002**	没有绑定开放平台帐号
       - **89300**	订单无效
 
-   :>json	string serrmsg:	错误信息
+   :>json	string errmsg:	错误信息
 
 使用说明
 

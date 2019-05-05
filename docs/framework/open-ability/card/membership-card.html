@@ -223,52 +223,110 @@
 获取开卡组件参数；
 详情查看会员开卡组件介绍：会员开卡组件</p>
 <p>参数说明</p>
-<p>参数名     类型      是否必填    参数说明
-appId   String  是       填写 wxeb490c6f9b154ef9，固定为此appid
-extraData       Object  是       开卡组件参数，由第3步获取，包含以下三个参数
-encrypt_card_id String  是       加密 card_id，传入前须 urldecode
-outer_str       String  是       会员卡领取渠道值，会在卡券领取事件回传给商户
-biz     String  是       商户公众号标识参数，传入前须 urldecode
-success Function        否       接口调用成功的回调函数
-fail    Function        否       接口调用失败的回调函数
-complete        Function        否       接口调用结束的回调函数（调用成功、失败都会执行）
-返回参数</p>
-<p>参数名     类型      参数说明
-errMsg  String  调用结果
-示例代码</p>
-<dl class="simple">
-<dt>wx.navigateToMiniProgram({</dt><dd><p>appId: ‘wxeb490c6f9b154ef9’, // 固定为此 appid，不可改动
-extraData: data, // 包括 encrypt_card_id, outer_str, biz三个字段，须从 step3 中获得的链接中获取参数
-success() {
-},
-fail() {
-},
-complete() {
-}</p>
-</dd>
-</dl>
-<p>})
-navigateToMiniProgram接口即将废弃，新版本中请使用&lt;navigator&gt;组件来使用此功能</p>
-<dl class="simple">
-<dt>&lt;navigator</dt><dd><p>target=”miniProgram”
-app-id=”wxeb490c6f9b154ef9”
-extra-data=”{{data}}”</p>
-</dd>
-</dl>
-<dl class="simple">
-<dt>&gt;</dt><dd><p>会员卡开卡</p>
-</dd>
-</dl>
-<p>&lt;/navigator&gt;
-返回说明</p>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 57%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>参数名</p></th>
+<th class="head"><p>类型</p></th>
+<th class="head"><p>是否必填</p></th>
+<th class="head"><p>参数说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>appId</p></td>
+<td><p>String</p></td>
+<td><p>是</p></td>
+<td><p>填写 wxeb490c6f9b154ef9，固定为此appid</p></td>
+</tr>
+<tr class="row-odd"><td><p>extraData</p></td>
+<td><p>Object</p></td>
+<td><p>是</p></td>
+<td><p>开卡组件参数，由第3步获取，包含以下三个参数</p></td>
+</tr>
+<tr class="row-even"><td><p>encrypt_card_id</p></td>
+<td><p>String</p></td>
+<td><p>是</p></td>
+<td><p>加密 card_id，传入前须 urldecode</p></td>
+</tr>
+<tr class="row-odd"><td><p>outer_str</p></td>
+<td><p>String</p></td>
+<td><p>是</p></td>
+<td><p>会员卡领取渠道值，会在卡券领取事件回传给商户</p></td>
+</tr>
+<tr class="row-even"><td><p>biz</p></td>
+<td><p>String</p></td>
+<td><p>是</p></td>
+<td><p>商户公众号标识参数，传入前须 urldecode</p></td>
+</tr>
+<tr class="row-odd"><td><p>success</p></td>
+<td><p>Function</p></td>
+<td><p>否</p></td>
+<td><p>接口调用成功的回调函数</p></td>
+</tr>
+<tr class="row-even"><td><p>fail</p></td>
+<td><p>Function</p></td>
+<td><p>否</p></td>
+<td><p>接口调用失败的回调函数</p></td>
+</tr>
+<tr class="row-odd"><td><p>complete</p></td>
+<td><p>Function</p></td>
+<td><p>否</p></td>
+<td><p>接口调用结束的回调函数（调用成功、失败都会执行）</p></td>
+</tr>
+</tbody>
+</table>
+<p>返回参数</p>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 31%" />
+<col style="width: 31%" />
+<col style="width: 38%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>参数名</p></th>
+<th class="head"><p>类型</p></th>
+<th class="head"><p>参数说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>errMsg</p></td>
+<td><p>String</p></td>
+<td><p>调用结果</p></td>
+</tr>
+</tbody>
+</table>
+<p>示例代码</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="nx">wx</span><span class="p">.</span><span class="nx">navigateToMiniProgram</span><span class="p">({</span>
+  <span class="nx">appId</span><span class="o">:</span> <span class="s1">&#39;wxeb490c6f9b154ef9&#39;</span><span class="p">,</span> <span class="c1">// 固定为此 appid，不可改动</span>
+  <span class="nx">extraData</span><span class="o">:</span> <span class="nx">data</span><span class="p">,</span> <span class="c1">// 包括 encrypt_card_id, outer_str, biz三个字段，须从 step3 中获得的链接中获取参数</span>
+  <span class="nx">success</span><span class="p">()</span> <span class="p">{</span>
+  <span class="p">},</span>
+  <span class="nx">fail</span><span class="p">()</span> <span class="p">{</span>
+  <span class="p">},</span>
+  <span class="nx">complete</span><span class="p">()</span> <span class="p">{</span>
+  <span class="p">}</span>
+<span class="p">})</span>
+</pre></div>
+</div>
+<p>navigateToMiniProgram接口即将废弃，新版本中请使用&lt;navigator&gt;组件来使用此功能</p>
+<p>返回说明</p>
 <p>在 App.onShow 里判断从会员开卡小程序返回的数据data</p>
 <p>判断 data.referrerInfo.appId 是否为开卡小程序 appId wxeb490c6f9b154ef9，如果不是则中止判断
 判断是否有 data.referrerInfo.extraData 是否有数据，如果没有，表示用户未激活直接左滑/点返回键返回，或者用户已经激活
-若用户激活成功，可以从 data.referrerInfo.extraData 中获取 activate_ticket，card_id，code 参数用于下一步操作
-Tip
-在开发者工具上调用此 API 并不会真实的跳转到另外的小程序，但是开发者工具会校验本次调用跳转是否成功详情
-开发者工具上支持被跳转的小程序处理接收参数的调试详情
-开卡组件是使用wx.navigateToMiniProgram开发的官方组件，跳转时无须绑定同一个公众号，直接调用即可</p>
+若用户激活成功，可以从 data.referrerInfo.extraData 中获取 activate_ticket，card_id，code 参数用于下一步操作</p>
+<div class="admonition tip">
+<p class="admonition-title">小技巧</p>
+<ul class="simple">
+<li><p>在开发者工具上调用此 API 并不会真实的跳转到另外的小程序，但是开发者工具会校验本次调用跳转是否成功详情</p></li>
+<li><p>开发者工具上支持被跳转的小程序处理接收参数的调试详情</p></li>
+<li><p>开卡组件是使用wx.navigateToMiniProgram开发的官方组件，跳转时无须绑定同一个公众号，直接调用即可</p></li>
+</ul>
+</div>
 </div>
 
 

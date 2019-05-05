@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>logistics.getAllDelivery &mdash; wxadev 1.0.0 文档</title>
+  <title>获取支持的快递公司列表 &mdash; wxadev 1.0.0 文档</title>
   
 
   
@@ -36,8 +36,8 @@
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜索" href="../search.html" />
-    <link rel="next" title="logistics.getOrder" href="logistics.getOrder.html" />
-    <link rel="prev" title="logistics.cancelOrder" href="logistics.cancelOrder.html" /> 
+    <link rel="next" title="获取运单数据" href="logistics.getOrder.html" />
+    <link rel="prev" title="取消运单" href="logistics.cancelOrder.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -103,19 +103,19 @@
 <li class="toctree-l2"><a class="reference internal" href="index.html#id13">小程序码</a></li>
 <li class="toctree-l2"><a class="reference internal" href="index.html#id14">内容安全</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="index.html#id15">物流助手</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="index.html#id16">服务提供方使用</a></li>
-<li class="toctree-l3 current"><a class="reference internal" href="index.html#id17">小程序使用</a><ul class="current">
-<li class="toctree-l4"><a class="reference internal" href="logistics.addOrder.html">logistics.addOrder</a></li>
-<li class="toctree-l4"><a class="reference internal" href="logistics.cancelOrder.html">logistics.cancelOrder</a></li>
-<li class="toctree-l4 current"><a class="current reference internal" href="#">logistics.getAllDelivery</a></li>
-<li class="toctree-l4"><a class="reference internal" href="logistics.getOrder.html">logistics.getOrder</a></li>
-<li class="toctree-l4"><a class="reference internal" href="logistics.getPath.html">logistics.getPath</a></li>
-<li class="toctree-l4"><a class="reference internal" href="logistics.getPrinter.html">logistics.getPrinter</a></li>
-<li class="toctree-l4"><a class="reference internal" href="logistics.getQuota.html">logistics.getQuota</a></li>
-<li class="toctree-l4"><a class="reference internal" href="logistics.onPathUpdate.html">logistics.onPathUpdate</a></li>
-<li class="toctree-l4"><a class="reference internal" href="logistics.updatePrinter.html">logistics.updatePrinter</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html#id16">小程序使用</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="logistics.onPathUpdate.html">运单轨迹更新事件</a></li>
+<li class="toctree-l4"><a class="reference internal" href="logistics.addOrder.html">生成运单</a></li>
+<li class="toctree-l4"><a class="reference internal" href="logistics.cancelOrder.html">取消运单</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">获取支持的快递公司列表</a></li>
+<li class="toctree-l4"><a class="reference internal" href="logistics.getOrder.html">获取运单数据</a></li>
+<li class="toctree-l4"><a class="reference internal" href="logistics.getPath.html">查询运单轨迹</a></li>
+<li class="toctree-l4"><a class="reference internal" href="logistics.getQuota.html">获取电子面单余额</a></li>
+<li class="toctree-l4"><a class="reference internal" href="logistics.updatePrinter.html">更新打印员</a></li>
+<li class="toctree-l4"><a class="reference internal" href="logistics.getPrinter.html">获取打印员</a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#id17">服务提供方使用</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="index.html#id18">生物认证</a></li>
@@ -174,7 +174,7 @@
         
           <li><a href="index.html">服务端API</a> &raquo;</li>
         
-      <li>logistics.getAllDelivery</li>
+      <li>获取支持的快递公司列表</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -193,8 +193,159 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="logistics-getalldelivery">
-<h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/api-backend/logistics.getAllDelivery.html">logistics.getAllDelivery</a><a class="headerlink" href="#logistics-getalldelivery" title="永久链接至标题">¶</a></h1>
+  <div class="section" id="id1">
+<h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/api-backend/logistics.getAllDelivery.html">获取支持的快递公司列表</a><a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
+<p>logistics.getAllDelivery
+本接口应在服务器端调用，详细说明参见服务端API。</p>
+<p>本接口支持云调用。需开发者工具版本 &gt;= 1.02.1904090（最新稳定版下载），wx-server-sdk &gt;= 0.4.0</p>
+<p>调用方式：</p>
+<p>一、HTTPS 调用
+二、云调用</p>
+<p>一、HTTPS 调用
+请求地址
+GET <a class="reference external" href="https://api.weixin.qq.com/cgi-bin/express/business/delivery/getall?access_token=ACCESS_TOKEN">https://api.weixin.qq.com/cgi-bin/express/business/delivery/getall?access_token=ACCESS_TOKEN</a>
+请求参数
+属性      类型      默认值     必填      说明
+access_token    string          是       接口调用凭证
+返回值
+Object
+属性      类型      说明
+count   number  快递公司数量
+data    Array.&lt;Object&gt;  快递公司信息列表
+data 的结构</p>
+<p>属性      类型      说明
+delivery_id     string  快递公司 ID
+delivery_name   string  快递公司名称
+返回数据示例</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;count&quot;</span><span class="p">:</span> <span class="mi">8</span><span class="p">,</span>
+  <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+      <span class="nt">&quot;delivery_id&quot;</span><span class="p">:</span> <span class="s2">&quot;BEST&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;delivery_name&quot;</span><span class="p">:</span> <span class="s2">&quot;百世快递&quot;</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="nt">&quot;delivery_id&quot;</span><span class="p">:</span> <span class="s2">&quot;EMS&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;delivery_name&quot;</span><span class="p">:</span> <span class="s2">&quot;中国邮政速递物流&quot;</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="nt">&quot;delivery_id&quot;</span><span class="p">:</span> <span class="s2">&quot;OTP&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;delivery_name&quot;</span><span class="p">:</span> <span class="s2">&quot;承诺达特快&quot;</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="nt">&quot;delivery_id&quot;</span><span class="p">:</span> <span class="s2">&quot;PJ&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;delivery_name&quot;</span><span class="p">:</span> <span class="s2">&quot;品骏物流&quot;</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="nt">&quot;delivery_id&quot;</span><span class="p">:</span> <span class="s2">&quot;SF&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;delivery_name&quot;</span><span class="p">:</span> <span class="s2">&quot;顺丰速运&quot;</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="nt">&quot;delivery_id&quot;</span><span class="p">:</span> <span class="s2">&quot;YTO&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;delivery_name&quot;</span><span class="p">:</span> <span class="s2">&quot;圆通速递&quot;</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="nt">&quot;delivery_id&quot;</span><span class="p">:</span> <span class="s2">&quot;YUNDA&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;delivery_name&quot;</span><span class="p">:</span> <span class="s2">&quot;韵达快递&quot;</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="nt">&quot;delivery_id&quot;</span><span class="p">:</span> <span class="s2">&quot;ZTO&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;delivery_name&quot;</span><span class="p">:</span> <span class="s2">&quot;中通快递&quot;</span>
+    <span class="p">}</span>
+  <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>二、云调用
+云调用是小程序·云开发提供的在云函数中调用微信开放接口的能力，需要在云函数中通过 wx-server-sdk 使用。</p>
+<p>接口方法
+openapi.logistics.getAllDelivery
+需在 config.json 中配置 logistics.getAllDelivery API 的权限，详情</p>
+<p>返回值
+Object
+属性      类型      说明
+count   number  快递公司数量
+data    Array.&lt;Object&gt;  快递公司信息列表
+data 的结构</p>
+<p>属性      类型      说明
+deliveryId      string  快递公司 ID
+deliveryName    string  快递公司名称
+请求示例
+const cloud = require(‘wx-server-sdk’)
+cloud.init()
+exports.main = async (event, context) =&gt; {</p>
+<blockquote>
+<div><dl class="simple">
+<dt>try {</dt><dd><p>const result = await cloud.openapi.logistics.getAllDelivery({})
+console.log(result)
+return result</p>
+</dd>
+<dt>} catch (err) {</dt><dd><p>console.log(err)
+return err</p>
+</dd>
+</dl>
+<p>}</p>
+</div></blockquote>
+<p>}
+返回数据示例
+{</p>
+<blockquote>
+<div><p>“count”: 8,
+“data”: [</p>
+<blockquote>
+<div><dl class="simple">
+<dt>{</dt><dd><p>“deliveryId”: “BEST”,
+“deliveryName”: “百世快递”</p>
+</dd>
+</dl>
+<p>},
+{</p>
+<blockquote>
+<div><p>“deliveryId”: “EMS”,
+“deliveryName”: “中国邮政速递物流”</p>
+</div></blockquote>
+<p>},
+{</p>
+<blockquote>
+<div><p>“deliveryId”: “OTP”,
+“deliveryName”: “承诺达特快”</p>
+</div></blockquote>
+<p>},
+{</p>
+<blockquote>
+<div><p>“deliveryId”: “PJ”,
+“deliveryName”: “品骏物流”</p>
+</div></blockquote>
+<p>},
+{</p>
+<blockquote>
+<div><p>“deliveryId”: “SF”,
+“deliveryName”: “顺丰速运”</p>
+</div></blockquote>
+<p>},
+{</p>
+<blockquote>
+<div><p>“deliveryId”: “YTO”,
+“deliveryName”: “圆通速递”</p>
+</div></blockquote>
+<p>},
+{</p>
+<blockquote>
+<div><p>“deliveryId”: “YUNDA”,
+“deliveryName”: “韵达快递”</p>
+</div></blockquote>
+<p>},
+{</p>
+<blockquote>
+<div><p>“deliveryId”: “ZTO”,
+“deliveryName”: “中通快递”</p>
+</div></blockquote>
+<p>}</p>
+</div></blockquote>
+<p>],
+“errMsg”: “openapi.logistics.getAllDelivery:ok”</p>
+</div></blockquote>
+<p>}</p>
 </div>
 
 
@@ -205,10 +356,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="logistics.getOrder.html" class="btn btn-neutral float-right" title="logistics.getOrder" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="logistics.getOrder.html" class="btn btn-neutral float-right" title="获取运单数据" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="logistics.cancelOrder.html" class="btn btn-neutral float-left" title="logistics.cancelOrder" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="logistics.cancelOrder.html" class="btn btn-neutral float-left" title="取消运单" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

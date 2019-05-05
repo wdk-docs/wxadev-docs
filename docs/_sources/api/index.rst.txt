@@ -856,16 +856,16 @@ mDNS
    :maxdepth: 1
    :hidden:
 
-   wx.setStorageSync
    wx.setStorage
-   wx.removeStorageSync
+   wx.setStorageSync
    wx.removeStorage
-   wx.getStorageSync
-   wx.getStorageInfoSync
-   wx.getStorageInfo
+   wx.removeStorageSync
    wx.getStorage
-   wx.clearStorageSync
+   wx.getStorageSync
+   wx.getStorageInfo
+   wx.getStorageInfoSync
    wx.clearStorage
+   wx.clearStorageSync
 
 媒体
 -------

@@ -19,8 +19,8 @@
    customer-message/index
    qr-code
    nearby
+   express
    express-download
    express-delivery
-   express
    data-analysis
    card/index

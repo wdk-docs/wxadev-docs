@@ -37,7 +37,7 @@
     <link rel="index" title="索引" href="../../genindex.html" />
     <link rel="search" title="搜索" href="../../search.html" />
     <link rel="next" title="微信物流助手（快递侧）" href="express-delivery.html" />
-    <link rel="prev" title="附近的小程序" href="nearby.html" /> 
+    <link rel="prev" title="微信物流助手（商户侧）" href="express.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -112,9 +112,15 @@
 <li class="toctree-l3"><a class="reference internal" href="customer-message/index.html">客服消息</a></li>
 <li class="toctree-l3"><a class="reference internal" href="qr-code.html">获取小程序码</a></li>
 <li class="toctree-l3"><a class="reference internal" href="nearby.html">附近的小程序</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">物流助手-打单软件</a></li>
-<li class="toctree-l3"><a class="reference internal" href="express-delivery.html">微信物流助手（快递侧）</a></li>
 <li class="toctree-l3"><a class="reference internal" href="express.html">微信物流助手（商户侧）</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">物流助手-打单软件</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id2">介绍</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id3">使用说明</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id4">最新版本下载地址</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id5">更新日志</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="express-delivery.html">微信物流助手（快递侧）</a></li>
 <li class="toctree-l3"><a class="reference internal" href="data-analysis.html">数据分析接口</a></li>
 <li class="toctree-l3"><a class="reference internal" href="card/index.html">card</a></li>
 </ul>
@@ -209,23 +215,35 @@
            <div itemprop="articleBody">
             
   <div class="section" id="id1">
-<h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/authexpress-downloadorize.html">物流助手-打单软件</a><a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
-<p>介绍
-商户可以通过打单软件，自助打印面单</p>
-<p>使用说明
-通过 updatePrinter API 更新打印员。
-打印员扫码登录、选择商户。
-配置热敏打印机（PC端需安装打印机驱动，并选择203dpi分辨率）。
-拉取面单，打印需要的面单；或启用自动打印，新订单下单成功即会自动打印。
-最新版本下载地址
-Windows</p>
+<h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/express-download.html">物流助手-打单软件</a><a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
+<div class="section" id="id2">
+<h2>介绍<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<p>商户可以通过打单软件，自助打印面单</p>
+</div>
+<div class="section" id="id3">
+<h2>使用说明<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
+<ol class="arabic simple">
+<li><p>通过 <code class="docutils literal notranslate"><span class="pre">updatePrinter</span></code> API 更新打印员。</p></li>
+<li><p>打印员扫码登录、选择商户。</p></li>
+<li><p>配置热敏打印机（PC端需安装打印机驱动，并选择203dpi分辨率）。</p></li>
+<li><p>拉取面单，打印需要的面单；或启用自动打印，新订单下单成功即会自动打印。</p></li>
+</ol>
+</div>
+<div class="section" id="id4">
+<h2>最新版本下载地址<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h2>
+<p><a class="reference download external" download="" href="http://dldir1.qq.com/WechatWebDev/WechatWayBillHelper/waybillhelper_v1.0.0.zip"><code class="xref download docutils literal notranslate"><span class="pre">Windows</span></code></a></p>
 <p>支持 Windows XP 及以上版本。</p>
-<p>更新日志
-v1.0.0 (2019.01.16)
-支持打印员扫码登录。
-支持不同快递配置独立打印机。
-支持手动拉取订单，保存或打印面单。
-支持自动拉取订单、自动打印面单。</p>
+</div>
+<div class="section" id="id5">
+<h2>更新日志<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h2>
+<p>v1.0.0 (2019.01.16)</p>
+<ol class="arabic simple">
+<li><p>支持打印员扫码登录。</p></li>
+<li><p>支持不同快递配置独立打印机。</p></li>
+<li><p>支持手动拉取订单，保存或打印面单。</p></li>
+<li><p>支持自动拉取订单、自动打印面单。</p></li>
+</ol>
+</div>
 </div>
 
 
@@ -239,7 +257,7 @@ v1.0.0 (2019.01.16)
         <a href="express-delivery.html" class="btn btn-neutral float-right" title="微信物流助手（快递侧）" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="nearby.html" class="btn btn-neutral float-left" title="附近的小程序" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="express.html" class="btn btn-neutral float-left" title="微信物流助手（商户侧）" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

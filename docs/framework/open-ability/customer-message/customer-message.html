@@ -221,25 +221,47 @@
   <div class="section" id="id1">
 <h1>客服消息<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
 <p>在页面使用客服消息
-需要将 &lt;button&gt; 组件 open-type 的值设置为 contact，当用户点击后就会进入客服会话，如果用户在会话中点击了小程序消息，则会返回到小程序，开发者可以通过 bindcontact 事件回调获取到用户所点消息的页面路径 path 和对应的参数 query。</p>
-<p>代码示例
-&lt;button open-type=”contact” bindcontact=”handleContact”&gt;&lt;/button&gt;
-Page({</p>
-<blockquote>
-<div><dl class="simple">
-<dt>handleContact(e) {</dt><dd><p>console.log(e.path)
-console.log(e.query)</p>
-</dd>
-</dl>
-<p>}</p>
-</div></blockquote>
-<p>})
-返回参数说明
-参数      类型      说明
-path    String  小程序消息指定的路径
-query   Object  小程序消息指定的查询参数
-后台接入消息服务
-用户向小程序客服发送消息、或者进入会话等情况时，开发者填写的服务器配置URL将得到微信服务器推送过来的消息和事件，开发者可以依据自身业务逻辑进行响应。接入和使用方式请参考消息推送。</p>
+需要将 &lt;button&gt; 组件 open-type 的值设置为 contact，当用户点击后就会进入客服会话，
+如果用户在会话中点击了小程序消息，则会返回到小程序，开发者可以通过 bindcontact 事件回调获取到用户所点消息的页面路径 path 和对应的参数 query。</p>
+<p>代码示例</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">button</span> <span class="na">open-type</span><span class="o">=</span><span class="s">&quot;contact&quot;</span> <span class="na">bindcontact</span><span class="o">=</span><span class="s">&quot;handleContact&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="nx">Page</span><span class="p">({</span>
+  <span class="nx">handleContact</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">e</span><span class="p">.</span><span class="nx">path</span><span class="p">)</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">e</span><span class="p">.</span><span class="nx">query</span><span class="p">)</span>
+  <span class="p">}</span>
+<span class="p">})</span>
+</pre></div>
+</div>
+<p>返回参数说明</p>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 17%" />
+<col style="width: 20%" />
+<col style="width: 63%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>参数</p></th>
+<th class="head"><p>类型</p></th>
+<th class="head"><p>说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>path</p></td>
+<td><p>String</p></td>
+<td><p>小程序消息指定的路径</p></td>
+</tr>
+<tr class="row-odd"><td><p>query</p></td>
+<td><p>Object</p></td>
+<td><p>小程序消息指定的查询参数</p></td>
+</tr>
+</tbody>
+</table>
+<p>后台接入消息服务</p>
+<p>用户向小程序客服发送消息、或者进入会话等情况时，开发者填写的服务器配置URL将得到微信服务器推送过来的消息和事件，
+开发者可以依据自身业务逻辑进行响应。接入和使用方式请参考消息推送。</p>
 </div>
 
 

@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>logistics.updatePrinter &mdash; wxadev 1.0.0 文档</title>
+  <title>更新打印员 &mdash; wxadev 1.0.0 文档</title>
   
 
   
@@ -36,8 +36,8 @@
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜索" href="../search.html" />
-    <link rel="next" title="soter.verifySignature" href="soter.verifySignature.html" />
-    <link rel="prev" title="logistics.onPathUpdate" href="logistics.onPathUpdate.html" /> 
+    <link rel="next" title="获取打印员" href="logistics.getPrinter.html" />
+    <link rel="prev" title="获取电子面单余额" href="logistics.getQuota.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -103,19 +103,19 @@
 <li class="toctree-l2"><a class="reference internal" href="index.html#id13">小程序码</a></li>
 <li class="toctree-l2"><a class="reference internal" href="index.html#id14">内容安全</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="index.html#id15">物流助手</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="index.html#id16">服务提供方使用</a></li>
-<li class="toctree-l3 current"><a class="reference internal" href="index.html#id17">小程序使用</a><ul class="current">
-<li class="toctree-l4"><a class="reference internal" href="logistics.addOrder.html">logistics.addOrder</a></li>
-<li class="toctree-l4"><a class="reference internal" href="logistics.cancelOrder.html">logistics.cancelOrder</a></li>
-<li class="toctree-l4"><a class="reference internal" href="logistics.getAllDelivery.html">logistics.getAllDelivery</a></li>
-<li class="toctree-l4"><a class="reference internal" href="logistics.getOrder.html">logistics.getOrder</a></li>
-<li class="toctree-l4"><a class="reference internal" href="logistics.getPath.html">logistics.getPath</a></li>
-<li class="toctree-l4"><a class="reference internal" href="logistics.getPrinter.html">logistics.getPrinter</a></li>
-<li class="toctree-l4"><a class="reference internal" href="logistics.getQuota.html">logistics.getQuota</a></li>
-<li class="toctree-l4"><a class="reference internal" href="logistics.onPathUpdate.html">logistics.onPathUpdate</a></li>
-<li class="toctree-l4 current"><a class="current reference internal" href="#">logistics.updatePrinter</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html#id16">小程序使用</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="logistics.onPathUpdate.html">运单轨迹更新事件</a></li>
+<li class="toctree-l4"><a class="reference internal" href="logistics.addOrder.html">生成运单</a></li>
+<li class="toctree-l4"><a class="reference internal" href="logistics.cancelOrder.html">取消运单</a></li>
+<li class="toctree-l4"><a class="reference internal" href="logistics.getAllDelivery.html">获取支持的快递公司列表</a></li>
+<li class="toctree-l4"><a class="reference internal" href="logistics.getOrder.html">获取运单数据</a></li>
+<li class="toctree-l4"><a class="reference internal" href="logistics.getPath.html">查询运单轨迹</a></li>
+<li class="toctree-l4"><a class="reference internal" href="logistics.getQuota.html">获取电子面单余额</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">更新打印员</a></li>
+<li class="toctree-l4"><a class="reference internal" href="logistics.getPrinter.html">获取打印员</a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#id17">服务提供方使用</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="index.html#id18">生物认证</a></li>
@@ -174,7 +174,7 @@
         
           <li><a href="index.html">服务端API</a> &raquo;</li>
         
-      <li>logistics.updatePrinter</li>
+      <li>更新打印员</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -193,8 +193,130 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="logistics-updateprinter">
-<h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/api-backend/logistics.updatePrinter.html">logistics.updatePrinter</a><a class="headerlink" href="#logistics-updateprinter" title="永久链接至标题">¶</a></h1>
+  <div class="section" id="id1">
+<h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/api-backend/logistics.updatePrinter.html">更新打印员</a><a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
+<div class="admonition seealso">
+<p class="admonition-title">参见</p>
+<p>本接口应在服务器端调用，详细说明参见 <a class="reference internal" href="index.html#api-backend"><span class="std std-ref">服务端API</span></a> 。</p>
+<p>本接口支持 <span class="xref std std-ref">云调用</span> 。需开发者工具版本 <code class="docutils literal notranslate"><span class="pre">&gt;=</span> <span class="pre">1.02.1904090</span></code> (最新 :<a class="reference download external" download="" href="https://developers.weixin.qq.com/miniprogram/dev/devtools/stable.html?t=19043020"><code class="xref download docutils literal notranslate"><span class="pre">稳定版下载</span></code></a>)，<code class="docutils literal notranslate"><span class="pre">wx-server-sdk</span> <span class="pre">&gt;=</span> <span class="pre">0.4.0</span></code></p>
+</div>
+<p>若需要使用 <span class="xref std std-doc">微信打单 PC 软件</span> ，才需要调用。</p>
+<div class="section" id="https">
+<h2>一、HTTPS 调用<a class="headerlink" href="#https" title="永久链接至标题">¶</a></h2>
+<dl class="get">
+<dt id="get--api--express-business-printer-update">
+<code class="descname">GET </code><code class="descname">&lt;api&gt;/express/business/printer/update</code><a class="headerlink" href="#get--api--express-business-printer-update" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list">
+<dt class="field-odd">Query Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>access_token</strong> (<em>string</em>) – <em>必选</em>      接口调用凭证</p></li>
+</ul>
+</dd>
+<dt class="field-even">Request JSON Object</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>openid</strong> (<em>string</em>) – <em>必选</em>    打印员 openid</p></li>
+<li><p><strong>update_type</strong> (<em>string</em>) – <p><em>必选</em>       更新类型 合法值:</p>
+<ul>
+<li><p><em>bind</em>    绑定</p></li>
+<li><p><em>unbind</em>  解除绑定</p></li>
+</ul>
+</p></li>
+</ul>
+</dd>
+<dt class="field-odd">Response JSON Object</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>errcode</strong> (<em>number</em>) – <p>错误码</p>
+<ul>
+<li><p><em>0</em>       成功</p></li>
+<li><p><em>-1</em>      系统失败</p></li>
+<li><p><em>9300517</em> update_type 不正确</p></li>
+</ul>
+</p></li>
+<li><p><strong>errmsg</strong> (<em>string</em>) – 错误信息</p></li>
+</ul>
+</dd>
+<dt class="field-even">请求示例</dt>
+<dd class="field-even"><div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="s2">&quot;openid&quot;</span><span class="o">:</span> <span class="s2">&quot;oJ4v0wRAfiXcnIbM3SgGEUkTw3Qw&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;update_type&quot;</span><span class="o">:</span> <span class="s2">&quot;bind&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</dd>
+<dt class="field-odd">返回示例</dt>
+<dd class="field-odd"><div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="s2">&quot;errcode&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+  <span class="s2">&quot;errmsg&quot;</span><span class="o">:</span> <span class="s2">&quot;ok&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="id2">
+<h2>二、云调用<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<p>云调用是小程序·云开发提供的在云函数中调用微信开放接口的能力，需要在云函数中通过 wx-server-sdk 使用。</p>
+<p>接口方法</p>
+<dl class="function">
+<dt id="openapi.logistics.updatePrinter">
+<code class="descclassname">openapi.logistics.</code><code class="descname">updatePrinter</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#openapi.logistics.updatePrinter" title="永久链接至目标">¶</a></dt>
+<dd><p>需在 config.json 中配置 logistics.updatePrinter API 的权限，详情</p>
+</dd></dl>
+
+<p>请求参数
+属性      类型      默认值     必填      说明
+openid  string          是       打印员 openid
+updateType      string          是       更新类型
+updateType 的合法值</p>
+<p>值       说明      最低版本
+bind    绑定
+unbind  解除绑定
+返回值
+Object
+属性      类型      说明
+errCode number  错误码
+errMsg  string  错误信息
+errCode 的合法值</p>
+<p>值       说明      最低版本
+0       成功
+异常
+Object
+抛出的异常</p>
+<p>属性      类型      说明
+errCode number  错误码
+errMsg  string  错误信息
+errCode 的合法值</p>
+<p>值       说明      最低版本
+-1      系统失败
+9300517 update_type 不正确
+请求数据示例</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="kr">const</span> <span class="nx">cloud</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;wx-server-sdk&#39;</span><span class="p">)</span>
+<span class="nx">cloud</span><span class="p">.</span><span class="nx">init</span><span class="p">()</span>
+<span class="nx">exports</span><span class="p">.</span><span class="nx">main</span> <span class="o">=</span> <span class="nx">async</span> <span class="p">(</span><span class="nx">event</span><span class="p">,</span> <span class="nx">context</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+  <span class="k">try</span> <span class="p">{</span>
+    <span class="kr">const</span> <span class="nx">result</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">cloud</span><span class="p">.</span><span class="nx">openapi</span><span class="p">.</span><span class="nx">logistics</span><span class="p">.</span><span class="nx">updatePrinter</span><span class="p">({</span>
+      <span class="nx">openid</span><span class="o">:</span> <span class="s1">&#39;oJ4v0wRAfiXcnIbM3SgGEUkTw3Qw&#39;</span><span class="p">,</span>
+      <span class="nx">updateType</span><span class="o">:</span> <span class="s1">&#39;bind&#39;</span>
+    <span class="p">})</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">result</span><span class="p">)</span>
+    <span class="k">return</span> <span class="nx">result</span>
+  <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span>
+    <span class="k">return</span> <span class="nx">err</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>返回数据示例</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="s2">&quot;errCode&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+  <span class="s2">&quot;errMsg&quot;</span><span class="o">:</span> <span class="s2">&quot;openapi.logistics.updatePrinter:ok&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
 </div>
 
 
@@ -205,10 +327,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="soter.verifySignature.html" class="btn btn-neutral float-right" title="soter.verifySignature" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="logistics.getPrinter.html" class="btn btn-neutral float-right" title="获取打印员" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="logistics.onPathUpdate.html" class="btn btn-neutral float-left" title="logistics.onPathUpdate" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="logistics.getQuota.html" class="btn btn-neutral float-left" title="获取电子面单余额" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

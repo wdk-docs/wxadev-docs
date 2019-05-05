@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>logistics.onAddOrder &mdash; wxadev 1.0.0 文档</title>
+  <title>请求下单事件 &mdash; wxadev 1.0.0 文档</title>
   
 
   
@@ -36,8 +36,8 @@
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜索" href="../search.html" />
-    <link rel="next" title="logistics.onCancelOrder" href="logistics.onCancelOrder.html" />
-    <link rel="prev" title="logistics.getContact" href="logistics.getContact.html" /> 
+    <link rel="next" title="取消订单事件" href="logistics.onCancelOrder.html" />
+    <link rel="prev" title="获取面单联系人信息" href="logistics.getContact.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -103,18 +103,18 @@
 <li class="toctree-l2"><a class="reference internal" href="index.html#id13">小程序码</a></li>
 <li class="toctree-l2"><a class="reference internal" href="index.html#id14">内容安全</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="index.html#id15">物流助手</a><ul class="current">
-<li class="toctree-l3 current"><a class="reference internal" href="index.html#id16">服务提供方使用</a><ul class="current">
-<li class="toctree-l4"><a class="reference internal" href="logistics.onGetQuota.html">logistics.onGetQuota</a></li>
-<li class="toctree-l4"><a class="reference internal" href="logistics.getContact.html">logistics.getContact</a></li>
-<li class="toctree-l4 current"><a class="current reference internal" href="#">logistics.onAddOrder</a></li>
-<li class="toctree-l4"><a class="reference internal" href="logistics.onCancelOrder.html">logistics.onCancelOrder</a></li>
-<li class="toctree-l4"><a class="reference internal" href="logistics.onCheckBusiness.html">logistics.onCheckBusiness</a></li>
-<li class="toctree-l4"><a class="reference internal" href="logistics.previewTemplate.html">logistics.previewTemplate</a></li>
-<li class="toctree-l4"><a class="reference internal" href="logistics.updateBusiness.html">logistics.updateBusiness</a></li>
-<li class="toctree-l4"><a class="reference internal" href="logistics.updatePath.html">logistics.updatePath</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#id16">小程序使用</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html#id17">服务提供方使用</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="logistics.getContact.html">获取面单联系人信息</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">请求下单事件</a></li>
+<li class="toctree-l4"><a class="reference internal" href="logistics.onCancelOrder.html">取消订单事件</a></li>
+<li class="toctree-l4"><a class="reference internal" href="logistics.onCheckBusiness.html">审核商户事件</a></li>
+<li class="toctree-l4"><a class="reference internal" href="logistics.onGetQuota.html">查询商户余额事件</a></li>
+<li class="toctree-l4"><a class="reference internal" href="logistics.previewTemplate.html">预览面单模板</a></li>
+<li class="toctree-l4"><a class="reference internal" href="logistics.updateBusiness.html">更新商户审核结果</a></li>
+<li class="toctree-l4"><a class="reference internal" href="logistics.updatePath.html">更新运单轨迹</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="index.html#id17">小程序使用</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="index.html#id18">生物认证</a></li>
@@ -173,7 +173,7 @@
         
           <li><a href="index.html">服务端API</a> &raquo;</li>
         
-      <li>logistics.onAddOrder</li>
+      <li>请求下单事件</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -192,8 +192,331 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="logistics-onaddorder">
-<h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/api-backend/logistics.onAddOrder.html">logistics.onAddOrder</a><a class="headerlink" href="#logistics-onaddorder" title="永久链接至标题">¶</a></h1>
+  <div class="section" id="id1">
+<h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/api-backend/logistics.onAddOrder.html">请求下单事件</a><a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
+<p>logistics.onAddOrder
+本文档描述服务器端接收的消息或事件，详细说明参见消息推送。</p>
+<div class="section" id="https">
+<h2>一、HTTPS 调用<a class="headerlink" href="#https" title="永久链接至标题">¶</a></h2>
+<p>消息参数
+Object</p>
+<p>属性      类型      说明
+ToUserName      string  快递公司小程序 UserName
+FromUserName    string  微信团队的 OpenID （固定值）
+CreateTime      number  事件时间，Unix时间戳
+MsgType string  消息类型，固定为 event
+Event   string  事件类型，固定为 add_waybill，不区分大小写
+Token   string  订单 Token。请保存该 Token，调用logistics.updatePath时需要传入
+OrderID string  唯一标识订单的 ID，由商户生成。快递需要保证相同的 OrderID 生成相同的运单ID。
+BizID   string  商户 ID，即商户在快递注册的客户编码或月结账户名
+BizPwd  string  BizID 对应的密码
+ShopAppID       string  商户的小程序 AppID
+WayBillID       string  运单 ID，从微信号段中生成。若为 0，则表示需要快递来生成运单 ID。
+Remark  string  快递备注，会打印到面单上，比如”易碎物品”
+Sender  Array.&lt;Object&gt;  发件人信息
+Receiver        Array.&lt;Object&gt;  收件人信息
+Cargo   Array.&lt;Object&gt;  包裹信息
+Insured Array.&lt;Object&gt;  保价信息
+Service Array.&lt;Object&gt;  服务类型</p>
+<p>Sender 的结构</p>
+<p>属性      类型      说明
+Name    string  发件人姓名
+Tel     string  发件人座机号码
+Mobile  string  发件人手机号码
+Company string  发件人公司名
+PostCode        string  发件人邮编
+Country string  发件人所在国家，默认为”中国”
+Province        string  发件人省份，比如”广东省”
+City    string  发件人地区/市，比如”广州市”
+Area    string  发件人区/县，比如”海珠区”
+Address string  发件人详细地址，比如”XX路XX号XX大厦XX”</p>
+<p>Receiver 的结构</p>
+<p>属性      类型      说明
+Name    string  收件人姓名
+Tel     string  收件人座机号码
+Mobile  string  收件人手机号码
+Company string  收件人公司名
+PostCode        string  收件人邮编
+Country string  收件人所在国家，默认为”中国”
+Province        string  收件人省份，比如”广东省”
+City    string  收件人地区/市，比如”广州市”
+Area    string  收件人区/县，比如”海珠区”
+Address string  收件人详细地址，比如”XX路XX号XX大厦XX”</p>
+<p>Cargo 的结构</p>
+<p>属性      类型      说明
+Weight  number  货物总重量，比如1.2，单位是千克(kg)
+Space_X number  货物长度，比如20.5，单位是厘米(cm)
+Space_Y number  货物宽度，比如15.0，单位是厘米(cm)
+Space_Z number  货物高度，比如10.0，单位是厘米(cm)
+Count   number  货物数量，一般为1</p>
+<p>Insured 的结构</p>
+<p>属性      类型      说明
+UseInsured      number  是否保价，0 表示不保价，1 表示保价
+InsuredValue    number  保价金额，单位是分，比如: 10000 表示 100 元</p>
+<p>Service 的结构</p>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 12%" />
+<col style="width: 68%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>属性</p></th>
+<th class="head"><p>类型</p></th>
+<th class="head"><p>说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>ServiceType</p></td>
+<td><p>number</p></td>
+<td><p>服务类型ID，详见已经支持的快递公司基本信息</p></td>
+</tr>
+<tr class="row-odd"><td><p>ServiceName</p></td>
+<td><p>string</p></td>
+<td><p>服务名称，详见已经支持的快递公司基本信息</p></td>
+</tr>
+</tbody>
+</table>
+<p>消息返回</p>
+<p>属性      类型      默认值     必填      说明
+ToUserName      string          是       原样返回请求中的 FromUserName
+FromUserName    string          是       快递公司小程序 UserName
+CreateTime      number          是       事件时间，Unix 时间戳
+MsgType string          是       消息类型，固定为 event
+Event   string          是       事件类型，固定为 add_waybill
+Token   string          是       传入的 Token，原样返回
+OrderID string          是       传入的唯一标识订单的 ID，由商户生成，原样返回
+BizID   string          是       商户 ID，原样返回
+WayBillID       string          是       运单 ID
+ResultCode      number          是       处理结果错误码
+ResultMsg       string          是       处理结果的详细信息
+WaybillData     string          是       集包地、三段码、大头笔等信息，用于生成面单信息。详见后文返回值说明</p>
+<p>ResultCode 的合法值</p>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 12%" />
+<col style="width: 88%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>值</p></th>
+<th class="head"><p>说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>下单成功</p></td>
+</tr>
+<tr class="row-odd"><td><p>-1</p></td>
+<td><p>其他错误</p></td>
+</tr>
+<tr class="row-even"><td><p>10001</p></td>
+<td><p>客户编码或者月结账户不存在</p></td>
+</tr>
+<tr class="row-odd"><td><p>10002</p></td>
+<td><p>客户密码不正确</p></td>
+</tr>
+<tr class="row-even"><td><p>20001</p></td>
+<td><p>运单 ID 不正确（仅适用于微信生成运单 ID 的情况）</p></td>
+</tr>
+<tr class="row-odd"><td><p>20002</p></td>
+<td><p>发件人信息不完整（包括姓名、电话、地址等不完整）</p></td>
+</tr>
+<tr class="row-even"><td><p>20003</p></td>
+<td><p>发件人地址不可达或者发货地址不在服务范围</p></td>
+</tr>
+<tr class="row-odd"><td><p>20004</p></td>
+<td><p>收件人信息不完整（包括姓名、电话、地址等不完整）</p></td>
+</tr>
+<tr class="row-even"><td><p>20005</p></td>
+<td><p>收件人地址不可达或者收货地址不在服务范围</p></td>
+</tr>
+<tr class="row-odd"><td><p>20006</p></td>
+<td><p>货物数量、重量、尺寸不正确或者不合理</p></td>
+</tr>
+<tr class="row-even"><td><p>20007</p></td>
+<td><p>商户余额不足，需要充值后再进行下单</p></td>
+</tr>
+<tr class="row-odd"><td><p>20008</p></td>
+<td><p>保价信息不正确（金额不合理或者快递不支持）</p></td>
+</tr>
+<tr class="row-even"><td><p>20009</p></td>
+<td><p>服务信息不正确</p></td>
+</tr>
+</tbody>
+</table>
+<p>消息参数说明</p>
+<p>各字段均为商家提供，不保证完整，不保证正确，需要快递侧做好参数合法性和正确性检查。
+当网络环境不稳定时，下单事件可能会重复推送。对于相同的 BizID+OrderID，要返回相同的运单 ID。
+不支持子母单、代收货款。</p>
+<p>返回值说明</p>
+<p>WaybillData 字段用于生成面单，结构为##(key##value##)*。key可以写到面单模板中，value是实际值。</p>
+<p>比如样例##ZTO_bagAddr##广州##ZTO_mark##888-666-666##中，”ZTO_markAddr”表示中通的集包地代号，”广州”是实际的集包地值；”ZTO_mark”表示中通三段码代号，”888-666-666”是实际的三段码值。</p>
+<p>消息数据包示例 XML 格式</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;xml&gt;</span>
+  <span class="nt">&lt;ToUserName&gt;</span><span class="cp">&lt;![CDATA[gh_abcdefg]]&gt;</span><span class="nt">&lt;/ToUserName&gt;</span>
+  <span class="nt">&lt;FromUserName&gt;</span><span class="cp">&lt;![CDATA[oABCD]]&gt;</span><span class="nt">&lt;/FromUserName&gt;</span>
+  <span class="nt">&lt;CreateTime&gt;</span>1533042556<span class="nt">&lt;/CreateTime&gt;</span>
+  <span class="nt">&lt;MsgType&gt;</span><span class="cp">&lt;![CDATA[event]]&gt;</span><span class="nt">&lt;/MsgType&gt;</span>
+  <span class="nt">&lt;Event&gt;</span><span class="cp">&lt;![CDATA[add_waybill]]&gt;</span><span class="nt">&lt;/Event&gt;</span>
+  <span class="nt">&lt;Token&gt;</span>1234ABC234523451<span class="nt">&lt;/Token&gt;</span>
+  <span class="nt">&lt;OrderID&gt;</span><span class="cp">&lt;![CDATA[012345678901234567890123456789]]&gt;</span><span class="nt">&lt;/OrderID&gt;</span>
+  <span class="nt">&lt;BizID&gt;</span><span class="cp">&lt;![CDATA[xyz]]&gt;</span><span class="nt">&lt;/BizID&gt;</span>
+  <span class="nt">&lt;BizPwd&gt;</span><span class="cp">&lt;![CDATA[xyz123]]&gt;</span><span class="nt">&lt;/BizPwd&gt;</span>
+  <span class="nt">&lt;ShopAppID&gt;</span><span class="cp">&lt;![CDATA[wxABCD]]&gt;</span><span class="nt">&lt;/ShopAppID&gt;</span>
+  <span class="nt">&lt;WayBillID&gt;</span><span class="cp">&lt;![CDATA[123456789]]&gt;</span><span class="nt">&lt;/WayBillID&gt;</span>
+  <span class="nt">&lt;Remark&gt;</span><span class="cp">&lt;![CDATA[易碎物品]]&gt;</span><span class="nt">&lt;/Remark&gt;</span>
+  <span class="nt">&lt;Sender&gt;</span>
+      <span class="nt">&lt;Name&gt;</span><span class="cp">&lt;![CDATA[张三]]&gt;</span><span class="nt">&lt;/Name&gt;</span>
+      <span class="nt">&lt;Tel&gt;</span><span class="cp">&lt;![CDATA[020-88888888]]&gt;</span><span class="nt">&lt;/Tel&gt;</span>
+      <span class="nt">&lt;Mobile&gt;</span><span class="cp">&lt;![CDATA[18666666666]]&gt;</span><span class="nt">&lt;/Mobile&gt;</span>
+      <span class="nt">&lt;Company&gt;</span><span class="cp">&lt;![CDATA[公司名]]&gt;</span><span class="nt">&lt;/Company&gt;</span>
+      <span class="nt">&lt;PostCode&gt;</span><span class="cp">&lt;![CDATA[123456]]&gt;</span><span class="nt">&lt;/PostCode&gt;</span>
+      <span class="nt">&lt;Country&gt;</span><span class="cp">&lt;![CDATA[中国]]&gt;</span><span class="nt">&lt;/Country&gt;</span>
+      <span class="nt">&lt;Province&gt;</span><span class="cp">&lt;![CDATA[广东省]]&gt;</span><span class="nt">&lt;/Province&gt;</span>
+      <span class="nt">&lt;City&gt;</span><span class="cp">&lt;![CDATA[广州市]]&gt;</span><span class="nt">&lt;/City&gt;</span>
+      <span class="nt">&lt;Area&gt;</span><span class="cp">&lt;![CDATA[海珠区]]&gt;</span><span class="nt">&lt;/Area&gt;</span>
+      <span class="nt">&lt;Address&gt;</span><span class="cp">&lt;![CDATA[XX路XX号XX大厦XX栋XX]]&gt;</span><span class="nt">&lt;/Address&gt;</span>
+  <span class="nt">&lt;/Sender&gt;</span>
+  <span class="nt">&lt;Receiver&gt;</span>
+      <span class="nt">&lt;Name&gt;</span><span class="cp">&lt;![CDATA[王小蒙]]&gt;</span><span class="nt">&lt;/Name&gt;</span>
+      <span class="nt">&lt;Tel&gt;</span><span class="cp">&lt;![CDATA[029-77777777]]&gt;</span><span class="nt">&lt;/Tel&gt;</span>
+      <span class="nt">&lt;Mobile&gt;</span><span class="cp">&lt;![CDATA[18610000000]]&gt;</span><span class="nt">&lt;/Mobile&gt;</span>
+      <span class="nt">&lt;Company&gt;</span><span class="cp">&lt;![CDATA[公司名]]&gt;</span><span class="nt">&lt;/Company&gt;</span>
+      <span class="nt">&lt;PostCode&gt;</span><span class="cp">&lt;![CDATA[654321]]&gt;</span><span class="nt">&lt;/PostCode&gt;</span>
+      <span class="nt">&lt;Country&gt;</span><span class="cp">&lt;![CDATA[中国]]&gt;</span><span class="nt">&lt;/Country&gt;</span>
+      <span class="nt">&lt;Province&gt;</span><span class="cp">&lt;![CDATA[广东省]]&gt;</span><span class="nt">&lt;/Province&gt;</span>
+      <span class="nt">&lt;City&gt;</span><span class="cp">&lt;![CDATA[广州市]]&gt;</span><span class="nt">&lt;/City&gt;</span>
+      <span class="nt">&lt;Area&gt;</span><span class="cp">&lt;![CDATA[天河区]]&gt;</span><span class="nt">&lt;/Area&gt;</span>
+      <span class="nt">&lt;Address&gt;</span><span class="cp">&lt;![CDATA[XX路XX号XX大厦XX栋XX]]&gt;</span><span class="nt">&lt;/Address&gt;</span>
+  <span class="nt">&lt;/Receiver&gt;</span>
+  <span class="nt">&lt;Cargo&gt;</span>
+      <span class="nt">&lt;Weight&gt;</span>1.2<span class="nt">&lt;/Weight&gt;</span>
+      <span class="nt">&lt;Space_X&gt;</span>20.5<span class="nt">&lt;/Space_X&gt;</span>
+      <span class="nt">&lt;Space_Y&gt;</span>15.0<span class="nt">&lt;/Space_Y&gt;</span>
+      <span class="nt">&lt;Space_Z&gt;</span>10.0<span class="nt">&lt;/Space_Z&gt;</span>
+      <span class="nt">&lt;Count&gt;</span>2<span class="nt">&lt;/Count&gt;</span>
+      <span class="nt">&lt;DetailList&gt;</span>
+          <span class="nt">&lt;Name&gt;</span><span class="cp">&lt;![CDATA[一千零一夜钻石包]]&gt;</span><span class="nt">&lt;/Name&gt;</span>
+          <span class="nt">&lt;Count&gt;</span>1<span class="nt">&lt;/Count&gt;</span>
+      <span class="nt">&lt;/DetailList&gt;</span>
+      <span class="nt">&lt;DetailList&gt;</span>
+          <span class="nt">&lt;Name&gt;</span><span class="cp">&lt;![CDATA[爱马仕柏金钻石包]]&gt;</span><span class="nt">&lt;/Name&gt;</span>
+          <span class="nt">&lt;Count&gt;</span>1<span class="nt">&lt;/Count&gt;</span>
+      <span class="nt">&lt;/DetailList&gt;</span>
+  <span class="nt">&lt;/Cargo&gt;</span>
+  <span class="nt">&lt;Insured&gt;</span>
+      <span class="nt">&lt;UseInsured&gt;</span>1<span class="nt">&lt;/UseInsured&gt;</span>
+      <span class="nt">&lt;InsuredValue&gt;</span>10000<span class="nt">&lt;/InsuredValue&gt;</span>
+  <span class="nt">&lt;/Insured&gt;</span>
+  <span class="nt">&lt;Service&gt;</span>
+      <span class="nt">&lt;ServiceType&gt;</span>0<span class="nt">&lt;/ServiceType&gt;</span>
+      <span class="nt">&lt;ServiceName&gt;</span><span class="cp">&lt;![CDATA[标准快递]]&gt;</span><span class="nt">&lt;/ServiceName&gt;</span>
+  <span class="nt">&lt;/Service&gt;</span>
+<span class="nt">&lt;/xml&gt;</span>
+</pre></div>
+</div>
+<p>JSON 格式</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;ToUserName&quot;</span><span class="p">:</span> <span class="s2">&quot;gh_abcdefg&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;FromUserName&quot;</span><span class="p">:</span> <span class="s2">&quot;oABCD&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;CreateTime&quot;</span><span class="p">:</span> <span class="mi">1533042556</span><span class="p">,</span>
+  <span class="nt">&quot;MsgType&quot;</span><span class="p">:</span> <span class="s2">&quot;event&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;Event&quot;</span><span class="p">:</span> <span class="s2">&quot;add_waybill&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;Token&quot;</span><span class="p">:</span> <span class="s2">&quot;1234ABC234523451&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;OrderID&quot;</span><span class="p">:</span> <span class="s2">&quot;012345678901234567890123456789&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;BizID&quot;</span><span class="p">:</span> <span class="s2">&quot;xyz&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;BizPwd&quot;</span><span class="p">:</span> <span class="s2">&quot;xyz123&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;ShopAppID&quot;</span><span class="p">:</span> <span class="s2">&quot;wxABCD&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;WayBillID&quot;</span><span class="p">:</span> <span class="s2">&quot;123456789&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;Remark&quot;</span><span class="p">:</span> <span class="s2">&quot;易碎物品&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;Sender&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;Name&quot;</span><span class="p">:</span> <span class="s2">&quot;张三&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;Tel&quot;</span><span class="p">:</span> <span class="s2">&quot;020-88888888&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;Mobile&quot;</span><span class="p">:</span> <span class="s2">&quot;18666666666&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;Company&quot;</span><span class="p">:</span> <span class="s2">&quot;公司名&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;PostCode&quot;</span><span class="p">:</span> <span class="s2">&quot;123456&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;Country&quot;</span><span class="p">:</span> <span class="s2">&quot;中国&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;Province&quot;</span><span class="p">:</span> <span class="s2">&quot;广东省&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;City&quot;</span><span class="p">:</span> <span class="s2">&quot;广州市&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;Area&quot;</span><span class="p">:</span> <span class="s2">&quot;海珠区&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;Address&quot;</span><span class="p">:</span> <span class="s2">&quot;XX路XX号XX大厦XX栋XX&quot;</span>
+  <span class="p">},</span>
+  <span class="nt">&quot;Receiver&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;Name&quot;</span><span class="p">:</span> <span class="s2">&quot;王小蒙&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;Tel&quot;</span><span class="p">:</span> <span class="s2">&quot;029-77777777&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;Mobile&quot;</span><span class="p">:</span> <span class="s2">&quot;18610000000&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;Company&quot;</span><span class="p">:</span> <span class="s2">&quot;公司名&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;PostCode&quot;</span><span class="p">:</span> <span class="s2">&quot;654321&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;Country&quot;</span><span class="p">:</span> <span class="s2">&quot;中国&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;Province&quot;</span><span class="p">:</span> <span class="s2">&quot;广东省&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;City&quot;</span><span class="p">:</span> <span class="s2">&quot;广州市&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;Area&quot;</span><span class="p">:</span> <span class="s2">&quot;天河区&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;Address&quot;</span><span class="p">:</span> <span class="s2">&quot;XX路XX号XX大厦XX栋XX&quot;</span>
+  <span class="p">},</span>
+  <span class="nt">&quot;Cargo&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;Weight&quot;</span><span class="p">:</span> <span class="mf">1.2</span><span class="p">,</span>
+    <span class="nt">&quot;Space_X&quot;</span><span class="p">:</span> <span class="mf">20.5</span><span class="p">,</span>
+    <span class="nt">&quot;Space_Y&quot;</span><span class="p">:</span> <span class="mi">15</span><span class="p">,</span>
+    <span class="nt">&quot;Space_Z&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
+    <span class="nt">&quot;Count&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+    <span class="nt">&quot;DetailList&quot;</span><span class="p">:</span> <span class="p">[</span>
+      <span class="p">{</span>
+        <span class="nt">&quot;Name&quot;</span><span class="p">:</span> <span class="s2">&quot;一千零一夜钻石包&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Count&quot;</span><span class="p">:</span> <span class="mi">1</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+        <span class="nt">&quot;Name&quot;</span><span class="p">:</span> <span class="s2">&quot;爱马仕柏金钻石包&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;Count&quot;</span><span class="p">:</span> <span class="mi">1</span>
+      <span class="p">}</span>
+    <span class="p">]</span>
+  <span class="p">},</span>
+  <span class="nt">&quot;Insured&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;UseInsured&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="nt">&quot;InsuredValue&quot;</span><span class="p">:</span> <span class="mi">10000</span>
+  <span class="p">},</span>
+  <span class="nt">&quot;Service&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;ServiceType&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="nt">&quot;ServiceName&quot;</span><span class="p">:</span> <span class="s2">&quot;标准快递&quot;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>返回数据包示例
+XML 格式</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;xml&gt;</span>
+    <span class="nt">&lt;ToUserName&gt;</span><span class="cp">&lt;![CDATA[oABCD]]&gt;</span><span class="nt">&lt;/ToUserName&gt;</span>
+    <span class="nt">&lt;FromUserName&gt;</span><span class="cp">&lt;![CDATA[gh_abcdefg]]&gt;</span><span class="nt">&lt;/FromUserName&gt;</span>
+    <span class="nt">&lt;CreateTime&gt;</span>1533042556<span class="nt">&lt;/CreateTime&gt;</span>
+    <span class="nt">&lt;MsgType&gt;</span><span class="cp">&lt;![CDATA[event]]&gt;</span><span class="nt">&lt;/MsgType&gt;</span>
+    <span class="nt">&lt;Event&gt;</span><span class="cp">&lt;![CDATA[add_waybill]]&gt;</span><span class="nt">&lt;/Event&gt;</span>
+    <span class="nt">&lt;Token&gt;</span>1234ABC234523451<span class="nt">&lt;/Token&gt;</span>
+    <span class="nt">&lt;OrderID&gt;</span><span class="cp">&lt;![CDATA[012345678901234567890123456789]]&gt;</span><span class="nt">&lt;/OrderID&gt;</span>
+    <span class="nt">&lt;BizID&gt;</span><span class="cp">&lt;![CDATA[xyz]]&gt;</span><span class="nt">&lt;/BizID&gt;</span>
+    <span class="nt">&lt;WayBillID&gt;</span><span class="cp">&lt;![CDATA[123456789]]&gt;</span><span class="nt">&lt;/WayBillID&gt;</span>
+    <span class="nt">&lt;ResultCode&gt;</span>0<span class="nt">&lt;/ResultCode&gt;</span>
+    <span class="nt">&lt;ResultMsg&gt;</span><span class="cp">&lt;![CDATA[success]]&gt;</span><span class="nt">&lt;/ResultMsg&gt;</span>
+    <span class="nt">&lt;WaybillData&gt;</span><span class="cp">&lt;![CDATA[##ZTO_bagAddr##广州##ZTO_mark##888-666-666##]]&gt;</span><span class="nt">&lt;/WaybillData&gt;</span>
+<span class="nt">&lt;/xml&gt;</span>
+</pre></div>
+</div>
+<p>JSON 格式</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;ToUserName&quot;</span><span class="p">:</span> <span class="s2">&quot;oABCD&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;FromUserName&quot;</span><span class="p">:</span> <span class="s2">&quot;gh_abcdefg&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;CreateTime&quot;</span><span class="p">:</span> <span class="mi">1533042556</span><span class="p">,</span>
+  <span class="nt">&quot;MsgType&quot;</span><span class="p">:</span> <span class="s2">&quot;event&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;Event&quot;</span><span class="p">:</span> <span class="s2">&quot;add_waybill&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;Token&quot;</span><span class="p">:</span> <span class="s2">&quot;1234ABC234523451&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;OrderID&quot;</span><span class="p">:</span> <span class="s2">&quot;012345678901234567890123456789&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;BizID&quot;</span><span class="p">:</span> <span class="s2">&quot;xyz&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;WayBillID&quot;</span><span class="p">:</span> <span class="s2">&quot;123456789&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;ResultCode&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+  <span class="nt">&quot;ResultMsg&quot;</span><span class="p">:</span> <span class="s2">&quot;success&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;WaybillData&quot;</span><span class="p">:</span> <span class="s2">&quot;##ZTO_bagAddr##广州##ZTO_mark##888-666-666##&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
 </div>
 
 
@@ -204,10 +527,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="logistics.onCancelOrder.html" class="btn btn-neutral float-right" title="logistics.onCancelOrder" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="logistics.onCancelOrder.html" class="btn btn-neutral float-right" title="取消订单事件" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="logistics.getContact.html" class="btn btn-neutral float-left" title="logistics.getContact" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="logistics.getContact.html" class="btn btn-neutral float-left" title="获取面单联系人信息" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

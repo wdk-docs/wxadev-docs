@@ -34,18 +34,27 @@ import 有作用域的概念，即只会 import 目标文件中定义的 templat
 如：C import B，B import A，在C中可以使用B定义的template，
 在B中可以使用A定义的template，但是C不能使用A定义的template。
 
+A.wxml
+
 .. code:: html
 
-  <!-- A.wxml -->
   <template name="A">
     <text>A template</text>
   </template>
-  <!-- B.wxml -->
+
+B.wxml
+
+.. code:: html
+
   <import src="a.wxml" />
   <template name="B">
     <text>B template</text>
   </template>
-  <!-- C.wxml -->
+
+C.wxml
+
+.. code:: html
+
   <import src="b.wxml" />
   <template is="A" />
   <!-- Error! Can not use tempalte when not import A. -->
@@ -56,13 +65,22 @@ include
 
 include 可以将目标文件除了 <template/> <wxs/> 外的整个代码引入，相当于是拷贝到 include 位置，如：
 
+index.wxml
+
 .. code:: html
 
-  <!-- index.wxml -->
   <include src="header.wxml" />
   <view>body</view>
   <include src="footer.wxml" />
-  <!-- header.wxml -->
+
+header.wxml
+
+.. code:: html
+
   <view>header</view>
-  <!-- footer.wxml -->
+
+footer.wxml
+
+.. code:: html
+
   <view>footer</view>

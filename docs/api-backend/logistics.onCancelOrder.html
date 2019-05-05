@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>logistics.onCancelOrder &mdash; wxadev 1.0.0 文档</title>
+  <title>取消订单事件 &mdash; wxadev 1.0.0 文档</title>
   
 
   
@@ -36,8 +36,8 @@
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜索" href="../search.html" />
-    <link rel="next" title="logistics.onCheckBusiness" href="logistics.onCheckBusiness.html" />
-    <link rel="prev" title="logistics.onAddOrder" href="logistics.onAddOrder.html" /> 
+    <link rel="next" title="审核商户事件" href="logistics.onCheckBusiness.html" />
+    <link rel="prev" title="请求下单事件" href="logistics.onAddOrder.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -103,18 +103,18 @@
 <li class="toctree-l2"><a class="reference internal" href="index.html#id13">小程序码</a></li>
 <li class="toctree-l2"><a class="reference internal" href="index.html#id14">内容安全</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="index.html#id15">物流助手</a><ul class="current">
-<li class="toctree-l3 current"><a class="reference internal" href="index.html#id16">服务提供方使用</a><ul class="current">
-<li class="toctree-l4"><a class="reference internal" href="logistics.onGetQuota.html">logistics.onGetQuota</a></li>
-<li class="toctree-l4"><a class="reference internal" href="logistics.getContact.html">logistics.getContact</a></li>
-<li class="toctree-l4"><a class="reference internal" href="logistics.onAddOrder.html">logistics.onAddOrder</a></li>
-<li class="toctree-l4 current"><a class="current reference internal" href="#">logistics.onCancelOrder</a></li>
-<li class="toctree-l4"><a class="reference internal" href="logistics.onCheckBusiness.html">logistics.onCheckBusiness</a></li>
-<li class="toctree-l4"><a class="reference internal" href="logistics.previewTemplate.html">logistics.previewTemplate</a></li>
-<li class="toctree-l4"><a class="reference internal" href="logistics.updateBusiness.html">logistics.updateBusiness</a></li>
-<li class="toctree-l4"><a class="reference internal" href="logistics.updatePath.html">logistics.updatePath</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#id16">小程序使用</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html#id17">服务提供方使用</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="logistics.getContact.html">获取面单联系人信息</a></li>
+<li class="toctree-l4"><a class="reference internal" href="logistics.onAddOrder.html">请求下单事件</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">取消订单事件</a></li>
+<li class="toctree-l4"><a class="reference internal" href="logistics.onCheckBusiness.html">审核商户事件</a></li>
+<li class="toctree-l4"><a class="reference internal" href="logistics.onGetQuota.html">查询商户余额事件</a></li>
+<li class="toctree-l4"><a class="reference internal" href="logistics.previewTemplate.html">预览面单模板</a></li>
+<li class="toctree-l4"><a class="reference internal" href="logistics.updateBusiness.html">更新商户审核结果</a></li>
+<li class="toctree-l4"><a class="reference internal" href="logistics.updatePath.html">更新运单轨迹</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="index.html#id17">小程序使用</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="index.html#id18">生物认证</a></li>
@@ -173,7 +173,7 @@
         
           <li><a href="index.html">服务端API</a> &raquo;</li>
         
-      <li>logistics.onCancelOrder</li>
+      <li>取消订单事件</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -192,8 +192,106 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="logistics-oncancelorder">
-<h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/api-backend/logistics.onCancelOrder.html">logistics.onCancelOrder</a><a class="headerlink" href="#logistics-oncancelorder" title="永久链接至标题">¶</a></h1>
+  <div class="section" id="id1">
+<h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/api-backend/logistics.onCancelOrder.html">取消订单事件</a><a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
+<p>logistics.onCancelOrder
+本文档描述服务器端接收的消息或事件，详细说明参见消息推送。</p>
+<p>一、HTTPS 调用
+消息参数
+Object
+属性      类型      说明
+ToUserName      string  快递公司小程序 UserName
+FromUserName    string  下单用户的 OpenID
+CreateTime      number  事件时间，Unix 时间戳
+MsgType string  消息类型，固定为 event
+Event   string  事件类型，固定为 cancel_waybill
+OrderID string  唯一标识订单的 ID，由商户生成
+BizID   string  商户 ID
+BizPwd  string  商户密码
+ShopAppID       string  商户的小程序 AppID
+WayBillID       string  运单 ID，从微信号段中生成
+消息返回
+属性      类型      默认值     必填      说明
+ToUserName      string          是       原样返回请求中的 FromUserName
+FromUserName    string          是       快递公司小程序 UserName
+CreateTime      number          是       事件时间，Unix 时间戳
+MsgType string          是       消息类型，固定为 event
+Event   string          是       事件类型，固定为 cancel_waybill，不区分大小写
+BizID   string          是       商户ID，请原样返回
+OrderID string          是       唯一标识订单的ID，由商户生成。请原样返回
+WayBillID       string          是       运单ID，请原样返回
+ResultCode      number          是       处理结果错误码
+ResultMsg       string          是       处理结果详情
+ResultCode 的合法值</p>
+<p>值       说明      最低版本
+0       取消成功
+-1      其他错误
+30001   参数错误（BizID、OrderID、WayBillID不存在）
+30002   已经揽收，不可取消
+30003   无效单（如已经取消过、或签收超过一定时间），不可取消
+30004   快递不支持取消运单
+消息数据包示例
+XML 格式</p>
+<dl class="simple">
+<dt>&lt;xml&gt;</dt><dd><p>&lt;ToUserName&gt;&lt;![CDATA[gh_abcdefg]]&gt;&lt;/ToUserName&gt;
+&lt;FromUserName&gt;&lt;![CDATA[oABCD]]&gt;&lt;/FromUserName&gt;
+&lt;CreateTime&gt;1533042556&lt;/CreateTime&gt;
+&lt;MsgType&gt;&lt;![CDATA[event]]&gt;&lt;/MsgType&gt;
+&lt;Event&gt;&lt;![CDATA[cancel_waybill]]&gt;&lt;/Event&gt;
+&lt;BizID&gt;&lt;![CDATA[xyz]]&gt;&lt;/BizID&gt;
+&lt;BizPwd&gt;&lt;![CDATA[xyz123]]&gt;&lt;/BizPwd&gt;
+&lt;ShopAppID&gt;&lt;![CDATA[wxABCD]]&gt;&lt;/ShopAppID&gt;
+&lt;OrderID&gt;&lt;![CDATA[012345678901234567890123456789]]&gt;&lt;/OrderID&gt;
+&lt;WayBillID&gt;&lt;![CDATA[123456789]]&gt;&lt;/WayBillID&gt;</p>
+</dd>
+</dl>
+<p>&lt;/xml&gt;
+JSON 格式</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;ToUserName&quot;</span><span class="p">:</span> <span class="s2">&quot;gh_abcdefg&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;FromUserName&quot;</span><span class="p">:</span> <span class="s2">&quot;oABCD&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;CreateTime&quot;</span><span class="p">:</span> <span class="mi">1533042556</span><span class="p">,</span>
+  <span class="nt">&quot;MsgType&quot;</span><span class="p">:</span> <span class="s2">&quot;event&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;Event&quot;</span><span class="p">:</span> <span class="s2">&quot;cancel_waybill&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;BizID&quot;</span><span class="p">:</span> <span class="s2">&quot;xyz&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;BizPwd&quot;</span><span class="p">:</span> <span class="s2">&quot;xyz123&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;ShopAppID&quot;</span><span class="p">:</span> <span class="s2">&quot;wxABCD&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;OrderID&quot;</span><span class="p">:</span> <span class="s2">&quot;012345678901234567890123456789&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;WayBillID&quot;</span><span class="p">:</span> <span class="s2">&quot;123456789&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>返回数据包示例
+XML 格式</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;xml&gt;</span>
+    <span class="nt">&lt;ToUserName&gt;</span><span class="cp">&lt;![CDATA[oABCD]]&gt;</span><span class="nt">&lt;/ToUserName&gt;</span>
+    <span class="nt">&lt;FromUserName&gt;</span><span class="cp">&lt;![CDATA[gh_abcdefg]]&gt;</span><span class="nt">&lt;/FromUserName&gt;</span>
+    <span class="nt">&lt;CreateTime&gt;</span>1533042556<span class="nt">&lt;/CreateTime&gt;</span>
+    <span class="nt">&lt;MsgType&gt;</span><span class="cp">&lt;![CDATA[event]]&gt;</span><span class="nt">&lt;/MsgType&gt;</span>
+    <span class="nt">&lt;Event&gt;</span><span class="cp">&lt;![CDATA[cancel_waybill]]&gt;</span><span class="nt">&lt;/Event&gt;</span>
+    <span class="nt">&lt;BizID&gt;</span><span class="cp">&lt;![CDATA[xyz]]&gt;</span><span class="nt">&lt;/BizID&gt;</span>
+    <span class="nt">&lt;OrderID&gt;</span><span class="cp">&lt;![CDATA[012345678901234567890123456789]]&gt;</span><span class="nt">&lt;/OrderID&gt;</span>
+    <span class="nt">&lt;WayBillID&gt;</span><span class="cp">&lt;![CDATA[123456789]]&gt;</span><span class="nt">&lt;/WayBillID&gt;</span>
+    <span class="nt">&lt;ResultCode&gt;</span>0<span class="nt">&lt;/ResultCode&gt;</span>
+    <span class="nt">&lt;ResultMsg&gt;</span><span class="cp">&lt;![CDATA[success]]&gt;</span><span class="nt">&lt;/ResultMsg&gt;</span>
+<span class="nt">&lt;/xml&gt;</span>
+</pre></div>
+</div>
+<p>JSON 格式</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;ToUserName&quot;</span><span class="p">:</span> <span class="s2">&quot;oABCD&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;FromUserName&quot;</span><span class="p">:</span> <span class="s2">&quot;gh_abcdefg&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;CreateTime&quot;</span><span class="p">:</span> <span class="mi">1533042556</span><span class="p">,</span>
+  <span class="nt">&quot;MsgType&quot;</span><span class="p">:</span> <span class="s2">&quot;event&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;Event&quot;</span><span class="p">:</span> <span class="s2">&quot;cancel_waybill&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;BizID&quot;</span><span class="p">:</span> <span class="s2">&quot;xyz&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;OrderID&quot;</span><span class="p">:</span> <span class="s2">&quot;012345678901234567890123456789&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;WayBillID&quot;</span><span class="p">:</span> <span class="s2">&quot;123456789&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;ResultCode&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+  <span class="nt">&quot;ResultMsg&quot;</span><span class="p">:</span> <span class="s2">&quot;success&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
 </div>
 
 
@@ -204,10 +302,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="logistics.onCheckBusiness.html" class="btn btn-neutral float-right" title="logistics.onCheckBusiness" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="logistics.onCheckBusiness.html" class="btn btn-neutral float-right" title="审核商户事件" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="logistics.onAddOrder.html" class="btn btn-neutral float-left" title="logistics.onAddOrder" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="logistics.onAddOrder.html" class="btn btn-neutral float-left" title="请求下单事件" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

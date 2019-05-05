@@ -36,8 +36,8 @@
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜索" href="../search.html" />
-    <link rel="next" title="wx.getStorageInfoSync" href="wx.getStorageInfoSync.html" />
-    <link rel="prev" title="wx.removeStorage" href="wx.removeStorage.html" /> 
+    <link rel="next" title="wx.getStorageInfo" href="wx.getStorageInfo.html" />
+    <link rel="prev" title="wx.getStorage" href="wx.getStorage.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -98,16 +98,16 @@
 <li class="toctree-l2"><a class="reference internal" href="index.html#id11">界面</a></li>
 <li class="toctree-l2"><a class="reference internal" href="index.html#id23">网络</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="index.html#id27">数据缓存</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="wx.setStorageSync.html">wx.createWorker</a></li>
-<li class="toctree-l3"><a class="reference internal" href="wx.setStorage.html">wx.createWorker</a></li>
-<li class="toctree-l3"><a class="reference internal" href="wx.removeStorageSync.html">wx.removeStorageSync</a></li>
+<li class="toctree-l3"><a class="reference internal" href="wx.setStorage.html">wx.setStorage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="wx.setStorageSync.html">wx.setStorageSync</a></li>
 <li class="toctree-l3"><a class="reference internal" href="wx.removeStorage.html">wx.removeStorage</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">wx.getStorageSync</a></li>
-<li class="toctree-l3"><a class="reference internal" href="wx.getStorageInfoSync.html">wx.getStorageInfoSync</a></li>
-<li class="toctree-l3"><a class="reference internal" href="wx.getStorageInfo.html">wx.getStorageInfo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="wx.removeStorageSync.html">wx.removeStorageSync</a></li>
 <li class="toctree-l3"><a class="reference internal" href="wx.getStorage.html">wx.getStorage</a></li>
-<li class="toctree-l3"><a class="reference internal" href="wx.clearStorageSync.html">wx.clearStorageSync</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">wx.getStorageSync</a></li>
+<li class="toctree-l3"><a class="reference internal" href="wx.getStorageInfo.html">wx.getStorageInfo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="wx.getStorageInfoSync.html">wx.getStorageInfoSync</a></li>
 <li class="toctree-l3"><a class="reference internal" href="wx.clearStorage.html">wx.clearStorage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="wx.clearStorageSync.html">wx.clearStorageSync</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="index.html#id28">媒体</a></li>
@@ -197,6 +197,45 @@
             
   <div class="section" id="wx-getstoragesync">
 <h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/api/wx.getStorageSync.html">wx.getStorageSync</a><a class="headerlink" href="#wx-getstoragesync" title="永久链接至标题">¶</a></h1>
+<dl class="function">
+<dt id="wx.getStorageSync">
+<code class="descclassname">wx.</code><code class="descname">getStorageSync</code><span class="sig-paren">(</span><em>string key</em><span class="sig-paren">)</span><a class="headerlink" href="#wx.getStorageSync" title="永久链接至目标">¶</a></dt>
+<dd><p><a class="reference internal" href="wx.getStorage.html#wx.getStorage" title="wx.getStorage"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.getStorage()</span></code></a> 的同步版本</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>key</strong> (<em>string</em>) – 本地缓存中指定的 key</p></li>
+</ul>
+</dd>
+<dt class="field-even">返回</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><strong>any</strong> <em>data</em> - key对应的内容</p></li>
+</ul>
+</p>
+</dd>
+<dt class="field-odd">示例</dt>
+<dd class="field-odd"><p></p></dd>
+</dl>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="nx">wx</span><span class="p">.</span><span class="nx">getStorage</span><span class="p">({</span>
+  <span class="nx">key</span><span class="o">:</span> <span class="s1">&#39;key&#39;</span><span class="p">,</span>
+  <span class="nx">success</span><span class="p">(</span><span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">res</span><span class="p">.</span><span class="nx">data</span><span class="p">)</span>
+  <span class="p">}</span>
+<span class="p">})</span>
+</pre></div>
+</div>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="k">try</span> <span class="p">{</span>
+  <span class="kr">const</span> <span class="nx">value</span> <span class="o">=</span> <span class="nx">wx</span><span class="p">.</span><span class="nx">getStorageSync</span><span class="p">(</span><span class="s1">&#39;key&#39;</span><span class="p">)</span>
+  <span class="k">if</span> <span class="p">(</span><span class="nx">value</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// Do something with return value</span>
+  <span class="p">}</span>
+<span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+  <span class="c1">// Do something when catch error</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</dd></dl>
+
 </div>
 
 
@@ -207,10 +246,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="wx.getStorageInfoSync.html" class="btn btn-neutral float-right" title="wx.getStorageInfoSync" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="wx.getStorageInfo.html" class="btn btn-neutral float-right" title="wx.getStorageInfo" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="wx.removeStorage.html" class="btn btn-neutral float-left" title="wx.removeStorage" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="wx.getStorage.html" class="btn btn-neutral float-left" title="wx.getStorage" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

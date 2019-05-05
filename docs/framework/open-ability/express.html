@@ -36,8 +36,8 @@
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="index" title="索引" href="../../genindex.html" />
     <link rel="search" title="搜索" href="../../search.html" />
-    <link rel="next" title="数据分析接口" href="data-analysis.html" />
-    <link rel="prev" title="微信物流助手（快递侧）" href="express-delivery.html" /> 
+    <link rel="next" title="物流助手-打单软件" href="express-download.html" />
+    <link rel="prev" title="附近的小程序" href="nearby.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -112,9 +112,17 @@
 <li class="toctree-l3"><a class="reference internal" href="customer-message/index.html">客服消息</a></li>
 <li class="toctree-l3"><a class="reference internal" href="qr-code.html">获取小程序码</a></li>
 <li class="toctree-l3"><a class="reference internal" href="nearby.html">附近的小程序</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">微信物流助手（商户侧）</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id2">产品优势</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id5">小程序接入步骤</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id6">已经支持的快递公司基本信息</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id7">打印面单</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id8">相关事件</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id9">联系我们</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="express-download.html">物流助手-打单软件</a></li>
 <li class="toctree-l3"><a class="reference internal" href="express-delivery.html">微信物流助手（快递侧）</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">微信物流助手（商户侧）</a></li>
 <li class="toctree-l3"><a class="reference internal" href="data-analysis.html">数据分析接口</a></li>
 <li class="toctree-l3"><a class="reference internal" href="card/index.html">card</a></li>
 </ul>
@@ -211,60 +219,246 @@
   <div class="section" id="id1">
 <h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/express.html">微信物流助手（商户侧）</a><a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
 <p>物流助手，帮助有物流需求的开发者，快速高效对接多家物流公司。对接后用户可通过微信服务通知接收实时物流状态，提升用户体验。</p>
-<p>产品优势
-小程序开发者
-节省开发成本：通过微信统一对接多家物流公司，平均1-2周调通接口，减少以往逐一对接多家物流的开发成本；
-实时跟进订单：可通过接口调取或通过事件接收订单的实时路由状态，跟踪最新路由情况；
-提升用户回访：关键物流状态会通过微信服务通知发送给用户，用户点击后可回访小程序查看该订单;
-利于数据保护：无需担心数据洞穿，利于保护和积累你的数据；
-接口完全免费：快递费为你与快递公司签约时收取，微信不收快递费及接口费；
-用户
-查收物流状态：用户在已调通物流接口的微信小程序内的订单，可以通过服务通知收到微信官方发送的订单物流状态。</p>
-<p>小程序接入步骤
-登录小程序管理后台，点击「物流助手」-「开通」，开通物流助手；
-绑定已与你有合作的物流公司帐号；
-按照本文档完成接口开发；
-下单时调用物流助手API即可。
-已经支持的快递公司基本信息
-快递公司名称  快递公司ID  服务类型ID及名称       是否支持现付  现付的BizID        快递模式
-百世快递    BEST    1（标准快递） 否       -       加盟
-德邦快递    DB      1（大件快递3.60）
-2（特准快件） 是       DB_CASH 直营
-中国邮政速递物流        EMS     6（标准快递）
-9（快递包裹） 否       -       直营
-承诺达特快   OTP     1（标准快递） 是       OTP_CASH        直营
-品骏快递    PJ      1（标准快递） 是       PJ_CASH 直营
-顺丰速运    SF      1（顺丰即日）
-2（顺丰次晨）
-3（顺丰标快）
-4（顺丰特惠） 是       SF_CASH 直营
-申通快递    STO     1（标准快递） 否       -       加盟
-圆通速递    YTO     0（普通快递）
-1（圆准达）  否       -       加盟
-韵达快递    YUNDA   0（标准快件） 否       -       加盟
-中通快递    ZTO     0（标准快件） 否       -       加盟
-打印面单
-小程序开发者下单之后，可以选择以下几种方式来打印电子面单：</p>
-<p>安装微信打单PC软件；
-使用 getOrder 拉取电子面单 html，使用热敏打印机打印；
-使用快递公司的接口；
-使用 getOrder 拉取电子面单的 waybill_data，自行构造面单并打印。
-相关接口
-获取支持的快递公司列表
-生成运单
-取消运单
-获取运单数据
-查询运单轨迹
-更新打印员
-获取打印员
-获取电子面单余额
-相关事件
-运单轨迹更新
-联系我们
-开发本接口中遇到任何问题可前往微信开放社区提问，我们会有专人第一时间解答。点击此处进入社区。</p>
+<div class="section" id="id2">
+<h2>产品优势<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<div class="section" id="id3">
+<h3>小程序开发者<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h3>
+<ol class="arabic simple">
+<li><p>节省开发成本：通过微信统一对接多家物流公司，平均1-2周调通接口，减少以往逐一对接多家物流的开发成本；</p></li>
+<li><p>实时跟进订单：可通过接口调取或通过事件接收订单的实时路由状态，跟踪最新路由情况；</p></li>
+<li><p>提升用户回访：关键物流状态会通过微信服务通知发送给用户，用户点击后可回访小程序查看该订单;</p></li>
+<li><p>利于数据保护：无需担心数据洞穿，利于保护和积累你的数据；</p></li>
+<li><p>接口完全免费：快递费为你与快递公司签约时收取，微信不收快递费及接口费；</p></li>
+</ol>
+</div>
+<div class="section" id="id4">
+<h3>用户<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h3>
+<p>查收物流状态：用户在已调通物流接口的微信小程序内的订单，可以通过服务通知收到微信官方发送的订单物流状态。</p>
+</div>
+</div>
+<div class="section" id="id5">
+<h2>小程序接入步骤<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h2>
+<ol class="arabic simple">
+<li><p>登录小程序管理后台，点击 <span class="menuselection">「物流助手」‣「开通」</span> ，开通物流助手；</p></li>
+<li><p>绑定已与你有合作的物流公司帐号；</p></li>
+<li><p>按照本文档完成接口开发；</p></li>
+<li><p>下单时调用物流助手API即可。</p></li>
+</ol>
+</div>
+<div class="section" id="id6">
+<h2>已经支持的快递公司基本信息<a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h2>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 13%" />
+<col style="width: 21%" />
+<col style="width: 15%" />
+<col style="width: 14%" />
+<col style="width: 11%" />
+<col style="width: 5%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>快递公司名称</p></th>
+<th class="head"><p>快递公司ID</p></th>
+<th class="head"><p>服务类型ID及名称</p></th>
+<th class="head"><p>是否支持现付</p></th>
+<th class="head"><p>现付的BizID</p></th>
+<th class="head"><p>快递模式</p></th>
+<th class="head"></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>百世快递</p></td>
+<td><p>BEST</p></td>
+<td><p>1（标准快递）</p></td>
+<td><p>否</p></td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+<td><p>加盟</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>德邦快递</p></td>
+<td><p>DB</p></td>
+<td><p>1（大件快递3.60）</p></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td></td>
+<td></td>
+<td><p>2（特准快件）</p></td>
+<td><p>是</p></td>
+<td><p>DB_CASH</p></td>
+<td><p>直营</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>中国邮政速递物流</p></td>
+<td><p>EMS</p></td>
+<td><p>6（标准快递）</p></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td></td>
+<td><p>9（快递包裹）</p></td>
+<td><p>否</p></td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+<td><p>直营</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>承诺达特快</p></td>
+<td><p>OTP</p></td>
+<td><p>1（标准快递）</p></td>
+<td><p>是</p></td>
+<td><p>OTP_CASH</p></td>
+<td><p>直营</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>品骏快递</p></td>
+<td><p>PJ</p></td>
+<td><p>1（标准快递）</p></td>
+<td><p>是</p></td>
+<td><p>PJ_CASH</p></td>
+<td><p>直营</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>顺丰速运</p></td>
+<td><p>SF</p></td>
+<td><p>1（顺丰即日）</p></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td></td>
+<td><p>2（顺丰次晨）</p></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td></td>
+<td></td>
+<td><p>3（顺丰标快）</p></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td></td>
+<td><p>4（顺丰特惠）</p></td>
+<td><p>是</p></td>
+<td><p>SF_CASH</p></td>
+<td><p>直营</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>申通快递</p></td>
+<td><p>STO</p></td>
+<td><p>1（标准快递）</p></td>
+<td><p>否</p></td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+<td><p>加盟</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>圆通速递</p></td>
+<td><p>YTO</p></td>
+<td><p>0（ 普通快递）</p></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td></td>
+<td></td>
+<td><p>1（圆准达）</p></td>
+<td><p>否</p></td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+<td><p>加盟</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>韵达快递</p></td>
+<td><p>YUNDA</p></td>
+<td><p>0（标准快件）</p></td>
+<td><p>否</p></td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+<td><p>加盟</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>中通快递</p></td>
+<td><p>ZTO</p></td>
+<td><p>0（标准快件）</p></td>
+<td><p>否</p></td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+<td><p>加盟</p></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id7">
+<h2>打印面单<a class="headerlink" href="#id7" title="永久链接至标题">¶</a></h2>
+<p>小程序开发者下单之后，可以选择以下几种方式来打印电子面单：</p>
+<ol class="arabic simple">
+<li><p>安装微信打单PC软件；</p></li>
+<li><p>使用 getOrder 拉取电子面单 html，使用热敏打印机打印；</p></li>
+<li><p>使用快递公司的接口；</p></li>
+<li><p>使用 getOrder 拉取电子面单的 waybill_data，自行构造面单并打印。</p></li>
+</ol>
+<p>相关接口</p>
+<ul class="simple">
+<li><p>获取支持的快递公司列表</p></li>
+<li><p>生成运单</p></li>
+<li><p>取消运单</p></li>
+<li><p>获取运单数据</p></li>
+<li><p>查询运单轨迹</p></li>
+<li><p>更新打印员</p></li>
+<li><p>获取打印员</p></li>
+<li><p>获取电子面单余额</p></li>
+</ul>
+</div>
+<div class="section" id="id8">
+<h2>相关事件<a class="headerlink" href="#id8" title="永久链接至标题">¶</a></h2>
+<p>运单轨迹更新</p>
+</div>
+<div class="section" id="id9">
+<h2>联系我们<a class="headerlink" href="#id9" title="永久链接至标题">¶</a></h2>
+<p>开发本接口中遇到任何问题可前往微信开放社区提问，我们会有专人第一时间解答。点击此处进入社区。</p>
 <p>社区提问时，建议参考以下格式：</p>
-<p><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/api/wx.createWorker.html">wx.createWorker</a>：请以【物流助手】开头
-正文：若为开发问题，请说明接口调用时间点、请求数据（注意隐私数据）和返回结果，便于我们定位问题。</p>
+<ol class="arabic simple">
+<li><p>标题：请以【物流助手】开头</p></li>
+<li><p>正文：若为开发问题，请说明接口调用时间点、请求数据（注意隐私数据）和返回结果，便于我们定位问题。</p></li>
+</ol>
+</div>
 </div>
 
 
@@ -275,10 +469,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="data-analysis.html" class="btn btn-neutral float-right" title="数据分析接口" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="express-download.html" class="btn btn-neutral float-right" title="物流助手-打单软件" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="express-delivery.html" class="btn btn-neutral float-left" title="微信物流助手（快递侧）" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="nearby.html" class="btn btn-neutral float-left" title="附近的小程序" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

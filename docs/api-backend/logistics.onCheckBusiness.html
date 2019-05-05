@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>logistics.onCheckBusiness &mdash; wxadev 1.0.0 文档</title>
+  <title>审核商户事件 &mdash; wxadev 1.0.0 文档</title>
   
 
   
@@ -36,8 +36,8 @@
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜索" href="../search.html" />
-    <link rel="next" title="logistics.previewTemplate" href="logistics.previewTemplate.html" />
-    <link rel="prev" title="logistics.onCancelOrder" href="logistics.onCancelOrder.html" /> 
+    <link rel="next" title="查询商户余额事件" href="logistics.onGetQuota.html" />
+    <link rel="prev" title="取消订单事件" href="logistics.onCancelOrder.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -103,18 +103,18 @@
 <li class="toctree-l2"><a class="reference internal" href="index.html#id13">小程序码</a></li>
 <li class="toctree-l2"><a class="reference internal" href="index.html#id14">内容安全</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="index.html#id15">物流助手</a><ul class="current">
-<li class="toctree-l3 current"><a class="reference internal" href="index.html#id16">服务提供方使用</a><ul class="current">
-<li class="toctree-l4"><a class="reference internal" href="logistics.onGetQuota.html">logistics.onGetQuota</a></li>
-<li class="toctree-l4"><a class="reference internal" href="logistics.getContact.html">logistics.getContact</a></li>
-<li class="toctree-l4"><a class="reference internal" href="logistics.onAddOrder.html">logistics.onAddOrder</a></li>
-<li class="toctree-l4"><a class="reference internal" href="logistics.onCancelOrder.html">logistics.onCancelOrder</a></li>
-<li class="toctree-l4 current"><a class="current reference internal" href="#">logistics.onCheckBusiness</a></li>
-<li class="toctree-l4"><a class="reference internal" href="logistics.previewTemplate.html">logistics.previewTemplate</a></li>
-<li class="toctree-l4"><a class="reference internal" href="logistics.updateBusiness.html">logistics.updateBusiness</a></li>
-<li class="toctree-l4"><a class="reference internal" href="logistics.updatePath.html">logistics.updatePath</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#id16">小程序使用</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html#id17">服务提供方使用</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="logistics.getContact.html">获取面单联系人信息</a></li>
+<li class="toctree-l4"><a class="reference internal" href="logistics.onAddOrder.html">请求下单事件</a></li>
+<li class="toctree-l4"><a class="reference internal" href="logistics.onCancelOrder.html">取消订单事件</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">审核商户事件</a></li>
+<li class="toctree-l4"><a class="reference internal" href="logistics.onGetQuota.html">查询商户余额事件</a></li>
+<li class="toctree-l4"><a class="reference internal" href="logistics.previewTemplate.html">预览面单模板</a></li>
+<li class="toctree-l4"><a class="reference internal" href="logistics.updateBusiness.html">更新商户审核结果</a></li>
+<li class="toctree-l4"><a class="reference internal" href="logistics.updatePath.html">更新运单轨迹</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="index.html#id17">小程序使用</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="index.html#id18">生物认证</a></li>
@@ -173,7 +173,7 @@
         
           <li><a href="index.html">服务端API</a> &raquo;</li>
         
-      <li>logistics.onCheckBusiness</li>
+      <li>审核商户事件</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -192,8 +192,245 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="logistics-oncheckbusiness">
-<h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/api-backend/logistics.onCheckBusiness.html">logistics.onCheckBusiness</a><a class="headerlink" href="#logistics-oncheckbusiness" title="永久链接至标题">¶</a></h1>
+  <div class="section" id="id1">
+<h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/api-backend/logistics.onCheckBusiness.html">审核商户事件</a><a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
+<p>logistics.onCheckBusiness</p>
+<p>本文档描述服务器端接收的消息或事件，详细说明参见消息推送。</p>
+<div class="section" id="https">
+<h2>一、HTTPS 调用<a class="headerlink" href="#https" title="永久链接至标题">¶</a></h2>
+<p>消息参数 Object</p>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 21%" />
+<col style="width: 11%" />
+<col style="width: 68%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>属性</p></th>
+<th class="head"><p>类型</p></th>
+<th class="head"><p>说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>ToUserName</p></td>
+<td><p>string</p></td>
+<td><p>快递公司小程序 UserName</p></td>
+</tr>
+<tr class="row-odd"><td><p>FromUserName</p></td>
+<td><p>string</p></td>
+<td><p>微信团队的 OpenID （固定值）</p></td>
+</tr>
+<tr class="row-even"><td><p>CreateTime</p></td>
+<td><p>number</p></td>
+<td><p>事件时间，Unix 时间戳</p></td>
+</tr>
+<tr class="row-odd"><td><p>MsgType</p></td>
+<td><p>string</p></td>
+<td><p>消息类型，固定为 event</p></td>
+</tr>
+<tr class="row-even"><td><p>Event</p></td>
+<td><p>string</p></td>
+<td><p>事件类型，固定为 check_biz，不区分大小写</p></td>
+</tr>
+<tr class="row-odd"><td><p>BizID</p></td>
+<td><p>string</p></td>
+<td><p>商户ID，即商户在快递注册的客户编码或月结账户名</p></td>
+</tr>
+<tr class="row-even"><td><p>BizPwd</p></td>
+<td><p>string</p></td>
+<td><p>BizID 对应的密码</p></td>
+</tr>
+<tr class="row-odd"><td><p>ShopAppID</p></td>
+<td><p>string</p></td>
+<td><p>商户的小程序 AppID</p></td>
+</tr>
+<tr class="row-even"><td><p>ShopName</p></td>
+<td><p>string</p></td>
+<td><p>商户名称，即小程序昵称（仅EMS可用）</p></td>
+</tr>
+<tr class="row-odd"><td><p>ShopTelphone</p></td>
+<td><p>string</p></td>
+<td><p>商户联系电话（仅EMS可用）</p></td>
+</tr>
+<tr class="row-even"><td><p>ShopContact</p></td>
+<td><p>string</p></td>
+<td><p>商户联系人姓名（仅EMS可用）</p></td>
+</tr>
+<tr class="row-odd"><td><p>ServiceName</p></td>
+<td><p>string</p></td>
+<td><p>预开通的服务类型名称（仅EMS可用）</p></td>
+</tr>
+<tr class="row-even"><td><p>SenderAddress</p></td>
+<td><p>string</p></td>
+<td><p>商户发货地址（仅EMS可用）</p></td>
+</tr>
+</tbody>
+</table>
+<p>消息返回</p>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 18%" />
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 8%" />
+<col style="width: 53%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>属性</p></th>
+<th class="head"><p>类型</p></th>
+<th class="head"><p>默认值</p></th>
+<th class="head"><p>必填</p></th>
+<th class="head"><p>说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>ToUserName</p></td>
+<td><p>string</p></td>
+<td></td>
+<td><p>是</p></td>
+<td><p>原样返回请求中的 FromUserName</p></td>
+</tr>
+<tr class="row-odd"><td><p>FromUserName</p></td>
+<td><p>string</p></td>
+<td></td>
+<td><p>是</p></td>
+<td><p>快递公司小程序 UserName</p></td>
+</tr>
+<tr class="row-even"><td><p>CreateTime</p></td>
+<td><p>number</p></td>
+<td></td>
+<td><p>是</p></td>
+<td><p>事件时间，Unix时间戳</p></td>
+</tr>
+<tr class="row-odd"><td><p>MsgType</p></td>
+<td><p>string</p></td>
+<td></td>
+<td><p>是</p></td>
+<td><p>消息类型，固定为event</p></td>
+</tr>
+<tr class="row-even"><td><p>Event</p></td>
+<td><p>string</p></td>
+<td></td>
+<td><p>是</p></td>
+<td><p>事件类型，固定为check_biz，不区分大小写</p></td>
+</tr>
+<tr class="row-odd"><td><p>BizID</p></td>
+<td><p>string</p></td>
+<td></td>
+<td><p>是</p></td>
+<td><p>商户ID</p></td>
+</tr>
+<tr class="row-even"><td><p>ResultCode</p></td>
+<td><p>number</p></td>
+<td></td>
+<td><p>是</p></td>
+<td><p>处理结果错误码</p></td>
+</tr>
+<tr class="row-odd"><td><p>ResultMsg</p></td>
+<td><p>string</p></td>
+<td></td>
+<td><p>是</p></td>
+<td><p>处理结果详情</p></td>
+</tr>
+<tr class="row-even"><td><p>Quota</p></td>
+<td><p>number</p></td>
+<td></td>
+<td><p>是</p></td>
+<td><p>商户可用余额，0 表示无可用余额</p></td>
+</tr>
+</tbody>
+</table>
+<p>ResultCode 的合法值</p>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 80%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>值</p></th>
+<th class="head"><p>说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>审核通过</p></td>
+</tr>
+<tr class="row-odd"><td><p>-1</p></td>
+<td><p>其他错误</p></td>
+</tr>
+<tr class="row-even"><td><p>10001</p></td>
+<td><p>客户编码或者月结账户不存在</p></td>
+</tr>
+<tr class="row-odd"><td><p>10002</p></td>
+<td><p>客户密码不正确</p></td>
+</tr>
+</tbody>
+</table>
+<p>消息数据包示例</p>
+<p>XML 格式</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;xml&gt;</span>
+    <span class="nt">&lt;ToUserName&gt;</span><span class="cp">&lt;![CDATA[gh_abcdefg]]&gt;</span><span class="nt">&lt;/ToUserName&gt;</span>
+    <span class="nt">&lt;FromUserName&gt;</span><span class="cp">&lt;![CDATA[oABCD]]&gt;</span><span class="nt">&lt;/FromUserName&gt;</span>
+    <span class="nt">&lt;CreateTime&gt;</span>1533042556<span class="nt">&lt;/CreateTime&gt;</span>
+    <span class="nt">&lt;MsgType&gt;</span><span class="cp">&lt;![CDATA[event]]&gt;</span><span class="nt">&lt;/MsgType&gt;</span>
+    <span class="nt">&lt;Event&gt;</span><span class="cp">&lt;![CDATA[check_biz]]&gt;</span><span class="nt">&lt;/Event&gt;</span>
+    <span class="nt">&lt;BizID&gt;</span><span class="cp">&lt;![CDATA[xyz]]&gt;</span><span class="nt">&lt;/BizID&gt;</span>
+    <span class="nt">&lt;BizPwd&gt;</span><span class="cp">&lt;![CDATA[xyz123]]&gt;</span><span class="nt">&lt;/BizPwd&gt;</span>
+    <span class="nt">&lt;ShopAppID&gt;</span><span class="cp">&lt;![CDATA[wxABCD]]&gt;</span><span class="nt">&lt;/ShopAppID&gt;</span>
+    <span class="nt">&lt;ShopName&gt;</span><span class="cp">&lt;![CDATA[商户名称]]&gt;</span><span class="nt">&lt;/ShopName&gt;</span>
+    <span class="nt">&lt;ShopTelphone&gt;</span><span class="cp">&lt;![CDATA[18677778888]]&gt;</span><span class="nt">&lt;/ShopTelphone&gt;</span>
+    <span class="nt">&lt;ShopContact&gt;</span><span class="cp">&lt;![CDATA[村正]]&gt;</span><span class="nt">&lt;/ShopContact&gt;</span>
+    <span class="nt">&lt;ServiceName&gt;</span><span class="cp">&lt;![CDATA[标准快递]]&gt;</span><span class="nt">&lt;/ServiceName&gt;</span>
+    <span class="nt">&lt;SenderAddress&gt;</span><span class="cp">&lt;![CDATA[广东省广州市海珠区新港中路397号]]&gt;</span><span class="nt">&lt;/SenderAddress&gt;</span>
+<span class="nt">&lt;/xml&gt;</span>
+</pre></div>
+</div>
+<p>JSON 格式</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;ToUserName&quot;</span><span class="p">:</span> <span class="s2">&quot;gh_abcdefg&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;FromUserName&quot;</span><span class="p">:</span> <span class="s2">&quot;oABCD&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;CreateTime&quot;</span><span class="p">:</span> <span class="mi">1533042556</span><span class="p">,</span>
+  <span class="nt">&quot;MsgType&quot;</span><span class="p">:</span> <span class="s2">&quot;event&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;Event&quot;</span><span class="p">:</span> <span class="s2">&quot;check_biz&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;BizID&quot;</span><span class="p">:</span> <span class="s2">&quot;xyz&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;BizPwd&quot;</span><span class="p">:</span> <span class="s2">&quot;xyz123&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;ShopAppID&quot;</span><span class="p">:</span> <span class="s2">&quot;wxABCD&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;ShopName&quot;</span><span class="p">:</span> <span class="s2">&quot;商户名称&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;ShopTelphone&quot;</span><span class="p">:</span> <span class="s2">&quot;18677778888&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;ShopContact&quot;</span><span class="p">:</span> <span class="s2">&quot;村正&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;ServiceName&quot;</span><span class="p">:</span> <span class="s2">&quot;标准快递&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;SenderAddress&quot;</span><span class="p">:</span> <span class="s2">&quot;广东省广州市海珠区新港中路397号&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>返回数据包示例</p>
+<p>XML 格式</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;xml&gt;</span>
+    <span class="nt">&lt;ToUserName&gt;</span><span class="cp">&lt;![CDATA[oABCD]]&gt;</span><span class="nt">&lt;/ToUserName&gt;</span>
+    <span class="nt">&lt;FromUserName&gt;</span><span class="cp">&lt;![CDATA[gh_abcdefg]]&gt;</span><span class="nt">&lt;/FromUserName&gt;</span>
+    <span class="nt">&lt;CreateTime&gt;</span>1533042556<span class="nt">&lt;/CreateTime&gt;</span>
+    <span class="nt">&lt;MsgType&gt;</span><span class="cp">&lt;![CDATA[event]]&gt;</span><span class="nt">&lt;/MsgType&gt;</span>
+    <span class="nt">&lt;Event&gt;</span><span class="cp">&lt;![CDATA[check_biz]]&gt;</span><span class="nt">&lt;/Event&gt;</span>
+    <span class="nt">&lt;BizID&gt;</span><span class="cp">&lt;![CDATA[xyz]]&gt;</span><span class="nt">&lt;/BizID&gt;</span>
+    <span class="nt">&lt;ResultCode&gt;</span>0<span class="nt">&lt;/ResultCode&gt;</span>
+    <span class="nt">&lt;ResultMsg&gt;</span><span class="cp">&lt;![CDATA[success]]&gt;</span><span class="nt">&lt;/ResultMsg&gt;</span>
+<span class="nt">&lt;/xml&gt;</span>
+</pre></div>
+</div>
+<p>JSON 格式</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;ToUserName&quot;</span><span class="p">:</span> <span class="s2">&quot;oABCD&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;FromUserName&quot;</span><span class="p">:</span> <span class="s2">&quot;gh_abcdefg&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;CreateTime&quot;</span><span class="p">:</span> <span class="mi">1533042556</span><span class="p">,</span>
+  <span class="nt">&quot;MsgType&quot;</span><span class="p">:</span> <span class="s2">&quot;event&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;Event&quot;</span><span class="p">:</span> <span class="s2">&quot;check_biz&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;BizID&quot;</span><span class="p">:</span> <span class="s2">&quot;xyz&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;ResultCode&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+  <span class="nt">&quot;ResultMsg&quot;</span><span class="p">:</span> <span class="s2">&quot;success&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
 </div>
 
 
@@ -204,10 +441,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="logistics.previewTemplate.html" class="btn btn-neutral float-right" title="logistics.previewTemplate" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="logistics.onGetQuota.html" class="btn btn-neutral float-right" title="查询商户余额事件" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="logistics.onCancelOrder.html" class="btn btn-neutral float-left" title="logistics.onCancelOrder" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="logistics.onCancelOrder.html" class="btn btn-neutral float-left" title="取消订单事件" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

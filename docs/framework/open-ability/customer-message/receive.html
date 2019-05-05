@@ -221,33 +221,35 @@
   <div class="section" id="id1">
 <h1>接收消息和事件<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
 <p>在页面中使用 &lt;button open-type=”contact” /&gt; 可以显示进入客服会话按钮。</p>
-<p>当用户在客服会话发送消息、或由某些特定的用户操作引发事件推送时，微信服务器会将消息或事件的数据包发送到开发者填写的 URL（详情请参考消息推送）。开发者收到请求后可以使用 发送客服消息 接口进行异步回复。</p>
+<p>当用户在客服会话发送消息、或由某些特定的用户操作引发事件推送时，
+微信服务器会将消息或事件的数据包发送到开发者填写的 URL（详情请参考消息推送）。
+开发者收到请求后可以使用 发送客服消息 接口进行异步回复。</p>
 <p>各消息类型的推送JSON、XML数据包结构如下。</p>
 <p>文本消息
 用户在客服会话中发送文本消息时将产生如下数据包：</p>
-<p>XML 格式
-&lt;xml&gt;</p>
-<blockquote>
-<div><p>&lt;ToUserName&gt;&lt;![CDATA[toUser]]&gt;&lt;/ToUserName&gt;
-&lt;FromUserName&gt;&lt;![CDATA[fromUser]]&gt;&lt;/FromUserName&gt;
-&lt;CreateTime&gt;1482048670&lt;/CreateTime&gt;
-&lt;MsgType&gt;&lt;![CDATA[text]]&gt;&lt;/MsgType&gt;
-&lt;Content&gt;&lt;![CDATA[this is a test]]&gt;&lt;/Content&gt;
-&lt;MsgId&gt;1234567890123456&lt;/MsgId&gt;</p>
-</div></blockquote>
-<p>&lt;/xml&gt;
-JSON 格式
-{</p>
-<blockquote>
-<div><p>“ToUserName”: “toUser”,
-“FromUserName”: “fromUser”,
-“CreateTime”: 1482048670,
-“MsgType”: “text”,
-“Content”: “this is a test”,
-“MsgId”: 1234567890123456</p>
-</div></blockquote>
-<p>}
-参数说明
+<p>XML 格式</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;xml&gt;</span>
+  <span class="nt">&lt;ToUserName&gt;</span><span class="cp">&lt;![CDATA[toUser]]&gt;</span><span class="nt">&lt;/ToUserName&gt;</span>
+  <span class="nt">&lt;FromUserName&gt;</span><span class="cp">&lt;![CDATA[fromUser]]&gt;</span><span class="nt">&lt;/FromUserName&gt;</span>
+  <span class="nt">&lt;CreateTime&gt;</span>1482048670<span class="nt">&lt;/CreateTime&gt;</span>
+  <span class="nt">&lt;MsgType&gt;</span><span class="cp">&lt;![CDATA[text]]&gt;</span><span class="nt">&lt;/MsgType&gt;</span>
+  <span class="nt">&lt;Content&gt;</span><span class="cp">&lt;![CDATA[this is a test]]&gt;</span><span class="nt">&lt;/Content&gt;</span>
+  <span class="nt">&lt;MsgId&gt;</span>1234567890123456<span class="nt">&lt;/MsgId&gt;</span>
+<span class="nt">&lt;/xml&gt;</span>
+</pre></div>
+</div>
+<p>JSON 格式</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;ToUserName&quot;</span><span class="p">:</span> <span class="s2">&quot;toUser&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;FromUserName&quot;</span><span class="p">:</span> <span class="s2">&quot;fromUser&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;CreateTime&quot;</span><span class="p">:</span> <span class="mi">1482048670</span><span class="p">,</span>
+  <span class="nt">&quot;MsgType&quot;</span><span class="p">:</span> <span class="s2">&quot;text&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;Content&quot;</span><span class="p">:</span> <span class="s2">&quot;this is a test&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;MsgId&quot;</span><span class="p">:</span> <span class="mi">1234567890123456</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>参数说明
 参数      说明
 ToUserName      小程序的原始ID
 FromUserName    发送者的openid
@@ -257,31 +259,31 @@ Content 文本消息内容
 MsgId   消息id，64位整型
 图片消息
 用户在客服会话中发送图片消息时将产生如下数据包：</p>
-<p>XML 格式
-&lt;xml&gt;</p>
-<blockquote>
-<div><p>&lt;ToUserName&gt;&lt;![CDATA[toUser]]&gt;&lt;/ToUserName&gt;
-&lt;FromUserName&gt;&lt;![CDATA[fromUser]]&gt;&lt;/FromUserName&gt;
-&lt;CreateTime&gt;1482048670&lt;/CreateTime&gt;
-&lt;MsgType&gt;&lt;![CDATA[image]]&gt;&lt;/MsgType&gt;
-&lt;PicUrl&gt;&lt;![CDATA[this is a url]]&gt;&lt;/PicUrl&gt;
-&lt;MediaId&gt;&lt;![CDATA[media_id]]&gt;&lt;/MediaId&gt;
-&lt;MsgId&gt;1234567890123456&lt;/MsgId&gt;</p>
-</div></blockquote>
-<p>&lt;/xml&gt;
-JSON 格式
-{</p>
-<blockquote>
-<div><p>“ToUserName”: “toUser”,
-“FromUserName”: “fromUser”,
-“CreateTime”: 1482048670,
-“MsgType”: “image”,
-“PicUrl”: “this is a url”,
-“MediaId”: “media_id”,
-“MsgId”: 1234567890123456</p>
-</div></blockquote>
-<p>}
-参数说明
+<p>XML 格式</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;xml&gt;</span>
+      <span class="nt">&lt;ToUserName&gt;</span><span class="cp">&lt;![CDATA[toUser]]&gt;</span><span class="nt">&lt;/ToUserName&gt;</span>
+      <span class="nt">&lt;FromUserName&gt;</span><span class="cp">&lt;![CDATA[fromUser]]&gt;</span><span class="nt">&lt;/FromUserName&gt;</span>
+      <span class="nt">&lt;CreateTime&gt;</span>1482048670<span class="nt">&lt;/CreateTime&gt;</span>
+      <span class="nt">&lt;MsgType&gt;</span><span class="cp">&lt;![CDATA[image]]&gt;</span><span class="nt">&lt;/MsgType&gt;</span>
+      <span class="nt">&lt;PicUrl&gt;</span><span class="cp">&lt;![CDATA[this is a url]]&gt;</span><span class="nt">&lt;/PicUrl&gt;</span>
+      <span class="nt">&lt;MediaId&gt;</span><span class="cp">&lt;![CDATA[media_id]]&gt;</span><span class="nt">&lt;/MediaId&gt;</span>
+      <span class="nt">&lt;MsgId&gt;</span>1234567890123456<span class="nt">&lt;/MsgId&gt;</span>
+<span class="nt">&lt;/xml&gt;</span>
+</pre></div>
+</div>
+<p>JSON 格式</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;ToUserName&quot;</span><span class="p">:</span> <span class="s2">&quot;toUser&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;FromUserName&quot;</span><span class="p">:</span> <span class="s2">&quot;fromUser&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;CreateTime&quot;</span><span class="p">:</span> <span class="mi">1482048670</span><span class="p">,</span>
+  <span class="nt">&quot;MsgType&quot;</span><span class="p">:</span> <span class="s2">&quot;image&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;PicUrl&quot;</span><span class="p">:</span> <span class="s2">&quot;this is a url&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;MediaId&quot;</span><span class="p">:</span> <span class="s2">&quot;media_id&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;MsgId&quot;</span><span class="p">:</span> <span class="mi">1234567890123456</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>参数说明
 参数      说明
 ToUserName      小程序的原始ID
 FromUserName    发送者的openid
@@ -292,37 +294,37 @@ MediaId 图片消息媒体id，可以调用[获取临时素材]((getTempMedia)�
 MsgId   消息id，64位整型
 小程序卡片消息
 用户在客服会话中发送小程序卡片消息时将产生如下数据包：</p>
-<p>XML 格式
-&lt;xml&gt;</p>
-<blockquote>
-<div><p>&lt;ToUserName&gt;&lt;![CDATA[toUser]]&gt;&lt;/ToUserName&gt;
-&lt;FromUserName&gt;&lt;![CDATA[fromUser]]&gt;&lt;/FromUserName&gt;
-&lt;CreateTime&gt;1482048670&lt;/CreateTime&gt;
-&lt;MsgType&gt;&lt;![CDATA[miniprogrampage]]&gt;&lt;/MsgType&gt;
-&lt;MsgId&gt;1234567890123456&lt;/MsgId&gt;
-&lt;Title&gt;&lt;![CDATA[Title]]&gt;&lt;/Title&gt;
-&lt;AppId&gt;&lt;![CDATA[AppId]]&gt;&lt;/AppId&gt;
-&lt;PagePath&gt;&lt;![CDATA[PagePath]]&gt;&lt;/PagePath&gt;
-&lt;ThumbUrl&gt;&lt;![CDATA[ThumbUrl]]&gt;&lt;/ThumbUrl&gt;
-&lt;ThumbMediaId&gt;&lt;![CDATA[ThumbMediaId]]&gt;&lt;/ThumbMediaId&gt;</p>
-</div></blockquote>
-<p>&lt;/xml&gt;
-JSON 格式
-{</p>
-<blockquote>
-<div><p>“ToUserName”: “toUser”,
-“FromUserName”: “fromUser”,
-“CreateTime”: 1482048670,
-“MsgType”: “miniprogrampage”,
-“MsgId”: 1234567890123456,
-“Title”: “title”,
-“AppId”: “appid”,
-“PagePath”: “path”,
-“ThumbUrl”: “”,
-“ThumbMediaId”: “”</p>
-</div></blockquote>
-<p>}
-参数说明
+<p>XML 格式</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;xml&gt;</span>
+  <span class="nt">&lt;ToUserName&gt;</span><span class="cp">&lt;![CDATA[toUser]]&gt;</span><span class="nt">&lt;/ToUserName&gt;</span>
+  <span class="nt">&lt;FromUserName&gt;</span><span class="cp">&lt;![CDATA[fromUser]]&gt;</span><span class="nt">&lt;/FromUserName&gt;</span>
+  <span class="nt">&lt;CreateTime&gt;</span>1482048670<span class="nt">&lt;/CreateTime&gt;</span>
+  <span class="nt">&lt;MsgType&gt;</span><span class="cp">&lt;![CDATA[miniprogrampage]]&gt;</span><span class="nt">&lt;/MsgType&gt;</span>
+  <span class="nt">&lt;MsgId&gt;</span>1234567890123456<span class="nt">&lt;/MsgId&gt;</span>
+  <span class="nt">&lt;Title&gt;</span><span class="cp">&lt;![CDATA[Title]]&gt;</span><span class="nt">&lt;/Title&gt;</span>
+  <span class="nt">&lt;AppId&gt;</span><span class="cp">&lt;![CDATA[AppId]]&gt;</span><span class="nt">&lt;/AppId&gt;</span>
+  <span class="nt">&lt;PagePath&gt;</span><span class="cp">&lt;![CDATA[PagePath]]&gt;</span><span class="nt">&lt;/PagePath&gt;</span>
+  <span class="nt">&lt;ThumbUrl&gt;</span><span class="cp">&lt;![CDATA[ThumbUrl]]&gt;</span><span class="nt">&lt;/ThumbUrl&gt;</span>
+  <span class="nt">&lt;ThumbMediaId&gt;</span><span class="cp">&lt;![CDATA[ThumbMediaId]]&gt;</span><span class="nt">&lt;/ThumbMediaId&gt;</span>
+<span class="nt">&lt;/xml&gt;</span>
+</pre></div>
+</div>
+<p>JSON 格式</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;ToUserName&quot;</span><span class="p">:</span> <span class="s2">&quot;toUser&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;FromUserName&quot;</span><span class="p">:</span> <span class="s2">&quot;fromUser&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;CreateTime&quot;</span><span class="p">:</span> <span class="mi">1482048670</span><span class="p">,</span>
+  <span class="nt">&quot;MsgType&quot;</span><span class="p">:</span> <span class="s2">&quot;miniprogrampage&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;MsgId&quot;</span><span class="p">:</span> <span class="mi">1234567890123456</span><span class="p">,</span>
+  <span class="nt">&quot;Title&quot;</span><span class="p">:</span> <span class="s2">&quot;title&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;AppId&quot;</span><span class="p">:</span> <span class="s2">&quot;appid&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;PagePath&quot;</span><span class="p">:</span> <span class="s2">&quot;path&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;ThumbUrl&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;ThumbMediaId&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>参数说明
 参数      说明
 ToUserName      小程序的原始ID
 FromUserName    发送者的openid
@@ -336,29 +338,29 @@ ThumbUrl        封面图片的临时cdn链接
 ThumbMediaId    封面图片的临时素材id
 进入会话事件
 用户在小程序“客服会话按钮”进入客服会话时将产生如下数据包：</p>
-<p>XML 格式
-&lt;xml&gt;</p>
-<blockquote>
-<div><p>&lt;ToUserName&gt;&lt;![CDATA[toUser]]&gt;&lt;/ToUserName&gt;
-&lt;FromUserName&gt;&lt;![CDATA[fromUser]]&gt;&lt;/FromUserName&gt;
-&lt;CreateTime&gt;1482048670&lt;/CreateTime&gt;
-&lt;MsgType&gt;&lt;![CDATA[event]]&gt;&lt;/MsgType&gt;
-&lt;Event&gt;&lt;![CDATA[user_enter_tempsession]]&gt;&lt;/Event&gt;
-&lt;SessionFrom&gt;&lt;![CDATA[sessionFrom]]&gt;&lt;/SessionFrom&gt;</p>
-</div></blockquote>
-<p>&lt;/xml&gt;
-JSON 格式
-{</p>
-<blockquote>
-<div><p>“ToUserName”: “toUser”,
-“FromUserName”: “fromUser”,
-“CreateTime”: 1482048670,
-“MsgType”: “event”,
-“Event”: “user_enter_tempsession”,
-“SessionFrom”: “sessionFrom”</p>
-</div></blockquote>
-<p>}
-参数说明
+<p>XML 格式</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;xml&gt;</span>
+    <span class="nt">&lt;ToUserName&gt;</span><span class="cp">&lt;![CDATA[toUser]]&gt;</span><span class="nt">&lt;/ToUserName&gt;</span>
+    <span class="nt">&lt;FromUserName&gt;</span><span class="cp">&lt;![CDATA[fromUser]]&gt;</span><span class="nt">&lt;/FromUserName&gt;</span>
+    <span class="nt">&lt;CreateTime&gt;</span>1482048670<span class="nt">&lt;/CreateTime&gt;</span>
+    <span class="nt">&lt;MsgType&gt;</span><span class="cp">&lt;![CDATA[event]]&gt;</span><span class="nt">&lt;/MsgType&gt;</span>
+    <span class="nt">&lt;Event&gt;</span><span class="cp">&lt;![CDATA[user_enter_tempsession]]&gt;</span><span class="nt">&lt;/Event&gt;</span>
+    <span class="nt">&lt;SessionFrom&gt;</span><span class="cp">&lt;![CDATA[sessionFrom]]&gt;</span><span class="nt">&lt;/SessionFrom&gt;</span>
+<span class="nt">&lt;/xml&gt;</span>
+</pre></div>
+</div>
+<p>JSON 格式</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;ToUserName&quot;</span><span class="p">:</span> <span class="s2">&quot;toUser&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;FromUserName&quot;</span><span class="p">:</span> <span class="s2">&quot;fromUser&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;CreateTime&quot;</span><span class="p">:</span> <span class="mi">1482048670</span><span class="p">,</span>
+  <span class="nt">&quot;MsgType&quot;</span><span class="p">:</span> <span class="s2">&quot;event&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;Event&quot;</span><span class="p">:</span> <span class="s2">&quot;user_enter_tempsession&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;SessionFrom&quot;</span><span class="p">:</span> <span class="s2">&quot;sessionFrom&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>参数说明
 参数      说明
 ToUserName      小程序的原始ID
 FromUserName    发送者的openid

@@ -231,17 +231,21 @@
 <p>import 有作用域的概念，即只会 import 目标文件中定义的 template，而不会 import 目标文件 import 的 template。</p>
 <p>如：C import B，B import A，在C中可以使用B定义的template，
 在B中可以使用A定义的template，但是C不能使用A定义的template。</p>
-<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="c">&lt;!-- A.wxml --&gt;</span>
-<span class="p">&lt;</span><span class="nt">template</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;A&quot;</span><span class="p">&gt;</span>
+<p>A.wxml</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">template</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;A&quot;</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">text</span><span class="p">&gt;</span>A template<span class="p">&lt;/</span><span class="nt">text</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">template</span><span class="p">&gt;</span>
-<span class="c">&lt;!-- B.wxml --&gt;</span>
-<span class="p">&lt;</span><span class="nt">import</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;a.wxml&quot;</span> <span class="p">/&gt;</span>
+</pre></div>
+</div>
+<p>B.wxml</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">import</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;a.wxml&quot;</span> <span class="p">/&gt;</span>
 <span class="p">&lt;</span><span class="nt">template</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;B&quot;</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">text</span><span class="p">&gt;</span>B template<span class="p">&lt;/</span><span class="nt">text</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">template</span><span class="p">&gt;</span>
-<span class="c">&lt;!-- C.wxml --&gt;</span>
-<span class="p">&lt;</span><span class="nt">import</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;b.wxml&quot;</span> <span class="p">/&gt;</span>
+</pre></div>
+</div>
+<p>C.wxml</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">import</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;b.wxml&quot;</span> <span class="p">/&gt;</span>
 <span class="p">&lt;</span><span class="nt">template</span> <span class="na">is</span><span class="o">=</span><span class="s">&quot;A&quot;</span> <span class="p">/&gt;</span>
 <span class="c">&lt;!-- Error! Can not use tempalte when not import A. --&gt;</span>
 <span class="p">&lt;</span><span class="nt">template</span> <span class="na">is</span><span class="o">=</span><span class="s">&quot;B&quot;</span> <span class="p">/&gt;</span>
@@ -251,14 +255,18 @@
 <div class="section" id="include">
 <h2>include<a class="headerlink" href="#include" title="永久链接至标题">¶</a></h2>
 <p>include 可以将目标文件除了 &lt;template/&gt; &lt;wxs/&gt; 外的整个代码引入，相当于是拷贝到 include 位置，如：</p>
-<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="c">&lt;!-- index.wxml --&gt;</span>
-<span class="p">&lt;</span><span class="nt">include</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;header.wxml&quot;</span> <span class="p">/&gt;</span>
+<p>index.wxml</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">include</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;header.wxml&quot;</span> <span class="p">/&gt;</span>
 <span class="p">&lt;</span><span class="nt">view</span><span class="p">&gt;</span>body<span class="p">&lt;/</span><span class="nt">view</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">include</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;footer.wxml&quot;</span> <span class="p">/&gt;</span>
-<span class="c">&lt;!-- header.wxml --&gt;</span>
-<span class="p">&lt;</span><span class="nt">view</span><span class="p">&gt;</span>header<span class="p">&lt;/</span><span class="nt">view</span><span class="p">&gt;</span>
-<span class="c">&lt;!-- footer.wxml --&gt;</span>
-<span class="p">&lt;</span><span class="nt">view</span><span class="p">&gt;</span>footer<span class="p">&lt;/</span><span class="nt">view</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<p>header.wxml</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">view</span><span class="p">&gt;</span>header<span class="p">&lt;/</span><span class="nt">view</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<p>footer.wxml</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">view</span><span class="p">&gt;</span>footer<span class="p">&lt;/</span><span class="nt">view</span><span class="p">&gt;</span>
 </pre></div>
 </div>
 </div>
