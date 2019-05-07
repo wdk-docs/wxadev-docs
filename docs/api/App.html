@@ -1,0 +1,273 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-CN" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-CN" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>App &mdash; wxadev 1.0.0 文档</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script type="text/javascript" src="../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜索" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../contents.html" class="icon icon-home"> wxadev
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../index.html">开发指南</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dev.html">简介</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../basic/index.html">基础教程</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../guide/index.html">运行环境</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../framework/index.html">框架</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../component/index.html">组件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index.html">API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api-backend/index.html">服务端API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../devtools/index.html">开发工具</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference/index.html">参考资料</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../wxcloud/index.html">云开发</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../wxwork/index.html">企业微信</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary.html">术语</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst.html">定义</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../contents.html">wxadev</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../contents.html">Docs</a> &raquo;</li>
+        
+      <li>App</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/api/App.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="app">
+<h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/api/App.html">App</a><a class="headerlink" href="#app" title="永久链接至标题">¶</a></h1>
+<p>App(Object object)
+注册小程序。接受一个 Object 参数，其指定小程序的生命周期回调等。</p>
+<p>App() 必须在 app.js 中调用，必须调用且只能调用一次。不然会出现无法预期的后果。</p>
+<p>参数
+Object object
+属性      类型      默认值     必填      说明
+onLaunch        function                否       生命周期回调——监听小程序初始化。
+onShow  function                否       生命周期回调——监听小程序启动或切前台。
+onHide  function                否       生命周期回调——监听小程序切后台。
+onError function                否       错误监听函数。
+onPageNotFound  function                否       页面不存在监听函数。
+其他      any             否       开发者可以添加任意的函数或数据变量到 Object 参数中，用 this 可以访问
+关于小程序前后台的定义和小程序的运行机制，请参考运行机制章节。</p>
+<p>示例代码
+App({</p>
+<blockquote>
+<div><dl class="simple">
+<dt>onLaunch(options) {</dt><dd><p>// Do something initial when launch.</p>
+</dd>
+</dl>
+<p>},
+onShow(options) {</p>
+<blockquote>
+<div><p>// Do something when show.</p>
+</div></blockquote>
+<p>},
+onHide() {</p>
+<blockquote>
+<div><p>// Do something when hide.</p>
+</div></blockquote>
+<p>},
+onError(msg) {</p>
+<blockquote>
+<div><p>console.log(msg)</p>
+</div></blockquote>
+<p>},
+globalData: ‘I am global data’</p>
+</div></blockquote>
+<p>})
+onLaunch(Object object)
+小程序初始化完成时触发，全局只触发一次。参数也可以使用 wx.getLaunchOptionsSync 获取。</p>
+<p>参数：与 wx.getLaunchOptionsSync 一致</p>
+<p>onShow(Object object)
+小程序启动，或从后台进入前台显示时触发。也可以使用 wx.onAppShow 绑定监听。</p>
+<p>参数：与 wx.onAppShow 一致</p>
+<p>onHide()
+小程序从前台进入后台时触发。也可以使用 wx.onAppHide 绑定监听。</p>
+<p>onError(String error)
+小程序发生脚本错误或 API 调用报错时触发。也可以使用 wx.onError 绑定监听。</p>
+<p>参数：与 wx.onError 一致</p>
+<p>onPageNotFound(Object object)
+基础库 1.9.90 开始支持，低版本需做兼容处理。</p>
+<p>小程序要打开的页面不存在时触发。也可以使用 wx.onPageNotFound 绑定监听。注意事项请参考 wx.onPageNotFound。</p>
+<p>参数：与 wx.onPageNotFound 一致</p>
+<p>示例代码：</p>
+<dl>
+<dt>App({</dt><dd><dl>
+<dt>onPageNotFound(res) {</dt><dd><dl class="simple">
+<dt>wx.redirectTo({</dt><dd><p>url: ‘pages/…’</p>
+</dd>
+</dl>
+<p>}) // 如果是 tabbar 页面，请使用 wx.switchTab</p>
+</dd>
+</dl>
+<p>}</p>
+</dd>
+</dl>
+<p>})</p>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Nosy
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

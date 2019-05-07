@@ -99,7 +99,11 @@
 <li class="toctree-l3"><a class="reference internal" href="network.html">网络</a></li>
 <li class="toctree-l3"><a class="reference internal" href="mDNS.html">局域网通信</a></li>
 <li class="toctree-l3"><a class="reference internal" href="storage.html">存储</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">文件系统</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">文件系统</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id2">代码包文件</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id5">本地文件</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="canvas.html">Canvas 画布</a></li>
 <li class="toctree-l3"><a class="reference internal" href="subpackages/index.html">分包加载</a></li>
 <li class="toctree-l3"><a class="reference internal" href="server-ability/index.html">服务端能力</a></li>
@@ -198,65 +202,135 @@
            <div itemprop="articleBody">
             
   <div class="section" id="id1">
-<h1>文件系统<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
-<p>文件系统是小程序提供的一套以小程序和用户维度隔离的存储以及一套相应的管理接口。通过 wx.getFileSystemManager() 可以获取到全局唯一的文件系统管理器，所有文件系统的管理操作通过 FileSystemManager 来调用。</p>
-<p>const fs = wx.getFileSystemManager()
-文件主要分为两大类：</p>
-<p>代码包文件：代码包文件指的是在项目目录中添加的文件。
-本地文件：通过调用接口本地产生，或通过网络下载下来，存储到本地的文件。
-其中本地文件又分为三种：</p>
-<p>本地临时文件：临时产生，随时会被回收的文件。不限制存储大小。
-本地缓存文件：小程序通过接口把本地临时文件缓存后产生的文件，不能自定义目录和文件名。除非用户主动删除小程序，否则不会被删除。跟本地用户文件共计，普通小程序最多可存储 10MB，游戏类目的小程序最多可存储 50MB。
-本地用户文件：小程序通过接口把本地临时文件缓存后产生的文件，允许自定义目录和文件名。除非用户主动删除小程序，否则不会被删除。跟本地缓存文件共计，普通小程序最多可存储 10MB，游戏类目的小程序最多可存储 50MB。
-代码包文件
-由于代码包文件大小限制，代码包文件适用于放置首次加载时需要的文件，对于内容较大或需要动态替换的文件，不推荐用添加到代码包中，推荐在小游戏启动之后再用下载接口下载到本地。</p>
-<p>访问代码包文件
-代码包文件的访问方式是从项目根目录开始写文件路径，不支持相对路径的写法。 image.png</p>
-<p>修改代码包文件
-代码包内的文件无法在运行后动态修改或删除，修改代码包文件需要重新发布版本。</p>
-<p>本地文件
-本地文件指的是小程序被用户添加到手机后，会有一块独立的文件存储区域，以用户维度隔离。即同一台手机，每个微信用户不能访问到其他登录用户的文件，同一个用户不同 appId 之间的文件也不能互相访问。 本地文件沙盒.png</p>
-<p>本地文件的文件路径均为以下格式：</p>
-<p>{{协议名}}://文件路径
-其中，协议名在 iOS/Android 客户端为 “wxfile”，在开发者工具上为 “http”，开发者无需关注这个差异，也不应在代码中去硬编码完整文件路径。</p>
-<p>本地临时文件
-本地临时文件只能通过调用特定接口产生，不能直接写入内容。本地临时文件产生后，仅在当前生命周期内有效，重启之后即不可用。因此，不可把本地临时文件路径存储起来下次使用。如果需要下次在使用，可通过 FileSystemManager.saveFile() 或 FileSystemManager.copyFile() 接口把本地临时文件转换成本地缓存文件或本地用户文件。</p>
-<p>示例
-wx.chooseImage({</p>
-<blockquote>
-<div><dl class="simple">
-<dt>success(res) {</dt><dd><p>const tempFilePaths = res.tempFilePaths // tempFilePaths 的每一项是一个本地临时文件路径</p>
-</dd>
-</dl>
-<p>}</p>
-</div></blockquote>
-<p>})
-本地缓存文件
-本地缓存文件只能通过调用特定接口产生，不能直接写入内容。本地缓存文件产生后，重启之后仍可用。本地缓存文件只能通过 FileSystemManager.saveFile() 接口将本地临时文件保存获得。</p>
-<p>示例
-fs.saveFile({</p>
-<blockquote>
-<div><p>tempFilePath: ‘’, // 传入一个本地临时文件路径
-success(res) {</p>
-<blockquote>
-<div><p>console.log(res.savedFilePath) // res.savedFilePath 为一个本地缓存文件路径</p>
-</div></blockquote>
-<p>}</p>
-</div></blockquote>
-<p>})
-注意：本地缓存文件是最初的设计，1.7.0 版本开始，提供了功能更完整的本地用户文件，可以完全覆盖本地缓存文件的功能，如果不需要兼容低于 1.7.0 版本，可以不使用本地缓存文件。</p>
-<p>本地用户文件
-本地用户文件是从 1.7.0 版本开始新增的概念。我们提供了一个用户文件目录给开发者，开发者对这个目录有完全自由的读写权限。通过 wx.env.USER_DATA_PATH 可以获取到这个目录的路径。</p>
-<p>示例
-// 在本地用户文件目录下创建一个文件 hello.txt，写入内容 “hello, world”
-const fs = wx.getFileSystemManager()
-fs.writeFileSync(<cite>${wx.env.USER_DATA_PATH}/hello.txt</cite>, ‘hello, world’, ‘utf8’)
-读写权限
-接口、组件   读       写
-代码包文件   有       无
-本地临时文件  有       无
-本地缓存文件  有       无
-本地用户文件  有       有</p>
+<h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/framework/ability/file-system.html">文件系统</a><a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
+<p>文件系统是小程序提供的一套以小程序和用户维度隔离的存储以及一套相应的管理接口。
+通过 <code class="xref js js-func docutils literal notranslate"><span class="pre">wx.getFileSystemManager()</span></code> 可以获取到全局唯一的文件系统管理器，
+所有文件系统的管理操作通过 <code class="xref js js-class docutils literal notranslate"><span class="pre">FileSystemManager()</span></code> 来调用。</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="kr">const</span> <span class="nx">fs</span> <span class="o">=</span> <span class="nx">wx</span><span class="p">.</span><span class="nx">getFileSystemManager</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>文件主要分为两大类：</p>
+<ul class="simple">
+<li><p><strong>代码包文件</strong>：代码包文件指的是在项目目录中添加的文件。</p></li>
+<li><p><strong>本地文件</strong>：通过调用接口本地产生，或通过网络下载下来，存储到本地的文件。</p></li>
+</ul>
+<p>其中本地文件又分为三种：</p>
+<ol class="arabic simple">
+<li><p><strong>本地临时文件</strong>：临时产生，随时会被回收的文件。不限制存储大小。</p></li>
+<li><p><strong>本地缓存文件</strong>：小程序通过接口把本地临时文件缓存后产生的文件，不能自定义目录和文件名。
+除非用户主动删除小程序，否则不会被删除。跟本地用户文件共计，
+普通小程序最多可存储 10MB，游戏类目的小程序最多可存储 50MB。</p></li>
+<li><p><strong>本地用户文件</strong>：小程序通过接口把本地临时文件缓存后产生的文件，允许自定义目录和文件名。
+除非用户主动删除小程序，否则不会被删除。跟本地缓存文件共计，
+普通小程序最多可存储 10MB，游戏类目的小程序最多可存储 50MB。</p></li>
+</ol>
+<div class="section" id="id2">
+<h2>代码包文件<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<p>由于代码包文件大小限制，代码包文件适用于放置首次加载时需要的文件，对于内容较大或需要动态替换的文件，不推荐用添加到代码包中，推荐在小游戏启动之后再用下载接口下载到本地。</p>
+<div class="section" id="id3">
+<h3>访问代码包文件<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h3>
+<p>代码包文件的访问方式是从项目根目录开始写文件路径，不支持相对路径的写法。</p>
+<img alt="https://developers.weixin.qq.com/miniprogram/dev/framework/ability/image/code-package.png?t=19043020" src="https://developers.weixin.qq.com/miniprogram/dev/framework/ability/image/code-package.png?t=19043020" />
+</div>
+<div class="section" id="id4">
+<h3>修改代码包文件<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h3>
+<p>代码包内的文件无法在运行后动态修改或删除，修改代码包文件需要重新发布版本。</p>
+</div>
+</div>
+<div class="section" id="id5">
+<h2>本地文件<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h2>
+<p>本地文件指的是小程序被用户添加到手机后，会有一块独立的文件存储区域，以用户维度隔离。即同一台手机，每个微信用户不能访问到其他登录用户的文件，同一个用户不同 appId 之间的文件也不能互相访问。 本地文件沙盒.png</p>
+<img alt="https://developers.weixin.qq.com/miniprogram/dev/framework/ability/image/file-sandbox.png?t=19043020" src="https://developers.weixin.qq.com/miniprogram/dev/framework/ability/image/file-sandbox.png?t=19043020" />
+<p>本地文件的文件路径均为以下格式:</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="p">{{</span><span class="nx">协议名</span><span class="p">}}</span><span class="o">:</span><span class="c1">//文件路径</span>
+</pre></div>
+</div>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span>其中，协议名在 iOS/Android 客户端为 &quot;wxfile&quot;，在开发者工具上为 &quot;http&quot;，
+开发者无需关注这个差异，也不应在代码中去硬编码完整文件路径。
+</pre></div>
+</div>
+<div class="section" id="id6">
+<h3>本地临时文件<a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h3>
+<p>本地临时文件只能通过调用特定接口产生，不能直接写入内容。本地临时文件产生后，仅在当前生命周期内有效，重启之后即不可用。
+因此，不可把本地临时文件路径存储起来下次使用。如果需要下次在使用，
+可通过 <code class="xref js js-func docutils literal notranslate"><span class="pre">FileSystemManager.saveFile()</span></code> 或 <code class="xref js js-func docutils literal notranslate"><span class="pre">FileSystemManager.copyFile()</span></code>
+接口把本地临时文件转换成本地缓存文件或本地用户文件。</p>
+<p>示例</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="nx">wx</span><span class="p">.</span><span class="nx">chooseImage</span><span class="p">({</span>
+  <span class="nx">success</span><span class="p">(</span><span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kr">const</span> <span class="nx">tempFilePaths</span> <span class="o">=</span> <span class="nx">res</span><span class="p">.</span><span class="nx">tempFilePaths</span> <span class="c1">// tempFilePaths 的每一项是一个本地临时文件路径</span>
+  <span class="p">}</span>
+<span class="p">})</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id7">
+<h3>本地缓存文件<a class="headerlink" href="#id7" title="永久链接至标题">¶</a></h3>
+<p>本地缓存文件只能通过调用特定接口产生，不能直接写入内容。
+本地缓存文件产生后，重启之后仍可用。
+本地缓存文件只能通过 <code class="xref js js-func docutils literal notranslate"><span class="pre">FileSystemManager.saveFile()</span></code> 接口将本地临时文件保存获得。</p>
+<p>示例</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="nx">fs</span><span class="p">.</span><span class="nx">saveFile</span><span class="p">({</span>
+  <span class="nx">tempFilePath</span><span class="o">:</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="c1">// 传入一个本地临时文件路径</span>
+  <span class="nx">success</span><span class="p">(</span><span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">res</span><span class="p">.</span><span class="nx">savedFilePath</span><span class="p">)</span> <span class="c1">// res.savedFilePath 为一个本地缓存文件路径</span>
+  <span class="p">}</span>
+<span class="p">})</span>
+</pre></div>
+</div>
+<div class="admonition attention">
+<p class="admonition-title">注意</p>
+<p>本地缓存文件是最初的设计，1.7.0 版本开始，提供了功能更完整的本地用户文件，
+可以完全覆盖本地缓存文件的功能，如果不需要兼容低于 1.7.0 版本，可以不使用本地缓存文件。</p>
+</div>
+</div>
+<div class="section" id="id8">
+<h3>本地用户文件<a class="headerlink" href="#id8" title="永久链接至标题">¶</a></h3>
+<div class="versionadded">
+<p><span class="versionmodified added">1.7.0 新版功能.</span></p>
+</div>
+<p>我们提供了一个用户文件目录给开发者，开发者对这个目录有完全自由的读写权限。
+通过 <code class="xref js js-data docutils literal notranslate"><span class="pre">wx.env.USER_DATA_PATH</span></code> 可以获取到这个目录的路径。</p>
+<p>示例</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="c1">// 在本地用户文件目录下创建一个文件 hello.txt，写入内容 &quot;hello, world&quot;</span>
+<span class="kr">const</span> <span class="nx">fs</span> <span class="o">=</span> <span class="nx">wx</span><span class="p">.</span><span class="nx">getFileSystemManager</span><span class="p">()</span>
+<span class="nx">fs</span><span class="p">.</span><span class="nx">writeFileSync</span><span class="p">(</span><span class="sb">`</span><span class="si">${</span><span class="nx">wx</span><span class="p">.</span><span class="nx">env</span><span class="p">.</span><span class="nx">USER_DATA_PATH</span><span class="si">}</span><span class="sb">/hello.txt`</span><span class="p">,</span> <span class="s1">&#39;hello, world&#39;</span><span class="p">,</span> <span class="s1">&#39;utf8&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>读写权限</p>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 58%" />
+<col style="width: 21%" />
+<col style="width: 21%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>接口、组件</p></th>
+<th class="head"><p>读</p></th>
+<th class="head"><p>写</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>代码包文件</p></td>
+<td><p>有</p></td>
+<td><p>无</p></td>
+</tr>
+<tr class="row-odd"><td><p>本地临时文件</p></td>
+<td><p>有</p></td>
+<td><p>无</p></td>
+</tr>
+<tr class="row-even"><td><p>本地缓存文件</p></td>
+<td><p>有</p></td>
+<td><p>无</p></td>
+</tr>
+<tr class="row-odd"><td><p>本地用户文件</p></td>
+<td><p>有</p></td>
+<td><p>有</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 </div>
 
 

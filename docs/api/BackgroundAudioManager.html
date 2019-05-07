@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>wx.createWorker &mdash; wxadev 1.0.0 文档</title>
+  <title>BackgroundAudioManager &mdash; wxadev 1.0.0 文档</title>
   
 
   
@@ -36,7 +36,7 @@
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜索" href="../search.html" />
-    <link rel="next" title="BackgroundAudioManager.onCanplay" href="BackgroundAudioManager.onCanplay.html" />
+    <link rel="next" title="wx.createLivePusherContext" href="wx.createLivePusherContext.html" />
     <link rel="prev" title="wx.getBackgroundAudioManager" href="wx.getBackgroundAudioManager.html" /> 
 </head>
 
@@ -113,7 +113,7 @@
 <li class="toctree-l4"><a class="reference internal" href="wx.onBackgroundAudioPause.html">wx.onBackgroundAudioPause</a></li>
 <li class="toctree-l4"><a class="reference internal" href="wx.getBackgroundAudioPlayerState.html">wx.getBackgroundAudioPlayerState</a></li>
 <li class="toctree-l4"><a class="reference internal" href="wx.getBackgroundAudioManager.html">wx.getBackgroundAudioManager</a></li>
-<li class="toctree-l4 current"><a class="reference internal" href="index.html#backgroundaudiomanager">BackgroundAudioManager</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">BackgroundAudioManager</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="index.html#id34">实时音视频</a></li>
@@ -186,7 +186,7 @@
         
           <li><a href="index.html">API</a> &raquo;</li>
         
-      <li>wx.createWorker</li>
+      <li>BackgroundAudioManager</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -205,8 +205,93 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="wx-createworker">
-<h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/api/wx.createWorker.html">wx.createWorker</a><a class="headerlink" href="#wx-createworker" title="永久链接至标题">¶</a></h1>
+  <div class="section" id="backgroundaudiomanager">
+<h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/api/BackgroundAudioManager.html">BackgroundAudioManager</a><a class="headerlink" href="#backgroundaudiomanager" title="永久链接至标题">¶</a></h1>
+<dl class="class">
+<dt id="BackgroundAudioManager">
+<em class="property">class </em><code class="descname">BackgroundAudioManager</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BackgroundAudioManager" title="永久链接至目标">¶</a></dt>
+<dd><p>BackgroundAudioManager 实例，可通过 <code class="xref js js-func docutils literal notranslate"><span class="pre">wx.getBackgroundAudioManager()</span></code> 获取。</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="BackgroundAudioManager.src">
+<code class="descclassname">BackgroundAudioManager.</code><code class="descname">src</code><a class="headerlink" href="#BackgroundAudioManager.src" title="永久链接至目标">¶</a></dt>
+<dd><div class="versionadded">
+<p><span class="versionmodified added">2.2.3 新版功能: </span>开始支持 <strong>云文件ID</strong></p>
+</div>
+<p>音频的数据源。
+默认为空字符串，当设置了新的 src 时，会自动开始播放，目前支持的格式有 m4a, aac, mp3, wav。</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>string</p>
+</dd>
+</dl>
+</dd></dl>
+
+<p>number startTime
+音频开始播放的位置（单位：s）。</p>
+<p>string title
+音频标题，用于原生音频播放器音频标题（必填）。原生音频播放器中的分享功能，分享出去的卡片标题，也将使用该值。</p>
+<p>string epname
+专辑名，原生音频播放器中的分享功能，分享出去的卡片简介，也将使用该值。</p>
+<p>string singer
+歌手名，原生音频播放器中的分享功能，分享出去的卡片简介，也将使用该值。</p>
+<p>string coverImgUrl
+封面图 URL，用于做原生音频播放器背景图。原生音频播放器中的分享功能，分享出去的卡片配图及背景也将使用该图。</p>
+<p>string webUrl
+页面链接，原生音频播放器中的分享功能，分享出去的卡片简介，也将使用该值。</p>
+<p>string protocol
+基础库 1.9.94 开始支持，低版本需做兼容处理。</p>
+<p>音频协议。默认值为 ‘http’，设置 ‘hls’ 可以支持播放 HLS 协议的直播音频。</p>
+<p>number duration
+当前音频的长度（单位：s），只有在有合法 src 时返回。（只读）</p>
+<p>number currentTime
+当前音频的播放位置（单位：s），只有在有合法 src 时返回。（只读）</p>
+<p>boolean paused
+当前是否暂停或停止。（只读）</p>
+<p>number buffered
+音频已缓冲的时间，仅保证当前播放时间点到此时间点内容已缓冲。（只读）</p>
+<p>方法
+BackgroundAudioManager.play()
+播放音乐</p>
+<p>BackgroundAudioManager.pause()
+暂停音乐</p>
+<p>BackgroundAudioManager.seek(number currentTime)
+跳转到指定位置</p>
+<p>BackgroundAudioManager.stop()
+停止音乐</p>
+<p>BackgroundAudioManager.onCanplay(function callback)
+监听背景音频进入可播放状态事件。但不保证后面可以流畅播放</p>
+<p>BackgroundAudioManager.onWaiting(function callback)
+监听音频加载中事件。当音频因为数据不足，需要停下来加载时会触发</p>
+<p>BackgroundAudioManager.onError(function callback)
+监听背景音频播放错误事件</p>
+<p>BackgroundAudioManager.onPlay(function callback)
+监听背景音频播放事件</p>
+<p>BackgroundAudioManager.onPause(function callback)
+监听背景音频暂停事件</p>
+<p>BackgroundAudioManager.onSeeking(function callback)
+监听背景音频开始跳转操作事件</p>
+<p>BackgroundAudioManager.onSeeked(function callback)
+监听背景音频完成跳转操作事件</p>
+<p>BackgroundAudioManager.onEnded(function callback)
+监听背景音频自然播放结束事件</p>
+<p>BackgroundAudioManager.onStop(function callback)
+监听背景音频停止事件</p>
+<p>BackgroundAudioManager.onTimeUpdate(function callback)
+监听背景音频播放进度更新事件</p>
+<p>BackgroundAudioManager.onNext(function callback)
+监听用户在系统音乐播放面板点击下一曲事件（仅iOS）</p>
+<p>BackgroundAudioManager.onPrev(function callback)
+监听用户在系统音乐播放面板点击上一曲事件（仅iOS）</p>
+<p>示例代码
+const backgroundAudioManager = wx.getBackgroundAudioManager()</p>
+<p>backgroundAudioManager.title = ‘此时此刻’
+backgroundAudioManager.epname = ‘此时此刻’
+backgroundAudioManager.singer = ‘许巍’
+backgroundAudioManager.coverImgUrl = ‘<a class="reference external" href="http://y.gtimg.cn/music/photo_new/T002R300x300M000003rsKF44GyaSk.jpg?max_age=2592000">http://y.gtimg.cn/music/photo_new/T002R300x300M000003rsKF44GyaSk.jpg?max_age=2592000</a>’
+// 设置了 src 之后会自动播放
+backgroundAudioManager.src = ‘<a class="reference external" href="http://ws.stream.qqmusic.qq.com/M500001VfvsJ21xFqb.mp3?guid=ffffffff82def4af4b12b3cd9337d5e7&amp;uin=346897220&amp;vkey=6292F51E1E384E061FF02C31F716658E5C81F5594D561F2E88B854E81CAAB7806D5E4F103E55D33C16F3FAC506D1AB172DE8600B37E43FAD&amp;fromtag=46">http://ws.stream.qqmusic.qq.com/M500001VfvsJ21xFqb.mp3?guid=ffffffff82def4af4b12b3cd9337d5e7&amp;uin=346897220&amp;vkey=6292F51E1E384E061FF02C31F716658E5C81F5594D561F2E88B854E81CAAB7806D5E4F103E55D33C16F3FAC506D1AB172DE8600B37E43FAD&amp;fromtag=46</a>’</p>
 </div>
 
 
@@ -217,7 +302,7 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="BackgroundAudioManager.onCanplay.html" class="btn btn-neutral float-right" title="BackgroundAudioManager.onCanplay" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="wx.createLivePusherContext.html" class="btn btn-neutral float-right" title="wx.createLivePusherContext" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="wx.getBackgroundAudioManager.html" class="btn btn-neutral float-left" title="wx.getBackgroundAudioManager" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>

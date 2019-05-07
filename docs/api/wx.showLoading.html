@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>wx.createWorker &mdash; wxadev 1.0.0 文档</title>
+  <title>wx.showLoading &mdash; wxadev 1.0.0 文档</title>
   
 
   
@@ -36,8 +36,8 @@
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜索" href="../search.html" />
-    <link rel="next" title="wx.showActionSheet" href="wx.showActionSheet.html" />
-    <link rel="prev" title="wx.showModal" href="wx.showModal.html" /> 
+    <link rel="next" title="wx.hideLoading" href="wx.hideLoading.html" />
+    <link rel="prev" title="wx.hideToast" href="wx.hideToast.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -89,46 +89,46 @@
 <li class="toctree-l1"><a class="reference internal" href="../framework/index.html">框架</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../component/index.html">组件</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">API</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="index.html#id1">基础</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#id2">系统</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#id4">更新</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#id5">小程序</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#id8">调试</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#id9">路由</a></li>
-<li class="toctree-l2 current"><a class="reference internal" href="index.html#id10">界面</a><ul class="current">
-<li class="toctree-l3 current"><a class="reference internal" href="index.html#id11">交互</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="index.html#id2">基础</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id3">系统</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id5">更新</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id6">小程序</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id9">调试</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id10">路由</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html#id11">界面</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="index.html#id12">交互</a><ul class="current">
 <li class="toctree-l4"><a class="reference internal" href="wx.showToast.html">wx.showToast</a></li>
-<li class="toctree-l4"><a class="reference internal" href="wx.showModal.html">wx.showModal</a></li>
-<li class="toctree-l4 current"><a class="current reference internal" href="#">wx.createWorker</a></li>
-<li class="toctree-l4"><a class="reference internal" href="wx.showActionSheet.html">wx.showActionSheet</a></li>
 <li class="toctree-l4"><a class="reference internal" href="wx.hideToast.html">wx.hideToast</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">wx.showLoading</a></li>
 <li class="toctree-l4"><a class="reference internal" href="wx.hideLoading.html">wx.hideLoading</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wx.showModal.html">wx.showModal</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wx.showActionSheet.html">wx.showActionSheet</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="index.html#id12">导航栏</a></li>
-<li class="toctree-l3"><a class="reference internal" href="index.html#id13">背景</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#id13">导航栏</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#id14">背景</a></li>
 <li class="toctree-l3"><a class="reference internal" href="index.html#tab-bar">Tab Bar</a></li>
-<li class="toctree-l3"><a class="reference internal" href="index.html#id14">字体</a></li>
-<li class="toctree-l3"><a class="reference internal" href="index.html#id15">下拉刷新</a></li>
-<li class="toctree-l3"><a class="reference internal" href="index.html#id16">滚动</a></li>
-<li class="toctree-l3"><a class="reference internal" href="index.html#id17">动画</a></li>
-<li class="toctree-l3"><a class="reference internal" href="index.html#id18">置顶</a></li>
-<li class="toctree-l3"><a class="reference internal" href="index.html#id19">自定义组件</a></li>
-<li class="toctree-l3"><a class="reference internal" href="index.html#id20">菜单</a></li>
-<li class="toctree-l3"><a class="reference internal" href="index.html#id21">窗口</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#id15">字体</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#id16">下拉刷新</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#id17">滚动</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#id18">动画</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#id19">置顶</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#id20">自定义组件</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#id21">菜单</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#id22">窗口</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#id22">网络</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#id26">数据缓存</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#id27">媒体</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#id35">位置</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#id36">转发</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#id37">画布</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#id38">文件</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#id39">开放接口</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#id54">设备</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id23">网络</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id27">数据缓存</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id28">媒体</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id36">位置</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id37">转发</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id38">画布</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id39">文件</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id40">开放接口</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id55">设备</a></li>
 <li class="toctree-l2"><a class="reference internal" href="index.html#worker">Worker</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#id71">第三方平台</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id72">第三方平台</a></li>
 <li class="toctree-l2"><a class="reference internal" href="index.html#wxml">WXML</a></li>
 </ul>
 </li>
@@ -186,7 +186,7 @@
         
           <li><a href="index.html">API</a> &raquo;</li>
         
-      <li>wx.createWorker</li>
+      <li>wx.showLoading</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -205,8 +205,44 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="wx-createworker">
-<h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/api/wx.createWorker.html">wx.createWorker</a><a class="headerlink" href="#wx-createworker" title="永久链接至标题">¶</a></h1>
+  <div class="section" id="wx-showloading">
+<h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/api/wx.showLoading.html">wx.showLoading</a><a class="headerlink" href="#wx-showloading" title="永久链接至标题">¶</a></h1>
+<dl class="function">
+<dt id="wx.showLoading">
+<code class="descclassname">wx.</code><code class="descname">showLoading</code><span class="sig-paren">(</span><em>{title[, mask][, success][, fail][, complete]}</em><span class="sig-paren">)</span><a class="headerlink" href="#wx.showLoading" title="永久链接至目标">¶</a></dt>
+<dd><p>基础库 1.1.0 开始支持，低版本需做兼容处理。</p>
+<p>显示 loading 提示框。需主动调用 wx.hideLoading 才能关闭提示框</p>
+<dl class="field-list">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>title</strong> (<em>string</em>) – 提示的内容</p></li>
+<li><p><strong>mask</strong> (<em>boolean</em>) – <strong>false</strong> 是否显示透明蒙层，防止触摸穿透</p></li>
+<li><p><strong>success</strong> (<em>function</em>) – 接口调用成功的回调函数</p></li>
+<li><p><strong>fail</strong> (<em>function</em>) – 接口调用失败的回调函数</p></li>
+<li><p><strong>complete</strong> (<em>function</em>) – 接口调用结束的回调函数（调用成功、失败都会执行）</p></li>
+</ul>
+</dd>
+<dt class="field-even">示例</dt>
+<dd class="field-even"><div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="nx">wx</span><span class="p">.</span><span class="nx">showLoading</span><span class="p">({</span>
+  <span class="nx">title</span><span class="o">:</span> <span class="s1">&#39;加载中&#39;</span><span class="p">,</span>
+<span class="p">})</span>
+
+<span class="nx">setTimeout</span><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+  <span class="nx">wx</span><span class="p">.</span><span class="nx">hideLoading</span><span class="p">()</span>
+<span class="p">},</span> <span class="mi">2000</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</dd></dl>
+
+<div class="admonition attention">
+<p class="admonition-title">注意</p>
+<ul class="simple">
+<li><p>wx.showLoading 和 wx.showToast 同时只能显示一个</p></li>
+<li><p>wx.showLoading 应与 wx.hideLoading 配对使用</p></li>
+</ul>
+</div>
 </div>
 
 
@@ -217,10 +253,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="wx.showActionSheet.html" class="btn btn-neutral float-right" title="wx.showActionSheet" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="wx.hideLoading.html" class="btn btn-neutral float-right" title="wx.hideLoading" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="wx.showModal.html" class="btn btn-neutral float-left" title="wx.showModal" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="wx.hideToast.html" class="btn btn-neutral float-left" title="wx.hideToast" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

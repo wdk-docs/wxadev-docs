@@ -5,64 +5,62 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="zh-CN" > <!--<![endif]-->
 <head>
   <meta charset="utf-8">
-
+  
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>require &mdash; wxadev 1.0.0 文档</title>
+  
 
-  <title>any require(string path) &mdash; wxadev 1.0.0 文档</title>
+  
+  
+  
+  
 
-
-
-
-
-
-
-
+  
   <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
-
-
+  
+    
       <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
         <script type="text/javascript" src="../../_static/jquery.js"></script>
         <script type="text/javascript" src="../../_static/underscore.js"></script>
         <script type="text/javascript" src="../../_static/doctools.js"></script>
         <script type="text/javascript" src="../../_static/language_data.js"></script>
         <script type="text/javascript" src="../../_static/translations.js"></script>
-
+    
     <script type="text/javascript" src="../../_static/js/theme.js"></script>
 
+    
 
-
-
+  
   <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="index" title="索引" href="../../genindex.html" />
-    <link rel="search" title="搜索" href="../../search.html" />
-    <link rel="next" title="&lt;no title&gt;" href="module.html" />
-    <link rel="prev" title="PageObject[] getCurrentPages()" href="getCurrentPages.html" />
+    <link rel="search" title="搜索" href="../../search.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
 
-
+   
   <div class="wy-grid-for-nav">
-
+    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
+          
 
-
-
+          
             <a href="../../contents.html" class="icon icon-home"> wxadev
+          
 
-
-
+          
           </a>
 
+          
+            
+            
+          
 
-
-
-
-
-
+          
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
@@ -71,66 +69,55 @@
   </form>
 </div>
 
-
+          
         </div>
 
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-
-
-
-
-
-
-              <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../../dev.html">小程序简介</a></li>
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../index.html">开发指南</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../dev.html">简介</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../basic/index.html">基础教程</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../framework/index.html">框架开发指南</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../guide/index.html">运行环境</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../framework/index.html">框架</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../component/index.html">组件</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../devtools/index.html">开发工具</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="../index.html">参考资料</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="../configuration/index.html">小程序配置</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../scene-list.html">场景值列表</a></li>
-<li class="toctree-l2 current"><a class="reference internal" href="index.html">框架接口</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="index.html#app">小程序 App</a></li>
-<li class="toctree-l3"><a class="reference internal" href="index.html#id2">页面</a></li>
-<li class="toctree-l3 current"><a class="reference internal" href="index.html#id3">模块</a><ul class="current">
-<li class="toctree-l4 current"><a class="current reference internal" href="#">any require(string path)</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="index.html#id4">基础模块</a></li>
-<li class="toctree-l3"><a class="reference internal" href="index.html#wxml">WXML语法参考</a></li>
-<li class="toctree-l3"><a class="reference internal" href="index.html#wxs">WXS语法参考</a></li>
-</ul>
-</li>
-</ul>
-</li>
 <li class="toctree-l1"><a class="reference internal" href="../../api/index.html">API</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../api-backend/index.html">服务端开放接口</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api-backend/index.html">服务端API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../devtools/index.html">开发工具</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../index.html">参考资料</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../wxcloud/index.html">云开发</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../wxwork/index.html">企业微信</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary.html">术语</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../rst.html">定义</a></li>
 </ul>
 
-
-
+            
+          
         </div>
       </div>
     </nav>
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
-
+      
       <nav class="wy-nav-top" aria-label="top navigation">
-
+        
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../../contents.html">wxadev</a>
-
+        
       </nav>
 
 
       <div class="wy-nav-content">
-
+        
         <div class="rst-content">
-
-
+        
+          
 
 
 
@@ -149,35 +136,33 @@
 <div role="navigation" aria-label="breadcrumbs navigation">
 
   <ul class="wy-breadcrumbs">
-
+    
       <li><a href="../../contents.html">Docs</a> &raquo;</li>
-
-          <li><a href="../index.html">参考资料</a> &raquo;</li>
-
-          <li><a href="index.html">框架接口</a> &raquo;</li>
-
-      <li>any require(string path)</li>
-
-
+        
+      <li>require</li>
+    
+    
       <li class="wy-breadcrumbs-aside">
-
-
+        
+            
             <a href="../../_sources/reference/api/require.rst.txt" rel="nofollow"> View page source</a>
-
-
+          
+        
       </li>
-
+    
   </ul>
 
-
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-
-  <div class="section" id="any-require-string-path">
-<h1>any require(string path)<a class="headerlink" href="#any-require-string-path" title="永久链接至:wxapi:`wx.createWorker`">¶</a></h1>
-<p>引入模块。返回模块通过 module.exports 或 exports 暴露的接口。</p>
+            
+  <p>setInterval</p>
+<div class="section" id="require">
+<h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/reference/api/require.html">require</a><a class="headerlink" href="#require" title="永久链接至标题">¶</a></h1>
+<p>any require(string path)
+引入模块。返回模块通过 module.exports 或 exports 暴露的接口。</p>
 <p>参数
 名称      类型      说明
 path    string  需要引入模块文件相对于当前文件的相对路径，或npm模块名，或npm模块路径。不支持绝对路径
@@ -214,19 +199,10 @@ goodbyeMINA() {</p>
 
 
            </div>
-
+           
           </div>
           <footer>
-
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-
-        <a href="module.html" class="btn btn-neutral float-right" title="&lt;no title&gt;" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-
-
-        <a href="getCurrentPages.html" class="btn btn-neutral float-left" title="PageObject[] getCurrentPages()" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-
-    </div>
-
+  
 
   <hr/>
 
@@ -236,7 +212,7 @@ goodbyeMINA() {</p>
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -246,7 +222,7 @@ goodbyeMINA() {</p>
     </section>
 
   </div>
-
+  
 
 
   <script type="text/javascript">
@@ -255,10 +231,10 @@ goodbyeMINA() {</p>
       });
   </script>
 
-
-
-
-
+  
+  
+    
+   
 
 </body>
 </html>

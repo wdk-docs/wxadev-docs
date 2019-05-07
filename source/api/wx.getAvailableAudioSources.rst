@@ -6,9 +6,9 @@
    .. versionadded: 2.1.0 低版本需做 :ref:`compatibility` 。
 
    :label: 获取当前支持的音频输入源
-   :param function success(res): 接口调用成功的回调函数
+   :param function success({audioSources}): 接口调用成功的回调函数
 
-     - **audioSources** (*Array.<string>*) - 支持的音频输入源列表，可在 RecorderManager.start() 接口中使用。返回值定义参考 [#l1]_
+     - **audioSources** (*Array.<string>*) - 支持的音频输入源列表，可在 :func:`RecorderManager.start()` 接口中使用。返回值定义参考 [#l1]_
 
        - **auto** -	自动设置，默认使用手机麦克风，插上耳麦后自动切换使用耳机麦克风，所有平台适用
        - **buildInMic** -	手机麦克风，仅限 iOS

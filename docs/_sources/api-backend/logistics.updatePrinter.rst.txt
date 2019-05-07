@@ -14,6 +14,8 @@
 
 .. http:get:: <api>/express/business/printer/update
 
+  :term:`api`
+
   :query string access_token: *必选*	接口调用凭证
   :<json string openid: *必选*	打印员 openid
   :<json string update_type: *必选*	更新类型 合法值:

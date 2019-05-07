@@ -36,8 +36,8 @@
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜索" href="../search.html" />
-    <link rel="next" title="InnerAudioContext.destroy" href="InnerAudioContext.destroy.html" />
-    <link rel="prev" title="AudioContext" href="AudioContext.html" /> 
+    <link rel="next" title="wx.stopBackgroundAudio" href="wx.stopBackgroundAudio.html" />
+    <link rel="prev" title="wx.getAvailableAudioSources" href="wx.getAvailableAudioSources.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -103,15 +103,9 @@
 <li class="toctree-l3"><a class="reference internal" href="index.html#id30">图片</a></li>
 <li class="toctree-l3"><a class="reference internal" href="index.html#id31">视频</a></li>
 <li class="toctree-l3 current"><a class="reference internal" href="index.html#id32">音频</a><ul class="current">
-<li class="toctree-l4"><a class="reference internal" href="wx.stopVoice.html">wx.stopVoice</a></li>
 <li class="toctree-l4"><a class="reference internal" href="wx.setInnerAudioOption.html">wx.setInnerAudioOption</a></li>
-<li class="toctree-l4"><a class="reference internal" href="wx.playVoice.html">wx.playVoice</a></li>
-<li class="toctree-l4"><a class="reference internal" href="wx.pauseVoice.html">wx.pauseVoice</a></li>
 <li class="toctree-l4"><a class="reference internal" href="wx.getAvailableAudioSources.html">wx.getAvailableAudioSources</a></li>
-<li class="toctree-l4"><a class="reference internal" href="wx.createInnerAudioContext.html">wx.createInnerAudioContext</a></li>
-<li class="toctree-l4"><a class="reference internal" href="wx.createAudioContext.html">wx.createAudioContext</a></li>
-<li class="toctree-l4 current"><a class="reference internal" href="index.html#inneraudiocontext">InnerAudioContext</a></li>
-<li class="toctree-l4"><a class="reference internal" href="index.html#audiocontext">AudioContext</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">InnerAudioContext</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="index.html#id33">背景音频</a></li>
@@ -214,20 +208,20 @@
 </div>
 <p>创建内部 <a class="reference internal" href="../component/audio.html#audio"><span class="std std-ref">audio</span></a> 上下文 <a class="reference internal" href="#InnerAudioContext" title="InnerAudioContext"><code class="xref js js-class docutils literal notranslate"><span class="pre">InnerAudioContext()</span></code></a> 对象。</p>
 <dl class="field-list simple">
-<dt class="field-odd">Return</dt>
+<dt class="field-odd">返回</dt>
 <dd class="field-odd"><p><a class="reference internal" href="#InnerAudioContext" title="InnerAudioContext"><code class="xref js js-class docutils literal notranslate"><span class="pre">InnerAudioContext()</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
 
-<div class="section" id="id1">
-<h2>属性<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h2>
 <dl class="class">
 <dt id="InnerAudioContext">
 <em class="property">class </em><code class="descname">InnerAudioContext</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#InnerAudioContext" title="永久链接至目标">¶</a></dt>
 <dd><p>InnerAudioContext 实例，可通过 <a class="reference internal" href="#wx.createInnerAudioContext" title="wx.createInnerAudioContext"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.createInnerAudioContext()</span></code></a> 接口获取实例。</p>
 </dd></dl>
 
+<div class="section" id="id1">
+<h2>属性<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h2>
 <dl class="attribute">
 <dt id="InnerAudioContext.src">
 <code class="descclassname">InnerAudioContext.</code><code class="descname">src</code><a class="headerlink" href="#InnerAudioContext.src" title="永久链接至目标">¶</a></dt>
@@ -235,7 +229,7 @@
 <dt class="field-odd">Label</dt>
 <dd class="field-odd"><p>音频资源的地址，用于直接播放</p>
 </dd>
-<dt class="field-even">Rtype</dt>
+<dt class="field-even">返回类型</dt>
 <dd class="field-even"><p>string</p>
 </dd>
 </dl>
@@ -251,7 +245,7 @@
 <dt class="field-odd">Label</dt>
 <dd class="field-odd"><p>开始播放的位置</p>
 </dd>
-<dt class="field-even">Rtype</dt>
+<dt class="field-even">返回类型</dt>
 <dd class="field-even"><p>number</p>
 </dd>
 <dt class="field-odd">Unit</dt>
@@ -270,7 +264,7 @@
 <dt class="field-odd">Label</dt>
 <dd class="field-odd"><p>是否自动开始播放</p>
 </dd>
-<dt class="field-even">Rtype</dt>
+<dt class="field-even">返回类型</dt>
 <dd class="field-even"><p>boolean</p>
 </dd>
 <dt class="field-odd">Default</dt>
@@ -286,7 +280,7 @@
 <dt class="field-odd">Label</dt>
 <dd class="field-odd"><p>是否循环播放</p>
 </dd>
-<dt class="field-even">Rtype</dt>
+<dt class="field-even">返回类型</dt>
 <dd class="field-even"><p>boolean</p>
 </dd>
 <dt class="field-odd">Default</dt>
@@ -302,7 +296,7 @@
 <dt class="field-odd">Label</dt>
 <dd class="field-odd"><p>是否遵循系统静音开关</p>
 </dd>
-<dt class="field-even">Rtype</dt>
+<dt class="field-even">返回类型</dt>
 <dd class="field-even"><p>boolean</p>
 </dd>
 <dt class="field-odd">Default</dt>
@@ -324,7 +318,7 @@
 <dt class="field-odd">Label</dt>
 <dd class="field-odd"><p>音量。范围 0~1。</p>
 </dd>
-<dt class="field-even">Rtype</dt>
+<dt class="field-even">返回类型</dt>
 <dd class="field-even"><p>number</p>
 </dd>
 <dt class="field-odd">Default</dt>
@@ -348,7 +342,7 @@
 <dt class="field-even">Premise</dt>
 <dd class="field-even"><p>只有在当前有合法的 src 时返回</p>
 </dd>
-<dt class="field-odd">Rtype</dt>
+<dt class="field-odd">返回类型</dt>
 <dd class="field-odd"><p>number</p>
 </dd>
 <dt class="field-even">Unit</dt>
@@ -370,7 +364,7 @@
 <dt class="field-even">Premise</dt>
 <dd class="field-even"><p>只有在当前有合法的 src 时返回</p>
 </dd>
-<dt class="field-odd">Rtype</dt>
+<dt class="field-odd">返回类型</dt>
 <dd class="field-odd"><p>number</p>
 </dd>
 <dt class="field-even">Unit</dt>
@@ -389,7 +383,7 @@
 <dt class="field-odd">Label</dt>
 <dd class="field-odd"><p>当前是是否暂停或停止状态</p>
 </dd>
-<dt class="field-even">Rtype</dt>
+<dt class="field-even">返回类型</dt>
 <dd class="field-even"><p>boolean</p>
 </dd>
 <dt class="field-odd">Readonly</dt>
@@ -405,7 +399,7 @@
 <dt class="field-odd">Label</dt>
 <dd class="field-odd"><p>音频缓冲的时间点，仅保证当前播放时间点到此时间点内容已缓冲</p>
 </dd>
-<dt class="field-even">Rtype</dt>
+<dt class="field-even">返回类型</dt>
 <dd class="field-even"><p>number</p>
 </dd>
 <dt class="field-odd">Readonly</dt>
@@ -449,10 +443,15 @@
 
 <dl class="function">
 <dt id="InnerAudioContext.seek">
-<code class="descclassname">InnerAudioContext.</code><code class="descname">seek</code><span class="sig-paren">(</span><em>number position</em><span class="sig-paren">)</span><a class="headerlink" href="#InnerAudioContext.seek" title="永久链接至目标">¶</a></dt>
+<code class="descclassname">InnerAudioContext.</code><code class="descname">seek</code><span class="sig-paren">(</span><em>position</em><span class="sig-paren">)</span><a class="headerlink" href="#InnerAudioContext.seek" title="永久链接至目标">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Label</dt>
 <dd class="field-odd"><p>跳转到指定位置</p>
+</dd>
+<dt class="field-even">参数</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>position</strong> (<em>number</em>) – 跳转的时间，单位 s。精确到小数点后 3 位，即支持 ms 级别精确度</p></li>
+</ul>
 </dd>
 </dl>
 </dd></dl>
@@ -469,211 +468,309 @@
 
 <dl class="function">
 <dt id="InnerAudioContext.onCanplay">
-<code class="descclassname">InnerAudioContext.</code><code class="descname">onCanplay</code><span class="sig-paren">(</span><em>function callback</em><span class="sig-paren">)</span><a class="headerlink" href="#InnerAudioContext.onCanplay" title="永久链接至目标">¶</a></dt>
+<code class="descclassname">InnerAudioContext.</code><code class="descname">onCanplay</code><span class="sig-paren">(</span><em>callback</em><span class="sig-paren">)</span><a class="headerlink" href="#InnerAudioContext.onCanplay" title="永久链接至目标">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Label</dt>
 <dd class="field-odd"><p>监听音频进入可以播放状态的事件。但不保证后面可以流畅播放</p>
+</dd>
+<dt class="field-even">参数</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>callback</strong> (<em>function</em>) – 音频进入可以播放状态的事件的回调函数</p></li>
+</ul>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="function">
 <dt id="InnerAudioContext.offCanplay">
-<code class="descclassname">InnerAudioContext.</code><code class="descname">offCanplay</code><span class="sig-paren">(</span><em>function callback</em><span class="sig-paren">)</span><a class="headerlink" href="#InnerAudioContext.offCanplay" title="永久链接至目标">¶</a></dt>
+<code class="descclassname">InnerAudioContext.</code><code class="descname">offCanplay</code><span class="sig-paren">(</span><em>callback</em><span class="sig-paren">)</span><a class="headerlink" href="#InnerAudioContext.offCanplay" title="永久链接至目标">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Label</dt>
 <dd class="field-odd"><p>取消监听音频进入可以播放状态的事件</p>
+</dd>
+<dt class="field-even">参数</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>callback</strong> (<em>function</em>) – 音频进入可以播放状态的事件的回调函数</p></li>
+</ul>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="function">
 <dt id="InnerAudioContext.onPlay">
-<code class="descclassname">InnerAudioContext.</code><code class="descname">onPlay</code><span class="sig-paren">(</span><em>function callback</em><span class="sig-paren">)</span><a class="headerlink" href="#InnerAudioContext.onPlay" title="永久链接至目标">¶</a></dt>
+<code class="descclassname">InnerAudioContext.</code><code class="descname">onPlay</code><span class="sig-paren">(</span><em>callback</em><span class="sig-paren">)</span><a class="headerlink" href="#InnerAudioContext.onPlay" title="永久链接至目标">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Label</dt>
 <dd class="field-odd"><p>监听音频播放事件</p>
+</dd>
+<dt class="field-even">参数</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>callback</strong> (<em>function</em>) – 音频播放事件的回调函数</p></li>
+</ul>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="function">
 <dt id="InnerAudioContext.offPlay">
-<code class="descclassname">InnerAudioContext.</code><code class="descname">offPlay</code><span class="sig-paren">(</span><em>function callback</em><span class="sig-paren">)</span><a class="headerlink" href="#InnerAudioContext.offPlay" title="永久链接至目标">¶</a></dt>
+<code class="descclassname">InnerAudioContext.</code><code class="descname">offPlay</code><span class="sig-paren">(</span><em>callback</em><span class="sig-paren">)</span><a class="headerlink" href="#InnerAudioContext.offPlay" title="永久链接至目标">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Label</dt>
 <dd class="field-odd"><p>取消监听音频播放事件</p>
+</dd>
+<dt class="field-even">参数</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>callback</strong> (<em>function</em>) – 音频播放事件的回调函数</p></li>
+</ul>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="function">
 <dt id="InnerAudioContext.onPause">
-<code class="descclassname">InnerAudioContext.</code><code class="descname">onPause</code><span class="sig-paren">(</span><em>function callback</em><span class="sig-paren">)</span><a class="headerlink" href="#InnerAudioContext.onPause" title="永久链接至目标">¶</a></dt>
+<code class="descclassname">InnerAudioContext.</code><code class="descname">onPause</code><span class="sig-paren">(</span><em>callback</em><span class="sig-paren">)</span><a class="headerlink" href="#InnerAudioContext.onPause" title="永久链接至目标">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Label</dt>
 <dd class="field-odd"><p>监听音频暂停事件</p>
+</dd>
+<dt class="field-even">参数</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>callback</strong> (<em>function</em>) – 音频暂停事件的回调函数</p></li>
+</ul>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="function">
 <dt id="InnerAudioContext.offPause">
-<code class="descclassname">InnerAudioContext.</code><code class="descname">offPause</code><span class="sig-paren">(</span><em>function callback</em><span class="sig-paren">)</span><a class="headerlink" href="#InnerAudioContext.offPause" title="永久链接至目标">¶</a></dt>
+<code class="descclassname">InnerAudioContext.</code><code class="descname">offPause</code><span class="sig-paren">(</span><em>callback</em><span class="sig-paren">)</span><a class="headerlink" href="#InnerAudioContext.offPause" title="永久链接至目标">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Label</dt>
 <dd class="field-odd"><p>取消监听音频暂停事件</p>
+</dd>
+<dt class="field-even">参数</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>callback</strong> (<em>function</em>) – 音频暂停事件的回调函数</p></li>
+</ul>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="function">
 <dt id="InnerAudioContext.onStop">
-<code class="descclassname">InnerAudioContext.</code><code class="descname">onStop</code><span class="sig-paren">(</span><em>function callback</em><span class="sig-paren">)</span><a class="headerlink" href="#InnerAudioContext.onStop" title="永久链接至目标">¶</a></dt>
+<code class="descclassname">InnerAudioContext.</code><code class="descname">onStop</code><span class="sig-paren">(</span><em>callback</em><span class="sig-paren">)</span><a class="headerlink" href="#InnerAudioContext.onStop" title="永久链接至目标">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Label</dt>
 <dd class="field-odd"><p>监听音频停止事件</p>
+</dd>
+<dt class="field-even">参数</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>callback</strong> (<em>function</em>) – 音频停止事件的回调函数</p></li>
+</ul>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="function">
 <dt id="InnerAudioContext.offStop">
-<code class="descclassname">InnerAudioContext.</code><code class="descname">offStop</code><span class="sig-paren">(</span><em>function callback</em><span class="sig-paren">)</span><a class="headerlink" href="#InnerAudioContext.offStop" title="永久链接至目标">¶</a></dt>
+<code class="descclassname">InnerAudioContext.</code><code class="descname">offStop</code><span class="sig-paren">(</span><em>callback</em><span class="sig-paren">)</span><a class="headerlink" href="#InnerAudioContext.offStop" title="永久链接至目标">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Label</dt>
 <dd class="field-odd"><p>取消监听音频停止事件</p>
+</dd>
+<dt class="field-even">参数</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>callback</strong> (<em>function</em>) – 音频停止事件的回调函数</p></li>
+</ul>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="function">
 <dt id="InnerAudioContext.onEnded">
-<code class="descclassname">InnerAudioContext.</code><code class="descname">onEnded</code><span class="sig-paren">(</span><em>function callback</em><span class="sig-paren">)</span><a class="headerlink" href="#InnerAudioContext.onEnded" title="永久链接至目标">¶</a></dt>
+<code class="descclassname">InnerAudioContext.</code><code class="descname">onEnded</code><span class="sig-paren">(</span><em>callback</em><span class="sig-paren">)</span><a class="headerlink" href="#InnerAudioContext.onEnded" title="永久链接至目标">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Label</dt>
 <dd class="field-odd"><p>监听音频自然播放至结束的事件</p>
+</dd>
+<dt class="field-even">参数</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>callback</strong> (<em>function</em>) – 音频自然播放至结束的事件的回调函数</p></li>
+</ul>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="function">
 <dt id="InnerAudioContext.offEnded">
-<code class="descclassname">InnerAudioContext.</code><code class="descname">offEnded</code><span class="sig-paren">(</span><em>function callback</em><span class="sig-paren">)</span><a class="headerlink" href="#InnerAudioContext.offEnded" title="永久链接至目标">¶</a></dt>
+<code class="descclassname">InnerAudioContext.</code><code class="descname">offEnded</code><span class="sig-paren">(</span><em>callback</em><span class="sig-paren">)</span><a class="headerlink" href="#InnerAudioContext.offEnded" title="永久链接至目标">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Label</dt>
 <dd class="field-odd"><p>取消监听音频自然播放至结束的事件</p>
+</dd>
+<dt class="field-even">参数</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>callback</strong> (<em>function</em>) – 音频自然播放至结束的事件的回调函数</p></li>
+</ul>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="function">
 <dt id="InnerAudioContext.onTimeUpdate">
-<code class="descclassname">InnerAudioContext.</code><code class="descname">onTimeUpdate</code><span class="sig-paren">(</span><em>function callback</em><span class="sig-paren">)</span><a class="headerlink" href="#InnerAudioContext.onTimeUpdate" title="永久链接至目标">¶</a></dt>
+<code class="descclassname">InnerAudioContext.</code><code class="descname">onTimeUpdate</code><span class="sig-paren">(</span><em>callback</em><span class="sig-paren">)</span><a class="headerlink" href="#InnerAudioContext.onTimeUpdate" title="永久链接至目标">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Label</dt>
 <dd class="field-odd"><p>监听音频播放进度更新事件</p>
+</dd>
+<dt class="field-even">参数</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>callback</strong> (<em>function</em>) – 音频播放进度更新事件的回调函数</p></li>
+</ul>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="function">
 <dt id="InnerAudioContext.offTimeUpdate">
-<code class="descclassname">InnerAudioContext.</code><code class="descname">offTimeUpdate</code><span class="sig-paren">(</span><em>function callback</em><span class="sig-paren">)</span><a class="headerlink" href="#InnerAudioContext.offTimeUpdate" title="永久链接至目标">¶</a></dt>
+<code class="descclassname">InnerAudioContext.</code><code class="descname">offTimeUpdate</code><span class="sig-paren">(</span><em>callback</em><span class="sig-paren">)</span><a class="headerlink" href="#InnerAudioContext.offTimeUpdate" title="永久链接至目标">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Label</dt>
 <dd class="field-odd"><p>取消监听音频播放进度更新事件</p>
+</dd>
+<dt class="field-even">参数</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>callback</strong> (<em>function</em>) – 音频播放进度更新事件的回调函数</p></li>
+</ul>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="function">
 <dt id="InnerAudioContext.onError">
-<code class="descclassname">InnerAudioContext.</code><code class="descname">onError</code><span class="sig-paren">(</span><em>function callback</em><span class="sig-paren">)</span><a class="headerlink" href="#InnerAudioContext.onError" title="永久链接至目标">¶</a></dt>
+<code class="descclassname">InnerAudioContext.</code><code class="descname">onError</code><span class="sig-paren">(</span><em>callback</em><span class="sig-paren">)</span><a class="headerlink" href="#InnerAudioContext.onError" title="永久链接至目标">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Label</dt>
 <dd class="field-odd"><p>监听音频播放错误事件</p>
+</dd>
+<dt class="field-even">参数</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>callback</strong> (<em>function</em>) – </p></li>
+</ul>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="function">
 <dt id="InnerAudioContext.offError">
-<code class="descclassname">InnerAudioContext.</code><code class="descname">offError</code><span class="sig-paren">(</span><em>function callback</em><span class="sig-paren">)</span><a class="headerlink" href="#InnerAudioContext.offError" title="永久链接至目标">¶</a></dt>
+<code class="descclassname">InnerAudioContext.</code><code class="descname">offError</code><span class="sig-paren">(</span><em>callback</em><span class="sig-paren">)</span><a class="headerlink" href="#InnerAudioContext.offError" title="永久链接至目标">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Label</dt>
 <dd class="field-odd"><p>取消监听音频播放错误事件</p>
+</dd>
+<dt class="field-even">参数</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>callback</strong> (<em>function</em>) – 音频播放错误事件的回调函数</p></li>
+</ul>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="function">
 <dt id="InnerAudioContext.onWaiting">
-<code class="descclassname">InnerAudioContext.</code><code class="descname">onWaiting</code><span class="sig-paren">(</span><em>function callback</em><span class="sig-paren">)</span><a class="headerlink" href="#InnerAudioContext.onWaiting" title="永久链接至目标">¶</a></dt>
+<code class="descclassname">InnerAudioContext.</code><code class="descname">onWaiting</code><span class="sig-paren">(</span><em>callback</em><span class="sig-paren">)</span><a class="headerlink" href="#InnerAudioContext.onWaiting" title="永久链接至目标">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Label</dt>
 <dd class="field-odd"><p>监听音频加载中事件。当音频因为数据不足，需要停下来加载时会触发</p>
+</dd>
+<dt class="field-even">参数</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>callback</strong> (<em>function</em>) – 音频加载中事件的回调函数</p></li>
+</ul>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="function">
 <dt id="InnerAudioContext.offWaiting">
-<code class="descclassname">InnerAudioContext.</code><code class="descname">offWaiting</code><span class="sig-paren">(</span><em>function callback</em><span class="sig-paren">)</span><a class="headerlink" href="#InnerAudioContext.offWaiting" title="永久链接至目标">¶</a></dt>
+<code class="descclassname">InnerAudioContext.</code><code class="descname">offWaiting</code><span class="sig-paren">(</span><em>callback</em><span class="sig-paren">)</span><a class="headerlink" href="#InnerAudioContext.offWaiting" title="永久链接至目标">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Label</dt>
 <dd class="field-odd"><p>取消监听音频加载中事件</p>
+</dd>
+<dt class="field-even">参数</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>callback</strong> (<em>function</em>) – 音频加载中事件的回调函数</p></li>
+</ul>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="function">
 <dt id="InnerAudioContext.onSeeking">
-<code class="descclassname">InnerAudioContext.</code><code class="descname">onSeeking</code><span class="sig-paren">(</span><em>function callback</em><span class="sig-paren">)</span><a class="headerlink" href="#InnerAudioContext.onSeeking" title="永久链接至目标">¶</a></dt>
+<code class="descclassname">InnerAudioContext.</code><code class="descname">onSeeking</code><span class="sig-paren">(</span><em>callback</em><span class="sig-paren">)</span><a class="headerlink" href="#InnerAudioContext.onSeeking" title="永久链接至目标">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Label</dt>
 <dd class="field-odd"><p>监听音频进行跳转操作的事件</p>
+</dd>
+<dt class="field-even">参数</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>callback</strong> (<em>function</em>) – </p></li>
+</ul>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="function">
 <dt id="InnerAudioContext.offSeeking">
-<code class="descclassname">InnerAudioContext.</code><code class="descname">offSeeking</code><span class="sig-paren">(</span><em>function callback</em><span class="sig-paren">)</span><a class="headerlink" href="#InnerAudioContext.offSeeking" title="永久链接至目标">¶</a></dt>
+<code class="descclassname">InnerAudioContext.</code><code class="descname">offSeeking</code><span class="sig-paren">(</span><em>callback</em><span class="sig-paren">)</span><a class="headerlink" href="#InnerAudioContext.offSeeking" title="永久链接至目标">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Label</dt>
 <dd class="field-odd"><p>取消监听音频进行跳转操作的事件</p>
+</dd>
+<dt class="field-even">参数</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>callback</strong> (<em>function</em>) – 音频进行跳转操作的事件的回调函数</p></li>
+</ul>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="function">
 <dt id="InnerAudioContext.onSeeked">
-<code class="descclassname">InnerAudioContext.</code><code class="descname">onSeeked</code><span class="sig-paren">(</span><em>function callback</em><span class="sig-paren">)</span><a class="headerlink" href="#InnerAudioContext.onSeeked" title="永久链接至目标">¶</a></dt>
+<code class="descclassname">InnerAudioContext.</code><code class="descname">onSeeked</code><span class="sig-paren">(</span><em>callback</em><span class="sig-paren">)</span><a class="headerlink" href="#InnerAudioContext.onSeeked" title="永久链接至目标">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Label</dt>
 <dd class="field-odd"><p>监听音频完成跳转操作的事件</p>
+</dd>
+<dt class="field-even">参数</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>callback</strong> (<em>function</em>) – </p></li>
+</ul>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="function">
 <dt id="InnerAudioContext.offSeeked">
-<code class="descclassname">InnerAudioContext.</code><code class="descname">offSeeked</code><span class="sig-paren">(</span><em>function callback</em><span class="sig-paren">)</span><a class="headerlink" href="#InnerAudioContext.offSeeked" title="永久链接至目标">¶</a></dt>
+<code class="descclassname">InnerAudioContext.</code><code class="descname">offSeeked</code><span class="sig-paren">(</span><em>callback</em><span class="sig-paren">)</span><a class="headerlink" href="#InnerAudioContext.offSeeked" title="永久链接至目标">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Label</dt>
 <dd class="field-odd"><p>取消监听音频完成跳转操作的事件</p>
 </dd>
+<dt class="field-even">参数</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>callback</strong> (<em>function</em>) – 音频完成跳转操作的事件的回调函数</p></li>
+</ul>
+</dd>
 </dl>
 </dd></dl>
 
-<p>支持格式</p>
-<table class="docutils align-center">
-<colgroup>
-<col style="width: 30%" />
-<col style="width: 25%" />
-<col style="width: 45%" />
-</colgroup>
+</div>
+<div class="section" id="id3">
+<h2>支持格式<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
+<table class="colwidths-auto docutils align-center" id="id5">
+<caption><span class="caption-text">支持格式</span><a class="headerlink" href="#id5" title="永久链接至表格">¶</a></caption>
 <thead>
 <tr class="row-odd"><th class="head"><p>格式</p></th>
 <th class="head"><p>iOS</p></th>
@@ -732,8 +829,20 @@
 </tbody>
 </table>
 </div>
-<div class="section" id="id3">
-<h2>示例代码<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
+<div class="section" id="id4">
+<h2>示例代码<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h2>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="kr">const</span> <span class="nx">innerAudioContext</span> <span class="o">=</span> <span class="nx">wx</span><span class="p">.</span><span class="nx">createInnerAudioContext</span><span class="p">()</span>
+<span class="nx">innerAudioContext</span><span class="p">.</span><span class="nx">autoplay</span> <span class="o">=</span> <span class="kc">true</span>
+<span class="nx">innerAudioContext</span><span class="p">.</span><span class="nx">src</span> <span class="o">=</span> <span class="s1">&#39;http://ws.stream.qqmusic.qq.com/M500001VfvsJ21xFqb.mp3?guid=ffffffff82def4af4b12b3cd9337d5e7&amp;uin=346897220&amp;vkey=6292F51E1E384E061FF02C31F716658E5C81F5594D561F2E88B854E81CAAB7806D5E4F103E55D33C16F3FAC506D1AB172DE8600B37E43FAD&amp;fromtag=46&#39;</span>
+<span class="nx">innerAudioContext</span><span class="p">.</span><span class="nx">onPlay</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;开始播放&#39;</span><span class="p">)</span>
+<span class="p">})</span>
+<span class="nx">innerAudioContext</span><span class="p">.</span><span class="nx">onError</span><span class="p">((</span><span class="nx">res</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">res</span><span class="p">.</span><span class="nx">errMsg</span><span class="p">)</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">res</span><span class="p">.</span><span class="nx">errCode</span><span class="p">)</span>
+<span class="p">})</span>
+</pre></div>
+</div>
 </div>
 </div>
 
@@ -745,10 +854,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="InnerAudioContext.destroy.html" class="btn btn-neutral float-right" title="InnerAudioContext.destroy" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="wx.stopBackgroundAudio.html" class="btn btn-neutral float-right" title="wx.stopBackgroundAudio" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="AudioContext.html" class="btn btn-neutral float-left" title="AudioContext" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="wx.getAvailableAudioSources.html" class="btn btn-neutral float-left" title="wx.getAvailableAudioSources" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

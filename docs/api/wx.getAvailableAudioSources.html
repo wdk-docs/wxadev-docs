@@ -36,8 +36,8 @@
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜索" href="../search.html" />
-    <link rel="next" title="wx.createInnerAudioContext" href="wx.createInnerAudioContext.html" />
-    <link rel="prev" title="wx.pauseVoice" href="wx.pauseVoice.html" /> 
+    <link rel="next" title="InnerAudioContext" href="InnerAudioContext.html" />
+    <link rel="prev" title="wx.setInnerAudioOption" href="wx.setInnerAudioOption.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -103,15 +103,9 @@
 <li class="toctree-l3"><a class="reference internal" href="index.html#id30">图片</a></li>
 <li class="toctree-l3"><a class="reference internal" href="index.html#id31">视频</a></li>
 <li class="toctree-l3 current"><a class="reference internal" href="index.html#id32">音频</a><ul class="current">
-<li class="toctree-l4"><a class="reference internal" href="wx.stopVoice.html">wx.stopVoice</a></li>
 <li class="toctree-l4"><a class="reference internal" href="wx.setInnerAudioOption.html">wx.setInnerAudioOption</a></li>
-<li class="toctree-l4"><a class="reference internal" href="wx.playVoice.html">wx.playVoice</a></li>
-<li class="toctree-l4"><a class="reference internal" href="wx.pauseVoice.html">wx.pauseVoice</a></li>
 <li class="toctree-l4 current"><a class="current reference internal" href="#">wx.getAvailableAudioSources</a></li>
-<li class="toctree-l4"><a class="reference internal" href="wx.createInnerAudioContext.html">wx.createInnerAudioContext</a></li>
-<li class="toctree-l4"><a class="reference internal" href="wx.createAudioContext.html">wx.createAudioContext</a></li>
-<li class="toctree-l4"><a class="reference internal" href="index.html#inneraudiocontext">InnerAudioContext</a></li>
-<li class="toctree-l4"><a class="reference internal" href="index.html#audiocontext">AudioContext</a></li>
+<li class="toctree-l4"><a class="reference internal" href="InnerAudioContext.html">InnerAudioContext</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="index.html#id33">背景音频</a></li>
@@ -213,11 +207,11 @@
 <dt class="field-odd">Label</dt>
 <dd class="field-odd"><p>获取当前支持的音频输入源</p>
 </dd>
-<dt class="field-even">Parameters</dt>
+<dt class="field-even">参数</dt>
 <dd class="field-even"><ul class="simple">
-<li><p><strong>success(res)</strong> (<em>function</em>) – <p>接口调用成功的回调函数</p>
+<li><p><strong>success({audioSources})</strong> (<em>function</em>) – <p>接口调用成功的回调函数</p>
 <ul>
-<li><p><strong>audioSources</strong> (<em>Array.&lt;string&gt;</em>) - 支持的音频输入源列表，可在 RecorderManager.start() 接口中使用。返回值定义参考 <a class="footnote-reference brackets" href="#l1" id="id1">1</a></p>
+<li><p><strong>audioSources</strong> (<em>Array.&lt;string&gt;</em>) - 支持的音频输入源列表，可在 <a class="reference internal" href="RecorderManager.start.html#RecorderManager.start" title="RecorderManager.start"><code class="xref js js-func docutils literal notranslate"><span class="pre">RecorderManager.start()</span></code></a> 接口中使用。返回值定义参考 <a class="footnote-reference brackets" href="#l1" id="id1">1</a></p>
 <ul>
 <li><p><strong>auto</strong> -     自动设置，默认使用手机麦克风，插上耳麦后自动切换使用耳机麦克风，所有平台适用</p></li>
 <li><p><strong>buildInMic</strong> -       手机麦克风，仅限 iOS</p></li>
@@ -252,10 +246,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="wx.createInnerAudioContext.html" class="btn btn-neutral float-right" title="wx.createInnerAudioContext" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="InnerAudioContext.html" class="btn btn-neutral float-right" title="InnerAudioContext" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="wx.pauseVoice.html" class="btn btn-neutral float-left" title="wx.pauseVoice" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="wx.setInnerAudioOption.html" class="btn btn-neutral float-left" title="wx.setInnerAudioOption" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

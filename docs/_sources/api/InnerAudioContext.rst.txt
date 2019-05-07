@@ -1,7 +1,7 @@
 :wxapi:`InnerAudioContext`
 ============================================
 
-.. js:function:: wx.createInnerAudioContext()
+.. function:: wx.createInnerAudioContext()
 
    .. versionadded:: 1.6.0 低版本需做 :ref:`compatibility` 。
 
@@ -9,41 +9,40 @@
 
    :return: :class:`InnerAudioContext`
 
+.. class:: InnerAudioContext
+
+   InnerAudioContext 实例，可通过 :func:`wx.createInnerAudioContext` 接口获取实例。
 
 属性
 --------
 
-.. js:class:: InnerAudioContext
-
-   InnerAudioContext 实例，可通过 :js:func:`wx.createInnerAudioContext` 接口获取实例。
-
-.. js:attribute:: InnerAudioContext.src
+.. attribute:: InnerAudioContext.src
 
    :label: 音频资源的地址，用于直接播放
    :rtype: string
 
    .. versionadded:: 2.2.3 开始支持云文件ID
 
-.. js:attribute:: InnerAudioContext.startTime
+.. attribute:: InnerAudioContext.startTime
 
    :label: 开始播放的位置
    :rtype: number
    :unit: s(秒)
    :default: 0
 
-.. js:attribute:: InnerAudioContext.autoplay
+.. attribute:: InnerAudioContext.autoplay
 
    :label: 是否自动开始播放
    :rtype: boolean
    :default: false
 
-.. js:attribute:: InnerAudioContext.loop
+.. attribute:: InnerAudioContext.loop
 
    :label: 是否循环播放
    :rtype: boolean
    :default: false
 
-.. js:attribute:: InnerAudioContext.obeyMuteSwitch
+.. attribute:: InnerAudioContext.obeyMuteSwitch
 
    :label: 是否遵循系统静音开关
    :rtype: boolean
@@ -52,14 +51,14 @@
 
           .. deprecated:: 2.3.0 使用 wx.setInnerAudioOption 接口统一设置。
 
-.. js:attribute:: InnerAudioContext.volume
+.. attribute:: InnerAudioContext.volume
 
    :label: 音量。范围 0~1。
    :rtype: number
    :default: 1
    :note: .. versionadded:: 1.9.90 低版本需做 :ref:`compatibility` 。
 
-.. js:attribute:: InnerAudioContext.duration
+.. attribute:: InnerAudioContext.duration
 
    :label: 当前音频的长度
    :premise: 只有在当前有合法的 src 时返回
@@ -67,7 +66,7 @@
    :unit: s(秒)
    :readonly: true
 
-.. js:attribute:: InnerAudioContext.currentTime
+.. attribute:: InnerAudioContext.currentTime
 
    :label: 当前音频的播放位置,时间保留小数点后 6 位
    :premise: 只有在当前有合法的 src 时返回
@@ -75,13 +74,13 @@
    :unit: s(秒)
    :readonly: true
 
-.. js:attribute:: InnerAudioContext.paused
+.. attribute:: InnerAudioContext.paused
 
    :label: 当前是是否暂停或停止状态
    :rtype: boolean
    :readonly: true
 
-.. js:attribute:: InnerAudioContext.buffered
+.. attribute:: InnerAudioContext.buffered
 
    :label: 音频缓冲的时间点，仅保证当前播放时间点到此时间点内容已缓冲
    :rtype: number
@@ -90,140 +89,167 @@
 方法
 -------
 
-.. js:function:: InnerAudioContext.play()
+.. function:: InnerAudioContext.play()
 
    :label: 播放
 
-.. js:function:: InnerAudioContext.pause()
+.. function:: InnerAudioContext.pause()
 
    :label: 暂停。暂停后的音频再播放会从暂停处开始播放
 
-.. js:function:: InnerAudioContext.stop()
+.. function:: InnerAudioContext.stop()
 
    :label: 停止。停止后的音频再播放会从头开始播放。
 
-.. js:function:: InnerAudioContext.seek(number position)
+.. function:: InnerAudioContext.seek(position)
 
    :label: 跳转到指定位置
+   :param number position: 跳转的时间，单位 s。精确到小数点后 3 位，即支持 ms 级别精确度
 
-.. js:function:: InnerAudioContext.destroy()
+.. function:: InnerAudioContext.destroy()
 
    :label: 销毁当前实例
 
-.. js:function:: InnerAudioContext.onCanplay(function callback)
+.. function:: InnerAudioContext.onCanplay(callback)
 
    :label: 监听音频进入可以播放状态的事件。但不保证后面可以流畅播放
+   :param function callback: 音频进入可以播放状态的事件的回调函数
 
-.. js:function:: InnerAudioContext.offCanplay(function callback)
+.. function:: InnerAudioContext.offCanplay(callback)
 
    :label: 取消监听音频进入可以播放状态的事件
+   :param function callback: 音频进入可以播放状态的事件的回调函数
 
-.. js:function:: InnerAudioContext.onPlay(function callback)
+.. function:: InnerAudioContext.onPlay(callback)
 
    :label: 监听音频播放事件
+   :param function callback: 音频播放事件的回调函数
 
-.. js:function:: InnerAudioContext.offPlay(function callback)
+.. function:: InnerAudioContext.offPlay(callback)
 
    :label: 取消监听音频播放事件
+   :param function callback: 音频播放事件的回调函数
 
-.. js:function:: InnerAudioContext.onPause(function callback)
+.. function:: InnerAudioContext.onPause(callback)
 
    :label: 监听音频暂停事件
+   :param function callback: 音频暂停事件的回调函数
 
-.. js:function:: InnerAudioContext.offPause(function callback)
+.. function:: InnerAudioContext.offPause(callback)
 
    :label: 取消监听音频暂停事件
+   :param function callback: 音频暂停事件的回调函数
 
-.. js:function:: InnerAudioContext.onStop(function callback)
+.. function:: InnerAudioContext.onStop(callback)
 
    :label: 监听音频停止事件
+   :param function callback: 音频停止事件的回调函数
 
-.. js:function:: InnerAudioContext.offStop(function callback)
+.. function:: InnerAudioContext.offStop(callback)
 
    :label: 取消监听音频停止事件
+   :param function callback: 音频停止事件的回调函数
 
-.. js:function:: InnerAudioContext.onEnded(function callback)
+.. function:: InnerAudioContext.onEnded(callback)
 
    :label: 监听音频自然播放至结束的事件
+   :param function callback: 音频自然播放至结束的事件的回调函数
 
-.. js:function:: InnerAudioContext.offEnded(function callback)
+.. function:: InnerAudioContext.offEnded(callback)
 
    :label: 取消监听音频自然播放至结束的事件
+   :param function callback: 音频自然播放至结束的事件的回调函数
 
-.. js:function:: InnerAudioContext.onTimeUpdate(function callback)
+.. function:: InnerAudioContext.onTimeUpdate(callback)
 
    :label: 监听音频播放进度更新事件
+   :param function callback: 音频播放进度更新事件的回调函数
 
-.. js:function:: InnerAudioContext.offTimeUpdate(function callback)
+.. function:: InnerAudioContext.offTimeUpdate(callback)
 
    :label: 取消监听音频播放进度更新事件
+   :param function callback: 音频播放进度更新事件的回调函数
 
-.. js:function:: InnerAudioContext.onError(function callback)
+.. function:: InnerAudioContext.onError(callback)
 
    :label: 监听音频播放错误事件
+   :param function callback: 
 
-.. js:function:: InnerAudioContext.offError(function callback)
+.. function:: InnerAudioContext.offError(callback)
 
    :label: 取消监听音频播放错误事件
+   :param function callback: 音频播放错误事件的回调函数
 
-.. js:function:: InnerAudioContext.onWaiting(function callback)
+.. function:: InnerAudioContext.onWaiting(callback)
 
    :label: 监听音频加载中事件。当音频因为数据不足，需要停下来加载时会触发
+   :param function callback: 音频加载中事件的回调函数
 
-.. js:function:: InnerAudioContext.offWaiting(function callback)
+.. function:: InnerAudioContext.offWaiting(callback)
 
    :label: 取消监听音频加载中事件
+   :param function callback: 音频加载中事件的回调函数
 
-.. js:function:: InnerAudioContext.onSeeking(function callback)
+.. function:: InnerAudioContext.onSeeking(callback)
 
    :label: 监听音频进行跳转操作的事件
+   :param function callback: 
 
-.. js:function:: InnerAudioContext.offSeeking(function callback)
+.. function:: InnerAudioContext.offSeeking(callback)
 
    :label: 取消监听音频进行跳转操作的事件
+   :param function callback: 音频进行跳转操作的事件的回调函数
 
-.. js:function:: InnerAudioContext.onSeeked(function callback)
+.. function:: InnerAudioContext.onSeeked(callback)
 
    :label: 监听音频完成跳转操作的事件
+   :param function callback: 
 
-.. js:function:: InnerAudioContext.offSeeked(function callback)
+.. function:: InnerAudioContext.offSeeked(callback)
 
    :label: 取消监听音频完成跳转操作的事件
+   :param function callback: 音频完成跳转操作的事件的回调函数
+
 
 支持格式
+-----------
 
-+------+-----+---------+
-| 格式 | iOS | Android |
-+======+=====+=========+
-| flac | x   | √       |
-+------+-----+---------+
-| m4a  | √   | √       |
-+------+-----+---------+
-| ogg  | x   | √       |
-+------+-----+---------+
-| ape  | x   | √       |
-+------+-----+---------+
-| amr  | x   | √       |
-+------+-----+---------+
-| wma  | x   | √       |
-+------+-----+---------+
-| wav  | √   | √       |
-+------+-----+---------+
-| mp3  | √   | √       |
-+------+-----+---------+
-| mp4  | x   | √       |
-+------+-----+---------+
-| aac  | √   | √       |
-+------+-----+---------+
-| aiff | √   | x       |
-+------+-----+---------+
-| caf  | √   | x       |
-+------+-----+---------+
+.. table:: 支持格式
+    :widths: auto
+    :align: center
+
+    +------+-----+---------+
+    | 格式 | iOS | Android |
+    +======+=====+=========+
+    | flac | x   | √       |
+    +------+-----+---------+
+    | m4a  | √   | √       |
+    +------+-----+---------+
+    | ogg  | x   | √       |
+    +------+-----+---------+
+    | ape  | x   | √       |
+    +------+-----+---------+
+    | amr  | x   | √       |
+    +------+-----+---------+
+    | wma  | x   | √       |
+    +------+-----+---------+
+    | wav  | √   | √       |
+    +------+-----+---------+
+    | mp3  | √   | √       |
+    +------+-----+---------+
+    | mp4  | x   | √       |
+    +------+-----+---------+
+    | aac  | √   | √       |
+    +------+-----+---------+
+    | aiff | √   | x       |
+    +------+-----+---------+
+    | caf  | √   | x       |
+    +------+-----+---------+
 
 示例代码
 -----------
 
-.. code::js
+.. code:: js
 
   const innerAudioContext = wx.createInnerAudioContext()
   innerAudioContext.autoplay = true

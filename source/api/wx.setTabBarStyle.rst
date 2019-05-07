@@ -1,2 +1,2 @@
-:wxapi:`wx.createWorker`
+:wxapi:`wx.setTabBarStyle`
 ============================================

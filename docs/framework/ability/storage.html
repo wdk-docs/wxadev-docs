@@ -198,10 +198,20 @@
            <div itemprop="articleBody">
             
   <div class="section" id="id1">
-<h1>存储<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
-<p>每个微信小程序都可以有自己的本地缓存，可以通过 wx.setStorage/wx.setStorageSync、wx.getStorage/wx.getStorageSync、wx.clearStorage/wx.clearStorageSync，wx.removeStorage/wx.removeStorageSync 对本地缓存进行读写和清理。</p>
+<h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/framework/ability/storage.html">存储</a><a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
+<p>每个微信小程序都可以有自己的本地缓存，
+可以通过
+<a class="reference internal" href="../../api/wx.setStorage.html#wx.setStorage" title="wx.setStorage"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.setStorage()</span></code></a> / <a class="reference internal" href="../../api/wx.setStorageSync.html#wx.setStorageSync" title="wx.setStorageSync"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.setStorageSync()</span></code></a> 、
+<a class="reference internal" href="../../api/wx.getStorage.html#wx.getStorage" title="wx.getStorage"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.getStorage()</span></code></a> / <a class="reference internal" href="../../api/wx.getStorageSync.html#wx.getStorageSync" title="wx.getStorageSync"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.getStorageSync()</span></code></a> 、
+<a class="reference internal" href="../../api/wx.clearStorage.html#wx.clearStorage" title="wx.clearStorage"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.clearStorage()</span></code></a> / <a class="reference internal" href="../../api/wx.clearStorageSync.html#wx.clearStorageSync" title="wx.clearStorageSync"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.clearStorageSync()</span></code></a> ，
+<a class="reference internal" href="../../api/wx.removeStorage.html#wx.removeStorage" title="wx.removeStorage"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.removeStorage()</span></code></a>/ <a class="reference internal" href="../../api/wx.removeStorageSync.html#wx.removeStorageSync" title="wx.removeStorageSync"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.removeStorageSync()</span></code></a>
+对本地缓存进行读写和清理。</p>
 <p>同一个微信用户，同一个小程序 storage 上限为 10MB。storage 以用户维度隔离，同一台设备上，A 用户无法读取到 B 用户的数据。</p>
-<p>注意： 如果用户储存空间不足，我们会清空最近最久未使用的小程序的本地缓存。我们不建议将关键信息全部存在 storage，以防储存空间不足或用户换设备的情况。</p>
+<div class="admonition attention">
+<p class="admonition-title">注意</p>
+<p>如果用户储存空间不足，我们会清空最近最久未使用的小程序的本地缓存。
+我们不建议将关键信息全部存在 storage，以防储存空间不足或用户换设备的情况。</p>
+</div>
 </div>
 
 

@@ -1,12 +1,43 @@
-框架接口
+框架接口说明
 ============
 
+小程序 App
+-----------------
+
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 3
    :glob:
 
-   app
-   page
+   App
+   getApp
+
+页面
+-----------------
+
+.. toctree::
+   :maxdepth: 3
+   :glob:
+
+   Page
+   getCurrentPages
+
+自定义组件
+-----------------
+
+.. toctree::
+   :maxdepth: 3
+   :glob:
+
+   Component
+   Behavior
+
+其它
+-----------------
+
+.. toctree::
+   :maxdepth: 3
+   :glob:
+
    module
    wx
    console

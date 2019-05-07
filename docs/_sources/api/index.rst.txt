@@ -255,27 +255,29 @@ LogManager
 +============================+=====================+
 | :func:`wx.showToast`       | 显示消息提示框      |
 +----------------------------+---------------------+
-| :func:`wx.showModal`       | 显示模态对话框      |
+| :func:`wx.hideToast`       | 隐藏消息提示框      |
 +----------------------------+---------------------+
 | :func:`wx.showLoading`     | 显示 loading 提示框 |
 +----------------------------+---------------------+
-| :func:`wx.showActionSheet` | 显示操作菜单        |
-+----------------------------+---------------------+
-| :func:`wx.hideToast`       | 隐藏消息提示框      |
-+----------------------------+---------------------+
 | :func:`wx.hideLoading`     | 隐藏 loading 提示框 |
 +----------------------------+---------------------+
+| :func:`wx.showModal`       | 显示模态对话框      |
++----------------------------+---------------------+
+| :func:`wx.showActionSheet` | 显示操作菜单        |
++----------------------------+---------------------+
+
+
 
 .. toctree::
    :maxdepth: 1
    :hidden:
 
    wx.showToast
-   wx.showModal
-   wx.showLoading
-   wx.showActionSheet
    wx.hideToast
+   wx.showLoading
    wx.hideLoading
+   wx.showModal
+   wx.showActionSheet
 
 导航栏
 ~~~~~~~~~~
@@ -1014,150 +1016,151 @@ VideoContext
 音频
 ~~~~~~~~~~~~~~~~~~
 
-+-------------------------------------+----------------------------------------------+
-|                名称                 |                   功能说明                   |
-+=====================================+==============================================+
-| :func:`wx.stopVoice`                | 结束播放语音                                 |
-+-------------------------------------+----------------------------------------------+
-| :func:`wx.setInnerAudioOption`      | 设置 InnerAudioContext 的播放选项            |
-+-------------------------------------+----------------------------------------------+
-| :func:`wx.playVoice`                | 开始播放语音                                 |
-+-------------------------------------+----------------------------------------------+
-| :func:`wx.pauseVoice`               | 暂停正在播放的语音                           |
-+-------------------------------------+----------------------------------------------+
-| :func:`wx.getAvailableAudioSources` | 获取当前支持的音频输入源                     |
-+-------------------------------------+----------------------------------------------+
-| :func:`wx.createInnerAudioContext`  | 创建内部 audio 上下文 InnerAudioContext 对象 |
-+-------------------------------------+----------------------------------------------+
-| :func:`wx.createAudioContext`       | 创建 audio 上下文 AudioContext 对象          |
-+-------------------------------------+----------------------------------------------+
+.. +-------------------------------+-------------------------------------+
+.. |             名称              |              功能说明               |
+.. +===============================+=====================================+
+.. | :func:`wx.stopVoice`          | 结束播放语音                        |
+.. +-------------------------------+-------------------------------------+
+.. | :func:`wx.playVoice`          | 开始播放语音                        |
+.. +-------------------------------+-------------------------------------+
+.. | :func:`wx.pauseVoice`         | 暂停正在播放的语音                  |
+.. +-------------------------------+-------------------------------------+
+.. | :func:`wx.createAudioContext` | 创建 audio 上下文 AudioContext 对象 |
+.. +-------------------------------+-------------------------------------+
+
+
+.. .. toctree::
+..    :maxdepth: 1
+..    :hidden:
+
+..    wx.stopVoice
+..    wx.playVoice
+..    wx.pauseVoice
+..    wx.createAudioContext
+
+
+.. InnerAudioContext
+.. ^^^^^^^^^^^^^^^^^^^^^
+
++-----------------------------------------+----------------------------------------------+
+|                  名称                   |                   功能说明                   |
++=========================================+==============================================+
+| :func:`wx.getAvailableAudioSources`     | 获取当前支持的音频输入源                     |
++-----------------------------------------+----------------------------------------------+
+| :func:`wx.createInnerAudioContext`      | 创建内部 audio 上下文 InnerAudioContext 对象 |
++-----------------------------------------+----------------------------------------------+
+| :func:`wx.setInnerAudioOption`          | 设置 InnerAudioContext 的播放选项            |
++-----------------------------------------+----------------------------------------------+
+| :func:`InnerAudioContext.destroy`       | 销毁当前实例                                 |
++-----------------------------------------+----------------------------------------------+
+| :func:`InnerAudioContext.offCanplay`    | 取消监听音频进入可以播放状态的事件           |
++-----------------------------------------+----------------------------------------------+
+| :func:`InnerAudioContext.offEnded`      | 取消监听音频自然播放至结束的事件             |
++-----------------------------------------+----------------------------------------------+
+| :func:`InnerAudioContext.offError`      | 取消监听音频播放错误事件                     |
++-----------------------------------------+----------------------------------------------+
+| :func:`InnerAudioContext.offPause`      | 取消监听音频暂停事件                         |
++-----------------------------------------+----------------------------------------------+
+| :func:`InnerAudioContext.offPlay`       | 取消监听音频播放事件                         |
++-----------------------------------------+----------------------------------------------+
+| :func:`InnerAudioContext.offSeeked`     | 取消监听音频完成跳转操作的事件               |
++-----------------------------------------+----------------------------------------------+
+| :func:`InnerAudioContext.offSeeking`    | 取消监听音频进行跳转操作的事件               |
++-----------------------------------------+----------------------------------------------+
+| :func:`InnerAudioContext.offStop`       | 取消监听音频停止事件                         |
++-----------------------------------------+----------------------------------------------+
+| :func:`InnerAudioContext.offTimeUpdate` | 取消监听音频播放进度更新事件                 |
++-----------------------------------------+----------------------------------------------+
+| :func:`InnerAudioContext.offWaiting`    | 取消监听音频加载中事件                       |
++-----------------------------------------+----------------------------------------------+
+| :func:`InnerAudioContext.onCanplay`     | 监听音频进入可以播放状态的事件               |
++-----------------------------------------+----------------------------------------------+
+| :func:`InnerAudioContext.onEnded`       | 监听音频自然播放至结束的事件                 |
++-----------------------------------------+----------------------------------------------+
+| :func:`InnerAudioContext.onError`       | 监听音频播放错误事件                         |
++-----------------------------------------+----------------------------------------------+
+| :func:`InnerAudioContext.onPause`       | 监听音频暂停事件                             |
++-----------------------------------------+----------------------------------------------+
+| :func:`InnerAudioContext.onPlay`        | 监听音频播放事件                             |
++-----------------------------------------+----------------------------------------------+
+| :func:`InnerAudioContext.onSeeked`      | 监听音频完成跳转操作的事件                   |
++-----------------------------------------+----------------------------------------------+
+| :func:`InnerAudioContext.onSeeking`     | 监听音频进行跳转操作的事件                   |
++-----------------------------------------+----------------------------------------------+
+| :func:`InnerAudioContext.onStop`        | 监听音频停止事件                             |
++-----------------------------------------+----------------------------------------------+
+| :func:`InnerAudioContext.onTimeUpdate`  | 监听音频播放进度更新事件                     |
++-----------------------------------------+----------------------------------------------+
+| :func:`InnerAudioContext.onWaiting`     | 监听音频加载中事件                           |
++-----------------------------------------+----------------------------------------------+
+| :func:`InnerAudioContext.pause`         | 暂停                                         |
++-----------------------------------------+----------------------------------------------+
+| :func:`InnerAudioContext.play`          | 播放                                         |
++-----------------------------------------+----------------------------------------------+
+| :func:`InnerAudioContext.seek`          | 跳转到指定位置                               |
++-----------------------------------------+----------------------------------------------+
+| :func:`InnerAudioContext.stop`          | 停止                                         |
++-----------------------------------------+----------------------------------------------+
 
 .. toctree::
    :maxdepth: 1
    :hidden:
 
-   wx.stopVoice
    wx.setInnerAudioOption
-   wx.playVoice
-   wx.pauseVoice
    wx.getAvailableAudioSources
-   wx.createInnerAudioContext
-   wx.createAudioContext
-
-InnerAudioContext
-^^^^^^^^^^^^^^^^^^^^^
-
-+-----------------------------------------+------------------------------------+
-|                  名称                   |              功能说明              |
-+=========================================+====================================+
-| :func:`InnerAudioContext.destroy`       | 销毁当前实例                       |
-+-----------------------------------------+------------------------------------+
-| :func:`InnerAudioContext.offCanplay`    | 取消监听音频进入可以播放状态的事件 |
-+-----------------------------------------+------------------------------------+
-| :func:`InnerAudioContext.offEnded`      | 取消监听音频自然播放至结束的事件   |
-+-----------------------------------------+------------------------------------+
-| :func:`InnerAudioContext.offError`      | 取消监听音频播放错误事件           |
-+-----------------------------------------+------------------------------------+
-| :func:`InnerAudioContext.offPause`      | 取消监听音频暂停事件               |
-+-----------------------------------------+------------------------------------+
-| :func:`InnerAudioContext.offPlay`       | 取消监听音频播放事件               |
-+-----------------------------------------+------------------------------------+
-| :func:`InnerAudioContext.offSeeked`     | 取消监听音频完成跳转操作的事件     |
-+-----------------------------------------+------------------------------------+
-| :func:`InnerAudioContext.offSeeking`    | 取消监听音频进行跳转操作的事件     |
-+-----------------------------------------+------------------------------------+
-| :func:`InnerAudioContext.offStop`       | 取消监听音频停止事件               |
-+-----------------------------------------+------------------------------------+
-| :func:`InnerAudioContext.offTimeUpdate` | 取消监听音频播放进度更新事件       |
-+-----------------------------------------+------------------------------------+
-| :func:`InnerAudioContext.offWaiting`    | 取消监听音频加载中事件             |
-+-----------------------------------------+------------------------------------+
-| :func:`InnerAudioContext.onCanplay`     | 监听音频进入可以播放状态的事件     |
-+-----------------------------------------+------------------------------------+
-| :func:`InnerAudioContext.onEnded`       | 监听音频自然播放至结束的事件       |
-+-----------------------------------------+------------------------------------+
-| :func:`InnerAudioContext.onError`       | 监听音频播放错误事件               |
-+-----------------------------------------+------------------------------------+
-| :func:`InnerAudioContext.onPause`       | 监听音频暂停事件                   |
-+-----------------------------------------+------------------------------------+
-| :func:`InnerAudioContext.onPlay`        | 监听音频播放事件                   |
-+-----------------------------------------+------------------------------------+
-| :func:`InnerAudioContext.onSeeked`      | 监听音频完成跳转操作的事件         |
-+-----------------------------------------+------------------------------------+
-| :func:`InnerAudioContext.onSeeking`     | 监听音频进行跳转操作的事件         |
-+-----------------------------------------+------------------------------------+
-| :func:`InnerAudioContext.onStop`        | 监听音频停止事件                   |
-+-----------------------------------------+------------------------------------+
-| :func:`InnerAudioContext.onTimeUpdate`  | 监听音频播放进度更新事件           |
-+-----------------------------------------+------------------------------------+
-| :func:`InnerAudioContext.onWaiting`     | 监听音频加载中事件                 |
-+-----------------------------------------+------------------------------------+
-| :func:`InnerAudioContext.pause`         | 暂停                               |
-+-----------------------------------------+------------------------------------+
-| :func:`InnerAudioContext.play`          | 播放                               |
-+-----------------------------------------+------------------------------------+
-| :func:`InnerAudioContext.seek`          | 跳转到指定位置                     |
-+-----------------------------------------+------------------------------------+
-| :func:`InnerAudioContext.stop`          | 停止                               |
-+-----------------------------------------+------------------------------------+
-
-.. toctree::
-   :maxdepth: 1
-   :hidden:
-
-   AudioContext
    InnerAudioContext
-   InnerAudioContext.destroy
-   InnerAudioContext.offCanplay
-   InnerAudioContext.offEnded
-   InnerAudioContext.offError
-   InnerAudioContext.offPause
-   InnerAudioContext.offPlay
-   InnerAudioContext.offSeeked
-   InnerAudioContext.offSeeking
-   InnerAudioContext.offStop
-   InnerAudioContext.offTimeUpdate
-   InnerAudioContext.offWaiting
-   InnerAudioContext.onCanplay
-   InnerAudioContext.onEnded
-   InnerAudioContext.onError
-   InnerAudioContext.onPause
-   InnerAudioContext.onPlay
-   InnerAudioContext.onSeeked
-   InnerAudioContext.onSeeking
-   InnerAudioContext.onStop
-   InnerAudioContext.onTimeUpdate
-   InnerAudioContext.onWaiting
-   InnerAudioContext.pause
-   InnerAudioContext.play
-   InnerAudioContext.seek
-   InnerAudioContext.stop
+
+..    InnerAudioContext.destroy
+..    InnerAudioContext.offCanplay
+..    InnerAudioContext.offEnded
+..    InnerAudioContext.offError
+..    InnerAudioContext.offPause
+..    InnerAudioContext.offPlay
+..    InnerAudioContext.offSeeked
+..    InnerAudioContext.offSeeking
+..    InnerAudioContext.offStop
+..    InnerAudioContext.offTimeUpdate
+..    InnerAudioContext.offWaiting
+..    InnerAudioContext.onCanplay
+..    InnerAudioContext.onEnded
+..    InnerAudioContext.onError
+..    InnerAudioContext.onPause
+..    InnerAudioContext.onPlay
+..    InnerAudioContext.onSeeked
+..    InnerAudioContext.onSeeking
+..    InnerAudioContext.onStop
+..    InnerAudioContext.onTimeUpdate
+..    InnerAudioContext.onWaiting
+..    InnerAudioContext.pause
+..    InnerAudioContext.play
+..    InnerAudioContext.seek
+..    InnerAudioContext.stop
 
 
-AudioContext
-^^^^^^^^^^^^^^^^^
+.. AudioContext
+.. ^^^^^^^^^^^^^^^^^
 
-+-----------------------------+----------------+
-|            名称             |    功能说明    |
-+=============================+================+
-| :func:`AudioContext.pause`  | 暂停音频       |
-+-----------------------------+----------------+
-| :func:`AudioContext.play`   | 播放音频       |
-+-----------------------------+----------------+
-| :func:`AudioContext.seek`   | 跳转到指定位置 |
-+-----------------------------+----------------+
-| :func:`AudioContext.setSrc` | 设置音频地址   |
-+-----------------------------+----------------+
+.. +-----------------------------+----------------+
+.. |            名称             |    功能说明    |
+.. +=============================+================+
+.. | :func:`AudioContext.pause`  | 暂停音频       |
+.. +-----------------------------+----------------+
+.. | :func:`AudioContext.play`   | 播放音频       |
+.. +-----------------------------+----------------+
+.. | :func:`AudioContext.seek`   | 跳转到指定位置 |
+.. +-----------------------------+----------------+
+.. | :func:`AudioContext.setSrc` | 设置音频地址   |
+.. +-----------------------------+----------------+
 
-.. toctree::
-   :maxdepth: 1
-   :hidden:
+.. .. toctree::
+..    :maxdepth: 1
+..    :hidden:
 
-   AudioContext
-   AudioContext.pause
-   AudioContext.play
-   AudioContext.seek
-   AudioContext.setSrc
+..    AudioContext
+..    AudioContext.pause
+..    AudioContext.play
+..    AudioContext.seek
+..    AudioContext.setSrc
 
 背景音频
 ~~~~~~~~~
@@ -1197,9 +1200,6 @@ AudioContext
    wx.onBackgroundAudioPause
    wx.getBackgroundAudioPlayerState
    wx.getBackgroundAudioManager
-
-BackgroundAudioManager
-^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 +---------------------------------------------+---------------------------------------------------+
 |                    名称                     |                     功能说明                      |
@@ -1242,22 +1242,6 @@ BackgroundAudioManager
    :hidden:
 
    BackgroundAudioManager
-   BackgroundAudioManager.onCanplay
-   BackgroundAudioManager.onEnded
-   BackgroundAudioManager.onError
-   BackgroundAudioManager.onNext
-   BackgroundAudioManager.onPause
-   BackgroundAudioManager.onPlay
-   BackgroundAudioManager.onPrev
-   BackgroundAudioManager.onSeeked
-   BackgroundAudioManager.onSeeking
-   BackgroundAudioManager.onStop
-   BackgroundAudioManager.onTimeUpdate
-   BackgroundAudioManager.onWaiting
-   BackgroundAudioManager.pause
-   BackgroundAudioManager.play
-   BackgroundAudioManager.seek
-   BackgroundAudioManager.stop
 
 实时音视频
 ~~~~~~~~~~~~~~~~~~

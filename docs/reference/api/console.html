@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>console &mdash; wxadev 1.0.0 文档</title>
+  <title>打印日志(console) &mdash; wxadev 1.0.0 文档</title>
   
 
   
@@ -37,7 +37,7 @@
     <link rel="index" title="索引" href="../../genindex.html" />
     <link rel="search" title="搜索" href="../../search.html" />
     <link rel="next" title="定时器" href="timer.html" />
-    <link rel="prev" title="wx" href="wx.html" /> 
+    <link rel="prev" title="小程序 API 全局对象(wx)" href="wx.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -94,23 +94,17 @@
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">参考资料</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../configuration/index.html">小程序配置</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../scene.html">场景值列表</a></li>
-<li class="toctree-l2 current"><a class="reference internal" href="index.html">框架接口</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="app.html">小程序 App</a></li>
-<li class="toctree-l3"><a class="reference internal" href="page.html">页面</a></li>
-<li class="toctree-l3"><a class="reference internal" href="module.html">模块化</a></li>
-<li class="toctree-l3"><a class="reference internal" href="wx.html">wx</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">console</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#console-groupend">console.groupEnd()</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#console-debug">console.debug()</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#console-error">console.error()</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#console-group-string-label">console.group(string label)</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id1">console.groupEnd()</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#console-info">console.info()</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#console-log">console.log()</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#console-warn">console.warn()</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">框架接口说明</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="index.html#app">小程序 App</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#id2">页面</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#id3">自定义组件</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html#id4">其它</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="module.html">模块化</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wx.html">小程序 API 全局对象(wx)</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">打印日志(console)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="timer.html">定时器</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="timer.html">定时器</a></li>
 </ul>
 </li>
 </ul>
@@ -166,9 +160,9 @@
         
           <li><a href="../index.html">参考资料</a> &raquo;</li>
         
-          <li><a href="index.html">框架接口</a> &raquo;</li>
+          <li><a href="index.html">框架接口说明</a> &raquo;</li>
         
-      <li>console</li>
+      <li>打印日志(console)</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -188,66 +182,111 @@
            <div itemprop="articleBody">
             
   <div class="section" id="console">
-<h1>console<a class="headerlink" href="#console" title="永久链接至标题">¶</a></h1>
-<p>向调试面板中打印日志。console 是一个全局对象，可以直接访问。在微信客户端中，向 vConsole 中输出日志。</p>
-<div class="section" id="console-groupend">
-<h2>console.groupEnd()<a class="headerlink" href="#console-groupend" title="永久链接至标题">¶</a></h2>
-<p>结束由 console.group 创建的分组</p>
+<h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/reference/api/console.html">打印日志(console)</a><a class="headerlink" href="#console" title="永久链接至标题">¶</a></h1>
+<dl class="class">
+<dt>
+<em class="property">class </em><code class="descname">console</code><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>向调试面板中打印日志。console 是一个全局对象，可以直接访问。在微信客户端中，向 vConsole 中输出日志。</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="console.debug">
+<code class="descclassname">console.</code><code class="descname">debug</code><span class="sig-paren">(</span><em>...args</em><span class="sig-paren">)</span><a class="headerlink" href="#console.debug" title="永久链接至目标">¶</a></dt>
+<dd><p>向调试面板中打印 debug 日志</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>...args</strong> (<em>any</em>) – 日志内容，可以有任意多个。</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="console.error">
+<code class="descclassname">console.</code><code class="descname">error</code><span class="sig-paren">(</span><em>...args</em><span class="sig-paren">)</span><a class="headerlink" href="#console.error" title="永久链接至目标">¶</a></dt>
+<dd><p>向调试面板中打印 error 日志</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>...args</strong> (<em>any</em>) – 日志内容，可以有任意多个。</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="console.info">
+<code class="descclassname">console.</code><code class="descname">info</code><span class="sig-paren">(</span><em>...args</em><span class="sig-paren">)</span><a class="headerlink" href="#console.info" title="永久链接至目标">¶</a></dt>
+<dd><p>向调试面板中打印 info 日志</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>...args</strong> (<em>any</em>) – 日志内容，可以有任意多个。</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="console.log">
+<code class="descclassname">console.</code><code class="descname">log</code><span class="sig-paren">(</span><em>..args</em><span class="sig-paren">)</span><a class="headerlink" href="#console.log" title="永久链接至目标">¶</a></dt>
+<dd><p>向调试面板中打印 log 日志</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>...args</strong> (<em>any</em>) – 日志内容，可以有任意多个。</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="console.warn">
+<code class="descclassname">console.</code><code class="descname">warn</code><span class="sig-paren">(</span><em>...args</em><span class="sig-paren">)</span><a class="headerlink" href="#console.warn" title="永久链接至目标">¶</a></dt>
+<dd><p>向调试面板中打印 warn 日志</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>...args</strong> (<em>any</em>) – 日志内容，可以有任意多个。</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="console.group">
+<code class="descclassname">console.</code><code class="descname">group</code><span class="sig-paren">(</span><em>label</em><span class="sig-paren">)</span><a class="headerlink" href="#console.group" title="永久链接至目标">¶</a></dt>
+<dd><p>在调试面板中创建一个新的分组。随后输出的内容都会被添加一个缩进，表示该内容属于当前分组。调用 console.groupEnd之后分组结束。</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>label</strong> (<em>string</em>) – 分组标记，可选。</p></li>
+</ul>
+</dd>
+</dl>
 <div class="admonition attention">
 <p class="admonition-title">注意</p>
-<p>由于 vConsole 功能有限，以及不同客户端对 console 方法的支持情况有差异，建议开发者在小程序中只使用本文档中提供的方法。
-部分内容展示的限制请参见调试</p>
+<p>仅在工具中有效，在 vConsole 中为空函数实现。</p>
 </div>
+</dd></dl>
+
+<dl class="function">
+<dt id="console.groupEnd">
+<code class="descclassname">console.</code><code class="descname">groupEnd</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#console.groupEnd" title="永久链接至目标">¶</a></dt>
+<dd><p>结束由 console.group 创建的分组</p>
+<div class="admonition attention">
+<p class="admonition-title">注意</p>
+<p>仅在工具中有效，在 vConsole 中为空函数实现。</p>
 </div>
-<div class="section" id="console-debug">
-<h2>console.debug()<a class="headerlink" href="#console-debug" title="永久链接至标题">¶</a></h2>
-<p>向调试面板中打印 debug 日志</p>
-<p>参数
-any …args
-日志内容，可以有任意多个。</p>
-</div>
-<div class="section" id="console-error">
-<h2>console.error()<a class="headerlink" href="#console-error" title="永久链接至标题">¶</a></h2>
-<p>向调试面板中打印 error 日志</p>
-<p>参数
-any …args
-日志内容，可以有任意多个。</p>
-</div>
-<div class="section" id="console-group-string-label">
-<h2>console.group(string label)<a class="headerlink" href="#console-group-string-label" title="永久链接至标题">¶</a></h2>
-<p>在调试面板中创建一个新的分组。随后输出的内容都会被添加一个缩进，表示该内容属于当前分组。调用 console.groupEnd之后分组结束。</p>
-<p>参数
-string label
-分组标记，可选。</p>
-<p>注意
-仅在工具中有效，在 vConsole 中为空函数实现。</p>
-</div>
-<div class="section" id="id1">
-<h2>console.groupEnd()<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h2>
-<p>结束由 console.group 创建的分组</p>
-<p>注意
-仅在工具中有效，在 vConsole 中为空函数实现。</p>
-</div>
-<div class="section" id="console-info">
-<h2>console.info()<a class="headerlink" href="#console-info" title="永久链接至标题">¶</a></h2>
-<p>向调试面板中打印 info 日志</p>
-<p>参数
-any …args
-日志内容，可以有任意多个。</p>
-</div>
-<div class="section" id="console-log">
-<h2>console.log()<a class="headerlink" href="#console-log" title="永久链接至标题">¶</a></h2>
-<p>向调试面板中打印 log 日志</p>
-<p>参数
-any …args
-日志内容，可以有任意多个。</p>
-</div>
-<div class="section" id="console-warn">
-<h2>console.warn()<a class="headerlink" href="#console-warn" title="永久链接至标题">¶</a></h2>
-<p>向调试面板中打印 warn 日志</p>
-<p>参数
-any …args
-日志内容，可以有任意多个。</p>
+</dd></dl>
+
+<div class="admonition attention">
+<p class="admonition-title">注意</p>
+<ul class="simple">
+<li><p>由于 vConsole 功能有限，以及不同客户端对 console 方法的支持情况有差异，建议开发者在小程序中只使用本文档中提供的方法。</p></li>
+<li><p>部分内容展示的限制请参见调试</p></li>
+</ul>
 </div>
 </div>
 
@@ -262,7 +301,7 @@ any …args
         <a href="timer.html" class="btn btn-neutral float-right" title="定时器" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="wx.html" class="btn btn-neutral float-left" title="wx" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="wx.html" class="btn btn-neutral float-left" title="小程序 API 全局对象(wx)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

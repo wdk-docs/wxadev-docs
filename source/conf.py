@@ -29,7 +29,7 @@ author = 'Nosy'
 release = '1.0.0'
 
 
-# -- General configuration ---------------------------------------------------
+# -- 一般配置 ---------------------------------------------------
 
 # 在此处添加任何Sphinx扩展模块名称，作为字符串。
 # 它们可以是Sphinx(名为'sphinx.ext。*')或您自定义的扩展。
@@ -76,6 +76,7 @@ extlinks = {
     'wxcloud': ('https://developers.weixin.qq.com/miniprogram/dev/wxcloud/%s.html', ''),
     'wx_comp': ('https://developers.weixin.qq.com/miniprogram/dev/component/%s.html', ''),
     'wxfrwk': ('https://developers.weixin.qq.com/miniprogram/dev/framework/%s.html', ''),
+    'wxref': ('https://developers.weixin.qq.com/miniprogram/dev/reference/%s.html', ''),
     'wxapi': ('https://developers.weixin.qq.com/miniprogram/dev/api/%s.html', ''),
     'wxbpi': ('https://developers.weixin.qq.com/miniprogram/dev/api-backend/%s.html', ''),
     'wxdt': ('https://developers.weixin.qq.com/miniprogram/dev/devtools/%s.html', ''),

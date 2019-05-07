@@ -36,8 +36,8 @@
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="index" title="索引" href="../../genindex.html" />
     <link rel="search" title="搜索" href="../../search.html" />
-    <link rel="next" title="wx" href="wx.html" />
-    <link rel="prev" title="页面" href="page.html" /> 
+    <link rel="next" title="小程序 API 全局对象(wx)" href="wx.html" />
+    <link rel="prev" title="Behavior" href="Behavior.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -94,18 +94,17 @@
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">参考资料</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../configuration/index.html">小程序配置</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../scene.html">场景值列表</a></li>
-<li class="toctree-l2 current"><a class="reference internal" href="index.html">框架接口</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="app.html">小程序 App</a></li>
-<li class="toctree-l3"><a class="reference internal" href="page.html">页面</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">模块化</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#object-module">Object module</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#any-require-string-path">any require(string path)</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#object-exports">Object exports</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">框架接口说明</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="index.html#app">小程序 App</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#id2">页面</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#id3">自定义组件</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html#id4">其它</a><ul class="current">
+<li class="toctree-l4 current"><a class="current reference internal" href="#">模块化</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wx.html">小程序 API 全局对象(wx)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="console.html">打印日志(console)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="timer.html">定时器</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="wx.html">wx</a></li>
-<li class="toctree-l3"><a class="reference internal" href="console.html">console</a></li>
-<li class="toctree-l3"><a class="reference internal" href="timer.html">定时器</a></li>
 </ul>
 </li>
 </ul>
@@ -161,7 +160,7 @@
         
           <li><a href="../index.html">参考资料</a> &raquo;</li>
         
-          <li><a href="index.html">框架接口</a> &raquo;</li>
+          <li><a href="index.html">框架接口说明</a> &raquo;</li>
         
       <li>模块化</li>
     
@@ -184,14 +183,27 @@
             
   <div class="section" id="id1">
 <h1>模块化<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
-<div class="section" id="object-module">
-<h2>Object module<a class="headerlink" href="#object-module" title="永久链接至标题">¶</a></h2>
-<p>当前模块对象</p>
-<p>属性
-属性      类型      说明
-exports Object  模块向外暴露的对象，使用require引用该模块时可以获取
-示例代码</p>
-<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="c1">// common.js</span>
+<dl class="class">
+<dt id="module">
+<em class="property">class </em><code class="descname">module</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#module" title="永久链接至目标">¶</a></dt>
+<dd><p>当前模块对象</p>
+<dl class="field-list simple">
+<dt class="field-odd">返回类型</dt>
+<dd class="field-odd"><p>Object</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="module.exports">
+<code class="descclassname">module.</code><code class="descname">exports</code><a class="headerlink" href="#module.exports" title="永久链接至目标">¶</a></dt>
+<dd><p>模块向外暴露的对象，使用require引用该模块时可以获取</p>
+<dl class="field-list">
+<dt class="field-odd">返回类型</dt>
+<dd class="field-odd"><p>Object</p>
+</dd>
+<dt class="field-even">示例</dt>
+<dd class="field-even"><div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="c1">// common.js</span>
 <span class="kd">function</span> <span class="nx">sayHello</span><span class="p">(</span><span class="nx">name</span><span class="p">)</span> <span class="p">{</span>
   <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`Hello </span><span class="si">${</span><span class="nx">name</span><span class="si">}</span><span class="sb"> !`</span><span class="p">)</span>
 <span class="p">}</span>
@@ -203,15 +215,22 @@ exports Object  模块向外暴露的对象，使用require引用该模块时可
 <span class="nx">exports</span><span class="p">.</span><span class="nx">sayGoodbye</span> <span class="o">=</span> <span class="nx">sayGoodbye</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="any-require-string-path">
-<h2>any require(string path)<a class="headerlink" href="#any-require-string-path" title="永久链接至标题">¶</a></h2>
-<p>引入模块。返回模块通过 module.exports 或 exports 暴露的接口。</p>
-<p>参数
-名称      类型      说明
-path    string  需要引入模块文件相对于当前文件的相对路径，或npm模块名，或npm模块路径。不支持绝对路径</p>
-<p>示例代码</p>
-<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="c1">// common.js</span>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="exports">
+<code class="descname">exports</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#exports" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list">
+<dt class="field-odd">Label</dt>
+<dd class="field-odd"><p>module.exports 的引用</p>
+</dd>
+<dt class="field-even">返回类型</dt>
+<dd class="field-even"><p>Object</p>
+</dd>
+<dt class="field-odd">示例</dt>
+<dd class="field-odd"><div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="c1">// common.js</span>
 <span class="kd">function</span> <span class="nx">sayHello</span><span class="p">(</span><span class="nx">name</span><span class="p">)</span> <span class="p">{</span>
   <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`Hello </span><span class="si">${</span><span class="nx">name</span><span class="si">}</span><span class="sb"> !`</span><span class="p">)</span>
 <span class="p">}</span>
@@ -221,7 +240,39 @@ path    string  需要引入模块文件相对于当前文件的相对路径，�
 
 <span class="nx">module</span><span class="p">.</span><span class="nx">exports</span><span class="p">.</span><span class="nx">sayHello</span> <span class="o">=</span> <span class="nx">sayHello</span>
 <span class="nx">exports</span><span class="p">.</span><span class="nx">sayGoodbye</span> <span class="o">=</span> <span class="nx">sayGoodbye</span>
-<span class="kr">const</span> <span class="nx">common</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;common.js&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="require">
+<code class="descname">require</code><span class="sig-paren">(</span><em>path</em><span class="sig-paren">)</span><a class="headerlink" href="#require" title="永久链接至目标">¶</a></dt>
+<dd><p>引入模块。返回模块通过 module.exports 或 exports 暴露的接口。</p>
+<dl class="field-list">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>path</strong> (<em>string</em>) – 需要引入模块文件相对于当前文件的相对路径，或npm模块名，或npm模块路径。不支持绝对路径</p></li>
+</ul>
+</dd>
+<dt class="field-even">返回类型</dt>
+<dd class="field-even"><p>any</p>
+</dd>
+<dt class="field-odd">示例</dt>
+<dd class="field-odd"><div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="c1">// common.js</span>
+<span class="kd">function</span> <span class="nx">sayHello</span><span class="p">(</span><span class="nx">name</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`Hello </span><span class="si">${</span><span class="nx">name</span><span class="si">}</span><span class="sb"> !`</span><span class="p">)</span>
+<span class="p">}</span>
+<span class="kd">function</span> <span class="nx">sayGoodbye</span><span class="p">(</span><span class="nx">name</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`Goodbye </span><span class="si">${</span><span class="nx">name</span><span class="si">}</span><span class="sb"> !`</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="nx">module</span><span class="p">.</span><span class="nx">exports</span><span class="p">.</span><span class="nx">sayHello</span> <span class="o">=</span> <span class="nx">sayHello</span>
+<span class="nx">exports</span><span class="p">.</span><span class="nx">sayGoodbye</span> <span class="o">=</span> <span class="nx">sayGoodbye</span>
+</pre></div>
+</div>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="kr">const</span> <span class="nx">common</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;common.js&#39;</span><span class="p">)</span>
 <span class="nx">Page</span><span class="p">({</span>
   <span class="nx">helloMINA</span><span class="p">()</span> <span class="p">{</span>
     <span class="nx">common</span><span class="p">.</span><span class="nx">sayHello</span><span class="p">(</span><span class="s1">&#39;MINA&#39;</span><span class="p">)</span>
@@ -232,24 +283,10 @@ path    string  需要引入模块文件相对于当前文件的相对路径，�
 <span class="p">})</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="object-exports">
-<h2>Object exports<a class="headerlink" href="#object-exports" title="永久链接至标题">¶</a></h2>
-<p>module.exports 的引用</p>
-<p>示例代码</p>
-<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="c1">// common.js</span>
-<span class="kd">function</span> <span class="nx">sayHello</span><span class="p">(</span><span class="nx">name</span><span class="p">)</span> <span class="p">{</span>
-  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`Hello </span><span class="si">${</span><span class="nx">name</span><span class="si">}</span><span class="sb"> !`</span><span class="p">)</span>
-<span class="p">}</span>
-<span class="kd">function</span> <span class="nx">sayGoodbye</span><span class="p">(</span><span class="nx">name</span><span class="p">)</span> <span class="p">{</span>
-  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`Goodbye </span><span class="si">${</span><span class="nx">name</span><span class="si">}</span><span class="sb"> !`</span><span class="p">)</span>
-<span class="p">}</span>
+</dd>
+</dl>
+</dd></dl>
 
-<span class="nx">module</span><span class="p">.</span><span class="nx">exports</span><span class="p">.</span><span class="nx">sayHello</span> <span class="o">=</span> <span class="nx">sayHello</span>
-<span class="nx">exports</span><span class="p">.</span><span class="nx">sayGoodbye</span> <span class="o">=</span> <span class="nx">sayGoodbye</span>
-</pre></div>
-</div>
-</div>
 </div>
 
 
@@ -260,10 +297,10 @@ path    string  需要引入模块文件相对于当前文件的相对路径，�
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="wx.html" class="btn btn-neutral float-right" title="wx" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="wx.html" class="btn btn-neutral float-right" title="小程序 API 全局对象(wx)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="page.html" class="btn btn-neutral float-left" title="页面" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="Behavior.html" class="btn btn-neutral float-left" title="Behavior" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
