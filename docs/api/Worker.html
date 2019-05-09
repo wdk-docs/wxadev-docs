@@ -200,12 +200,12 @@
 </div>
 <p>创建一个 Worker 线程。目前限制最多只能创建一个 Worker，创建下一个 <a class="reference internal" href="#Worker" title="Worker"><code class="xref js js-class docutils literal notranslate"><span class="pre">Worker()</span></code></a> 前请先调用 <a class="reference internal" href="#Worker.terminate" title="Worker.terminate"><code class="xref js js-func docutils literal notranslate"><span class="pre">Worker.terminate()</span></code></a></p>
 <dl class="field-list simple">
-<dt class="field-odd">参数</dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>scriptPath</strong> (<em>string</em>) – worker 入口文件的绝对路径</p></li>
 </ul>
 </dd>
-<dt class="field-even">返回</dt>
+<dt class="field-even">Return</dt>
 <dd class="field-even"><p><a class="reference internal" href="#Worker" title="Worker"><code class="xref js js-class docutils literal notranslate"><span class="pre">Worker()</span></code></a> 对象</p>
 </dd>
 </dl>
@@ -224,7 +224,7 @@
 <code class="descclassname">Worker.</code><code class="descname">postMessage</code><span class="sig-paren">(</span><em>message</em><span class="sig-paren">)</span><a class="headerlink" href="#Worker.postMessage" title="永久链接至目标">¶</a></dt>
 <dd><p>向主线程/Worker 线程发送的消息。</p>
 <dl class="field-list">
-<dt class="field-odd">参数</dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>message</strong> (<em>Object</em>) – 需要发送的消息，必须是一个可序列化的 JavaScript key-value 形式的对象。</p></li>
 </ul>
@@ -259,7 +259,7 @@
 <code class="descclassname">Worker.</code><code class="descname">onMessage</code><span class="sig-paren">(</span><em>callback</em><span class="sig-paren">)</span><a class="headerlink" href="#Worker.onMessage" title="永久链接至目标">¶</a></dt>
 <dd><p>监听主线程/Worker 线程向当前线程发送的消息的事件。</p>
 <dl class="field-list simple">
-<dt class="field-odd">参数</dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>callback(message)</strong> (<em>function</em>) – <p>主线程/Worker 线程向当前线程发送的消息</p>
 <ul>

@@ -194,8 +194,8 @@
 再把结果返回到小程序主线程。
 Worker 运行于一个单独的全局上下文与线程中，不能直接调用主线程的方法。</p>
 <p>Worker 与主线程之间的数据传输，
-双方使用 <code class="xref js js-func docutils literal notranslate"><span class="pre">Worker.postMessage()</span></code> 来发送数据，
-<code class="xref js js-func docutils literal notranslate"><span class="pre">Worker.onMessage()</span></code> 来接收数据，
+双方使用 <a class="reference internal" href="../api/Worker.html#Worker.postMessage" title="Worker.postMessage"><code class="xref js js-func docutils literal notranslate"><span class="pre">Worker.postMessage()</span></code></a> 来发送数据，
+<a class="reference internal" href="../api/Worker.html#Worker.onMessage" title="Worker.onMessage"><code class="xref js js-func docutils literal notranslate"><span class="pre">Worker.onMessage()</span></code></a> 来接收数据，
 传输的数据并不是直接共享，而是被复制的。</p>
 <div class="section" id="id1">
 <h2>使用流程<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h2>

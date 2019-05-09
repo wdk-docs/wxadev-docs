@@ -205,7 +205,7 @@
 <h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/framework/ability/file-system.html">文件系统</a><a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
 <p>文件系统是小程序提供的一套以小程序和用户维度隔离的存储以及一套相应的管理接口。
 通过 <code class="xref js js-func docutils literal notranslate"><span class="pre">wx.getFileSystemManager()</span></code> 可以获取到全局唯一的文件系统管理器，
-所有文件系统的管理操作通过 <code class="xref js js-class docutils literal notranslate"><span class="pre">FileSystemManager()</span></code> 来调用。</p>
+所有文件系统的管理操作通过 <a class="reference internal" href="../../api/FileSystemManager.html#FileSystemManager" title="FileSystemManager"><code class="xref js js-class docutils literal notranslate"><span class="pre">FileSystemManager()</span></code></a> 来调用。</p>
 <div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="kr">const</span> <span class="nx">fs</span> <span class="o">=</span> <span class="nx">wx</span><span class="p">.</span><span class="nx">getFileSystemManager</span><span class="p">()</span>
 </pre></div>
 </div>
@@ -253,7 +253,7 @@
 <h3>本地临时文件<a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h3>
 <p>本地临时文件只能通过调用特定接口产生，不能直接写入内容。本地临时文件产生后，仅在当前生命周期内有效，重启之后即不可用。
 因此，不可把本地临时文件路径存储起来下次使用。如果需要下次在使用，
-可通过 <code class="xref js js-func docutils literal notranslate"><span class="pre">FileSystemManager.saveFile()</span></code> 或 <code class="xref js js-func docutils literal notranslate"><span class="pre">FileSystemManager.copyFile()</span></code>
+可通过 <a class="reference internal" href="../../api/FileSystemManager.html#FileSystemManager.saveFile" title="FileSystemManager.saveFile"><code class="xref js js-func docutils literal notranslate"><span class="pre">FileSystemManager.saveFile()</span></code></a> 或 <a class="reference internal" href="../../api/FileSystemManager.html#FileSystemManager.copyFile" title="FileSystemManager.copyFile"><code class="xref js js-func docutils literal notranslate"><span class="pre">FileSystemManager.copyFile()</span></code></a>
 接口把本地临时文件转换成本地缓存文件或本地用户文件。</p>
 <p>示例</p>
 <div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="nx">wx</span><span class="p">.</span><span class="nx">chooseImage</span><span class="p">({</span>
@@ -268,7 +268,7 @@
 <h3>本地缓存文件<a class="headerlink" href="#id7" title="永久链接至标题">¶</a></h3>
 <p>本地缓存文件只能通过调用特定接口产生，不能直接写入内容。
 本地缓存文件产生后，重启之后仍可用。
-本地缓存文件只能通过 <code class="xref js js-func docutils literal notranslate"><span class="pre">FileSystemManager.saveFile()</span></code> 接口将本地临时文件保存获得。</p>
+本地缓存文件只能通过 <a class="reference internal" href="../../api/FileSystemManager.html#FileSystemManager.saveFile" title="FileSystemManager.saveFile"><code class="xref js js-func docutils literal notranslate"><span class="pre">FileSystemManager.saveFile()</span></code></a> 接口将本地临时文件保存获得。</p>
 <p>示例</p>
 <div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="nx">fs</span><span class="p">.</span><span class="nx">saveFile</span><span class="p">({</span>
   <span class="nx">tempFilePath</span><span class="o">:</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="c1">// 传入一个本地临时文件路径</span>

@@ -37,7 +37,7 @@
     <link rel="index" title="索引" href="../../genindex.html" />
     <link rel="search" title="搜索" href="../../search.html" />
     <link rel="next" title="云开发" href="../../wxcloud/index.html" />
-    <link rel="prev" title="console" href="console.html" /> 
+    <link rel="prev" title="打印日志(console)" href="console.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -100,8 +100,8 @@
 <li class="toctree-l3"><a class="reference internal" href="index.html#id3">自定义组件</a></li>
 <li class="toctree-l3 current"><a class="reference internal" href="index.html#id4">其它</a><ul class="current">
 <li class="toctree-l4"><a class="reference internal" href="module.html">模块化</a></li>
-<li class="toctree-l4"><a class="reference internal" href="wx.html">wx</a></li>
-<li class="toctree-l4"><a class="reference internal" href="console.html">console</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wx.html">小程序 API 全局对象(wx)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="console.html">打印日志(console)</a></li>
 <li class="toctree-l4 current"><a class="current reference internal" href="#">定时器</a></li>
 </ul>
 </li>
@@ -190,17 +190,17 @@
 <dt class="field-odd">Label</dt>
 <dd class="field-odd"><p>设定一个定时器。在定时到期以后执行注册的回调函数</p>
 </dd>
-<dt class="field-even">参数</dt>
+<dt class="field-even">Parameters</dt>
 <dd class="field-even"><ul class="simple">
 <li><p><strong>callback</strong> (<em>function</em>) – 回调函数</p></li>
 <li><p><strong>delay</strong> (<em>number</em>) – 延迟的时间，函数的调用会在该延迟之后发生，单位 ms。</p></li>
 <li><p><strong>rest</strong> (<em>any</em>) – param1, param2, …, paramN 等附加参数，它们会作为参数传递给回调函数。</p></li>
 </ul>
 </dd>
-<dt class="field-odd">返回类型</dt>
+<dt class="field-odd">Rtype</dt>
 <dd class="field-odd"><p>number</p>
 </dd>
-<dt class="field-even">返回</dt>
+<dt class="field-even">Return</dt>
 <dd class="field-even"><p>定时器的编号 <cite>timeoutID</cite> 。这个值可以传递给 clearTimeout 来取消该定时。</p>
 </dd>
 </dl>
@@ -213,7 +213,7 @@
 <dt class="field-odd">Label</dt>
 <dd class="field-odd"><p>取消由 setTimeout 设置的定时器。</p>
 </dd>
-<dt class="field-even">参数</dt>
+<dt class="field-even">Parameters</dt>
 <dd class="field-even"><ul class="simple">
 <li><p><strong>timeoutID</strong> (<em>number</em>) – 要取消的定时器的 ID</p></li>
 </ul>
@@ -228,17 +228,17 @@
 <dt class="field-odd">Label</dt>
 <dd class="field-odd"><p>设定一个定时器。按照指定的周期（以毫秒计）来执行注册的回调函数</p>
 </dd>
-<dt class="field-even">参数</dt>
+<dt class="field-even">Parameters</dt>
 <dd class="field-even"><ul class="simple">
 <li><p><strong>callback</strong> (<em>function</em>) – 回调函数</p></li>
 <li><p><strong>delay</strong> (<em>number</em>) – 执行回调函数之间的时间间隔，单位 ms。</p></li>
 <li><p><strong>rest</strong> (<em>any</em>) – param1, param2, …, paramN 等附加参数，它们会作为参数传递给回调函数。</p></li>
 </ul>
 </dd>
-<dt class="field-odd">返回类型</dt>
+<dt class="field-odd">Rtype</dt>
 <dd class="field-odd"><p>number</p>
 </dd>
-<dt class="field-even">返回</dt>
+<dt class="field-even">Return</dt>
 <dd class="field-even"><p>定时器的编号 <cite>intervalID</cite> 。这个值可以传递给 clearInterval 来取消该定时。</p>
 </dd>
 </dl>
@@ -249,7 +249,7 @@
 <code class="descname">clearInterval</code><span class="sig-paren">(</span><em>number intervalID</em><span class="sig-paren">)</span><a class="headerlink" href="#clearInterval" title="永久链接至目标">¶</a></dt>
 <dd><p>取消由 setInterval 设置的定时器。</p>
 <dl class="field-list simple">
-<dt class="field-odd">参数</dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>intervalID</strong> (<em>number</em>) – 要取消的定时器的 ID</p></li>
 </ul>
@@ -270,7 +270,7 @@
         <a href="../../wxcloud/index.html" class="btn btn-neutral float-right" title="云开发" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="console.html" class="btn btn-neutral float-left" title="console" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="console.html" class="btn btn-neutral float-left" title="打印日志(console)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

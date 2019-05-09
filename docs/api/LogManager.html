@@ -37,7 +37,7 @@
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜索" href="../search.html" />
     <link rel="next" title="console" href="console.html" />
-    <link rel="prev" title="wx.getLogManager" href="wx.getLogManager.html" /> 
+    <link rel="prev" title="wx.setEnableDebug" href="wx.setEnableDebug.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -95,9 +95,8 @@
 <li class="toctree-l2"><a class="reference internal" href="index.html#id5">小程序</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="index.html#id8">调试</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="wx.setEnableDebug.html">wx.setEnableDebug</a></li>
-<li class="toctree-l3"><a class="reference internal" href="wx.getLogManager.html">wx.getLogManager</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">LogManager</a></li>
-<li class="toctree-l3"><a class="reference internal" href="index.html#console">console</a></li>
+<li class="toctree-l3"><a class="reference internal" href="console.html">console</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="index.html#id9">路由</a></li>
@@ -105,14 +104,14 @@
 <li class="toctree-l2"><a class="reference internal" href="index.html#id22">网络</a></li>
 <li class="toctree-l2"><a class="reference internal" href="index.html#id26">数据缓存</a></li>
 <li class="toctree-l2"><a class="reference internal" href="index.html#id27">媒体</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#id35">位置</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#id36">转发</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#id37">画布</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#id38">文件</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#id39">开放接口</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#id54">设备</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id34">位置</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id35">转发</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id36">画布</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id37">文件</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id38">开放接口</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id53">设备</a></li>
 <li class="toctree-l2"><a class="reference internal" href="index.html#worker">Worker</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#id71">第三方平台</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id69">第三方平台</a></li>
 <li class="toctree-l2"><a class="reference internal" href="index.html#wxml">WXML</a></li>
 </ul>
 </li>
@@ -199,7 +198,7 @@
 </div>
 <p>获取日志管理器对象 <a class="reference internal" href="#LogManager" title="LogManager"><code class="xref js js-class docutils literal notranslate"><span class="pre">LogManager()</span></code></a> 。</p>
 <dl class="field-list">
-<dt class="field-odd">参数</dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>level</strong> (<em>number</em>) – <p><strong>0</strong> 是否会把 App、Page 的生命周期函数和 wx 命名空间下的函数调用写入日志。</p>
 <ul>
@@ -212,7 +211,7 @@
 </p></li>
 </ul>
 </dd>
-<dt class="field-even">返回</dt>
+<dt class="field-even">Return</dt>
 <dd class="field-even"><p><a class="reference internal" href="#LogManager" title="LogManager"><code class="xref js js-class docutils literal notranslate"><span class="pre">LogManager()</span></code></a></p>
 </dd>
 <dt class="field-odd">示例</dt>
@@ -230,7 +229,7 @@
 <dl class="class">
 <dt id="LogManager">
 <em class="property">class </em><code class="descname">LogManager</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#LogManager" title="永久链接至目标">¶</a></dt>
-<dd><p>日志管理器实例，可以通过 <a class="reference internal" href="#wx.getLogManager" title="wx.getLogManager"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.getLogManager()</span></code></a> 获取。</p>
+<dd><p>日志管理器实例，可以通过 <a class="reference internal" href="wx.getLogManager.html#wx.getLogManager" title="wx.getLogManager"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.getLogManager()</span></code></a> 获取。</p>
 </dd></dl>
 
 <dl class="function">
@@ -238,7 +237,7 @@
 <code class="descclassname">LogManager.</code><code class="descname">debug</code><span class="sig-paren">(</span><em>...args</em><span class="sig-paren">)</span><a class="headerlink" href="#LogManager.debug" title="永久链接至目标">¶</a></dt>
 <dd><p>写 debug 日志</p>
 <dl class="field-list simple">
-<dt class="field-odd">参数</dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>...args</strong> (<em>Object | Array.&lt;any&gt; | number | string</em>) – 日志内容，可以有任意多个。每次调用的参数的总大小不超过100Kb</p></li>
 </ul>
@@ -251,7 +250,7 @@
 <code class="descclassname">LogManager.</code><code class="descname">info</code><span class="sig-paren">(</span><em>...args</em><span class="sig-paren">)</span><a class="headerlink" href="#LogManager.info" title="永久链接至目标">¶</a></dt>
 <dd><p>写 info 日志</p>
 <dl class="field-list simple">
-<dt class="field-odd">参数</dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>...args</strong> (<em>Object | Array.&lt;any&gt; | number | string</em>) – 日志内容，可以有任意多个。每次调用的参数的总大小不超过100Kb</p></li>
 </ul>
@@ -264,7 +263,7 @@
 <code class="descclassname">LogManager.</code><code class="descname">log</code><span class="sig-paren">(</span><em>...args</em><span class="sig-paren">)</span><a class="headerlink" href="#LogManager.log" title="永久链接至目标">¶</a></dt>
 <dd><p>写 log 日志</p>
 <dl class="field-list simple">
-<dt class="field-odd">参数</dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>...args</strong> (<em>Object | Array.&lt;any&gt; | number | string</em>) – 日志内容，可以有任意多个。每次调用的参数的总大小不超过100Kb</p></li>
 </ul>
@@ -277,7 +276,7 @@
 <code class="descclassname">LogManager.</code><code class="descname">warn</code><span class="sig-paren">(</span><em>...args</em><span class="sig-paren">)</span><a class="headerlink" href="#LogManager.warn" title="永久链接至目标">¶</a></dt>
 <dd><p>写 warn 日志</p>
 <dl class="field-list simple">
-<dt class="field-odd">参数</dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>...args</strong> (<em>Object | Array.&lt;any&gt; | number | string</em>) – 日志内容，可以有任意多个。每次调用的参数的总大小不超过100Kb</p></li>
 </ul>
@@ -302,7 +301,7 @@
         <a href="console.html" class="btn btn-neutral float-right" title="console" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="wx.getLogManager.html" class="btn btn-neutral float-left" title="wx.getLogManager" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="wx.setEnableDebug.html" class="btn btn-neutral float-left" title="wx.setEnableDebug" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

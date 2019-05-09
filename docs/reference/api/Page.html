@@ -186,7 +186,7 @@
 <em class="property">class </em><code class="descname">Page</code><span class="sig-paren">(</span><em>{data</em>, <em>onLoad</em>, <em>onShow</em>, <em>onReady</em>, <em>onHide</em>, <em>onUnload</em>, <em>onPullDownRefresh</em>, <em>onReachBottom</em>, <em>onShareAppMessage</em>, <em>onPageScroll</em>, <em>onResize</em>, <em>onTabItemTap}</em><span class="sig-paren">)</span><a class="headerlink" href="#Page" title="永久链接至目标">¶</a></dt>
 <dd><p>注册小程序中的一个页面。接受一个 Object 类型参数，其指定页面的初始数据、生命周期回调、事件处理函数等。</p>
 <dl class="field-list">
-<dt class="field-odd">参数</dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>data</strong> (<em>Object</em>) – <p>页面第一次渲染使用的初始数据。
 页面加载时，data 将会以JSON字符串的形式由逻辑层传至渲染层，
@@ -219,8 +219,8 @@
 <p>对界面内容进行设置的 API 如 <code class="xref js js-func docutils literal notranslate"><span class="pre">wx.setNavigationBarTitle()</span></code> ，请在onReady之后进行。详见生命周期</p>
 </div>
 </p></li>
-<li><p><strong>onHide</strong> (<em>function</em>) – <strong>生命周期回调函数</strong> — 监听页面隐藏, 页面隐藏/切入后台时触发。 如 <code class="xref js js-func docutils literal notranslate"><span class="pre">wx.navigateTo()</span></code> 或底部 tab 切换到其他页面，小程序切入后台等。</p></li>
-<li><p><strong>onUnload</strong> (<em>function</em>) – <strong>生命周期回调函数</strong> — 监听页面卸载, 页面卸载时触发。如 <code class="xref js js-func docutils literal notranslate"><span class="pre">wx.redirectTo()</span></code> 或 <code class="xref js js-func docutils literal notranslate"><span class="pre">wx.navigateBack()</span></code> 到其他页面时。</p></li>
+<li><p><strong>onHide</strong> (<em>function</em>) – <strong>生命周期回调函数</strong> — 监听页面隐藏, 页面隐藏/切入后台时触发。 如 <a class="reference internal" href="../../api/wx.navigateTo.html#wx.navigateTo" title="wx.navigateTo"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.navigateTo()</span></code></a> 或底部 tab 切换到其他页面，小程序切入后台等。</p></li>
+<li><p><strong>onUnload</strong> (<em>function</em>) – <strong>生命周期回调函数</strong> — 监听页面卸载, 页面卸载时触发。如 <a class="reference internal" href="../../api/wx.redirectTo.html#wx.redirectTo" title="wx.redirectTo"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.redirectTo()</span></code></a> 或 <a class="reference internal" href="../../api/wx.navigateBack.html#wx.navigateBack" title="wx.navigateBack"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.navigateBack()</span></code></a> 到其他页面时。</p></li>
 <li><p><strong>onPullDownRefresh</strong> (<em>function</em>) – <p><strong>页面事件处理函数</strong> - 监听用户下拉动作刷新事件。</p>
 <ul>
 <li><p>需要在 <code class="docutils literal notranslate"><span class="pre">app.json</span></code> 的 window 选项中或页面配置中开启 <code class="xref js js-data docutils literal notranslate"><span class="pre">enablePullDownRefresh</span></code> 。</p></li>
@@ -414,7 +414,7 @@
 <code class="descclassname">Page.prototype.</code><code class="descname">setData</code><span class="sig-paren">(</span><em>data</em><span class="optional">[</span>, <em>callback</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#Page.prototype.setData" title="永久链接至目标">¶</a></dt>
 <dd><p>setData 函数用于将数据从逻辑层发送到视图层（异步），同时改变对应的 this.data 的值（同步）。</p>
 <dl class="field-list simple">
-<dt class="field-odd">参数</dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>data</strong> (<em>object</em>) – <p>要改变的数据,
 以 <em>key:value</em> 的形式表示，将 <em>this.data</em> 中的 <em>key</em> 对应的值改变成 <em>value。</em></p>
