@@ -36,8 +36,8 @@
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜索" href="../search.html" />
-    <link rel="next" title="Worker.onMessage" href="Worker.onMessage.html" />
-    <link rel="prev" title="wx.createWorker" href="wx.createWorker.html" /> 
+    <link rel="next" title="wx.getExtConfigSync" href="wx.getExtConfigSync.html" />
+    <link rel="prev" title="wx.vibrateLong" href="wx.vibrateLong.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -90,33 +90,30 @@
 <li class="toctree-l1"><a class="reference internal" href="../component/index.html">组件</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">API</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="index.html#id2">基础</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#id3">系统</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#id5">更新</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#id6">小程序</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#id9">调试</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#id10">路由</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#id11">界面</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#id23">网络</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#id27">数据缓存</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#id28">媒体</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#id36">位置</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#id37">转发</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#id38">画布</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#id39">文件</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#id40">开放接口</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#id55">设备</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id3">系统信息</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id4">更新</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id5">小程序</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id8">调试</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id9">路由</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id10">界面</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id22">网络</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id26">数据缓存</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id27">媒体</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id34">位置</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id35">转发</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id36">画布</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id37">文件</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id38">开放接口</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id53">设备</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="index.html#worker">Worker</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="wx.createWorker.html">wx.createWorker</a></li>
-<li class="toctree-l3 current"><a class="reference internal" href="index.html#id71">Worker</a><ul class="current">
-<li class="toctree-l4 current"><a class="current reference internal" href="#">Worker</a></li>
-<li class="toctree-l4"><a class="reference internal" href="Worker.onMessage.html">Worker.onMessage</a></li>
-<li class="toctree-l4"><a class="reference internal" href="Worker.postMessage.html">Worker.postMessage</a></li>
-<li class="toctree-l4"><a class="reference internal" href="Worker.terminate.html">Worker.terminate</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Worker</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id1">方法</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id2">示例代码</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#id72">第三方平台</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id69">第三方平台</a></li>
 <li class="toctree-l2"><a class="reference internal" href="index.html#wxml">WXML</a></li>
 </ul>
 </li>
@@ -195,6 +192,103 @@
             
   <div class="section" id="worker">
 <h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/api/Worker.html">Worker</a><a class="headerlink" href="#worker" title="永久链接至标题">¶</a></h1>
+<dl class="function">
+<dt id="wx.createWorker">
+<code class="descclassname">wx.</code><code class="descname">createWorker</code><span class="sig-paren">(</span><em>scriptPath</em><span class="sig-paren">)</span><a class="headerlink" href="#wx.createWorker" title="永久链接至目标">¶</a></dt>
+<dd><div class="versionadded">
+<p><span class="versionmodified added">1.9.90 新版功能: </span>低版本需做兼容处理。</p>
+</div>
+<p>创建一个 Worker 线程。目前限制最多只能创建一个 Worker，创建下一个 <a class="reference internal" href="#Worker" title="Worker"><code class="xref js js-class docutils literal notranslate"><span class="pre">Worker()</span></code></a> 前请先调用 <a class="reference internal" href="#Worker.terminate" title="Worker.terminate"><code class="xref js js-func docutils literal notranslate"><span class="pre">Worker.terminate()</span></code></a></p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>scriptPath</strong> (<em>string</em>) – worker 入口文件的绝对路径</p></li>
+</ul>
+</dd>
+<dt class="field-even">返回</dt>
+<dd class="field-even"><p><a class="reference internal" href="#Worker" title="Worker"><code class="xref js js-class docutils literal notranslate"><span class="pre">Worker()</span></code></a> 对象</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="Worker">
+<em class="property">class </em><code class="descname">Worker</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Worker" title="永久链接至目标">¶</a></dt>
+<dd><p>Worker 实例，主线程中可通过 <a class="reference internal" href="#wx.createWorker" title="wx.createWorker"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.createWorker()</span></code></a> 接口获取，worker 线程中可通过全局变量 worker 获取。</p>
+</dd></dl>
+
+<div class="section" id="id1">
+<h2>方法<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h2>
+<dl class="function">
+<dt id="Worker.postMessage">
+<code class="descclassname">Worker.</code><code class="descname">postMessage</code><span class="sig-paren">(</span><em>message</em><span class="sig-paren">)</span><a class="headerlink" href="#Worker.postMessage" title="永久链接至目标">¶</a></dt>
+<dd><p>向主线程/Worker 线程发送的消息。</p>
+<dl class="field-list">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>message</strong> (<em>Object</em>) – 需要发送的消息，必须是一个可序列化的 JavaScript key-value 形式的对象。</p></li>
+</ul>
+</dd>
+<dt class="field-even">示例</dt>
+<dd class="field-even"><p>worker 线程中</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="nx">worker</span><span class="p">.</span><span class="nx">postMessage</span><span class="p">({</span>
+  <span class="nx">msg</span><span class="o">:</span> <span class="s1">&#39;hello from worker&#39;</span>
+<span class="p">})</span>
+</pre></div>
+</div>
+<p>主线程中</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="kr">const</span> <span class="nx">worker</span> <span class="o">=</span> <span class="nx">wx</span><span class="p">.</span><span class="nx">createWorker</span><span class="p">(</span><span class="s1">&#39;workers/request/index.js&#39;</span><span class="p">)</span>
+
+<span class="nx">worker</span><span class="p">.</span><span class="nx">postMessage</span><span class="p">({</span>
+  <span class="nx">msg</span><span class="o">:</span> <span class="s1">&#39;hello from main&#39;</span>
+<span class="p">})</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="Worker.terminate">
+<code class="descclassname">Worker.</code><code class="descname">terminate</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Worker.terminate" title="永久链接至目标">¶</a></dt>
+<dd><p>结束当前 Worker 线程。仅限在主线程 worker 对象上调用。</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="Worker.onMessage">
+<code class="descclassname">Worker.</code><code class="descname">onMessage</code><span class="sig-paren">(</span><em>callback</em><span class="sig-paren">)</span><a class="headerlink" href="#Worker.onMessage" title="永久链接至目标">¶</a></dt>
+<dd><p>监听主线程/Worker 线程向当前线程发送的消息的事件。</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>callback(message)</strong> (<em>function</em>) – <p>主线程/Worker 线程向当前线程发送的消息</p>
+<ul>
+<li><p>message   Object  主线程/Worker 线程向当前线程发送的消息</p></li>
+</ul>
+</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="id2">
+<h2>示例代码<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<p>运行以下代码需先进行基础配置，详细请查阅 多线程 文档了解基础知识和配置方法。</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="kr">const</span> <span class="nx">worker</span> <span class="o">=</span> <span class="nx">wx</span><span class="p">.</span><span class="nx">createWorker</span><span class="p">(</span><span class="s1">&#39;workers/request/index.js&#39;</span><span class="p">)</span> <span class="c1">// 文件名指定 worker 的入口文件路径，绝对路径</span>
+
+<span class="nx">worker</span><span class="p">.</span><span class="nx">onMessage</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">res</span><span class="p">)</span>
+<span class="p">})</span>
+
+<span class="nx">worker</span><span class="p">.</span><span class="nx">postMessage</span><span class="p">({</span>
+  <span class="nx">msg</span><span class="o">:</span> <span class="s1">&#39;hello worker&#39;</span>
+<span class="p">})</span>
+
+<span class="nx">worker</span><span class="p">.</span><span class="nx">terminate</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
 </div>
 
 
@@ -205,10 +299,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="Worker.onMessage.html" class="btn btn-neutral float-right" title="Worker.onMessage" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="wx.getExtConfigSync.html" class="btn btn-neutral float-right" title="wx.getExtConfigSync" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="wx.createWorker.html" class="btn btn-neutral float-left" title="wx.createWorker" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="wx.vibrateLong.html" class="btn btn-neutral float-left" title="wx.vibrateLong" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

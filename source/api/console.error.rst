@@ -1,2 +1,4 @@
-console.error
-=================
+:orphan:
+
+:wxapi:`console.error`
+==============================

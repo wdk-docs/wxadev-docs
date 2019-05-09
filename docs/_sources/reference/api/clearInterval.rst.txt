@@ -1,7 +1,7 @@
 :orphan:
 
 :wxref:`clearInterval <api/clearInterval>`
-===================================
+==============================================
 
 clearInterval(number intervalID)
 取消由 setInterval 设置的定时器。

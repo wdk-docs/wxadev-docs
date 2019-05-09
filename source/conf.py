@@ -102,3 +102,5 @@ http_index_localname = "微信小程序API"
 primary_domain = 'js'
 
 highlight_language = 'js'
+
+todo_include_todos = 'true'

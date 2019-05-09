@@ -1,15 +1,17 @@
-sitemap 配置
-==============
 
-微信现已开放小程序内搜索，开发者可以通过 sitemap.json 配置，或者管理后台页面收录开关来配置其小程序页面是否允许微信索引。
+:wxref:`sitemap 配置 <configuration/sitemap>`
+========================================================
+
+微信现已开放小程序内搜索，开发者可以通过 :file:`sitemap.json` 配置，或者管理后台页面收录开关来配置其小程序页面是否允许微信索引。
 当开发者允许微信索引时，微信会通过爬虫的形式，为小程序的页面内容建立索引。当用户的搜索词条触发该索引时，小程序的页面将可能展示在搜索结果中。
-爬虫访问小程序内页面时，会携带特定的 user-agent：mpcrawler 及场景值：1129。
+爬虫访问小程序内页面时，会携带特定的 :mimetype:`user-agent:mpcrawler` 及场景值：*1129* 。
 需要注意的是，若小程序爬虫发现的页面数据和真实用户的呈现不一致，那么该页面将不会进入索引中。
 
-小程序根目录下的 sitemap.json 文件用于配置小程序及其页面是否允许被微信索引，文件内容为一个 JSON 对象，
-如果没有 sitemap.json ，则默认为所有页面都允许被索引；sitemap.json 有以下属性：
+小程序根目录下的 :file:`sitemap.json` 文件用于配置小程序及其页面是否允许被微信索引，文件内容为一个 JSON 对象，
+如果没有 :file:`sitemap.json` ，则默认为所有页面都允许被索引；:file:`sitemap.json` 有以下属性：
 
 配置项
+------------
 
 +-------+----------+------+--------------+
 | 属性  |   类型   | 必填 |     描述     |
@@ -52,6 +54,7 @@ matching 取值说明
 +-----------+--------------------------------------------------------+
 
 配置示例
+------------
 
 示例1
 
@@ -72,12 +75,11 @@ matching 取值说明
     ]
   }
 
-path/to/page?a=1&b=2 => 优先索引
-path/to/page => 不被索引
-path/to/page?a=1 => 不被索引
-path/to/page?a=1&b=2&c=3 => 不被索引
-
-其他页面都会被索引
+- path/to/page?a=1&b=2 => 优先索引
+- path/to/page => 不被索引
+- path/to/page?a=1 => 不被索引
+- path/to/page?a=1&b=2&c=3 => 不被索引
+- 其他页面都会被索引
 
 示例2
 
@@ -98,12 +100,11 @@ path/to/page?a=1&b=2&c=3 => 不被索引
     ]
   }
 
-path/to/page?a=1&b=2 => 优先索引
-path/to/page?a=1&b=2&c=3 => 优先索引
-path/to/page => 不被索引
-path/to/page?a=1 => 不被索引
-
-其他页面都会被索引
+- path/to/page?a=1&b=2 => 优先索引
+- path/to/page?a=1&b=2&c=3 => 优先索引
+- path/to/page => 不被索引
+- path/to/page?a=1 => 不被索引
+- 其他页面都会被索引
 
 示例3
 
@@ -124,12 +125,11 @@ path/to/page?a=1 => 不被索引
     ]
   }
 
-path/to/page => 优先索引
-path/to/page?c=3 => 优先索引
-path/to/page?a=1 => 不被索引
-path/to/page?a=1&b=2 => 不被索引
-
-其他页面都会被索引
+- path/to/page => 优先索引
+- path/to/page?c=3 => 优先索引
+- path/to/page?a=1 => 不被索引
+- path/to/page?a=1&b=2 => 不被索引
+- 其他页面都会被索引
 
 示例4
 
@@ -150,13 +150,12 @@ path/to/page?a=1&b=2 => 不被索引
     ]
   }
 
-path/to/page?a=1 => 优先索引
-path/to/page?a=1&b=2 => 优先索引
-path/to/page => 不被索引
-path/to/page?c=3 => 不被索引
+- path/to/page?a=1 => 优先索引
+- path/to/page?a=1&b=2 => 优先索引
+- path/to/page => 不被索引
+- path/to/page?c=3 => 不被索引
+- 其他页面都会被索引
 
-其他页面都会被索引
+.. tip:: 没有 :file:`sitemap.json` 则默认所有页面都能被索引
 
-.. tip:: 没有 sitemap.json 则默认所有页面都能被索引
-
-.. tip:: {"action": "allow", "page": "*"} 是优先级最低的默认规则，未显式指明 "disallow" 的都默认被索引
+.. tip:: ``{"action": "allow", "page": "*"}`` 是优先级最低的默认规则，未显式指明 ``"disallow"`` 的都默认被索引

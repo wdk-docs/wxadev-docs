@@ -90,29 +90,29 @@
 <li class="toctree-l1"><a class="reference internal" href="../component/index.html">组件</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">API</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="index.html#id2">基础</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#id3">系统</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#id5">更新</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#id6">小程序</a></li>
-<li class="toctree-l2 current"><a class="reference internal" href="index.html#id9">调试</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="index.html#id3">系统信息</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id4">更新</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id5">小程序</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html#id8">调试</a><ul class="current">
 <li class="toctree-l3 current"><a class="current reference internal" href="#">wx.setEnableDebug</a></li>
 <li class="toctree-l3"><a class="reference internal" href="wx.getLogManager.html">wx.getLogManager</a></li>
 <li class="toctree-l3"><a class="reference internal" href="index.html#console">console</a></li>
 <li class="toctree-l3"><a class="reference internal" href="index.html#logmanager">LogManager</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#id10">路由</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#id11">界面</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#id23">网络</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#id27">数据缓存</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#id28">媒体</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#id36">位置</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#id37">转发</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#id38">画布</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#id39">文件</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#id40">开放接口</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#id55">设备</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id9">路由</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id10">界面</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id22">网络</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id26">数据缓存</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id27">媒体</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id35">位置</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id36">转发</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id37">画布</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id38">文件</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id39">开放接口</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id54">设备</a></li>
 <li class="toctree-l2"><a class="reference internal" href="index.html#worker">Worker</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#id72">第三方平台</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id71">第三方平台</a></li>
 <li class="toctree-l2"><a class="reference internal" href="index.html#wxml">WXML</a></li>
 </ul>
 </li>
@@ -191,31 +191,42 @@
             
   <div class="section" id="wx-setenabledebug">
 <h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/api/wx.setEnableDebug.html">wx.setEnableDebug</a><a class="headerlink" href="#wx-setenabledebug" title="永久链接至标题">¶</a></h1>
-<p>wx.setEnableDebug(Object object)
-基础库 1.4.0 开始支持，低版本需做 <a class="reference internal" href="../framework/compatibility.html#compatibility"><span class="std std-ref">兼容处理</span></a> 。</p>
+<dl class="function">
+<dt id="wx.setEnableDebug">
+<code class="descclassname">wx.</code><code class="descname">setEnableDebug</code><span class="sig-paren">(</span><em>{enableDebug[, success][, fail][, complete]}</em><span class="sig-paren">)</span><a class="headerlink" href="#wx.setEnableDebug" title="永久链接至目标">¶</a></dt>
+<dd><div class="versionadded">
+<p><span class="versionmodified added">1.4.0 新版功能: </span>低版本需做 <a class="reference internal" href="../framework/compatibility.html#compatibility"><span class="std std-ref">兼容处理</span></a> 。</p>
+</div>
 <p>设置是否打开调试开关。此开关对正式版也能生效。</p>
-<p>参数
-Object object
-属性      类型      默认值     必填      说明
-enableDebug     boolean         是       是否打开调试
-success function                否       接口调用成功的回调函数
-fail    function                否       接口调用失败的回调函数
-complete        function                否       接口调用结束的回调函数（调用成功、失败都会执行）
-示例代码
-// 打开调试
-wx.setEnableDebug({</p>
-<blockquote>
-<div><p>enableDebug: true</p>
-</div></blockquote>
-<p>})</p>
-<p>// 关闭调试
-wx.setEnableDebug({</p>
-<blockquote>
-<div><p>enableDebug: false</p>
-</div></blockquote>
-<p>})
-Tips
-在正式版打开调试还有一种方法，就是先在开发版或体验版打开调试，再切到正式版就能看到vConsole。</p>
+<dl class="field-list">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>enableDebug</strong> (<em>boolean</em>) – 是否打开调试</p></li>
+<li><p><strong>success</strong> (<em>function</em>) – 接口调用成功的回调函数</p></li>
+<li><p><strong>fail</strong> (<em>function</em>) – 接口调用失败的回调函数</p></li>
+<li><p><strong>complete</strong> (<em>function</em>) – 接口调用结束的回调函数（调用成功、失败都会执行）</p></li>
+</ul>
+</dd>
+<dt class="field-even">示例代码</dt>
+<dd class="field-even"><div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="c1">// 打开调试</span>
+<span class="nx">wx</span><span class="p">.</span><span class="nx">setEnableDebug</span><span class="p">({</span>
+  <span class="nx">enableDebug</span><span class="o">:</span> <span class="kc">true</span>
+<span class="p">})</span>
+
+<span class="c1">// 关闭调试</span>
+<span class="nx">wx</span><span class="p">.</span><span class="nx">setEnableDebug</span><span class="p">({</span>
+  <span class="nx">enableDebug</span><span class="o">:</span> <span class="kc">false</span>
+<span class="p">})</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+<div class="admonition tip">
+<p class="admonition-title">小技巧</p>
+<p>在正式版打开调试还有一种方法，就是先在开发版或体验版打开调试，再切到正式版就能看到vConsole。</p>
+</div>
+</dd></dl>
+
 </div>
 
 

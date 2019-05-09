@@ -90,29 +90,29 @@
 <li class="toctree-l1"><a class="reference internal" href="../component/index.html">组件</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">API</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="index.html#id2">基础</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#id3">系统</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#id5">更新</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#id6">小程序</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#id9">调试</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#id10">路由</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#id11">界面</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#id23">网络</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#id27">数据缓存</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#id28">媒体</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#id36">位置</a></li>
-<li class="toctree-l2 current"><a class="reference internal" href="index.html#id37">转发</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="index.html#id3">系统信息</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id4">更新</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id5">小程序</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id8">调试</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id9">路由</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id10">界面</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id22">网络</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id26">数据缓存</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id27">媒体</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id34">位置</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html#id35">转发</a><ul class="current">
 <li class="toctree-l3 current"><a class="current reference internal" href="#">wx.updateShareMenu</a></li>
 <li class="toctree-l3"><a class="reference internal" href="wx.showShareMenu.html">wx.showShareMenu</a></li>
 <li class="toctree-l3"><a class="reference internal" href="wx.hideShareMenu.html">wx.hideShareMenu</a></li>
 <li class="toctree-l3"><a class="reference internal" href="wx.getShareInfo.html">wx.getShareInfo</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#id38">画布</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#id39">文件</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#id40">开放接口</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#id55">设备</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id36">画布</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id37">文件</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id38">开放接口</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id53">设备</a></li>
 <li class="toctree-l2"><a class="reference internal" href="index.html#worker">Worker</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#id72">第三方平台</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id70">第三方平台</a></li>
 <li class="toctree-l2"><a class="reference internal" href="index.html#wxml">WXML</a></li>
 </ul>
 </li>
@@ -191,6 +191,56 @@
             
   <div class="section" id="wx-updatesharemenu">
 <h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/api/wx.updateShareMenu.html">wx.updateShareMenu</a><a class="headerlink" href="#wx-updatesharemenu" title="永久链接至标题">¶</a></h1>
+<dl class="function">
+<dt id="wx.updateShareMenu">
+<code class="descclassname">wx.</code><code class="descname">updateShareMenu</code><span class="sig-paren">(</span><em>[withShareTicket][, isUpdatableMessage][, activityId][, templateInfo][, success][, fail][, complete]</em><span class="sig-paren">)</span><a class="headerlink" href="#wx.updateShareMenu" title="永久链接至目标">¶</a></dt>
+<dd><div class="versionadded">
+<p><span class="versionmodified added">1.2.0 新版功能: </span>低版本需做  <a class="reference internal" href="../framework/compatibility.html#compatibility"><span class="std std-ref">兼容处理</span></a></p>
+</div>
+<p>更新转发属性</p>
+<dl class="field-list">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>withShareTicket</strong> (<em>boolean</em>) – <strong>false</strong> 是否使用带 shareTicket 的转发详情</p></li>
+<li><p><strong>isUpdatableMessage</strong> (<em>boolean</em>) – <p><strong>false</strong> 是否是动态消息，详见动态消息</p>
+<div class="versionadded">
+<p><span class="versionmodified added">2.4.0 新版功能.</span></p>
+</div>
+</p></li>
+<li><p><strong>activityId</strong> (<em>string</em>) – <p>动态消息的 <code class="docutils literal notranslate"><span class="pre">activityId</span></code> 。通过 <code class="xref js js-func docutils literal notranslate"><span class="pre">updatableMessage.createActivityId()</span></code> 接口获取</p>
+<div class="versionadded">
+<p><span class="versionmodified added">2.4.0 新版功能.</span></p>
+</div>
+</p></li>
+<li><p><strong>templateInfo</strong> (<em>object</em>) – <p>动态消息的模板信息</p>
+<div class="versionadded">
+<p><span class="versionmodified added">2.4.0 新版功能.</span></p>
+</div>
+<ul>
+<li><p><strong>parameterList</strong> (<em>Array.&lt;Object&gt;</em>) - 参数列表</p>
+<ul>
+<li><p><strong>name</strong> (<em>string</em>) - 参数名</p></li>
+<li><p><strong>value</strong> (<em>string</em>) - 参数值</p></li>
+</ul>
+</li>
+</ul>
+</p></li>
+<li><p><strong>success</strong> (<em>function</em>) – 接口调用成功的回调函数</p></li>
+<li><p><strong>fail</strong> (<em>function</em>) – 接口调用失败的回调函数</p></li>
+<li><p><strong>complete</strong> (<em>function</em>) – 接口调用结束的回调函数（调用成功、失败都会执行）</p></li>
+</ul>
+</dd>
+<dt class="field-even">示例</dt>
+<dd class="field-even"><div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="nx">wx</span><span class="p">.</span><span class="nx">updateShareMenu</span><span class="p">({</span>
+  <span class="nx">withShareTicket</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+  <span class="nx">success</span><span class="p">()</span> <span class="p">{</span> <span class="p">}</span>
+<span class="p">})</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</dd></dl>
+
 </div>
 
 

@@ -1,78 +1,88 @@
-:wxapi:`VideoContext`
+:wxapi:`VideoContext ☁️ <VideoContext>`
 ============================================
+
+.. function:: wx.createVideoContext(id, this)
+
+   创建 video 上下文 :class:`VideoContext` 对象。
+
+   :param string id: :ref:`<video> <video>` 组件的 id
+   :param object this: 在自定义组件下，当前组件实例的this，以操作组件内 :ref:`<video> <video>` 组件
+   :return: :class:`VideoContext`
 
 .. class:: VideoContext
 
-  VideoContext实例，可通过 :func:`wx.createVideoContext` 获取。
+  VideoContext 实例，可通过 :func:`wx.createVideoContext` 获取。
 
-  videoContext通过id跟一个<:ref:`video`>组件绑定，对应操作的<:ref:`video`>组件。
+  videoContext 通过 id 跟一个 :ref:`<video> <video>` 组件绑定，对应操作的 :ref:`<video> <video>` 组件。
 
 方法
 -----
 
 .. function:: VideoContext.play()
 
-  :label: 播放视频
+   播放视频
 
 .. function:: VideoContext.pause()
 
-  :label: 暂停视频
+   暂停视频
 
 .. function:: VideoContext.stop()
 
-  :label: 停止视频
+   停止视频
 
 .. function:: VideoContext.seek(position)
 
-  :label: 跳转到指定位置
+   跳转到指定位置
 
-  :param number position: 跳转到的位置，单位 s
+   :param number position: 跳转到的位置，单位 s
 
 .. function:: VideoContext.sendDanmu({text[,color]})
 
-  :label: 发送弹幕
+   发送弹幕
 
-  :param string text: 弹幕文字
-  :param string color: 弹幕颜色
+   :param string text: 弹幕文字
+   :param string color: 弹幕颜色
 
 .. function:: VideoContext.playbackRate(rate)
 
-  :label: 设置倍速播放
-  :param number rate: 倍率，支持 0.5/0.8/1.0/1.25/1.5，2.6.3 起支持 2.0 倍速
+   设置倍速播放
 
-  .. versionadded:: 1.4.0 低版本需做 :ref:`compatibility` 。
+   :param number rate: 倍率，支持 0.5/0.8/1.0/1.25/1.5，2.6.3 起支持 2.0 倍速
+
+   .. versionadded:: 1.4.0 低版本需做 :ref:`compatibility` 。
 
 .. function:: VideoContext.requestFullScreen({[direction]})
 
-  :label: 进入全屏
-  :param number direction: 设置全屏时视频的方向，不指定则根据宽高比自动判断, 合法值:
+   进入全屏
 
-    - *0*	正常竖向
-    - *90*	屏幕逆时针90度
-    - *-90*	屏幕顺时针90度
+   :param number direction: 设置全屏时视频的方向，不指定则根据宽高比自动判断, 合法值:
 
-  .. versionadded:: 1.4.0 低版本需做 :ref:`compatibility` 。
+     - *0*	正常竖向
+     - *90*	屏幕逆时针90度
+     - *-90*	屏幕顺时针90度
 
-  .. versionadded:: 1.7.0 参数 direction
+   .. versionadded:: 1.4.0 低版本需做 :ref:`compatibility` 。
+
+   .. versionadded:: 1.7.0 参数 direction
 
 
 .. function:: VideoContext.exitFullScreen()
 
-  :label: 退出全屏
+   退出全屏
 
-  .. versionadded:: 1.4.0 低版本需做 :ref:`compatibility` 。
+   .. versionadded:: 1.4.0 低版本需做 :ref:`compatibility` 。
 
 .. function:: VideoContext.showStatusBar()
 
-  :label: 显示状态栏，仅在iOS的全屏下有效
+   显示状态栏，仅在iOS的全屏下有效
 
-  .. versionadded:: 2.1.0 低版本需做 :ref:`compatibility` 。
+   .. versionadded:: 2.1.0 低版本需做 :ref:`compatibility` 。
 
 .. function:: VideoContext.hideStatusBar()
 
-  :label: 隐藏状态栏，仅在iOS的全屏下有效
+   隐藏状态栏，仅在iOS的全屏下有效
 
-  .. versionadded:: 2.1.0 低版本需做 :ref:`compatibility` 。
+   .. versionadded:: 2.1.0 低版本需做 :ref:`compatibility` 。
 
 示例代码
 ------------

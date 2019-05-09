@@ -90,11 +90,11 @@
 <li class="toctree-l1"><a class="reference internal" href="../component/index.html">组件</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">API</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="index.html#id2">基础</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#id3">系统</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#id5">更新</a></li>
-<li class="toctree-l2 current"><a class="reference internal" href="index.html#id6">小程序</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="index.html#id7">生命周期</a></li>
-<li class="toctree-l3 current"><a class="reference internal" href="index.html#id8">应用级事件</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="index.html#id3">系统信息</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id4">更新</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html#id5">小程序</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="index.html#id6">生命周期</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html#id7">应用级事件</a><ul class="current">
 <li class="toctree-l4"><a class="reference internal" href="wx.onPageNotFound.html">wx.onPageNotFound</a></li>
 <li class="toctree-l4"><a class="reference internal" href="wx.onError.html">wx.onError</a></li>
 <li class="toctree-l4"><a class="reference internal" href="wx.onAudioInterruptionEnd.html">wx.onAudioInterruptionEnd</a></li>
@@ -111,20 +111,20 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#id9">调试</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#id10">路由</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#id11">界面</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#id23">网络</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#id27">数据缓存</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#id28">媒体</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#id36">位置</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#id37">转发</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#id38">画布</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#id39">文件</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#id40">开放接口</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#id55">设备</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id8">调试</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id9">路由</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id10">界面</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id22">网络</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id26">数据缓存</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id27">媒体</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id35">位置</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id36">转发</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id37">画布</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id38">文件</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id39">开放接口</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id54">设备</a></li>
 <li class="toctree-l2"><a class="reference internal" href="index.html#worker">Worker</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#id72">第三方平台</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id71">第三方平台</a></li>
 <li class="toctree-l2"><a class="reference internal" href="index.html#wxml">WXML</a></li>
 </ul>
 </li>
@@ -203,8 +203,12 @@
             
   <div class="section" id="wx-offerror">
 <h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/api/wx.offError.html">wx.offError</a><a class="headerlink" href="#wx-offerror" title="永久链接至标题">¶</a></h1>
-<p>wx.offError(function callback)
-基础库 2.1.2 开始支持，低版本需做 <a class="reference internal" href="../framework/compatibility.html#compatibility"><span class="std std-ref">兼容处理</span></a> 。</p>
+<dl class="function">
+<dt id="wx.offError">
+<code class="descclassname">wx.</code><code class="descname">offError</code><span class="sig-paren">(</span><em>function callback</em><span class="sig-paren">)</span><a class="headerlink" href="#wx.offError" title="永久链接至目标">¶</a></dt>
+<dd></dd></dl>
+
+<p>基础库 2.1.2 开始支持，低版本需做 <a class="reference internal" href="../framework/compatibility.html#compatibility"><span class="std std-ref">兼容处理</span></a> 。</p>
 <p>取消监听小程序错误事件。</p>
 <p>参数
 function callback

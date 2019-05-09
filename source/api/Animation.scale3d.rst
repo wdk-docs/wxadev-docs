@@ -1,2 +1,2 @@
-:wxapi:`wx.createWorker`
+:wxapi:`Animation.scale3d`
 ============================================

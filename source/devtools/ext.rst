@@ -1,11 +1,11 @@
 .. _dt-ext:
 
-:wxdt:`开发辅助 <ext>`
+:wxdt:`第三方平台开发 <ext>`
 =========================
 
-
-概述
-小程序运营者，可以一键授权给第三方平台，通过第三方平台来完成业务。第三方平台在小程序的前后端开发上同直接开发小程序有所区别，其所拥有的各项 API 以及详细说明请查看 代小程序实现业务 ，其余部分请阅读下文。
+小程序运营者，可以一键授权给第三方平台，通过第三方平台来完成业务。
+第三方平台在小程序的前后端开发上同直接开发小程序有所区别，
+其所拥有的各项 API 以及详细说明请查看 代小程序实现业务 ，其余部分请阅读下文。
 
 开发第三方平台小程序具有一定的复杂性，首先需要确认三个概念：
 
@@ -22,14 +22,18 @@ extAppid：授权给第三方平台的小程序
 创建项目
 与开发普通小程序一致，第三方平台开发者填入相关的 3rdMiniProgramAppid ，设定项目名称和选择项目目录即可创建项目。
 
-对于第三方平台小程序，可以在项目页卡查看到相关的 open3rd 信息以及当前的第三方的 3rdMiniProgramAppid ，如若项目配置了相关的 extAppid ，那么项目页卡中也会有相关信息。
+对于第三方平台小程序，
+可以在项目页卡查看到相关的 open3rd 信息以及当前的第三方的 3rdMiniProgramAppid ，
+如若项目配置了相关的 extAppid ，那么项目页卡中也会有相关信息。
 
 ext
 
 小程序模板开发
-与开发普通小程序一致，开发者在开发工具上开发好相关的业务逻辑之后，在项目页卡中提交预览即可以在微信中查看小程序的真实表现。
+与开发普通小程序一致，开发者在开发工具上开发好相关的业务逻辑之后，
+在项目页卡中提交预览即可以在微信中查看小程序的真实表现。
 
-有所不同的是，第三方平台小程序的提交上传是上传至该第三方平台的 open 帐号下的模板草稿箱中，该平台的管理员需要自行对该模板进行相应的设置，更多请参考 开放平台的文档 。
+有所不同的是，第三方平台小程序的提交上传是上传至该第三方平台的 open 帐号下的模板草稿箱中，
+该平台的管理员需要自行对该模板进行相应的设置，更多请参考 开放平台的文档 。
 
 extAppid 的开发调试
 为了方便第三方平台的开发者引入 extAppid 的开发调试工作，需要引入 ext.json 的概念。
@@ -38,45 +42,48 @@ ext.json 是一个配置文件，放置在小程序项目的根目录下。
 
 以下是一个包含了所有配置选项的 ext.json ：
 
-{
-  "extEnable": true,
-  "extAppid": "wxf9c4501a76931b33",
-  "directCommit": false,
-  "ext": {
-    "name": "wechat",
-    "attr": {
-      "host": "open.weixin.qq.com",
-      "users": ["user_1", "user_2"]
-    }
-  },
-  "extPages": {
-    "pages/logs/logs": {
-      "navigationBarTitleText": "logs"
-    }
-  },
-  "window": {
-    "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "Demo",
-    "navigationBarTextStyle": "black"
-  },
-  "tabBar": {
-    "list": [
-      {
-        "pagePath": "pages/index/index",
-        "text": "首页"
-      },
-      {
-        "pagePath": "pages/logs/logs",
-        "text": "日志"
+.. code:: json
+
+  {
+    "extEnable": true,
+    "extAppid": "wxf9c4501a76931b33",
+    "directCommit": false,
+    "ext": {
+      "name": "wechat",
+      "attr": {
+        "host": "open.weixin.qq.com",
+        "users": ["user_1", "user_2"]
       }
-    ]
-  },
-  "networkTimeout": {
-    "request": 10000,
-    "downloadFile": 10000
+    },
+    "extPages": {
+      "pages/logs/logs": {
+        "navigationBarTitleText": "logs"
+      }
+    },
+    "window": {
+      "backgroundTextStyle": "light",
+      "navigationBarBackgroundColor": "#fff",
+      "navigationBarTitleText": "Demo",
+      "navigationBarTextStyle": "black"
+    },
+    "tabBar": {
+      "list": [
+        {
+          "pagePath": "pages/index/index",
+          "text": "首页"
+        },
+        {
+          "pagePath": "pages/logs/logs",
+          "text": "日志"
+        }
+      ]
+    },
+    "networkTimeout": {
+      "request": 10000,
+      "downloadFile": 10000
+    }
   }
-}
+
 ext.json中的配置字段分为两种
 
 特有的字段
@@ -99,13 +106,16 @@ ext 字段是开发自定义的数据字段，在小程序中可以通过 wx.get
 
 例如上面的例子中，通过 wx.getExtConfigSync 就可以获得 ext 字段的所有配置
 
-{
-  "name": "wechat",
-  "attr": {
-    "host": "open.weixin.qq.com",
-    "users": ["user_1", "user_2"]
+.. code:: json
+
+  {
+    "name": "wechat",
+    "attr": {
+      "host": "open.weixin.qq.com",
+      "users": ["user_1", "user_2"]
+    }
   }
-}
+
 extPages
 extPages 是一个对象，对象中的每个 key 应该是该小程序模板 app.json 中定义的页面，每个 key 对应的 value 是 page.json 中所规定的各项配置。
 
@@ -123,12 +133,15 @@ tips: 可以使用工具的命令行接口 或者 http 接口来实现自动化�
 同 app.json 相同的字段
 当 ext.json 中的字段同 app.json 中一致时，ext.json 的字段会覆盖 app.json 中的对应字段，例如以下的 ext.json
 
-{
-  "window": {
-    "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "ext navigationBarTitleText",
-    "navigationBarTextStyle": "black"
+.. code:: json
+
+  {
+    "window": {
+      "backgroundTextStyle": "light",
+      "navigationBarBackgroundColor": "#fff",
+      "navigationBarTitleText": "ext navigationBarTitleText",
+      "navigationBarTextStyle": "black"
+    }
   }
-}
+
 那么该小程序最终的 navigationBarTitleText 应该是 ext navigationBarTitleText 。

@@ -95,11 +95,15 @@
 <li class="toctree-l2 current"><a class="reference internal" href="index.html">小程序配置</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="app.html">全局配置</a></li>
 <li class="toctree-l3"><a class="reference internal" href="page.html">页面配置</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">sitemap 配置</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">sitemap 配置</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id1">配置项</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id2">配置示例</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../scene.html">场景值列表</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../api/index.html">框架接口</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/index.html">框架接口说明</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../wxcloud/index.html">云开发</a></li>
@@ -175,14 +179,15 @@
            <div itemprop="articleBody">
             
   <div class="section" id="sitemap">
-<h1>sitemap 配置<a class="headerlink" href="#sitemap" title="永久链接至标题">¶</a></h1>
-<p>微信现已开放小程序内搜索，开发者可以通过 sitemap.json 配置，或者管理后台页面收录开关来配置其小程序页面是否允许微信索引。
+<h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/sitemap.html">sitemap 配置</a><a class="headerlink" href="#sitemap" title="永久链接至标题">¶</a></h1>
+<p>微信现已开放小程序内搜索，开发者可以通过 <code class="file docutils literal notranslate"><span class="pre">sitemap.json</span></code> 配置，或者管理后台页面收录开关来配置其小程序页面是否允许微信索引。
 当开发者允许微信索引时，微信会通过爬虫的形式，为小程序的页面内容建立索引。当用户的搜索词条触发该索引时，小程序的页面将可能展示在搜索结果中。
-爬虫访问小程序内页面时，会携带特定的 user-agent：mpcrawler 及场景值：1129。
+爬虫访问小程序内页面时，会携带特定的 <em class="mimetype">user-agent:mpcrawler</em> 及场景值：<em>1129</em> 。
 需要注意的是，若小程序爬虫发现的页面数据和真实用户的呈现不一致，那么该页面将不会进入索引中。</p>
-<p>小程序根目录下的 sitemap.json 文件用于配置小程序及其页面是否允许被微信索引，文件内容为一个 JSON 对象，
-如果没有 sitemap.json ，则默认为所有页面都允许被索引；sitemap.json 有以下属性：</p>
-<p>配置项</p>
+<p>小程序根目录下的 <code class="file docutils literal notranslate"><span class="pre">sitemap.json</span></code> 文件用于配置小程序及其页面是否允许被微信索引，文件内容为一个 JSON 对象，
+如果没有 <code class="file docutils literal notranslate"><span class="pre">sitemap.json</span></code> ，则默认为所有页面都允许被索引；<code class="file docutils literal notranslate"><span class="pre">sitemap.json</span></code> 有以下属性：</p>
+<div class="section" id="id1">
+<h2>配置项<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h2>
 <table class="docutils align-center">
 <colgroup>
 <col style="width: 19%" />
@@ -294,7 +299,9 @@
 </tr>
 </tbody>
 </table>
-<p>配置示例</p>
+</div>
+<div class="section" id="id2">
+<h2>配置示例<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
 <p>示例1</p>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
   <span class="nt">&quot;rules&quot;</span><span class="p">:</span> <span class="p">[</span>
@@ -312,11 +319,13 @@
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>path/to/page?a=1&amp;b=2 =&gt; 优先索引
-path/to/page =&gt; 不被索引
-path/to/page?a=1 =&gt; 不被索引
-path/to/page?a=1&amp;b=2&amp;c=3 =&gt; 不被索引</p>
-<p>其他页面都会被索引</p>
+<ul class="simple">
+<li><p>path/to/page?a=1&amp;b=2 =&gt; 优先索引</p></li>
+<li><p>path/to/page =&gt; 不被索引</p></li>
+<li><p>path/to/page?a=1 =&gt; 不被索引</p></li>
+<li><p>path/to/page?a=1&amp;b=2&amp;c=3 =&gt; 不被索引</p></li>
+<li><p>其他页面都会被索引</p></li>
+</ul>
 <p>示例2</p>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
   <span class="nt">&quot;rules&quot;</span><span class="p">:</span> <span class="p">[</span>
@@ -334,11 +343,13 @@ path/to/page?a=1&amp;b=2&amp;c=3 =&gt; 不被索引</p>
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>path/to/page?a=1&amp;b=2 =&gt; 优先索引
-path/to/page?a=1&amp;b=2&amp;c=3 =&gt; 优先索引
-path/to/page =&gt; 不被索引
-path/to/page?a=1 =&gt; 不被索引</p>
-<p>其他页面都会被索引</p>
+<ul class="simple">
+<li><p>path/to/page?a=1&amp;b=2 =&gt; 优先索引</p></li>
+<li><p>path/to/page?a=1&amp;b=2&amp;c=3 =&gt; 优先索引</p></li>
+<li><p>path/to/page =&gt; 不被索引</p></li>
+<li><p>path/to/page?a=1 =&gt; 不被索引</p></li>
+<li><p>其他页面都会被索引</p></li>
+</ul>
 <p>示例3</p>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
   <span class="nt">&quot;rules&quot;</span><span class="p">:</span> <span class="p">[</span>
@@ -356,11 +367,13 @@ path/to/page?a=1 =&gt; 不被索引</p>
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>path/to/page =&gt; 优先索引
-path/to/page?c=3 =&gt; 优先索引
-path/to/page?a=1 =&gt; 不被索引
-path/to/page?a=1&amp;b=2 =&gt; 不被索引</p>
-<p>其他页面都会被索引</p>
+<ul class="simple">
+<li><p>path/to/page =&gt; 优先索引</p></li>
+<li><p>path/to/page?c=3 =&gt; 优先索引</p></li>
+<li><p>path/to/page?a=1 =&gt; 不被索引</p></li>
+<li><p>path/to/page?a=1&amp;b=2 =&gt; 不被索引</p></li>
+<li><p>其他页面都会被索引</p></li>
+</ul>
 <p>示例4</p>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
   <span class="nt">&quot;rules&quot;</span><span class="p">:</span> <span class="p">[</span>
@@ -378,18 +391,21 @@ path/to/page?a=1&amp;b=2 =&gt; 不被索引</p>
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>path/to/page?a=1 =&gt; 优先索引
-path/to/page?a=1&amp;b=2 =&gt; 优先索引
-path/to/page =&gt; 不被索引
-path/to/page?c=3 =&gt; 不被索引</p>
-<p>其他页面都会被索引</p>
+<ul class="simple">
+<li><p>path/to/page?a=1 =&gt; 优先索引</p></li>
+<li><p>path/to/page?a=1&amp;b=2 =&gt; 优先索引</p></li>
+<li><p>path/to/page =&gt; 不被索引</p></li>
+<li><p>path/to/page?c=3 =&gt; 不被索引</p></li>
+<li><p>其他页面都会被索引</p></li>
+</ul>
 <div class="admonition tip">
 <p class="admonition-title">小技巧</p>
-<p>没有 sitemap.json 则默认所有页面都能被索引</p>
+<p>没有 <code class="file docutils literal notranslate"><span class="pre">sitemap.json</span></code> 则默认所有页面都能被索引</p>
 </div>
 <div class="admonition tip">
 <p class="admonition-title">小技巧</p>
-<p>{“action”: “allow”, “page”: “*”} 是优先级最低的默认规则，未显式指明 “disallow” 的都默认被索引</p>
+<p><code class="docutils literal notranslate"><span class="pre">{&quot;action&quot;:</span> <span class="pre">&quot;allow&quot;,</span> <span class="pre">&quot;page&quot;:</span> <span class="pre">&quot;*&quot;}</span></code> 是优先级最低的默认规则，未显式指明 <code class="docutils literal notranslate"><span class="pre">&quot;disallow&quot;</span></code> 的都默认被索引</p>
+</div>
 </div>
 </div>
 

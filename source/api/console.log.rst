@@ -1,2 +1,4 @@
-console.log
-=
+:orphan:
+
+:wxapi:`console.log`
+==============================

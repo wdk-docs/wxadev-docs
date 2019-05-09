@@ -1,2 +1,4 @@
-console.groupEnd
-=======
+:orphan:
+
+:wxapi:`console.groupEnd`
+==================================

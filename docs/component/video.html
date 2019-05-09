@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>video &mdash; wxadev 1.0.0 文档</title>
+  <title>video ☁️ &mdash; wxadev 1.0.0 文档</title>
   
 
   
@@ -36,8 +36,8 @@
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜索" href="../search.html" />
-    <link rel="next" title="map" href="map.html" />
-    <link rel="prev" title="live-pusher" href="live-pusher.html" /> 
+    <link rel="next" title="live-pusher" href="live-pusher.html" />
+    <link rel="prev" title="audio 🗑" href="audio.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -93,12 +93,12 @@
 <li class="toctree-l2"><a class="reference internal" href="index.html#id4">表单</a></li>
 <li class="toctree-l2"><a class="reference internal" href="index.html#id5">导航</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="index.html#id6">媒体</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="audio.html">audio</a></li>
-<li class="toctree-l3"><a class="reference internal" href="camera.html">camera</a></li>
-<li class="toctree-l3"><a class="reference internal" href="image.html">image</a></li>
-<li class="toctree-l3"><a class="reference internal" href="live-player.html">live-player</a></li>
+<li class="toctree-l3"><a class="reference internal" href="image.html">image ☁️</a></li>
+<li class="toctree-l3"><a class="reference internal" href="audio.html">audio 🗑</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">video ☁️</a></li>
 <li class="toctree-l3"><a class="reference internal" href="live-pusher.html">live-pusher</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">video</a></li>
+<li class="toctree-l3"><a class="reference internal" href="live-player.html">live-player</a></li>
+<li class="toctree-l3"><a class="reference internal" href="camera.html">camera</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="index.html#id7">地图</a></li>
@@ -164,7 +164,7 @@
         
           <li><a href="index.html">组件</a> &raquo;</li>
         
-      <li>video</li>
+      <li>video ☁️</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -184,19 +184,23 @@
            <div itemprop="articleBody">
             
   <div class="section" id="video">
-<span id="id1"></span><h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/component/video.html">video</a><a class="headerlink" href="#video" title="永久链接至标题">¶</a></h1>
+<span id="id1"></span><h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/component/video.html">video ☁️</a><a class="headerlink" href="#video" title="永久链接至标题">¶</a></h1>
 <div class="versionadded">
 <p><span class="versionmodified added">1.0.0 新版功能: </span>低版本需做 <a class="reference internal" href="../framework/compatibility.html#compatibility"><span class="std std-ref">兼容处理</span></a> 。</p>
 </div>
-<p>视频。相关 api：<a class="reference internal" href="../api/wx.createVideoContext.html#wx.createVideoContext" title="wx.createVideoContext"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.createVideoContext()</span></code></a></p>
+<div class="versionadded">
+<p><span class="versionmodified added">2.3.0 新版功能: </span>支持云文件ID。</p>
+</div>
+<p>视频组件。相关api：<a class="reference internal" href="../api/VideoContext.html#wx.createVideoContext" title="wx.createVideoContext"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.createVideoContext()</span></code></a></p>
 <table class="docutils align-center">
 <colgroup>
-<col style="width: 17%" />
-<col style="width: 9%" />
+<col style="width: 25%" />
+<col style="width: 13%" />
+<col style="width: 8%" />
 <col style="width: 5%" />
-<col style="width: 3%" />
-<col style="width: 61%" />
-<col style="width: 6%" />
+<col style="width: 28%" />
+<col style="width: 17%" />
+<col style="width: 4%" />
 </colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>属性</p></th>
@@ -205,6 +209,7 @@
 <th class="head"><p>必填</p></th>
 <th class="head"><p>说明</p></th>
 <th class="head"><p>最低版本</p></th>
+<th class="head"></th>
 </tr>
 </thead>
 <tbody>
@@ -212,22 +217,41 @@
 <td><p>string</p></td>
 <td></td>
 <td><p>是</p></td>
-<td><p>要播放视频的资源地址，支持云文件ID（2.3.0）</p></td>
-<td><p>1.0.0</p></td>
+<td><p>要播放视频的资源地址，</p></td>
+<td></td>
+<td></td>
 </tr>
-<tr class="row-odd"><td><p>duration</p></td>
+<tr class="row-odd"><td></td>
+<td></td>
+<td></td>
+<td></td>
+<td><p>支持云文件ID(2.3.0)</p></td>
+<td><p>1.0.0</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>duration</p></td>
 <td><p>number</p></td>
 <td></td>
 <td><p>否</p></td>
 <td><p>指定视频时长</p></td>
 <td><p>1.1.0</p></td>
+<td></td>
 </tr>
-<tr class="row-even"><td><p>controls</p></td>
+<tr class="row-odd"><td><p>controls</p></td>
 <td><p>boolean</p></td>
 <td><p>true</p></td>
 <td><p>否</p></td>
-<td><p>是否显示默认播放控件（播放/暂停按钮、播放进度、时间）</p></td>
+<td><p>是否显示默认播放控件</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td></td>
+<td></td>
+<td></td>
+<td></td>
+<td><p>(播放/暂停按钮、播放进度、时间)</p></td>
 <td><p>1.0.0</p></td>
+<td></td>
 </tr>
 <tr class="row-odd"><td><p>danmu-list</p></td>
 <td><p>Array.&lt;object&gt;</p></td>
@@ -235,20 +259,55 @@
 <td><p>否</p></td>
 <td><p>弹幕列表</p></td>
 <td><p>1.0.0</p></td>
+<td></td>
 </tr>
 <tr class="row-even"><td><p>danmu-btn</p></td>
 <td><p>boolean</p></td>
 <td><p>false</p></td>
 <td><p>否</p></td>
-<td><p>是否显示弹幕按钮，只在初始化时有效，不能动态变更</p></td>
+<td><p>是否显示弹幕按钮，</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td></td>
+<td></td>
+<td></td>
+<td><p>只在初始化时有效，</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td></td>
+<td></td>
+<td></td>
+<td></td>
+<td><p>不能动态变更</p></td>
 <td><p>1.0.0</p></td>
+<td></td>
 </tr>
 <tr class="row-odd"><td><p>enable-danmu</p></td>
 <td><p>boolean</p></td>
 <td><p>false</p></td>
 <td><p>否</p></td>
-<td><p>是否展示弹幕，只在初始化时有效，不能动态变更</p></td>
+<td><p>是否展示弹幕，</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td><p>只在初始化时有效，</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td></td>
+<td></td>
+<td></td>
+<td><p>不能动态变更</p></td>
 <td><p>1.0.0</p></td>
+<td></td>
 </tr>
 <tr class="row-even"><td><p>autoplay</p></td>
 <td><p>boolean</p></td>
@@ -256,6 +315,7 @@
 <td><p>否</p></td>
 <td><p>是否自动播放</p></td>
 <td><p>1.0.0</p></td>
+<td></td>
 </tr>
 <tr class="row-odd"><td><p>loop</p></td>
 <td><p>boolean</p></td>
@@ -263,6 +323,7 @@
 <td><p>否</p></td>
 <td><p>是否循环播放</p></td>
 <td><p>1.4.0</p></td>
+<td></td>
 </tr>
 <tr class="row-even"><td><p>muted</p></td>
 <td><p>boolean</p></td>
@@ -270,6 +331,7 @@
 <td><p>否</p></td>
 <td><p>是否静音播放</p></td>
 <td><p>1.4.0</p></td>
+<td></td>
 </tr>
 <tr class="row-odd"><td><p>initial-time</p></td>
 <td><p>number</p></td>
@@ -277,27 +339,63 @@
 <td><p>否</p></td>
 <td><p>指定视频初始播放位置</p></td>
 <td><p>1.6.0</p></td>
+<td></td>
 </tr>
 <tr class="row-even"><td><p>page-gesture</p></td>
 <td><p>boolean</p></td>
 <td><p>false</p></td>
 <td><p>否</p></td>
-<td><p>在非全屏模式下，是否开启亮度与音量调节手势（废弃，见 vslide-gesture）</p></td>
+<td><p>在非全屏模式下，</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td></td>
+<td></td>
+<td></td>
+<td><p>是否开启亮度与音量调节手势</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td></td>
+<td></td>
+<td></td>
+<td></td>
+<td><p>(废弃，见 vslide-gesture)</p></td>
 <td><p>1.6.0</p></td>
+<td></td>
 </tr>
 <tr class="row-odd"><td><p>direction</p></td>
 <td><p>number</p></td>
 <td></td>
 <td><p>否</p></td>
-<td><p>设置全屏时视频的方向，不指定则根据宽高比自动判断</p></td>
-<td><p>1.7.0</p></td>
+<td><p>设置全屏时视频的方向，</p></td>
+<td></td>
+<td></td>
 </tr>
-<tr class="row-even"><td><p>show-progress</p></td>
+<tr class="row-even"><td></td>
+<td></td>
+<td></td>
+<td></td>
+<td><p>不指定则根据宽高比自动判断</p></td>
+<td><p>1.7.0</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>show-progress</p></td>
 <td><p>boolean</p></td>
 <td><p>true</p></td>
 <td><p>否</p></td>
-<td><p>若不设置，宽度大于240时才会显示</p></td>
+<td><p>若不设置，宽度大于</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td></td>
+<td></td>
+<td></td>
+<td></td>
+<td><p>240时才会显示</p></td>
 <td><p>1.9.0</p></td>
+<td></td>
 </tr>
 <tr class="row-odd"><td><p>show-fullscreen-btn</p></td>
 <td><p>boolean</p></td>
@@ -305,41 +403,95 @@
 <td><p>否</p></td>
 <td><p>是否显示全屏按钮</p></td>
 <td><p>1.9.0</p></td>
+<td></td>
 </tr>
 <tr class="row-even"><td><p>show-play-btn</p></td>
 <td><p>boolean</p></td>
 <td><p>true</p></td>
 <td><p>否</p></td>
-<td><p>是否显示视频底部控制栏的播放按钮</p></td>
-<td><p>1.9.0</p></td>
+<td><p>是否显示视频底部</p></td>
+<td></td>
+<td></td>
 </tr>
-<tr class="row-odd"><td><p>show-center-play-btn</p></td>
+<tr class="row-odd"><td></td>
+<td></td>
+<td></td>
+<td></td>
+<td><p>控制栏的播放按钮</p></td>
+<td><p>1.9.0</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>show-center-play-btn</p></td>
 <td><p>boolean</p></td>
 <td><p>true</p></td>
 <td><p>否</p></td>
 <td><p>是否显示视频中间的播放按钮</p></td>
 <td><p>1.9.0</p></td>
+<td></td>
 </tr>
-<tr class="row-even"><td><p>enable-progress-gesture</p></td>
+<tr class="row-odd"><td><p>enable-progress-gesture</p></td>
 <td><p>boolean</p></td>
 <td><p>true</p></td>
 <td><p>否</p></td>
 <td><p>是否开启控制进度的手势</p></td>
 <td><p>1.9.0</p></td>
+<td></td>
 </tr>
-<tr class="row-odd"><td><p>object-fit</p></td>
+<tr class="row-even"><td><p>object-fit</p></td>
 <td><p>string</p></td>
 <td><p>contain</p></td>
 <td><p>否</p></td>
-<td><p>当视频大小与 video 容器大小不一致时，视频的表现形式</p></td>
-<td><p>1.0.0</p></td>
+<td><p>当视频大小与 video</p></td>
+<td></td>
+<td></td>
 </tr>
-<tr class="row-even"><td><p>poster</p></td>
+<tr class="row-odd"><td></td>
+<td></td>
+<td></td>
+<td></td>
+<td><p>容器大小不一致时，</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td></td>
+<td></td>
+<td></td>
+<td></td>
+<td><p>视频的表现形式</p></td>
+<td><p>1.0.0</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>poster</p></td>
 <td><p>string</p></td>
 <td></td>
 <td><p>否</p></td>
-<td><p>视频封面的图片网络资源地址或云文件ID（2.3.0）。若 controls 属性值为 false 则设置 poster 无效</p></td>
+<td><p>视频封面的图片网络资源地址</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td></td>
+<td></td>
+<td></td>
+<td></td>
+<td><p>或云文件ID(2.3.0)</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td></td>
+<td></td>
+<td></td>
+<td><p>若 controls 属性值为 false</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td></td>
+<td></td>
+<td></td>
+<td></td>
+<td><p>则设置 poster 无效</p></td>
 <td><p>1.0.0</p></td>
+<td></td>
 </tr>
 <tr class="row-odd"><td><p>show-mute-btn</p></td>
 <td><p>boolean</p></td>
@@ -347,13 +499,15 @@
 <td><p>否</p></td>
 <td><p>是否显示静音按钮</p></td>
 <td><p>2.4.0</p></td>
+<td></td>
 </tr>
 <tr class="row-even"><td><p>title</p></td>
 <td><p>string</p></td>
 <td></td>
 <td><p>否</p></td>
-<td><p>视频的:wxapi:<cite>wx.createWorker</cite>，全屏时在顶部展示</p></td>
+<td><p>视频的标题，全屏时在顶部展示</p></td>
 <td><p>2.4.0</p></td>
+<td></td>
 </tr>
 <tr class="row-odd"><td><p>play-btn-position</p></td>
 <td><p>string</p></td>
@@ -361,94 +515,153 @@
 <td><p>否</p></td>
 <td><p>播放按钮的位置</p></td>
 <td><p>2.4.0</p></td>
+<td></td>
 </tr>
 <tr class="row-even"><td><p>enable-play-gesture</p></td>
 <td><p>boolean</p></td>
 <td><p>false</p></td>
 <td><p>否</p></td>
-<td><p>是否开启播放手势，即双击切换播放/暂停</p></td>
-<td><p>2.4.0</p></td>
+<td><p>是否开启播放手势，</p></td>
+<td></td>
+<td></td>
 </tr>
-<tr class="row-odd"><td><p>auto-pause-if-navigate</p></td>
+<tr class="row-odd"><td></td>
+<td></td>
+<td></td>
+<td></td>
+<td><p>即双击切换播放/暂停</p></td>
+<td><p>2.4.0</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>auto-pause-if-navigate</p></td>
 <td><p>boolean</p></td>
 <td><p>true</p></td>
 <td><p>否</p></td>
-<td><p>当跳转到其它小程序页面时，是否自动暂停本页面的视频</p></td>
+<td><p>当跳转到其它小程序页面时，</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td></td>
+<td></td>
+<td></td>
+<td><p>是否自动暂停本页面的视频</p></td>
 <td><p>2.5.0</p></td>
+<td></td>
 </tr>
 <tr class="row-even"><td><p>auto-pause-if-open-native</p></td>
 <td><p>boolean</p></td>
 <td><p>true</p></td>
 <td><p>否</p></td>
-<td><p>当跳转到其它微信原生页面时，是否自动暂停本页面的视频</p></td>
-<td><p>2.5.0</p></td>
+<td><p>当跳转到其它微信原生页面时，</p></td>
+<td></td>
+<td></td>
 </tr>
-<tr class="row-odd"><td><p>vslide-gesture</p></td>
+<tr class="row-odd"><td></td>
+<td></td>
+<td></td>
+<td></td>
+<td><p>是否自动暂停本页面的视频</p></td>
+<td><p>2.5.0</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>vslide-gesture</p></td>
 <td><p>boolean</p></td>
 <td><p>false</p></td>
 <td><p>否</p></td>
-<td><p>在非全屏模式下，是否开启亮度与音量调节手势（同 page-gesture）</p></td>
-<td><p>2.6.2</p></td>
+<td><p>在非全屏模式下，是否开启亮度</p></td>
+<td></td>
+<td></td>
 </tr>
-<tr class="row-even"><td><p>vslide-gesture-in-fullscreen</p></td>
+<tr class="row-odd"><td></td>
+<td></td>
+<td></td>
+<td></td>
+<td><p>与音量调节手势</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td></td>
+<td></td>
+<td></td>
+<td></td>
+<td><p>(同 page-gesture)</p></td>
+<td><p>2.6.2</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>vslide-gesture-in-fullscreen</p></td>
 <td><p>boolean</p></td>
 <td><p>true</p></td>
 <td><p>否</p></td>
-<td><p>在全屏模式下，是否开启亮度与音量调节手势</p></td>
-<td><p>2.6.2</p></td>
-</tr>
-<tr class="row-odd"><td><p>bindplay</p></td>
-<td><p>eventhandle</p></td>
+<td><p>在全屏模式下，是否开启亮度</p></td>
 <td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td></td>
+<td></td>
+<td></td>
+<td></td>
+<td><p>与音量调节手势</p></td>
+<td><p>2.6.2</p></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<table class="colwidths-auto docutils align-left" id="id2">
+<caption><span class="caption-text">video 组件 绑定事件</span><a class="headerlink" href="#id2" title="永久链接至表格">¶</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>属性</p></th>
+<th class="head"><p>类型</p></th>
+<th class="head"><p>必填</p></th>
+<th class="head"><p>说明</p></th>
+<th class="head"><p>最低版本</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>bindplay</p></td>
+<td><p>eventhandle</p></td>
 <td><p>否</p></td>
 <td><p>当开始/继续播放时触发play事件</p></td>
 <td><p>1.0.0</p></td>
 </tr>
-<tr class="row-even"><td><p>bindpause</p></td>
+<tr class="row-odd"><td><p>bindpause</p></td>
 <td><p>eventhandle</p></td>
-<td></td>
 <td><p>否</p></td>
 <td><p>当暂停播放时触发 pause 事件</p></td>
 <td><p>1.0.0</p></td>
 </tr>
-<tr class="row-odd"><td><p>bindended</p></td>
+<tr class="row-even"><td><p>bindended</p></td>
 <td><p>eventhandle</p></td>
-<td></td>
 <td><p>否</p></td>
 <td><p>当播放到末尾时触发 ended 事件</p></td>
 <td><p>1.0.0</p></td>
 </tr>
-<tr class="row-even"><td><p>bindtimeupdate</p></td>
+<tr class="row-odd"><td><p>bindtimeupdate</p></td>
 <td><p>eventhandle</p></td>
-<td></td>
 <td><p>否</p></td>
 <td><p>播放进度变化时触发，event.detail = {currentTime, duration} 。触发频率 250ms 一次</p></td>
 <td><p>1.0.0</p></td>
 </tr>
-<tr class="row-odd"><td><p>bindfullscreenchange</p></td>
+<tr class="row-even"><td><p>bindfullscreenchange</p></td>
 <td><p>eventhandle</p></td>
-<td></td>
 <td><p>否</p></td>
 <td><p>视频进入和退出全屏时触发，event.detail = {fullScreen, direction}，direction 有效值为 vertical 或 horizontal</p></td>
 <td><p>1.4.0</p></td>
 </tr>
-<tr class="row-even"><td><p>bindwaiting</p></td>
+<tr class="row-odd"><td><p>bindwaiting</p></td>
 <td><p>eventhandle</p></td>
-<td></td>
 <td><p>否</p></td>
 <td><p>视频出现缓冲时触发</p></td>
 <td><p>1.7.0</p></td>
 </tr>
-<tr class="row-odd"><td><p>binderror</p></td>
+<tr class="row-even"><td><p>binderror</p></td>
 <td><p>eventhandle</p></td>
-<td></td>
 <td><p>否</p></td>
 <td><p>视频播放出错时触发</p></td>
 <td><p>1.7.0</p></td>
 </tr>
-<tr class="row-even"><td><p>bindprogress</p></td>
+<tr class="row-odd"><td><p>bindprogress</p></td>
 <td><p>eventhandle</p></td>
-<td></td>
 <td><p>否</p></td>
 <td><p>加载进度变化时触发，只支持一段加载。event.detail = {buffered}，百分比</p></td>
 <td><p>2.4.0</p></td>
@@ -696,10 +909,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="map.html" class="btn btn-neutral float-right" title="map" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="live-pusher.html" class="btn btn-neutral float-right" title="live-pusher" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="live-pusher.html" class="btn btn-neutral float-left" title="live-pusher" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="audio.html" class="btn btn-neutral float-left" title="audio 🗑" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

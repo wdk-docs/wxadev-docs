@@ -90,28 +90,28 @@
 <li class="toctree-l1"><a class="reference internal" href="../component/index.html">组件</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">API</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="index.html#id2">基础</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#id3">系统</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#id5">更新</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#id6">小程序</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#id9">调试</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#id10">路由</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#id11">界面</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#id23">网络</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#id27">数据缓存</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#id28">媒体</a></li>
-<li class="toctree-l2 current"><a class="reference internal" href="index.html#id36">位置</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="index.html#id3">系统信息</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id4">更新</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id5">小程序</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id8">调试</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id9">路由</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id10">界面</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id22">网络</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id26">数据缓存</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id27">媒体</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html#id34">位置</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="wx.openLocation.html">wx.openLocation</a></li>
 <li class="toctree-l3"><a class="reference internal" href="wx.getLocation.html">wx.getLocation</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">wx.chooseLocation</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#id37">转发</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#id38">画布</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#id39">文件</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#id40">开放接口</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#id55">设备</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id35">转发</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id36">画布</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id37">文件</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id38">开放接口</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id53">设备</a></li>
 <li class="toctree-l2"><a class="reference internal" href="index.html#worker">Worker</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#id72">第三方平台</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#id70">第三方平台</a></li>
 <li class="toctree-l2"><a class="reference internal" href="index.html#wxml">WXML</a></li>
 </ul>
 </li>
@@ -190,6 +190,29 @@
             
   <div class="section" id="wx-chooselocation">
 <h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/api/wx.chooseLocation.html">wx.chooseLocation</a><a class="headerlink" href="#wx-chooselocation" title="永久链接至标题">¶</a></h1>
+<dl class="function">
+<dt id="wx.chooseLocation">
+<code class="descclassname">wx.</code><code class="descname">chooseLocation</code><span class="sig-paren">(</span><em>{[success][, fail][, complete]}</em><span class="sig-paren">)</span><a class="headerlink" href="#wx.chooseLocation" title="永久链接至目标">¶</a></dt>
+<dd><p>调用前需要 用户授权 <a class="reference internal" href="AuthSetting.html#scope.userLocation" title="scope.userLocation"><code class="xref js js-data docutils literal notranslate"><span class="pre">scope.userLocation</span></code></a></p>
+<p>打开地图选择位置。</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>success()</strong> (<em>function</em>) – <p>接口调用成功的回调函数</p>
+<ul>
+<li><p><strong>name</strong> (<em>string</em>) - 位置名称</p></li>
+<li><p><strong>address</strong> (<em>string</em>) - 详细地址</p></li>
+<li><p><strong>latitude</strong> (<em>string</em>) - 纬度，浮点数，范围为-90~90，负数表示南纬。使用 gcj02 国测局坐标系</p></li>
+<li><p><strong>longitude</strong> (<em>string</em>) - 经度，浮点数，范围为-180~180，负数表示西经。使用 gcj02 国测局坐标系</p></li>
+</ul>
+</p></li>
+<li><p><strong>fail</strong> (<em>function</em>) – 接口调用失败的回调函数</p></li>
+<li><p><strong>complete</strong> (<em>function</em>) – 接口调用结束的回调函数（调用成功、失败都会执行）</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
 </div>
 
 

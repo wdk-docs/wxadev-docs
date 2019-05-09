@@ -1,2 +1,4 @@
+:orphan:
+
 :wxapi:`CanvasContext.bezierCurveTo`
 ============================================

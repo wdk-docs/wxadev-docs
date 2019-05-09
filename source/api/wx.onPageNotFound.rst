@@ -3,13 +3,11 @@
 
 .. function:: wx.onPageNotFound(function callback)
 
-基础库 2.1.2 开始支持，低版本需做 :ref:`compatibility` 。
+   .. versionadded:: 2.1.2 低版本需做 :ref:`compatibility` 。
 
-监听小程序要打开的页面不存在事件。该事件与 App.onPageNotFound 的回调时机一致。
+   监听小程序要打开的页面不存在事件。该事件与 App.onPageNotFound 的回调时机一致。
 
-参数
-function callback
-小程序要打开的页面不存在事件的回调函数
+   :param function callback: 小程序要打开的页面不存在事件的回调函数
 
 参数
 Object res

@@ -299,6 +299,22 @@
 </div>
 <div class="section" id="id2">
 <h2>用户信息<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 35%" />
+<col style="width: 65%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>名称</p></th>
+<th class="head"><p>功能说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="auth.getPaidUnionId.html#auth-getpaidunionid"><span class="std std-ref">auth.getPaidUnionId</span></a></p></td>
+<td><p>用户支付完成后，获取该用户的 UnionId，无需用户授权</p></td>
+</tr>
+</tbody>
+</table>
 <div class="toctree-wrapper compound">
 </div>
 </div>
@@ -329,52 +345,293 @@
 </div>
 <div class="section" id="id5">
 <h3>访问留存<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h3>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 51%" />
+<col style="width: 49%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>名称</p></th>
+<th class="head"><p>功能说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>analysis.getDailyRetain</p></td>
+<td><p>获取用户访问小程序日留存</p></td>
+</tr>
+<tr class="row-odd"><td><p>analysis.getMonthlyRetain</p></td>
+<td><p>获取用户访问小程序月留存</p></td>
+</tr>
+<tr class="row-even"><td><p>analysis.getWeeklyRetain</p></td>
+<td><p>获取用户访问小程序周留存</p></td>
+</tr>
+</tbody>
+</table>
 <div class="toctree-wrapper compound">
 </div>
 </div>
 <div class="section" id="id6">
 <h3>访问趋势<a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h3>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 44%" />
+<col style="width: 56%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>名称</p></th>
+<th class="head"><p>功能说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>analysis.getDailyVisitTrend</p></td>
+<td><p>获取用户访问小程序数据日趋势</p></td>
+</tr>
+<tr class="row-odd"><td><p>analysis.getMonthlyVisitTrend</p></td>
+<td><p>获取用户访问小程序数据月趋势</p></td>
+</tr>
+<tr class="row-even"><td><p>analysis.getWeeklyVisitTrend</p></td>
+<td><p>获取用户访问小程序数据周趋势</p></td>
+</tr>
+<tr class="row-odd"><td><p>analysis.getUserPortrait</p></td>
+<td><p>获取小程序新增或活跃用户的画像分布数据</p></td>
+</tr>
+<tr class="row-even"><td><p>analysis.getVisitDistribution</p></td>
+<td><p>获取用户小程序访问分布数据</p></td>
+</tr>
+<tr class="row-odd"><td><p>analysis.getVisitPage</p></td>
+<td><p>访问页面</p></td>
+</tr>
+<tr class="row-even"><td><p>analysis.getDailySummary</p></td>
+<td><p>获取用户访问小程序数据概况</p></td>
+</tr>
+</tbody>
+</table>
 <div class="toctree-wrapper compound">
 </div>
 </div>
 </div>
 <div class="section" id="id7">
 <h2>客服消息<a class="headerlink" href="#id7" title="永久链接至标题">¶</a></h2>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 59%" />
+<col style="width: 41%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>名称</p></th>
+<th class="head"><p>功能说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>customerServiceMessage.getTempMedia</p></td>
+<td><p>获取客服消息内的临时素材</p></td>
+</tr>
+<tr class="row-odd"><td><p>customerServiceMessage.send</p></td>
+<td><p>发送客服消息给用户</p></td>
+</tr>
+<tr class="row-even"><td><p>customerServiceMessage.setTyping</p></td>
+<td><p>下发客服当前输入状态给用户</p></td>
+</tr>
+<tr class="row-odd"><td><p>customerServiceMessage.uploadTempMedia</p></td>
+<td><p>把媒体文件上传到微信服务器</p></td>
+</tr>
+</tbody>
+</table>
 <div class="toctree-wrapper compound">
 </div>
 </div>
 <div class="section" id="id8">
 <h2>模板消息<a class="headerlink" href="#id8" title="永久链接至标题">¶</a></h2>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 53%" />
+<col style="width: 47%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>名称</p></th>
+<th class="head"><p>功能说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>templateMessage.addTemplate</p></td>
+<td><p>组合模板并添加至帐号下的个人模板库</p></td>
+</tr>
+<tr class="row-odd"><td><p>templateMessage.deleteTemplate</p></td>
+<td><p>删除帐号下的某个模板</p></td>
+</tr>
+<tr class="row-even"><td><p>templateMessage.getTemplateLibraryById</p></td>
+<td><p>获取模板库某个模板标题下关键词库</p></td>
+</tr>
+<tr class="row-odd"><td><p>templateMessage.getTemplateLibraryList</p></td>
+<td><p>获取小程序模板库标题列表</p></td>
+</tr>
+<tr class="row-even"><td><p>templateMessage.getTemplateList</p></td>
+<td><p>获取帐号下已存在的模板列表</p></td>
+</tr>
+<tr class="row-odd"><td><p>templateMessage.send</p></td>
+<td><p>发送模板消息</p></td>
+</tr>
+</tbody>
+</table>
 <div class="toctree-wrapper compound">
 </div>
 </div>
 <div class="section" id="id9">
 <h2>统一服务消息<a class="headerlink" href="#id9" title="永久链接至标题">¶</a></h2>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 38%" />
+<col style="width: 62%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>名称</p></th>
+<th class="head"><p>功能说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>uniformMessage.send</p></td>
+<td><p>下发小程序和公众号统一的服务消息</p></td>
+</tr>
+</tbody>
+</table>
 <div class="toctree-wrapper compound">
 </div>
 </div>
 <div class="section" id="id10">
 <h2>动态消息<a class="headerlink" href="#id10" title="永久链接至标题">¶</a></h2>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 51%" />
+<col style="width: 49%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>名称</p></th>
+<th class="head"><p>功能说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>updatableMessage.createActivityId</p></td>
+<td><p>创建被分享动态消息的 activity_id</p></td>
+</tr>
+<tr class="row-odd"><td><p>updatableMessage.setUpdatableMsg</p></td>
+<td><p>修改被分享的动态消息</p></td>
+</tr>
+</tbody>
+</table>
 <div class="toctree-wrapper compound">
 </div>
 </div>
 <div class="section" id="id11">
 <h2>插件管理<a class="headerlink" href="#id11" title="永久链接至标题">¶</a></h2>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 47%" />
+<col style="width: 53%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>名称</p></th>
+<th class="head"><p>功能说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>pluginManager.applyPlugin</p></td>
+<td><p>向插件开发者发起使用插件的申请</p></td>
+</tr>
+<tr class="row-odd"><td><p>pluginManager.getPluginDevApplyList</p></td>
+<td><p>获取当前所有插件使用方（供插件开发者调用）</p></td>
+</tr>
+<tr class="row-even"><td><p>pluginManager.getPluginList</p></td>
+<td><p>查询已添加的插件</p></td>
+</tr>
+<tr class="row-odd"><td><p>pluginManager.setDevPluginApplyStatus</p></td>
+<td><p>修改插件使用申请的状态（供插件开发者调用）</p></td>
+</tr>
+<tr class="row-even"><td><p>pluginManager.unbindPlugin</p></td>
+<td><p>删除已添加的插件</p></td>
+</tr>
+</tbody>
+</table>
 <div class="toctree-wrapper compound">
 </div>
 </div>
 <div class="section" id="id12">
 <h2>附近的小程序<a class="headerlink" href="#id12" title="永久链接至标题">¶</a></h2>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>名称</p></th>
+<th class="head"><p>功能说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>nearbyPoi.add</p></td>
+<td><p>添加地点</p></td>
+</tr>
+<tr class="row-odd"><td><p>nearbyPoi.delete</p></td>
+<td><p>删除地点</p></td>
+</tr>
+<tr class="row-even"><td><p>nearbyPoi.getList</p></td>
+<td><p>查看地点列表</p></td>
+</tr>
+<tr class="row-odd"><td><p>nearbyPoi.setShowStatus</p></td>
+<td><p>展示/取消展示附近小程序</p></td>
+</tr>
+</tbody>
+</table>
 <div class="toctree-wrapper compound">
 </div>
 </div>
 <div class="section" id="id13">
 <h2>小程序码<a class="headerlink" href="#id13" title="永久链接至标题">¶</a></h2>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 30%" />
+<col style="width: 70%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>名称</p></th>
+<th class="head"><p>功能说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>wxacode.createQRCode</p></td>
+<td><p>获取小程序二维码，适用于需要的码数量较少的业务场景</p></td>
+</tr>
+<tr class="row-odd"><td><p>wxacode.get</p></td>
+<td><p>获取小程序码，适用于需要的码数量较少的业务场景</p></td>
+</tr>
+<tr class="row-even"><td><p>wxacode.getUnlimited</p></td>
+<td><p>获取小程序码，适用于需要的码数量极多的业务场景</p></td>
+</tr>
+</tbody>
+</table>
 <div class="toctree-wrapper compound">
 </div>
 </div>
 <div class="section" id="id14">
 <h2>内容安全<a class="headerlink" href="#id14" title="永久链接至标题">¶</a></h2>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 39%" />
+<col style="width: 61%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>名称</p></th>
+<th class="head"><p>功能说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>security.imgSecCheck</p></td>
+<td><p>校验一张图片是否含有违法违规内容</p></td>
+</tr>
+<tr class="row-odd"><td><p>security.msgSecCheck</p></td>
+<td><p>检查一段文本是否含有违法违规内容</p></td>
+</tr>
+</tbody>
+</table>
 <div class="toctree-wrapper compound">
 </div>
 </div>
@@ -384,8 +641,8 @@
 <h3>小程序使用<a class="headerlink" href="#id16" title="永久链接至标题">¶</a></h3>
 <table class="docutils align-center">
 <colgroup>
-<col style="width: 61%" />
-<col style="width: 39%" />
+<col style="width: 56%" />
+<col style="width: 44%" />
 </colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>名称</p></th>
@@ -396,28 +653,28 @@
 <tr class="row-even"><td><p>logistics.onPathUpdate</p></td>
 <td><p>运单轨迹更新事件</p></td>
 </tr>
-<tr class="row-odd"><td><p>logistics.addOrder <code class="docutils literal notranslate"><span class="pre">云调用</span></code></p></td>
+<tr class="row-odd"><td><p>logistics.addOrder ☁️</p></td>
 <td><p>生成运单</p></td>
 </tr>
-<tr class="row-even"><td><p>logistics.cancelOrder  <code class="docutils literal notranslate"><span class="pre">云调用</span></code></p></td>
+<tr class="row-even"><td><p>logistics.cancelOrder  ☁️</p></td>
 <td><p>取消运单</p></td>
 </tr>
-<tr class="row-odd"><td><p>logistics.getAllDelivery  <code class="docutils literal notranslate"><span class="pre">云调用</span></code></p></td>
+<tr class="row-odd"><td><p>logistics.getAllDelivery  ☁️</p></td>
 <td><p>获取支持的快递公司列表</p></td>
 </tr>
-<tr class="row-even"><td><p>logistics.getOrder  <code class="docutils literal notranslate"><span class="pre">云调用</span></code></p></td>
+<tr class="row-even"><td><p>logistics.getOrder  ☁️</p></td>
 <td><p>获取运单数据</p></td>
 </tr>
-<tr class="row-odd"><td><p>logistics.getPath  <code class="docutils literal notranslate"><span class="pre">云调用</span></code></p></td>
+<tr class="row-odd"><td><p>logistics.getPath  ☁️</p></td>
 <td><p>查询运单轨迹</p></td>
 </tr>
-<tr class="row-even"><td><p>logistics.getPrinter  <code class="docutils literal notranslate"><span class="pre">云调用</span></code></p></td>
+<tr class="row-even"><td><p>logistics.getPrinter  ☁️</p></td>
 <td><p>获取打印员</p></td>
 </tr>
-<tr class="row-odd"><td><p>logistics.getQuota  <code class="docutils literal notranslate"><span class="pre">云调用</span></code></p></td>
+<tr class="row-odd"><td><p>logistics.getQuota  ☁️</p></td>
 <td><p>获取电子面单余额</p></td>
 </tr>
-<tr class="row-even"><td><p>logistics.updatePrinter  <code class="docutils literal notranslate"><span class="pre">云调用</span></code></p></td>
+<tr class="row-even"><td><p>logistics.updatePrinter  ☁️</p></td>
 <td><p>更新打印员</p></td>
 </tr>
 </tbody>
@@ -429,8 +686,8 @@
 <h3>服务提供方使用<a class="headerlink" href="#id17" title="永久链接至标题">¶</a></h3>
 <table class="docutils align-center">
 <colgroup>
-<col style="width: 66%" />
-<col style="width: 34%" />
+<col style="width: 60%" />
+<col style="width: 40%" />
 </colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>名称</p></th>
@@ -438,7 +695,7 @@
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p>logistics.getContact <code class="docutils literal notranslate"><span class="pre">云调用</span></code></p></td>
+<tr class="row-even"><td><p>logistics.getContact ☁️</p></td>
 <td><p>获取面单联系人信息</p></td>
 </tr>
 <tr class="row-odd"><td><p>logistics.onAddOrder</p></td>
@@ -453,13 +710,13 @@
 <tr class="row-even"><td><p>logistics.onGetQuota</p></td>
 <td><p>查询商户余额事件</p></td>
 </tr>
-<tr class="row-odd"><td><p>logistics.previewTemplate <code class="docutils literal notranslate"><span class="pre">云调用</span></code></p></td>
+<tr class="row-odd"><td><p>logistics.previewTemplate ☁️</p></td>
 <td><p>预览面单模板</p></td>
 </tr>
-<tr class="row-even"><td><p>logistics.updateBusiness <code class="docutils literal notranslate"><span class="pre">云调用</span></code></p></td>
+<tr class="row-even"><td><p>logistics.updateBusiness ☁️</p></td>
 <td><p>更新商户审核结果</p></td>
 </tr>
-<tr class="row-odd"><td><p>logistics.updatePath <code class="docutils literal notranslate"><span class="pre">云调用</span></code></p></td>
+<tr class="row-odd"><td><p>logistics.updatePath ☁️</p></td>
 <td><p>更新运单轨迹</p></td>
 </tr>
 </tbody>
@@ -470,6 +727,22 @@
 </div>
 <div class="section" id="id18">
 <h2>生物认证<a class="headerlink" href="#id18" title="永久链接至标题">¶</a></h2>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 45%" />
+<col style="width: 55%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>名称</p></th>
+<th class="head"><p>功能说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>soter.verifySignature</p></td>
+<td><p>SOTER 生物认证秘钥签名验证</p></td>
+</tr>
+</tbody>
+</table>
 <div class="toctree-wrapper compound">
 </div>
 </div>

@@ -66,7 +66,7 @@
     </view>
   </view>
 
-.. code:: js
+.. code::
 
   const pageData = {}
   for (let i = 1; i < 5; i++) {

@@ -103,10 +103,9 @@ version 的合法值
 示例代码
 --------------
 
-:download:`在开发者工具中预览效果 <path>`
+:download:`在开发者工具中预览效果 <https://developers.weixin.qq.com/s/2Ec11cmI6BY1>`
 
-.. code:: html
-
+.. code:: css
 
   .navigator-hover {
     color: blue;
@@ -114,6 +113,9 @@ version 的合法值
   .other-navigator-hover {
     color: red;
   }
+
+.. code:: html
+
   <!-- sample.wxml -->
   <view class="btn-area">
     <navigator
@@ -147,12 +149,18 @@ version 的合法值
       打开绑定的小程序
     </navigator>
   </view>
+
+.. code:: html
+
   <!-- navigator.wxml -->
   <view style="text-align:center">{{title}}</view>
   <view>点击左上角返回回到之前页面</view>
   <!-- redirect.wxml -->
   <view style="text-align:center">{{title}}</view>
   <view>点击左上角返回回到上级页面</view>
+
+.. code::
+
   Page({
     onLoad(options) {
       this.setData({

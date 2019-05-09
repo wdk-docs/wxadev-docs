@@ -1,2 +1,4 @@
-console.warn
-=
+:orphan:
+
+:wxapi:`console.warn`
+============================

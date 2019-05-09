@@ -1,2 +1,4 @@
-console.info
-====
+:orphan:
+
+:wxapi:`console.info`
+===========================

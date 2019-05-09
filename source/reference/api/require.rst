@@ -1,4 +1,5 @@
-setInterval
+
+:orphan:
 
 :wxref:`require <api/require>`
 ===================================

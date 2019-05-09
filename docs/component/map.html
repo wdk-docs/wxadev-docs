@@ -37,7 +37,7 @@
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜索" href="../search.html" />
     <link rel="next" title="canvas" href="canvas.html" />
-    <link rel="prev" title="video" href="video.html" /> 
+    <link rel="prev" title="camera" href="camera.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -180,13 +180,16 @@
             
   <div class="section" id="map">
 <span id="id1"></span><h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/component/map.html">map</a><a class="headerlink" href="#map" title="永久链接至标题">¶</a></h1>
+<p>版本:1.0.0 更新:2019 年 05 月 09 日</p>
 <div class="versionadded">
 <p><span class="versionmodified added">1.0.0 新版功能: </span>低版本需做 <a class="reference internal" href="../framework/compatibility.html#compatibility"><span class="std std-ref">兼容处理</span></a> 。</p>
 </div>
-<p>地图。相关api <a class="reference internal" href="../api/wx.createMapContext.html#wx.createMapContext" title="wx.createMapContext"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.createMapContext()</span></code></a> 。</p>
-<p>个性化地图能力可在小程序后台“设置-开发者工具-腾讯位置服务”申请开通。
-设置subkey后，小程序内的地图组件均会使用该底图效果。详见《小程序个性地图使用指南》
-组件属性的长度单位默认为px，2.4.0起支持传入单位(rpx/px)。</p>
+<div class="versionadded">
+<p><span class="versionmodified added">2.4.0 新版功能: </span>组件属性的长度单位支持传入单位(rpx/px) , 默认为px。</p>
+</div>
+<p>地图。相关api <a class="reference internal" href="../api/MapContext.html#wx.createMapContext" title="wx.createMapContext"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.createMapContext()</span></code></a> 。</p>
+<p>个性化地图能力可在小程序后台“ <span class="menuselection">设置 ‣ 开发者工具 ‣ 腾讯位置服务</span> ”申请开通。
+设置 <code class="docutils literal notranslate"><span class="pre">subkey</span></code> 后，小程序内的地图组件均会使用该底图效果。详见 <a class="reference external" href="https://lbs.qq.com/product/miniapp/guide/">《小程序个性地图使用指南》</a></p>
 <table class="docutils align-center">
 <colgroup>
 <col style="width: 19%" />
@@ -384,89 +387,583 @@
 </tbody>
 </table>
 <p>marker 标记点用于在地图上显示标记的位置</p>
-<p>属性      说明      类型      必填      备注      最低版本
-id      标记点 id  number  否       marker 点击事件回调会返回此 id。建议为每个 marker 设置上 number 类型 id，保证更新 marker 时有更好的性能。
-latitude        纬度      number  是       浮点数，范围 -90 ~ 90
-longitude       经度      number  是       浮点数，范围 -180 ~ 180
-title   标注点名    string  否
-zIndex  显示层级    number  否               2.3.0
-iconPath        显示的图标   string  是       项目目录下的图片路径，支持相对路径写法，以’/’开头则表示相对小程序根目录；也支持临时路径和网络图片（2.3.0）
-rotate  旋转角度    number  否       顺时针旋转的角度，范围 0 ~ 360，默认为 0
-alpha   标注的透明度  number  否       默认 1，无透明，范围 0 ~ 1
-width   标注图标宽度  number/string   否       默认为图片实际宽度
-height  标注图标高度  number/string   否       默认为图片实际高度
-callout 自定义标记点上方的气泡窗口   Object  否       支持的属性见下表，可识别换行符。        1.2.0
-label   为标记点旁边增加标签      Object  否       支持的属性见下表，可识别换行符。        1.2.0
-anchor  经纬度在标注图标的锚点，默认底边中点      Object  否       {x, y}，x 表示横向(0-1)，y 表示竖向(0-1)。{x: .5, y: 1} 表示底边中点     1.2.0
-aria-label      无障碍访问，（属性）元素的额外描述       string  否               2.5.0</p>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 6%" />
+<col style="width: 20%" />
+<col style="width: 8%" />
+<col style="width: 3%" />
+<col style="width: 57%" />
+<col style="width: 5%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>属性</p></th>
+<th class="head"><p>说明</p></th>
+<th class="head"><p>类型</p></th>
+<th class="head"><p>必填</p></th>
+<th class="head"><p>备注</p></th>
+<th class="head"><p>最低版本</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>id</p></td>
+<td><p>标记点 id</p></td>
+<td><p>number</p></td>
+<td><p>否</p></td>
+<td><p>marker 点击事件回调会返回此 id。建议为每个 marker 设置上 number 类型 id，保证更新 marker 时有更好的性能。</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>latitude</p></td>
+<td><p>纬度</p></td>
+<td><p>number</p></td>
+<td><p>是</p></td>
+<td><p>浮点数，范围 -90 ~ 90</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>longitude</p></td>
+<td><p>经度</p></td>
+<td><p>number</p></td>
+<td><p>是</p></td>
+<td><p>浮点数，范围 -180 ~ 180</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>title</p></td>
+<td><p>标注点名</p></td>
+<td><p>string</p></td>
+<td><p>否</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>zIndex</p></td>
+<td><p>显示层级</p></td>
+<td><p>number</p></td>
+<td><p>否</p></td>
+<td></td>
+<td><p>2.3.0</p></td>
+</tr>
+<tr class="row-odd"><td><p>iconPath</p></td>
+<td><p>显示的图标</p></td>
+<td><p>string</p></td>
+<td><p>是</p></td>
+<td><p>项目目录下的图片路径，支持相对路径写法，以’/’开头则表示相对小程序根目录；也支持临时路径和网络图片（2.3.0）</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>rotate</p></td>
+<td><p>旋转角度</p></td>
+<td><p>number</p></td>
+<td><p>否</p></td>
+<td><p>顺时针旋转的角度，范围 0 ~ 360，默认为 0</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>alpha</p></td>
+<td><p>标注的透明度</p></td>
+<td><p>number</p></td>
+<td><p>否</p></td>
+<td><p>默认 1，无透明，范围 0 ~ 1</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>width</p></td>
+<td><p>标注图标宽度</p></td>
+<td><p>number/string</p></td>
+<td><p>否</p></td>
+<td><p>默认为图片实际宽度</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>height</p></td>
+<td><p>标注图标高度</p></td>
+<td><p>number/string</p></td>
+<td><p>否</p></td>
+<td><p>默认为图片实际高度</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>callout</p></td>
+<td><p>自定义标记点上方的气泡窗口</p></td>
+<td><p>Object</p></td>
+<td><p>否</p></td>
+<td><p>支持的属性见下表，可识别换行符。</p></td>
+<td><p>1.2.0</p></td>
+</tr>
+<tr class="row-odd"><td><p>label</p></td>
+<td><p>为标记点旁边增加标签</p></td>
+<td><p>Object</p></td>
+<td><p>否</p></td>
+<td><p>支持的属性见下表，可识别换行符。</p></td>
+<td><p>1.2.0</p></td>
+</tr>
+<tr class="row-even"><td><p>anchor</p></td>
+<td><p>经纬度在标注图标的锚点，默认底边中点</p></td>
+<td><p>Object</p></td>
+<td><p>否</p></td>
+<td><p>{x, y}，x 表示横向(0-1)，y 表示竖向(0-1)。{x: .5, y: 1} 表示底边中点</p></td>
+<td><p>1.2.0</p></td>
+</tr>
+<tr class="row-odd"><td><p>aria-label</p></td>
+<td><p>无障碍访问，（属性）元素的额外描述</p></td>
+<td><p>string</p></td>
+<td><p>否</p></td>
+<td></td>
+<td><p>2.5.0</p></td>
+</tr>
+</tbody>
+</table>
 <p>marker 上的气泡 callout</p>
-<p>属性      说明      类型      最低版本
-content 文本      string  1.2.0
-color   文本颜色    string  1.2.0
-fontSize        文字大小    number  1.2.0
-borderRadius    边框圆角    number  1.2.0
-borderWidth     边框宽度    number  2.3.0
-borderColor     边框颜色    string  2.3.0
-bgColor 背景色     string  1.2.0
-padding 文本边缘留白  number  1.2.0
-display ‘BYCLICK’:点击显示; ‘ALWAYS’:常显     string  1.2.0
-textAlign       文本对齐方式。有效值: left, right, center string  1.6.0</p>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 19%" />
+<col style="width: 57%" />
+<col style="width: 11%" />
+<col style="width: 13%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>属性</p></th>
+<th class="head"><p>说明</p></th>
+<th class="head"><p>类型</p></th>
+<th class="head"><p>最低版本</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>content</p></td>
+<td><p>文本</p></td>
+<td><p>string</p></td>
+<td><p>1.2.0</p></td>
+</tr>
+<tr class="row-odd"><td><p>color</p></td>
+<td><p>文本颜色</p></td>
+<td><p>string</p></td>
+<td><p>1.2.0</p></td>
+</tr>
+<tr class="row-even"><td><p>fontSize</p></td>
+<td><p>文字大小</p></td>
+<td><p>number</p></td>
+<td><p>1.2.0</p></td>
+</tr>
+<tr class="row-odd"><td><p>borderRadius</p></td>
+<td><p>边框圆角</p></td>
+<td><p>number</p></td>
+<td><p>1.2.0</p></td>
+</tr>
+<tr class="row-even"><td><p>borderWidth</p></td>
+<td><p>边框宽度</p></td>
+<td><p>number</p></td>
+<td><p>2.3.0</p></td>
+</tr>
+<tr class="row-odd"><td><p>borderColor</p></td>
+<td><p>边框颜色</p></td>
+<td><p>string</p></td>
+<td><p>2.3.0</p></td>
+</tr>
+<tr class="row-even"><td><p>bgColor</p></td>
+<td><p>背景色</p></td>
+<td><p>string</p></td>
+<td><p>1.2.0</p></td>
+</tr>
+<tr class="row-odd"><td><p>padding</p></td>
+<td><p>文本边缘留白</p></td>
+<td><p>number</p></td>
+<td><p>1.2.0</p></td>
+</tr>
+<tr class="row-even"><td><p>display</p></td>
+<td><p>‘BYCLICK’:点击显示; ‘ALWAYS’:常显</p></td>
+<td><p>string</p></td>
+<td><p>1.2.0</p></td>
+</tr>
+<tr class="row-odd"><td><p>textAlign</p></td>
+<td><p>文本对齐方式。有效值: left, right, center</p></td>
+<td><p>string</p></td>
+<td><p>1.6.0</p></td>
+</tr>
+</tbody>
+</table>
 <p>marker 上的气泡 label</p>
-<p>属性      说明      类型      最低版本
-content 文本      string  1.2.0
-color   文本颜色    string  1.2.0
-fontSize        文字大小    number  1.2.0
-x       label的坐标（废弃）    number  1.2.0
-y       label的坐标（废弃）    number  1.2.0
-anchorX label的坐标，原点是 marker 对应的经纬度      number  2.1.0
-anchorY label的坐标，原点是 marker 对应的经纬度      number  2.1.0
-borderWidth     边框宽度    number  1.6.0
-borderColor     边框颜色    string  1.6.0
-borderRadius    边框圆角    number  1.6.0
-bgColor 背景色     string  1.6.0
-padding 文本边缘留白  number  1.6.0
-textAlign       文本对齐方式。有效值: left, right, center string  1.6.0</p>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 19%" />
+<col style="width: 57%" />
+<col style="width: 11%" />
+<col style="width: 13%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>属性</p></th>
+<th class="head"><p>说明</p></th>
+<th class="head"><p>类型</p></th>
+<th class="head"><p>最低版本</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>content</p></td>
+<td><p>文本</p></td>
+<td><p>string</p></td>
+<td><p>1.2.0</p></td>
+</tr>
+<tr class="row-odd"><td><p>color</p></td>
+<td><p>文本颜色</p></td>
+<td><p>string</p></td>
+<td><p>1.2.0</p></td>
+</tr>
+<tr class="row-even"><td><p>fontSize</p></td>
+<td><p>文字大小</p></td>
+<td><p>number</p></td>
+<td><p>1.2.0</p></td>
+</tr>
+<tr class="row-odd"><td><p>x</p></td>
+<td><p>label的坐标（废弃）</p></td>
+<td><p>number</p></td>
+<td><p>1.2.0</p></td>
+</tr>
+<tr class="row-even"><td><p>y</p></td>
+<td><p>label的坐标（废弃）</p></td>
+<td><p>number</p></td>
+<td><p>1.2.0</p></td>
+</tr>
+<tr class="row-odd"><td><p>anchorX</p></td>
+<td><p>label的坐标，原点是 marker 对应的经纬度</p></td>
+<td><p>number</p></td>
+<td><p>2.1.0</p></td>
+</tr>
+<tr class="row-even"><td><p>anchorY</p></td>
+<td><p>label的坐标，原点是 marker 对应的经纬度</p></td>
+<td><p>number</p></td>
+<td><p>2.1.0</p></td>
+</tr>
+<tr class="row-odd"><td><p>borderWidth</p></td>
+<td><p>边框宽度</p></td>
+<td><p>number</p></td>
+<td><p>1.6.0</p></td>
+</tr>
+<tr class="row-even"><td><p>borderColor</p></td>
+<td><p>边框颜色</p></td>
+<td><p>string</p></td>
+<td><p>1.6.0</p></td>
+</tr>
+<tr class="row-odd"><td><p>borderRadius</p></td>
+<td><p>边框圆角</p></td>
+<td><p>number</p></td>
+<td><p>1.6.0</p></td>
+</tr>
+<tr class="row-even"><td><p>bgColor</p></td>
+<td><p>背景色</p></td>
+<td><p>string</p></td>
+<td><p>1.6.0</p></td>
+</tr>
+<tr class="row-odd"><td><p>padding</p></td>
+<td><p>文本边缘留白</p></td>
+<td><p>number</p></td>
+<td><p>1.6.0</p></td>
+</tr>
+<tr class="row-even"><td><p>textAlign</p></td>
+<td><p>文本对齐方式。有效值: left, right, center</p></td>
+<td><p>string</p></td>
+<td><p>1.6.0</p></td>
+</tr>
+</tbody>
+</table>
 <p>polyline 指定一系列坐标点，从数组第一项连线至最后一项</p>
-<p>属性      说明      类型      必填      备注      最低版本
-points  经纬度数组   array   是       [{latitude: 0, longitude: 0}]
-color   线的颜色    string  否       十六进制
-width   线的宽度    number  否
-dottedLine      是否虚线    boolean 否       默认 false
-arrowLine       带箭头的线   boolean 否       默认 false，开发者工具暂不支持该属性   1.2.0
-arrowIconPath   更换箭头图标  string  否       在 arrowLine 为 true 时生效  1.6.0
-borderColor     线的边框颜色  string  否               1.2.0
-borderWidth     线的厚度    number  否               1.2.0</p>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 16%" />
+<col style="width: 15%" />
+<col style="width: 10%" />
+<col style="width: 7%" />
+<col style="width: 41%" />
+<col style="width: 11%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>属性</p></th>
+<th class="head"><p>说明</p></th>
+<th class="head"><p>类型</p></th>
+<th class="head"><p>必填</p></th>
+<th class="head"><p>备注</p></th>
+<th class="head"><p>最低版本</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>points</p></td>
+<td><p>经纬度数组</p></td>
+<td><p>array</p></td>
+<td><p>是</p></td>
+<td><p>[{latitude: 0, longitude: 0}]</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>color</p></td>
+<td><p>线的颜色</p></td>
+<td><p>string</p></td>
+<td><p>否</p></td>
+<td><p>十六进制</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>width</p></td>
+<td><p>线的宽度</p></td>
+<td><p>number</p></td>
+<td><p>否</p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>dottedLine</p></td>
+<td><p>是否虚线</p></td>
+<td><p>boolean</p></td>
+<td><p>否</p></td>
+<td><p>默认 false</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>arrowLine</p></td>
+<td><p>带箭头的线</p></td>
+<td><p>boolean</p></td>
+<td><p>否</p></td>
+<td><p>默认 false，开发者工具暂不支持该属性</p></td>
+<td><p>1.2.0</p></td>
+</tr>
+<tr class="row-odd"><td><p>arrowIconPath</p></td>
+<td><p>更换箭头图标</p></td>
+<td><p>string</p></td>
+<td><p>否</p></td>
+<td><p>在 arrowLine 为 true 时生效</p></td>
+<td><p>1.6.0</p></td>
+</tr>
+<tr class="row-even"><td><p>borderColor</p></td>
+<td><p>线的边框颜色</p></td>
+<td><p>string</p></td>
+<td><p>否</p></td>
+<td><p>1.2.0</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>borderWidth</p></td>
+<td><p>线的厚度</p></td>
+<td><p>number</p></td>
+<td><p>否</p></td>
+<td><p>1.2.0</p></td>
+<td></td>
+</tr>
+</tbody>
+</table>
 <p>polygon 指定一系列坐标点，根据 points 坐标数据生成闭合多边形</p>
-<p>属性      说明      类型      必填      备注      最低版本
-points  经纬度数组   array   是       [{latitude: 0, longitude: 0}]   2.3.0
-strokeWidth     描边的宽度   number  否               2.3.0
-strokeColor     描边的颜色   string  否       十六进制    2.3.0
-fillColor       填充颜色    string  否       十六进制
-zIndex  设置多边形Z轴数值       number  否               2.3.0</p>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 15%" />
+<col style="width: 22%" />
+<col style="width: 9%" />
+<col style="width: 7%" />
+<col style="width: 36%" />
+<col style="width: 11%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>属性</p></th>
+<th class="head"><p>说明</p></th>
+<th class="head"><p>类型</p></th>
+<th class="head"><p>必填</p></th>
+<th class="head"><p>备注</p></th>
+<th class="head"><p>最低版本</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>points</p></td>
+<td><p>经纬度数组</p></td>
+<td><p>array</p></td>
+<td><p>是</p></td>
+<td><p>[{latitude: 0, longitude: 0}]</p></td>
+<td><p>2.3.0</p></td>
+</tr>
+<tr class="row-odd"><td><p>strokeWidth</p></td>
+<td><p>描边的宽度</p></td>
+<td><p>number</p></td>
+<td><p>否</p></td>
+<td></td>
+<td><p>2.3.0</p></td>
+</tr>
+<tr class="row-even"><td><p>strokeColor</p></td>
+<td><p>描边的颜色</p></td>
+<td><p>string</p></td>
+<td><p>否</p></td>
+<td><p>十六进制</p></td>
+<td><p>2.3.0</p></td>
+</tr>
+<tr class="row-odd"><td><p>fillColor</p></td>
+<td><p>填充颜色</p></td>
+<td><p>string</p></td>
+<td><p>否</p></td>
+<td><p>十六进制</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>zIndex</p></td>
+<td><p>设置多边形Z轴数值</p></td>
+<td><p>number</p></td>
+<td><p>否</p></td>
+<td></td>
+<td><p>2.3.0</p></td>
+</tr>
+</tbody>
+</table>
 <p>circle 在地图上显示圆</p>
-<p>属性      说明      类型      必填      备注
-latitude        纬度      number  是       浮点数，范围 -90 ~ 90
-longitude       经度      number  是       浮点数，范围 -180 ~ 180
-color   描边的颜色   string  否       十六进制
-fillColor       填充颜色    string  否       十六进制
-radius  半径      number  是
-strokeWidth     描边的宽度   number  否</p>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 19%" />
+<col style="width: 13%" />
+<col style="width: 9%" />
+<col style="width: 39%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>属性</p></th>
+<th class="head"><p>说明</p></th>
+<th class="head"><p>类型</p></th>
+<th class="head"><p>必填</p></th>
+<th class="head"><p>备注</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>latitude</p></td>
+<td><p>纬度</p></td>
+<td><p>number</p></td>
+<td><p>是</p></td>
+<td><p>浮点数，范围 -90 ~ 90</p></td>
+</tr>
+<tr class="row-odd"><td><p>longitude</p></td>
+<td><p>经度</p></td>
+<td><p>number</p></td>
+<td><p>是</p></td>
+<td><p>浮点数，范围 -180 ~ 180</p></td>
+</tr>
+<tr class="row-even"><td><p>color</p></td>
+<td><p>描边的颜色</p></td>
+<td><p>string</p></td>
+<td><p>否</p></td>
+<td><p>十六进制</p></td>
+</tr>
+<tr class="row-odd"><td><p>fillColor</p></td>
+<td><p>填充颜色</p></td>
+<td><p>string</p></td>
+<td><p>否</p></td>
+<td><p>十六进制</p></td>
+</tr>
+<tr class="row-even"><td><p>radius</p></td>
+<td><p>半径</p></td>
+<td><p>number</p></td>
+<td><p>是</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>strokeWidth</p></td>
+<td><p>描边的宽度</p></td>
+<td><p>number</p></td>
+<td><p>否</p></td>
+<td></td>
+</tr>
+</tbody>
+</table>
 <p>control 在地图上显示控件，控件不随着地图移动。即将废弃，请使用 cover-view</p>
-<p>属性      说明      类型      必填      备注
-id      控件id    number  否       在控件点击事件回调会返回此id
-position        控件在地图的位置        object  是       控件相对地图位置
-iconPath        显示的图标   string  是       项目目录下的图片路径，支持相对路径写法，以’/’开头则表示相对小程序根目录；也支持临时路径
-clickable       是否可点击   boolean 否       默认不可点击</p>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 8%" />
+<col style="width: 14%" />
+<col style="width: 7%" />
+<col style="width: 5%" />
+<col style="width: 67%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>属性</p></th>
+<th class="head"><p>说明</p></th>
+<th class="head"><p>类型</p></th>
+<th class="head"><p>必填</p></th>
+<th class="head"><p>备注</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>id</p></td>
+<td><p>控件id</p></td>
+<td><p>number</p></td>
+<td><p>否</p></td>
+<td><p>在控件点击事件回调会返回此id</p></td>
+</tr>
+<tr class="row-odd"><td><p>position</p></td>
+<td><p>控件在地图的位置</p></td>
+<td><p>object</p></td>
+<td><p>是</p></td>
+<td><p>控件相对地图位置</p></td>
+</tr>
+<tr class="row-even"><td><p>iconPath</p></td>
+<td><p>显示的图标</p></td>
+<td><p>string</p></td>
+<td><p>是</p></td>
+<td><p>项目目录下的图片路径，支持相对路径写法，以’/’开头则表示相对小程序根目录；也支持临时路径</p></td>
+</tr>
+<tr class="row-odd"><td><p>clickable</p></td>
+<td><p>是否可点击</p></td>
+<td><p>boolean</p></td>
+<td><p>否</p></td>
+<td><p>默认不可点击</p></td>
+</tr>
+</tbody>
+</table>
 <p>position</p>
-<p>属性      说明      类型      必填      备注
-left    距离地图的左边界多远      number  否       默认为0
-top     距离地图的上边界多远      number  否       默认为0
-width   控件宽度    number  否       默认为图片宽度
-height  控件高度    number  否       默认为图片高度</p>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 13%" />
+<col style="width: 37%" />
+<col style="width: 13%" />
+<col style="width: 10%" />
+<col style="width: 27%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>属性</p></th>
+<th class="head"><p>说明</p></th>
+<th class="head"><p>类型</p></th>
+<th class="head"><p>必填</p></th>
+<th class="head"><p>备注</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>left</p></td>
+<td><p>距离地图的左边界多远</p></td>
+<td><p>number</p></td>
+<td><p>否</p></td>
+<td><p>默认为0</p></td>
+</tr>
+<tr class="row-odd"><td><p>top</p></td>
+<td><p>距离地图的上边界多远</p></td>
+<td><p>number</p></td>
+<td><p>否</p></td>
+<td><p>默认为0</p></td>
+</tr>
+<tr class="row-even"><td><p>width</p></td>
+<td><p>控件宽度</p></td>
+<td><p>number</p></td>
+<td><p>否</p></td>
+<td><p>默认为图片宽度</p></td>
+</tr>
+<tr class="row-odd"><td><p>height</p></td>
+<td><p>控件高度</p></td>
+<td><p>number</p></td>
+<td><p>否</p></td>
+<td><p>默认为图片高度</p></td>
+</tr>
+</tbody>
+</table>
 <p>bindregionchange 返回值</p>
-<p>属性      说明      类型      备注
-type    视野变化开始、结束时触发    string  视野变化开始为begin，结束为end
-causedBy        导致视野变化的原因       string  拖动地图导致(drag)、缩放导致(scale)、调用接口导致(update)</p>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 25%" />
+<col style="width: 8%" />
+<col style="width: 57%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>属性</p></th>
+<th class="head"><p>说明</p></th>
+<th class="head"><p>类型</p></th>
+<th class="head"><p>备注</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>type</p></td>
+<td><p>视野变化开始、结束时触发</p></td>
+<td><p>string</p></td>
+<td><p>视野变化开始为begin，结束为end</p></td>
+</tr>
+<tr class="row-odd"><td><p>causedBy</p></td>
+<td><p>导致视野变化的原因</p></td>
+<td><p>string</p></td>
+<td><p>拖动地图导致(drag)、缩放导致(scale)、调用接口导致(update)</p></td>
+</tr>
+</tbody>
+</table>
 <div class="admonition tip">
 <p class="admonition-title">小技巧</p>
 <p>个性化地图暂不支持工具中调试。请先使用微信客户端进行测试。</p>
@@ -488,7 +985,7 @@ causedBy        导致视野变化的原因       string  拖动地图导致(dra
 <p>请注意原生组件使用限制。</p>
 </div>
 <p>示例代码</p>
-<p>在开发者工具中预览效果</p>
+<p><a class="reference download external" download="" href="https://developers.weixin.qq.com/s/3uVxpmmT6wY9"><code class="xref download docutils literal notranslate"><span class="pre">在开发者工具中预览效果</span></code></a></p>
 <div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="c">&lt;!-- map.wxml --&gt;</span>
 <span class="p">&lt;</span><span class="nt">map</span>
   <span class="na">id</span><span class="o">=</span><span class="s">&quot;map&quot;</span>
@@ -566,7 +1063,7 @@ causedBy        导致视野变化的原因       string  拖动地图导致(dra
         <a href="canvas.html" class="btn btn-neutral float-right" title="canvas" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="video.html" class="btn btn-neutral float-left" title="video" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="camera.html" class="btn btn-neutral float-left" title="camera" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

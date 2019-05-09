@@ -110,7 +110,7 @@ ul
 
 示例代码
 
-:download:`在开发者工具中预览效果 <path>`
+:download:`在开发者工具中预览效果 <https://developers.weixin.qq.com/s/zPVmpim46wYQ>`
 
 .. code:: html
 

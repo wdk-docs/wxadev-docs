@@ -36,8 +36,8 @@
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜索" href="../search.html" />
-    <link rel="next" title="video" href="video.html" />
-    <link rel="prev" title="live-player" href="live-player.html" /> 
+    <link rel="next" title="live-player" href="live-player.html" />
+    <link rel="prev" title="video ☁️" href="video.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -93,12 +93,12 @@
 <li class="toctree-l2"><a class="reference internal" href="index.html#id4">表单</a></li>
 <li class="toctree-l2"><a class="reference internal" href="index.html#id5">导航</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="index.html#id6">媒体</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="audio.html">audio</a></li>
-<li class="toctree-l3"><a class="reference internal" href="camera.html">camera</a></li>
-<li class="toctree-l3"><a class="reference internal" href="image.html">image</a></li>
-<li class="toctree-l3"><a class="reference internal" href="live-player.html">live-player</a></li>
+<li class="toctree-l3"><a class="reference internal" href="image.html">image ☁️</a></li>
+<li class="toctree-l3"><a class="reference internal" href="audio.html">audio 🗑</a></li>
+<li class="toctree-l3"><a class="reference internal" href="video.html">video ☁️</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">live-pusher</a></li>
-<li class="toctree-l3"><a class="reference internal" href="video.html">video</a></li>
+<li class="toctree-l3"><a class="reference internal" href="live-player.html">live-player</a></li>
+<li class="toctree-l3"><a class="reference internal" href="camera.html">camera</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="index.html#id7">地图</a></li>
@@ -185,11 +185,16 @@
             
   <div class="section" id="live-pusher">
 <span id="id1"></span><h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/component/live-pusher.html">live-pusher</a><a class="headerlink" href="#live-pusher" title="永久链接至标题">¶</a></h1>
+<p>版本:1.0.0 更新:2019 年 05 月 09 日</p>
 <div class="versionadded">
 <p><span class="versionmodified added">1.7.0 新版功能: </span>低版本需做 <a class="reference internal" href="../framework/compatibility.html#compatibility"><span class="std std-ref">兼容处理</span></a> 。</p>
 </div>
+<div class="versionadded">
+<p><span class="versionmodified added">2.3.0 新版功能: </span><code class="docutils literal notranslate"><span class="pre">waiting-image</span></code> 属性完整支持网络路径、临时文件和包内路径。</p>
+</div>
 <p>实时音视频录制。需要用户授权 <a class="reference internal" href="../api/AuthSetting.html#scope.camera" title="scope.camera"><code class="xref js js-data docutils literal notranslate"><span class="pre">scope.camera</span></code></a> 、 <a class="reference internal" href="../api/AuthSetting.html#scope.record" title="scope.record"><code class="xref js js-data docutils literal notranslate"><span class="pre">scope.record</span></code></a>。</p>
-<p>暂只针对国内主体如下类目的小程序开放，需要先通过类目审核，再在小程序管理后台，<span class="menuselection">「开发」‣「接口设置」</span> 中自助开通该组件权限。</p>
+<p>暂只针对国内主体如下类目的小程序开放，需要先通过类目审核，
+再在小程序管理后台，<span class="menuselection">「开发」‣「接口设置」</span> 中自助开通该组件权限。</p>
 <table class="docutils align-center">
 <colgroup>
 <col style="width: 7%" />
@@ -233,7 +238,7 @@
 </tr>
 </tbody>
 </table>
-<p>相关api: <a class="reference internal" href="../api/wx.createLivePusherContext.html#wx.createLivePusherContext" title="wx.createLivePusherContext"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.createLivePusherContext()</span></code></a></p>
+<p>相关api: <a class="reference internal" href="../api/LivePusherContext.html#wx.createLivePusherContext" title="wx.createLivePusherContext"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.createLivePusherContext()</span></code></a></p>
 <table class="docutils align-center">
 <colgroup>
 <col style="width: 18%" />
@@ -416,8 +421,8 @@
 </tr>
 </tbody>
 </table>
-<p>orientation 的合法值</p>
-<table class="docutils align-center">
+<table class="docutils align-center" id="id2">
+<caption><span class="caption-text">orientation 的合法值</span><a class="headerlink" href="#id2" title="永久链接至表格">¶</a></caption>
 <colgroup>
 <col style="width: 67%" />
 <col style="width: 33%" />
@@ -446,14 +451,10 @@
 </div>
 <div class="admonition tip">
 <p class="admonition-title">小技巧</p>
-<p>waiting-image 属性在 2.3.0 起完整支持网络路径、临时文件和包内路径。</p>
-</div>
-<div class="admonition tip">
-<p class="admonition-title">小技巧</p>
 <p>请注意原生组件使用限制。</p>
 </div>
-<p>错误码（errCode）</p>
-<table class="docutils align-center">
+<table class="docutils align-center" id="id3">
+<caption><span class="caption-text">错误码（errCode）</span><a class="headerlink" href="#id3" title="永久链接至表格">¶</a></caption>
 <colgroup>
 <col style="width: 15%" />
 <col style="width: 85%" />
@@ -478,8 +479,8 @@
 </tr>
 </tbody>
 </table>
-<p>状态码（code）</p>
-<table class="docutils align-center">
+<table class="docutils align-center" id="id4">
+<caption><span class="caption-text">状态码（code）</span><a class="headerlink" href="#id4" title="永久链接至表格">¶</a></caption>
 <colgroup>
 <col style="width: 11%" />
 <col style="width: 89%" />
@@ -583,8 +584,8 @@
 </tr>
 </tbody>
 </table>
-<p>网络状态数据（info）</p>
-<table class="docutils align-center">
+<table class="docutils align-center" id="id5">
+<caption><span class="caption-text">网络状态数据（info）</span><a class="headerlink" href="#id5" title="永久链接至表格">¶</a></caption>
 <colgroup>
 <col style="width: 21%" />
 <col style="width: 79%" />
@@ -622,7 +623,7 @@
 </tbody>
 </table>
 <p>示例代码</p>
-<p>在开发者工具中预览效果</p>
+<p><a class="reference download external" download="" href="https://developers.weixin.qq.com/s/KvWD9mmA62Yk"><code class="xref download docutils literal notranslate"><span class="pre">在开发者工具中预览效果</span></code></a></p>
 <div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">live-pusher</span>
   <span class="na">url</span><span class="o">=</span><span class="s">&quot;https://domain/push_stream&quot;</span>
   <span class="na">mode</span><span class="o">=</span><span class="s">&quot;RTC&quot;</span>
@@ -639,7 +640,6 @@
 <span class="p">})</span>
 </pre></div>
 </div>
-<p>版本：1.0.0  ，更新：2019 年 05 月 05 日</p>
 </div>
 
 
@@ -650,10 +650,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="video.html" class="btn btn-neutral float-right" title="video" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="live-player.html" class="btn btn-neutral float-right" title="live-player" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="live-player.html" class="btn btn-neutral float-left" title="live-player" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="video.html" class="btn btn-neutral float-left" title="video ☁️" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

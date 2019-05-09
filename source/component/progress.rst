@@ -35,7 +35,7 @@
 
 示例代码
 
-:download:`在开发者工具中预览效果 <path>`
+:download:`在开发者工具中预览效果 <https://developers.weixin.qq.com/s/Oga4Hcmj6cYS>`
 
 
 .. code:: html
@@ -44,3 +44,5 @@
   <progress percent="40" stroke-width="12" />
   <progress percent="60" color="pink" />
   <progress percent="80" active />
+
+.. image:: https://developers.weixin.qq.com/miniprogram/dev/image/pic/progress.png?t=19050911

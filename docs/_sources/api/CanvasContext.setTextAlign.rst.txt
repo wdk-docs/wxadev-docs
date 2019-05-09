@@ -1,2 +1,2 @@
-:wxapi:`video`
+:wxapi:`CanvasContext.setTextAlign`
 ============================================

@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>开发辅助 &mdash; wxadev 1.0.0 文档</title>
+  <title>第三方平台开发 &mdash; wxadev 1.0.0 文档</title>
   
 
   
@@ -95,7 +95,7 @@
 <li class="toctree-l2"><a class="reference internal" href="settings.html">设置页</a></li>
 <li class="toctree-l2"><a class="reference internal" href="edit.html">编辑区</a></li>
 <li class="toctree-l2"><a class="reference internal" href="debug.html">调试</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">开发辅助</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">第三方平台开发</a></li>
 <li class="toctree-l2"><a class="reference internal" href="sandbox.html">开发辅助</a></li>
 <li class="toctree-l2"><a class="reference internal" href="audits.html">工具插件</a></li>
 <li class="toctree-l2"><a class="reference internal" href="notsupport.html">API 实现差异</a></li>
@@ -156,7 +156,7 @@
         
           <li><a href="index.html">开发工具</a> &raquo;</li>
         
-      <li>开发辅助</li>
+      <li>第三方平台开发</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -176,9 +176,10 @@
            <div itemprop="articleBody">
             
   <div class="section" id="dt-ext">
-<span id="id1"></span><h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/devtools/ext.html">开发辅助</a><a class="headerlink" href="#dt-ext" title="永久链接至标题">¶</a></h1>
-<p>概述
-小程序运营者，可以一键授权给第三方平台，通过第三方平台来完成业务。第三方平台在小程序的前后端开发上同直接开发小程序有所区别，其所拥有的各项 API 以及详细说明请查看 代小程序实现业务 ，其余部分请阅读下文。</p>
+<span id="id1"></span><h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/devtools/ext.html">第三方平台开发</a><a class="headerlink" href="#dt-ext" title="永久链接至标题">¶</a></h1>
+<p>小程序运营者，可以一键授权给第三方平台，通过第三方平台来完成业务。
+第三方平台在小程序的前后端开发上同直接开发小程序有所区别，
+其所拥有的各项 API 以及详细说明请查看 代小程序实现业务 ，其余部分请阅读下文。</p>
 <p>开发第三方平台小程序具有一定的复杂性，首先需要确认三个概念：</p>
 <p>open3rd：第三方平台，是小程序官方认可的第三方开发商 详情
 3rdMiniProgramAppid：第三方平台申请的并绑定在该平台上的小程序，用于开发小程序模板
@@ -190,77 +191,61 @@ extAppid：授权给第三方平台的小程序
 最新版本的开发工具支持第三方平台小程序的开发和预览。</p>
 <p>创建项目
 与开发普通小程序一致，第三方平台开发者填入相关的 3rdMiniProgramAppid ，设定项目名称和选择项目目录即可创建项目。</p>
-<p>对于第三方平台小程序，可以在项目页卡查看到相关的 open3rd 信息以及当前的第三方的 3rdMiniProgramAppid ，如若项目配置了相关的 extAppid ，那么项目页卡中也会有相关信息。</p>
+<p>对于第三方平台小程序，
+可以在项目页卡查看到相关的 open3rd 信息以及当前的第三方的 3rdMiniProgramAppid ，
+如若项目配置了相关的 extAppid ，那么项目页卡中也会有相关信息。</p>
 <p>ext</p>
 <p>小程序模板开发
-与开发普通小程序一致，开发者在开发工具上开发好相关的业务逻辑之后，在项目页卡中提交预览即可以在微信中查看小程序的真实表现。</p>
-<p>有所不同的是，第三方平台小程序的提交上传是上传至该第三方平台的 open 帐号下的模板草稿箱中，该平台的管理员需要自行对该模板进行相应的设置，更多请参考 开放平台的文档 。</p>
+与开发普通小程序一致，开发者在开发工具上开发好相关的业务逻辑之后，
+在项目页卡中提交预览即可以在微信中查看小程序的真实表现。</p>
+<p>有所不同的是，第三方平台小程序的提交上传是上传至该第三方平台的 open 帐号下的模板草稿箱中，
+该平台的管理员需要自行对该模板进行相应的设置，更多请参考 开放平台的文档 。</p>
 <p>extAppid 的开发调试
 为了方便第三方平台的开发者引入 extAppid 的开发调试工作，需要引入 ext.json 的概念。</p>
 <p>ext.json 是一个配置文件，放置在小程序项目的根目录下。</p>
 <p>以下是一个包含了所有配置选项的 ext.json ：</p>
-<dl>
-<dt>{</dt><dd><p>“extEnable”: true,
-“extAppid”: “wxf9c4501a76931b33”,
-“directCommit”: false,
-“ext”: {</p>
-<blockquote>
-<div><p>“name”: “wechat”,
-“attr”: {</p>
-<blockquote>
-<div><p>“host”: “open.weixin.qq.com”,
-“users”: [“user_1”, “user_2”]</p>
-</div></blockquote>
-<p>}</p>
-</div></blockquote>
-<p>},
-“extPages”: {</p>
-<blockquote>
-<div><dl class="simple">
-<dt>“pages/logs/logs”: {</dt><dd><p>“navigationBarTitleText”: “logs”</p>
-</dd>
-</dl>
-<p>}</p>
-</div></blockquote>
-<p>},
-“window”: {</p>
-<blockquote>
-<div><p>“backgroundTextStyle”: “light”,
-“navigationBarBackgroundColor”: “#fff”,
-“navigationBarTitleText”: “Demo”,
-“navigationBarTextStyle”: “black”</p>
-</div></blockquote>
-<p>},
-“tabBar”: {</p>
-<blockquote>
-<div><dl>
-<dt>“list”: [</dt><dd><dl class="simple">
-<dt>{</dt><dd><p>“pagePath”: “pages/index/index”,
-“text”: “首页”</p>
-</dd>
-</dl>
-<p>},
-{</p>
-<blockquote>
-<div><p>“pagePath”: “pages/logs/logs”,
-“text”: “日志”</p>
-</div></blockquote>
-<p>}</p>
-</dd>
-</dl>
-<p>]</p>
-</div></blockquote>
-<p>},
-“networkTimeout”: {</p>
-<blockquote>
-<div><p>“request”: 10000,
-“downloadFile”: 10000</p>
-</div></blockquote>
-<p>}</p>
-</dd>
-</dl>
-<p>}
-ext.json中的配置字段分为两种</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;extEnable&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+  <span class="nt">&quot;extAppid&quot;</span><span class="p">:</span> <span class="s2">&quot;wxf9c4501a76931b33&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;directCommit&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+  <span class="nt">&quot;ext&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;wechat&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;attr&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;host&quot;</span><span class="p">:</span> <span class="s2">&quot;open.weixin.qq.com&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;users&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;user_1&quot;</span><span class="p">,</span> <span class="s2">&quot;user_2&quot;</span><span class="p">]</span>
+    <span class="p">}</span>
+  <span class="p">},</span>
+  <span class="nt">&quot;extPages&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;pages/logs/logs&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;navigationBarTitleText&quot;</span><span class="p">:</span> <span class="s2">&quot;logs&quot;</span>
+    <span class="p">}</span>
+  <span class="p">},</span>
+  <span class="nt">&quot;window&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;backgroundTextStyle&quot;</span><span class="p">:</span> <span class="s2">&quot;light&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;navigationBarBackgroundColor&quot;</span><span class="p">:</span> <span class="s2">&quot;#fff&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;navigationBarTitleText&quot;</span><span class="p">:</span> <span class="s2">&quot;Demo&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;navigationBarTextStyle&quot;</span><span class="p">:</span> <span class="s2">&quot;black&quot;</span>
+  <span class="p">},</span>
+  <span class="nt">&quot;tabBar&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;list&quot;</span><span class="p">:</span> <span class="p">[</span>
+      <span class="p">{</span>
+        <span class="nt">&quot;pagePath&quot;</span><span class="p">:</span> <span class="s2">&quot;pages/index/index&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;text&quot;</span><span class="p">:</span> <span class="s2">&quot;首页&quot;</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+        <span class="nt">&quot;pagePath&quot;</span><span class="p">:</span> <span class="s2">&quot;pages/logs/logs&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;text&quot;</span><span class="p">:</span> <span class="s2">&quot;日志&quot;</span>
+      <span class="p">}</span>
+    <span class="p">]</span>
+  <span class="p">},</span>
+  <span class="nt">&quot;networkTimeout&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;request&quot;</span><span class="p">:</span> <span class="mi">10000</span><span class="p">,</span>
+    <span class="nt">&quot;downloadFile&quot;</span><span class="p">:</span> <span class="mi">10000</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>ext.json中的配置字段分为两种</p>
 <p>特有的字段
 同 app.json 相同的字段
 特有的字段
@@ -277,18 +262,16 @@ extAppid 是授权调试的 AppID ，例如开发者在此处填写的是 wxf9c4
 <p>ext
 ext 字段是开发自定义的数据字段，在小程序中可以通过 wx.getExtConfigSync 或者 wx.getExtConfig 获取到这些配置信息。</p>
 <p>例如上面的例子中，通过 wx.getExtConfigSync 就可以获得 ext 字段的所有配置</p>
-<dl>
-<dt>{</dt><dd><p>“name”: “wechat”,
-“attr”: {</p>
-<blockquote>
-<div><p>“host”: “open.weixin.qq.com”,
-“users”: [“user_1”, “user_2”]</p>
-</div></blockquote>
-<p>}</p>
-</dd>
-</dl>
-<p>}
-extPages
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;wechat&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;attr&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;host&quot;</span><span class="p">:</span> <span class="s2">&quot;open.weixin.qq.com&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;users&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;user_1&quot;</span><span class="p">,</span> <span class="s2">&quot;user_2&quot;</span><span class="p">]</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>extPages
 extPages 是一个对象，对象中的每个 key 应该是该小程序模板 app.json 中定义的页面，每个 key 对应的 value 是 page.json 中所规定的各项配置。</p>
 <p>当开发者设置这个配置以后，小程序框架会对应的修改相对应的 page 的配置信息。</p>
 <p>directCommit
@@ -298,19 +281,17 @@ directCommit 是一个 Boolean 类型的字段，用于规定当前的上传操�
 <p>tips: 可以使用工具的命令行接口 或者 http 接口来实现自动化的代码提交审核</p>
 <p>同 app.json 相同的字段
 当 ext.json 中的字段同 app.json 中一致时，ext.json 的字段会覆盖 app.json 中的对应字段，例如以下的 ext.json</p>
-<dl>
-<dt>{</dt><dd><dl class="simple">
-<dt>“window”: {</dt><dd><p>“backgroundTextStyle”: “light”,
-“navigationBarBackgroundColor”: “#fff”,
-“navigationBarTitleText”: “ext navigationBarTitleText”,
-“navigationBarTextStyle”: “black”</p>
-</dd>
-</dl>
-<p>}</p>
-</dd>
-</dl>
-<p>}
-那么该小程序最终的 navigationBarTitleText 应该是 ext navigationBarTitleText 。</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;window&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;backgroundTextStyle&quot;</span><span class="p">:</span> <span class="s2">&quot;light&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;navigationBarBackgroundColor&quot;</span><span class="p">:</span> <span class="s2">&quot;#fff&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;navigationBarTitleText&quot;</span><span class="p">:</span> <span class="s2">&quot;ext navigationBarTitleText&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;navigationBarTextStyle&quot;</span><span class="p">:</span> <span class="s2">&quot;black&quot;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>那么该小程序最终的 navigationBarTitleText 应该是 ext navigationBarTitleText 。</p>
 </div>
 
 

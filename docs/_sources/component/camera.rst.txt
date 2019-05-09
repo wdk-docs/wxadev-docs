@@ -5,7 +5,8 @@
 
 .. versionadded::  1.6.0 低版本需做 :doc:`../framework/compatibility` 。
 
-系统相机。扫码二维码功能，需升级微信客户端至6.7.3。需要 :doc:`/framework/open-ability/authorize` :data:`scope.camera` 。
+系统相机。扫码二维码功能，需升级微信客户端至6.7.3。
+需要 :ref:`open-ability_authorize` :data:`scope.camera` 。
 
 相关api: :func:`wx.createCameraContext`
 
@@ -63,7 +64,7 @@ flash 的合法值
 
 示例代码
 
-`在开发者工具中预览效果 <https://developers.weixin.qq.com/s/VBZ3Jim26zYu>`_
+:download:`在开发者工具中预览效果 <https://developers.weixin.qq.com/s/VBZ3Jim26zYu>`
 
 .. code:: html
 

@@ -37,7 +37,7 @@
 
 示例代码
 
-:download:`在开发者工具中预览效果 <path>`
+:download:`在开发者工具中预览效果 <https://developers.weixin.qq.com/s/LK9tzcmM6QYj>`
 
 .. code:: html
 
@@ -87,3 +87,5 @@
       ]
     }
   })
+
+.. image:: https://developers.weixin.qq.com/miniprogram/dev/image/pic/icon.png?t=19050911

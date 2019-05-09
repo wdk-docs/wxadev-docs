@@ -36,8 +36,8 @@
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜索" href="../search.html" />
-    <link rel="next" title="live-pusher" href="live-pusher.html" />
-    <link rel="prev" title="image" href="image.html" /> 
+    <link rel="next" title="camera" href="camera.html" />
+    <link rel="prev" title="live-pusher" href="live-pusher.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -93,12 +93,12 @@
 <li class="toctree-l2"><a class="reference internal" href="index.html#id4">表单</a></li>
 <li class="toctree-l2"><a class="reference internal" href="index.html#id5">导航</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="index.html#id6">媒体</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="audio.html">audio</a></li>
-<li class="toctree-l3"><a class="reference internal" href="camera.html">camera</a></li>
-<li class="toctree-l3"><a class="reference internal" href="image.html">image</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">live-player</a></li>
+<li class="toctree-l3"><a class="reference internal" href="image.html">image ☁️</a></li>
+<li class="toctree-l3"><a class="reference internal" href="audio.html">audio 🗑</a></li>
+<li class="toctree-l3"><a class="reference internal" href="video.html">video ☁️</a></li>
 <li class="toctree-l3"><a class="reference internal" href="live-pusher.html">live-pusher</a></li>
-<li class="toctree-l3"><a class="reference internal" href="video.html">video</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">live-player</a></li>
+<li class="toctree-l3"><a class="reference internal" href="camera.html">camera</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="index.html#id7">地图</a></li>
@@ -188,92 +188,229 @@
 <div class="versionadded">
 <p><span class="versionmodified added">1.7.0 新版功能: </span>低版本需做 <a class="reference internal" href="../framework/compatibility.html#compatibility"><span class="std std-ref">兼容处理</span></a> 。</p>
 </div>
-<p>实时音视频播放。相关api：wx.createLivePlayerContext</p>
-<p>暂只针对国内主体如下类目的小程序开放，需要先通过类目审核，再在小程序管理后台，「开发」-「接口设置」中自助开通该组件权限。</p>
+<p>实时音视频播放。相关api：<a class="reference internal" href="../api/LivePlayerContext.html#wx.createLivePlayerContext" title="wx.createLivePlayerContext"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.createLivePlayerContext()</span></code></a></p>
+<p>暂只针对国内主体如下类目的小程序开放，需要先通过类目审核，再在小程序管理后台，
+<span class="menuselection">「开发」‣「接口设置」</span> 中自助开通该组件权限。</p>
 <table class="docutils align-center">
 <colgroup>
-<col style="width: 14%" />
-<col style="width: 31%" />
-<col style="width: 51%" />
-<col style="width: 4%" />
+<col style="width: 18%" />
+<col style="width: 39%" />
+<col style="width: 42%" />
 </colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>一级类目/主体类型</p></th>
 <th class="head"><p>二级类目</p></th>
 <th class="head"><p>小程序内容场景</p></th>
-<th class="head"></th>
 </tr>
 </thead>
 <tbody>
 <tr class="row-even"><td><p>社交</p></td>
 <td><p>直播</p></td>
 <td><p>涉及娱乐性质，如明星直播、生活趣事直播、宠</p></td>
-<td></td>
 </tr>
 <tr class="row-odd"><td></td>
 <td></td>
 <td><p>物直播等。选择该类目后首次提交代码审核，需</p></td>
-<td></td>
 </tr>
 <tr class="row-even"><td></td>
 <td></td>
 <td><p>经当地互联网主管机关审核确认，预计审核时长</p></td>
-<td></td>
 </tr>
 <tr class="row-odd"><td></td>
 <td></td>
 <td><p>7 天左右</p></td>
-<td></td>
 </tr>
 <tr class="row-even"><td><p>教育</p></td>
 <td><p>在线视频课程</p></td>
 <td><p>网课、在线培训、讲座等教育类直播</p></td>
-<td></td>
 </tr>
 <tr class="row-odd"><td><p>医疗</p></td>
 <td><p>互联网医院，公立医院</p></td>
 <td><p>问诊、大型健康讲座等直播</p></td>
-<td></td>
 </tr>
 <tr class="row-even"><td><p>金融</p></td>
 <td><p>银行、信托、基金、证券/期货、证券、期货</p></td>
-<td></td>
 <td></td>
 </tr>
 <tr class="row-odd"><td></td>
 <td><p>投资咨询、保险、征信业务、新三板信息服</p></td>
 <td></td>
-<td></td>
 </tr>
 <tr class="row-even"><td></td>
 <td><p>务平台、股票信息服务平台（港股/美股）、</p></td>
-<td></td>
 <td></td>
 </tr>
 <tr class="row-odd"><td></td>
 <td><p>消费金融</p></td>
 <td><p>金融产品视频客服理赔、金融产品推广直播等</p></td>
-<td></td>
 </tr>
 <tr class="row-even"><td><p>汽车</p></td>
 <td><p>汽车预售服务</p></td>
 <td><p>汽车预售、推广直播</p></td>
-<td></td>
 </tr>
 <tr class="row-odd"><td><p>政府主体帐号</p></td>
 <td><p>/</p></td>
 <td><p>政府相关工作推广直播、领导讲话直播等</p></td>
-<td></td>
 </tr>
 <tr class="row-even"><td><p>工具</p></td>
 <td><p>视频客服</p></td>
-<td><p>不涉及以上几类内容的一对一视频客服服务，如企业售后一对一视频服务等</p></td>
+<td><p>不涉及以上几类内容的一对一视频客服服务，</p></td>
+</tr>
+<tr class="row-odd"><td></td>
 <td></td>
+<td><p>如企业售后一对一视频服务等</p></td>
 </tr>
 </tbody>
 </table>
-<p>mode 的合法值</p>
 <table class="docutils align-center">
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 12%" />
+<col style="width: 9%" />
+<col style="width: 5%" />
+<col style="width: 40%" />
+<col style="width: 9%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>属性</p></th>
+<th class="head"><p>类型</p></th>
+<th class="head"><p>默认值</p></th>
+<th class="head"><p>必填</p></th>
+<th class="head"><p>说明</p></th>
+<th class="head"><p>最低版本</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>src</p></td>
+<td><p>string</p></td>
+<td></td>
+<td><p>否</p></td>
+<td><p>音视频地址。目前仅支持 flv, rtmp 格式</p></td>
+<td><p>1.7.0</p></td>
+</tr>
+<tr class="row-odd"><td><p>mode</p></td>
+<td><p>string</p></td>
+<td><p>live</p></td>
+<td><p>否</p></td>
+<td><p>模式</p></td>
+<td><p>1.7.0</p></td>
+</tr>
+<tr class="row-even"><td><p>autoplay</p></td>
+<td><p>boolean</p></td>
+<td><p>false</p></td>
+<td><p>否</p></td>
+<td><p>自动播放</p></td>
+<td><p>1.7.0</p></td>
+</tr>
+<tr class="row-odd"><td><p>muted</p></td>
+<td><p>boolean</p></td>
+<td><p>false</p></td>
+<td><p>否</p></td>
+<td><p>是否静音</p></td>
+<td><p>1.7.0</p></td>
+</tr>
+<tr class="row-even"><td><p>orientation</p></td>
+<td><p>string</p></td>
+<td><p>vertical</p></td>
+<td><p>否</p></td>
+<td><p>画面方向</p></td>
+<td><p>1.7.0</p></td>
+</tr>
+<tr class="row-odd"><td><p>object-fit</p></td>
+<td><p>string</p></td>
+<td><p>contain</p></td>
+<td><p>否</p></td>
+<td><p>填充模式，可选值有 contain，fillCrop</p></td>
+<td><p>1.7.0</p></td>
+</tr>
+<tr class="row-even"><td><p>background-mute</p></td>
+<td><p>boolean</p></td>
+<td><p>false</p></td>
+<td><p>否</p></td>
+<td><p>进入后台时是否静音（已废弃，默认退台静音）</p></td>
+<td><p>1.7.0</p></td>
+</tr>
+<tr class="row-odd"><td><p>min-cache</p></td>
+<td><p>number</p></td>
+<td><p>1</p></td>
+<td><p>否</p></td>
+<td><p>最小缓冲区，单位s（RTC 模式推荐 0.2s）</p></td>
+<td><p>1.7.0</p></td>
+</tr>
+<tr class="row-even"><td><p>max-cache</p></td>
+<td><p>number</p></td>
+<td><p>3</p></td>
+<td><p>否</p></td>
+<td><p>最大缓冲区，单位s（RTC 模式推荐 0.8s）</p></td>
+<td><p>1.7.0</p></td>
+</tr>
+<tr class="row-odd"><td><p>sound-mode</p></td>
+<td><p>string</p></td>
+<td><p>speaker</p></td>
+<td><p>否</p></td>
+<td><p>声音输出方式</p></td>
+<td><p>1.9.90</p></td>
+</tr>
+<tr class="row-even"><td><p>auto-pause-if-navigate</p></td>
+<td><p>boolean</p></td>
+<td><p>true</p></td>
+<td><p>否</p></td>
+<td><p>当跳转到其它小程序页面时，</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td></td>
+<td></td>
+<td></td>
+<td><p>是否自动暂停本页面的实时音视频播放</p></td>
+<td><p>2.5.0</p></td>
+</tr>
+<tr class="row-even"><td><p>auto-pause-if-open-native</p></td>
+<td><p>boolean</p></td>
+<td><p>true</p></td>
+<td><p>否</p></td>
+<td><p>当跳转到其它微信原生页面时，</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td></td>
+<td></td>
+<td></td>
+<td><p>是否自动暂停本页面的实时音视频播放</p></td>
+<td><p>2.5.0</p></td>
+</tr>
+<tr class="row-even"><td><p>bindstatechange</p></td>
+<td><p>eventhandle</p></td>
+<td></td>
+<td><p>否</p></td>
+<td><p>播放状态变化事件，detail = {code}</p></td>
+<td><p>1.7.0</p></td>
+</tr>
+<tr class="row-odd"><td><p>bindfullscreenchange</p></td>
+<td><p>eventhandle</p></td>
+<td></td>
+<td><p>否</p></td>
+<td><p>全屏变化事件，</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td></td>
+<td></td>
+<td></td>
+<td></td>
+<td><p>detail = {direction, fullScreen}</p></td>
+<td><p>1.7.0</p></td>
+</tr>
+<tr class="row-odd"><td><p>bindnetstatus</p></td>
+<td><p>eventhandle</p></td>
+<td></td>
+<td><p>否</p></td>
+<td><p>网络状态通知，detail = {info}</p></td>
+<td><p>1.9.0</p></td>
+</tr>
+</tbody>
+</table>
+<table class="docutils align-center" id="id2">
+<caption><span class="caption-text">mode 的合法值</span><a class="headerlink" href="#id2" title="永久链接至表格">¶</a></caption>
 <colgroup>
 <col style="width: 19%" />
 <col style="width: 81%" />
@@ -290,28 +427,8 @@
 </tr>
 </tbody>
 </table>
-<p>orientation 的合法值</p>
-<table class="docutils align-center">
-<colgroup>
-<col style="width: 55%" />
-<col style="width: 45%" />
-</colgroup>
-<tbody>
-<tr class="row-odd"><td><p>值</p></td>
-<td><p>说明</p></td>
-</tr>
-<tr class="row-even"><td><p>vertical</p></td>
-<td><p>竖直</p></td>
-</tr>
-<tr class="row-odd"><td><p>horizontal</p></td>
-<td><p>水平</p></td>
-</tr>
-<tr class="row-even"><td><p>sound-mode</p></td>
-<td><p>的合法值</p></td>
-</tr>
-</tbody>
-</table>
-<table class="docutils align-center">
+<table class="docutils align-center" id="id3">
+<caption><span class="caption-text">sound-mode 的合法值</span><a class="headerlink" href="#id3" title="永久链接至表格">¶</a></caption>
 <colgroup>
 <col style="width: 53%" />
 <col style="width: 47%" />
@@ -328,8 +445,8 @@
 </tr>
 </tbody>
 </table>
-<p>状态码</p>
-<table class="docutils align-center">
+<table class="docutils align-center" id="id4">
+<caption><span class="caption-text">状态码</span><a class="headerlink" href="#id4" title="永久链接至表格">¶</a></caption>
 <colgroup>
 <col style="width: 11%" />
 <col style="width: 89%" />
@@ -409,8 +526,8 @@
 </tr>
 </tbody>
 </table>
-<p>网络状态数据</p>
-<table class="docutils align-center">
+<table class="docutils align-center" id="id5">
+<caption><span class="caption-text">网络状态数据</span><a class="headerlink" href="#id5" title="永久链接至表格">¶</a></caption>
 <colgroup>
 <col style="width: 21%" />
 <col style="width: 79%" />
@@ -456,7 +573,7 @@
 <p>开发者工具上暂不支持。</p>
 </div>
 <p>示例代码</p>
-<p><code class="xref download docutils literal notranslate"><span class="pre">在开发者工具中预览效果</span></code></p>
+<p><a class="reference download external" download="" href="https://developers.weixin.qq.com/s/UzWEzmm763Y4"><code class="xref download docutils literal notranslate"><span class="pre">在开发者工具中预览效果</span></code></a></p>
 <div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">live-player</span>
   <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://domain/pull_stream&quot;</span>
   <span class="na">mode</span><span class="o">=</span><span class="s">&quot;RTC&quot;</span>
@@ -465,14 +582,16 @@
   <span class="na">binderror</span><span class="o">=</span><span class="s">&quot;error&quot;</span>
   <span class="na">style</span><span class="o">=</span><span class="s">&quot;width: 300px; height: 225px;&quot;</span>
 <span class="p">/&gt;</span>
-Page({
-  statechange(e) {
-    console.log(&#39;live-player code:&#39;, e.detail.code)
-  },
-  error(e) {
-    console.error(&#39;live-player error:&#39;, e.detail.errMsg)
-  }
-})
+</pre></div>
+</div>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="nx">Page</span><span class="p">({</span>
+  <span class="nx">statechange</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;live-player code:&#39;</span><span class="p">,</span> <span class="nx">e</span><span class="p">.</span><span class="nx">detail</span><span class="p">.</span><span class="nx">code</span><span class="p">)</span>
+  <span class="p">},</span>
+  <span class="nx">error</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="s1">&#39;live-player error:&#39;</span><span class="p">,</span> <span class="nx">e</span><span class="p">.</span><span class="nx">detail</span><span class="p">.</span><span class="nx">errMsg</span><span class="p">)</span>
+  <span class="p">}</span>
+<span class="p">})</span>
 </pre></div>
 </div>
 </div>
@@ -485,10 +604,10 @@ Page({
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="live-pusher.html" class="btn btn-neutral float-right" title="live-pusher" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="camera.html" class="btn btn-neutral float-right" title="camera" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="image.html" class="btn btn-neutral float-left" title="image" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="live-pusher.html" class="btn btn-neutral float-left" title="live-pusher" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

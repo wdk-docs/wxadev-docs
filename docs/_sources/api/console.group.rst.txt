@@ -1,2 +1,4 @@
-console.group
-=====
+:orphan:
+
+:wxapi:`console.group`
+============================

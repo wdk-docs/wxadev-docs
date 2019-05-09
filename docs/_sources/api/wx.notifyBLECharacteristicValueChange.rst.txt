@@ -1,3 +1,2 @@
-
-:wxapi:`:wxapi:`wx.createWorker``
-===============
+:wxapi:`:wxapi:wx.notifyBLECharacteristicValueChange`
+============================================================

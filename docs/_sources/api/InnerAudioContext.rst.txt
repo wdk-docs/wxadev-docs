@@ -1,5 +1,5 @@
-:wxapi:`InnerAudioContext`
-============================================
+:wxapi:`InnerAudioContext ☁️ <InnerAudioContext>`
+=====================================================
 
 .. function:: wx.createInnerAudioContext()
 
@@ -173,7 +173,7 @@
 .. function:: InnerAudioContext.onError(callback)
 
    :label: 监听音频播放错误事件
-   :param function callback: 
+   :param function callback:
 
 .. function:: InnerAudioContext.offError(callback)
 
@@ -193,7 +193,7 @@
 .. function:: InnerAudioContext.onSeeking(callback)
 
    :label: 监听音频进行跳转操作的事件
-   :param function callback: 
+   :param function callback:
 
 .. function:: InnerAudioContext.offSeeking(callback)
 
@@ -203,7 +203,7 @@
 .. function:: InnerAudioContext.onSeeked(callback)
 
    :label: 监听音频完成跳转操作的事件
-   :param function callback: 
+   :param function callback:
 
 .. function:: InnerAudioContext.offSeeked(callback)
 

@@ -200,27 +200,63 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="id1">
-<h1>场景值<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
-<p>基础库 1.1.0 开始支持，低版本需做 <a class="reference internal" href="../compatibility.html#compatibility"><span class="std std-ref">兼容处理</span></a> 。</p>
-<p>场景值用来描述用户进入小程序的路径。完整场景值的含义请查看场景值列表。</p>
-<p>由于Android系统限制，目前还无法获取到按 Home 键退出到桌面，然后从桌面再次进小程序的场景值，对于这种情况，会保留上一次的场景值。</p>
+  <div class="section" id="app-service-scene">
+<span id="id1"></span><h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/framework/app-service/scene.html">场景值</a><a class="headerlink" href="#app-service-scene" title="永久链接至标题">¶</a></h1>
+<p>更新: 2019 年 05 月 08 日</p>
+<p>基础库 1.1.0 低版本需做 <a class="reference internal" href="../compatibility.html#compatibility"><span class="std std-ref">兼容处理</span></a> 。</p>
+<p>场景值用来描述用户进入小程序的路径。完整场景值的含义请查看 <a class="reference internal" href="../../reference/scene.html#scene-list"><span class="std std-ref">场景值列表</span></a> 。</p>
+<p>由于 Android 系统限制，目前还无法获取到按 <kbd class="kbd docutils literal notranslate">Home</kbd> 键退出到桌面，然后从桌面再次进小程序的场景值，对于这种情况，会保留上一次的场景值。</p>
 <div class="section" id="id2">
 <h2>获取场景值<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
 <p>开发者可以通过下列方式获取场景值：</p>
-<p>对于小程序，可以在 App 的 onLaunch 和 onShow，或wx.getLaunchOptionsSync 中获取上述场景值。
-对于小游戏，可以在 wx.getLaunchOptionsSync 和 wx.onShow 中获取上述场景值</p>
+<ul class="simple">
+<li><p>对于小程序，可以在 <a class="reference internal" href="../../reference/api/App.html#App" title="App"><code class="xref js js-class docutils literal notranslate"><span class="pre">App()</span></code></a> 的 <code class="docutils literal notranslate"><span class="pre">onLaunch</span></code> 和 <code class="docutils literal notranslate"><span class="pre">onShow</span></code> ，
+或 <a class="reference internal" href="../../api/wx.getLaunchOptionsSync.html#wx.getLaunchOptionsSync" title="wx.getLaunchOptionsSync"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.getLaunchOptionsSync()</span></code></a> 中获取上述场景值。</p></li>
+<li><p>对于小游戏，可以在 <a class="reference internal" href="../../api/wx.getLaunchOptionsSync.html#wx.getLaunchOptionsSync" title="wx.getLaunchOptionsSync"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.getLaunchOptionsSync()</span></code></a> 和 <code class="xref js js-func docutils literal notranslate"><span class="pre">wx.onShow()</span></code> 中获取上述场景值</p></li>
+</ul>
 </div>
 <div class="section" id="id3">
 <h2>返回来源信息的场景<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
 <p>部分场景值下还可以获取来源应用、公众号或小程序的appId。获取方式请参考对应API的参考文档。</p>
-<p>场景值     场景      appId含义
-1020    公众号 profile 页相关小程序列表    来源公众号
-1035    公众号自定义菜单        来源公众号
-1036    App 分享消息卡片      来源App
-1037    小程序打开小程序        来源小程序
-1038    从另一个小程序返回       来源小程序
-1043    公众号模板消息 来源公众号</p>
+<table class="docutils align-center">
+<colgroup>
+<col style="width: 15%" />
+<col style="width: 62%" />
+<col style="width: 23%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>场景值</p></th>
+<th class="head"><p>场景</p></th>
+<th class="head"><p>appId含义</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1020</p></td>
+<td><p>公众号 profile 页相关小程序列表</p></td>
+<td><p>来源公众号</p></td>
+</tr>
+<tr class="row-odd"><td><p>1035</p></td>
+<td><p>公众号自定义菜单</p></td>
+<td><p>来源公众号</p></td>
+</tr>
+<tr class="row-even"><td><p>1036</p></td>
+<td><p>App 分享消息卡片</p></td>
+<td><p>来源App</p></td>
+</tr>
+<tr class="row-odd"><td><p>1037</p></td>
+<td><p>小程序打开小程序</p></td>
+<td><p>来源小程序</p></td>
+</tr>
+<tr class="row-even"><td><p>1038</p></td>
+<td><p>从另一个小程序返回</p></td>
+<td><p>来源小程序</p></td>
+</tr>
+<tr class="row-odd"><td><p>1043</p></td>
+<td><p>公众号模板消息</p></td>
+<td><p>来源公众号</p></td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 

@@ -1,6 +1,6 @@
 .. _image:
 
-:wx_comp:`image`
+:wx_comp:`image ☁️ <image>`
 =============================
 
 .. versionadded::  1.0.0 低版本需做 :ref:`compatibility` 。

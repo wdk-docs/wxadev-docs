@@ -1,2 +1,4 @@
-console.debug
-=================
+:orphan:
+
+:wxapi:`console.debug`
+=============================

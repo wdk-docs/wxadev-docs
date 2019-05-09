@@ -424,14 +424,16 @@
 </div>
 <div class="section" id="id4">
 <h2>示例代码<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h2>
-<p><code class="xref download docutils literal notranslate"><span class="pre">在开发者工具中预览效果</span></code></p>
-<div class="highlight-html notranslate"><div class="highlight"><pre><span></span>.navigator-hover {
-  color: blue;
-}
-.other-navigator-hover {
-  color: red;
-}
-<span class="c">&lt;!-- sample.wxml --&gt;</span>
+<p><a class="reference download external" download="" href="https://developers.weixin.qq.com/s/2Ec11cmI6BY1"><code class="xref download docutils literal notranslate"><span class="pre">在开发者工具中预览效果</span></code></a></p>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="p">.</span><span class="nc">navigator-hover</span> <span class="p">{</span>
+  <span class="k">color</span><span class="p">:</span> <span class="kc">blue</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="p">.</span><span class="nc">other-navigator-hover</span> <span class="p">{</span>
+  <span class="k">color</span><span class="p">:</span> <span class="kc">red</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="c">&lt;!-- sample.wxml --&gt;</span>
 <span class="p">&lt;</span><span class="nt">view</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;btn-area&quot;</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">navigator</span>
     <span class="na">url</span><span class="o">=</span><span class="s">&quot;/page/navigate/navigate?title=navigate&quot;</span>
@@ -464,19 +466,23 @@
     打开绑定的小程序
   <span class="p">&lt;/</span><span class="nt">navigator</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">view</span><span class="p">&gt;</span>
-<span class="c">&lt;!-- navigator.wxml --&gt;</span>
+</pre></div>
+</div>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="c">&lt;!-- navigator.wxml --&gt;</span>
 <span class="p">&lt;</span><span class="nt">view</span> <span class="na">style</span><span class="o">=</span><span class="s">&quot;text-align:center&quot;</span><span class="p">&gt;</span>{{title}}<span class="p">&lt;/</span><span class="nt">view</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">view</span><span class="p">&gt;</span>点击左上角返回回到之前页面<span class="p">&lt;/</span><span class="nt">view</span><span class="p">&gt;</span>
 <span class="c">&lt;!-- redirect.wxml --&gt;</span>
 <span class="p">&lt;</span><span class="nt">view</span> <span class="na">style</span><span class="o">=</span><span class="s">&quot;text-align:center&quot;</span><span class="p">&gt;</span>{{title}}<span class="p">&lt;/</span><span class="nt">view</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">view</span><span class="p">&gt;</span>点击左上角返回回到上级页面<span class="p">&lt;/</span><span class="nt">view</span><span class="p">&gt;</span>
-Page({
-  onLoad(options) {
-    this.setData({
-      title: options.title
-    })
-  }
-})
+</pre></div>
+</div>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="nx">Page</span><span class="p">({</span>
+  <span class="nx">onLoad</span><span class="p">(</span><span class="nx">options</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">setData</span><span class="p">({</span>
+      <span class="nx">title</span><span class="o">:</span> <span class="nx">options</span><span class="p">.</span><span class="nx">title</span>
+    <span class="p">})</span>
+  <span class="p">}</span>
+<span class="p">})</span>
 </pre></div>
 </div>
 </div>
