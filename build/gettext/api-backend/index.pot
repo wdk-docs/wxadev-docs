@@ -1,0 +1,596 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019, Nosy
+# This file is distributed under the same license as the wxadev package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: wxadev \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-09 22:55+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/api-backend/index.rst:4
+msgid ":wxbpi:`服务端API <index>`"
+msgstr ""
+
+#: ../../source/api-backend/index.rst:7
+msgid "登录"
+msgstr ""
+
+#: ../../source/api-backend/index.rst:10
+#: ../../source/api-backend/index.rst:25
+#: ../../source/api-backend/index.rst:40
+#: ../../source/api-backend/index.rst:62
+#: ../../source/api-backend/index.rst:83
+#: ../../source/api-backend/index.rst:116
+#: ../../source/api-backend/index.rst:140
+#: ../../source/api-backend/index.rst:170
+#: ../../source/api-backend/index.rst:185
+#: ../../source/api-backend/index.rst:203
+#: ../../source/api-backend/index.rst:230
+#: ../../source/api-backend/index.rst:254
+#: ../../source/api-backend/index.rst:275
+#: ../../source/api-backend/index.rst:296
+#: ../../source/api-backend/index.rst:335
+#: ../../source/api-backend/index.rst:371
+msgid "名称"
+msgstr ""
+
+#: ../../source/api-backend/index.rst:10
+#: ../../source/api-backend/index.rst:25
+#: ../../source/api-backend/index.rst:40
+#: ../../source/api-backend/index.rst:62
+#: ../../source/api-backend/index.rst:83
+#: ../../source/api-backend/index.rst:116
+#: ../../source/api-backend/index.rst:140
+#: ../../source/api-backend/index.rst:170
+#: ../../source/api-backend/index.rst:185
+#: ../../source/api-backend/index.rst:203
+#: ../../source/api-backend/index.rst:230
+#: ../../source/api-backend/index.rst:254
+#: ../../source/api-backend/index.rst:275
+#: ../../source/api-backend/index.rst:296
+#: ../../source/api-backend/index.rst:335
+#: ../../source/api-backend/index.rst:371
+msgid "功能说明"
+msgstr ""
+
+#: ../../source/api-backend/index.rst:12
+msgid "auth.code2Session"
+msgstr ""
+
+#: ../../source/api-backend/index.rst:12
+msgid "登录凭证校验"
+msgstr ""
+
+#: ../../source/api-backend/index.rst:22
+msgid "用户信息"
+msgstr ""
+
+#: ../../source/api-backend/index.rst:27
+msgid ":ref:`auth.getPaidUnionId`"
+msgstr ""
+
+#: ../../source/api-backend/index.rst:27
+msgid "用户支付完成后，获取该用户的 UnionId，无需用户授权"
+msgstr ""
+
+#: ../../source/api-backend/index.rst:37
+msgid "接口调用凭证"
+msgstr ""
+
+#: ../../source/api-backend/index.rst:42
+msgid "auth.getAccessToken"
+msgstr ""
+
+#: ../../source/api-backend/index.rst:42
+msgid "获取小程序全局唯一后台接口调用凭据（access_token）"
+msgstr ""
+
+#: ../../source/api-backend/index.rst:52
+msgid "数据分析"
+msgstr ""
+
+#: ../../source/api-backend/index.rst:59
+msgid "访问留存"
+msgstr ""
+
+#: ../../source/api-backend/index.rst:64
+msgid "analysis.getDailyRetain"
+msgstr ""
+
+#: ../../source/api-backend/index.rst:64
+msgid "获取用户访问小程序日留存"
+msgstr ""
+
+#: ../../source/api-backend/index.rst:66
+msgid "analysis.getMonthlyRetain"
+msgstr ""
+
+#: ../../source/api-backend/index.rst:66
+msgid "获取用户访问小程序月留存"
+msgstr ""
+
+#: ../../source/api-backend/index.rst:68
+msgid "analysis.getWeeklyRetain"
+msgstr ""
+
+#: ../../source/api-backend/index.rst:68
+msgid "获取用户访问小程序周留存"
+msgstr ""
+
+#: ../../source/api-backend/index.rst:80
+msgid "访问趋势"
+msgstr ""
+
+#: ../../source/api-backend/index.rst:85
+msgid "analysis.getDailyVisitTrend"
+msgstr ""
+
+#: ../../source/api-backend/index.rst:85
+msgid "获取用户访问小程序数据日趋势"
+msgstr ""
+
+#: ../../source/api-backend/index.rst:87
+msgid "analysis.getMonthlyVisitTrend"
+msgstr ""
+
+#: ../../source/api-backend/index.rst:87
+msgid "获取用户访问小程序数据月趋势"
+msgstr ""
+
+#: ../../source/api-backend/index.rst:89
+msgid "analysis.getWeeklyVisitTrend"
+msgstr ""
+
+#: ../../source/api-backend/index.rst:89
+msgid "获取用户访问小程序数据周趋势"
+msgstr ""
+
+#: ../../source/api-backend/index.rst:91
+msgid "analysis.getUserPortrait"
+msgstr ""
+
+#: ../../source/api-backend/index.rst:91
+msgid "获取小程序新增或活跃用户的画像分布数据"
+msgstr ""
+
+#: ../../source/api-backend/index.rst:93
+msgid "analysis.getVisitDistribution"
+msgstr ""
+
+#: ../../source/api-backend/index.rst:93
+msgid "获取用户小程序访问分布数据"
+msgstr ""
+
+#: ../../source/api-backend/index.rst:95
+msgid "analysis.getVisitPage"
+msgstr ""
+
+#: ../../source/api-backend/index.rst:95
+msgid "访问页面"
+msgstr ""
+
+#: ../../source/api-backend/index.rst:97
+msgid "analysis.getDailySummary"
+msgstr ""
+
+#: ../../source/api-backend/index.rst:97
+msgid "获取用户访问小程序数据概况"
+msgstr ""
+
+#: ../../source/api-backend/index.rst:113
+msgid "客服消息"
+msgstr ""
+
+#: ../../source/api-backend/index.rst:118
+msgid "customerServiceMessage.getTempMedia"
+msgstr ""
+
+#: ../../source/api-backend/index.rst:118
+msgid "获取客服消息内的临时素材"
+msgstr ""
+
+#: ../../source/api-backend/index.rst:120
+msgid "customerServiceMessage.send"
+msgstr ""
+
+#: ../../source/api-backend/index.rst:120
+msgid "发送客服消息给用户"
+msgstr ""
+
+#: ../../source/api-backend/index.rst:122
+msgid "customerServiceMessage.setTyping"
+msgstr ""
+
+#: ../../source/api-backend/index.rst:122
+msgid "下发客服当前输入状态给用户"
+msgstr ""
+
+#: ../../source/api-backend/index.rst:124
+msgid "customerServiceMessage.uploadTempMedia"
+msgstr ""
+
+#: ../../source/api-backend/index.rst:124
+msgid "把媒体文件上传到微信服务器"
+msgstr ""
+
+#: ../../source/api-backend/index.rst:137
+msgid "模板消息"
+msgstr ""
+
+#: ../../source/api-backend/index.rst:142
+msgid "templateMessage.addTemplate"
+msgstr ""
+
+#: ../../source/api-backend/index.rst:142
+msgid "组合模板并添加至帐号下的个人模板库"
+msgstr ""
+
+#: ../../source/api-backend/index.rst:144
+msgid "templateMessage.deleteTemplate"
+msgstr ""
+
+#: ../../source/api-backend/index.rst:144
+msgid "删除帐号下的某个模板"
+msgstr ""
+
+#: ../../source/api-backend/index.rst:146
+msgid "templateMessage.getTemplateLibraryById"
+msgstr ""
+
+#: ../../source/api-backend/index.rst:146
+msgid "获取模板库某个模板标题下关键词库"
+msgstr ""
+
+#: ../../source/api-backend/index.rst:148
+msgid "templateMessage.getTemplateLibraryList"
+msgstr ""
+
+#: ../../source/api-backend/index.rst:148
+msgid "获取小程序模板库标题列表"
+msgstr ""
+
+#: ../../source/api-backend/index.rst:150
+msgid "templateMessage.getTemplateList"
+msgstr ""
+
+#: ../../source/api-backend/index.rst:150
+msgid "获取帐号下已存在的模板列表"
+msgstr ""
+
+#: ../../source/api-backend/index.rst:152
+msgid "templateMessage.send"
+msgstr ""
+
+#: ../../source/api-backend/index.rst:152
+msgid "发送模板消息"
+msgstr ""
+
+#: ../../source/api-backend/index.rst:167
+msgid "统一服务消息"
+msgstr ""
+
+#: ../../source/api-backend/index.rst:172
+msgid "uniformMessage.send"
+msgstr ""
+
+#: ../../source/api-backend/index.rst:172
+msgid "下发小程序和公众号统一的服务消息"
+msgstr ""
+
+#: ../../source/api-backend/index.rst:182
+msgid "动态消息"
+msgstr ""
+
+#: ../../source/api-backend/index.rst:187
+msgid "updatableMessage.createActivityId"
+msgstr ""
+
+#: ../../source/api-backend/index.rst:187
+msgid "创建被分享动态消息的 activity_id"
+msgstr ""
+
+#: ../../source/api-backend/index.rst:189
+msgid "updatableMessage.setUpdatableMsg"
+msgstr ""
+
+#: ../../source/api-backend/index.rst:189
+msgid "修改被分享的动态消息"
+msgstr ""
+
+#: ../../source/api-backend/index.rst:200
+msgid "插件管理"
+msgstr ""
+
+#: ../../source/api-backend/index.rst:205
+msgid "pluginManager.applyPlugin"
+msgstr ""
+
+#: ../../source/api-backend/index.rst:205
+msgid "向插件开发者发起使用插件的申请"
+msgstr ""
+
+#: ../../source/api-backend/index.rst:207
+msgid "pluginManager.getPluginDevApplyList"
+msgstr ""
+
+#: ../../source/api-backend/index.rst:207
+msgid "获取当前所有插件使用方（供插件开发者调用）"
+msgstr ""
+
+#: ../../source/api-backend/index.rst:209
+msgid "pluginManager.getPluginList"
+msgstr ""
+
+#: ../../source/api-backend/index.rst:209
+msgid "查询已添加的插件"
+msgstr ""
+
+#: ../../source/api-backend/index.rst:211
+msgid "pluginManager.setDevPluginApplyStatus"
+msgstr ""
+
+#: ../../source/api-backend/index.rst:211
+msgid "修改插件使用申请的状态（供插件开发者调用）"
+msgstr ""
+
+#: ../../source/api-backend/index.rst:213
+msgid "pluginManager.unbindPlugin"
+msgstr ""
+
+#: ../../source/api-backend/index.rst:213
+msgid "删除已添加的插件"
+msgstr ""
+
+#: ../../source/api-backend/index.rst:227
+msgid "附近的小程序"
+msgstr ""
+
+#: ../../source/api-backend/index.rst:232
+msgid "nearbyPoi.add"
+msgstr ""
+
+#: ../../source/api-backend/index.rst:232
+msgid "添加地点"
+msgstr ""
+
+#: ../../source/api-backend/index.rst:234
+msgid "nearbyPoi.delete"
+msgstr ""
+
+#: ../../source/api-backend/index.rst:234
+msgid "删除地点"
+msgstr ""
+
+#: ../../source/api-backend/index.rst:236
+msgid "nearbyPoi.getList"
+msgstr ""
+
+#: ../../source/api-backend/index.rst:236
+msgid "查看地点列表"
+msgstr ""
+
+#: ../../source/api-backend/index.rst:238
+msgid "nearbyPoi.setShowStatus"
+msgstr ""
+
+#: ../../source/api-backend/index.rst:238
+msgid "展示/取消展示附近小程序"
+msgstr ""
+
+#: ../../source/api-backend/index.rst:251
+msgid "小程序码"
+msgstr ""
+
+#: ../../source/api-backend/index.rst:256
+msgid "wxacode.createQRCode"
+msgstr ""
+
+#: ../../source/api-backend/index.rst:256
+msgid "获取小程序二维码，适用于需要的码数量较少的业务场景"
+msgstr ""
+
+#: ../../source/api-backend/index.rst:258
+msgid "wxacode.get"
+msgstr ""
+
+#: ../../source/api-backend/index.rst:258
+msgid "获取小程序码，适用于需要的码数量较少的业务场景"
+msgstr ""
+
+#: ../../source/api-backend/index.rst:260
+msgid "wxacode.getUnlimited"
+msgstr ""
+
+#: ../../source/api-backend/index.rst:260
+msgid "获取小程序码，适用于需要的码数量极多的业务场景"
+msgstr ""
+
+#: ../../source/api-backend/index.rst:272
+msgid "内容安全"
+msgstr ""
+
+#: ../../source/api-backend/index.rst:277
+msgid "security.imgSecCheck"
+msgstr ""
+
+#: ../../source/api-backend/index.rst:277
+msgid "校验一张图片是否含有违法违规内容"
+msgstr ""
+
+#: ../../source/api-backend/index.rst:279
+msgid "security.msgSecCheck"
+msgstr ""
+
+#: ../../source/api-backend/index.rst:279
+msgid "检查一段文本是否含有违法违规内容"
+msgstr ""
+
+#: ../../source/api-backend/index.rst:290
+msgid "物流助手"
+msgstr ""
+
+#: ../../source/api-backend/index.rst:293
+msgid "小程序使用"
+msgstr ""
+
+#: ../../source/api-backend/index.rst:298
+msgid "logistics.onPathUpdate"
+msgstr ""
+
+#: ../../source/api-backend/index.rst:298
+msgid "运单轨迹更新事件"
+msgstr ""
+
+#: ../../source/api-backend/index.rst:300
+msgid "logistics.addOrder ☁️"
+msgstr ""
+
+#: ../../source/api-backend/index.rst:300
+msgid "生成运单"
+msgstr ""
+
+#: ../../source/api-backend/index.rst:302
+msgid "logistics.cancelOrder  ☁️"
+msgstr ""
+
+#: ../../source/api-backend/index.rst:302
+msgid "取消运单"
+msgstr ""
+
+#: ../../source/api-backend/index.rst:304
+msgid "logistics.getAllDelivery  ☁️"
+msgstr ""
+
+#: ../../source/api-backend/index.rst:304
+msgid "获取支持的快递公司列表"
+msgstr ""
+
+#: ../../source/api-backend/index.rst:306
+msgid "logistics.getOrder  ☁️"
+msgstr ""
+
+#: ../../source/api-backend/index.rst:306
+msgid "获取运单数据"
+msgstr ""
+
+#: ../../source/api-backend/index.rst:308
+msgid "logistics.getPath  ☁️"
+msgstr ""
+
+#: ../../source/api-backend/index.rst:308
+msgid "查询运单轨迹"
+msgstr ""
+
+#: ../../source/api-backend/index.rst:310
+msgid "logistics.getPrinter  ☁️"
+msgstr ""
+
+#: ../../source/api-backend/index.rst:310
+msgid "获取打印员"
+msgstr ""
+
+#: ../../source/api-backend/index.rst:312
+msgid "logistics.getQuota  ☁️"
+msgstr ""
+
+#: ../../source/api-backend/index.rst:312
+msgid "获取电子面单余额"
+msgstr ""
+
+#: ../../source/api-backend/index.rst:314
+msgid "logistics.updatePrinter  ☁️"
+msgstr ""
+
+#: ../../source/api-backend/index.rst:314
+msgid "更新打印员"
+msgstr ""
+
+#: ../../source/api-backend/index.rst:332
+msgid "服务提供方使用"
+msgstr ""
+
+#: ../../source/api-backend/index.rst:337
+msgid "logistics.getContact ☁️"
+msgstr ""
+
+#: ../../source/api-backend/index.rst:337
+msgid "获取面单联系人信息"
+msgstr ""
+
+#: ../../source/api-backend/index.rst:339
+msgid "logistics.onAddOrder"
+msgstr ""
+
+#: ../../source/api-backend/index.rst:339
+msgid "请求下单事件"
+msgstr ""
+
+#: ../../source/api-backend/index.rst:341
+msgid "logistics.onCancelOrder"
+msgstr ""
+
+#: ../../source/api-backend/index.rst:341
+msgid "取消订单事件"
+msgstr ""
+
+#: ../../source/api-backend/index.rst:343
+msgid "logistics.onCheckBusiness"
+msgstr ""
+
+#: ../../source/api-backend/index.rst:343
+msgid "审核商户事件"
+msgstr ""
+
+#: ../../source/api-backend/index.rst:345
+msgid "logistics.onGetQuota"
+msgstr ""
+
+#: ../../source/api-backend/index.rst:345
+msgid "查询商户余额事件"
+msgstr ""
+
+#: ../../source/api-backend/index.rst:347
+msgid "logistics.previewTemplate ☁️"
+msgstr ""
+
+#: ../../source/api-backend/index.rst:347
+msgid "预览面单模板"
+msgstr ""
+
+#: ../../source/api-backend/index.rst:349
+msgid "logistics.updateBusiness ☁️"
+msgstr ""
+
+#: ../../source/api-backend/index.rst:349
+msgid "更新商户审核结果"
+msgstr ""
+
+#: ../../source/api-backend/index.rst:351
+msgid "logistics.updatePath ☁️"
+msgstr ""
+
+#: ../../source/api-backend/index.rst:351
+msgid "更新运单轨迹"
+msgstr ""
+
+#: ../../source/api-backend/index.rst:368
+msgid "生物认证"
+msgstr ""
+
+#: ../../source/api-backend/index.rst:373
+msgid "soter.verifySignature"
+msgstr ""
+
+#: ../../source/api-backend/index.rst:373
+msgid "SOTER 生物认证秘钥签名验证"
+msgstr ""
+

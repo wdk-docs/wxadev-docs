@@ -1,0 +1,244 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019, Nosy
+# This file is distributed under the same license as the wxadev package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: wxadev \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-09 22:55+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../../source/devtools/page.rst:4
+msgid ":wxdt:`界面 <page>`"
+msgstr ""
+
+#: ../../source/devtools/page.rst:6
+msgid "启动页 登录页 在登录页，可以使用微信扫码登陆开发者工具，开发者工具将使用这个微信帐号的信息进行小程序的开发和调试。"
+msgstr ""
+
+#: ../../source/devtools/page.rst:10
+msgid "登录"
+msgstr ""
+
+#: ../../source/devtools/page.rst:12
+msgid "项目列表 登录成功后，会看到已经存在的项目列表和代码片段列表，"
+msgstr ""
+
+#: ../../source/devtools/page.rst:15
+msgid "在项目列表可以选择公众号网页调试，进入到公众号网页调试模式"
+msgstr ""
+
+#: ../../source/devtools/page.rst:17
+msgid "项目列表"
+msgstr ""
+
+#: ../../source/devtools/page.rst:19
+msgid "新建项目 当符合以下条件时，可以在本地创建一个小程序项目"
+msgstr ""
+
+#: ../../source/devtools/page.rst:22
+msgid ""
+"需要一个小程序的 AppID；如没有 AppID，可以选择申请使用测试号。 登录的微信号需要是该 AppID 的开发者； "
+"需要选择一个空目录，或者选择的非空目录下存在 app.json 或者 "
+"project.config.json。当选择空目录时，可以选择是否在该目录下生成一个简单的项目。 新建项目"
+msgstr ""
+
+#: ../../source/devtools/page.rst:27
+msgid "多开项目 工具支持同时打开多个项目，每次打开项目时会从新窗口打开，入口有以下几种："
+msgstr ""
+
+#: ../../source/devtools/page.rst:30
+msgid ""
+"从项目选择页打开项目，处于项目窗口时可以从菜单栏的项目 -> 查看所有项目打开项目选择页 从菜单栏的最近打开项目列表中打开的项目会从新窗口打开 "
+"新建项目 命令行或 HTTP 调用工具打开项目 管理项目 对本地项目进行删除和批量删除"
+msgstr ""
+
+#: ../../source/devtools/page.rst:37
+msgid "管理项目"
+msgstr ""
+
+#: ../../source/devtools/page.rst:39
+msgid "主界面 开发者工具主界面，从上到下，从左到右，分别为：菜单栏、工具栏、模拟器、编辑器、调试器 五大部分。"
+msgstr ""
+
+#: ../../source/devtools/page.rst:44
+msgid "菜单栏 微信web开发者工具"
+msgstr ""
+
+#: ../../source/devtools/page.rst:47
+msgid "切换帐号：快速切换登录用户"
+msgstr ""
+
+#: ../../source/devtools/page.rst:49
+msgid "关于：关于开发者工具"
+msgstr ""
+
+#: ../../source/devtools/page.rst:51
+msgid "检查更新：检查版本更新"
+msgstr ""
+
+#: ../../source/devtools/page.rst:53
+msgid "开发者论坛：前往开发者论坛"
+msgstr ""
+
+#: ../../source/devtools/page.rst:55
+msgid "开发者文档：前往开发者文档"
+msgstr ""
+
+#: ../../source/devtools/page.rst:57
+msgid "调试：调试开发者工具、调试编辑器；如果遇到疑似开发者工具或者编辑器的 bug，可以打开调试工具查看是否有出错日志，欢迎在论坛上反馈相关问题"
+msgstr ""
+
+#: ../../source/devtools/page.rst:59
+msgid "更换开发模式：快速切换公众号网页调试和小程序调试"
+msgstr ""
+
+#: ../../source/devtools/page.rst:61
+msgid "退出：退出开发者工具"
+msgstr ""
+
+#: ../../source/devtools/page.rst:63
+msgid "项目"
+msgstr ""
+
+#: ../../source/devtools/page.rst:65
+msgid "新建项目：快速新建项目"
+msgstr ""
+
+#: ../../source/devtools/page.rst:67
+msgid "打开最近：可以查看最近打开的项目列表，并选择是否进入对应项目"
+msgstr ""
+
+#: ../../source/devtools/page.rst:69
+msgid "查看所有项目：新窗口打开启动页的项目列表页"
+msgstr ""
+
+#: ../../source/devtools/page.rst:71
+msgid "关闭当前项目：关闭当前项目，回到启动页的项目列表页"
+msgstr ""
+
+#: ../../source/devtools/page.rst:73
+msgid "文件"
+msgstr ""
+
+#: ../../source/devtools/page.rst:75
+msgid "新建文件"
+msgstr ""
+
+#: ../../source/devtools/page.rst:77
+msgid "保存"
+msgstr ""
+
+#: ../../source/devtools/page.rst:79
+msgid "保存所有"
+msgstr ""
+
+#: ../../source/devtools/page.rst:81
+msgid "关闭文件"
+msgstr ""
+
+#: ../../source/devtools/page.rst:83
+msgid "编辑：可以查看编辑相关的操作和快捷键"
+msgstr ""
+
+#: ../../source/devtools/page.rst:85
+msgid "工具"
+msgstr ""
+
+#: ../../source/devtools/page.rst:87
+msgid "编译：编译当前小程序项目"
+msgstr ""
+
+#: ../../source/devtools/page.rst:89
+msgid "刷新：与编译的功能一致，由于历史原因保留对应的快捷键 ctrl(⌘) + R"
+msgstr ""
+
+#: ../../source/devtools/page.rst:91
+msgid "编译配置：可以选择普通编译或自定义编译条件"
+msgstr ""
+
+#: ../../source/devtools/page.rst:93
+msgid "前后台切换：模拟客户端小程序进入后台运行和返回前台的操作"
+msgstr ""
+
+#: ../../source/devtools/page.rst:95
+msgid "清除缓存：清除文件缓存、数据缓存、以及授权数据"
+msgstr ""
+
+#: ../../source/devtools/page.rst:97
+msgid "界面：控制主界面窗口模块的显示与隐藏"
+msgstr ""
+
+#: ../../source/devtools/page.rst:99
+msgid "设置："
+msgstr ""
+
+#: ../../source/devtools/page.rst:101
+msgid "外观设置：控制编辑器的配色主题、字体、字号、行距"
+msgstr ""
+
+#: ../../source/devtools/page.rst:103
+msgid "编辑设置：控制文件保存的行为，编辑器的表现"
+msgstr ""
+
+#: ../../source/devtools/page.rst:105
+msgid "代理设置：选择直连网络、系统代理和手动设置代理"
+msgstr ""
+
+#: ../../source/devtools/page.rst:107
+msgid "通知设置：设置是否接受某种类型的通知"
+msgstr ""
+
+#: ../../source/devtools/page.rst:109
+msgid "工具栏 点击用户头像可以打开个人中心，在这里可以便捷的切换用户和查看开发者工具收到的消息。"
+msgstr ""
+
+#: ../../source/devtools/page.rst:114
+msgid "用户头像右侧是控制主界面模块显示/隐藏的按钮。至少需要有一个模块显示。"
+msgstr ""
+
+#: ../../source/devtools/page.rst:118
+msgid "工具栏中间，可以选择普通编译，也可以新建并选择自定义条件进行编译和预览。"
+msgstr ""
+
+#: ../../source/devtools/page.rst:120
+msgid "通过切后台按钮，可以模拟小程序进入后台的情况"
+msgstr ""
+
+#: ../../source/devtools/page.rst:124
+msgid "工具栏上提供了清缓存的快速入口。可以便捷的清除工具上的文件缓存、数据缓存、还有后台的授权数据，方便开发者调试。"
+msgstr ""
+
+#: ../../source/devtools/page.rst:126
+msgid "工具栏右侧是开发辅助功能的区域，在这里可以上传代码、申请测试、上传腾讯云、查看项目信息"
+msgstr ""
+
+#: ../../source/devtools/page.rst:130
+msgid "工具栏管理 在工具栏上点击鼠标右键，可以打开工具栏管理"
+msgstr ""
+
+#: ../../source/devtools/page.rst:135
+msgid "模拟器 模拟器可以模拟小程序在微信客户端的表现。小程序的代码通过编译后可以在模拟器上直接运行。"
+msgstr ""
+
+#: ../../source/devtools/page.rst:138
+msgid "开发者可以选择不同的设备，也可以添加自定义设备来调试小程序在不同尺寸机型上的适配问题。"
+msgstr ""
+
+#: ../../source/devtools/page.rst:142
+msgid "在模拟器底部的状态栏，可以直观地看到当前运行小程序的场景值，页面路径及页面参数"
+msgstr ""
+
+#: ../../source/devtools/page.rst:144
+msgid "独立窗口 点击 模拟器/调试器 右上角的按钮可以使用独立窗口显示 模拟器/调试器"
+msgstr ""
+

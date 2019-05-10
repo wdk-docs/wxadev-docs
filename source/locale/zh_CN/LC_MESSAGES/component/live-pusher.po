@@ -1,0 +1,900 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019, Nosy
+# This file is distributed under the same license as the wxadev package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: wxadev \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-09 22:55+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../../source/component/live-pusher.rst:4
+msgid ":wx_comp:`live-pusher`"
+msgstr ""
+
+#: ../../source/component/live-pusher.rst:6
+msgid "版本:|release| 更新:|today|"
+msgstr ""
+
+#: ../../source/component/live-pusher.rst:8
+msgid "低版本需做 :ref:`compatibility` 。"
+msgstr ""
+
+#: ../../source/component/live-pusher.rst:10
+msgid "``waiting-image`` 属性完整支持网络路径、临时文件和包内路径。"
+msgstr ""
+
+#: ../../source/component/live-pusher.rst:12
+msgid "实时音视频录制。需要用户授权 :data:`scope.camera` 、 :data:`scope.record`。"
+msgstr ""
+
+#: ../../source/component/live-pusher.rst:14
+msgid ""
+"暂只针对国内主体如下类目的小程序开放，需要先通过类目审核， 再在小程序管理后台，:menuselection:`「开发」-->「接口设置」` "
+"中自助开通该组件权限。"
+msgstr ""
+
+#: ../../source/component/live-pusher.rst:18
+msgid "一级类目/主体类型"
+msgstr ""
+
+#: ../../source/component/live-pusher.rst:18
+msgid "二级类目"
+msgstr ""
+
+#: ../../source/component/live-pusher.rst:18
+msgid "小程序内容场景"
+msgstr ""
+
+#: ../../source/component/live-pusher.rst:20
+msgid "社交"
+msgstr ""
+
+#: ../../source/component/live-pusher.rst:20
+msgid "直播"
+msgstr ""
+
+#: ../../source/component/live-pusher.rst:20
+msgid "涉及娱乐性质，如明星直播、生活趣事直播、宠物直播等。选择该类目后首次提交代码审核，需经当地互联网主管机关审核确认，预计审核时长7天左右"
+msgstr ""
+
+#: ../../source/component/live-pusher.rst:22
+msgid "教育"
+msgstr ""
+
+#: ../../source/component/live-pusher.rst:22
+msgid "在线视频课程"
+msgstr ""
+
+#: ../../source/component/live-pusher.rst:22
+msgid "网课、在线培训、讲座等教育类直播"
+msgstr ""
+
+#: ../../source/component/live-pusher.rst:24
+msgid "医疗"
+msgstr ""
+
+#: ../../source/component/live-pusher.rst:24
+msgid "互联网医院，公立医院"
+msgstr ""
+
+#: ../../source/component/live-pusher.rst:24
+msgid "问诊、大型健康讲座等直播"
+msgstr ""
+
+#: ../../source/component/live-pusher.rst:26
+msgid "金融"
+msgstr ""
+
+#: ../../source/component/live-pusher.rst:26
+msgid "银行、信托、基金、证券/期货、证券、期货投资咨询、保险、征信业务、新三板信息服务平台、股票信息服务平台（港股/美股）、消费金融"
+msgstr ""
+
+#: ../../source/component/live-pusher.rst:26
+msgid "金融产品视频客服理赔、金融产品推广直播等"
+msgstr ""
+
+#: ../../source/component/live-pusher.rst:28
+msgid "汽车"
+msgstr ""
+
+#: ../../source/component/live-pusher.rst:28
+msgid "汽车预售服务"
+msgstr ""
+
+#: ../../source/component/live-pusher.rst:28
+msgid "汽车预售、推广直播"
+msgstr ""
+
+#: ../../source/component/live-pusher.rst:30
+msgid "政府主体帐号"
+msgstr ""
+
+#: ../../source/component/live-pusher.rst:30
+msgid "/"
+msgstr ""
+
+#: ../../source/component/live-pusher.rst:30
+msgid "政府相关工作推广直播、领导讲话直播等"
+msgstr ""
+
+#: ../../source/component/live-pusher.rst:32
+msgid "工具"
+msgstr ""
+
+#: ../../source/component/live-pusher.rst:32
+msgid "视频客服"
+msgstr ""
+
+#: ../../source/component/live-pusher.rst:32
+msgid "不涉及以上几类内容的一对一视频客服服务，如企业售后一对一视频服务等"
+msgstr ""
+
+#: ../../source/component/live-pusher.rst:35
+msgid "相关api: :func:`wx.createLivePusherContext`"
+msgstr ""
+
+#: ../../source/component/live-pusher.rst:38
+msgid "属性"
+msgstr ""
+
+#: ../../source/component/live-pusher.rst:38
+msgid "类型"
+msgstr ""
+
+#: ../../source/component/live-pusher.rst:38
+msgid "默认值"
+msgstr ""
+
+#: ../../source/component/live-pusher.rst:38
+msgid "必填"
+msgstr ""
+
+#: ../../source/component/live-pusher.rst:38
+#: ../../source/component/live-pusher.rst:90
+#: ../../source/component/live-pusher.rst:108
+#: ../../source/component/live-pusher.rst:122
+#: ../../source/component/live-pusher.rst:190
+msgid "说明"
+msgstr ""
+
+#: ../../source/component/live-pusher.rst:38
+msgid "最低版本"
+msgstr ""
+
+#: ../../source/component/live-pusher.rst:40
+msgid "url"
+msgstr ""
+
+#: ../../source/component/live-pusher.rst:40
+#: ../../source/component/live-pusher.rst:42
+#: ../../source/component/live-pusher.rst:52
+#: ../../source/component/live-pusher.rst:58
+#: ../../source/component/live-pusher.rst:64
+#: ../../source/component/live-pusher.rst:66
+#: ../../source/component/live-pusher.rst:70
+msgid "string"
+msgstr ""
+
+#: ../../source/component/live-pusher.rst:40
+#: ../../source/component/live-pusher.rst:42
+#: ../../source/component/live-pusher.rst:44
+#: ../../source/component/live-pusher.rst:46
+#: ../../source/component/live-pusher.rst:48
+#: ../../source/component/live-pusher.rst:50
+#: ../../source/component/live-pusher.rst:52
+#: ../../source/component/live-pusher.rst:54
+#: ../../source/component/live-pusher.rst:56
+#: ../../source/component/live-pusher.rst:58
+#: ../../source/component/live-pusher.rst:60
+#: ../../source/component/live-pusher.rst:62
+#: ../../source/component/live-pusher.rst:64
+#: ../../source/component/live-pusher.rst:66
+#: ../../source/component/live-pusher.rst:68
+#: ../../source/component/live-pusher.rst:70
+#: ../../source/component/live-pusher.rst:72
+#: ../../source/component/live-pusher.rst:74
+#: ../../source/component/live-pusher.rst:76
+#: ../../source/component/live-pusher.rst:78
+#: ../../source/component/live-pusher.rst:80
+#: ../../source/component/live-pusher.rst:82
+#: ../../source/component/live-pusher.rst:84
+msgid "否"
+msgstr ""
+
+#: ../../source/component/live-pusher.rst:40
+msgid "推流地址。目前仅支持 flv, rtmp 格式"
+msgstr ""
+
+#: ../../source/component/live-pusher.rst:40
+#: ../../source/component/live-pusher.rst:42
+#: ../../source/component/live-pusher.rst:44
+#: ../../source/component/live-pusher.rst:46
+#: ../../source/component/live-pusher.rst:48
+#: ../../source/component/live-pusher.rst:50
+#: ../../source/component/live-pusher.rst:52
+#: ../../source/component/live-pusher.rst:54
+#: ../../source/component/live-pusher.rst:56
+#: ../../source/component/live-pusher.rst:58
+#: ../../source/component/live-pusher.rst:60
+#: ../../source/component/live-pusher.rst:62
+#: ../../source/component/live-pusher.rst:64
+#: ../../source/component/live-pusher.rst:66
+#: ../../source/component/live-pusher.rst:72
+#: ../../source/component/live-pusher.rst:74
+msgid "1.7.0"
+msgstr ""
+
+#: ../../source/component/live-pusher.rst:42
+msgid "mode"
+msgstr ""
+
+#: ../../source/component/live-pusher.rst:42
+msgid "RTC"
+msgstr ""
+
+#: ../../source/component/live-pusher.rst:42
+msgid "SD（标清）, HD（高清）, FHD（超清）, RTC（实时通话）"
+msgstr ""
+
+#: ../../source/component/live-pusher.rst:44
+msgid "autopush"
+msgstr ""
+
+#: ../../source/component/live-pusher.rst:44
+#: ../../source/component/live-pusher.rst:46
+#: ../../source/component/live-pusher.rst:48
+#: ../../source/component/live-pusher.rst:50
+#: ../../source/component/live-pusher.rst:68
+#: ../../source/component/live-pusher.rst:72
+msgid "boolean"
+msgstr ""
+
+#: ../../source/component/live-pusher.rst:44
+#: ../../source/component/live-pusher.rst:46
+#: ../../source/component/live-pusher.rst:68
+#: ../../source/component/live-pusher.rst:72
+msgid "false"
+msgstr ""
+
+#: ../../source/component/live-pusher.rst:44
+msgid "自动推流"
+msgstr ""
+
+#: ../../source/component/live-pusher.rst:46
+msgid "muted"
+msgstr ""
+
+#: ../../source/component/live-pusher.rst:46
+msgid "是否静音"
+msgstr ""
+
+#: ../../source/component/live-pusher.rst:48
+msgid "enable-camera"
+msgstr ""
+
+#: ../../source/component/live-pusher.rst:48
+#: ../../source/component/live-pusher.rst:50
+msgid "true"
+msgstr ""
+
+#: ../../source/component/live-pusher.rst:48
+msgid "开启摄像头"
+msgstr ""
+
+#: ../../source/component/live-pusher.rst:50
+msgid "auto-focus"
+msgstr ""
+
+#: ../../source/component/live-pusher.rst:50
+msgid "自动聚集"
+msgstr ""
+
+#: ../../source/component/live-pusher.rst:52
+msgid "orientation"
+msgstr ""
+
+#: ../../source/component/live-pusher.rst:52
+#: ../../source/component/live-pusher.rst:92
+msgid "vertical"
+msgstr ""
+
+#: ../../source/component/live-pusher.rst:52
+msgid "画面方向"
+msgstr ""
+
+#: ../../source/component/live-pusher.rst:54
+msgid "beauty"
+msgstr ""
+
+#: ../../source/component/live-pusher.rst:54
+#: ../../source/component/live-pusher.rst:56
+#: ../../source/component/live-pusher.rst:60
+#: ../../source/component/live-pusher.rst:62
+msgid "number"
+msgstr ""
+
+#: ../../source/component/live-pusher.rst:54
+#: ../../source/component/live-pusher.rst:56
+msgid "0"
+msgstr ""
+
+#: ../../source/component/live-pusher.rst:54
+msgid "美颜，取值范围 0-9 ，0 表示关闭"
+msgstr ""
+
+#: ../../source/component/live-pusher.rst:56
+msgid "whiteness"
+msgstr ""
+
+#: ../../source/component/live-pusher.rst:56
+msgid "美白，取值范围 0-9 ，0 表示关闭"
+msgstr ""
+
+#: ../../source/component/live-pusher.rst:58
+msgid "aspect"
+msgstr ""
+
+#: ../../source/component/live-pusher.rst:58
+msgid "9:16"
+msgstr ""
+
+#: ../../source/component/live-pusher.rst:58
+msgid "宽高比，可选值有 3:4, 9:16"
+msgstr ""
+
+#: ../../source/component/live-pusher.rst:60
+msgid "min-bitrate"
+msgstr ""
+
+#: ../../source/component/live-pusher.rst:60
+msgid "200"
+msgstr ""
+
+#: ../../source/component/live-pusher.rst:60
+msgid "最小码率"
+msgstr ""
+
+#: ../../source/component/live-pusher.rst:62
+msgid "max-bitrate"
+msgstr ""
+
+#: ../../source/component/live-pusher.rst:62
+msgid "1000"
+msgstr ""
+
+#: ../../source/component/live-pusher.rst:62
+msgid "最大码率"
+msgstr ""
+
+#: ../../source/component/live-pusher.rst:64
+msgid "waiting-image"
+msgstr ""
+
+#: ../../source/component/live-pusher.rst:64
+msgid "进入后台时推流的等待画面"
+msgstr ""
+
+#: ../../source/component/live-pusher.rst:66
+msgid "waiting-image-hash"
+msgstr ""
+
+#: ../../source/component/live-pusher.rst:66
+msgid "等待画面资源的MD5值"
+msgstr ""
+
+#: ../../source/component/live-pusher.rst:68
+msgid "zoom"
+msgstr ""
+
+#: ../../source/component/live-pusher.rst:68
+msgid "调整焦距"
+msgstr ""
+
+#: ../../source/component/live-pusher.rst:68
+msgid "2.1.0"
+msgstr ""
+
+#: ../../source/component/live-pusher.rst:70
+msgid "device-position"
+msgstr ""
+
+#: ../../source/component/live-pusher.rst:70
+msgid "front"
+msgstr ""
+
+#: ../../source/component/live-pusher.rst:70
+msgid "前置或后置，值为front, back"
+msgstr ""
+
+#: ../../source/component/live-pusher.rst:70
+msgid "2.3.0"
+msgstr ""
+
+#: ../../source/component/live-pusher.rst:72
+msgid "background-mute"
+msgstr ""
+
+#: ../../source/component/live-pusher.rst:72
+msgid "进入后台时是否静音"
+msgstr ""
+
+#: ../../source/component/live-pusher.rst:74
+msgid "bindstatechange"
+msgstr ""
+
+#: ../../source/component/live-pusher.rst:74
+#: ../../source/component/live-pusher.rst:76
+#: ../../source/component/live-pusher.rst:78
+#: ../../source/component/live-pusher.rst:80
+#: ../../source/component/live-pusher.rst:82
+#: ../../source/component/live-pusher.rst:84
+msgid "eventhandle"
+msgstr ""
+
+#: ../../source/component/live-pusher.rst:74
+msgid "状态变化事件，detail = {code}"
+msgstr ""
+
+#: ../../source/component/live-pusher.rst:76
+msgid "bindnetstatus"
+msgstr ""
+
+#: ../../source/component/live-pusher.rst:76
+msgid "网络状态通知，detail = {info}"
+msgstr ""
+
+#: ../../source/component/live-pusher.rst:76
+msgid "1.9.0"
+msgstr ""
+
+#: ../../source/component/live-pusher.rst:78
+msgid "binderror"
+msgstr ""
+
+#: ../../source/component/live-pusher.rst:78
+msgid "渲染错误事件，detail = {errMsg, errCode}"
+msgstr ""
+
+#: ../../source/component/live-pusher.rst:78
+msgid "1.7.4"
+msgstr ""
+
+#: ../../source/component/live-pusher.rst:80
+msgid "bindbgmstart"
+msgstr ""
+
+#: ../../source/component/live-pusher.rst:80
+msgid "背景音开始播放时触发"
+msgstr ""
+
+#: ../../source/component/live-pusher.rst:80
+#: ../../source/component/live-pusher.rst:82
+#: ../../source/component/live-pusher.rst:84
+msgid "2.4.0"
+msgstr ""
+
+#: ../../source/component/live-pusher.rst:82
+msgid "bindbgmprogress"
+msgstr ""
+
+#: ../../source/component/live-pusher.rst:82
+msgid "背景音进度变化时触发，detail = {progress, duration}"
+msgstr ""
+
+#: ../../source/component/live-pusher.rst:84
+msgid "bindbgmcomplete"
+msgstr ""
+
+#: ../../source/component/live-pusher.rst:84
+msgid "背景音播放完成时触发"
+msgstr ""
+
+#: ../../source/component/live-pusher.rst:87
+msgid "orientation 的合法值"
+msgstr ""
+
+#: ../../source/component/live-pusher.rst:90
+msgid "值"
+msgstr ""
+
+#: ../../source/component/live-pusher.rst:92
+msgid "竖直"
+msgstr ""
+
+#: ../../source/component/live-pusher.rst:94
+msgid "horizontal"
+msgstr ""
+
+#: ../../source/component/live-pusher.rst:94
+msgid "水平"
+msgstr ""
+
+#: ../../source/component/live-pusher.rst:98
+msgid "开发者工具上暂不支持。"
+msgstr ""
+
+#: ../../source/component/live-pusher.rst:100
+msgid "<:doc:`live-pusher`> 默认宽度为100%、无默认高度，请通过wxss设置宽高。"
+msgstr ""
+
+#: ../../source/component/live-pusher.rst:102
+msgid "请注意原生组件使用限制。"
+msgstr ""
+
+#: ../../source/component/live-pusher.rst:105
+msgid "错误码（errCode）"
+msgstr ""
+
+#: ../../source/component/live-pusher.rst:108
+#: ../../source/component/live-pusher.rst:122
+msgid "代码"
+msgstr ""
+
+#: ../../source/component/live-pusher.rst:110
+msgid "10001"
+msgstr ""
+
+#: ../../source/component/live-pusher.rst:110
+msgid "用户禁止使用摄像头"
+msgstr ""
+
+#: ../../source/component/live-pusher.rst:112
+msgid "10002"
+msgstr ""
+
+#: ../../source/component/live-pusher.rst:112
+msgid "用户禁止使用录音"
+msgstr ""
+
+#: ../../source/component/live-pusher.rst:114
+msgid "10003"
+msgstr ""
+
+#: ../../source/component/live-pusher.rst:114
+msgid "背景音资源（BGM）加载失败"
+msgstr ""
+
+#: ../../source/component/live-pusher.rst:116
+msgid "10004"
+msgstr ""
+
+#: ../../source/component/live-pusher.rst:116
+msgid "等待画面资源（waiting-image）加载失败"
+msgstr ""
+
+#: ../../source/component/live-pusher.rst:119
+msgid "状态码（code）"
+msgstr ""
+
+#: ../../source/component/live-pusher.rst:124
+msgid "1001"
+msgstr ""
+
+#: ../../source/component/live-pusher.rst:124
+msgid "已经连接推流服务器"
+msgstr ""
+
+#: ../../source/component/live-pusher.rst:126
+msgid "1002"
+msgstr ""
+
+#: ../../source/component/live-pusher.rst:126
+msgid "已经与服务器握手完毕,开始推流"
+msgstr ""
+
+#: ../../source/component/live-pusher.rst:128
+msgid "1003"
+msgstr ""
+
+#: ../../source/component/live-pusher.rst:128
+msgid "打开摄像头成功"
+msgstr ""
+
+#: ../../source/component/live-pusher.rst:130
+msgid "1004"
+msgstr ""
+
+#: ../../source/component/live-pusher.rst:130
+msgid "录屏启动成功"
+msgstr ""
+
+#: ../../source/component/live-pusher.rst:132
+msgid "1005"
+msgstr ""
+
+#: ../../source/component/live-pusher.rst:132
+msgid "推流动态调整分辨率"
+msgstr ""
+
+#: ../../source/component/live-pusher.rst:134
+msgid "1006"
+msgstr ""
+
+#: ../../source/component/live-pusher.rst:134
+msgid "推流动态调整码率"
+msgstr ""
+
+#: ../../source/component/live-pusher.rst:136
+msgid "1007"
+msgstr ""
+
+#: ../../source/component/live-pusher.rst:136
+msgid "首帧画面采集完成"
+msgstr ""
+
+#: ../../source/component/live-pusher.rst:138
+msgid "1008"
+msgstr ""
+
+#: ../../source/component/live-pusher.rst:138
+msgid "编码器启动"
+msgstr ""
+
+#: ../../source/component/live-pusher.rst:140
+msgid "-1301"
+msgstr ""
+
+#: ../../source/component/live-pusher.rst:140
+msgid "打开摄像头失败"
+msgstr ""
+
+#: ../../source/component/live-pusher.rst:142
+msgid "-1302"
+msgstr ""
+
+#: ../../source/component/live-pusher.rst:142
+msgid "打开麦克风失败"
+msgstr ""
+
+#: ../../source/component/live-pusher.rst:144
+msgid "-1303"
+msgstr ""
+
+#: ../../source/component/live-pusher.rst:144
+#: ../../source/component/live-pusher.rst:170
+msgid "视频编码失败"
+msgstr ""
+
+#: ../../source/component/live-pusher.rst:146
+msgid "-1304"
+msgstr ""
+
+#: ../../source/component/live-pusher.rst:146
+msgid "音频编码失败"
+msgstr ""
+
+#: ../../source/component/live-pusher.rst:148
+msgid "-1305"
+msgstr ""
+
+#: ../../source/component/live-pusher.rst:148
+msgid "不支持的视频分辨率"
+msgstr ""
+
+#: ../../source/component/live-pusher.rst:150
+msgid "-1306"
+msgstr ""
+
+#: ../../source/component/live-pusher.rst:150
+msgid "不支持的音频采样率"
+msgstr ""
+
+#: ../../source/component/live-pusher.rst:152
+msgid "-1307"
+msgstr ""
+
+#: ../../source/component/live-pusher.rst:152
+msgid "网络断连，且经多次重连抢救无效，更多重试请自行重启推流"
+msgstr ""
+
+#: ../../source/component/live-pusher.rst:154
+msgid "-1308"
+msgstr ""
+
+#: ../../source/component/live-pusher.rst:154
+msgid "开始录屏失败，可能是被用户拒绝"
+msgstr ""
+
+#: ../../source/component/live-pusher.rst:156
+msgid "-1309"
+msgstr ""
+
+#: ../../source/component/live-pusher.rst:156
+msgid "录屏失败，不支持的Android系统版本，需要5.0以上的系统"
+msgstr ""
+
+#: ../../source/component/live-pusher.rst:158
+msgid "-1310"
+msgstr ""
+
+#: ../../source/component/live-pusher.rst:158
+msgid "录屏被其他应用打断了"
+msgstr ""
+
+#: ../../source/component/live-pusher.rst:160
+msgid "-1311"
+msgstr ""
+
+#: ../../source/component/live-pusher.rst:160
+msgid "Android Mic打开成功，但是录不到音频数据"
+msgstr ""
+
+#: ../../source/component/live-pusher.rst:162
+msgid "-1312"
+msgstr ""
+
+#: ../../source/component/live-pusher.rst:162
+msgid "录屏动态切横竖屏失败"
+msgstr ""
+
+#: ../../source/component/live-pusher.rst:164
+msgid "1101"
+msgstr ""
+
+#: ../../source/component/live-pusher.rst:164
+msgid "网络状况不佳：上行带宽太小，上传数据受阻"
+msgstr ""
+
+#: ../../source/component/live-pusher.rst:166
+msgid "1102"
+msgstr ""
+
+#: ../../source/component/live-pusher.rst:166
+msgid "网络断连, 已启动自动重连"
+msgstr ""
+
+#: ../../source/component/live-pusher.rst:168
+msgid "1103"
+msgstr ""
+
+#: ../../source/component/live-pusher.rst:168
+msgid "硬编码启动失败,采用软编码"
+msgstr ""
+
+#: ../../source/component/live-pusher.rst:170
+msgid "1104"
+msgstr ""
+
+#: ../../source/component/live-pusher.rst:172
+msgid "1105"
+msgstr ""
+
+#: ../../source/component/live-pusher.rst:172
+#: ../../source/component/live-pusher.rst:174
+msgid "新美颜软编码启动失败，采用老的软编码"
+msgstr ""
+
+#: ../../source/component/live-pusher.rst:174
+msgid "1106"
+msgstr ""
+
+#: ../../source/component/live-pusher.rst:176
+msgid "3001"
+msgstr ""
+
+#: ../../source/component/live-pusher.rst:176
+msgid "RTMP -DNS解析失败"
+msgstr ""
+
+#: ../../source/component/live-pusher.rst:178
+msgid "3002"
+msgstr ""
+
+#: ../../source/component/live-pusher.rst:178
+msgid "RTMP服务器连接失败"
+msgstr ""
+
+#: ../../source/component/live-pusher.rst:180
+msgid "3003"
+msgstr ""
+
+#: ../../source/component/live-pusher.rst:180
+msgid "RTMP服务器握手失败"
+msgstr ""
+
+#: ../../source/component/live-pusher.rst:182
+msgid "3004"
+msgstr ""
+
+#: ../../source/component/live-pusher.rst:182
+msgid "RTMP服务器主动断开，请检查推流地址的合法性或防盗链有效期"
+msgstr ""
+
+#: ../../source/component/live-pusher.rst:184
+msgid "3005"
+msgstr ""
+
+#: ../../source/component/live-pusher.rst:184
+msgid "RTMP 读/写失败"
+msgstr ""
+
+#: ../../source/component/live-pusher.rst:187
+msgid "网络状态数据（info）"
+msgstr ""
+
+#: ../../source/component/live-pusher.rst:190
+msgid "键名"
+msgstr ""
+
+#: ../../source/component/live-pusher.rst:192
+msgid "videoBitrate"
+msgstr ""
+
+#: ../../source/component/live-pusher.rst:192
+msgid "当前视频编/码器输出的比特率，单位 kbps"
+msgstr ""
+
+#: ../../source/component/live-pusher.rst:194
+msgid "audioBitrate"
+msgstr ""
+
+#: ../../source/component/live-pusher.rst:194
+msgid "当前音频编/码器输出的比特率，单位 kbps"
+msgstr ""
+
+#: ../../source/component/live-pusher.rst:196
+msgid "videoFPS"
+msgstr ""
+
+#: ../../source/component/live-pusher.rst:196
+msgid "当前视频帧率"
+msgstr ""
+
+#: ../../source/component/live-pusher.rst:198
+msgid "videoGOP"
+msgstr ""
+
+#: ../../source/component/live-pusher.rst:198
+msgid "当前视频 GOP,也就是每两个关键帧(I帧)间隔时长，单位 s"
+msgstr ""
+
+#: ../../source/component/live-pusher.rst:200
+msgid "netSpeed"
+msgstr ""
+
+#: ../../source/component/live-pusher.rst:200
+msgid "当前的发送/接收速度"
+msgstr ""
+
+#: ../../source/component/live-pusher.rst:202
+msgid "netJitter"
+msgstr ""
+
+#: ../../source/component/live-pusher.rst:202
+msgid "网络抖动情况，抖动越大，网络越不稳定"
+msgstr ""
+
+#: ../../source/component/live-pusher.rst:204
+msgid "videoWidth"
+msgstr ""
+
+#: ../../source/component/live-pusher.rst:204
+msgid "视频画面的宽度"
+msgstr ""
+
+#: ../../source/component/live-pusher.rst:206
+msgid "videoHeight"
+msgstr ""
+
+#: ../../source/component/live-pusher.rst:206
+msgid "视频画面的高度"
+msgstr ""
+
+#: ../../source/component/live-pusher.rst:209
+msgid "示例代码"
+msgstr ""
+
+#: ../../source/component/live-pusher.rst:211
+msgid ":download:`在开发者工具中预览效果 <https://developers.weixin.qq.com/s/KvWD9mmA62Yk>`"
+msgstr ""
+

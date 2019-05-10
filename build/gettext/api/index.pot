@@ -1,0 +1,4251 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019, Nosy
+# This file is distributed under the same license as the wxadev package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: wxadev \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-09 22:55+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/api/index.rst:4
+msgid ":wxapi:`API <index>`"
+msgstr ""
+
+#: ../../source/api/index.rst:6
+msgid "版本:|release| 更新:|today|"
+msgstr ""
+
+#: ../../source/api/index.rst:9
+msgid "基础"
+msgstr ""
+
+#: ../../source/api/index.rst:12
+#: ../../source/api/index.rst:27
+#: ../../source/api/index.rst:45
+#: ../../source/api/index.rst:80
+#: ../../source/api/index.rst:96
+#: ../../source/api/index.rst:156
+#: ../../source/api/index.rst:177
+#: ../../source/api/index.rst:198
+#: ../../source/api/index.rst:228
+#: ../../source/api/index.rst:260
+#: ../../source/api/index.rst:284
+#: ../../source/api/index.rst:302
+#: ../../source/api/index.rst:338
+#: ../../source/api/index.rst:353
+#: ../../source/api/index.rst:373
+#: ../../source/api/index.rst:388
+#: ../../source/api/index.rst:403
+#: ../../source/api/index.rst:506
+#: ../../source/api/index.rst:521
+#: ../../source/api/index.rst:536
+#: ../../source/api/index.rst:552
+#: ../../source/api/index.rst:575
+#: ../../source/api/index.rst:591
+#: ../../source/api/index.rst:614
+#: ../../source/api/index.rst:630
+#: ../../source/api/index.rst:659
+#: ../../source/api/index.rst:675
+#: ../../source/api/index.rst:704
+#: ../../source/api/index.rst:737
+#: ../../source/api/index.rst:768
+#: ../../source/api/index.rst:810
+#: ../../source/api/index.rst:861
+#: ../../source/api/index.rst:885
+#: ../../source/api/index.rst:915
+#: ../../source/api/index.rst:958
+#: ../../source/api/index.rst:1035
+#: ../../source/api/index.rst:1087
+#: ../../source/api/index.rst:1119
+#: ../../source/api/index.rst:1142
+#: ../../source/api/index.rst:1187
+#: ../../source/api/index.rst:1210
+#: ../../source/api/index.rst:1232
+#: ../../source/api/index.rst:1256
+#: ../../source/api/index.rst:1284
+#: ../../source/api/index.rst:1300
+#: ../../source/api/index.rst:1438
+#: ../../source/api/index.rst:1471
+#: ../../source/api/index.rst:1490
+#: ../../source/api/index.rst:1590
+#: ../../source/api/index.rst:1609
+#: ../../source/api/index.rst:1627
+#: ../../source/api/index.rst:1642
+#: ../../source/api/index.rst:1660
+#: ../../source/api/index.rst:1675
+#: ../../source/api/index.rst:1690
+#: ../../source/api/index.rst:1705
+#: ../../source/api/index.rst:1720
+#: ../../source/api/index.rst:1741
+#: ../../source/api/index.rst:1756
+#: ../../source/api/index.rst:1774
+#: ../../source/api/index.rst:1792
+#: ../../source/api/index.rst:1813
+#: ../../source/api/index.rst:1831
+#: ../../source/api/index.rst:1870
+#: ../../source/api/index.rst:1900
+#: ../../source/api/index.rst:1916
+#: ../../source/api/index.rst:1956
+#: ../../source/api/index.rst:1996
+#: ../../source/api/index.rst:2015
+#: ../../source/api/index.rst:2034
+#: ../../source/api/index.rst:2061
+#: ../../source/api/index.rst:2080
+#: ../../source/api/index.rst:2104
+#: ../../source/api/index.rst:2120
+#: ../../source/api/index.rst:2142
+#: ../../source/api/index.rst:2164
+#: ../../source/api/index.rst:2186
+#: ../../source/api/index.rst:2208
+#: ../../source/api/index.rst:2224
+#: ../../source/api/index.rst:2240
+#: ../../source/api/index.rst:2259
+#: ../../source/api/index.rst:2282
+#: ../../source/api/index.rst:2300
+#: ../../source/api/index.rst:2318
+#: ../../source/api/index.rst:2346
+#: ../../source/api/index.rst:2371
+msgid "名称"
+msgstr ""
+
+#: ../../source/api/index.rst:12
+#: ../../source/api/index.rst:27
+#: ../../source/api/index.rst:45
+#: ../../source/api/index.rst:80
+#: ../../source/api/index.rst:96
+#: ../../source/api/index.rst:156
+#: ../../source/api/index.rst:177
+#: ../../source/api/index.rst:198
+#: ../../source/api/index.rst:228
+#: ../../source/api/index.rst:260
+#: ../../source/api/index.rst:284
+#: ../../source/api/index.rst:302
+#: ../../source/api/index.rst:338
+#: ../../source/api/index.rst:353
+#: ../../source/api/index.rst:373
+#: ../../source/api/index.rst:388
+#: ../../source/api/index.rst:403
+#: ../../source/api/index.rst:506
+#: ../../source/api/index.rst:521
+#: ../../source/api/index.rst:536
+#: ../../source/api/index.rst:552
+#: ../../source/api/index.rst:575
+#: ../../source/api/index.rst:591
+#: ../../source/api/index.rst:614
+#: ../../source/api/index.rst:630
+#: ../../source/api/index.rst:659
+#: ../../source/api/index.rst:675
+#: ../../source/api/index.rst:704
+#: ../../source/api/index.rst:737
+#: ../../source/api/index.rst:768
+#: ../../source/api/index.rst:810
+#: ../../source/api/index.rst:861
+#: ../../source/api/index.rst:885
+#: ../../source/api/index.rst:915
+#: ../../source/api/index.rst:958
+#: ../../source/api/index.rst:1035
+#: ../../source/api/index.rst:1087
+#: ../../source/api/index.rst:1119
+#: ../../source/api/index.rst:1142
+#: ../../source/api/index.rst:1187
+#: ../../source/api/index.rst:1210
+#: ../../source/api/index.rst:1232
+#: ../../source/api/index.rst:1256
+#: ../../source/api/index.rst:1284
+#: ../../source/api/index.rst:1300
+#: ../../source/api/index.rst:1438
+#: ../../source/api/index.rst:1471
+#: ../../source/api/index.rst:1490
+#: ../../source/api/index.rst:1590
+#: ../../source/api/index.rst:1609
+#: ../../source/api/index.rst:1627
+#: ../../source/api/index.rst:1642
+#: ../../source/api/index.rst:1660
+#: ../../source/api/index.rst:1675
+#: ../../source/api/index.rst:1690
+#: ../../source/api/index.rst:1705
+#: ../../source/api/index.rst:1720
+#: ../../source/api/index.rst:1741
+#: ../../source/api/index.rst:1756
+#: ../../source/api/index.rst:1774
+#: ../../source/api/index.rst:1792
+#: ../../source/api/index.rst:1813
+#: ../../source/api/index.rst:1831
+#: ../../source/api/index.rst:1870
+#: ../../source/api/index.rst:1900
+#: ../../source/api/index.rst:1916
+#: ../../source/api/index.rst:1956
+#: ../../source/api/index.rst:1996
+#: ../../source/api/index.rst:2015
+#: ../../source/api/index.rst:2034
+#: ../../source/api/index.rst:2061
+#: ../../source/api/index.rst:2080
+#: ../../source/api/index.rst:2104
+#: ../../source/api/index.rst:2120
+#: ../../source/api/index.rst:2142
+#: ../../source/api/index.rst:2164
+#: ../../source/api/index.rst:2186
+#: ../../source/api/index.rst:2208
+#: ../../source/api/index.rst:2224
+#: ../../source/api/index.rst:2240
+#: ../../source/api/index.rst:2259
+#: ../../source/api/index.rst:2282
+#: ../../source/api/index.rst:2300
+#: ../../source/api/index.rst:2318
+#: ../../source/api/index.rst:2346
+#: ../../source/api/index.rst:2371
+msgid "功能说明"
+msgstr ""
+
+#: ../../source/api/index.rst:14
+msgid ":func:`wx.canIUse`"
+msgstr ""
+
+#: ../../source/api/index.rst:14
+msgid "判断小程序的API，回调，参数，组件等是否在当前版本可用"
+msgstr ""
+
+#: ../../source/api/index.rst:24
+msgid "系统信息"
+msgstr ""
+
+#: ../../source/api/index.rst:29
+msgid ":func:`wx.getSystemInfoSync`"
+msgstr ""
+
+#: ../../source/api/index.rst:29
+msgid "wx.getSystemInfo 的同步版本"
+msgstr ""
+
+#: ../../source/api/index.rst:31
+msgid ":func:`wx.getSystemInfo`"
+msgstr ""
+
+#: ../../source/api/index.rst:31
+msgid "获取系统信息"
+msgstr ""
+
+#: ../../source/api/index.rst:42
+msgid "更新"
+msgstr ""
+
+#: ../../source/api/index.rst:47
+msgid ":func:`wx.getUpdateManager`"
+msgstr ""
+
+#: ../../source/api/index.rst:47
+msgid "获取全局唯一的版本更新管理器，用于管理小程序更新"
+msgstr ""
+
+#: ../../source/api/index.rst:49
+msgid ":class:`UpdateManager`"
+msgstr ""
+
+#: ../../source/api/index.rst:51
+msgid ":func:`UpdateManager.applyUpdate`"
+msgstr ""
+
+#: ../../source/api/index.rst:51
+msgid "强制小程序重启并使用新版本"
+msgstr ""
+
+#: ../../source/api/index.rst:53
+msgid ":func:`UpdateManager.onCheckForUpdate`"
+msgstr ""
+
+#: ../../source/api/index.rst:53
+msgid "监听向微信后台请求检查更新结果事件"
+msgstr ""
+
+#: ../../source/api/index.rst:55
+msgid ":func:`UpdateManager.onUpdateFailed`"
+msgstr ""
+
+#: ../../source/api/index.rst:55
+msgid "监听小程序更新失败事件"
+msgstr ""
+
+#: ../../source/api/index.rst:57
+msgid ":func:`UpdateManager.onUpdateReady`"
+msgstr ""
+
+#: ../../source/api/index.rst:57
+msgid "监听小程序有版本更新事件"
+msgstr ""
+
+#: ../../source/api/index.rst:74
+msgid "小程序"
+msgstr ""
+
+#: ../../source/api/index.rst:77
+msgid "生命周期"
+msgstr ""
+
+#: ../../source/api/index.rst:82
+msgid ":func:`wx.getLaunchOptionsSync`"
+msgstr ""
+
+#: ../../source/api/index.rst:82
+msgid "获取小程序启动时的参数"
+msgstr ""
+
+#: ../../source/api/index.rst:93
+msgid "应用级事件"
+msgstr ""
+
+#: ../../source/api/index.rst:98
+msgid ":func:`wx.onPageNotFound`"
+msgstr ""
+
+#: ../../source/api/index.rst:98
+msgid "监听小程序要打开的页面不存在事件"
+msgstr ""
+
+#: ../../source/api/index.rst:100
+msgid ":func:`wx.onError`"
+msgstr ""
+
+#: ../../source/api/index.rst:100
+msgid "监听小程序错误事件"
+msgstr ""
+
+#: ../../source/api/index.rst:102
+msgid ":func:`wx.onAudioInterruptionEnd`"
+msgstr ""
+
+#: ../../source/api/index.rst:102
+msgid "监听音频中断结束事件"
+msgstr ""
+
+#: ../../source/api/index.rst:104
+msgid ":func:`wx.onAudioInterruptionBegin`"
+msgstr ""
+
+#: ../../source/api/index.rst:104
+msgid "监听音频因为受到系统占用而被中断开始事件"
+msgstr ""
+
+#: ../../source/api/index.rst:106
+msgid ":func:`wx.onAppShow`"
+msgstr ""
+
+#: ../../source/api/index.rst:106
+msgid "监听小程序切前台事件"
+msgstr ""
+
+#: ../../source/api/index.rst:108
+msgid ":func:`wx.onAppHide`"
+msgstr ""
+
+#: ../../source/api/index.rst:108
+msgid "监听小程序切后台事件"
+msgstr ""
+
+#: ../../source/api/index.rst:110
+msgid ":func:`wx.offPageNotFound`"
+msgstr ""
+
+#: ../../source/api/index.rst:110
+msgid "取消监听小程序要打开的页面不存在事件"
+msgstr ""
+
+#: ../../source/api/index.rst:112
+msgid ":func:`wx.offError`"
+msgstr ""
+
+#: ../../source/api/index.rst:112
+msgid "取消监听小程序错误事件"
+msgstr ""
+
+#: ../../source/api/index.rst:114
+msgid ":func:`wx.offAudioInterruptionEnd`"
+msgstr ""
+
+#: ../../source/api/index.rst:114
+msgid "取消监听音频中断结束事件"
+msgstr ""
+
+#: ../../source/api/index.rst:116
+msgid ":func:`wx.offAudioInterruptionBegin`"
+msgstr ""
+
+#: ../../source/api/index.rst:116
+msgid "取消监听音频因为受到系统占用而被中断开始事件"
+msgstr ""
+
+#: ../../source/api/index.rst:118
+msgid ":func:`wx.offAppShow`"
+msgstr ""
+
+#: ../../source/api/index.rst:118
+msgid "取消监听小程序切前台事件"
+msgstr ""
+
+#: ../../source/api/index.rst:120
+msgid ":func:`wx.offAppHide`"
+msgstr ""
+
+#: ../../source/api/index.rst:120
+msgid "取消监听小程序切后台事件"
+msgstr ""
+
+#: ../../source/api/index.rst:142
+msgid "调试"
+msgstr ""
+
+#: ../../source/api/index.rst:152
+msgid "LogManager"
+msgstr ""
+
+#: ../../source/api/index.rst:158
+msgid ":func:`wx.setEnableDebug`"
+msgstr ""
+
+#: ../../source/api/index.rst:158
+msgid "设置是否打开调试开关"
+msgstr ""
+
+#: ../../source/api/index.rst:160
+msgid ":func:`wx.getLogManager`"
+msgstr ""
+
+#: ../../source/api/index.rst:160
+msgid "获取日志管理器对象"
+msgstr ""
+
+#: ../../source/api/index.rst:162
+msgid ":func:`LogManager`"
+msgstr ""
+
+#: ../../source/api/index.rst:162
+msgid "日志管理器对象"
+msgstr ""
+
+#: ../../source/api/index.rst:164
+msgid ":func:`LogManager.debug`"
+msgstr ""
+
+#: ../../source/api/index.rst:164
+msgid "写 debug 日志"
+msgstr ""
+
+#: ../../source/api/index.rst:166
+msgid ":func:`LogManager.info`"
+msgstr ""
+
+#: ../../source/api/index.rst:166
+msgid "写 info 日志"
+msgstr ""
+
+#: ../../source/api/index.rst:168
+msgid ":func:`LogManager.log`"
+msgstr ""
+
+#: ../../source/api/index.rst:168
+msgid "写 log 日志"
+msgstr ""
+
+#: ../../source/api/index.rst:170
+msgid ":func:`LogManager.warn`"
+msgstr ""
+
+#: ../../source/api/index.rst:170
+msgid "写 warn 日志"
+msgstr ""
+
+#: ../../source/api/index.rst:173
+msgid "console"
+msgstr ""
+
+#: ../../source/api/index.rst:179
+msgid ":func:`console.debug`"
+msgstr ""
+
+#: ../../source/api/index.rst:179
+msgid "向调试面板中打印 debug 日志"
+msgstr ""
+
+#: ../../source/api/index.rst:181
+msgid ":func:`console.error`"
+msgstr ""
+
+#: ../../source/api/index.rst:181
+msgid "向调试面板中打印 error 日志"
+msgstr ""
+
+#: ../../source/api/index.rst:183
+msgid ":func:`console.group`"
+msgstr ""
+
+#: ../../source/api/index.rst:183
+msgid "在调试面板中创建一个新的分组"
+msgstr ""
+
+#: ../../source/api/index.rst:185
+msgid ":func:`console.groupEnd`"
+msgstr ""
+
+#: ../../source/api/index.rst:185
+msgid "结束由 console.group 创建的分组"
+msgstr ""
+
+#: ../../source/api/index.rst:187
+msgid ":func:`console.info`"
+msgstr ""
+
+#: ../../source/api/index.rst:187
+msgid "向调试面板中打印 info 日志"
+msgstr ""
+
+#: ../../source/api/index.rst:189
+msgid ":func:`console.log`"
+msgstr ""
+
+#: ../../source/api/index.rst:189
+msgid "向调试面板中打印 log 日志"
+msgstr ""
+
+#: ../../source/api/index.rst:191
+msgid ":func:`console.warn`"
+msgstr ""
+
+#: ../../source/api/index.rst:191
+msgid "向调试面板中打印 warn 日志"
+msgstr ""
+
+#: ../../source/api/index.rst:195
+msgid "路由"
+msgstr ""
+
+#: ../../source/api/index.rst:200
+msgid ":func:`wx.switchTab`"
+msgstr ""
+
+#: ../../source/api/index.rst:200
+msgid "跳转到 tabBar 页面，并关闭其他所有非 tabBar 页面"
+msgstr ""
+
+#: ../../source/api/index.rst:202
+msgid ":func:`wx.reLaunch`"
+msgstr ""
+
+#: ../../source/api/index.rst:202
+msgid "关闭所有页面，打开到应用内的某个页面"
+msgstr ""
+
+#: ../../source/api/index.rst:204
+msgid ":func:`wx.redirectTo`"
+msgstr ""
+
+#: ../../source/api/index.rst:204
+msgid "关闭当前页面，跳转到应用内的某个页面"
+msgstr ""
+
+#: ../../source/api/index.rst:206
+msgid ":func:`wx.navigateTo`"
+msgstr ""
+
+#: ../../source/api/index.rst:206
+msgid "保留当前页面，跳转到应用内的某个页面"
+msgstr ""
+
+#: ../../source/api/index.rst:208
+msgid ":func:`wx.navigateBack`"
+msgstr ""
+
+#: ../../source/api/index.rst:208
+msgid "关闭当前页面，返回上一页面或多级页面"
+msgstr ""
+
+#: ../../source/api/index.rst:222
+msgid "界面"
+msgstr ""
+
+#: ../../source/api/index.rst:225
+msgid "交互"
+msgstr ""
+
+#: ../../source/api/index.rst:230
+msgid ":func:`wx.showToast`"
+msgstr ""
+
+#: ../../source/api/index.rst:230
+msgid "显示消息提示框"
+msgstr ""
+
+#: ../../source/api/index.rst:232
+msgid ":func:`wx.hideToast`"
+msgstr ""
+
+#: ../../source/api/index.rst:232
+msgid "隐藏消息提示框"
+msgstr ""
+
+#: ../../source/api/index.rst:234
+msgid ":func:`wx.showLoading`"
+msgstr ""
+
+#: ../../source/api/index.rst:234
+msgid "显示 loading 提示框"
+msgstr ""
+
+#: ../../source/api/index.rst:236
+msgid ":func:`wx.hideLoading`"
+msgstr ""
+
+#: ../../source/api/index.rst:236
+msgid "隐藏 loading 提示框"
+msgstr ""
+
+#: ../../source/api/index.rst:238
+msgid ":func:`wx.showModal`"
+msgstr ""
+
+#: ../../source/api/index.rst:238
+msgid "显示模态对话框"
+msgstr ""
+
+#: ../../source/api/index.rst:240
+msgid ":func:`wx.showActionSheet`"
+msgstr ""
+
+#: ../../source/api/index.rst:240
+msgid "显示操作菜单"
+msgstr ""
+
+#: ../../source/api/index.rst:257
+msgid "导航栏"
+msgstr ""
+
+#: ../../source/api/index.rst:262
+msgid ":func:`wx.showNavigationBarLoading`"
+msgstr ""
+
+#: ../../source/api/index.rst:262
+msgid "在当前页面显示导航条加载动画"
+msgstr ""
+
+#: ../../source/api/index.rst:264
+msgid ":func:`wx.setNavigationBarTitle`"
+msgstr ""
+
+#: ../../source/api/index.rst:264
+msgid "动态设置当前页面的标题"
+msgstr ""
+
+#: ../../source/api/index.rst:266
+msgid ":func:`wx.setNavigationBarColor`"
+msgstr ""
+
+#: ../../source/api/index.rst:266
+msgid "设置页面导航条颜色"
+msgstr ""
+
+#: ../../source/api/index.rst:268
+msgid ":func:`wx.hideNavigationBarLoading`"
+msgstr ""
+
+#: ../../source/api/index.rst:268
+msgid "在当前页面隐藏导航条加载动画"
+msgstr ""
+
+#: ../../source/api/index.rst:281
+msgid "背景"
+msgstr ""
+
+#: ../../source/api/index.rst:286
+msgid ":func:`wx.setBackgroundTextStyle`"
+msgstr ""
+
+#: ../../source/api/index.rst:286
+msgid "动态设置下拉背景字体、loading 图的样式"
+msgstr ""
+
+#: ../../source/api/index.rst:288
+msgid ":func:`wx.setBackgroundColor`"
+msgstr ""
+
+#: ../../source/api/index.rst:288
+msgid "动态设置窗口的背景色"
+msgstr ""
+
+#: ../../source/api/index.rst:299
+msgid "Tab Bar"
+msgstr ""
+
+#: ../../source/api/index.rst:304
+msgid ":func:`wx.showTabBarRedDot`"
+msgstr ""
+
+#: ../../source/api/index.rst:304
+msgid "显示 tabBar 某一项的右上角的红点"
+msgstr ""
+
+#: ../../source/api/index.rst:306
+msgid ":func:`wx.showTabBar`"
+msgstr ""
+
+#: ../../source/api/index.rst:306
+msgid "显示 tabBar"
+msgstr ""
+
+#: ../../source/api/index.rst:308
+msgid ":func:`wx.setTabBarStyle`"
+msgstr ""
+
+#: ../../source/api/index.rst:308
+msgid "动态设置 tabBar 的整体样式"
+msgstr ""
+
+#: ../../source/api/index.rst:310
+msgid ":func:`wx.setTabBarItem`"
+msgstr ""
+
+#: ../../source/api/index.rst:310
+msgid "动态设置 tabBar 某一项的内容"
+msgstr ""
+
+#: ../../source/api/index.rst:312
+msgid ":func:`wx.setTabBarBadge`"
+msgstr ""
+
+#: ../../source/api/index.rst:312
+msgid "为 tabBar 某一项的右上角添加文本"
+msgstr ""
+
+#: ../../source/api/index.rst:314
+msgid ":func:`wx.removeTabBarBadge`"
+msgstr ""
+
+#: ../../source/api/index.rst:314
+msgid "移除 tabBar 某一项右上角的文本"
+msgstr ""
+
+#: ../../source/api/index.rst:316
+msgid ":func:`wx.hideTabBarRedDot`"
+msgstr ""
+
+#: ../../source/api/index.rst:316
+msgid "隐藏 tabBar 某一项的右上角的红点"
+msgstr ""
+
+#: ../../source/api/index.rst:318
+msgid ":func:`wx.hideTabBar`"
+msgstr ""
+
+#: ../../source/api/index.rst:318
+msgid "隐藏 tabBar"
+msgstr ""
+
+#: ../../source/api/index.rst:335
+msgid "字体"
+msgstr ""
+
+#: ../../source/api/index.rst:340
+msgid ":func:`wx.loadFontFace`"
+msgstr ""
+
+#: ../../source/api/index.rst:340
+msgid "动态加载网络字体"
+msgstr ""
+
+#: ../../source/api/index.rst:350
+msgid "下拉刷新"
+msgstr ""
+
+#: ../../source/api/index.rst:355
+msgid ":func:`wx.startPullDownRefresh`"
+msgstr ""
+
+#: ../../source/api/index.rst:355
+msgid "开始下拉刷新"
+msgstr ""
+
+#: ../../source/api/index.rst:357
+msgid ":func:`wx.stopPullDownRefresh`"
+msgstr ""
+
+#: ../../source/api/index.rst:357
+msgid "停止当前页面下拉刷新"
+msgstr ""
+
+#: ../../source/api/index.rst:370
+msgid "滚动"
+msgstr ""
+
+#: ../../source/api/index.rst:375
+msgid ":func:`wx.pageScrollTo`"
+msgstr ""
+
+#: ../../source/api/index.rst:375
+msgid "将页面滚动到目标位置"
+msgstr ""
+
+#: ../../source/api/index.rst:385
+msgid "动画"
+msgstr ""
+
+#: ../../source/api/index.rst:390
+msgid ":func:`wx.createAnimation`"
+msgstr ""
+
+#: ../../source/api/index.rst:390
+msgid "创建一个动画实例 animation"
+msgstr ""
+
+#: ../../source/api/index.rst:400
+msgid "Animation"
+msgstr ""
+
+#: ../../source/api/index.rst:405
+msgid ":func:`Animation.translateZ`"
+msgstr ""
+
+#: ../../source/api/index.rst:405
+msgid "对 Z 轴平移"
+msgstr ""
+
+#: ../../source/api/index.rst:407
+msgid ":func:`Animation.translateY`"
+msgstr ""
+
+#: ../../source/api/index.rst:407
+msgid "对 Y 轴平移"
+msgstr ""
+
+#: ../../source/api/index.rst:409
+msgid ":func:`Animation.translateX`"
+msgstr ""
+
+#: ../../source/api/index.rst:409
+msgid "对 X 轴平移"
+msgstr ""
+
+#: ../../source/api/index.rst:411
+msgid ":func:`Animation.translate3d`"
+msgstr ""
+
+#: ../../source/api/index.rst:411
+msgid "对 xyz 坐标进行平移变换"
+msgstr ""
+
+#: ../../source/api/index.rst:413
+msgid ":func:`Animation.translate`"
+msgstr ""
+
+#: ../../source/api/index.rst:413
+msgid "平移变换"
+msgstr ""
+
+#: ../../source/api/index.rst:415
+msgid ":func:`Animation.top`"
+msgstr ""
+
+#: ../../source/api/index.rst:415
+msgid "设置 top 值"
+msgstr ""
+
+#: ../../source/api/index.rst:417
+msgid ":func:`Animation.step`"
+msgstr ""
+
+#: ../../source/api/index.rst:417
+msgid "表示一组动画完成"
+msgstr ""
+
+#: ../../source/api/index.rst:419
+msgid ":func:`Animation.skewY`"
+msgstr ""
+
+#: ../../source/api/index.rst:419
+msgid "对 Y 轴坐标进行倾斜"
+msgstr ""
+
+#: ../../source/api/index.rst:421
+msgid ":func:`Animation.skewX`"
+msgstr ""
+
+#: ../../source/api/index.rst:421
+msgid "对 X 轴坐标进行倾斜"
+msgstr ""
+
+#: ../../source/api/index.rst:423
+msgid ":func:`Animation.skew`"
+msgstr ""
+
+#: ../../source/api/index.rst:423
+msgid "对 X、Y 轴坐标进行倾斜"
+msgstr ""
+
+#: ../../source/api/index.rst:425
+msgid ":func:`Animation.scaleZ`"
+msgstr ""
+
+#: ../../source/api/index.rst:425
+msgid "缩放 Z 轴"
+msgstr ""
+
+#: ../../source/api/index.rst:427
+msgid ":func:`Animation.scaleY`"
+msgstr ""
+
+#: ../../source/api/index.rst:427
+msgid "缩放 Y 轴"
+msgstr ""
+
+#: ../../source/api/index.rst:429
+msgid ":func:`Animation.scaleX`"
+msgstr ""
+
+#: ../../source/api/index.rst:429
+msgid "缩放 X 轴"
+msgstr ""
+
+#: ../../source/api/index.rst:431
+msgid ":func:`Animation.scale3d`"
+msgstr ""
+
+#: ../../source/api/index.rst:431
+#: ../../source/api/index.rst:433
+msgid "缩放"
+msgstr ""
+
+#: ../../source/api/index.rst:433
+msgid ":func:`Animation.scale`"
+msgstr ""
+
+#: ../../source/api/index.rst:435
+msgid ":func:`Animation.rotateZ`"
+msgstr ""
+
+#: ../../source/api/index.rst:435
+msgid "从 Z 轴顺时针旋转一个角度"
+msgstr ""
+
+#: ../../source/api/index.rst:437
+msgid ":func:`Animation.rotateY`"
+msgstr ""
+
+#: ../../source/api/index.rst:437
+msgid "从 Y 轴顺时针旋转一个角度"
+msgstr ""
+
+#: ../../source/api/index.rst:439
+msgid ":func:`Animation.rotateX`"
+msgstr ""
+
+#: ../../source/api/index.rst:439
+#: ../../source/api/index.rst:441
+msgid "从 X 轴顺时针旋转一个角度"
+msgstr ""
+
+#: ../../source/api/index.rst:441
+msgid ":func:`Animation.rotate3d`"
+msgstr ""
+
+#: ../../source/api/index.rst:443
+msgid ":func:`Animation.rotate`"
+msgstr ""
+
+#: ../../source/api/index.rst:443
+msgid "从原点顺时针旋转一个角度"
+msgstr ""
+
+#: ../../source/api/index.rst:445
+msgid ":func:`Animation.right`"
+msgstr ""
+
+#: ../../source/api/index.rst:445
+msgid "设置 right 值"
+msgstr ""
+
+#: ../../source/api/index.rst:447
+msgid ":func:`Animation.opacity`"
+msgstr ""
+
+#: ../../source/api/index.rst:447
+msgid "设置透明度"
+msgstr ""
+
+#: ../../source/api/index.rst:449
+msgid ":func:`Animation.matrix3d`"
+msgstr ""
+
+#: ../../source/api/index.rst:449
+msgid "同 transform-function matrix3d"
+msgstr ""
+
+#: ../../source/api/index.rst:451
+msgid ":func:`Animation.matrix`"
+msgstr ""
+
+#: ../../source/api/index.rst:451
+msgid "同 transform-function matrix"
+msgstr ""
+
+#: ../../source/api/index.rst:453
+msgid ":func:`Animation.backgroundColor`"
+msgstr ""
+
+#: ../../source/api/index.rst:453
+msgid "设置背景色"
+msgstr ""
+
+#: ../../source/api/index.rst:455
+msgid ":func:`Animation.left`"
+msgstr ""
+
+#: ../../source/api/index.rst:455
+msgid "设置 left 值"
+msgstr ""
+
+#: ../../source/api/index.rst:457
+msgid ":func:`Animation.height`"
+msgstr ""
+
+#: ../../source/api/index.rst:457
+msgid "设置高度"
+msgstr ""
+
+#: ../../source/api/index.rst:459
+msgid ":func:`Animation.width`"
+msgstr ""
+
+#: ../../source/api/index.rst:459
+msgid "设置宽度"
+msgstr ""
+
+#: ../../source/api/index.rst:461
+msgid ":func:`Animation.export`"
+msgstr ""
+
+#: ../../source/api/index.rst:461
+msgid "导出动画队列"
+msgstr ""
+
+#: ../../source/api/index.rst:463
+msgid ":func:`Animation.bottom`"
+msgstr ""
+
+#: ../../source/api/index.rst:463
+msgid "设置 bottom 值"
+msgstr ""
+
+#: ../../source/api/index.rst:503
+msgid "置顶"
+msgstr ""
+
+#: ../../source/api/index.rst:508
+msgid ":func:`wx.setTopBarText`"
+msgstr ""
+
+#: ../../source/api/index.rst:508
+msgid "动态设置置顶栏文字内容"
+msgstr ""
+
+#: ../../source/api/index.rst:518
+msgid "自定义组件"
+msgstr ""
+
+#: ../../source/api/index.rst:523
+msgid ":func:`wx.nextTick`"
+msgstr ""
+
+#: ../../source/api/index.rst:523
+msgid "延迟一部分操作到下一个时间片再执行"
+msgstr ""
+
+#: ../../source/api/index.rst:533
+msgid "菜单"
+msgstr ""
+
+#: ../../source/api/index.rst:538
+msgid ":func:`wx.getMenuButtonBoundingClientRect`"
+msgstr ""
+
+#: ../../source/api/index.rst:538
+msgid "获取菜单按钮（右上角胶囊按钮）的布局位置信息"
+msgstr ""
+
+#: ../../source/api/index.rst:549
+msgid "窗口"
+msgstr ""
+
+#: ../../source/api/index.rst:554
+msgid ":func:`wx.onWindowResize`"
+msgstr ""
+
+#: ../../source/api/index.rst:554
+msgid "监听窗口尺寸变化事件"
+msgstr ""
+
+#: ../../source/api/index.rst:556
+msgid ":func:`wx.offWindowResize`"
+msgstr ""
+
+#: ../../source/api/index.rst:556
+msgid "取消监听窗口尺寸变化事件"
+msgstr ""
+
+#: ../../source/api/index.rst:569
+#: ../../source/api/index.rst:2058
+msgid "网络"
+msgstr ""
+
+#: ../../source/api/index.rst:572
+msgid "发起请求"
+msgstr ""
+
+#: ../../source/api/index.rst:577
+msgid ":func:`wx.request`"
+msgstr ""
+
+#: ../../source/api/index.rst:577
+msgid "发起 HTTPS 网络请求"
+msgstr ""
+
+#: ../../source/api/index.rst:588
+msgid "RequestTask"
+msgstr ""
+
+#: ../../source/api/index.rst:593
+msgid ":func:`RequestTask.abort`"
+msgstr ""
+
+#: ../../source/api/index.rst:593
+msgid "中断请求任务"
+msgstr ""
+
+#: ../../source/api/index.rst:595
+msgid ":func:`RequestTask.offHeadersReceived`"
+msgstr ""
+
+#: ../../source/api/index.rst:595
+#: ../../source/api/index.rst:634
+#: ../../source/api/index.rst:679
+msgid "取消监听 HTTP Response Header 事件"
+msgstr ""
+
+#: ../../source/api/index.rst:597
+msgid ":func:`RequestTask.onHeadersReceived`"
+msgstr ""
+
+#: ../../source/api/index.rst:597
+#: ../../source/api/index.rst:638
+#: ../../source/api/index.rst:683
+msgid "监听 HTTP Response Header 事件"
+msgstr ""
+
+#: ../../source/api/index.rst:611
+msgid "下载"
+msgstr ""
+
+#: ../../source/api/index.rst:616
+msgid ":func:`wx.downloadFile`"
+msgstr ""
+
+#: ../../source/api/index.rst:616
+msgid "下载文件资源到本地"
+msgstr ""
+
+#: ../../source/api/index.rst:627
+msgid "DownloadTask"
+msgstr ""
+
+#: ../../source/api/index.rst:632
+msgid ":func:`DownloadTask.abort`"
+msgstr ""
+
+#: ../../source/api/index.rst:632
+msgid "中断下载任务"
+msgstr ""
+
+#: ../../source/api/index.rst:634
+msgid ":func:`DownloadTask.offHeadersReceived`"
+msgstr ""
+
+#: ../../source/api/index.rst:636
+msgid ":func:`DownloadTask.offProgressUpdate`"
+msgstr ""
+
+#: ../../source/api/index.rst:636
+msgid "取消监听下载进度变化事件"
+msgstr ""
+
+#: ../../source/api/index.rst:638
+msgid ":func:`DownloadTask.onHeadersReceived`"
+msgstr ""
+
+#: ../../source/api/index.rst:640
+msgid ":func:`DownloadTask.onProgressUpdate`"
+msgstr ""
+
+#: ../../source/api/index.rst:640
+msgid "监听下载进度变化事件"
+msgstr ""
+
+#: ../../source/api/index.rst:656
+msgid "上传"
+msgstr ""
+
+#: ../../source/api/index.rst:661
+msgid ":func:`wx.uploadFile`"
+msgstr ""
+
+#: ../../source/api/index.rst:661
+msgid "将本地资源上传到服务器"
+msgstr ""
+
+#: ../../source/api/index.rst:672
+msgid "UploadTask"
+msgstr ""
+
+#: ../../source/api/index.rst:677
+msgid ":func:`UploadTask.abort`"
+msgstr ""
+
+#: ../../source/api/index.rst:677
+msgid "中断上传任务"
+msgstr ""
+
+#: ../../source/api/index.rst:679
+msgid ":func:`UploadTask.offHeadersReceived`"
+msgstr ""
+
+#: ../../source/api/index.rst:681
+msgid ":func:`UploadTask.offProgressUpdate`"
+msgstr ""
+
+#: ../../source/api/index.rst:681
+msgid "取消监听上传进度变化事件"
+msgstr ""
+
+#: ../../source/api/index.rst:683
+msgid ":func:`UploadTask.onHeadersReceived`"
+msgstr ""
+
+#: ../../source/api/index.rst:685
+msgid ":func:`UploadTask.onProgressUpdate`"
+msgstr ""
+
+#: ../../source/api/index.rst:685
+msgid "监听上传进度变化事件"
+msgstr ""
+
+#: ../../source/api/index.rst:701
+msgid "WebSocket"
+msgstr ""
+
+#: ../../source/api/index.rst:706
+msgid ":func:`wx.sendSocketMessage`"
+msgstr ""
+
+#: ../../source/api/index.rst:706
+#: ../../source/api/index.rst:749
+msgid "通过 WebSocket 连接发送数据"
+msgstr ""
+
+#: ../../source/api/index.rst:708
+msgid ":func:`wx.onSocketOpen`"
+msgstr ""
+
+#: ../../source/api/index.rst:708
+#: ../../source/api/index.rst:747
+msgid "监听 WebSocket 连接打开事件"
+msgstr ""
+
+#: ../../source/api/index.rst:710
+msgid ":func:`wx.onSocketMessage`"
+msgstr ""
+
+#: ../../source/api/index.rst:710
+#: ../../source/api/index.rst:745
+msgid "监听 WebSocket 接受到服务器的消息事件"
+msgstr ""
+
+#: ../../source/api/index.rst:712
+msgid ":func:`wx.onSocketError`"
+msgstr ""
+
+#: ../../source/api/index.rst:712
+#: ../../source/api/index.rst:743
+msgid "监听 WebSocket 错误事件"
+msgstr ""
+
+#: ../../source/api/index.rst:714
+msgid ":func:`wx.onSocketClose`"
+msgstr ""
+
+#: ../../source/api/index.rst:714
+#: ../../source/api/index.rst:741
+msgid "监听 WebSocket 连接关闭事件"
+msgstr ""
+
+#: ../../source/api/index.rst:716
+msgid ":func:`wx.connectSocket`"
+msgstr ""
+
+#: ../../source/api/index.rst:716
+msgid "创建一个 WebSocket 连接"
+msgstr ""
+
+#: ../../source/api/index.rst:718
+msgid ":func:`wx.closeSocket`"
+msgstr ""
+
+#: ../../source/api/index.rst:718
+#: ../../source/api/index.rst:739
+msgid "关闭 WebSocket 连接"
+msgstr ""
+
+#: ../../source/api/index.rst:734
+msgid "SocketTask"
+msgstr ""
+
+#: ../../source/api/index.rst:739
+msgid ":func:`SocketTask.close`"
+msgstr ""
+
+#: ../../source/api/index.rst:741
+msgid ":func:`SocketTask.onClose`"
+msgstr ""
+
+#: ../../source/api/index.rst:743
+msgid ":func:`SocketTask.onError`"
+msgstr ""
+
+#: ../../source/api/index.rst:745
+msgid ":func:`SocketTask.onMessage`"
+msgstr ""
+
+#: ../../source/api/index.rst:747
+msgid ":func:`SocketTask.onOpen`"
+msgstr ""
+
+#: ../../source/api/index.rst:749
+msgid ":func:`SocketTask.send`"
+msgstr ""
+
+#: ../../source/api/index.rst:765
+msgid "mDNS"
+msgstr ""
+
+#: ../../source/api/index.rst:770
+msgid ":func:`wx.stopLocalServiceDiscovery`"
+msgstr ""
+
+#: ../../source/api/index.rst:770
+msgid "停止搜索 mDNS 服务"
+msgstr ""
+
+#: ../../source/api/index.rst:772
+msgid ":func:`wx.startLocalServiceDiscovery`"
+msgstr ""
+
+#: ../../source/api/index.rst:772
+msgid "开始搜索局域网下的 mDNS 服务"
+msgstr ""
+
+#: ../../source/api/index.rst:774
+msgid ":func:`wx.onLocalServiceResolveFail`"
+msgstr ""
+
+#: ../../source/api/index.rst:774
+msgid "监听 mDNS 服务解析失败的事件"
+msgstr ""
+
+#: ../../source/api/index.rst:776
+msgid ":func:`wx.onLocalServiceLost`"
+msgstr ""
+
+#: ../../source/api/index.rst:776
+msgid "监听 mDNS 服务离开的事件"
+msgstr ""
+
+#: ../../source/api/index.rst:778
+msgid ":func:`wx.onLocalServiceFound`"
+msgstr ""
+
+#: ../../source/api/index.rst:778
+msgid "监听 mDNS 服务发现的事件"
+msgstr ""
+
+#: ../../source/api/index.rst:780
+msgid ":func:`wx.onLocalServiceDiscoveryStop`"
+msgstr ""
+
+#: ../../source/api/index.rst:780
+msgid "监听 mDNS 服务停止搜索的事件"
+msgstr ""
+
+#: ../../source/api/index.rst:782
+msgid ":func:`wx.offLocalServiceResolveFail`"
+msgstr ""
+
+#: ../../source/api/index.rst:782
+msgid "取消监听 mDNS 服务解析失败的事件"
+msgstr ""
+
+#: ../../source/api/index.rst:784
+msgid ":func:`wx.offLocalServiceLost`"
+msgstr ""
+
+#: ../../source/api/index.rst:784
+msgid "取消监听 mDNS 服务离开的事件"
+msgstr ""
+
+#: ../../source/api/index.rst:786
+msgid ":func:`wx.offLocalServiceFound`"
+msgstr ""
+
+#: ../../source/api/index.rst:786
+msgid "取消监听 mDNS 服务发现的事件"
+msgstr ""
+
+#: ../../source/api/index.rst:788
+msgid ":func:`wx.offLocalServiceDiscoveryStop`"
+msgstr ""
+
+#: ../../source/api/index.rst:788
+msgid "取消监听 mDNS 服务停止搜索的事件"
+msgstr ""
+
+#: ../../source/api/index.rst:807
+msgid "数据缓存"
+msgstr ""
+
+#: ../../source/api/index.rst:812
+msgid ":func:`wx.setStorageSync`"
+msgstr ""
+
+#: ../../source/api/index.rst:812
+msgid "wx.setStorage 的同步版本"
+msgstr ""
+
+#: ../../source/api/index.rst:814
+msgid ":func:`wx.setStorage`"
+msgstr ""
+
+#: ../../source/api/index.rst:814
+msgid "将数据存储在本地缓存中指定的 key 中"
+msgstr ""
+
+#: ../../source/api/index.rst:816
+msgid ":func:`wx.removeStorageSync`"
+msgstr ""
+
+#: ../../source/api/index.rst:816
+msgid "wx.removeStorage 的同步版本"
+msgstr ""
+
+#: ../../source/api/index.rst:818
+msgid ":func:`wx.removeStorage`"
+msgstr ""
+
+#: ../../source/api/index.rst:818
+msgid "从本地缓存中移除指定 key"
+msgstr ""
+
+#: ../../source/api/index.rst:820
+msgid ":func:`wx.getStorageSync`"
+msgstr ""
+
+#: ../../source/api/index.rst:820
+msgid "wx.getStorage 的同步版本"
+msgstr ""
+
+#: ../../source/api/index.rst:822
+msgid ":func:`wx.getStorageInfoSync`"
+msgstr ""
+
+#: ../../source/api/index.rst:822
+msgid "wx.getStorageInfo 的同步版本"
+msgstr ""
+
+#: ../../source/api/index.rst:824
+msgid ":func:`wx.getStorageInfo`"
+msgstr ""
+
+#: ../../source/api/index.rst:824
+msgid "异步获取当前storage的相关信息"
+msgstr ""
+
+#: ../../source/api/index.rst:826
+msgid ":func:`wx.getStorage`"
+msgstr ""
+
+#: ../../source/api/index.rst:826
+msgid "从本地缓存中异步获取指定 key 的内容"
+msgstr ""
+
+#: ../../source/api/index.rst:828
+msgid ":func:`wx.clearStorageSync`"
+msgstr ""
+
+#: ../../source/api/index.rst:828
+msgid "wx.clearStorage 的同步版本"
+msgstr ""
+
+#: ../../source/api/index.rst:830
+msgid ":func:`wx.clearStorage`"
+msgstr ""
+
+#: ../../source/api/index.rst:830
+msgid "清理本地数据缓存"
+msgstr ""
+
+#: ../../source/api/index.rst:849
+msgid "媒体"
+msgstr ""
+
+#: ../../source/api/index.rst:852
+msgid "地图"
+msgstr ""
+
+#: ../../source/api/index.rst:863
+msgid ":func:`wx.createMapContext`"
+msgstr ""
+
+#: ../../source/api/index.rst:863
+msgid "创建 map 上下文 MapContext 对象"
+msgstr ""
+
+#: ../../source/api/index.rst:865
+msgid ":func:`MapContext`"
+msgstr ""
+
+#: ../../source/api/index.rst:865
+msgid "MapContext 对象"
+msgstr ""
+
+#: ../../source/api/index.rst:867
+msgid ":func:`MapContext.getCenterLocation`"
+msgstr ""
+
+#: ../../source/api/index.rst:867
+msgid "获取当前地图中心的经纬度"
+msgstr ""
+
+#: ../../source/api/index.rst:869
+msgid ":func:`MapContext.getRegion`"
+msgstr ""
+
+#: ../../source/api/index.rst:869
+msgid "获取当前地图的视野范围"
+msgstr ""
+
+#: ../../source/api/index.rst:871
+msgid ":func:`MapContext.getScale`"
+msgstr ""
+
+#: ../../source/api/index.rst:871
+msgid "获取当前地图的缩放级别"
+msgstr ""
+
+#: ../../source/api/index.rst:873
+msgid ":func:`MapContext.includePoints`"
+msgstr ""
+
+#: ../../source/api/index.rst:873
+msgid "缩放视野展示所有经纬度"
+msgstr ""
+
+#: ../../source/api/index.rst:875
+msgid ":func:`MapContext.moveToLocation`"
+msgstr ""
+
+#: ../../source/api/index.rst:875
+msgid "将地图中心移动到当前定位点"
+msgstr ""
+
+#: ../../source/api/index.rst:877
+msgid ":func:`MapContext.translateMarker`"
+msgstr ""
+
+#: ../../source/api/index.rst:877
+msgid "平移marker，带动画"
+msgstr ""
+
+#: ../../source/api/index.rst:882
+msgid "图片"
+msgstr ""
+
+#: ../../source/api/index.rst:887
+msgid ":func:`wx.saveImageToPhotosAlbum`"
+msgstr ""
+
+#: ../../source/api/index.rst:887
+msgid "保存图片到系统相册"
+msgstr ""
+
+#: ../../source/api/index.rst:889
+msgid ":func:`wx.previewImage`"
+msgstr ""
+
+#: ../../source/api/index.rst:889
+msgid "在新页面中全屏预览图片"
+msgstr ""
+
+#: ../../source/api/index.rst:891
+msgid ":func:`wx.getImageInfo`"
+msgstr ""
+
+#: ../../source/api/index.rst:891
+msgid "获取图片信息"
+msgstr ""
+
+#: ../../source/api/index.rst:893
+msgid ":func:`wx.compressImage`"
+msgstr ""
+
+#: ../../source/api/index.rst:893
+msgid "压缩图片接口，可选压缩质量"
+msgstr ""
+
+#: ../../source/api/index.rst:895
+msgid ":func:`wx.chooseMessageFile`"
+msgstr ""
+
+#: ../../source/api/index.rst:895
+msgid "从客户端会话选择文件"
+msgstr ""
+
+#: ../../source/api/index.rst:897
+msgid ":func:`wx.chooseImage`"
+msgstr ""
+
+#: ../../source/api/index.rst:897
+msgid "从本地相册选择图片或使用相机拍照"
+msgstr ""
+
+#: ../../source/api/index.rst:912
+msgid "视频"
+msgstr ""
+
+#: ../../source/api/index.rst:917
+msgid ":func:`wx.saveVideoToPhotosAlbum`"
+msgstr ""
+
+#: ../../source/api/index.rst:917
+msgid "保存视频到系统相册"
+msgstr ""
+
+#: ../../source/api/index.rst:919
+msgid ":func:`wx.chooseVideo`"
+msgstr ""
+
+#: ../../source/api/index.rst:919
+msgid "拍摄视频或从手机相册中选视频"
+msgstr ""
+
+#: ../../source/api/index.rst:921
+msgid ":func:`wx.createVideoContext`"
+msgstr ""
+
+#: ../../source/api/index.rst:921
+msgid "创建 video 上下文 VideoContext 对象"
+msgstr ""
+
+#: ../../source/api/index.rst:923
+msgid ":class:`VideoContext`"
+msgstr ""
+
+#: ../../source/api/index.rst:923
+msgid "通过 wx.createVideoContext() 获取"
+msgstr ""
+
+#: ../../source/api/index.rst:925
+msgid ":func:`VideoContext.seek`"
+msgstr ""
+
+#: ../../source/api/index.rst:925
+#: ../../source/api/index.rst:1012
+#: ../../source/api/index.rst:1069
+msgid "跳转到指定位置"
+msgstr ""
+
+#: ../../source/api/index.rst:927
+msgid ":func:`VideoContext.exitFullScreen`"
+msgstr ""
+
+#: ../../source/api/index.rst:927
+#: ../../source/api/index.rst:1123
+msgid "退出全屏"
+msgstr ""
+
+#: ../../source/api/index.rst:929
+msgid ":func:`VideoContext.hideStatusBar`"
+msgstr ""
+
+#: ../../source/api/index.rst:929
+msgid "隐藏状态栏，仅在iOS全屏下有效"
+msgstr ""
+
+#: ../../source/api/index.rst:931
+msgid ":func:`VideoContext.pause`"
+msgstr ""
+
+#: ../../source/api/index.rst:931
+msgid "暂停视频"
+msgstr ""
+
+#: ../../source/api/index.rst:933
+msgid ":func:`VideoContext.play`"
+msgstr ""
+
+#: ../../source/api/index.rst:933
+msgid "播放视频"
+msgstr ""
+
+#: ../../source/api/index.rst:935
+msgid ":func:`VideoContext.playbackRate`"
+msgstr ""
+
+#: ../../source/api/index.rst:935
+msgid "设置倍速播放"
+msgstr ""
+
+#: ../../source/api/index.rst:937
+msgid ":func:`VideoContext.requestFullScreen`"
+msgstr ""
+
+#: ../../source/api/index.rst:937
+#: ../../source/api/index.rst:1131
+msgid "进入全屏"
+msgstr ""
+
+#: ../../source/api/index.rst:939
+msgid ":func:`VideoContext.sendDanmu`"
+msgstr ""
+
+#: ../../source/api/index.rst:939
+msgid "发送弹幕"
+msgstr ""
+
+#: ../../source/api/index.rst:941
+msgid ":func:`VideoContext.showStatusBar`"
+msgstr ""
+
+#: ../../source/api/index.rst:941
+msgid "显示状态栏，仅在iOS全屏下有效"
+msgstr ""
+
+#: ../../source/api/index.rst:943
+msgid ":func:`VideoContext.stop`"
+msgstr ""
+
+#: ../../source/api/index.rst:943
+msgid "停止视频"
+msgstr ""
+
+#: ../../source/api/index.rst:955
+msgid "音频"
+msgstr ""
+
+#: ../../source/api/index.rst:960
+msgid ":func:`wx.getAvailableAudioSources`"
+msgstr ""
+
+#: ../../source/api/index.rst:960
+msgid "获取当前支持的音频输入源"
+msgstr ""
+
+#: ../../source/api/index.rst:962
+msgid ":func:`wx.createInnerAudioContext`"
+msgstr ""
+
+#: ../../source/api/index.rst:962
+msgid "创建内部 audio 上下文 InnerAudioContext 对象"
+msgstr ""
+
+#: ../../source/api/index.rst:964
+msgid ":func:`wx.setInnerAudioOption`"
+msgstr ""
+
+#: ../../source/api/index.rst:964
+msgid "设置 InnerAudioContext 的播放选项"
+msgstr ""
+
+#: ../../source/api/index.rst:966
+msgid ":func:`InnerAudioContext.destroy`"
+msgstr ""
+
+#: ../../source/api/index.rst:966
+msgid "销毁当前实例"
+msgstr ""
+
+#: ../../source/api/index.rst:968
+msgid ":func:`InnerAudioContext.offCanplay`"
+msgstr ""
+
+#: ../../source/api/index.rst:968
+msgid "取消监听音频进入可以播放状态的事件"
+msgstr ""
+
+#: ../../source/api/index.rst:970
+msgid ":func:`InnerAudioContext.offEnded`"
+msgstr ""
+
+#: ../../source/api/index.rst:970
+msgid "取消监听音频自然播放至结束的事件"
+msgstr ""
+
+#: ../../source/api/index.rst:972
+msgid ":func:`InnerAudioContext.offError`"
+msgstr ""
+
+#: ../../source/api/index.rst:972
+msgid "取消监听音频播放错误事件"
+msgstr ""
+
+#: ../../source/api/index.rst:974
+msgid ":func:`InnerAudioContext.offPause`"
+msgstr ""
+
+#: ../../source/api/index.rst:974
+msgid "取消监听音频暂停事件"
+msgstr ""
+
+#: ../../source/api/index.rst:976
+msgid ":func:`InnerAudioContext.offPlay`"
+msgstr ""
+
+#: ../../source/api/index.rst:976
+msgid "取消监听音频播放事件"
+msgstr ""
+
+#: ../../source/api/index.rst:978
+msgid ":func:`InnerAudioContext.offSeeked`"
+msgstr ""
+
+#: ../../source/api/index.rst:978
+msgid "取消监听音频完成跳转操作的事件"
+msgstr ""
+
+#: ../../source/api/index.rst:980
+msgid ":func:`InnerAudioContext.offSeeking`"
+msgstr ""
+
+#: ../../source/api/index.rst:980
+msgid "取消监听音频进行跳转操作的事件"
+msgstr ""
+
+#: ../../source/api/index.rst:982
+msgid ":func:`InnerAudioContext.offStop`"
+msgstr ""
+
+#: ../../source/api/index.rst:982
+msgid "取消监听音频停止事件"
+msgstr ""
+
+#: ../../source/api/index.rst:984
+msgid ":func:`InnerAudioContext.offTimeUpdate`"
+msgstr ""
+
+#: ../../source/api/index.rst:984
+msgid "取消监听音频播放进度更新事件"
+msgstr ""
+
+#: ../../source/api/index.rst:986
+msgid ":func:`InnerAudioContext.offWaiting`"
+msgstr ""
+
+#: ../../source/api/index.rst:986
+msgid "取消监听音频加载中事件"
+msgstr ""
+
+#: ../../source/api/index.rst:988
+msgid ":func:`InnerAudioContext.onCanplay`"
+msgstr ""
+
+#: ../../source/api/index.rst:988
+msgid "监听音频进入可以播放状态的事件"
+msgstr ""
+
+#: ../../source/api/index.rst:990
+msgid ":func:`InnerAudioContext.onEnded`"
+msgstr ""
+
+#: ../../source/api/index.rst:990
+msgid "监听音频自然播放至结束的事件"
+msgstr ""
+
+#: ../../source/api/index.rst:992
+msgid ":func:`InnerAudioContext.onError`"
+msgstr ""
+
+#: ../../source/api/index.rst:992
+msgid "监听音频播放错误事件"
+msgstr ""
+
+#: ../../source/api/index.rst:994
+msgid ":func:`InnerAudioContext.onPause`"
+msgstr ""
+
+#: ../../source/api/index.rst:994
+msgid "监听音频暂停事件"
+msgstr ""
+
+#: ../../source/api/index.rst:996
+msgid ":func:`InnerAudioContext.onPlay`"
+msgstr ""
+
+#: ../../source/api/index.rst:996
+msgid "监听音频播放事件"
+msgstr ""
+
+#: ../../source/api/index.rst:998
+msgid ":func:`InnerAudioContext.onSeeked`"
+msgstr ""
+
+#: ../../source/api/index.rst:998
+msgid "监听音频完成跳转操作的事件"
+msgstr ""
+
+#: ../../source/api/index.rst:1000
+msgid ":func:`InnerAudioContext.onSeeking`"
+msgstr ""
+
+#: ../../source/api/index.rst:1000
+msgid "监听音频进行跳转操作的事件"
+msgstr ""
+
+#: ../../source/api/index.rst:1002
+msgid ":func:`InnerAudioContext.onStop`"
+msgstr ""
+
+#: ../../source/api/index.rst:1002
+msgid "监听音频停止事件"
+msgstr ""
+
+#: ../../source/api/index.rst:1004
+msgid ":func:`InnerAudioContext.onTimeUpdate`"
+msgstr ""
+
+#: ../../source/api/index.rst:1004
+msgid "监听音频播放进度更新事件"
+msgstr ""
+
+#: ../../source/api/index.rst:1006
+msgid ":func:`InnerAudioContext.onWaiting`"
+msgstr ""
+
+#: ../../source/api/index.rst:1006
+#: ../../source/api/index.rst:1063
+msgid "监听音频加载中事件"
+msgstr ""
+
+#: ../../source/api/index.rst:1008
+msgid ":func:`InnerAudioContext.pause`"
+msgstr ""
+
+#: ../../source/api/index.rst:1008
+#: ../../source/api/index.rst:1127
+msgid "暂停"
+msgstr ""
+
+#: ../../source/api/index.rst:1010
+msgid ":func:`InnerAudioContext.play`"
+msgstr ""
+
+#: ../../source/api/index.rst:1010
+#: ../../source/api/index.rst:1129
+msgid "播放"
+msgstr ""
+
+#: ../../source/api/index.rst:1012
+msgid ":func:`InnerAudioContext.seek`"
+msgstr ""
+
+#: ../../source/api/index.rst:1014
+msgid ":func:`InnerAudioContext.stop`"
+msgstr ""
+
+#: ../../source/api/index.rst:1014
+#: ../../source/api/index.rst:1135
+msgid "停止"
+msgstr ""
+
+#: ../../source/api/index.rst:1026
+msgid "背景音频"
+msgstr ""
+
+#: ../../source/api/index.rst:1037
+msgid ":func:`wx.getBackgroundAudioManager`"
+msgstr ""
+
+#: ../../source/api/index.rst:1037
+msgid "获取全局唯一的背景音频管理器"
+msgstr ""
+
+#: ../../source/api/index.rst:1039
+msgid ":func:`BackgroundAudioManager`"
+msgstr ""
+
+#: ../../source/api/index.rst:1039
+msgid "全局唯一的背景音频管理器"
+msgstr ""
+
+#: ../../source/api/index.rst:1041
+msgid ":func:`BackgroundAudioManager.onCanplay`"
+msgstr ""
+
+#: ../../source/api/index.rst:1041
+msgid "监听背景音频进入可播放状态事件"
+msgstr ""
+
+#: ../../source/api/index.rst:1043
+msgid ":func:`BackgroundAudioManager.onEnded`"
+msgstr ""
+
+#: ../../source/api/index.rst:1043
+msgid "监听背景音频自然播放结束事件"
+msgstr ""
+
+#: ../../source/api/index.rst:1045
+msgid ":func:`BackgroundAudioManager.onError`"
+msgstr ""
+
+#: ../../source/api/index.rst:1045
+msgid "监听背景音频播放错误事件"
+msgstr ""
+
+#: ../../source/api/index.rst:1047
+msgid ":func:`BackgroundAudioManager.onNext`"
+msgstr ""
+
+#: ../../source/api/index.rst:1047
+msgid "监听用户在系统音乐播放面板点击下一曲事件（仅iOS）"
+msgstr ""
+
+#: ../../source/api/index.rst:1049
+msgid ":func:`BackgroundAudioManager.onPause`"
+msgstr ""
+
+#: ../../source/api/index.rst:1049
+msgid "监听背景音频暂停事件"
+msgstr ""
+
+#: ../../source/api/index.rst:1051
+msgid ":func:`BackgroundAudioManager.onPlay`"
+msgstr ""
+
+#: ../../source/api/index.rst:1051
+msgid "监听背景音频播放事件"
+msgstr ""
+
+#: ../../source/api/index.rst:1053
+msgid ":func:`BackgroundAudioManager.onPrev`"
+msgstr ""
+
+#: ../../source/api/index.rst:1053
+msgid "监听用户在系统音乐播放面板点击上一曲事件（仅iOS）"
+msgstr ""
+
+#: ../../source/api/index.rst:1055
+msgid ":func:`BackgroundAudioManager.onSeeked`"
+msgstr ""
+
+#: ../../source/api/index.rst:1055
+msgid "监听背景音频完成跳转操作事件"
+msgstr ""
+
+#: ../../source/api/index.rst:1057
+msgid ":func:`BackgroundAudioManager.onSeeking`"
+msgstr ""
+
+#: ../../source/api/index.rst:1057
+msgid "监听背景音频开始跳转操作事件"
+msgstr ""
+
+#: ../../source/api/index.rst:1059
+msgid ":func:`BackgroundAudioManager.onStop`"
+msgstr ""
+
+#: ../../source/api/index.rst:1059
+msgid "监听背景音频停止事件"
+msgstr ""
+
+#: ../../source/api/index.rst:1061
+msgid ":func:`BackgroundAudioManager.onTimeUpdate`"
+msgstr ""
+
+#: ../../source/api/index.rst:1061
+msgid "监听背景音频播放进度更新事件"
+msgstr ""
+
+#: ../../source/api/index.rst:1063
+msgid ":func:`BackgroundAudioManager.onWaiting`"
+msgstr ""
+
+#: ../../source/api/index.rst:1065
+msgid ":func:`BackgroundAudioManager.pause`"
+msgstr ""
+
+#: ../../source/api/index.rst:1065
+msgid "暂停音乐"
+msgstr ""
+
+#: ../../source/api/index.rst:1067
+msgid ":func:`BackgroundAudioManager.play`"
+msgstr ""
+
+#: ../../source/api/index.rst:1067
+msgid "播放音乐"
+msgstr ""
+
+#: ../../source/api/index.rst:1069
+msgid ":func:`BackgroundAudioManager.seek`"
+msgstr ""
+
+#: ../../source/api/index.rst:1071
+msgid ":func:`BackgroundAudioManager.stop`"
+msgstr ""
+
+#: ../../source/api/index.rst:1071
+msgid "停止音乐"
+msgstr ""
+
+#: ../../source/api/index.rst:1075
+msgid "实时音视频"
+msgstr ""
+
+#: ../../source/api/index.rst:1084
+msgid "LivePusherContext"
+msgstr ""
+
+#: ../../source/api/index.rst:1089
+msgid ":func:`wx.createLivePusherContext`"
+msgstr ""
+
+#: ../../source/api/index.rst:1089
+msgid "创建 live-pusher 上下文 LivePusherContext 对象"
+msgstr ""
+
+#: ../../source/api/index.rst:1091
+msgid ":func:`LivePusherContext.pause`"
+msgstr ""
+
+#: ../../source/api/index.rst:1091
+msgid "暂停推流"
+msgstr ""
+
+#: ../../source/api/index.rst:1093
+msgid ":func:`LivePusherContext.pauseBGM`"
+msgstr ""
+
+#: ../../source/api/index.rst:1093
+msgid "暂停背景音"
+msgstr ""
+
+#: ../../source/api/index.rst:1095
+msgid ":func:`LivePusherContext.playBGM`"
+msgstr ""
+
+#: ../../source/api/index.rst:1095
+msgid "播放背景音"
+msgstr ""
+
+#: ../../source/api/index.rst:1097
+msgid ":func:`LivePusherContext.resume`"
+msgstr ""
+
+#: ../../source/api/index.rst:1097
+msgid "恢复推流"
+msgstr ""
+
+#: ../../source/api/index.rst:1099
+msgid ":func:`LivePusherContext.resumeBGM`"
+msgstr ""
+
+#: ../../source/api/index.rst:1099
+msgid "恢复背景音"
+msgstr ""
+
+#: ../../source/api/index.rst:1101
+msgid ":func:`LivePusherContext.setBGMVolume`"
+msgstr ""
+
+#: ../../source/api/index.rst:1101
+msgid "设置背景音音量"
+msgstr ""
+
+#: ../../source/api/index.rst:1103
+msgid ":func:`LivePusherContext.snapshot`"
+msgstr ""
+
+#: ../../source/api/index.rst:1103
+msgid "快照"
+msgstr ""
+
+#: ../../source/api/index.rst:1105
+msgid ":func:`LivePusherContext.start`"
+msgstr ""
+
+#: ../../source/api/index.rst:1105
+msgid "播放推流"
+msgstr ""
+
+#: ../../source/api/index.rst:1107
+msgid ":func:`LivePusherContext.stop`"
+msgstr ""
+
+#: ../../source/api/index.rst:1107
+msgid "停止推流"
+msgstr ""
+
+#: ../../source/api/index.rst:1109
+msgid ":func:`LivePusherContext.stopBGM`"
+msgstr ""
+
+#: ../../source/api/index.rst:1109
+msgid "停止背景音"
+msgstr ""
+
+#: ../../source/api/index.rst:1111
+msgid ":func:`LivePusherContext.switchCamera`"
+msgstr ""
+
+#: ../../source/api/index.rst:1111
+msgid "切换前后摄像头"
+msgstr ""
+
+#: ../../source/api/index.rst:1113
+msgid ":func:`LivePusherContext.toggleTorch`"
+msgstr ""
+
+#: ../../source/api/index.rst:1113
+msgid "切换"
+msgstr ""
+
+#: ../../source/api/index.rst:1116
+msgid "LivePlayerContext"
+msgstr ""
+
+#: ../../source/api/index.rst:1121
+msgid ":func:`wx.createLivePlayerContext`"
+msgstr ""
+
+#: ../../source/api/index.rst:1121
+msgid "创建 live-player 上下文 LivePlayerContext 对象"
+msgstr ""
+
+#: ../../source/api/index.rst:1123
+msgid ":func:`LivePlayerContext.exitFullScreen`"
+msgstr ""
+
+#: ../../source/api/index.rst:1125
+msgid ":func:`LivePlayerContext.mute`"
+msgstr ""
+
+#: ../../source/api/index.rst:1125
+msgid "静音"
+msgstr ""
+
+#: ../../source/api/index.rst:1127
+msgid ":func:`LivePlayerContext.pause`"
+msgstr ""
+
+#: ../../source/api/index.rst:1129
+msgid ":func:`LivePlayerContext.play`"
+msgstr ""
+
+#: ../../source/api/index.rst:1131
+msgid ":func:`LivePlayerContext.requestFullScreen`"
+msgstr ""
+
+#: ../../source/api/index.rst:1133
+msgid ":func:`LivePlayerContext.resume`"
+msgstr ""
+
+#: ../../source/api/index.rst:1133
+msgid "恢复"
+msgstr ""
+
+#: ../../source/api/index.rst:1135
+msgid ":func:`LivePlayerContext.stop`"
+msgstr ""
+
+#: ../../source/api/index.rst:1139
+msgid "录音 RecorderManager"
+msgstr ""
+
+#: ../../source/api/index.rst:1144
+msgid ":func:`wx.getRecorderManager`"
+msgstr ""
+
+#: ../../source/api/index.rst:1144
+msgid "获取全局唯一的录音管理器 RecorderManager"
+msgstr ""
+
+#: ../../source/api/index.rst:1146
+msgid ":class:`RecorderManager`"
+msgstr ""
+
+#: ../../source/api/index.rst:1148
+msgid ":func:`RecorderManager.onError`"
+msgstr ""
+
+#: ../../source/api/index.rst:1148
+msgid "监听录音错误事件"
+msgstr ""
+
+#: ../../source/api/index.rst:1150
+msgid ":func:`RecorderManager.onFrameRecorded`"
+msgstr ""
+
+#: ../../source/api/index.rst:1150
+msgid "监听已录制完指定帧大小的文件事件"
+msgstr ""
+
+#: ../../source/api/index.rst:1152
+msgid ":func:`RecorderManager.onInterruptionBegin`"
+msgstr ""
+
+#: ../../source/api/index.rst:1152
+msgid "监听录音因为受到系统占用而被中断开始事件"
+msgstr ""
+
+#: ../../source/api/index.rst:1154
+msgid ":func:`RecorderManager.onInterruptionEnd`"
+msgstr ""
+
+#: ../../source/api/index.rst:1154
+msgid "监听录音中断结束事件"
+msgstr ""
+
+#: ../../source/api/index.rst:1156
+msgid ":func:`RecorderManager.onPause`"
+msgstr ""
+
+#: ../../source/api/index.rst:1156
+msgid "监听录音暂停事件"
+msgstr ""
+
+#: ../../source/api/index.rst:1158
+msgid ":func:`RecorderManager.onResume`"
+msgstr ""
+
+#: ../../source/api/index.rst:1158
+msgid "监听录音继续事件"
+msgstr ""
+
+#: ../../source/api/index.rst:1160
+msgid ":func:`RecorderManager.onStart`"
+msgstr ""
+
+#: ../../source/api/index.rst:1160
+msgid "监听录音开始事件"
+msgstr ""
+
+#: ../../source/api/index.rst:1162
+msgid ":func:`RecorderManager.onStop`"
+msgstr ""
+
+#: ../../source/api/index.rst:1162
+msgid "监听录音结束事件"
+msgstr ""
+
+#: ../../source/api/index.rst:1164
+msgid ":func:`RecorderManager.pause`"
+msgstr ""
+
+#: ../../source/api/index.rst:1164
+msgid "暂停录音"
+msgstr ""
+
+#: ../../source/api/index.rst:1166
+msgid ":func:`RecorderManager.resume`"
+msgstr ""
+
+#: ../../source/api/index.rst:1166
+msgid "继续录音"
+msgstr ""
+
+#: ../../source/api/index.rst:1168
+msgid ":func:`RecorderManager.start`"
+msgstr ""
+
+#: ../../source/api/index.rst:1168
+msgid "开始录音"
+msgstr ""
+
+#: ../../source/api/index.rst:1170
+msgid ":func:`RecorderManager.stop`"
+msgstr ""
+
+#: ../../source/api/index.rst:1170
+msgid "停止录音"
+msgstr ""
+
+#: ../../source/api/index.rst:1172
+msgid ":func:`wx.stopRecord`"
+msgstr ""
+
+#: ../../source/api/index.rst:1172
+msgid "停止录音 .. deprecated:: 1.6.0"
+msgstr ""
+
+#: ../../source/api/index.rst:1174
+msgid ":func:`wx.startRecord`"
+msgstr ""
+
+#: ../../source/api/index.rst:1174
+msgid "开始录音 .. deprecated :: 1.6.0"
+msgstr ""
+
+#: ../../source/api/index.rst:1184
+msgid "相机 CameraContext"
+msgstr ""
+
+#: ../../source/api/index.rst:1189
+msgid ":func:`wx.createCameraContext`"
+msgstr ""
+
+#: ../../source/api/index.rst:1189
+msgid "创建 camera 上下文 CameraContext 对象"
+msgstr ""
+
+#: ../../source/api/index.rst:1191
+msgid ":class:`CameraContext`"
+msgstr ""
+
+#: ../../source/api/index.rst:1191
+msgid "CameraContext 实例"
+msgstr ""
+
+#: ../../source/api/index.rst:1193
+msgid ":func:`CameraContext.startRecord`"
+msgstr ""
+
+#: ../../source/api/index.rst:1193
+msgid "开始录像"
+msgstr ""
+
+#: ../../source/api/index.rst:1195
+msgid ":func:`CameraContext.stopRecord`"
+msgstr ""
+
+#: ../../source/api/index.rst:1195
+msgid "结束录像"
+msgstr ""
+
+#: ../../source/api/index.rst:1197
+msgid ":func:`CameraContext.takePhoto`"
+msgstr ""
+
+#: ../../source/api/index.rst:1197
+msgid "拍摄照片"
+msgstr ""
+
+#: ../../source/api/index.rst:1207
+msgid "位置"
+msgstr ""
+
+#: ../../source/api/index.rst:1212
+msgid ":func:`wx.openLocation`"
+msgstr ""
+
+#: ../../source/api/index.rst:1212
+msgid "使用微信内置地图查看位置"
+msgstr ""
+
+#: ../../source/api/index.rst:1214
+msgid ":func:`wx.getLocation`"
+msgstr ""
+
+#: ../../source/api/index.rst:1214
+msgid "获取当前的地理位置、速度"
+msgstr ""
+
+#: ../../source/api/index.rst:1216
+msgid ":func:`wx.chooseLocation`"
+msgstr ""
+
+#: ../../source/api/index.rst:1216
+msgid "打开地图选择位置"
+msgstr ""
+
+#: ../../source/api/index.rst:1229
+msgid "转发"
+msgstr ""
+
+#: ../../source/api/index.rst:1234
+msgid ":func:`wx.updateShareMenu`"
+msgstr ""
+
+#: ../../source/api/index.rst:1234
+msgid "更新转发属性"
+msgstr ""
+
+#: ../../source/api/index.rst:1236
+msgid ":func:`wx.showShareMenu`"
+msgstr ""
+
+#: ../../source/api/index.rst:1236
+msgid "显示当前页面的转发按钮"
+msgstr ""
+
+#: ../../source/api/index.rst:1238
+msgid ":func:`wx.hideShareMenu`"
+msgstr ""
+
+#: ../../source/api/index.rst:1238
+msgid "隐藏转发按钮"
+msgstr ""
+
+#: ../../source/api/index.rst:1240
+msgid ":func:`wx.getShareInfo`"
+msgstr ""
+
+#: ../../source/api/index.rst:1240
+msgid "获取转发详细信息"
+msgstr ""
+
+#: ../../source/api/index.rst:1253
+msgid "画布"
+msgstr ""
+
+#: ../../source/api/index.rst:1258
+msgid ":func:`wx.createCanvasContext`"
+msgstr ""
+
+#: ../../source/api/index.rst:1258
+msgid "创建 canvas 的绘图上下文 CanvasContext 对象"
+msgstr ""
+
+#: ../../source/api/index.rst:1260
+msgid ":func:`wx.canvasToTempFilePath`"
+msgstr ""
+
+#: ../../source/api/index.rst:1260
+msgid "把当前画布指定区域的内容导出生成指定大小的图片"
+msgstr ""
+
+#: ../../source/api/index.rst:1262
+msgid ":func:`wx.canvasPutImageData`"
+msgstr ""
+
+#: ../../source/api/index.rst:1262
+msgid "将像素数据绘制到画布"
+msgstr ""
+
+#: ../../source/api/index.rst:1264
+msgid ":func:`wx.canvasGetImageData`"
+msgstr ""
+
+#: ../../source/api/index.rst:1264
+msgid "获取 canvas 区域隐含的像素数据"
+msgstr ""
+
+#: ../../source/api/index.rst:1266
+msgid ":func:`Color`"
+msgstr ""
+
+#: ../../source/api/index.rst:1266
+msgid "颜色"
+msgstr ""
+
+#: ../../source/api/index.rst:1281
+msgid "CanvasGradient"
+msgstr ""
+
+#: ../../source/api/index.rst:1286
+msgid "CanvasGradient.addColorStop"
+msgstr ""
+
+#: ../../source/api/index.rst:1286
+msgid "添加颜色的渐变点"
+msgstr ""
+
+#: ../../source/api/index.rst:1297
+msgid "CanvasContext"
+msgstr ""
+
+#: ../../source/api/index.rst:1302
+msgid "CanvasContext.arc"
+msgstr ""
+
+#: ../../source/api/index.rst:1302
+msgid "创建一条弧线"
+msgstr ""
+
+#: ../../source/api/index.rst:1304
+msgid "CanvasContext.arcTo"
+msgstr ""
+
+#: ../../source/api/index.rst:1304
+msgid "根据控制点和半径绘制圆弧路径"
+msgstr ""
+
+#: ../../source/api/index.rst:1306
+msgid "CanvasContext.beginPath"
+msgstr ""
+
+#: ../../source/api/index.rst:1306
+msgid "开始创建一个路径"
+msgstr ""
+
+#: ../../source/api/index.rst:1308
+msgid "CanvasContext.bezierCurveTo"
+msgstr ""
+
+#: ../../source/api/index.rst:1308
+msgid "创建三次方贝塞尔曲线路径"
+msgstr ""
+
+#: ../../source/api/index.rst:1310
+msgid "CanvasContext.clearRect"
+msgstr ""
+
+#: ../../source/api/index.rst:1310
+msgid "清除画布上在该矩形区域内的内容"
+msgstr ""
+
+#: ../../source/api/index.rst:1312
+msgid "CanvasContext.clip"
+msgstr ""
+
+#: ../../source/api/index.rst:1312
+msgid "从原始画布中剪切任意形状和尺寸"
+msgstr ""
+
+#: ../../source/api/index.rst:1314
+msgid "CanvasContext.closePath"
+msgstr ""
+
+#: ../../source/api/index.rst:1314
+msgid "关闭一个路径"
+msgstr ""
+
+#: ../../source/api/index.rst:1316
+msgid "CanvasContext.createCircularGradient"
+msgstr ""
+
+#: ../../source/api/index.rst:1316
+msgid "创建一个圆形的渐变颜色"
+msgstr ""
+
+#: ../../source/api/index.rst:1318
+msgid "CanvasContext.createLinearGradient"
+msgstr ""
+
+#: ../../source/api/index.rst:1318
+msgid "创建一个线性的渐变颜色"
+msgstr ""
+
+#: ../../source/api/index.rst:1320
+msgid "CanvasContext.createPattern"
+msgstr ""
+
+#: ../../source/api/index.rst:1320
+msgid "对指定的图像创建模式的方法，可在指定的方向上重复元图像"
+msgstr ""
+
+#: ../../source/api/index.rst:1322
+msgid "CanvasContext.draw"
+msgstr ""
+
+#: ../../source/api/index.rst:1322
+msgid "将之前在绘图上下文中的描述（路径、变形、样式）画到 canvas 中"
+msgstr ""
+
+#: ../../source/api/index.rst:1324
+msgid "CanvasContext.drawImage"
+msgstr ""
+
+#: ../../source/api/index.rst:1324
+msgid "绘制图像到画布"
+msgstr ""
+
+#: ../../source/api/index.rst:1326
+msgid "CanvasContext.fill"
+msgstr ""
+
+#: ../../source/api/index.rst:1326
+msgid "对当前路径中的内容进行填充"
+msgstr ""
+
+#: ../../source/api/index.rst:1328
+msgid "CanvasContext.fillRect"
+msgstr ""
+
+#: ../../source/api/index.rst:1328
+msgid "填充一个矩形"
+msgstr ""
+
+#: ../../source/api/index.rst:1330
+msgid "CanvasContext.fillText"
+msgstr ""
+
+#: ../../source/api/index.rst:1330
+msgid "在画布上绘制被填充的文本"
+msgstr ""
+
+#: ../../source/api/index.rst:1332
+msgid "CanvasContext.lineTo"
+msgstr ""
+
+#: ../../source/api/index.rst:1332
+msgid "增加一个新点，然后创建一条从上次指定点到目标点的线"
+msgstr ""
+
+#: ../../source/api/index.rst:1334
+msgid "CanvasContext.measureText"
+msgstr ""
+
+#: ../../source/api/index.rst:1334
+msgid "测量文本尺寸信息"
+msgstr ""
+
+#: ../../source/api/index.rst:1336
+msgid "CanvasContext.moveTo"
+msgstr ""
+
+#: ../../source/api/index.rst:1336
+msgid "把路径移动到画布中的指定点，不创建线条"
+msgstr ""
+
+#: ../../source/api/index.rst:1338
+msgid "CanvasContext.quadraticCurveTo"
+msgstr ""
+
+#: ../../source/api/index.rst:1338
+msgid "创建二次贝塞尔曲线路径"
+msgstr ""
+
+#: ../../source/api/index.rst:1340
+msgid "CanvasContext.rect"
+msgstr ""
+
+#: ../../source/api/index.rst:1340
+msgid "创建一个矩形路径"
+msgstr ""
+
+#: ../../source/api/index.rst:1342
+msgid "CanvasContext.restore"
+msgstr ""
+
+#: ../../source/api/index.rst:1342
+msgid "恢复之前保存的绘图上下文"
+msgstr ""
+
+#: ../../source/api/index.rst:1344
+msgid "CanvasContext.rotate"
+msgstr ""
+
+#: ../../source/api/index.rst:1344
+msgid "以原点为中心顺时针旋转当前坐标轴"
+msgstr ""
+
+#: ../../source/api/index.rst:1346
+msgid "CanvasContext.save"
+msgstr ""
+
+#: ../../source/api/index.rst:1346
+msgid "保存绘图上下文"
+msgstr ""
+
+#: ../../source/api/index.rst:1348
+msgid "CanvasContext.scale"
+msgstr ""
+
+#: ../../source/api/index.rst:1348
+msgid "在调用后，之后创建的路径其横纵坐标会被缩放"
+msgstr ""
+
+#: ../../source/api/index.rst:1350
+msgid "CanvasContext.setFillStyle"
+msgstr ""
+
+#: ../../source/api/index.rst:1350
+msgid "设置填充色"
+msgstr ""
+
+#: ../../source/api/index.rst:1352
+msgid "CanvasContext.setFontSize"
+msgstr ""
+
+#: ../../source/api/index.rst:1352
+msgid "设置字体的字号"
+msgstr ""
+
+#: ../../source/api/index.rst:1354
+msgid "CanvasContext.setGlobalAlpha"
+msgstr ""
+
+#: ../../source/api/index.rst:1354
+msgid "设置全局画笔透明度"
+msgstr ""
+
+#: ../../source/api/index.rst:1356
+msgid "CanvasContext.setLineCap"
+msgstr ""
+
+#: ../../source/api/index.rst:1356
+msgid "设置线条的端点样式"
+msgstr ""
+
+#: ../../source/api/index.rst:1358
+msgid "CanvasContext.setLineDash"
+msgstr ""
+
+#: ../../source/api/index.rst:1358
+msgid "设置虚线样式"
+msgstr ""
+
+#: ../../source/api/index.rst:1360
+msgid "CanvasContext.setLineJoin"
+msgstr ""
+
+#: ../../source/api/index.rst:1360
+msgid "设置线条的交点样式"
+msgstr ""
+
+#: ../../source/api/index.rst:1362
+msgid "CanvasContext.setLineWidth"
+msgstr ""
+
+#: ../../source/api/index.rst:1362
+msgid "设置线条的宽度"
+msgstr ""
+
+#: ../../source/api/index.rst:1364
+msgid "CanvasContext.setMiterLimit"
+msgstr ""
+
+#: ../../source/api/index.rst:1364
+msgid "设置最大斜接长度"
+msgstr ""
+
+#: ../../source/api/index.rst:1366
+msgid "CanvasContext.setShadow"
+msgstr ""
+
+#: ../../source/api/index.rst:1366
+msgid "设定阴影样式"
+msgstr ""
+
+#: ../../source/api/index.rst:1368
+msgid "CanvasContext.setStrokeStyle"
+msgstr ""
+
+#: ../../source/api/index.rst:1368
+msgid "设置描边颜色"
+msgstr ""
+
+#: ../../source/api/index.rst:1370
+msgid "CanvasContext.setTextAlign"
+msgstr ""
+
+#: ../../source/api/index.rst:1370
+msgid "设置文字的对齐"
+msgstr ""
+
+#: ../../source/api/index.rst:1372
+msgid "CanvasContext.setTextBaseline"
+msgstr ""
+
+#: ../../source/api/index.rst:1372
+msgid "设置文字的竖直对齐"
+msgstr ""
+
+#: ../../source/api/index.rst:1374
+msgid "CanvasContext.setTransform"
+msgstr ""
+
+#: ../../source/api/index.rst:1374
+msgid "使用矩阵重新设置（覆盖）当前变换的方法"
+msgstr ""
+
+#: ../../source/api/index.rst:1376
+msgid "CanvasContext.stroke"
+msgstr ""
+
+#: ../../source/api/index.rst:1376
+msgid "画出当前路径的边框"
+msgstr ""
+
+#: ../../source/api/index.rst:1378
+msgid "CanvasContext.strokeRect"
+msgstr ""
+
+#: ../../source/api/index.rst:1378
+msgid "画一个矩形(非填充)"
+msgstr ""
+
+#: ../../source/api/index.rst:1380
+msgid "CanvasContext.strokeText"
+msgstr ""
+
+#: ../../source/api/index.rst:1380
+msgid "给定的 (x, y) 位置绘制文本描边的方法"
+msgstr ""
+
+#: ../../source/api/index.rst:1382
+msgid "CanvasContext.transform"
+msgstr ""
+
+#: ../../source/api/index.rst:1382
+msgid "使用矩阵多次叠加当前变换的方法"
+msgstr ""
+
+#: ../../source/api/index.rst:1384
+msgid "CanvasContext.translate"
+msgstr ""
+
+#: ../../source/api/index.rst:1384
+msgid "对当前坐标系的原点 (0, 0) 进行变换"
+msgstr ""
+
+#: ../../source/api/index.rst:1435
+msgid "文件"
+msgstr ""
+
+#: ../../source/api/index.rst:1440
+msgid "wx.saveFile"
+msgstr ""
+
+#: ../../source/api/index.rst:1440
+msgid "保存文件到本地"
+msgstr ""
+
+#: ../../source/api/index.rst:1442
+msgid "wx.removeSavedFile"
+msgstr ""
+
+#: ../../source/api/index.rst:1442
+msgid "删除本地缓存文件"
+msgstr ""
+
+#: ../../source/api/index.rst:1444
+msgid "wx.openDocument"
+msgstr ""
+
+#: ../../source/api/index.rst:1444
+msgid "新开页面打开文档"
+msgstr ""
+
+#: ../../source/api/index.rst:1446
+msgid "wx.getSavedFileList"
+msgstr ""
+
+#: ../../source/api/index.rst:1446
+#: ../../source/api/index.rst:1506
+msgid "获取该小程序下已保存的本地缓存文件列表"
+msgstr ""
+
+#: ../../source/api/index.rst:1448
+msgid "wx.getSavedFileInfo"
+msgstr ""
+
+#: ../../source/api/index.rst:1448
+msgid "获取本地文件的文件信息"
+msgstr ""
+
+#: ../../source/api/index.rst:1450
+msgid "wx.getFileSystemManager"
+msgstr ""
+
+#: ../../source/api/index.rst:1450
+msgid "获取全局唯一的文件管理器"
+msgstr ""
+
+#: ../../source/api/index.rst:1452
+msgid "wx.getFileInfo"
+msgstr ""
+
+#: ../../source/api/index.rst:1452
+msgid "获取文件信息"
+msgstr ""
+
+#: ../../source/api/index.rst:1468
+msgid "Stats"
+msgstr ""
+
+#: ../../source/api/index.rst:1473
+msgid "Stats.isDirectory"
+msgstr ""
+
+#: ../../source/api/index.rst:1473
+msgid "判断当前文件是否一个目录"
+msgstr ""
+
+#: ../../source/api/index.rst:1475
+msgid "Stats.isFile"
+msgstr ""
+
+#: ../../source/api/index.rst:1475
+msgid "判断当前文件是否一个普通文件"
+msgstr ""
+
+#: ../../source/api/index.rst:1487
+msgid "FileSystemManager"
+msgstr ""
+
+#: ../../source/api/index.rst:1492
+msgid "FileSystemManager.access"
+msgstr ""
+
+#: ../../source/api/index.rst:1492
+msgid "判断文件/目录是否存在"
+msgstr ""
+
+#: ../../source/api/index.rst:1494
+msgid "FileSystemManager.accessSync"
+msgstr ""
+
+#: ../../source/api/index.rst:1494
+msgid "FileSystemManager.access 的同步版本"
+msgstr ""
+
+#: ../../source/api/index.rst:1496
+msgid "FileSystemManager.appendFile"
+msgstr ""
+
+#: ../../source/api/index.rst:1496
+msgid "在文件结尾追加内容"
+msgstr ""
+
+#: ../../source/api/index.rst:1498
+msgid "FileSystemManager.appendFileSync"
+msgstr ""
+
+#: ../../source/api/index.rst:1498
+msgid "FileSystemManager.appendFile 的同步版本"
+msgstr ""
+
+#: ../../source/api/index.rst:1500
+msgid "FileSystemManager.copyFile"
+msgstr ""
+
+#: ../../source/api/index.rst:1500
+msgid "复制文件"
+msgstr ""
+
+#: ../../source/api/index.rst:1502
+msgid "FileSystemManager.copyFileSync"
+msgstr ""
+
+#: ../../source/api/index.rst:1502
+msgid "FileSystemManager.copyFile 的同步版本"
+msgstr ""
+
+#: ../../source/api/index.rst:1504
+msgid "FileSystemManager.getFileInfo"
+msgstr ""
+
+#: ../../source/api/index.rst:1504
+msgid "获取该小程序下的 本地临时文件 或 本地缓存文件 信息"
+msgstr ""
+
+#: ../../source/api/index.rst:1506
+msgid "FileSystemManager.getSavedFileList"
+msgstr ""
+
+#: ../../source/api/index.rst:1508
+msgid "FileSystemManager.mkdir"
+msgstr ""
+
+#: ../../source/api/index.rst:1508
+msgid "创建目录"
+msgstr ""
+
+#: ../../source/api/index.rst:1510
+msgid "FileSystemManager.mkdirSync"
+msgstr ""
+
+#: ../../source/api/index.rst:1510
+msgid "FileSystemManager.mkdir 的同步版本"
+msgstr ""
+
+#: ../../source/api/index.rst:1512
+msgid "FileSystemManager.readdir"
+msgstr ""
+
+#: ../../source/api/index.rst:1512
+msgid "读取目录内文件列表"
+msgstr ""
+
+#: ../../source/api/index.rst:1514
+msgid "FileSystemManager.readdirSync"
+msgstr ""
+
+#: ../../source/api/index.rst:1514
+msgid "FileSystemManager.readdir 的同步版本"
+msgstr ""
+
+#: ../../source/api/index.rst:1516
+msgid "FileSystemManager.readFile"
+msgstr ""
+
+#: ../../source/api/index.rst:1516
+msgid "读取本地文件内容"
+msgstr ""
+
+#: ../../source/api/index.rst:1518
+msgid "FileSystemManager.readFileSync"
+msgstr ""
+
+#: ../../source/api/index.rst:1518
+msgid "FileSystemManager.readFile 的同步版本"
+msgstr ""
+
+#: ../../source/api/index.rst:1520
+msgid "FileSystemManager.removeSavedFile"
+msgstr ""
+
+#: ../../source/api/index.rst:1520
+msgid "删除该小程序下已保存的本地缓存文件"
+msgstr ""
+
+#: ../../source/api/index.rst:1522
+msgid "FileSystemManager.rename"
+msgstr ""
+
+#: ../../source/api/index.rst:1522
+msgid "重命名文件"
+msgstr ""
+
+#: ../../source/api/index.rst:1524
+msgid "FileSystemManager.renameSync"
+msgstr ""
+
+#: ../../source/api/index.rst:1524
+msgid "FileSystemManager.rename 的同步版本"
+msgstr ""
+
+#: ../../source/api/index.rst:1526
+msgid "FileSystemManager.rmdir"
+msgstr ""
+
+#: ../../source/api/index.rst:1526
+msgid "删除目录"
+msgstr ""
+
+#: ../../source/api/index.rst:1528
+msgid "FileSystemManager.rmdirSync"
+msgstr ""
+
+#: ../../source/api/index.rst:1528
+msgid "FileSystemManager.rmdir 的同步版本"
+msgstr ""
+
+#: ../../source/api/index.rst:1530
+msgid "FileSystemManager.saveFile"
+msgstr ""
+
+#: ../../source/api/index.rst:1530
+msgid "保存临时文件到本地"
+msgstr ""
+
+#: ../../source/api/index.rst:1532
+msgid "FileSystemManager.saveFileSync"
+msgstr ""
+
+#: ../../source/api/index.rst:1532
+msgid "FileSystemManager.saveFile 的同步版本"
+msgstr ""
+
+#: ../../source/api/index.rst:1534
+msgid "FileSystemManager.stat"
+msgstr ""
+
+#: ../../source/api/index.rst:1534
+msgid "获取文件 Stats 对象"
+msgstr ""
+
+#: ../../source/api/index.rst:1536
+msgid "FileSystemManager.statSync"
+msgstr ""
+
+#: ../../source/api/index.rst:1536
+msgid "FileSystemManager.stat 的同步版本"
+msgstr ""
+
+#: ../../source/api/index.rst:1538
+msgid "FileSystemManager.unlink"
+msgstr ""
+
+#: ../../source/api/index.rst:1538
+msgid "删除文件"
+msgstr ""
+
+#: ../../source/api/index.rst:1540
+msgid "FileSystemManager.unlinkSync"
+msgstr ""
+
+#: ../../source/api/index.rst:1540
+msgid "FileSystemManager.unlink 的同步版本"
+msgstr ""
+
+#: ../../source/api/index.rst:1542
+msgid "FileSystemManager.unzip"
+msgstr ""
+
+#: ../../source/api/index.rst:1542
+msgid "解压文件"
+msgstr ""
+
+#: ../../source/api/index.rst:1544
+msgid "FileSystemManager.writeFile"
+msgstr ""
+
+#: ../../source/api/index.rst:1544
+msgid "写文件"
+msgstr ""
+
+#: ../../source/api/index.rst:1546
+msgid "FileSystemManager.writeFileSync"
+msgstr ""
+
+#: ../../source/api/index.rst:1546
+msgid "FileSystemManager.writeFile 的同步版本"
+msgstr ""
+
+#: ../../source/api/index.rst:1584
+msgid "开放接口"
+msgstr ""
+
+#: ../../source/api/index.rst:1587
+msgid "登录"
+msgstr ""
+
+#: ../../source/api/index.rst:1592
+msgid "wx.login"
+msgstr ""
+
+#: ../../source/api/index.rst:1592
+msgid "调用接口获取登录凭证（code）"
+msgstr ""
+
+#: ../../source/api/index.rst:1594
+msgid "wx.checkSession"
+msgstr ""
+
+#: ../../source/api/index.rst:1594
+msgid "检查登录态是否过期"
+msgstr ""
+
+#: ../../source/api/index.rst:1606
+msgid "小程序跳转"
+msgstr ""
+
+#: ../../source/api/index.rst:1611
+msgid "wx.navigateToMiniProgram"
+msgstr ""
+
+#: ../../source/api/index.rst:1611
+msgid "打开另一个小程序"
+msgstr ""
+
+#: ../../source/api/index.rst:1613
+msgid "wx.navigateBackMiniProgram"
+msgstr ""
+
+#: ../../source/api/index.rst:1613
+msgid "返回到上一个小程序"
+msgstr ""
+
+#: ../../source/api/index.rst:1624
+msgid "帐号信息"
+msgstr ""
+
+#: ../../source/api/index.rst:1629
+msgid "wx.getAccountInfoSync"
+msgstr ""
+
+#: ../../source/api/index.rst:1629
+msgid "获取当前帐号信息"
+msgstr ""
+
+#: ../../source/api/index.rst:1639
+#: ../../source/api/index.rst:1646
+msgid "用户信息"
+msgstr ""
+
+#: ../../source/api/index.rst:1644
+msgid "wx.getUserInfo"
+msgstr ""
+
+#: ../../source/api/index.rst:1644
+msgid "获取用户信息"
+msgstr ""
+
+#: ../../source/api/index.rst:1646
+msgid "UserInfo"
+msgstr ""
+
+#: ../../source/api/index.rst:1657
+msgid "数据上报"
+msgstr ""
+
+#: ../../source/api/index.rst:1662
+msgid "wx.reportMonitor"
+msgstr ""
+
+#: ../../source/api/index.rst:1662
+msgid "自定义业务数据监控上报接口"
+msgstr ""
+
+#: ../../source/api/index.rst:1672
+msgid "数据分析"
+msgstr ""
+
+#: ../../source/api/index.rst:1677
+msgid "wx.reportAnalytics"
+msgstr ""
+
+#: ../../source/api/index.rst:1677
+msgid "自定义分析数据上报接口"
+msgstr ""
+
+#: ../../source/api/index.rst:1687
+msgid "支付"
+msgstr ""
+
+#: ../../source/api/index.rst:1692
+msgid "wx.requestPayment"
+msgstr ""
+
+#: ../../source/api/index.rst:1692
+msgid "发起微信支付"
+msgstr ""
+
+#: ../../source/api/index.rst:1702
+msgid "授权"
+msgstr ""
+
+#: ../../source/api/index.rst:1707
+msgid "wx.authorize"
+msgstr ""
+
+#: ../../source/api/index.rst:1707
+msgid "提前向用户发起授权请求"
+msgstr ""
+
+#: ../../source/api/index.rst:1717
+msgid "设置"
+msgstr ""
+
+#: ../../source/api/index.rst:1722
+msgid "wx.openSetting"
+msgstr ""
+
+#: ../../source/api/index.rst:1722
+msgid "调起客户端小程序设置界面，返回用户设置的操作结果"
+msgstr ""
+
+#: ../../source/api/index.rst:1724
+msgid "wx.getSetting"
+msgstr ""
+
+#: ../../source/api/index.rst:1724
+msgid "获取用户的当前设置"
+msgstr ""
+
+#: ../../source/api/index.rst:1726
+msgid "AuthSetting"
+msgstr ""
+
+#: ../../source/api/index.rst:1726
+msgid "用户授权设置信息，详情参考权限"
+msgstr ""
+
+#: ../../source/api/index.rst:1738
+msgid "收货地址"
+msgstr ""
+
+#: ../../source/api/index.rst:1743
+msgid "wx.chooseAddress"
+msgstr ""
+
+#: ../../source/api/index.rst:1743
+msgid "获取用户收货地址"
+msgstr ""
+
+#: ../../source/api/index.rst:1753
+msgid "卡券"
+msgstr ""
+
+#: ../../source/api/index.rst:1758
+msgid "wx.openCard"
+msgstr ""
+
+#: ../../source/api/index.rst:1758
+msgid "查看微信卡包中的卡券"
+msgstr ""
+
+#: ../../source/api/index.rst:1760
+msgid "wx.addCard"
+msgstr ""
+
+#: ../../source/api/index.rst:1760
+msgid "批量添加卡券"
+msgstr ""
+
+#: ../../source/api/index.rst:1771
+msgid "发票"
+msgstr ""
+
+#: ../../source/api/index.rst:1776
+msgid "wx.chooseInvoiceTitle"
+msgstr ""
+
+#: ../../source/api/index.rst:1776
+msgid "选择用户的发票抬头"
+msgstr ""
+
+#: ../../source/api/index.rst:1778
+msgid "wx.chooseInvoice"
+msgstr ""
+
+#: ../../source/api/index.rst:1778
+msgid "选择用户已有的发票"
+msgstr ""
+
+#: ../../source/api/index.rst:1789
+msgid "生物认证"
+msgstr ""
+
+#: ../../source/api/index.rst:1794
+msgid "wx.startSoterAuthentication"
+msgstr ""
+
+#: ../../source/api/index.rst:1794
+msgid "开始 SOTER 生物认证"
+msgstr ""
+
+#: ../../source/api/index.rst:1796
+msgid "wx.checkIsSupportSoterAuthentication"
+msgstr ""
+
+#: ../../source/api/index.rst:1796
+msgid "获取本机支持的 SOTER 生物认证方式"
+msgstr ""
+
+#: ../../source/api/index.rst:1798
+msgid "wx.checkIsSoterEnrolledInDevice"
+msgstr ""
+
+#: ../../source/api/index.rst:1798
+msgid "获取设备内是否录入如指纹等生物信息的接口"
+msgstr ""
+
+#: ../../source/api/index.rst:1810
+msgid "微信运动"
+msgstr ""
+
+#: ../../source/api/index.rst:1815
+msgid "wx.getWeRunData"
+msgstr ""
+
+#: ../../source/api/index.rst:1815
+msgid "获取用户过去三十天微信运动步数"
+msgstr ""
+
+#: ../../source/api/index.rst:1825
+msgid "设备"
+msgstr ""
+
+#: ../../source/api/index.rst:1828
+msgid "Wi-Fi"
+msgstr ""
+
+#: ../../source/api/index.rst:1833
+msgid "wx.stopWifi"
+msgstr ""
+
+#: ../../source/api/index.rst:1833
+msgid "关闭 Wi-Fi 模块"
+msgstr ""
+
+#: ../../source/api/index.rst:1835
+msgid "wx.startWifi"
+msgstr ""
+
+#: ../../source/api/index.rst:1835
+msgid "初始化 Wi-Fi 模块"
+msgstr ""
+
+#: ../../source/api/index.rst:1837
+msgid "wx.setWifiList"
+msgstr ""
+
+#: ../../source/api/index.rst:1837
+msgid "设置 wifiList 中 AP 的相关信息"
+msgstr ""
+
+#: ../../source/api/index.rst:1839
+msgid "wx.onWifiConnected"
+msgstr ""
+
+#: ../../source/api/index.rst:1839
+msgid "监听连接上 Wi-Fi 的事件"
+msgstr ""
+
+#: ../../source/api/index.rst:1841
+msgid "wx.onGetWifiList"
+msgstr ""
+
+#: ../../source/api/index.rst:1841
+msgid "监听获取到 Wi-Fi 列表数据事件"
+msgstr ""
+
+#: ../../source/api/index.rst:1843
+msgid "wx.getWifiList"
+msgstr ""
+
+#: ../../source/api/index.rst:1843
+msgid "请求获取 Wi-Fi 列表"
+msgstr ""
+
+#: ../../source/api/index.rst:1845
+msgid "wx.getConnectedWifi"
+msgstr ""
+
+#: ../../source/api/index.rst:1845
+msgid "获取已连接中的 Wi-Fi 信息"
+msgstr ""
+
+#: ../../source/api/index.rst:1847
+msgid "wx.connectWifi"
+msgstr ""
+
+#: ../../source/api/index.rst:1847
+msgid "连接 Wi-Fi"
+msgstr ""
+
+#: ../../source/api/index.rst:1849
+msgid "WifiInfo"
+msgstr ""
+
+#: ../../source/api/index.rst:1849
+msgid "Wifi 信息"
+msgstr ""
+
+#: ../../source/api/index.rst:1867
+msgid "iBeacon"
+msgstr ""
+
+#: ../../source/api/index.rst:1872
+msgid "wx.stopBeaconDiscovery"
+msgstr ""
+
+#: ../../source/api/index.rst:1872
+msgid "停止搜索附近的 iBeacon 设备"
+msgstr ""
+
+#: ../../source/api/index.rst:1874
+msgid "wx.startBeaconDiscovery"
+msgstr ""
+
+#: ../../source/api/index.rst:1874
+msgid "开始搜索附近的 iBeacon 设备"
+msgstr ""
+
+#: ../../source/api/index.rst:1876
+msgid "wx.onBeaconUpdate"
+msgstr ""
+
+#: ../../source/api/index.rst:1876
+msgid "监听 iBeacon 设备更新事件"
+msgstr ""
+
+#: ../../source/api/index.rst:1878
+msgid "wx.onBeaconServiceChange"
+msgstr ""
+
+#: ../../source/api/index.rst:1878
+msgid "监听 iBeacon 服务状态变化事件"
+msgstr ""
+
+#: ../../source/api/index.rst:1880
+msgid "wx.getBeacons"
+msgstr ""
+
+#: ../../source/api/index.rst:1880
+msgid "获取所有已搜索到的 iBeacon 设备"
+msgstr ""
+
+#: ../../source/api/index.rst:1894
+msgid "IBeaconInfo"
+msgstr ""
+
+#: ../../source/api/index.rst:1897
+msgid "联系人"
+msgstr ""
+
+#: ../../source/api/index.rst:1902
+msgid "wx.addPhoneContact"
+msgstr ""
+
+#: ../../source/api/index.rst:1902
+msgid "添加手机通讯录联系人"
+msgstr ""
+
+#: ../../source/api/index.rst:1913
+msgid "低功耗蓝牙"
+msgstr ""
+
+#: ../../source/api/index.rst:1918
+msgid "wx.writeBLECharacteristicValue"
+msgstr ""
+
+#: ../../source/api/index.rst:1918
+msgid "向低功耗蓝牙设备特征值中写入二进制数据"
+msgstr ""
+
+#: ../../source/api/index.rst:1920
+msgid "wx.readBLECharacteristicValue"
+msgstr ""
+
+#: ../../source/api/index.rst:1920
+msgid "读取低功耗蓝牙设备的特征值的二进制数据值"
+msgstr ""
+
+#: ../../source/api/index.rst:1922
+msgid "wx.onBLEConnectionStateChange"
+msgstr ""
+
+#: ../../source/api/index.rst:1922
+msgid "监听低功耗蓝牙连接状态的改变事件"
+msgstr ""
+
+#: ../../source/api/index.rst:1924
+msgid "wx.onBLECharacteristicValueChange"
+msgstr ""
+
+#: ../../source/api/index.rst:1924
+msgid "监听低功耗蓝牙设备的特征值变化事件"
+msgstr ""
+
+#: ../../source/api/index.rst:1926
+msgid "wx.notifyBLECharacteristicValueChange"
+msgstr ""
+
+#: ../../source/api/index.rst:1926
+msgid "启用低功耗蓝牙设备特征值变化时的 notify 功能，订阅特征值"
+msgstr ""
+
+#: ../../source/api/index.rst:1928
+msgid "wx.getBLEDeviceServices"
+msgstr ""
+
+#: ../../source/api/index.rst:1928
+msgid "获取蓝牙设备所有服务(service)"
+msgstr ""
+
+#: ../../source/api/index.rst:1930
+msgid "wx.getBLEDeviceCharacteristics"
+msgstr ""
+
+#: ../../source/api/index.rst:1930
+msgid "获取蓝牙设备某个服务中所有特征值(characteristic)"
+msgstr ""
+
+#: ../../source/api/index.rst:1932
+msgid "wx.createBLEConnection"
+msgstr ""
+
+#: ../../source/api/index.rst:1932
+msgid "连接低功耗蓝牙设备"
+msgstr ""
+
+#: ../../source/api/index.rst:1934
+msgid "wx.closeBLEConnection"
+msgstr ""
+
+#: ../../source/api/index.rst:1934
+msgid "断开与低功耗蓝牙设备的连接"
+msgstr ""
+
+#: ../../source/api/index.rst:1953
+msgid "蓝牙"
+msgstr ""
+
+#: ../../source/api/index.rst:1958
+msgid "wx.stopBluetoothDevicesDiscovery"
+msgstr ""
+
+#: ../../source/api/index.rst:1958
+msgid "停止搜寻附近的蓝牙外围设备"
+msgstr ""
+
+#: ../../source/api/index.rst:1960
+msgid "wx.startBluetoothDevicesDiscovery"
+msgstr ""
+
+#: ../../source/api/index.rst:1960
+msgid "开始搜寻附近的蓝牙外围设备"
+msgstr ""
+
+#: ../../source/api/index.rst:1962
+msgid "wx.openBluetoothAdapter"
+msgstr ""
+
+#: ../../source/api/index.rst:1962
+msgid "初始化蓝牙模块"
+msgstr ""
+
+#: ../../source/api/index.rst:1964
+msgid "wx.onBluetoothDeviceFound"
+msgstr ""
+
+#: ../../source/api/index.rst:1964
+msgid "监听寻找到新设备的事件"
+msgstr ""
+
+#: ../../source/api/index.rst:1966
+msgid "wx.onBluetoothAdapterStateChange"
+msgstr ""
+
+#: ../../source/api/index.rst:1966
+msgid "监听蓝牙适配器状态变化事件"
+msgstr ""
+
+#: ../../source/api/index.rst:1968
+msgid "wx.getConnectedBluetoothDevices"
+msgstr ""
+
+#: ../../source/api/index.rst:1968
+msgid "根据 uuid 获取处于已连接状态的设备"
+msgstr ""
+
+#: ../../source/api/index.rst:1970
+msgid "wx.getBluetoothDevices"
+msgstr ""
+
+#: ../../source/api/index.rst:1970
+msgid "获取在蓝牙模块生效期间所有已发现的蓝牙设备"
+msgstr ""
+
+#: ../../source/api/index.rst:1972
+msgid "wx.getBluetoothAdapterState"
+msgstr ""
+
+#: ../../source/api/index.rst:1972
+msgid "获取本机蓝牙适配器状态"
+msgstr ""
+
+#: ../../source/api/index.rst:1974
+msgid "wx.closeBluetoothAdapter"
+msgstr ""
+
+#: ../../source/api/index.rst:1974
+msgid "关闭蓝牙模块"
+msgstr ""
+
+#: ../../source/api/index.rst:1993
+msgid "电量"
+msgstr ""
+
+#: ../../source/api/index.rst:1998
+msgid "wx.getBatteryInfoSync"
+msgstr ""
+
+#: ../../source/api/index.rst:1998
+msgid "wx.getBatteryInfo 的同步版本"
+msgstr ""
+
+#: ../../source/api/index.rst:2000
+msgid "wx.getBatteryInfo"
+msgstr ""
+
+#: ../../source/api/index.rst:2000
+msgid "获取设备电量"
+msgstr ""
+
+#: ../../source/api/index.rst:2012
+msgid "剪贴板"
+msgstr ""
+
+#: ../../source/api/index.rst:2017
+msgid "wx.setClipboardData"
+msgstr ""
+
+#: ../../source/api/index.rst:2017
+msgid "设置系统剪贴板的内容"
+msgstr ""
+
+#: ../../source/api/index.rst:2019
+msgid "wx.getClipboardData"
+msgstr ""
+
+#: ../../source/api/index.rst:2019
+msgid "获取系统剪贴板的内容"
+msgstr ""
+
+#: ../../source/api/index.rst:2031
+msgid "NFC"
+msgstr ""
+
+#: ../../source/api/index.rst:2036
+msgid "wx.stopHCE"
+msgstr ""
+
+#: ../../source/api/index.rst:2036
+msgid "关闭 NFC 模块"
+msgstr ""
+
+#: ../../source/api/index.rst:2038
+msgid "wx.startHCE"
+msgstr ""
+
+#: ../../source/api/index.rst:2038
+msgid "初始化 NFC 模块"
+msgstr ""
+
+#: ../../source/api/index.rst:2040
+msgid "wx.sendHCEMessage"
+msgstr ""
+
+#: ../../source/api/index.rst:2040
+msgid "发送 NFC 消息"
+msgstr ""
+
+#: ../../source/api/index.rst:2042
+msgid "wx.onHCEMessage"
+msgstr ""
+
+#: ../../source/api/index.rst:2042
+msgid "监听接收 NFC 设备消息事件"
+msgstr ""
+
+#: ../../source/api/index.rst:2044
+msgid "wx.getHCEState"
+msgstr ""
+
+#: ../../source/api/index.rst:2044
+msgid "判断当前设备是否支持 HCE 能力"
+msgstr ""
+
+#: ../../source/api/index.rst:2063
+msgid "wx.onNetworkStatusChange"
+msgstr ""
+
+#: ../../source/api/index.rst:2063
+msgid "监听网络状态变化事件"
+msgstr ""
+
+#: ../../source/api/index.rst:2065
+msgid "wx.getNetworkType"
+msgstr ""
+
+#: ../../source/api/index.rst:2065
+msgid "获取网络类型"
+msgstr ""
+
+#: ../../source/api/index.rst:2077
+msgid "屏幕"
+msgstr ""
+
+#: ../../source/api/index.rst:2082
+msgid "wx.setScreenBrightness"
+msgstr ""
+
+#: ../../source/api/index.rst:2082
+msgid "设置屏幕亮度"
+msgstr ""
+
+#: ../../source/api/index.rst:2084
+msgid "wx.setKeepScreenOn"
+msgstr ""
+
+#: ../../source/api/index.rst:2084
+msgid "设置是否保持常亮状态"
+msgstr ""
+
+#: ../../source/api/index.rst:2086
+msgid "wx.onUserCaptureScreen"
+msgstr ""
+
+#: ../../source/api/index.rst:2086
+msgid "监听用户主动截屏事件"
+msgstr ""
+
+#: ../../source/api/index.rst:2088
+msgid "wx.getScreenBrightness"
+msgstr ""
+
+#: ../../source/api/index.rst:2088
+msgid "获取屏幕亮度"
+msgstr ""
+
+#: ../../source/api/index.rst:2101
+msgid "电话"
+msgstr ""
+
+#: ../../source/api/index.rst:2106
+msgid "wx.makePhoneCall"
+msgstr ""
+
+#: ../../source/api/index.rst:2106
+msgid "拨打电话"
+msgstr ""
+
+#: ../../source/api/index.rst:2117
+msgid "加速计"
+msgstr ""
+
+#: ../../source/api/index.rst:2122
+msgid "wx.stopAccelerometer"
+msgstr ""
+
+#: ../../source/api/index.rst:2122
+msgid "停止监听加速度数据"
+msgstr ""
+
+#: ../../source/api/index.rst:2124
+msgid "wx.startAccelerometer"
+msgstr ""
+
+#: ../../source/api/index.rst:2124
+msgid "开始监听加速度数据"
+msgstr ""
+
+#: ../../source/api/index.rst:2126
+msgid "wx.onAccelerometerChange"
+msgstr ""
+
+#: ../../source/api/index.rst:2126
+msgid "监听加速度数据事件"
+msgstr ""
+
+#: ../../source/api/index.rst:2139
+msgid "罗盘"
+msgstr ""
+
+#: ../../source/api/index.rst:2144
+msgid "wx.stopCompass"
+msgstr ""
+
+#: ../../source/api/index.rst:2144
+msgid "停止监听罗盘数据"
+msgstr ""
+
+#: ../../source/api/index.rst:2146
+msgid "wx.startCompass"
+msgstr ""
+
+#: ../../source/api/index.rst:2146
+msgid "开始监听罗盘数据"
+msgstr ""
+
+#: ../../source/api/index.rst:2148
+msgid "wx.onCompassChange"
+msgstr ""
+
+#: ../../source/api/index.rst:2148
+msgid "监听罗盘数据变化事件"
+msgstr ""
+
+#: ../../source/api/index.rst:2161
+msgid "设备方向"
+msgstr ""
+
+#: ../../source/api/index.rst:2166
+msgid "wx.stopDeviceMotionListening"
+msgstr ""
+
+#: ../../source/api/index.rst:2166
+msgid "停止监听设备方向的变化"
+msgstr ""
+
+#: ../../source/api/index.rst:2168
+msgid "wx.startDeviceMotionListening"
+msgstr ""
+
+#: ../../source/api/index.rst:2168
+msgid "开始监听设备方向的变化"
+msgstr ""
+
+#: ../../source/api/index.rst:2170
+msgid "wx.onDeviceMotionChange"
+msgstr ""
+
+#: ../../source/api/index.rst:2170
+msgid "监听设备方向变化事件"
+msgstr ""
+
+#: ../../source/api/index.rst:2183
+msgid "陀螺仪"
+msgstr ""
+
+#: ../../source/api/index.rst:2188
+msgid "wx.stopGyroscope"
+msgstr ""
+
+#: ../../source/api/index.rst:2188
+msgid "停止监听陀螺仪数据"
+msgstr ""
+
+#: ../../source/api/index.rst:2190
+msgid "wx.startGyroscope"
+msgstr ""
+
+#: ../../source/api/index.rst:2190
+msgid "开始监听陀螺仪数据"
+msgstr ""
+
+#: ../../source/api/index.rst:2192
+msgid "wx.onGyroscopeChange"
+msgstr ""
+
+#: ../../source/api/index.rst:2192
+msgid "监听陀螺仪数据变化事件"
+msgstr ""
+
+#: ../../source/api/index.rst:2205
+msgid "性能"
+msgstr ""
+
+#: ../../source/api/index.rst:2210
+msgid "wx.onMemoryWarning"
+msgstr ""
+
+#: ../../source/api/index.rst:2210
+msgid "监听内存不足告警事件"
+msgstr ""
+
+#: ../../source/api/index.rst:2221
+msgid "扫码"
+msgstr ""
+
+#: ../../source/api/index.rst:2226
+msgid "wx.scanCode"
+msgstr ""
+
+#: ../../source/api/index.rst:2226
+msgid "调起客户端扫码界面进行扫码"
+msgstr ""
+
+#: ../../source/api/index.rst:2237
+msgid "振动"
+msgstr ""
+
+#: ../../source/api/index.rst:2242
+msgid "wx.vibrateShort"
+msgstr ""
+
+#: ../../source/api/index.rst:2242
+msgid "使手机发生较短时间的振动（15 ms）"
+msgstr ""
+
+#: ../../source/api/index.rst:2244
+msgid "wx.vibrateLong"
+msgstr ""
+
+#: ../../source/api/index.rst:2244
+msgid "使手机发生较长时间的振动（400 ms)"
+msgstr ""
+
+#: ../../source/api/index.rst:2256
+msgid "Worker"
+msgstr ""
+
+#: ../../source/api/index.rst:2261
+msgid ":func:`wx.createWorker`"
+msgstr ""
+
+#: ../../source/api/index.rst:2261
+msgid "创建一个 Worker 线程"
+msgstr ""
+
+#: ../../source/api/index.rst:2263
+msgid ":class:`Worker`"
+msgstr ""
+
+#: ../../source/api/index.rst:2263
+msgid "Worker 线程"
+msgstr ""
+
+#: ../../source/api/index.rst:2265
+msgid ":func:`Worker.onMessage`"
+msgstr ""
+
+#: ../../source/api/index.rst:2265
+msgid "监听主线程/Worker 线程向当前线程发送的消息的事件"
+msgstr ""
+
+#: ../../source/api/index.rst:2267
+msgid ":func:`Worker.postMessage`"
+msgstr ""
+
+#: ../../source/api/index.rst:2267
+msgid "向主线程/Worker 线程发送的消息"
+msgstr ""
+
+#: ../../source/api/index.rst:2269
+msgid ":func:`Worker.terminate`"
+msgstr ""
+
+#: ../../source/api/index.rst:2269
+msgid "结束当前 Worker 线程"
+msgstr ""
+
+#: ../../source/api/index.rst:2279
+msgid "第三方平台"
+msgstr ""
+
+#: ../../source/api/index.rst:2284
+msgid "wx.getExtConfigSync"
+msgstr ""
+
+#: ../../source/api/index.rst:2284
+msgid "wx.getExtConfig 的同步版本"
+msgstr ""
+
+#: ../../source/api/index.rst:2286
+msgid "wx.getExtConfig"
+msgstr ""
+
+#: ../../source/api/index.rst:2286
+msgid "获取第三方平台自定义的数据字段"
+msgstr ""
+
+#: ../../source/api/index.rst:2297
+msgid "WXML"
+msgstr ""
+
+#: ../../source/api/index.rst:2302
+msgid "wx.createSelectorQuery"
+msgstr ""
+
+#: ../../source/api/index.rst:2302
+msgid "返回一个 SelectorQuery 对象实例"
+msgstr ""
+
+#: ../../source/api/index.rst:2304
+msgid "wx.createIntersectionObserver"
+msgstr ""
+
+#: ../../source/api/index.rst:2304
+msgid "创建并返回一个 IntersectionObserver 对象实例"
+msgstr ""
+
+#: ../../source/api/index.rst:2315
+msgid "SelectorQuery"
+msgstr ""
+
+#: ../../source/api/index.rst:2320
+msgid "SelectorQuery.exec"
+msgstr ""
+
+#: ../../source/api/index.rst:2320
+msgid "执行所有的请求"
+msgstr ""
+
+#: ../../source/api/index.rst:2322
+msgid "SelectorQuery.in"
+msgstr ""
+
+#: ../../source/api/index.rst:2322
+msgid "将选择器的选取范围更改为自定义组件 component 内"
+msgstr ""
+
+#: ../../source/api/index.rst:2324
+msgid "SelectorQuery.select"
+msgstr ""
+
+#: ../../source/api/index.rst:2324
+msgid "在当前页面下选择第一个匹配选择器 selector 的节点"
+msgstr ""
+
+#: ../../source/api/index.rst:2326
+msgid "SelectorQuery.selectAll"
+msgstr ""
+
+#: ../../source/api/index.rst:2326
+msgid "在当前页面下选择匹配选择器 selector 的所有节点"
+msgstr ""
+
+#: ../../source/api/index.rst:2328
+msgid "SelectorQuery.selectViewport"
+msgstr ""
+
+#: ../../source/api/index.rst:2328
+msgid "选择显示区域"
+msgstr ""
+
+#: ../../source/api/index.rst:2343
+msgid "NodesRef"
+msgstr ""
+
+#: ../../source/api/index.rst:2348
+msgid "NodesRef.boundingClientRect"
+msgstr ""
+
+#: ../../source/api/index.rst:2348
+msgid "添加节点的布局位置的查询请求"
+msgstr ""
+
+#: ../../source/api/index.rst:2350
+msgid "NodesRef.context"
+msgstr ""
+
+#: ../../source/api/index.rst:2350
+msgid "添加节点的 Context 对象查询请求"
+msgstr ""
+
+#: ../../source/api/index.rst:2352
+msgid "NodesRef.fields"
+msgstr ""
+
+#: ../../source/api/index.rst:2352
+msgid "获取节点的相关信息"
+msgstr ""
+
+#: ../../source/api/index.rst:2354
+msgid "NodesRef.scrollOffset"
+msgstr ""
+
+#: ../../source/api/index.rst:2354
+msgid "添加节点的滚动位置查询请求"
+msgstr ""
+
+#: ../../source/api/index.rst:2368
+msgid "IntersectionObserver"
+msgstr ""
+
+#: ../../source/api/index.rst:2373
+msgid "IntersectionObserver.disconnect"
+msgstr ""
+
+#: ../../source/api/index.rst:2373
+msgid "停止监听"
+msgstr ""
+
+#: ../../source/api/index.rst:2375
+msgid "IntersectionObserver.observe"
+msgstr ""
+
+#: ../../source/api/index.rst:2375
+msgid "指定目标节点并开始监听相交状态变化情况"
+msgstr ""
+
+#: ../../source/api/index.rst:2377
+msgid "IntersectionObserver.relativeTo"
+msgstr ""
+
+#: ../../source/api/index.rst:2377
+msgid "使用选择器指定一个节点，作为参照区域之一"
+msgstr ""
+
+#: ../../source/api/index.rst:2379
+msgid "IntersectionObserver.relativeToViewport"
+msgstr ""
+
+#: ../../source/api/index.rst:2379
+msgid "指定页面显示区域作为参照区域之一"
+msgstr ""
+

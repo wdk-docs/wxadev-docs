@@ -38,7 +38,8 @@ extensions = [
     'sphinx.ext.extlinks',
     'recommonmark',
     'sphinx.ext.githubpages',
-    'sphinxcontrib.httpdomain'
+    'sphinxcontrib.httpdomain',
+    'sphinxjsondomain'
 ]
 
 # 相对于此目录，在此处添加包含模板的所有路径。
@@ -104,3 +105,6 @@ primary_domain = 'js'
 highlight_language = 'js'
 
 todo_include_todos = 'true'
+
+locale_dirs = ['locale/']   # path is example but recommended.
+gettext_compact = False     # optional.

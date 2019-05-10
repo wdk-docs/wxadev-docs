@@ -1,0 +1,119 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019, Nosy
+# This file is distributed under the same license as the wxadev package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: wxadev \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-09 22:55+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../../source/devtools/download.rst:4
+msgid ":wxdt:`下载 <download>`"
+msgstr ""
+
+#: ../../source/devtools/download.rst:7
+msgid "Windows 仅支持 Windows 7 及以上版本。"
+msgstr ""
+
+#: ../../source/devtools/download.rst:10
+msgid ""
+"开发版 `Nightly Build "
+"<https://developers.weixin.qq.com/miniprogram/dev/devtools/nightly.html>`_"
+msgstr ""
+
+#: ../../source/devtools/download.rst:12
+msgid "日常构建版本，用于尽快修复缺陷和敏捷上线小的特性；开发自测验证，稳定性欠佳"
+msgstr ""
+
+#: ../../source/devtools/download.rst:14
+msgid ""
+":download:`Windows 64 "
+"<https://dldir1.qq.com/WechatWebDev/nightly/p-7aa88fbb60d64e4a96fac38999591e31/wechat_devtools_1.02.1904192_x64.exe>`、"
+" :download:`Windows 32 "
+"<https://dldir1.qq.com/WechatWebDev/nightly/p-7aa88fbb60d64e4a96fac38999591e31/wechat_devtools_1.02.1904192_ia32.exe>`、"
+" :download:`macOS "
+"<https://dldir1.qq.com/WechatWebDev/nightly/p-7aa88fbb60d64e4a96fac38999591e31/wechat_devtools_1.02.1904192.dmg>`"
+msgstr ""
+
+#: ../../source/devtools/download.rst:19
+msgid ""
+"预发布版 `RC Build "
+"<https://developers.weixin.qq.com/miniprogram/dev/devtools/rc.html>`_"
+msgstr ""
+
+#: ../../source/devtools/download.rst:21
+msgid "预发布版，包含大的特性；通过内部测试，稳定性尚可"
+msgstr ""
+
+#: ../../source/devtools/download.rst:23
+msgid ""
+":download:`Windows 64 <https://servicewechat.com/wxa-dev-"
+"logic/download_redirect?type=x64&from=mpwiki&download_version=1021904091&version_type=1>`、"
+" :download:`Windows 32 <https://servicewechat.com/wxa-dev-"
+"logic/download_redirect?type=ia32&from=mpwiki&download_version=1021904091&version_type=1>`、"
+" :download:`macOS <https://servicewechat.com/wxa-dev-"
+"logic/download_redirect?type=darwin&from=mpwiki&download_version=1021904091&version_type=1>`"
+msgstr ""
+
+#: ../../source/devtools/download.rst:28
+msgid ""
+"稳定版 `Stable Build "
+"<https://developers.weixin.qq.com/miniprogram/dev/devtools/stable.html>`_"
+" (1.02.1902010)"
+msgstr ""
+
+#: ../../source/devtools/download.rst:30
+msgid "测试版缺陷收敛后转为稳定版；"
+msgstr ""
+
+#: ../../source/devtools/download.rst:32
+msgid ""
+":download:`Windows 64 <https://servicewechat.com/wxa-dev-"
+"logic/download_redirect?type=x64&from=mpwiki&download_version=1021904090&version_type=1>`、"
+" :download:`Windows 32 <https://servicewechat.com/wxa-dev-"
+"logic/download_redirect?type=ia32&from=mpwiki&download_version=1021904090&version_type=1>`、"
+" :download:`macOS <https://servicewechat.com/wxa-dev-"
+"logic/download_redirect?type=darwin&from=mpwiki&download_version=1021904090&version_type=1>`"
+msgstr ""
+
+#: ../../source/devtools/download.rst:37
+msgid ""
+"内核升级版 `Upgrade Build "
+"<https://developers.weixin.qq.com/miniprogram/dev/devtools/upnwjs.html>`_"
+" (1.03.1903211)"
+msgstr ""
+
+#: ../../source/devtools/download.rst:39
+msgid "为升级内核而准备的版本"
+msgstr ""
+
+#: ../../source/devtools/download.rst:41
+msgid ""
+":download:`Windows 64 "
+"<https://dldir1.qq.com/WechatWebDev/1.3.0/201904152/wechat_devtools_1.03.1904152_x64.exe>`、"
+" :download:`Windows 32 "
+"<https://dldir1.qq.com/WechatWebDev/1.3.0/201904152/wechat_devtools_1.03.1904152_ia32.exe>`、"
+" :download:`macOS "
+"<https://dldir1.qq.com/WechatWebDev/1.3.0/201904152/wechat_devtools_1.03.1904152.dmg>`"
+msgstr ""
+
+#: ../../source/devtools/download.rst:46
+msgid "全部更新日志"
+msgstr ""
+
+#: ../../source/devtools/download.rst:48
+msgid ""
+"`全部更新日志 "
+"<https://developers.weixin.qq.com/miniprogram/dev/devtools/uplog.html>`_"
+msgstr ""
+

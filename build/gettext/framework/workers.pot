@@ -1,0 +1,118 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019, Nosy
+# This file is distributed under the same license as the wxadev package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: wxadev \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-09 22:55+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/framework/workers.rst:2
+msgid ":wxfrwk:`多线程 Worker <workers>`"
+msgstr ""
+
+#: ../../source/framework/workers.rst:4
+msgid "一些异步处理的任务，可以放置于 Worker 中运行，待运行结束后， 再把结果返回到小程序主线程。 Worker 运行于一个单独的全局上下文与线程中，不能直接调用主线程的方法。"
+msgstr ""
+
+#: ../../source/framework/workers.rst:8
+msgid "Worker 与主线程之间的数据传输， 双方使用 :func:`Worker.postMessage()` 来发送数据， :func:`Worker.onMessage()` 来接收数据， 传输的数据并不是直接共享，而是被复制的。"
+msgstr ""
+
+#: ../../source/framework/workers.rst:14
+msgid "使用流程"
+msgstr ""
+
+#: ../../source/framework/workers.rst:16
+msgid "在开发者工具中预览效果"
+msgstr ""
+
+#: ../../source/framework/workers.rst:18
+msgid "配置 Worker 信息"
+msgstr ""
+
+#: ../../source/framework/workers.rst:20
+msgid "在 app.json 中可配置 Worker 代码放置的目录，目录下的代码将被打包成一个文件："
+msgstr ""
+
+#: ../../source/framework/workers.rst:22
+msgid "配置示例："
+msgstr ""
+
+#: ../../source/framework/workers.rst:30
+msgid "添加 Worker 代码文件"
+msgstr ""
+
+#: ../../source/framework/workers.rst:32
+msgid "根据步骤 1 中的配置，在代码目录下新建以下两个入口文件："
+msgstr ""
+
+#: ../../source/framework/workers.rst:34
+msgid "workers/request/index.js"
+msgstr ""
+
+#: ../../source/framework/workers.rst:35
+msgid "workers/request/utils.js"
+msgstr ""
+
+#: ../../source/framework/workers.rst:36
+msgid "workers/response/index.js"
+msgstr ""
+
+#: ../../source/framework/workers.rst:38
+msgid "添加后，目录结构如下::"
+msgstr ""
+
+#: ../../source/framework/workers.rst:50
+msgid "编写 Worker 代码"
+msgstr ""
+
+#: ../../source/framework/workers.rst:52
+msgid "在 workers/request/index.js 编写 Worker 响应代码"
+msgstr ""
+
+#: ../../source/framework/workers.rst:63
+msgid "在主线程中初始化 Worker"
+msgstr ""
+
+#: ../../source/framework/workers.rst:65
+msgid "在主线程的代码 app.js 中初始化 Worker"
+msgstr ""
+
+#: ../../source/framework/workers.rst:71
+msgid "主线程向 Worker 发送消息"
+msgstr ""
+
+#: ../../source/framework/workers.rst:79
+msgid "worker 对象的其它接口请看 worker接口说明"
+msgstr ""
+
+#: ../../source/framework/workers.rst:83
+msgid "Worker 最大并发数量限制为 1 个，创建下一个前请用 Worker.terminate() 结束当前 Worker"
+msgstr ""
+
+#: ../../source/framework/workers.rst:84
+msgid "Worker 内代码只能 require 指定 Worker 路径内的文件，无法引用其它路径"
+msgstr ""
+
+#: ../../source/framework/workers.rst:85
+msgid "Worker 的入口文件由 wx.createWorker() 时指定，开发者可动态指定 Worker 入口文件"
+msgstr ""
+
+#: ../../source/framework/workers.rst:86
+msgid "Worker 内不支持 wx 系列的 API"
+msgstr ""
+
+#: ../../source/framework/workers.rst:87
+msgid "Workers 之间不支持发送消息"
+msgstr ""
+

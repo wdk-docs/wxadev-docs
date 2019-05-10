@@ -1,0 +1,33 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019, Nosy
+# This file is distributed under the same license as the wxadev package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: wxadev \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-09 22:55+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../../source/framework/open-ability/customer-message/typing.rst:2
+msgid "客服输入状态"
+msgstr ""
+
+#: ../../source/framework/open-ability/customer-message/typing.rst:4
+msgid "开发者可通过调用 客服输入状态接口，返回客服当前输入状态给用户。"
+msgstr ""
+
+#: ../../source/framework/open-ability/customer-message/typing.rst:6
+msgid ""
+"此接口需要客服消息接口权限。 如果不满足发送客服消息的触发条件，则无法下发输入状态。 下发输入状态，需要客服之前 30 秒内跟用户有过消息交互。 "
+"在输入状态中（持续 15 秒），不可重复下发输入态。 在输入状态中，如果向用户下发消息，会同时取消输入状态。"
+msgstr ""
+

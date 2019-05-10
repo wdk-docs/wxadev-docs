@@ -1,0 +1,42 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019, Nosy
+# This file is distributed under the same license as the wxadev package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: wxadev \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-09 22:55+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/framework/plugin/api-limit.rst:2
+msgid "插件调用 API 的限制"
+msgstr ""
+
+#: ../../source/framework/plugin/api-limit.rst:4
+msgid "插件可以调用的 API 与小程序不同，主要有两个区别："
+msgstr ""
+
+#: ../../source/framework/plugin/api-limit.rst:6
+msgid "插件的请求域名列表与小程序相互独立； 一些 API 不允许插件调用（这些函数不存在于 wx 对象下）。 有些接口虽然在插件中不能使用，但可以通过插件功能页来达到目的，请参考插件功能页。"
+msgstr ""
+
+#: ../../source/framework/plugin/api-limit.rst:10
+msgid "目前，允许插件调用的 API 及其对应版本要求如下："
+msgstr ""
+
+#: ../../source/framework/plugin/api-limit.rst:12
+msgid "发起请求 API     最低版本    备注 wx.request      1.9.6 上传、下载 API     最低版本    备注 wx.downloadFile 1.9.6 wx.uploadFile   1.9.6 WebSocket API     最低版本    备注 wx.connectSocket        1.9.6 图片 API     最低版本    备注 wx.previewImage 1.9.6 wx.chooseImage  1.9.6 wx.getImageInfo 1.9.6 wx.saveImageToPhotosAlbum       1.9.6 录音 API     最低版本    备注 wx.startRecord  1.9.6 wx.stopRecord   1.9.6 实时音视频 API     最低版本    备注 wx.createLivePlayerContext      1.9.6 wx.createLivePusherContext      1.9.6 录音管理 API     最低版本    备注 wx.getRecorderManager   1.9.94 音频播放控制 API     最低版本    备注 wx.pauseVoice   1.9.6 wx.playVoice    1.9.6 wx.stopVoice    1.9.6 音乐播放控制 API     最低版本    备注 wx.onBackgroundAudioPlay        1.9.6 wx.getBackgroundAudioPlayerState        1.9.6 wx.onBackgroundAudioStop        1.9.6 wx.stopBackgroundAudio  1.9.6 wx.onBackgroundAudioPause       1.9.6 wx.seekBackgroundAudio  1.9.6 wx.playBackgroundAudio  1.9.6 wx.pauseBackgroundAudio 1.9.6 背景音频播放管理 API     最低版本    备注 wx.getBackgroundAudioManager    1.9.6 音频组件控制 API     最低版本    备注 wx.createInnerAudioContext      1.9.6 wx.createAudioContext   1.9.6 视频 API     最低版本    备注 wx.chooseVideo  1.9.6 wx.saveVideoToPhotosAlbum       1.9.6 视频组件控制 API     最低版本    备注 wx.createVideoContext   1.9.6 相机组件控制 API     最低版本    备注 wx.createCameraContext  1.9.6 数据缓存 API     最低版本    备注 wx.setStorageSync       1.9.6 wx.getStorage   1.9.6 wx.removeStorageSync    1.9.6 wx.setStorage   1.9.6 wx.getStorageSync       1.9.6 wx.removeStorage        1.9.6 获取位置 API     最低版本    备注 wx.getLocation  1.9.6 wx.chooseLocation       1.9.6 查看位置 API     最低版本    备注 wx.openLocation 1.9.6 地图组件控制 API     最低版本    备注 wx.createMapContext     1.9.6 系统信息 API     最低版本    备注 wx.getSystemInfoSync    1.9.6 wx.getSystemInfo        1.9.6 屏幕亮度 API     最低版本    备注 wx.setKeepScreenOn      1.9.6 wx.setScreenBrightness  1.9.6 wx.getScreenBrightness  1.9.6 用户截屏事件 API     最低版本    备注 wx.onUserCaptureScreen  1.9.6   仅限插件页面中调用 振动 API     最低版本    备注 wx.vibrateLong  1.9.6 wx.vibrateShort 1.9.6 手机联系人 API     最低版本    备注 wx.addPhoneContact      1.9.6 NFC API     最低版本    备注 wx.sendHCEMessage       2.1.0 wx.stopHCE      2.1.0 wx.onHCEMessage 2.1.0 wx.startHCE     2.1.0 wx.getHCEState  2.1.0 网络状态 API     最低版本    备注 wx.onNetworkStatusChange        1.9.6 wx.getNetworkType       1.9.6 加速度计 API     最低版本    备注 wx.startAccelerometer   1.9.6 wx.stopAccelerometer    1.9.6 wx.onAccelerometerChange        1.9.6 罗盘 API     最低版本    备注 wx.onCompassChange      1.9.6 wx.stopCompass  1.9.6 wx.startCompass 1.9.6 拨打电话 API     最低版本    备注 wx.makePhoneCall        1.9.6 扫码 API     最低版本    备注 wx.scanCode     1.9.6 剪贴板 API     最低版本    备注 wx.setClipboardData     1.9.6 wx.getClipboardData     1.9.6 蓝牙 API     最低版本    备注 wx.writeBLECharacteristicValue  1.9.6 wx.startBluetoothDevicesDiscovery       1.9.6 wx.getConnectedBluetoothDevices 1.9.6 wx.notifyBLECharacteristicValueChange   1.9.6 wx.onBluetoothDeviceFound       1.9.6 wx.readBLECharacteristicValue   1.9.6 wx.openBluetoothAdapter 1.9.6 wx.getBLEDeviceCharacteristics  1.9.6 wx.stopBluetoothDevicesDiscovery        1.9.6 wx.onBLEConnectionStateChange   1.9.6 wx.getBluetoothDevices  1.9.6 wx.getBluetoothAdapterState     1.9.6 wx.onBluetoothAdapterStateChange        1.9.6 wx.getBLEDeviceServices 1.9.6 wx.onBLECharacteristicValueChange       1.9.6 wx.createBLEConnection  1.9.6 wx.closeBluetoothAdapter        1.9.6 wx.closeBLEConnection   1.9.6 wx.notifyBLECharacteristicValueChange   1.9.6 wx.onBLEConnectionStateChange   1.9.6 iBeacon API     最低版本    备注 wx.getBeacons   1.9.6 wx.startBeaconDiscovery 1.9.6 wx.onBeaconServiceChange        1.9.6 wx.onBeaconUpdate       1.9.6 wx.stopBeaconDiscovery  1.9.6 交互反馈 API     最低版本    备注 wx.hideLoading  1.9.6 wx.showActionSheet      1.9.6 wx.showLoading  1.9.6 wx.hideToast    1.9.6 wx.showToast    1.9.6 wx.showModal    1.9.6 设置导航条 API     最低版本    备注 wx.showNavigationBarLoading     2.1.0   仅限插件页面中调用 wx.hideNavigationBarLoading     2.1.0   仅限插件页面中调用 wx.setNavigationBarColor        2.1.0   仅限插件页面中调用 wx.setNavigationBarTitle        2.1.0   仅限插件页面中调用 背景 API     最低版本    备注 wx.setBackgroundColor   2.4.0   仅限插件页面中调用 wx.setBackgroundTextStyle       2.4.0   仅限插件页面中调用 WXML节点信息 API     最低版本    备注 wx.createSelectorQuery  1.9.6 WXML节点布局相交状态 API     最低版本    备注 wx.createIntersectionObserver   1.9.6 导航 API     最低版本    备注 wx.navigateBack 2.1.0   仅限插件页面中调用 wx.navigateTo   2.2.2   仅限插件页面中调用 wx.redirectTo   2.2.2   仅限插件页面中调用 wx.switchTab    2.3.1   仅限插件页面中调用 wx.reLaunch     2.3.1   仅限插件页面中调用 动画 API     最低版本    备注 wx.createAnimation      1.9.6 位置 API     最低版本    备注 wx.pageScrollTo 2.1.0   仅限插件页面中调用 绘图 API     最低版本    备注 wx.canvasPutImageData   1.9.6 wx.canvasToTempFilePath 1.9.6 wx.createCanvasContext  1.9.6 wx.canvasGetImageData   1.9.6 下拉刷新 API     最低版本    备注 wx.stopPullDownRefresh  2.1.0   仅限插件页面中调用 wx.startPullDownRefresh 2.1.0   仅限插件页面中调用 当前帐号信息 API     最低版本    备注 wx.getAccountInfoSync   2.2.2 转发 API     最低版本    备注 wx.hideShareMenu        2.1.0   仅限插件页面中调用 wx.getShareInfo 2.1.0   仅限插件页面中调用 wx.showShareMenu        2.1.0   仅限插件页面中调用 wx.updateShareMenu      2.1.0   仅限插件页面中调用 其他 API     最低版本    备注 wx.reportAnalytics      1.9.6   见下方备注 登录和获取用户信息 这一组接口仅限在用户信息功能页中获得用户授权之后调用。否则将返回 fail 。详见 用户信息功能页 。"
+msgstr ""
+
+#: ../../source/framework/plugin/api-limit.rst:230
+msgid "API     最低版本    备注 wx.login        2.3.1 wx.getUserInfo  2.3.1 Bugs & Tips wx.reportAnalytics 可以被正常调用，但目前不会进行统计展示。"
+msgstr ""
+

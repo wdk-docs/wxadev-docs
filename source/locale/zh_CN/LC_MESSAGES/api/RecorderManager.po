@@ -1,0 +1,168 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019, Nosy
+# This file is distributed under the same license as the wxadev package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: wxadev \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-09 22:55+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../../source/api/RecorderManager.rst:2
+msgid ":wxapi:`RecorderManager`"
+msgstr ""
+
+#: ../../source/api/RecorderManager.rst:6
+#: ../../source/api/RecorderManager.rst:76
+#: ../../source/api/RecorderManager.rst:85
+msgid "低版本需做 :ref:`compatibility` 。"
+msgstr ""
+
+#: ../../source/api/RecorderManager.rst:8
+msgid "获取全局唯一的录音管理器 :class:`RecorderManager`"
+msgstr ""
+
+#: ../../source/api/RecorderManager.rst
+msgid "返回"
+msgstr ""
+
+#: ../../source/api/RecorderManager.rst:10
+msgid ":class:`RecorderManager`"
+msgstr ""
+
+#: ../../source/api/RecorderManager.rst
+msgid "label"
+msgstr ""
+
+#: ../../source/api/RecorderManager.rst:14
+msgid "全局唯一的录音管理器"
+msgstr ""
+
+#: ../../source/api/RecorderManager.rst:17
+msgid "方法"
+msgstr ""
+
+#: ../../source/api/RecorderManager.rst:21
+msgid "开始录制 :func:`RecorderManager.start`"
+msgstr ""
+
+#: ../../source/api/RecorderManager.rst:25
+msgid "暂停录音"
+msgstr ""
+
+#: ../../source/api/RecorderManager.rst:29
+msgid "继续录音"
+msgstr ""
+
+#: ../../source/api/RecorderManager.rst:33
+msgid "停止录音"
+msgstr ""
+
+#: ../../source/api/RecorderManager.rst:37
+msgid "监听录音开始事件"
+msgstr ""
+
+#: ../../source/api/RecorderManager.rst
+msgid "参数"
+msgstr ""
+
+#: ../../source/api/RecorderManager.rst:38
+#: ../../source/api/RecorderManager.rst:43
+msgid "录音开始事件的回调函数"
+msgstr ""
+
+#: ../../source/api/RecorderManager.rst:42
+msgid "监听录音继续事件"
+msgstr ""
+
+#: ../../source/api/RecorderManager.rst:47
+msgid "监听录音暂停事件"
+msgstr ""
+
+#: ../../source/api/RecorderManager.rst:48
+msgid "录音暂停事件的回调函数"
+msgstr ""
+
+#: ../../source/api/RecorderManager.rst:52
+msgid "监听录音结束事件"
+msgstr ""
+
+#: ../../source/api/RecorderManager.rst:53
+msgid "录音结束事件的回调函数"
+msgstr ""
+
+#: ../../source/api/RecorderManager.rst:57
+msgid "监听已录制完指定帧大小的文件事件。如果设置了 frameSize，则会回调此事件。"
+msgstr ""
+
+#: ../../source/api/RecorderManager.rst:58
+msgid ""
+"已录制完指定帧大小的文件事件的回调函数  - **res** (*Object*) -    - **frameBuffer** "
+"(*ArrayBuffer*) - 录音分片数据   - **isLastFrame** (*boolean*) - "
+"当前帧是否正常录音结束前的最后一帧"
+msgstr ""
+
+#: ../../source/api/RecorderManager.rst:58
+msgid "已录制完指定帧大小的文件事件的回调函数"
+msgstr ""
+
+#: ../../source/api/RecorderManager.rst:60
+#: ../../source/api/RecorderManager.rst:70
+msgid "**res** (*Object*) -"
+msgstr ""
+
+#: ../../source/api/RecorderManager.rst:62
+msgid "**frameBuffer** (*ArrayBuffer*) - 录音分片数据"
+msgstr ""
+
+#: ../../source/api/RecorderManager.rst:63
+msgid "**isLastFrame** (*boolean*) - 当前帧是否正常录音结束前的最后一帧"
+msgstr ""
+
+#: ../../source/api/RecorderManager.rst:67
+msgid "监听录音错误事件"
+msgstr ""
+
+#: ../../source/api/RecorderManager.rst:68
+msgid "录音错误事件的回调函数  - **res** (*Object*) -    - **errMsg** (*string*) - 错误信息"
+msgstr ""
+
+#: ../../source/api/RecorderManager.rst:68
+msgid "录音错误事件的回调函数"
+msgstr ""
+
+#: ../../source/api/RecorderManager.rst:72
+msgid "**errMsg** (*string*) - 错误信息"
+msgstr ""
+
+#: ../../source/api/RecorderManager.rst:78
+msgid ""
+"监听录音因为受到系统占用而被中断开始事件。 以下场景会触发此事件：微信语音聊天、微信视频聊天。此事件触发后，录音会被暂停。 pause "
+"事件在此事件后触发"
+msgstr ""
+
+#: ../../source/api/RecorderManager.rst:81
+msgid "录音因为受到系统占用而被中断开始事件的回调函数"
+msgstr ""
+
+#: ../../source/api/RecorderManager.rst:87
+msgid "监听录音中断结束事件。 在收到 interruptionBegin 事件之后，小程序内所有录音会暂停，收到此事件之后才可再次录音成功。"
+msgstr ""
+
+#: ../../source/api/RecorderManager.rst:89
+msgid "录音中断结束事件的回调函数"
+msgstr ""
+
+#: ../../source/api/RecorderManager.rst:92
+msgid "示例代码"
+msgstr ""
+

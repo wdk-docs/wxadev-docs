@@ -1,0 +1,299 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019, Nosy
+# This file is distributed under the same license as the wxadev package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: wxadev \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-09 22:55+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../../source/devtools/change/stable.rst:2
+msgid "稳定版 Stable Build 更新日志"
+msgstr ""
+
+#: ../../source/devtools/change/stable.rst:4
+msgid "1.02.1902010 Windows 64 、 Windows 32 、 macOS"
+msgstr ""
+
+#: ../../source/devtools/change/stable.rst:6
+msgid "2019.02.01"
+msgstr ""
+
+#: ../../source/devtools/change/stable.rst:8
+#: ../../source/devtools/change/stable.rst:41
+msgid "F 修复 界面调试样式信息显示不全的问题 反馈详情"
+msgstr ""
+
+#: ../../source/devtools/change/stable.rst:10
+msgid "2019.01.23"
+msgstr ""
+
+#: ../../source/devtools/change/stable.rst:12
+msgid "F 修复 1.02.1901221 引入的 app.json usingComponent 没有扩散的问题 反馈详情"
+msgstr ""
+
+#: ../../source/devtools/change/stable.rst:13
+msgid "F 修复 长路径的项目无法正常打开的问题 反馈详情"
+msgstr ""
+
+#: ../../source/devtools/change/stable.rst:14
+#: ../../source/devtools/change/stable.rst:20
+msgid "F 修复 1.02.1901170 引入的 win 版经常弹项目列表窗口的问题 反馈详情"
+msgstr ""
+
+#: ../../source/devtools/change/stable.rst:16
+msgid "2019.01.22"
+msgstr ""
+
+#: ../../source/devtools/change/stable.rst:18
+msgid "F 修复 1.02.1901170 引入的 wx.previewImage 无效的问题 反馈详情"
+msgstr ""
+
+#: ../../source/devtools/change/stable.rst:19
+msgid "F 修复 1.02.1901170 引入的预览时报 pageJSON 错误的问题 反馈详情"
+msgstr ""
+
+#: ../../source/devtools/change/stable.rst:21
+msgid "F 修复 1.02.1901170 引入的 tabBar selectIconPath 无效的问题 反馈详情"
+msgstr ""
+
+#: ../../source/devtools/change/stable.rst:22
+msgid "F 修复 1.02.1901170 引入的小程序全屏模式存现返回按钮的问题 反馈详情"
+msgstr ""
+
+#: ../../source/devtools/change/stable.rst:23
+msgid "F 修复 ext.json 中有效字段被误提示为无效字段的问题 反馈详情"
+msgstr ""
+
+#: ../../source/devtools/change/stable.rst:24
+msgid "F 修复 wx.setStorage key 允许为空字符的问题"
+msgstr ""
+
+#: ../../source/devtools/change/stable.rst:25
+msgid "F 修复 第三方平台命令行上传代码异常问题 反馈详情"
+msgstr ""
+
+#: ../../source/devtools/change/stable.rst:27
+msgid "2019.01.17"
+msgstr ""
+
+#: ../../source/devtools/change/stable.rst:29
+msgid "A 新增 自定义 tabbar 调试支持 详情"
+msgstr ""
+
+#: ../../source/devtools/change/stable.rst:30
+msgid "A 新增 微信开发者·代码管理 详情"
+msgstr ""
+
+#: ../../source/devtools/change/stable.rst:31
+msgid "A 新增 安全设置，CLI/HTTP 调用默认关闭，需要手动开启 详情"
+msgstr ""
+
+#: ../../source/devtools/change/stable.rst:32
+msgid "A 新增 游客模式可以修改 appid"
+msgstr ""
+
+#: ../../source/devtools/change/stable.rst:33
+msgid "U 优化 新建项目流程"
+msgstr ""
+
+#: ../../source/devtools/change/stable.rst:34
+msgid "U 优化 开发者工具模态弹窗反馈的交互"
+msgstr ""
+
+#: ../../source/devtools/change/stable.rst:35
+msgid "U 优化 app.json 和 page.json 的字段类型检查及无效字段提示"
+msgstr ""
+
+#: ../../source/devtools/change/stable.rst:36
+msgid "F 修复 修改 appid 后云开发的本地缓存没有清理导致无法正确上传、下载代码的问题"
+msgstr ""
+
+#: ../../source/devtools/change/stable.rst:37
+msgid "F 修复 设置系统代理失败后，界面还是显示为系统代理的问题"
+msgstr ""
+
+#: ../../source/devtools/change/stable.rst:38
+msgid "F 修复 设置系统代理失败，Windows 版会有多次失败提示的问题"
+msgstr ""
+
+#: ../../source/devtools/change/stable.rst:39
+msgid "F 修复 多帐号调试窗口丢失 AppData 调试面板的问题 反馈详情"
+msgstr ""
+
+#: ../../source/devtools/change/stable.rst:40
+msgid "F 修复 macOS 复制失效的问题"
+msgstr ""
+
+#: ../../source/devtools/change/stable.rst:42
+msgid "F 修复 WXML 面板不显示 media query 的问题 反馈详情"
+msgstr ""
+
+#: ../../source/devtools/change/stable.rst:43
+msgid "F 修复 WXML 面板样式点一下就点不动的问题 反馈详情"
+msgstr ""
+
+#: ../../source/devtools/change/stable.rst:44
+msgid "F 修复 在硬盘删除项目目录后重建，开发者工具无法监听到文件变更的问题"
+msgstr ""
+
+#: ../../source/devtools/change/stable.rst:45
+msgid "F 修复 登录流程的部分错误情况没有错误提示的问题"
+msgstr ""
+
+#: ../../source/devtools/change/stable.rst:46
+msgid "F 修复 分享时未触发 app.onHide 的问题 反馈详情"
+msgstr ""
+
+#: ../../source/devtools/change/stable.rst:47
+msgid "F 修复 小游戏调试器无法显示 wx.downloadFile wx.uploadFile 的请求的问题"
+msgstr ""
+
+#: ../../source/devtools/change/stable.rst:48
+msgid "F 修复 2.4.4 基础库开发者工具切后台报错的问题 反馈详情"
+msgstr ""
+
+#: ../../source/devtools/change/stable.rst:49
+msgid "F 修复 小程序分包中使用插件的页面会丢失样式的问题"
+msgstr ""
+
+#: ../../source/devtools/change/stable.rst:51
+msgid "2018.12.27"
+msgstr ""
+
+#: ../../source/devtools/change/stable.rst:53
+msgid ""
+"#. Windows 64 、 Windows 32 、 macOS #. #. F 修复 1.02.1812260 引入的 "
+"first_column 的问题 反馈详情 #. F 修复 getLocation 每次都会有授权弹窗的问题"
+msgstr ""
+
+#: ../../source/devtools/change/stable.rst:58
+msgid "2018.12.26"
+msgstr ""
+
+#: ../../source/devtools/change/stable.rst:60
+msgid "A 新增 app.json 支持 permission 字段"
+msgstr ""
+
+#: ../../source/devtools/change/stable.rst:61
+msgid "A 新增 page.json 支持 navigationStyle 字段（仅对 2.4.3 基础库有效）"
+msgstr ""
+
+#: ../../source/devtools/change/stable.rst:62
+msgid "F 修复 部分组件黑色主题样式问题"
+msgstr ""
+
+#: ../../source/devtools/change/stable.rst:63
+msgid "F 修复 公众号网页调试没法打开外观设置的问题"
+msgstr ""
+
+#: ../../source/devtools/change/stable.rst:65
+msgid "2018.12.18"
+msgstr ""
+
+#: ../../source/devtools/change/stable.rst:67
+msgid "A 新增 黑色主题 详情"
+msgstr ""
+
+#: ../../source/devtools/change/stable.rst:68
+msgid "A 新增 mDns 调试支持"
+msgstr ""
+
+#: ../../source/devtools/change/stable.rst:69
+msgid "A 新增 模拟器在工具右侧展示"
+msgstr ""
+
+#: ../../source/devtools/change/stable.rst:70
+msgid "A 新增 模拟器 Home 和 返回操作 反馈详情"
+msgstr ""
+
+#: ../../source/devtools/change/stable.rst:71
+msgid "A 新增 <web-view> 支持 bindload/binderror"
+msgstr ""
+
+#: ../../source/devtools/change/stable.rst:72
+msgid "A 新增 project.config.json 中 appid 支持修改"
+msgstr ""
+
+#: ../../source/devtools/change/stable.rst:73
+msgid "A 新增 小游戏 game.json 配置项 deviceOrientation 支持 landscapeLeft/landscapeRight"
+msgstr ""
+
+#: ../../source/devtools/change/stable.rst:74
+msgid "A 新增 小程序配置文件支持 pageOrientation 详情"
+msgstr ""
+
+#: ../../source/devtools/change/stable.rst:75
+msgid "A 新增 CLI/HTTP 支持自动预览 详情"
+msgstr ""
+
+#: ../../source/devtools/change/stable.rst:76
+msgid "U 优化 云函数上传时提示是否有未安装的依赖"
+msgstr ""
+
+#: ../../source/devtools/change/stable.rst:77
+msgid "U 优化 当自定义编译条件过多时，点击打开自动定位到已选择的编译模式"
+msgstr ""
+
+#: ../../source/devtools/change/stable.rst:78
+msgid "U 优化 自定义编译条件支持方向键操作"
+msgstr ""
+
+#: ../../source/devtools/change/stable.rst:79
+msgid "F 修复 小程序分包会加载两次 app.wxss 的问题 反馈详情"
+msgstr ""
+
+#: ../../source/devtools/change/stable.rst:80
+msgid "F 修复 app.json 中写入 extAppid 导致异常的问题"
+msgstr ""
+
+#: ../../source/devtools/change/stable.rst:81
+msgid "F 修复 macOS 版工具会出现 command + s 无法保存的问题 反馈详情"
+msgstr ""
+
+#: ../../source/devtools/change/stable.rst:82
+msgid "F 修复 分包中的插件引用自身资源加载失败的问题"
+msgstr ""
+
+#: ../../source/devtools/change/stable.rst:83
+msgid "F 修复 分包预加载阶段时 app.js 被执行的问题 反馈详情"
+msgstr ""
+
+#: ../../source/devtools/change/stable.rst:84
+msgid "F 修复 小游戏分包中的 game.js 为空文件上传会报错的问题"
+msgstr ""
+
+#: ../../source/devtools/change/stable.rst:85
+msgid "F 修复 未打开工具时点击代码片段链接无法自动拉起工具的问题"
+msgstr ""
+
+#: ../../source/devtools/change/stable.rst:86
+msgid "F 修复 公众号网页调试的调试器无法弹出的问题"
+msgstr ""
+
+#: ../../source/devtools/change/stable.rst:87
+msgid "F 修复 Windows 版任务栏图标丢失的问题"
+msgstr ""
+
+#: ../../source/devtools/change/stable.rst:88
+msgid "F 修复 Page.onTabItemTap 只有第一次触发的问题 反馈详情"
+msgstr ""
+
+#: ../../source/devtools/change/stable.rst:89
+msgid "F 修复 页面没有 json 文件的时，app.json 的 usingComponents 没有在该页面生效的问题 反馈详情"
+msgstr ""
+
+#: ../../source/devtools/change/stable.rst:90
+msgid "F 修复 cli 发生错误时进程退出码为 0 的问题"
+msgstr ""
+

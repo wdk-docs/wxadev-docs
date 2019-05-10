@@ -1,0 +1,62 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019, Nosy
+# This file is distributed under the same license as the wxadev package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: wxadev \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-09 22:55+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../../source/api/wx.getStorageInfoSync.rst:2
+msgid ":wxapi:`wx.getStorageInfoSync`"
+msgstr ""
+
+#: ../../source/api/wx.getStorageInfoSync.rst:6
+msgid ":func:`wx.getStorageInfo` 的同步版本"
+msgstr ""
+
+#: ../../source/api/wx.getStorageInfoSync.rst
+msgid "返回类型"
+msgstr ""
+
+#: ../../source/api/wx.getStorageInfoSync.rst:8
+msgid "object"
+msgstr ""
+
+#: ../../source/api/wx.getStorageInfoSync.rst
+msgid "返回"
+msgstr ""
+
+#: ../../source/api/wx.getStorageInfoSync.rst:9
+msgid ""
+"- **keys**  *Array.<string>* -      当前 storage 中所有的 key - **currentSize**"
+"   *number* -      当前占用的空间大小, 单位 KB - **limitSize**     *number* -      "
+"限制的空间大小，单位 KB"
+msgstr ""
+
+#: ../../source/api/wx.getStorageInfoSync.rst:11
+msgid "**keys**  *Array.<string>* -      当前 storage 中所有的 key"
+msgstr ""
+
+#: ../../source/api/wx.getStorageInfoSync.rst:12
+msgid "**currentSize**   *number* -      当前占用的空间大小, 单位 KB"
+msgstr ""
+
+#: ../../source/api/wx.getStorageInfoSync.rst:13
+msgid "**limitSize**     *number* -      限制的空间大小，单位 KB"
+msgstr ""
+
+#: ../../source/api/wx.getStorageInfoSync.rst
+msgid "示例"
+msgstr ""
+

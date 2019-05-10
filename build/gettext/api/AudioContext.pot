@@ -1,0 +1,54 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019, Nosy
+# This file is distributed under the same license as the wxadev package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: wxadev \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-09 22:55+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/api/AudioContext.rst:4
+msgid ":wxapi:`AudioContext`"
+msgstr ""
+
+#: ../../source/api/AudioContext.rst:8
+msgid "AudioContext 实例，可通过 :func:`wx.createAudioContext` 获取。"
+msgstr ""
+
+#: ../../source/api/AudioContext.rst:10
+msgid "audioContext 通过 id 跟一个 <:ref:`audio`> 组件绑定，操作对应的 <:ref:`audio`> 组件。"
+msgstr ""
+
+#: ../../source/api/AudioContext.rst:13
+msgid "方法"
+msgstr ""
+
+#: ../../source/api/AudioContext.rst:17
+msgid "设置音频地址"
+msgstr ""
+
+#: ../../source/api/AudioContext.rst:21
+msgid "播放音频。"
+msgstr ""
+
+#: ../../source/api/AudioContext.rst:25
+msgid "暂停音频。"
+msgstr ""
+
+#: ../../source/api/AudioContext.rst:29
+msgid "跳转到指定位置。"
+msgstr ""
+
+#: ../../source/api/AudioContext.rst:31
+msgid "示例代码"
+msgstr ""
+

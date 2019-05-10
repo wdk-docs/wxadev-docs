@@ -1,0 +1,86 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019, Nosy
+# This file is distributed under the same license as the wxadev package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: wxadev \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-09 22:55+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../../source/api/wx.getShareInfo.rst:2
+msgid ":wxapi:`wx.getShareInfo`"
+msgstr ""
+
+#: ../../source/api/wx.getShareInfo.rst:6
+msgid "低版本需做 :ref:`compatibility`"
+msgstr ""
+
+#: ../../source/api/wx.getShareInfo.rst:8
+msgid "获取转发详细信息"
+msgstr ""
+
+#: ../../source/api/wx.getShareInfo.rst
+msgid "参数"
+msgstr ""
+
+#: ../../source/api/wx.getShareInfo.rst:10
+msgid "shareTicket"
+msgstr ""
+
+#: ../../source/api/wx.getShareInfo.rst:11
+msgid "超时时间，单位 ms     1.9.90"
+msgstr ""
+
+#: ../../source/api/wx.getShareInfo.rst:12
+msgid ""
+"接口调用成功的回调函数  - **errMsg**        (*string*) - 错误信息 - **encryptedData** "
+"(*string*) -包括敏感数据在内的完整转发信息的加密数据，详细见加密数据解密算法 - **iv** (*string*) "
+"-加密算法的初始向量，详细见加密数据解密算法"
+msgstr ""
+
+#: ../../source/api/wx.getShareInfo.rst:12
+msgid "接口调用成功的回调函数"
+msgstr ""
+
+#: ../../source/api/wx.getShareInfo.rst:14
+msgid "**errMsg**        (*string*) - 错误信息"
+msgstr ""
+
+#: ../../source/api/wx.getShareInfo.rst:15
+msgid "**encryptedData** (*string*) -包括敏感数据在内的完整转发信息的加密数据，详细见加密数据解密算法"
+msgstr ""
+
+#: ../../source/api/wx.getShareInfo.rst:16
+msgid "**iv** (*string*) -加密算法的初始向量，详细见加密数据解密算法"
+msgstr ""
+
+#: ../../source/api/wx.getShareInfo.rst:18
+msgid "接口调用失败的回调函数"
+msgstr ""
+
+#: ../../source/api/wx.getShareInfo.rst:19
+msgid "接口调用结束的回调函数（调用成功、失败都会执行）"
+msgstr ""
+
+#: ../../source/api/wx.getShareInfo.rst
+msgid "示例"
+msgstr ""
+
+#: ../../source/api/wx.getShareInfo.rst:23
+msgid "encryptedData 解密后为以下 json 结构，详见加密数据解密算法。其中 openGId 为当前群的唯一标识"
+msgstr ""
+
+#: ../../source/api/wx.getShareInfo.rst:31
+msgid "如需要展示群名称，可以使用开放数据组件"
+msgstr ""
+

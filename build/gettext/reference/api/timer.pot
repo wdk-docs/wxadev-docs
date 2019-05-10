@@ -1,0 +1,100 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019, Nosy
+# This file is distributed under the same license as the wxadev package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: wxadev \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-09 22:55+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/reference/api/timer.rst:2
+msgid "定时器"
+msgstr ""
+
+#: ../../source/reference/api/timer.rst:0
+#: ../../source/reference/api/timer.rst:0
+msgid "label"
+msgstr ""
+
+#: ../../source/reference/api/timer.rst:6
+msgid "设定一个定时器。在定时到期以后执行注册的回调函数"
+msgstr ""
+
+#: ../../source/reference/api/timer.rst:0
+#: ../../source/reference/api/timer.rst:0
+#: ../../source/reference/api/timer.rst:0
+#: ../../source/reference/api/timer.rst:0
+msgid "参数"
+msgstr ""
+
+#: ../../source/reference/api/timer.rst:7
+#: ../../source/reference/api/timer.rst:21
+msgid "回调函数"
+msgstr ""
+
+#: ../../source/reference/api/timer.rst:8
+msgid "延迟的时间，函数的调用会在该延迟之后发生，单位 ms。"
+msgstr ""
+
+#: ../../source/reference/api/timer.rst:9
+#: ../../source/reference/api/timer.rst:23
+msgid "param1, param2, ..., paramN 等附加参数，它们会作为参数传递给回调函数。"
+msgstr ""
+
+#: ../../source/reference/api/timer.rst:0
+#: ../../source/reference/api/timer.rst:0
+msgid "返回类型"
+msgstr ""
+
+#: ../../source/reference/api/timer.rst:10
+#: ../../source/reference/api/timer.rst:24
+msgid "number"
+msgstr ""
+
+#: ../../source/reference/api/timer.rst:0
+#: ../../source/reference/api/timer.rst:0
+msgid "返回"
+msgstr ""
+
+#: ../../source/reference/api/timer.rst:11
+msgid "定时器的编号 `timeoutID` 。这个值可以传递给 clearTimeout 来取消该定时。"
+msgstr ""
+
+#: ../../source/reference/api/timer.rst:15
+msgid "取消由 setTimeout 设置的定时器。"
+msgstr ""
+
+#: ../../source/reference/api/timer.rst:16
+#: ../../source/reference/api/timer.rst:31
+msgid "要取消的定时器的 ID"
+msgstr ""
+
+#: ../../source/reference/api/timer.rst:0
+msgid "Label"
+msgstr ""
+
+#: ../../source/reference/api/timer.rst:20
+msgid "设定一个定时器。按照指定的周期（以毫秒计）来执行注册的回调函数"
+msgstr ""
+
+#: ../../source/reference/api/timer.rst:22
+msgid "执行回调函数之间的时间间隔，单位 ms。"
+msgstr ""
+
+#: ../../source/reference/api/timer.rst:25
+msgid "定时器的编号 `intervalID` 。这个值可以传递给 clearInterval 来取消该定时。"
+msgstr ""
+
+#: ../../source/reference/api/timer.rst:29
+msgid "取消由 setInterval 设置的定时器。"
+msgstr ""
+

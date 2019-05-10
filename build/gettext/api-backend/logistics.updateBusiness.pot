@@ -1,0 +1,113 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019, Nosy
+# This file is distributed under the same license as the wxadev package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: wxadev \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-09 22:55+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/api-backend/logistics.updateBusiness.rst:2
+msgid ":wxbpi:`更新商户审核结果 <logistics.updateBusiness>`"
+msgstr ""
+
+#: ../../source/api-backend/logistics.updateBusiness.rst:4
+msgid "logistics.updateBusiness 本接口应在服务器端调用，详细说明参见服务端API。"
+msgstr ""
+
+#: ../../source/api-backend/logistics.updateBusiness.rst:7
+msgid "本接口支持云调用。需开发者工具版本 >= 1.02.1904090（最新稳定版下载），wx-server-sdk >= 0.4.0"
+msgstr ""
+
+#: ../../source/api-backend/logistics.updateBusiness.rst:11
+msgid "一、HTTPS 调用"
+msgstr ""
+
+#: ../../source/api-backend/logistics.updateBusiness.rst:13
+msgid "请求地址 POST https://api.weixin.qq.com/cgi-bin/express/delivery/service/business/update?access_token=ACCESS_TOKEN"
+msgstr ""
+
+#: ../../source/api-backend/logistics.updateBusiness.rst:16
+#: ../../source/api-backend/logistics.updateBusiness.rst:68
+msgid "请求参数"
+msgstr ""
+
+#: ../../source/api-backend/logistics.updateBusiness.rst:18
+msgid "属性      类型      默认值     必填      说明 access_token    string          是       接口调用凭证 shop_app_id     string          是       商户的小程序AppID，即审核商户事件中的 ShopAppID biz_id  string          是       商户账户 result_code     number          是       审核结果，0 表示审核通过，其他表示审核失败 result_msg      string          否       审核错误原因，仅 result_code 不等于 0 时需要设置 返回值 Object 属性      类型      说明 errcode number  错误码 errmsg  string  错误信息"
+msgstr ""
+
+#: ../../source/api-backend/logistics.updateBusiness.rst:30
+msgid "errcode 的合法值"
+msgstr ""
+
+#: ../../source/api-backend/logistics.updateBusiness.rst:32
+msgid "值       说明      最低版本 0       成功 -1      其他错误 40013   非法的商户小程序 AppID 9300525 商户未申请过审核"
+msgstr ""
+
+#: ../../source/api-backend/logistics.updateBusiness.rst:38
+#: ../../source/api-backend/logistics.updateBusiness.rst:99
+msgid "请求数据示例"
+msgstr ""
+
+#: ../../source/api-backend/logistics.updateBusiness.rst:49
+#: ../../source/api-backend/logistics.updateBusiness.rst:121
+msgid "返回数据示例"
+msgstr ""
+
+#: ../../source/api-backend/logistics.updateBusiness.rst:59
+msgid "二、云调用"
+msgstr ""
+
+#: ../../source/api-backend/logistics.updateBusiness.rst:61
+msgid "云调用是小程序·云开发提供的在云函数中调用微信开放接口的能力，需要在云函数中通过 wx-server-sdk 使用。"
+msgstr ""
+
+#: ../../source/api-backend/logistics.updateBusiness.rst:63
+msgid "接口方法"
+msgstr ""
+
+#: ../../source/api-backend/logistics.updateBusiness.rst:65
+msgid "openapi.logistics.updateBusiness 需在 config.json 中配置 logistics.updateBusiness API 的权限，详情"
+msgstr ""
+
+#: ../../source/api-backend/logistics.updateBusiness.rst:70
+msgid "属性      类型      默认值     必填      说明 shopAppId       string          是       商户的小程序AppID，即审核商户事件中的 ShopAppID bizId   string          是       商户账户 resultCode      number          是       审核结果，0 表示审核通过，其他表示审核失败 resultMsg       string          否       审核错误原因，仅 result_code 不等于 0 时需要设置"
+msgstr ""
+
+#: ../../source/api-backend/logistics.updateBusiness.rst:76
+msgid "返回值 Object"
+msgstr ""
+
+#: ../../source/api-backend/logistics.updateBusiness.rst:78
+msgid "属性      类型      说明 errCode number  错误码 errMsg  string  错误信息 errCode 的合法值"
+msgstr ""
+
+#: ../../source/api-backend/logistics.updateBusiness.rst:83
+msgid "值       说明      最低版本 0       成功"
+msgstr ""
+
+#: ../../source/api-backend/logistics.updateBusiness.rst:86
+msgid "异常 Object 抛出的异常"
+msgstr ""
+
+#: ../../source/api-backend/logistics.updateBusiness.rst:88
+msgid "属性      类型      说明 errCode number  错误码 errMsg  string  错误信息"
+msgstr ""
+
+#: ../../source/api-backend/logistics.updateBusiness.rst:92
+msgid "errCode 的合法值"
+msgstr ""
+
+#: ../../source/api-backend/logistics.updateBusiness.rst:94
+msgid "值       说明      最低版本 -1      其他错误 40013   非法的商户小程序 AppID 9300525 商户未申请过审核"
+msgstr ""
+

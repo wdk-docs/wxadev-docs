@@ -1,0 +1,150 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019, Nosy
+# This file is distributed under the same license as the wxadev package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: wxadev \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-09 23:21+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/api-backend/logistics.updatePrinter.rst:2
+msgid ":wxbpi:`更新打印员 <logistics.updatePrinter>`"
+msgstr ""
+
+#: ../../source/api-backend/logistics.updatePrinter.rst:6
+msgid "本接口应在服务器端调用，详细说明参见 :ref:`api-backend` 。"
+msgstr ""
+
+#: ../../source/api-backend/logistics.updatePrinter.rst:8
+msgid "本接口支持 `云调用 <https:://wdk-docs.github.io/wxcloud-docs>`_ 。 需开发者工具版本 ``>= 1.02.1904090`` (最新 :download:`稳定版下载 <https://developers.weixin.qq.com/miniprogram/dev/devtools/stable.html?t=19043020>`)， ``wx-server-sdk >= 0.4.0``"
+msgstr ""
+
+#: ../../source/api-backend/logistics.updatePrinter.rst:13
+msgid "若需要使用 :ref:`微信打单 PC 软件 <express-download>` ，才需要调用。"
+msgstr ""
+
+#: ../../source/api-backend/logistics.updatePrinter.rst:16
+msgid "一、HTTPS 调用"
+msgstr ""
+
+#: ../../source/api-backend/logistics.updatePrinter.rst:20
+msgid ":term:`api`"
+msgstr ""
+
+#: ../../source/api-backend/logistics.updatePrinter.rst:0
+msgid "Query Parameters"
+msgstr ""
+
+#: ../../source/api-backend/logistics.updatePrinter.rst:22
+msgid "*必选*      接口调用凭证"
+msgstr ""
+
+#: ../../source/api-backend/logistics.updatePrinter.rst:0
+msgid "Request JSON Object"
+msgstr ""
+
+#: ../../source/api-backend/logistics.updatePrinter.rst:23
+msgid "*必选*    打印员 openid"
+msgstr ""
+
+#: ../../source/api-backend/logistics.updatePrinter.rst:24
+msgid "*必选*       更新类型 合法值:  - *bind*    绑定 - *unbind*  解除绑定"
+msgstr ""
+
+#: ../../source/api-backend/logistics.updatePrinter.rst:24
+msgid "*必选*       更新类型 合法值:"
+msgstr ""
+
+#: ../../source/api-backend/logistics.updatePrinter.rst:26
+msgid "*bind*    绑定"
+msgstr ""
+
+#: ../../source/api-backend/logistics.updatePrinter.rst:27
+msgid "*unbind*  解除绑定"
+msgstr ""
+
+#: ../../source/api-backend/logistics.updatePrinter.rst:0
+msgid "Response JSON Object"
+msgstr ""
+
+#: ../../source/api-backend/logistics.updatePrinter.rst:29
+msgid "错误码  - *0*       成功 - *-1*      系统失败 - *9300517* update_type 不正确"
+msgstr ""
+
+#: ../../source/api-backend/logistics.updatePrinter.rst:29
+msgid "错误码"
+msgstr ""
+
+#: ../../source/api-backend/logistics.updatePrinter.rst:31
+msgid "*0*       成功"
+msgstr ""
+
+#: ../../source/api-backend/logistics.updatePrinter.rst:32
+msgid "*-1*      系统失败"
+msgstr ""
+
+#: ../../source/api-backend/logistics.updatePrinter.rst:33
+msgid "*9300517* update_type 不正确"
+msgstr ""
+
+#: ../../source/api-backend/logistics.updatePrinter.rst:35
+msgid "错误信息"
+msgstr ""
+
+#: ../../source/api-backend/logistics.updatePrinter.rst:0
+msgid "请求示例"
+msgstr ""
+
+#: ../../source/api-backend/logistics.updatePrinter.rst:0
+msgid "返回示例"
+msgstr ""
+
+#: ../../source/api-backend/logistics.updatePrinter.rst:56
+msgid "二、云调用"
+msgstr ""
+
+#: ../../source/api-backend/logistics.updatePrinter.rst:58
+msgid "云调用是小程序·云开发提供的在云函数中调用微信开放接口的能力，需要在云函数中通过 wx-server-sdk 使用。"
+msgstr ""
+
+#: ../../source/api-backend/logistics.updatePrinter.rst:60
+msgid "接口方法"
+msgstr ""
+
+#: ../../source/api-backend/logistics.updatePrinter.rst:64
+msgid "需在 config.json 中配置 logistics.updatePrinter API 的权限，详情"
+msgstr ""
+
+#: ../../source/api-backend/logistics.updatePrinter.rst:66
+msgid "请求参数 属性      类型      默认值     必填      说明 openid  string          是       打印员 openid updateType      string          是       更新类型 updateType 的合法值"
+msgstr ""
+
+#: ../../source/api-backend/logistics.updatePrinter.rst:72
+msgid "值       说明      最低版本 bind    绑定 unbind  解除绑定 返回值 Object 属性      类型      说明 errCode number  错误码 errMsg  string  错误信息 errCode 的合法值"
+msgstr ""
+
+#: ../../source/api-backend/logistics.updatePrinter.rst:82
+msgid "值       说明      最低版本 0       成功 异常 Object 抛出的异常"
+msgstr ""
+
+#: ../../source/api-backend/logistics.updatePrinter.rst:88
+msgid "属性      类型      说明 errCode number  错误码 errMsg  string  错误信息 errCode 的合法值"
+msgstr ""
+
+#: ../../source/api-backend/logistics.updatePrinter.rst:93
+msgid "值       说明      最低版本 -1      系统失败 9300517 update_type 不正确 请求数据示例"
+msgstr ""
+
+#: ../../source/api-backend/logistics.updatePrinter.rst:116
+msgid "返回数据示例"
+msgstr ""
+

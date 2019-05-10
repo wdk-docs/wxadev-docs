@@ -1,0 +1,90 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019, Nosy
+# This file is distributed under the same license as the wxadev package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: wxadev \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-09 22:55+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/api/wx.canIUse.rst:2
+msgid ":wxapi:`wx.canIUse`"
+msgstr ""
+
+#: ../../source/api/wx.canIUse.rst:0
+msgid "label"
+msgstr ""
+
+#: ../../source/api/wx.canIUse.rst:9
+msgid "判断小程序的API，回调，参数，组件等是否在当前版本可用"
+msgstr ""
+
+#: ../../source/api/wx.canIUse.rst:0
+msgid "参数"
+msgstr ""
+
+#: ../../source/api/wx.canIUse.rst:11
+msgid "使用 ${API}.${method}.${param}.${options} 或者 ${component}.${attribute}.${option} 方式来调用  - *${API}* 代表 API 名字 - *${method}* 代表调用方式，有效值为return, success, object, callback - *${param}* 代表参数或者返回值 - *${options}* 代表参数的可选值 - *${component}* 代表组件名字 - *${attribute}* 代表组件属性 - *${option}* 代表组件属性的可选值"
+msgstr ""
+
+#: ../../source/api/wx.canIUse.rst:11
+msgid "使用 ${API}.${method}.${param}.${options} 或者 ${component}.${attribute}.${option} 方式来调用"
+msgstr ""
+
+#: ../../source/api/wx.canIUse.rst:13
+msgid "*${API}* 代表 API 名字"
+msgstr ""
+
+#: ../../source/api/wx.canIUse.rst:14
+msgid "*${method}* 代表调用方式，有效值为return, success, object, callback"
+msgstr ""
+
+#: ../../source/api/wx.canIUse.rst:15
+msgid "*${param}* 代表参数或者返回值"
+msgstr ""
+
+#: ../../source/api/wx.canIUse.rst:16
+msgid "*${options}* 代表参数的可选值"
+msgstr ""
+
+#: ../../source/api/wx.canIUse.rst:17
+msgid "*${component}* 代表组件名字"
+msgstr ""
+
+#: ../../source/api/wx.canIUse.rst:18
+msgid "*${attribute}* 代表组件属性"
+msgstr ""
+
+#: ../../source/api/wx.canIUse.rst:19
+msgid "*${option}* 代表组件属性的可选值"
+msgstr ""
+
+#: ../../source/api/wx.canIUse.rst:0
+msgid "返回类型"
+msgstr ""
+
+#: ../../source/api/wx.canIUse.rst:21
+msgid "boolean"
+msgstr ""
+
+#: ../../source/api/wx.canIUse.rst:0
+msgid "返回"
+msgstr ""
+
+#: ../../source/api/wx.canIUse.rst:22
+msgid "布尔值 当前版本是否可用"
+msgstr ""
+
+#: ../../source/api/wx.canIUse.rst:0
+msgid "示例代码"
+msgstr ""
+

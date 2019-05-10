@@ -1,0 +1,42 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019, Nosy
+# This file is distributed under the same license as the wxadev package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: wxadev \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-09 22:55+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/api/setTimeout.rst:4
+msgid ":wxapi:`setTimeout`"
+msgstr ""
+
+#: ../../source/api/setTimeout.rst:6
+msgid "number setTimeout(function callback, number delay, any rest) 设定一个定时器。在定时到期以后执行注册的回调函数"
+msgstr ""
+
+#: ../../source/api/setTimeout.rst:9
+msgid "参数 function callback 回调函数"
+msgstr ""
+
+#: ../../source/api/setTimeout.rst:13
+msgid "number delay 延迟的时间，函数的调用会在该延迟之后发生，单位 ms。"
+msgstr ""
+
+#: ../../source/api/setTimeout.rst:16
+msgid "any rest param1, param2, ..., paramN 等附加参数，它们会作为参数传递给回调函数。"
+msgstr ""
+
+#: ../../source/api/setTimeout.rst:19
+msgid "返回值 number 定时器的编号。这个值可以传递给 clearTimeout 来取消该定时。"
+msgstr ""
+

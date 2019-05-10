@@ -1,0 +1,71 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019, Nosy
+# This file is distributed under the same license as the wxadev package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: wxadev \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-09 22:55+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../../source/api/wx.compressImage.rst:2
+msgid ":wxapi:`wx.compressImage`"
+msgstr ""
+
+#: ../../source/api/wx.compressImage.rst:7
+msgid "低版本需做  :ref:`compatibility` 。"
+msgstr ""
+
+#: ../../source/api/wx.compressImage.rst
+msgid "label"
+msgstr ""
+
+#: ../../source/api/wx.compressImage.rst:9
+msgid "压缩图片接口，可选压缩质量"
+msgstr ""
+
+#: ../../source/api/wx.compressImage.rst
+msgid "参数"
+msgstr ""
+
+#: ../../source/api/wx.compressImage.rst:11
+msgid "图片路径，图片的路径，可以是相对路径、临时文件路径、存储文件路径"
+msgstr ""
+
+#: ../../source/api/wx.compressImage.rst:12
+msgid "``80`` 压缩质量，范围0～100，数值越小，质量越低，压缩率越高（仅对jpg有效）。"
+msgstr ""
+
+#: ../../source/api/wx.compressImage.rst:13
+msgid "接口调用成功的回调函数  - **tempFilePath** (*string*) - 压缩后图片的临时文件路径"
+msgstr ""
+
+#: ../../source/api/wx.compressImage.rst:13
+msgid "接口调用成功的回调函数"
+msgstr ""
+
+#: ../../source/api/wx.compressImage.rst:15
+msgid "**tempFilePath** (*string*) - 压缩后图片的临时文件路径"
+msgstr ""
+
+#: ../../source/api/wx.compressImage.rst:17
+msgid "接口调用失败的回调函数"
+msgstr ""
+
+#: ../../source/api/wx.compressImage.rst:18
+msgid "接口调用结束的回调函数（调用成功、失败都会执行）"
+msgstr ""
+
+#: ../../source/api/wx.compressImage.rst
+msgid "示例"
+msgstr ""
+

@@ -1,0 +1,87 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019, Nosy
+# This file is distributed under the same license as the wxadev package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: wxadev \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-09 22:55+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../../source/wxwork/api/contact/wx.qy.openEnterpriseChat.rst:2
+msgid ""
+":wxwork:`wx.qy.openEnterpriseChat <dev-doc/qywx-"
+"api/contact/wxqyopenenterprisechat>`"
+msgstr ""
+
+#: ../../source/wxwork/api/contact/wx.qy.openEnterpriseChat.rst
+msgid "label"
+msgstr ""
+
+#: ../../source/wxwork/api/contact/wx.qy.openEnterpriseChat.rst:6
+msgid "打开通讯录选人功能"
+msgstr ""
+
+#: ../../source/wxwork/api/contact/wx.qy.openEnterpriseChat.rst
+msgid "参数"
+msgstr ""
+
+#: ../../source/wxwork/api/contact/wx.qy.openEnterpriseChat.rst:7
+msgid "会话名称。单聊时该参数传入空字符串\"\"即可"
+msgstr ""
+
+#: ../../source/wxwork/api/contact/wx.qy.openEnterpriseChat.rst:8
+msgid ""
+"(userIds和externalUserIds至少填一个)参与会话的企业成员列表，格式为 ``userid1;userid2;...`` "
+"，用分号隔开。"
+msgstr ""
+
+#: ../../source/wxwork/api/contact/wx.qy.openEnterpriseChat.rst:9
+msgid "(userIds和externalUserIds至少填一个) 参与会话的外部联系人列表，格式为userId1;userId2;…，用分号隔开。"
+msgstr ""
+
+#: ../../source/wxwork/api/contact/wx.qy.openEnterpriseChat.rst:10
+msgid "接口调用成功的回调函数"
+msgstr ""
+
+#: ../../source/wxwork/api/contact/wx.qy.openEnterpriseChat.rst:11
+msgid "接口调用失败的回调函数"
+msgstr ""
+
+#: ../../source/wxwork/api/contact/wx.qy.openEnterpriseChat.rst:12
+msgid "接口调用结束的回调函数(调用成功、失败都会执行)"
+msgstr ""
+
+#: ../../source/wxwork/api/contact/wx.qy.openEnterpriseChat.rst
+msgid "调用前提"
+msgstr ""
+
+#: ../../source/wxwork/api/contact/wx.qy.openEnterpriseChat.rst:16
+msgid "必须先调用过wx.qy.login，且session_key未过期，开发者可调用checkSession 检查当前登录态"
+msgstr ""
+
+#: ../../source/wxwork/api/contact/wx.qy.openEnterpriseChat.rst:17
+msgid "当前成员必须在应用的可见范围"
+msgstr ""
+
+#: ../../source/wxwork/api/contact/wx.qy.openEnterpriseChat.rst:18
+msgid "externalUserIds由外部联系人选人接口selectExternalContact获得"
+msgstr ""
+
+#: ../../source/wxwork/api/contact/wx.qy.openEnterpriseChat.rst:19
+msgid "由于目前暂不支持包含微信联系人的群聊，所以externalUserIds中最多只能有一个微信联系人，而且一旦externalUserIds中有微信联系人，就不能再传userIds参数。"
+msgstr ""
+
+#: ../../source/wxwork/api/contact/wx.qy.openEnterpriseChat.rst
+msgid "示例代码"
+msgstr ""
+

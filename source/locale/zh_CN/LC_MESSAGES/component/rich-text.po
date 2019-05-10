@@ -1,0 +1,452 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019, Nosy
+# This file is distributed under the same license as the wxadev package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: wxadev \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-09 22:55+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../../source/component/rich-text.rst:4
+msgid ":wx_comp:`rich-text <rich-text>`"
+msgstr ""
+
+#: ../../source/component/rich-text.rst:6
+msgid "低版本需做 :ref:`compatibility` 。"
+msgstr ""
+
+#: ../../source/component/rich-text.rst:9
+#: ../../source/component/rich-text.rst:33
+#: ../../source/component/rich-text.rst:37
+#: ../../source/component/rich-text.rst:45
+#: ../../source/component/rich-text.rst:55
+msgid "属性"
+msgstr ""
+
+#: ../../source/component/rich-text.rst:9
+#: ../../source/component/rich-text.rst:33
+#: ../../source/component/rich-text.rst:45
+msgid "类型"
+msgstr ""
+
+#: ../../source/component/rich-text.rst:9
+msgid "默认值"
+msgstr ""
+
+#: ../../source/component/rich-text.rst:9
+#: ../../source/component/rich-text.rst:33
+#: ../../source/component/rich-text.rst:45
+msgid "必填"
+msgstr ""
+
+#: ../../source/component/rich-text.rst:9
+#: ../../source/component/rich-text.rst:19
+#: ../../source/component/rich-text.rst:33
+#: ../../source/component/rich-text.rst:45
+msgid "说明"
+msgstr ""
+
+#: ../../source/component/rich-text.rst:9
+msgid "最低版本"
+msgstr ""
+
+#: ../../source/component/rich-text.rst:11
+#: ../../source/component/rich-text.rst:28
+msgid "nodes"
+msgstr ""
+
+#: ../../source/component/rich-text.rst:11
+msgid "array/string"
+msgstr ""
+
+#: ../../source/component/rich-text.rst:11
+msgid "[]"
+msgstr ""
+
+#: ../../source/component/rich-text.rst:11
+#: ../../source/component/rich-text.rst:13
+#: ../../source/component/rich-text.rst:37
+#: ../../source/component/rich-text.rst:39
+msgid "否"
+msgstr ""
+
+#: ../../source/component/rich-text.rst:11
+msgid "节点列表/HTML String"
+msgstr ""
+
+#: ../../source/component/rich-text.rst:11
+msgid "1.4.0"
+msgstr ""
+
+#: ../../source/component/rich-text.rst:13
+msgid "space"
+msgstr ""
+
+#: ../../source/component/rich-text.rst:13
+#: ../../source/component/rich-text.rst:35
+#: ../../source/component/rich-text.rst:47
+msgid "string"
+msgstr ""
+
+#: ../../source/component/rich-text.rst:13
+msgid "显示连续空格"
+msgstr ""
+
+#: ../../source/component/rich-text.rst:13
+msgid "2.4.1"
+msgstr ""
+
+#: ../../source/component/rich-text.rst:16
+msgid "space 的合法值"
+msgstr ""
+
+#: ../../source/component/rich-text.rst:19
+msgid "值"
+msgstr ""
+
+#: ../../source/component/rich-text.rst:21
+msgid "ensp"
+msgstr ""
+
+#: ../../source/component/rich-text.rst:21
+msgid "中文字符空格一半大小"
+msgstr ""
+
+#: ../../source/component/rich-text.rst:23
+msgid "emsp"
+msgstr ""
+
+#: ../../source/component/rich-text.rst:23
+msgid "中文字符空格大小"
+msgstr ""
+
+#: ../../source/component/rich-text.rst:25
+msgid "nbsp"
+msgstr ""
+
+#: ../../source/component/rich-text.rst:25
+msgid "根据字体设置的空格大小"
+msgstr ""
+
+#: ../../source/component/rich-text.rst:30
+msgid "现支持两种节点，通过type来区分，分别是元素节点和文本节点，默认是元素节点，在富文本区域里显示的HTML节点 元素节点：type = node*"
+msgstr ""
+
+#: ../../source/component/rich-text.rst:33
+#: ../../source/component/rich-text.rst:45
+msgid "备注"
+msgstr ""
+
+#: ../../source/component/rich-text.rst:35
+msgid "name"
+msgstr ""
+
+#: ../../source/component/rich-text.rst:35
+msgid "标签名"
+msgstr ""
+
+#: ../../source/component/rich-text.rst:35
+#: ../../source/component/rich-text.rst:47
+msgid "是"
+msgstr ""
+
+#: ../../source/component/rich-text.rst:35
+msgid "支持部分受信任的 HTML 节点"
+msgstr ""
+
+#: ../../source/component/rich-text.rst:37
+msgid "attrs"
+msgstr ""
+
+#: ../../source/component/rich-text.rst:37
+msgid "object"
+msgstr ""
+
+#: ../../source/component/rich-text.rst:37
+msgid "支持部分受信任的属性，遵循 Pascal 命名法"
+msgstr ""
+
+#: ../../source/component/rich-text.rst:39
+msgid "children"
+msgstr ""
+
+#: ../../source/component/rich-text.rst:39
+msgid "子节点列表"
+msgstr ""
+
+#: ../../source/component/rich-text.rst:39
+msgid "array"
+msgstr ""
+
+#: ../../source/component/rich-text.rst:39
+msgid "结构和 nodes 一致"
+msgstr ""
+
+#: ../../source/component/rich-text.rst:42
+msgid "文本节点：``type = text*``"
+msgstr ""
+
+#: ../../source/component/rich-text.rst:47
+msgid "text"
+msgstr ""
+
+#: ../../source/component/rich-text.rst:47
+msgid "文本"
+msgstr ""
+
+#: ../../source/component/rich-text.rst:47
+msgid "支持entities"
+msgstr ""
+
+#: ../../source/component/rich-text.rst:50
+msgid "受信任的HTML节点及属性"
+msgstr ""
+
+#: ../../source/component/rich-text.rst:52
+msgid "全局支持class和style属性，不支持id属性。"
+msgstr ""
+
+#: ../../source/component/rich-text.rst:55
+msgid "节点"
+msgstr ""
+
+#: ../../source/component/rich-text.rst:57
+msgid "a"
+msgstr ""
+
+#: ../../source/component/rich-text.rst:58
+msgid "abbr"
+msgstr ""
+
+#: ../../source/component/rich-text.rst:59
+msgid "b"
+msgstr ""
+
+#: ../../source/component/rich-text.rst:60
+msgid "blockquote"
+msgstr ""
+
+#: ../../source/component/rich-text.rst:61
+msgid "br"
+msgstr ""
+
+#: ../../source/component/rich-text.rst:62
+msgid "code"
+msgstr ""
+
+#: ../../source/component/rich-text.rst:63
+msgid "col"
+msgstr ""
+
+#: ../../source/component/rich-text.rst:63
+#: ../../source/component/rich-text.rst:64
+msgid "span，width"
+msgstr ""
+
+#: ../../source/component/rich-text.rst:64
+msgid "colgroup"
+msgstr ""
+
+#: ../../source/component/rich-text.rst:65
+msgid "dd"
+msgstr ""
+
+#: ../../source/component/rich-text.rst:66
+msgid "del"
+msgstr ""
+
+#: ../../source/component/rich-text.rst:67
+msgid "div"
+msgstr ""
+
+#: ../../source/component/rich-text.rst:68
+msgid "dl"
+msgstr ""
+
+#: ../../source/component/rich-text.rst:69
+msgid "dt"
+msgstr ""
+
+#: ../../source/component/rich-text.rst:70
+msgid "em"
+msgstr ""
+
+#: ../../source/component/rich-text.rst:71
+msgid "fieldset"
+msgstr ""
+
+#: ../../source/component/rich-text.rst:72
+msgid "h1"
+msgstr ""
+
+#: ../../source/component/rich-text.rst:73
+msgid "h2"
+msgstr ""
+
+#: ../../source/component/rich-text.rst:74
+msgid "h3"
+msgstr ""
+
+#: ../../source/component/rich-text.rst:75
+msgid "h4"
+msgstr ""
+
+#: ../../source/component/rich-text.rst:76
+msgid "h5"
+msgstr ""
+
+#: ../../source/component/rich-text.rst:77
+msgid "h6"
+msgstr ""
+
+#: ../../source/component/rich-text.rst:78
+msgid "hr"
+msgstr ""
+
+#: ../../source/component/rich-text.rst:79
+msgid "i"
+msgstr ""
+
+#: ../../source/component/rich-text.rst:80
+msgid "img"
+msgstr ""
+
+#: ../../source/component/rich-text.rst:80
+msgid "alt，src，height，width"
+msgstr ""
+
+#: ../../source/component/rich-text.rst:81
+msgid "ins"
+msgstr ""
+
+#: ../../source/component/rich-text.rst:82
+msgid "label"
+msgstr ""
+
+#: ../../source/component/rich-text.rst:83
+msgid "legend"
+msgstr ""
+
+#: ../../source/component/rich-text.rst:84
+msgid "li"
+msgstr ""
+
+#: ../../source/component/rich-text.rst:85
+msgid "ol"
+msgstr ""
+
+#: ../../source/component/rich-text.rst:85
+msgid "start，type"
+msgstr ""
+
+#: ../../source/component/rich-text.rst:86
+msgid "p"
+msgstr ""
+
+#: ../../source/component/rich-text.rst:87
+msgid "q"
+msgstr ""
+
+#: ../../source/component/rich-text.rst:88
+msgid "span"
+msgstr ""
+
+#: ../../source/component/rich-text.rst:89
+msgid "strong"
+msgstr ""
+
+#: ../../source/component/rich-text.rst:90
+msgid "sub"
+msgstr ""
+
+#: ../../source/component/rich-text.rst:91
+msgid "sup"
+msgstr ""
+
+#: ../../source/component/rich-text.rst:92
+msgid "table"
+msgstr ""
+
+#: ../../source/component/rich-text.rst:92
+msgid "width"
+msgstr ""
+
+#: ../../source/component/rich-text.rst:93
+msgid "tbody"
+msgstr ""
+
+#: ../../source/component/rich-text.rst:94
+msgid "td"
+msgstr ""
+
+#: ../../source/component/rich-text.rst:94
+#: ../../source/component/rich-text.rst:96
+msgid "colspan，height，rowspan，width"
+msgstr ""
+
+#: ../../source/component/rich-text.rst:95
+msgid "tfoot"
+msgstr ""
+
+#: ../../source/component/rich-text.rst:96
+msgid "th"
+msgstr ""
+
+#: ../../source/component/rich-text.rst:97
+msgid "thead"
+msgstr ""
+
+#: ../../source/component/rich-text.rst:98
+msgid "tr"
+msgstr ""
+
+#: ../../source/component/rich-text.rst:99
+msgid "ul"
+msgstr ""
+
+#: ../../source/component/rich-text.rst:103
+msgid "nodes 不推荐使用 String 类型，性能会有所下降。"
+msgstr ""
+
+#: ../../source/component/rich-text.rst:104
+msgid "rich-text 组件内屏蔽所有节点的事件。"
+msgstr ""
+
+#: ../../source/component/rich-text.rst:105
+msgid "attrs 属性不支持 id ，支持 class 。"
+msgstr ""
+
+#: ../../source/component/rich-text.rst:106
+msgid "name 属性大小写不敏感。"
+msgstr ""
+
+#: ../../source/component/rich-text.rst:107
+msgid "如果使用了不受信任的HTML节点，该节点及其所有子节点将会被移除。"
+msgstr ""
+
+#: ../../source/component/rich-text.rst:108
+msgid "img 标签仅支持网络图片。"
+msgstr ""
+
+#: ../../source/component/rich-text.rst:109
+msgid "如果在自定义组件中使用 rich-text 组件，那么仅自定义组件的 wxss 样式对 rich-text 中的 class 生效。"
+msgstr ""
+
+#: ../../source/component/rich-text.rst:111
+msgid "示例代码"
+msgstr ""
+
+#: ../../source/component/rich-text.rst:113
+msgid ":download:`在开发者工具中预览效果 <https://developers.weixin.qq.com/s/zPVmpim46wYQ>`"
+msgstr ""
+

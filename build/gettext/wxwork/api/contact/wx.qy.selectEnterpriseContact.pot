@@ -1,0 +1,94 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019, Nosy
+# This file is distributed under the same license as the wxadev package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: wxadev \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-09 22:55+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/wxwork/api/contact/wx.qy.selectEnterpriseContact.rst:2
+msgid ":wxwork:`wx.qy.selectEnterpriseContact <dev-doc/qywx-api/contact/wxqyselectenterprisecontact>`"
+msgstr ""
+
+#: ../../source/wxwork/api/contact/wx.qy.selectEnterpriseContact.rst:0
+msgid "label"
+msgstr ""
+
+#: ../../source/wxwork/api/contact/wx.qy.selectEnterpriseContact.rst:6
+msgid "打开通讯录选人功能"
+msgstr ""
+
+#: ../../source/wxwork/api/contact/wx.qy.selectEnterpriseContact.rst:0
+msgid "参数"
+msgstr ""
+
+#: ../../source/wxwork/api/contact/wx.qy.selectEnterpriseContact.rst:7
+msgid "是       -1表示打开的通讯录从自己所在部门开始展示, 0表示从最上层开始"
+msgstr ""
+
+#: ../../source/wxwork/api/contact/wx.qy.selectEnterpriseContact.rst:8
+msgid "是       选择模式，\"single\"表示单选，\"multi\"表示多选"
+msgstr ""
+
+#: ../../source/wxwork/api/contact/wx.qy.selectEnterpriseContact.rst:9
+msgid "是       选择限制类型，指定\"department\"、\"user\"中的一个或者多个"
+msgstr ""
+
+#: ../../source/wxwork/api/contact/wx.qy.selectEnterpriseContact.rst:10
+msgid "否       已选部门ID列表。用于多次选人时可重入"
+msgstr ""
+
+#: ../../source/wxwork/api/contact/wx.qy.selectEnterpriseContact.rst:11
+msgid "否       已选用户ID列表。用于多次选人时可重入"
+msgstr ""
+
+#: ../../source/wxwork/api/contact/wx.qy.selectEnterpriseContact.rst:12
+msgid "接口调用成功的回调函数  - **departmentList**        (*array*)       已选的部门列表 - **userList**      (*array*)       已选的成员列表"
+msgstr ""
+
+#: ../../source/wxwork/api/contact/wx.qy.selectEnterpriseContact.rst:12
+msgid "接口调用成功的回调函数"
+msgstr ""
+
+#: ../../source/wxwork/api/contact/wx.qy.selectEnterpriseContact.rst:14
+msgid "**departmentList**        (*array*)       已选的部门列表"
+msgstr ""
+
+#: ../../source/wxwork/api/contact/wx.qy.selectEnterpriseContact.rst:15
+msgid "**userList**      (*array*)       已选的成员列表"
+msgstr ""
+
+#: ../../source/wxwork/api/contact/wx.qy.selectEnterpriseContact.rst:17
+msgid "接口调用失败的回调函数"
+msgstr ""
+
+#: ../../source/wxwork/api/contact/wx.qy.selectEnterpriseContact.rst:18
+msgid "接口调用结束的回调函数（调用成功、失败都会执行）"
+msgstr ""
+
+#: ../../source/wxwork/api/contact/wx.qy.selectEnterpriseContact.rst:0
+msgid "调用前提"
+msgstr ""
+
+#: ../../source/wxwork/api/contact/wx.qy.selectEnterpriseContact.rst:21
+msgid "必须先调用过wx.qy.login，且session_key未过期，开发者可调用checkSession 检查当前登录态"
+msgstr ""
+
+#: ../../source/wxwork/api/contact/wx.qy.selectEnterpriseContact.rst:22
+msgid "当前成员必须在应用的可见范围"
+msgstr ""
+
+#: ../../source/wxwork/api/contact/wx.qy.selectEnterpriseContact.rst:0
+msgid "示例代码"
+msgstr ""
+

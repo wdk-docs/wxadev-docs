@@ -1,0 +1,277 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019, Nosy
+# This file is distributed under the same license as the wxadev package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: wxadev \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-09 22:55+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../../source/framework/plugin/functional-pages/request-payment.rst:2
+#: ../../source/framework/plugin/functional-pages/request-payment.rst:56
+msgid "支付功能页"
+msgstr ""
+
+#: ../../source/framework/plugin/functional-pages/request-payment.rst:4
+msgid "支付功能页用于帮助插件完成支付，相当于 wx.requestPayment 的功能。"
+msgstr ""
+
+#: ../../source/framework/plugin/functional-pages/request-payment.rst:6
+msgid ""
+"需要注意的是：插件使用支付功能，需要进行额外的权限申请，申请位置位于管理后台的“小程序插件 -> 基本设置 -> "
+"支付能力”设置项中。另外，无论是否通过申请，主体为个人小程序在使用插件时，都无法正常使用插件里的支付功能。"
+msgstr ""
+
+#: ../../source/framework/plugin/functional-pages/request-payment.rst:8
+msgid ""
+"调用参数 支付功能页使用 <functional-page-navigator> 进行跳转时，对应的参数 name 应为固定值 "
+"requestPayment，其他参数如下："
+msgstr ""
+
+#: ../../source/framework/plugin/functional-pages/request-payment.rst:11
+msgid "args参数说明："
+msgstr ""
+
+#: ../../source/framework/plugin/functional-pages/request-payment.rst:13
+msgid ""
+"参数名     类型      必填      说明 fee     Number  是       需要显示在页面中的金额，单位为分 "
+"paymentArgs     Object  否       任意数据，传递给功能页中的响应函数 回调结果："
+msgstr ""
+
+#: ../../source/framework/plugin/functional-pages/request-payment.rst:18
+msgid ""
+"回调类型    errMsg  说明 success requestPayment:ok       调用支付成功 fail    "
+"requestPayment:fail cancel      用户取消支付 fail    requestPayment:fail "
+"(detail message)    调用支付失败，其中 detail message 为后台返回的详细失败原因 代码示例："
+msgstr ""
+
+#: ../../source/framework/plugin/functional-pages/request-payment.rst:24
+msgid ""
+"<!-- plugin/components/pay.wxml --> <!-- 上线时，version 应改为 "
+"\"release\"，并确保插件所有者小程序已经发布 --> <functional-page-navigator"
+msgstr ""
+
+#: ../../source/framework/plugin/functional-pages/request-payment.rst:27
+msgid ""
+"version=\"develop\" name=\"requestPayment\" args=\"{{ args }}\" "
+"bind:success=\"paymentSuccess\" bind:fail=\"paymentFailed\""
+msgstr ""
+
+#: ../../source/framework/plugin/functional-pages/request-payment.rst:32
+msgid ">"
+msgstr ""
+
+#: ../../source/framework/plugin/functional-pages/request-payment.rst:33
+msgid "<button class=\"payment-button\">支付 0.01 元</button>"
+msgstr ""
+
+#: ../../source/framework/plugin/functional-pages/request-payment.rst:34
+msgid "</functional-page-navigator> // plugin/components/pay.js Component({"
+msgstr ""
+
+#: ../../source/framework/plugin/functional-pages/request-payment.rst:40
+msgid "data: {"
+msgstr ""
+
+#: ../../source/framework/plugin/functional-pages/request-payment.rst:39
+msgid "args: {"
+msgstr ""
+
+#: ../../source/framework/plugin/functional-pages/request-payment.rst:39
+msgid "fee: 1, // 支付金额，单位为分 paymentArgs: 'A' // 将传递到功能页函数的自定义参数"
+msgstr ""
+
+#: ../../source/framework/plugin/functional-pages/request-payment.rst:41
+#: ../../source/framework/plugin/functional-pages/request-payment.rst:51
+#: ../../source/framework/plugin/functional-pages/request-payment.rst:52
+#: ../../source/framework/plugin/functional-pages/request-payment.rst:131
+#: ../../source/framework/plugin/functional-pages/request-payment.rst:138
+#: ../../source/framework/plugin/functional-pages/request-payment.rst:145
+msgid "}"
+msgstr ""
+
+#: ../../source/framework/plugin/functional-pages/request-payment.rst:42
+msgid "}, methods: {"
+msgstr ""
+
+#: ../../source/framework/plugin/functional-pages/request-payment.rst:44
+msgid "// 支付成功的回调接口 paymentSuccess(e) {"
+msgstr ""
+
+#: ../../source/framework/plugin/functional-pages/request-payment.rst:46
+#: ../../source/framework/plugin/functional-pages/request-payment.rst:50
+msgid "console.log(e)"
+msgstr ""
+
+#: ../../source/framework/plugin/functional-pages/request-payment.rst:47
+msgid "}, // 支付失败的回调接口 paymentFailed(e) {"
+msgstr ""
+
+#: ../../source/framework/plugin/functional-pages/request-payment.rst:53
+msgid "}) 用户点击该 navigator 后，将跳转到如下的支付功能页："
+msgstr ""
+
+#: ../../source/framework/plugin/functional-pages/request-payment.rst:58
+msgid ""
+"配置功能页函数 "
+"支付功能页需要插件开发者在插件所有者小程序中提供一个函数来响应插件中的支付调用。即，在插件中跳转到支付功能页时，这个函数就会在合适的时机被调用，来帮助完成支付。如果不提供功能页函数，功能页调用将通过"
+" fail 事件返回失败。"
+msgstr ""
+
+#: ../../source/framework/plugin/functional-pages/request-payment.rst:61
+msgid ""
+"支付功能页函数应以导出函数的形式提供在插件所有者小程序的根目录下的 functional-pages/request-payment.js "
+"文件中，名为 beforeRequestPayment。该函数应接收两个参数："
+msgstr ""
+
+#: ../../source/framework/plugin/functional-pages/request-payment.rst:63
+msgid ""
+"参数名     类型      说明 paymentArgs     Object  即通过 <functional-page-"
+"navigator> 的 arg 参数中的 paymentArgs 字段传递到功能页的自定义数据 callback        Function"
+"        回调函数，调用该函数后，小程序将发起支付（类似于 wx.requestPayment） callback函数的参数："
+msgstr ""
+
+#: ../../source/framework/plugin/functional-pages/request-payment.rst:68
+msgid ""
+"参数名     类型      说明 error   Object  失败信息，若无失败，应返回 null requestPaymentArgs"
+"      Object  支付参数，用于调用 wx.requestPayment，参数如下 reqeustPaymentArgs 的参数："
+msgstr ""
+
+#: ../../source/framework/plugin/functional-pages/request-payment.rst:73
+msgid "用于发起支付，和 wx.requestPayment 的参数相同，但没有回调函数（success, fail, complete）："
+msgstr ""
+
+#: ../../source/framework/plugin/functional-pages/request-payment.rst:75
+msgid ""
+"参数      类型      必填      说明 timeStamp       String  是       "
+"时间戳从1970年1月1日00:00:00至今的秒数,即当前的时间 nonceStr        String  是       "
+"随机字符串，长度为32个字符以下。 package String  是       统一下单接口返回的 prepay_id "
+"参数值，提交格式如：prepay_id=*** signType        String  是       签名算法，暂支持 MD5 "
+"paySign String  是       签名,具体签名方案参见小程序支付接口文档; 了解更多信息，请查看微信支付接口文档"
+msgstr ""
+
+#: ../../source/framework/plugin/functional-pages/request-payment.rst:83
+msgid "功能页函数代码示例："
+msgstr ""
+
+#: ../../source/framework/plugin/functional-pages/request-payment.rst:85
+msgid ""
+"// functional-pages/request-payment.js exports.beforeRequestPayment = "
+"function (paymentArgs, callback) {"
+msgstr ""
+
+#: ../../source/framework/plugin/functional-pages/request-payment.rst:87
+msgid ""
+"// 注意： // 功能页函数（这个函数）不应 require 其他非 functional-pages 目录中的文件， // 其他非 "
+"functional-pages 目录中的文件也不应 require 这个目录中的文件， // 这样的 require 调用在未来将不被支持。 "
+"// // 同在 functional-pages 中的文件可以 require const getOpenIdURL = "
+"require('./URL').getOpenIdURL const paymentURL = "
+"require('./URL').paymentURL"
+msgstr ""
+
+#: ../../source/framework/plugin/functional-pages/request-payment.rst:96
+msgid ""
+"// 自定义的参数，此处应为从插件传递过来的 'A' const customArgument = "
+"paymentArgs.customArgument"
+msgstr ""
+
+#: ../../source/framework/plugin/functional-pages/request-payment.rst:99
+msgid ""
+"// 第一步：调用 wx.login 方法获取 code，然后在服务端调用微信接口使用 code 换取下单用户的 openId // 具体文档参考"
+" https://mp.weixin.qq.com/debug/wxadoc/dev/api/api-"
+"login.html?t=20161230#wxloginobject wx.login({"
+msgstr ""
+
+#: ../../source/framework/plugin/functional-pages/request-payment.rst:138
+msgid "success(data) {"
+msgstr ""
+
+#: ../../source/framework/plugin/functional-pages/request-payment.rst:137
+msgid "wx.request({"
+msgstr ""
+
+#: ../../source/framework/plugin/functional-pages/request-payment.rst:104
+msgid "url: getOpenIdURL, data: {code: data.code}, success(res) {"
+msgstr ""
+
+#: ../../source/framework/plugin/functional-pages/request-payment.rst:107
+msgid ""
+"// 拉取用户 openid 成功 // 第二步：在服务端调用支付统一下单，返回支付参数。这里的开发和普通的 wx.requestPayment "
+"相同 // 文档可以参考 "
+"https://pay.weixin.qq.com/wiki/doc/api/wxa/wxa_api.php?chapter=7_4&index=3"
+" wx.request({"
+msgstr ""
+
+#: ../../source/framework/plugin/functional-pages/request-payment.rst:111
+msgid ""
+"url: paymentURL, data: {openid: res.data.openid}, method: 'POST', "
+"success(res) {"
+msgstr ""
+
+#: ../../source/framework/plugin/functional-pages/request-payment.rst:115
+msgid ""
+"console.log('unified order success, response is:', res) const payargs = "
+"res.data.payargs // 第三步：调用回调函数 callback 进行支付 // 在 callback 中需要返回两个参数： err"
+" 和 requestPaymentArgs： // err 应为 null （或者一些失败信息）； // requestPaymentArgs "
+"将被用于调用 wx.requestPayment，除了 success/fail/complete 不被支持外， // 应与 "
+"wx.requestPayment 参数相同。 const error = null const requestPaymentArgs = {"
+msgstr ""
+
+#: ../../source/framework/plugin/functional-pages/request-payment.rst:124
+msgid ""
+"timeStamp: payargs.timeStamp, nonceStr: payargs.nonceStr, package: "
+"payargs.package, signType: payargs.signType, paySign: payargs.paySign,"
+msgstr ""
+
+#: ../../source/framework/plugin/functional-pages/request-payment.rst:129
+msgid "} callback(error, requestPaymentArgs)"
+msgstr ""
+
+#: ../../source/framework/plugin/functional-pages/request-payment.rst:132
+#: ../../source/framework/plugin/functional-pages/request-payment.rst:139
+#: ../../source/framework/plugin/functional-pages/request-payment.rst:146
+msgid "})"
+msgstr ""
+
+#: ../../source/framework/plugin/functional-pages/request-payment.rst:133
+msgid "}, fail(res) {"
+msgstr ""
+
+#: ../../source/framework/plugin/functional-pages/request-payment.rst:135
+msgid ""
+"console.log('拉取用户openid失败，将无法正常使用开放接口等服务', res) // callback "
+"第一个参数为错误信息，返回错误信息 callback(res)"
+msgstr ""
+
+#: ../../source/framework/plugin/functional-pages/request-payment.rst:140
+msgid "}, fail(err) {"
+msgstr ""
+
+#: ../../source/framework/plugin/functional-pages/request-payment.rst:142
+msgid ""
+"console.log('wx.login 接口调用失败，将无法正常使用开放接口等服务', err) // callback "
+"第一个参数为错误信息，返回错误信息 callback(err)"
+msgstr ""
+
+#: ../../source/framework/plugin/functional-pages/request-payment.rst:147
+msgid ""
+"} 注意：功能页函数不应 require 其他非 functional-pages 目录中的文件，其他非 functional-pages "
+"目录中的文件也不应 require 这个目录中的文件。这样的 require 调用在未来将不被支持。"
+msgstr ""
+
+#: ../../source/framework/plugin/functional-pages/request-payment.rst:150
+msgid ""
+"这个目录和文件应当被放置在插件所有者小程序代码中（而非插件代码中），它是插件所有者小程序的一部分（而非插件的一部分）。 "
+"如果需要新增或更改这段代码，需要发布插件所有者小程序，才能在正式版中生效；需要重新预览插件所有者小程序，才能在开发版中生效。"
+msgstr ""
+

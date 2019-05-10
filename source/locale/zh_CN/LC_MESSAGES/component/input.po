@@ -1,0 +1,433 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019, Nosy
+# This file is distributed under the same license as the wxadev package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: wxadev \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-09 22:55+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../../source/component/input.rst:4
+msgid ":wx_comp:`input`"
+msgstr ""
+
+#: ../../source/component/input.rst:6
+msgid "开始支持，低版本需做 :ref:`compatibility` 。"
+msgstr ""
+
+#: ../../source/component/input.rst:8
+msgid "输入框。该组件是原生组件，使用时请注意相关限制"
+msgstr ""
+
+#: ../../source/component/input.rst:11
+msgid "属性"
+msgstr ""
+
+#: ../../source/component/input.rst:11
+msgid "类型"
+msgstr ""
+
+#: ../../source/component/input.rst:11
+msgid "默认值"
+msgstr ""
+
+#: ../../source/component/input.rst:11
+msgid "必填"
+msgstr ""
+
+#: ../../source/component/input.rst:11 ../../source/component/input.rst:59
+#: ../../source/component/input.rst:73
+msgid "说明"
+msgstr ""
+
+#: ../../source/component/input.rst:11
+msgid "最低版本"
+msgstr ""
+
+#: ../../source/component/input.rst:13
+msgid "value"
+msgstr ""
+
+#: ../../source/component/input.rst:13 ../../source/component/input.rst:15
+#: ../../source/component/input.rst:19 ../../source/component/input.rst:21
+#: ../../source/component/input.rst:23 ../../source/component/input.rst:35
+msgid "string"
+msgstr ""
+
+#: ../../source/component/input.rst:13 ../../source/component/input.rst:19
+#: ../../source/component/input.rst:21 ../../source/component/input.rst:39
+#: ../../source/component/input.rst:47 ../../source/component/input.rst:49
+#: ../../source/component/input.rst:51 ../../source/component/input.rst:53
+msgid "是"
+msgstr ""
+
+#: ../../source/component/input.rst:13
+msgid "输入框的初始内容"
+msgstr ""
+
+#: ../../source/component/input.rst:13 ../../source/component/input.rst:15
+#: ../../source/component/input.rst:17 ../../source/component/input.rst:19
+#: ../../source/component/input.rst:21 ../../source/component/input.rst:23
+#: ../../source/component/input.rst:25 ../../source/component/input.rst:27
+#: ../../source/component/input.rst:29 ../../source/component/input.rst:31
+#: ../../source/component/input.rst:33 ../../source/component/input.rst:47
+#: ../../source/component/input.rst:49 ../../source/component/input.rst:51
+#: ../../source/component/input.rst:53
+msgid "1.0.0"
+msgstr ""
+
+#: ../../source/component/input.rst:15
+msgid "type"
+msgstr ""
+
+#: ../../source/component/input.rst:15 ../../source/component/input.rst:61
+msgid "text"
+msgstr ""
+
+#: ../../source/component/input.rst:15 ../../source/component/input.rst:17
+#: ../../source/component/input.rst:23 ../../source/component/input.rst:25
+#: ../../source/component/input.rst:27 ../../source/component/input.rst:29
+#: ../../source/component/input.rst:31 ../../source/component/input.rst:33
+#: ../../source/component/input.rst:35 ../../source/component/input.rst:37
+#: ../../source/component/input.rst:41 ../../source/component/input.rst:43
+#: ../../source/component/input.rst:45
+msgid "否"
+msgstr ""
+
+#: ../../source/component/input.rst:15
+msgid "input 的类型"
+msgstr ""
+
+#: ../../source/component/input.rst:17
+msgid "password"
+msgstr ""
+
+#: ../../source/component/input.rst:17 ../../source/component/input.rst:25
+#: ../../source/component/input.rst:31 ../../source/component/input.rst:33
+#: ../../source/component/input.rst:37 ../../source/component/input.rst:45
+msgid "boolean"
+msgstr ""
+
+#: ../../source/component/input.rst:17 ../../source/component/input.rst:25
+#: ../../source/component/input.rst:31 ../../source/component/input.rst:33
+#: ../../source/component/input.rst:37
+msgid "false"
+msgstr ""
+
+#: ../../source/component/input.rst:17
+msgid "是否是密码类型"
+msgstr ""
+
+#: ../../source/component/input.rst:19
+msgid "placeholder"
+msgstr ""
+
+#: ../../source/component/input.rst:19
+msgid "输入框为空时占位符"
+msgstr ""
+
+#: ../../source/component/input.rst:21
+msgid "placeholder-style"
+msgstr ""
+
+#: ../../source/component/input.rst:21
+msgid "指定 placeholder 的样式"
+msgstr ""
+
+#: ../../source/component/input.rst:23
+msgid "placeholder-class"
+msgstr ""
+
+#: ../../source/component/input.rst:23
+msgid "input-placeholder"
+msgstr ""
+
+#: ../../source/component/input.rst:23
+msgid "指定 placeholder 的样式类"
+msgstr ""
+
+#: ../../source/component/input.rst:25
+msgid "disabled"
+msgstr ""
+
+#: ../../source/component/input.rst:25
+msgid "是否禁用"
+msgstr ""
+
+#: ../../source/component/input.rst:27
+msgid "maxlength"
+msgstr ""
+
+#: ../../source/component/input.rst:27 ../../source/component/input.rst:29
+#: ../../source/component/input.rst:39 ../../source/component/input.rst:41
+#: ../../source/component/input.rst:43 ../../source/component/input.rst:63
+msgid "number"
+msgstr ""
+
+#: ../../source/component/input.rst:27
+msgid "140"
+msgstr ""
+
+#: ../../source/component/input.rst:27
+msgid "最大输入长度，设置为 -1 的时候不限制最大长度"
+msgstr ""
+
+#: ../../source/component/input.rst:29
+msgid "cursor-spacing"
+msgstr ""
+
+#: ../../source/component/input.rst:29
+msgid "0"
+msgstr ""
+
+#: ../../source/component/input.rst:29
+msgid "指定光标与键盘的距离，取 input 距离底部的距离和 cursor-spacing 指定的距离的最小值作为光标与键盘的距离"
+msgstr ""
+
+#: ../../source/component/input.rst:31
+msgid "auto-focus"
+msgstr ""
+
+#: ../../source/component/input.rst:31
+msgid "(即将废弃，请直接使用 focus )自动聚焦，拉起键盘"
+msgstr ""
+
+#: ../../source/component/input.rst:33
+msgid "focus"
+msgstr ""
+
+#: ../../source/component/input.rst:33
+msgid "获取焦点"
+msgstr ""
+
+#: ../../source/component/input.rst:35
+msgid "confirm-type"
+msgstr ""
+
+#: ../../source/component/input.rst:35 ../../source/component/input.rst:83
+msgid "done"
+msgstr ""
+
+#: ../../source/component/input.rst:35
+msgid "设置键盘右下角按钮的文字，仅在type='text'时生效"
+msgstr ""
+
+#: ../../source/component/input.rst:35 ../../source/component/input.rst:37
+msgid "1.1.0"
+msgstr ""
+
+#: ../../source/component/input.rst:37
+msgid "confirm-hold"
+msgstr ""
+
+#: ../../source/component/input.rst:37
+msgid "点击键盘右下角按钮时是否保持键盘不收起"
+msgstr ""
+
+#: ../../source/component/input.rst:39
+msgid "cursor"
+msgstr ""
+
+#: ../../source/component/input.rst:39
+msgid "指定focus时的光标位置"
+msgstr ""
+
+#: ../../source/component/input.rst:39
+msgid "1.5.0"
+msgstr ""
+
+#: ../../source/component/input.rst:41
+msgid "selection-start"
+msgstr ""
+
+#: ../../source/component/input.rst:41 ../../source/component/input.rst:43
+msgid "-1"
+msgstr ""
+
+#: ../../source/component/input.rst:41
+msgid "光标起始位置，自动聚集时有效，需与selection-end搭配使用"
+msgstr ""
+
+#: ../../source/component/input.rst:41 ../../source/component/input.rst:43
+msgid "1.9.0"
+msgstr ""
+
+#: ../../source/component/input.rst:43
+msgid "selection-end"
+msgstr ""
+
+#: ../../source/component/input.rst:43
+msgid "光标结束位置，自动聚集时有效，需与selection-start搭配使用"
+msgstr ""
+
+#: ../../source/component/input.rst:45
+msgid "adjust-position"
+msgstr ""
+
+#: ../../source/component/input.rst:45
+msgid "true"
+msgstr ""
+
+#: ../../source/component/input.rst:45
+msgid "键盘弹起时，是否自动上推页面"
+msgstr ""
+
+#: ../../source/component/input.rst:45
+msgid "1.9.90"
+msgstr ""
+
+#: ../../source/component/input.rst:47
+msgid "bindinput"
+msgstr ""
+
+#: ../../source/component/input.rst:47 ../../source/component/input.rst:49
+#: ../../source/component/input.rst:51 ../../source/component/input.rst:53
+msgid "eventhandle"
+msgstr ""
+
+#: ../../source/component/input.rst:47
+msgid ""
+"键盘输入时触发，event.detail = {value, cursor, keyCode}，keyCode 为键值，2.1.0 "
+"起支持，处理函数可以直接 return 一个字符串，将替换输入框的内容。"
+msgstr ""
+
+#: ../../source/component/input.rst:49
+msgid "bindfocus"
+msgstr ""
+
+#: ../../source/component/input.rst:49
+msgid "输入框聚焦时触发，event.detail = { value, height }，height 为键盘高度，在基础库 1.9.90 起支持"
+msgstr ""
+
+#: ../../source/component/input.rst:51
+msgid "bindblur"
+msgstr ""
+
+#: ../../source/component/input.rst:51
+msgid "输入框失去焦点时触发，event.detail = {value: value}"
+msgstr ""
+
+#: ../../source/component/input.rst:53
+msgid "bindconfirm"
+msgstr ""
+
+#: ../../source/component/input.rst:53
+msgid "点击完成按钮时触发，event.detail = {value: value}"
+msgstr ""
+
+#: ../../source/component/input.rst:56
+msgid "type 的合法值"
+msgstr ""
+
+#: ../../source/component/input.rst:59 ../../source/component/input.rst:73
+msgid "值"
+msgstr ""
+
+#: ../../source/component/input.rst:61
+msgid "文本输入键盘"
+msgstr ""
+
+#: ../../source/component/input.rst:63
+msgid "数字输入键盘"
+msgstr ""
+
+#: ../../source/component/input.rst:65
+msgid "idcard"
+msgstr ""
+
+#: ../../source/component/input.rst:65
+msgid "身份证输入键盘"
+msgstr ""
+
+#: ../../source/component/input.rst:67
+msgid "digit"
+msgstr ""
+
+#: ../../source/component/input.rst:67
+msgid "带小数点的数字键盘"
+msgstr ""
+
+#: ../../source/component/input.rst:70
+msgid "confirm-type 的合法值"
+msgstr ""
+
+#: ../../source/component/input.rst:75
+msgid "send"
+msgstr ""
+
+#: ../../source/component/input.rst:75
+msgid "右下角按钮为“发送”"
+msgstr ""
+
+#: ../../source/component/input.rst:77
+msgid "search"
+msgstr ""
+
+#: ../../source/component/input.rst:77
+msgid "右下角按钮为“搜索”"
+msgstr ""
+
+#: ../../source/component/input.rst:79
+msgid "next"
+msgstr ""
+
+#: ../../source/component/input.rst:79
+msgid "右下角按钮为“下一个”"
+msgstr ""
+
+#: ../../source/component/input.rst:81
+msgid "go"
+msgstr ""
+
+#: ../../source/component/input.rst:81
+msgid "右下角按钮为“前往”"
+msgstr ""
+
+#: ../../source/component/input.rst:83
+msgid "右下角按钮为“完成”"
+msgstr ""
+
+#: ../../source/component/input.rst:86
+msgid "confirm-type的最终表现与手机输入法本身的实现有关，部分安卓系统输入法和第三方输入法可能不支持或不完全支持"
+msgstr ""
+
+#: ../../source/component/input.rst:88
+msgid "input 组件是一个原生组件，字体是系统字体，所以无法设置 font-family"
+msgstr ""
+
+#: ../../source/component/input.rst:90
+msgid "在 input 聚焦期间，避免使用 css 动画"
+msgstr ""
+
+#: ../../source/component/input.rst:92
+msgid ""
+"对于将 input 封装在自定义组件中、而 form 在自定义组件外的情况， form 将不能获得这个自定义组件中 input "
+"的值。此时需要使用自定义组件的 内置 behaviors wx://form-field"
+msgstr ""
+
+#: ../../source/component/input.rst:94
+msgid "微信版本 6.3.30, focus 属性设置无效"
+msgstr ""
+
+#: ../../source/component/input.rst:96
+msgid "微信版本 6.3.30, placeholder 在聚焦时出现重影问题"
+msgstr ""
+
+#: ../../source/component/input.rst:98
+msgid "示例代码"
+msgstr ""
+
+#: ../../source/component/input.rst:100
+msgid "在开发者工具中预览效果"
+msgstr ""
+

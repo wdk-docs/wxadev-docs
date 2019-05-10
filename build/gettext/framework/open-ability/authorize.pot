@@ -1,0 +1,202 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019, Nosy
+# This file is distributed under the same license as the wxadev package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: wxadev \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-09 22:55+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/framework/open-ability/authorize.rst:4
+msgid ":wxfrwk:`用户授权 <open-ability/authorize>`"
+msgstr ""
+
+#: ../../source/framework/open-ability/authorize.rst:6
+msgid "部分接口需要经过用户授权同意才能调用。我们把这些接口按使用范围分成多个 scope ， 用户选择对 scope 来进行授权，当授权给一个 scope 之后，其对应的所有接口都可以直接使用。"
+msgstr ""
+
+#: ../../source/framework/open-ability/authorize.rst:9
+msgid "部分接口需要获得用户授权同意后才能调用。此类接口调用时："
+msgstr ""
+
+#: ../../source/framework/open-ability/authorize.rst:11
+msgid "如果用户未接受或拒绝过此权限，会弹窗询问用户，用户点击同意后方可调用接口；"
+msgstr ""
+
+#: ../../source/framework/open-ability/authorize.rst:12
+msgid "如果用户已授权，可以直接调用接口；"
+msgstr ""
+
+#: ../../source/framework/open-ability/authorize.rst:13
+msgid "如果用户已拒绝授权，则不会出现弹窗，而是直接进入接口 fail 回调。请开发者兼容用户拒绝授权的场景。"
+msgstr ""
+
+#: ../../source/framework/open-ability/authorize.rst:16
+msgid "获取用户授权设置"
+msgstr ""
+
+#: ../../source/framework/open-ability/authorize.rst:18
+msgid "开发者可以使用 wx.getSetting 获取用户当前的授权状态。"
+msgstr ""
+
+#: ../../source/framework/open-ability/authorize.rst:21
+msgid "打开设置界面"
+msgstr ""
+
+#: ../../source/framework/open-ability/authorize.rst:23
+msgid "用户可以在小程序设置界面（「右上角」 - 「关于」 - 「右上角」 - 「设置」）中控制对该小程序的授权状态。"
+msgstr ""
+
+#: ../../source/framework/open-ability/authorize.rst:25
+msgid "开发者可以调用 wx.openSetting 打开设置界面，引导用户开启授权。"
+msgstr ""
+
+#: ../../source/framework/open-ability/authorize.rst:28
+msgid "提前发起授权请求"
+msgstr ""
+
+#: ../../source/framework/open-ability/authorize.rst:30
+msgid "开发者可以使用 wx.authorize 在调用需授权 API 之前，提前向用户发起授权请求。"
+msgstr ""
+
+#: ../../source/framework/open-ability/authorize.rst:33
+msgid "scope 列表"
+msgstr ""
+
+#: ../../source/framework/open-ability/authorize.rst:36
+msgid "scope"
+msgstr ""
+
+#: ../../source/framework/open-ability/authorize.rst:36
+msgid "对应接口"
+msgstr ""
+
+#: ../../source/framework/open-ability/authorize.rst:36
+msgid "描述"
+msgstr ""
+
+#: ../../source/framework/open-ability/authorize.rst:38
+msgid "scope.userInfo"
+msgstr ""
+
+#: ../../source/framework/open-ability/authorize.rst:38
+msgid "wx.getUserInfo"
+msgstr ""
+
+#: ../../source/framework/open-ability/authorize.rst:38
+msgid "用户信息"
+msgstr ""
+
+#: ../../source/framework/open-ability/authorize.rst:40
+msgid "scope.userLocation"
+msgstr ""
+
+#: ../../source/framework/open-ability/authorize.rst:40
+msgid "wx.getLocation, wx.chooseLocation"
+msgstr ""
+
+#: ../../source/framework/open-ability/authorize.rst:40
+msgid "地理位置"
+msgstr ""
+
+#: ../../source/framework/open-ability/authorize.rst:42
+msgid "scope.address"
+msgstr ""
+
+#: ../../source/framework/open-ability/authorize.rst:42
+msgid "wx.chooseAddress"
+msgstr ""
+
+#: ../../source/framework/open-ability/authorize.rst:42
+msgid "通讯地址"
+msgstr ""
+
+#: ../../source/framework/open-ability/authorize.rst:44
+msgid "scope.invoiceTitle"
+msgstr ""
+
+#: ../../source/framework/open-ability/authorize.rst:44
+msgid "wx.chooseInvoiceTitle"
+msgstr ""
+
+#: ../../source/framework/open-ability/authorize.rst:44
+msgid "发票抬头"
+msgstr ""
+
+#: ../../source/framework/open-ability/authorize.rst:46
+msgid "scope.invoice"
+msgstr ""
+
+#: ../../source/framework/open-ability/authorize.rst:46
+msgid "wx.chooseInvoice"
+msgstr ""
+
+#: ../../source/framework/open-ability/authorize.rst:46
+msgid "获取发票"
+msgstr ""
+
+#: ../../source/framework/open-ability/authorize.rst:48
+msgid "scope.werun"
+msgstr ""
+
+#: ../../source/framework/open-ability/authorize.rst:48
+msgid "wx.getWeRunData"
+msgstr ""
+
+#: ../../source/framework/open-ability/authorize.rst:48
+msgid "微信运动步数"
+msgstr ""
+
+#: ../../source/framework/open-ability/authorize.rst:50
+msgid "scope.record"
+msgstr ""
+
+#: ../../source/framework/open-ability/authorize.rst:50
+msgid "wx.startRecord"
+msgstr ""
+
+#: ../../source/framework/open-ability/authorize.rst:50
+msgid "录音功能"
+msgstr ""
+
+#: ../../source/framework/open-ability/authorize.rst:52
+msgid "scope.writePhotosAlbum"
+msgstr ""
+
+#: ../../source/framework/open-ability/authorize.rst:52
+msgid "wx.saveImageToPhotosAlbum, wx.saveVideoToPhotosAlbum"
+msgstr ""
+
+#: ../../source/framework/open-ability/authorize.rst:52
+msgid "保存到相册"
+msgstr ""
+
+#: ../../source/framework/open-ability/authorize.rst:54
+msgid "scope.camera"
+msgstr ""
+
+#: ../../source/framework/open-ability/authorize.rst:54
+msgid "<camera /> 组件"
+msgstr ""
+
+#: ../../source/framework/open-ability/authorize.rst:54
+msgid "摄像头"
+msgstr ""
+
+#: ../../source/framework/open-ability/authorize.rst:59
+msgid "wx.authorize({scope: \"scope.userInfo\"})，不会弹出授权窗口，请使用 <button open-type=\"getUserInfo\"/>"
+msgstr ""
+
+#: ../../source/framework/open-ability/authorize.rst:60
+msgid "需要授权 scope.userLocation 时必须配置地理位置用途说明。"
+msgstr ""
+

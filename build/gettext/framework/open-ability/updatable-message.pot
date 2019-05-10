@@ -1,0 +1,193 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019, Nosy
+# This file is distributed under the same license as the wxadev package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: wxadev \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-09 22:55+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/framework/open-ability/updatable-message.rst:2
+msgid ":wxfrwk:`动态消息 <open-ability/share/updatable-message>`"
+msgstr ""
+
+#: ../../source/framework/open-ability/updatable-message.rst:4
+msgid "支持转发动态消息。动态消息对比普通消息，有以下特点："
+msgstr ""
+
+#: ../../source/framework/open-ability/updatable-message.rst:6
+msgid "消息发出去之后，开发者可以通过后台接口修改部分消息内容。 消息有对应的提醒按钮，用户点击提醒按钮可以订阅提醒，开发者可以通过后台修改消息状态并推送一次提醒消息给订阅了提醒的用户 消息属性 动态消息有状态、文字内容、文字颜色。"
+msgstr ""
+
+#: ../../source/framework/open-ability/updatable-message.rst:11
+msgid "状态 消息有两个状态，分别有其对应的文字内容和颜色。其中状态 0 可以转移到状态 0 和 1，状态 1 无法再转移。"
+msgstr ""
+
+#: ../../source/framework/open-ability/updatable-message.rst:15
+msgid "状态"
+msgstr ""
+
+#: ../../source/framework/open-ability/updatable-message.rst:15
+msgid "文字内容"
+msgstr ""
+
+#: ../../source/framework/open-ability/updatable-message.rst:15
+msgid "颜色"
+msgstr ""
+
+#: ../../source/framework/open-ability/updatable-message.rst:15
+msgid "允许转移的状态"
+msgstr ""
+
+#: ../../source/framework/open-ability/updatable-message.rst:17
+msgid "0"
+msgstr ""
+
+#: ../../source/framework/open-ability/updatable-message.rst:17
+msgid "\"成员正在加入，当前 {member_count}/{room_limit} 人\""
+msgstr ""
+
+#: ../../source/framework/open-ability/updatable-message.rst:17
+msgid "#FA9D39"
+msgstr ""
+
+#: ../../source/framework/open-ability/updatable-message.rst:17
+msgid "0, 1"
+msgstr ""
+
+#: ../../source/framework/open-ability/updatable-message.rst:19
+msgid "1"
+msgstr ""
+
+#: ../../source/framework/open-ability/updatable-message.rst:19
+msgid "\"已开始\""
+msgstr ""
+
+#: ../../source/framework/open-ability/updatable-message.rst:19
+msgid "#CCCCCC"
+msgstr ""
+
+#: ../../source/framework/open-ability/updatable-message.rst:19
+msgid "无"
+msgstr ""
+
+#: ../../source/framework/open-ability/updatable-message.rst:22
+msgid "状态参数"
+msgstr ""
+
+#: ../../source/framework/open-ability/updatable-message.rst:24
+msgid "每个状态转移的时候可以携带参数，具体参数说明如下。"
+msgstr ""
+
+#: ../../source/framework/open-ability/updatable-message.rst:27
+msgid "参数"
+msgstr ""
+
+#: ../../source/framework/open-ability/updatable-message.rst:27
+msgid "类型"
+msgstr ""
+
+#: ../../source/framework/open-ability/updatable-message.rst:27
+msgid "说明"
+msgstr ""
+
+#: ../../source/framework/open-ability/updatable-message.rst:29
+msgid "member_count"
+msgstr ""
+
+#: ../../source/framework/open-ability/updatable-message.rst:29
+#: ../../source/framework/open-ability/updatable-message.rst:31
+#: ../../source/framework/open-ability/updatable-message.rst:33
+#: ../../source/framework/open-ability/updatable-message.rst:37
+msgid "string"
+msgstr ""
+
+#: ../../source/framework/open-ability/updatable-message.rst:29
+msgid "状态 0 时有效，文字内容模板中 member_count 的值"
+msgstr ""
+
+#: ../../source/framework/open-ability/updatable-message.rst:31
+msgid "room_limit"
+msgstr ""
+
+#: ../../source/framework/open-ability/updatable-message.rst:31
+msgid "状态 0 时有效，文字内容模板中 room_limit 的值"
+msgstr ""
+
+#: ../../source/framework/open-ability/updatable-message.rst:33
+msgid "path"
+msgstr ""
+
+#: ../../source/framework/open-ability/updatable-message.rst:33
+msgid "状态 1 时有效，点击「进入」启动小程序时使用的路径。"
+msgstr ""
+
+#: ../../source/framework/open-ability/updatable-message.rst:35
+msgid "对于小游戏，没有页面的概念，可以用于传递查询字符串（query），如 \"?foo=bar\""
+msgstr ""
+
+#: ../../source/framework/open-ability/updatable-message.rst:37
+msgid "version_type"
+msgstr ""
+
+#: ../../source/framework/open-ability/updatable-message.rst:37
+msgid "状态 1 时有效，状态 1 时有效，点击「进入」启动小程序时使用的版本。"
+msgstr ""
+
+#: ../../source/framework/open-ability/updatable-message.rst:39
+msgid "有效参数值为：develop（开发版），trial（体验版），release（正式版）"
+msgstr ""
+
+#: ../../source/framework/open-ability/updatable-message.rst:42
+msgid "使用方法"
+msgstr ""
+
+#: ../../source/framework/open-ability/updatable-message.rst:44
+msgid "一、创建 activity_id"
+msgstr ""
+
+#: ../../source/framework/open-ability/updatable-message.rst:46
+msgid "每条动态消息可以理解为一个活动，活动发起前需要通过 updatableMessage.createActivityId 接口创建 activity_id。后续转发动态消息以及更新动态消息都需要传入这个 activity_id。"
+msgstr ""
+
+#: ../../source/framework/open-ability/updatable-message.rst:48
+msgid "活动的默认有效期是 24 小时。活动结束后，消息内容会变成统一的样式："
+msgstr ""
+
+#: ../../source/framework/open-ability/updatable-message.rst:50
+msgid "文字内容：“已结束” 文字颜色：#00ff00"
+msgstr ""
+
+#: ../../source/framework/open-ability/updatable-message.rst:53
+msgid "二、在转发之前声明消息类型为动态消息"
+msgstr ""
+
+#: ../../source/framework/open-ability/updatable-message.rst:55
+msgid "通过调用 wx.updateShareMenu 接口，传入 isUpdatableMessage: true，以及 templateInfo、activityId 参数。其中 activityId 从步骤一中获得。"
+msgstr ""
+
+#: ../../source/framework/open-ability/updatable-message.rst:74
+msgid "三、修改动态消息内容"
+msgstr ""
+
+#: ../../source/framework/open-ability/updatable-message.rst:76
+msgid "动态消息发出去之后，可以通过 updatableMessage.setUpdatableMsg 修改消息内容。"
+msgstr ""
+
+#: ../../source/framework/open-ability/updatable-message.rst:78
+msgid "低版本兼容"
+msgstr ""
+
+#: ../../source/framework/open-ability/updatable-message.rst:80
+msgid "对于不支持动态消息的客户端版本，收到动态消息后会展示成普通消息"
+msgstr ""
+

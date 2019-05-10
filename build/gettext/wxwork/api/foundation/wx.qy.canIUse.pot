@@ -1,0 +1,86 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019, Nosy
+# This file is distributed under the same license as the wxadev package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: wxadev \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-09 22:55+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/wxwork/api/foundation/wx.qy.canIUse.rst:2
+msgid "wx.qy.canIUse"
+msgstr ""
+
+#: ../../source/wxwork/api/foundation/wx.qy.canIUse.rst:0
+msgid "label"
+msgstr ""
+
+#: ../../source/wxwork/api/foundation/wx.qy.canIUse.rst:7
+msgid "判断企业微信专有接口、回调、参数等是否在当前版本可用。"
+msgstr ""
+
+#: ../../source/wxwork/api/foundation/wx.qy.canIUse.rst:0
+msgid "参数"
+msgstr ""
+
+#: ../../source/wxwork/api/foundation/wx.qy.canIUse.rst:8
+msgid "使用 ${API}.${method}.${param}.${options} 或者 ${component}.${attribute}.${option} 方式来调用  - *${API}* 代表 API 名字 - *${method}* 代表调用方式，有效值为return, success, object, callback - *${param}* 代表参数或者返回值 - *${options}* 代表参数的可选值"
+msgstr ""
+
+#: ../../source/wxwork/api/foundation/wx.qy.canIUse.rst:8
+msgid "使用 ${API}.${method}.${param}.${options} 或者 ${component}.${attribute}.${option} 方式来调用"
+msgstr ""
+
+#: ../../source/wxwork/api/foundation/wx.qy.canIUse.rst:10
+msgid "*${API}* 代表 API 名字"
+msgstr ""
+
+#: ../../source/wxwork/api/foundation/wx.qy.canIUse.rst:11
+msgid "*${method}* 代表调用方式，有效值为return, success, object, callback"
+msgstr ""
+
+#: ../../source/wxwork/api/foundation/wx.qy.canIUse.rst:12
+msgid "*${param}* 代表参数或者返回值"
+msgstr ""
+
+#: ../../source/wxwork/api/foundation/wx.qy.canIUse.rst:13
+msgid "*${options}* 代表参数的可选值"
+msgstr ""
+
+#: ../../source/wxwork/api/foundation/wx.qy.canIUse.rst:0
+msgid "返回类型"
+msgstr ""
+
+#: ../../source/wxwork/api/foundation/wx.qy.canIUse.rst:15
+msgid "boolean"
+msgstr ""
+
+#: ../../source/wxwork/api/foundation/wx.qy.canIUse.rst:0
+msgid "返回"
+msgstr ""
+
+#: ../../source/wxwork/api/foundation/wx.qy.canIUse.rst:16
+msgid "布尔值"
+msgstr ""
+
+#: ../../source/wxwork/api/foundation/wx.qy.canIUse.rst:0
+msgid "注意"
+msgstr ""
+
+#: ../../source/wxwork/api/foundation/wx.qy.canIUse.rst:17
+msgid ":func:`wx.canIUse` 判断的是微信小程序通用接口（即wx.[接口名]）是否在当前版本可用。"
+msgstr ""
+
+#: ../../source/wxwork/api/foundation/wx.qy.canIUse.rst:0
+msgid "示例"
+msgstr ""
+

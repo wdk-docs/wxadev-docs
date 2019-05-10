@@ -1,0 +1,101 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019, Nosy
+# This file is distributed under the same license as the wxadev package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: wxadev \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-09 22:55+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/api/LogManager.rst:2
+msgid ":wxapi:`LogManager`"
+msgstr ""
+
+#: ../../source/api/LogManager.rst:6
+msgid "低版本需做 :ref:`compatibility` 。"
+msgstr ""
+
+#: ../../source/api/LogManager.rst:8
+msgid "获取日志管理器对象 :class:`LogManager` 。"
+msgstr ""
+
+#: ../../source/api/LogManager.rst:0
+#: ../../source/api/LogManager.rst:0
+#: ../../source/api/LogManager.rst:0
+#: ../../source/api/LogManager.rst:0
+#: ../../source/api/LogManager.rst:0
+msgid "参数"
+msgstr ""
+
+#: ../../source/api/LogManager.rst:10
+msgid "**0** 是否会把 App、Page 的生命周期函数和 wx 命名空间下的函数调用写入日志。  - *0* 会 - *1* 不会  .. versionadded:: 2.3.2"
+msgstr ""
+
+#: ../../source/api/LogManager.rst:10
+msgid "**0** 是否会把 App、Page 的生命周期函数和 wx 命名空间下的函数调用写入日志。"
+msgstr ""
+
+#: ../../source/api/LogManager.rst:12
+msgid "*0* 会"
+msgstr ""
+
+#: ../../source/api/LogManager.rst:13
+msgid "*1* 不会"
+msgstr ""
+
+#: ../../source/api/LogManager.rst:0
+msgid "返回"
+msgstr ""
+
+#: ../../source/api/LogManager.rst:17
+msgid ":class:`LogManager`"
+msgstr ""
+
+#: ../../source/api/LogManager.rst:0
+msgid "示例"
+msgstr ""
+
+#: ../../source/api/LogManager.rst:30
+msgid "日志管理器实例，可以通过 :func:`wx.getLogManager` 获取。"
+msgstr ""
+
+#: ../../source/api/LogManager.rst:34
+msgid "写 debug 日志"
+msgstr ""
+
+#: ../../source/api/LogManager.rst:36
+#: ../../source/api/LogManager.rst:43
+#: ../../source/api/LogManager.rst:50
+#: ../../source/api/LogManager.rst:57
+msgid "日志内容，可以有任意多个。每次调用的参数的总大小不超过100Kb"
+msgstr ""
+
+#: ../../source/api/LogManager.rst:41
+msgid "写 info 日志"
+msgstr ""
+
+#: ../../source/api/LogManager.rst:48
+msgid "写 log 日志"
+msgstr ""
+
+#: ../../source/api/LogManager.rst:55
+msgid "写 warn 日志"
+msgstr ""
+
+#: ../../source/api/LogManager.rst:60
+msgid "最多保存5M的日志内容，超过5M后，旧的日志内容会被删除。 用户可以通过使用 :ref:`<Button> <Button>` 组件的 ``open-type=\"feedback\"`` 来上传打印的日志。 开发者可以通过小程序管理后台左侧菜单 ``反馈管理`` 页面查看。"
+msgstr ""
+
+#: ../../source/api/LogManager.rst:64
+msgid "基础库默认会把 :class:`App` 、 :class:`Page` 的生命周期函数和 :class:`wx` 命名空间下的函数调用写入日志。"
+msgstr ""
+

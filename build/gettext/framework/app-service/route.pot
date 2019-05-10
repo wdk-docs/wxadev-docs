@@ -1,0 +1,289 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019, Nosy
+# This file is distributed under the same license as the wxadev package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: wxadev \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-09 22:55+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/framework/app-service/route.rst:2
+msgid ":wxfrwk:`页面路由 <app-service/route>`"
+msgstr ""
+
+#: ../../source/framework/app-service/route.rst:4
+msgid "在小程序中所有页面的路由全部由框架进行管理。"
+msgstr ""
+
+#: ../../source/framework/app-service/route.rst:7
+msgid "页面栈"
+msgstr ""
+
+#: ../../source/framework/app-service/route.rst:9
+msgid "框架以栈的形式维护了当前的所有页面。 当发生路由切换的时候，页面栈的表现如下："
+msgstr ""
+
+#: ../../source/framework/app-service/route.rst:12
+#: ../../source/framework/app-service/route.rst:30
+#: ../../source/framework/app-service/route.rst:36
+msgid "路由方式"
+msgstr ""
+
+#: ../../source/framework/app-service/route.rst:12
+msgid "页面栈表现"
+msgstr ""
+
+#: ../../source/framework/app-service/route.rst:14
+#: ../../source/framework/app-service/route.rst:38
+msgid "初始化"
+msgstr ""
+
+#: ../../source/framework/app-service/route.rst:14
+#: ../../source/framework/app-service/route.rst:16
+msgid "新页面入栈"
+msgstr ""
+
+#: ../../source/framework/app-service/route.rst:16
+#: ../../source/framework/app-service/route.rst:40
+msgid "打开新页面"
+msgstr ""
+
+#: ../../source/framework/app-service/route.rst:18
+#: ../../source/framework/app-service/route.rst:44
+msgid "页面重定向"
+msgstr ""
+
+#: ../../source/framework/app-service/route.rst:18
+msgid "当前页面出栈，新页面入栈"
+msgstr ""
+
+#: ../../source/framework/app-service/route.rst:20
+#: ../../source/framework/app-service/route.rst:48
+msgid "页面返回"
+msgstr ""
+
+#: ../../source/framework/app-service/route.rst:20
+msgid "页面不断出栈，直到目标返回页"
+msgstr ""
+
+#: ../../source/framework/app-service/route.rst:22
+#: ../../source/framework/app-service/route.rst:54
+msgid "Tab 切换"
+msgstr ""
+
+#: ../../source/framework/app-service/route.rst:22
+msgid "页面全部出栈，只留下新的 Tab 页面"
+msgstr ""
+
+#: ../../source/framework/app-service/route.rst:24
+msgid "重加载"
+msgstr ""
+
+#: ../../source/framework/app-service/route.rst:24
+msgid "页面全部出栈，只留下新的页面"
+msgstr ""
+
+#: ../../source/framework/app-service/route.rst:27
+msgid "开发者可以使用 :func:`getCurrentPages` 函数获取当前页面栈。"
+msgstr ""
+
+#: ../../source/framework/app-service/route.rst:33
+msgid "对于路由的触发方式以及页面生命周期函数如下："
+msgstr ""
+
+#: ../../source/framework/app-service/route.rst:36
+msgid "触发时机"
+msgstr ""
+
+#: ../../source/framework/app-service/route.rst:36
+msgid "路由前页面"
+msgstr ""
+
+#: ../../source/framework/app-service/route.rst:36
+msgid "路由后页面"
+msgstr ""
+
+#: ../../source/framework/app-service/route.rst:38
+msgid "小程序打开的第一个页面"
+msgstr ""
+
+#: ../../source/framework/app-service/route.rst:38
+#: ../../source/framework/app-service/route.rst:42
+#: ../../source/framework/app-service/route.rst:46
+#: ../../source/framework/app-service/route.rst:62
+msgid "onLoad, onShow"
+msgstr ""
+
+#: ../../source/framework/app-service/route.rst:40
+msgid "调用 API :func:`wx.navigateTo`"
+msgstr ""
+
+#: ../../source/framework/app-service/route.rst:42
+msgid "使用组件 ``<navigator open-type=\"navigateTo\"/>``"
+msgstr ""
+
+#: ../../source/framework/app-service/route.rst:42
+msgid "onHide"
+msgstr ""
+
+#: ../../source/framework/app-service/route.rst:44
+msgid "调用 API :func:`wx.redirectTo`"
+msgstr ""
+
+#: ../../source/framework/app-service/route.rst:46
+msgid "使用组件 ``<navigator open-type=\"redirectTo\"/>``"
+msgstr ""
+
+#: ../../source/framework/app-service/route.rst:46
+#: ../../source/framework/app-service/route.rst:52
+#: ../../source/framework/app-service/route.rst:62
+msgid "onUnload"
+msgstr ""
+
+#: ../../source/framework/app-service/route.rst:48
+msgid "调用 API :func:`wx.navigateBack`"
+msgstr ""
+
+#: ../../source/framework/app-service/route.rst:50
+msgid "使用组件 ``<navigator open-type=\"navigateBack\">``"
+msgstr ""
+
+#: ../../source/framework/app-service/route.rst:52
+msgid "用户按左上角返回按钮"
+msgstr ""
+
+#: ../../source/framework/app-service/route.rst:52
+msgid "onShow"
+msgstr ""
+
+#: ../../source/framework/app-service/route.rst:54
+msgid "调用 API :func:`wx.switchTab`"
+msgstr ""
+
+#: ../../source/framework/app-service/route.rst:56
+msgid "使用组件 ``<navigator open-type=\"switchTab\"/>``"
+msgstr ""
+
+#: ../../source/framework/app-service/route.rst:58
+msgid "用户切换 Tab"
+msgstr ""
+
+#: ../../source/framework/app-service/route.rst:58
+msgid "各种情况请参考下表"
+msgstr ""
+
+#: ../../source/framework/app-service/route.rst:60
+msgid "重启动"
+msgstr ""
+
+#: ../../source/framework/app-service/route.rst:60
+msgid "调用 API :func:`wx.reLaunch`"
+msgstr ""
+
+#: ../../source/framework/app-service/route.rst:62
+msgid "使用组件 ``<navigator open-type=\"reLaunch\"/>``"
+msgstr ""
+
+#: ../../source/framework/app-service/route.rst:65
+msgid "Tab 切换对应的生命周期（以 A、B 页面为 Tabbar 页面，C 是从 A 页面打开的页面，D 页面是从 C 页面打开的页面为例）："
+msgstr ""
+
+#: ../../source/framework/app-service/route.rst:67
+msgid "当前页面    路由后页面   触发的生命周期（按顺序）"
+msgstr ""
+
+#: ../../source/framework/app-service/route.rst:70
+#: ../../source/framework/app-service/route.rst:70
+#: ../../source/framework/app-service/route.rst:72
+#: ../../source/framework/app-service/route.rst:74
+#: ../../source/framework/app-service/route.rst:76
+#: ../../source/framework/app-service/route.rst:82
+msgid "A"
+msgstr ""
+
+#: ../../source/framework/app-service/route.rst:70
+msgid "Nothing happend"
+msgstr ""
+
+#: ../../source/framework/app-service/route.rst:72
+#: ../../source/framework/app-service/route.rst:78
+#: ../../source/framework/app-service/route.rst:80
+#: ../../source/framework/app-service/route.rst:84
+msgid "B"
+msgstr ""
+
+#: ../../source/framework/app-service/route.rst:72
+msgid "A.onHide(), B.onLoad(), B.onShow()"
+msgstr ""
+
+#: ../../source/framework/app-service/route.rst:74
+msgid "B（再次打开）"
+msgstr ""
+
+#: ../../source/framework/app-service/route.rst:74
+msgid "A.onHide(), B.onShow()"
+msgstr ""
+
+#: ../../source/framework/app-service/route.rst:76
+#: ../../source/framework/app-service/route.rst:78
+msgid "C"
+msgstr ""
+
+#: ../../source/framework/app-service/route.rst:76
+msgid "C.onUnload(), A.onShow()"
+msgstr ""
+
+#: ../../source/framework/app-service/route.rst:78
+msgid "C.onUnload(), B.onLoad(), B.onShow()"
+msgstr ""
+
+#: ../../source/framework/app-service/route.rst:80
+msgid "D"
+msgstr ""
+
+#: ../../source/framework/app-service/route.rst:80
+msgid "D.onUnload(), C.onUnload(), B.onLoad(), B.onShow()"
+msgstr ""
+
+#: ../../source/framework/app-service/route.rst:82
+#: ../../source/framework/app-service/route.rst:84
+msgid "D（从转发进入）"
+msgstr ""
+
+#: ../../source/framework/app-service/route.rst:82
+msgid "D.onUnload(), A.onLoad(), A.onShow()"
+msgstr ""
+
+#: ../../source/framework/app-service/route.rst:84
+msgid "D.onUnload(), B.onLoad(), B.onShow()"
+msgstr ""
+
+#: ../../source/framework/app-service/route.rst:90
+msgid ":func:`wx.navigateTo` , :func:`wx.redirectTo` 只能打开非 :envvar:`tabBar` 页面。"
+msgstr ""
+
+#: ../../source/framework/app-service/route.rst:91
+msgid ":func:`wx.switchTab` 只能打开 :envvar:`tabBar` 页面。"
+msgstr ""
+
+#: ../../source/framework/app-service/route.rst:92
+msgid ":func:`wx.reLaunch` 可以打开任意页面。"
+msgstr ""
+
+#: ../../source/framework/app-service/route.rst:93
+msgid "页面底部的 tabBar 由页面决定，即只要是定义为 :envvar:`tabBar` 的页面，底部都有 :envvar:`tabBar。`"
+msgstr ""
+
+#: ../../source/framework/app-service/route.rst:94
+msgid "调用页面路由带的参数可以在目标页面的 onLoad 中获取。"
+msgstr ""
+

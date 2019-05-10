@@ -1,0 +1,77 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019, Nosy
+# This file is distributed under the same license as the wxadev package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: wxadev \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-09 22:55+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../../source/reference/api/require.rst:5
+msgid ":wxref:`require <api/require>`"
+msgstr ""
+
+#: ../../source/reference/api/require.rst:7
+msgid "any require(string path) 引入模块。返回模块通过 module.exports 或 exports 暴露的接口。"
+msgstr ""
+
+#: ../../source/reference/api/require.rst:10
+msgid ""
+"参数 名称      类型      说明 path    string  "
+"需要引入模块文件相对于当前文件的相对路径，或npm模块名，或npm模块路径。不支持绝对路径 示例代码 // common.js function "
+"sayHello(name) {"
+msgstr ""
+
+#: ../../source/reference/api/require.rst:16
+msgid "console.log(`Hello ${name} !`)"
+msgstr ""
+
+#: ../../source/reference/api/require.rst:17
+msgid "} function sayGoodbye(name) {"
+msgstr ""
+
+#: ../../source/reference/api/require.rst:19
+msgid "console.log(`Goodbye ${name} !`)"
+msgstr ""
+
+#: ../../source/reference/api/require.rst:20
+#: ../../source/reference/api/require.rst:31
+msgid "}"
+msgstr ""
+
+#: ../../source/reference/api/require.rst:22
+msgid ""
+"module.exports.sayHello = sayHello exports.sayGoodbye = sayGoodbye const "
+"common = require('common.js') Page({"
+msgstr ""
+
+#: ../../source/reference/api/require.rst:26
+msgid "helloMINA() {"
+msgstr ""
+
+#: ../../source/reference/api/require.rst:27
+msgid "common.sayHello('MINA')"
+msgstr ""
+
+#: ../../source/reference/api/require.rst:28
+msgid "}, goodbyeMINA() {"
+msgstr ""
+
+#: ../../source/reference/api/require.rst:30
+msgid "common.sayGoodbye('MINA')"
+msgstr ""
+
+#: ../../source/reference/api/require.rst:32
+msgid "})"
+msgstr ""
+

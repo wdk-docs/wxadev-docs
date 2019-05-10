@@ -198,19 +198,19 @@
             
   <div class="section" id="mapcontext">
 <h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/api/MapContext.html">MapContext</a><a class="headerlink" href="#mapcontext" title="永久链接至标题">¶</a></h1>
-<p>版本:1.0.0 更新:2019 年 05 月 09 日</p>
+<p>版本:1.0.0 更新:2019 年 05 月 10 日</p>
 <dl class="function">
 <dt id="wx.createMapContext">
 <code class="descclassname">wx.</code><code class="descname">createMapContext</code><span class="sig-paren">(</span><em>mapId</em>, <em>this</em><span class="sig-paren">)</span><a class="headerlink" href="#wx.createMapContext" title="永久链接至目标">¶</a></dt>
 <dd><p>创建 map 上下文 <a class="reference internal" href="#MapContext" title="MapContext"><code class="xref js js-class docutils literal notranslate"><span class="pre">MapContext()</span></code></a> 对象。</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">参数</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>mapId</strong> (<em>string</em>) – <a class="reference internal" href="../component/map.html#map"><span class="std std-ref">&lt;map&gt;</span></a> 组件的 id</p></li>
 <li><p><strong>this</strong> (<em>object</em>) – 在自定义组件下，当前组件实例的this，以操作组件内 <a class="reference internal" href="../component/map.html#map"><span class="std std-ref">&lt;map&gt;</span></a> 组件</p></li>
 </ul>
 </dd>
-<dt class="field-even">Return</dt>
+<dt class="field-even">返回</dt>
 <dd class="field-even"><p><a class="reference internal" href="#MapContext" title="MapContext"><code class="xref js js-class docutils literal notranslate"><span class="pre">MapContext()</span></code></a></p>
 </dd>
 </dl>
@@ -230,7 +230,7 @@
 <code class="descclassname">MapContext.</code><code class="descname">getCenterLocation</code><span class="sig-paren">(</span><em>{[success][, fail][, complete]}</em><span class="sig-paren">)</span><a class="headerlink" href="#MapContext.getCenterLocation" title="永久链接至目标">¶</a></dt>
 <dd><p>获取当前地图中心的经纬度。返回的是 <cite>gcj02</cite> 坐标系，可以用于 <a class="reference internal" href="wx.openLocation.html#wx.openLocation" title="wx.openLocation"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.openLocation()</span></code></a></p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">参数</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>success({longitude, latitude})</strong> (<em>function</em>) – <p>接口调用成功的回调函数</p>
 <ul>
@@ -256,7 +256,7 @@
 <code class="descclassname">MapContext.</code><code class="descname">translateMarker</code><span class="sig-paren">(</span><em>object</em><span class="sig-paren">)</span><a class="headerlink" href="#MapContext.translateMarker" title="永久链接至目标">¶</a></dt>
 <dd><p>平移marker，带动画</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">参数</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>object</strong> (<em>Object</em>) – object</p></li>
 </ul>
@@ -269,7 +269,7 @@
 <code class="descclassname">MapContext.</code><code class="descname">includePoints</code><span class="sig-paren">(</span><em>object</em><span class="sig-paren">)</span><a class="headerlink" href="#MapContext.includePoints" title="永久链接至目标">¶</a></dt>
 <dd><p>缩放视野展示所有经纬度</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">参数</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>object</strong> (<em>Object</em>) – object</p></li>
 </ul>

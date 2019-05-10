@@ -1,0 +1,158 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019, Nosy
+# This file is distributed under the same license as the wxadev package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: wxadev \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-09 22:55+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/api/VideoContext.rst:2
+msgid ":wxapi:`VideoContext ☁️ <VideoContext>`"
+msgstr ""
+
+#: ../../source/api/VideoContext.rst:6
+msgid "创建 video 上下文 :class:`VideoContext` 对象。"
+msgstr ""
+
+#: ../../source/api/VideoContext.rst:0
+#: ../../source/api/VideoContext.rst:0
+#: ../../source/api/VideoContext.rst:0
+#: ../../source/api/VideoContext.rst:0
+#: ../../source/api/VideoContext.rst:0
+msgid "参数"
+msgstr ""
+
+#: ../../source/api/VideoContext.rst:8
+msgid ":ref:`<video> <video>` 组件的 id"
+msgstr ""
+
+#: ../../source/api/VideoContext.rst:9
+msgid "在自定义组件下，当前组件实例的this，以操作组件内 :ref:`<video> <video>` 组件"
+msgstr ""
+
+#: ../../source/api/VideoContext.rst:0
+msgid "返回"
+msgstr ""
+
+#: ../../source/api/VideoContext.rst:10
+msgid ":class:`VideoContext`"
+msgstr ""
+
+#: ../../source/api/VideoContext.rst:14
+msgid "VideoContext 实例，可通过 :func:`wx.createVideoContext` 获取。"
+msgstr ""
+
+#: ../../source/api/VideoContext.rst:16
+msgid "videoContext 通过 id 跟一个 :ref:`<video> <video>` 组件绑定，对应操作的 :ref:`<video> <video>` 组件。"
+msgstr ""
+
+#: ../../source/api/VideoContext.rst:19
+msgid "方法"
+msgstr ""
+
+#: ../../source/api/VideoContext.rst:23
+msgid "播放视频"
+msgstr ""
+
+#: ../../source/api/VideoContext.rst:27
+msgid "暂停视频"
+msgstr ""
+
+#: ../../source/api/VideoContext.rst:31
+msgid "停止视频"
+msgstr ""
+
+#: ../../source/api/VideoContext.rst:35
+msgid "跳转到指定位置"
+msgstr ""
+
+#: ../../source/api/VideoContext.rst:37
+msgid "跳转到的位置，单位 s"
+msgstr ""
+
+#: ../../source/api/VideoContext.rst:41
+msgid "发送弹幕"
+msgstr ""
+
+#: ../../source/api/VideoContext.rst:43
+msgid "弹幕文字"
+msgstr ""
+
+#: ../../source/api/VideoContext.rst:44
+msgid "弹幕颜色"
+msgstr ""
+
+#: ../../source/api/VideoContext.rst:48
+msgid "设置倍速播放"
+msgstr ""
+
+#: ../../source/api/VideoContext.rst:50
+msgid "倍率，支持 0.5/0.8/1.0/1.25/1.5，2.6.3 起支持 2.0 倍速"
+msgstr ""
+
+#: ../../source/api/VideoContext.rst:52
+#: ../../source/api/VideoContext.rst:64
+#: ../../source/api/VideoContext.rst:73
+#: ../../source/api/VideoContext.rst:79
+#: ../../source/api/VideoContext.rst:85
+msgid "低版本需做 :ref:`compatibility` 。"
+msgstr ""
+
+#: ../../source/api/VideoContext.rst:56
+msgid "进入全屏"
+msgstr ""
+
+#: ../../source/api/VideoContext.rst:58
+msgid "设置全屏时视频的方向，不指定则根据宽高比自动判断, 合法值:  - *0*      正常竖向 - *90*     屏幕逆时针90度 - *-90*    屏幕顺时针90度"
+msgstr ""
+
+#: ../../source/api/VideoContext.rst:58
+msgid "设置全屏时视频的方向，不指定则根据宽高比自动判断, 合法值:"
+msgstr ""
+
+#: ../../source/api/VideoContext.rst:60
+msgid "*0*      正常竖向"
+msgstr ""
+
+#: ../../source/api/VideoContext.rst:61
+msgid "*90*     屏幕逆时针90度"
+msgstr ""
+
+#: ../../source/api/VideoContext.rst:62
+msgid "*-90*    屏幕顺时针90度"
+msgstr ""
+
+#: ../../source/api/VideoContext.rst:66
+msgid "参数 direction"
+msgstr ""
+
+#: ../../source/api/VideoContext.rst:71
+msgid "退出全屏"
+msgstr ""
+
+#: ../../source/api/VideoContext.rst:77
+msgid "显示状态栏，仅在iOS的全屏下有效"
+msgstr ""
+
+#: ../../source/api/VideoContext.rst:83
+msgid "隐藏状态栏，仅在iOS的全屏下有效"
+msgstr ""
+
+#: ../../source/api/VideoContext.rst:88
+msgid "示例代码"
+msgstr ""
+
+#: ../../source/api/VideoContext.rst:90
+msgid "在开发者工具中预览效果"
+msgstr ""
+

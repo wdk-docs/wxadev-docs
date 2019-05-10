@@ -1,0 +1,35 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019, Nosy
+# This file is distributed under the same license as the wxadev package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: wxadev \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-09 22:55+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../../source/framework/open-ability/card/card.rst:2
+msgid "卡券"
+msgstr ""
+
+#: ../../source/framework/open-ability/card/card.rst:4
+msgid "说明 小程序卡券接口支持在小程序中领取/查看/使用公众号 AppId 创建的会员卡、票、券（含通用卡）。更多使用方法可参考 小程序&卡券打通"
+msgstr ""
+
+#: ../../source/framework/open-ability/card/card.rst:7
+msgid "使用条件 目前只有认证小程序才能使用卡券接口，可参考 指引 进行认证。"
+msgstr ""
+
+#: ../../source/framework/open-ability/card/card.rst:10
+msgid "接口 小程序内可以通过 wx.addCard 接口给用户添加卡券。通过 wx.openCard 让用户选择已有卡券。"
+msgstr ""
+

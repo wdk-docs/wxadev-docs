@@ -1,0 +1,90 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019, Nosy
+# This file is distributed under the same license as the wxadev package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: wxadev \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-09 22:55+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../../source/wxwork/doc/notice.rst:2
+msgid ":wxwork:`开发前须知 <index>`"
+msgstr ""
+
+#: ../../source/wxwork/doc/notice.rst:5
+msgid "概述"
+msgstr ""
+
+#: ../../source/wxwork/doc/notice.rst:7
+msgid "企业微信移动客户端从2.5.8版本开始，已内置微信小程序基础库，开发者无需适配（部分接口需要适配），即可将微信小程序移植到企业微信上运行，同时开发者也可以针对企业微信提供的扩展接口开发出更适用于企业内部场景的小程序。"
+msgstr ""
+
+#: ../../source/wxwork/doc/notice.rst:9
+msgid "本质上企业微信小程序是微信小程序的一个扩展子集，微信小程序的大部分能力都可以在企业微信上运行，同时企业微信扩展了部分和企业相关的能力以满足更多的场景需求。所以一个小程序如果需要同时运行在微信和企业微信端，对于开发者来说需要针对企业微信的环境适配部分不兼容的能力，针对微信环境适配企业微信专有的部分接口能力。"
+msgstr ""
+
+#: ../../source/wxwork/doc/notice.rst:11
+msgid "如何获取环境变量可参考文档：:func:`wx.getSystemInfo`"
+msgstr ""
+
+#: ../../source/wxwork/doc/notice.rst:14
+msgid "企业微信小程序能力扩展"
+msgstr ""
+
+#: ../../source/wxwork/doc/notice.rst:16
+msgid ""
+"在微信小程序中可以通过获取用户的openid来唯一标识一个用户，在企业微信小程序中可以通过获取用户的userid来唯一标识一个员工。同时企业微信小程序还提供了和员工企业身份相配套的session生成以及验证的接口、员工基础信息获取的相关接口，除此以外企业微信还扩展了一些企业微信特有的接口能力，更多接口请参考开发文档：:ref"
+":`qywx-api`"
+msgstr ""
+
+#: ../../source/wxwork/doc/notice.rst:19
+msgid "企业微信关联小程序"
+msgstr ""
+
+#: ../../source/wxwork/doc/notice.rst:21
+msgid ""
+"由于目前企业微信和微信之间的消息可以互通，使得互通消息中的小程序可以天然的运行在微信和企业微信两个运行环境中。 "
+"默认情况下，按照微信已有的流程开发的小程序可以直接在两个运行环境中运行，但是如果小程序有调用企业微信的专有接口， "
+"如获取员工相关的信息，那么此小程序需要在企业微信管理端进行一次绑定关联操作（一个小程序可绑定多个企业）， :wxwork:`了解详细步骤 "
+"<dev-doc/qywx-api>`"
+msgstr ""
+
+#: ../../source/wxwork/doc/notice.rst:27
+msgid "多企业关联同一个小程序"
+msgstr ""
+
+#: ../../source/wxwork/doc/notice.rst:29
+msgid "企业微信允许多个企业关联同一个小程序，但是开发者在开发过程中需要注意以下几点："
+msgstr ""
+
+#: ../../source/wxwork/doc/notice.rst:31
+msgid ""
+"小程序被关联到多个企业即会有多组 *[CorpId, Secret]* ， 开发者可以使用任意起一个企业的[CorpId, "
+"Secret]获取access_token 使用获取到的access_token和code参数调用jscode2session接口 "
+"判断返回的用户CorpId和access_token与第一步中的CorpId是否一致， "
+"如果不一致，则调用wx.qy.login重新进行一遍登录流程，此时使用返回的[CorpId, Secret]来调用jscode2session接口"
+" 如果没有使用这种流程，调用企业微信通讯录相关的接口时，会报错 “not allow to cross corp”。"
+msgstr ""
+
+#: ../../source/wxwork/doc/notice.rst:39
+msgid "第三方小程序(服务商)"
+msgstr ""
+
+#: ../../source/wxwork/doc/notice.rst:41
+msgid "企业微信的第三方服务商也可以开发小程序，并关联到第三方应用中，发布之后即可通过企业授权安装使用。第三方小程序的登录流程与企业有些差异，详见第三方小程序。"
+msgstr ""
+
+#: ../../source/wxwork/doc/notice.rst:43
+msgid "企业开发者请忽略这个章节"
+msgstr ""
+

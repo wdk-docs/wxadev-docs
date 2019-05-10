@@ -1,0 +1,510 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019, Nosy
+# This file is distributed under the same license as the wxadev package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: wxadev \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-09 22:55+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/api/InnerAudioContext.rst:2
+msgid ":wxapi:`InnerAudioContext ☁️ <InnerAudioContext>`"
+msgstr ""
+
+#: ../../source/api/InnerAudioContext.rst:6
+#: ../../source/api/InnerAudioContext.rst:59
+msgid "低版本需做 :ref:`compatibility` 。"
+msgstr ""
+
+#: ../../source/api/InnerAudioContext.rst:8
+msgid "创建内部 :ref:`audio` 上下文 :class:`InnerAudioContext` 对象。"
+msgstr ""
+
+#: ../../source/api/InnerAudioContext.rst:0
+msgid "返回"
+msgstr ""
+
+#: ../../source/api/InnerAudioContext.rst:10
+msgid ":class:`InnerAudioContext`"
+msgstr ""
+
+#: ../../source/api/InnerAudioContext.rst:14
+msgid "InnerAudioContext 实例，可通过 :func:`wx.createInnerAudioContext` 接口获取实例。"
+msgstr ""
+
+#: ../../source/api/InnerAudioContext.rst:17
+msgid "属性"
+msgstr ""
+
+#: ../../source/api/InnerAudioContext.rst:0
+#: ../../source/api/InnerAudioContext.rst:0
+#: ../../source/api/InnerAudioContext.rst:0
+#: ../../source/api/InnerAudioContext.rst:0
+#: ../../source/api/InnerAudioContext.rst:0
+#: ../../source/api/InnerAudioContext.rst:0
+#: ../../source/api/InnerAudioContext.rst:0
+#: ../../source/api/InnerAudioContext.rst:0
+#: ../../source/api/InnerAudioContext.rst:0
+#: ../../source/api/InnerAudioContext.rst:0
+#: ../../source/api/InnerAudioContext.rst:0
+#: ../../source/api/InnerAudioContext.rst:0
+#: ../../source/api/InnerAudioContext.rst:0
+#: ../../source/api/InnerAudioContext.rst:0
+#: ../../source/api/InnerAudioContext.rst:0
+#: ../../source/api/InnerAudioContext.rst:0
+#: ../../source/api/InnerAudioContext.rst:0
+#: ../../source/api/InnerAudioContext.rst:0
+#: ../../source/api/InnerAudioContext.rst:0
+#: ../../source/api/InnerAudioContext.rst:0
+#: ../../source/api/InnerAudioContext.rst:0
+#: ../../source/api/InnerAudioContext.rst:0
+#: ../../source/api/InnerAudioContext.rst:0
+#: ../../source/api/InnerAudioContext.rst:0
+#: ../../source/api/InnerAudioContext.rst:0
+#: ../../source/api/InnerAudioContext.rst:0
+#: ../../source/api/InnerAudioContext.rst:0
+#: ../../source/api/InnerAudioContext.rst:0
+#: ../../source/api/InnerAudioContext.rst:0
+#: ../../source/api/InnerAudioContext.rst:0
+#: ../../source/api/InnerAudioContext.rst:0
+#: ../../source/api/InnerAudioContext.rst:0
+#: ../../source/api/InnerAudioContext.rst:0
+#: ../../source/api/InnerAudioContext.rst:0
+#: ../../source/api/InnerAudioContext.rst:0
+msgid "label"
+msgstr ""
+
+#: ../../source/api/InnerAudioContext.rst:21
+msgid "音频资源的地址，用于直接播放"
+msgstr ""
+
+#: ../../source/api/InnerAudioContext.rst:0
+#: ../../source/api/InnerAudioContext.rst:0
+#: ../../source/api/InnerAudioContext.rst:0
+#: ../../source/api/InnerAudioContext.rst:0
+#: ../../source/api/InnerAudioContext.rst:0
+#: ../../source/api/InnerAudioContext.rst:0
+#: ../../source/api/InnerAudioContext.rst:0
+#: ../../source/api/InnerAudioContext.rst:0
+#: ../../source/api/InnerAudioContext.rst:0
+#: ../../source/api/InnerAudioContext.rst:0
+msgid "rtype"
+msgstr ""
+
+#: ../../source/api/InnerAudioContext.rst:22
+msgid "string"
+msgstr ""
+
+#: ../../source/api/InnerAudioContext.rst:24
+msgid "开始支持云文件ID"
+msgstr ""
+
+#: ../../source/api/InnerAudioContext.rst:28
+msgid "开始播放的位置"
+msgstr ""
+
+#: ../../source/api/InnerAudioContext.rst:29
+#: ../../source/api/InnerAudioContext.rst:57
+#: ../../source/api/InnerAudioContext.rst:65
+#: ../../source/api/InnerAudioContext.rst:73
+#: ../../source/api/InnerAudioContext.rst:86
+msgid "number"
+msgstr ""
+
+#: ../../source/api/InnerAudioContext.rst:0
+#: ../../source/api/InnerAudioContext.rst:0
+#: ../../source/api/InnerAudioContext.rst:0
+msgid "unit"
+msgstr ""
+
+#: ../../source/api/InnerAudioContext.rst:30
+#: ../../source/api/InnerAudioContext.rst:66
+#: ../../source/api/InnerAudioContext.rst:74
+msgid "s(秒)"
+msgstr ""
+
+#: ../../source/api/InnerAudioContext.rst:0
+#: ../../source/api/InnerAudioContext.rst:0
+#: ../../source/api/InnerAudioContext.rst:0
+#: ../../source/api/InnerAudioContext.rst:0
+#: ../../source/api/InnerAudioContext.rst:0
+msgid "default"
+msgstr ""
+
+#: ../../source/api/InnerAudioContext.rst:31
+msgid "0"
+msgstr ""
+
+#: ../../source/api/InnerAudioContext.rst:35
+msgid "是否自动开始播放"
+msgstr ""
+
+#: ../../source/api/InnerAudioContext.rst:36
+#: ../../source/api/InnerAudioContext.rst:42
+#: ../../source/api/InnerAudioContext.rst:48
+#: ../../source/api/InnerAudioContext.rst:80
+msgid "boolean"
+msgstr ""
+
+#: ../../source/api/InnerAudioContext.rst:37
+#: ../../source/api/InnerAudioContext.rst:43
+msgid "false"
+msgstr ""
+
+#: ../../source/api/InnerAudioContext.rst:41
+msgid "是否循环播放"
+msgstr ""
+
+#: ../../source/api/InnerAudioContext.rst:47
+msgid "是否遵循系统静音开关"
+msgstr ""
+
+#: ../../source/api/InnerAudioContext.rst:49
+#: ../../source/api/InnerAudioContext.rst:67
+#: ../../source/api/InnerAudioContext.rst:75
+#: ../../source/api/InnerAudioContext.rst:81
+#: ../../source/api/InnerAudioContext.rst:87
+msgid "true"
+msgstr ""
+
+#: ../../source/api/InnerAudioContext.rst:0
+#: ../../source/api/InnerAudioContext.rst:0
+msgid "note"
+msgstr ""
+
+#: ../../source/api/InnerAudioContext.rst:50
+msgid "当此参数为 false 时，即使用户打开了静音开关，也能继续发出声音。"
+msgstr ""
+
+#: ../../source/api/InnerAudioContext.rst:52
+msgid "使用 wx.setInnerAudioOption 接口统一设置。"
+msgstr ""
+
+#: ../../source/api/InnerAudioContext.rst:56
+msgid "音量。范围 0~1。"
+msgstr ""
+
+#: ../../source/api/InnerAudioContext.rst:58
+msgid "1"
+msgstr ""
+
+#: ../../source/api/InnerAudioContext.rst:63
+msgid "当前音频的长度"
+msgstr ""
+
+#: ../../source/api/InnerAudioContext.rst:0
+#: ../../source/api/InnerAudioContext.rst:0
+msgid "premise"
+msgstr ""
+
+#: ../../source/api/InnerAudioContext.rst:64
+#: ../../source/api/InnerAudioContext.rst:72
+msgid "只有在当前有合法的 src 时返回"
+msgstr ""
+
+#: ../../source/api/InnerAudioContext.rst:0
+#: ../../source/api/InnerAudioContext.rst:0
+#: ../../source/api/InnerAudioContext.rst:0
+#: ../../source/api/InnerAudioContext.rst:0
+msgid "readonly"
+msgstr ""
+
+#: ../../source/api/InnerAudioContext.rst:71
+msgid "当前音频的播放位置,时间保留小数点后 6 位"
+msgstr ""
+
+#: ../../source/api/InnerAudioContext.rst:79
+msgid "当前是是否暂停或停止状态"
+msgstr ""
+
+#: ../../source/api/InnerAudioContext.rst:85
+msgid "音频缓冲的时间点，仅保证当前播放时间点到此时间点内容已缓冲"
+msgstr ""
+
+#: ../../source/api/InnerAudioContext.rst:90
+msgid "方法"
+msgstr ""
+
+#: ../../source/api/InnerAudioContext.rst:94
+msgid "播放"
+msgstr ""
+
+#: ../../source/api/InnerAudioContext.rst:98
+msgid "暂停。暂停后的音频再播放会从暂停处开始播放"
+msgstr ""
+
+#: ../../source/api/InnerAudioContext.rst:102
+msgid "停止。停止后的音频再播放会从头开始播放。"
+msgstr ""
+
+#: ../../source/api/InnerAudioContext.rst:106
+msgid "跳转到指定位置"
+msgstr ""
+
+#: ../../source/api/InnerAudioContext.rst:0
+#: ../../source/api/InnerAudioContext.rst:0
+#: ../../source/api/InnerAudioContext.rst:0
+#: ../../source/api/InnerAudioContext.rst:0
+#: ../../source/api/InnerAudioContext.rst:0
+#: ../../source/api/InnerAudioContext.rst:0
+#: ../../source/api/InnerAudioContext.rst:0
+#: ../../source/api/InnerAudioContext.rst:0
+#: ../../source/api/InnerAudioContext.rst:0
+#: ../../source/api/InnerAudioContext.rst:0
+#: ../../source/api/InnerAudioContext.rst:0
+#: ../../source/api/InnerAudioContext.rst:0
+#: ../../source/api/InnerAudioContext.rst:0
+#: ../../source/api/InnerAudioContext.rst:0
+#: ../../source/api/InnerAudioContext.rst:0
+#: ../../source/api/InnerAudioContext.rst:0
+#: ../../source/api/InnerAudioContext.rst:0
+#: ../../source/api/InnerAudioContext.rst:0
+#: ../../source/api/InnerAudioContext.rst:0
+#: ../../source/api/InnerAudioContext.rst:0
+#: ../../source/api/InnerAudioContext.rst:0
+msgid "参数"
+msgstr ""
+
+#: ../../source/api/InnerAudioContext.rst:107
+msgid "跳转的时间，单位 s。精确到小数点后 3 位，即支持 ms 级别精确度"
+msgstr ""
+
+#: ../../source/api/InnerAudioContext.rst:111
+msgid "销毁当前实例"
+msgstr ""
+
+#: ../../source/api/InnerAudioContext.rst:115
+msgid "监听音频进入可以播放状态的事件。但不保证后面可以流畅播放"
+msgstr ""
+
+#: ../../source/api/InnerAudioContext.rst:116
+#: ../../source/api/InnerAudioContext.rst:121
+msgid "音频进入可以播放状态的事件的回调函数"
+msgstr ""
+
+#: ../../source/api/InnerAudioContext.rst:120
+msgid "取消监听音频进入可以播放状态的事件"
+msgstr ""
+
+#: ../../source/api/InnerAudioContext.rst:125
+msgid "监听音频播放事件"
+msgstr ""
+
+#: ../../source/api/InnerAudioContext.rst:126
+#: ../../source/api/InnerAudioContext.rst:131
+msgid "音频播放事件的回调函数"
+msgstr ""
+
+#: ../../source/api/InnerAudioContext.rst:130
+msgid "取消监听音频播放事件"
+msgstr ""
+
+#: ../../source/api/InnerAudioContext.rst:135
+msgid "监听音频暂停事件"
+msgstr ""
+
+#: ../../source/api/InnerAudioContext.rst:136
+#: ../../source/api/InnerAudioContext.rst:141
+msgid "音频暂停事件的回调函数"
+msgstr ""
+
+#: ../../source/api/InnerAudioContext.rst:140
+msgid "取消监听音频暂停事件"
+msgstr ""
+
+#: ../../source/api/InnerAudioContext.rst:145
+msgid "监听音频停止事件"
+msgstr ""
+
+#: ../../source/api/InnerAudioContext.rst:146
+#: ../../source/api/InnerAudioContext.rst:151
+msgid "音频停止事件的回调函数"
+msgstr ""
+
+#: ../../source/api/InnerAudioContext.rst:150
+msgid "取消监听音频停止事件"
+msgstr ""
+
+#: ../../source/api/InnerAudioContext.rst:155
+msgid "监听音频自然播放至结束的事件"
+msgstr ""
+
+#: ../../source/api/InnerAudioContext.rst:156
+#: ../../source/api/InnerAudioContext.rst:161
+msgid "音频自然播放至结束的事件的回调函数"
+msgstr ""
+
+#: ../../source/api/InnerAudioContext.rst:160
+msgid "取消监听音频自然播放至结束的事件"
+msgstr ""
+
+#: ../../source/api/InnerAudioContext.rst:165
+msgid "监听音频播放进度更新事件"
+msgstr ""
+
+#: ../../source/api/InnerAudioContext.rst:166
+#: ../../source/api/InnerAudioContext.rst:171
+msgid "音频播放进度更新事件的回调函数"
+msgstr ""
+
+#: ../../source/api/InnerAudioContext.rst:170
+msgid "取消监听音频播放进度更新事件"
+msgstr ""
+
+#: ../../source/api/InnerAudioContext.rst:175
+msgid "监听音频播放错误事件"
+msgstr ""
+
+#: ../../source/api/InnerAudioContext.rst:180
+msgid "取消监听音频播放错误事件"
+msgstr ""
+
+#: ../../source/api/InnerAudioContext.rst:181
+msgid "音频播放错误事件的回调函数"
+msgstr ""
+
+#: ../../source/api/InnerAudioContext.rst:185
+msgid "监听音频加载中事件。当音频因为数据不足，需要停下来加载时会触发"
+msgstr ""
+
+#: ../../source/api/InnerAudioContext.rst:186
+#: ../../source/api/InnerAudioContext.rst:191
+msgid "音频加载中事件的回调函数"
+msgstr ""
+
+#: ../../source/api/InnerAudioContext.rst:190
+msgid "取消监听音频加载中事件"
+msgstr ""
+
+#: ../../source/api/InnerAudioContext.rst:195
+msgid "监听音频进行跳转操作的事件"
+msgstr ""
+
+#: ../../source/api/InnerAudioContext.rst:200
+msgid "取消监听音频进行跳转操作的事件"
+msgstr ""
+
+#: ../../source/api/InnerAudioContext.rst:201
+msgid "音频进行跳转操作的事件的回调函数"
+msgstr ""
+
+#: ../../source/api/InnerAudioContext.rst:205
+msgid "监听音频完成跳转操作的事件"
+msgstr ""
+
+#: ../../source/api/InnerAudioContext.rst:210
+msgid "取消监听音频完成跳转操作的事件"
+msgstr ""
+
+#: ../../source/api/InnerAudioContext.rst:211
+msgid "音频完成跳转操作的事件的回调函数"
+msgstr ""
+
+#: ../../source/api/InnerAudioContext.rst:215
+#: ../../source/api/InnerAudioContext.rst:217
+msgid "支持格式"
+msgstr ""
+
+#: ../../source/api/InnerAudioContext.rst:222
+msgid "格式"
+msgstr ""
+
+#: ../../source/api/InnerAudioContext.rst:222
+msgid "iOS"
+msgstr ""
+
+#: ../../source/api/InnerAudioContext.rst:222
+msgid "Android"
+msgstr ""
+
+#: ../../source/api/InnerAudioContext.rst:224
+msgid "flac"
+msgstr ""
+
+#: ../../source/api/InnerAudioContext.rst:224
+#: ../../source/api/InnerAudioContext.rst:228
+#: ../../source/api/InnerAudioContext.rst:230
+#: ../../source/api/InnerAudioContext.rst:232
+#: ../../source/api/InnerAudioContext.rst:234
+#: ../../source/api/InnerAudioContext.rst:240
+#: ../../source/api/InnerAudioContext.rst:244
+#: ../../source/api/InnerAudioContext.rst:246
+msgid "x"
+msgstr ""
+
+#: ../../source/api/InnerAudioContext.rst:224
+#: ../../source/api/InnerAudioContext.rst:226
+#: ../../source/api/InnerAudioContext.rst:226
+#: ../../source/api/InnerAudioContext.rst:228
+#: ../../source/api/InnerAudioContext.rst:230
+#: ../../source/api/InnerAudioContext.rst:232
+#: ../../source/api/InnerAudioContext.rst:234
+#: ../../source/api/InnerAudioContext.rst:236
+#: ../../source/api/InnerAudioContext.rst:236
+#: ../../source/api/InnerAudioContext.rst:238
+#: ../../source/api/InnerAudioContext.rst:238
+#: ../../source/api/InnerAudioContext.rst:240
+#: ../../source/api/InnerAudioContext.rst:242
+#: ../../source/api/InnerAudioContext.rst:242
+#: ../../source/api/InnerAudioContext.rst:244
+#: ../../source/api/InnerAudioContext.rst:246
+msgid "√"
+msgstr ""
+
+#: ../../source/api/InnerAudioContext.rst:226
+msgid "m4a"
+msgstr ""
+
+#: ../../source/api/InnerAudioContext.rst:228
+msgid "ogg"
+msgstr ""
+
+#: ../../source/api/InnerAudioContext.rst:230
+msgid "ape"
+msgstr ""
+
+#: ../../source/api/InnerAudioContext.rst:232
+msgid "amr"
+msgstr ""
+
+#: ../../source/api/InnerAudioContext.rst:234
+msgid "wma"
+msgstr ""
+
+#: ../../source/api/InnerAudioContext.rst:236
+msgid "wav"
+msgstr ""
+
+#: ../../source/api/InnerAudioContext.rst:238
+msgid "mp3"
+msgstr ""
+
+#: ../../source/api/InnerAudioContext.rst:240
+msgid "mp4"
+msgstr ""
+
+#: ../../source/api/InnerAudioContext.rst:242
+msgid "aac"
+msgstr ""
+
+#: ../../source/api/InnerAudioContext.rst:244
+msgid "aiff"
+msgstr ""
+
+#: ../../source/api/InnerAudioContext.rst:246
+msgid "caf"
+msgstr ""
+
+#: ../../source/api/InnerAudioContext.rst:250
+msgid "示例代码"
+msgstr ""
+

@@ -1,0 +1,67 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019, Nosy
+# This file is distributed under the same license as the wxadev package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: wxadev \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-09 22:55+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../../source/framework/open-ability/bio-auth.rst:2
+msgid ":wxfrwk:`生物认证 <open-ability/bio-auth>`"
+msgstr ""
+
+#: ../../source/framework/open-ability/bio-auth.rst:4
+msgid "小程序通过 ``SOTER`` 提供以下生物认证方式。"
+msgstr ""
+
+#: ../../source/framework/open-ability/bio-auth.rst:6
+msgid "目前暂时只支持指纹识别认证。设备支持的生物认证方式可使用 ``wx.checkIsSupportSoterAuthentication`` 查询"
+msgstr ""
+
+#: ../../source/framework/open-ability/bio-auth.rst:8
+msgid "调用流程"
+msgstr ""
+
+#: ../../source/framework/open-ability/bio-auth.rst:12
+msgid "流程步骤说明"
+msgstr ""
+
+#: ../../source/framework/open-ability/bio-auth.rst:14
+msgid "调用 ``wx.startSoterAuthentication`` ，获取 resultJSON 和 resultJSONSignature"
+msgstr ""
+
+#: ../../source/framework/open-ability/bio-auth.rst:15
+msgid ""
+"（可选）签名校验。此处 resultJSONSignature 使用 SHA256withRSA/PSS 作为签名算法进行验签。 "
+"此公式数学定义如下: bool 验签结果=verify(用于签名的原串，签名串，验证签名的公钥)"
+msgstr ""
+
+#: ../../source/framework/open-ability/bio-auth.rst:17
+msgid ""
+"微信提供后台接口用于可信的密钥验签服务，微信将保证该接口返回的验签结果的正确性与可靠性， 并且对于 Android root "
+"情况下该接口具有上述特征（将返回是否保证root情况安全性）。"
+msgstr ""
+
+#: ../../source/framework/open-ability/bio-auth.rst:20
+msgid "接口地址::"
+msgstr ""
+
+#: ../../source/framework/open-ability/bio-auth.rst:24
+msgid "post 数据内容（JSON 编码）:"
+msgstr ""
+
+#: ../../source/framework/open-ability/bio-auth.rst:34
+msgid "请求返回数据内容（JSON 编码）:"
+msgstr ""
+

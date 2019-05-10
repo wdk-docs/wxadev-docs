@@ -1,0 +1,50 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019, Nosy
+# This file is distributed under the same license as the wxadev package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: wxadev \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-09 22:55+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../../source/api/wx.onPageNotFound.rst:2
+msgid ":wxapi:`wx.onPageNotFound`"
+msgstr ""
+
+#: ../../source/api/wx.onPageNotFound.rst:6
+msgid "低版本需做 :ref:`compatibility` 。"
+msgstr ""
+
+#: ../../source/api/wx.onPageNotFound.rst:8
+msgid "监听小程序要打开的页面不存在事件。该事件与 App.onPageNotFound 的回调时机一致。"
+msgstr ""
+
+#: ../../source/api/wx.onPageNotFound.rst
+msgid "参数"
+msgstr ""
+
+#: ../../source/api/wx.onPageNotFound.rst:10
+msgid "小程序要打开的页面不存在事件的回调函数"
+msgstr ""
+
+#: ../../source/api/wx.onPageNotFound.rst:12
+msgid ""
+"参数 Object res 属性      类型      说明 path    string  不存在页面的路径 query   Object"
+"  打开不存在页面的 query 参数 isEntryPage     boolean "
+"是否本次启动的首个页面（例如从分享等入口进来，首个页面是开发者配置的分享页面） 注意 "
+"开发者可以在回调中进行页面重定向，但必须在回调中同步处理，异步处理（例如 setTimeout 异步执行）无效。 若开发者没有调用 "
+"wx.onPageNotFound 绑定监听，也没有声明 "
+"App.onPageNotFound，当跳转页面不存在时，将推入微信客户端原生的页面不存在提示页面。 "
+"如果回调中又重定向到另一个不存在的页面，将推入微信客户端原生的页面不存在提示页面，并且不再第二次回调。"
+msgstr ""
+

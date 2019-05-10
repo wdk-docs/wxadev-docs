@@ -1,0 +1,297 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019, Nosy
+# This file is distributed under the same license as the wxadev package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: wxadev \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-09 22:55+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/reference/configuration/sitemap.rst:3
+msgid ":wxref:`sitemap 配置 <configuration/sitemap>`"
+msgstr ""
+
+#: ../../source/reference/configuration/sitemap.rst:5
+msgid "微信现已开放小程序内搜索，开发者可以通过 :file:`sitemap.json` 配置，或者管理后台页面收录开关来配置其小程序页面是否允许微信索引。 当开发者允许微信索引时，微信会通过爬虫的形式，为小程序的页面内容建立索引。当用户的搜索词条触发该索引时，小程序的页面将可能展示在搜索结果中。 爬虫访问小程序内页面时，会携带特定的 :mimetype:`user-agent:mpcrawler` 及场景值：*1129* 。 需要注意的是，若小程序爬虫发现的页面数据和真实用户的呈现不一致，那么该页面将不会进入索引中。"
+msgstr ""
+
+#: ../../source/reference/configuration/sitemap.rst:10
+msgid "小程序根目录下的 :file:`sitemap.json` 文件用于配置小程序及其页面是否允许被微信索引，文件内容为一个 JSON 对象， 如果没有 :file:`sitemap.json` ，则默认为所有页面都允许被索引；:file:`sitemap.json` 有以下属性："
+msgstr ""
+
+#: ../../source/reference/configuration/sitemap.rst:14
+msgid "配置项"
+msgstr ""
+
+#: ../../source/reference/configuration/sitemap.rst:17
+#: ../../source/reference/configuration/sitemap.rst:27
+msgid "属性"
+msgstr ""
+
+#: ../../source/reference/configuration/sitemap.rst:17
+#: ../../source/reference/configuration/sitemap.rst:27
+msgid "类型"
+msgstr ""
+
+#: ../../source/reference/configuration/sitemap.rst:17
+#: ../../source/reference/configuration/sitemap.rst:27
+msgid "必填"
+msgstr ""
+
+#: ../../source/reference/configuration/sitemap.rst:17
+msgid "描述"
+msgstr ""
+
+#: ../../source/reference/configuration/sitemap.rst:19
+#: ../../source/reference/configuration/sitemap.rst:22
+msgid "rules"
+msgstr ""
+
+#: ../../source/reference/configuration/sitemap.rst:19
+msgid "Object[]"
+msgstr ""
+
+#: ../../source/reference/configuration/sitemap.rst:19
+#: ../../source/reference/configuration/sitemap.rst:31
+msgid "是"
+msgstr ""
+
+#: ../../source/reference/configuration/sitemap.rst:19
+msgid "索引规则列表"
+msgstr ""
+
+#: ../../source/reference/configuration/sitemap.rst:24
+msgid "rules 配置项指定了索引规则，每项规则为一个JSON对象，属性如下所示："
+msgstr ""
+
+#: ../../source/reference/configuration/sitemap.rst:27
+msgid "默认值"
+msgstr ""
+
+#: ../../source/reference/configuration/sitemap.rst:27
+msgid "取值"
+msgstr ""
+
+#: ../../source/reference/configuration/sitemap.rst:27
+msgid "取值说明"
+msgstr ""
+
+#: ../../source/reference/configuration/sitemap.rst:29
+msgid "action"
+msgstr ""
+
+#: ../../source/reference/configuration/sitemap.rst:29
+#: ../../source/reference/configuration/sitemap.rst:31
+#: ../../source/reference/configuration/sitemap.rst:36
+msgid "string"
+msgstr ""
+
+#: ../../source/reference/configuration/sitemap.rst:29
+#: ../../source/reference/configuration/sitemap.rst:33
+#: ../../source/reference/configuration/sitemap.rst:36
+#: ../../source/reference/configuration/sitemap.rst:39
+msgid "否"
+msgstr ""
+
+#: ../../source/reference/configuration/sitemap.rst:29
+msgid "\"allow\""
+msgstr ""
+
+#: ../../source/reference/configuration/sitemap.rst:29
+msgid "\"allow\"、\"disallow\""
+msgstr ""
+
+#: ../../source/reference/configuration/sitemap.rst:29
+msgid "命中该规则的页面是否能被索引"
+msgstr ""
+
+#: ../../source/reference/configuration/sitemap.rst:31
+msgid "page"
+msgstr ""
+
+#: ../../source/reference/configuration/sitemap.rst:31
+msgid "\"*\"、页面的路径"
+msgstr ""
+
+#: ../../source/reference/configuration/sitemap.rst:31
+msgid "表示所有页面，不能作为通配符使用"
+msgstr ""
+
+#: ../../source/reference/configuration/sitemap.rst:33
+msgid "params"
+msgstr ""
+
+#: ../../source/reference/configuration/sitemap.rst:33
+msgid "string[]"
+msgstr ""
+
+#: ../../source/reference/configuration/sitemap.rst:33
+msgid "[]"
+msgstr ""
+
+#: ../../source/reference/configuration/sitemap.rst:33
+msgid "当 page 字段指定的页面在被本规则匹配时 可能使用的页面参数名称的列表（不含参数值）"
+msgstr ""
+
+#: ../../source/reference/configuration/sitemap.rst:36
+msgid "matching"
+msgstr ""
+
+#: ../../source/reference/configuration/sitemap.rst:36
+msgid "\"inclusive\""
+msgstr ""
+
+#: ../../source/reference/configuration/sitemap.rst:36
+msgid "参考 matching 取值说明"
+msgstr ""
+
+#: ../../source/reference/configuration/sitemap.rst:36
+msgid "当 page 字段指定的页面在被本规则匹配时， 此参数说明 params 匹配方式"
+msgstr ""
+
+#: ../../source/reference/configuration/sitemap.rst:39
+msgid "priority"
+msgstr ""
+
+#: ../../source/reference/configuration/sitemap.rst:39
+msgid "Number"
+msgstr ""
+
+#: ../../source/reference/configuration/sitemap.rst:39
+msgid "优先级，值越大则规则越早被匹配，否则默认从上到下匹配"
+msgstr ""
+
+#: ../../source/reference/configuration/sitemap.rst:42
+msgid "matching 取值说明"
+msgstr ""
+
+#: ../../source/reference/configuration/sitemap.rst:45
+msgid "值"
+msgstr ""
+
+#: ../../source/reference/configuration/sitemap.rst:45
+msgid "说明"
+msgstr ""
+
+#: ../../source/reference/configuration/sitemap.rst:47
+msgid "exact"
+msgstr ""
+
+#: ../../source/reference/configuration/sitemap.rst:47
+msgid "当小程序页面的参数列表等于 params 时，规则命中"
+msgstr ""
+
+#: ../../source/reference/configuration/sitemap.rst:49
+msgid "inclusive"
+msgstr ""
+
+#: ../../source/reference/configuration/sitemap.rst:49
+msgid "当小程序页面的参数列表包含 params 时，规则命中"
+msgstr ""
+
+#: ../../source/reference/configuration/sitemap.rst:51
+msgid "exclusive"
+msgstr ""
+
+#: ../../source/reference/configuration/sitemap.rst:51
+msgid "当小程序页面的参数列表与 params 交集为空时，规则命中"
+msgstr ""
+
+#: ../../source/reference/configuration/sitemap.rst:53
+msgid "partial"
+msgstr ""
+
+#: ../../source/reference/configuration/sitemap.rst:53
+msgid "当小程序页面的参数列表与 params 交集不为空时，规则命中"
+msgstr ""
+
+#: ../../source/reference/configuration/sitemap.rst:57
+msgid "配置示例"
+msgstr ""
+
+#: ../../source/reference/configuration/sitemap.rst:59
+msgid "示例1"
+msgstr ""
+
+#: ../../source/reference/configuration/sitemap.rst:78
+#: ../../source/reference/configuration/sitemap.rst:103
+#: ../../source/reference/configuration/sitemap.rst:154
+msgid "path/to/page?a=1&b=2 => 优先索引"
+msgstr ""
+
+#: ../../source/reference/configuration/sitemap.rst:79
+#: ../../source/reference/configuration/sitemap.rst:105
+#: ../../source/reference/configuration/sitemap.rst:155
+msgid "path/to/page => 不被索引"
+msgstr ""
+
+#: ../../source/reference/configuration/sitemap.rst:80
+#: ../../source/reference/configuration/sitemap.rst:106
+#: ../../source/reference/configuration/sitemap.rst:130
+msgid "path/to/page?a=1 => 不被索引"
+msgstr ""
+
+#: ../../source/reference/configuration/sitemap.rst:81
+msgid "path/to/page?a=1&b=2&c=3 => 不被索引"
+msgstr ""
+
+#: ../../source/reference/configuration/sitemap.rst:82
+#: ../../source/reference/configuration/sitemap.rst:107
+#: ../../source/reference/configuration/sitemap.rst:132
+#: ../../source/reference/configuration/sitemap.rst:157
+msgid "其他页面都会被索引"
+msgstr ""
+
+#: ../../source/reference/configuration/sitemap.rst:84
+msgid "示例2"
+msgstr ""
+
+#: ../../source/reference/configuration/sitemap.rst:104
+msgid "path/to/page?a=1&b=2&c=3 => 优先索引"
+msgstr ""
+
+#: ../../source/reference/configuration/sitemap.rst:109
+msgid "示例3"
+msgstr ""
+
+#: ../../source/reference/configuration/sitemap.rst:128
+msgid "path/to/page => 优先索引"
+msgstr ""
+
+#: ../../source/reference/configuration/sitemap.rst:129
+msgid "path/to/page?c=3 => 优先索引"
+msgstr ""
+
+#: ../../source/reference/configuration/sitemap.rst:131
+msgid "path/to/page?a=1&b=2 => 不被索引"
+msgstr ""
+
+#: ../../source/reference/configuration/sitemap.rst:134
+msgid "示例4"
+msgstr ""
+
+#: ../../source/reference/configuration/sitemap.rst:153
+msgid "path/to/page?a=1 => 优先索引"
+msgstr ""
+
+#: ../../source/reference/configuration/sitemap.rst:156
+msgid "path/to/page?c=3 => 不被索引"
+msgstr ""
+
+#: ../../source/reference/configuration/sitemap.rst:159
+msgid "没有 :file:`sitemap.json` 则默认所有页面都能被索引"
+msgstr ""
+
+#: ../../source/reference/configuration/sitemap.rst:161
+msgid "``{\"action\": \"allow\", \"page\": \"*\"}`` 是优先级最低的默认规则，未显式指明 ``\"disallow\"`` 的都默认被索引"
+msgstr ""
+

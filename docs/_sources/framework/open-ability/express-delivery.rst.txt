@@ -1,3 +1,5 @@
+.. _express-delivery:
+
 :wxfrwk:`微信物流助手（快递侧） <open-ability/express-delivery>`
 ===================================================================
 

@@ -1,0 +1,36 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019, Nosy
+# This file is distributed under the same license as the wxadev package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: wxadev \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-09 22:55+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../../source/devtools/index.rst:2
+msgid "开发工具"
+msgstr ""
+
+#: ../../source/devtools/index.rst:4
+msgid ""
+"为了帮助开发者简单和高效地开发和调试微信小程序，我们在原有的公众号网页调试工具的基础上， 推出了全新的 "
+"微信开发者工具，集成了公众号网页调试和小程序调试两种开发模式。"
+msgstr ""
+
+#: ../../source/devtools/index.rst:7
+msgid ""
+"使用公众号网页调试，开发者可以调试微信网页授权和微信JS-SDK 详情 使用小程序调试，开发者可以完成小程序的 API "
+"和页面的开发调试、代码查看和编辑、小程序预览和发布等功能。 为了更好的开发体验，我们从视觉、交互、性能等方面对开发者工具进行升级，推出了 "
+"1.0.0 版本。"
+msgstr ""
+

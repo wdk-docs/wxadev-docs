@@ -1,0 +1,249 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019, Nosy
+# This file is distributed under the same license as the wxadev package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: wxadev \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-09 22:55+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/api/BackgroundAudioManager.rst:2
+msgid ":wxapi:`BackgroundAudioManager ☁️ <BackgroundAudioManager>`"
+msgstr ""
+
+#: ../../source/api/BackgroundAudioManager.rst:6
+msgid "低版本需做 :ref:`compatibility` 。"
+msgstr ""
+
+#: ../../source/api/BackgroundAudioManager.rst:8
+msgid "获取全局唯一的背景音频管理器。 小程序切入后台，如果音频处于播放状态， 可以继续播放。但是后台状态不能通过调用API操纵音频的播放状态。"
+msgstr ""
+
+#: ../../source/api/BackgroundAudioManager.rst:11
+msgid "从微信客户端6.7.2版本开始，若需要在小程序切后台后继续播放音频， 需要在 :file:`app.json` 中配置 ``requiredBackgroundModes`` 属性。 开发版和体验版上可以直接生效，正式版还需通过审核。"
+msgstr ""
+
+#: ../../source/api/BackgroundAudioManager.rst:0
+msgid "返回"
+msgstr ""
+
+#: ../../source/api/BackgroundAudioManager.rst:15
+msgid ":class:`BackgroundAudioManager`"
+msgstr ""
+
+#: ../../source/api/BackgroundAudioManager.rst:19
+msgid "BackgroundAudioManager 实例，可通过 :func:`wx.getBackgroundAudioManager` 获取。"
+msgstr ""
+
+#: ../../source/api/BackgroundAudioManager.rst:22
+msgid "属性"
+msgstr ""
+
+#: ../../source/api/BackgroundAudioManager.rst:26
+msgid "开始支持 **云文件ID**"
+msgstr ""
+
+#: ../../source/api/BackgroundAudioManager.rst:28
+msgid "音频的数据源。 默认为空字符串，当设置了新的 ``src`` 时，会自动开始播放，目前支持的格式有:"
+msgstr ""
+
+#: ../../source/api/BackgroundAudioManager.rst:31
+msgid "m4a"
+msgstr ""
+
+#: ../../source/api/BackgroundAudioManager.rst:32
+msgid "aac"
+msgstr ""
+
+#: ../../source/api/BackgroundAudioManager.rst:33
+msgid "mp3"
+msgstr ""
+
+#: ../../source/api/BackgroundAudioManager.rst:34
+msgid "wav"
+msgstr ""
+
+#: ../../source/api/BackgroundAudioManager.rst:0
+#: ../../source/api/BackgroundAudioManager.rst:0
+#: ../../source/api/BackgroundAudioManager.rst:0
+#: ../../source/api/BackgroundAudioManager.rst:0
+#: ../../source/api/BackgroundAudioManager.rst:0
+#: ../../source/api/BackgroundAudioManager.rst:0
+#: ../../source/api/BackgroundAudioManager.rst:0
+#: ../../source/api/BackgroundAudioManager.rst:0
+#: ../../source/api/BackgroundAudioManager.rst:0
+#: ../../source/api/BackgroundAudioManager.rst:0
+#: ../../source/api/BackgroundAudioManager.rst:0
+#: ../../source/api/BackgroundAudioManager.rst:0
+msgid "rtype"
+msgstr ""
+
+#: ../../source/api/BackgroundAudioManager.rst:36
+#: ../../source/api/BackgroundAudioManager.rst:48
+#: ../../source/api/BackgroundAudioManager.rst:54
+#: ../../source/api/BackgroundAudioManager.rst:60
+#: ../../source/api/BackgroundAudioManager.rst:66
+#: ../../source/api/BackgroundAudioManager.rst:72
+#: ../../source/api/BackgroundAudioManager.rst:80
+msgid "string"
+msgstr ""
+
+#: ../../source/api/BackgroundAudioManager.rst:40
+msgid "音频开始播放的位置(单位：s)。"
+msgstr ""
+
+#: ../../source/api/BackgroundAudioManager.rst:42
+msgid "number"
+msgstr ""
+
+#: ../../source/api/BackgroundAudioManager.rst:46
+msgid "音频标题，用于原生音频播放器音频标题(必填)。原生音频播放器中的分享功能，分享出去的卡片标题，也将使用该值。"
+msgstr ""
+
+#: ../../source/api/BackgroundAudioManager.rst:52
+msgid "专辑名，原生音频播放器中的分享功能，分享出去的卡片简介，也将使用该值。"
+msgstr ""
+
+#: ../../source/api/BackgroundAudioManager.rst:58
+msgid "歌手名，原生音频播放器中的分享功能，分享出去的卡片简介，也将使用该值。"
+msgstr ""
+
+#: ../../source/api/BackgroundAudioManager.rst:64
+msgid "封面图 URL，用于做原生音频播放器背景图。原生音频播放器中的分享功能，分享出去的卡片配图及背景也将使用该图。"
+msgstr ""
+
+#: ../../source/api/BackgroundAudioManager.rst:70
+msgid "页面链接，原生音频播放器中的分享功能，分享出去的卡片简介，也将使用该值。"
+msgstr ""
+
+#: ../../source/api/BackgroundAudioManager.rst:76
+msgid "低版本需做兼容处理。"
+msgstr ""
+
+#: ../../source/api/BackgroundAudioManager.rst:78
+msgid "音频协议。默认值为 ``'http'``，设置 ``'hls'`` 可以支持播放 **HLS** 协议的直播音频。"
+msgstr ""
+
+#: ../../source/api/BackgroundAudioManager.rst:84
+msgid "当前音频的长度(单位：``s``)，只有在有合法 ``src`` 时返回。"
+msgstr ""
+
+#: ../../source/api/BackgroundAudioManager.rst:86
+#: ../../source/api/BackgroundAudioManager.rst:92
+#: ../../source/api/BackgroundAudioManager.rst:104
+msgid "number(只读)"
+msgstr ""
+
+#: ../../source/api/BackgroundAudioManager.rst:90
+msgid "当前音频的播放位置(单位：``s``)，只有在有合法 ``src`` 时返回。"
+msgstr ""
+
+#: ../../source/api/BackgroundAudioManager.rst:96
+msgid "当前是否暂停或停止。"
+msgstr ""
+
+#: ../../source/api/BackgroundAudioManager.rst:98
+msgid "boolean(只读)"
+msgstr ""
+
+#: ../../source/api/BackgroundAudioManager.rst:102
+msgid "音频已缓冲的时间，仅保证当前播放时间点到此时间点内容已缓冲。"
+msgstr ""
+
+#: ../../source/api/BackgroundAudioManager.rst:107
+msgid "方法"
+msgstr ""
+
+#: ../../source/api/BackgroundAudioManager.rst:111
+msgid "播放音乐"
+msgstr ""
+
+#: ../../source/api/BackgroundAudioManager.rst:115
+msgid "暂停音乐"
+msgstr ""
+
+#: ../../source/api/BackgroundAudioManager.rst:0
+#: ../../source/api/BackgroundAudioManager.rst:0
+#: ../../source/api/BackgroundAudioManager.rst:0
+#: ../../source/api/BackgroundAudioManager.rst:0
+#: ../../source/api/BackgroundAudioManager.rst:0
+#: ../../source/api/BackgroundAudioManager.rst:0
+#: ../../source/api/BackgroundAudioManager.rst:0
+#: ../../source/api/BackgroundAudioManager.rst:0
+#: ../../source/api/BackgroundAudioManager.rst:0
+#: ../../source/api/BackgroundAudioManager.rst:0
+#: ../../source/api/BackgroundAudioManager.rst:0
+#: ../../source/api/BackgroundAudioManager.rst:0
+#: ../../source/api/BackgroundAudioManager.rst:0
+msgid "参数"
+msgstr ""
+
+#: ../../source/api/BackgroundAudioManager.rst:119
+msgid "跳转到指定位置"
+msgstr ""
+
+#: ../../source/api/BackgroundAudioManager.rst:123
+msgid "停止音乐"
+msgstr ""
+
+#: ../../source/api/BackgroundAudioManager.rst:127
+msgid "监听背景音频进入可播放状态事件。但不保证后面可以流畅播放"
+msgstr ""
+
+#: ../../source/api/BackgroundAudioManager.rst:131
+msgid "监听音频加载中事件。当音频因为数据不足，需要停下来加载时会触发"
+msgstr ""
+
+#: ../../source/api/BackgroundAudioManager.rst:135
+msgid "监听背景音频播放错误事件"
+msgstr ""
+
+#: ../../source/api/BackgroundAudioManager.rst:139
+msgid "监听背景音频播放事件"
+msgstr ""
+
+#: ../../source/api/BackgroundAudioManager.rst:143
+msgid "监听背景音频暂停事件"
+msgstr ""
+
+#: ../../source/api/BackgroundAudioManager.rst:147
+msgid "监听背景音频开始跳转操作事件"
+msgstr ""
+
+#: ../../source/api/BackgroundAudioManager.rst:151
+msgid "监听背景音频完成跳转操作事件"
+msgstr ""
+
+#: ../../source/api/BackgroundAudioManager.rst:155
+msgid "监听背景音频自然播放结束事件"
+msgstr ""
+
+#: ../../source/api/BackgroundAudioManager.rst:159
+msgid "监听背景音频停止事件"
+msgstr ""
+
+#: ../../source/api/BackgroundAudioManager.rst:163
+msgid "监听背景音频播放进度更新事件"
+msgstr ""
+
+#: ../../source/api/BackgroundAudioManager.rst:167
+msgid "监听用户在系统音乐播放面板点击下一曲事件(仅iOS)"
+msgstr ""
+
+#: ../../source/api/BackgroundAudioManager.rst:171
+msgid "监听用户在系统音乐播放面板点击上一曲事件(仅iOS)"
+msgstr ""
+
+#: ../../source/api/BackgroundAudioManager.rst:174
+msgid "示例代码"
+msgstr ""
+

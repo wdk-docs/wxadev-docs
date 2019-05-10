@@ -1,0 +1,179 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019, Nosy
+# This file is distributed under the same license as the wxadev package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: wxadev \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-09 22:55+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/api-backend/auth.getPaidUnionId.rst:4
+msgid ":wxbpi:`auth.getPaidUnionId`"
+msgstr ""
+
+#: ../../source/api-backend/auth.getPaidUnionId.rst:6
+msgid "本接口应在服务器端调用，详细说明参见 :ref:`ability_bpi` 。"
+msgstr ""
+
+#: ../../source/api-backend/auth.getPaidUnionId.rst:8
+msgid "本接口支持云调用。需开发者工具版本 ``>= 1.02.1904090`` （最新稳定版下载）， ``wx-server-sdk >= 0.4.0``"
+msgstr ""
+
+#: ../../source/api-backend/auth.getPaidUnionId.rst:10
+msgid "用户支付完成后，获取该用户的 UnionId，无需用户授权。本接口支持第三方平台代理查询。"
+msgstr ""
+
+#: ../../source/api-backend/auth.getPaidUnionId.rst:12
+msgid "调用前需要用户完成支付，且在支付后的五分钟内有效。"
+msgstr ""
+
+#: ../../source/api-backend/auth.getPaidUnionId.rst:14
+msgid "调用方式::"
+msgstr ""
+
+#: ../../source/api-backend/auth.getPaidUnionId.rst:20
+msgid "HTTPS 调用"
+msgstr ""
+
+#: ../../source/api-backend/auth.getPaidUnionId.rst:22
+msgid "请求地址 :term:`api_wxa`"
+msgstr ""
+
+#: ../../source/api-backend/auth.getPaidUnionId.rst:0
+msgid "Query Parameters"
+msgstr ""
+
+#: ../../source/api-backend/auth.getPaidUnionId.rst:26
+msgid "*必选*     接口调用凭证"
+msgstr ""
+
+#: ../../source/api-backend/auth.getPaidUnionId.rst:27
+msgid "*必选*   支付用户唯一标识"
+msgstr ""
+
+#: ../../source/api-backend/auth.getPaidUnionId.rst:28
+msgid "*非比选*  微信支付订单号"
+msgstr ""
+
+#: ../../source/api-backend/auth.getPaidUnionId.rst:29
+msgid "*非必选*  微信支付分配的商户号，和商户订单号配合使用"
+msgstr ""
+
+#: ../../source/api-backend/auth.getPaidUnionId.rst:30
+msgid "*非必选*    微信支付商户订单号，和商户号配合使用"
+msgstr ""
+
+#: ../../source/api-backend/auth.getPaidUnionId.rst:0
+msgid "Response JSON Object"
+msgstr ""
+
+#: ../../source/api-backend/auth.getPaidUnionId.rst:31
+msgid "用户唯一标识，调用成功后返回"
+msgstr ""
+
+#: ../../source/api-backend/auth.getPaidUnionId.rst:32
+msgid "错误码, 合法值如下  - **-1**  系统繁忙，此时请开发者稍候再试 - **0**   请求成功 - **40003**       openid 错误 - **89002**       没有绑定开放平台帐号 - **89300**       订单无效"
+msgstr ""
+
+#: ../../source/api-backend/auth.getPaidUnionId.rst:32
+msgid "错误码, 合法值如下"
+msgstr ""
+
+#: ../../source/api-backend/auth.getPaidUnionId.rst:34
+msgid "**-1**  系统繁忙，此时请开发者稍候再试"
+msgstr ""
+
+#: ../../source/api-backend/auth.getPaidUnionId.rst:35
+msgid "**0**   请求成功"
+msgstr ""
+
+#: ../../source/api-backend/auth.getPaidUnionId.rst:36
+msgid "**40003**       openid 错误"
+msgstr ""
+
+#: ../../source/api-backend/auth.getPaidUnionId.rst:37
+msgid "**89002**       没有绑定开放平台帐号"
+msgstr ""
+
+#: ../../source/api-backend/auth.getPaidUnionId.rst:38
+msgid "**89300**       订单无效"
+msgstr ""
+
+#: ../../source/api-backend/auth.getPaidUnionId.rst:40
+msgid "错误信息"
+msgstr ""
+
+#: ../../source/api-backend/auth.getPaidUnionId.rst:42
+msgid "使用说明"
+msgstr ""
+
+#: ../../source/api-backend/auth.getPaidUnionId.rst:44
+msgid "以下两种方式任选其一。"
+msgstr ""
+
+#: ../../source/api-backend/auth.getPaidUnionId.rst:46
+msgid "微信支付订单号（transaction_id）::"
+msgstr ""
+
+#: ../../source/api-backend/auth.getPaidUnionId.rst:50
+msgid "微信支付商户订单号和微信支付商户号（out_trade_no 及 mch_id）::"
+msgstr ""
+
+#: ../../source/api-backend/auth.getPaidUnionId.rst:54
+#: ../../source/api-backend/auth.getPaidUnionId.rst:131
+msgid "返回数据示例"
+msgstr ""
+
+#: ../../source/api-backend/auth.getPaidUnionId.rst:65
+msgid "云调用"
+msgstr ""
+
+#: ../../source/api-backend/auth.getPaidUnionId.rst:67
+msgid "云调用是小程序·云开发提供的在云函数中调用微信开放接口的能力，需要在云函数中通过 wx-server-sdk 使用。"
+msgstr ""
+
+#: ../../source/api-backend/auth.getPaidUnionId.rst:69
+msgid "接口方法"
+msgstr ""
+
+#: ../../source/api-backend/auth.getPaidUnionId.rst:71
+msgid "openapi.auth.getPaidUnionId"
+msgstr ""
+
+#: ../../source/api-backend/auth.getPaidUnionId.rst:73
+msgid "需在 config.json 中配置 auth.getPaidUnionId API 的权限，详情"
+msgstr ""
+
+#: ../../source/api-backend/auth.getPaidUnionId.rst:75
+msgid "请求参数 属性      类型      默认值     必填      说明 openid  string          是       支付用户唯一标识 transactionId   string          否       微信支付订单号 mchId   string          否       微信支付分配的商户号，和商户订单号配合使用 outTradeNo      string          否       微信支付商户订单号，和商户号配合使用"
+msgstr ""
+
+#: ../../source/api-backend/auth.getPaidUnionId.rst:82
+msgid "返回值 Object 返回的 JSON 数据包"
+msgstr ""
+
+#: ../../source/api-backend/auth.getPaidUnionId.rst:86
+msgid "属性      类型      说明 unionid string  用户唯一标识，调用成功后返回 errCode number  错误码 errMsg  string  错误信息 errCode 的合法值"
+msgstr ""
+
+#: ../../source/api-backend/auth.getPaidUnionId.rst:92
+msgid "值       说明      最低版本 0       成功 异常 Object 抛出的异常"
+msgstr ""
+
+#: ../../source/api-backend/auth.getPaidUnionId.rst:98
+msgid "属性      类型      说明 errCode number  错误码 errMsg  string  错误信息 errCode 的合法值"
+msgstr ""
+
+#: ../../source/api-backend/auth.getPaidUnionId.rst:103
+msgid "值       说明      最低版本 -1      系统繁忙，此时请开发者稍候再试 40003   openid 错误 89002   没有绑定开放平台帐号 89300   订单无效 请求示例"
+msgstr ""
+

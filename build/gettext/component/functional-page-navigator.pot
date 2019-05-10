@@ -1,0 +1,199 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019, Nosy
+# This file is distributed under the same license as the wxadev package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: wxadev \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-09 22:55+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/component/functional-page-navigator.rst:4
+msgid ":wx_comp:`functional-page-navigator`"
+msgstr ""
+
+#: ../../source/component/functional-page-navigator.rst:6
+msgid "低版本需做 :ref:`compatibility` 。"
+msgstr ""
+
+#: ../../source/component/functional-page-navigator.rst:8
+msgid "仅在插件中有效，用于跳转到插件功能页。"
+msgstr ""
+
+#: ../../source/component/functional-page-navigator.rst:11
+msgid "属性"
+msgstr ""
+
+#: ../../source/component/functional-page-navigator.rst:11
+msgid "类型"
+msgstr ""
+
+#: ../../source/component/functional-page-navigator.rst:11
+msgid "默认值"
+msgstr ""
+
+#: ../../source/component/functional-page-navigator.rst:11
+msgid "必填"
+msgstr ""
+
+#: ../../source/component/functional-page-navigator.rst:11
+#: ../../source/component/functional-page-navigator.rst:27
+#: ../../source/component/functional-page-navigator.rst:40
+msgid "说明"
+msgstr ""
+
+#: ../../source/component/functional-page-navigator.rst:11
+#: ../../source/component/functional-page-navigator.rst:40
+msgid "最低版本"
+msgstr ""
+
+#: ../../source/component/functional-page-navigator.rst:13
+msgid "version"
+msgstr ""
+
+#: ../../source/component/functional-page-navigator.rst:13
+#: ../../source/component/functional-page-navigator.rst:15
+msgid "string"
+msgstr ""
+
+#: ../../source/component/functional-page-navigator.rst:13
+#: ../../source/component/functional-page-navigator.rst:33
+msgid "release"
+msgstr ""
+
+#: ../../source/component/functional-page-navigator.rst:13
+#: ../../source/component/functional-page-navigator.rst:15
+#: ../../source/component/functional-page-navigator.rst:17
+#: ../../source/component/functional-page-navigator.rst:19
+#: ../../source/component/functional-page-navigator.rst:21
+msgid "否"
+msgstr ""
+
+#: ../../source/component/functional-page-navigator.rst:13
+msgid "跳转到的小程序版本，线上版本必须设置为 release"
+msgstr ""
+
+#: ../../source/component/functional-page-navigator.rst:13
+#: ../../source/component/functional-page-navigator.rst:15
+#: ../../source/component/functional-page-navigator.rst:17
+#: ../../source/component/functional-page-navigator.rst:19
+#: ../../source/component/functional-page-navigator.rst:21
+#: ../../source/component/functional-page-navigator.rst:42
+#: ../../source/component/functional-page-navigator.rst:44
+msgid "2.1.0"
+msgstr ""
+
+#: ../../source/component/functional-page-navigator.rst:15
+msgid "name"
+msgstr ""
+
+#: ../../source/component/functional-page-navigator.rst:15
+msgid "要跳转到的功能页"
+msgstr ""
+
+#: ../../source/component/functional-page-navigator.rst:17
+msgid "args"
+msgstr ""
+
+#: ../../source/component/functional-page-navigator.rst:17
+msgid "object"
+msgstr ""
+
+#: ../../source/component/functional-page-navigator.rst:17
+msgid "功能页参数，参数格式与具体功能页相关"
+msgstr ""
+
+#: ../../source/component/functional-page-navigator.rst:19
+msgid "bindsuccess"
+msgstr ""
+
+#: ../../source/component/functional-page-navigator.rst:19
+#: ../../source/component/functional-page-navigator.rst:21
+msgid "eventhandler"
+msgstr ""
+
+#: ../../source/component/functional-page-navigator.rst:19
+msgid "功能页返回，且操作成功时触发， detail 格式与具体功能页相关"
+msgstr ""
+
+#: ../../source/component/functional-page-navigator.rst:21
+msgid "bindfail"
+msgstr ""
+
+#: ../../source/component/functional-page-navigator.rst:21
+msgid "功能页返回，且操作失败时触发， detail 格式与具体功能页相关"
+msgstr ""
+
+#: ../../source/component/functional-page-navigator.rst:24
+msgid "version 的合法值"
+msgstr ""
+
+#: ../../source/component/functional-page-navigator.rst:27
+#: ../../source/component/functional-page-navigator.rst:40
+msgid "值"
+msgstr ""
+
+#: ../../source/component/functional-page-navigator.rst:29
+msgid "develop"
+msgstr ""
+
+#: ../../source/component/functional-page-navigator.rst:29
+msgid "开发版"
+msgstr ""
+
+#: ../../source/component/functional-page-navigator.rst:31
+msgid "trial"
+msgstr ""
+
+#: ../../source/component/functional-page-navigator.rst:31
+msgid "体验版"
+msgstr ""
+
+#: ../../source/component/functional-page-navigator.rst:33
+msgid "正式版"
+msgstr ""
+
+#: ../../source/component/functional-page-navigator.rst:37
+msgid "name 的合法值"
+msgstr ""
+
+#: ../../source/component/functional-page-navigator.rst:42
+msgid "loginAndGetUserInfo"
+msgstr ""
+
+#: ../../source/component/functional-page-navigator.rst:42
+msgid "用户信息功能页"
+msgstr ""
+
+#: ../../source/component/functional-page-navigator.rst:44
+msgid "requestPayment"
+msgstr ""
+
+#: ../../source/component/functional-page-navigator.rst:44
+msgid "支付功能页"
+msgstr ""
+
+#: ../../source/component/functional-page-navigator.rst:47
+msgid "功能页是插件所有者小程序中的一个特殊页面，开发者不能自定义这个页面的外观。"
+msgstr ""
+
+#: ../../source/component/functional-page-navigator.rst:49
+msgid "在功能页展示时，一些与界面展示相关的接口将被禁用（接口调用返回 fail ）。"
+msgstr ""
+
+#: ../../source/component/functional-page-navigator.rst:51
+msgid "这个组件本身可以在开发者工具中使用，但功能页的跳转目前不支持在开发者工具中调试，请在真机上测试。"
+msgstr ""
+
+#: ../../source/component/functional-page-navigator.rst:53
+msgid "示例代码"
+msgstr ""
+

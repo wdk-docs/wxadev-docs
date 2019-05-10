@@ -78,54 +78,53 @@ pages
 window
 ---------------------------------------------------
 
-.. envvar:: window
+.. json:object:: window
+   :showexample:
 
-用于设置小程序的状态栏、导航条、标题、窗口背景色。
+   用于设置小程序的状态栏、导航条、标题、窗口背景色。
 
-+------------------------------+---------------+----------+------------------------------------------------------------+----------+
-|             属性             |     类型      |  默认值  |                            描述                            | 最低版本 |
-+==============================+===============+==========+============================================================+==========+
-| navigationBarBackgroundColor | HexColor [1]_ | #000000  | 导航栏背景颜色，如 #000000                                 |          |
-+------------------------------+---------------+----------+------------------------------------------------------------+----------+
-| navigationBarTextStyle       | string        | white    | 导航栏标题颜色，仅支持 black/white                         |          |
-+------------------------------+---------------+----------+------------------------------------------------------------+----------+
-| navigationBarTitleText       | string        |          | 导航栏标题文字内容                                         |          |
-+------------------------------+---------------+----------+------------------------------------------------------------+----------+
-| navigationStyle              | string        | default  | 导航栏样式，仅支持以下值：                                 |          |
-+------------------------------+---------------+----------+------------------------------------------------------------+----------+
-|                              |               | default  | 默认样式                                                   |          |
-+------------------------------+---------------+----------+------------------------------------------------------------+----------+
-|                              |               | custom   | 自定义导航栏，只保留右上角胶囊按钮。参见 [2]_ 。微信客户端 | 6.6.0    |
-+------------------------------+---------------+----------+------------------------------------------------------------+----------+
-| backgroundColor              | HexColor [1]_ | #ffffff  | 窗口的背景色                                               |          |
-+------------------------------+---------------+----------+------------------------------------------------------------+----------+
-| backgroundTextStyle          | string        | dark     | 下拉 loading 的样式，仅支持 dark / light                   |          |
-+------------------------------+---------------+----------+------------------------------------------------------------+----------+
-| backgroundColorTop           | string        | #ffffff  | 顶部窗口的背景色，仅iOS支持  微信客户端                    | 6.5.16   |
-+------------------------------+---------------+----------+------------------------------------------------------------+----------+
-| backgroundColorBottom        | string        | #ffffff  | 底部窗口的背景色，仅 iOS 支持  微信客户端                  | 6.5.16   |
-+------------------------------+---------------+----------+------------------------------------------------------------+----------+
-| enablePullDownRefresh        | boolean       | false    | 是否开启全局的下拉刷新。                                   |          |
-+------------------------------+---------------+----------+------------------------------------------------------------+----------+
-|                              |               |          | 详见 Page.onPullDownRefresh                                |          |
-+------------------------------+---------------+----------+------------------------------------------------------------+----------+
-| onReachBottomDistance        | number        | 50       | 页面上拉触底事件触发时距页面底部距离，单位为px。           |          |
-+------------------------------+---------------+----------+------------------------------------------------------------+----------+
-|                              |               |          | 详见 Page.onReachBottom                                    |          |
-+------------------------------+---------------+----------+------------------------------------------------------------+----------+
-| pageOrientation              | string        | portrait | 屏幕旋转设置，支持 auto/portrait/landscape                 |          |
-+------------------------------+---------------+----------+------------------------------------------------------------+----------+
-|                              |               |          | 详见 响应显示区域变化  2.4.0(auto)/2.5.0(landscape)        |          |
-+------------------------------+---------------+----------+------------------------------------------------------------+----------+
+   :property navigationBarBackgroundColor: 导航栏背景颜色，如 #000000
+   :proptype navigationBarBackgroundColor: HexColor [1]_
+   :options navigationBarBackgroundColor: #000000
+   :property navigationBarTextStyle: 导航栏标题颜色，仅支持 black/white
+   :proptype navigationBarTextStyle: string
+   :options navigationBarTextStyle: white
+   :property string navigationBarTitleText: 导航栏标题文字内容
+   :property navigationStyle: 导航栏样式，仅支持以下值： default 默认样式 custom 自定义导航栏，只保留右上角胶囊按钮 [2]_ 。	微信客户端 6.6.0
+   :proptype navigationStyle: string
+   :options navigationStyle: default
+   :property backgroundColor: 窗口的背景色
+   :proptype backgroundColor: HexColor [1]_
+   :options backgroundColor: #ffffff
+   :property backgroundTextStyle: 下拉 loading 的样式，仅支持 dark / light
+   :proptype backgroundTextStyle: string
+   :options backgroundTextStyle: dark
+   :property backgroundColorTop: 顶部窗口的背景色，仅 iOS 支持	微信客户端 6.5.16
+   :proptype backgroundColorTop: string
+   :options backgroundColorTop: #ffffff
+   :property backgroundColorBottom: 底部窗口的背景色，仅 iOS 支持	微信客户端 6.5.16
+   :proptype backgroundColorBottom: string
+   :options backgroundColorBottom: #ffffff
+   :property enablePullDownRefresh: 是否开启全局的下拉刷新。详见 Page.onPullDownRefresh
+   :proptype enablePullDownRefresh: boolean
+   :options enablePullDownRefresh: false
+   :property onReachBottomDistance: 页面上拉触底事件触发时距页面底部距离，单位为px。详见 Page.onReachBottom
+   :proptype onReachBottomDistance: number
+   :options onReachBottomDistance: 50
+   :property pageOrientation: 屏幕旋转设置，支持 auto/portrait/landscape 详见 响应显示区域变化	2.4.0 (auto) / 2.5.0 (landscape)
+   :proptype pageOrientation: string
+   :options pageOrientation: portrait
+
+:proptype user: :json:object:`window`
 
 .. [1] HexColor（十六进制颜色值），如"#ff00ff"
 .. [2] 关于navigationStyle
 
-   - 客户端 7.0.0 以下版本，navigationStyle 只在 app.json 中生效。
-   - 客户端 6.7.2 版本开始，navigationStyle: custom 对 <web-view> 组件无效
-   - 开启 custom 后，低版本客户端需要做好兼容。开发者工具基础库版本切到 1.7.0（不代表最低版本，只供调试用）可方便切到旧视觉
+  - 客户端 7.0.0 以下版本，navigationStyle 只在 app.json 中生效。
+  - 客户端 6.7.2 版本开始，navigationStyle: custom 对 <web-view> 组件无效
+  - 开启 custom 后，低版本客户端需要做好兼容。开发者工具基础库版本切到 1.7.0（不代表最低版本，只供调试用）可方便切到旧视觉
 
-如：
+示例代码：
 
 .. code::
 

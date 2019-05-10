@@ -1,0 +1,263 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019, Nosy
+# This file is distributed under the same license as the wxadev package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: wxadev \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-09 22:55+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/framework/view/wxs/basiclibrary.rst:4
+msgid ":wxfrwk:`基础类库 <view/wxs/07basiclibrary>`"
+msgstr ""
+
+#: ../../source/framework/view/wxs/basiclibrary.rst:8
+msgid "console"
+msgstr ""
+
+#: ../../source/framework/view/wxs/basiclibrary.rst:10
+msgid "console.log 方法用于在 console 窗口输出信息。它可以接受多个参数，将它们的结果连接起来输出。"
+msgstr ""
+
+#: ../../source/framework/view/wxs/basiclibrary.rst:13
+msgid "Math"
+msgstr ""
+
+#: ../../source/framework/view/wxs/basiclibrary.rst:16
+#: ../../source/framework/view/wxs/basiclibrary.rst:90
+#: ../../source/framework/view/wxs/basiclibrary.rst:103
+#: ../../source/framework/view/wxs/basiclibrary.rst:115
+msgid "属性"
+msgstr ""
+
+#: ../../source/framework/view/wxs/basiclibrary.rst:18
+msgid "E"
+msgstr ""
+
+#: ../../source/framework/view/wxs/basiclibrary.rst:19
+msgid "LN10"
+msgstr ""
+
+#: ../../source/framework/view/wxs/basiclibrary.rst:20
+msgid "LN2"
+msgstr ""
+
+#: ../../source/framework/view/wxs/basiclibrary.rst:21
+msgid "LOG2E"
+msgstr ""
+
+#: ../../source/framework/view/wxs/basiclibrary.rst:22
+msgid "LOG10E"
+msgstr ""
+
+#: ../../source/framework/view/wxs/basiclibrary.rst:23
+msgid "PI"
+msgstr ""
+
+#: ../../source/framework/view/wxs/basiclibrary.rst:24
+msgid "SQRT1_2"
+msgstr ""
+
+#: ../../source/framework/view/wxs/basiclibrary.rst:25
+msgid "SQRT2"
+msgstr ""
+
+#: ../../source/framework/view/wxs/basiclibrary.rst:27
+#: ../../source/framework/view/wxs/basiclibrary.rst:97
+#: ../../source/framework/view/wxs/basiclibrary.rst:109
+#: ../../source/framework/view/wxs/basiclibrary.rst:121
+msgid "以上属性的具体使用请参考 ES5 标准。"
+msgstr ""
+
+#: ../../source/framework/view/wxs/basiclibrary.rst:30
+#: ../../source/framework/view/wxs/basiclibrary.rst:57
+#: ../../source/framework/view/wxs/basiclibrary.rst:124
+msgid "方法"
+msgstr ""
+
+#: ../../source/framework/view/wxs/basiclibrary.rst:32
+msgid "abs"
+msgstr ""
+
+#: ../../source/framework/view/wxs/basiclibrary.rst:33
+msgid "acos"
+msgstr ""
+
+#: ../../source/framework/view/wxs/basiclibrary.rst:34
+msgid "asin"
+msgstr ""
+
+#: ../../source/framework/view/wxs/basiclibrary.rst:35
+msgid "atan"
+msgstr ""
+
+#: ../../source/framework/view/wxs/basiclibrary.rst:36
+msgid "atan2"
+msgstr ""
+
+#: ../../source/framework/view/wxs/basiclibrary.rst:37
+msgid "ceil"
+msgstr ""
+
+#: ../../source/framework/view/wxs/basiclibrary.rst:38
+msgid "cos"
+msgstr ""
+
+#: ../../source/framework/view/wxs/basiclibrary.rst:39
+msgid "exp"
+msgstr ""
+
+#: ../../source/framework/view/wxs/basiclibrary.rst:40
+msgid "floor"
+msgstr ""
+
+#: ../../source/framework/view/wxs/basiclibrary.rst:41
+msgid "log"
+msgstr ""
+
+#: ../../source/framework/view/wxs/basiclibrary.rst:42
+msgid "max"
+msgstr ""
+
+#: ../../source/framework/view/wxs/basiclibrary.rst:43
+msgid "min"
+msgstr ""
+
+#: ../../source/framework/view/wxs/basiclibrary.rst:44
+msgid "pow"
+msgstr ""
+
+#: ../../source/framework/view/wxs/basiclibrary.rst:45
+msgid "random"
+msgstr ""
+
+#: ../../source/framework/view/wxs/basiclibrary.rst:46
+msgid "round"
+msgstr ""
+
+#: ../../source/framework/view/wxs/basiclibrary.rst:47
+msgid "sin"
+msgstr ""
+
+#: ../../source/framework/view/wxs/basiclibrary.rst:48
+msgid "sqrt"
+msgstr ""
+
+#: ../../source/framework/view/wxs/basiclibrary.rst:49
+msgid "tan"
+msgstr ""
+
+#: ../../source/framework/view/wxs/basiclibrary.rst:51
+#: ../../source/framework/view/wxs/basiclibrary.rst:135
+msgid "以上方法的具体使用请参考 ES5 标准。"
+msgstr ""
+
+#: ../../source/framework/view/wxs/basiclibrary.rst:54
+msgid "JSON"
+msgstr ""
+
+#: ../../source/framework/view/wxs/basiclibrary.rst:59
+msgid "stringify(object): 将 object 对象转换为 JSON 字符串，并返回该字符串。"
+msgstr ""
+
+#: ../../source/framework/view/wxs/basiclibrary.rst:60
+msgid "parse(string): 将 JSON 字符串转化成对象，并返回该对象。"
+msgstr ""
+
+#: ../../source/framework/view/wxs/basiclibrary.rst:62
+msgid "示例代码："
+msgstr ""
+
+#: ../../source/framework/view/wxs/basiclibrary.rst:87
+msgid "Number"
+msgstr ""
+
+#: ../../source/framework/view/wxs/basiclibrary.rst:92
+msgid "MAX_VALUE"
+msgstr ""
+
+#: ../../source/framework/view/wxs/basiclibrary.rst:93
+msgid "MIN_VALUE"
+msgstr ""
+
+#: ../../source/framework/view/wxs/basiclibrary.rst:94
+msgid "NEGATIVE_INFINITY"
+msgstr ""
+
+#: ../../source/framework/view/wxs/basiclibrary.rst:95
+msgid "POSITIVE_INFINITY"
+msgstr ""
+
+#: ../../source/framework/view/wxs/basiclibrary.rst:100
+msgid "Date"
+msgstr ""
+
+#: ../../source/framework/view/wxs/basiclibrary.rst:105
+msgid "parse"
+msgstr ""
+
+#: ../../source/framework/view/wxs/basiclibrary.rst:106
+msgid "UTC"
+msgstr ""
+
+#: ../../source/framework/view/wxs/basiclibrary.rst:107
+msgid "now"
+msgstr ""
+
+#: ../../source/framework/view/wxs/basiclibrary.rst:112
+msgid "Global"
+msgstr ""
+
+#: ../../source/framework/view/wxs/basiclibrary.rst:117
+msgid "NaN"
+msgstr ""
+
+#: ../../source/framework/view/wxs/basiclibrary.rst:118
+msgid "Infinity"
+msgstr ""
+
+#: ../../source/framework/view/wxs/basiclibrary.rst:119
+msgid "undefined"
+msgstr ""
+
+#: ../../source/framework/view/wxs/basiclibrary.rst:126
+msgid "parseInt"
+msgstr ""
+
+#: ../../source/framework/view/wxs/basiclibrary.rst:127
+msgid "parseFloat"
+msgstr ""
+
+#: ../../source/framework/view/wxs/basiclibrary.rst:128
+msgid "isNaN"
+msgstr ""
+
+#: ../../source/framework/view/wxs/basiclibrary.rst:129
+msgid "isFinite"
+msgstr ""
+
+#: ../../source/framework/view/wxs/basiclibrary.rst:130
+msgid "decodeURI"
+msgstr ""
+
+#: ../../source/framework/view/wxs/basiclibrary.rst:131
+msgid "decodeURIComponent"
+msgstr ""
+
+#: ../../source/framework/view/wxs/basiclibrary.rst:132
+msgid "encodeURI"
+msgstr ""
+
+#: ../../source/framework/view/wxs/basiclibrary.rst:133
+msgid "encodeURIComponent"
+msgstr ""
+

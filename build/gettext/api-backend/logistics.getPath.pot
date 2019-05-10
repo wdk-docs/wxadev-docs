@@ -1,0 +1,95 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019, Nosy
+# This file is distributed under the same license as the wxadev package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: wxadev \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-09 22:55+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/api-backend/logistics.getPath.rst:2
+msgid ":wxbpi:`查询运单轨迹 <logistics.getPath>`"
+msgstr ""
+
+#: ../../source/api-backend/logistics.getPath.rst:4
+msgid "logistics.getPath 本接口应在服务器端调用，详细说明参见服务端API。"
+msgstr ""
+
+#: ../../source/api-backend/logistics.getPath.rst:7
+msgid "本接口支持云调用。需开发者工具版本 >= 1.02.1904090（最新稳定版下载），wx-server-sdk >= 0.4.0"
+msgstr ""
+
+#: ../../source/api-backend/logistics.getPath.rst:11
+msgid "一、HTTPS 调用"
+msgstr ""
+
+#: ../../source/api-backend/logistics.getPath.rst:13
+msgid "请求地址 POST https://api.weixin.qq.com/cgi-bin/express/business/path/get?access_token=ACCESS_TOKEN"
+msgstr ""
+
+#: ../../source/api-backend/logistics.getPath.rst:16
+msgid "请求参数 属性      类型      默认值     必填      说明 access_token    string          是       接口调用凭证 order_id        string          是       订单 ID，需保证全局唯一 openid  string          是       用户 openid delivery_id     string          是       快递公司ID，参见getAllDelivery waybill_id      string          是       运单ID"
+msgstr ""
+
+#: ../../source/api-backend/logistics.getPath.rst:24
+msgid "返回值 Object 属性      类型      说明 openid  string  用户openid delivery_id     string  快递公司 ID waybill_id      string  运单 ID path_item_num   number  轨迹节点数量 path_item_list  Array.<Object>  轨迹节点列表"
+msgstr ""
+
+#: ../../source/api-backend/logistics.getPath.rst:33
+msgid "path_item_list 的结构"
+msgstr ""
+
+#: ../../source/api-backend/logistics.getPath.rst:35
+msgid "属性      类型      说明 action_time     number  轨迹节点 Unix 时间戳 action_type     number  轨迹节点类型 action_msg      string  轨迹节点详情"
+msgstr ""
+
+#: ../../source/api-backend/logistics.getPath.rst:40
+msgid "action_type 的合法值"
+msgstr ""
+
+#: ../../source/api-backend/logistics.getPath.rst:42
+msgid "值       说明      最低版本 100001  揽件阶段-揽件成功 100002  揽件阶段-揽件失败 100003  揽件阶段-分配业务员 200001  运输阶段-更新运输轨迹 300002  派送阶段-开始派送 300003  派送阶段-签收成功 300004  派送阶段-签收失败 400001  异常阶段-订单取消 400002  异常阶段-订单滞留"
+msgstr ""
+
+#: ../../source/api-backend/logistics.getPath.rst:53
+msgid "请求数据示例"
+msgstr ""
+
+#: ../../source/api-backend/logistics.getPath.rst:64
+#: ../../source/api-backend/logistics.getPath.rst:155
+msgid "返回数据示例"
+msgstr ""
+
+#: ../../source/api-backend/logistics.getPath.rst:93
+msgid "二、云调用"
+msgstr ""
+
+#: ../../source/api-backend/logistics.getPath.rst:95
+msgid "云调用是小程序·云开发提供的在云函数中调用微信开放接口的能力，需要在云函数中通过 wx-server-sdk 使用。"
+msgstr ""
+
+#: ../../source/api-backend/logistics.getPath.rst:97
+msgid "接口方法 openapi.logistics.getPath 需在 config.json 中配置 logistics.getPath API 的权限，详情"
+msgstr ""
+
+#: ../../source/api-backend/logistics.getPath.rst:101
+msgid "请求参数 属性      类型      默认值     必填      说明 orderId string          是       订单 ID，需保证全局唯一 openid  string          是       用户 openid deliveryId      string          是       快递公司ID，参见getAllDelivery waybillId       string          是       运单ID 返回值 Object 属性      类型      说明 openid  string  用户openid deliveryId      string  快递公司 ID waybillId       string  运单 ID pathItemNum     number  轨迹节点数量 pathItemList    Array.<Object>  轨迹节点列表 pathItemList 的结构"
+msgstr ""
+
+#: ../../source/api-backend/logistics.getPath.rst:117
+msgid "属性      类型      说明 actionTime      number  轨迹节点 Unix 时间戳 actionType      number  轨迹节点类型 actionMsg       string  轨迹节点详情 actionType 的合法值"
+msgstr ""
+
+#: ../../source/api-backend/logistics.getPath.rst:123
+msgid "值       说明      最低版本 100001  揽件阶段-揽件成功 100002  揽件阶段-揽件失败 100003  揽件阶段-分配业务员 200001  运输阶段-更新运输轨迹 300002  派送阶段-开始派送 300003  派送阶段-签收成功 300004  派送阶段-签收失败 400001  异常阶段-订单取消 400002  异常阶段-订单滞留 请求数据示例"
+msgstr ""
+

@@ -1,0 +1,99 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019, Nosy
+# This file is distributed under the same license as the wxadev package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: wxadev \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-09 22:55+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../../source/wxwork/api/login/code2Session.rst:2
+msgid ":wxwork:`code2Session <dev-doc/qywx-api/login/code2session>`"
+msgstr ""
+
+#: ../../source/wxwork/api/login/code2Session.rst:9
+msgid ""
+"临时登录凭证校验接口是一个后台HTTPS 接口， 开发者服务器使用临时登录凭证code获取 "
+"session_key、用户userid以及用户所在企业的corpid等信息。"
+msgstr ""
+
+#: ../../source/wxwork/api/login/code2Session.rst:12
+msgid "如果你是第三方服务商开发者，请参见第三方小程序，和此接口的主要区别在于请求地址不同。"
+msgstr ""
+
+#: ../../source/wxwork/api/login/code2Session.rst:14
+msgid "**登录流程示意图**"
+msgstr ""
+
+#: ../../source/wxwork/api/login/code2Session.rst
+msgid "Query Parameters"
+msgstr ""
+
+#: ../../source/wxwork/api/login/code2Session.rst:24
+msgid ""
+"必选 调用接口凭证(注意，此处的access_token "
+"是企业微信应用的access_token，获取方法参见“获取access_token”。要求必须由该小程序关联的应用的secret获取"
+msgstr ""
+
+#: ../../source/wxwork/api/login/code2Session.rst:25
+msgid "必选 登录时获取的 code"
+msgstr ""
+
+#: ../../source/wxwork/api/login/code2Session.rst:26
+msgid "必选 此处固定为 ``authorization_code``"
+msgstr ""
+
+#: ../../source/wxwork/api/login/code2Session.rst
+msgid "权限说明"
+msgstr ""
+
+#: ../../source/wxwork/api/login/code2Session.rst:27
+msgid "access_token必须是与小程序关联的应用secret所获得。"
+msgstr ""
+
+#: ../../source/wxwork/api/login/code2Session.rst
+msgid "Response JSON Object"
+msgstr ""
+
+#: ../../source/wxwork/api/login/code2Session.rst:28
+msgid "用户所属企业的corpid"
+msgstr ""
+
+#: ../../source/wxwork/api/login/code2Session.rst:29
+msgid "用户在企业内的UserID，对应管理端的帐号，企业内唯一。注意：如果该企业没有关联该小程序，则此处返回加密的userid"
+msgstr ""
+
+#: ../../source/wxwork/api/login/code2Session.rst:30
+msgid "会话密钥"
+msgstr ""
+
+#: ../../source/wxwork/api/login/code2Session.rst:31
+msgid "错误码，真确时候返回 ``0``"
+msgstr ""
+
+#: ../../source/wxwork/api/login/code2Session.rst:32
+msgid "错误信息，正确时候返回 ``ok``。更多错误码的说明请查看 :wework:`企业微信全局错误码说明 <90139/90313>`。"
+msgstr ""
+
+#: ../../source/wxwork/api/login/code2Session.rst:36
+msgid "企业微信的jscode2session请求url与微信的不同"
+msgstr ""
+
+#: ../../source/wxwork/api/login/code2Session.rst:37
+msgid "企业微信的jscode2session返回的是userid，而微信返回的是openid"
+msgstr ""
+
+#: ../../source/wxwork/api/login/code2Session.rst:38
+msgid "获取access_token时请使用企业的corpid参数，请勿使用小程序的appid"
+msgstr ""
+

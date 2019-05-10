@@ -1,0 +1,356 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019, Nosy
+# This file is distributed under the same license as the wxadev package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: wxadev \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-09 22:55+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../../source/framework/client-lib/version.rst:2
+msgid ":wxfrwk:`基础库版本分布 <client-lib/version>`"
+msgstr ""
+
+#: ../../source/framework/client-lib/version.rst:4
+msgid "更新时间：2019 年 4 月 27 日"
+msgstr ""
+
+#: ../../source/framework/client-lib/version.rst:6
+msgid "占比低于 0.01% 的版本已隐藏，占比低于 1% 的版本以灰色显示。灰度发布中的版本占比将在灰度完成后显示。"
+msgstr ""
+
+#: ../../source/framework/client-lib/version.rst:9
+msgid "基础库版本"
+msgstr ""
+
+#: ../../source/framework/client-lib/version.rst:9
+msgid "安卓版本"
+msgstr ""
+
+#: ../../source/framework/client-lib/version.rst:9
+msgid "安卓用户占比"
+msgstr ""
+
+#: ../../source/framework/client-lib/version.rst:9
+msgid "iOS版本"
+msgstr ""
+
+#: ../../source/framework/client-lib/version.rst:9
+msgid "iOS用户占比"
+msgstr ""
+
+#: ../../source/framework/client-lib/version.rst:9
+msgid "总体占比"
+msgstr ""
+
+#: ../../source/framework/client-lib/version.rst:11
+msgid "2.6.6"
+msgstr ""
+
+#: ../../source/framework/client-lib/version.rst:11
+msgid "7.0.3"
+msgstr ""
+
+#: ../../source/framework/client-lib/version.rst:11
+msgid "92.14%"
+msgstr ""
+
+#: ../../source/framework/client-lib/version.rst:11
+msgid "86.25%"
+msgstr ""
+
+#: ../../source/framework/client-lib/version.rst:11
+msgid "90.78%"
+msgstr ""
+
+#: ../../source/framework/client-lib/version.rst:13
+msgid "2.6.5"
+msgstr ""
+
+#: ../../source/framework/client-lib/version.rst:13
+#: ../../source/framework/client-lib/version.rst:33
+#: ../../source/framework/client-lib/version.rst:35
+#: ../../source/framework/client-lib/version.rst:43
+#: ../../source/framework/client-lib/version.rst:45
+#: ../../source/framework/client-lib/version.rst:47
+msgid "0.01%"
+msgstr ""
+
+#: ../../source/framework/client-lib/version.rst:15
+msgid "2.5.2"
+msgstr ""
+
+#: ../../source/framework/client-lib/version.rst:15
+msgid "7.0.0"
+msgstr ""
+
+#: ../../source/framework/client-lib/version.rst:15
+msgid "2.56%"
+msgstr ""
+
+#: ../../source/framework/client-lib/version.rst:15
+msgid "3.19%"
+msgstr ""
+
+#: ../../source/framework/client-lib/version.rst:15
+msgid "2.70%"
+msgstr ""
+
+#: ../../source/framework/client-lib/version.rst:17
+msgid "2.5.1"
+msgstr ""
+
+#: ../../source/framework/client-lib/version.rst:17
+msgid "0.50%"
+msgstr ""
+
+#: ../../source/framework/client-lib/version.rst:17
+#: ../../source/framework/client-lib/version.rst:25
+#: ../../source/framework/client-lib/version.rst:33
+msgid "0.00%"
+msgstr ""
+
+#: ../../source/framework/client-lib/version.rst:17
+msgid "0.39%"
+msgstr ""
+
+#: ../../source/framework/client-lib/version.rst:19
+msgid "2.4.4"
+msgstr ""
+
+#: ../../source/framework/client-lib/version.rst:19
+msgid "6.7.3"
+msgstr ""
+
+#: ../../source/framework/client-lib/version.rst:19
+msgid "1.80%"
+msgstr ""
+
+#: ../../source/framework/client-lib/version.rst:19
+msgid "4.63%"
+msgstr ""
+
+#: ../../source/framework/client-lib/version.rst:19
+msgid "2.45%"
+msgstr ""
+
+#: ../../source/framework/client-lib/version.rst:21
+msgid "2.3.2"
+msgstr ""
+
+#: ../../source/framework/client-lib/version.rst:21
+msgid "6.7.2"
+msgstr ""
+
+#: ../../source/framework/client-lib/version.rst:21
+msgid "0.40%"
+msgstr ""
+
+#: ../../source/framework/client-lib/version.rst:21
+msgid "1.57%"
+msgstr ""
+
+#: ../../source/framework/client-lib/version.rst:21
+msgid "0.67%"
+msgstr ""
+
+#: ../../source/framework/client-lib/version.rst:23
+msgid "2.2.5"
+msgstr ""
+
+#: ../../source/framework/client-lib/version.rst:23
+#: ../../source/framework/client-lib/version.rst:25
+msgid "6.6.7"
+msgstr ""
+
+#: ../../source/framework/client-lib/version.rst:23
+msgid "1.05%"
+msgstr ""
+
+#: ../../source/framework/client-lib/version.rst:23
+msgid "6.7.0"
+msgstr ""
+
+#: ../../source/framework/client-lib/version.rst:23
+msgid "1.56%"
+msgstr ""
+
+#: ../../source/framework/client-lib/version.rst:23
+msgid "1.17%"
+msgstr ""
+
+#: ../../source/framework/client-lib/version.rst:25
+msgid "2.1.3"
+msgstr ""
+
+#: ../../source/framework/client-lib/version.rst:25
+msgid "0.53%"
+msgstr ""
+
+#: ../../source/framework/client-lib/version.rst:25
+msgid "0.12%"
+msgstr ""
+
+#: ../../source/framework/client-lib/version.rst:27
+msgid "2.0.9"
+msgstr ""
+
+#: ../../source/framework/client-lib/version.rst:27
+msgid "6.6.6"
+msgstr ""
+
+#: ../../source/framework/client-lib/version.rst:27
+msgid "0.51%"
+msgstr ""
+
+#: ../../source/framework/client-lib/version.rst:27
+msgid "0.79%"
+msgstr ""
+
+#: ../../source/framework/client-lib/version.rst:27
+msgid "0.58%"
+msgstr ""
+
+#: ../../source/framework/client-lib/version.rst:29
+msgid "1.9.97"
+msgstr ""
+
+#: ../../source/framework/client-lib/version.rst:29
+msgid "6.6.2"
+msgstr ""
+
+#: ../../source/framework/client-lib/version.rst:29
+msgid "0.62%"
+msgstr ""
+
+#: ../../source/framework/client-lib/version.rst:29
+msgid "0.69%"
+msgstr ""
+
+#: ../../source/framework/client-lib/version.rst:29
+msgid "0.64%"
+msgstr ""
+
+#: ../../source/framework/client-lib/version.rst:31
+msgid "1.9.9"
+msgstr ""
+
+#: ../../source/framework/client-lib/version.rst:31
+msgid "6.6.1"
+msgstr ""
+
+#: ../../source/framework/client-lib/version.rst:31
+msgid "0.20%"
+msgstr ""
+
+#: ../../source/framework/client-lib/version.rst:31
+msgid "0.33%"
+msgstr ""
+
+#: ../../source/framework/client-lib/version.rst:31
+msgid "0.23%"
+msgstr ""
+
+#: ../../source/framework/client-lib/version.rst:33
+msgid "1.9.6"
+msgstr ""
+
+#: ../../source/framework/client-lib/version.rst:33
+#: ../../source/framework/client-lib/version.rst:41
+#: ../../source/framework/client-lib/version.rst:43
+#: ../../source/framework/client-lib/version.rst:45
+msgid "0.02%"
+msgstr ""
+
+#: ../../source/framework/client-lib/version.rst:35
+msgid "1.9.4"
+msgstr ""
+
+#: ../../source/framework/client-lib/version.rst:35
+msgid "6.6.0"
+msgstr ""
+
+#: ../../source/framework/client-lib/version.rst:35
+msgid "0.07%"
+msgstr ""
+
+#: ../../source/framework/client-lib/version.rst:35
+#: ../../source/framework/client-lib/version.rst:37
+#: ../../source/framework/client-lib/version.rst:39
+#: ../../source/framework/client-lib/version.rst:41
+#: ../../source/framework/client-lib/version.rst:43
+#: ../../source/framework/client-lib/version.rst:47
+msgid "0.03%"
+msgstr ""
+
+#: ../../source/framework/client-lib/version.rst:37
+msgid "1.7.4"
+msgstr ""
+
+#: ../../source/framework/client-lib/version.rst:37
+msgid "6.5.22"
+msgstr ""
+
+#: ../../source/framework/client-lib/version.rst:37
+#: ../../source/framework/client-lib/version.rst:47
+msgid "0.06%"
+msgstr ""
+
+#: ../../source/framework/client-lib/version.rst:37
+msgid "0.04%"
+msgstr ""
+
+#: ../../source/framework/client-lib/version.rst:39
+msgid "1.6.8"
+msgstr ""
+
+#: ../../source/framework/client-lib/version.rst:39
+msgid "6.5.16"
+msgstr ""
+
+#: ../../source/framework/client-lib/version.rst:39
+msgid "0.11%"
+msgstr ""
+
+#: ../../source/framework/client-lib/version.rst:39
+msgid "0.05%"
+msgstr ""
+
+#: ../../source/framework/client-lib/version.rst:41
+msgid "1.5.8"
+msgstr ""
+
+#: ../../source/framework/client-lib/version.rst:41
+msgid "6.5.13"
+msgstr ""
+
+#: ../../source/framework/client-lib/version.rst:41
+msgid "0.08%"
+msgstr ""
+
+#: ../../source/framework/client-lib/version.rst:43
+msgid "1.4.4"
+msgstr ""
+
+#: ../../source/framework/client-lib/version.rst:43
+msgid "6.5.10"
+msgstr ""
+
+#: ../../source/framework/client-lib/version.rst:45
+msgid "1.2.5"
+msgstr ""
+
+#: ../../source/framework/client-lib/version.rst:47
+msgid "1.1.1"
+msgstr ""
+

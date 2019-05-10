@@ -1,0 +1,311 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019, Nosy
+# This file is distributed under the same license as the wxadev package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: wxadev \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-09 22:55+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/api/RecorderManager.start.rst:4
+msgid ":wxapi:`RecorderManager.start`"
+msgstr ""
+
+#: ../../source/api/RecorderManager.start.rst:7
+msgid "函数定义"
+msgstr ""
+
+#: ../../source/api/RecorderManager.start.rst:0
+msgid "label"
+msgstr ""
+
+#: ../../source/api/RecorderManager.start.rst:11
+msgid ":class:`RecorderManager` 开始录音"
+msgstr ""
+
+#: ../../source/api/RecorderManager.start.rst:0
+msgid "参数"
+msgstr ""
+
+#: ../../source/api/RecorderManager.start.rst:12
+msgid "``60000``       录音的时长，单位 ms，最大值 600000（10 分钟）"
+msgstr ""
+
+#: ../../source/api/RecorderManager.start.rst:13
+msgid "``8000``        采样率"
+msgstr ""
+
+#: ../../source/api/RecorderManager.start.rst:14
+msgid "``2``   录音通道数"
+msgstr ""
+
+#: ../../source/api/RecorderManager.start.rst:15
+msgid "``48000``       编码码率，有效值见下表格"
+msgstr ""
+
+#: ../../source/api/RecorderManager.start.rst:16
+msgid "``aac`` 音频格式"
+msgstr ""
+
+#: ../../source/api/RecorderManager.start.rst:17
+msgid "指定帧大小，单位 KB。传入 frameSize 后，每录制指定帧大小的内容后，会回调录制的文件内容，不指定则不会回调。暂仅支持 mp3 格式。"
+msgstr ""
+
+#: ../../source/api/RecorderManager.start.rst:18
+msgid "``auto``        指定录音的音频输入源，可通过 :func:`wx.getAvailableAudioSources()` 获取当前可用的音频源"
+msgstr ""
+
+#: ../../source/api/RecorderManager.start.rst:22
+msgid "sampleRate 的合法值"
+msgstr ""
+
+#: ../../source/api/RecorderManager.start.rst:25
+#: ../../source/api/RecorderManager.start.rst:50
+#: ../../source/api/RecorderManager.start.rst:61
+#: ../../source/api/RecorderManager.start.rst:72
+msgid "值"
+msgstr ""
+
+#: ../../source/api/RecorderManager.start.rst:25
+#: ../../source/api/RecorderManager.start.rst:50
+#: ../../source/api/RecorderManager.start.rst:61
+#: ../../source/api/RecorderManager.start.rst:72
+msgid "说明"
+msgstr ""
+
+#: ../../source/api/RecorderManager.start.rst:27
+#: ../../source/api/RecorderManager.start.rst:97
+msgid "8000"
+msgstr ""
+
+#: ../../source/api/RecorderManager.start.rst:27
+msgid "8000   采样率"
+msgstr ""
+
+#: ../../source/api/RecorderManager.start.rst:29
+#: ../../source/api/RecorderManager.start.rst:99
+msgid "11025"
+msgstr ""
+
+#: ../../source/api/RecorderManager.start.rst:29
+msgid "11025  采样率"
+msgstr ""
+
+#: ../../source/api/RecorderManager.start.rst:31
+#: ../../source/api/RecorderManager.start.rst:101
+msgid "12000"
+msgstr ""
+
+#: ../../source/api/RecorderManager.start.rst:31
+msgid "12000  采样率"
+msgstr ""
+
+#: ../../source/api/RecorderManager.start.rst:33
+#: ../../source/api/RecorderManager.start.rst:103
+msgid "16000"
+msgstr ""
+
+#: ../../source/api/RecorderManager.start.rst:33
+msgid "16000  采样率"
+msgstr ""
+
+#: ../../source/api/RecorderManager.start.rst:35
+#: ../../source/api/RecorderManager.start.rst:105
+msgid "22050"
+msgstr ""
+
+#: ../../source/api/RecorderManager.start.rst:35
+msgid "22050  采样率"
+msgstr ""
+
+#: ../../source/api/RecorderManager.start.rst:37
+#: ../../source/api/RecorderManager.start.rst:107
+msgid "24000"
+msgstr ""
+
+#: ../../source/api/RecorderManager.start.rst:37
+msgid "24000  采样率"
+msgstr ""
+
+#: ../../source/api/RecorderManager.start.rst:39
+#: ../../source/api/RecorderManager.start.rst:109
+msgid "32000"
+msgstr ""
+
+#: ../../source/api/RecorderManager.start.rst:39
+msgid "32000  采样率"
+msgstr ""
+
+#: ../../source/api/RecorderManager.start.rst:41
+#: ../../source/api/RecorderManager.start.rst:111
+msgid "44100"
+msgstr ""
+
+#: ../../source/api/RecorderManager.start.rst:41
+msgid "44100  采样率"
+msgstr ""
+
+#: ../../source/api/RecorderManager.start.rst:43
+#: ../../source/api/RecorderManager.start.rst:113
+msgid "48000"
+msgstr ""
+
+#: ../../source/api/RecorderManager.start.rst:43
+msgid "48000  采样率"
+msgstr ""
+
+#: ../../source/api/RecorderManager.start.rst:47
+msgid "numberOfChannels 的合法值"
+msgstr ""
+
+#: ../../source/api/RecorderManager.start.rst:50
+#: ../../source/api/RecorderManager.start.rst:61
+msgid "最低版本"
+msgstr ""
+
+#: ../../source/api/RecorderManager.start.rst:52
+#: ../../source/api/RecorderManager.start.rst:52
+msgid "1"
+msgstr ""
+
+#: ../../source/api/RecorderManager.start.rst:52
+#: ../../source/api/RecorderManager.start.rst:54
+msgid "个通道"
+msgstr ""
+
+#: ../../source/api/RecorderManager.start.rst:54
+#: ../../source/api/RecorderManager.start.rst:54
+msgid "2"
+msgstr ""
+
+#: ../../source/api/RecorderManager.start.rst:58
+msgid "format 的合法值"
+msgstr ""
+
+#: ../../source/api/RecorderManager.start.rst:63
+#: ../../source/api/RecorderManager.start.rst:63
+msgid "mp3"
+msgstr ""
+
+#: ../../source/api/RecorderManager.start.rst:63
+#: ../../source/api/RecorderManager.start.rst:65
+msgid "格式"
+msgstr ""
+
+#: ../../source/api/RecorderManager.start.rst:65
+#: ../../source/api/RecorderManager.start.rst:65
+msgid "aac"
+msgstr ""
+
+#: ../../source/api/RecorderManager.start.rst:69
+msgid "audioSource 的合法值"
+msgstr ""
+
+#: ../../source/api/RecorderManager.start.rst:74
+msgid "auto"
+msgstr ""
+
+#: ../../source/api/RecorderManager.start.rst:74
+msgid "自动设置，默认使用手机麦克风，插上耳麦后自动切换使用耳机麦克风，所有平台适用"
+msgstr ""
+
+#: ../../source/api/RecorderManager.start.rst:76
+msgid "buildInMic"
+msgstr ""
+
+#: ../../source/api/RecorderManager.start.rst:76
+msgid "手机麦克风，仅限 iOS"
+msgstr ""
+
+#: ../../source/api/RecorderManager.start.rst:78
+msgid "headsetMic"
+msgstr ""
+
+#: ../../source/api/RecorderManager.start.rst:78
+msgid "耳机麦克风，仅限 iOS"
+msgstr ""
+
+#: ../../source/api/RecorderManager.start.rst:80
+msgid "mic"
+msgstr ""
+
+#: ../../source/api/RecorderManager.start.rst:80
+msgid "麦克风（没插耳麦时是手机麦克风，插耳麦时是耳机麦克风），仅限 Android"
+msgstr ""
+
+#: ../../source/api/RecorderManager.start.rst:82
+msgid "camcorder"
+msgstr ""
+
+#: ../../source/api/RecorderManager.start.rst:82
+msgid "同 mic，适用于录制音视频内容，仅限 Android"
+msgstr ""
+
+#: ../../source/api/RecorderManager.start.rst:84
+msgid "voice_communication"
+msgstr ""
+
+#: ../../source/api/RecorderManager.start.rst:84
+msgid "同 mic，适用于实时沟通，仅限 Android"
+msgstr ""
+
+#: ../../source/api/RecorderManager.start.rst:86
+msgid "voice_recognition"
+msgstr ""
+
+#: ../../source/api/RecorderManager.start.rst:86
+msgid "同 mic，适用于语音识别，仅限 Android"
+msgstr ""
+
+#: ../../source/api/RecorderManager.start.rst:90
+msgid "采样率与编码码率限制"
+msgstr ""
+
+#: ../../source/api/RecorderManager.start.rst:92
+msgid "每种采样率有对应的编码码率范围有效值，设置不合法的采样率或编码码率会导致录音失败，具体对应关系如下表。"
+msgstr ""
+
+#: ../../source/api/RecorderManager.start.rst:95
+msgid "采样率"
+msgstr ""
+
+#: ../../source/api/RecorderManager.start.rst:95
+msgid "编码码率"
+msgstr ""
+
+#: ../../source/api/RecorderManager.start.rst:97
+#: ../../source/api/RecorderManager.start.rst:99
+msgid "16000 ~ 48000"
+msgstr ""
+
+#: ../../source/api/RecorderManager.start.rst:101
+msgid "24000 ~ 64000"
+msgstr ""
+
+#: ../../source/api/RecorderManager.start.rst:103
+msgid "24000 ~ 96000"
+msgstr ""
+
+#: ../../source/api/RecorderManager.start.rst:105
+#: ../../source/api/RecorderManager.start.rst:107
+msgid "32000 ~ 128000"
+msgstr ""
+
+#: ../../source/api/RecorderManager.start.rst:109
+msgid "48000 ~ 192000"
+msgstr ""
+
+#: ../../source/api/RecorderManager.start.rst:111
+#: ../../source/api/RecorderManager.start.rst:113
+msgid "64000 ~ 320000"
+msgstr ""
+

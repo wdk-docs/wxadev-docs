@@ -358,66 +358,66 @@ console.log(&#39;.wxs&#39; === a + b);
 <div class="section" id="id9">
 <h2>其他运算符<a class="headerlink" href="#id9" title="永久链接至标题">¶</a></h2>
 <p>示例代码：</p>
-<div class="highlight-js notranslate"><div class="highlight"><pre><span></span>var a = 10, b = 20;
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="kd">var</span> <span class="nx">a</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span> <span class="nx">b</span> <span class="o">=</span> <span class="mi">20</span><span class="p">;</span>
 
-//条件运算符
-console.log(20 === (a &gt;= 10 ? a + 10 : b + 10));
-//逗号运算符
-console.log(20 === (a, b));
-运算符优先级
-优先级   运算符     说明      结合性
-20    ( ... ) 括号      N / A
-19    ... ....        成员访问    从左到右
-... [...]     成员访问    从左到右
-... (...)     函数调用    从左到右
-17    ... ++  后置递增    N / A
-... --        后置递减    N / A
-16    ! ...   逻辑非     从右到左
-~ ... 按位非     从右到左
-+ ... 一元加法    从右到左
-- ... 一元减法    从右到左
-++ ...        前置递增    从右到左
--- ...        前置递减    从右到左
-typeof ...    类型      从右到左
-void ...      空虚      从右到左
-delete ...    删除      从右到左
-14    ... *...        乘法      从左到右
-... /...      除法      从左到右
-... %...      取模      从左到右
-13    ... +...        加法      从左到右
-... -...      减法      从左到右
-12    ... &lt;&lt;...       按位左移    从左到右
-... &gt;&gt;...     按位右移    从左到右
-... &gt;&gt;&gt;...    无符号右移   从左到右
-11    ... &lt;...        小于      从左到右
-... &lt;=...     小于等于    从左到右
-... &gt;...      大于      从左到右
-... &gt;=...     大于等于    从左到右
-10    ... ==...       等号      从左到右
-... !=...     非等号     从左到右
-... ===...    全等号     从左到右
-... !==...    非全等号    从左到右
-9     ... &amp;...        按位与     从左到右
-8     ... ^...        按位异或    从左到右
-7     ... ｜...        按位或     从左到右
-6     ... &amp;&amp;...       逻辑与     从左到右
-五     ... ｜｜...       逻辑或     从左到右
-4     ... ... ?... ... :... ...       条件运算符   从右到左
-3     ... =...        赋值      从右到左
-... +=...     赋值      从右到左
-... -=...     赋值      从右到左
-... *=...     赋值      从右到左
-... /=...     赋值      从右到左
-... %=...     赋值      从右到左
-... &lt;&lt;=...    赋值      从右到左
-... &gt;&gt;=...    赋值      从右到左
-... &gt;&gt;&gt;=...   赋值      从右到左
-... &amp;=...     赋值      从右到左
-... ^=...     赋值      从右到左
-... ｜=...     赋值      从右到左
-0     ... ,...        逗号      从左到右
+<span class="c1">//条件运算符</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="mi">20</span> <span class="o">===</span> <span class="p">(</span><span class="nx">a</span> <span class="o">&gt;=</span> <span class="mi">10</span> <span class="o">?</span> <span class="nx">a</span> <span class="o">+</span> <span class="mi">10</span> <span class="o">:</span> <span class="nx">b</span> <span class="o">+</span> <span class="mi">10</span><span class="p">));</span>
+<span class="c1">//逗号运算符</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="mi">20</span> <span class="o">===</span> <span class="p">(</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">));</span>
 </pre></div>
 </div>
+<p>运算符优先级
+优先级     运算符     说明      结合性
+20      ( … ) 括号      N / A
+19      … ….        成员访问    从左到右
+… […]       成员访问    从左到右
+… (…)       函数调用    从左到右
+17      … ++  后置递增    N / A
+… –  后置递减    N / A
+16      ! …   逻辑非     从右到左
+~ …   按位非     从右到左
++ …   一元加法    从右到左
+- …   一元减法    从右到左
+++ …  前置递增    从右到左
+– …  前置递减    从右到左
+typeof …      类型      从右到左
+void …        空虚      从右到左
+delete …      删除      从右到左
+14      … <a href="#id10"><span class="problematic" id="id11">*</span></a>…        乘法      从左到右
+… /…        除法      从左到右
+… %…        取模      从左到右
+13      … +…        加法      从左到右
+… -…        减法      从左到右
+12      … &lt;&lt;…       按位左移    从左到右
+… &gt;&gt;…       按位右移    从左到右
+… &gt;&gt;&gt;…      无符号右移   从左到右
+11      … &lt;…        小于      从左到右
+… &lt;=…       小于等于    从左到右
+… &gt;…        大于      从左到右
+… &gt;=…       大于等于    从左到右
+10      … ==…       等号      从左到右
+… !=…       非等号     从左到右
+… ===…      全等号     从左到右
+… !==…      非全等号    从左到右
+9       … &amp;…        按位与     从左到右
+8       … ^…        按位异或    从左到右
+7       … ｜…        按位或     从左到右
+6       … &amp;&amp;…       逻辑与     从左到右
+五       … ｜｜…       逻辑或     从左到右
+4       … … ?… … :… …       条件运算符   从右到左
+3       … =…        赋值      从右到左
+… +=…       赋值      从右到左
+… -=…       赋值      从右到左
+… <a href="#id12"><span class="problematic" id="id13">*</span></a>=…       赋值      从右到左
+… /=…       赋值      从右到左
+… %=…       赋值      从右到左
+… &lt;&lt;=…      赋值      从右到左
+… &gt;&gt;=…      赋值      从右到左
+… &gt;&gt;&gt;=…     赋值      从右到左
+… &amp;=…       赋值      从右到左
+… ^=…       赋值      从右到左
+… ｜=…       赋值      从右到左
+0       … ,…        逗号      从左到右</p>
 </div>
 </div>
 

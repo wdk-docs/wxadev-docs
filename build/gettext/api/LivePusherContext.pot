@@ -1,0 +1,197 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019, Nosy
+# This file is distributed under the same license as the wxadev package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: wxadev \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-09 23:21+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/api/LivePusherContext.rst:2
+msgid ":wxapi:`LivePusherContext`"
+msgstr ""
+
+#: ../../source/api/LivePusherContext.rst:6
+#: ../../source/api/LivePusherContext.rst:63
+#: ../../source/api/LivePusherContext.rst:73
+#: ../../source/api/LivePusherContext.rst:83
+#: ../../source/api/LivePusherContext.rst:94
+#: ../../source/api/LivePusherContext.rst:104
+#: ../../source/api/LivePusherContext.rst:114
+#: ../../source/api/LivePusherContext.rst:124
+msgid "低版本需做 :ref:`compatibility` 。"
+msgstr ""
+
+#: ../../source/api/LivePusherContext.rst:0
+#: ../../source/api/LivePusherContext.rst:0
+#: ../../source/api/LivePusherContext.rst:0
+#: ../../source/api/LivePusherContext.rst:0
+#: ../../source/api/LivePusherContext.rst:0
+#: ../../source/api/LivePusherContext.rst:0
+#: ../../source/api/LivePusherContext.rst:0
+#: ../../source/api/LivePusherContext.rst:0
+#: ../../source/api/LivePusherContext.rst:0
+#: ../../source/api/LivePusherContext.rst:0
+#: ../../source/api/LivePusherContext.rst:0
+#: ../../source/api/LivePusherContext.rst:0
+#: ../../source/api/LivePusherContext.rst:0
+msgid "label"
+msgstr ""
+
+#: ../../source/api/LivePusherContext.rst:8
+msgid "创建 :ref:`live-pusher` 上下文 :class:`LivePusherContext` 对象。"
+msgstr ""
+
+#: ../../source/api/LivePusherContext.rst:0
+msgid "返回"
+msgstr ""
+
+#: ../../source/api/LivePusherContext.rst:9
+msgid "LivePusherContext"
+msgstr ""
+
+#: ../../source/api/LivePusherContext.rst:14
+msgid "LivePusherContext 实例，可通过 :func:`wx.createLivePusherContext` 获取。"
+msgstr ""
+
+#: ../../source/api/LivePusherContext.rst:16
+msgid "livePusherContext 与页面内唯一的 <:ref:`live-pusher`> 组件绑定，操作对应的 <:ref:`live-pusher`> 组件。"
+msgstr ""
+
+#: ../../source/api/LivePusherContext.rst:19
+msgid "方法"
+msgstr ""
+
+#: ../../source/api/LivePusherContext.rst:23
+msgid "播放推流"
+msgstr ""
+
+#: ../../source/api/LivePusherContext.rst:0
+#: ../../source/api/LivePusherContext.rst:0
+#: ../../source/api/LivePusherContext.rst:0
+#: ../../source/api/LivePusherContext.rst:0
+#: ../../source/api/LivePusherContext.rst:0
+#: ../../source/api/LivePusherContext.rst:0
+#: ../../source/api/LivePusherContext.rst:0
+#: ../../source/api/LivePusherContext.rst:0
+#: ../../source/api/LivePusherContext.rst:0
+#: ../../source/api/LivePusherContext.rst:0
+#: ../../source/api/LivePusherContext.rst:0
+#: ../../source/api/LivePusherContext.rst:0
+msgid "参数"
+msgstr ""
+
+#: ../../source/api/LivePusherContext.rst:25
+#: ../../source/api/LivePusherContext.rst:33
+#: ../../source/api/LivePusherContext.rst:41
+#: ../../source/api/LivePusherContext.rst:49
+#: ../../source/api/LivePusherContext.rst:57
+#: ../../source/api/LivePusherContext.rst:67
+#: ../../source/api/LivePusherContext.rst:77
+#: ../../source/api/LivePusherContext.rst:88
+#: ../../source/api/LivePusherContext.rst:98
+#: ../../source/api/LivePusherContext.rst:108
+#: ../../source/api/LivePusherContext.rst:118
+#: ../../source/api/LivePusherContext.rst:128
+msgid "接口调用成功的回调函数"
+msgstr ""
+
+#: ../../source/api/LivePusherContext.rst:26
+#: ../../source/api/LivePusherContext.rst:34
+#: ../../source/api/LivePusherContext.rst:42
+#: ../../source/api/LivePusherContext.rst:50
+#: ../../source/api/LivePusherContext.rst:58
+#: ../../source/api/LivePusherContext.rst:68
+#: ../../source/api/LivePusherContext.rst:78
+#: ../../source/api/LivePusherContext.rst:89
+#: ../../source/api/LivePusherContext.rst:99
+#: ../../source/api/LivePusherContext.rst:109
+#: ../../source/api/LivePusherContext.rst:119
+#: ../../source/api/LivePusherContext.rst:129
+msgid "接口调用失败的回调函数"
+msgstr ""
+
+#: ../../source/api/LivePusherContext.rst:27
+#: ../../source/api/LivePusherContext.rst:35
+#: ../../source/api/LivePusherContext.rst:43
+#: ../../source/api/LivePusherContext.rst:51
+#: ../../source/api/LivePusherContext.rst:59
+#: ../../source/api/LivePusherContext.rst:69
+#: ../../source/api/LivePusherContext.rst:79
+#: ../../source/api/LivePusherContext.rst:90
+#: ../../source/api/LivePusherContext.rst:100
+#: ../../source/api/LivePusherContext.rst:110
+#: ../../source/api/LivePusherContext.rst:120
+#: ../../source/api/LivePusherContext.rst:130
+msgid "接口调用结束的回调函数（调用成功、失败都会执行）"
+msgstr ""
+
+#: ../../source/api/LivePusherContext.rst:31
+msgid "停止推流"
+msgstr ""
+
+#: ../../source/api/LivePusherContext.rst:39
+msgid "暂停推流"
+msgstr ""
+
+#: ../../source/api/LivePusherContext.rst:47
+msgid "恢复推流"
+msgstr ""
+
+#: ../../source/api/LivePusherContext.rst:55
+msgid "切换前后摄像头"
+msgstr ""
+
+#: ../../source/api/LivePusherContext.rst:65
+msgid "快照"
+msgstr ""
+
+#: ../../source/api/LivePusherContext.rst:75
+msgid "切换"
+msgstr ""
+
+#: ../../source/api/LivePusherContext.rst:85
+msgid "播放背景音"
+msgstr ""
+
+#: ../../source/api/LivePusherContext.rst:87
+msgid "加入背景混音的资源地址"
+msgstr ""
+
+#: ../../source/api/LivePusherContext.rst:96
+msgid "停止背景音"
+msgstr ""
+
+#: ../../source/api/LivePusherContext.rst:106
+msgid "暂停背景音"
+msgstr ""
+
+#: ../../source/api/LivePusherContext.rst:116
+msgid "恢复背景音"
+msgstr ""
+
+#: ../../source/api/LivePusherContext.rst:126
+msgid "设置背景音音量"
+msgstr ""
+
+#: ../../source/api/LivePusherContext.rst:127
+msgid "音量大小，范围是 0-1"
+msgstr ""
+
+#: ../../source/api/LivePusherContext.rst:132
+msgid "示例代码"
+msgstr ""
+
+#: ../../source/api/LivePusherContext.rst:134
+msgid "在开发者工具中预览效果"
+msgstr ""
+

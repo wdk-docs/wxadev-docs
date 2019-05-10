@@ -1,0 +1,3457 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019, Nosy
+# This file is distributed under the same license as the wxadev package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: wxadev \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-09 22:55+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/devtools/change/uplog.rst:2
+msgid "开发者工具更新日志"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:4
+msgid "查看基础库更新日志 查看云开发更新日志"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:7
+msgid "2019.02.01"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:9
+#: ../../source/devtools/change/uplog.rst:42
+msgid "F 修复 界面调试样式信息显示不全的问题 反馈详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:11
+msgid "2019.01.23"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:13
+msgid "F 修复 1.02.1901221 引入的 app.json usingComponent 没有扩散的问题 反馈详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:14
+msgid "F 修复 长路径的项目无法正常打开的问题 反馈详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:15
+#: ../../source/devtools/change/uplog.rst:21
+msgid "F 修复 1.02.1901170 引入的 win 版经常弹项目列表窗口的问题 反馈详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:17
+msgid "2019.01.22"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:19
+msgid "F 修复 1.02.1901170 引入的 wx.previewImage 无效的问题 反馈详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:20
+msgid "F 修复 1.02.1901170 引入的预览时报 pageJSON 错误的问题 反馈详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:22
+msgid "F 修复 1.02.1901170 引入的 tabBar selectIconPath 无效的问题 反馈详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:23
+msgid "F 修复 1.02.1901170 引入的小程序全屏模式存现返回按钮的问题 反馈详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:24
+msgid "F 修复 ext.json 中有效字段被误提示为无效字段的问题 反馈详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:25
+msgid "F 修复 wx.setStorage key 允许为空字符的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:26
+msgid "F 修复 第三方平台命令行上传代码异常问题 反馈详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:28
+msgid "2019.01.17"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:30
+msgid "A 新增 自定义 tabbar 调试支持 详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:31
+msgid "A 新增 微信开发者·代码管理 详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:32
+msgid "A 新增 安全设置，CLI/HTTP 调用默认关闭，需要手动开启 详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:33
+msgid "A 新增 游客模式可以修改 appid"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:34
+msgid "U 优化 新建项目流程"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:35
+msgid "U 优化 开发者工具模态弹窗反馈的交互"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:36
+msgid "U 优化 app.json 和 page.json 的字段类型检查及无效字段提示"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:37
+msgid "F 修复 修改 appid 后云开发的本地缓存没有清理导致无法正确上传、下载代码的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:38
+msgid "F 修复 设置系统代理失败后，界面还是显示为系统代理的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:39
+msgid "F 修复 设置系统代理失败，windows 版会有多次失败提示的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:40
+msgid "F 修复 多帐号调试窗口丢失 AppData 调试面板的问题 反馈详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:41
+msgid "F 修复 Mac 复制失效的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:43
+msgid "F 修复 WXML 面板不显示 media query 的问题 反馈详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:44
+msgid "F 修复 WXML 面板样式点一下就点不动的问题 反馈详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:45
+msgid "F 修复 在硬盘删除项目目录后重建，开发者工具无法监听到文件变更的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:46
+msgid "F 修复 登录流程的部分错误情况没有错误提示的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:47
+msgid "F 修复 分享时未触发 app.onHide 的问题 反馈详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:48
+msgid "F 修复 小游戏调试器无法显示 wx.downloadFile wx.uploadFile 的请求的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:49
+msgid "F 修复 2.4.4 基础库开发者工具切后台报错的问题 反馈详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:50
+msgid "F 修复 小程序分包中使用插件的页面会丢失样式的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:52
+msgid "2018.12.27"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:54
+msgid "#. windows 64 、 windows 32 、 mac #. #. F 修复 1.02.1812260 引入的 first_column 的问题 反馈详情 #. F 修复 getLocation 每次都会有授权弹窗的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:59
+msgid "2018.12.26"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:61
+msgid "A 新增 app.json 支持 permission 字段"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:62
+msgid "A 新增 page.json 支持 navigationStyle 字段（仅对 2.4.3 基础库有效）"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:63
+msgid "F 修复 部分组件黑色主题样式问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:64
+msgid "F 修复 公众号网页调试没法打开外观设置的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:66
+msgid "2018.12.18"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:68
+msgid "A 新增 黑色主题 详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:69
+msgid "A 新增 mDns 调试支持"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:70
+msgid "A 新增 模拟器在工具右侧展示"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:71
+msgid "A 新增 模拟器 Home 和 返回操作 反馈详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:72
+msgid "A 新增 <web-view> 支持 bindload/binderror"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:73
+msgid "A 新增 project.config.json 中 appid 支持修改"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:74
+msgid "A 新增 小游戏 game.json 配置项 deviceOrientation 支持 landscapeLeft/landscapeRight"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:75
+msgid "A 新增 小程序配置文件支持 pageOrientation 详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:76
+msgid "A 新增 CLI/HTTP 支持自动预览 详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:77
+msgid "U 优化 云函数上传时提示是否有未安装的依赖"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:78
+msgid "U 优化 当自定义编译条件过多时，点击打开自动定位到已选择的编译模式"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:79
+msgid "U 优化 自定义编译条件支持方向键操作"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:80
+msgid "F 修复 小程序分包会加载两次 app.wxss 的问题 反馈详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:81
+msgid "F 修复 app.json 中写入 extAppid 导致异常的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:82
+msgid "F 修复 mac 版工具会出现 command + s 无法保存的问题 反馈详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:83
+msgid "F 修复 分包中的插件引用自身资源加载失败的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:84
+msgid "F 修复 分包预加载阶段时 app.js 被执行的问题 反馈详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:85
+msgid "F 修复 小游戏分包中的 game.js 为空文件上传会报错的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:86
+msgid "F 修复 未打开工具时点击代码片段链接无法自动拉起工具的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:87
+msgid "F 修复 公众号网页调试的调试器无法弹出的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:88
+msgid "F 修复 windows 版任务栏图标丢失的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:89
+msgid "F 修复 Page.onTabItemTap 只有第一次触发的问题 反馈详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:90
+msgid "F 修复 页面没有 json 文件的时，app.json 的 usingComponents 没有在该页面生效的问题 反馈详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:91
+msgid "F 修复 cli 发生错误时进程退出码为 0 的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:93
+msgid "2018.11.29"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:95
+msgid "#. windows 64 、 windows 32 、 mac #. #. F 修复 新建带有 miniprogramRoot 的项目后编译失败，需要任意修改一次 project.config.json 的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:99
+msgid "2018.11.28"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:101
+msgid "A 新增 云函数定时触发器 详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:102
+msgid "F 修复 1.02.1811150 版本引入的部分 Windows 系统出现 wxml not found 的问题 反馈详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:103
+msgid "F 修复 小游戏分包加载失败的问题 反馈详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:105
+msgid "2018.11.15"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:107
+msgid "F 修复 1.02.1811141 版本引入的 page.json 设置无效的问题 反馈详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:108
+msgid "F 修复 1.02.1811141 版本引入的 wxml 本地调试丢失 rpx 原始信息的问题 反馈详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:110
+msgid "2018.11.14"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:112
+msgid "A 新增 typescript 支持 详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:113
+msgid "A 新增 云数据库索引可以增加唯一性限制 详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:114
+msgid "A 新增 云数据库导出 详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:115
+msgid "A 新增 CLI & HTTP 支持自定义编译条件"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:116
+msgid "A 新增 CLI & HTTP 支持 \"构建npm\""
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:117
+msgid "A 新增 CLI & HTTP 命令登录 IDE 时支持输入登录结果到指定文件"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:118
+msgid "A 新增 CLI & HTTP 支持下载代码片段到指定目录"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:119
+msgid "A 新增 wxss 支持 @supports 反馈详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:120
+msgid "U 优化 代码片段大小提高至 1MB"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:121
+msgid "U 优化 通过 project.config.json 的 packOptions.ignore 配置忽略的文件在调试器中不会显示 404"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:122
+msgid "U 优化 支持根据 package.json 的 dependencies 字段构建 npm"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:123
+msgid "F 修复 CLI & HTTP 预览/上传一个未在工具中创建的项目时会出错的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:124
+msgid "F 修复 音乐暂停时 seek 与真机表现不一致的问题 反馈详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:125
+msgid "F 修复 BackgroundAudioManager.title 不指定时开发者工具没有报错的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:126
+msgid "F 修复 部分 页面右键很难出现调试按钮的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:127
+msgid "F 修复 wxs 解析表达式中的对象字面量时报错"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:128
+msgid "F 修复 wxs 错误阻塞渲染问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:129
+msgid "F 修复 wxs 文件修改保存后没有立即生效的问题 反馈详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:130
+msgid "F 修复 Windows 系统打开位于网络路径的项目提示找不到 \"app.json\" 的问题 反馈详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:131
+msgid "F 修复 Windows 系统下 wxml 文件过多会报 ENAMETOOLONG 错误导致无法编译的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:132
+msgid "F 修复 全局配置文件中 networkTimeout.connectSocket 无效的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:133
+msgid "F 修复 插件开发模式下切后台不会触发 App.onHide 的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:134
+msgid "F 修复 小游戏自定义编译条件 wx.getLaunchInfoSync 丢失 referrerInfo 的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:135
+msgid "F 修复 小游戏网络请求校验 tls 版本没有生效的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:136
+msgid "F 修复 小游戏广告无法关闭的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:137
+msgid "F 修复 未开启多核心编译后小游戏无法正常运行的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:139
+msgid "2018.10.25"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:141
+msgid "#. windows 64 、 windows 32 、 mac #. #. F 修复 extAppid 与 appid 一致时导致 ext.json 上传时被忽略的问题 反馈详情 #. F 修复 2.3.1 基础库打开小游戏加载异常的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:146
+msgid "2018.10.19"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:148
+msgid "A 新增 云开发在线安装依赖功能"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:149
+msgid "A 新增 导入代码片段时支持使用测试号"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:150
+msgid "A 新增 代码保护功能 详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:151
+msgid "A 新增 小程序允许在 app.json 中使用 usingComponents"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:152
+msgid "F 修复 自动生成页面没有遵守 tabsize 设置 反馈详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:153
+msgid "F 修复 开发者工具切换为英文版时，wx.getSystemInfo 返回的语言还是中文的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:154
+msgid "F 修复 Mac 系统当使用 USB 连接 iPhone/iPad 时会出现设置系统代理失败的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:155
+msgid "F 修复 第三方平台 extappid 信息无法读到的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:156
+msgid "F 修复 Win 系统在未打开开发工具时导入代码片段链接有误的问题 反馈详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:157
+msgid "F 修复 小游戏通过二维码编译无法获取 query 信息的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:158
+msgid "F 修复 生成的 project.config.json 异常导致无法预览的问题 反馈详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:159
+msgid "F 修复 代码片段在游客模式下修改 appid 会报错的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:160
+msgid "F 修复 font-size 最小为 12px 的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:161
+msgid "U 优化 代码片段链接"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:163
+msgid "2018.09.26"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:165
+msgid "A 新增 项目详情页动态更新 AppID"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:166
+msgid "A 新增 project.config.json packOptions.ignore / debugOptions.hidedInDevtools 支持 Glob 和 RegExp 规则"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:167
+msgid "A 新增小游戏真机调试（需特定系统和客户端版本）详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:168
+msgid "U 优化 编译器在调试器底部状态来显示编译的进度信息"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:169
+msgid "U 优化 小游戏 JS 文件编译缓存，增加文件 MD5 校验"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:170
+msgid "U 优化 云函数下载体验"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:171
+msgid "U 优化 云函数上传成功后显示详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:172
+msgid "U 优化 开发者工具菜单显示"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:173
+msgid "U 优化 编辑器菜单的顺序"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:174
+msgid "U 优化 编辑器全局搜索时默认不搜索 node_modules 目录"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:175
+msgid "F 修复 云函数上传时没有保留源文件的操作权限的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:176
+msgid "F 修复 云开发控制台云函数测试中带有中文会调用失败的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:177
+msgid "F 修复 云开发控制台中添加 bool 数据类型异常的问题 反馈详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:178
+msgid "F 修复 上传云函数上传失败会报 AuthFailure.TokenFailure 的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:179
+msgid "F 修复 多帐号调试时 tabBar 图标不显示的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:180
+msgid "F 修复 wx.getImageInfo orientation 与客户端不一致的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:181
+msgid "F 修复 小游戏触摸事件中 Touch 对象与客户端不一致的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:182
+msgid "F 修复 开发者工具 offline 模拟时， <web-view> 组件还能发起请求的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:183
+msgid "F 修复 小游戏 fs.readdir 提示 permission denied 的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:184
+msgid "F 修复 CLI/HTTP 调用返回的 JSON 结果在浏览器显示乱码的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:185
+msgid "F 修复 预览二维码没有居中的问题 反馈详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:187
+msgid "2018.09.11"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:189
+msgid "#. windows 64 、 windows 32 、 mac #. #. F 修复 1.02.1809101 版本在32位 windows 机器出现 wxml 编译失败导致异常的问题 反馈详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:193
+msgid "2018.09.10"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:195
+msgid "A 新增 小程序·云开发 详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:196
+msgid "F 修复 部分 windows 机器第一次点击预览会闪烁黑屏的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:197
+msgid "F 修复 WXS 的 switch case 负数报错 反馈详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:198
+msgid "F 修复 无法调试客服按钮 反馈详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:199
+msgid "F 修复 开发者工具调用 wx.getAccountInfoSync 获取到的appid为空 反馈详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:200
+msgid "F 修复 第三方平台调用 wx.getAccountInfoSync 返回的不是 extAppId 反馈详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:201
+msgid "F 修复 编译前预处理命令不生效 反馈详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:202
+msgid "F 修复 packOptions.ignore 指定了在小程序目录内的文件的话会导致小程序无法启动 反馈详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:203
+msgid "#. 对 Beta 版用户的额外更新说明（相对于 Beta 版工具的额外更新内容）： #. #. A 新增 小游戏云开发 QuickStart #. F 修复 云开发控制台数据库经纬度显示反了 反馈详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:208
+msgid "2018.08.30"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:210
+msgid "A 新增 版本管理 详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:211
+msgid "A 新增 体验评分 详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:212
+msgid "A 新增 npm 支持 详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:213
+msgid "A 新增 英文版支持"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:214
+msgid "A 新增 小程序分包预加载调试（需基础库2.3.0支持）"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:215
+msgid "A 新增 小程序独立分包调试"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:216
+msgid "A 新增 plugin.json 中新增 page 会自动生成页面"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:217
+msgid "A 新增 代码片段管理反选功能"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:218
+msgid "A 新增 wxml 标签属性支持数字"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:219
+msgid "A 新增 编辑器折叠所有文件夹功能"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:220
+msgid "A 新增 项目配置支持 debugOptions 选项，可以隐藏指定源文件避免调试器不响应 详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:221
+msgid "F 修复 部分 windows 机器无法启动开发工具的问题 反馈详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:222
+msgid "F 修复 模拟器独立窗口后，最小化工具界面，页面刷新/切换后不渲染的问题 反馈详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:223
+msgid "F 修复 tabBar 图标失效的问题 反馈详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:224
+msgid "F 修复 打开一个新项目窗口然后关闭，会导致之前打开的项目窗口中 wx.connectSocket 无法设置 header 的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:225
+msgid "F 修复 js 文件有非 UTF-8 格式的会导致预览时一直在 loading 的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:226
+msgid "F 修复 自定义组件文件名中有空格会导致 wxml 编译失败的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:227
+msgid "F 修复 自定义组件 wx:if 逻辑编译错误的问题 反馈详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:228
+msgid "F 修复 wxml 文件中有 <!----> 会导致异常的问题反馈详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:229
+msgid "F 修复 分包中 wxml 编译错误，控制台没有正常报错的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:230
+msgid "F 修复 windows 版创建代码片段时名字使用特殊字符导致创建临时目录出错的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:231
+msgid "F 修复 windows 版在控制台上按 ctrl + 鼠标滚轮会导致界面缩放的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:232
+msgid "F 修复 小游戏意见反馈组件图片无法加载的问题 反馈详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:233
+msgid "U 优化 上传时版本号过短的问题 反馈详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:234
+msgid "U 优化 API 回调的实现逻辑"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:236
+msgid "2018.08.08"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:238
+msgid "F 修复 Mac 版开发者工具代理一直是 “直连网络” 的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:240
+msgid "2018.08.01"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:242
+msgid "F 修复 小程序使用分包后，云测试提示代码包上限有误的问题 反馈详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:243
+msgid "F 修复 素材管理文件列表内容重叠的问题 反馈详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:244
+msgid "F 修复 模拟器工具栏消失的问题 反馈详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:246
+msgid "2018.07.20"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:248
+msgid "F 修复 1.02.1807120 带来的编译不生效的问题 反馈详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:249
+#: ../../source/devtools/change/uplog.rst:266
+msgid "F 修复 界面调试样式覆盖规则计算错误的问题 反馈详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:250
+#: ../../source/devtools/change/uplog.rst:274
+msgid "F 修复 分包根目录名字后缀相同时报错的问题 反馈详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:252
+msgid "2018.07.12"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:254
+msgid "A 新增 多帐号调试 详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:255
+msgid "A 新增 iPad 及横屏调试"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:256
+msgid "A 新增 素材管理支持 svg 文件"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:257
+msgid "A 新增 编辑器全局搜索支持更多文本文件"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:258
+msgid "U 优化 编辑器菜单采用原生菜单，避免被其他界面遮盖导致显示不全"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:259
+msgid "F 修复 远程调试网络面板某些请求会有乱码的问题 反馈详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:260
+msgid "F 修复 自定义组件在 1.6.3 基础库开发者工具报错的问题 反馈详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:261
+msgid "F 修复 快速编译，快速弹出/收回模拟器导致开发者工具黑屏的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:262
+msgid "F 修复 断网后点击登录会出现开发者工具白屏的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:263
+msgid "F 修复 用户代码触发开发者工具上传的问题 反馈详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:264
+msgid "F 修复 wx.setBackgroundColor 和 wx.setBackgroundTextStyle 在页面生命周期使用会报错的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:265
+msgid "F 修复 插件功能页 json 配置没有生效的问题 反馈详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:267
+msgid "F 修复 wx.createAudioInstance src 是本地项目文件，动态设置 volume = 0 再设置回 1 后没有声音的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:268
+msgid "F 修复 小游戏分包加载时，分包大小只包含 JS 文件的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:269
+msgid "F 修复 小游戏使用分包时，2.1.0 以下基础库无法调试的问题 反馈详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:270
+msgid "F 修复 小游戏 wx.createUserInfoButton 无法使用本地图片的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:271
+msgid "F 修复 通过二维码编译的场景值不符合预期的问题 反馈详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:272
+msgid "F 修复 wx.showToast icon = 'none' 时无法穿透的问题 反馈详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:273
+msgid "F 修复 自定义分析窗口无法再次打开的问题 反馈详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:276
+msgid "2018.06.12"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:278
+msgid "#. windows 64 、 windows 32 、 mac #. #. A 新增 TGit 工具栏入口 详情 #. F 修复 远程调试分包中使用插件报错的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:283
+msgid "2018.06.08"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:285
+msgid "A 新增 自动预览功能 详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:286
+msgid "A 新增 远程调试 Network 面板"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:287
+msgid "A 新增 模拟器静音功能"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:288
+msgid "A 新增 代码断点检测及提示"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:289
+msgid "A 新增 支持插件页面"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:290
+msgid "A 新增 上传插件时推荐版本号"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:291
+msgid "A 新增 Storage 面板清除按钮及数据详情展示"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:292
+msgid "A 新增 项目详情 appid 复制按钮"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:293
+msgid "F 修复 Win10 1803 版本出现自动编译的问题 反馈详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:294
+msgid "F 修复 1.02.1805181 引入的组件中使用抽象节点 componentGenerics 时异常的问题 反馈详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:295
+msgid "F 修复 因在循环中使用断点导致重新编译时提示重启耗时过久的问题 反馈详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:296
+msgid "F 修复 项目中引入新插件时报错，需要切换一下基础库才能使用的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:297
+msgid "F 修复 navigationStyle 为 custom 时显示异常的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:298
+msgid "F 修复 wx.setTabbarItem 后重新编译无法恢复的问题 反馈详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:299
+msgid "F 修复 远程调试 typescript 源文件内容丢失的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:300
+msgid "F 修复 压缩后的 js 文件无法正常格式化的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:301
+msgid "F 修复 小游戏视频广告在模拟器缩放的情况下尺寸异常的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:303
+msgid "2018.05.18"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:305
+msgid "#. windows 64 、 windows 32 、 mac #. #. F 修复 1.02.1805150 引入的 <web-view> 组件显示异常的问题 反馈详情 #. F 修复 1.02.1805150 引入的小屏幕电脑上模拟器容器没有滚动条的问题 #. F 修复 小程序 iPhoneX 模拟器刘海丢失的问题 #. F 修复 覆盖安装后启动的工具版本号还是旧版本的问题 #. F 修复 windows 安装界面乱码的问题 反馈详情 #. F 修复 自定义组件中节点动态删除导致 wxml 面板白屏的问题 反馈详情 #. F 修复 小游戏调用 wx.setPreferredFramesPerSecond 后丢帧的问题 #. F 修复 小游戏使用 fs.writeFileSync 写入一个 ArrayBuffer 类型的数据，encoding 指定为 binary 时会导致写入的文件内容错误的问题 #. F 修复 使用插件时，插件中的图片没有显示的问题 #. F 修复 小程序中带有 sourcemap 时解析失败导致上传报错的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:318
+msgid "2018.05.15"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:320
+msgid "A 新增 素材管理功能 详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:321
+msgid "A 新增 工具栏右键进行工具栏管理 详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:322
+msgid "A 新增 独立窗口显示模拟器和调试器的功能 详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:323
+msgid "A 新增 可以在工具栏切换小程序模式和插件模式"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:324
+msgid "A 新增 小程序使用的插件有更新时，在控制台提示插件更新"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:325
+msgid "A 新增 小游戏 wx.createUserInfoButton 调试支持（基础库需选择2.0.6）"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:326
+msgid "A 新增 当插件有更新时，在插件使用者的调试器控制台提示更新"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:327
+msgid "A 新增 插件 README.md 文档编辑及上传功能"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:328
+msgid "A 新增 小游戏广告展示"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:329
+msgid "U 优化 多核编译的实现方案"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:330
+msgid "U 优化 开发者工具中基础库的更新逻辑，实时获取最新的基础库"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:331
+msgid "F 修复 1.02.1804251 引入的修改 game.json 中的 deviceOrientation 不生效的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:332
+msgid "F 修复 1.02.1804251 引入的小游戏重新编译时音效没有重置的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:333
+msgid "F 修复 1.02.1804251 引入的 addEventListener 报错导致无法显示页面的问题 反馈详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:334
+msgid "F 修复 小游戏 wx.getUpdateManager 无效的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:335
+msgid "F 修复 小游戏 wx.onShow 偶尔不触发的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:336
+msgid "F 修复 小游戏默认背景颜色与真机不一致的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:337
+msgid "F 修复 小游戏 状态栏位置异常的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:338
+msgid "F 修复 小程序业务逻辑（复杂计算或死循环）导致重新编译无效的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:339
+msgid "F 修复 横屏时 iPhoneX 刘海位置异常的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:340
+msgid "F 修复 wx.showModal 在页面路由之后消失的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:341
+msgid "F 修复 开启自动保存修改时，在 app.json 中新增 page 出现多个中间页面的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:342
+msgid "F 修复 开发者工具 1.6.0 基础库调用 wx.createInnerAudioContext 无效的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:343
+msgid "F 修复 <picker fields=\"year\" value=\"2018\"/> 显示 1970 的问题 反馈详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:344
+msgid "F 修复 开发者工具支持 HTTP2 而真机不支持 HTTP2，导致网络 Response Headers 大小写不一致的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:345
+msgid "F 修复 不处理 wx.authorize 授权窗，直接重新编译，再也无法弹出授权窗，清除缓存编译也无法弹出的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:346
+msgid "F 修复 多开项目时社区消息会重复通知的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:347
+msgid "F 修复 命令行调用无法打开游客模式的项目的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:348
+msgid "F 修复 点击胶囊关闭按钮，不会触发 App.onHide 的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:349
+msgid "F 修复 自带背景音乐播放器窗口没有播放按钮的问题 反馈详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:350
+msgid "F 修复 快速修改 text 节点时在 WXML 面板中显示异常的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:351
+msgid "F 修复 referrerInfo.extraData 类型与文档不一致的问题 反馈详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:352
+msgid "F 修复 <web-view> src 没有更新的问题 反馈详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:354
+msgid "2018.04.25"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:356
+msgid "A 新增 搜索动态页 详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:357
+msgid "A 新增 wx.getUserInfo 升级提示"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:358
+msgid "F 修复 小游戏使用自定义编译条件预览时，真机没有 query 的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:359
+msgid "F 修复 2.0.0 基础库 <button open-type=\"getUserInfo\"></button> 无效的问题 反馈详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:361
+#: ../../source/devtools/change/uplog.rst:394
+msgid "2018.04.12"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:363
+#: ../../source/devtools/change/uplog.rst:396
+msgid "F 修复 1.02.1804080 引入的编译条件为分包内页面时无法加载的问题 反馈详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:364
+#: ../../source/devtools/change/uplog.rst:397
+msgid "F 修复 1.02.1804080 引入的页面白屏的问题 反馈详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:365
+#: ../../source/devtools/change/uplog.rst:398
+msgid "F 修复 未使用插件时，出现 [non-writable] 的提示的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:366
+#: ../../source/devtools/change/uplog.rst:399
+msgid "F 修复 navigationStyle 为 'custom' 时，获取的 windowHeight 与真机不一致的问题 反馈详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:367
+#: ../../source/devtools/change/uplog.rst:400
+msgid "F 修复 wx.showModal 没有覆盖 tabbar 的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:369
+#: ../../source/devtools/change/uplog.rst:402
+msgid "2018.04.08"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:371
+#: ../../source/devtools/change/uplog.rst:404
+msgid "A 新增 编辑器文件标签打开策略设置"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:372
+#: ../../source/devtools/change/uplog.rst:405
+msgid "A 新增 iPhone X 刘海效果"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:373
+#: ../../source/devtools/change/uplog.rst:406
+msgid "A 新增 App.onPageNotFound 的调试支持 详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:374
+#: ../../source/devtools/change/uplog.rst:407
+msgid "A 新增 远程调试带插件的小程序支持"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:375
+#: ../../source/devtools/change/uplog.rst:408
+msgid "A 新增 project.config.json 的 ignore 字段 详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:376
+#: ../../source/devtools/change/uplog.rst:409
+msgid "A 新增 项目设置中展示插件信息、分包大小"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:377
+#: ../../source/devtools/change/uplog.rst:410
+msgid "A 新增 自定义预处理命令 详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:378
+#: ../../source/devtools/change/uplog.rst:411
+msgid "A 新增 支持分包中使用插件"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:379
+#: ../../source/devtools/change/uplog.rst:412
+msgid "F 修复 同步 API 导致内存泄漏的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:380
+#: ../../source/devtools/change/uplog.rst:413
+msgid "F 修复 <web-view> 链接带 #wechat_redirect 无法加载的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:381
+#: ../../source/devtools/change/uplog.rst:414
+msgid "F 修复 在 tabbar 页面调用 wx.redirectTo 后再调用 wx.switchTab 到同一 tabbar，页面出错的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:382
+#: ../../source/devtools/change/uplog.rst:415
+msgid "F 修复 网络请求 API 没有带上对应模拟器设备的 userAgent 的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:383
+#: ../../source/devtools/change/uplog.rst:416
+msgid "F 修复 项目管理删除无效项目不生效的问题 反馈详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:384
+#: ../../source/devtools/change/uplog.rst:417
+msgid "F 修复 只有设置页面时，无法关闭开发者工具的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:385
+#: ../../source/devtools/change/uplog.rst:418
+msgid "F 修复 当项目目录在 node_modules 下时，无法感知文件变更的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:386
+#: ../../source/devtools/change/uplog.rst:419
+msgid "F 修复 1.02.1803210 版本导致的 WXML 面板，某些情况下不显示子节点的问题 反馈详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:387
+#: ../../source/devtools/change/uplog.rst:420
+msgid "F 修复 远程调试 CanvasContext.measureText 报错的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:388
+#: ../../source/devtools/change/uplog.rst:421
+msgid "F 修复 WXML 面板无法审查自定义组件内节点的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:389
+#: ../../source/devtools/change/uplog.rst:422
+msgid "F 修复 WXSS 文件解析异常导致无法查看节点样式的问题 反馈详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:390
+#: ../../source/devtools/change/uplog.rst:423
+msgid "F 修复 某些情况下新增编译条件无效的问题 反馈详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:391
+#: ../../source/devtools/change/uplog.rst:424
+msgid "F 修复 切换模拟器网络为 offline 后，Socket接口还能正常发送的问题。"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:392
+#: ../../source/devtools/change/uplog.rst:425
+msgid "F 修复 BackgroundAudioManager 不回调 onCanplay 的问题 反馈详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:427
+msgid "2018.03.21"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:429
+msgid "#. windows 64 、 windows 32 、 mac #. #. F 修复 TLS 版本校验出错的问题 反馈详情 #. F 修复 wx.chooseVideo 没有回调的问题 #. F 修复 插件中没有 WXML 文件时报错的问题 #. F 修复 开发者工具更新逻辑异常的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:436
+msgid "2018.03.15"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:438
+msgid "F 修复 上报更新导致 wx.uploadFile 返回值异常的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:439
+msgid "F 修复 申请测试报告时报错的问题 反馈详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:440
+msgid "F 修复 频繁调用 wx.downloadFile 后 wx.saveFile 于同一网络图片时，可能出错的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:441
+msgid "F 修复 wx.setTabBarItem 不支持图标地址绝对路径的问题 反馈详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:442
+msgid "F 修复 onShareAppMessage 不能展示临时图片的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:443
+msgid "F 修复 插件中自定义组件样式丢失的问题 反馈详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:444
+msgid "F 修复 审查节点时，WXML 面板没有高亮对应节点的问题 反馈详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:445
+msgid "F 修复 工具覆盖安装后出现无法监听文件变更的问题 反馈详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:447
+msgid "2018.03.13"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:449
+msgid "A 新增 小程序插件开发支持 详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:450
+msgid "A 新增 小程序代码片段功能 详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:451
+msgid "A 新增 通过二维码调试功能，可以调试获取二维码所生成的二维码"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:452
+msgid "A 新增 Network 面板显示 wx.uploadFile、wx.downloadFile 的内容"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:453
+msgid "A 新增 wx.getImageInfo 返回图片的方向和类型"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:454
+msgid "F 修复 界面调试没有显示 padding、margin 的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:455
+msgid "F 修复 wx.request 没有校验 method 的问题 反馈详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:456
+msgid "F 修复 项目列表页中没有按最近使用时间排序的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:457
+msgid "F 修复 小游戏编译条件场景值为 1044 时没有 shareInfo 的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:458
+msgid "F 修复 网页调试 devicePixelRatio 不正确的问题 反馈详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:459
+msgid "F 修复 tabbar 没有 icon 时文字没有居中对齐的问题反馈详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:460
+msgid "F 修复 腾讯云恢复开发环境后，选择智能上传时，没有全量上传的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:461
+msgid "F 修复 开发者工具可以新建名称为 \".\" 的文件夹的问题 反馈详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:462
+msgid "F 修复 公众号网页调试地址栏下拉选择错误的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:463
+msgid "U 优化 开发者工具卡顿的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:465
+msgid "2018.02.27"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:467
+msgid "F 修复 长文本中文乱码问题 反馈详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:468
+msgid "F 修复 用命令行 / http 上传第三方平台小程序代码没有上传至对应用户的问题 反馈详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:470
+msgid "2018.02.08"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:472
+msgid "A 新增 iPhone X 尺寸"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:473
+msgid "U 更新 自动补全更新"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:474
+msgid "F 修复 多开时登录态丢失问题 反馈详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:475
+msgid "F 修复 Windows 某些版本下工具可能打不开的问题 反馈详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:476
+msgid "F 修复 硬盘空间满的时候，如果保存出错文件会被清空的问题 反馈详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:477
+msgid "F 修复 wx.getSystemInfo 返回缺少 batteryLevel 的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:478
+msgid "F 修复 部分 API 自动补全格式错误 反馈详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:479
+msgid "F 修复 wx.navigateBackMiniProgram 返回信息错误问题 反馈详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:480
+msgid "F 修复 焦点不在编辑器时，按下跳转文件快捷键没有自动让它获取到焦点的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:481
+msgid "F 修复 在 app.json 编辑 pages 自动创建文件时，路径逾越了项目路径也能成功的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:482
+msgid "F 修复 app.json 中 enablePullDownRefresh 没有严格校验类型的问题 反馈详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:484
+msgid "2018.02.01"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:486
+msgid "A 新增 多开项目"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:487
+msgid "A 新增 小程序远程调试(需要更新客户端版本) 详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:488
+msgid "A 新增 sourceMap 文件解析"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:489
+msgid "A 新增 wx.showTabBar、wx.hideTabBar、wx.setTabBarStyle、wx.setTabBarItem、Page.onTabItemTap 调试支持"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:490
+msgid "F 修复 1.02.1801081 版本 wxss 编译器更新失败的问题 反馈详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:491
+msgid "F 修复 使用自定义组件后 AppData 面板无法使用的问题 反馈详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:492
+msgid "F 修复 Mac 版本，如果目录存在 .DS_Store，删除目录时提示非空的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:493
+msgid "F 修复 部分系统上黑屏的问题 反馈详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:494
+msgid "F 修复 部分系统上无法获取 webgl 的问题 反馈详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:496
+msgid "2017.12.15"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:498
+msgid "A 新增 命令行调用工具执行打开、预览、上传等功能 详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:499
+msgid "A 新增 通过 HTTP 调用工具执行打开、预览、上传等功能 详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:500
+msgid "A 新增 编辑器 Git 展示支持 详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:501
+msgid "A 新增 第三方平台 ext.json 新增 directCommit 字段,用于直接代小程序提交审核 详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:502
+msgid "A 新增 WXML 面板属性自动补全"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:503
+msgid "U 更新 编辑器自动补全"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:504
+msgid "U 优化 提升预览上传性能，预览时展示正在编译的文件"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:505
+msgid "U 优化 增加预览上传队列，优化频繁预览上传的性能"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:506
+msgid "U 优化 项目列表小程序封面截图策略与性能"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:507
+msgid "U 优化 创建项目时目录不合法的提示"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:509
+msgid "2017.11.30"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:511
+msgid "A 新增 详情页中展示基础库用户使用率及线上版小程序设置的最低基础库"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:512
+msgid "A 新增 项目详情页显示业务域名（webview 可信域名）"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:513
+msgid "A 新增 开启不校验安全域名时，也不校验 webview 的业务域名"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:514
+msgid "F 修复 场景值为 1044 时，返回的 scene 字段是 String 类型而不是 Number 类型的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:515
+msgid "F 修复 断网的时候 socket 没有提示信息的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:516
+msgid "F 修复 安装包重复下载问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:517
+msgid "F 修复 wx.downloadFile 响应 404 时，没有返回 tempFilePath 的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:518
+msgid "F 修复 project.config.json 中 miniprogramRoot 设置的路径以 / 结尾的话会导致编辑器保存自动编译不成功的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:519
+msgid "F 修复 支持 sourcemap 文件在调试器中的加载。反馈详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:520
+msgid "U 优化 复制二维码的交互"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:521
+msgid "U 优化 创建项目页增加注册小程序的入口"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:523
+msgid "2017.11.16"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:525
+msgid "F 修复 导航条背景色错误时白屏问题 反馈详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:526
+msgid "F 修复 小程序页面跳转时 WXML 面板可能空白的问题 反馈详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:527
+msgid "F 修复 修复计算上传代码包错误的问题 反馈详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:528
+msgid "A 新增 新建项目时可以选择创建腾讯云的 quick start 项目。"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:529
+msgid "A 新增 编辑器右键创建 Component 功能。"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:530
+msgid "F 修复 模拟器选择 offline 后，没有明确提示问题。 反馈详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:531
+msgid "F 修复 wx.downloadFile 的 downloadTask.onProgressUpdate 缺少返回参数totalBytesWritten、totalBytesExpectedToWrite 的问题。反馈详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:532
+msgid "F 修复 工具异常退出后仍然有进程未关闭并占用大量CPU资源的问题。"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:533
+msgid "F 修复 切换设备时 rpx 计算有误的问题。 反馈详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:534
+msgid "F 修复 websocket 自动断开时，未重置连接状态的问题。 反馈详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:535
+msgid "F 修复 <web-view> 页面分享时 Page.onShareAppMessage 回调参数没有 webViewUrl 的问题。反馈详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:536
+msgid "F 修复 <web-view> 中的网页有 iframe 导致网页主页面无法调用 JSSDK 的方法的问题。 反馈详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:537
+msgid "F 修复 <web-view> 没有校验 iframe 中链接合法性的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:538
+msgid "F 修复 wxml style 列表无法滚动到底部的问题。 反馈详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:539
+msgid "F 修复 wxml 大量节点更新时导致调试器整体卡顿的问题。 反馈详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:540
+msgid "F 修复 wxml 显示嵌套 <text> 出错的问题。"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:541
+msgid "F 修复 wx.authorize 用户拒绝依然回调 ok 的问题。 反馈详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:542
+msgid "F 修复 自定义编译条件预览时自定义参数有误的问题。 反馈详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:543
+msgid "F 修复 路由 API 在目标页面获取的参数与客户端不一致的问题。 反馈详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:544
+msgid "U 优化 项目列表的视觉展示。"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:545
+msgid "U 优化 编辑器显示目录树的功能图标位置固定。 反馈详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:546
+msgid "U 优化 预览/上传前先计算项目代码包大小再进行编译打包处理，避免项目过大导致内存溢出。"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:548
+msgid "2017.11.02"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:550
+msgid "A 新增 可以上传 php 代码到腾讯云，QuickStart Demo 地址"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:551
+msgid "A 新增 <web-view> 组件调试支持 详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:552
+msgid "A 新增 自定义组件调试支持，需在项目配置中勾选 \"预览/上传时使用新特性\" 选项 详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:553
+msgid "U 优化 Storage Panel 大于 300 个项目时，不一次性展示全部"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:554
+msgid "U 优化 编辑器不补全 BOM、DOM 的接口"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:555
+msgid "F 修复 不打开 Storage Panel 的情况下调用 wx.setStorage 开发者工具内存泄露的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:556
+msgid "F 修复 Storage Panel 存储非法值导致奔溃的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:557
+msgid "F 修复 自定义编译条件当场景值为 1020、1035、1036、1043 允许填 appid"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:558
+msgid "F 修复 Wxml Panel 在节点替换的情况下，旧节点没有移除的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:559
+msgid "F 修复 wx.connectSocket 接口在超过数量限制时表现与客户端不一致的问题 反馈详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:560
+msgid "F 修复 编辑器无法打开大写后缀名的图片的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:561
+msgid "F 修复 1.01.171019 版本导致 wx.getImageInfo 报错的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:562
+msgid "F 修复 wx.downloadFile 下载文件无法打开的问题 反馈详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:564
+msgid "2017.10.19"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:566
+msgid "F: 修复 1.01.171013 版本更新导致的 App.onLaunch 中 API 调用没有回调的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:567
+msgid "F: 修复 1.01.171013 windows 版本可执行文件数字签名异常的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:568
+msgid "F: 修复 getPhoneNumber 需要短信验证时依旧回调成功的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:569
+msgid "F: 修复 公众号网页调试无法添加自定义设备的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:571
+msgid "2017.10.18"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:573
+msgid "F: 修复 管理项目时选择多个项目，界面异常的问题 反馈详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:574
+msgid "F: 修复 域名检查大小写敏感的问题 反馈详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:575
+msgid "F: 修复 1.01.171013 版本更新导致的 wxml panel 空白的问题 反馈详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:576
+msgid "F: 修复 编辑器全局搜索某些字符时可能崩溃的问题 反馈详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:578
+msgid "2017.10.16"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:580
+msgid "F: 修复 wx.canvasToTempFilePath 出错的问题 反馈详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:581
+msgid "F: 修复 创建项目时， project.config.json 没有兼容旧版 svr/client 字段的问题，新字段为 qcloudRoot/miniprogramRoot"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:582
+msgid "F: 修复 image 组件 src 为空时有 404 提示的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:584
+msgid "2017.10.13"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:586
+msgid "A: 新增 清除全部缓存功能"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:587
+msgid "A: 新增 清除登录状态功能"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:588
+msgid "A: 新增 控制台输入 showDecryptedInfo 可以获取加解密信息，帮助开发者验证解密结果是否正确"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:589
+msgid "A: 新增 编辑代码时可自动补全 require、import 语句的 js 文件路径"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:590
+msgid "F: 修复 第一次编译模拟器白屏的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:591
+msgid "F: 修复 编辑器文件重命名为已存在文件时直接覆盖的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:592
+msgid "F: 修复 带端口的域名在域名检查没有错误提示的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:593
+msgid "F: 修复 page.json 中 disableScroll 无效的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:594
+msgid "F: 修复 wx.openCard 出错的问题 反馈详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:595
+msgid "F: 修复 wx.chooseVideo 缺失返回值的问题 反馈详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:596
+msgid "F: 修复 wx.captureScreen 失败的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:597
+msgid "F: 修复 公众号网页调试缺失日志的问题 反馈详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:598
+msgid "F: 修复 下载并发数在重新编译后没有重置的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:599
+msgid "U: 优化 模拟器加载小程序的方案调整为不通过代理直连本地服务器，减少代理设置异常对模拟器小程序加载的影响"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:600
+msgid "U: 优化 调试器 WXML、Storage 的某些内容展示方式"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:602
+msgid "2017.09.25"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:616
+msgid "(1.01.170925)"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:604
+msgid "A 新增 1.5.4 基础库"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:605
+msgid "A 新增 点击模拟器状态栏可以复制相关参数的功能"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:606
+msgid "A 新增 创建项目时，工程目录下会自动生成 project.config.json 文件，方便导入时保留相关配置"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:607
+msgid "A 新增 可自定义常用功能的快捷键"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:608
+msgid "U 优化 新建项目默认打开自动补全样式的功能"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:609
+msgid "U 优化 进入项目后自动编译小程序"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:610
+msgid "F 修复 wx.downloadFile 当 URL 不合法时不执行回调的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:611
+msgid "F 修复 调用某些 API 不触发 onShow、onHide 函数的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:612
+msgid "F 修复 公众号网页调试 devtools 中无法点击链接打开网页的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:613
+msgid "F 修复 格式化代码时将 <text> 标签内的内容缩进的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:614
+msgid "U 优化 改良了编辑器在打开、删除、重命名文件时的表现行为"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:615
+msgid "F 修复 编辑器显示文件大小不正确的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:616
+msgid "U 优化 部分界面外观优化，更易操作可读"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:618
+msgid "2017.09.13"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:640
+msgid "(1.01.170913)"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:620
+msgid "A 新增 1.5.3 基础库"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:621
+msgid "U 优化 为工具栏、模拟器、编辑器、目录树、调试器界面的显示隐藏切换增加快捷键"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:622
+msgid "U 优化 编辑器同时编辑若干同名文件时，文件标签的标题显示文件夹或路径名称来区分"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:623
+msgid "U 优化 上传代码时自动填写上次提交的版本号和备注"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:624
+msgid "U 修复 工具不支持 fiddler 和 charles 抓包的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:625
+msgid "F 修复 创建项目时候判断是否空目录时 Mac 下未排除隐藏文件的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:626
+msgid "F 修复 开发者工具内部错误导致的 crash 问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:627
+msgid "F 修复 工具栏隐藏后无法显示预览二维码的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:628
+msgid "F 修复 选择旧基础库在重启工具后不生效的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:629
+msgid "F 修复 API wx.getWeRunData 在未开通微信运动时未正确提示的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:630
+msgid "F 修复 登录态失效时创建项目失败没有提示的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:631
+msgid "F 修复 地理位置模拟只生效一次的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:632
+msgid "F 修复 模拟器缩放时页面底部被遮住了一部分的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:633
+msgid "F 修复 app.json 中 unicode 未正常展示的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:634
+msgid "F 修复 点击腾讯云恢复开发环境没有提示的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:635
+msgid "F 修复 模拟器缩放时切后台后的场景值列表样式异常的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:636
+msgid "F 修复 编辑器目录在新建和右键点击时显示效果出错的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:637
+msgid "F 修复 Picker 组件选择第一个值出错的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:638
+msgid "F 修复 重新编译后 audio api 依然在播放音乐的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:639
+msgid "F 修复 app.json 指定 tabBar 的selectedColor不生效的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:640
+msgid "F 修复 Windows 系统下无法编辑和保存局域网内文件的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:642
+msgid "2017.09.06"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:671
+msgid "(1.01.170906)"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:644
+msgid "F 修复 使用 wx:key 的 warning 重复出现的问题 反馈详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:645
+msgid "F 修复 使用 工具中自定义分享图功能无法使用的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:646
+msgid "F 修复 从标签页跳转到新的页面，在跳转完成之前会显示其他标签页的问题 反馈详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:647
+msgid "F 修复 公众号开发中 touch 模拟未生效的问题 反馈详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:648
+msgid "F 修复 wxss编译错误提示不正确的问题反馈详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:649
+msgid "F 修复 使用 project.config.json 导致右键新建页面失败的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:650
+msgid "F 修复 编辑 wxml 文件缺失补全的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:651
+msgid "F 修复 navigationBarTextStyle 默认值错误的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:652
+msgid "F 修复 wxml panel 节点缺失的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:653
+msgid "F 修复 wxml panel 选中元素会跳到之前选中的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:654
+msgid "F 修复 wx.request 的 Referer 附带的 appid 不对的问题 反馈详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:655
+msgid "F 修复 wx.chooseAddress 没有模拟返回数据的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:656
+msgid "F 修复 wxml panel 中鼠标手势不对的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:657
+msgid "F 修复 分享无法使用自定义图片的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:658
+msgid "F 修复 .sql 文件无法查看的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:659
+msgid "F 修复 storage panel 显示出旧数据的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:660
+msgid "F 修复 检查域名和 TLS 版本时，网络请求无法回调的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:661
+msgid "F 修复 工具中 template 标签内的 wxml 无法格式化"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:662
+msgid "F 修复 pageScrollTo 调用没有效果的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:663
+msgid "F 修复 新版工具中最小字号只能为 12px 的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:664
+msgid "F 修复 错误提示框在错误过长的情况下无法关闭的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:665
+msgid "F 修复 脚本文件名中有空格或者是中文文件名无法加载的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:666
+msgid "U 优化 编译有错误，不主动弹出调试器"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:667
+msgid "U 优化 使用 project.config.json 修改 client 之外的文件，不触发编译"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:668
+msgid "U 优化 使用 Webview 复用，优化工具卡顿问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:669
+msgid "U 优化 删除 F8 F10 快捷键占用的问题 反馈详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:670
+msgid "F 修复 app.json 指定 borderStyle 不生效的问题 反馈详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:671
+msgid "U 优化 编辑器的替换快捷键改为 Ctrl + Shift + R，避免与刷新 Ctrl + R 冲突"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:673
+msgid "2017.09.01"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:675
+msgid "F 修复 wxml panel 选中节点跳动的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:676
+msgid "F 修复 wxml panel 鼠标为圆点的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:677
+msgid "F 修复 编辑器快捷键格式化代码失效的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:678
+msgid "F 修复 <picker> 选择第一个异常的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:679
+msgid "F 修复 wxml 编译导致 <radio-group> 在 Page.setData 之后选中状态被重置的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:680
+msgid "F 修复 第三方平台小程序 Refer 异常的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:681
+msgid "F 修复 公众号网页开发触摸模拟不生效的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:682
+msgid "F 修复 公众号网页开发页面变大的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:683
+msgid "F 修复 console panel 日志重复显示问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:684
+msgid "F 修复 上传代码时上次的输入没有记录的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:685
+msgid "F 修复 保存文件自动编译时，文件保存没有生效的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:686
+msgid "F 修复 ext.json 中 extEnable 为 false，到手机上预览依旧生效的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:687
+msgid "F 修复 页面字体大小异常的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:688
+msgid "F 修复 修复了在外部编辑器编辑了文件，工具不能检测到更改的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:689
+msgid "F 修复 设备选择时 wx.getSystemInfo 的内容不对的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:691
+msgid "2017.08.31"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:693
+msgid "A 新增 快捷键 F8 显示隐藏工具栏"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:694
+msgid "U 优化 当有错误的时候 console 面板不会自动弹出"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:695
+msgid "F 修复 保存时自动编译，编译时自动保存无法保存所有文件的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:696
+msgid "F 修复 第三方平台小程序打开项目报错的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:697
+msgid "F 修复 启动工具后显示网络连接错误，增加错误提示"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:698
+msgid "F 修复 模拟器在一些设备上显示模糊的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:699
+msgid "F 修复 wxss 编译错误提示不正确的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:700
+msgid "F 修复 某些第三方编辑器打开文件会触发工具自动编译的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:701
+msgid "F 修复 网页调试 hash 变化会 load 页面的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:702
+msgid "F 修复 网页调试 alert、confirm 不显示的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:703
+msgid "F 修复 网页调试添加卡券屏幕缩放无效的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:704
+msgid "F 修复 网页调试 urlbar 输入后自动匹配，按键盘向下键然后 load 不了"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:706
+msgid "2017.08.30"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:708
+msgid "A 新增 申请测试报告功能 详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:709
+msgid "A 新增 WXS 功能 详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:710
+msgid "A 新增 发布腾讯云功能 详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:711
+msgid "U 优化 全新的视觉和交互体验"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:712
+msgid "U 优化 更新内核版本"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:713
+msgid "历史版本下载 2017.08.30 (0.22.203100)"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:714
+msgid "#. windows 64 、 windows 32 、 mac #."
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:717
+msgid "2017.08.21"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:719
+msgid "F 修复 1.5.0 基础库造成开发工具 AppData panel 失效的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:720
+msgid "F 修复 API chooseInvoiceTitle 出现脚本错误的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:722
+msgid "2017.08.18"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:724
+msgid "新增 4 个全新 API 包括获取发票抬头，指纹识别，主动触发下拉刷新等"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:725
+msgid "更新 API shareAppMessage 支持分享时自定义卡片配图"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:726
+msgid "更新 组件 <button> 支持客服会话分享小程序卡片及传入源页面信息"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:727
+msgid "优化后台拉起小程序时 reLaunch 逻辑"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:728
+#: ../../source/devtools/change/uplog.rst:731
+#: ../../source/devtools/change/uplog.rst:946
+msgid "工具更新"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:729
+msgid "F 修复 编辑器设置自动换行和主题不生效的问题。反馈详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:730
+msgid "F 修复 网页调试 UA 不正确的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:732
+msgid "A 新增 功能 自定义数据上报调试 详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:733
+msgid "F 修复 <picker> bindchange 事件选中 value 值不对的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:734
+msgid "F 修复 编辑器设置自动换行和主题不生效的问题 反馈详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:735
+msgid "工具更新 (0.19.191100)"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:736
+msgid "A 新增 基础库 1.4.0 调试支持"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:737
+msgid "A 新增 性能 Trace 工具 详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:738
+msgid "A 新增 Win 菜单栏 hover 时改变背景色 反馈详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:739
+msgid "F 修复 全局搜索结果页切换标签回来滚动位置不应回到顶部的问题 反馈详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:740
+msgid "F 修复 文件大小写不一致问题导致部分文件系统大小写敏感用户开启工具白屏的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:741
+msgid "F 修复 WXML 和 WXSS 代码格式化时缩进没有依据配置"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:742
+msgid "F 修复 微信授权窗口没有设置缺省头像的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:743
+msgid "F 修复 使用 button 触发分享时候工具会有两次 onShareAppMessage 事件的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:745
+msgid "2017.06.22"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:747
+msgid "F 修复 开发工具中 wx.uploadFile header 设置无效的问题 反馈详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:748
+msgid "F 修复 开发者工具打开公众号网页报项目属性获取失败错误的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:749
+msgid "0.18.182100"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:750
+msgid "A 新增 基础库 1.3.0 调试支持"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:751
+msgid "A 新增 编辑器状态栏显示文件大小"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:752
+msgid "A 新增 编辑器增加跳转到左边 / 右边文件的快捷键 Ctrl(Command) + PageUp 和 Ctrl(Command) + PageDown"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:753
+msgid "A 新增 显示图片时状态栏右侧会给出图片大小信息"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:754
+msgid "U 优化 编辑器中删除文件不会硬盘删除而是移到回收站"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:755
+msgid "U 优化 上传代码的交互，去除扫码确认，并给予默认 项目备注"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:756
+msgid "F 修复 tabbar 图标工具上错误支持了 svg 图片的问题 反馈详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:757
+msgid "F 修复 windows 设置 http_proxy 环境变量可能导致无法登陆问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:758
+msgid "F 修复 新建 Page 时 app.json 中路径添加出错的问题 反馈详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:759
+msgid "F 修复 wx.uploadFile wx.downloadFile 设置 networkTimeout 无效的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:760
+msgid "F 修复 提交预览或者上传时，检查 tabbar icon 超过 40kb 返回的错误码有误的问题 反馈详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:761
+msgid "F 修复 开启自动保存后 app.json 修改后立刻关闭再打开后内容被置空的问题的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:762
+msgid "F 修复 开发者工具中可以使用 Image 但是移动设备中无法使用的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:763
+msgid "F 修复 某些情况下上传代码会出现二维码无效提示的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:764
+msgid "F 修复 上传成功后没有提示的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:766
+msgid "2017.05.26"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:768
+msgid "A 新增 基础库 1.2.2 调试支持"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:769
+msgid "F 修复 基础库切换导致异常的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:770
+msgid "F 修复 页面内分享会调用两次 Page.onShareAppMessage 的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:771
+msgid "F 修复 工具外部修改代码文件或文件夹时出现编译异常的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:772
+msgid "F 修复 wx.uploadFile 网络状态码不为 200 回调 fail 与客户端不一致的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:774
+msgid "2017.05.19"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:776
+msgid "A 新增 基础库 1.2.1 调试支持。"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:777
+msgid "U 优化 App 和 Page 中的函数自动补全"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:778
+msgid "F 修复 条件编译中的 query 在 App.onLaunch 时多 decode 一次的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:779
+msgid "F 修复 首页的 json 文件出错，且 tabbar 中有空路径时工具无法启动的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:780
+msgid "F 修复 开启上传代码样式文件自动补全时，wxss 文件有误导致一直在上传中的问题 反馈详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:781
+msgid "F 修复 wx.previewImage 中参数为非字符串时工具异常的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:782
+msgid "F 修复 网页调试中刷新和下拉地址栏按钮无效"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:783
+msgid "F 修复 网页调试菜单栏缺失跳转按钮、Mac 下缺失后退、前进、选中地址栏的问题 反馈详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:784
+msgid "F 修复 使用\"关闭其他标签\"后，使用 Ctrl+s 保存当前文件，会恢复之前关闭的其他标签的问题 反馈详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:785
+msgid "F 修复 有时外部修改文件保存后自动编译时报网络错误的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:786
+msgid "F 修复 有 tabbar 的小程序启动时还未加载完时快速切换到另一个 tab 然后马上切换回来会出错的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:788
+msgid "2017.05.09"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:790
+msgid "F 修复 RapidSSL 证书被判断为非法证书的问题 反馈详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:791
+msgid "F 修复 wxss 压缩导致 @import 文件丢失文件的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:792
+msgid "F 修复 模拟器内容高度错误的问题 反馈详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:793
+msgid "F 修复 清楚数据缓存功能失效的问题 反馈详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:794
+msgid "F 修复 app.json 中添加新页面不会自动创建页面的问题 反馈详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:795
+msgid "F 修复 文件光标定位问题和从 wxss 栏打开文件双开问题 反馈详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:796
+msgid "F 修复 设置了文件名字大小写敏感的系统，无法打开开发工具的问题 反馈详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:798
+msgid "2017.05.08"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:800
+msgid "A 新增 wx.addCard、wx.openCard 调试支持"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:801
+msgid "A 新增 wx.request 时 https 证书的校验，非法证书将会请求失败"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:802
+msgid "A 新增 获取更多转发信息的调试支持 详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:803
+msgid "A 新增 基础库切换详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:804
+msgid "A 新增 脚本断点提示，当有断点时，在 devtools 上方会有相关的提示以及操作区"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:805
+msgid "A 新增 开发者社区新消息的提醒的功能"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:806
+msgid "A 新增 详细的菜单项"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:807
+msgid "A 新增 设备切换为 Android 后支持自定义宽高的功能"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:808
+msgid "A 新增 wxss文件代码压缩功能"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:809
+msgid "A 新增 编辑器设置页：支持外观配置，编译配置 详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:810
+msgid "A 新增 编辑器配置: tab 是否转空格、tab 的大小详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:811
+msgid "A 新增 编辑器配置：修改时自动保存、编译时自动保存、文件变化时刷新小程序详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:812
+msgid "A 新增 编辑器右键新建 Page 的功能"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:813
+msgid "A 新增 编辑器 ctrl + n 新建临时文件"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:814
+msgid "U 优化 编辑器自动补全的体验"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:815
+msgid "U 优化 编辑器获取系统字体缓慢的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:816
+msgid "U 优化 编辑器全局搜索结果 Tab 位置可移动"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:817
+msgid "U 优化 编辑器顶部文件栏标签宽度自适应文件名字"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:818
+msgid "U 优化 编辑器全局搜索的体验问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:819
+msgid "U 优化 编辑器新建文件的体验问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:820
+msgid "U 优化 开发者工具页面切换的速度"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:821
+msgid "U 优化 wxml panel 的操作体验"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:822
+msgid "F 修复 wx.request 在没有设置超时时间的情况下，超时时没有返回的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:823
+msgid "F 修复 某些情况下新建目录失败的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:824
+msgid "F 修复 开发工具中 wxss 文件 background-image 可以使用本地图片同客户端不一致的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:825
+msgid "F 修复 wxml panel 对于 text 从空值动态添加文本会显示错误的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:826
+msgid "F 修复 windows 版开发工具在扫码登录页无法关闭应用的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:827
+msgid "F 修复 登录二维码过期无法自动刷新的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:828
+msgid "F 修复 编辑器目录树单击打开文件时文件没有获得焦点的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:829
+msgid "F 修复 编辑器文件列表底部右键菜单显示不全的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:830
+msgid "F 修复 编辑器跳转文件时，文件名前空白字符时无法搜索文件的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:831
+msgid "F 修复 编辑器全局搜索结果打开文件失败的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:832
+msgid "F 修复 wx.createCanvasContext 自动补全出错的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:833
+msgid "F 修复 wx.chooseAddress 不会弹授权框以及返回缺失 telNumber 的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:834
+msgid "F 修复 wx.uploadFile、wx.downloadFile 在 url 格式错误时没有回调的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:835
+msgid "F 修复 wx.uploadFile、wx.downloadFile header 中没有 referer 的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:836
+msgid "F 修复 wx.request 在检查 TLS 版本时出现内存泄漏的问"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:837
+msgid "F 修复 wx.getSystemInfo 宽高与真实设备不一致的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:838
+msgid "F 修复 wx.getLocation 返回值缺少 speed、accuracy 的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:839
+msgid "F 修复 wx.showModal 点击取消按钮 res.cancel 为 false 的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:840
+msgid "F 修复 wx.scanCode 网络切换为 none 时与客户端表现不一致的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:841
+msgid "F 修复 App.onLaunch 获取的场景值为字符串与客户端不一致的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:842
+msgid "F 修复 自定义条件编译的参数在 Page.onLoad 中获取的 query 与客户端不一致的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:843
+msgid "F 修复 使用轮询调用 setData 会导致内存泄露的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:844
+msgid "F 修复 tabBar iconPath 以 / 或者 ./ 开头，编译出错的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:845
+msgid "F 修复 自定义预览未填写 启动页面 字段时候，生成的二维码未带上自定义参数的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:846
+msgid "F 修复 wxml panel 在某些情况下不能正常显示的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:847
+msgid "F 修复 对 TrustAsia 证书判断错误的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:849
+msgid "2017.03.29"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:851
+msgid "F 修复 windows 版工具缺失文件的问题 反馈详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:852
+msgid "F 修复 wx.scanCode 失败的问题 反馈详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:853
+msgid "F 修复 API wx.redirect 第一次无效的问题 反馈详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:854
+msgid "F 修复 无 tabbar 的项目页面栈层数异常的问题 反馈详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:855
+msgid "F 修复 默认场景值为 0 的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:857
+msgid "2017.03.28"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:859
+msgid "A 新增 mac 版开发工具支持蓝牙调试"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:860
+msgid "A 新增 wx.reLaunch wx.chooseAddress wx.openSetting wx.getClipboardData wx.setClipboardData wx.arrayBufferToBase64   #. wx.base64ToArrayBuffer wx.showLoading wx.hideLoading wx.startAccelerometer wx.stopAccelerometer wx.onNetworkStatusChange  #. wx.hideShareMenu wx.showShareMenu CanvasContext.setTextAlign 等 API 的调试支持"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:861
+msgid "A 新增 小程序项目列表页支持删除项目"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:862
+msgid "A 新增 自定义编译新增场景值调试支持"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:863
+msgid "A 新增 后台切换进入前台时的场景值调试支持"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:864
+msgid "A 新增 进入开发者社区的入口"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:865
+msgid "A 新增 可在项目列表删除所选项目的功能"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:866
+msgid "A 新增 svg 格式文件的支持"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:867
+msgid "U 优化 编辑器 wxml 代码自动补全的体验"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:868
+msgid "U 优化 可信域名出错时候的错误提示"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:869
+msgid "U 优化 合并 清除工具授权数据 和 清除手机授权数据 选项为 清除授权数据"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:870
+msgid "F 修复 自定义编译时候启动页面的 json 配置失效的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:871
+msgid "F 修复 开发者工具被缩放时候工具显示错乱的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:872
+msgid "F 修复 页面文件目录中带 . 时，该目录下的样式文件无法找到的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:873
+msgid "F 修复 Page.onLoad 返回的参数被多 decode 一次的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:874
+msgid "F 修复 小程序页面栈超过 5 层没有正确报错的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:875
+msgid "F 修复 wx.chooseImage 会在某些情况下会返回两个相同的 localId 的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:876
+msgid "F 修复 <input> 组件在开发工具无法自动聚焦的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:877
+msgid "F 修复 关闭项目后再进入时工具大小异常的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:878
+msgid "F 修复 代码中使用 print 会跳出打印窗口的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:879
+msgid "F 修复 某些情况下压缩代码出错的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:880
+msgid "F 修复 wx.canvasToTempFilePath 不生效的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:882
+msgid "2017.02.06"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:884
+msgid "A 新增 地理位置模拟的功能 详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:885
+msgid "A 新增 移动设备重力感应模拟的功能 详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:886
+msgid "A 新增 模拟器网络状态中新增无网络状态模拟的功能"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:887
+msgid "A 新增 显示当前调试页面的路径以及参数的功能"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:888
+msgid "A 新增 当系统中存在代理软件，导致工具无法正常启动时候的提示"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:889
+msgid "A 新增 控制台方法 showSystemInfo() 显示工具运行状态"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:890
+msgid "U 优化 代码压缩上传 的功能，提高代码压缩率"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:891
+msgid "U 优化 预览和上传代码的速度"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:892
+msgid "U 优化 工具的网络请求，支持开发者使用 Charles 抓包调试"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:893
+msgid "F 修复 mac 下 清除缓存菜单 被 tabbar 挡住的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:894
+msgid "F 修复 wx.showToast 在 mask 为 true 时候层级错误的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:895
+msgid "F 修复 调用 wx.stopBackgroundAudio 后没有触发 onBackgroundAudioStop的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:896
+msgid "F 修复 新建项目时 appid 不存在的提示不正确的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:897
+msgid "F 修复 项目目录中遇到无权限读取的文件时候工具假死的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:898
+msgid "F 修复 未勾选 监听文件变化，自动刷新开发者工具 在编辑模式下仍然自动刷新的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:899
+msgid "F 修复 自动更新失败的问题（需下个版本完全解决）"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:900
+msgid "F 修复 取消授权，工具返回未同移动设备保持一致的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:901
+msgid "F 修复 .wxml .wxss 文件格式化后无法 undo 的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:902
+msgid "F 修复 wx.previewImage 不支持 localid 的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:903
+msgid "F 修复 tabbar 页面调用 wx.navigateback 后出现 webviewid 错误的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:904
+msgid "F 修复 编辑器中 wx.createCanvasContext 补全不正确的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:905
+msgid "F 修复 工具闪退后可能无法启动的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:906
+msgid "F 修复 控制台没有输出 ES6 语法错误的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:907
+msgid "F 修复 windows 10中右键关闭工具会导致 crash 的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:908
+msgid "F 修复 授权按钮颜色不正确的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:909
+msgid "F 修复 wx.downloadFile 未处理 URL 中 query 导致获取到的 localid 无法使用的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:910
+msgid "F 修复 获取用户信息时，取消授权没有保存到后台的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:911
+msgid "F 修复 navigationBarTextStyle 未对颜色进行校验的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:913
+msgid "2017.01.04"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:915
+msgid "A 新增 清除手机授权数据 (缓存-清除手机授权数据) 功能"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:916
+msgid "A 新增 提交预览或者上传代码时候校验文件编码功能"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:917
+msgid "U 升级 nwjs 到 19.4 版本, 更新至 Chrome55 内核"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:918
+msgid "U 更新 与客户端一致，在<scroll-view> 中不会触发下拉刷新"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:919
+msgid "F 修复 组件 <picker> 在开发工具上初始值设置不对的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:920
+msgid "F 修复 工具去除 fetch api，与微信客户端保持一致"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:921
+msgid "F 修复 wx.navigateBack 出现 webviewID not exist 错误的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:922
+msgid "F 修复 添加或者删除 app.wxss 工具编译缓存没有更新的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:923
+msgid "F 修复 wxml 文件最后一行编译出错导致工具卡死的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:924
+msgid "F 修复 wxml 标签未闭合，没有错误提示的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:925
+msgid "F 修复 编辑器全局搜索点击搜索结果没有跳转到文件对应行的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:926
+msgid "F 修复 Appdata panel 对数组数据更新处理错误的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:927
+msgid "F 修复 一些工具的其他 bug"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:928
+msgid "0.11.122100"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:929
+msgid "A 新增 wx.switchTab 的调试支持"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:930
+msgid "A 新增 wx.startRecord wx.stopRecord wx.playVoice wx.pauseVoice wx.stopVoice API 调试支持"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:931
+msgid "A 新增 微信支付调试支持 详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:932
+msgid "A 新增 二维码扫码调试支持"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:933
+msgid "A 新增 app.json 重复定义页面文件导致提交预览错误的提示"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:934
+msgid "A 新增 模拟器加载图片网络错误的提示信息"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:935
+msgid "A 新增 编译时候设置初始化页面以及参数的功能"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:936
+msgid "A 新增 提交预览时候设置初始化页面以及参数的功能"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:937
+msgid "F 优化 appdata panel 分页面查看数据，支持动态更新以及 code 模式显示"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:938
+msgid "F 修复 wx.getBackgroundAudioPlayerState 在没有音乐播放的时候无返回的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:939
+msgid "F 修复 wx.getBackgroundAudioPlayerState 获取 status 不正确的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:940
+msgid "F 修复 wxml panel 某些情况下白屏的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:941
+msgid "F 修复 wxml panel 属性无法复制，并且复制带有回车的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:942
+msgid "F 修复 wxml panel 单一文本节点展示没有对齐的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:943
+msgid "F 修复 app.json 中 tabbar 的 position 设置为 top 时模拟器显示错误的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:944
+msgid "F 修复 devtools 和编辑器中点击外部链接错误的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:945
+msgid "F 修复 wx.requst 因为缓存无法发送请求的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:947
+msgid "F 修复 wx.request 在某些情况下重复触发的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:948
+msgid "F 修复 wxml panel rpx 调试失效的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:949
+msgid "F 修复 编辑器 textarea 组件 提示错误的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:950
+msgid "0.11.112300"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:951
+msgid "A 增加 控制台指令 showRequestInfo() 显示 wx.request 请求详细信息"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:952
+msgid "F 修复 修复 TLS 版本校验出错，导致 wx.request 失败的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:953
+msgid "0.11.112200"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:954
+#: ../../source/devtools/change/uplog.rst:990
+#: ../../source/devtools/change/uplog.rst:1021
+msgid "开发者工具基础功能"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:955
+msgid "A 增加 上传代码时样式自动补全选项，默认开启，开发者可以主动关闭 详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:956
+msgid "A 增加 开发环境不校验请求安全域名以及 TLS 版本选项，默认关闭，开发者可以主动开启 详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:957
+msgid "A 增加 Page 页面脚本错误的提示信息"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:958
+msgid "A 增加 同客户的保持一致，校验 wx.request、wx.downloadFile、wx.uploadFile 的 TLS 版本"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:959
+msgid "A 增加 工具窗口位置以及大小的自动保存功能"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:960
+msgid "A 增加 显示模拟器中的错误信息的功能"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:961
+msgid "A 增加 wxml panel 双击标签名展开的功能"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:962
+msgid "A 增加 打开本地开发目录的功能"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:963
+msgid "A 增加 当前 AppId 的网络配置信息表"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:964
+msgid "F 修复 同客户端保持一致，移除 Promise，开发者需要自行引入兼容库"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:965
+msgid "F 修复 某些情况下，事件被发布多次的 bug"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:966
+msgid "F 修复 在 devtools 中使用 Ctrl + R 或者 F5 导致模拟器出现错误的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:967
+msgid "F 修复 wxml panel 在 mac 中白屏的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:968
+msgid "F 修复 wxml panel 在 inspect 模式下卡顿的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:969
+msgid "F 修复 wxml panel 在某些情况下假死的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:970
+msgid "F 修复 wxml panel sytle 面板文字重叠的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:971
+msgid "F 修复 wxml panel 无法取消多个样式规则的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:972
+msgid "F 修复 wx.request 设置 content-type 错误的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:973
+msgid "F 修复 wx.downloadFile、wx.uploadFile 未校验可信域名的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:974
+msgid "F 修复 git 切换分支或者文件大量改变时候模拟器白屏的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:975
+msgid "F 修复 wxml 文件不存在的时候没有报错信息的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:976
+#: ../../source/devtools/change/uplog.rst:1007
+#: ../../source/devtools/change/uplog.rst:1039
+msgid "编辑模块"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:977
+msgid "A 增加 wxml、wxss 文件格式化代码的功能"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:978
+msgid "A 增加 使用 Ctrl + Shift + f 搜索代码的功能"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:979
+msgid "A 增加 文件树右键功能"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:980
+msgid "A 增加 关闭右侧文件的功能"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:981
+msgid "A 增加 使用 Ctrl + p 文件跳转支持模糊搜索"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:982
+msgid "A 增加 wxml 代码自动补全的和文档显示的功能 详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:983
+msgid "A 增加 gif 类型文件的显示功能"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:984
+msgid "A 增加 在硬盘上打开文件的功能"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:985
+msgid "A 增加 保存 app.json 后，自动创建对应 page.js 和 page.wxml 文件的功能"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:986
+msgid "F 修复 wxml 自动补全错误的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:987
+msgid "F 修复 文件过多时候，在 tabbar 上无法点击的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:988
+msgid "F 修复 修改目录名字可能失败的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:989
+msgid "0.10.102800"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:991
+msgid "A 增加 监听文件变化，实时刷新模拟器，默认开启，开发者可以在项目中主动关闭"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:992
+msgid "A 增加 登录界面增加代理配置、切换帐号"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:993
+msgid "A 增加 所有新增 API 以及 组件的调试功能"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:994
+msgid "A 增加 更友好的错误提示功能"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:995
+msgid "A 增加 wxml panel rpx 调试支持"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:996
+msgid "A 增加 wxml panel 实时修改同步模拟器的功能"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:997
+msgid "A 增加 wx.previewImage API 调试支持"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:998
+msgid "F 修复 工具中无法模拟字体小于 12px 的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:999
+msgid "F 修复 picker 组件的 start、end 无效的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:1000
+msgid "F 修复 video 组件无法滑动进度条的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:1001
+msgid "F 修复 wx.getSystemInfo 再有 tabbar 情况下获取高度错误的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:1002
+msgid "F 修复 wx.chooseImage 设置count无效的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:1003
+msgid "F 修复 Page.onLoad 时调用 wx.setNavigationBarTitle 失败的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:1004
+msgid "F 修复 wxml panel 空白以及选择时候卡顿的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:1005
+msgid "F 修复 脚本文件名字为中文时候的编译错误问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:1006
+msgid "F 修复 关闭项目时候没有关闭媒体播放的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:1008
+msgid "A 增加 文件自动保存功能 详情"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:1009
+msgid "A 增加 编辑显示模拟器并且实时刷新"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:1010
+msgid "A 增加 Ctrl + \\ 文件树展开和收起"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:1011
+msgid "A 增加 Ctrl + w 关闭当前编辑页面"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:1012
+msgid "A 增加 Ctrl + p 文件跳转"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:1013
+msgid "A 增加 Ctrl + m 打开或者关闭模拟器"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:1014
+msgid "A 增加 编辑器底部状态栏"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:1015
+msgid "A 增加 json wxml 代码自动补全以及提示功能"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:1016
+msgid "F 修复光标丢失的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:1017
+msgid "0.10.101400"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:1018
+msgid "F 修复 下拉刷新无法使用的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:1019
+msgid "F 修复 app.json 文件修改后开发工具没有及时更新的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:1020
+msgid "0.10.101100"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:1022
+msgid "A 增加 ES6 到 ES5 的转换，默认开启，开发者可以在项目中主动关闭"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:1023
+msgid "A 增加 提交代码时候可选压缩代码，默认关闭，开发者可以在项目中主动开启"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:1024
+msgid "A 增加 wx.uploadFile 和 wx.downloadFile 调试支持"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:1025
+msgid "A 增加 下拉刷新的调试支持"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:1026
+msgid "A 增加 <form> reportSubmit 模式模拟返回 formId 调试支持"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:1027
+msgid "A 增加 <video> 添加了滑动进度条的功能"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:1028
+msgid "A 增加 <picker> mode=time mode=date"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:1029
+msgid "F 修复 打开地图导致错误的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:1030
+msgid "F 修复 <map> 组件不显示的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:1031
+msgid "F 修复 <canvas> 中 drawImage 闪烁的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:1032
+msgid "F 修复 json 中 navigationBarTextStyle 缺省值设置出错的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:1033
+msgid "F 修复 <picker> 在表单提交事件中 value 为空的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:1034
+msgid "F 修复 背景音乐停止时会触发一次 wx.onBackgroundAudioPause 的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:1035
+msgid "F 修复 wx.request 超时会触发两次 fail 和 complete 回调的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:1036
+msgid "F 修复 小屏幕下开发者工具无法拖动到底部的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:1037
+msgid "F 修复 wx.setStorage 没有限制大小的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:1038
+msgid "F 修复 某些情况下修改了代码文件但工具没有更新的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:1040
+msgid "A 增加 侧边栏可以拖拽位置保存"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:1041
+msgid "A 增加 快捷键 ctrl + \\ or command + \\ 隐藏侧边栏"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:1042
+msgid "A 增加 文件页卡可以拖动排序的功能"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:1043
+msgid "F 修复 wx.setNavitionBarTitle 提示错误的问题"
+msgstr ""
+
+#: ../../source/devtools/change/uplog.rst:1044
+msgid "F 修复 某些情况下文件修改不生效的问题"
+msgstr ""
+

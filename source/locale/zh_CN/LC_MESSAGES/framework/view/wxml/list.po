@@ -1,0 +1,115 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019, Nosy
+# This file is distributed under the same license as the wxadev package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: wxadev \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-09 22:55+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../../source/framework/view/wxml/list.rst:4
+msgid ":wxfrwk:`wx:for 列表渲染 <view/wxml/list>`"
+msgstr ""
+
+#: ../../source/framework/view/wxml/list.rst:9
+msgid "``wx:for`` ``wx:for-item`` ``wx:for-index`` ``wx:key=\"*this\"``"
+msgstr ""
+
+#: ../../source/framework/view/wxml/list.rst:11
+msgid "``index`` ``item``"
+msgstr ""
+
+#: ../../source/framework/view/wxml/list.rst:15
+msgid "wx:for"
+msgstr ""
+
+#: ../../source/framework/view/wxml/list.rst:17
+msgid "在组件上使用 wx:for 控制属性绑定一个数组，即可使用数组中各项的数据重复渲染该组件。"
+msgstr ""
+
+#: ../../source/framework/view/wxml/list.rst:19
+msgid "默认数组的当前项的下标变量名默认为 index，数组当前项的变量名默认为 item"
+msgstr ""
+
+#: ../../source/framework/view/wxml/list.rst:39
+msgid "使用 wx:for-item 可以指定数组当前元素的变量名，"
+msgstr ""
+
+#: ../../source/framework/view/wxml/list.rst:41
+msgid "使用 wx:for-index 可以指定数组当前下标的变量名："
+msgstr ""
+
+#: ../../source/framework/view/wxml/list.rst:49
+msgid "wx:for 也可以嵌套，下边是一个九九乘法表"
+msgstr ""
+
+#: ../../source/framework/view/wxml/list.rst:64
+msgid "block wx:for"
+msgstr ""
+
+#: ../../source/framework/view/wxml/list.rst:66
+msgid "类似 block wx:if，也可以将 wx:for 用在<block/>标签上，以渲染一个包含多节点的结构块。例如："
+msgstr ""
+
+#: ../../source/framework/view/wxml/list.rst:78
+msgid "wx:key"
+msgstr ""
+
+#: ../../source/framework/view/wxml/list.rst:80
+msgid ""
+"如果列表中项目的位置会动态改变或者有新的项目添加到列表中， 并且希望列表中的项目保持自己的特征和状态（如 <input> "
+"中的输入内容，<switch> 的选中状态）， 需要使用 wx:key 来指定列表中项目的唯一的标识符。"
+msgstr ""
+
+#: ../../source/framework/view/wxml/list.rst:84
+msgid "``wx:key`` 的值以两种形式提供"
+msgstr ""
+
+#: ../../source/framework/view/wxml/list.rst:86
+msgid ""
+"字符串，代表在 for 循环的 array 中 item 的某个 property， 该 property "
+"的值需要是列表中唯一的字符串或数字，且不能动态改变。"
+msgstr ""
+
+#: ../../source/framework/view/wxml/list.rst:89
+msgid ""
+"保留关键字 *this 代表在 for 循环中的 item 本身，这种表示需要 item 本身是一个唯一的字符串或者数字， "
+"如：当数据改变触发渲染层重新渲染的时候，会校正带有 key 的组件，框架会确保他们被重新排序， "
+"而不是重新创建，以确保使组件保持自身的状态，并且提高列表渲染时的效率。"
+msgstr ""
+
+#: ../../source/framework/view/wxml/list.rst:93
+msgid "如不提供 wx:key，会报一个 warning， 如果明确知道该列表是静态，或者不必关注其顺序，可以选择忽略。"
+msgstr ""
+
+#: ../../source/framework/view/wxml/list.rst:95
+msgid "示例代码："
+msgstr ""
+
+#: ../../source/framework/view/wxml/list.rst:97
+msgid ":download:`在开发者工具中预览效果 <https://developers.weixin.qq.com/s/tpg5tKmv6kZt>`"
+msgstr ""
+
+#: ../../source/framework/view/wxml/list.rst:154
+msgid "当 wx:for 的值为字符串时，会将字符串解析成字符串数组"
+msgstr ""
+
+#: ../../source/framework/view/wxml/list.rst:162
+#: ../../source/framework/view/wxml/list.rst:178
+msgid "等同于"
+msgstr ""
+
+#: ../../source/framework/view/wxml/list.rst:170
+msgid "花括号和引号之间如果有空格，将最终被解析成为字符串"
+msgstr ""
+

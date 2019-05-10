@@ -1,0 +1,62 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019, Nosy
+# This file is distributed under the same license as the wxadev package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: wxadev \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-09 22:55+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../../source/devtools/settings.rst:4
+msgid ":wxdt:`设置页 <setting>`"
+msgstr ""
+
+#: ../../source/devtools/settings.rst:6
+msgid "外观设置、编辑设置、代理设置和通知配置。菜单栏上点击设置，或者使用快捷键 ctrl(⌘) + , 可以打开设置页。"
+msgstr ""
+
+#: ../../source/devtools/settings.rst:8
+msgid "外观设置 支持配置开发者工具外观和代码编辑器习惯和风格。"
+msgstr ""
+
+#: ../../source/devtools/settings.rst:11
+msgid "主题：深色、浅色 字体 字号 行距 appearance"
+msgstr ""
+
+#: ../../source/devtools/settings.rst:17
+msgid ""
+"编辑设置 修改文件时自动保存 编译时自动保存所有文件 文件保存时自动编译小程序 自动折行 用空格代替 Tab 代码缩略图 总是在新标签页打开文件 "
+"Git 比较文件内容时，忽略 Windows 风格回车符 Tab 大小 如果选中了 "
+"“总是在新标签页打开文件”，则在编辑器目录树点击文件时，总是会在一个新标签页中打开此文件，而非在临时标签页中打开。"
+msgstr ""
+
+#: ../../source/devtools/settings.rst:29
+msgid "edit"
+msgstr ""
+
+#: ../../source/devtools/settings.rst:31
+msgid "代理设置 可以配置不使用代理，或使用系统代理，或使用自定义代理。"
+msgstr ""
+
+#: ../../source/devtools/settings.rst:34
+msgid "proxy"
+msgstr ""
+
+#: ../../source/devtools/settings.rst:36
+msgid "安全设置 可以开启和关闭 CLI/HTTP 调用功能"
+msgstr ""
+
+#: ../../source/devtools/settings.rst:39
+msgid "security"
+msgstr ""
+

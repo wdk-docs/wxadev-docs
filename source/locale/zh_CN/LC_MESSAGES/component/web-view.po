@@ -1,0 +1,264 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019, Nosy
+# This file is distributed under the same license as the wxadev package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: wxadev \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-09 22:55+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../../source/component/web-view.rst:4
+msgid ":wx_comp:`web-view`"
+msgstr ""
+
+#: ../../source/component/web-view.rst:6
+msgid "低版本需做 :ref:`compatibility` 。"
+msgstr ""
+
+#: ../../source/component/web-view.rst:8
+msgid "承载网页的容器。会自动铺满整个小程序页面，个人类型与海外类型的小程序暂不支持使用。"
+msgstr ""
+
+#: ../../source/component/web-view.rst:10
+msgid "客户端 6.7.2 版本开始，navigationStyle: custom 对 <web-view> 组件无效"
+msgstr ""
+
+#: ../../source/component/web-view.rst:13
+msgid "属性"
+msgstr ""
+
+#: ../../source/component/web-view.rst:13
+msgid "类型"
+msgstr ""
+
+#: ../../source/component/web-view.rst:13
+msgid "默认值"
+msgstr ""
+
+#: ../../source/component/web-view.rst:13
+msgid "必填"
+msgstr ""
+
+#: ../../source/component/web-view.rst:13
+#: ../../source/component/web-view.rst:29
+msgid "说明"
+msgstr ""
+
+#: ../../source/component/web-view.rst:13
+#: ../../source/component/web-view.rst:29
+msgid "最低版本"
+msgstr ""
+
+#: ../../source/component/web-view.rst:15
+msgid "src"
+msgstr ""
+
+#: ../../source/component/web-view.rst:15
+msgid "string"
+msgstr ""
+
+#: ../../source/component/web-view.rst:15
+#: ../../source/component/web-view.rst:17
+#: ../../source/component/web-view.rst:19
+#: ../../source/component/web-view.rst:21
+msgid "否"
+msgstr ""
+
+#: ../../source/component/web-view.rst:15
+msgid "webview 指向网页的链接。可打开关联的公众号的文章，其它网页需登录小程序管理后台配置业务域名。"
+msgstr ""
+
+#: ../../source/component/web-view.rst:15
+#: ../../source/component/web-view.rst:17
+#: ../../source/component/web-view.rst:19
+#: ../../source/component/web-view.rst:21
+#: ../../source/component/web-view.rst:31
+#: ../../source/component/web-view.rst:33
+msgid "1.6.4"
+msgstr ""
+
+#: ../../source/component/web-view.rst:17
+msgid "bindmessage"
+msgstr ""
+
+#: ../../source/component/web-view.rst:17
+#: ../../source/component/web-view.rst:19
+#: ../../source/component/web-view.rst:21
+msgid "eventhandler"
+msgstr ""
+
+#: ../../source/component/web-view.rst:17
+msgid ""
+"网页向小程序 postMessage 时，会在特定时机（小程序后退、组件销毁、分享）触发并收到消息。e.detail = { data "
+"}，data是多次 postMessage 的参数组成的数组"
+msgstr ""
+
+#: ../../source/component/web-view.rst:19
+msgid "bindload"
+msgstr ""
+
+#: ../../source/component/web-view.rst:19
+msgid "网页加载成功时候触发此事件。e.detail = { src }"
+msgstr ""
+
+#: ../../source/component/web-view.rst:21
+msgid "binderror"
+msgstr ""
+
+#: ../../source/component/web-view.rst:21
+msgid "网页加载失败的时候触发此事件。e.detail = { src }"
+msgstr ""
+
+#: ../../source/component/web-view.rst:24
+msgid "相关接口 1"
+msgstr ""
+
+#: ../../source/component/web-view.rst:26
+msgid "<web-view>网页中可使用JSSDK 1.3.2提供的接口返回小程序页面。 支持的接口有："
+msgstr ""
+
+#: ../../source/component/web-view.rst:29
+msgid "接口名"
+msgstr ""
+
+#: ../../source/component/web-view.rst:31
+msgid "wx.miniProgram.navigateTo"
+msgstr ""
+
+#: ../../source/component/web-view.rst:31
+#: ../../source/component/web-view.rst:33
+#: ../../source/component/web-view.rst:35
+#: ../../source/component/web-view.rst:37
+#: ../../source/component/web-view.rst:39
+msgid "参数与小程序接口一致"
+msgstr ""
+
+#: ../../source/component/web-view.rst:33
+msgid "wx.miniProgram.navigateBack"
+msgstr ""
+
+#: ../../source/component/web-view.rst:35
+msgid "wx.miniProgram.switchTab"
+msgstr ""
+
+#: ../../source/component/web-view.rst:35
+#: ../../source/component/web-view.rst:37
+#: ../../source/component/web-view.rst:39
+msgid "1.6.5"
+msgstr ""
+
+#: ../../source/component/web-view.rst:37
+msgid "wx.miniProgram.reLaunch"
+msgstr ""
+
+#: ../../source/component/web-view.rst:39
+msgid "wx.miniProgram.redirectTo"
+msgstr ""
+
+#: ../../source/component/web-view.rst:41
+msgid "wx.miniProgram.postMessage"
+msgstr ""
+
+#: ../../source/component/web-view.rst:41
+msgid "向小程序发送消息，会在特定时机（小程序后退、组件销毁、分享）触发组件的message事件"
+msgstr ""
+
+#: ../../source/component/web-view.rst:41
+#: ../../source/component/web-view.rst:43
+msgid "1.7.1"
+msgstr ""
+
+#: ../../source/component/web-view.rst:43
+msgid "wx.miniProgram.getEnv"
+msgstr ""
+
+#: ../../source/component/web-view.rst:43
+msgid "获取当前环境"
+msgstr ""
+
+#: ../../source/component/web-view.rst:46
+#: ../../source/component/web-view.rst:107
+msgid "示例代码"
+msgstr ""
+
+#: ../../source/component/web-view.rst:48
+msgid "在开发者工具中预览效果"
+msgstr ""
+
+#: ../../source/component/web-view.rst:70
+msgid "相关接口 2"
+msgstr ""
+
+#: ../../source/component/web-view.rst:72
+msgid "<web-view>网页中仅支持以下JSSDK接口："
+msgstr ""
+
+#: ../../source/component/web-view.rst:74
+msgid ""
+"接口模块    接口说明    具体接口 判断客户端是否支持js             checkJSApi 图像接口    拍照或上传   "
+"chooseImage 预览图片    previewImage 上传图片    uploadImage 下载图片    "
+"downloadImage 获取本地图片  getLocalImgData 音频接口    开始录音    startRecord 停止录音"
+"    stopRecord 监听录音自动停止        onVoiceRecordEnd 播放语音    playVoice 暂停播放"
+"    pauseVoice 停止播放    stopVoice 监听语音播放完毕        onVoicePlayEnd 上传接口    "
+"uploadVoice 下载接口    downloadVoice 智能接口    识别音频    translateVoice 设备信息    "
+"获取网络状态  getNetworkType 地理位置    使用内置地图打开地点      openLocation 获取地理位置  "
+"getLocation 摇一摇周边   开启ibeacon       startSearchBeacons 关闭ibeacon       "
+"stopSearchBeacons 监听ibeacon       onSearchBeacons 微信扫一扫   调起微信扫一扫 "
+"scanQRCode 微信卡券    拉取使用卡券列表        chooseCard 批量添加卡券接口        addCard "
+"查看微信卡包的卡券       openCard 长按识别    小程序圆形码  无"
+msgstr ""
+
+#: ../../source/component/web-view.rst:103
+msgid "相关接口 3"
+msgstr ""
+
+#: ../../source/component/web-view.rst:105
+msgid "用户分享时可获取当前<web-view>的URL，即在onShareAppMessage回调中返回webViewUrl参数。"
+msgstr ""
+
+#: ../../source/component/web-view.rst:109
+msgid "示例代码："
+msgstr ""
+
+#: ../../source/component/web-view.rst:137
+msgid "相关接口 5 从微信7.0.0开始，可以通过判断userAgent中包含miniProgram字样来判断小程序web-view环境。"
+msgstr ""
+
+#: ../../source/component/web-view.rst:140
+msgid "Bug & Tip"
+msgstr ""
+
+#: ../../source/component/web-view.rst:142
+msgid "网页内 iframe 的域名也需要配置到域名白名单。"
+msgstr ""
+
+#: ../../source/component/web-view.rst:144
+msgid "开发者工具上，可以在 <web-view> 组件上通过右键 - 调试，打开 <web-view> 组件的调试。"
+msgstr ""
+
+#: ../../source/component/web-view.rst:146
+msgid "每个页面只能有一个 <web-view>，<web-view> 会自动铺满整个页面，并覆盖其他组件。"
+msgstr ""
+
+#: ../../source/component/web-view.rst:148
+msgid "<web-view> 网页与小程序之间不支持除 JSSDK 提供的接口之外的通信。"
+msgstr ""
+
+#: ../../source/component/web-view.rst:150
+msgid "在 iOS 中，若存在JSSDK接口调用无响应的情况，可在 <web-view> 的 src 后面加个#wechat_redirect解决。"
+msgstr ""
+
+#: ../../source/component/web-view.rst:152
+msgid "避免在链接中带有中文字符，在 iOS 中会有打开白屏的问题，建议加一下 encodeURIComponent"
+msgstr ""
+

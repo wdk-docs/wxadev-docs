@@ -1,0 +1,99 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019, Nosy
+# This file is distributed under the same license as the wxadev package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: wxadev \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-09 22:55+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../../source/api/FileSystemManager.rst:2
+msgid ":wxapi:`FileSystemManager`"
+msgstr ""
+
+#: ../../source/api/FileSystemManager.rst:6
+msgid "..versonadded:: 1.9.9 开始支持，低版本需做兼容处理。"
+msgstr ""
+
+#: ../../source/api/FileSystemManager.rst:8
+msgid "文件管理器"
+msgstr ""
+
+#: ../../source/api/FileSystemManager.rst:11
+msgid "方法"
+msgstr ""
+
+#: ../../source/api/FileSystemManager.rst:15
+msgid "判断文件/目录是否存在"
+msgstr ""
+
+#: ../../source/api/FileSystemManager.rst:19
+msgid "在文件结尾追加内容"
+msgstr ""
+
+#: ../../source/api/FileSystemManager.rst:23
+msgid "保存临时文件到本地。此接口会移动临时文件，因此调用成功后，tempFilePath 将不可用。"
+msgstr ""
+
+#: ../../source/api/FileSystemManager.rst:27
+msgid "获取该小程序下已保存的本地缓存文件列表"
+msgstr ""
+
+#: ../../source/api/FileSystemManager.rst:31
+msgid "删除该小程序下已保存的本地缓存文件"
+msgstr ""
+
+#: ../../source/api/FileSystemManager.rst:35
+msgid "复制文件"
+msgstr ""
+
+#: ../../source/api/FileSystemManager.rst:39
+msgid "获取该小程序下的 本地临时文件 或 本地缓存文件 信息"
+msgstr ""
+
+#: ../../source/api/FileSystemManager.rst:43
+msgid "创建目录"
+msgstr ""
+
+#: ../../source/api/FileSystemManager.rst:47
+msgid "读取目录内文件列表"
+msgstr ""
+
+#: ../../source/api/FileSystemManager.rst:51
+msgid "读取本地文件内容"
+msgstr ""
+
+#: ../../source/api/FileSystemManager.rst:55
+msgid "重命名文件。可以把文件从 oldPath 移动到 newPath"
+msgstr ""
+
+#: ../../source/api/FileSystemManager.rst:59
+msgid "删除目录"
+msgstr ""
+
+#: ../../source/api/FileSystemManager.rst:63
+msgid "获取文件 Stats 对象"
+msgstr ""
+
+#: ../../source/api/FileSystemManager.rst:67
+msgid "删除文件"
+msgstr ""
+
+#: ../../source/api/FileSystemManager.rst:71
+msgid "解压文件"
+msgstr ""
+
+#: ../../source/api/FileSystemManager.rst:75
+msgid "写文件"
+msgstr ""
+

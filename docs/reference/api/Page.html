@@ -186,7 +186,7 @@
 <em class="property">class </em><code class="descname">Page</code><span class="sig-paren">(</span><em>{data</em>, <em>onLoad</em>, <em>onShow</em>, <em>onReady</em>, <em>onHide</em>, <em>onUnload</em>, <em>onPullDownRefresh</em>, <em>onReachBottom</em>, <em>onShareAppMessage</em>, <em>onPageScroll</em>, <em>onResize</em>, <em>onTabItemTap}</em><span class="sig-paren">)</span><a class="headerlink" href="#Page" title="永久链接至目标">¶</a></dt>
 <dd><p>注册小程序中的一个页面。接受一个 Object 类型参数，其指定页面的初始数据、生命周期回调、事件处理函数等。</p>
 <dl class="field-list">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">参数</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>data</strong> (<em>Object</em>) – <p>页面第一次渲染使用的初始数据。
 页面加载时，data 将会以JSON字符串的形式由逻辑层传至渲染层，
@@ -224,8 +224,8 @@
 <li><p><strong>onPullDownRefresh</strong> (<em>function</em>) – <p><strong>页面事件处理函数</strong> - 监听用户下拉动作刷新事件。</p>
 <ul>
 <li><p>需要在 <code class="docutils literal notranslate"><span class="pre">app.json</span></code> 的 window 选项中或页面配置中开启 <code class="xref js js-data docutils literal notranslate"><span class="pre">enablePullDownRefresh</span></code> 。</p></li>
-<li><p>可以通过 <code class="xref js js-func docutils literal notranslate"><span class="pre">wx.startPullDownRefresh()</span></code> 触发下拉刷新，调用后触发下拉刷新动画，效果与用户手动下拉刷新一致。</p></li>
-<li><p>当处理完数据刷新后，<code class="xref js js-func docutils literal notranslate"><span class="pre">wx.stopPullDownRefresh()</span></code> 可以停止当前页面的下拉刷新。</p></li>
+<li><p>可以通过 <a class="reference internal" href="../../api/wx.startPullDownRefresh.html#wx.startPullDownRefresh" title="wx.startPullDownRefresh"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.startPullDownRefresh()</span></code></a> 触发下拉刷新，调用后触发下拉刷新动画，效果与用户手动下拉刷新一致。</p></li>
+<li><p>当处理完数据刷新后，<a class="reference internal" href="../../api/wx.stopPullDownRefresh.html#wx.stopPullDownRefresh" title="wx.stopPullDownRefresh"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.stopPullDownRefresh()</span></code></a> 可以停止当前页面的下拉刷新。</p></li>
 </ul>
 </p></li>
 <li><p><strong>onReachBottom</strong> (<em>function</em>) – <p><strong>页面事件处理函数</strong> - 监听用户上拉触底事件。</p>
@@ -414,7 +414,7 @@
 <code class="descclassname">Page.prototype.</code><code class="descname">setData</code><span class="sig-paren">(</span><em>data</em><span class="optional">[</span>, <em>callback</em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#Page.prototype.setData" title="永久链接至目标">¶</a></dt>
 <dd><p>setData 函数用于将数据从逻辑层发送到视图层（异步），同时改变对应的 this.data 的值（同步）。</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">参数</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>data</strong> (<em>object</em>) – <p>要改变的数据,
 以 <em>key:value</em> 的形式表示，将 <em>this.data</em> 中的 <em>key</em> 对应的值改变成 <em>value。</em></p>

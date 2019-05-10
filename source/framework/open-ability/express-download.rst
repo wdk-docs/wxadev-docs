@@ -1,3 +1,5 @@
+.. _express-download:
+
 :wxfrwk:`物流助手-打单软件 <open-ability/express-download>`
 ======================================================================
 

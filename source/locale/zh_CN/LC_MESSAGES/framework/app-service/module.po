@@ -1,0 +1,53 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019, Nosy
+# This file is distributed under the same license as the wxadev package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: wxadev \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-09 22:55+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../../source/framework/app-service/module.rst:2
+msgid "模块化"
+msgstr ""
+
+#: ../../source/framework/app-service/module.rst:4
+msgid ""
+"可以将一些公共的代码抽离成为一个单独的 js 文件，作为一个模块。模块只有通过 module.exports 或者 exports "
+"才能对外暴露接口。"
+msgstr ""
+
+#: ../../source/framework/app-service/module.rst:8
+msgid ""
+"exports 是 module.exports 的一个引用，因此在模块里边随意更改 exports 的指向会造成未知的错误。 "
+"所以更推荐开发者采用 module.exports 来暴露模块接口，除非你已经清晰知道这两者的关系。 小程序目前不支持直接引入 "
+"node_modules , 开发者需要使用到 node_modules 时候建议拷贝出相关的代码到小程序的目录中，或者使用小程序支持的 npm "
+"功能。"
+msgstr ""
+
+#: ../../source/framework/app-service/module.rst:25
+msgid "​在需要使用这些模块的文件中，使用 require 将公共代码引入"
+msgstr ""
+
+#: ../../source/framework/app-service/module.rst:39
+msgid "文件作用域"
+msgstr ""
+
+#: ../../source/framework/app-service/module.rst:41
+msgid "在 JavaScript 文件中声明的变量和函数只在该文件中有效；不同的文件中可以声明相同名字的变量和函数，不会互相影响。"
+msgstr ""
+
+#: ../../source/framework/app-service/module.rst:43
+msgid "通过全局函数 getApp 可以获取全局的应用实例，如果需要全局的数据可以在 App 中设置，如："
+msgstr ""
+

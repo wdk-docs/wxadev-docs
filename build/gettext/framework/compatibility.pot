@@ -1,0 +1,115 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019, Nosy
+# This file is distributed under the same license as the wxadev package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: wxadev \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-09 22:55+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/framework/compatibility.rst:4
+#: ../../source/framework/compatibility.rst:7
+msgid "兼容处理"
+msgstr ""
+
+#: ../../source/framework/compatibility.rst:9
+msgid "小程序的功能不断的增加，但是旧版本的微信客户端并不支持新功能，所以在使用这些新能力的时候需要做兼容。"
+msgstr ""
+
+#: ../../source/framework/compatibility.rst:11
+msgid "开发者可以通过以下方式进行低版本的兼容："
+msgstr ""
+
+#: ../../source/framework/compatibility.rst:13
+msgid "版本号比较"
+msgstr ""
+
+#: ../../source/framework/compatibility.rst:15
+msgid "微信客户端和小程序基础库的版本号风格为 Major.Minor.Patch（主版本号.次版本号.修订版本号）。"
+msgstr ""
+
+#: ../../source/framework/compatibility.rst:17
+msgid "文档中会在组件，API等页面描述中带上各个功能所要求的最低基础库版本号。"
+msgstr ""
+
+#: ../../source/framework/compatibility.rst:19
+msgid "开发者可以在小程序中通过调用 :func:`wx.getSystemInfo` 或者 :func:`wx.getSystemInfoSync` 获取到当前小程序运行的基础库的版本号。  通过版本号比较的方式进行运行低版本兼容逻辑。"
+msgstr ""
+
+#: ../../source/framework/compatibility.rst:22
+msgid "版本号比较适用于所有情况。部分场景下也可以使用后面提到的方法完成。"
+msgstr ""
+
+#: ../../source/framework/compatibility.rst:24
+msgid "注意：不要直接使用字符串比较的方法进行版本号比较。"
+msgstr ""
+
+#: ../../source/framework/compatibility.rst:26
+msgid "版本号比较可以参考以下代码："
+msgstr ""
+
+#: ../../source/framework/compatibility.rst:69
+msgid "API 存在判断"
+msgstr ""
+
+#: ../../source/framework/compatibility.rst:71
+msgid "对于新增的 API，可以通过判断该API是否存在来判断是否支持用户使用的基础库版本。例如："
+msgstr ""
+
+#: ../../source/framework/compatibility.rst:85
+msgid ":js:func:`wx.canIUse`"
+msgstr ""
+
+#: ../../source/framework/compatibility.rst:87
+msgid "除了直接通过版本号判断，也可以通过 wx.canIUse 来判断是否可以在该基础库版本下直接使用。例如："
+msgstr ""
+
+#: ../../source/framework/compatibility.rst:89
+msgid "API 参数或返回值"
+msgstr ""
+
+#: ../../source/framework/compatibility.rst:91
+msgid "对于 API 的参数或者返回值有新增的参数，可以判断用以下代码判断。"
+msgstr ""
+
+#: ../../source/framework/compatibility.rst:103
+msgid "组件"
+msgstr ""
+
+#: ../../source/framework/compatibility.rst:105
+msgid "对于组件，新增的组件或属性在旧版本上不会被处理，不过也不会报错。如果特殊场景需要对旧版本做一些降级处理，可以这样子做。"
+msgstr ""
+
+#: ../../source/framework/compatibility.rst:122
+msgid "canIUse 的数据文件随基础库进行更新，新版本中的新功能可能出现遗漏的情况，建议开发者在使用时提前测试。"
+msgstr ""
+
+#: ../../source/framework/compatibility.rst:125
+msgid "设置最低基础库版本"
+msgstr ""
+
+#: ../../source/framework/compatibility.rst:127
+msgid "需要 iOS 6.5.8 / 安卓 6.5.7 及以上版本微信客户端支持"
+msgstr ""
+
+#: ../../source/framework/compatibility.rst:129
+msgid "为便于开发者解决低版本基础库无法兼容小程序的新功能的问题，开发者可设置小程序最低基础库版本要求。"
+msgstr ""
+
+#: ../../source/framework/compatibility.rst:131
+msgid "开发者可以登录小程序管理后台，进入「设置 - 基本设置 - 基础库最低版本设置」进行配置。 在配置前，开发者可查看近 30 天内访问当前小程序的用户所使用的基础库版本占比，以帮助开发者了解当前用户使用的情况。"
+msgstr ""
+
+#: ../../source/framework/compatibility.rst:136
+msgid "设置后，若用户基础库版本低于设置值，则无法正常打开小程序，并提示用户更新客户端版本。"
+msgstr ""
+

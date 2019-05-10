@@ -1,0 +1,114 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019, Nosy
+# This file is distributed under the same license as the wxadev package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: wxadev \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-09 22:55+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/api/wx.chooseVideo.rst:2
+msgid ":wxapi:`wx.chooseVideo`"
+msgstr ""
+
+#: ../../source/api/wx.chooseVideo.rst:0
+msgid "label"
+msgstr ""
+
+#: ../../source/api/wx.chooseVideo.rst:6
+msgid "拍摄视频或从手机相册中选视频。"
+msgstr ""
+
+#: ../../source/api/wx.chooseVideo.rst:0
+msgid "参数"
+msgstr ""
+
+#: ../../source/api/wx.chooseVideo.rst:7
+msgid "['album', 'camera']     视频选择的来源  - *album*   从相册选择视频 - *camera*  使用相机拍摄视频"
+msgstr ""
+
+#: ../../source/api/wx.chooseVideo.rst:7
+msgid "['album', 'camera']     视频选择的来源"
+msgstr ""
+
+#: ../../source/api/wx.chooseVideo.rst:9
+msgid "*album*   从相册选择视频"
+msgstr ""
+
+#: ../../source/api/wx.chooseVideo.rst:10
+msgid "*camera*  使用相机拍摄视频"
+msgstr ""
+
+#: ../../source/api/wx.chooseVideo.rst:12
+msgid "``true`` 是否压缩所选择的视频文件   1.6.0"
+msgstr ""
+
+#: ../../source/api/wx.chooseVideo.rst:13
+msgid "``60``  拍摄视频最长拍摄时间，单位秒"
+msgstr ""
+
+#: ../../source/api/wx.chooseVideo.rst:14
+msgid "``'back'``      默认拉起的是前置或者后置摄像头。部分 Android 手机下由于系统 ROM 不支持无法生效  - *back*    默认拉起后置摄像头 - *front*   默认拉起前置摄像头"
+msgstr ""
+
+#: ../../source/api/wx.chooseVideo.rst:14
+msgid "``'back'``      默认拉起的是前置或者后置摄像头。部分 Android 手机下由于系统 ROM 不支持无法生效"
+msgstr ""
+
+#: ../../source/api/wx.chooseVideo.rst:16
+msgid "*back*    默认拉起后置摄像头"
+msgstr ""
+
+#: ../../source/api/wx.chooseVideo.rst:17
+msgid "*front*   默认拉起前置摄像头"
+msgstr ""
+
+#: ../../source/api/wx.chooseVideo.rst:19
+msgid "接口调用成功的回调函数  - **tempFilePath**  (*string*) -    选定视频的临时文件路径 - **duration**      (*number*) -    选定视频的时间长度 - **size**  (*number*) -    选定视频的数据量大小 - **height**        (*number*) -    返回选定视频的高度 - **width** (*number*) -    返回选定视频的宽度"
+msgstr ""
+
+#: ../../source/api/wx.chooseVideo.rst:19
+msgid "接口调用成功的回调函数"
+msgstr ""
+
+#: ../../source/api/wx.chooseVideo.rst:21
+msgid "**tempFilePath**  (*string*) -    选定视频的临时文件路径"
+msgstr ""
+
+#: ../../source/api/wx.chooseVideo.rst:22
+msgid "**duration**      (*number*) -    选定视频的时间长度"
+msgstr ""
+
+#: ../../source/api/wx.chooseVideo.rst:23
+msgid "**size**  (*number*) -    选定视频的数据量大小"
+msgstr ""
+
+#: ../../source/api/wx.chooseVideo.rst:24
+msgid "**height**        (*number*) -    返回选定视频的高度"
+msgstr ""
+
+#: ../../source/api/wx.chooseVideo.rst:25
+msgid "**width** (*number*) -    返回选定视频的宽度"
+msgstr ""
+
+#: ../../source/api/wx.chooseVideo.rst:27
+msgid "接口调用失败的回调函数"
+msgstr ""
+
+#: ../../source/api/wx.chooseVideo.rst:28
+msgid "接口调用结束的回调函数（调用成功、失败都会执行）"
+msgstr ""
+
+#: ../../source/api/wx.chooseVideo.rst:0
+msgid "示例"
+msgstr ""
+

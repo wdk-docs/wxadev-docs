@@ -1,0 +1,378 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019, Nosy
+# This file is distributed under the same license as the wxadev package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: wxadev \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-09 23:21+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/framework/open-ability/express.rst:4
+msgid ":wxfrwk:`微信物流助手（商户侧） <open-ability/express>`"
+msgstr ""
+
+#: ../../source/framework/open-ability/express.rst:6
+msgid "物流助手，帮助有物流需求的开发者，快速高效对接多家物流公司。对接后用户可通过微信服务通知接收实时物流状态，提升用户体验。"
+msgstr ""
+
+#: ../../source/framework/open-ability/express.rst:9
+msgid "产品优势"
+msgstr ""
+
+#: ../../source/framework/open-ability/express.rst:12
+msgid "小程序开发者"
+msgstr ""
+
+#: ../../source/framework/open-ability/express.rst:14
+msgid "节省开发成本：通过微信统一对接多家物流公司，平均1-2周调通接口，减少以往逐一对接多家物流的开发成本；"
+msgstr ""
+
+#: ../../source/framework/open-ability/express.rst:15
+msgid "实时跟进订单：可通过接口调取或通过事件接收订单的实时路由状态，跟踪最新路由情况；"
+msgstr ""
+
+#: ../../source/framework/open-ability/express.rst:16
+msgid "提升用户回访：关键物流状态会通过微信服务通知发送给用户，用户点击后可回访小程序查看该订单;"
+msgstr ""
+
+#: ../../source/framework/open-ability/express.rst:17
+msgid "利于数据保护：无需担心数据洞穿，利于保护和积累你的数据；"
+msgstr ""
+
+#: ../../source/framework/open-ability/express.rst:18
+msgid "接口完全免费：快递费为你与快递公司签约时收取，微信不收快递费及接口费；"
+msgstr ""
+
+#: ../../source/framework/open-ability/express.rst:21
+msgid "用户"
+msgstr ""
+
+#: ../../source/framework/open-ability/express.rst:23
+msgid "查收物流状态：用户在已调通物流接口的微信小程序内的订单，可以通过服务通知收到微信官方发送的订单物流状态。"
+msgstr ""
+
+#: ../../source/framework/open-ability/express.rst:26
+msgid "小程序接入步骤"
+msgstr ""
+
+#: ../../source/framework/open-ability/express.rst:28
+msgid "登录小程序管理后台，点击 :menuselection:`「物流助手」-->「开通」` ，开通物流助手；"
+msgstr ""
+
+#: ../../source/framework/open-ability/express.rst:29
+msgid "绑定已与你有合作的物流公司帐号；"
+msgstr ""
+
+#: ../../source/framework/open-ability/express.rst:30
+msgid "按照本文档完成接口开发；"
+msgstr ""
+
+#: ../../source/framework/open-ability/express.rst:31
+msgid "下单时调用物流助手API即可。"
+msgstr ""
+
+#: ../../source/framework/open-ability/express.rst:34
+msgid "已经支持的快递公司基本信息"
+msgstr ""
+
+#: ../../source/framework/open-ability/express.rst:37
+msgid "快递公司名称"
+msgstr ""
+
+#: ../../source/framework/open-ability/express.rst:37
+msgid "快递公司ID"
+msgstr ""
+
+#: ../../source/framework/open-ability/express.rst:37
+msgid "服务类型ID及名称"
+msgstr ""
+
+#: ../../source/framework/open-ability/express.rst:37
+msgid "是否支持现付"
+msgstr ""
+
+#: ../../source/framework/open-ability/express.rst:37
+msgid "现付的BizID"
+msgstr ""
+
+#: ../../source/framework/open-ability/express.rst:37
+msgid "快递模式"
+msgstr ""
+
+#: ../../source/framework/open-ability/express.rst:39
+msgid "百世快递"
+msgstr ""
+
+#: ../../source/framework/open-ability/express.rst:39
+msgid "BEST"
+msgstr ""
+
+#: ../../source/framework/open-ability/express.rst:39
+#: ../../source/framework/open-ability/express.rst:50
+#: ../../source/framework/open-ability/express.rst:52
+#: ../../source/framework/open-ability/express.rst:62
+msgid "1（标准快递）"
+msgstr ""
+
+#: ../../source/framework/open-ability/express.rst:39
+#: ../../source/framework/open-ability/express.rst:48
+#: ../../source/framework/open-ability/express.rst:62
+#: ../../source/framework/open-ability/express.rst:66
+#: ../../source/framework/open-ability/express.rst:68
+#: ../../source/framework/open-ability/express.rst:70
+msgid "否"
+msgstr ""
+
+#: ../../source/framework/open-ability/express.rst:39
+#: ../../source/framework/open-ability/express.rst:62
+#: ../../source/framework/open-ability/express.rst:66
+#: ../../source/framework/open-ability/express.rst:68
+#: ../../source/framework/open-ability/express.rst:70
+msgid "加盟"
+msgstr ""
+
+#: ../../source/framework/open-ability/express.rst:41
+msgid "德邦快递"
+msgstr ""
+
+#: ../../source/framework/open-ability/express.rst:41
+msgid "DB"
+msgstr ""
+
+#: ../../source/framework/open-ability/express.rst:41
+msgid "1（大件快递3.60）"
+msgstr ""
+
+#: ../../source/framework/open-ability/express.rst:43
+msgid "2（特准快件）"
+msgstr ""
+
+#: ../../source/framework/open-ability/express.rst:43
+#: ../../source/framework/open-ability/express.rst:50
+#: ../../source/framework/open-ability/express.rst:52
+#: ../../source/framework/open-ability/express.rst:60
+msgid "是"
+msgstr ""
+
+#: ../../source/framework/open-ability/express.rst:43
+msgid "DB_CASH"
+msgstr ""
+
+#: ../../source/framework/open-ability/express.rst:43
+#: ../../source/framework/open-ability/express.rst:48
+#: ../../source/framework/open-ability/express.rst:50
+#: ../../source/framework/open-ability/express.rst:52
+#: ../../source/framework/open-ability/express.rst:60
+msgid "直营"
+msgstr ""
+
+#: ../../source/framework/open-ability/express.rst:46
+msgid "中国邮政速递物流"
+msgstr ""
+
+#: ../../source/framework/open-ability/express.rst:46
+msgid "EMS"
+msgstr ""
+
+#: ../../source/framework/open-ability/express.rst:46
+msgid "6（标准快递）"
+msgstr ""
+
+#: ../../source/framework/open-ability/express.rst:48
+msgid "9（快递包裹）"
+msgstr ""
+
+#: ../../source/framework/open-ability/express.rst:50
+msgid "承诺达特快"
+msgstr ""
+
+#: ../../source/framework/open-ability/express.rst:50
+msgid "OTP"
+msgstr ""
+
+#: ../../source/framework/open-ability/express.rst:50
+msgid "OTP_CASH"
+msgstr ""
+
+#: ../../source/framework/open-ability/express.rst:52
+msgid "品骏快递"
+msgstr ""
+
+#: ../../source/framework/open-ability/express.rst:52
+msgid "PJ"
+msgstr ""
+
+#: ../../source/framework/open-ability/express.rst:52
+msgid "PJ_CASH"
+msgstr ""
+
+#: ../../source/framework/open-ability/express.rst:54
+msgid "顺丰速运"
+msgstr ""
+
+#: ../../source/framework/open-ability/express.rst:54
+msgid "SF"
+msgstr ""
+
+#: ../../source/framework/open-ability/express.rst:54
+msgid "1（顺丰即日）"
+msgstr ""
+
+#: ../../source/framework/open-ability/express.rst:56
+msgid "2（顺丰次晨）"
+msgstr ""
+
+#: ../../source/framework/open-ability/express.rst:58
+msgid "3（顺丰标快）"
+msgstr ""
+
+#: ../../source/framework/open-ability/express.rst:60
+msgid "4（顺丰特惠）"
+msgstr ""
+
+#: ../../source/framework/open-ability/express.rst:60
+msgid "SF_CASH"
+msgstr ""
+
+#: ../../source/framework/open-ability/express.rst:62
+msgid "申通快递"
+msgstr ""
+
+#: ../../source/framework/open-ability/express.rst:62
+msgid "STO"
+msgstr ""
+
+#: ../../source/framework/open-ability/express.rst:64
+msgid "圆通速递"
+msgstr ""
+
+#: ../../source/framework/open-ability/express.rst:64
+msgid "YTO"
+msgstr ""
+
+#: ../../source/framework/open-ability/express.rst:64
+msgid "0（ 普通快递）"
+msgstr ""
+
+#: ../../source/framework/open-ability/express.rst:66
+msgid "1（圆准达）"
+msgstr ""
+
+#: ../../source/framework/open-ability/express.rst:68
+msgid "韵达快递"
+msgstr ""
+
+#: ../../source/framework/open-ability/express.rst:68
+msgid "YUNDA"
+msgstr ""
+
+#: ../../source/framework/open-ability/express.rst:68
+#: ../../source/framework/open-ability/express.rst:70
+msgid "0（标准快件）"
+msgstr ""
+
+#: ../../source/framework/open-ability/express.rst:70
+msgid "中通快递"
+msgstr ""
+
+#: ../../source/framework/open-ability/express.rst:70
+msgid "ZTO"
+msgstr ""
+
+#: ../../source/framework/open-ability/express.rst:74
+msgid "打印面单"
+msgstr ""
+
+#: ../../source/framework/open-ability/express.rst:76
+msgid "小程序开发者下单之后，可以选择以下几种方式来打印电子面单："
+msgstr ""
+
+#: ../../source/framework/open-ability/express.rst:78
+msgid "安装微信打单PC软件；"
+msgstr ""
+
+#: ../../source/framework/open-ability/express.rst:79
+msgid "使用 getOrder 拉取电子面单 html，使用热敏打印机打印；"
+msgstr ""
+
+#: ../../source/framework/open-ability/express.rst:80
+msgid "使用快递公司的接口；"
+msgstr ""
+
+#: ../../source/framework/open-ability/express.rst:81
+msgid "使用 getOrder 拉取电子面单的 waybill_data，自行构造面单并打印。"
+msgstr ""
+
+#: ../../source/framework/open-ability/express.rst:83
+msgid "相关接口"
+msgstr ""
+
+#: ../../source/framework/open-ability/express.rst:85
+msgid "获取支持的快递公司列表"
+msgstr ""
+
+#: ../../source/framework/open-ability/express.rst:86
+msgid "生成运单"
+msgstr ""
+
+#: ../../source/framework/open-ability/express.rst:87
+msgid "取消运单"
+msgstr ""
+
+#: ../../source/framework/open-ability/express.rst:88
+msgid "获取运单数据"
+msgstr ""
+
+#: ../../source/framework/open-ability/express.rst:89
+msgid "查询运单轨迹"
+msgstr ""
+
+#: ../../source/framework/open-ability/express.rst:90
+msgid "更新打印员"
+msgstr ""
+
+#: ../../source/framework/open-ability/express.rst:91
+msgid "获取打印员"
+msgstr ""
+
+#: ../../source/framework/open-ability/express.rst:92
+msgid "获取电子面单余额"
+msgstr ""
+
+#: ../../source/framework/open-ability/express.rst:95
+msgid "相关事件"
+msgstr ""
+
+#: ../../source/framework/open-ability/express.rst:97
+msgid "运单轨迹更新"
+msgstr ""
+
+#: ../../source/framework/open-ability/express.rst:100
+msgid "联系我们"
+msgstr ""
+
+#: ../../source/framework/open-ability/express.rst:102
+msgid "开发本接口中遇到任何问题可前往微信开放社区提问，我们会有专人第一时间解答。点击此处进入社区。"
+msgstr ""
+
+#: ../../source/framework/open-ability/express.rst:104
+msgid "社区提问时，建议参考以下格式："
+msgstr ""
+
+#: ../../source/framework/open-ability/express.rst:106
+msgid "标题：请以【物流助手】开头"
+msgstr ""
+
+#: ../../source/framework/open-ability/express.rst:107
+msgid "正文：若为开发问题，请说明接口调用时间点、请求数据（注意隐私数据）和返回结果，便于我们定位问题。"
+msgstr ""
+

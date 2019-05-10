@@ -1,0 +1,208 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019, Nosy
+# This file is distributed under the same license as the wxadev package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: wxadev \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-09 22:55+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../../source/component/official-account.rst:4
+msgid ":wx_comp:`official-account`"
+msgstr ""
+
+#: ../../source/component/official-account.rst:6
+msgid "开始支持，低版本需做 :ref:`compatibility` 。"
+msgstr ""
+
+#: ../../source/component/official-account.rst:8
+msgid "公众号关注组件。当用户扫小程序码打开小程序时，开发者可在小程序内配置公众号关注组件，方便用户快捷关注公众号，可嵌套在原生组件内。"
+msgstr ""
+
+#: ../../source/component/official-account.rst:12
+msgid "使用组件前，需前往小程序后台，在“设置”->“接口设置”->“公众号关注组件”中设置要展示的公众号。注：设置的公众号需与小程序主体一致。"
+msgstr ""
+
+#: ../../source/component/official-account.rst:13
+msgid "在一个小程序的生命周期内，只有从以下场景进入小程序，才具有展示引导关注公众号组件的能力:"
+msgstr ""
+
+#: ../../source/component/official-account.rst:15
+msgid "当小程序从扫小程序码场景（场景值1047）打开时"
+msgstr ""
+
+#: ../../source/component/official-account.rst:16
+msgid "当小程序从聊天顶部场景（场景值1089）中的「最近使用」内打开时，若小程序之前未被销毁，则该组件保持上一次打开小程序时的状态"
+msgstr ""
+
+#: ../../source/component/official-account.rst:17
+msgid "当从其他小程序返回小程序（场景值1038）时，若小程序之前未被销毁，则该组件保持上一次打开小程序时的状态"
+msgstr ""
+
+#: ../../source/component/official-account.rst:19
+msgid "组件限定最小宽度为300px，高度为定值84px。"
+msgstr ""
+
+#: ../../source/component/official-account.rst:20
+msgid "每个页面只能配置一个该组件。"
+msgstr ""
+
+#: ../../source/component/official-account.rst:23
+#: ../../source/component/official-account.rst:33
+msgid "属性名"
+msgstr ""
+
+#: ../../source/component/official-account.rst:23
+#: ../../source/component/official-account.rst:33
+msgid "类型"
+msgstr ""
+
+#: ../../source/component/official-account.rst:23
+#: ../../source/component/official-account.rst:33
+#: ../../source/component/official-account.rst:43
+msgid "说明"
+msgstr ""
+
+#: ../../source/component/official-account.rst:25
+msgid "bindload"
+msgstr ""
+
+#: ../../source/component/official-account.rst:25
+#: ../../source/component/official-account.rst:27
+msgid "EventHandle"
+msgstr ""
+
+#: ../../source/component/official-account.rst:25
+msgid "组件加载成功时触发"
+msgstr ""
+
+#: ../../source/component/official-account.rst:27
+msgid "binderror"
+msgstr ""
+
+#: ../../source/component/official-account.rst:27
+msgid "组件加载失败时触发"
+msgstr ""
+
+#: ../../source/component/official-account.rst:30
+msgid "detail 对象"
+msgstr ""
+
+#: ../../source/component/official-account.rst:35
+msgid "status"
+msgstr ""
+
+#: ../../source/component/official-account.rst:35
+msgid "Number"
+msgstr ""
+
+#: ../../source/component/official-account.rst:35
+msgid "状态码"
+msgstr ""
+
+#: ../../source/component/official-account.rst:37
+msgid "errMsg"
+msgstr ""
+
+#: ../../source/component/official-account.rst:37
+msgid "String"
+msgstr ""
+
+#: ../../source/component/official-account.rst:37
+msgid "错误信息"
+msgstr ""
+
+#: ../../source/component/official-account.rst:40
+msgid "status  有效值"
+msgstr ""
+
+#: ../../source/component/official-account.rst:43
+msgid "值"
+msgstr ""
+
+#: ../../source/component/official-account.rst:45
+msgid "-2"
+msgstr ""
+
+#: ../../source/component/official-account.rst:45
+msgid "网络错误"
+msgstr ""
+
+#: ../../source/component/official-account.rst:47
+msgid "-1"
+msgstr ""
+
+#: ../../source/component/official-account.rst:47
+msgid "数据解析错误"
+msgstr ""
+
+#: ../../source/component/official-account.rst:49
+msgid "0"
+msgstr ""
+
+#: ../../source/component/official-account.rst:49
+msgid "加载成功"
+msgstr ""
+
+#: ../../source/component/official-account.rst:51
+msgid "1"
+msgstr ""
+
+#: ../../source/component/official-account.rst:51
+msgid "小程序关注公众号功能被封禁"
+msgstr ""
+
+#: ../../source/component/official-account.rst:53
+msgid "2"
+msgstr ""
+
+#: ../../source/component/official-account.rst:53
+msgid "关联公众号被封禁"
+msgstr ""
+
+#: ../../source/component/official-account.rst:55
+msgid "3"
+msgstr ""
+
+#: ../../source/component/official-account.rst:55
+msgid "关联关系解除或未选中关联公众号"
+msgstr ""
+
+#: ../../source/component/official-account.rst:57
+msgid "4"
+msgstr ""
+
+#: ../../source/component/official-account.rst:57
+msgid "未开启关注公众号功能"
+msgstr ""
+
+#: ../../source/component/official-account.rst:59
+msgid "5"
+msgstr ""
+
+#: ../../source/component/official-account.rst:59
+msgid "场景值错误"
+msgstr ""
+
+#: ../../source/component/official-account.rst:61
+msgid "6"
+msgstr ""
+
+#: ../../source/component/official-account.rst:61
+msgid "重复创建"
+msgstr ""
+
+#: ../../source/component/official-account.rst:64
+msgid "示例代码"
+msgstr ""
+

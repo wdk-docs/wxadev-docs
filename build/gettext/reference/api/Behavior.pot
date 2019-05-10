@@ -1,0 +1,58 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019, Nosy
+# This file is distributed under the same license as the wxadev package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: wxadev \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-09 22:55+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/reference/api/Behavior.rst:2
+msgid ":wxref:`Behavior <api/Behavior>`"
+msgstr ""
+
+#: ../../source/reference/api/Behavior.rst:6
+msgid "注册一个 behavior，接受一个 Object 类型的参数。"
+msgstr ""
+
+#: ../../source/reference/api/Behavior.rst:0
+msgid "参数"
+msgstr ""
+
+#: ../../source/reference/api/Behavior.rst:8
+msgid "Map 否       同组件的属性"
+msgstr ""
+
+#: ../../source/reference/api/Behavior.rst:9
+msgid "同组件的数据"
+msgstr ""
+
+#: ../../source/reference/api/Behavior.rst:10
+msgid "同自定义组件的方法"
+msgstr ""
+
+#: ../../source/reference/api/Behavior.rst:11
+msgid "Array  否       引入其它的 behavior"
+msgstr ""
+
+#: ../../source/reference/api/Behavior.rst:12
+#: ../../source/reference/api/Behavior.rst:13
+#: ../../source/reference/api/Behavior.rst:14
+#: ../../source/reference/api/Behavior.rst:15
+#: ../../source/reference/api/Behavior.rst:16
+msgid "生命周期函数"
+msgstr ""
+
+#: ../../source/reference/api/Behavior.rst:0
+msgid "示例"
+msgstr ""
+

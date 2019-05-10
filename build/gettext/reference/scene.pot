@@ -1,0 +1,690 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019, Nosy
+# This file is distributed under the same license as the wxadev package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: wxadev \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-09 22:55+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/reference/scene.rst:4
+msgid ":wxref:`场景值列表 <scene-list>`"
+msgstr ""
+
+#: ../../source/reference/scene.rst:6
+msgid "关于场景值的详细说明和获取方式请参考 指南 - :ref:`app-service_scene`"
+msgstr ""
+
+#: ../../source/reference/scene.rst:9
+msgid "场景值ID"
+msgstr ""
+
+#: ../../source/reference/scene.rst:9
+msgid "说明"
+msgstr ""
+
+#: ../../source/reference/scene.rst:9
+msgid "图例"
+msgstr ""
+
+#: ../../source/reference/scene.rst:11
+msgid "1001"
+msgstr ""
+
+#: ../../source/reference/scene.rst:11
+msgid "发现栏小程序主入口，「最近使用」列表"
+msgstr ""
+
+#: ../../source/reference/scene.rst:13
+msgid "（基础库2.2.4版本起包含「我的小程序」列表）"
+msgstr ""
+
+#: ../../source/reference/scene.rst:13
+#: ../../source/reference/scene.rst:15
+#: ../../source/reference/scene.rst:17
+#: ../../source/reference/scene.rst:19
+#: ../../source/reference/scene.rst:21
+#: ../../source/reference/scene.rst:23
+#: ../../source/reference/scene.rst:25
+#: ../../source/reference/scene.rst:27
+#: ../../source/reference/scene.rst:29
+#: ../../source/reference/scene.rst:31
+#: ../../source/reference/scene.rst:33
+#: ../../source/reference/scene.rst:35
+#: ../../source/reference/scene.rst:39
+#: ../../source/reference/scene.rst:41
+#: ../../source/reference/scene.rst:43
+#: ../../source/reference/scene.rst:45
+#: ../../source/reference/scene.rst:47
+#: ../../source/reference/scene.rst:49
+#: ../../source/reference/scene.rst:51
+#: ../../source/reference/scene.rst:55
+#: ../../source/reference/scene.rst:57
+#: ../../source/reference/scene.rst:59
+#: ../../source/reference/scene.rst:61
+#: ../../source/reference/scene.rst:63
+#: ../../source/reference/scene.rst:65
+#: ../../source/reference/scene.rst:67
+#: ../../source/reference/scene.rst:69
+#: ../../source/reference/scene.rst:71
+#: ../../source/reference/scene.rst:73
+#: ../../source/reference/scene.rst:75
+#: ../../source/reference/scene.rst:77
+#: ../../source/reference/scene.rst:79
+#: ../../source/reference/scene.rst:81
+#: ../../source/reference/scene.rst:83
+#: ../../source/reference/scene.rst:85
+#: ../../source/reference/scene.rst:87
+#: ../../source/reference/scene.rst:89
+#: ../../source/reference/scene.rst:93
+#: ../../source/reference/scene.rst:95
+#: ../../source/reference/scene.rst:97
+#: ../../source/reference/scene.rst:101
+#: ../../source/reference/scene.rst:103
+#: ../../source/reference/scene.rst:107
+#: ../../source/reference/scene.rst:109
+#: ../../source/reference/scene.rst:111
+#: ../../source/reference/scene.rst:113
+#: ../../source/reference/scene.rst:115
+#: ../../source/reference/scene.rst:117
+#: ../../source/reference/scene.rst:119
+#: ../../source/reference/scene.rst:121
+#: ../../source/reference/scene.rst:123
+#: ../../source/reference/scene.rst:125
+#: ../../source/reference/scene.rst:127
+#: ../../source/reference/scene.rst:131
+#: ../../source/reference/scene.rst:133
+#: ../../source/reference/scene.rst:135
+#: ../../source/reference/scene.rst:137
+#: ../../source/reference/scene.rst:139
+#: ../../source/reference/scene.rst:141
+#: ../../source/reference/scene.rst:143
+#: ../../source/reference/scene.rst:147
+msgid "查看"
+msgstr ""
+
+#: ../../source/reference/scene.rst:15
+msgid "1005"
+msgstr ""
+
+#: ../../source/reference/scene.rst:15
+msgid "微信首页顶部搜索框的搜索结果页"
+msgstr ""
+
+#: ../../source/reference/scene.rst:17
+msgid "1006"
+msgstr ""
+
+#: ../../source/reference/scene.rst:17
+msgid "发现栏小程序主入口搜索框的搜索结果页"
+msgstr ""
+
+#: ../../source/reference/scene.rst:19
+msgid "1007"
+msgstr ""
+
+#: ../../source/reference/scene.rst:19
+msgid "单人聊天会话中的小程序消息卡片"
+msgstr ""
+
+#: ../../source/reference/scene.rst:21
+msgid "1008"
+msgstr ""
+
+#: ../../source/reference/scene.rst:21
+msgid "群聊会话中的小程序消息卡片"
+msgstr ""
+
+#: ../../source/reference/scene.rst:23
+msgid "1011"
+msgstr ""
+
+#: ../../source/reference/scene.rst:23
+msgid "扫描二维码"
+msgstr ""
+
+#: ../../source/reference/scene.rst:25
+msgid "1012"
+msgstr ""
+
+#: ../../source/reference/scene.rst:25
+msgid "长按图片识别二维码"
+msgstr ""
+
+#: ../../source/reference/scene.rst:27
+msgid "1013"
+msgstr ""
+
+#: ../../source/reference/scene.rst:27
+msgid "扫描手机相册中选取的二维码"
+msgstr ""
+
+#: ../../source/reference/scene.rst:29
+msgid "1014"
+msgstr ""
+
+#: ../../source/reference/scene.rst:29
+msgid "小程序模板消息"
+msgstr ""
+
+#: ../../source/reference/scene.rst:31
+msgid "1017"
+msgstr ""
+
+#: ../../source/reference/scene.rst:31
+msgid "前往小程序体验版的入口页"
+msgstr ""
+
+#: ../../source/reference/scene.rst:33
+msgid "1019"
+msgstr ""
+
+#: ../../source/reference/scene.rst:33
+msgid "微信钱包（微信客户端7.0.0版本改为支付入口）"
+msgstr ""
+
+#: ../../source/reference/scene.rst:35
+msgid "1020"
+msgstr ""
+
+#: ../../source/reference/scene.rst:35
+msgid "公众号 profile 页相关小程序列表"
+msgstr ""
+
+#: ../../source/reference/scene.rst:37
+msgid "1022"
+msgstr ""
+
+#: ../../source/reference/scene.rst:37
+msgid "聊天顶部置顶小程序入口（微信客户端6.6.1版本起废弃）"
+msgstr ""
+
+#: ../../source/reference/scene.rst:37
+#: ../../source/reference/scene.rst:53
+#: ../../source/reference/scene.rst:91
+#: ../../source/reference/scene.rst:99
+#: ../../source/reference/scene.rst:105
+#: ../../source/reference/scene.rst:145
+#: ../../source/reference/scene.rst:151
+#: ../../source/reference/scene.rst:155
+#: ../../source/reference/scene.rst:157
+msgid "/"
+msgstr ""
+
+#: ../../source/reference/scene.rst:39
+msgid "1023"
+msgstr ""
+
+#: ../../source/reference/scene.rst:39
+msgid "安卓系统桌面图标"
+msgstr ""
+
+#: ../../source/reference/scene.rst:41
+msgid "1024"
+msgstr ""
+
+#: ../../source/reference/scene.rst:41
+msgid "小程序 profile 页"
+msgstr ""
+
+#: ../../source/reference/scene.rst:43
+msgid "1025"
+msgstr ""
+
+#: ../../source/reference/scene.rst:43
+msgid "扫描一维码"
+msgstr ""
+
+#: ../../source/reference/scene.rst:45
+msgid "1026"
+msgstr ""
+
+#: ../../source/reference/scene.rst:45
+msgid "发现栏小程序主入口，「附近的小程序」列表"
+msgstr ""
+
+#: ../../source/reference/scene.rst:47
+msgid "1027"
+msgstr ""
+
+#: ../../source/reference/scene.rst:47
+msgid "微信首页顶部搜索框搜索结果页「使用过的小程序」列表"
+msgstr ""
+
+#: ../../source/reference/scene.rst:49
+msgid "1028"
+msgstr ""
+
+#: ../../source/reference/scene.rst:49
+msgid "我的卡包"
+msgstr ""
+
+#: ../../source/reference/scene.rst:51
+msgid "1029"
+msgstr ""
+
+#: ../../source/reference/scene.rst:51
+msgid "小程序中的卡券详情页"
+msgstr ""
+
+#: ../../source/reference/scene.rst:53
+msgid "1030"
+msgstr ""
+
+#: ../../source/reference/scene.rst:53
+msgid "自动化测试下打开小程序"
+msgstr ""
+
+#: ../../source/reference/scene.rst:55
+msgid "1031"
+msgstr ""
+
+#: ../../source/reference/scene.rst:55
+msgid "长按图片识别一维码"
+msgstr ""
+
+#: ../../source/reference/scene.rst:57
+msgid "1032"
+msgstr ""
+
+#: ../../source/reference/scene.rst:57
+msgid "扫描手机相册中选取的一维码"
+msgstr ""
+
+#: ../../source/reference/scene.rst:59
+msgid "1034"
+msgstr ""
+
+#: ../../source/reference/scene.rst:59
+msgid "微信支付完成页"
+msgstr ""
+
+#: ../../source/reference/scene.rst:61
+msgid "1035"
+msgstr ""
+
+#: ../../source/reference/scene.rst:61
+msgid "公众号自定义菜单"
+msgstr ""
+
+#: ../../source/reference/scene.rst:63
+msgid "1036"
+msgstr ""
+
+#: ../../source/reference/scene.rst:63
+msgid "App 分享消息卡片"
+msgstr ""
+
+#: ../../source/reference/scene.rst:65
+msgid "1037"
+msgstr ""
+
+#: ../../source/reference/scene.rst:65
+msgid "小程序打开小程序"
+msgstr ""
+
+#: ../../source/reference/scene.rst:67
+msgid "1038"
+msgstr ""
+
+#: ../../source/reference/scene.rst:67
+msgid "从另一个小程序返回"
+msgstr ""
+
+#: ../../source/reference/scene.rst:69
+msgid "1039"
+msgstr ""
+
+#: ../../source/reference/scene.rst:69
+msgid "摇电视"
+msgstr ""
+
+#: ../../source/reference/scene.rst:71
+msgid "1042"
+msgstr ""
+
+#: ../../source/reference/scene.rst:71
+msgid "添加好友搜索框的搜索结果页"
+msgstr ""
+
+#: ../../source/reference/scene.rst:73
+msgid "1043"
+msgstr ""
+
+#: ../../source/reference/scene.rst:73
+msgid "公众号模板消息"
+msgstr ""
+
+#: ../../source/reference/scene.rst:75
+msgid "1044"
+msgstr ""
+
+#: ../../source/reference/scene.rst:75
+msgid "带 shareTicket 的小程序消息卡片 详情"
+msgstr ""
+
+#: ../../source/reference/scene.rst:77
+msgid "1045"
+msgstr ""
+
+#: ../../source/reference/scene.rst:77
+msgid "朋友圈广告"
+msgstr ""
+
+#: ../../source/reference/scene.rst:79
+msgid "1046"
+msgstr ""
+
+#: ../../source/reference/scene.rst:79
+msgid "朋友圈广告详情页"
+msgstr ""
+
+#: ../../source/reference/scene.rst:81
+msgid "1047"
+msgstr ""
+
+#: ../../source/reference/scene.rst:81
+msgid "扫描小程序码"
+msgstr ""
+
+#: ../../source/reference/scene.rst:83
+msgid "1048"
+msgstr ""
+
+#: ../../source/reference/scene.rst:83
+msgid "长按图片识别小程序码"
+msgstr ""
+
+#: ../../source/reference/scene.rst:85
+msgid "1049"
+msgstr ""
+
+#: ../../source/reference/scene.rst:85
+msgid "扫描手机相册中选取的小程序码"
+msgstr ""
+
+#: ../../source/reference/scene.rst:87
+msgid "1052"
+msgstr ""
+
+#: ../../source/reference/scene.rst:87
+msgid "卡券的适用门店列表"
+msgstr ""
+
+#: ../../source/reference/scene.rst:89
+msgid "1053"
+msgstr ""
+
+#: ../../source/reference/scene.rst:89
+msgid "搜一搜的结果页"
+msgstr ""
+
+#: ../../source/reference/scene.rst:91
+msgid "1054"
+msgstr ""
+
+#: ../../source/reference/scene.rst:91
+msgid "顶部搜索框小程序快捷入口（微信客户端版本6.7.4起废弃）"
+msgstr ""
+
+#: ../../source/reference/scene.rst:93
+msgid "1056"
+msgstr ""
+
+#: ../../source/reference/scene.rst:93
+msgid "聊天顶部音乐播放器右上角菜单"
+msgstr ""
+
+#: ../../source/reference/scene.rst:95
+msgid "1057"
+msgstr ""
+
+#: ../../source/reference/scene.rst:95
+msgid "钱包中的银行卡详情页"
+msgstr ""
+
+#: ../../source/reference/scene.rst:97
+msgid "1058"
+msgstr ""
+
+#: ../../source/reference/scene.rst:97
+msgid "公众号文章"
+msgstr ""
+
+#: ../../source/reference/scene.rst:99
+msgid "1059"
+msgstr ""
+
+#: ../../source/reference/scene.rst:99
+msgid "体验版小程序绑定邀请页"
+msgstr ""
+
+#: ../../source/reference/scene.rst:101
+msgid "1064"
+msgstr ""
+
+#: ../../source/reference/scene.rst:101
+msgid "微信首页连Wi-Fi状态栏"
+msgstr ""
+
+#: ../../source/reference/scene.rst:103
+msgid "1067"
+msgstr ""
+
+#: ../../source/reference/scene.rst:103
+msgid "公众号文章广告"
+msgstr ""
+
+#: ../../source/reference/scene.rst:105
+msgid "1068"
+msgstr ""
+
+#: ../../source/reference/scene.rst:105
+msgid "附近小程序列表广告（已废弃）"
+msgstr ""
+
+#: ../../source/reference/scene.rst:107
+msgid "1069"
+msgstr ""
+
+#: ../../source/reference/scene.rst:107
+msgid "移动应用"
+msgstr ""
+
+#: ../../source/reference/scene.rst:109
+msgid "1071"
+msgstr ""
+
+#: ../../source/reference/scene.rst:109
+msgid "钱包中的银行卡列表页"
+msgstr ""
+
+#: ../../source/reference/scene.rst:111
+msgid "1072"
+msgstr ""
+
+#: ../../source/reference/scene.rst:111
+msgid "二维码收款页面"
+msgstr ""
+
+#: ../../source/reference/scene.rst:113
+msgid "1073"
+msgstr ""
+
+#: ../../source/reference/scene.rst:113
+msgid "客服消息列表下发的小程序消息卡片"
+msgstr ""
+
+#: ../../source/reference/scene.rst:115
+msgid "1074"
+msgstr ""
+
+#: ../../source/reference/scene.rst:115
+msgid "公众号会话下发的小程序消息卡片"
+msgstr ""
+
+#: ../../source/reference/scene.rst:117
+msgid "1077"
+msgstr ""
+
+#: ../../source/reference/scene.rst:117
+msgid "摇周边"
+msgstr ""
+
+#: ../../source/reference/scene.rst:119
+msgid "1078"
+msgstr ""
+
+#: ../../source/reference/scene.rst:119
+msgid "微信连Wi-Fi成功提示页"
+msgstr ""
+
+#: ../../source/reference/scene.rst:121
+msgid "1079"
+msgstr ""
+
+#: ../../source/reference/scene.rst:121
+msgid "微信游戏中心"
+msgstr ""
+
+#: ../../source/reference/scene.rst:123
+msgid "1081"
+msgstr ""
+
+#: ../../source/reference/scene.rst:123
+msgid "客服消息下发的文字链"
+msgstr ""
+
+#: ../../source/reference/scene.rst:125
+msgid "1082"
+msgstr ""
+
+#: ../../source/reference/scene.rst:125
+msgid "公众号会话下发的文字链"
+msgstr ""
+
+#: ../../source/reference/scene.rst:127
+msgid "1084"
+msgstr ""
+
+#: ../../source/reference/scene.rst:127
+msgid "朋友圈广告原生页"
+msgstr ""
+
+#: ../../source/reference/scene.rst:129
+msgid "1089"
+msgstr ""
+
+#: ../../source/reference/scene.rst:129
+msgid "微信聊天主界面下拉，「最近使用」栏"
+msgstr ""
+
+#: ../../source/reference/scene.rst:131
+msgid "（基础库2.2.4版本起包含「我的小程序」栏）"
+msgstr ""
+
+#: ../../source/reference/scene.rst:133
+msgid "1090"
+msgstr ""
+
+#: ../../source/reference/scene.rst:133
+msgid "长按小程序右上角菜单唤出最近使用历史"
+msgstr ""
+
+#: ../../source/reference/scene.rst:135
+msgid "1091"
+msgstr ""
+
+#: ../../source/reference/scene.rst:135
+msgid "公众号文章商品卡片"
+msgstr ""
+
+#: ../../source/reference/scene.rst:137
+msgid "1092"
+msgstr ""
+
+#: ../../source/reference/scene.rst:137
+msgid "城市服务入口"
+msgstr ""
+
+#: ../../source/reference/scene.rst:139
+msgid "1095"
+msgstr ""
+
+#: ../../source/reference/scene.rst:139
+msgid "小程序广告组件"
+msgstr ""
+
+#: ../../source/reference/scene.rst:141
+msgid "1096"
+msgstr ""
+
+#: ../../source/reference/scene.rst:141
+msgid "聊天记录"
+msgstr ""
+
+#: ../../source/reference/scene.rst:143
+msgid "1097"
+msgstr ""
+
+#: ../../source/reference/scene.rst:143
+msgid "微信支付签约页"
+msgstr ""
+
+#: ../../source/reference/scene.rst:145
+msgid "1099"
+msgstr ""
+
+#: ../../source/reference/scene.rst:145
+msgid "页面内嵌插件"
+msgstr ""
+
+#: ../../source/reference/scene.rst:147
+msgid "1102"
+msgstr ""
+
+#: ../../source/reference/scene.rst:147
+msgid "公众号 profile 页服务预览"
+msgstr ""
+
+#: ../../source/reference/scene.rst:149
+msgid "1103"
+msgstr ""
+
+#: ../../source/reference/scene.rst:149
+msgid "发现栏小程序主入口，"
+msgstr ""
+
+#: ../../source/reference/scene.rst:151
+msgid "「我的小程序」列表（基础库2.2.4版本起废弃）"
+msgstr ""
+
+#: ../../source/reference/scene.rst:153
+msgid "1104"
+msgstr ""
+
+#: ../../source/reference/scene.rst:153
+msgid "微信聊天主界面下拉，"
+msgstr ""
+
+#: ../../source/reference/scene.rst:155
+msgid "「我的小程序」栏（基础库2.2.4版本起废弃）"
+msgstr ""
+
+#: ../../source/reference/scene.rst:157
+msgid "1129"
+msgstr ""
+
+#: ../../source/reference/scene.rst:157
+msgid "微信爬虫访问 详情"
+msgstr ""
+

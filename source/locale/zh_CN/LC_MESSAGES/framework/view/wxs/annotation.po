@@ -1,0 +1,39 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019, Nosy
+# This file is distributed under the same license as the wxadev package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: wxadev \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-09 22:55+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../../source/framework/view/wxs/annotation.rst:4
+msgid ":wxfrwk:`注释 <view/wxs/03annotation>`"
+msgstr ""
+
+#: ../../source/framework/view/wxs/annotation.rst:7
+msgid "WXS主要有3种注释的方法。"
+msgstr ""
+
+#: ../../source/framework/view/wxs/annotation.rst:9
+msgid "示例代码："
+msgstr ""
+
+#: ../../source/framework/view/wxs/annotation.rst:19
+msgid "上述例子中，所有WXS代码均被注释掉了。"
+msgstr ""
+
+#: ../../source/framework/view/wxs/annotation.rst:21
+msgid "方法三和方法二的唯一区别是，没有*/结束符"
+msgstr ""
+

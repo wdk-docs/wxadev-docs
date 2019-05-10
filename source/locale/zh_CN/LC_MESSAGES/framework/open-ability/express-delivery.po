@@ -1,0 +1,123 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019, Nosy
+# This file is distributed under the same license as the wxadev package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: wxadev \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-09 23:21+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../../source/framework/open-ability/express-delivery.rst:4
+msgid ":wxfrwk:`微信物流助手（快递侧） <open-ability/express-delivery>`"
+msgstr ""
+
+#: ../../source/framework/open-ability/express-delivery.rst:6
+msgid "物流助手，帮助有物流需求的开发者，快速高效对接多家物流公司。对接后用户可通过微信服务通知接收实时物流状态，提升用户体验。"
+msgstr ""
+
+#: ../../source/framework/open-ability/express-delivery.rst:9
+msgid "产品优势"
+msgstr ""
+
+#: ../../source/framework/open-ability/express-delivery.rst:11
+msgid "承接微信生态订单：通过微信统一接口，一次性服务微信生态内有寄件需求的商户。"
+msgstr ""
+
+#: ../../source/framework/open-ability/express-delivery.rst:12
+msgid "提升用户回访：关键物流状态会通过微信服务通知发送给用户，用户点击后可回访快递公司小程序查看该订单的物流状态或进行后续操作。"
+msgstr ""
+
+#: ../../source/framework/open-ability/express-delivery.rst:15
+msgid "接入说明"
+msgstr ""
+
+#: ../../source/framework/open-ability/express-delivery.rst:17
+msgid "目前物流助手采用定向邀请方式接入物流公司。"
+msgstr ""
+
+#: ../../source/framework/open-ability/express-delivery.rst:20
+msgid "接入准备"
+msgstr ""
+
+#: ../../source/framework/open-ability/express-delivery.rst:22
+msgid "小程序"
+msgstr ""
+
+#: ../../source/framework/open-ability/express-delivery.rst:24
+msgid "用户收到轨迹更新消息后，可以间接跳转到快递小程序的轨迹详情页。至少需要提供两个页面："
+msgstr ""
+
+#: ../../source/framework/open-ability/express-delivery.rst:26
+msgid "快递轨迹详情页，路径可以参考pages/info/info?from=wx&no=12345678901234。微信做跳转时，会传入运单号。"
+msgstr ""
+
+#: ../../source/framework/open-ability/express-delivery.rst:27
+msgid "快递投诉页面"
+msgstr ""
+
+#: ../../source/framework/open-ability/express-delivery.rst:29
+msgid "小程序事件服务"
+msgstr ""
+
+#: ../../source/framework/open-ability/express-delivery.rst:31
+msgid "事件服务用于接收微信的推送，目前有审核商户、查询余额、下单、取消运单等事件。"
+msgstr ""
+
+#: ../../source/framework/open-ability/express-delivery.rst:33
+msgid "面单模板和示例"
+msgstr ""
+
+#: ../../source/framework/open-ability/express-delivery.rst:35
+msgid "标注各个区域的尺寸、字号等。可参考模板示例"
+msgstr ""
+
+#: ../../source/framework/open-ability/express-delivery.rst:38
+msgid "相关接口"
+msgstr ""
+
+#: ../../source/framework/open-ability/express-delivery.rst:40
+msgid "获取面单联系人信息"
+msgstr ""
+
+#: ../../source/framework/open-ability/express-delivery.rst:41
+msgid "预览面单模板"
+msgstr ""
+
+#: ../../source/framework/open-ability/express-delivery.rst:42
+msgid "更新商户审核结果"
+msgstr ""
+
+#: ../../source/framework/open-ability/express-delivery.rst:43
+msgid "更新运单轨迹"
+msgstr ""
+
+#: ../../source/framework/open-ability/express-delivery.rst:46
+msgid "相关事件"
+msgstr ""
+
+#: ../../source/framework/open-ability/express-delivery.rst:48
+msgid "请求下单"
+msgstr ""
+
+#: ../../source/framework/open-ability/express-delivery.rst:49
+msgid "取消订单"
+msgstr ""
+
+#: ../../source/framework/open-ability/express-delivery.rst:50
+msgid "审核商户"
+msgstr ""
+
+#: ../../source/framework/open-ability/express-delivery.rst:51
+msgid "查询商户余额"
+msgstr ""
+

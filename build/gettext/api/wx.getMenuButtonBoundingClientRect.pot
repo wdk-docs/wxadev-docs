@@ -1,0 +1,38 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019, Nosy
+# This file is distributed under the same license as the wxadev package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: wxadev \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-09 22:55+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/api/wx.getMenuButtonBoundingClientRect.rst:2
+msgid ":wxapi:`wx.getMenuButtonBoundingClientRect`"
+msgstr ""
+
+#: ../../source/api/wx.getMenuButtonBoundingClientRect.rst:6
+msgid "开始支持，低版本需做兼容处理。"
+msgstr ""
+
+#: ../../source/api/wx.getMenuButtonBoundingClientRect.rst:8
+msgid "获取菜单按钮（右上角胶囊按钮）的布局位置信息。坐标信息以屏幕左上角为原点。"
+msgstr ""
+
+#: ../../source/api/wx.getMenuButtonBoundingClientRect.rst:10
+msgid "返回值 Object 菜单按钮的布局位置信息"
+msgstr ""
+
+#: ../../source/api/wx.getMenuButtonBoundingClientRect.rst:14
+msgid "属性      类型      说明 width   number  宽度，单位：px height  number  高度，单位：px top     number  上边界坐标，单位：px right   number  右边界坐标，单位：px bottom  number  下边界坐标，单位：px left    number  左边界坐标，单位：px"
+msgstr ""
+

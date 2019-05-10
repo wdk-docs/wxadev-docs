@@ -1,0 +1,66 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019, Nosy
+# This file is distributed under the same license as the wxadev package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: wxadev \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-09 22:55+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/wxwork/api/login/wx.qy.login.rst:2
+msgid "wx.qy.login"
+msgstr ""
+
+#: ../../source/wxwork/api/login/wx.qy.login.rst:0
+msgid "label"
+msgstr ""
+
+#: ../../source/wxwork/api/login/wx.qy.login.rst:6
+msgid "获取企业微信派发的临时登录凭证"
+msgstr ""
+
+#: ../../source/wxwork/api/login/wx.qy.login.rst:0
+msgid "参数"
+msgstr ""
+
+#: ../../source/wxwork/api/login/wx.qy.login.rst:7
+msgid "超时时间，单位 ms"
+msgstr ""
+
+#: ../../source/wxwork/api/login/wx.qy.login.rst:8
+msgid "接口调用成功的回调函数  - **errMsg**        (*string*) -    调用结果 - **code**  (*string*) -    用户登录凭证（有效期五分钟）。开发者需要在开发者服务器后台调用 api，使用 code 换取 userid 和 session_key 等信息"
+msgstr ""
+
+#: ../../source/wxwork/api/login/wx.qy.login.rst:8
+msgid "接口调用成功的回调函数"
+msgstr ""
+
+#: ../../source/wxwork/api/login/wx.qy.login.rst:10
+msgid "**errMsg**        (*string*) -    调用结果"
+msgstr ""
+
+#: ../../source/wxwork/api/login/wx.qy.login.rst:11
+msgid "**code**  (*string*) -    用户登录凭证（有效期五分钟）。开发者需要在开发者服务器后台调用 api，使用 code 换取 userid 和 session_key 等信息"
+msgstr ""
+
+#: ../../source/wxwork/api/login/wx.qy.login.rst:13
+msgid "接口调用失败的回调函数"
+msgstr ""
+
+#: ../../source/wxwork/api/login/wx.qy.login.rst:14
+msgid "接口调用结束的回调函数（调用成功、失败都会执行）"
+msgstr ""
+
+#: ../../source/wxwork/api/login/wx.qy.login.rst:0
+msgid "示例代码"
+msgstr ""
+

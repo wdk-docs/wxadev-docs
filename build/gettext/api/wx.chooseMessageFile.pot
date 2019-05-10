@@ -1,0 +1,122 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019, Nosy
+# This file is distributed under the same license as the wxadev package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: wxadev \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-09 22:55+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/api/wx.chooseMessageFile.rst:2
+msgid ":wxapi:`wx.chooseMessageFile`"
+msgstr ""
+
+#: ../../source/api/wx.chooseMessageFile.rst:0
+msgid "label"
+msgstr ""
+
+#: ../../source/api/wx.chooseMessageFile.rst:8
+msgid "从客户端会话选择文件。"
+msgstr ""
+
+#: ../../source/api/wx.chooseMessageFile.rst:0
+msgid "参数"
+msgstr ""
+
+#: ../../source/api/wx.chooseMessageFile.rst:10
+msgid "是       最多可以选择的图片张数，可以 0～100"
+msgstr ""
+
+#: ../../source/api/wx.chooseMessageFile.rst:11
+msgid "``'all'`` 所选的文件的类型,合法值:  - *all*     从所有文件选择 - *video*   只能选择视频文件 - *image*   只能选择图片文件 - *file*    可以选择除了图片和视频之外的其它的文件"
+msgstr ""
+
+#: ../../source/api/wx.chooseMessageFile.rst:11
+msgid "``'all'`` 所选的文件的类型,合法值:"
+msgstr ""
+
+#: ../../source/api/wx.chooseMessageFile.rst:13
+msgid "*all*     从所有文件选择"
+msgstr ""
+
+#: ../../source/api/wx.chooseMessageFile.rst:14
+msgid "*video*   只能选择视频文件"
+msgstr ""
+
+#: ../../source/api/wx.chooseMessageFile.rst:15
+msgid "*image*   只能选择图片文件"
+msgstr ""
+
+#: ../../source/api/wx.chooseMessageFile.rst:16
+msgid "*file*    可以选择除了图片和视频之外的其它的文件"
+msgstr ""
+
+#: ../../source/api/wx.chooseMessageFile.rst:18
+msgid "根据文件拓展名过滤，仅 type==file 时有效。每一项都不能是空字符串。默认不过滤。        2.6.0"
+msgstr ""
+
+#: ../../source/api/wx.chooseMessageFile.rst:19
+msgid "接口调用成功的回调函数  - **tempFiles**     (*Array.<Object>*) - 返回选择的文件的本地临时文件对象数组    - **path**        (*string*) -    本地临时文件路径   - **size**        (*number*) -    本地临时文件大小，单位 B   - **name**        (*string*) -    选择的文件名称   - **type**        (*string*) -    选择的文件类型,合法值:      - *video*       选择了视频文件     - *image*       选择了图片文件     - *file* 选择了除图片和视频的文件    - **time**        (*number*) -    选择的文件的会话发送时间，Unix时间戳，工具暂不支持此属性"
+msgstr ""
+
+#: ../../source/api/wx.chooseMessageFile.rst:19
+msgid "接口调用成功的回调函数"
+msgstr ""
+
+#: ../../source/api/wx.chooseMessageFile.rst:21
+msgid "**tempFiles**     (*Array.<Object>*) - 返回选择的文件的本地临时文件对象数组"
+msgstr ""
+
+#: ../../source/api/wx.chooseMessageFile.rst:23
+msgid "**path**        (*string*) -    本地临时文件路径"
+msgstr ""
+
+#: ../../source/api/wx.chooseMessageFile.rst:24
+msgid "**size**        (*number*) -    本地临时文件大小，单位 B"
+msgstr ""
+
+#: ../../source/api/wx.chooseMessageFile.rst:25
+msgid "**name**        (*string*) -    选择的文件名称"
+msgstr ""
+
+#: ../../source/api/wx.chooseMessageFile.rst:26
+msgid "**type**        (*string*) -    选择的文件类型,合法值:"
+msgstr ""
+
+#: ../../source/api/wx.chooseMessageFile.rst:28
+msgid "*video*       选择了视频文件"
+msgstr ""
+
+#: ../../source/api/wx.chooseMessageFile.rst:29
+msgid "*image*       选择了图片文件"
+msgstr ""
+
+#: ../../source/api/wx.chooseMessageFile.rst:30
+msgid "*file* 选择了除图片和视频的文件"
+msgstr ""
+
+#: ../../source/api/wx.chooseMessageFile.rst:32
+msgid "**time**        (*number*) -    选择的文件的会话发送时间，Unix时间戳，工具暂不支持此属性"
+msgstr ""
+
+#: ../../source/api/wx.chooseMessageFile.rst:34
+msgid "接口调用失败的回调函数"
+msgstr ""
+
+#: ../../source/api/wx.chooseMessageFile.rst:35
+msgid "接口调用结束的回调函数（调用成功、失败都会执行）"
+msgstr ""
+
+#: ../../source/api/wx.chooseMessageFile.rst:0
+msgid "示例"
+msgstr ""
+

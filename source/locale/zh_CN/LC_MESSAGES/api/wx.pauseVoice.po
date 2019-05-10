@@ -1,0 +1,57 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019, Nosy
+# This file is distributed under the same license as the wxadev package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: wxadev \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-09 22:55+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../../source/api/wx.pauseVoice.rst:4
+msgid ":wxapi:`wx.pauseVoice`"
+msgstr ""
+
+#: ../../source/api/wx.pauseVoice.rst:8
+msgid "请使用 :class:`wx.createInnerAudioContext` 代替"
+msgstr ""
+
+#: ../../source/api/wx.pauseVoice.rst
+msgid "label"
+msgstr ""
+
+#: ../../source/api/wx.pauseVoice.rst:10
+msgid ""
+"暂停正在播放的语音。再次调用 wx.playVoice 播放同一个文件时，会从暂停处开始播放。如果想从头开始播放，需要先调用 "
+"wx.stopVoice。"
+msgstr ""
+
+#: ../../source/api/wx.pauseVoice.rst
+msgid "参数"
+msgstr ""
+
+#: ../../source/api/wx.pauseVoice.rst:13
+msgid "接口调用成功的回调函数"
+msgstr ""
+
+#: ../../source/api/wx.pauseVoice.rst:14
+msgid "接口调用失败的回调函数"
+msgstr ""
+
+#: ../../source/api/wx.pauseVoice.rst:15
+msgid "接口调用结束的回调函数（调用成功、失败都会执行）"
+msgstr ""
+
+#: ../../source/api/wx.pauseVoice.rst
+msgid "示例"
+msgstr ""
+

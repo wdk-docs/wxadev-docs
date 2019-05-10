@@ -1,0 +1,37 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019, Nosy
+# This file is distributed under the same license as the wxadev package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: wxadev \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-09 22:55+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../../source/framework/plugin/component-limit.rst:2
+msgid "插件使用组件的限制"
+msgstr ""
+
+#: ../../source/framework/plugin/component-limit.rst:4
+msgid "在插件开发中，以下组件不能在插件页面中使用："
+msgstr ""
+
+#: ../../source/framework/plugin/component-limit.rst:6
+msgid ""
+"开放能力（open-type）为以下之一的 button： contact（打开客服会话） getPhoneNumber（获取用户手机号） "
+"getUserInfo（获取用户信息） open-data web-view 以下组件的使用对基础库版本有要求："
+msgstr ""
+
+#: ../../source/framework/plugin/component-limit.rst:14
+msgid "navigator 需要基础库版本 2.1.0 live-player 和 live-pusher 需要基础库版本 2.3.0"
+msgstr ""
+

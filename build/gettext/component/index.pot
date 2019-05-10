@@ -1,0 +1,464 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019, Nosy
+# This file is distributed under the same license as the wxadev package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: wxadev \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-09 22:55+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/component/index.rst:4
+msgid "组件"
+msgstr ""
+
+#: ../../source/component/index.rst:7
+#: ../../source/component/index.rst:26
+msgid "视图容器"
+msgstr ""
+
+#: ../../source/component/index.rst:10
+#: ../../source/component/index.rst:46
+#: ../../source/component/index.rst:70
+#: ../../source/component/index.rst:124
+#: ../../source/component/index.rst:142
+#: ../../source/component/index.rst:172
+#: ../../source/component/index.rst:187
+#: ../../source/component/index.rst:202
+#: ../../source/component/index.rst:226
+#: ../../source/component/index.rst:267
+msgid "名称"
+msgstr ""
+
+#: ../../source/component/index.rst:10
+#: ../../source/component/index.rst:46
+#: ../../source/component/index.rst:70
+#: ../../source/component/index.rst:124
+#: ../../source/component/index.rst:142
+#: ../../source/component/index.rst:172
+#: ../../source/component/index.rst:187
+#: ../../source/component/index.rst:202
+#: ../../source/component/index.rst:226
+#: ../../source/component/index.rst:267
+msgid "功能说明"
+msgstr ""
+
+#: ../../source/component/index.rst:12
+msgid ":doc:`cover-image`"
+msgstr ""
+
+#: ../../source/component/index.rst:12
+msgid "覆盖在原生组件之上的图片视图"
+msgstr ""
+
+#: ../../source/component/index.rst:14
+msgid ":doc:`cover-view`"
+msgstr ""
+
+#: ../../source/component/index.rst:14
+msgid "覆盖在原生组件之上的文本视图"
+msgstr ""
+
+#: ../../source/component/index.rst:16
+msgid ":doc:`movable-area`"
+msgstr ""
+
+#: ../../source/component/index.rst:16
+msgid "<movable-view>的可移动区域"
+msgstr ""
+
+#: ../../source/component/index.rst:18
+msgid ":doc:`movable-view`"
+msgstr ""
+
+#: ../../source/component/index.rst:18
+msgid "可移动的视图容器，在页面中可以拖拽滑动"
+msgstr ""
+
+#: ../../source/component/index.rst:20
+msgid ":doc:`scroll-view`"
+msgstr ""
+
+#: ../../source/component/index.rst:20
+msgid "可滚动视图区域"
+msgstr ""
+
+#: ../../source/component/index.rst:22
+msgid ":doc:`swiper`"
+msgstr ""
+
+#: ../../source/component/index.rst:22
+msgid "滑块视图容器"
+msgstr ""
+
+#: ../../source/component/index.rst:24
+msgid ":doc:`swiper-item`"
+msgstr ""
+
+#: ../../source/component/index.rst:24
+msgid "仅可放置在<swiper>组件中，宽高自动设置为100%"
+msgstr ""
+
+#: ../../source/component/index.rst:26
+msgid ":doc:`view`"
+msgstr ""
+
+#: ../../source/component/index.rst:43
+msgid "基础内容"
+msgstr ""
+
+#: ../../source/component/index.rst:48
+msgid ":doc:`icon`"
+msgstr ""
+
+#: ../../source/component/index.rst:48
+msgid "图标"
+msgstr ""
+
+#: ../../source/component/index.rst:50
+msgid ":doc:`progress`"
+msgstr ""
+
+#: ../../source/component/index.rst:50
+msgid "进度条"
+msgstr ""
+
+#: ../../source/component/index.rst:52
+msgid ":doc:`rich-text`"
+msgstr ""
+
+#: ../../source/component/index.rst:52
+msgid "富文本"
+msgstr ""
+
+#: ../../source/component/index.rst:54
+msgid ":doc:`text`"
+msgstr ""
+
+#: ../../source/component/index.rst:54
+msgid "文本"
+msgstr ""
+
+#: ../../source/component/index.rst:67
+#: ../../source/component/index.rst:78
+msgid "表单"
+msgstr ""
+
+#: ../../source/component/index.rst:72
+msgid ":doc:`button`"
+msgstr ""
+
+#: ../../source/component/index.rst:72
+msgid "按钮"
+msgstr ""
+
+#: ../../source/component/index.rst:74
+msgid ":doc:`checkbox`"
+msgstr ""
+
+#: ../../source/component/index.rst:74
+msgid "多选项目"
+msgstr ""
+
+#: ../../source/component/index.rst:76
+msgid ":doc:`checkbox-group`"
+msgstr ""
+
+#: ../../source/component/index.rst:76
+msgid "多项选择器，内部由多个checkbox组成"
+msgstr ""
+
+#: ../../source/component/index.rst:78
+msgid ":doc:`form`"
+msgstr ""
+
+#: ../../source/component/index.rst:80
+msgid ":doc:`input`"
+msgstr ""
+
+#: ../../source/component/index.rst:80
+msgid "输入框"
+msgstr ""
+
+#: ../../source/component/index.rst:82
+msgid ":doc:`label`"
+msgstr ""
+
+#: ../../source/component/index.rst:82
+msgid "用来改进表单组件的可用性"
+msgstr ""
+
+#: ../../source/component/index.rst:84
+msgid ":doc:`picker`"
+msgstr ""
+
+#: ../../source/component/index.rst:84
+msgid "从底部弹起的滚动选择器"
+msgstr ""
+
+#: ../../source/component/index.rst:86
+msgid ":doc:`picker-view`"
+msgstr ""
+
+#: ../../source/component/index.rst:86
+msgid "嵌入页面的滚动选择器"
+msgstr ""
+
+#: ../../source/component/index.rst:88
+msgid ":doc:`picker-view-column`"
+msgstr ""
+
+#: ../../source/component/index.rst:88
+msgid "滚动选择器子项"
+msgstr ""
+
+#: ../../source/component/index.rst:90
+msgid ":doc:`radio`"
+msgstr ""
+
+#: ../../source/component/index.rst:90
+msgid "单选项目"
+msgstr ""
+
+#: ../../source/component/index.rst:92
+msgid ":doc:`radio-group`"
+msgstr ""
+
+#: ../../source/component/index.rst:92
+msgid "单项选择器，内部由多个 <radio> 组成"
+msgstr ""
+
+#: ../../source/component/index.rst:94
+msgid ":doc:`slider`"
+msgstr ""
+
+#: ../../source/component/index.rst:94
+msgid "滑动选择器"
+msgstr ""
+
+#: ../../source/component/index.rst:96
+msgid ":doc:`switch`"
+msgstr ""
+
+#: ../../source/component/index.rst:96
+msgid "开关选择器"
+msgstr ""
+
+#: ../../source/component/index.rst:98
+msgid ":doc:`textarea`"
+msgstr ""
+
+#: ../../source/component/index.rst:98
+msgid "多行输入框"
+msgstr ""
+
+#: ../../source/component/index.rst:121
+msgid "导航"
+msgstr ""
+
+#: ../../source/component/index.rst:126
+msgid ":doc:`functional-page-navigator`"
+msgstr ""
+
+#: ../../source/component/index.rst:126
+msgid "仅在插件中有效，用于跳转到插件功能页"
+msgstr ""
+
+#: ../../source/component/index.rst:128
+msgid ":doc:`navigator`"
+msgstr ""
+
+#: ../../source/component/index.rst:128
+msgid "页面链接"
+msgstr ""
+
+#: ../../source/component/index.rst:139
+msgid "媒体"
+msgstr ""
+
+#: ../../source/component/index.rst:144
+msgid ":doc:`image`"
+msgstr ""
+
+#: ../../source/component/index.rst:144
+msgid "图片"
+msgstr ""
+
+#: ../../source/component/index.rst:146
+msgid ":doc:`audio`"
+msgstr ""
+
+#: ../../source/component/index.rst:146
+msgid "音频"
+msgstr ""
+
+#: ../../source/component/index.rst:148
+msgid ":doc:`video`"
+msgstr ""
+
+#: ../../source/component/index.rst:148
+msgid "视频"
+msgstr ""
+
+#: ../../source/component/index.rst:150
+msgid ":doc:`live-pusher`"
+msgstr ""
+
+#: ../../source/component/index.rst:150
+msgid "实时音视频录制"
+msgstr ""
+
+#: ../../source/component/index.rst:152
+msgid ":doc:`live-player`"
+msgstr ""
+
+#: ../../source/component/index.rst:152
+msgid "实时音视频播放"
+msgstr ""
+
+#: ../../source/component/index.rst:154
+msgid ":doc:`camera`"
+msgstr ""
+
+#: ../../source/component/index.rst:154
+msgid "系统相机"
+msgstr ""
+
+#: ../../source/component/index.rst:169
+#: ../../source/component/index.rst:174
+msgid "地图"
+msgstr ""
+
+#: ../../source/component/index.rst:174
+msgid ":doc:`map`"
+msgstr ""
+
+#: ../../source/component/index.rst:184
+#: ../../source/component/index.rst:189
+msgid "画布"
+msgstr ""
+
+#: ../../source/component/index.rst:189
+msgid ":doc:`canvas`"
+msgstr ""
+
+#: ../../source/component/index.rst:199
+msgid "开放能力"
+msgstr ""
+
+#: ../../source/component/index.rst:204
+msgid ":doc:`web-view`"
+msgstr ""
+
+#: ../../source/component/index.rst:204
+msgid "承载网页的容器"
+msgstr ""
+
+#: ../../source/component/index.rst:206
+msgid ":doc:`ad`"
+msgstr ""
+
+#: ../../source/component/index.rst:206
+msgid "广告"
+msgstr ""
+
+#: ../../source/component/index.rst:208
+msgid ":doc:`official-account`"
+msgstr ""
+
+#: ../../source/component/index.rst:208
+msgid "公众号关注组件"
+msgstr ""
+
+#: ../../source/component/index.rst:210
+msgid ":doc:`open-data`"
+msgstr ""
+
+#: ../../source/component/index.rst:210
+msgid "用于展示微信开放的数据"
+msgstr ""
+
+#: ../../source/component/index.rst:223
+msgid "原生组件说明"
+msgstr ""
+
+#: ../../source/component/index.rst:228
+msgid ":doc:`native-component`"
+msgstr ""
+
+#: ../../source/component/index.rst:228
+msgid "## 原生组件"
+msgstr ""
+
+#: ../../source/component/index.rst:231
+msgid "小程序中的部分组件是由客户端创建的原生组件，这些组件有："
+msgstr ""
+
+#: ../../source/component/index.rst:233
+msgid "camera"
+msgstr ""
+
+#: ../../source/component/index.rst:234
+msgid "canvas"
+msgstr ""
+
+#: ../../source/component/index.rst:235
+msgid "input（仅在focus时表现为原生组件）"
+msgstr ""
+
+#: ../../source/component/index.rst:236
+msgid "live-player"
+msgstr ""
+
+#: ../../source/component/index.rst:237
+msgid "live-pusher"
+msgstr ""
+
+#: ../../source/component/index.rst:238
+msgid "map"
+msgstr ""
+
+#: ../../source/component/index.rst:239
+msgid "textarea"
+msgstr ""
+
+#: ../../source/component/index.rst:240
+msgid "video"
+msgstr ""
+
+#: ../../source/component/index.rst:245
+msgid "原生组件的使用限制"
+msgstr ""
+
+#: ../../source/component/index.rst:247
+msgid "由于原生组件脱离在 WebView 渲染流程外，因此在使用时有以下限制："
+msgstr ""
+
+#: ../../source/component/index.rst:249
+msgid "原生组件的层级是最高的，所以页面中的其他组件无论设置 z-index 为多少，都无法盖在原生组件上"
+msgstr ""
+
+#: ../../source/component/index.rst:258
+msgid "无妨碍访问"
+msgstr ""
+
+#: ../../source/component/index.rst:269
+msgid ":doc:`aria-component`"
+msgstr ""
+
+#: ../../source/component/index.rst:269
+msgid "## 无障碍访问"
+msgstr ""
+
+#: ../../source/component/index.rst:272
+msgid "为了更好地满足视障人士对于小程序的访问需求，支持部分ARIA标签"
+msgstr ""
+

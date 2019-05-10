@@ -1,0 +1,206 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019, Nosy
+# This file is distributed under the same license as the wxadev package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: wxadev \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-09 22:55+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/framework/open-ability/template-message.rst:2
+msgid ":wxfrwk:`模板消息 <open-ability/template-message>`"
+msgstr ""
+
+#: ../../source/framework/open-ability/template-message.rst:4
+msgid "微信6.5.2及以上版本支持"
+msgstr ""
+
+#: ../../source/framework/open-ability/template-message.rst:6
+msgid "基于微信的通知渠道，我们为开发者提供了可以高效触达用户的模板消息能力，以便实现服务的闭环并提供更佳的体验。"
+msgstr ""
+
+#: ../../source/framework/open-ability/template-message.rst:8
+msgid "模板推送位置：服务通知 模板下发条件：用户本人在微信体系内与页面有交互行为后触发，详见 下发条件说明 模板跳转能力：点击查看详情仅能跳转下发模板的该帐号的各个页面 使用说明 步骤一：获取模板 ID 有两个方法可以获取模板 ID："
+msgstr ""
+
+#: ../../source/framework/open-ability/template-message.rst:15
+msgid "通过模板消息管理接口获取模板 ID（详见 模板消息管理）"
+msgstr ""
+
+#: ../../source/framework/open-ability/template-message.rst:16
+msgid "在微信公众平台手动配置获取模板 ID"
+msgstr ""
+
+#: ../../source/framework/open-ability/template-message.rst:18
+msgid "登录 https://mp.weixin.qq.com 获取模板，如果没有合适的模板，可以申请添加新模板，审核通过后可使用，详见 模板审核说明"
+msgstr ""
+
+#: ../../source/framework/open-ability/template-message.rst:22
+msgid "步骤二：页面的 <form/> 组件，属性 report-submit 为 true 时，可以声明为需要发送模板消息，此时点击按钮提交表单可以获取 formId，用于发送模板消息。或者当用户完成 支付行为，可以获取 prepay_id 用于发送模板消息。"
+msgstr ""
+
+#: ../../source/framework/open-ability/template-message.rst:24
+msgid "步骤三：调用接口下发模板消息（详见 templateMessage.send ）"
+msgstr ""
+
+#: ../../source/framework/open-ability/template-message.rst:26
+msgid "使用效果"
+msgstr ""
+
+#: ../../source/framework/open-ability/template-message.rst:30
+msgid "模板消息管理"
+msgstr ""
+
+#: ../../source/framework/open-ability/template-message.rst:32
+msgid "获取小程序模板库标题列表"
+msgstr ""
+
+#: ../../source/framework/open-ability/template-message.rst:33
+msgid "获取模板库某个模板标题下关键词库"
+msgstr ""
+
+#: ../../source/framework/open-ability/template-message.rst:34
+msgid "组合模板并添加至帐号下的个人模板库"
+msgstr ""
+
+#: ../../source/framework/open-ability/template-message.rst:35
+msgid "获取帐号下已存在的模板列表"
+msgstr ""
+
+#: ../../source/framework/open-ability/template-message.rst:36
+msgid "删除帐号下的某个模板"
+msgstr ""
+
+#: ../../source/framework/open-ability/template-message.rst:38
+msgid "下发条件说明"
+msgstr ""
+
+#: ../../source/framework/open-ability/template-message.rst:40
+msgid "支付"
+msgstr ""
+
+#: ../../source/framework/open-ability/template-message.rst:42
+msgid "当用户在小程序内完成过支付行为，可允许开发者向用户在7天内推送有限条数的模板消息（1次支付可下发3条，多次支付下发条数独立，互相不影响）"
+msgstr ""
+
+#: ../../source/framework/open-ability/template-message.rst:44
+msgid "提交表单"
+msgstr ""
+
+#: ../../source/framework/open-ability/template-message.rst:46
+msgid "当用户在小程序内发生过提交表单行为且该表单声明为要发模板消息的，开发者需要向用户提供服务时，可允许开发者向用户在7天内推送有限条数的模板消息（1次提交表单可下发1条，多次提交下发条数独立，相互不影响）"
+msgstr ""
+
+#: ../../source/framework/open-ability/template-message.rst:48
+msgid "审核说明"
+msgstr ""
+
+#: ../../source/framework/open-ability/template-message.rst:50
+msgid "标题"
+msgstr ""
+
+#: ../../source/framework/open-ability/template-message.rst:52
+msgid "标题不能存在相同"
+msgstr ""
+
+#: ../../source/framework/open-ability/template-message.rst:53
+msgid "标题意思不能存在过度相似"
+msgstr ""
+
+#: ../../source/framework/open-ability/template-message.rst:54
+msgid "标题必须以“提醒”或“通知”结尾"
+msgstr ""
+
+#: ../../source/framework/open-ability/template-message.rst:55
+msgid "标题不能带特殊符号、个性化字词等没有行业通用性的内容"
+msgstr ""
+
+#: ../../source/framework/open-ability/template-message.rst:56
+msgid "标题必须能体现具体服务场景"
+msgstr ""
+
+#: ../../source/framework/open-ability/template-message.rst:57
+msgid "标题不能涉及营销相关内容，包括不限于：消费优惠类、购物返利类、商品更新类、优惠券类、代金券类、红包类、会员卡类、积分类、活动类等营销倾向通知"
+msgstr ""
+
+#: ../../source/framework/open-ability/template-message.rst:59
+msgid "关键词"
+msgstr ""
+
+#: ../../source/framework/open-ability/template-message.rst:61
+msgid "同一标题下，关键词不能存在相同"
+msgstr ""
+
+#: ../../source/framework/open-ability/template-message.rst:62
+msgid "同一标题下，关键词不能存在过度相似"
+msgstr ""
+
+#: ../../source/framework/open-ability/template-message.rst:63
+msgid "关键词不能带特殊符号、个性化字词等没有行业通用性的内容"
+msgstr ""
+
+#: ../../source/framework/open-ability/template-message.rst:64
+msgid "关键词内容示例必须与关键词对应匹配"
+msgstr ""
+
+#: ../../source/framework/open-ability/template-message.rst:65
+msgid "关键词不能太过宽泛，需要具有限制性，例如：“内容”这个就太宽泛，不能审核通过"
+msgstr ""
+
+#: ../../source/framework/open-ability/template-message.rst:67
+msgid "违规说明"
+msgstr ""
+
+#: ../../source/framework/open-ability/template-message.rst:69
+msgid "除不能违反运营规范外，还不能违反以下规则，包括但不限于："
+msgstr ""
+
+#: ../../source/framework/open-ability/template-message.rst:71
+msgid "不允许恶意诱导用户进行触发操作，以达到可向用户下发模板目的"
+msgstr ""
+
+#: ../../source/framework/open-ability/template-message.rst:72
+msgid "不允许恶意骚扰，下发对用户造成骚扰的模板"
+msgstr ""
+
+#: ../../source/framework/open-ability/template-message.rst:73
+msgid "不允许恶意营销，下发营销目的模板"
+msgstr ""
+
+#: ../../source/framework/open-ability/template-message.rst:75
+msgid "处罚说明"
+msgstr ""
+
+#: ../../source/framework/open-ability/template-message.rst:77
+msgid "根据违规情况给予相应梯度的处罚，一般处罚规则如下："
+msgstr ""
+
+#: ../../source/framework/open-ability/template-message.rst:79
+msgid "第一次违规，删除违规模板以示警告，"
+msgstr ""
+
+#: ../../source/framework/open-ability/template-message.rst:80
+msgid "第二次违规，封禁接口7天，"
+msgstr ""
+
+#: ../../source/framework/open-ability/template-message.rst:81
+msgid "第三次违规，封禁接口30天，"
+msgstr ""
+
+#: ../../source/framework/open-ability/template-message.rst:82
+msgid "第四次违规，永久封禁接口"
+msgstr ""
+
+#: ../../source/framework/open-ability/template-message.rst:84
+msgid "处罚结果及原因以站内信形式告知"
+msgstr ""
+

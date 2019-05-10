@@ -1,0 +1,277 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019, Nosy
+# This file is distributed under the same license as the wxadev package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: wxadev \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-09 22:55+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../../source/component/audio.rst:5
+msgid ":wx_comp:`audio 🗑 <audio>`"
+msgstr ""
+
+#: ../../source/component/audio.rst:7
+msgid "低版本需做 :ref:`compatibility` 。"
+msgstr ""
+
+#: ../../source/component/audio.rst:9
+msgid "建议使用能力更强的 :func:`wx.createInnerAudioContext` 接口"
+msgstr ""
+
+#: ../../source/component/audio.rst:12
+msgid "属性"
+msgstr ""
+
+#: ../../source/component/audio.rst:12
+msgid "类型"
+msgstr ""
+
+#: ../../source/component/audio.rst:12
+msgid "默认值"
+msgstr ""
+
+#: ../../source/component/audio.rst:12
+msgid "必填"
+msgstr ""
+
+#: ../../source/component/audio.rst:12
+msgid "说明"
+msgstr ""
+
+#: ../../source/component/audio.rst:12
+msgid "最低版本"
+msgstr ""
+
+#: ../../source/component/audio.rst:14
+msgid "id"
+msgstr ""
+
+#: ../../source/component/audio.rst:14 ../../source/component/audio.rst:16
+#: ../../source/component/audio.rst:22 ../../source/component/audio.rst:28
+#: ../../source/component/audio.rst:34
+msgid "string"
+msgstr ""
+
+#: ../../source/component/audio.rst:14 ../../source/component/audio.rst:16
+#: ../../source/component/audio.rst:18 ../../source/component/audio.rst:20
+#: ../../source/component/audio.rst:22 ../../source/component/audio.rst:28
+#: ../../source/component/audio.rst:34 ../../source/component/audio.rst:40
+#: ../../source/component/audio.rst:44 ../../source/component/audio.rst:46
+#: ../../source/component/audio.rst:48 ../../source/component/audio.rst:52
+msgid "否"
+msgstr ""
+
+#: ../../source/component/audio.rst:14
+msgid "audio 组件的唯一标识符"
+msgstr ""
+
+#: ../../source/component/audio.rst:14 ../../source/component/audio.rst:16
+#: ../../source/component/audio.rst:18 ../../source/component/audio.rst:20
+#: ../../source/component/audio.rst:26 ../../source/component/audio.rst:32
+#: ../../source/component/audio.rst:38 ../../source/component/audio.rst:42
+#: ../../source/component/audio.rst:44 ../../source/component/audio.rst:46
+#: ../../source/component/audio.rst:50 ../../source/component/audio.rst:52
+msgid "1.0.0"
+msgstr ""
+
+#: ../../source/component/audio.rst:16
+msgid "src"
+msgstr ""
+
+#: ../../source/component/audio.rst:16
+msgid "要播放音频的资源地址"
+msgstr ""
+
+#: ../../source/component/audio.rst:18
+msgid "loop"
+msgstr ""
+
+#: ../../source/component/audio.rst:18 ../../source/component/audio.rst:20
+msgid "boolean"
+msgstr ""
+
+#: ../../source/component/audio.rst:18 ../../source/component/audio.rst:20
+msgid "false"
+msgstr ""
+
+#: ../../source/component/audio.rst:18
+msgid "是否循环播放"
+msgstr ""
+
+#: ../../source/component/audio.rst:20
+msgid "controls"
+msgstr ""
+
+#: ../../source/component/audio.rst:20
+msgid "是否显示默认控件"
+msgstr ""
+
+#: ../../source/component/audio.rst:22
+msgid "poster"
+msgstr ""
+
+#: ../../source/component/audio.rst:22
+msgid "默认控件上的音频封面的图片资源地址，"
+msgstr ""
+
+#: ../../source/component/audio.rst:24
+msgid "如果 controls 属性值为 false"
+msgstr ""
+
+#: ../../source/component/audio.rst:26
+msgid "则设置 poster 无效"
+msgstr ""
+
+#: ../../source/component/audio.rst:28
+msgid "name"
+msgstr ""
+
+#: ../../source/component/audio.rst:28
+msgid "未知音频"
+msgstr ""
+
+#: ../../source/component/audio.rst:28
+msgid "默认控件上的音频名字，"
+msgstr ""
+
+#: ../../source/component/audio.rst:30 ../../source/component/audio.rst:36
+msgid "如果 controls 属性值为"
+msgstr ""
+
+#: ../../source/component/audio.rst:32
+msgid "false 则设置 name 无效"
+msgstr ""
+
+#: ../../source/component/audio.rst:34
+msgid "author"
+msgstr ""
+
+#: ../../source/component/audio.rst:34
+msgid "未知作者"
+msgstr ""
+
+#: ../../source/component/audio.rst:34
+msgid "默认控件上的作者名字，"
+msgstr ""
+
+#: ../../source/component/audio.rst:38
+msgid "false 则设置 author 无效"
+msgstr ""
+
+#: ../../source/component/audio.rst:40
+msgid "binderror"
+msgstr ""
+
+#: ../../source/component/audio.rst:40 ../../source/component/audio.rst:44
+#: ../../source/component/audio.rst:46 ../../source/component/audio.rst:48
+#: ../../source/component/audio.rst:52
+msgid "eventhandle"
+msgstr ""
+
+#: ../../source/component/audio.rst:40
+msgid "当发生错误时触发 error 事件，"
+msgstr ""
+
+#: ../../source/component/audio.rst:42
+msgid "detail = {errMsg:MediaError.code}"
+msgstr ""
+
+#: ../../source/component/audio.rst:44
+msgid "bindplay"
+msgstr ""
+
+#: ../../source/component/audio.rst:44
+msgid "当开始/继续播放时触发play事件"
+msgstr ""
+
+#: ../../source/component/audio.rst:46
+msgid "bindpause"
+msgstr ""
+
+#: ../../source/component/audio.rst:46
+msgid "当暂停播放时触发 pause 事件"
+msgstr ""
+
+#: ../../source/component/audio.rst:48
+msgid "bindtimeupdate"
+msgstr ""
+
+#: ../../source/component/audio.rst:48
+msgid "当播放进度改变时触发 timeupdate 事件，"
+msgstr ""
+
+#: ../../source/component/audio.rst:50
+msgid "detail = {currentTime, duration}"
+msgstr ""
+
+#: ../../source/component/audio.rst:52
+msgid "bindended"
+msgstr ""
+
+#: ../../source/component/audio.rst:52
+msgid "当播放到末尾时触发 ended 事件"
+msgstr ""
+
+#: ../../source/component/audio.rst:55
+msgid "MediaError.code"
+msgstr ""
+
+#: ../../source/component/audio.rst:58
+msgid "返回错误码"
+msgstr ""
+
+#: ../../source/component/audio.rst:58
+msgid "描述"
+msgstr ""
+
+#: ../../source/component/audio.rst:60
+msgid "1"
+msgstr ""
+
+#: ../../source/component/audio.rst:60
+msgid "获取资源被用户禁止"
+msgstr ""
+
+#: ../../source/component/audio.rst:61
+msgid "2"
+msgstr ""
+
+#: ../../source/component/audio.rst:61
+msgid "网络错误"
+msgstr ""
+
+#: ../../source/component/audio.rst:62
+msgid "3"
+msgstr ""
+
+#: ../../source/component/audio.rst:62
+msgid "解码错误"
+msgstr ""
+
+#: ../../source/component/audio.rst:63
+msgid "4"
+msgstr ""
+
+#: ../../source/component/audio.rst:63
+msgid "不合适资源"
+msgstr ""
+
+#: ../../source/component/audio.rst:66
+msgid "示例代码 在开发者工具中预览效果"
+msgstr ""
+
+#: ../../source/component/audio.rst:115
+msgid "相关api： :wxapi:`wx.createAudioContext`"
+msgstr ""
+

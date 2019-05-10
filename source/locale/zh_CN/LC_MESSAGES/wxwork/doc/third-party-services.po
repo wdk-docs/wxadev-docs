@@ -1,0 +1,102 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019, Nosy
+# This file is distributed under the same license as the wxadev package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: wxadev \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-09 22:55+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../../source/wxwork/doc/third-party-services.rst:3
+msgid "第三方小程序（服务商）"
+msgstr ""
+
+#: ../../source/wxwork/doc/third-party-services.rst:5
+msgid "企业微信的第三方服务商也可以开发小程序并关联到第三方应用，发布之后即可让企业授权安装并使用（参见第三方应用授权安装流程）"
+msgstr ""
+
+#: ../../source/wxwork/doc/third-party-services.rst:7
+msgid "第三方小程序的登录流程与企业自建应用有些差异，主要差异是jscode2session接口调用方式有所区别，详见下文"
+msgstr ""
+
+#: ../../source/wxwork/doc/third-party-services.rst:10
+msgid "第三方小程序登录流程示意图"
+msgstr ""
+
+#: ../../source/wxwork/doc/third-party-services.rst:14
+msgid "图片描述"
+msgstr ""
+
+#: ../../source/wxwork/doc/third-party-services.rst:16
+msgid "流程说明："
+msgstr ""
+
+#: ../../source/wxwork/doc/third-party-services.rst:18
+msgid ""
+"小程序调用 wx.qy.login() 获取 临时登录凭证code ，并回传到服务商服务器。 服务商服务器以code换取 用户唯一标识 "
+"userid 、用户所在企业corpid 和 会话密钥 session_key。 "
+"此步骤以后服务商后台可以根据用户标识来生成自定义登录态，用于后续业务逻辑中前后端交互时识别用户身份。"
+msgstr ""
+
+#: ../../source/wxwork/doc/third-party-services.rst:23
+msgid "第三方登录凭证校验"
+msgstr ""
+
+#: ../../source/wxwork/doc/third-party-services.rst:25
+msgid "接口地址"
+msgstr ""
+
+#: ../../source/wxwork/doc/third-party-services.rst
+msgid "Query Parameters"
+msgstr ""
+
+#: ../../source/wxwork/doc/third-party-services.rst:29
+msgid "**必选**   第三方应用凭证，获取方法见获取第三方应用凭证。要求必须由该小程序关联的第三方应用的secret获取"
+msgstr ""
+
+#: ../../source/wxwork/doc/third-party-services.rst:30
+msgid "**必选**  登录时获取的 code"
+msgstr ""
+
+#: ../../source/wxwork/doc/third-party-services.rst:31
+msgid "**必选**   此处固定为 ``authorization_code``"
+msgstr ""
+
+#: ../../source/wxwork/doc/third-party-services.rst
+msgid "Response JSON Object"
+msgstr ""
+
+#: ../../source/wxwork/doc/third-party-services.rst:33
+msgid "用户所属企业的corpid"
+msgstr ""
+
+#: ../../source/wxwork/doc/third-party-services.rst:34
+msgid "用户在企业内的UserID，对应管理端的帐号，企业内唯一。注意：如果该企业没有关联该小程序，则此处返回加密的userid"
+msgstr ""
+
+#: ../../source/wxwork/doc/third-party-services.rst:35
+msgid "会话密钥"
+msgstr ""
+
+#: ../../source/wxwork/doc/third-party-services.rst:36
+msgid "错误码，真确时候返回 ``0``。 更多错误码的说明请查看 :wework:`企业微信全局错误码说明 <90139/90313>`"
+msgstr ""
+
+#: ../../source/wxwork/doc/third-party-services.rst:37
+msgid "错误信息，正确时候返回 ``ok``。"
+msgstr ""
+
+#: ../../source/wxwork/doc/third-party-services.rst:41
+msgid "第三方请求jscode2session的url与企业自建应用不同，url中增加了/service/，参数为suite_access_token，而非access_token，请开发者注意区分。"
+msgstr ""
+

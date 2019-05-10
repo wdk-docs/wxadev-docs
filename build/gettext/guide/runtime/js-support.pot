@@ -1,0 +1,323 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019, Nosy
+# This file is distributed under the same license as the wxadev package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: wxadev \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-09 22:55+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/guide/runtime/js-support.rst:2
+msgid "JavaScript 支持情况"
+msgstr ""
+
+#: ../../source/guide/runtime/js-support.rst:5
+msgid "运行限制"
+msgstr ""
+
+#: ../../source/guide/runtime/js-support.rst:7
+msgid "基于安全考虑，小程序中不支持动态执行 JS 代码，即："
+msgstr ""
+
+#: ../../source/guide/runtime/js-support.rst:9
+msgid "不支持使用 eval 执行 JS 代码"
+msgstr ""
+
+#: ../../source/guide/runtime/js-support.rst:10
+msgid "不支持使用 new Function 创建函数"
+msgstr ""
+
+#: ../../source/guide/runtime/js-support.rst:13
+msgid "客户端 ES6 API 支持情况"
+msgstr ""
+
+#: ../../source/guide/runtime/js-support.rst:15
+msgid "微信小程序已经支持了绝大部分的 ES6 API，已支持的 API 如下（部分API依赖系统版本）："
+msgstr ""
+
+#: ../../source/guide/runtime/js-support.rst:18
+msgid "String"
+msgstr ""
+
+#: ../../source/guide/runtime/js-support.rst:18
+#: ../../source/guide/runtime/js-support.rst:36
+#: ../../source/guide/runtime/js-support.rst:60
+#: ../../source/guide/runtime/js-support.rst:78
+#: ../../source/guide/runtime/js-support.rst:116
+#: ../../source/guide/runtime/js-support.rst:132
+msgid "iOS8"
+msgstr ""
+
+#: ../../source/guide/runtime/js-support.rst:18
+#: ../../source/guide/runtime/js-support.rst:36
+#: ../../source/guide/runtime/js-support.rst:60
+#: ../../source/guide/runtime/js-support.rst:78
+#: ../../source/guide/runtime/js-support.rst:116
+#: ../../source/guide/runtime/js-support.rst:132
+msgid "iOS9"
+msgstr ""
+
+#: ../../source/guide/runtime/js-support.rst:18
+#: ../../source/guide/runtime/js-support.rst:36
+#: ../../source/guide/runtime/js-support.rst:60
+#: ../../source/guide/runtime/js-support.rst:78
+#: ../../source/guide/runtime/js-support.rst:116
+#: ../../source/guide/runtime/js-support.rst:132
+msgid "iOS10"
+msgstr ""
+
+#: ../../source/guide/runtime/js-support.rst:18
+#: ../../source/guide/runtime/js-support.rst:36
+#: ../../source/guide/runtime/js-support.rst:60
+#: ../../source/guide/runtime/js-support.rst:78
+#: ../../source/guide/runtime/js-support.rst:116
+#: ../../source/guide/runtime/js-support.rst:132
+msgid "Android"
+msgstr ""
+
+#: ../../source/guide/runtime/js-support.rst:20
+msgid "codePointAt"
+msgstr ""
+
+#: ../../source/guide/runtime/js-support.rst:22
+msgid "normalize"
+msgstr ""
+
+#: ../../source/guide/runtime/js-support.rst:22
+#: ../../source/guide/runtime/js-support.rst:22
+#: ../../source/guide/runtime/js-support.rst:50
+#: ../../source/guide/runtime/js-support.rst:50
+#: ../../source/guide/runtime/js-support.rst:52
+#: ../../source/guide/runtime/js-support.rst:140
+#: ../../source/guide/runtime/js-support.rst:140
+#: ../../source/guide/runtime/js-support.rst:140
+msgid "✘"
+msgstr ""
+
+#: ../../source/guide/runtime/js-support.rst:24
+#: ../../source/guide/runtime/js-support.rst:52
+msgid "includes"
+msgstr ""
+
+#: ../../source/guide/runtime/js-support.rst:26
+msgid "startsWith"
+msgstr ""
+
+#: ../../source/guide/runtime/js-support.rst:28
+msgid "endsWith"
+msgstr ""
+
+#: ../../source/guide/runtime/js-support.rst:30
+msgid "repeat"
+msgstr ""
+
+#: ../../source/guide/runtime/js-support.rst:32
+msgid "String.fromCodePoint"
+msgstr ""
+
+#: ../../source/guide/runtime/js-support.rst:36
+msgid "Array"
+msgstr ""
+
+#: ../../source/guide/runtime/js-support.rst:38
+msgid "copyWithin"
+msgstr ""
+
+#: ../../source/guide/runtime/js-support.rst:40
+msgid "find"
+msgstr ""
+
+#: ../../source/guide/runtime/js-support.rst:42
+msgid "findIndex"
+msgstr ""
+
+#: ../../source/guide/runtime/js-support.rst:44
+msgid "fill"
+msgstr ""
+
+#: ../../source/guide/runtime/js-support.rst:46
+msgid "entries"
+msgstr ""
+
+#: ../../source/guide/runtime/js-support.rst:48
+#: ../../source/guide/runtime/js-support.rst:124
+msgid "keys"
+msgstr ""
+
+#: ../../source/guide/runtime/js-support.rst:50
+msgid "values"
+msgstr ""
+
+#: ../../source/guide/runtime/js-support.rst:54
+msgid "Array.from"
+msgstr ""
+
+#: ../../source/guide/runtime/js-support.rst:56
+msgid "Array.of"
+msgstr ""
+
+#: ../../source/guide/runtime/js-support.rst:60
+msgid "Number"
+msgstr ""
+
+#: ../../source/guide/runtime/js-support.rst:62
+msgid "isFinite"
+msgstr ""
+
+#: ../../source/guide/runtime/js-support.rst:64
+msgid "isNaN"
+msgstr ""
+
+#: ../../source/guide/runtime/js-support.rst:66
+msgid "parseInt"
+msgstr ""
+
+#: ../../source/guide/runtime/js-support.rst:68
+msgid "parseFloat"
+msgstr ""
+
+#: ../../source/guide/runtime/js-support.rst:70
+msgid "isInteger"
+msgstr ""
+
+#: ../../source/guide/runtime/js-support.rst:72
+msgid "EPSILON"
+msgstr ""
+
+#: ../../source/guide/runtime/js-support.rst:74
+msgid "isSafeInteger"
+msgstr ""
+
+#: ../../source/guide/runtime/js-support.rst:78
+msgid "Math"
+msgstr ""
+
+#: ../../source/guide/runtime/js-support.rst:80
+msgid "trunc"
+msgstr ""
+
+#: ../../source/guide/runtime/js-support.rst:82
+msgid "sign"
+msgstr ""
+
+#: ../../source/guide/runtime/js-support.rst:84
+msgid "cbrt"
+msgstr ""
+
+#: ../../source/guide/runtime/js-support.rst:86
+msgid "clz32"
+msgstr ""
+
+#: ../../source/guide/runtime/js-support.rst:88
+msgid "imul"
+msgstr ""
+
+#: ../../source/guide/runtime/js-support.rst:90
+msgid "fround"
+msgstr ""
+
+#: ../../source/guide/runtime/js-support.rst:92
+msgid "hypot"
+msgstr ""
+
+#: ../../source/guide/runtime/js-support.rst:94
+msgid "expm1"
+msgstr ""
+
+#: ../../source/guide/runtime/js-support.rst:96
+msgid "log1p"
+msgstr ""
+
+#: ../../source/guide/runtime/js-support.rst:98
+msgid "log10"
+msgstr ""
+
+#: ../../source/guide/runtime/js-support.rst:100
+msgid "log2"
+msgstr ""
+
+#: ../../source/guide/runtime/js-support.rst:102
+msgid "sinh"
+msgstr ""
+
+#: ../../source/guide/runtime/js-support.rst:104
+msgid "cosh"
+msgstr ""
+
+#: ../../source/guide/runtime/js-support.rst:106
+msgid "tanh"
+msgstr ""
+
+#: ../../source/guide/runtime/js-support.rst:108
+msgid "asinh"
+msgstr ""
+
+#: ../../source/guide/runtime/js-support.rst:110
+msgid "acosh"
+msgstr ""
+
+#: ../../source/guide/runtime/js-support.rst:112
+msgid "atanh"
+msgstr ""
+
+#: ../../source/guide/runtime/js-support.rst:116
+msgid "Object"
+msgstr ""
+
+#: ../../source/guide/runtime/js-support.rst:118
+msgid "is"
+msgstr ""
+
+#: ../../source/guide/runtime/js-support.rst:120
+msgid "assign"
+msgstr ""
+
+#: ../../source/guide/runtime/js-support.rst:122
+msgid "getOwnPropertyDescriptor"
+msgstr ""
+
+#: ../../source/guide/runtime/js-support.rst:126
+msgid "getOwnPropertyNames"
+msgstr ""
+
+#: ../../source/guide/runtime/js-support.rst:128
+msgid "getOwnPropertySymbols"
+msgstr ""
+
+#: ../../source/guide/runtime/js-support.rst:132
+msgid "Other"
+msgstr ""
+
+#: ../../source/guide/runtime/js-support.rst:134
+msgid "Symbol"
+msgstr ""
+
+#: ../../source/guide/runtime/js-support.rst:136
+msgid "Set"
+msgstr ""
+
+#: ../../source/guide/runtime/js-support.rst:138
+msgid "Map"
+msgstr ""
+
+#: ../../source/guide/runtime/js-support.rst:140
+msgid "Proxy"
+msgstr ""
+
+#: ../../source/guide/runtime/js-support.rst:142
+msgid "Reflect"
+msgstr ""
+
+#: ../../source/guide/runtime/js-support.rst:144
+msgid "Promise"
+msgstr ""
+

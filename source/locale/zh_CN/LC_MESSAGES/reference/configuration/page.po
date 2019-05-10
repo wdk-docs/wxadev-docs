@@ -1,0 +1,258 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019, Nosy
+# This file is distributed under the same license as the wxadev package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: wxadev \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-09 22:55+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../../source/reference/configuration/page.rst:2
+msgid ":wxref:`页面配置 <configuration/page>`"
+msgstr ""
+
+#: ../../source/reference/configuration/page.rst:4
+msgid ""
+"每一个小程序页面也可以使用 ``.json`` 文件来对本页面的窗口表现进行配置。 页面中配置项在当前页面会覆盖 :file:`app.json`"
+" 的 :envvar:`window` 中相同的配置项。 文件内容为一个 JSON 对象，有以下属性："
+msgstr ""
+
+#: ../../source/reference/configuration/page.rst:9
+msgid "配置项"
+msgstr ""
+
+#: ../../source/reference/configuration/page.rst:12
+msgid "属性"
+msgstr ""
+
+#: ../../source/reference/configuration/page.rst:12
+msgid "类型"
+msgstr ""
+
+#: ../../source/reference/configuration/page.rst:12
+msgid "默认值"
+msgstr ""
+
+#: ../../source/reference/configuration/page.rst:12
+msgid "描述"
+msgstr ""
+
+#: ../../source/reference/configuration/page.rst:12
+msgid "最低版本"
+msgstr ""
+
+#: ../../source/reference/configuration/page.rst:14
+msgid "navigationBarBackgroundColor"
+msgstr ""
+
+#: ../../source/reference/configuration/page.rst:14
+#: ../../source/reference/configuration/page.rst:24
+msgid "HexColor"
+msgstr ""
+
+#: ../../source/reference/configuration/page.rst:14
+msgid "#000000"
+msgstr ""
+
+#: ../../source/reference/configuration/page.rst:14
+msgid "导航栏背景颜色，如 #000000"
+msgstr ""
+
+#: ../../source/reference/configuration/page.rst:16
+msgid "navigationBarTextStyle"
+msgstr ""
+
+#: ../../source/reference/configuration/page.rst:16
+#: ../../source/reference/configuration/page.rst:18
+#: ../../source/reference/configuration/page.rst:20
+#: ../../source/reference/configuration/page.rst:26
+#: ../../source/reference/configuration/page.rst:29
+#: ../../source/reference/configuration/page.rst:32
+#: ../../source/reference/configuration/page.rst:41
+msgid "string"
+msgstr ""
+
+#: ../../source/reference/configuration/page.rst:16
+msgid "white"
+msgstr ""
+
+#: ../../source/reference/configuration/page.rst:16
+msgid "导航栏标题颜色，仅支持 black / white"
+msgstr ""
+
+#: ../../source/reference/configuration/page.rst:18
+msgid "navigationBarTitleText"
+msgstr ""
+
+#: ../../source/reference/configuration/page.rst:18
+msgid "导航栏标题文字内容"
+msgstr ""
+
+#: ../../source/reference/configuration/page.rst:20
+msgid "navigationStyle"
+msgstr ""
+
+#: ../../source/reference/configuration/page.rst:20
+msgid "default"
+msgstr ""
+
+#: ../../source/reference/configuration/page.rst:20
+msgid "导航栏样式，仅支持以下值：default 默认样式custom 自定义导航栏， 只保留右上角胶囊按钮"
+msgstr ""
+
+#: ../../source/reference/configuration/page.rst:22
+#: ../../source/reference/configuration/page.rst:51
+msgid "微信客户端 7.0.0"
+msgstr ""
+
+#: ../../source/reference/configuration/page.rst:24
+msgid "backgroundColor"
+msgstr ""
+
+#: ../../source/reference/configuration/page.rst:24
+#: ../../source/reference/configuration/page.rst:29
+#: ../../source/reference/configuration/page.rst:32
+msgid "#ffffff"
+msgstr ""
+
+#: ../../source/reference/configuration/page.rst:24
+msgid "窗口的背景色"
+msgstr ""
+
+#: ../../source/reference/configuration/page.rst:26
+msgid "backgroundTextStyle"
+msgstr ""
+
+#: ../../source/reference/configuration/page.rst:26
+msgid "dark"
+msgstr ""
+
+#: ../../source/reference/configuration/page.rst:26
+msgid "下拉 loading 的样式， 仅支持 dark / light"
+msgstr ""
+
+#: ../../source/reference/configuration/page.rst:29
+msgid "backgroundColorTop"
+msgstr ""
+
+#: ../../source/reference/configuration/page.rst:29
+msgid "顶部窗口的背景色， 仅 iOS 支持"
+msgstr ""
+
+#: ../../source/reference/configuration/page.rst:30
+#: ../../source/reference/configuration/page.rst:33
+msgid "微信客户端 6.5.16"
+msgstr ""
+
+#: ../../source/reference/configuration/page.rst:32
+msgid "backgroundColorBottom"
+msgstr ""
+
+#: ../../source/reference/configuration/page.rst:32
+msgid "底部窗口的背景色， 仅 iOS 支持"
+msgstr ""
+
+#: ../../source/reference/configuration/page.rst:35
+msgid "enablePullDownRefresh"
+msgstr ""
+
+#: ../../source/reference/configuration/page.rst:35
+#: ../../source/reference/configuration/page.rst:46
+#: ../../source/reference/configuration/page.rst:50
+msgid "boolean"
+msgstr ""
+
+#: ../../source/reference/configuration/page.rst:35
+#: ../../source/reference/configuration/page.rst:46
+#: ../../source/reference/configuration/page.rst:50
+msgid "false"
+msgstr ""
+
+#: ../../source/reference/configuration/page.rst:35
+msgid "是否开启当前页面下拉刷新。 详见 Page.onPullDownRefresh"
+msgstr ""
+
+#: ../../source/reference/configuration/page.rst:38
+msgid "onReachBottomDistance"
+msgstr ""
+
+#: ../../source/reference/configuration/page.rst:38
+msgid "number"
+msgstr ""
+
+#: ../../source/reference/configuration/page.rst:38
+msgid "50"
+msgstr ""
+
+#: ../../source/reference/configuration/page.rst:38
+msgid "页面上拉触底事件触发时距页面底部距离， 单位为px。详见 Page.onReachBottom"
+msgstr ""
+
+#: ../../source/reference/configuration/page.rst:41
+msgid "pageOrientation"
+msgstr ""
+
+#: ../../source/reference/configuration/page.rst:41
+msgid "portrait"
+msgstr ""
+
+#: ../../source/reference/configuration/page.rst:41
+msgid "屏幕旋转设置， 支持 auto/portrait/landscape 详见响应显示区域变化 2.4.0(auto)/2.5.0(landscape)"
+msgstr ""
+
+#: ../../source/reference/configuration/page.rst:46
+msgid "disableScroll"
+msgstr ""
+
+#: ../../source/reference/configuration/page.rst:46
+msgid "设置为 true 则页面整体不能上下滚动。 只在页面配置中有效， 无法在 app.json 中设置"
+msgstr ""
+
+#: ../../source/reference/configuration/page.rst:50
+msgid "disableSwipeBack"
+msgstr ""
+
+#: ../../source/reference/configuration/page.rst:50
+msgid "禁止页面右滑手势返回"
+msgstr ""
+
+#: ../../source/reference/configuration/page.rst:53
+msgid "usingComponents"
+msgstr ""
+
+#: ../../source/reference/configuration/page.rst:53
+msgid "Object"
+msgstr ""
+
+#: ../../source/reference/configuration/page.rst:53
+msgid "否"
+msgstr ""
+
+#: ../../source/reference/configuration/page.rst:53
+msgid "页面自定义组件配置"
+msgstr ""
+
+#: ../../source/reference/configuration/page.rst:53
+msgid "1.6.3"
+msgstr ""
+
+#: ../../source/reference/configuration/page.rst:56
+msgid ""
+"页面配置中只能设置 :file:`app.json` 中 :envvar:`window` 对应的配置项， 以决定本页面的窗口表现，所以无需写 "
+":envvar:`window` 这个属性。"
+msgstr ""
+
+#: ../../source/reference/configuration/page.rst:60
+msgid "配置示例"
+msgstr ""
+

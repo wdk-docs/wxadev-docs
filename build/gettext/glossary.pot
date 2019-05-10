@@ -1,0 +1,62 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019, Nosy
+# This file is distributed under the same license as the wxadev package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: wxadev \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-09 22:55+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/glossary.rst:4
+msgid "术语"
+msgstr ""
+
+#: ../../source/glossary.rst:7
+msgid "版本"
+msgstr ""
+
+#: ../../source/glossary.rst:9
+msgid "指的是小程序基础库"
+msgstr ""
+
+#: ../../source/glossary.rst:10
+msgid "框架"
+msgstr ""
+
+#: ../../source/glossary.rst:12
+msgid "小程序框架"
+msgstr ""
+
+#: ../../source/glossary.rst:13
+msgid "api"
+msgstr ""
+
+#: ../../source/glossary.rst:15
+msgid "https://api.weixin.qq.com/cgi-bin/"
+msgstr ""
+
+#: ../../source/glossary.rst:16
+msgid "qyapi"
+msgstr ""
+
+#: ../../source/glossary.rst:18
+msgid "https://qyapi.weixin.qq.com/cgi-bin/"
+msgstr ""
+
+#: ../../source/glossary.rst:19
+msgid "api_wxa"
+msgstr ""
+
+#: ../../source/glossary.rst:21
+msgid "https://api.weixin.qq.com/wxa/"
+msgstr ""
+

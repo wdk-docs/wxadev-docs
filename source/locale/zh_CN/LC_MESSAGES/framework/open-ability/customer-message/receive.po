@@ -1,0 +1,86 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019, Nosy
+# This file is distributed under the same license as the wxadev package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: wxadev \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-09 22:55+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../../source/framework/open-ability/customer-message/receive.rst:2
+msgid "接收消息和事件"
+msgstr ""
+
+#: ../../source/framework/open-ability/customer-message/receive.rst:4
+msgid "在页面中使用 <button open-type=\"contact\" /> 可以显示进入客服会话按钮。"
+msgstr ""
+
+#: ../../source/framework/open-ability/customer-message/receive.rst:6
+msgid ""
+"当用户在客服会话发送消息、或由某些特定的用户操作引发事件推送时， 微信服务器会将消息或事件的数据包发送到开发者填写的 "
+"URL（详情请参考消息推送）。 开发者收到请求后可以使用 发送客服消息 接口进行异步回复。"
+msgstr ""
+
+#: ../../source/framework/open-ability/customer-message/receive.rst:10
+msgid "各消息类型的推送JSON、XML数据包结构如下。"
+msgstr ""
+
+#: ../../source/framework/open-ability/customer-message/receive.rst:12
+msgid "文本消息 用户在客服会话中发送文本消息时将产生如下数据包："
+msgstr ""
+
+#: ../../source/framework/open-ability/customer-message/receive.rst:15
+#: ../../source/framework/open-ability/customer-message/receive.rst:52
+#: ../../source/framework/open-ability/customer-message/receive.rst:92
+#: ../../source/framework/open-ability/customer-message/receive.rst:140
+msgid "XML 格式"
+msgstr ""
+
+#: ../../source/framework/open-ability/customer-message/receive.rst:28
+#: ../../source/framework/open-ability/customer-message/receive.rst:66
+#: ../../source/framework/open-ability/customer-message/receive.rst:108
+#: ../../source/framework/open-ability/customer-message/receive.rst:153
+msgid "JSON 格式"
+msgstr ""
+
+#: ../../source/framework/open-ability/customer-message/receive.rst:41
+msgid ""
+"参数说明 参数      说明 ToUserName      小程序的原始ID FromUserName    发送者的openid "
+"CreateTime      消息创建时间(整型） MsgType text Content 文本消息内容 MsgId   消息id，64位整型"
+" 图片消息 用户在客服会话中发送图片消息时将产生如下数据包："
+msgstr ""
+
+#: ../../source/framework/open-ability/customer-message/receive.rst:80
+msgid ""
+"参数说明 参数      说明 ToUserName      小程序的原始ID FromUserName    发送者的openid "
+"CreateTime      消息创建时间(整型） MsgType image PicUrl  图片链接（由系统生成） MediaId "
+"图片消息媒体id，可以调用[获取临时素材]((getTempMedia)接口拉取数据。 MsgId   消息id，64位整型 小程序卡片消息 "
+"用户在客服会话中发送小程序卡片消息时将产生如下数据包："
+msgstr ""
+
+#: ../../source/framework/open-ability/customer-message/receive.rst:125
+msgid ""
+"参数说明 参数      说明 ToUserName      小程序的原始ID FromUserName    发送者的openid "
+"CreateTime      消息创建时间(整型） MsgType miniprogrampage MsgId   消息id，64位整型 "
+"Title   标题 AppId   小程序appid PagePath        小程序页面路径 ThumbUrl        "
+"封面图片的临时cdn链接 ThumbMediaId    封面图片的临时素材id 进入会话事件 "
+"用户在小程序“客服会话按钮”进入客服会话时将产生如下数据包："
+msgstr ""
+
+#: ../../source/framework/open-ability/customer-message/receive.rst:166
+msgid ""
+"参数说明 参数      说明 ToUserName      小程序的原始ID FromUserName    发送者的openid "
+"CreateTime      事件创建时间(整型） MsgType event Event   "
+"事件类型，user_enter_tempsession SessionFrom     开发者在客服会话按钮设置的 session-from 属性"
+msgstr ""
+

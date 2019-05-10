@@ -1,0 +1,244 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019, Nosy
+# This file is distributed under the same license as the wxadev package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: wxadev \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-09 22:55+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../../source/component/progress.rst:4
+msgid ":wx_comp:`progress <progress>`"
+msgstr ""
+
+#: ../../source/component/progress.rst:6
+msgid "低版本需做 :ref:`compatibility` 。"
+msgstr ""
+
+#: ../../source/component/progress.rst:8
+msgid "组件属性的长度单位默认为px，2.4.0起支持传入单位(rpx/px)。"
+msgstr ""
+
+#: ../../source/component/progress.rst:11
+msgid "属性"
+msgstr ""
+
+#: ../../source/component/progress.rst:11
+msgid "类型"
+msgstr ""
+
+#: ../../source/component/progress.rst:11
+msgid "默认值"
+msgstr ""
+
+#: ../../source/component/progress.rst:11
+msgid "必填"
+msgstr ""
+
+#: ../../source/component/progress.rst:11
+msgid "说明"
+msgstr ""
+
+#: ../../source/component/progress.rst:11
+msgid "最低版本"
+msgstr ""
+
+#: ../../source/component/progress.rst:13
+msgid "percent"
+msgstr ""
+
+#: ../../source/component/progress.rst:13
+msgid "number"
+msgstr ""
+
+#: ../../source/component/progress.rst:13
+#: ../../source/component/progress.rst:15
+#: ../../source/component/progress.rst:17
+#: ../../source/component/progress.rst:19
+#: ../../source/component/progress.rst:21
+#: ../../source/component/progress.rst:23
+#: ../../source/component/progress.rst:25
+#: ../../source/component/progress.rst:27
+#: ../../source/component/progress.rst:29
+#: ../../source/component/progress.rst:31
+#: ../../source/component/progress.rst:33
+msgid "否"
+msgstr ""
+
+#: ../../source/component/progress.rst:13
+msgid "百分比0~100"
+msgstr ""
+
+#: ../../source/component/progress.rst:13
+#: ../../source/component/progress.rst:15
+#: ../../source/component/progress.rst:21
+#: ../../source/component/progress.rst:23
+#: ../../source/component/progress.rst:25
+#: ../../source/component/progress.rst:27
+#: ../../source/component/progress.rst:29
+msgid "1.0.0"
+msgstr ""
+
+#: ../../source/component/progress.rst:15
+msgid "show-info"
+msgstr ""
+
+#: ../../source/component/progress.rst:15
+#: ../../source/component/progress.rst:29
+msgid "boolean"
+msgstr ""
+
+#: ../../source/component/progress.rst:15
+#: ../../source/component/progress.rst:29
+msgid "false"
+msgstr ""
+
+#: ../../source/component/progress.rst:15
+msgid "在进度条右侧显示百分比"
+msgstr ""
+
+#: ../../source/component/progress.rst:17
+msgid "border-radius"
+msgstr ""
+
+#: ../../source/component/progress.rst:17
+#: ../../source/component/progress.rst:19
+#: ../../source/component/progress.rst:21
+msgid "number/string"
+msgstr ""
+
+#: ../../source/component/progress.rst:17
+msgid "0"
+msgstr ""
+
+#: ../../source/component/progress.rst:17
+msgid "圆角大小"
+msgstr ""
+
+#: ../../source/component/progress.rst:17
+#: ../../source/component/progress.rst:19
+msgid "2.3.1"
+msgstr ""
+
+#: ../../source/component/progress.rst:19
+msgid "font-size"
+msgstr ""
+
+#: ../../source/component/progress.rst:19
+msgid "16"
+msgstr ""
+
+#: ../../source/component/progress.rst:19
+msgid "右侧百分比字体大小"
+msgstr ""
+
+#: ../../source/component/progress.rst:21
+msgid "stroke-width"
+msgstr ""
+
+#: ../../source/component/progress.rst:21
+msgid "6"
+msgstr ""
+
+#: ../../source/component/progress.rst:21
+msgid "进度条线的宽度"
+msgstr ""
+
+#: ../../source/component/progress.rst:23
+msgid "color"
+msgstr ""
+
+#: ../../source/component/progress.rst:23
+#: ../../source/component/progress.rst:25
+#: ../../source/component/progress.rst:27
+#: ../../source/component/progress.rst:31
+msgid "string"
+msgstr ""
+
+#: ../../source/component/progress.rst:23
+#: ../../source/component/progress.rst:25
+msgid "#09BB07"
+msgstr ""
+
+#: ../../source/component/progress.rst:23
+msgid "进度条颜色（请使用activeColor）"
+msgstr ""
+
+#: ../../source/component/progress.rst:25
+msgid "activeColor"
+msgstr ""
+
+#: ../../source/component/progress.rst:25
+msgid "已选择的进度条的颜色"
+msgstr ""
+
+#: ../../source/component/progress.rst:27
+msgid "backgroundColor"
+msgstr ""
+
+#: ../../source/component/progress.rst:27
+msgid "#EBEBEB"
+msgstr ""
+
+#: ../../source/component/progress.rst:27
+msgid "未选择的进度条的颜色"
+msgstr ""
+
+#: ../../source/component/progress.rst:29
+msgid "active"
+msgstr ""
+
+#: ../../source/component/progress.rst:29
+msgid "进度条从左往右的动画"
+msgstr ""
+
+#: ../../source/component/progress.rst:31
+msgid "active-mode"
+msgstr ""
+
+#: ../../source/component/progress.rst:31
+msgid "backwards"
+msgstr ""
+
+#: ../../source/component/progress.rst:31
+msgid "backwards: 动画从头播；forwards：动画从上次结束点接着播"
+msgstr ""
+
+#: ../../source/component/progress.rst:31
+msgid "1.7.0"
+msgstr ""
+
+#: ../../source/component/progress.rst:33
+msgid "bindactiveend"
+msgstr ""
+
+#: ../../source/component/progress.rst:33
+msgid "eventhandle"
+msgstr ""
+
+#: ../../source/component/progress.rst:33
+msgid "动画完成事件"
+msgstr ""
+
+#: ../../source/component/progress.rst:33
+msgid "2.4.1"
+msgstr ""
+
+#: ../../source/component/progress.rst:36
+msgid "示例代码"
+msgstr ""
+
+#: ../../source/component/progress.rst:38
+msgid ":download:`在开发者工具中预览效果 <https://developers.weixin.qq.com/s/Oga4Hcmj6cYS>`"
+msgstr ""
+

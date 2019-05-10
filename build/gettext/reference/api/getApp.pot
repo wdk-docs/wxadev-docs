@@ -1,0 +1,50 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019, Nosy
+# This file is distributed under the same license as the wxadev package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: wxadev \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-09 22:55+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/reference/api/getApp.rst:2
+msgid ":wxref:`获取到小程序全局唯一的 App 实例(getApp) <api/getApp>`"
+msgstr ""
+
+#: ../../source/reference/api/getApp.rst:6
+msgid "获取到小程序全局唯一的 App 实例。"
+msgstr ""
+
+#: ../../source/reference/api/getApp.rst:0
+msgid "返回"
+msgstr ""
+
+#: ../../source/reference/api/getApp.rst:8
+msgid "AppObject"
+msgstr ""
+
+#: ../../source/reference/api/getApp.rst:0
+msgid "参数"
+msgstr ""
+
+#: ../../source/reference/api/getApp.rst:10
+msgid "**false**       在 App 未定义时返回默认实现。当App被调用时，默认实现中定义的属性会被覆盖合并到App中。一般用于独立分包        2.2.4"
+msgstr ""
+
+#: ../../source/reference/api/getApp.rst:0
+msgid "示例"
+msgstr ""
+
+#: ../../source/reference/api/getApp.rst:22
+msgid "不要在定义于 App 内的函数中，或调用 App 前调用 getApp ，使用 this 就可以拿到 app 实例。 通过 getApp 获取实例之后，不要私自调用生命周期函数。"
+msgstr ""
+

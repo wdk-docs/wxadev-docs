@@ -1,0 +1,42 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019, Nosy
+# This file is distributed under the same license as the wxadev package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: wxadev \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-09 22:55+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/framework/open-ability/qr-code.rst:2
+msgid ":wxfrwk:`获取小程序码 <open-ability/qr-code>`"
+msgstr ""
+
+#: ../../source/framework/open-ability/qr-code.rst:4
+msgid "通过后台接口可以获取小程序任意页面的小程序码，扫描该小程序码可以直接进入小程序对应的页面，所有生成的小程序码永久有效，可放心使用。 我们推荐生成并使用小程序码，它具有更好的辨识度，且拥有展示“公众号关注组件”等高级能力。 生成的小程序码如下所示："
+msgstr ""
+
+#: ../../source/framework/open-ability/qr-code.rst:8
+msgid "可以使用开发工具 1.02.1803130 及以后版本通过二维码编译功能调试所获得的二维码"
+msgstr ""
+
+#: ../../source/framework/open-ability/qr-code.rst:12
+msgid "为满足不同需求和场景，这里提供了两个接口，开发者可挑选适合自己的接口。"
+msgstr ""
+
+#: ../../source/framework/open-ability/qr-code.rst:14
+msgid "接口 A: 适用于需要的码数量较少的业务场景 生成小程序码，可接受 path 参数较长，生成个数受限，数量限制见 注意事项，请谨慎使用。 接口 B：适用于需要的码数量极多的业务场景 生成小程序码，可接受页面参数较短，生成个数不受限。 获取小程序二维码（不推荐使用） 通过后台接口可以获取小程序任意页面的小程序二维码，生成的小程序二维码如下所示："
+msgstr ""
+
+#: ../../source/framework/open-ability/qr-code.rst:23
+msgid "接口 C：适用于需要的码数量较少的业务场景 生成二维码，可接受 path 参数较长，生成个数受限，数量限制见 注意事项。 注意事项 接口只能生成已发布的小程序的二维码 接口 A 加上接口 C，总共生成的码数量限制为 100,000，请谨慎调用。 接口 B 调用分钟频率受限(5000次/分钟)，如需大量小程序码，建议预生成。"
+msgstr ""
+

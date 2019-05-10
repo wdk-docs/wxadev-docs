@@ -1,0 +1,78 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019, Nosy
+# This file is distributed under the same license as the wxadev package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: wxadev \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-09 22:55+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/framework/open-ability/customer-message/customer-message.rst:2
+msgid "客服消息"
+msgstr ""
+
+#: ../../source/framework/open-ability/customer-message/customer-message.rst:4
+msgid "在页面使用客服消息 需要将 <button> 组件 open-type 的值设置为 contact，当用户点击后就会进入客服会话， 如果用户在会话中点击了小程序消息，则会返回到小程序，开发者可以通过 bindcontact 事件回调获取到用户所点消息的页面路径 path 和对应的参数 query。"
+msgstr ""
+
+#: ../../source/framework/open-ability/customer-message/customer-message.rst:8
+msgid "代码示例"
+msgstr ""
+
+#: ../../source/framework/open-ability/customer-message/customer-message.rst:23
+msgid "返回参数说明"
+msgstr ""
+
+#: ../../source/framework/open-ability/customer-message/customer-message.rst:26
+msgid "参数"
+msgstr ""
+
+#: ../../source/framework/open-ability/customer-message/customer-message.rst:26
+msgid "类型"
+msgstr ""
+
+#: ../../source/framework/open-ability/customer-message/customer-message.rst:26
+msgid "说明"
+msgstr ""
+
+#: ../../source/framework/open-ability/customer-message/customer-message.rst:28
+msgid "path"
+msgstr ""
+
+#: ../../source/framework/open-ability/customer-message/customer-message.rst:28
+msgid "String"
+msgstr ""
+
+#: ../../source/framework/open-ability/customer-message/customer-message.rst:28
+msgid "小程序消息指定的路径"
+msgstr ""
+
+#: ../../source/framework/open-ability/customer-message/customer-message.rst:30
+msgid "query"
+msgstr ""
+
+#: ../../source/framework/open-ability/customer-message/customer-message.rst:30
+msgid "Object"
+msgstr ""
+
+#: ../../source/framework/open-ability/customer-message/customer-message.rst:30
+msgid "小程序消息指定的查询参数"
+msgstr ""
+
+#: ../../source/framework/open-ability/customer-message/customer-message.rst:33
+msgid "后台接入消息服务"
+msgstr ""
+
+#: ../../source/framework/open-ability/customer-message/customer-message.rst:35
+msgid "用户向小程序客服发送消息、或者进入会话等情况时，开发者填写的服务器配置URL将得到微信服务器推送过来的消息和事件， 开发者可以依据自身业务逻辑进行响应。接入和使用方式请参考消息推送。"
+msgstr ""
+

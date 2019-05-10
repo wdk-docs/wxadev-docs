@@ -1,0 +1,138 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019, Nosy
+# This file is distributed under the same license as the wxadev package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: wxadev \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-09 22:55+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/api-backend/logistics.addOrder.rst:2
+msgid ":wxbpi:`生成运单 <logistics.addOrder>`"
+msgstr ""
+
+#: ../../source/api-backend/logistics.addOrder.rst:4
+msgid "logistics.addOrder 本接口应在服务器端调用，详细说明参见服务端API。"
+msgstr ""
+
+#: ../../source/api-backend/logistics.addOrder.rst:7
+msgid "本接口支持云调用。需开发者工具版本 >= 1.02.1904090（最新稳定版下载），wx-server-sdk >= 0.4.0"
+msgstr ""
+
+#: ../../source/api-backend/logistics.addOrder.rst:11
+msgid "调用方式："
+msgstr ""
+
+#: ../../source/api-backend/logistics.addOrder.rst:13
+msgid "一、HTTPS 调用 二、云调用"
+msgstr ""
+
+#: ../../source/api-backend/logistics.addOrder.rst:16
+msgid "一、HTTPS 调用 请求地址 POST https://api.weixin.qq.com/cgi-bin/express/business/order/add?access_token=ACCESS_TOKEN 请求参数 属性      类型      默认值     必填      说明 access_token    string          是       接口调用凭证 order_id        string          是       订单ID，须保证全局唯一，不超过512字节 openid  string          是       用户 openid delivery_id     string          是       快递公司ID，参见getAllDelivery biz_id  string          是       快递客户编码或者现付编码 custom_remark   string          否       快递备注信息，比如\"易碎物品\"，不超过1024字节 sender  Object          是       发件人信息 receiver        Object          是       收件人信息 cargo   Object          是       包裹信息，将传递给快递公司 shop    Object          是       商品信息，会展示到物流通知消息中 insured Object          是       保价信息 service Object          是       服务类型 sender 的结构"
+msgstr ""
+
+#: ../../source/api-backend/logistics.addOrder.rst:35
+msgid "属性      类型      默认值     必填      说明 name    string          是       发件人姓名，不超过64字节 tel     string          否       发件人座机号码，若不填写则必须填写 mobile，不超过32字节 mobile  string          否       发件人手机号码，若不填写则必须填写 tel，不超过32字节 company string          否       发件人公司名称，不超过64字节 post_code       string          否       发件人邮编，不超过10字节 country string          否       发件人国家，不超过64字节 province        string          是       发件人省份，比如：\"广东省\"，不超过64字节 city    string          是       发件人市/地区，比如：\"广州市\"，不超过64字节 area    string          是       发件人区/县，比如：\"海珠区\"，不超过64字节 address string          是       发件人详细地址，比如：\"XX路XX号XX大厦XX\"，不超过512字节 receiver 的结构"
+msgstr ""
+
+#: ../../source/api-backend/logistics.addOrder.rst:48
+msgid "属性      类型      默认值     必填      说明 name    string          是       收件人姓名，不超过64字节 tel     string          否       收件人座机号码，若不填写则必须填写 mobile，不超过32字节 mobile  string          否       收件人手机号码，若不填写则必须填写 tel，不超过32字节 company string          否       收件人公司名，不超过64字节 post_code       string          否       收件人邮编，不超过10字节 country string          否       收件人所在国家，不超过64字节 province        string          是       收件人省份，比如：\"广东省\"，不超过64字节 city    string          是       收件人地区/市，比如：\"广州市\"，不超过64字节 area    string          是       收件人区/县，比如：\"天河区\"，不超过64字节 address string          是       收件人详细地址，比如：\"XX路XX号XX大厦XX\"，不超过512字节 cargo 的结构"
+msgstr ""
+
+#: ../../source/api-backend/logistics.addOrder.rst:61
+msgid "属性      类型      默认值     必填      说明 count   number          是       包裹数量 weight  number          是       包裹总重量，单位是千克(kg) space_x number          是       包裹长度，单位厘米(cm) space_y number          是       包裹宽度，单位厘米(cm) space_z number          是       包裹高度，单位厘米(cm) detail_list     Array.<Object>          是       包裹中商品详情列表 cargo.detail_list 的结构"
+msgstr ""
+
+#: ../../source/api-backend/logistics.addOrder.rst:70
+#: ../../source/api-backend/logistics.addOrder.rst:269
+msgid "属性      类型      默认值     必填      说明 name    string          是       商品名，不超过128字节 count   number          是       商品数量 shop 的结构"
+msgstr ""
+
+#: ../../source/api-backend/logistics.addOrder.rst:75
+msgid "属性      类型      默认值     必填      说明 wxa_path        string          是       商家小程序的路径，建议为订单页面 img_url string          是       商品缩略图 url goods_name      string          是       商品名称 goods_count     number          是       商品数量 insured 的结构"
+msgstr ""
+
+#: ../../source/api-backend/logistics.addOrder.rst:82
+msgid "属性      类型      默认值     必填      说明 use_insured     number          是       是否保价，0 表示不保价，1 表示保价 insured_value   number          是       保价金额，单位是分，比如: 10000 表示 100 元 service 的结构"
+msgstr ""
+
+#: ../../source/api-backend/logistics.addOrder.rst:87
+msgid "属性      类型      默认值     必填      说明 service_type    number          是       服务类型ID，详见已经支持的快递公司基本信息 service_name    string          是       服务名称，详见已经支持的快递公司基本信息 返回值 Object 属性      类型      说明 order_id        string  订单ID，下单成功时返回 waybill_id      string  运单ID，下单成功时返回 waybill_data    Array.<Object>  运单信息，下单成功时返回 errcode number  微信侧错误码，下单失败时返回 errmsg  string  微信侧错误信息，下单失败时返回 delivery_resultcode     number  快递侧错误码，下单失败时返回 delivery_resultmsg      string  快递侧错误信息，下单失败时返回 waybill_data 的结构"
+msgstr ""
+
+#: ../../source/api-backend/logistics.addOrder.rst:102
+msgid "属性      类型      说明 key     string  运单信息 key value   string  运单信息 value errcode 的合法值"
+msgstr ""
+
+#: ../../source/api-backend/logistics.addOrder.rst:107
+#: ../../source/api-backend/logistics.addOrder.rst:317
+msgid "值       说明      最低版本 -1      系统失败 9300501 快递侧逻辑错误，详细原因需要看 delivery_resultcode 9300503 delivery_id 不存在 9300510 service_type 不存在 9300526 字段长度不正确 请求示例"
+msgstr ""
+
+#: ../../source/api-backend/logistics.addOrder.rst:180
+#: ../../source/api-backend/logistics.addOrder.rst:401
+msgid "返回示例 下单成功"
+msgstr ""
+
+#: ../../source/api-backend/logistics.addOrder.rst:200
+#: ../../source/api-backend/logistics.addOrder.rst:423
+msgid "下单失败"
+msgstr ""
+
+#: ../../source/api-backend/logistics.addOrder.rst:212
+msgid "二、云调用 云调用是小程序·云开发提供的在云函数中调用微信开放接口的能力，需要在云函数中通过 wx-server-sdk 使用。"
+msgstr ""
+
+#: ../../source/api-backend/logistics.addOrder.rst:215
+msgid "接口方法 openapi.logistics.addOrder 需在 config.json 中配置 logistics.addOrder API 的权限，详情"
+msgstr ""
+
+#: ../../source/api-backend/logistics.addOrder.rst:219
+msgid "请求参数 属性      类型      默认值     必填      说明 orderId string          是       订单ID，须保证全局唯一，不超过512字节 openid  string          是       用户 openid deliveryId      string          是       快递公司ID，参见getAllDelivery bizId   string          是       快递客户编码或者现付编码 customRemark    string          否       快递备注信息，比如\"易碎物品\"，不超过1024字节 sender  Object          是       发件人信息 receiver        Object          是       收件人信息 cargo   Object          是       包裹信息，将传递给快递公司 shop    Object          是       商品信息，会展示到物流通知消息中 insured Object          是       保价信息 service Object          是       服务类型 sender 的结构"
+msgstr ""
+
+#: ../../source/api-backend/logistics.addOrder.rst:234
+msgid "属性      类型      默认值     必填      说明 name    string          是       发件人姓名，不超过64字节 tel     string          否       发件人座机号码，若不填写则必须填写 mobile，不超过32字节 mobile  string          否       发件人手机号码，若不填写则必须填写 tel，不超过32字节 company string          否       发件人公司名称，不超过64字节 postCode        string          否       发件人邮编，不超过10字节 country string          否       发件人国家，不超过64字节 province        string          是       发件人省份，比如：\"广东省\"，不超过64字节 city    string          是       发件人市/地区，比如：\"广州市\"，不超过64字节 area    string          是       发件人区/县，比如：\"海珠区\"，不超过64字节 address string          是       发件人详细地址，比如：\"XX路XX号XX大厦XX\"，不超过512字节 receiver 的结构"
+msgstr ""
+
+#: ../../source/api-backend/logistics.addOrder.rst:247
+msgid "属性      类型      默认值     必填      说明 name    string          是       收件人姓名，不超过64字节 tel     string          否       收件人座机号码，若不填写则必须填写 mobile，不超过32字节 mobile  string          否       收件人手机号码，若不填写则必须填写 tel，不超过32字节 company string          否       收件人公司名，不超过64字节 postCode        string          否       收件人邮编，不超过10字节 country string          否       收件人所在国家，不超过64字节 province        string          是       收件人省份，比如：\"广东省\"，不超过64字节 city    string          是       收件人地区/市，比如：\"广州市\"，不超过64字节 area    string          是       收件人区/县，比如：\"天河区\"，不超过64字节 address string          是       收件人详细地址，比如：\"XX路XX号XX大厦XX\"，不超过512字节 cargo 的结构"
+msgstr ""
+
+#: ../../source/api-backend/logistics.addOrder.rst:260
+msgid "属性      类型      默认值     必填      说明 count   number          是       包裹数量 weight  number          是       包裹总重量，单位是千克(kg) spaceX  number          是       包裹长度，单位厘米(cm) spaceY  number          是       包裹宽度，单位厘米(cm) spaceZ  number          是       包裹高度，单位厘米(cm) detailList      Array.<Object>          是       包裹中商品详情列表 cargo.detailList 的结构"
+msgstr ""
+
+#: ../../source/api-backend/logistics.addOrder.rst:274
+msgid "属性      类型      默认值     必填      说明 wxaPath string          是       商家小程序的路径，建议为订单页面 imgUrl  string          是       商品缩略图 url goodsName       string          是       商品名称 goodsCount      number          是       商品数量 insured 的结构"
+msgstr ""
+
+#: ../../source/api-backend/logistics.addOrder.rst:281
+msgid "属性      类型      默认值     必填      说明 useInsured      number          是       是否保价，0 表示不保价，1 表示保价 insuredValue    number          是       保价金额，单位是分，比如: 10000 表示 100 元 service 的结构"
+msgstr ""
+
+#: ../../source/api-backend/logistics.addOrder.rst:286
+msgid "属性      类型      默认值     必填      说明 serviceType     number          是       服务类型ID，详见已经支持的快递公司基本信息 serviceName     string          是       服务名称，详见已经支持的快递公司基本信息 返回值 Object 属性      类型      说明 orderId string  订单ID，下单成功时返回 waybillId       string  运单ID，下单成功时返回 waybillData     Array.<Object>  运单信息，下单成功时返回 errCode number  微信侧错误码，下单失败时返回 errMsg  string  微信侧错误信息，下单失败时返回 deliveryResultcode      number  快递侧错误码，下单失败时返回 deliveryResultmsg       string  快递侧错误信息，下单失败时返回 waybillData 的结构"
+msgstr ""
+
+#: ../../source/api-backend/logistics.addOrder.rst:301
+msgid "属性      类型      说明 key     string  运单信息 key value   string  运单信息 value errCode 的合法值"
+msgstr ""
+
+#: ../../source/api-backend/logistics.addOrder.rst:306
+msgid "值       说明      最低版本 0       成功 异常 Object 抛出的异常"
+msgstr ""
+
+#: ../../source/api-backend/logistics.addOrder.rst:312
+msgid "属性      类型      说明 errCode number  微信侧错误码，下单失败时返回 errMsg  string  微信侧错误信息，下单失败时返回 errCode 的合法值"
+msgstr ""
+

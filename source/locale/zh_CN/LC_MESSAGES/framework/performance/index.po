@@ -1,0 +1,121 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019, Nosy
+# This file is distributed under the same license as the wxadev package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: wxadev \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-09 22:55+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../../source/framework/performance/index.rst:3
+msgid ":wxfrwk:`性能 <performance>`"
+msgstr ""
+
+#: ../../source/framework/performance/index.rst:8
+msgid "在某些情况下，开发者需要了解当前小程序的性能情况。"
+msgstr ""
+
+#: ../../source/framework/performance/index.rst:10
+msgid ""
+"我们提供了性能面板让开发者了解小程序的性能。 开发者可以在开发版小程序下打开性能面板，打开方法：进入开发版小程序， "
+"进入右上角更多按钮，点击「显示性能窗口」。"
+msgstr ""
+
+#: ../../source/framework/performance/index.rst:14
+msgid "后续我们会提供更多的性能分析工具让开发者定位性能问题。"
+msgstr ""
+
+#: ../../source/framework/performance/index.rst:18
+msgid "性能面板指标说明"
+msgstr ""
+
+#: ../../source/framework/performance/index.rst:21
+msgid "指标"
+msgstr ""
+
+#: ../../source/framework/performance/index.rst:21
+msgid "说明"
+msgstr ""
+
+#: ../../source/framework/performance/index.rst:23
+msgid "CPU"
+msgstr ""
+
+#: ../../source/framework/performance/index.rst:23
+msgid "小程序进程的 CPU 占用率，仅 Android 下提供"
+msgstr ""
+
+#: ../../source/framework/performance/index.rst:25
+msgid "内存"
+msgstr ""
+
+#: ../../source/framework/performance/index.rst:25
+msgid "小程序进程的内存占用（Total Pss)，仅 Android 下提供"
+msgstr ""
+
+#: ../../source/framework/performance/index.rst:27
+msgid "启动耗时"
+msgstr ""
+
+#: ../../source/framework/performance/index.rst:27
+msgid "小程序启动总耗时"
+msgstr ""
+
+#: ../../source/framework/performance/index.rst:29
+msgid "下载耗时"
+msgstr ""
+
+#: ../../source/framework/performance/index.rst:29
+msgid "小程序包下载耗时，首次打开或资源包需更新时会进行下载"
+msgstr ""
+
+#: ../../source/framework/performance/index.rst:31
+msgid "页面切换耗时"
+msgstr ""
+
+#: ../../source/framework/performance/index.rst:31
+msgid "小程序页面切换的耗时"
+msgstr ""
+
+#: ../../source/framework/performance/index.rst:33
+msgid "帧率/FPS"
+msgstr ""
+
+#: ../../source/framework/performance/index.rst:35
+msgid "首次渲染耗时"
+msgstr ""
+
+#: ../../source/framework/performance/index.rst:35
+msgid "页面次首次渲染的耗时"
+msgstr ""
+
+#: ../../source/framework/performance/index.rst:37
+msgid "再次渲染耗时"
+msgstr ""
+
+#: ../../source/framework/performance/index.rst:37
+msgid "页面再次渲染的耗时（通常由开发者的 setData 操作触发）"
+msgstr ""
+
+#: ../../source/framework/performance/index.rst:39
+msgid "数据缓存"
+msgstr ""
+
+#: ../../source/framework/performance/index.rst:39
+msgid "小程序通过 Storage 接口储存的缓存大小"
+msgstr ""
+
+#: ../../source/framework/performance/index.rst:42
+msgid "目前，我们提供了两种性能分析工具，和几个性能优化上的建议，开发者可以参考使用。"
+msgstr ""
+

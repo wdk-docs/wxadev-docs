@@ -1,0 +1,1180 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019, Nosy
+# This file is distributed under the same license as the wxadev package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: wxadev \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-09 22:55+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/component/map.rst:4
+msgid ":wx_comp:`map`"
+msgstr ""
+
+#: ../../source/component/map.rst:6
+msgid "版本:|release| 更新:|today|"
+msgstr ""
+
+#: ../../source/component/map.rst:8
+msgid "低版本需做 :ref:`compatibility` 。"
+msgstr ""
+
+#: ../../source/component/map.rst:9
+msgid "组件属性的长度单位支持传入单位(rpx/px) , 默认为px。"
+msgstr ""
+
+#: ../../source/component/map.rst:11
+msgid "地图。相关api :func:`wx.createMapContext` 。"
+msgstr ""
+
+#: ../../source/component/map.rst:13
+msgid "个性化地图能力可在小程序后台“ :menuselection:`设置 --> 开发者工具 --> 腾讯位置服务` ”申请开通。 设置 ``subkey`` 后，小程序内的地图组件均会使用该底图效果。详见 `《小程序个性地图使用指南》 <https://lbs.qq.com/product/miniapp/guide/>`_"
+msgstr ""
+
+#: ../../source/component/map.rst:17
+#: ../../source/component/map.rst:73
+#: ../../source/component/map.rst:107
+#: ../../source/component/map.rst:133
+#: ../../source/component/map.rst:165
+#: ../../source/component/map.rst:187
+#: ../../source/component/map.rst:203
+#: ../../source/component/map.rst:221
+#: ../../source/component/map.rst:235
+#: ../../source/component/map.rst:249
+msgid "属性"
+msgstr ""
+
+#: ../../source/component/map.rst:17
+#: ../../source/component/map.rst:73
+#: ../../source/component/map.rst:107
+#: ../../source/component/map.rst:133
+#: ../../source/component/map.rst:165
+#: ../../source/component/map.rst:187
+#: ../../source/component/map.rst:203
+#: ../../source/component/map.rst:221
+#: ../../source/component/map.rst:235
+#: ../../source/component/map.rst:249
+msgid "类型"
+msgstr ""
+
+#: ../../source/component/map.rst:17
+msgid "默认值"
+msgstr ""
+
+#: ../../source/component/map.rst:17
+#: ../../source/component/map.rst:73
+#: ../../source/component/map.rst:165
+#: ../../source/component/map.rst:187
+#: ../../source/component/map.rst:203
+#: ../../source/component/map.rst:221
+#: ../../source/component/map.rst:235
+msgid "必填"
+msgstr ""
+
+#: ../../source/component/map.rst:17
+#: ../../source/component/map.rst:73
+#: ../../source/component/map.rst:107
+#: ../../source/component/map.rst:133
+#: ../../source/component/map.rst:165
+#: ../../source/component/map.rst:187
+#: ../../source/component/map.rst:203
+#: ../../source/component/map.rst:221
+#: ../../source/component/map.rst:235
+#: ../../source/component/map.rst:249
+msgid "说明"
+msgstr ""
+
+#: ../../source/component/map.rst:17
+#: ../../source/component/map.rst:73
+#: ../../source/component/map.rst:107
+#: ../../source/component/map.rst:133
+#: ../../source/component/map.rst:165
+#: ../../source/component/map.rst:187
+msgid "最低版本"
+msgstr ""
+
+#: ../../source/component/map.rst:19
+#: ../../source/component/map.rst:79
+#: ../../source/component/map.rst:207
+msgid "longitude"
+msgstr ""
+
+#: ../../source/component/map.rst:19
+#: ../../source/component/map.rst:21
+#: ../../source/component/map.rst:23
+#: ../../source/component/map.rst:75
+#: ../../source/component/map.rst:77
+#: ../../source/component/map.rst:79
+#: ../../source/component/map.rst:83
+#: ../../source/component/map.rst:87
+#: ../../source/component/map.rst:89
+#: ../../source/component/map.rst:113
+#: ../../source/component/map.rst:115
+#: ../../source/component/map.rst:117
+#: ../../source/component/map.rst:123
+#: ../../source/component/map.rst:139
+#: ../../source/component/map.rst:141
+#: ../../source/component/map.rst:143
+#: ../../source/component/map.rst:145
+#: ../../source/component/map.rst:147
+#: ../../source/component/map.rst:149
+#: ../../source/component/map.rst:153
+#: ../../source/component/map.rst:157
+#: ../../source/component/map.rst:171
+#: ../../source/component/map.rst:181
+#: ../../source/component/map.rst:191
+#: ../../source/component/map.rst:197
+#: ../../source/component/map.rst:205
+#: ../../source/component/map.rst:207
+#: ../../source/component/map.rst:213
+#: ../../source/component/map.rst:215
+#: ../../source/component/map.rst:223
+#: ../../source/component/map.rst:237
+#: ../../source/component/map.rst:239
+#: ../../source/component/map.rst:241
+#: ../../source/component/map.rst:243
+msgid "number"
+msgstr ""
+
+#: ../../source/component/map.rst:19
+#: ../../source/component/map.rst:21
+#: ../../source/component/map.rst:77
+#: ../../source/component/map.rst:79
+#: ../../source/component/map.rst:85
+#: ../../source/component/map.rst:167
+#: ../../source/component/map.rst:189
+#: ../../source/component/map.rst:205
+#: ../../source/component/map.rst:207
+#: ../../source/component/map.rst:213
+#: ../../source/component/map.rst:225
+#: ../../source/component/map.rst:227
+msgid "是"
+msgstr ""
+
+#: ../../source/component/map.rst:19
+msgid "中心经度"
+msgstr ""
+
+#: ../../source/component/map.rst:19
+#: ../../source/component/map.rst:21
+#: ../../source/component/map.rst:23
+#: ../../source/component/map.rst:25
+#: ../../source/component/map.rst:27
+#: ../../source/component/map.rst:29
+#: ../../source/component/map.rst:31
+#: ../../source/component/map.rst:33
+#: ../../source/component/map.rst:35
+#: ../../source/component/map.rst:37
+#: ../../source/component/map.rst:55
+#: ../../source/component/map.rst:57
+#: ../../source/component/map.rst:59
+msgid "1.0.0"
+msgstr ""
+
+#: ../../source/component/map.rst:21
+#: ../../source/component/map.rst:77
+#: ../../source/component/map.rst:205
+msgid "latitude"
+msgstr ""
+
+#: ../../source/component/map.rst:21
+msgid "中心纬度"
+msgstr ""
+
+#: ../../source/component/map.rst:23
+msgid "scale"
+msgstr ""
+
+#: ../../source/component/map.rst:23
+msgid "16"
+msgstr ""
+
+#: ../../source/component/map.rst:23
+#: ../../source/component/map.rst:25
+#: ../../source/component/map.rst:27
+#: ../../source/component/map.rst:29
+#: ../../source/component/map.rst:31
+#: ../../source/component/map.rst:33
+#: ../../source/component/map.rst:35
+#: ../../source/component/map.rst:37
+#: ../../source/component/map.rst:39
+#: ../../source/component/map.rst:41
+#: ../../source/component/map.rst:43
+#: ../../source/component/map.rst:45
+#: ../../source/component/map.rst:47
+#: ../../source/component/map.rst:49
+#: ../../source/component/map.rst:51
+#: ../../source/component/map.rst:53
+#: ../../source/component/map.rst:55
+#: ../../source/component/map.rst:57
+#: ../../source/component/map.rst:59
+#: ../../source/component/map.rst:61
+#: ../../source/component/map.rst:63
+#: ../../source/component/map.rst:65
+#: ../../source/component/map.rst:67
+#: ../../source/component/map.rst:75
+#: ../../source/component/map.rst:81
+#: ../../source/component/map.rst:83
+#: ../../source/component/map.rst:87
+#: ../../source/component/map.rst:89
+#: ../../source/component/map.rst:91
+#: ../../source/component/map.rst:93
+#: ../../source/component/map.rst:95
+#: ../../source/component/map.rst:97
+#: ../../source/component/map.rst:99
+#: ../../source/component/map.rst:101
+#: ../../source/component/map.rst:169
+#: ../../source/component/map.rst:171
+#: ../../source/component/map.rst:173
+#: ../../source/component/map.rst:175
+#: ../../source/component/map.rst:177
+#: ../../source/component/map.rst:179
+#: ../../source/component/map.rst:181
+#: ../../source/component/map.rst:191
+#: ../../source/component/map.rst:193
+#: ../../source/component/map.rst:195
+#: ../../source/component/map.rst:197
+#: ../../source/component/map.rst:209
+#: ../../source/component/map.rst:211
+#: ../../source/component/map.rst:215
+#: ../../source/component/map.rst:223
+#: ../../source/component/map.rst:229
+#: ../../source/component/map.rst:237
+#: ../../source/component/map.rst:239
+#: ../../source/component/map.rst:241
+#: ../../source/component/map.rst:243
+msgid "否"
+msgstr ""
+
+#: ../../source/component/map.rst:23
+msgid "缩放级别，取值范围为5-18"
+msgstr ""
+
+#: ../../source/component/map.rst:25
+msgid "markers"
+msgstr ""
+
+#: ../../source/component/map.rst:25
+msgid "Array.<marker>"
+msgstr ""
+
+#: ../../source/component/map.rst:25
+msgid "标记点"
+msgstr ""
+
+#: ../../source/component/map.rst:27
+msgid "covers"
+msgstr ""
+
+#: ../../source/component/map.rst:27
+msgid "Array.<cover>"
+msgstr ""
+
+#: ../../source/component/map.rst:27
+msgid "即将移除，请使用 markers"
+msgstr ""
+
+#: ../../source/component/map.rst:29
+msgid "polyline"
+msgstr ""
+
+#: ../../source/component/map.rst:29
+msgid "Array.<polyline>"
+msgstr ""
+
+#: ../../source/component/map.rst:29
+msgid "路线"
+msgstr ""
+
+#: ../../source/component/map.rst:31
+msgid "circles"
+msgstr ""
+
+#: ../../source/component/map.rst:31
+msgid "Array.<circle>"
+msgstr ""
+
+#: ../../source/component/map.rst:31
+msgid "圆"
+msgstr ""
+
+#: ../../source/component/map.rst:33
+msgid "controls"
+msgstr ""
+
+#: ../../source/component/map.rst:33
+msgid "Array.<control>"
+msgstr ""
+
+#: ../../source/component/map.rst:33
+msgid "控件（即将废弃，建议使用 cover-view 代替）"
+msgstr ""
+
+#: ../../source/component/map.rst:35
+msgid "include-points"
+msgstr ""
+
+#: ../../source/component/map.rst:35
+msgid "Array.<point>"
+msgstr ""
+
+#: ../../source/component/map.rst:35
+msgid "缩放视野以包含所有给定的坐标点"
+msgstr ""
+
+#: ../../source/component/map.rst:37
+msgid "show-location"
+msgstr ""
+
+#: ../../source/component/map.rst:37
+#: ../../source/component/map.rst:43
+#: ../../source/component/map.rst:45
+#: ../../source/component/map.rst:47
+#: ../../source/component/map.rst:49
+#: ../../source/component/map.rst:51
+#: ../../source/component/map.rst:53
+#: ../../source/component/map.rst:173
+#: ../../source/component/map.rst:175
+#: ../../source/component/map.rst:229
+msgid "boolean"
+msgstr ""
+
+#: ../../source/component/map.rst:37
+#: ../../source/component/map.rst:43
+#: ../../source/component/map.rst:45
+#: ../../source/component/map.rst:47
+#: ../../source/component/map.rst:53
+msgid "false"
+msgstr ""
+
+#: ../../source/component/map.rst:37
+msgid "显示带有方向的当前定位点"
+msgstr ""
+
+#: ../../source/component/map.rst:39
+msgid "polygons"
+msgstr ""
+
+#: ../../source/component/map.rst:39
+msgid "Array.<polygon>"
+msgstr ""
+
+#: ../../source/component/map.rst:39
+msgid "多边形"
+msgstr ""
+
+#: ../../source/component/map.rst:39
+#: ../../source/component/map.rst:41
+#: ../../source/component/map.rst:43
+#: ../../source/component/map.rst:45
+#: ../../source/component/map.rst:47
+#: ../../source/component/map.rst:49
+#: ../../source/component/map.rst:51
+#: ../../source/component/map.rst:53
+#: ../../source/component/map.rst:65
+#: ../../source/component/map.rst:67
+#: ../../source/component/map.rst:83
+#: ../../source/component/map.rst:117
+#: ../../source/component/map.rst:119
+#: ../../source/component/map.rst:189
+#: ../../source/component/map.rst:191
+#: ../../source/component/map.rst:193
+#: ../../source/component/map.rst:197
+msgid "2.3.0"
+msgstr ""
+
+#: ../../source/component/map.rst:41
+msgid "subkey"
+msgstr ""
+
+#: ../../source/component/map.rst:41
+#: ../../source/component/map.rst:81
+#: ../../source/component/map.rst:85
+#: ../../source/component/map.rst:101
+#: ../../source/component/map.rst:109
+#: ../../source/component/map.rst:111
+#: ../../source/component/map.rst:119
+#: ../../source/component/map.rst:121
+#: ../../source/component/map.rst:125
+#: ../../source/component/map.rst:127
+#: ../../source/component/map.rst:135
+#: ../../source/component/map.rst:137
+#: ../../source/component/map.rst:151
+#: ../../source/component/map.rst:155
+#: ../../source/component/map.rst:159
+#: ../../source/component/map.rst:169
+#: ../../source/component/map.rst:177
+#: ../../source/component/map.rst:179
+#: ../../source/component/map.rst:193
+#: ../../source/component/map.rst:195
+#: ../../source/component/map.rst:209
+#: ../../source/component/map.rst:211
+#: ../../source/component/map.rst:227
+#: ../../source/component/map.rst:251
+#: ../../source/component/map.rst:253
+msgid "string"
+msgstr ""
+
+#: ../../source/component/map.rst:41
+msgid "个性化地图使用的key，仅初始化地图时有效"
+msgstr ""
+
+#: ../../source/component/map.rst:43
+msgid "enable-3D"
+msgstr ""
+
+#: ../../source/component/map.rst:43
+msgid "展示3D楼块(工具暂不支持）"
+msgstr ""
+
+#: ../../source/component/map.rst:45
+msgid "show-compass"
+msgstr ""
+
+#: ../../source/component/map.rst:45
+msgid "显示指南针"
+msgstr ""
+
+#: ../../source/component/map.rst:47
+msgid "enable-overlooking"
+msgstr ""
+
+#: ../../source/component/map.rst:47
+msgid "开启俯视"
+msgstr ""
+
+#: ../../source/component/map.rst:49
+msgid "enable-zoom"
+msgstr ""
+
+#: ../../source/component/map.rst:49
+#: ../../source/component/map.rst:51
+msgid "true"
+msgstr ""
+
+#: ../../source/component/map.rst:49
+msgid "是否支持缩放"
+msgstr ""
+
+#: ../../source/component/map.rst:51
+msgid "enable-scroll"
+msgstr ""
+
+#: ../../source/component/map.rst:51
+msgid "是否支持拖动"
+msgstr ""
+
+#: ../../source/component/map.rst:53
+msgid "enable-rotate"
+msgstr ""
+
+#: ../../source/component/map.rst:53
+msgid "是否支持旋转"
+msgstr ""
+
+#: ../../source/component/map.rst:55
+msgid "bindtap"
+msgstr ""
+
+#: ../../source/component/map.rst:55
+#: ../../source/component/map.rst:57
+#: ../../source/component/map.rst:59
+#: ../../source/component/map.rst:61
+#: ../../source/component/map.rst:63
+#: ../../source/component/map.rst:65
+#: ../../source/component/map.rst:67
+msgid "eventhandle"
+msgstr ""
+
+#: ../../source/component/map.rst:55
+msgid "点击地图时触发"
+msgstr ""
+
+#: ../../source/component/map.rst:57
+msgid "bindmarkertap"
+msgstr ""
+
+#: ../../source/component/map.rst:57
+msgid "点击标记点时触发，会返回marker的id"
+msgstr ""
+
+#: ../../source/component/map.rst:59
+msgid "bindcontroltap"
+msgstr ""
+
+#: ../../source/component/map.rst:59
+msgid "点击控件时触发，会返回control的id"
+msgstr ""
+
+#: ../../source/component/map.rst:61
+msgid "bindcallouttap"
+msgstr ""
+
+#: ../../source/component/map.rst:61
+msgid "点击标记点对应的气泡时触发，会返回marker的id"
+msgstr ""
+
+#: ../../source/component/map.rst:61
+#: ../../source/component/map.rst:95
+#: ../../source/component/map.rst:97
+#: ../../source/component/map.rst:99
+#: ../../source/component/map.rst:109
+#: ../../source/component/map.rst:111
+#: ../../source/component/map.rst:113
+#: ../../source/component/map.rst:115
+#: ../../source/component/map.rst:121
+#: ../../source/component/map.rst:123
+#: ../../source/component/map.rst:125
+#: ../../source/component/map.rst:135
+#: ../../source/component/map.rst:137
+#: ../../source/component/map.rst:139
+#: ../../source/component/map.rst:141
+#: ../../source/component/map.rst:143
+#: ../../source/component/map.rst:175
+#: ../../source/component/map.rst:179
+#: ../../source/component/map.rst:181
+msgid "1.2.0"
+msgstr ""
+
+#: ../../source/component/map.rst:63
+msgid "bindupdated"
+msgstr ""
+
+#: ../../source/component/map.rst:63
+msgid "在地图渲染更新完成时触发"
+msgstr ""
+
+#: ../../source/component/map.rst:63
+#: ../../source/component/map.rst:127
+#: ../../source/component/map.rst:149
+#: ../../source/component/map.rst:151
+#: ../../source/component/map.rst:153
+#: ../../source/component/map.rst:155
+#: ../../source/component/map.rst:157
+#: ../../source/component/map.rst:159
+#: ../../source/component/map.rst:177
+msgid "1.6.0"
+msgstr ""
+
+#: ../../source/component/map.rst:65
+msgid "bindregionchange"
+msgstr ""
+
+#: ../../source/component/map.rst:65
+msgid "视野发生变化时触发"
+msgstr ""
+
+#: ../../source/component/map.rst:67
+msgid "bindpoitap"
+msgstr ""
+
+#: ../../source/component/map.rst:67
+msgid "点击地图poi点时触发"
+msgstr ""
+
+#: ../../source/component/map.rst:70
+msgid "marker 标记点用于在地图上显示标记的位置"
+msgstr ""
+
+#: ../../source/component/map.rst:73
+#: ../../source/component/map.rst:165
+#: ../../source/component/map.rst:187
+#: ../../source/component/map.rst:203
+#: ../../source/component/map.rst:221
+#: ../../source/component/map.rst:235
+#: ../../source/component/map.rst:249
+msgid "备注"
+msgstr ""
+
+#: ../../source/component/map.rst:75
+#: ../../source/component/map.rst:223
+msgid "id"
+msgstr ""
+
+#: ../../source/component/map.rst:75
+msgid "标记点 id"
+msgstr ""
+
+#: ../../source/component/map.rst:75
+msgid "marker 点击事件回调会返回此 id。建议为每个 marker 设置上 number 类型 id，保证更新 marker 时有更好的性能。"
+msgstr ""
+
+#: ../../source/component/map.rst:77
+#: ../../source/component/map.rst:205
+msgid "纬度"
+msgstr ""
+
+#: ../../source/component/map.rst:77
+#: ../../source/component/map.rst:205
+msgid "浮点数，范围 -90 ~ 90"
+msgstr ""
+
+#: ../../source/component/map.rst:79
+#: ../../source/component/map.rst:207
+msgid "经度"
+msgstr ""
+
+#: ../../source/component/map.rst:79
+#: ../../source/component/map.rst:207
+msgid "浮点数，范围 -180 ~ 180"
+msgstr ""
+
+#: ../../source/component/map.rst:81
+msgid "title"
+msgstr ""
+
+#: ../../source/component/map.rst:81
+msgid "标注点名"
+msgstr ""
+
+#: ../../source/component/map.rst:83
+#: ../../source/component/map.rst:197
+msgid "zIndex"
+msgstr ""
+
+#: ../../source/component/map.rst:83
+msgid "显示层级"
+msgstr ""
+
+#: ../../source/component/map.rst:85
+#: ../../source/component/map.rst:227
+msgid "iconPath"
+msgstr ""
+
+#: ../../source/component/map.rst:85
+#: ../../source/component/map.rst:227
+msgid "显示的图标"
+msgstr ""
+
+#: ../../source/component/map.rst:85
+msgid "项目目录下的图片路径，支持相对路径写法，以'/'开头则表示相对小程序根目录；也支持临时路径和网络图片（2.3.0）"
+msgstr ""
+
+#: ../../source/component/map.rst:87
+msgid "rotate"
+msgstr ""
+
+#: ../../source/component/map.rst:87
+msgid "旋转角度"
+msgstr ""
+
+#: ../../source/component/map.rst:87
+msgid "顺时针旋转的角度，范围 0 ~ 360，默认为 0"
+msgstr ""
+
+#: ../../source/component/map.rst:89
+msgid "alpha"
+msgstr ""
+
+#: ../../source/component/map.rst:89
+msgid "标注的透明度"
+msgstr ""
+
+#: ../../source/component/map.rst:89
+msgid "默认 1，无透明，范围 0 ~ 1"
+msgstr ""
+
+#: ../../source/component/map.rst:91
+#: ../../source/component/map.rst:171
+#: ../../source/component/map.rst:241
+msgid "width"
+msgstr ""
+
+#: ../../source/component/map.rst:91
+msgid "标注图标宽度"
+msgstr ""
+
+#: ../../source/component/map.rst:91
+#: ../../source/component/map.rst:93
+msgid "number/string"
+msgstr ""
+
+#: ../../source/component/map.rst:91
+msgid "默认为图片实际宽度"
+msgstr ""
+
+#: ../../source/component/map.rst:93
+#: ../../source/component/map.rst:243
+msgid "height"
+msgstr ""
+
+#: ../../source/component/map.rst:93
+msgid "标注图标高度"
+msgstr ""
+
+#: ../../source/component/map.rst:93
+msgid "默认为图片实际高度"
+msgstr ""
+
+#: ../../source/component/map.rst:95
+msgid "callout"
+msgstr ""
+
+#: ../../source/component/map.rst:95
+msgid "自定义标记点上方的气泡窗口"
+msgstr ""
+
+#: ../../source/component/map.rst:95
+#: ../../source/component/map.rst:97
+#: ../../source/component/map.rst:99
+msgid "Object"
+msgstr ""
+
+#: ../../source/component/map.rst:95
+#: ../../source/component/map.rst:97
+msgid "支持的属性见下表，可识别换行符。"
+msgstr ""
+
+#: ../../source/component/map.rst:97
+msgid "label"
+msgstr ""
+
+#: ../../source/component/map.rst:97
+msgid "为标记点旁边增加标签"
+msgstr ""
+
+#: ../../source/component/map.rst:99
+msgid "anchor"
+msgstr ""
+
+#: ../../source/component/map.rst:99
+msgid "经纬度在标注图标的锚点，默认底边中点"
+msgstr ""
+
+#: ../../source/component/map.rst:99
+msgid "{x, y}，x 表示横向(0-1)，y 表示竖向(0-1)。{x: .5, y: 1} 表示底边中点"
+msgstr ""
+
+#: ../../source/component/map.rst:101
+msgid "aria-label"
+msgstr ""
+
+#: ../../source/component/map.rst:101
+msgid "无障碍访问，（属性）元素的额外描述"
+msgstr ""
+
+#: ../../source/component/map.rst:101
+msgid "2.5.0"
+msgstr ""
+
+#: ../../source/component/map.rst:104
+msgid "marker 上的气泡 callout"
+msgstr ""
+
+#: ../../source/component/map.rst:109
+#: ../../source/component/map.rst:135
+msgid "content"
+msgstr ""
+
+#: ../../source/component/map.rst:109
+#: ../../source/component/map.rst:135
+msgid "文本"
+msgstr ""
+
+#: ../../source/component/map.rst:111
+#: ../../source/component/map.rst:137
+#: ../../source/component/map.rst:169
+#: ../../source/component/map.rst:209
+msgid "color"
+msgstr ""
+
+#: ../../source/component/map.rst:111
+#: ../../source/component/map.rst:137
+msgid "文本颜色"
+msgstr ""
+
+#: ../../source/component/map.rst:113
+#: ../../source/component/map.rst:139
+msgid "fontSize"
+msgstr ""
+
+#: ../../source/component/map.rst:113
+#: ../../source/component/map.rst:139
+msgid "文字大小"
+msgstr ""
+
+#: ../../source/component/map.rst:115
+#: ../../source/component/map.rst:153
+msgid "borderRadius"
+msgstr ""
+
+#: ../../source/component/map.rst:115
+#: ../../source/component/map.rst:153
+msgid "边框圆角"
+msgstr ""
+
+#: ../../source/component/map.rst:117
+#: ../../source/component/map.rst:149
+#: ../../source/component/map.rst:181
+msgid "borderWidth"
+msgstr ""
+
+#: ../../source/component/map.rst:117
+#: ../../source/component/map.rst:149
+msgid "边框宽度"
+msgstr ""
+
+#: ../../source/component/map.rst:119
+#: ../../source/component/map.rst:151
+#: ../../source/component/map.rst:179
+msgid "borderColor"
+msgstr ""
+
+#: ../../source/component/map.rst:119
+#: ../../source/component/map.rst:151
+msgid "边框颜色"
+msgstr ""
+
+#: ../../source/component/map.rst:121
+#: ../../source/component/map.rst:155
+msgid "bgColor"
+msgstr ""
+
+#: ../../source/component/map.rst:121
+#: ../../source/component/map.rst:155
+msgid "背景色"
+msgstr ""
+
+#: ../../source/component/map.rst:123
+#: ../../source/component/map.rst:157
+msgid "padding"
+msgstr ""
+
+#: ../../source/component/map.rst:123
+#: ../../source/component/map.rst:157
+msgid "文本边缘留白"
+msgstr ""
+
+#: ../../source/component/map.rst:125
+msgid "display"
+msgstr ""
+
+#: ../../source/component/map.rst:125
+msgid "'BYCLICK':点击显示; 'ALWAYS':常显"
+msgstr ""
+
+#: ../../source/component/map.rst:127
+#: ../../source/component/map.rst:159
+msgid "textAlign"
+msgstr ""
+
+#: ../../source/component/map.rst:127
+#: ../../source/component/map.rst:159
+msgid "文本对齐方式。有效值: left, right, center"
+msgstr ""
+
+#: ../../source/component/map.rst:130
+msgid "marker 上的气泡 label"
+msgstr ""
+
+#: ../../source/component/map.rst:141
+msgid "x"
+msgstr ""
+
+#: ../../source/component/map.rst:141
+#: ../../source/component/map.rst:143
+msgid "label的坐标（废弃）"
+msgstr ""
+
+#: ../../source/component/map.rst:143
+msgid "y"
+msgstr ""
+
+#: ../../source/component/map.rst:145
+msgid "anchorX"
+msgstr ""
+
+#: ../../source/component/map.rst:145
+#: ../../source/component/map.rst:147
+msgid "label的坐标，原点是 marker 对应的经纬度"
+msgstr ""
+
+#: ../../source/component/map.rst:145
+#: ../../source/component/map.rst:147
+msgid "2.1.0"
+msgstr ""
+
+#: ../../source/component/map.rst:147
+msgid "anchorY"
+msgstr ""
+
+#: ../../source/component/map.rst:162
+msgid "polyline 指定一系列坐标点，从数组第一项连线至最后一项"
+msgstr ""
+
+#: ../../source/component/map.rst:167
+#: ../../source/component/map.rst:189
+msgid "points"
+msgstr ""
+
+#: ../../source/component/map.rst:167
+#: ../../source/component/map.rst:189
+msgid "经纬度数组"
+msgstr ""
+
+#: ../../source/component/map.rst:167
+#: ../../source/component/map.rst:189
+msgid "array"
+msgstr ""
+
+#: ../../source/component/map.rst:167
+#: ../../source/component/map.rst:189
+msgid "[{latitude: 0, longitude: 0}]"
+msgstr ""
+
+#: ../../source/component/map.rst:169
+msgid "线的颜色"
+msgstr ""
+
+#: ../../source/component/map.rst:169
+#: ../../source/component/map.rst:193
+#: ../../source/component/map.rst:195
+#: ../../source/component/map.rst:209
+#: ../../source/component/map.rst:211
+msgid "十六进制"
+msgstr ""
+
+#: ../../source/component/map.rst:171
+msgid "线的宽度"
+msgstr ""
+
+#: ../../source/component/map.rst:173
+msgid "dottedLine"
+msgstr ""
+
+#: ../../source/component/map.rst:173
+msgid "是否虚线"
+msgstr ""
+
+#: ../../source/component/map.rst:173
+msgid "默认 false"
+msgstr ""
+
+#: ../../source/component/map.rst:175
+msgid "arrowLine"
+msgstr ""
+
+#: ../../source/component/map.rst:175
+msgid "带箭头的线"
+msgstr ""
+
+#: ../../source/component/map.rst:175
+msgid "默认 false，开发者工具暂不支持该属性"
+msgstr ""
+
+#: ../../source/component/map.rst:177
+msgid "arrowIconPath"
+msgstr ""
+
+#: ../../source/component/map.rst:177
+msgid "更换箭头图标"
+msgstr ""
+
+#: ../../source/component/map.rst:177
+msgid "在 arrowLine 为 true 时生效"
+msgstr ""
+
+#: ../../source/component/map.rst:179
+msgid "线的边框颜色"
+msgstr ""
+
+#: ../../source/component/map.rst:181
+msgid "线的厚度"
+msgstr ""
+
+#: ../../source/component/map.rst:184
+msgid "polygon 指定一系列坐标点，根据 points 坐标数据生成闭合多边形"
+msgstr ""
+
+#: ../../source/component/map.rst:191
+#: ../../source/component/map.rst:215
+msgid "strokeWidth"
+msgstr ""
+
+#: ../../source/component/map.rst:191
+#: ../../source/component/map.rst:215
+msgid "描边的宽度"
+msgstr ""
+
+#: ../../source/component/map.rst:193
+msgid "strokeColor"
+msgstr ""
+
+#: ../../source/component/map.rst:193
+#: ../../source/component/map.rst:209
+msgid "描边的颜色"
+msgstr ""
+
+#: ../../source/component/map.rst:195
+#: ../../source/component/map.rst:211
+msgid "fillColor"
+msgstr ""
+
+#: ../../source/component/map.rst:195
+#: ../../source/component/map.rst:211
+msgid "填充颜色"
+msgstr ""
+
+#: ../../source/component/map.rst:197
+msgid "设置多边形Z轴数值"
+msgstr ""
+
+#: ../../source/component/map.rst:200
+msgid "circle 在地图上显示圆"
+msgstr ""
+
+#: ../../source/component/map.rst:213
+msgid "radius"
+msgstr ""
+
+#: ../../source/component/map.rst:213
+msgid "半径"
+msgstr ""
+
+#: ../../source/component/map.rst:218
+msgid "control 在地图上显示控件，控件不随着地图移动。即将废弃，请使用 cover-view"
+msgstr ""
+
+#: ../../source/component/map.rst:223
+msgid "控件id"
+msgstr ""
+
+#: ../../source/component/map.rst:223
+msgid "在控件点击事件回调会返回此id"
+msgstr ""
+
+#: ../../source/component/map.rst:225
+#: ../../source/component/map.rst:232
+msgid "position"
+msgstr ""
+
+#: ../../source/component/map.rst:225
+msgid "控件在地图的位置"
+msgstr ""
+
+#: ../../source/component/map.rst:225
+msgid "object"
+msgstr ""
+
+#: ../../source/component/map.rst:225
+msgid "控件相对地图位置"
+msgstr ""
+
+#: ../../source/component/map.rst:227
+msgid "项目目录下的图片路径，支持相对路径写法，以'/'开头则表示相对小程序根目录；也支持临时路径"
+msgstr ""
+
+#: ../../source/component/map.rst:229
+msgid "clickable"
+msgstr ""
+
+#: ../../source/component/map.rst:229
+msgid "是否可点击"
+msgstr ""
+
+#: ../../source/component/map.rst:229
+msgid "默认不可点击"
+msgstr ""
+
+#: ../../source/component/map.rst:237
+msgid "left"
+msgstr ""
+
+#: ../../source/component/map.rst:237
+msgid "距离地图的左边界多远"
+msgstr ""
+
+#: ../../source/component/map.rst:237
+#: ../../source/component/map.rst:239
+msgid "默认为0"
+msgstr ""
+
+#: ../../source/component/map.rst:239
+msgid "top"
+msgstr ""
+
+#: ../../source/component/map.rst:239
+msgid "距离地图的上边界多远"
+msgstr ""
+
+#: ../../source/component/map.rst:241
+msgid "控件宽度"
+msgstr ""
+
+#: ../../source/component/map.rst:241
+msgid "默认为图片宽度"
+msgstr ""
+
+#: ../../source/component/map.rst:243
+msgid "控件高度"
+msgstr ""
+
+#: ../../source/component/map.rst:243
+msgid "默认为图片高度"
+msgstr ""
+
+#: ../../source/component/map.rst:246
+msgid "bindregionchange 返回值"
+msgstr ""
+
+#: ../../source/component/map.rst:251
+msgid "type"
+msgstr ""
+
+#: ../../source/component/map.rst:251
+msgid "视野变化开始、结束时触发"
+msgstr ""
+
+#: ../../source/component/map.rst:251
+msgid "视野变化开始为begin，结束为end"
+msgstr ""
+
+#: ../../source/component/map.rst:253
+msgid "causedBy"
+msgstr ""
+
+#: ../../source/component/map.rst:253
+msgid "导致视野变化的原因"
+msgstr ""
+
+#: ../../source/component/map.rst:253
+msgid "拖动地图导致(drag)、缩放导致(scale)、调用接口导致(update)"
+msgstr ""
+
+#: ../../source/component/map.rst:256
+msgid "个性化地图暂不支持工具中调试。请先使用微信客户端进行测试。"
+msgstr ""
+
+#: ../../source/component/map.rst:258
+msgid "地图中的颜色值color/borderColor/bgColor等需使用6位（8位）十六进制表示，8位时后两位表示alpha值，如：#000000AA"
+msgstr ""
+
+#: ../../source/component/map.rst:260
+msgid "地图组件的经纬度必填, 如果不填经纬度则默认值是北京的经纬度。"
+msgstr ""
+
+#: ../../source/component/map.rst:262
+msgid "map 组件使用的经纬度是火星坐标系，调用 wx.getLocation 接口需要指定 type 为 gcj02"
+msgstr ""
+
+#: ../../source/component/map.rst:264
+msgid "请注意原生组件使用限制。"
+msgstr ""
+
+#: ../../source/component/map.rst:266
+msgid "示例代码"
+msgstr ""
+
+#: ../../source/component/map.rst:268
+msgid ":download:`在开发者工具中预览效果 <https://developers.weixin.qq.com/s/3uVxpmmT6wY9>`"
+msgstr ""
+

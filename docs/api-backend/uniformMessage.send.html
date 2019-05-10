@@ -313,7 +313,7 @@
 <code class="descclassname">openapi.uniformMessage.</code><code class="descname">send</code><span class="sig-paren">(</span><em>{touser</em>, <em>weappTemplateMsg</em>, <em>mpTemplateMsg}</em><span class="sig-paren">)</span><a class="headerlink" href="#openapi.uniformMessage.send" title="永久链接至目标">¶</a></dt>
 <dd><p>云调用是小程序·云开发提供的在云函数中调用微信开放接口的能力，需要在云函数中通过 wx-server-sdk 使用。</p>
 <dl class="field-list">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">参数</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>touser</strong> (<em>string</em>) – 是       用户openid，可以是小程序的openid，也可以是mp_template_msg.appid对应的公众号的openid</p></li>
 <li><p><strong>weappTemplateMsg</strong> (<em>object</em>) – <p>否       小程序模板消息相关的信息，可以参考小程序模板消息接口; 有此节点则优先发送小程序模板消息</p>
@@ -336,17 +336,19 @@
 </p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><ul class="simple">
+<dt class="field-even">返回</dt>
+<dd class="field-even"><p><ul class="simple">
 <li><p><strong>errCode</strong>     (<em>number</em>):     错误码</p></li>
 <li><p><strong>errMsg</strong>      (<em>string</em>):     错误信息</p></li>
 </ul>
+</p>
 </dd>
-<dt class="field-odd">Throws SomeError</dt>
-<dd class="field-odd"><ul class="simple">
+<dt class="field-odd">抛出</dt>
+<dd class="field-odd"><p><strong>SomeError</strong> – <ul class="simple">
 <li><p><strong>errCode</strong>     (<em>number</em>):     错误码</p></li>
 <li><p><strong>errMsg</strong>      (<em>string</em>):     错误信息</p></li>
 </ul>
+</p>
 </dd>
 <dt class="field-even">请求示例</dt>
 <dd class="field-even"><div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="kr">const</span> <span class="nx">cloud</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;wx-server-sdk&#39;</span><span class="p">)</span>

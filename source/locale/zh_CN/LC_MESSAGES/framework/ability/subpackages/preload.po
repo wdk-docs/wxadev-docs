@@ -1,0 +1,139 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019, Nosy
+# This file is distributed under the same license as the wxadev package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: wxadev \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-09 22:55+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../../source/framework/ability/subpackages/preload.rst:2
+msgid "分包预下载"
+msgstr ""
+
+#: ../../source/framework/ability/subpackages/preload.rst:4
+msgid ""
+"基础库 2.3.0 开始支持，低版本需做 :ref:`compatibility` 。 开发者工具请使用 1.02.1808300 "
+"及以上版本，可点此下载。"
+msgstr ""
+
+#: ../../source/framework/ability/subpackages/preload.rst:6
+msgid "开发者可以通过配置，在进入小程序某个页面时，由框架自动预下载可能需要的分包，提升进入后续分包页面时的启动速度。对于独立分包，也可以预下载主包。"
+msgstr ""
+
+#: ../../source/framework/ability/subpackages/preload.rst:8
+msgid "分包预下载目前只支持通过配置方式使用，暂不支持通过调用API完成。"
+msgstr ""
+
+#: ../../source/framework/ability/subpackages/preload.rst:10
+msgid "vConsole 里有preloadSubpackages开头的日志信息，可以用来验证预下载的情况。"
+msgstr ""
+
+#: ../../source/framework/ability/subpackages/preload.rst:12
+msgid "配置方法 预下载分包行为在进入某个页面时触发，通过在 app.json 增加 preloadRule 配置来控制。"
+msgstr ""
+
+#: ../../source/framework/ability/subpackages/preload.rst:19
+#: ../../source/framework/ability/subpackages/preload.rst:54
+msgid "{"
+msgstr ""
+
+#: ../../source/framework/ability/subpackages/preload.rst:16
+msgid "\"pages\": [\"pages/index\"], \"subpackages\": ["
+msgstr ""
+
+#: ../../source/framework/ability/subpackages/preload.rst:19
+msgid "\"root\": \"important\", \"pages\": [\"index\"]"
+msgstr ""
+
+#: ../../source/framework/ability/subpackages/preload.rst:21
+#: ../../source/framework/ability/subpackages/preload.rst:25
+#: ../../source/framework/ability/subpackages/preload.rst:30
+#: ../../source/framework/ability/subpackages/preload.rst:34
+msgid "}, {"
+msgstr ""
+
+#: ../../source/framework/ability/subpackages/preload.rst:23
+msgid "\"root\": \"sub1\", \"pages\": [\"index\"]"
+msgstr ""
+
+#: ../../source/framework/ability/subpackages/preload.rst:27
+msgid "\"name\": \"hello\", \"root\": \"path/to\", \"pages\": [\"index\"]"
+msgstr ""
+
+#: ../../source/framework/ability/subpackages/preload.rst:32
+msgid "\"root\": \"sub3\", \"pages\": [\"index\"]"
+msgstr ""
+
+#: ../../source/framework/ability/subpackages/preload.rst:36
+msgid "\"root\": \"indep\", \"pages\": [\"index\"], \"independent\": true"
+msgstr ""
+
+#: ../../source/framework/ability/subpackages/preload.rst:39
+#: ../../source/framework/ability/subpackages/preload.rst:54
+#: ../../source/framework/ability/subpackages/preload.rst:55
+msgid "}"
+msgstr ""
+
+#: ../../source/framework/ability/subpackages/preload.rst:40
+msgid "], \"preloadRule\": {"
+msgstr ""
+
+#: ../../source/framework/ability/subpackages/preload.rst:43
+msgid "\"pages/index\": {"
+msgstr ""
+
+#: ../../source/framework/ability/subpackages/preload.rst:43
+msgid "\"network\": \"all\", \"packages\": [\"important\"]"
+msgstr ""
+
+#: ../../source/framework/ability/subpackages/preload.rst:45
+msgid "}, \"sub1/index\": {"
+msgstr ""
+
+#: ../../source/framework/ability/subpackages/preload.rst:47
+msgid "\"packages\": [\"hello\", \"sub3\"]"
+msgstr ""
+
+#: ../../source/framework/ability/subpackages/preload.rst:48
+msgid "}, \"sub3/index\": {"
+msgstr ""
+
+#: ../../source/framework/ability/subpackages/preload.rst:50
+msgid "\"packages\": [\"path/to\"]"
+msgstr ""
+
+#: ../../source/framework/ability/subpackages/preload.rst:51
+msgid "}, \"indep/index\": {"
+msgstr ""
+
+#: ../../source/framework/ability/subpackages/preload.rst:53
+msgid "\"packages\": [\"__APP__\"]"
+msgstr ""
+
+#: ../../source/framework/ability/subpackages/preload.rst:56
+msgid "} preloadRule 中，key 是页面路径，value 是进入此页面的预下载配置，每个配置有以下几项："
+msgstr ""
+
+#: ../../source/framework/ability/subpackages/preload.rst:59
+msgid ""
+"字段      类型      必填      默认值     说明 packages        StringArray     是"
+"       无       进入页面后预下载分包的 root 或 name。__APP__ 表示主包。 network String  否"
+"       wifi    在指定网络下预下载，可选值为： all: 不限网络 wifi: 仅wifi下预下载 限制 "
+"同一个分包中的页面享有共同的预下载大小限额 2M，限额会在工具中打包时校验。"
+msgstr ""
+
+#: ../../source/framework/ability/subpackages/preload.rst:67
+msgid "如，页面 A 和 B 都在同一个分包中，A 中预下载总大小 0.5M 的分包，B中最多只能预下载总大小 1.5M 的分包。"
+msgstr ""
+

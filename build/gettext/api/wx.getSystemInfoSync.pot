@@ -1,0 +1,338 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019, Nosy
+# This file is distributed under the same license as the wxadev package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: wxadev \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-09 22:55+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/api/wx.getSystemInfoSync.rst:2
+msgid ":wxapi:`wx.getSystemInfoSync`"
+msgstr ""
+
+#: ../../source/api/wx.getSystemInfoSync.rst:6
+msgid ":func:`wx.getSystemInfo` 的同步版本"
+msgstr ""
+
+#: ../../source/api/wx.getSystemInfoSync.rst:0
+msgid "返回类型"
+msgstr ""
+
+#: ../../source/api/wx.getSystemInfoSync.rst:8
+msgid "Object"
+msgstr ""
+
+#: ../../source/api/wx.getSystemInfoSync.rst:0
+msgid "返回"
+msgstr ""
+
+#: ../../source/api/wx.getSystemInfoSync.rst:9
+msgid "+-----------------------------+---------+-----------------------------------------------------------------------------------------------------------------------------------------------------+----------+  |            属性             |  类型   |                                                                        说明                                                                         | 最低版本 |  +=============================+=========+=====================================================================================================================================================+==========+  | brand                       | string  | 设备品牌                                                                                                                                            | 1.5.0    |  +-----------------------------+---------+-----------------------------------------------------------------------------------------------------------------------------------------------------+----------+  | model                       | string  | 设备型号                                                                                                                                            |          |  +-----------------------------+---------+-----------------------------------------------------------------------------------------------------------------------------------------------------+----------+  | pixelRatio                  | number  | 设备像素比                                                                                                                                          |          |  +-----------------------------+---------+-----------------------------------------------------------------------------------------------------------------------------------------------------+----------+  | screenWidth                 | number  | 屏幕宽度，单位px                                                                                                                                    | 1.1.0    |  +-----------------------------+---------+-----------------------------------------------------------------------------------------------------------------------------------------------------+----------+  | screenHeight                | number  | 屏幕高度，单位px                                                                                                                                    | 1.1.0    |  +-----------------------------+---------+-----------------------------------------------------------------------------------------------------------------------------------------------------+----------+  | windowWidth                 | number  | 可使用窗口宽度，单位px                                                                                                                              |          |  +-----------------------------+---------+-----------------------------------------------------------------------------------------------------------------------------------------------------+----------+  | windowHeight                | number  | 可使用窗口高度，单位px                                                                                                                              |          |  +-----------------------------+---------+-----------------------------------------------------------------------------------------------------------------------------------------------------+----------+  | statusBarHeight             | number  | 状态栏的高度，单位px                                                                                                                                | 1.9.0    |  +-----------------------------+---------+-----------------------------------------------------------------------------------------------------------------------------------------------------+----------+  | language                    | string  | 微信设置的语言                                                                                                                                      |          |  +-----------------------------+---------+-----------------------------------------------------------------------------------------------------------------------------------------------------+----------+  | version                     | string  | 微信版本号                                                                                                                                          |          |  +-----------------------------+---------+-----------------------------------------------------------------------------------------------------------------------------------------------------+----------+  | system                      | string  | 操作系统及版本                                                                                                                                      |          |  +-----------------------------+---------+-----------------------------------------------------------------------------------------------------------------------------------------------------+----------+  | platform                    | string  | 客户端平台                                                                                                                                          |          |  +-----------------------------+---------+-----------------------------------------------------------------------------------------------------------------------------------------------------+----------+  | fontSizeSetting             | number  | 用户字体大小（单位px）。以微信客户端「我-设置-通用-字体大小」中的设置为准                                                                           | 1.5.0    |  +-----------------------------+---------+-----------------------------------------------------------------------------------------------------------------------------------------------------+----------+  | SDKVersion                  | string  | 客户端基础库版本                                                                                                                                    | 1.1.0    |  +-----------------------------+---------+-----------------------------------------------------------------------------------------------------------------------------------------------------+----------+  | benchmarkLevel              | number  | 设备性能等级（仅Android小游戏）。取值为：-2 或 0（该设备无法运行小游戏），-1（性能未知），>=1（设备性能值，该值越高，设备性能越好，目前最高不到50） | 1.8.0    |  +-----------------------------+---------+-----------------------------------------------------------------------------------------------------------------------------------------------------+----------+  | albumAuthorized             | boolean | 允许微信使用相册的开关（仅 iOS 有效）                                                                                                               | 2.6.0    |  +-----------------------------+---------+-----------------------------------------------------------------------------------------------------------------------------------------------------+----------+  | cameraAuthorized            | boolean | 允许微信使用摄像头的开关                                                                                                                            | 2.6.0    |  +-----------------------------+---------+-----------------------------------------------------------------------------------------------------------------------------------------------------+----------+  | locationAuthorized          | boolean | 允许微信使用定位的开关                                                                                                                              | 2.6.0    |  +-----------------------------+---------+-----------------------------------------------------------------------------------------------------------------------------------------------------+----------+  | microphoneAuthorized        | boolean | 允许微信使用麦克风的开关                                                                                                                            | 2.6.0    |  +-----------------------------+---------+-----------------------------------------------------------------------------------------------------------------------------------------------------+----------+  | notificationAuthorized      | boolean | 允许微信通知的开关                                                                                                                                  | 2.6.0    |  +-----------------------------+---------+-----------------------------------------------------------------------------------------------------------------------------------------------------+----------+  | notificationAlertAuthorized | boolean | 允许微信通知带有提醒的开关（仅 iOS 有效）                                                                                                           | 2.6.0    |  +-----------------------------+---------+-----------------------------------------------------------------------------------------------------------------------------------------------------+----------+  | notificationBadgeAuthorized | boolean | 允许微信通知带有标记的开关（仅 iOS 有效）                                                                                                           | 2.6.0    |  +-----------------------------+---------+-----------------------------------------------------------------------------------------------------------------------------------------------------+----------+  | notificationSoundAuthorized | boolean | 允许微信通知带有声音的开关（仅 iOS 有效）                                                                                                           | 2.6.0    |  +-----------------------------+---------+-----------------------------------------------------------------------------------------------------------------------------------------------------+----------+  | bluetoothEnabled            | boolean | 蓝牙的系统开关                                                                                                                                      | 2.6.0    |  +-----------------------------+---------+-----------------------------------------------------------------------------------------------------------------------------------------------------+----------+  | locationEnabled             | boolean | 地理位置的系统开关                                                                                                                                  | 2.6.0    |  +-----------------------------+---------+-----------------------------------------------------------------------------------------------------------------------------------------------------+----------+  | wifiEnabled                 | boolean | Wi-Fi 的系统开关                                                                                                                                    | 2.6.0    |  +-----------------------------+---------+-----------------------------------------------------------------------------------------------------------------------------------------------------+----------+  :示例:    .. code:: js      wx.getSystemInfo({       success(res) {         console.log(res.model)         console.log(res.pixelRatio)         console.log(res.windowWidth)         console.log(res.windowHeight)         console.log(res.language)         console.log(res.version)         console.log(res.platform)       }     })     try {       const res = wx.getSystemInfoSync()       console.log(res.model)       console.log(res.pixelRatio)       console.log(res.windowWidth)       console.log(res.windowHeight)       console.log(res.language)       console.log(res.version)       console.log(res.platform)     } catch (e) {       // Do something when catch error     }"
+msgstr ""
+
+#: ../../source/api/wx.getSystemInfoSync.rst:12
+msgid "属性"
+msgstr ""
+
+#: ../../source/api/wx.getSystemInfoSync.rst:12
+msgid "类型"
+msgstr ""
+
+#: ../../source/api/wx.getSystemInfoSync.rst:12
+msgid "说明"
+msgstr ""
+
+#: ../../source/api/wx.getSystemInfoSync.rst:12
+msgid "最低版本"
+msgstr ""
+
+#: ../../source/api/wx.getSystemInfoSync.rst:14
+msgid "brand"
+msgstr ""
+
+#: ../../source/api/wx.getSystemInfoSync.rst:14
+#: ../../source/api/wx.getSystemInfoSync.rst:16
+#: ../../source/api/wx.getSystemInfoSync.rst:30
+#: ../../source/api/wx.getSystemInfoSync.rst:32
+#: ../../source/api/wx.getSystemInfoSync.rst:34
+#: ../../source/api/wx.getSystemInfoSync.rst:36
+#: ../../source/api/wx.getSystemInfoSync.rst:40
+msgid "string"
+msgstr ""
+
+#: ../../source/api/wx.getSystemInfoSync.rst:14
+msgid "设备品牌"
+msgstr ""
+
+#: ../../source/api/wx.getSystemInfoSync.rst:14
+#: ../../source/api/wx.getSystemInfoSync.rst:38
+msgid "1.5.0"
+msgstr ""
+
+#: ../../source/api/wx.getSystemInfoSync.rst:16
+msgid "model"
+msgstr ""
+
+#: ../../source/api/wx.getSystemInfoSync.rst:16
+msgid "设备型号"
+msgstr ""
+
+#: ../../source/api/wx.getSystemInfoSync.rst:18
+msgid "pixelRatio"
+msgstr ""
+
+#: ../../source/api/wx.getSystemInfoSync.rst:18
+#: ../../source/api/wx.getSystemInfoSync.rst:20
+#: ../../source/api/wx.getSystemInfoSync.rst:22
+#: ../../source/api/wx.getSystemInfoSync.rst:24
+#: ../../source/api/wx.getSystemInfoSync.rst:26
+#: ../../source/api/wx.getSystemInfoSync.rst:28
+#: ../../source/api/wx.getSystemInfoSync.rst:38
+#: ../../source/api/wx.getSystemInfoSync.rst:42
+msgid "number"
+msgstr ""
+
+#: ../../source/api/wx.getSystemInfoSync.rst:18
+msgid "设备像素比"
+msgstr ""
+
+#: ../../source/api/wx.getSystemInfoSync.rst:20
+msgid "screenWidth"
+msgstr ""
+
+#: ../../source/api/wx.getSystemInfoSync.rst:20
+msgid "屏幕宽度，单位px"
+msgstr ""
+
+#: ../../source/api/wx.getSystemInfoSync.rst:20
+#: ../../source/api/wx.getSystemInfoSync.rst:22
+#: ../../source/api/wx.getSystemInfoSync.rst:40
+msgid "1.1.0"
+msgstr ""
+
+#: ../../source/api/wx.getSystemInfoSync.rst:22
+msgid "screenHeight"
+msgstr ""
+
+#: ../../source/api/wx.getSystemInfoSync.rst:22
+msgid "屏幕高度，单位px"
+msgstr ""
+
+#: ../../source/api/wx.getSystemInfoSync.rst:24
+msgid "windowWidth"
+msgstr ""
+
+#: ../../source/api/wx.getSystemInfoSync.rst:24
+msgid "可使用窗口宽度，单位px"
+msgstr ""
+
+#: ../../source/api/wx.getSystemInfoSync.rst:26
+msgid "windowHeight"
+msgstr ""
+
+#: ../../source/api/wx.getSystemInfoSync.rst:26
+msgid "可使用窗口高度，单位px"
+msgstr ""
+
+#: ../../source/api/wx.getSystemInfoSync.rst:28
+msgid "statusBarHeight"
+msgstr ""
+
+#: ../../source/api/wx.getSystemInfoSync.rst:28
+msgid "状态栏的高度，单位px"
+msgstr ""
+
+#: ../../source/api/wx.getSystemInfoSync.rst:28
+msgid "1.9.0"
+msgstr ""
+
+#: ../../source/api/wx.getSystemInfoSync.rst:30
+msgid "language"
+msgstr ""
+
+#: ../../source/api/wx.getSystemInfoSync.rst:30
+msgid "微信设置的语言"
+msgstr ""
+
+#: ../../source/api/wx.getSystemInfoSync.rst:32
+msgid "version"
+msgstr ""
+
+#: ../../source/api/wx.getSystemInfoSync.rst:32
+msgid "微信版本号"
+msgstr ""
+
+#: ../../source/api/wx.getSystemInfoSync.rst:34
+msgid "system"
+msgstr ""
+
+#: ../../source/api/wx.getSystemInfoSync.rst:34
+msgid "操作系统及版本"
+msgstr ""
+
+#: ../../source/api/wx.getSystemInfoSync.rst:36
+msgid "platform"
+msgstr ""
+
+#: ../../source/api/wx.getSystemInfoSync.rst:36
+msgid "客户端平台"
+msgstr ""
+
+#: ../../source/api/wx.getSystemInfoSync.rst:38
+msgid "fontSizeSetting"
+msgstr ""
+
+#: ../../source/api/wx.getSystemInfoSync.rst:38
+msgid "用户字体大小（单位px）。以微信客户端「我-设置-通用-字体大小」中的设置为准"
+msgstr ""
+
+#: ../../source/api/wx.getSystemInfoSync.rst:40
+msgid "SDKVersion"
+msgstr ""
+
+#: ../../source/api/wx.getSystemInfoSync.rst:40
+msgid "客户端基础库版本"
+msgstr ""
+
+#: ../../source/api/wx.getSystemInfoSync.rst:42
+msgid "benchmarkLevel"
+msgstr ""
+
+#: ../../source/api/wx.getSystemInfoSync.rst:42
+msgid "设备性能等级（仅Android小游戏）。取值为：-2 或 0（该设备无法运行小游戏），-1（性能未知），>=1（设备性能值，该值越高，设备性能越好，目前最高不到50）"
+msgstr ""
+
+#: ../../source/api/wx.getSystemInfoSync.rst:42
+msgid "1.8.0"
+msgstr ""
+
+#: ../../source/api/wx.getSystemInfoSync.rst:44
+msgid "albumAuthorized"
+msgstr ""
+
+#: ../../source/api/wx.getSystemInfoSync.rst:44
+#: ../../source/api/wx.getSystemInfoSync.rst:46
+#: ../../source/api/wx.getSystemInfoSync.rst:48
+#: ../../source/api/wx.getSystemInfoSync.rst:50
+#: ../../source/api/wx.getSystemInfoSync.rst:52
+#: ../../source/api/wx.getSystemInfoSync.rst:54
+#: ../../source/api/wx.getSystemInfoSync.rst:56
+#: ../../source/api/wx.getSystemInfoSync.rst:58
+#: ../../source/api/wx.getSystemInfoSync.rst:60
+#: ../../source/api/wx.getSystemInfoSync.rst:62
+#: ../../source/api/wx.getSystemInfoSync.rst:64
+msgid "boolean"
+msgstr ""
+
+#: ../../source/api/wx.getSystemInfoSync.rst:44
+msgid "允许微信使用相册的开关（仅 iOS 有效）"
+msgstr ""
+
+#: ../../source/api/wx.getSystemInfoSync.rst:44
+#: ../../source/api/wx.getSystemInfoSync.rst:46
+#: ../../source/api/wx.getSystemInfoSync.rst:48
+#: ../../source/api/wx.getSystemInfoSync.rst:50
+#: ../../source/api/wx.getSystemInfoSync.rst:52
+#: ../../source/api/wx.getSystemInfoSync.rst:54
+#: ../../source/api/wx.getSystemInfoSync.rst:56
+#: ../../source/api/wx.getSystemInfoSync.rst:58
+#: ../../source/api/wx.getSystemInfoSync.rst:60
+#: ../../source/api/wx.getSystemInfoSync.rst:62
+#: ../../source/api/wx.getSystemInfoSync.rst:64
+msgid "2.6.0"
+msgstr ""
+
+#: ../../source/api/wx.getSystemInfoSync.rst:46
+msgid "cameraAuthorized"
+msgstr ""
+
+#: ../../source/api/wx.getSystemInfoSync.rst:46
+msgid "允许微信使用摄像头的开关"
+msgstr ""
+
+#: ../../source/api/wx.getSystemInfoSync.rst:48
+msgid "locationAuthorized"
+msgstr ""
+
+#: ../../source/api/wx.getSystemInfoSync.rst:48
+msgid "允许微信使用定位的开关"
+msgstr ""
+
+#: ../../source/api/wx.getSystemInfoSync.rst:50
+msgid "microphoneAuthorized"
+msgstr ""
+
+#: ../../source/api/wx.getSystemInfoSync.rst:50
+msgid "允许微信使用麦克风的开关"
+msgstr ""
+
+#: ../../source/api/wx.getSystemInfoSync.rst:52
+msgid "notificationAuthorized"
+msgstr ""
+
+#: ../../source/api/wx.getSystemInfoSync.rst:52
+msgid "允许微信通知的开关"
+msgstr ""
+
+#: ../../source/api/wx.getSystemInfoSync.rst:54
+msgid "notificationAlertAuthorized"
+msgstr ""
+
+#: ../../source/api/wx.getSystemInfoSync.rst:54
+msgid "允许微信通知带有提醒的开关（仅 iOS 有效）"
+msgstr ""
+
+#: ../../source/api/wx.getSystemInfoSync.rst:56
+msgid "notificationBadgeAuthorized"
+msgstr ""
+
+#: ../../source/api/wx.getSystemInfoSync.rst:56
+msgid "允许微信通知带有标记的开关（仅 iOS 有效）"
+msgstr ""
+
+#: ../../source/api/wx.getSystemInfoSync.rst:58
+msgid "notificationSoundAuthorized"
+msgstr ""
+
+#: ../../source/api/wx.getSystemInfoSync.rst:58
+msgid "允许微信通知带有声音的开关（仅 iOS 有效）"
+msgstr ""
+
+#: ../../source/api/wx.getSystemInfoSync.rst:60
+msgid "bluetoothEnabled"
+msgstr ""
+
+#: ../../source/api/wx.getSystemInfoSync.rst:60
+msgid "蓝牙的系统开关"
+msgstr ""
+
+#: ../../source/api/wx.getSystemInfoSync.rst:62
+msgid "locationEnabled"
+msgstr ""
+
+#: ../../source/api/wx.getSystemInfoSync.rst:62
+msgid "地理位置的系统开关"
+msgstr ""
+
+#: ../../source/api/wx.getSystemInfoSync.rst:64
+msgid "wifiEnabled"
+msgstr ""
+
+#: ../../source/api/wx.getSystemInfoSync.rst:64
+msgid "Wi-Fi 的系统开关"
+msgstr ""
+
+#: ../../source/api/wx.getSystemInfoSync.rst:0
+msgid "示例"
+msgstr ""
+

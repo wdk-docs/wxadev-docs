@@ -1,0 +1,71 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019, Nosy
+# This file is distributed under the same license as the wxadev package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: wxadev \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-09 22:55+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../../source/framework/view/wxs/variate.rst:4
+msgid ":wxfrwk:`变量 <view/wxs/02variate>`"
+msgstr ""
+
+#: ../../source/framework/view/wxs/variate.rst:7
+msgid "概念"
+msgstr ""
+
+#: ../../source/framework/view/wxs/variate.rst:9
+msgid "WXS中的变量均为值的引用。"
+msgstr ""
+
+#: ../../source/framework/view/wxs/variate.rst:10
+msgid "没有声明的变量直接赋值使用，会被定义为全局变量。"
+msgstr ""
+
+#: ../../source/framework/view/wxs/variate.rst:11
+msgid "如果只声明变量而不赋值，则默认值为undefined。"
+msgstr ""
+
+#: ../../source/framework/view/wxs/variate.rst:12
+msgid "VAR表现与JavaScript的一致，会有变量提升。"
+msgstr ""
+
+#: ../../source/framework/view/wxs/variate.rst:20
+msgid "上面代码，分别声明了foo，bar，i三个变量。然后，foo赋值为数值1，bar赋值为字符串\"hello world\"。"
+msgstr ""
+
+#: ../../source/framework/view/wxs/variate.rst:23
+msgid "变量名"
+msgstr ""
+
+#: ../../source/framework/view/wxs/variate.rst:25
+msgid "变量命名必须符合下面两个规则："
+msgstr ""
+
+#: ../../source/framework/view/wxs/variate.rst:27
+msgid "首字符必须是：  字母（A-ZA-Z），下划线（_）"
+msgstr ""
+
+#: ../../source/framework/view/wxs/variate.rst:28
+msgid "剩余字符可以是：字母（a-zA-Z），下划线（_），数字（0-9）"
+msgstr ""
+
+#: ../../source/framework/view/wxs/variate.rst:31
+msgid "保留标识符"
+msgstr ""
+
+#: ../../source/framework/view/wxs/variate.rst:33
+msgid "以下标识符不能作为变量名::"
+msgstr ""
+

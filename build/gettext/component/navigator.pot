@@ -1,0 +1,421 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019, Nosy
+# This file is distributed under the same license as the wxadev package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: wxadev \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-09 22:55+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/component/navigator.rst:4
+msgid ":wx_comp:`navigator`"
+msgstr ""
+
+#: ../../source/component/navigator.rst:6
+msgid "低版本需做 :ref:`compatibility` 。"
+msgstr ""
+
+#: ../../source/component/navigator.rst:8
+msgid "页面链接。"
+msgstr ""
+
+#: ../../source/component/navigator.rst:11
+msgid "属性"
+msgstr ""
+
+#: ../../source/component/navigator.rst:11
+msgid "类型"
+msgstr ""
+
+#: ../../source/component/navigator.rst:11
+msgid "默认值"
+msgstr ""
+
+#: ../../source/component/navigator.rst:11
+msgid "必填"
+msgstr ""
+
+#: ../../source/component/navigator.rst:11
+#: ../../source/component/navigator.rst:47
+#: ../../source/component/navigator.rst:57
+#: ../../source/component/navigator.rst:75
+msgid "说明"
+msgstr ""
+
+#: ../../source/component/navigator.rst:11
+#: ../../source/component/navigator.rst:57
+msgid "最低版本"
+msgstr ""
+
+#: ../../source/component/navigator.rst:13
+msgid "target"
+msgstr ""
+
+#: ../../source/component/navigator.rst:13
+#: ../../source/component/navigator.rst:15
+#: ../../source/component/navigator.rst:17
+#: ../../source/component/navigator.rst:21
+#: ../../source/component/navigator.rst:23
+#: ../../source/component/navigator.rst:27
+#: ../../source/component/navigator.rst:29
+#: ../../source/component/navigator.rst:37
+#: ../../source/component/navigator.rst:39
+#: ../../source/component/navigator.rst:41
+msgid "string"
+msgstr ""
+
+#: ../../source/component/navigator.rst:13
+#: ../../source/component/navigator.rst:49
+msgid "self"
+msgstr ""
+
+#: ../../source/component/navigator.rst:13
+#: ../../source/component/navigator.rst:15
+#: ../../source/component/navigator.rst:17
+#: ../../source/component/navigator.rst:19
+#: ../../source/component/navigator.rst:21
+#: ../../source/component/navigator.rst:23
+#: ../../source/component/navigator.rst:25
+#: ../../source/component/navigator.rst:27
+#: ../../source/component/navigator.rst:29
+#: ../../source/component/navigator.rst:31
+#: ../../source/component/navigator.rst:33
+#: ../../source/component/navigator.rst:35
+#: ../../source/component/navigator.rst:37
+#: ../../source/component/navigator.rst:39
+#: ../../source/component/navigator.rst:41
+msgid "否"
+msgstr ""
+
+#: ../../source/component/navigator.rst:13
+msgid "在哪个目标上发生跳转，默认当前小程序"
+msgstr ""
+
+#: ../../source/component/navigator.rst:13
+#: ../../source/component/navigator.rst:21
+#: ../../source/component/navigator.rst:23
+#: ../../source/component/navigator.rst:25
+#: ../../source/component/navigator.rst:27
+#: ../../source/component/navigator.rst:37
+#: ../../source/component/navigator.rst:39
+#: ../../source/component/navigator.rst:41
+msgid "2.0.7"
+msgstr ""
+
+#: ../../source/component/navigator.rst:15
+msgid "url"
+msgstr ""
+
+#: ../../source/component/navigator.rst:15
+msgid "当前小程序内的跳转链接"
+msgstr ""
+
+#: ../../source/component/navigator.rst:15
+#: ../../source/component/navigator.rst:17
+#: ../../source/component/navigator.rst:19
+#: ../../source/component/navigator.rst:29
+#: ../../source/component/navigator.rst:33
+#: ../../source/component/navigator.rst:35
+msgid "1.0.0"
+msgstr ""
+
+#: ../../source/component/navigator.rst:17
+msgid "open-type"
+msgstr ""
+
+#: ../../source/component/navigator.rst:17
+#: ../../source/component/navigator.rst:59
+msgid "navigate"
+msgstr ""
+
+#: ../../source/component/navigator.rst:17
+msgid "跳转方式"
+msgstr ""
+
+#: ../../source/component/navigator.rst:19
+msgid "delta"
+msgstr ""
+
+#: ../../source/component/navigator.rst:19
+#: ../../source/component/navigator.rst:33
+#: ../../source/component/navigator.rst:35
+msgid "number"
+msgstr ""
+
+#: ../../source/component/navigator.rst:19
+msgid "1"
+msgstr ""
+
+#: ../../source/component/navigator.rst:19
+msgid "当 open-type 为 'navigateBack' 时有效，表示回退的层数"
+msgstr ""
+
+#: ../../source/component/navigator.rst:21
+msgid "app-id"
+msgstr ""
+
+#: ../../source/component/navigator.rst:21
+msgid "当target=\"miniProgram\"时有效，要打开的小程序 appId"
+msgstr ""
+
+#: ../../source/component/navigator.rst:23
+msgid "path"
+msgstr ""
+
+#: ../../source/component/navigator.rst:23
+msgid "当target=\"miniProgram\"时有效，打开的页面路径，如果为空则打开首页"
+msgstr ""
+
+#: ../../source/component/navigator.rst:25
+msgid "extra-data"
+msgstr ""
+
+#: ../../source/component/navigator.rst:25
+msgid "object"
+msgstr ""
+
+#: ../../source/component/navigator.rst:25
+msgid "当target=\"miniProgram\"时有效，需要传递给目标小程序的数据，目标小程序可在 App.onLaunch()，App.onShow() 中获取到这份数据。详情"
+msgstr ""
+
+#: ../../source/component/navigator.rst:27
+msgid "version"
+msgstr ""
+
+#: ../../source/component/navigator.rst:27
+#: ../../source/component/navigator.rst:81
+msgid "release"
+msgstr ""
+
+#: ../../source/component/navigator.rst:27
+msgid "当target=\"miniProgram\"时有效，要打开的小程序版本"
+msgstr ""
+
+#: ../../source/component/navigator.rst:29
+msgid "hover-class"
+msgstr ""
+
+#: ../../source/component/navigator.rst:29
+msgid "navigator-hover"
+msgstr ""
+
+#: ../../source/component/navigator.rst:29
+msgid "指定点击时的样式类，当hover-class=\"none\"时，没有点击态效果"
+msgstr ""
+
+#: ../../source/component/navigator.rst:31
+msgid "hover-stop-propagation"
+msgstr ""
+
+#: ../../source/component/navigator.rst:31
+msgid "boolean"
+msgstr ""
+
+#: ../../source/component/navigator.rst:31
+msgid "false"
+msgstr ""
+
+#: ../../source/component/navigator.rst:31
+msgid "指定是否阻止本节点的祖先节点出现点击态"
+msgstr ""
+
+#: ../../source/component/navigator.rst:31
+msgid "1.5.0"
+msgstr ""
+
+#: ../../source/component/navigator.rst:33
+msgid "hover-start-time"
+msgstr ""
+
+#: ../../source/component/navigator.rst:33
+msgid "50"
+msgstr ""
+
+#: ../../source/component/navigator.rst:33
+msgid "按住后多久出现点击态，单位毫秒"
+msgstr ""
+
+#: ../../source/component/navigator.rst:35
+msgid "hover-stay-time"
+msgstr ""
+
+#: ../../source/component/navigator.rst:35
+msgid "600"
+msgstr ""
+
+#: ../../source/component/navigator.rst:35
+msgid "手指松开后点击态保留时间，单位毫秒"
+msgstr ""
+
+#: ../../source/component/navigator.rst:37
+msgid "bindsuccess"
+msgstr ""
+
+#: ../../source/component/navigator.rst:37
+msgid "当target=\"miniProgram\"时有效，跳转小程序成功"
+msgstr ""
+
+#: ../../source/component/navigator.rst:39
+msgid "bindfail"
+msgstr ""
+
+#: ../../source/component/navigator.rst:39
+msgid "当target=\"miniProgram\"时有效，跳转小程序失败"
+msgstr ""
+
+#: ../../source/component/navigator.rst:41
+msgid "bindcomplete"
+msgstr ""
+
+#: ../../source/component/navigator.rst:41
+msgid "当target=\"miniProgram\"时有效，跳转小程序完成"
+msgstr ""
+
+#: ../../source/component/navigator.rst:44
+msgid "target 的合法值"
+msgstr ""
+
+#: ../../source/component/navigator.rst:47
+#: ../../source/component/navigator.rst:57
+#: ../../source/component/navigator.rst:75
+msgid "值"
+msgstr ""
+
+#: ../../source/component/navigator.rst:49
+msgid "当前小程序"
+msgstr ""
+
+#: ../../source/component/navigator.rst:51
+msgid "miniProgram"
+msgstr ""
+
+#: ../../source/component/navigator.rst:51
+msgid "其它小程序"
+msgstr ""
+
+#: ../../source/component/navigator.rst:54
+msgid "open-type 的合法值"
+msgstr ""
+
+#: ../../source/component/navigator.rst:59
+msgid "对应 wx.navigateTo 或 wx.navigateToMiniProgram 的功能"
+msgstr ""
+
+#: ../../source/component/navigator.rst:61
+msgid "redirect"
+msgstr ""
+
+#: ../../source/component/navigator.rst:61
+msgid "对应 wx.redirectTo 的功能"
+msgstr ""
+
+#: ../../source/component/navigator.rst:63
+msgid "switchTab"
+msgstr ""
+
+#: ../../source/component/navigator.rst:63
+msgid "对应 wx.switchTab 的功能"
+msgstr ""
+
+#: ../../source/component/navigator.rst:65
+msgid "reLaunch"
+msgstr ""
+
+#: ../../source/component/navigator.rst:65
+msgid "对应 wx.reLaunch 的功能"
+msgstr ""
+
+#: ../../source/component/navigator.rst:65
+#: ../../source/component/navigator.rst:67
+msgid "1.1.0"
+msgstr ""
+
+#: ../../source/component/navigator.rst:67
+msgid "navigateBack"
+msgstr ""
+
+#: ../../source/component/navigator.rst:67
+msgid "对应 wx.navigateBack 的功能"
+msgstr ""
+
+#: ../../source/component/navigator.rst:69
+msgid "exit"
+msgstr ""
+
+#: ../../source/component/navigator.rst:69
+msgid "退出小程序，target=\"miniProgram\"时生效"
+msgstr ""
+
+#: ../../source/component/navigator.rst:69
+msgid "2.1.0"
+msgstr ""
+
+#: ../../source/component/navigator.rst:72
+msgid "version 的合法值"
+msgstr ""
+
+#: ../../source/component/navigator.rst:77
+msgid "develop"
+msgstr ""
+
+#: ../../source/component/navigator.rst:77
+msgid "开发版"
+msgstr ""
+
+#: ../../source/component/navigator.rst:79
+msgid "trial"
+msgstr ""
+
+#: ../../source/component/navigator.rst:79
+msgid "体验版"
+msgstr ""
+
+#: ../../source/component/navigator.rst:81
+msgid "正式版，仅在当前小程序为开发版或体验版时此参数有效；如果当前小程序是正式版，则打开的小程序必定是正式版。"
+msgstr ""
+
+#: ../../source/component/navigator.rst:85
+msgid "使用限制"
+msgstr ""
+
+#: ../../source/component/navigator.rst:87
+msgid "需要用户确认跳转 从 2.3.0 版本开始，在跳转至其他小程序前，将统一增加弹窗，询问是否跳转， 用户确认后才可以跳转其他小程序。如果用户点击取消，则回调 fail cancel。"
+msgstr ""
+
+#: ../../source/component/navigator.rst:89
+msgid "每个小程序可跳转的其他小程序数量限制为不超过 10 个 从 2.4.0 版本以及指定日期（具体待定）开始， 开发者提交新版小程序代码时，如使用了跳转其他小程序功能，则需要在代码配置中声明将要跳转的小程序名单， 限定不超过 10 个，否则将无法通过审核。该名单可在发布新版时更新，不支持动态修改。 配置方法详见 配置。调用此接口时，所跳转的 appId 必须在配置列表中， 否则回调 fail appId \"${appId}\" is not in navigateToMiniProgramAppIdList。"
+msgstr ""
+
+#: ../../source/component/navigator.rst:96
+msgid "关于调试"
+msgstr ""
+
+#: ../../source/component/navigator.rst:98
+msgid "在开发者工具上调用此 API 并不会真实的跳转到另外的小程序，但是开发者工具会校验本次调用跳转是否成功。详情"
+msgstr ""
+
+#: ../../source/component/navigator.rst:99
+msgid "开发者工具上支持被跳转的小程序处理接收参数的调试。详情"
+msgstr ""
+
+#: ../../source/component/navigator.rst:101
+msgid "navigator-hover 默认为 {background-color: rgba(0, 0, 0, 0.1); opacity: 0.7;}, <navigator> 的子节点背景色应为透明色"
+msgstr ""
+
+#: ../../source/component/navigator.rst:104
+msgid "示例代码"
+msgstr ""
+
+#: ../../source/component/navigator.rst:106
+msgid ":download:`在开发者工具中预览效果 <https://developers.weixin.qq.com/s/2Ec11cmI6BY1>`"
+msgstr ""
+

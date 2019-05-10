@@ -1,0 +1,159 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019, Nosy
+# This file is distributed under the same license as the wxadev package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: wxadev \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-09 22:55+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/api/LivePlayerContext.rst:2
+msgid ":wxapi:`LivePlayerContext`"
+msgstr ""
+
+#: ../../source/api/LivePlayerContext.rst:6
+msgid "低版本需做 :ref:`compatibility` 。"
+msgstr ""
+
+#: ../../source/api/LivePlayerContext.rst:8
+msgid "创建 live-player 上下文 LivePlayerContext 对象。"
+msgstr ""
+
+#: ../../source/api/LivePlayerContext.rst:0
+#: ../../source/api/LivePlayerContext.rst:0
+#: ../../source/api/LivePlayerContext.rst:0
+#: ../../source/api/LivePlayerContext.rst:0
+#: ../../source/api/LivePlayerContext.rst:0
+#: ../../source/api/LivePlayerContext.rst:0
+#: ../../source/api/LivePlayerContext.rst:0
+#: ../../source/api/LivePlayerContext.rst:0
+msgid "参数"
+msgstr ""
+
+#: ../../source/api/LivePlayerContext.rst:10
+msgid ":ref:`<live-player> <live-player>` 组件的 id"
+msgstr ""
+
+#: ../../source/api/LivePlayerContext.rst:11
+msgid "在自定义组件下，当前组件实例的this，以操作组件内 :ref:`<live-player> <live-player>` 组件"
+msgstr ""
+
+#: ../../source/api/LivePlayerContext.rst:0
+msgid "返回"
+msgstr ""
+
+#: ../../source/api/LivePlayerContext.rst:12
+msgid ":class:`LivePlayerContext`"
+msgstr ""
+
+#: ../../source/api/LivePlayerContext.rst:16
+msgid "LivePlayerContext 实例，可通过 :func:`wx.createLivePlayerContext` 获取。"
+msgstr ""
+
+#: ../../source/api/LivePlayerContext.rst:18
+msgid "livePlayerContext 通过 id 跟一个 <:ref:`live-player`> 组件绑定，操作对应的 :ref:`<live-player> <live-player>` 组件。"
+msgstr ""
+
+#: ../../source/api/LivePlayerContext.rst:21
+msgid "方法"
+msgstr ""
+
+#: ../../source/api/LivePlayerContext.rst:25
+msgid "播放"
+msgstr ""
+
+#: ../../source/api/LivePlayerContext.rst:27
+#: ../../source/api/LivePlayerContext.rst:35
+#: ../../source/api/LivePlayerContext.rst:43
+#: ../../source/api/LivePlayerContext.rst:51
+#: ../../source/api/LivePlayerContext.rst:61
+#: ../../source/api/LivePlayerContext.rst:75
+#: ../../source/api/LivePlayerContext.rst:83
+msgid "接口调用成功的回调函数"
+msgstr ""
+
+#: ../../source/api/LivePlayerContext.rst:28
+#: ../../source/api/LivePlayerContext.rst:36
+#: ../../source/api/LivePlayerContext.rst:44
+#: ../../source/api/LivePlayerContext.rst:52
+#: ../../source/api/LivePlayerContext.rst:62
+#: ../../source/api/LivePlayerContext.rst:76
+#: ../../source/api/LivePlayerContext.rst:84
+msgid "接口调用失败的回调函数"
+msgstr ""
+
+#: ../../source/api/LivePlayerContext.rst:29
+#: ../../source/api/LivePlayerContext.rst:37
+#: ../../source/api/LivePlayerContext.rst:45
+#: ../../source/api/LivePlayerContext.rst:53
+#: ../../source/api/LivePlayerContext.rst:63
+#: ../../source/api/LivePlayerContext.rst:77
+#: ../../source/api/LivePlayerContext.rst:85
+msgid "接口调用结束的回调函数（调用成功、失败都会执行）"
+msgstr ""
+
+#: ../../source/api/LivePlayerContext.rst:33
+msgid "停止"
+msgstr ""
+
+#: ../../source/api/LivePlayerContext.rst:41
+msgid "静音"
+msgstr ""
+
+#: ../../source/api/LivePlayerContext.rst:49
+msgid "暂停"
+msgstr ""
+
+#: ../../source/api/LivePlayerContext.rst:57
+msgid "低版本需做 :ref:`compatibility`"
+msgstr ""
+
+#: ../../source/api/LivePlayerContext.rst:59
+msgid "恢复"
+msgstr ""
+
+#: ../../source/api/LivePlayerContext.rst:67
+msgid "进入全屏"
+msgstr ""
+
+#: ../../source/api/LivePlayerContext.rst:69
+msgid "``0``        设置全屏时的方向  - *0*       正常竖向 - *90*      屏幕逆时针90度 - *-90*     屏幕顺时针90度"
+msgstr ""
+
+#: ../../source/api/LivePlayerContext.rst:69
+msgid "``0``        设置全屏时的方向"
+msgstr ""
+
+#: ../../source/api/LivePlayerContext.rst:71
+msgid "*0*       正常竖向"
+msgstr ""
+
+#: ../../source/api/LivePlayerContext.rst:72
+msgid "*90*      屏幕逆时针90度"
+msgstr ""
+
+#: ../../source/api/LivePlayerContext.rst:73
+msgid "*-90*     屏幕顺时针90度"
+msgstr ""
+
+#: ../../source/api/LivePlayerContext.rst:81
+msgid "退出全屏"
+msgstr ""
+
+#: ../../source/api/LivePlayerContext.rst:87
+msgid "示例代码"
+msgstr ""
+
+#: ../../source/api/LivePlayerContext.rst:89
+msgid ":download:`在开发者工具中预览效果 <https://developers.weixin.qq.com/s/UzWEzmm763Y4>`"
+msgstr ""
+

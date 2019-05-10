@@ -1,0 +1,144 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019, Nosy
+# This file is distributed under the same license as the wxadev package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: wxadev \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-09 22:55+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/component/view.rst:4
+msgid ":wx_comp:`view`"
+msgstr ""
+
+#: ../../source/component/view.rst:6
+msgid "低版本需做 :ref:`compatibility` 。"
+msgstr ""
+
+#: ../../source/component/view.rst:8
+msgid "视图容器"
+msgstr ""
+
+#: ../../source/component/view.rst:11
+msgid "属性"
+msgstr ""
+
+#: ../../source/component/view.rst:11
+msgid "类型"
+msgstr ""
+
+#: ../../source/component/view.rst:11
+msgid "默认值"
+msgstr ""
+
+#: ../../source/component/view.rst:11
+msgid "必填"
+msgstr ""
+
+#: ../../source/component/view.rst:11
+msgid "说明"
+msgstr ""
+
+#: ../../source/component/view.rst:11
+msgid "最低版本"
+msgstr ""
+
+#: ../../source/component/view.rst:13
+msgid "hover-class"
+msgstr ""
+
+#: ../../source/component/view.rst:13
+msgid "string"
+msgstr ""
+
+#: ../../source/component/view.rst:13
+msgid "none"
+msgstr ""
+
+#: ../../source/component/view.rst:13
+#: ../../source/component/view.rst:15
+#: ../../source/component/view.rst:17
+#: ../../source/component/view.rst:19
+msgid "否"
+msgstr ""
+
+#: ../../source/component/view.rst:13
+msgid "指定按下去的样式类。当 ``hover-class=\"none\"`` 时，没有点击态效果"
+msgstr ""
+
+#: ../../source/component/view.rst:13
+#: ../../source/component/view.rst:17
+#: ../../source/component/view.rst:19
+msgid "1.0.0"
+msgstr ""
+
+#: ../../source/component/view.rst:15
+msgid "hover-stop-propagation"
+msgstr ""
+
+#: ../../source/component/view.rst:15
+msgid "boolean"
+msgstr ""
+
+#: ../../source/component/view.rst:15
+msgid "false"
+msgstr ""
+
+#: ../../source/component/view.rst:15
+msgid "指定是否阻止本节点的祖先节点出现点击态"
+msgstr ""
+
+#: ../../source/component/view.rst:15
+msgid "1.5.0"
+msgstr ""
+
+#: ../../source/component/view.rst:17
+msgid "hover-start-time"
+msgstr ""
+
+#: ../../source/component/view.rst:17
+#: ../../source/component/view.rst:19
+msgid "number"
+msgstr ""
+
+#: ../../source/component/view.rst:17
+msgid "50"
+msgstr ""
+
+#: ../../source/component/view.rst:17
+msgid "按住后多久出现点击态，单位毫秒"
+msgstr ""
+
+#: ../../source/component/view.rst:19
+msgid "hover-stay-time"
+msgstr ""
+
+#: ../../source/component/view.rst:19
+msgid "400"
+msgstr ""
+
+#: ../../source/component/view.rst:19
+msgid "手指松开后点击态保留时间，单位毫秒"
+msgstr ""
+
+#: ../../source/component/view.rst:22
+msgid "如果需要使用滚动视图，请使用 :ref:`scroll-view`"
+msgstr ""
+
+#: ../../source/component/view.rst:24
+msgid "示例代码"
+msgstr ""
+
+#: ../../source/component/view.rst:26
+msgid ":download:`在开发者工具中预览效果 <https://developers.weixin.qq.com/s/eJwL4bmd6mY3>`"
+msgstr ""
+

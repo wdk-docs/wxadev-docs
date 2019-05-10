@@ -1,0 +1,716 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019, Nosy
+# This file is distributed under the same license as the wxadev package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: wxadev \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-09 22:55+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../../source/component/video.rst:4
+msgid ":wx_comp:`video ☁️ <video>`"
+msgstr ""
+
+#: ../../source/component/video.rst:6
+msgid "低版本需做 :ref:`compatibility` 。"
+msgstr ""
+
+#: ../../source/component/video.rst:8
+msgid "支持云文件ID。"
+msgstr ""
+
+#: ../../source/component/video.rst:10
+msgid "视频组件。相关api：:func:`wx.createVideoContext`"
+msgstr ""
+
+#: ../../source/component/video.rst:13 ../../source/component/video.rst:119
+msgid "属性"
+msgstr ""
+
+#: ../../source/component/video.rst:13 ../../source/component/video.rst:119
+msgid "类型"
+msgstr ""
+
+#: ../../source/component/video.rst:13
+msgid "默认值"
+msgstr ""
+
+#: ../../source/component/video.rst:13 ../../source/component/video.rst:119
+msgid "必填"
+msgstr ""
+
+#: ../../source/component/video.rst:13 ../../source/component/video.rst:119
+#: ../../source/component/video.rst:141 ../../source/component/video.rst:153
+#: ../../source/component/video.rst:165
+msgid "说明"
+msgstr ""
+
+#: ../../source/component/video.rst:13 ../../source/component/video.rst:119
+msgid "最低版本"
+msgstr ""
+
+#: ../../source/component/video.rst:15
+msgid "src"
+msgstr ""
+
+#: ../../source/component/video.rst:15 ../../source/component/video.rst:71
+#: ../../source/component/video.rst:77 ../../source/component/video.rst:87
+#: ../../source/component/video.rst:89
+msgid "string"
+msgstr ""
+
+#: ../../source/component/video.rst:15
+msgid "是"
+msgstr ""
+
+#: ../../source/component/video.rst:15
+msgid "要播放视频的资源地址，"
+msgstr ""
+
+#: ../../source/component/video.rst:17
+msgid "支持云文件ID(2.3.0)"
+msgstr ""
+
+#: ../../source/component/video.rst:17 ../../source/component/video.rst:23
+#: ../../source/component/video.rst:25 ../../source/component/video.rst:31
+#: ../../source/component/video.rst:37 ../../source/component/video.rst:39
+#: ../../source/component/video.rst:75 ../../source/component/video.rst:83
+#: ../../source/component/video.rst:121 ../../source/component/video.rst:123
+#: ../../source/component/video.rst:125 ../../source/component/video.rst:127
+msgid "1.0.0"
+msgstr ""
+
+#: ../../source/component/video.rst:19
+msgid "duration"
+msgstr ""
+
+#: ../../source/component/video.rst:19 ../../source/component/video.rst:45
+#: ../../source/component/video.rst:53
+msgid "number"
+msgstr ""
+
+#: ../../source/component/video.rst:19 ../../source/component/video.rst:21
+#: ../../source/component/video.rst:25 ../../source/component/video.rst:27
+#: ../../source/component/video.rst:33 ../../source/component/video.rst:39
+#: ../../source/component/video.rst:41 ../../source/component/video.rst:43
+#: ../../source/component/video.rst:45 ../../source/component/video.rst:47
+#: ../../source/component/video.rst:53 ../../source/component/video.rst:57
+#: ../../source/component/video.rst:61 ../../source/component/video.rst:63
+#: ../../source/component/video.rst:67 ../../source/component/video.rst:69
+#: ../../source/component/video.rst:71 ../../source/component/video.rst:77
+#: ../../source/component/video.rst:85 ../../source/component/video.rst:87
+#: ../../source/component/video.rst:89 ../../source/component/video.rst:91
+#: ../../source/component/video.rst:95 ../../source/component/video.rst:99
+#: ../../source/component/video.rst:103 ../../source/component/video.rst:109
+#: ../../source/component/video.rst:121 ../../source/component/video.rst:123
+#: ../../source/component/video.rst:125 ../../source/component/video.rst:127
+#: ../../source/component/video.rst:129 ../../source/component/video.rst:131
+#: ../../source/component/video.rst:133 ../../source/component/video.rst:135
+msgid "否"
+msgstr ""
+
+#: ../../source/component/video.rst:19
+msgid "指定视频时长"
+msgstr ""
+
+#: ../../source/component/video.rst:19
+msgid "1.1.0"
+msgstr ""
+
+#: ../../source/component/video.rst:21
+msgid "controls"
+msgstr ""
+
+#: ../../source/component/video.rst:21 ../../source/component/video.rst:27
+#: ../../source/component/video.rst:33 ../../source/component/video.rst:39
+#: ../../source/component/video.rst:41 ../../source/component/video.rst:43
+#: ../../source/component/video.rst:47 ../../source/component/video.rst:57
+#: ../../source/component/video.rst:61 ../../source/component/video.rst:63
+#: ../../source/component/video.rst:67 ../../source/component/video.rst:69
+#: ../../source/component/video.rst:85 ../../source/component/video.rst:91
+#: ../../source/component/video.rst:95 ../../source/component/video.rst:99
+#: ../../source/component/video.rst:103 ../../source/component/video.rst:109
+msgid "boolean"
+msgstr ""
+
+#: ../../source/component/video.rst:21 ../../source/component/video.rst:57
+#: ../../source/component/video.rst:61 ../../source/component/video.rst:63
+#: ../../source/component/video.rst:67 ../../source/component/video.rst:69
+#: ../../source/component/video.rst:95 ../../source/component/video.rst:99
+#: ../../source/component/video.rst:109
+msgid "true"
+msgstr ""
+
+#: ../../source/component/video.rst:21
+msgid "是否显示默认播放控件"
+msgstr ""
+
+#: ../../source/component/video.rst:23
+msgid "(播放/暂停按钮、播放进度、时间)"
+msgstr ""
+
+#: ../../source/component/video.rst:25
+msgid "danmu-list"
+msgstr ""
+
+#: ../../source/component/video.rst:25
+msgid "Array.<object>"
+msgstr ""
+
+#: ../../source/component/video.rst:25
+msgid "弹幕列表"
+msgstr ""
+
+#: ../../source/component/video.rst:27
+msgid "danmu-btn"
+msgstr ""
+
+#: ../../source/component/video.rst:27 ../../source/component/video.rst:33
+#: ../../source/component/video.rst:39 ../../source/component/video.rst:41
+#: ../../source/component/video.rst:43 ../../source/component/video.rst:47
+#: ../../source/component/video.rst:85 ../../source/component/video.rst:91
+#: ../../source/component/video.rst:103
+msgid "false"
+msgstr ""
+
+#: ../../source/component/video.rst:27
+msgid "是否显示弹幕按钮，"
+msgstr ""
+
+#: ../../source/component/video.rst:29 ../../source/component/video.rst:35
+msgid "只在初始化时有效，"
+msgstr ""
+
+#: ../../source/component/video.rst:31 ../../source/component/video.rst:37
+msgid "不能动态变更"
+msgstr ""
+
+#: ../../source/component/video.rst:33
+msgid "enable-danmu"
+msgstr ""
+
+#: ../../source/component/video.rst:33
+msgid "是否展示弹幕，"
+msgstr ""
+
+#: ../../source/component/video.rst:39
+msgid "autoplay"
+msgstr ""
+
+#: ../../source/component/video.rst:39
+msgid "是否自动播放"
+msgstr ""
+
+#: ../../source/component/video.rst:41
+msgid "loop"
+msgstr ""
+
+#: ../../source/component/video.rst:41
+msgid "是否循环播放"
+msgstr ""
+
+#: ../../source/component/video.rst:41 ../../source/component/video.rst:43
+#: ../../source/component/video.rst:129
+msgid "1.4.0"
+msgstr ""
+
+#: ../../source/component/video.rst:43
+msgid "muted"
+msgstr ""
+
+#: ../../source/component/video.rst:43
+msgid "是否静音播放"
+msgstr ""
+
+#: ../../source/component/video.rst:45
+msgid "initial-time"
+msgstr ""
+
+#: ../../source/component/video.rst:45 ../../source/component/video.rst:143
+msgid "0"
+msgstr ""
+
+#: ../../source/component/video.rst:45
+msgid "指定视频初始播放位置"
+msgstr ""
+
+#: ../../source/component/video.rst:45 ../../source/component/video.rst:51
+msgid "1.6.0"
+msgstr ""
+
+#: ../../source/component/video.rst:47
+msgid "page-gesture"
+msgstr ""
+
+#: ../../source/component/video.rst:47
+msgid "在非全屏模式下，"
+msgstr ""
+
+#: ../../source/component/video.rst:49
+msgid "是否开启亮度与音量调节手势"
+msgstr ""
+
+#: ../../source/component/video.rst:51
+msgid "(废弃，见 vslide-gesture)"
+msgstr ""
+
+#: ../../source/component/video.rst:53
+msgid "direction"
+msgstr ""
+
+#: ../../source/component/video.rst:53
+msgid "设置全屏时视频的方向，"
+msgstr ""
+
+#: ../../source/component/video.rst:55
+msgid "不指定则根据宽高比自动判断"
+msgstr ""
+
+#: ../../source/component/video.rst:55 ../../source/component/video.rst:131
+#: ../../source/component/video.rst:133
+msgid "1.7.0"
+msgstr ""
+
+#: ../../source/component/video.rst:57
+msgid "show-progress"
+msgstr ""
+
+#: ../../source/component/video.rst:57
+msgid "若不设置，宽度大于"
+msgstr ""
+
+#: ../../source/component/video.rst:59
+msgid "240时才会显示"
+msgstr ""
+
+#: ../../source/component/video.rst:59 ../../source/component/video.rst:61
+#: ../../source/component/video.rst:65 ../../source/component/video.rst:67
+#: ../../source/component/video.rst:69
+msgid "1.9.0"
+msgstr ""
+
+#: ../../source/component/video.rst:61
+msgid "show-fullscreen-btn"
+msgstr ""
+
+#: ../../source/component/video.rst:61
+msgid "是否显示全屏按钮"
+msgstr ""
+
+#: ../../source/component/video.rst:63
+msgid "show-play-btn"
+msgstr ""
+
+#: ../../source/component/video.rst:63
+msgid "是否显示视频底部"
+msgstr ""
+
+#: ../../source/component/video.rst:65
+msgid "控制栏的播放按钮"
+msgstr ""
+
+#: ../../source/component/video.rst:67
+msgid "show-center-play-btn"
+msgstr ""
+
+#: ../../source/component/video.rst:67
+msgid "是否显示视频中间的播放按钮"
+msgstr ""
+
+#: ../../source/component/video.rst:69
+msgid "enable-progress-gesture"
+msgstr ""
+
+#: ../../source/component/video.rst:69
+msgid "是否开启控制进度的手势"
+msgstr ""
+
+#: ../../source/component/video.rst:71
+msgid "object-fit"
+msgstr ""
+
+#: ../../source/component/video.rst:71 ../../source/component/video.rst:155
+msgid "contain"
+msgstr ""
+
+#: ../../source/component/video.rst:71
+msgid "当视频大小与 video"
+msgstr ""
+
+#: ../../source/component/video.rst:73
+msgid "容器大小不一致时，"
+msgstr ""
+
+#: ../../source/component/video.rst:75
+msgid "视频的表现形式"
+msgstr ""
+
+#: ../../source/component/video.rst:77
+msgid "poster"
+msgstr ""
+
+#: ../../source/component/video.rst:77
+msgid "视频封面的图片网络资源地址"
+msgstr ""
+
+#: ../../source/component/video.rst:79
+msgid "或云文件ID(2.3.0)"
+msgstr ""
+
+#: ../../source/component/video.rst:81
+msgid "若 controls 属性值为 false"
+msgstr ""
+
+#: ../../source/component/video.rst:83
+msgid "则设置 poster 无效"
+msgstr ""
+
+#: ../../source/component/video.rst:85
+msgid "show-mute-btn"
+msgstr ""
+
+#: ../../source/component/video.rst:85
+msgid "是否显示静音按钮"
+msgstr ""
+
+#: ../../source/component/video.rst:85 ../../source/component/video.rst:87
+#: ../../source/component/video.rst:89 ../../source/component/video.rst:93
+#: ../../source/component/video.rst:135
+msgid "2.4.0"
+msgstr ""
+
+#: ../../source/component/video.rst:87
+msgid "title"
+msgstr ""
+
+#: ../../source/component/video.rst:87
+msgid "视频的标题，全屏时在顶部展示"
+msgstr ""
+
+#: ../../source/component/video.rst:89
+msgid "play-btn-position"
+msgstr ""
+
+#: ../../source/component/video.rst:89 ../../source/component/video.rst:167
+msgid "bottom"
+msgstr ""
+
+#: ../../source/component/video.rst:89
+msgid "播放按钮的位置"
+msgstr ""
+
+#: ../../source/component/video.rst:91
+msgid "enable-play-gesture"
+msgstr ""
+
+#: ../../source/component/video.rst:91
+msgid "是否开启播放手势，"
+msgstr ""
+
+#: ../../source/component/video.rst:93
+msgid "即双击切换播放/暂停"
+msgstr ""
+
+#: ../../source/component/video.rst:95
+msgid "auto-pause-if-navigate"
+msgstr ""
+
+#: ../../source/component/video.rst:95
+msgid "当跳转到其它小程序页面时，"
+msgstr ""
+
+#: ../../source/component/video.rst:97 ../../source/component/video.rst:101
+msgid "是否自动暂停本页面的视频"
+msgstr ""
+
+#: ../../source/component/video.rst:97 ../../source/component/video.rst:101
+msgid "2.5.0"
+msgstr ""
+
+#: ../../source/component/video.rst:99
+msgid "auto-pause-if-open-native"
+msgstr ""
+
+#: ../../source/component/video.rst:99
+msgid "当跳转到其它微信原生页面时，"
+msgstr ""
+
+#: ../../source/component/video.rst:103
+msgid "vslide-gesture"
+msgstr ""
+
+#: ../../source/component/video.rst:103
+msgid "在非全屏模式下，是否开启亮度"
+msgstr ""
+
+#: ../../source/component/video.rst:105 ../../source/component/video.rst:111
+msgid "与音量调节手势"
+msgstr ""
+
+#: ../../source/component/video.rst:107
+msgid "(同 page-gesture)"
+msgstr ""
+
+#: ../../source/component/video.rst:107 ../../source/component/video.rst:111
+msgid "2.6.2"
+msgstr ""
+
+#: ../../source/component/video.rst:109
+msgid "vslide-gesture-in-fullscreen"
+msgstr ""
+
+#: ../../source/component/video.rst:109
+msgid "在全屏模式下，是否开启亮度"
+msgstr ""
+
+#: ../../source/component/video.rst:114
+msgid "video 组件 绑定事件"
+msgstr ""
+
+#: ../../source/component/video.rst:121
+msgid "bindplay"
+msgstr ""
+
+#: ../../source/component/video.rst:121 ../../source/component/video.rst:123
+#: ../../source/component/video.rst:125 ../../source/component/video.rst:127
+#: ../../source/component/video.rst:129 ../../source/component/video.rst:131
+#: ../../source/component/video.rst:133 ../../source/component/video.rst:135
+msgid "eventhandle"
+msgstr ""
+
+#: ../../source/component/video.rst:121
+msgid "当开始/继续播放时触发play事件"
+msgstr ""
+
+#: ../../source/component/video.rst:123
+msgid "bindpause"
+msgstr ""
+
+#: ../../source/component/video.rst:123
+msgid "当暂停播放时触发 pause 事件"
+msgstr ""
+
+#: ../../source/component/video.rst:125
+msgid "bindended"
+msgstr ""
+
+#: ../../source/component/video.rst:125
+msgid "当播放到末尾时触发 ended 事件"
+msgstr ""
+
+#: ../../source/component/video.rst:127
+msgid "bindtimeupdate"
+msgstr ""
+
+#: ../../source/component/video.rst:127
+msgid "播放进度变化时触发，event.detail = {currentTime, duration} 。触发频率 250ms 一次"
+msgstr ""
+
+#: ../../source/component/video.rst:129
+msgid "bindfullscreenchange"
+msgstr ""
+
+#: ../../source/component/video.rst:129
+msgid ""
+"视频进入和退出全屏时触发，event.detail = {fullScreen, direction}，direction 有效值为 "
+"vertical 或 horizontal"
+msgstr ""
+
+#: ../../source/component/video.rst:131
+msgid "bindwaiting"
+msgstr ""
+
+#: ../../source/component/video.rst:131
+msgid "视频出现缓冲时触发"
+msgstr ""
+
+#: ../../source/component/video.rst:133
+msgid "binderror"
+msgstr ""
+
+#: ../../source/component/video.rst:133
+msgid "视频播放出错时触发"
+msgstr ""
+
+#: ../../source/component/video.rst:135
+msgid "bindprogress"
+msgstr ""
+
+#: ../../source/component/video.rst:135
+msgid "加载进度变化时触发，只支持一段加载。event.detail = {buffered}，百分比"
+msgstr ""
+
+#: ../../source/component/video.rst:138
+msgid "direction 的合法值"
+msgstr ""
+
+#: ../../source/component/video.rst:141 ../../source/component/video.rst:153
+#: ../../source/component/video.rst:165
+msgid "值"
+msgstr ""
+
+#: ../../source/component/video.rst:143
+msgid "正常竖向"
+msgstr ""
+
+#: ../../source/component/video.rst:145
+msgid "90"
+msgstr ""
+
+#: ../../source/component/video.rst:145
+msgid "屏幕逆时针90度"
+msgstr ""
+
+#: ../../source/component/video.rst:147
+msgid "-90"
+msgstr ""
+
+#: ../../source/component/video.rst:147
+msgid "屏幕顺时针90度"
+msgstr ""
+
+#: ../../source/component/video.rst:150
+msgid "object-fit 的合法值"
+msgstr ""
+
+#: ../../source/component/video.rst:155
+msgid "包含"
+msgstr ""
+
+#: ../../source/component/video.rst:157
+msgid "fill"
+msgstr ""
+
+#: ../../source/component/video.rst:157
+msgid "填充"
+msgstr ""
+
+#: ../../source/component/video.rst:159
+msgid "cover"
+msgstr ""
+
+#: ../../source/component/video.rst:159
+msgid "覆盖"
+msgstr ""
+
+#: ../../source/component/video.rst:162
+msgid "play-btn-position 的合法值"
+msgstr ""
+
+#: ../../source/component/video.rst:167
+msgid "controls bar上"
+msgstr ""
+
+#: ../../source/component/video.rst:169
+msgid "center"
+msgstr ""
+
+#: ../../source/component/video.rst:169
+msgid "视频中间"
+msgstr ""
+
+#: ../../source/component/video.rst:173
+msgid "<video> 默认宽度300px、高度225px，可通过wxss设置宽高。"
+msgstr ""
+
+#: ../../source/component/video.rst:175
+msgid "请注意原生组件使用限制"
+msgstr ""
+
+#: ../../source/component/video.rst:177
+msgid "支持的格式"
+msgstr ""
+
+#: ../../source/component/video.rst:180 ../../source/component/video.rst:200
+msgid "格式"
+msgstr ""
+
+#: ../../source/component/video.rst:180 ../../source/component/video.rst:200
+msgid "iOS"
+msgstr ""
+
+#: ../../source/component/video.rst:180 ../../source/component/video.rst:200
+msgid "Android"
+msgstr ""
+
+#: ../../source/component/video.rst:182
+msgid "mp4"
+msgstr ""
+
+#: ../../source/component/video.rst:182 ../../source/component/video.rst:184
+#: ../../source/component/video.rst:186 ../../source/component/video.rst:188
+#: ../../source/component/video.rst:190 ../../source/component/video.rst:192
+#: ../../source/component/video.rst:194 ../../source/component/video.rst:202
+#: ../../source/component/video.rst:204 ../../source/component/video.rst:206
+#: ../../source/component/video.rst:208
+msgid "√"
+msgstr ""
+
+#: ../../source/component/video.rst:184
+msgid "mov"
+msgstr ""
+
+#: ../../source/component/video.rst:184 ../../source/component/video.rst:186
+#: ../../source/component/video.rst:190 ../../source/component/video.rst:194
+#: ../../source/component/video.rst:208
+msgid "x"
+msgstr ""
+
+#: ../../source/component/video.rst:186
+msgid "m4v"
+msgstr ""
+
+#: ../../source/component/video.rst:188
+msgid "3gp"
+msgstr ""
+
+#: ../../source/component/video.rst:190
+msgid "avi"
+msgstr ""
+
+#: ../../source/component/video.rst:192
+msgid "m3u8"
+msgstr ""
+
+#: ../../source/component/video.rst:194
+msgid "webm"
+msgstr ""
+
+#: ../../source/component/video.rst:197
+msgid "支持的编码格式"
+msgstr ""
+
+#: ../../source/component/video.rst:202
+msgid "H.264"
+msgstr ""
+
+#: ../../source/component/video.rst:204
+msgid "HEVC"
+msgstr ""
+
+#: ../../source/component/video.rst:206
+msgid "MPEG-4"
+msgstr ""
+
+#: ../../source/component/video.rst:208
+msgid "VP9"
+msgstr ""
+
+#: ../../source/component/video.rst:211
+msgid "示例代码"
+msgstr ""
+
+#: ../../source/component/video.rst:213
+msgid "在开发者工具中预览效果"
+msgstr ""
+

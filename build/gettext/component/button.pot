@@ -1,0 +1,600 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019, Nosy
+# This file is distributed under the same license as the wxadev package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: wxadev \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-09 22:55+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/component/button.rst:4
+msgid ":wx_comp:`button`"
+msgstr ""
+
+#: ../../source/component/button.rst:6
+msgid "开始支持，低版本需做 :ref:`compatibility` 。"
+msgstr ""
+
+#: ../../source/component/button.rst:8
+msgid "按钮。"
+msgstr ""
+
+#: ../../source/component/button.rst:11
+msgid "属性"
+msgstr ""
+
+#: ../../source/component/button.rst:11
+msgid "类型"
+msgstr ""
+
+#: ../../source/component/button.rst:11
+msgid "默认值"
+msgstr ""
+
+#: ../../source/component/button.rst:11
+msgid "必填"
+msgstr ""
+
+#: ../../source/component/button.rst:11
+#: ../../source/component/button.rst:65
+#: ../../source/component/button.rst:75
+#: ../../source/component/button.rst:87
+#: ../../source/component/button.rst:97
+#: ../../source/component/button.rst:123
+msgid "说明"
+msgstr ""
+
+#: ../../source/component/button.rst:11
+#: ../../source/component/button.rst:97
+msgid "最低版本"
+msgstr ""
+
+#: ../../source/component/button.rst:13
+msgid "size"
+msgstr ""
+
+#: ../../source/component/button.rst:13
+#: ../../source/component/button.rst:15
+#: ../../source/component/button.rst:23
+#: ../../source/component/button.rst:25
+#: ../../source/component/button.rst:27
+#: ../../source/component/button.rst:35
+#: ../../source/component/button.rst:37
+#: ../../source/component/button.rst:39
+#: ../../source/component/button.rst:41
+#: ../../source/component/button.rst:43
+#: ../../source/component/button.rst:45
+msgid "string"
+msgstr ""
+
+#: ../../source/component/button.rst:13
+#: ../../source/component/button.rst:15
+#: ../../source/component/button.rst:67
+#: ../../source/component/button.rst:79
+msgid "default"
+msgstr ""
+
+#: ../../source/component/button.rst:13
+#: ../../source/component/button.rst:15
+#: ../../source/component/button.rst:17
+#: ../../source/component/button.rst:19
+#: ../../source/component/button.rst:21
+#: ../../source/component/button.rst:23
+#: ../../source/component/button.rst:25
+#: ../../source/component/button.rst:27
+#: ../../source/component/button.rst:29
+#: ../../source/component/button.rst:31
+#: ../../source/component/button.rst:33
+#: ../../source/component/button.rst:35
+#: ../../source/component/button.rst:37
+#: ../../source/component/button.rst:39
+#: ../../source/component/button.rst:41
+#: ../../source/component/button.rst:43
+#: ../../source/component/button.rst:45
+#: ../../source/component/button.rst:47
+#: ../../source/component/button.rst:49
+#: ../../source/component/button.rst:51
+#: ../../source/component/button.rst:53
+#: ../../source/component/button.rst:55
+#: ../../source/component/button.rst:57
+#: ../../source/component/button.rst:59
+msgid "否"
+msgstr ""
+
+#: ../../source/component/button.rst:13
+msgid "按钮的大小"
+msgstr ""
+
+#: ../../source/component/button.rst:13
+#: ../../source/component/button.rst:15
+#: ../../source/component/button.rst:17
+#: ../../source/component/button.rst:19
+#: ../../source/component/button.rst:21
+#: ../../source/component/button.rst:23
+#: ../../source/component/button.rst:27
+#: ../../source/component/button.rst:31
+#: ../../source/component/button.rst:33
+msgid "1.0.0"
+msgstr ""
+
+#: ../../source/component/button.rst:15
+msgid "type"
+msgstr ""
+
+#: ../../source/component/button.rst:15
+msgid "按钮的样式类型"
+msgstr ""
+
+#: ../../source/component/button.rst:17
+msgid "plain"
+msgstr ""
+
+#: ../../source/component/button.rst:17
+#: ../../source/component/button.rst:19
+#: ../../source/component/button.rst:21
+#: ../../source/component/button.rst:29
+#: ../../source/component/button.rst:47
+msgid "boolean"
+msgstr ""
+
+#: ../../source/component/button.rst:17
+#: ../../source/component/button.rst:19
+#: ../../source/component/button.rst:21
+#: ../../source/component/button.rst:29
+#: ../../source/component/button.rst:47
+msgid "false"
+msgstr ""
+
+#: ../../source/component/button.rst:17
+msgid "按钮是否镂空，背景色透明"
+msgstr ""
+
+#: ../../source/component/button.rst:19
+msgid "disabled"
+msgstr ""
+
+#: ../../source/component/button.rst:19
+msgid "是否禁用"
+msgstr ""
+
+#: ../../source/component/button.rst:21
+msgid "loading"
+msgstr ""
+
+#: ../../source/component/button.rst:21
+msgid "名称前是否带 loading 图标"
+msgstr ""
+
+#: ../../source/component/button.rst:23
+msgid "form-type"
+msgstr ""
+
+#: ../../source/component/button.rst:23
+msgid "用于 <form> 组件，点击分别会触发 <form> 组件的 submit/reset 事件"
+msgstr ""
+
+#: ../../source/component/button.rst:25
+msgid "open-type"
+msgstr ""
+
+#: ../../source/component/button.rst:25
+msgid "微信开放能力"
+msgstr ""
+
+#: ../../source/component/button.rst:25
+#: ../../source/component/button.rst:100
+msgid "1.1.0"
+msgstr ""
+
+#: ../../source/component/button.rst:27
+msgid "hover-class"
+msgstr ""
+
+#: ../../source/component/button.rst:27
+msgid "button-hover"
+msgstr ""
+
+#: ../../source/component/button.rst:27
+msgid "指定按钮按下去的样式类。当 hover-class=\"none\" 时，没有点击态效果"
+msgstr ""
+
+#: ../../source/component/button.rst:29
+msgid "hover-stop-propagation"
+msgstr ""
+
+#: ../../source/component/button.rst:29
+msgid "指定是否阻止本节点的祖先节点出现点击态"
+msgstr ""
+
+#: ../../source/component/button.rst:29
+#: ../../source/component/button.rst:39
+#: ../../source/component/button.rst:41
+#: ../../source/component/button.rst:43
+#: ../../source/component/button.rst:47
+#: ../../source/component/button.rst:51
+msgid "1.5.0"
+msgstr ""
+
+#: ../../source/component/button.rst:31
+msgid "hover-start-time"
+msgstr ""
+
+#: ../../source/component/button.rst:31
+#: ../../source/component/button.rst:33
+msgid "number"
+msgstr ""
+
+#: ../../source/component/button.rst:31
+msgid "20"
+msgstr ""
+
+#: ../../source/component/button.rst:31
+msgid "按住后多久出现点击态，单位毫秒"
+msgstr ""
+
+#: ../../source/component/button.rst:33
+msgid "hover-stay-time"
+msgstr ""
+
+#: ../../source/component/button.rst:33
+msgid "70"
+msgstr ""
+
+#: ../../source/component/button.rst:33
+msgid "手指松开后点击态保留时间，单位毫秒"
+msgstr ""
+
+#: ../../source/component/button.rst:35
+msgid "lang"
+msgstr ""
+
+#: ../../source/component/button.rst:35
+#: ../../source/component/button.rst:125
+msgid "en"
+msgstr ""
+
+#: ../../source/component/button.rst:35
+msgid "指定返回用户信息的语言，zh_CN 简体中文，zh_TW 繁体中文，en 英文。"
+msgstr ""
+
+#: ../../source/component/button.rst:35
+#: ../../source/component/button.rst:49
+#: ../../source/component/button.rst:108
+msgid "1.3.0"
+msgstr ""
+
+#: ../../source/component/button.rst:37
+msgid "session-from"
+msgstr ""
+
+#: ../../source/component/button.rst:37
+msgid "会话来源，open-type=\"contact\"时有效"
+msgstr ""
+
+#: ../../source/component/button.rst:37
+msgid "1.4.0"
+msgstr ""
+
+#: ../../source/component/button.rst:39
+msgid "send-message-title"
+msgstr ""
+
+#: ../../source/component/button.rst:39
+msgid "当前标题"
+msgstr ""
+
+#: ../../source/component/button.rst:39
+msgid "会话内消息卡片标题，open-type=\"contact\"时有效"
+msgstr ""
+
+#: ../../source/component/button.rst:41
+msgid "send-message-path"
+msgstr ""
+
+#: ../../source/component/button.rst:41
+msgid "当前分享路径"
+msgstr ""
+
+#: ../../source/component/button.rst:41
+msgid "会话内消息卡片点击跳转小程序路径，open-type=\"contact\"时有效"
+msgstr ""
+
+#: ../../source/component/button.rst:43
+msgid "send-message-img"
+msgstr ""
+
+#: ../../source/component/button.rst:43
+msgid "截图"
+msgstr ""
+
+#: ../../source/component/button.rst:43
+msgid "会话内消息卡片图片，open-type=\"contact\"时有效"
+msgstr ""
+
+#: ../../source/component/button.rst:45
+msgid "app-parameter"
+msgstr ""
+
+#: ../../source/component/button.rst:45
+msgid "打开 APP 时，向 APP 传递的参数，open-type=launchApp时有效"
+msgstr ""
+
+#: ../../source/component/button.rst:45
+#: ../../source/component/button.rst:55
+#: ../../source/component/button.rst:111
+msgid "1.9.5"
+msgstr ""
+
+#: ../../source/component/button.rst:47
+msgid "show-message-card"
+msgstr ""
+
+#: ../../source/component/button.rst:47
+msgid "是否显示会话内消息卡片，设置此参数为 true，用户进入客服会话会在右下角显示\"可能要发送的小程序\"提示，用户点击后可以快速发送小程序消息，open-type=\"contact\"时有效"
+msgstr ""
+
+#: ../../source/component/button.rst:49
+msgid "bindgetuserinfo"
+msgstr ""
+
+#: ../../source/component/button.rst:49
+#: ../../source/component/button.rst:51
+#: ../../source/component/button.rst:53
+#: ../../source/component/button.rst:55
+#: ../../source/component/button.rst:57
+#: ../../source/component/button.rst:59
+msgid "eventhandle"
+msgstr ""
+
+#: ../../source/component/button.rst:49
+msgid "用户点击该按钮时，会返回获取到的用户信息，回调的detail数据与wx.getUserInfo返回的一致，open-type=\"getUserInfo\"时有效"
+msgstr ""
+
+#: ../../source/component/button.rst:51
+msgid "bindcontact"
+msgstr ""
+
+#: ../../source/component/button.rst:51
+msgid "客服消息回调，open-type=\"contact\"时有效"
+msgstr ""
+
+#: ../../source/component/button.rst:53
+msgid "bindgetphonenumber"
+msgstr ""
+
+#: ../../source/component/button.rst:53
+msgid "获取用户手机号回调，open-type=getPhoneNumber时有效"
+msgstr ""
+
+#: ../../source/component/button.rst:53
+#: ../../source/component/button.rst:102
+#: ../../source/component/button.rst:105
+msgid "1.2.0"
+msgstr ""
+
+#: ../../source/component/button.rst:55
+msgid "binderror"
+msgstr ""
+
+#: ../../source/component/button.rst:55
+msgid "当使用开放能力时，发生错误的回调，open-type=launchApp时有效"
+msgstr ""
+
+#: ../../source/component/button.rst:57
+msgid "bindopensetting"
+msgstr ""
+
+#: ../../source/component/button.rst:57
+msgid "在打开授权设置页后回调，open-type=openSetting时有效"
+msgstr ""
+
+#: ../../source/component/button.rst:57
+#: ../../source/component/button.rst:113
+msgid "2.0.7"
+msgstr ""
+
+#: ../../source/component/button.rst:59
+msgid "bindlaunchapp"
+msgstr ""
+
+#: ../../source/component/button.rst:59
+msgid "打开 APP 成功的回调，open-type=launchApp时有效"
+msgstr ""
+
+#: ../../source/component/button.rst:59
+msgid "2.4.4"
+msgstr ""
+
+#: ../../source/component/button.rst:62
+msgid "size 的合法值"
+msgstr ""
+
+#: ../../source/component/button.rst:65
+#: ../../source/component/button.rst:75
+#: ../../source/component/button.rst:87
+#: ../../source/component/button.rst:97
+#: ../../source/component/button.rst:123
+msgid "值"
+msgstr ""
+
+#: ../../source/component/button.rst:67
+msgid "默认大小"
+msgstr ""
+
+#: ../../source/component/button.rst:69
+msgid "mini"
+msgstr ""
+
+#: ../../source/component/button.rst:69
+msgid "小尺寸"
+msgstr ""
+
+#: ../../source/component/button.rst:72
+msgid "type 的合法值"
+msgstr ""
+
+#: ../../source/component/button.rst:77
+msgid "primary"
+msgstr ""
+
+#: ../../source/component/button.rst:77
+msgid "绿色"
+msgstr ""
+
+#: ../../source/component/button.rst:79
+msgid "白色"
+msgstr ""
+
+#: ../../source/component/button.rst:81
+msgid "warn"
+msgstr ""
+
+#: ../../source/component/button.rst:81
+msgid "红色"
+msgstr ""
+
+#: ../../source/component/button.rst:84
+msgid "form-type 的合法值"
+msgstr ""
+
+#: ../../source/component/button.rst:89
+msgid "submit"
+msgstr ""
+
+#: ../../source/component/button.rst:89
+msgid "提交表单"
+msgstr ""
+
+#: ../../source/component/button.rst:91
+msgid "reset"
+msgstr ""
+
+#: ../../source/component/button.rst:91
+msgid "重置表单"
+msgstr ""
+
+#: ../../source/component/button.rst:94
+msgid "open-type 的合法值"
+msgstr ""
+
+#: ../../source/component/button.rst:99
+msgid "contact"
+msgstr ""
+
+#: ../../source/component/button.rst:99
+msgid "打开客服会话，如果用户在会话中点击消息卡片后返回小程序， 可以从 bindcontact 回调中获得具体信息，具体说明"
+msgstr ""
+
+#: ../../source/component/button.rst:102
+msgid "share"
+msgstr ""
+
+#: ../../source/component/button.rst:102
+msgid "触发用户转发，使用前建议先阅读使用指引"
+msgstr ""
+
+#: ../../source/component/button.rst:104
+msgid "getPhoneNumber"
+msgstr ""
+
+#: ../../source/component/button.rst:104
+msgid "获取用户手机号，可以从bindgetphonenumber 回调中获取到用户信息，具体说明"
+msgstr ""
+
+#: ../../source/component/button.rst:107
+msgid "getUserInfo"
+msgstr ""
+
+#: ../../source/component/button.rst:107
+msgid "获取用户信息，可以从bindgetuserinfo 回调中获取到用户信息"
+msgstr ""
+
+#: ../../source/component/button.rst:110
+msgid "launchApp"
+msgstr ""
+
+#: ../../source/component/button.rst:110
+msgid "打开APP，可以通过app-parameter 属性设定向APP传的参数具体说明"
+msgstr ""
+
+#: ../../source/component/button.rst:113
+msgid "openSetting"
+msgstr ""
+
+#: ../../source/component/button.rst:113
+msgid "打开授权设置页"
+msgstr ""
+
+#: ../../source/component/button.rst:115
+msgid "feedback"
+msgstr ""
+
+#: ../../source/component/button.rst:115
+msgid "打开“意见反馈”页面，用户可提交反馈内容并上传日志， 开发者可以登录小程序管理后台后进入 左侧菜单“客服反馈”页面获取到反馈内容"
+msgstr ""
+
+#: ../../source/component/button.rst:117
+msgid "2.1.0"
+msgstr ""
+
+#: ../../source/component/button.rst:120
+msgid "lang 的合法值"
+msgstr ""
+
+#: ../../source/component/button.rst:125
+msgid "英文"
+msgstr ""
+
+#: ../../source/component/button.rst:126
+msgid "zh_CN"
+msgstr ""
+
+#: ../../source/component/button.rst:126
+msgid "简体中文"
+msgstr ""
+
+#: ../../source/component/button.rst:127
+msgid "zh_TW"
+msgstr ""
+
+#: ../../source/component/button.rst:127
+msgid "繁体中文"
+msgstr ""
+
+#: ../../source/component/button.rst:130
+msgid "button-hover 默认为{background-color: rgba(0, 0, 0, 0.1); opacity: 0.7;}"
+msgstr ""
+
+#: ../../source/component/button.rst:132
+msgid "bindgetphonenumber 从1.2.0 开始支持，但是在1.5.3以下版本中无法使用wx.canIUse进行检测，建议使用基础库版本进行判断。"
+msgstr ""
+
+#: ../../source/component/button.rst:134
+msgid "在bindgetphonenumber 等返回加密信息的回调中调用 wx.login 登录，可能会刷新登录态。此时服务器使用 code 换取的 sessionKey 不是加密时使用的 sessionKey，导致解密失败。建议开发者提前进行 login；或者在回调中先使用 checkSession 进行登录态检查，避免 login 刷新登录态。"
+msgstr ""
+
+#: ../../source/component/button.rst:136
+msgid "从 2.1.0 起，button 可作为原生组件的子节点嵌入，以便在原生组件上使用 open-type 的能力。"
+msgstr ""
+
+#: ../../source/component/button.rst:138
+msgid "目前设置了 form-type 的 button 只会对当前组件中的 form 有效。因而，将 button 封装在自定义组件中，而 from 在自定义组件外，将会使这个 button 的 form-type 失效。"
+msgstr ""
+
+#: ../../source/component/button.rst:140
+msgid "示例代码"
+msgstr ""
+
+#: ../../source/component/button.rst:142
+msgid ":download:`在开发者工具中预览效果 <https://developers.weixin.qq.com/s/ZHrWZqm66cZy>`"
+msgstr ""
+

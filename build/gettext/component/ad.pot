@@ -1,0 +1,274 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019, Nosy
+# This file is distributed under the same license as the wxadev package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: wxadev \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-09 22:55+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/component/ad.rst:4
+msgid ":wx_comp:`ad`"
+msgstr ""
+
+#: ../../source/component/ad.rst:6
+msgid "低版本需做 :ref:`compatibility`"
+msgstr ""
+
+#: ../../source/component/ad.rst:8
+msgid "广告。目前暂时以邀请制开放申请，请留意后续模板消息的通知"
+msgstr ""
+
+#: ../../source/component/ad.rst:11
+msgid "属性"
+msgstr ""
+
+#: ../../source/component/ad.rst:11
+msgid "类型"
+msgstr ""
+
+#: ../../source/component/ad.rst:11
+msgid "默认值"
+msgstr ""
+
+#: ../../source/component/ad.rst:11
+msgid "必填"
+msgstr ""
+
+#: ../../source/component/ad.rst:11
+msgid "说明"
+msgstr ""
+
+#: ../../source/component/ad.rst:11
+msgid "最低版本"
+msgstr ""
+
+#: ../../source/component/ad.rst:13
+msgid "unit-id"
+msgstr ""
+
+#: ../../source/component/ad.rst:13
+msgid "string"
+msgstr ""
+
+#: ../../source/component/ad.rst:13
+#: ../../source/component/ad.rst:15
+#: ../../source/component/ad.rst:17
+msgid "是"
+msgstr ""
+
+#: ../../source/component/ad.rst:13
+msgid "广告单元id，可在小程序管理后台的流量主模块新建"
+msgstr ""
+
+#: ../../source/component/ad.rst:13
+msgid "1.9.94"
+msgstr ""
+
+#: ../../source/component/ad.rst:15
+msgid "bindload"
+msgstr ""
+
+#: ../../source/component/ad.rst:15
+#: ../../source/component/ad.rst:17
+msgid "eventhandle"
+msgstr ""
+
+#: ../../source/component/ad.rst:15
+msgid "广告加载成功的回调"
+msgstr ""
+
+#: ../../source/component/ad.rst:15
+#: ../../source/component/ad.rst:17
+msgid "2.2.1"
+msgstr ""
+
+#: ../../source/component/ad.rst:17
+msgid "binderror"
+msgstr ""
+
+#: ../../source/component/ad.rst:17
+msgid "广告发生错误的回调，event.detail = {errCode: 1002}"
+msgstr ""
+
+#: ../../source/component/ad.rst:20
+msgid "错误码信息与解决方案表"
+msgstr ""
+
+#: ../../source/component/ad.rst:22
+msgid "错误码是通过binderror回调获取到的错误信息。"
+msgstr ""
+
+#: ../../source/component/ad.rst:25
+msgid "代码"
+msgstr ""
+
+#: ../../source/component/ad.rst:25
+msgid "异常情况"
+msgstr ""
+
+#: ../../source/component/ad.rst:25
+msgid "理由"
+msgstr ""
+
+#: ../../source/component/ad.rst:25
+msgid "解决方案"
+msgstr ""
+
+#: ../../source/component/ad.rst:27
+msgid "1000"
+msgstr ""
+
+#: ../../source/component/ad.rst:27
+msgid "后端错误调用失败"
+msgstr ""
+
+#: ../../source/component/ad.rst:27
+#: ../../source/component/ad.rst:35
+msgid "该项错误不是开发者的异常情况"
+msgstr ""
+
+#: ../../source/component/ad.rst:27
+#: ../../source/component/ad.rst:35
+msgid "一般情况下忽略一段时间即可恢复。"
+msgstr ""
+
+#: ../../source/component/ad.rst:29
+msgid "1001"
+msgstr ""
+
+#: ../../source/component/ad.rst:29
+msgid "参数错误"
+msgstr ""
+
+#: ../../source/component/ad.rst:29
+msgid "使用方法错误"
+msgstr ""
+
+#: ../../source/component/ad.rst:29
+msgid "可以前往developers.weixin.qq.com确认具体教程 （小程序和小游戏分别有各自的教程， 可以在顶部选项中，“设计”一栏的右侧进行切换。"
+msgstr ""
+
+#: ../../source/component/ad.rst:33
+msgid "1002"
+msgstr ""
+
+#: ../../source/component/ad.rst:33
+msgid "广告单元无效"
+msgstr ""
+
+#: ../../source/component/ad.rst:33
+msgid "可能是拼写错误、或者误用了其他APP的广告ID"
+msgstr ""
+
+#: ../../source/component/ad.rst:33
+msgid "请重新前往mp.weixin.qq.com确认广告位ID。"
+msgstr ""
+
+#: ../../source/component/ad.rst:35
+msgid "1003"
+msgstr ""
+
+#: ../../source/component/ad.rst:35
+msgid "内部错误"
+msgstr ""
+
+#: ../../source/component/ad.rst:37
+msgid "1004"
+msgstr ""
+
+#: ../../source/component/ad.rst:37
+msgid "无适合的广告"
+msgstr ""
+
+#: ../../source/component/ad.rst:37
+msgid "广告不是每一次都会出现， 这次没有出现可能是由于该用户不适合浏览广告"
+msgstr ""
+
+#: ../../source/component/ad.rst:38
+msgid "属于正常情况，且开发者需要针对这种情况做形态上的兼容。"
+msgstr ""
+
+#: ../../source/component/ad.rst:40
+msgid "1005"
+msgstr ""
+
+#: ../../source/component/ad.rst:40
+msgid "广告组件审核中"
+msgstr ""
+
+#: ../../source/component/ad.rst:40
+msgid "你的广告正在被审核，无法展现广告"
+msgstr ""
+
+#: ../../source/component/ad.rst:40
+#: ../../source/component/ad.rst:43
+msgid "请前往mp.weixin.qq.com确认审核状态， 且开发者需要针对这种情况做形态上的兼容。"
+msgstr ""
+
+#: ../../source/component/ad.rst:43
+msgid "1006"
+msgstr ""
+
+#: ../../source/component/ad.rst:43
+#: ../../source/component/ad.rst:46
+msgid "广告组件被驳回"
+msgstr ""
+
+#: ../../source/component/ad.rst:43
+msgid "你的广告审核失败，无法展现广告"
+msgstr ""
+
+#: ../../source/component/ad.rst:46
+msgid "1007"
+msgstr ""
+
+#: ../../source/component/ad.rst:46
+msgid "你的广告能力已经被封禁，封禁期间无法展现广告"
+msgstr ""
+
+#: ../../source/component/ad.rst:46
+msgid "请前往mp.weixin.qq.com确认小程序广告封禁状态。"
+msgstr ""
+
+#: ../../source/component/ad.rst:48
+msgid "1008"
+msgstr ""
+
+#: ../../source/component/ad.rst:48
+msgid "广告单元已关闭"
+msgstr ""
+
+#: ../../source/component/ad.rst:48
+msgid "该广告位的广告能力已经被关闭"
+msgstr ""
+
+#: ../../source/component/ad.rst:48
+msgid "请前往mp.weixin.qq.com重新打开对应广告位的展现。"
+msgstr ""
+
+#: ../../source/component/ad.rst:52
+msgid "在无广告展示时，ad 标签不会占用高度"
+msgstr ""
+
+#: ../../source/component/ad.rst:54
+msgid "ad 组件不支持触发 bindtap 等触摸相关事件"
+msgstr ""
+
+#: ../../source/component/ad.rst:56
+msgid "目前可以给 ad 标签设置 wxss 样式调整广告宽度，以使广告与页面更融洽，但请遵循小程序流量主应用规范"
+msgstr ""
+
+#: ../../source/component/ad.rst:58
+msgid "监听到error回调后，开发者可以针对性的处理，比如隐藏广告组件的父容器， 以保证用户体验，但不要移除广告组件，否则将无法收到bindload的回调。"
+msgstr ""
+

@@ -1,0 +1,237 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019, Nosy
+# This file is distributed under the same license as the wxadev package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: wxadev \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-09 22:55+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../../source/devtools/change/nightly.rst:2
+msgid "开发版 Nightly Build 更新日志"
+msgstr ""
+
+#: ../../source/devtools/change/nightly.rst:4
+msgid "日常构建版本，用于尽快修复缺陷和敏捷上线小的特性；开发自测验证，稳定性欠佳"
+msgstr ""
+
+#: ../../source/devtools/change/nightly.rst:6
+msgid "Windows 64、Windows 32、macOS"
+msgstr ""
+
+#: ../../source/devtools/change/nightly.rst:8
+msgid "2019.04.12"
+msgstr ""
+
+#: ../../source/devtools/change/nightly.rst:10
+msgid "U 优化 变更同步api的调用的实现方式"
+msgstr ""
+
+#: ../../source/devtools/change/nightly.rst:12
+msgid "2019.04.11"
+msgstr ""
+
+#: ../../source/devtools/change/nightly.rst:14
+#: ../../source/devtools/change/nightly.rst:17
+msgid "A 新增 设置是否工具启动默认打开项目"
+msgstr ""
+
+#: ../../source/devtools/change/nightly.rst:15
+#: ../../source/devtools/change/nightly.rst:18
+msgid "A 新增 通用设置"
+msgstr ""
+
+#: ../../source/devtools/change/nightly.rst:16
+msgid "A 新增 Network 面板显示图片请求"
+msgstr ""
+
+#: ../../source/devtools/change/nightly.rst:19
+msgid "F 修复 windows真机调试，配置了funciontpages的小程序会报错"
+msgstr ""
+
+#: ../../source/devtools/change/nightly.rst:20
+msgid "F 修复 网页调试模式不需要 home 和返回按钮"
+msgstr ""
+
+#: ../../source/devtools/change/nightly.rst:21
+msgid "F 修复 编译过虑文件错误显示 反馈详情"
+msgstr ""
+
+#: ../../source/devtools/change/nightly.rst:23
+msgid "2019.04.04"
+msgstr ""
+
+#: ../../source/devtools/change/nightly.rst:25
+msgid "F 修复 HTTP 调用无法上传 反馈详情"
+msgstr ""
+
+#: ../../source/devtools/change/nightly.rst:26
+msgid "F 修复 tabBar 仅支持十六进制颜色"
+msgstr ""
+
+#: ../../source/devtools/change/nightly.rst:28
+msgid "2019.04.03"
+msgstr ""
+
+#: ../../source/devtools/change/nightly.rst:30
+msgid "U 优化 BackgroundAudioManager，弹窗改为模拟器下方显示"
+msgstr ""
+
+#: ../../source/devtools/change/nightly.rst:31
+msgid "F 修复 tabBar 多次切换被蒙层挡住"
+msgstr ""
+
+#: ../../source/devtools/change/nightly.rst:33
+msgid "2019.04.01"
+msgstr ""
+
+#: ../../source/devtools/change/nightly.rst:35
+msgid "U 优化 预览框显示日期从相对日期改为绝对日期"
+msgstr ""
+
+#: ../../source/devtools/change/nightly.rst:36
+msgid "F 修复 背景音频 title 设置导致无法暂停 反馈详情"
+msgstr ""
+
+#: ../../source/devtools/change/nightly.rst:38
+msgid "2019.03.29"
+msgstr ""
+
+#: ../../source/devtools/change/nightly.rst:40
+msgid "A 新增 云开发新增云调用：在云函数中可以调用小程序开放接口 详情"
+msgstr ""
+
+#: ../../source/devtools/change/nightly.rst:41
+msgid "U 云控制台设计改版，优化交互体验 详情"
+msgstr ""
+
+#: ../../source/devtools/change/nightly.rst:43
+msgid "2019.03.28"
+msgstr ""
+
+#: ../../source/devtools/change/nightly.rst:45
+msgid "F 修复 详情面板中，基础库版本占比有时不显示的问题"
+msgstr ""
+
+#: ../../source/devtools/change/nightly.rst:46
+msgid "F 修复 macOS cli 上传代码时，--upload-desc 上传不全的问题"
+msgstr ""
+
+#: ../../source/devtools/change/nightly.rst:48
+msgid "2019.03.26"
+msgstr ""
+
+#: ../../source/devtools/change/nightly.rst:50
+msgid "F 修复 navigationStyle: 'custom' 在 <web-view> 存在时仍生效的问题"
+msgstr ""
+
+#: ../../source/devtools/change/nightly.rst:51
+msgid "F 修复 企业微信小程序开发，wx.qy 接口在 onLaunch 方法不生效的问题"
+msgstr ""
+
+#: ../../source/devtools/change/nightly.rst:53
+msgid "2019.03.25"
+msgstr ""
+
+#: ../../source/devtools/change/nightly.rst:55
+msgid "F 修复 1.02.1903211 覆盖安装后文件修改无法触发编译的问题"
+msgstr ""
+
+#: ../../source/devtools/change/nightly.rst:56
+msgid "F 修复 1.02.1903211 出现两个企业微信模拟器插件的问题"
+msgstr ""
+
+#: ../../source/devtools/change/nightly.rst:57
+msgid "F 修复 1.02.1903211 公众号网页调试空白的问题"
+msgstr ""
+
+#: ../../source/devtools/change/nightly.rst:58
+msgid "F 修复 1.02.1903211 模拟器启动时宽度错误的问题"
+msgstr ""
+
+#: ../../source/devtools/change/nightly.rst:60
+msgid "2019.03.19"
+msgstr ""
+
+#: ../../source/devtools/change/nightly.rst:62
+msgid "U 优化 TS 版快速开始的代码结构"
+msgstr ""
+
+#: ../../source/devtools/change/nightly.rst:63
+msgid "F 修复 打开背景音乐播放器时无法打开设置窗口的问题"
+msgstr ""
+
+#: ../../source/devtools/change/nightly.rst:64
+msgid "F 修复 wx.connectSocket 超时时最大连接数控制异常的问题"
+msgstr ""
+
+#: ../../source/devtools/change/nightly.rst:65
+msgid "F 修复 <web-view> 横屏时无法显示全部的问题 反馈详情"
+msgstr ""
+
+#: ../../source/devtools/change/nightly.rst:66
+msgid "F 修复 wxss 中使用非数字开头的自定义属性报错的问题"
+msgstr ""
+
+#: ../../source/devtools/change/nightly.rst:68
+msgid "2019.03.12"
+msgstr ""
+
+#: ../../source/devtools/change/nightly.rst:70
+msgid "U 优化 大型的小程序项目编译卡顿的问题"
+msgstr ""
+
+#: ../../source/devtools/change/nightly.rst:71
+msgid "F 修复 自定义 tabBar 中调用 wx.getSystemInfo 返回的 windowHeight 不正确的问题"
+msgstr ""
+
+#: ../../source/devtools/change/nightly.rst:72
+msgid "F 修复 自定义分析测试功能失效的问题 反馈详情"
+msgstr ""
+
+#: ../../source/devtools/change/nightly.rst:73
+msgid "F 修复 没有开通云开发的 appid 选择云开发启动模板新建项目后会弹下拉提示的问题"
+msgstr ""
+
+#: ../../source/devtools/change/nightly.rst:74
+msgid "F 修复 弹出的模拟器，打开设置授权会出现两个状态栏的问题 反馈详情"
+msgstr ""
+
+#: ../../source/devtools/change/nightly.rst:75
+msgid "F 修复 wx.chooseMessageFile 在 tabBar 切换后失效的问题"
+msgstr ""
+
+#: ../../source/devtools/change/nightly.rst:76
+msgid "F 修复 wxss 文件中 keyframe 后有注释会导致 wxml 面板无法解析样式的问题 反馈详情"
+msgstr ""
+
+#: ../../source/devtools/change/nightly.rst:77
+msgid "F 修复 弹出模拟器之后 wx.getMenuButtonBoundingClient 异常的问题 反馈详情"
+msgstr ""
+
+#: ../../source/devtools/change/nightly.rst:78
+msgid "F 修复 wxs 无法显示相同日志的问题 反馈详情"
+msgstr ""
+
+#: ../../source/devtools/change/nightly.rst:79
+msgid "F 修复 wxs 报错信息没有显示的问题 反馈详情"
+msgstr ""
+
+#: ../../source/devtools/change/nightly.rst:80
+msgid "F 修复 tabBar 调整会先显示其他 tabBar 页面的问题 反馈详情"
+msgstr ""
+
+#: ../../source/devtools/change/nightly.rst:81
+msgid "F 修复 npm 构建 mqtt 包会报错的问题"
+msgstr ""
+

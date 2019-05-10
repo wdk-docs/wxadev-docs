@@ -1,0 +1,42 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019, Nosy
+# This file is distributed under the same license as the wxadev package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: wxadev \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-09 22:55+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../../source/wxwork/api/index.rst:4
+msgid ":wxwork:`接口 <dev-doc/qywx-api>`"
+msgstr ""
+
+#: ../../source/wxwork/api/index.rst:6
+msgid "企业微信专有接口是指企业微信在微信小程序基础库的基础上进行的二次能力扩展， 主要在逻辑层扩展，渲染层与微信小程序基本保持一致。"
+msgstr ""
+
+#: ../../source/wxwork/api/index.rst:9
+msgid ""
+"扩展的接口可以让小程序在企业微信环境运行时获得更多和企业微信相关的能力， 比如微信小程序提供了 :func:`wx.login` "
+"接口用于获取用户在微信环境中的用户openid信息， 企业微信提供了 :func:`wx.qy.login` 接口用于获取用户的userid信息，"
+" 这样使得一个小程序在企业微信与微信消息互通的场景中，可以根据运行环境获得两种身份态。"
+msgstr ""
+
+#: ../../source/wxwork/api/index.rst:14
+msgid "**兼容处理**"
+msgstr ""
+
+#: ../../source/wxwork/api/index.rst:16
+msgid "小程序在微信环境中运行时，不支持调用企业微信专有接口，需要进行对应的 :ref:`compatibility` 。"
+msgstr ""
+

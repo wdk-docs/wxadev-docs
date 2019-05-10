@@ -5,7 +5,7 @@
 
   .. versionadded:: 1.7.0 低版本需做 :ref:`compatibility` 。
 
-  :label: 创建 :doc:`live-pusher` 上下文 :class:`LivePusherContext` 对象。
+  :label: 创建 :ref:`live-pusher` 上下文 :class:`LivePusherContext` 对象。
   :returns: LivePusherContext
 
 
@@ -13,7 +13,7 @@
 
   LivePusherContext 实例，可通过 :func:`wx.createLivePusherContext` 获取。
 
-  livePusherContext 与页面内唯一的 <:doc:`live-pusher`> 组件绑定，操作对应的 <:doc:`live-pusher`> 组件。
+  livePusherContext 与页面内唯一的 <:ref:`live-pusher`> 组件绑定，操作对应的 <:ref:`live-pusher`> 组件。
 
 方法
 --------

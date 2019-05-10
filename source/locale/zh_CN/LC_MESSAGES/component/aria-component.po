@@ -1,0 +1,120 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019, Nosy
+# This file is distributed under the same license as the wxadev package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: wxadev \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-09 22:55+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../../source/component/aria-component.rst:5
+msgid ":wx_comp:`aria-component`"
+msgstr ""
+
+#: ../../source/component/aria-component.rst:7
+msgid "无障碍访问"
+msgstr ""
+
+#: ../../source/component/aria-component.rst:9
+msgid "为了更好地满足视障人士对于小程序的访问需求，支持部分ARIA标签。"
+msgstr ""
+
+#: ../../source/component/aria-component.rst:11
+msgid "无障碍特性在读屏模式下可以访问，iOS可通过设置->通用->辅助功能->旁白打开。"
+msgstr ""
+
+#: ../../source/component/aria-component.rst:13
+msgid ""
+"以 ``<view>`` 组件为例，增加了 *aria-role* 和 *aria-label* 属性。 其中 *aria-role* "
+"表示组件的角色， 当设置为 `'img'` 时，读屏模式下聚焦后系统会朗读出 '图像' 。设置为 `'button'` "
+"时，聚焦后后系统朗读出'按钮'。 aria-label表示组件附带的额外信息，聚焦后系统会自动朗读出来。"
+msgstr ""
+
+#: ../../source/component/aria-component.rst:17
+msgid "小程序内置组件已经预埋了一些无障碍的属性，以下组件开发者可以补充相关的属性："
+msgstr ""
+
+#: ../../source/component/aria-component.rst:19
+msgid "button"
+msgstr ""
+
+#: ../../source/component/aria-component.rst:20
+msgid "input"
+msgstr ""
+
+#: ../../source/component/aria-component.rst:21
+msgid "textarea"
+msgstr ""
+
+#: ../../source/component/aria-component.rst:22
+msgid "checkbox"
+msgstr ""
+
+#: ../../source/component/aria-component.rst:23
+msgid "switch"
+msgstr ""
+
+#: ../../source/component/aria-component.rst:24
+msgid "radio"
+msgstr ""
+
+#: ../../source/component/aria-component.rst:25
+msgid "slider"
+msgstr ""
+
+#: ../../source/component/aria-component.rst:26
+msgid "picker-view"
+msgstr ""
+
+#: ../../source/component/aria-component.rst:27
+msgid "scroll-view"
+msgstr ""
+
+#: ../../source/component/aria-component.rst:28
+msgid "progress"
+msgstr ""
+
+#: ../../source/component/aria-component.rst:29
+msgid "navigator"
+msgstr ""
+
+#: ../../source/component/aria-component.rst:30
+msgid "image"
+msgstr ""
+
+#: ../../source/component/aria-component.rst:31
+msgid "icon"
+msgstr ""
+
+#: ../../source/component/aria-component.rst:32
+msgid "view"
+msgstr ""
+
+#: ../../source/component/aria-component.rst:33
+msgid "cover-view"
+msgstr ""
+
+#: ../../source/component/aria-component.rst:34
+msgid "cover-image"
+msgstr ""
+
+#: ../../source/component/aria-component.rst:35
+msgid "map"
+msgstr ""
+
+#: ../../source/component/aria-component.rst:38
+msgid ""
+"安卓和iOS读屏模式下设置aria-role后朗读的内容不同系统之间会有差异 可设置的aria-role可参看 Using "
+"Aria中的Widget Roles，部分role的设置在移动端可能无效。"
+msgstr ""
+

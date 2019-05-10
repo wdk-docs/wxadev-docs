@@ -1,0 +1,216 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019, Nosy
+# This file is distributed under the same license as the wxadev package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: wxadev \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-09 22:55+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/framework/ability/canvas.rst:2
+msgid "Canvas 画布"
+msgstr ""
+
+#: ../../source/framework/ability/canvas.rst:4
+msgid "所有在 <canvas> 中的画图必须用 JavaScript 完成："
+msgstr ""
+
+#: ../../source/framework/ability/canvas.rst:6
+msgid "WXML：（我们在接下来的例子中如无特殊声明都会用这个 WXML 为模板，不再重复）"
+msgstr ""
+
+#: ../../source/framework/ability/canvas.rst:8
+msgid "<canvas canvas-id=\"myCanvas\" style=\"border: 1px solid;\" /> JS：（我们在接下来的例子中会将 JS 放在 onLoad 中）"
+msgstr ""
+
+#: ../../source/framework/ability/canvas.rst:11
+msgid "const ctx = wx.createCanvasContext('myCanvas') ctx.setFillStyle('red') ctx.fillRect(10, 10, 150, 75) ctx.draw() 第一步：创建一个 Canvas 绘图上下文"
+msgstr ""
+
+#: ../../source/framework/ability/canvas.rst:17
+msgid "首先，我们需要创建一个 Canvas 绘图上下文 CanvasContext。"
+msgstr ""
+
+#: ../../source/framework/ability/canvas.rst:19
+msgid "CanvasContext 是小程序内建的一个对象，有一些绘图的方法："
+msgstr ""
+
+#: ../../source/framework/ability/canvas.rst:21
+msgid "const ctx = wx.createCanvasContext('myCanvas') 第二步：使用 Canvas 绘图上下文进行绘图描述"
+msgstr ""
+
+#: ../../source/framework/ability/canvas.rst:24
+msgid "接着，我们来描述要在 Canvas 中绘制什么内容。"
+msgstr ""
+
+#: ../../source/framework/ability/canvas.rst:26
+msgid "设置绘图上下文的填充色为红色："
+msgstr ""
+
+#: ../../source/framework/ability/canvas.rst:28
+msgid "ctx.setFillStyle('red') 用 fillRect(x, y, width, height) 方法画一个矩形，填充为刚刚设置的红色："
+msgstr ""
+
+#: ../../source/framework/ability/canvas.rst:31
+msgid "ctx.fillRect(10, 10, 150, 75) 第三步：画图"
+msgstr ""
+
+#: ../../source/framework/ability/canvas.rst:34
+msgid "告诉 <canvas> 组件你要将刚刚的描述绘制上去："
+msgstr ""
+
+#: ../../source/framework/ability/canvas.rst:36
+msgid "ctx.draw() 结果："
+msgstr ""
+
+#: ../../source/framework/ability/canvas.rst:41
+msgid "坐标系 canvas 是在一个二维的网格当中。左上角的坐标为(0, 0)。"
+msgstr ""
+
+#: ../../source/framework/ability/canvas.rst:44
+msgid "在上一节，我们用了这个方法 fillRect(0, 0, 150, 75)。"
+msgstr ""
+
+#: ../../source/framework/ability/canvas.rst:46
+msgid "它的含义为：从左上角(0, 0)开始，画一个150 x 75px 的矩形。"
+msgstr ""
+
+#: ../../source/framework/ability/canvas.rst:48
+msgid "代码示例"
+msgstr ""
+
+#: ../../source/framework/ability/canvas.rst:50
+msgid "我们可以在 <canvas> 中加上一些事件，来观测它的坐标系"
+msgstr ""
+
+#: ../../source/framework/ability/canvas.rst:56
+msgid "<canvas"
+msgstr ""
+
+#: ../../source/framework/ability/canvas.rst:53
+msgid "canvas-id=\"myCanvas\" style=\"margin: 5px; border:1px solid #d3d3d3;\" bindtouchstart=\"start\" bindtouchmove=\"move\" bindtouchend=\"end\""
+msgstr ""
+
+#: ../../source/framework/ability/canvas.rst:58
+msgid "/>"
+msgstr ""
+
+#: ../../source/framework/ability/canvas.rst:60
+msgid "<view hidden=\"{{hidden}}\">"
+msgstr ""
+
+#: ../../source/framework/ability/canvas.rst:61
+msgid "Coordinates: ({{x}}, {{y}})"
+msgstr ""
+
+#: ../../source/framework/ability/canvas.rst:62
+msgid "</view> Page({"
+msgstr ""
+
+#: ../../source/framework/ability/canvas.rst:66
+msgid "data: {"
+msgstr ""
+
+#: ../../source/framework/ability/canvas.rst:65
+msgid "x: 0, y: 0, hidden: true"
+msgstr ""
+
+#: ../../source/framework/ability/canvas.rst:68
+msgid "}, start(e) {"
+msgstr ""
+
+#: ../../source/framework/ability/canvas.rst:72
+#: ../../source/framework/ability/canvas.rst:78
+#: ../../source/framework/ability/canvas.rst:83
+msgid "this.setData({"
+msgstr ""
+
+#: ../../source/framework/ability/canvas.rst:71
+msgid "hidden: false, x: e.touches[0].x, y: e.touches[0].y"
+msgstr ""
+
+#: ../../source/framework/ability/canvas.rst:74
+#: ../../source/framework/ability/canvas.rst:80
+#: ../../source/framework/ability/canvas.rst:85
+msgid "})"
+msgstr ""
+
+#: ../../source/framework/ability/canvas.rst:75
+msgid "}, move(e) {"
+msgstr ""
+
+#: ../../source/framework/ability/canvas.rst:78
+msgid "x: e.touches[0].x, y: e.touches[0].y"
+msgstr ""
+
+#: ../../source/framework/ability/canvas.rst:81
+msgid "}, end(e) {"
+msgstr ""
+
+#: ../../source/framework/ability/canvas.rst:84
+msgid "hidden: true"
+msgstr ""
+
+#: ../../source/framework/ability/canvas.rst:86
+msgid "}"
+msgstr ""
+
+#: ../../source/framework/ability/canvas.rst:87
+msgid "}) 当你把手指放到 canvas 中，就会在下边显示出触碰点的坐标："
+msgstr ""
+
+#: ../../source/framework/ability/canvas.rst:92
+msgid "渐变 渐变能用于填充一个矩形，圆，线，文字等。填充色可以不固定位固定的一种颜色。"
+msgstr ""
+
+#: ../../source/framework/ability/canvas.rst:95
+msgid "我们提供了两种颜色渐变的方式："
+msgstr ""
+
+#: ../../source/framework/ability/canvas.rst:97
+msgid "createLinearGradient(x, y, x1, y1) 创建一个线性的渐变 createCircularGradient(x, y, r) 创建一个从圆心开始的渐变 一旦我们创建了一个渐变对象，我们必须添加两个颜色渐变点。"
+msgstr ""
+
+#: ../../source/framework/ability/canvas.rst:101
+msgid "addColorStop(position, color) 方法用于指定颜色渐变点的位置和颜色，位置必须位于0到1之间。"
+msgstr ""
+
+#: ../../source/framework/ability/canvas.rst:103
+msgid "可以用setFillStyle 和 setStrokeStyle 方法设置渐变，然后进行画图描述。"
+msgstr ""
+
+#: ../../source/framework/ability/canvas.rst:105
+msgid "使用 createLinearGradient()"
+msgstr ""
+
+#: ../../source/framework/ability/canvas.rst:107
+#: ../../source/framework/ability/canvas.rst:122
+msgid "const ctx = wx.createCanvasContext('myCanvas')"
+msgstr ""
+
+#: ../../source/framework/ability/canvas.rst:109
+msgid "// Create linear gradient const grd = ctx.createLinearGradient(0, 0, 200, 0) grd.addColorStop(0, 'red') grd.addColorStop(1, 'white')"
+msgstr ""
+
+#: ../../source/framework/ability/canvas.rst:114
+#: ../../source/framework/ability/canvas.rst:129
+msgid "// Fill with gradient ctx.setFillStyle(grd) ctx.fillRect(10, 10, 150, 80) ctx.draw()"
+msgstr ""
+
+#: ../../source/framework/ability/canvas.rst:120
+msgid "使用 createCircularGradient()"
+msgstr ""
+
+#: ../../source/framework/ability/canvas.rst:124
+msgid "// Create circular gradient const grd = ctx.createCircularGradient(75, 50, 50) grd.addColorStop(0, 'red') grd.addColorStop(1, 'white')"
+msgstr ""
+

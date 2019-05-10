@@ -1,0 +1,94 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019, Nosy
+# This file is distributed under the same license as the wxadev package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: wxadev \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-09 22:55+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../../source/component/label.rst:4
+msgid ":wx_comp:`label`"
+msgstr ""
+
+#: ../../source/component/label.rst:6
+msgid "开始支持，低版本需做 :ref:`compatibility` 。"
+msgstr ""
+
+#: ../../source/component/label.rst:8
+msgid "用来改进表单组件的可用性。"
+msgstr ""
+
+#: ../../source/component/label.rst:10
+msgid ""
+"使用for属性找到对应的id，或者将控件放在该标签下，当点击时，就会触发对应的控件。 "
+"for优先级高于内部控件，内部有多个控件的时候默认触发第一个控件。 目前可以绑定的控件有：button, checkbox, radio, "
+"switch。"
+msgstr ""
+
+#: ../../source/component/label.rst:15
+msgid "属性"
+msgstr ""
+
+#: ../../source/component/label.rst:15
+msgid "类型"
+msgstr ""
+
+#: ../../source/component/label.rst:15
+msgid "默认值"
+msgstr ""
+
+#: ../../source/component/label.rst:15
+msgid "必填"
+msgstr ""
+
+#: ../../source/component/label.rst:15
+msgid "说明"
+msgstr ""
+
+#: ../../source/component/label.rst:15
+msgid "最低版本"
+msgstr ""
+
+#: ../../source/component/label.rst:17
+msgid "for"
+msgstr ""
+
+#: ../../source/component/label.rst:17
+msgid "string"
+msgstr ""
+
+#: ../../source/component/label.rst:17
+msgid "否"
+msgstr ""
+
+#: ../../source/component/label.rst:17
+msgid "绑定控件的"
+msgstr ""
+
+#: ../../source/component/label.rst:17
+msgid "id"
+msgstr ""
+
+#: ../../source/component/label.rst:17
+msgid "1.0.0"
+msgstr ""
+
+#: ../../source/component/label.rst:20
+msgid "示例代码"
+msgstr ""
+
+#: ../../source/component/label.rst:22
+msgid "在开发者工具中预览效果"
+msgstr ""
+

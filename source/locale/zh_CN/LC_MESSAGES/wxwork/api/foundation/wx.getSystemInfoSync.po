@@ -1,0 +1,134 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019, Nosy
+# This file is distributed under the same license as the wxadev package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: wxadev \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-09 22:55+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../../source/wxwork/api/foundation/wx.getSystemInfoSync.rst:2
+msgid "wx.getSystemInfoSync"
+msgstr ""
+
+#: ../../source/wxwork/api/foundation/wx.getSystemInfoSync.rst:6
+msgid ""
+"小程序可以在微信和企业微信中调用此接口，但是在企业微信中调用此接口时， 会额外返回一个 environment 字段（微信中不返回）， "
+"如此字段值为 wxwork，则表示当前小程序运行在企业微信环境中。"
+msgstr ""
+
+#: ../../source/wxwork/api/foundation/wx.getSystemInfoSync.rst:10
+msgid ":func:`wx.getSystemInfo` 的同步版本"
+msgstr ""
+
+#: ../../source/wxwork/api/foundation/wx.getSystemInfoSync.rst
+msgid "返回"
+msgstr ""
+
+#: ../../source/wxwork/api/foundation/wx.getSystemInfoSync.rst:12
+msgid ""
+"- **brand** (*string*) - 设备品牌 - **model** (*string*) - 设备型号 - "
+"**pixelRatio** (*number*) - 设备像素比 - **screenWidth** (*number*) - "
+"屏幕宽度，单位px - **screenHeight** (*number*) - 屏幕高度，单位px - **windowWidth** "
+"(*number*) - 可使用窗口宽度，单位px - **windowHeight** (*number*) - 可使用窗口高度，单位px - "
+"**statusBarHeight** (*number*) - 状态栏的高度，单位px - **language** (*string*) - "
+"微信设置的语言 - **version** (*string*) - 微信版本号 - **system** (*string*) - "
+"操作系统及版本 - **platform** (*string*) - 客户端平台 - **fontSizeSetting** "
+"(*number*) - 用户字体大小（单位px）。以微信客户端「我-设置-通用-字体大小」中的设置为准 - **SDKVersion** "
+"(*string*) - 客户端基础库版本 - **benchmarkLevel** (*number*) - "
+"设备性能等级（仅Android小游戏）。取值为：-2 或 "
+"0（该设备无法运行小游戏），-1（性能未知），>=1（设备性能值，该值越高，设备性能越好，目前最高不到50） - **environment** "
+"(*string*) - 小程序当前运行环境  :示例代码:    .. code::      wx.getSystemInfo({"
+"       success(res) {         console.log(res.model)         "
+"console.log(res.pixelRatio)         console.log(res.windowWidth)         "
+"console.log(res.windowHeight)         console.log(res.language)         "
+"console.log(res.version)         console.log(res.platform)         "
+"console.log(res.environment)       }     })    .. code::      try {"
+"       const res = wx.getSystemInfoSync()       console.log(res.model)"
+"       console.log(res.pixelRatio)       console.log(res.windowWidth)"
+"       console.log(res.windowHeight)       console.log(res.language)"
+"       console.log(res.version)       console.log(res.platform)       "
+"console.log(res.environment)     } catch (e) {       // Do something when"
+" catch error     }"
+msgstr ""
+
+#: ../../source/wxwork/api/foundation/wx.getSystemInfoSync.rst:14
+msgid "**brand** (*string*) - 设备品牌"
+msgstr ""
+
+#: ../../source/wxwork/api/foundation/wx.getSystemInfoSync.rst:15
+msgid "**model** (*string*) - 设备型号"
+msgstr ""
+
+#: ../../source/wxwork/api/foundation/wx.getSystemInfoSync.rst:16
+msgid "**pixelRatio** (*number*) - 设备像素比"
+msgstr ""
+
+#: ../../source/wxwork/api/foundation/wx.getSystemInfoSync.rst:17
+msgid "**screenWidth** (*number*) - 屏幕宽度，单位px"
+msgstr ""
+
+#: ../../source/wxwork/api/foundation/wx.getSystemInfoSync.rst:18
+msgid "**screenHeight** (*number*) - 屏幕高度，单位px"
+msgstr ""
+
+#: ../../source/wxwork/api/foundation/wx.getSystemInfoSync.rst:19
+msgid "**windowWidth** (*number*) - 可使用窗口宽度，单位px"
+msgstr ""
+
+#: ../../source/wxwork/api/foundation/wx.getSystemInfoSync.rst:20
+msgid "**windowHeight** (*number*) - 可使用窗口高度，单位px"
+msgstr ""
+
+#: ../../source/wxwork/api/foundation/wx.getSystemInfoSync.rst:21
+msgid "**statusBarHeight** (*number*) - 状态栏的高度，单位px"
+msgstr ""
+
+#: ../../source/wxwork/api/foundation/wx.getSystemInfoSync.rst:22
+msgid "**language** (*string*) - 微信设置的语言"
+msgstr ""
+
+#: ../../source/wxwork/api/foundation/wx.getSystemInfoSync.rst:23
+msgid "**version** (*string*) - 微信版本号"
+msgstr ""
+
+#: ../../source/wxwork/api/foundation/wx.getSystemInfoSync.rst:24
+msgid "**system** (*string*) - 操作系统及版本"
+msgstr ""
+
+#: ../../source/wxwork/api/foundation/wx.getSystemInfoSync.rst:25
+msgid "**platform** (*string*) - 客户端平台"
+msgstr ""
+
+#: ../../source/wxwork/api/foundation/wx.getSystemInfoSync.rst:26
+msgid "**fontSizeSetting** (*number*) - 用户字体大小（单位px）。以微信客户端「我-设置-通用-字体大小」中的设置为准"
+msgstr ""
+
+#: ../../source/wxwork/api/foundation/wx.getSystemInfoSync.rst:27
+msgid "**SDKVersion** (*string*) - 客户端基础库版本"
+msgstr ""
+
+#: ../../source/wxwork/api/foundation/wx.getSystemInfoSync.rst:28
+msgid ""
+"**benchmarkLevel** (*number*) - 设备性能等级（仅Android小游戏）。取值为：-2 或 "
+"0（该设备无法运行小游戏），-1（性能未知），>=1（设备性能值，该值越高，设备性能越好，目前最高不到50）"
+msgstr ""
+
+#: ../../source/wxwork/api/foundation/wx.getSystemInfoSync.rst:29
+msgid "**environment** (*string*) - 小程序当前运行环境"
+msgstr ""
+
+#: ../../source/wxwork/api/foundation/wx.getSystemInfoSync.rst
+msgid "示例代码"
+msgstr ""
+

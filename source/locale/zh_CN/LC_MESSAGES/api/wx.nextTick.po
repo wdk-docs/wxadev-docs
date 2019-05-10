@@ -1,0 +1,51 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019, Nosy
+# This file is distributed under the same license as the wxadev package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: wxadev \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-09 22:55+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../../source/api/wx.nextTick.rst:2
+msgid ":wxapi:`wx.nextTick`"
+msgstr ""
+
+#: ../../source/api/wx.nextTick.rst:6
+msgid "低版本需做 :ref:`compatibility` 。"
+msgstr ""
+
+#: ../../source/api/wx.nextTick.rst:8
+msgid "延迟一部分操作到下一个时间片再执行。（类似于 setTimeout）"
+msgstr ""
+
+#: ../../source/api/wx.nextTick.rst
+msgid "参数"
+msgstr ""
+
+#: ../../source/api/wx.nextTick.rst:10
+msgid ""
+"因为自定义组件中的 setData 和 triggerEvent "
+"等接口本身是同步的操作，当这几个接口被连续调用时，都是在一个同步流程中执行完的，因此若逻辑不当可能会导致出错。"
+msgstr ""
+
+#: ../../source/api/wx.nextTick.rst:12
+msgid ""
+"一个极端的案例：当父组件的 setData 引发了子组件的 triggerEvent， 进而使得父组件又进行了一次 setData，期间有通过 "
+"wx:if 语句对子组件进行卸载， 就有可能引发奇怪的错误，所以对于不需要在一个同步流程内完成的逻辑， 可以使用此接口延迟到下一个时间片再执行。"
+msgstr ""
+
+#: ../../source/api/wx.nextTick.rst
+msgid "示例代码"
+msgstr ""
+

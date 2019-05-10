@@ -1,0 +1,86 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019, Nosy
+# This file is distributed under the same license as the wxadev package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: wxadev \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-09 22:55+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/wxwork/doc/wx-component-support.rst:2
+msgid "微信小程序组件支持情况"
+msgstr ""
+
+#: ../../source/wxwork/doc/wx-component-support.rst:5
+msgid "视图容器(View Container)："
+msgstr ""
+
+#: ../../source/wxwork/doc/wx-component-support.rst:7
+msgid "组件名     说明      企业微信支持情况 view    视图容器    支持 scroll-view     可滚动视图容器 支持 swiper  滑块视图容器  支持 movable-view/movable-area       可移动的视图容器        支持 cover-view      覆盖在原生组件之上的文本视图  支持 cover-image     覆盖在原生组件之上的图片视图  支持"
+msgstr ""
+
+#: ../../source/wxwork/doc/wx-component-support.rst:16
+msgid "基础内容(Basic Content)："
+msgstr ""
+
+#: ../../source/wxwork/doc/wx-component-support.rst:18
+msgid "组件名     说明      企业微信支持情况 icon    图标      支持 text    文字      支持 rich-text       富文本     支持 progress        进度条     支持"
+msgstr ""
+
+#: ../../source/wxwork/doc/wx-component-support.rst:25
+msgid "表单(Form)："
+msgstr ""
+
+#: ../../source/wxwork/doc/wx-component-support.rst:27
+msgid "标签名     说明      企业微信支持情况 button  按钮      支持 checkbox        多项选择器   支持 form    表单      支持 input   输入框     支持 label   标签      支持 picker  列表选择器   支持 picker-view     内嵌列表选择器 支持 radio   单项选择器   支持 slider  滚动选择器   支持 switch  开关选择器   支持 textarea        多行输入框   支持"
+msgstr ""
+
+#: ../../source/wxwork/doc/wx-component-support.rst:41
+msgid "导航(Navigation)："
+msgstr ""
+
+#: ../../source/wxwork/doc/wx-component-support.rst:43
+msgid "组件名     说明      企业微信支持情况 navigator       页面链接    支持 functional-page-navigator       跳转到插件功能页        支持"
+msgstr ""
+
+#: ../../source/wxwork/doc/wx-component-support.rst:48
+msgid "多媒体(Media)："
+msgstr ""
+
+#: ../../source/wxwork/doc/wx-component-support.rst:50
+msgid "组件名     说明      企业微信支持情况 audio   音频      部分支持 image   图片      支持 video   视频      部分支持 camera  系统相机    不支持 live-player     实时音视频播放 支持 live-pusher     实时音视频录制 支持"
+msgstr ""
+
+#: ../../source/wxwork/doc/wx-component-support.rst:59
+msgid "地图(Map)："
+msgstr ""
+
+#: ../../source/wxwork/doc/wx-component-support.rst:62
+msgid "组件名     说明      企业微信支持情况 map     地图      部分支持"
+msgstr ""
+
+#: ../../source/wxwork/doc/wx-component-support.rst:66
+msgid "画布(Canvas)："
+msgstr ""
+
+#: ../../source/wxwork/doc/wx-component-support.rst:68
+msgid "组件名     说明      企业微信支持情况 canvas  画布      部分支持"
+msgstr ""
+
+#: ../../source/wxwork/doc/wx-component-support.rst:72
+msgid "开放能力(Open Ability)："
+msgstr ""
+
+#: ../../source/wxwork/doc/wx-component-support.rst:74
+msgid "组件名     说明      企业微信支持情况 open-data       展示微信开放的数据       不支持 web-view        承载网页的容器 部分支持 ad      广告      支持 official-account        关注公众号   不支持"
+msgstr ""
+

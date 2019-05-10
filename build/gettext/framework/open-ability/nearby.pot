@@ -1,0 +1,38 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019, Nosy
+# This file is distributed under the same license as the wxadev package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: wxadev \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-09 22:55+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/framework/open-ability/nearby.rst:2
+msgid ":wxfrwk:`附近的小程序 <open-ability/nearby>`"
+msgstr ""
+
+#: ../../source/framework/open-ability/nearby.rst:4
+msgid "概述 附近的小程序 API，提供给需快速批量创建附近地点的小程序开发者使用，使用前请先调高附近地点额度。 调高附近地点额度申请方式如下："
+msgstr ""
+
+#: ../../source/framework/open-ability/nearby.rst:7
+msgid "下载 《调高地点额度申请表》，填写后发送至 placeofminiprogram@qq.com。"
+msgstr ""
+
+#: ../../source/framework/open-ability/nearby.rst:9
+msgid "邮件主题为：“帐号名称”申请调高附近地点额度。审核通过后可调高额度。"
+msgstr ""
+
+#: ../../source/framework/open-ability/nearby.rst:11
+msgid "管理接口 添加地点 查看地点列表 删除地点 展示/取消展示附近小程序"
+msgstr ""
+

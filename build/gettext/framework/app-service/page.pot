@@ -1,0 +1,38 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019, Nosy
+# This file is distributed under the same license as the wxadev package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: wxadev \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-09 22:55+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/framework/app-service/page.rst:4
+msgid ":wxfrwk:`注册页面 <app-service/page>`"
+msgstr ""
+
+#: ../../source/framework/app-service/page.rst:6
+msgid "对于小程序中的每个页面，都需要在页面对应的 js 文件中调用 Page 方法注册页面示例，指定页面的初始数据、生命周期回调、事件处理函数等。"
+msgstr ""
+
+#: ../../source/framework/app-service/page.rst:8
+msgid "详细的参数含义和使用请参考 Page 参考文档 。"
+msgstr ""
+
+#: ../../source/framework/app-service/page.rst:65
+msgid "除了 Page ，作为高级用法，页面可以像自定义组件一样使用 Component 来创建，这样就可以使用自定义组件的特性，如 behaviors 等。"
+msgstr ""
+
+#: ../../source/framework/app-service/page.rst:67
+msgid "具体细节请阅读 Component 构造器 章节。"
+msgstr ""
+

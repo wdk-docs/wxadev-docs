@@ -1,0 +1,148 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019, Nosy
+# This file is distributed under the same license as the wxadev package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: wxadev \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-09 22:55+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../../source/api/CameraContext.rst:2
+msgid ":wxapi:`CameraContext`"
+msgstr ""
+
+#: ../../source/api/CameraContext.rst:6
+msgid "低版本需做 :doc:`/framework/compatibility` 。"
+msgstr ""
+
+#: ../../source/api/CameraContext.rst
+msgid "label"
+msgstr ""
+
+#: ../../source/api/CameraContext.rst:8
+msgid "创建 camera 上下文 :class:`CameraContext` 对象。"
+msgstr ""
+
+#: ../../source/api/CameraContext.rst
+msgid "返回"
+msgstr ""
+
+#: ../../source/api/CameraContext.rst:9
+msgid ":class:`CameraContext`"
+msgstr ""
+
+#: ../../source/api/CameraContext.rst:13
+msgid "CameraContext 实例，可通过 :func:`wx.createCameraContext` 获取。"
+msgstr ""
+
+#: ../../source/api/CameraContext.rst:15
+msgid ""
+"cameraContext 与页面内唯一的 :ref:`<camera> <camera>` 组件绑定，操作对应的 :ref:`<camera> "
+"<camera>` 组件。"
+msgstr ""
+
+#: ../../source/api/CameraContext.rst:18
+msgid "方法"
+msgstr ""
+
+#: ../../source/api/CameraContext.rst:22
+msgid ":class:`CameraContext` 实例拍摄照片"
+msgstr ""
+
+#: ../../source/api/CameraContext.rst
+msgid "参数"
+msgstr ""
+
+#: ../../source/api/CameraContext.rst:24
+msgid "成像质量，合法值:  - *high*: 高质量 - *normal*: 普通质量(**默认值**) - *low*: 低质量"
+msgstr ""
+
+#: ../../source/api/CameraContext.rst:24
+msgid "成像质量，合法值:"
+msgstr ""
+
+#: ../../source/api/CameraContext.rst:26
+msgid "*high*: 高质量"
+msgstr ""
+
+#: ../../source/api/CameraContext.rst:27
+msgid "*normal*: 普通质量(**默认值**)"
+msgstr ""
+
+#: ../../source/api/CameraContext.rst:28
+msgid "*low*: 低质量"
+msgstr ""
+
+#: ../../source/api/CameraContext.rst:30
+msgid "接口调用成功的回调函数  - **tempImagePath** (*string*) - 照片文件的临时路径，安卓是jpg图片格式，ios是png"
+msgstr ""
+
+#: ../../source/api/CameraContext.rst:30 ../../source/api/CameraContext.rst:45
+#: ../../source/api/CameraContext.rst:52
+msgid "接口调用成功的回调函数"
+msgstr ""
+
+#: ../../source/api/CameraContext.rst:32
+msgid "**tempImagePath** (*string*) - 照片文件的临时路径，安卓是jpg图片格式，ios是png"
+msgstr ""
+
+#: ../../source/api/CameraContext.rst:34 ../../source/api/CameraContext.rst:46
+#: ../../source/api/CameraContext.rst:57
+msgid "接口调用失败的回调函数"
+msgstr ""
+
+#: ../../source/api/CameraContext.rst:35 ../../source/api/CameraContext.rst:47
+#: ../../source/api/CameraContext.rst:58
+msgid "接口调用结束的回调函数（调用成功、失败都会执行）"
+msgstr ""
+
+#: ../../source/api/CameraContext.rst:39
+msgid ":class:`CameraContext` 实例开始录像"
+msgstr ""
+
+#: ../../source/api/CameraContext.rst:40
+msgid ""
+"超过30s或页面 onHide 时会结束录像  - **tempThumbPath** (*string*) - 封面图片文件的临时路径 - "
+"**tempVideoPath** (*string*) - 视频的文件的临时路径"
+msgstr ""
+
+#: ../../source/api/CameraContext.rst:40
+msgid "超过30s或页面 onHide 时会结束录像"
+msgstr ""
+
+#: ../../source/api/CameraContext.rst:42 ../../source/api/CameraContext.rst:54
+msgid "**tempThumbPath** (*string*) - 封面图片文件的临时路径"
+msgstr ""
+
+#: ../../source/api/CameraContext.rst:43 ../../source/api/CameraContext.rst:55
+msgid "**tempVideoPath** (*string*) - 视频的文件的临时路径"
+msgstr ""
+
+#: ../../source/api/CameraContext.rst:51
+msgid ":class:`CameraContext` 实例结束录像"
+msgstr ""
+
+#: ../../source/api/CameraContext.rst:52
+msgid ""
+"接口调用成功的回调函数  - **tempThumbPath** (*string*) - 封面图片文件的临时路径 - "
+"**tempVideoPath** (*string*) - 视频的文件的临时路径"
+msgstr ""
+
+#: ../../source/api/CameraContext.rst:61
+msgid "示例代码"
+msgstr ""
+
+#: ../../source/api/CameraContext.rst:63
+msgid ":download:`在开发者工具中预览效果 <https://developers.weixin.qq.com/s/VBZ3Jim26zYu>`"
+msgstr ""
+

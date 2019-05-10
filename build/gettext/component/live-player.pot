@@ -1,0 +1,738 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019, Nosy
+# This file is distributed under the same license as the wxadev package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: wxadev \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-09 22:55+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/component/live-player.rst:4
+msgid ":wx_comp:`live-player`"
+msgstr ""
+
+#: ../../source/component/live-player.rst:6
+msgid "低版本需做 :ref:`compatibility` 。"
+msgstr ""
+
+#: ../../source/component/live-player.rst:8
+msgid "实时音视频播放。相关api：:func:`wx.createLivePlayerContext`"
+msgstr ""
+
+#: ../../source/component/live-player.rst:10
+msgid "暂只针对国内主体如下类目的小程序开放，需要先通过类目审核，再在小程序管理后台， :menuselection:`「开发」-->「接口设置」` 中自助开通该组件权限。"
+msgstr ""
+
+#: ../../source/component/live-player.rst:14
+msgid "一级类目/主体类型"
+msgstr ""
+
+#: ../../source/component/live-player.rst:14
+msgid "二级类目"
+msgstr ""
+
+#: ../../source/component/live-player.rst:14
+msgid "小程序内容场景"
+msgstr ""
+
+#: ../../source/component/live-player.rst:16
+msgid "社交"
+msgstr ""
+
+#: ../../source/component/live-player.rst:16
+#: ../../source/component/live-player.rst:90
+msgid "直播"
+msgstr ""
+
+#: ../../source/component/live-player.rst:16
+msgid "涉及娱乐性质，如明星直播、生活趣事直播、宠"
+msgstr ""
+
+#: ../../source/component/live-player.rst:18
+msgid "物直播等。选择该类目后首次提交代码审核，需"
+msgstr ""
+
+#: ../../source/component/live-player.rst:20
+msgid "经当地互联网主管机关审核确认，预计审核时长"
+msgstr ""
+
+#: ../../source/component/live-player.rst:22
+msgid "7 天左右"
+msgstr ""
+
+#: ../../source/component/live-player.rst:24
+msgid "教育"
+msgstr ""
+
+#: ../../source/component/live-player.rst:24
+msgid "在线视频课程"
+msgstr ""
+
+#: ../../source/component/live-player.rst:24
+msgid "网课、在线培训、讲座等教育类直播"
+msgstr ""
+
+#: ../../source/component/live-player.rst:26
+msgid "医疗"
+msgstr ""
+
+#: ../../source/component/live-player.rst:26
+msgid "互联网医院，公立医院"
+msgstr ""
+
+#: ../../source/component/live-player.rst:26
+msgid "问诊、大型健康讲座等直播"
+msgstr ""
+
+#: ../../source/component/live-player.rst:28
+msgid "金融"
+msgstr ""
+
+#: ../../source/component/live-player.rst:28
+msgid "银行、信托、基金、证券/期货、证券、期货"
+msgstr ""
+
+#: ../../source/component/live-player.rst:30
+msgid "投资咨询、保险、征信业务、新三板信息服"
+msgstr ""
+
+#: ../../source/component/live-player.rst:32
+msgid "务平台、股票信息服务平台（港股/美股）、"
+msgstr ""
+
+#: ../../source/component/live-player.rst:34
+msgid "消费金融"
+msgstr ""
+
+#: ../../source/component/live-player.rst:34
+msgid "金融产品视频客服理赔、金融产品推广直播等"
+msgstr ""
+
+#: ../../source/component/live-player.rst:36
+msgid "汽车"
+msgstr ""
+
+#: ../../source/component/live-player.rst:36
+msgid "汽车预售服务"
+msgstr ""
+
+#: ../../source/component/live-player.rst:36
+msgid "汽车预售、推广直播"
+msgstr ""
+
+#: ../../source/component/live-player.rst:38
+msgid "政府主体帐号"
+msgstr ""
+
+#: ../../source/component/live-player.rst:38
+msgid "/"
+msgstr ""
+
+#: ../../source/component/live-player.rst:38
+msgid "政府相关工作推广直播、领导讲话直播等"
+msgstr ""
+
+#: ../../source/component/live-player.rst:40
+msgid "工具"
+msgstr ""
+
+#: ../../source/component/live-player.rst:40
+msgid "视频客服"
+msgstr ""
+
+#: ../../source/component/live-player.rst:40
+msgid "不涉及以上几类内容的一对一视频客服服务，"
+msgstr ""
+
+#: ../../source/component/live-player.rst:42
+msgid "如企业售后一对一视频服务等"
+msgstr ""
+
+#: ../../source/component/live-player.rst:46
+msgid "属性"
+msgstr ""
+
+#: ../../source/component/live-player.rst:46
+msgid "类型"
+msgstr ""
+
+#: ../../source/component/live-player.rst:46
+msgid "默认值"
+msgstr ""
+
+#: ../../source/component/live-player.rst:46
+msgid "必填"
+msgstr ""
+
+#: ../../source/component/live-player.rst:46
+#: ../../source/component/live-player.rst:88
+#: ../../source/component/live-player.rst:108
+#: ../../source/component/live-player.rst:118
+#: ../../source/component/live-player.rst:170
+msgid "说明"
+msgstr ""
+
+#: ../../source/component/live-player.rst:46
+msgid "最低版本"
+msgstr ""
+
+#: ../../source/component/live-player.rst:48
+msgid "src"
+msgstr ""
+
+#: ../../source/component/live-player.rst:48
+#: ../../source/component/live-player.rst:50
+#: ../../source/component/live-player.rst:56
+#: ../../source/component/live-player.rst:58
+#: ../../source/component/live-player.rst:66
+msgid "string"
+msgstr ""
+
+#: ../../source/component/live-player.rst:48
+#: ../../source/component/live-player.rst:50
+#: ../../source/component/live-player.rst:52
+#: ../../source/component/live-player.rst:54
+#: ../../source/component/live-player.rst:56
+#: ../../source/component/live-player.rst:58
+#: ../../source/component/live-player.rst:60
+#: ../../source/component/live-player.rst:62
+#: ../../source/component/live-player.rst:64
+#: ../../source/component/live-player.rst:66
+#: ../../source/component/live-player.rst:68
+#: ../../source/component/live-player.rst:72
+#: ../../source/component/live-player.rst:76
+#: ../../source/component/live-player.rst:78
+#: ../../source/component/live-player.rst:82
+msgid "否"
+msgstr ""
+
+#: ../../source/component/live-player.rst:48
+msgid "音视频地址。目前仅支持 flv, rtmp 格式"
+msgstr ""
+
+#: ../../source/component/live-player.rst:48
+#: ../../source/component/live-player.rst:50
+#: ../../source/component/live-player.rst:52
+#: ../../source/component/live-player.rst:54
+#: ../../source/component/live-player.rst:56
+#: ../../source/component/live-player.rst:58
+#: ../../source/component/live-player.rst:60
+#: ../../source/component/live-player.rst:62
+#: ../../source/component/live-player.rst:64
+#: ../../source/component/live-player.rst:76
+#: ../../source/component/live-player.rst:80
+msgid "1.7.0"
+msgstr ""
+
+#: ../../source/component/live-player.rst:50
+msgid "mode"
+msgstr ""
+
+#: ../../source/component/live-player.rst:50
+#: ../../source/component/live-player.rst:90
+msgid "live"
+msgstr ""
+
+#: ../../source/component/live-player.rst:50
+msgid "模式"
+msgstr ""
+
+#: ../../source/component/live-player.rst:52
+msgid "autoplay"
+msgstr ""
+
+#: ../../source/component/live-player.rst:52
+#: ../../source/component/live-player.rst:54
+#: ../../source/component/live-player.rst:60
+#: ../../source/component/live-player.rst:68
+#: ../../source/component/live-player.rst:72
+msgid "boolean"
+msgstr ""
+
+#: ../../source/component/live-player.rst:52
+#: ../../source/component/live-player.rst:54
+#: ../../source/component/live-player.rst:60
+msgid "false"
+msgstr ""
+
+#: ../../source/component/live-player.rst:52
+msgid "自动播放"
+msgstr ""
+
+#: ../../source/component/live-player.rst:54
+msgid "muted"
+msgstr ""
+
+#: ../../source/component/live-player.rst:54
+msgid "是否静音"
+msgstr ""
+
+#: ../../source/component/live-player.rst:56
+msgid "orientation"
+msgstr ""
+
+#: ../../source/component/live-player.rst:56
+msgid "vertical"
+msgstr ""
+
+#: ../../source/component/live-player.rst:56
+msgid "画面方向"
+msgstr ""
+
+#: ../../source/component/live-player.rst:58
+msgid "object-fit"
+msgstr ""
+
+#: ../../source/component/live-player.rst:58
+msgid "contain"
+msgstr ""
+
+#: ../../source/component/live-player.rst:58
+msgid "填充模式，可选值有 contain，fillCrop"
+msgstr ""
+
+#: ../../source/component/live-player.rst:60
+msgid "background-mute"
+msgstr ""
+
+#: ../../source/component/live-player.rst:60
+msgid "进入后台时是否静音（已废弃，默认退台静音）"
+msgstr ""
+
+#: ../../source/component/live-player.rst:62
+msgid "min-cache"
+msgstr ""
+
+#: ../../source/component/live-player.rst:62
+#: ../../source/component/live-player.rst:64
+msgid "number"
+msgstr ""
+
+#: ../../source/component/live-player.rst:62
+msgid "1"
+msgstr ""
+
+#: ../../source/component/live-player.rst:62
+msgid "最小缓冲区，单位s（RTC 模式推荐 0.2s）"
+msgstr ""
+
+#: ../../source/component/live-player.rst:64
+msgid "max-cache"
+msgstr ""
+
+#: ../../source/component/live-player.rst:64
+msgid "3"
+msgstr ""
+
+#: ../../source/component/live-player.rst:64
+msgid "最大缓冲区，单位s（RTC 模式推荐 0.8s）"
+msgstr ""
+
+#: ../../source/component/live-player.rst:66
+msgid "sound-mode"
+msgstr ""
+
+#: ../../source/component/live-player.rst:66
+#: ../../source/component/live-player.rst:110
+msgid "speaker"
+msgstr ""
+
+#: ../../source/component/live-player.rst:66
+msgid "声音输出方式"
+msgstr ""
+
+#: ../../source/component/live-player.rst:66
+msgid "1.9.90"
+msgstr ""
+
+#: ../../source/component/live-player.rst:68
+msgid "auto-pause-if-navigate"
+msgstr ""
+
+#: ../../source/component/live-player.rst:68
+#: ../../source/component/live-player.rst:72
+msgid "true"
+msgstr ""
+
+#: ../../source/component/live-player.rst:68
+msgid "当跳转到其它小程序页面时，"
+msgstr ""
+
+#: ../../source/component/live-player.rst:70
+#: ../../source/component/live-player.rst:74
+msgid "是否自动暂停本页面的实时音视频播放"
+msgstr ""
+
+#: ../../source/component/live-player.rst:70
+#: ../../source/component/live-player.rst:74
+msgid "2.5.0"
+msgstr ""
+
+#: ../../source/component/live-player.rst:72
+msgid "auto-pause-if-open-native"
+msgstr ""
+
+#: ../../source/component/live-player.rst:72
+msgid "当跳转到其它微信原生页面时，"
+msgstr ""
+
+#: ../../source/component/live-player.rst:76
+msgid "bindstatechange"
+msgstr ""
+
+#: ../../source/component/live-player.rst:76
+#: ../../source/component/live-player.rst:78
+#: ../../source/component/live-player.rst:82
+msgid "eventhandle"
+msgstr ""
+
+#: ../../source/component/live-player.rst:76
+msgid "播放状态变化事件，detail = {code}"
+msgstr ""
+
+#: ../../source/component/live-player.rst:78
+msgid "bindfullscreenchange"
+msgstr ""
+
+#: ../../source/component/live-player.rst:78
+msgid "全屏变化事件，"
+msgstr ""
+
+#: ../../source/component/live-player.rst:80
+msgid "detail = {direction, fullScreen}"
+msgstr ""
+
+#: ../../source/component/live-player.rst:82
+msgid "bindnetstatus"
+msgstr ""
+
+#: ../../source/component/live-player.rst:82
+msgid "网络状态通知，detail = {info}"
+msgstr ""
+
+#: ../../source/component/live-player.rst:82
+msgid "1.9.0"
+msgstr ""
+
+#: ../../source/component/live-player.rst:85
+msgid "mode 的合法值"
+msgstr ""
+
+#: ../../source/component/live-player.rst:88
+#: ../../source/component/live-player.rst:108
+msgid "值"
+msgstr ""
+
+#: ../../source/component/live-player.rst:92
+msgid "RTC"
+msgstr ""
+
+#: ../../source/component/live-player.rst:92
+msgid "实时通话，该模式时延更低"
+msgstr ""
+
+#: ../../source/component/live-player.rst:105
+msgid "sound-mode 的合法值"
+msgstr ""
+
+#: ../../source/component/live-player.rst:110
+msgid "扬声器"
+msgstr ""
+
+#: ../../source/component/live-player.rst:112
+msgid "ear"
+msgstr ""
+
+#: ../../source/component/live-player.rst:112
+msgid "听筒"
+msgstr ""
+
+#: ../../source/component/live-player.rst:115
+msgid "状态码"
+msgstr ""
+
+#: ../../source/component/live-player.rst:118
+msgid "代码"
+msgstr ""
+
+#: ../../source/component/live-player.rst:120
+msgid "2001"
+msgstr ""
+
+#: ../../source/component/live-player.rst:120
+msgid "已经连接服务器"
+msgstr ""
+
+#: ../../source/component/live-player.rst:122
+msgid "2002"
+msgstr ""
+
+#: ../../source/component/live-player.rst:122
+msgid "已经连接服务器,开始拉流"
+msgstr ""
+
+#: ../../source/component/live-player.rst:124
+msgid "2003"
+msgstr ""
+
+#: ../../source/component/live-player.rst:124
+msgid "网络接收到首个视频数据包(IDR)"
+msgstr ""
+
+#: ../../source/component/live-player.rst:126
+msgid "2004"
+msgstr ""
+
+#: ../../source/component/live-player.rst:126
+msgid "视频播放开始"
+msgstr ""
+
+#: ../../source/component/live-player.rst:128
+msgid "2005"
+msgstr ""
+
+#: ../../source/component/live-player.rst:128
+msgid "视频播放进度"
+msgstr ""
+
+#: ../../source/component/live-player.rst:130
+msgid "2006"
+msgstr ""
+
+#: ../../source/component/live-player.rst:130
+msgid "视频播放结束"
+msgstr ""
+
+#: ../../source/component/live-player.rst:132
+msgid "2007"
+msgstr ""
+
+#: ../../source/component/live-player.rst:132
+msgid "视频播放Loading"
+msgstr ""
+
+#: ../../source/component/live-player.rst:134
+msgid "2008"
+msgstr ""
+
+#: ../../source/component/live-player.rst:134
+msgid "解码器启动"
+msgstr ""
+
+#: ../../source/component/live-player.rst:136
+msgid "2009"
+msgstr ""
+
+#: ../../source/component/live-player.rst:136
+msgid "视频分辨率改变"
+msgstr ""
+
+#: ../../source/component/live-player.rst:138
+msgid "-2301"
+msgstr ""
+
+#: ../../source/component/live-player.rst:138
+msgid "网络断连，且经多次重连抢救无效，更多重试请自行重启播放"
+msgstr ""
+
+#: ../../source/component/live-player.rst:140
+msgid "-2302"
+msgstr ""
+
+#: ../../source/component/live-player.rst:140
+msgid "获取加速拉流地址失败"
+msgstr ""
+
+#: ../../source/component/live-player.rst:142
+msgid "2101"
+msgstr ""
+
+#: ../../source/component/live-player.rst:142
+msgid "当前视频帧解码失败"
+msgstr ""
+
+#: ../../source/component/live-player.rst:144
+msgid "2102"
+msgstr ""
+
+#: ../../source/component/live-player.rst:144
+msgid "当前音频帧解码失败"
+msgstr ""
+
+#: ../../source/component/live-player.rst:146
+msgid "2103"
+msgstr ""
+
+#: ../../source/component/live-player.rst:146
+msgid "网络断连, 已启动自动重连"
+msgstr ""
+
+#: ../../source/component/live-player.rst:148
+msgid "2104"
+msgstr ""
+
+#: ../../source/component/live-player.rst:148
+msgid "网络来包不稳：可能是下行带宽不足，或由于主播端出流不均匀"
+msgstr ""
+
+#: ../../source/component/live-player.rst:150
+msgid "2105"
+msgstr ""
+
+#: ../../source/component/live-player.rst:150
+msgid "当前视频播放出现卡顿"
+msgstr ""
+
+#: ../../source/component/live-player.rst:152
+msgid "2106"
+msgstr ""
+
+#: ../../source/component/live-player.rst:152
+msgid "硬解启动失败，采用软解"
+msgstr ""
+
+#: ../../source/component/live-player.rst:154
+msgid "2107"
+msgstr ""
+
+#: ../../source/component/live-player.rst:154
+msgid "当前视频帧不连续，可能丢帧"
+msgstr ""
+
+#: ../../source/component/live-player.rst:156
+msgid "2108"
+msgstr ""
+
+#: ../../source/component/live-player.rst:156
+msgid "当前流硬解第一个I帧失败，SDK自动切软解"
+msgstr ""
+
+#: ../../source/component/live-player.rst:158
+msgid "3001"
+msgstr ""
+
+#: ../../source/component/live-player.rst:158
+msgid "RTMP -DNS解析失败"
+msgstr ""
+
+#: ../../source/component/live-player.rst:160
+msgid "3002"
+msgstr ""
+
+#: ../../source/component/live-player.rst:160
+msgid "RTMP服务器连接失败"
+msgstr ""
+
+#: ../../source/component/live-player.rst:162
+msgid "3003"
+msgstr ""
+
+#: ../../source/component/live-player.rst:162
+msgid "RTMP服务器握手失败"
+msgstr ""
+
+#: ../../source/component/live-player.rst:164
+msgid "3005"
+msgstr ""
+
+#: ../../source/component/live-player.rst:164
+msgid "RTMP 读/写失败"
+msgstr ""
+
+#: ../../source/component/live-player.rst:167
+msgid "网络状态数据"
+msgstr ""
+
+#: ../../source/component/live-player.rst:170
+msgid "键名"
+msgstr ""
+
+#: ../../source/component/live-player.rst:172
+msgid "videoBitrate"
+msgstr ""
+
+#: ../../source/component/live-player.rst:172
+msgid "当前视频编/码器输出的比特率，单位 kbps"
+msgstr ""
+
+#: ../../source/component/live-player.rst:174
+msgid "audioBitrate"
+msgstr ""
+
+#: ../../source/component/live-player.rst:174
+msgid "当前音频编/码器输出的比特率，单位 kbps"
+msgstr ""
+
+#: ../../source/component/live-player.rst:176
+msgid "videoFPS"
+msgstr ""
+
+#: ../../source/component/live-player.rst:176
+msgid "当前视频帧率"
+msgstr ""
+
+#: ../../source/component/live-player.rst:178
+msgid "videoGOP"
+msgstr ""
+
+#: ../../source/component/live-player.rst:178
+msgid "当前视频 GOP,也就是每两个关键帧(I帧)间隔时长，单位 s"
+msgstr ""
+
+#: ../../source/component/live-player.rst:180
+msgid "netSpeed"
+msgstr ""
+
+#: ../../source/component/live-player.rst:180
+msgid "当前的发送/接收速度"
+msgstr ""
+
+#: ../../source/component/live-player.rst:182
+msgid "netJitter"
+msgstr ""
+
+#: ../../source/component/live-player.rst:182
+msgid "网络抖动情况，抖动越大，网络越不稳定"
+msgstr ""
+
+#: ../../source/component/live-player.rst:184
+msgid "videoWidth"
+msgstr ""
+
+#: ../../source/component/live-player.rst:184
+msgid "视频画面的宽度"
+msgstr ""
+
+#: ../../source/component/live-player.rst:186
+msgid "videoHeight"
+msgstr ""
+
+#: ../../source/component/live-player.rst:186
+msgid "视频画面的高度"
+msgstr ""
+
+#: ../../source/component/live-player.rst:189
+msgid "<live-player> 默认宽度300px、高度225px，可通过wxss设置宽高。"
+msgstr ""
+
+#: ../../source/component/live-player.rst:191
+msgid "开发者工具上暂不支持。"
+msgstr ""
+
+#: ../../source/component/live-player.rst:193
+msgid "示例代码"
+msgstr ""
+
+#: ../../source/component/live-player.rst:195
+msgid ":download:`在开发者工具中预览效果 <https://developers.weixin.qq.com/s/UzWEzmm763Y4>`"
+msgstr ""
+

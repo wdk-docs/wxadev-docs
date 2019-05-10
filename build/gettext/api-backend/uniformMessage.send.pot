@@ -1,0 +1,300 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019, Nosy
+# This file is distributed under the same license as the wxadev package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: wxadev \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-09 22:55+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/api-backend/uniformMessage.send.rst:2
+msgid "下发统一服务消息 :wxbpi:`uniformMessage.send`"
+msgstr ""
+
+#: ../../source/api-backend/uniformMessage.send.rst:4
+msgid ":: 本接口应在服务器端调用，详细说明参见服务端API。"
+msgstr ""
+
+#: ../../source/api-backend/uniformMessage.send.rst:6
+msgid ":: 本接口支持云调用。"
+msgstr ""
+
+#: ../../source/api-backend/uniformMessage.send.rst:9
+msgid "服务器端调用"
+msgstr ""
+
+#: ../../source/api-backend/uniformMessage.send.rst:0
+msgid "synopsis"
+msgstr ""
+
+#: ../../source/api-backend/uniformMessage.send.rst:15
+msgid "下发小程序和公众号统一的服务消息"
+msgstr ""
+
+#: ../../source/api-backend/uniformMessage.send.rst:17
+msgid ":mimetype:`application/json`"
+msgstr ""
+
+#: ../../source/api-backend/uniformMessage.send.rst:0
+msgid "Query Parameters"
+msgstr ""
+
+#: ../../source/api-backend/uniformMessage.send.rst:19
+msgid "*必选*     接口调用凭证"
+msgstr ""
+
+#: ../../source/api-backend/uniformMessage.send.rst:0
+msgid "Request JSON Object"
+msgstr ""
+
+#: ../../source/api-backend/uniformMessage.send.rst:20
+msgid "*必选* 用户openid，可以是小程序的openid，也可以是mp_template_msg.appid对应的公众号的openid"
+msgstr ""
+
+#: ../../source/api-backend/uniformMessage.send.rst:21
+msgid "非必选        小程序模板消息相关的信息，可以参考小程序模板消息接口; 有此节点则优先发送小程序模板消息  - **template_id** (*string*):  *必选*       小程序模板ID - **page** (*string*):  *必选*      小程序页面路径 - **form_id** (*string*): *必选*    小程序模板消息formid - **data** (*string*):  *必选*      小程序模板数据 - **emphasis_keyword** (*string*):        *必选*    小程序模板放大关键词"
+msgstr ""
+
+#: ../../source/api-backend/uniformMessage.send.rst:21
+msgid "非必选        小程序模板消息相关的信息，可以参考小程序模板消息接口; 有此节点则优先发送小程序模板消息"
+msgstr ""
+
+#: ../../source/api-backend/uniformMessage.send.rst:23
+msgid "**template_id** (*string*):  *必选*       小程序模板ID"
+msgstr ""
+
+#: ../../source/api-backend/uniformMessage.send.rst:24
+msgid "**page** (*string*):  *必选*      小程序页面路径"
+msgstr ""
+
+#: ../../source/api-backend/uniformMessage.send.rst:25
+msgid "**form_id** (*string*): *必选*    小程序模板消息formid"
+msgstr ""
+
+#: ../../source/api-backend/uniformMessage.send.rst:26
+msgid "**data** (*string*):  *必选*      小程序模板数据"
+msgstr ""
+
+#: ../../source/api-backend/uniformMessage.send.rst:27
+msgid "**emphasis_keyword** (*string*):        *必选*    小程序模板放大关键词"
+msgstr ""
+
+#: ../../source/api-backend/uniformMessage.send.rst:29
+msgid "*必选*  公众号模板消息相关的信息，可以参考公众号模板消息接口；有此节点并且没有weapp_template_msg节点时，发送公众号模板消息  - **appid** (*string*): *必选*      公众号appid，要求与小程序有绑定且同主体 - **template_id** (*string*): *必选*        公众号模板id - **url** (*string*): *必选*        公众号模板消息所要跳转的url - **miniprogram** (*string*): *必选*        公众号模板消息所要跳转的小程序，小程序的必须与公众号具有绑定关系 - **data** (*string*): *必选*       公众号模板消息的数据"
+msgstr ""
+
+#: ../../source/api-backend/uniformMessage.send.rst:29
+msgid "*必选*  公众号模板消息相关的信息，可以参考公众号模板消息接口；有此节点并且没有weapp_template_msg节点时，发送公众号模板消息"
+msgstr ""
+
+#: ../../source/api-backend/uniformMessage.send.rst:31
+msgid "**appid** (*string*): *必选*      公众号appid，要求与小程序有绑定且同主体"
+msgstr ""
+
+#: ../../source/api-backend/uniformMessage.send.rst:32
+msgid "**template_id** (*string*): *必选*        公众号模板id"
+msgstr ""
+
+#: ../../source/api-backend/uniformMessage.send.rst:33
+msgid "**url** (*string*): *必选*        公众号模板消息所要跳转的url"
+msgstr ""
+
+#: ../../source/api-backend/uniformMessage.send.rst:34
+msgid "**miniprogram** (*string*): *必选*        公众号模板消息所要跳转的小程序，小程序的必须与公众号具有绑定关系"
+msgstr ""
+
+#: ../../source/api-backend/uniformMessage.send.rst:35
+msgid "**data** (*string*): *必选*       公众号模板消息的数据"
+msgstr ""
+
+#: ../../source/api-backend/uniformMessage.send.rst:0
+msgid "Response JSON Object"
+msgstr ""
+
+#: ../../source/api-backend/uniformMessage.send.rst:36
+msgid "错误信息"
+msgstr ""
+
+#: ../../source/api-backend/uniformMessage.send.rst:37
+#: ../../source/api-backend/uniformMessage.send.rst:223
+#: ../../source/api-backend/uniformMessage.send.rst:226
+msgid "错误码"
+msgstr ""
+
+#: ../../source/api-backend/uniformMessage.send.rst:0
+#: ../../source/api-backend/uniformMessage.send.rst:0
+msgid "请求示例"
+msgstr ""
+
+#: ../../source/api-backend/uniformMessage.send.rst:0
+msgid "响应示例"
+msgstr ""
+
+#: ../../source/api-backend/uniformMessage.send.rst:109
+msgid "云调用"
+msgstr ""
+
+#: ../../source/api-backend/uniformMessage.send.rst:113
+msgid "云调用是小程序·云开发提供的在云函数中调用微信开放接口的能力，需要在云函数中通过 wx-server-sdk 使用。"
+msgstr ""
+
+#: ../../source/api-backend/uniformMessage.send.rst:0
+msgid "参数"
+msgstr ""
+
+#: ../../source/api-backend/uniformMessage.send.rst:115
+msgid "是       用户openid，可以是小程序的openid，也可以是mp_template_msg.appid对应的公众号的openid"
+msgstr ""
+
+#: ../../source/api-backend/uniformMessage.send.rst:116
+msgid "否       小程序模板消息相关的信息，可以参考小程序模板消息接口; 有此节点则优先发送小程序模板消息  - **templateId** (*string*):              是       小程序模板ID - **page** (*string*):            是       小程序页面路径 - **formId** (*string*):          是       小程序模板消息formid - **data** (*string*):            是       小程序模板数据 - **emphasisKeyword**     (*string*):             是       小程序模板放大关键词"
+msgstr ""
+
+#: ../../source/api-backend/uniformMessage.send.rst:116
+msgid "否       小程序模板消息相关的信息，可以参考小程序模板消息接口; 有此节点则优先发送小程序模板消息"
+msgstr ""
+
+#: ../../source/api-backend/uniformMessage.send.rst:118
+msgid "**templateId** (*string*):              是       小程序模板ID"
+msgstr ""
+
+#: ../../source/api-backend/uniformMessage.send.rst:119
+msgid "**page** (*string*):            是       小程序页面路径"
+msgstr ""
+
+#: ../../source/api-backend/uniformMessage.send.rst:120
+msgid "**formId** (*string*):          是       小程序模板消息formid"
+msgstr ""
+
+#: ../../source/api-backend/uniformMessage.send.rst:121
+msgid "**data** (*string*):            是       小程序模板数据"
+msgstr ""
+
+#: ../../source/api-backend/uniformMessage.send.rst:122
+msgid "**emphasisKeyword**     (*string*):             是       小程序模板放大关键词"
+msgstr ""
+
+#: ../../source/api-backend/uniformMessage.send.rst:124
+msgid "是       公众号模板消息相关的信息，可以参考公众号模板消息接口；有此节点并且没有weapp_template_msg节点时，发送公众号模板消息  - **appid**       (*string*):             是       公众号appid，要求与小程序有绑定且同主体 - **templateId**  (*string*):             是       公众号模板id - **url** (*string*):             是       公众号模板消息所要跳转的url - **miniprogram** (*string*):             是       公众号模板消息所要跳转的小程序，小程序的必须与公众号具有绑定关系 - **data**        (*string*):     是       公众号模板消息的数据"
+msgstr ""
+
+#: ../../source/api-backend/uniformMessage.send.rst:124
+msgid "是       公众号模板消息相关的信息，可以参考公众号模板消息接口；有此节点并且没有weapp_template_msg节点时，发送公众号模板消息"
+msgstr ""
+
+#: ../../source/api-backend/uniformMessage.send.rst:126
+msgid "**appid**       (*string*):             是       公众号appid，要求与小程序有绑定且同主体"
+msgstr ""
+
+#: ../../source/api-backend/uniformMessage.send.rst:127
+msgid "**templateId**  (*string*):             是       公众号模板id"
+msgstr ""
+
+#: ../../source/api-backend/uniformMessage.send.rst:128
+msgid "**url** (*string*):             是       公众号模板消息所要跳转的url"
+msgstr ""
+
+#: ../../source/api-backend/uniformMessage.send.rst:129
+msgid "**miniprogram** (*string*):             是       公众号模板消息所要跳转的小程序，小程序的必须与公众号具有绑定关系"
+msgstr ""
+
+#: ../../source/api-backend/uniformMessage.send.rst:130
+msgid "**data**        (*string*):     是       公众号模板消息的数据"
+msgstr ""
+
+#: ../../source/api-backend/uniformMessage.send.rst:0
+msgid "返回"
+msgstr ""
+
+#: ../../source/api-backend/uniformMessage.send.rst:132
+#: ../../source/api-backend/uniformMessage.send.rst:137
+msgid "- **errCode**     (*number*):     错误码 - **errMsg**      (*string*):     错误信息"
+msgstr ""
+
+#: ../../source/api-backend/uniformMessage.send.rst:134
+#: ../../source/api-backend/uniformMessage.send.rst:139
+msgid "**errCode**     (*number*):     错误码"
+msgstr ""
+
+#: ../../source/api-backend/uniformMessage.send.rst:135
+#: ../../source/api-backend/uniformMessage.send.rst:140
+msgid "**errMsg**      (*string*):     错误信息"
+msgstr ""
+
+#: ../../source/api-backend/uniformMessage.send.rst:0
+msgid "抛出"
+msgstr ""
+
+#: ../../source/api-backend/uniformMessage.send.rst:0
+msgid "返回示例"
+msgstr ""
+
+#: ../../source/api-backend/uniformMessage.send.rst:226
+msgid "说明"
+msgstr ""
+
+#: ../../source/api-backend/uniformMessage.send.rst:228
+msgid "40037"
+msgstr ""
+
+#: ../../source/api-backend/uniformMessage.send.rst:228
+msgid "模板id不正确，weapp_template_msg.template_id或者mp_template_msg.template_id"
+msgstr ""
+
+#: ../../source/api-backend/uniformMessage.send.rst:230
+msgid "41028"
+msgstr ""
+
+#: ../../source/api-backend/uniformMessage.send.rst:230
+msgid "weapp_template_msg.form_id过期或者不正确"
+msgstr ""
+
+#: ../../source/api-backend/uniformMessage.send.rst:232
+msgid "41029"
+msgstr ""
+
+#: ../../source/api-backend/uniformMessage.send.rst:232
+msgid "weapp_template_msg.form_id已被使用"
+msgstr ""
+
+#: ../../source/api-backend/uniformMessage.send.rst:234
+msgid "41030"
+msgstr ""
+
+#: ../../source/api-backend/uniformMessage.send.rst:234
+msgid "weapp_template_msg.page不正确"
+msgstr ""
+
+#: ../../source/api-backend/uniformMessage.send.rst:236
+msgid "45009"
+msgstr ""
+
+#: ../../source/api-backend/uniformMessage.send.rst:236
+msgid "接口调用超过限额"
+msgstr ""
+
+#: ../../source/api-backend/uniformMessage.send.rst:238
+msgid "40003"
+msgstr ""
+
+#: ../../source/api-backend/uniformMessage.send.rst:238
+msgid "touser不是正确的openid"
+msgstr ""
+
+#: ../../source/api-backend/uniformMessage.send.rst:240
+msgid "40013"
+msgstr ""
+
+#: ../../source/api-backend/uniformMessage.send.rst:240
+msgid "appid不正确，或者不符合绑定关系要求"
+msgstr ""
+

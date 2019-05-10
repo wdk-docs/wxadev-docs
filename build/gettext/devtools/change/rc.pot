@@ -1,0 +1,206 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019, Nosy
+# This file is distributed under the same license as the wxadev package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: wxadev \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-09 22:55+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/devtools/change/rc.rst:2
+msgid "预发布版 RC Build 更新日志"
+msgstr ""
+
+#: ../../source/devtools/change/rc.rst:4
+msgid "预发布版本，包含大的特性；通过内部测试，稳定性尚可"
+msgstr ""
+
+#: ../../source/devtools/change/rc.rst:6
+msgid "1.02.1904091 Windows 64 、 Windows 32 、 macOS"
+msgstr ""
+
+#: ../../source/devtools/change/rc.rst:8
+msgid "2019.04.09"
+msgstr ""
+
+#: ../../source/devtools/change/rc.rst:10
+msgid "U 优化 背景音频的交互体验"
+msgstr ""
+
+#: ../../source/devtools/change/rc.rst:11
+msgid "F 修复 HTTP 调用无法上传的问题 反馈详情"
+msgstr ""
+
+#: ../../source/devtools/change/rc.rst:12
+msgid "F 修复 tabBar 字体颜色支持 rgb 格式与客户端不一致的问题"
+msgstr ""
+
+#: ../../source/devtools/change/rc.rst:13
+msgid "F 修复 tabBar 被蒙层遮住的问题"
+msgstr ""
+
+#: ../../source/devtools/change/rc.rst:14
+msgid "F 修复 App.onLaunch 中无法调用企业微信 api 的问题"
+msgstr ""
+
+#: ../../source/devtools/change/rc.rst:15
+msgid "F 修复 wx.getBackgroundAudioManager 实现与客户端不一致的问题 反馈详情"
+msgstr ""
+
+#: ../../source/devtools/change/rc.rst:16
+msgid "F 修复 navigationStyle: custom 有 <web-view> 组件的页面没有顶部导航栏的问题"
+msgstr ""
+
+#: ../../source/devtools/change/rc.rst:17
+msgid "F 修复 命令行调用上传时 --upload-desc 会截断空格后内容的问题 反馈详情"
+msgstr ""
+
+#: ../../source/devtools/change/rc.rst:18
+msgid "F 修复 代理设置本地代理，失去焦点会自动在文字前加空格的问题"
+msgstr ""
+
+#: ../../source/devtools/change/rc.rst:19
+msgid "F 修复 基础库占比只在第一次预览之后才显示的问题"
+msgstr ""
+
+#: ../../source/devtools/change/rc.rst:21
+msgid "2019.03.25"
+msgstr ""
+
+#: ../../source/devtools/change/rc.rst:23
+msgid "F 修复 1.02.1903211 覆盖安装后文件修改无法触发编译的问题"
+msgstr ""
+
+#: ../../source/devtools/change/rc.rst:24
+msgid "F 修复 1.02.1903211 出现两个企业微信模拟器插件的问题"
+msgstr ""
+
+#: ../../source/devtools/change/rc.rst:25
+msgid "F 修复 1.02.1903211 公众号网页调试空白的问题"
+msgstr ""
+
+#: ../../source/devtools/change/rc.rst:26
+msgid "F 修复 1.02.1903211 模拟器启动时宽度错误的问题"
+msgstr ""
+
+#: ../../source/devtools/change/rc.rst:28
+msgid "2019.03.21"
+msgstr ""
+
+#: ../../source/devtools/change/rc.rst:30
+msgid "A 新增 云函数本地调试 文档"
+msgstr ""
+
+#: ../../source/devtools/change/rc.rst:31
+msgid "A 新增 企业微信模拟器插件 文档"
+msgstr ""
+
+#: ../../source/devtools/change/rc.rst:32
+msgid "A 新增 CLI/HTTP 调用关闭项目窗口、关闭开发者工具 详情"
+msgstr ""
+
+#: ../../source/devtools/change/rc.rst:33
+msgid "A 新增 小程序支持 pageOrientation: \"landscape\""
+msgstr ""
+
+#: ../../source/devtools/change/rc.rst:34
+msgid "A 新增 分包配置中新增的页面配置会自动生成对应的页面结构 反馈详情"
+msgstr ""
+
+#: ../../source/devtools/change/rc.rst:35
+msgid "A 新增 真机调试支持调试 functionalPage"
+msgstr ""
+
+#: ../../source/devtools/change/rc.rst:36
+msgid "A 新增 云控制台支持地理位置索引 文档"
+msgstr ""
+
+#: ../../source/devtools/change/rc.rst:37
+msgid "U 优化 大型的小程序项目编译卡顿的问题"
+msgstr ""
+
+#: ../../source/devtools/change/rc.rst:38
+msgid "U 优化 TS 版快速开始的代码结构"
+msgstr ""
+
+#: ../../source/devtools/change/rc.rst:39
+msgid "F 修复 打开背景音乐播放器时无法打开设置窗口的问题"
+msgstr ""
+
+#: ../../source/devtools/change/rc.rst:40
+msgid "F 修复 wx.connectSocket 超时时最大连接数控制异常的问题"
+msgstr ""
+
+#: ../../source/devtools/change/rc.rst:41
+msgid "F 修复 wx.connectSocket 在无法建立连接的情况下没有错误回调的问题"
+msgstr ""
+
+#: ../../source/devtools/change/rc.rst:42
+msgid "F 修复 <web-view> 横屏时无法显示全部的问题 反馈详情"
+msgstr ""
+
+#: ../../source/devtools/change/rc.rst:43
+msgid "F 修复 wxss 中使用非数字开头的自定义属性报错的问题"
+msgstr ""
+
+#: ../../source/devtools/change/rc.rst:44
+msgid "F 修复 自定义 tabBar 中调用 wx.getSystemInfo 返回的 windowHeight 不正确的问题"
+msgstr ""
+
+#: ../../source/devtools/change/rc.rst:45
+msgid "F 修复 自定义分析测试功能失效的问题 反馈详情"
+msgstr ""
+
+#: ../../source/devtools/change/rc.rst:46
+msgid "F 修复 没有开通云开发的 appid 选择云开发启动模板新建项目后会弹下拉提示的问题"
+msgstr ""
+
+#: ../../source/devtools/change/rc.rst:47
+msgid "F 修复 弹出的模拟器，打开设置授权会出现两个状态栏的问题 反馈详情"
+msgstr ""
+
+#: ../../source/devtools/change/rc.rst:48
+msgid "F 修复 wx.chooseMessageFile 在 tabBar 切换后失效的问题"
+msgstr ""
+
+#: ../../source/devtools/change/rc.rst:49
+msgid "F 修复 wxss 文件中 keyframe 后有注释会导致 wxml 面板无法解析样式的问题 反馈详情"
+msgstr ""
+
+#: ../../source/devtools/change/rc.rst:50
+msgid "F 修复 弹出模拟器之后 wx.getMenuButtonBoundingClient 异常的问题 反馈详情"
+msgstr ""
+
+#: ../../source/devtools/change/rc.rst:51
+msgid "F 修复 wxs 无法显示相同日志的问题 反馈详情"
+msgstr ""
+
+#: ../../source/devtools/change/rc.rst:52
+msgid "F 修复 wxs 报错信息没有显示的问题 反馈详情"
+msgstr ""
+
+#: ../../source/devtools/change/rc.rst:53
+msgid "F 修复 tabBar 调整会先显示其他 tabBar 页面的问题 反馈详情"
+msgstr ""
+
+#: ../../source/devtools/change/rc.rst:54
+msgid "F 修复 npm 构建 mqtt 包会报错的问题"
+msgstr ""
+
+#: ../../source/devtools/change/rc.rst:55
+msgid "F 修复 项目列表窗口大小异常的问题"
+msgstr ""
+
+#: ../../source/devtools/change/rc.rst:56
+msgid "F 修复 上传时间显示错误的问题 反馈详情"
+msgstr ""
+

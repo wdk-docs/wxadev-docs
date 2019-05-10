@@ -1,0 +1,38 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019, Nosy
+# This file is distributed under the same license as the wxadev package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: wxadev \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-09 22:55+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../../source/devtools/notsupport.rst:4
+msgid ":wxdt:`API 实现差异 <notsupport>`"
+msgstr ""
+
+#: ../../source/devtools/notsupport.rst:6
+msgid "由于运行环境的差异，下列 API 在开发者工具的实现与客户端不一致，请使用真机调试"
+msgstr ""
+
+#: ../../source/devtools/notsupport.rst:8
+msgid ""
+"API     说明 wx.checkIsSupportSoterAuthentication    设备不支持 "
+"wx.startSoterAuthentication     设备不支持 wx.chooseInvoiceTitle   模拟数据返回 "
+"wx.addPhoneContact      设备不支持 wx.onUserCaptureScreen  设备不支持 "
+"wx.startBeaconDiscovery 设备不支持 wx.stopBeaconDiscovery  设备不支持 wx.getBeacons"
+"   设备不支持 wx.onBeaconUpdate       设备不支持 wx.onBeaconServiceChange        "
+"设备不支持 wx.makePhoneCall        弹窗提示接口调用成功 wx.onCompassChange      设备不支持 "
+"wx.chooseAddress        模拟数据返回"
+msgstr ""
+

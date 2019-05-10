@@ -1,0 +1,90 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019, Nosy
+# This file is distributed under the same license as the wxadev package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: wxadev \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-09 22:55+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/api-backend/logistics.cancelOrder.rst:2
+msgid ":wxbpi:`取消运单 <logistics.cancelOrder>`"
+msgstr ""
+
+#: ../../source/api-backend/logistics.cancelOrder.rst:4
+msgid "logistics.cancelOrder 本接口应在服务器端调用，详细说明参见服务端API。"
+msgstr ""
+
+#: ../../source/api-backend/logistics.cancelOrder.rst:7
+msgid "本接口支持云调用。需开发者工具版本 >= 1.02.1904090（最新稳定版下载），wx-server-sdk >= 0.4.0"
+msgstr ""
+
+#: ../../source/api-backend/logistics.cancelOrder.rst:11
+msgid "调用方式："
+msgstr ""
+
+#: ../../source/api-backend/logistics.cancelOrder.rst:13
+msgid "一、HTTPS 调用 二、云调用"
+msgstr ""
+
+#: ../../source/api-backend/logistics.cancelOrder.rst:16
+msgid "一、HTTPS 调用 请求地址 POST https://api.weixin.qq.com/cgi-bin/express/business/order/cancel?access_token=ACCESS_TOKEN 请求参数 属性      类型      默认值     必填      说明 access_token    string          是       接口调用凭证 order_id        string          是       订单 ID，需保证全局唯一 openid  string          是       用户 openid delivery_id     string          是       快递公司ID，参见getAllDelivery waybill_id      string          是       运单ID 返回值 Object 属性      类型      说明 errcode number  错误码 errmsg  string  错误信息 errcode 的合法值"
+msgstr ""
+
+#: ../../source/api-backend/logistics.cancelOrder.rst:33
+msgid "值       说明      最低版本 0       成功 -1      系统失败 40199   运单 ID 不存在 9300506 运单 ID 已经存在轨迹，不可取消 请求示例 {"
+msgstr ""
+
+#: ../../source/api-backend/logistics.cancelOrder.rst:40
+msgid "\"order_id\": \"01234567890123456789\", \"openid\": \"oABC123456\", \"delivery_id\": \"SF\", \"waybill_id\": \"123456789\""
+msgstr ""
+
+#: ../../source/api-backend/logistics.cancelOrder.rst:44
+msgid "} 返回示例 {"
+msgstr ""
+
+#: ../../source/api-backend/logistics.cancelOrder.rst:47
+msgid "\"errcode\": 0, \"errmsg\": \"ok\""
+msgstr ""
+
+#: ../../source/api-backend/logistics.cancelOrder.rst:49
+msgid "}"
+msgstr ""
+
+#: ../../source/api-backend/logistics.cancelOrder.rst:51
+msgid "二、云调用 云调用是小程序·云开发提供的在云函数中调用微信开放接口的能力，需要在云函数中通过 wx-server-sdk 使用。"
+msgstr ""
+
+#: ../../source/api-backend/logistics.cancelOrder.rst:54
+msgid "接口方法 openapi.logistics.cancelOrder 需在 config.json 中配置 logistics.cancelOrder API 的权限，详情"
+msgstr ""
+
+#: ../../source/api-backend/logistics.cancelOrder.rst:58
+msgid "请求参数 属性      类型      默认值     必填      说明 orderId string          是       订单 ID，需保证全局唯一 openid  string          是       用户 openid deliveryId      string          是       快递公司ID，参见getAllDelivery waybillId       string          是       运单ID 返回值 Object 属性      类型      说明 errCode number  错误码 errMsg  string  错误信息 errCode 的合法值"
+msgstr ""
+
+#: ../../source/api-backend/logistics.cancelOrder.rst:71
+msgid "值       说明      最低版本 0       成功 异常 Object 抛出的异常"
+msgstr ""
+
+#: ../../source/api-backend/logistics.cancelOrder.rst:77
+msgid "属性      类型      说明 errCode number  错误码 errMsg  string  错误信息 errCode 的合法值"
+msgstr ""
+
+#: ../../source/api-backend/logistics.cancelOrder.rst:82
+msgid "值       说明      最低版本 -1      系统失败 40199   运单 ID 不存在 9300506 运单 ID 已经存在轨迹，不可取消 请求示例"
+msgstr ""
+
+#: ../../source/api-backend/logistics.cancelOrder.rst:107
+msgid "返回示例"
+msgstr ""
+

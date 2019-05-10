@@ -1,0 +1,37 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019, Nosy
+# This file is distributed under the same license as the wxadev package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: wxadev \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-09 22:55+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../../source/framework/app-service/app.rst:2
+msgid "注册小程序"
+msgstr ""
+
+#: ../../source/framework/app-service/app.rst:4
+msgid "每个小程序都需要在 app.js 中调用 App 方法注册小程序示例，绑定生命周期回调函数、错误监听和页面不存在监听函数等。"
+msgstr ""
+
+#: ../../source/framework/app-service/app.rst:6
+msgid "详细的参数含义和使用请参考 App 参考文档 。"
+msgstr ""
+
+#: ../../source/framework/app-service/app.rst:27
+msgid ""
+"整个小程序只有一个 App 实例，是全部页面共享的。 开发者可以通过 getApp 方法获取到全局唯一的 App "
+"示例，获取App上的数据或调用开发者注册在 App 上的函数。"
+msgstr ""
+

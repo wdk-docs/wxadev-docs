@@ -1,0 +1,103 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019, Nosy
+# This file is distributed under the same license as the wxadev package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: wxadev \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-09 22:55+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../../source/devtools/change/upnwjs.rst:2
+msgid "微信开发者工具内核升级版公测"
+msgstr ""
+
+#: ../../source/devtools/change/upnwjs.rst:4
+msgid ""
+"Windows 64、Windows 32、macOS 本页面提供的是开发者工具内核升级的下载，我们升级了开发者工具的 nwjs 内核以 Beta"
+" 方式发布公测。"
+msgstr ""
+
+#: ../../source/devtools/change/upnwjs.rst:7
+msgid "Beta 版本的功能同正式版本一致，仅对 nwjs 内核进行升级，并做了必要的版本兼容适配"
+msgstr ""
+
+#: ../../source/devtools/change/upnwjs.rst:9
+msgid "Beta 版本安装不会覆盖正式版本的安装路径，首次启动 Beta 版本会将正式版本的项目列表导入到用户目录中，之后两个版本的数据不会互相影响。"
+msgstr ""
+
+#: ../../source/devtools/change/upnwjs.rst:11
+msgid "我们将持续升级 nwjs 希望解决正式版本中 nwjs 内核带来的一系列问题，如下："
+msgstr ""
+
+#: ../../source/devtools/change/upnwjs.rst:13
+msgid "F 修复 高分屏渲染错位的问题"
+msgstr ""
+
+#: ../../source/devtools/change/upnwjs.rst:14
+msgid "F 修复 快速编译导致 Windows 版本黑屏、Mac 版本白屏的问题"
+msgstr ""
+
+#: ../../source/devtools/change/upnwjs.rst:15
+msgid "F 修复 焦点丢失的问题"
+msgstr ""
+
+#: ../../source/devtools/change/upnwjs.rst:16
+msgid "F 修复 无法复制粘贴的问题"
+msgstr ""
+
+#: ../../source/devtools/change/upnwjs.rst:17
+msgid "U 优化 Sources 面板调试大文件时卡顿的问题"
+msgstr ""
+
+#: ../../source/devtools/change/upnwjs.rst:19
+msgid "邀请广大开发者进行公测和反馈，反馈链接"
+msgstr ""
+
+#: ../../source/devtools/change/upnwjs.rst:22
+msgid "2019.04.02"
+msgstr ""
+
+#: ../../source/devtools/change/upnwjs.rst:24
+msgid "U 更新 nwjs 至 0.37.2"
+msgstr ""
+
+#: ../../source/devtools/change/upnwjs.rst:26
+msgid "2019.03.21"
+msgstr ""
+
+#: ../../source/devtools/change/upnwjs.rst:28
+msgid "U 更新 nwjs 至 0.37.0"
+msgstr ""
+
+#: ../../source/devtools/change/upnwjs.rst:30
+msgid "2019.02.19"
+msgstr ""
+
+#: ../../source/devtools/change/upnwjs.rst:32
+msgid "U macOS 版升级 nwjs 到 0.36.2"
+msgstr ""
+
+#: ../../source/devtools/change/upnwjs.rst:34
+msgid "2018.12.26"
+msgstr ""
+
+#: ../../source/devtools/change/upnwjs.rst:36
+msgid "F 修复 <web-view> 组件无法右键调试的问题"
+msgstr ""
+
+#: ../../source/devtools/change/upnwjs.rst:37
+msgid ""
+"F 修复 安装 Beta 版之后，打开正式版会弹窗提示”发生个人资料错误“的问题；之前安装过的请手动删除 "
+"C:/Users/<username>/AppData/Local/fixpreferences/ 目录"
+msgstr ""
+

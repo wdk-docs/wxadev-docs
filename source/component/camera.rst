@@ -6,7 +6,7 @@
 .. versionadded::  1.6.0 低版本需做 :doc:`../framework/compatibility` 。
 
 系统相机。扫码二维码功能，需升级微信客户端至6.7.3。
-需要 :ref:`open-ability_authorize` :data:`scope.camera` 。
+需要 :ref:`authorize` :data:`scope.camera` 。
 
 相关api: :func:`wx.createCameraContext`
 

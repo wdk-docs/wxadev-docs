@@ -1,0 +1,145 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019, Nosy
+# This file is distributed under the same license as the wxadev package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: wxadev \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-09 22:55+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../../source/framework/ability/server-ability/message-push.rst:2
+msgid "消息推送"
+msgstr ""
+
+#: ../../source/framework/ability/server-ability/message-push.rst:4
+msgid "接入微信小程序消息推送服务，开发者需要按照如下步骤完成："
+msgstr ""
+
+#: ../../source/framework/ability/server-ability/message-push.rst:6
+msgid ""
+"填写服务器配置 验证服务器地址的有效性 据接口文档实现业务逻辑，接收消息和事件 第一步：填写服务器配置 "
+"登录小程序后台后，在「开发」-「开发设置」-「消息推送」中，管理员扫码启用消息服务，填写服务器地址（URL）、令牌（Token） 和 "
+"消息加密密钥（EncodingAESKey）等信息。"
+msgstr ""
+
+#: ../../source/framework/ability/server-ability/message-push.rst:12
+msgid ""
+"URL: 开发者用来接收微信消息和事件的接口 URL。开发者所填写的URL 必须以 http:// 或 https:// 开头，分别支持 80 "
+"端口和 443 端口。 Token: 可由开发者可以任意填写，用作生成签名（该 Token 会和接口 URL 中包含的 Token "
+"进行比对，从而验证安全性）。 EncodingAESKey: 由开发者手动填写或随机生成，将用作消息体加解密密钥。 "
+"同时，开发者可选择消息加解密方式：明文模式（默认）、兼容模式和安全模式。可以选择消息数据格式：XML 格式（默认）或 JSON 格式。"
+msgstr ""
+
+#: ../../source/framework/ability/server-ability/message-push.rst:17
+msgid "填写服务器配置"
+msgstr ""
+
+#: ../../source/framework/ability/server-ability/message-push.rst:19
+msgid "模式的选择与服务器配置在提交后都会立即生效，请开发者谨慎填写及选择。切换加密方式和数据格式需要提前配置好相关代码，详情请参考 消息加解密说明。"
+msgstr ""
+
+#: ../../source/framework/ability/server-ability/message-push.rst:21
+msgid "第二步：验证消息的确来自微信服务器 开发者提交信息后，微信服务器将发送GET请求到填写的服务器地址URL上，GET请求携带参数如下表所示："
+msgstr ""
+
+#: ../../source/framework/ability/server-ability/message-push.rst:24
+msgid ""
+"参数      描述 signature       "
+"微信加密签名，signature结合了开发者填写的token参数和请求中的timestamp参数、nonce参数。 timestamp"
+"       时间戳 nonce   随机数 echostr 随机字符串 开发者通过检验 signature "
+"对请求进行校验（下面有校验方式）。若确认此次 GET 请求来自微信服务器，请原样返回 echostr "
+"参数内容，则接入生效，成为开发者成功，否则接入失败。加密/校验流程如下："
+msgstr ""
+
+#: ../../source/framework/ability/server-ability/message-push.rst:31
+msgid ""
+"将token、timestamp、nonce三个参数进行字典序排序 将三个参数字符串拼接成一个字符串进行sha1加密 "
+"开发者获得加密后的字符串可与signature对比，标识该请求来源于微信 验证URL有效性成功后即接入生效，成为开发者。"
+msgstr ""
+
+#: ../../source/framework/ability/server-ability/message-push.rst:36
+msgid "检验signature的PHP示例代码："
+msgstr ""
+
+#: ../../source/framework/ability/server-ability/message-push.rst:38
+msgid "private function checkSignature() {"
+msgstr ""
+
+#: ../../source/framework/ability/server-ability/message-push.rst:40
+msgid ""
+"$signature = $_GET[\"signature\"]; $timestamp = $_GET[\"timestamp\"]; "
+"$nonce = $_GET[\"nonce\"];"
+msgstr ""
+
+#: ../../source/framework/ability/server-ability/message-push.rst:44
+msgid ""
+"$token = TOKEN; $tmpArr = array($token, $timestamp, $nonce); "
+"sort($tmpArr, SORT_STRING); $tmpStr = implode( $tmpArr ); $tmpStr = sha1("
+" $tmpStr );"
+msgstr ""
+
+#: ../../source/framework/ability/server-ability/message-push.rst:50
+msgid "if ($tmpStr == $signature ) {"
+msgstr ""
+
+#: ../../source/framework/ability/server-ability/message-push.rst:51
+msgid "return true;"
+msgstr ""
+
+#: ../../source/framework/ability/server-ability/message-push.rst:52
+msgid "} else {"
+msgstr ""
+
+#: ../../source/framework/ability/server-ability/message-push.rst:53
+msgid "return false;"
+msgstr ""
+
+#: ../../source/framework/ability/server-ability/message-push.rst:54
+#: ../../source/framework/ability/server-ability/message-push.rst:55
+msgid "}"
+msgstr ""
+
+#: ../../source/framework/ability/server-ability/message-push.rst:57
+msgid "PHP示例代码下载：下载"
+msgstr ""
+
+#: ../../source/framework/ability/server-ability/message-push.rst:59
+msgid ""
+"第三步：接收消息和事件 "
+"当某些特定的用户操作引发事件推送时（如用户向小程序客服发送消息、或者进入会话等情况），微信服务器会将消息（或事件）的数据包以 POST "
+"请求发送到开发者配置的 URL，开发者可以依据自身业务逻辑进行响应。"
+msgstr ""
+
+#: ../../source/framework/ability/server-ability/message-push.rst:62
+msgid ""
+"微信服务器在将用户的消息发给开发者服务器地址后，微信服务器在五秒内收不到响应会断掉连接，并且重新发起请求，总共重试三次。如果在调试中，发现用户无法收到响应的消息，可以检查是否消息处理超时。关于重试的消息排重，有"
+" msgid 的消息推荐使用 msgid 排重。事件类型消息推荐使用 FromUserName + CreateTime 排重。"
+msgstr ""
+
+#: ../../source/framework/ability/server-ability/message-push.rst:64
+msgid "服务器收到请求必须做出下述回复，这样微信服务器才不会对此作任何处理，并且不会发起重试，否则，将出现严重的错误提示。详见下面说明："
+msgstr ""
+
+#: ../../source/framework/ability/server-ability/message-push.rst:66
+msgid ""
+"直接回复success（推荐方式） 直接回复空串（指字节长度为0的空字符串，而不是结构体中content字段的内容为空） "
+"若接口文档有指定返回内容，应按文档说明返回 "
+"对于客服消息，一旦遇到以下情况，微信会在小程序会话中向用户下发系统提示“该小程序客服暂时无法提供服务，请稍后再试”："
+msgstr ""
+
+#: ../../source/framework/ability/server-ability/message-push.rst:71
+msgid ""
+"开发者在5秒内未回复任何内容 开发者回复了异常数据 "
+"如果开发者希望增强安全性，可以在开发者中心处开启消息加密，这样，用户发给小程序的消息以及小程序被动回复用户消息都会继续加密，详见消息加解密说明。"
+msgstr ""
+

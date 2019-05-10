@@ -1,0 +1,244 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019, Nosy
+# This file is distributed under the same license as the wxadev package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: wxadev \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-09 22:55+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../../source/framework/view/component.rst:2
+msgid ":wxfrwk:`基础组件 <view/component>`"
+msgstr ""
+
+#: ../../source/framework/view/component.rst:4
+msgid "框架为开发者提供了一系列基础组件，开发者可以通过组合这些基础组件进行快速开发。详细介绍请参考 :ref:`component` 文档。"
+msgstr ""
+
+#: ../../source/framework/view/component.rst:6
+msgid "什么是组件："
+msgstr ""
+
+#: ../../source/framework/view/component.rst:8
+msgid "组件是视图层的基本组成单元。"
+msgstr ""
+
+#: ../../source/framework/view/component.rst:9
+msgid "组件自带一些功能与微信风格一致的样式。"
+msgstr ""
+
+#: ../../source/framework/view/component.rst:10
+msgid "一个组件通常包括 开始标签 和 结束标签，属性 用来修饰这个组件，内容 在两个标签之内。"
+msgstr ""
+
+#: ../../source/framework/view/component.rst:18
+msgid "所有组件与属性都是小写，以连字符-连接"
+msgstr ""
+
+#: ../../source/framework/view/component.rst:21
+msgid "属性类型"
+msgstr ""
+
+#: ../../source/framework/view/component.rst:24
+#: ../../source/framework/view/component.rst:47
+msgid "类型"
+msgstr ""
+
+#: ../../source/framework/view/component.rst:24
+#: ../../source/framework/view/component.rst:47
+msgid "描述"
+msgstr ""
+
+#: ../../source/framework/view/component.rst:24
+#: ../../source/framework/view/component.rst:47
+msgid "注解"
+msgstr ""
+
+#: ../../source/framework/view/component.rst:26
+#: ../../source/framework/view/component.rst:55
+msgid "Boolean"
+msgstr ""
+
+#: ../../source/framework/view/component.rst:26
+msgid "布尔值"
+msgstr ""
+
+#: ../../source/framework/view/component.rst:26
+msgid "组件写上该属性，不管是什么值都被当作 true；只有组件上没有该属性时，属性值才为false。如果属性值为变量，变量的值会被转换为Boolean类型"
+msgstr ""
+
+#: ../../source/framework/view/component.rst:28
+msgid "Number"
+msgstr ""
+
+#: ../../source/framework/view/component.rst:28
+msgid "数字"
+msgstr ""
+
+#: ../../source/framework/view/component.rst:28
+msgid "1, 2.5"
+msgstr ""
+
+#: ../../source/framework/view/component.rst:30
+#: ../../source/framework/view/component.rst:49
+#: ../../source/framework/view/component.rst:51
+#: ../../source/framework/view/component.rst:53
+msgid "String"
+msgstr ""
+
+#: ../../source/framework/view/component.rst:30
+msgid "字符串"
+msgstr ""
+
+#: ../../source/framework/view/component.rst:30
+msgid "\"string\""
+msgstr ""
+
+#: ../../source/framework/view/component.rst:32
+msgid "Array"
+msgstr ""
+
+#: ../../source/framework/view/component.rst:32
+msgid "数组"
+msgstr ""
+
+#: ../../source/framework/view/component.rst:32
+msgid "[ 1, \"string\" ]"
+msgstr ""
+
+#: ../../source/framework/view/component.rst:34
+msgid "Object"
+msgstr ""
+
+#: ../../source/framework/view/component.rst:34
+msgid "对象"
+msgstr ""
+
+#: ../../source/framework/view/component.rst:34
+msgid "{ key: value }"
+msgstr ""
+
+#: ../../source/framework/view/component.rst:36
+#: ../../source/framework/view/component.rst:59
+msgid "EventHandler"
+msgstr ""
+
+#: ../../source/framework/view/component.rst:36
+msgid "事件处理函数名"
+msgstr ""
+
+#: ../../source/framework/view/component.rst:36
+msgid "\"handlerName\" 是 :ref:`Page` 中定义的事件处理函数名"
+msgstr ""
+
+#: ../../source/framework/view/component.rst:38
+#: ../../source/framework/view/component.rst:57
+msgid "Any"
+msgstr ""
+
+#: ../../source/framework/view/component.rst:38
+msgid "任意属性"
+msgstr ""
+
+#: ../../source/framework/view/component.rst:42
+msgid "公共属性"
+msgstr ""
+
+#: ../../source/framework/view/component.rst:44
+msgid "所有组件都有以下属性："
+msgstr ""
+
+#: ../../source/framework/view/component.rst:47
+msgid "属性名"
+msgstr ""
+
+#: ../../source/framework/view/component.rst:49
+msgid "id"
+msgstr ""
+
+#: ../../source/framework/view/component.rst:49
+msgid "组件的唯一标示"
+msgstr ""
+
+#: ../../source/framework/view/component.rst:49
+msgid "保持整个页面唯一"
+msgstr ""
+
+#: ../../source/framework/view/component.rst:51
+msgid "class"
+msgstr ""
+
+#: ../../source/framework/view/component.rst:51
+msgid "组件的样式类"
+msgstr ""
+
+#: ../../source/framework/view/component.rst:51
+msgid "在对应的 WXSS 中定义的样式类"
+msgstr ""
+
+#: ../../source/framework/view/component.rst:53
+msgid "style"
+msgstr ""
+
+#: ../../source/framework/view/component.rst:53
+msgid "组件的内联样式"
+msgstr ""
+
+#: ../../source/framework/view/component.rst:53
+msgid "可以动态设置的内联样式"
+msgstr ""
+
+#: ../../source/framework/view/component.rst:55
+msgid "hidden"
+msgstr ""
+
+#: ../../source/framework/view/component.rst:55
+msgid "组件是否显示"
+msgstr ""
+
+#: ../../source/framework/view/component.rst:55
+msgid "所有组件默认显示"
+msgstr ""
+
+#: ../../source/framework/view/component.rst:57
+msgid "data-*"
+msgstr ""
+
+#: ../../source/framework/view/component.rst:57
+msgid "自定义属性"
+msgstr ""
+
+#: ../../source/framework/view/component.rst:57
+msgid "组件上触发的事件时，会发送给事件处理函数"
+msgstr ""
+
+#: ../../source/framework/view/component.rst:59
+msgid "bind* / catch*"
+msgstr ""
+
+#: ../../source/framework/view/component.rst:59
+msgid "组件的事件"
+msgstr ""
+
+#: ../../source/framework/view/component.rst:59
+msgid "详见 :ref:`wxml-event`"
+msgstr ""
+
+#: ../../source/framework/view/component.rst:63
+msgid "特殊属性"
+msgstr ""
+
+#: ../../source/framework/view/component.rst:65
+msgid "几乎所有组件都有各自定义的属性，可以对该组件的功能或样式进行修饰，请参考各个 :ref:`component` 的定义。"
+msgstr ""
+

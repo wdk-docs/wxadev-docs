@@ -1,0 +1,644 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019, Nosy
+# This file is distributed under the same license as the wxadev package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: wxadev \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-09 22:55+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/framework/view/wxs/datatype.rst:4
+msgid ":wxfrwk:`数据类型 <view/wxs/06datatype>`"
+msgstr ""
+
+#: ../../source/framework/view/wxs/datatype.rst:6
+msgid "WXS 语言目前共有以下几种数据类型："
+msgstr ""
+
+#: ../../source/framework/view/wxs/datatype.rst:8
+msgid "number ： 数值"
+msgstr ""
+
+#: ../../source/framework/view/wxs/datatype.rst:9
+msgid "string ：字符串"
+msgstr ""
+
+#: ../../source/framework/view/wxs/datatype.rst:10
+msgid "boolean：布尔值"
+msgstr ""
+
+#: ../../source/framework/view/wxs/datatype.rst:11
+msgid "object：对象"
+msgstr ""
+
+#: ../../source/framework/view/wxs/datatype.rst:12
+msgid "function：函数"
+msgstr ""
+
+#: ../../source/framework/view/wxs/datatype.rst:13
+msgid "array : 数组"
+msgstr ""
+
+#: ../../source/framework/view/wxs/datatype.rst:14
+msgid "date：日期"
+msgstr ""
+
+#: ../../source/framework/view/wxs/datatype.rst:15
+msgid "regexp：正则"
+msgstr ""
+
+#: ../../source/framework/view/wxs/datatype.rst:18
+msgid "number"
+msgstr ""
+
+#: ../../source/framework/view/wxs/datatype.rst:21
+#: ../../source/framework/view/wxs/datatype.rst:51
+#: ../../source/framework/view/wxs/datatype.rst:98
+#: ../../source/framework/view/wxs/datatype.rst:119
+#: ../../source/framework/view/wxs/datatype.rst:163
+#: ../../source/framework/view/wxs/datatype.rst:226
+#: ../../source/framework/view/wxs/datatype.rst:275
+#: ../../source/framework/view/wxs/datatype.rst:364
+msgid "语法"
+msgstr ""
+
+#: ../../source/framework/view/wxs/datatype.rst:23
+msgid "number 包括两种数值：整数，小数。"
+msgstr ""
+
+#: ../../source/framework/view/wxs/datatype.rst:31
+#: ../../source/framework/view/wxs/datatype.rst:62
+#: ../../source/framework/view/wxs/datatype.rst:103
+#: ../../source/framework/view/wxs/datatype.rst:149
+#: ../../source/framework/view/wxs/datatype.rst:201
+#: ../../source/framework/view/wxs/datatype.rst:238
+#: ../../source/framework/view/wxs/datatype.rst:307
+#: ../../source/framework/view/wxs/datatype.rst:391
+msgid "属性"
+msgstr ""
+
+#: ../../source/framework/view/wxs/datatype.rst:33
+msgid "constructor：返回字符串 \"Number\"。"
+msgstr ""
+
+#: ../../source/framework/view/wxs/datatype.rst:36
+#: ../../source/framework/view/wxs/datatype.rst:70
+#: ../../source/framework/view/wxs/datatype.rst:108
+#: ../../source/framework/view/wxs/datatype.rst:155
+#: ../../source/framework/view/wxs/datatype.rst:207
+#: ../../source/framework/view/wxs/datatype.rst:246
+#: ../../source/framework/view/wxs/datatype.rst:312
+#: ../../source/framework/view/wxs/datatype.rst:403
+msgid "方法"
+msgstr ""
+
+#: ../../source/framework/view/wxs/datatype.rst:38
+#: ../../source/framework/view/wxs/datatype.rst:72
+#: ../../source/framework/view/wxs/datatype.rst:110
+#: ../../source/framework/view/wxs/datatype.rst:248
+#: ../../source/framework/view/wxs/datatype.rst:314
+#: ../../source/framework/view/wxs/datatype.rst:407
+msgid "toString"
+msgstr ""
+
+#: ../../source/framework/view/wxs/datatype.rst:39
+#: ../../source/framework/view/wxs/datatype.rst:317
+msgid "toLocaleString"
+msgstr ""
+
+#: ../../source/framework/view/wxs/datatype.rst:40
+#: ../../source/framework/view/wxs/datatype.rst:73
+#: ../../source/framework/view/wxs/datatype.rst:111
+#: ../../source/framework/view/wxs/datatype.rst:320
+msgid "valueOf"
+msgstr ""
+
+#: ../../source/framework/view/wxs/datatype.rst:41
+msgid "toFixed"
+msgstr ""
+
+#: ../../source/framework/view/wxs/datatype.rst:42
+msgid "toExponential"
+msgstr ""
+
+#: ../../source/framework/view/wxs/datatype.rst:43
+msgid "toPrecision"
+msgstr ""
+
+#: ../../source/framework/view/wxs/datatype.rst:45
+#: ../../source/framework/view/wxs/datatype.rst:92
+#: ../../source/framework/view/wxs/datatype.rst:113
+#: ../../source/framework/view/wxs/datatype.rst:269
+#: ../../source/framework/view/wxs/datatype.rst:358
+#: ../../source/framework/view/wxs/datatype.rst:409
+msgid "以上方法的具体使用请参考 ES5 标准。"
+msgstr ""
+
+#: ../../source/framework/view/wxs/datatype.rst:48
+msgid "string"
+msgstr ""
+
+#: ../../source/framework/view/wxs/datatype.rst:53
+msgid "string 有两种写法："
+msgstr ""
+
+#: ../../source/framework/view/wxs/datatype.rst:64
+msgid "constructor：返回字符串 \"String\"。"
+msgstr ""
+
+#: ../../source/framework/view/wxs/datatype.rst:65
+#: ../../source/framework/view/wxs/datatype.rst:241
+msgid "length"
+msgstr ""
+
+#: ../../source/framework/view/wxs/datatype.rst:67
+#: ../../source/framework/view/wxs/datatype.rst:243
+#: ../../source/framework/view/wxs/datatype.rst:400
+msgid "除constructor外属性的具体含义请参考 ES5 标准。"
+msgstr ""
+
+#: ../../source/framework/view/wxs/datatype.rst:74
+msgid "charAt"
+msgstr ""
+
+#: ../../source/framework/view/wxs/datatype.rst:75
+msgid "charCodeAt"
+msgstr ""
+
+#: ../../source/framework/view/wxs/datatype.rst:76
+#: ../../source/framework/view/wxs/datatype.rst:249
+msgid "concat"
+msgstr ""
+
+#: ../../source/framework/view/wxs/datatype.rst:77
+#: ../../source/framework/view/wxs/datatype.rst:259
+msgid "indexOf"
+msgstr ""
+
+#: ../../source/framework/view/wxs/datatype.rst:78
+#: ../../source/framework/view/wxs/datatype.rst:260
+msgid "lastIndexOf"
+msgstr ""
+
+#: ../../source/framework/view/wxs/datatype.rst:79
+msgid "localeCompare"
+msgstr ""
+
+#: ../../source/framework/view/wxs/datatype.rst:80
+msgid "match"
+msgstr ""
+
+#: ../../source/framework/view/wxs/datatype.rst:81
+msgid "replace"
+msgstr ""
+
+#: ../../source/framework/view/wxs/datatype.rst:82
+msgid "search"
+msgstr ""
+
+#: ../../source/framework/view/wxs/datatype.rst:83
+#: ../../source/framework/view/wxs/datatype.rst:255
+msgid "slice"
+msgstr ""
+
+#: ../../source/framework/view/wxs/datatype.rst:84
+msgid "split"
+msgstr ""
+
+#: ../../source/framework/view/wxs/datatype.rst:85
+msgid "substring"
+msgstr ""
+
+#: ../../source/framework/view/wxs/datatype.rst:86
+msgid "toLowerCase"
+msgstr ""
+
+#: ../../source/framework/view/wxs/datatype.rst:87
+msgid "toLocaleLowerCase"
+msgstr ""
+
+#: ../../source/framework/view/wxs/datatype.rst:88
+msgid "toUpperCase"
+msgstr ""
+
+#: ../../source/framework/view/wxs/datatype.rst:89
+msgid "toLocaleUpperCase"
+msgstr ""
+
+#: ../../source/framework/view/wxs/datatype.rst:90
+msgid "trim"
+msgstr ""
+
+#: ../../source/framework/view/wxs/datatype.rst:95
+msgid "boolean"
+msgstr ""
+
+#: ../../source/framework/view/wxs/datatype.rst:100
+msgid "布尔值只有两个特定的值：true 和 false。"
+msgstr ""
+
+#: ../../source/framework/view/wxs/datatype.rst:105
+msgid "constructor：返回字符串 \"Boolean\"。"
+msgstr ""
+
+#: ../../source/framework/view/wxs/datatype.rst:116
+msgid "object"
+msgstr ""
+
+#: ../../source/framework/view/wxs/datatype.rst:121
+msgid "object 是一种无序的键值对。使用方法如下所示："
+msgstr ""
+
+#: ../../source/framework/view/wxs/datatype.rst:151
+msgid "constructor：返回字符串 \"Object\"。"
+msgstr ""
+
+#: ../../source/framework/view/wxs/datatype.rst:152
+msgid "console.log(\"Object\" === {k:\"1\",v:\"2\"}.constructor)"
+msgstr ""
+
+#: ../../source/framework/view/wxs/datatype.rst:157
+msgid "toString：返回字符串 \"[object Object]\"。"
+msgstr ""
+
+#: ../../source/framework/view/wxs/datatype.rst:160
+msgid "function"
+msgstr ""
+
+#: ../../source/framework/view/wxs/datatype.rst:165
+msgid "function 支持以下的定义方式："
+msgstr ""
+
+#: ../../source/framework/view/wxs/datatype.rst:203
+msgid "constructor：返回字符串 \"Function\"。"
+msgstr ""
+
+#: ../../source/framework/view/wxs/datatype.rst:204
+msgid "length：返回函数的形参个数。"
+msgstr ""
+
+#: ../../source/framework/view/wxs/datatype.rst:209
+msgid "toString：返回字符串 \"[function Function]\"。"
+msgstr ""
+
+#: ../../source/framework/view/wxs/datatype.rst:211
+#: ../../source/framework/view/wxs/datatype.rst:293
+#: ../../source/framework/view/wxs/datatype.rst:380
+#: ../../source/framework/view/wxs/datatype.rst:419
+#: ../../source/framework/view/wxs/datatype.rst:452
+msgid "示例代码："
+msgstr ""
+
+#: ../../source/framework/view/wxs/datatype.rst:223
+msgid "array"
+msgstr ""
+
+#: ../../source/framework/view/wxs/datatype.rst:228
+msgid "array 支持以下的定义方式："
+msgstr ""
+
+#: ../../source/framework/view/wxs/datatype.rst:240
+msgid "constructor：返回字符串 \"Array\"。"
+msgstr ""
+
+#: ../../source/framework/view/wxs/datatype.rst:250
+msgid "join"
+msgstr ""
+
+#: ../../source/framework/view/wxs/datatype.rst:251
+msgid "pop"
+msgstr ""
+
+#: ../../source/framework/view/wxs/datatype.rst:252
+msgid "push"
+msgstr ""
+
+#: ../../source/framework/view/wxs/datatype.rst:253
+msgid "reverse"
+msgstr ""
+
+#: ../../source/framework/view/wxs/datatype.rst:254
+msgid "shift"
+msgstr ""
+
+#: ../../source/framework/view/wxs/datatype.rst:256
+msgid "sort"
+msgstr ""
+
+#: ../../source/framework/view/wxs/datatype.rst:257
+msgid "splice"
+msgstr ""
+
+#: ../../source/framework/view/wxs/datatype.rst:258
+msgid "unshift"
+msgstr ""
+
+#: ../../source/framework/view/wxs/datatype.rst:261
+msgid "every"
+msgstr ""
+
+#: ../../source/framework/view/wxs/datatype.rst:262
+msgid "some"
+msgstr ""
+
+#: ../../source/framework/view/wxs/datatype.rst:263
+msgid "forEach"
+msgstr ""
+
+#: ../../source/framework/view/wxs/datatype.rst:264
+msgid "map"
+msgstr ""
+
+#: ../../source/framework/view/wxs/datatype.rst:265
+msgid "filter"
+msgstr ""
+
+#: ../../source/framework/view/wxs/datatype.rst:266
+msgid "reduce"
+msgstr ""
+
+#: ../../source/framework/view/wxs/datatype.rst:267
+msgid "reduceRight"
+msgstr ""
+
+#: ../../source/framework/view/wxs/datatype.rst:272
+msgid "date"
+msgstr ""
+
+#: ../../source/framework/view/wxs/datatype.rst:277
+msgid "生成 date 对象需要使用 getDate函数, 返回一个当前时间的对象。"
+msgstr ""
+
+#: ../../source/framework/view/wxs/datatype.rst:288
+msgid "参数"
+msgstr ""
+
+#: ../../source/framework/view/wxs/datatype.rst:290
+msgid "milliseconds: 从1970年1月1日00:00:00 UTC开始计算的毫秒数"
+msgstr ""
+
+#: ../../source/framework/view/wxs/datatype.rst:291
+msgid "datestring: 日期字符串，其格式为：\"month day, year hours:minutes:seconds\""
+msgstr ""
+
+#: ../../source/framework/view/wxs/datatype.rst:309
+msgid "constructor：返回字符串 “Date”。"
+msgstr ""
+
+#: ../../source/framework/view/wxs/datatype.rst:315
+msgid "toDateString"
+msgstr ""
+
+#: ../../source/framework/view/wxs/datatype.rst:316
+msgid "toTimeString"
+msgstr ""
+
+#: ../../source/framework/view/wxs/datatype.rst:318
+msgid "toLocaleDateString"
+msgstr ""
+
+#: ../../source/framework/view/wxs/datatype.rst:319
+msgid "toLocaleTimeString"
+msgstr ""
+
+#: ../../source/framework/view/wxs/datatype.rst:321
+msgid "getTime"
+msgstr ""
+
+#: ../../source/framework/view/wxs/datatype.rst:322
+msgid "getFullYear"
+msgstr ""
+
+#: ../../source/framework/view/wxs/datatype.rst:323
+msgid "getUTCFullYear"
+msgstr ""
+
+#: ../../source/framework/view/wxs/datatype.rst:324
+msgid "getMonth"
+msgstr ""
+
+#: ../../source/framework/view/wxs/datatype.rst:325
+msgid "getUTCMonth"
+msgstr ""
+
+#: ../../source/framework/view/wxs/datatype.rst:326
+msgid "getDate"
+msgstr ""
+
+#: ../../source/framework/view/wxs/datatype.rst:327
+msgid "getUTCDate"
+msgstr ""
+
+#: ../../source/framework/view/wxs/datatype.rst:328
+msgid "getDay"
+msgstr ""
+
+#: ../../source/framework/view/wxs/datatype.rst:329
+msgid "getUTCDay"
+msgstr ""
+
+#: ../../source/framework/view/wxs/datatype.rst:330
+msgid "getHours"
+msgstr ""
+
+#: ../../source/framework/view/wxs/datatype.rst:331
+msgid "getUTCHours"
+msgstr ""
+
+#: ../../source/framework/view/wxs/datatype.rst:332
+msgid "getMinutes"
+msgstr ""
+
+#: ../../source/framework/view/wxs/datatype.rst:333
+msgid "getUTCMinutes"
+msgstr ""
+
+#: ../../source/framework/view/wxs/datatype.rst:334
+msgid "getSeconds"
+msgstr ""
+
+#: ../../source/framework/view/wxs/datatype.rst:335
+msgid "getUTCSeconds"
+msgstr ""
+
+#: ../../source/framework/view/wxs/datatype.rst:336
+msgid "getMilliseconds"
+msgstr ""
+
+#: ../../source/framework/view/wxs/datatype.rst:337
+msgid "getUTCMilliseconds"
+msgstr ""
+
+#: ../../source/framework/view/wxs/datatype.rst:338
+msgid "getTimezoneOffset"
+msgstr ""
+
+#: ../../source/framework/view/wxs/datatype.rst:339
+msgid "setTime"
+msgstr ""
+
+#: ../../source/framework/view/wxs/datatype.rst:340
+msgid "setMilliseconds"
+msgstr ""
+
+#: ../../source/framework/view/wxs/datatype.rst:341
+msgid "setUTCMilliseconds"
+msgstr ""
+
+#: ../../source/framework/view/wxs/datatype.rst:342
+msgid "setSeconds"
+msgstr ""
+
+#: ../../source/framework/view/wxs/datatype.rst:343
+msgid "setUTCSeconds"
+msgstr ""
+
+#: ../../source/framework/view/wxs/datatype.rst:344
+msgid "setMinutes"
+msgstr ""
+
+#: ../../source/framework/view/wxs/datatype.rst:345
+msgid "setUTCMinutes"
+msgstr ""
+
+#: ../../source/framework/view/wxs/datatype.rst:346
+msgid "setHours"
+msgstr ""
+
+#: ../../source/framework/view/wxs/datatype.rst:347
+msgid "setUTCHours"
+msgstr ""
+
+#: ../../source/framework/view/wxs/datatype.rst:348
+msgid "setDate"
+msgstr ""
+
+#: ../../source/framework/view/wxs/datatype.rst:349
+msgid "setUTCDate"
+msgstr ""
+
+#: ../../source/framework/view/wxs/datatype.rst:350
+msgid "setMonth"
+msgstr ""
+
+#: ../../source/framework/view/wxs/datatype.rst:351
+msgid "setUTCMonth"
+msgstr ""
+
+#: ../../source/framework/view/wxs/datatype.rst:352
+msgid "setFullYear"
+msgstr ""
+
+#: ../../source/framework/view/wxs/datatype.rst:353
+msgid "setUTCFullYear"
+msgstr ""
+
+#: ../../source/framework/view/wxs/datatype.rst:354
+msgid "toUTCString"
+msgstr ""
+
+#: ../../source/framework/view/wxs/datatype.rst:355
+msgid "toISOString"
+msgstr ""
+
+#: ../../source/framework/view/wxs/datatype.rst:356
+msgid "toJSON"
+msgstr ""
+
+#: ../../source/framework/view/wxs/datatype.rst:361
+msgid "regexp"
+msgstr ""
+
+#: ../../source/framework/view/wxs/datatype.rst:366
+msgid "生成 regexp 对象需要使用 getRegExp函数。"
+msgstr ""
+
+#: ../../source/framework/view/wxs/datatype.rst:368
+msgid "getRegExp(pattern[, flags])"
+msgstr ""
+
+#: ../../source/framework/view/wxs/datatype.rst:371
+msgid "参数："
+msgstr ""
+
+#: ../../source/framework/view/wxs/datatype.rst:373
+msgid "pattern: 正则表达式的内容。"
+msgstr ""
+
+#: ../../source/framework/view/wxs/datatype.rst:374
+msgid "flags：修饰符。该字段只能包含以下字符:"
+msgstr ""
+
+#: ../../source/framework/view/wxs/datatype.rst:376
+msgid "g: global"
+msgstr ""
+
+#: ../../source/framework/view/wxs/datatype.rst:377
+msgid "i: ignoreCase"
+msgstr ""
+
+#: ../../source/framework/view/wxs/datatype.rst:378
+msgid "m: multiline。"
+msgstr ""
+
+#: ../../source/framework/view/wxs/datatype.rst:393
+msgid "constructor：返回字符串 \"RegExp\"。"
+msgstr ""
+
+#: ../../source/framework/view/wxs/datatype.rst:394
+msgid "source"
+msgstr ""
+
+#: ../../source/framework/view/wxs/datatype.rst:395
+msgid "global"
+msgstr ""
+
+#: ../../source/framework/view/wxs/datatype.rst:396
+msgid "ignoreCase"
+msgstr ""
+
+#: ../../source/framework/view/wxs/datatype.rst:397
+msgid "multiline"
+msgstr ""
+
+#: ../../source/framework/view/wxs/datatype.rst:398
+msgid "lastIndex"
+msgstr ""
+
+#: ../../source/framework/view/wxs/datatype.rst:405
+msgid "exec"
+msgstr ""
+
+#: ../../source/framework/view/wxs/datatype.rst:406
+msgid "test"
+msgstr ""
+
+#: ../../source/framework/view/wxs/datatype.rst:412
+msgid "数据类型判断"
+msgstr ""
+
+#: ../../source/framework/view/wxs/datatype.rst:415
+msgid "constructor 属性"
+msgstr ""
+
+#: ../../source/framework/view/wxs/datatype.rst:417
+msgid "数据类型的判断可以使用 constructor 属性。"
+msgstr ""
+
+#: ../../source/framework/view/wxs/datatype.rst:448
+msgid "typeof"
+msgstr ""
+
+#: ../../source/framework/view/wxs/datatype.rst:450
+msgid "使用 typeof 也可以区分部分数据类型。"
+msgstr ""
+

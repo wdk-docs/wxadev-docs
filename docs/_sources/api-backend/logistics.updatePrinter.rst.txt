@@ -5,9 +5,12 @@
 
   本接口应在服务器端调用，详细说明参见 :ref:`api-backend` 。
 
-  本接口支持 :ref:`云调用 <https:://wdk-docs.github.io/wxcloud-docs>` 。需开发者工具版本 ``>= 1.02.1904090`` (最新 ::download:`稳定版下载 <https://developers.weixin.qq.com/miniprogram/dev/devtools/stable.html?t=19043020>`)，``wx-server-sdk >= 0.4.0``
+  本接口支持 `云调用 <https:://wdk-docs.github.io/wxcloud-docs>`_ 。
+  需开发者工具版本 ``>= 1.02.1904090``
+  (最新 :download:`稳定版下载 <https://developers.weixin.qq.com/miniprogram/dev/devtools/stable.html?t=19043020>`)，
+  ``wx-server-sdk >= 0.4.0``
 
-若需要使用 :doc:`微信打单 PC 软件 <express-download>` ，才需要调用。
+若需要使用 :ref:`微信打单 PC 软件 <express-download>` ，才需要调用。
 
 一、HTTPS 调用
 ----------------

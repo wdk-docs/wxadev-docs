@@ -1,0 +1,59 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019, Nosy
+# This file is distributed under the same license as the wxadev package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: wxadev \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-09 22:55+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../../source/framework/config.rst:2
+msgid "小程序配置"
+msgstr ""
+
+#: ../../source/framework/config.rst:5
+msgid "全局配置"
+msgstr ""
+
+#: ../../source/framework/config.rst:7
+msgid "小程序根目录下的 `app.json` 文件用来对微信小程序进行全局配置，决定页面文件的路径、窗口表现、设置网络超时时间、设置多 `tab` 等。"
+msgstr ""
+
+#: ../../source/framework/config.rst:9
+msgid ""
+"完整配置项说明请参考 `小程序全局配置 "
+"<https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html>`_"
+msgstr ""
+
+#: ../../source/framework/config.rst:11
+msgid "以下是一个包含了部分常用配置选项的 `app.json` ："
+msgstr ""
+
+#: ../../source/framework/config.rst:41
+msgid "页面配置"
+msgstr ""
+
+#: ../../source/framework/config.rst:43
+msgid ""
+"每一个小程序页面也可以使用同名 `.json` 文件来对本页面的窗口表现进行配置， 页面中配置项会覆盖 `app.json` 的 `window`"
+" 中相同的配置项。"
+msgstr ""
+
+#: ../../source/framework/config.rst:46
+msgid "完整配置项说明请参考小程序页面配置"
+msgstr ""
+
+#: ../../source/framework/config.rst:48
+msgid "例如："
+msgstr ""
+

@@ -1,0 +1,362 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019, Nosy
+# This file is distributed under the same license as the wxadev package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: wxadev \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-09 22:55+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/component/textarea.rst:4
+msgid ":wx_comp:`textarea`"
+msgstr ""
+
+#: ../../source/component/textarea.rst:6
+msgid "低版本需做 :ref:`compatibility` 。"
+msgstr ""
+
+#: ../../source/component/textarea.rst:8
+msgid "多行输入框。该组件是原生组件，使用时请注意相关限制。"
+msgstr ""
+
+#: ../../source/component/textarea.rst:11
+msgid "属性"
+msgstr ""
+
+#: ../../source/component/textarea.rst:11
+msgid "类型"
+msgstr ""
+
+#: ../../source/component/textarea.rst:11
+msgid "默认值"
+msgstr ""
+
+#: ../../source/component/textarea.rst:11
+msgid "必填"
+msgstr ""
+
+#: ../../source/component/textarea.rst:11
+msgid "说明"
+msgstr ""
+
+#: ../../source/component/textarea.rst:11
+msgid "最低版本"
+msgstr ""
+
+#: ../../source/component/textarea.rst:13
+msgid "value"
+msgstr ""
+
+#: ../../source/component/textarea.rst:13
+#: ../../source/component/textarea.rst:15
+#: ../../source/component/textarea.rst:17
+#: ../../source/component/textarea.rst:19
+msgid "string"
+msgstr ""
+
+#: ../../source/component/textarea.rst:13
+#: ../../source/component/textarea.rst:15
+#: ../../source/component/textarea.rst:17
+#: ../../source/component/textarea.rst:19
+#: ../../source/component/textarea.rst:21
+#: ../../source/component/textarea.rst:23
+#: ../../source/component/textarea.rst:25
+#: ../../source/component/textarea.rst:27
+#: ../../source/component/textarea.rst:29
+#: ../../source/component/textarea.rst:31
+#: ../../source/component/textarea.rst:33
+#: ../../source/component/textarea.rst:35
+#: ../../source/component/textarea.rst:37
+#: ../../source/component/textarea.rst:39
+#: ../../source/component/textarea.rst:41
+#: ../../source/component/textarea.rst:43
+#: ../../source/component/textarea.rst:45
+#: ../../source/component/textarea.rst:47
+#: ../../source/component/textarea.rst:49
+#: ../../source/component/textarea.rst:51
+#: ../../source/component/textarea.rst:53
+msgid "否"
+msgstr ""
+
+#: ../../source/component/textarea.rst:13
+msgid "输入框的内容"
+msgstr ""
+
+#: ../../source/component/textarea.rst:13
+#: ../../source/component/textarea.rst:15
+#: ../../source/component/textarea.rst:17
+#: ../../source/component/textarea.rst:19
+#: ../../source/component/textarea.rst:21
+#: ../../source/component/textarea.rst:23
+#: ../../source/component/textarea.rst:25
+#: ../../source/component/textarea.rst:27
+#: ../../source/component/textarea.rst:29
+#: ../../source/component/textarea.rst:31
+#: ../../source/component/textarea.rst:33
+#: ../../source/component/textarea.rst:45
+#: ../../source/component/textarea.rst:47
+#: ../../source/component/textarea.rst:49
+#: ../../source/component/textarea.rst:51
+#: ../../source/component/textarea.rst:53
+msgid "1.0.0"
+msgstr ""
+
+#: ../../source/component/textarea.rst:15
+msgid "placeholder"
+msgstr ""
+
+#: ../../source/component/textarea.rst:15
+msgid "输入框为空时占位符"
+msgstr ""
+
+#: ../../source/component/textarea.rst:17
+msgid "placeholder-style"
+msgstr ""
+
+#: ../../source/component/textarea.rst:17
+msgid "指定 placeholder 的样式，目前仅支持color,font-size和font-weight"
+msgstr ""
+
+#: ../../source/component/textarea.rst:19
+msgid "placeholder-class"
+msgstr ""
+
+#: ../../source/component/textarea.rst:19
+msgid "textarea-placeholder"
+msgstr ""
+
+#: ../../source/component/textarea.rst:19
+msgid "指定 placeholder 的样式类"
+msgstr ""
+
+#: ../../source/component/textarea.rst:21
+msgid "disabled"
+msgstr ""
+
+#: ../../source/component/textarea.rst:21
+#: ../../source/component/textarea.rst:25
+#: ../../source/component/textarea.rst:27
+#: ../../source/component/textarea.rst:29
+#: ../../source/component/textarea.rst:31
+#: ../../source/component/textarea.rst:37
+#: ../../source/component/textarea.rst:43
+msgid "boolean"
+msgstr ""
+
+#: ../../source/component/textarea.rst:21
+#: ../../source/component/textarea.rst:25
+#: ../../source/component/textarea.rst:27
+#: ../../source/component/textarea.rst:29
+#: ../../source/component/textarea.rst:31
+msgid "false"
+msgstr ""
+
+#: ../../source/component/textarea.rst:21
+msgid "是否禁用"
+msgstr ""
+
+#: ../../source/component/textarea.rst:23
+msgid "maxlength"
+msgstr ""
+
+#: ../../source/component/textarea.rst:23
+#: ../../source/component/textarea.rst:33
+#: ../../source/component/textarea.rst:35
+#: ../../source/component/textarea.rst:39
+#: ../../source/component/textarea.rst:41
+msgid "number"
+msgstr ""
+
+#: ../../source/component/textarea.rst:23
+msgid "140"
+msgstr ""
+
+#: ../../source/component/textarea.rst:23
+msgid "最大输入长度，设置为 -1 的时候不限制最大长度"
+msgstr ""
+
+#: ../../source/component/textarea.rst:25
+msgid "auto-focus"
+msgstr ""
+
+#: ../../source/component/textarea.rst:25
+msgid "自动聚焦，拉起键盘。"
+msgstr ""
+
+#: ../../source/component/textarea.rst:27
+msgid "focus"
+msgstr ""
+
+#: ../../source/component/textarea.rst:27
+msgid "获取焦点"
+msgstr ""
+
+#: ../../source/component/textarea.rst:29
+msgid "auto-height"
+msgstr ""
+
+#: ../../source/component/textarea.rst:29
+msgid "是否自动增高，设置auto-height时，style.height不生效"
+msgstr ""
+
+#: ../../source/component/textarea.rst:31
+msgid "fixed"
+msgstr ""
+
+#: ../../source/component/textarea.rst:31
+msgid "如果 textarea 是在一个 position:fixed 的区域，需要显示指定属性 fixed 为 true"
+msgstr ""
+
+#: ../../source/component/textarea.rst:33
+msgid "cursor-spacing"
+msgstr ""
+
+#: ../../source/component/textarea.rst:33
+msgid "0"
+msgstr ""
+
+#: ../../source/component/textarea.rst:33
+msgid "指定光标与键盘的距离。取textarea距离底部的距离和cursor-spacing指定的距离的最小值作为光标与键盘的距离"
+msgstr ""
+
+#: ../../source/component/textarea.rst:35
+msgid "cursor"
+msgstr ""
+
+#: ../../source/component/textarea.rst:35
+#: ../../source/component/textarea.rst:39
+#: ../../source/component/textarea.rst:41
+msgid "-1"
+msgstr ""
+
+#: ../../source/component/textarea.rst:35
+msgid "指定focus时的光标位置"
+msgstr ""
+
+#: ../../source/component/textarea.rst:35
+msgid "1.5.0"
+msgstr ""
+
+#: ../../source/component/textarea.rst:37
+msgid "show-confirm-bar"
+msgstr ""
+
+#: ../../source/component/textarea.rst:37
+#: ../../source/component/textarea.rst:43
+msgid "true"
+msgstr ""
+
+#: ../../source/component/textarea.rst:37
+msgid "是否显示键盘上方带有”完成“按钮那一栏"
+msgstr ""
+
+#: ../../source/component/textarea.rst:37
+msgid "1.6.0"
+msgstr ""
+
+#: ../../source/component/textarea.rst:39
+msgid "selection-start"
+msgstr ""
+
+#: ../../source/component/textarea.rst:39
+msgid "光标起始位置，自动聚集时有效，需与selection-end搭配使用"
+msgstr ""
+
+#: ../../source/component/textarea.rst:39
+#: ../../source/component/textarea.rst:41
+msgid "1.9.0"
+msgstr ""
+
+#: ../../source/component/textarea.rst:41
+msgid "selection-end"
+msgstr ""
+
+#: ../../source/component/textarea.rst:41
+msgid "光标结束位置，自动聚集时有效，需与selection-start搭配使用"
+msgstr ""
+
+#: ../../source/component/textarea.rst:43
+msgid "adjust-position"
+msgstr ""
+
+#: ../../source/component/textarea.rst:43
+msgid "键盘弹起时，是否自动上推页面"
+msgstr ""
+
+#: ../../source/component/textarea.rst:43
+msgid "1.9.90"
+msgstr ""
+
+#: ../../source/component/textarea.rst:45
+msgid "bindfocus"
+msgstr ""
+
+#: ../../source/component/textarea.rst:45
+#: ../../source/component/textarea.rst:47
+#: ../../source/component/textarea.rst:49
+#: ../../source/component/textarea.rst:51
+#: ../../source/component/textarea.rst:53
+msgid "eventhandle"
+msgstr ""
+
+#: ../../source/component/textarea.rst:45
+msgid "输入框聚焦时触发，event.detail = { value, height }，height 为键盘高度，在基础库 1.9.90 起支持"
+msgstr ""
+
+#: ../../source/component/textarea.rst:47
+msgid "bindblur"
+msgstr ""
+
+#: ../../source/component/textarea.rst:47
+msgid "输入框失去焦点时触发，event.detail = {value, cursor}"
+msgstr ""
+
+#: ../../source/component/textarea.rst:49
+msgid "bindlinechange"
+msgstr ""
+
+#: ../../source/component/textarea.rst:49
+msgid "输入框行数变化时调用，event.detail = {height: 0, heightRpx: 0, lineCount: 0}"
+msgstr ""
+
+#: ../../source/component/textarea.rst:51
+msgid "bindinput"
+msgstr ""
+
+#: ../../source/component/textarea.rst:51
+msgid "当键盘输入时，触发 input 事件，event.detail = {value, cursor, keyCode}，keyCode 为键值，目前工具还不支持返回keyCode参数。bindinput 处理函数的返回值并不会反映到 textarea 上"
+msgstr ""
+
+#: ../../source/component/textarea.rst:53
+msgid "bindconfirm"
+msgstr ""
+
+#: ../../source/component/textarea.rst:53
+msgid "点击完成时， 触发 confirm 事件，event.detail = {value: value}"
+msgstr ""
+
+#: ../../source/component/textarea.rst:56
+msgid "textarea 的 blur 事件会晚于页面上的 tap 事件，如果需要在 button 的点击事件获取 textarea，可以使用 form 的 bindsubmit。"
+msgstr ""
+
+#: ../../source/component/textarea.rst:57
+msgid "不建议在多行文本上对用户的输入进行修改，所以 textarea 的 bindinput 处理函数并不会将返回值反映到 textarea 上。"
+msgstr ""
+
+#: ../../source/component/textarea.rst:61
+msgid "示例代码"
+msgstr ""
+
+#: ../../source/component/textarea.rst:63
+msgid "在开发者工具中预览效果"
+msgstr ""
+

@@ -1,0 +1,79 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019, Nosy
+# This file is distributed under the same license as the wxadev package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: wxadev \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-09 22:55+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/api-backend/logistics.onPathUpdate.rst:2
+msgid ":wxbpi:`运单轨迹更新事件 <logistics.onPathUpdate>`"
+msgstr ""
+
+#: ../../source/api-backend/logistics.onPathUpdate.rst:4
+msgid "logistics.onPathUpdate"
+msgstr ""
+
+#: ../../source/api-backend/logistics.onPathUpdate.rst:6
+msgid "本文档描述服务器端接收的消息或事件，详细说明参见消息推送。"
+msgstr ""
+
+#: ../../source/api-backend/logistics.onPathUpdate.rst:8
+msgid "当运单轨迹有更新时，会产生如下数据包。收到事件之后，回复success或者空串即可。"
+msgstr ""
+
+#: ../../source/api-backend/logistics.onPathUpdate.rst:11
+msgid "一、HTTPS 调用 消息参数 Object 属性      类型      说明 ToUserName      string  小程序的原始ID FromUserName    string  发送者的openid CreateTime      number  消息创建时间（整型） MsgType string  固定 event Event   string  固定 add_express_path DeliveryID      string  快递公司ID WayBillId       string  运单ID Version number  轨迹版本号（整型） Count   number  轨迹节点数（整型） Actions Array.<Object>  轨迹列表 Actions 的结构"
+msgstr ""
+
+#: ../../source/api-backend/logistics.onPathUpdate.rst:27
+msgid "属性      类型      说明 ActionTime      number  轨迹节点 Unix 时间戳 ActionType      number  轨迹节点类型 ActionMsg       string  轨迹节点详情 ActionType 的合法值"
+msgstr ""
+
+#: ../../source/api-backend/logistics.onPathUpdate.rst:33
+msgid "值       说明      最低版本 100001  揽件阶段-揽件成功 100002  揽件阶段-揽件失败 100003  揽件阶段-分配业务员 200001  运输阶段-更新运输轨迹 300002  派送阶段-开始派送 300003  派送阶段-签收成功 300004  派送阶段-签收失败 400001  异常阶段-订单取消 400002  异常阶段-订单滞留 消息数据包示例 XML 格式"
+msgstr ""
+
+#: ../../source/api-backend/logistics.onPathUpdate.rst:69
+msgid "<xml>"
+msgstr ""
+
+#: ../../source/api-backend/logistics.onPathUpdate.rst:47
+msgid "<ToUserName><![CDATA[toUser]]></ToUserName> <FromUserName><![CDATA[fromUser]]></FromUserName> <CreateTime>1546924844</CreateTime> <MsgType><![CDATA[event]]></MsgType> <Event><![CDATA[add_express_path]]></Event> <DeliveryID><![CDATA[SF]]></DeliveryID> <WayBillId><![CDATA[123456789]]></WayBillId> <Version>3</Version> <Count>3</Count> <Actions>"
+msgstr ""
+
+#: ../../source/api-backend/logistics.onPathUpdate.rst:57
+msgid "<ActionTime>1546924840</ActionTime> <ActionType>100001</ActionType> <ActionMsg><![CDATA[小哥A揽件成功]]></ActionMsg>"
+msgstr ""
+
+#: ../../source/api-backend/logistics.onPathUpdate.rst:60
+#: ../../source/api-backend/logistics.onPathUpdate.rst:65
+msgid "</Actions> <Actions>"
+msgstr ""
+
+#: ../../source/api-backend/logistics.onPathUpdate.rst:62
+msgid "<ActionTime>1546924841</ActionTime> <ActionType>200001</ActionType> <ActionMsg><![CDATA[到达广州集包地]]></ActionMsg>"
+msgstr ""
+
+#: ../../source/api-backend/logistics.onPathUpdate.rst:67
+msgid "<ActionTime>1546924842</ActionTime> <ActionType>200001</ActionType> <ActionMsg><![CDATA[运往目的地]]></ActionMsg>"
+msgstr ""
+
+#: ../../source/api-backend/logistics.onPathUpdate.rst:70
+msgid "</Actions>"
+msgstr ""
+
+#: ../../source/api-backend/logistics.onPathUpdate.rst:71
+msgid "</xml> JSON 格式"
+msgstr ""
+

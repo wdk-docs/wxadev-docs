@@ -1,6 +1,10 @@
 开发教程
 ============
 
+.. image:: https://readthedocs.org/projects/wxadev-docs/badge/?version=latest
+   :target: https://wxadev-docs.readthedocs.io/en/latest/?badge=latest
+   :alt: Documentation Status
+
 .. toctree::
    :maxdepth: 2
    :glob:

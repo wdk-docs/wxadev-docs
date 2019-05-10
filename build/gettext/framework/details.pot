@@ -1,0 +1,70 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019, Nosy
+# This file is distributed under the same license as the wxadev package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: wxadev \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-09 22:55+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/framework/details.rst:2
+msgid "运行环境"
+msgstr ""
+
+#: ../../source/framework/details.rst:4
+msgid "微信小程序运行在三端：iOS（iPhone/iPad）、Android 和 用于调试的开发者工具。"
+msgstr ""
+
+#: ../../source/framework/details.rst:6
+msgid "三端的脚本执行环境以及用于渲染非原生组件的环境是各不相同的："
+msgstr ""
+
+#: ../../source/framework/details.rst:8
+msgid "在 iOS 上，小程序逻辑层的 javascript 代码运行在 JavaScriptCore 中，视图层是由 WKWebView 来渲染的，环境有 iOS8、iOS9、iOS10；"
+msgstr ""
+
+#: ../../source/framework/details.rst:10
+msgid "在 Android 上，"
+msgstr ""
+
+#: ../../source/framework/details.rst:12
+msgid "旧版本，小程序逻辑层的 javascript 代码运行中 X5 JSCore 中，视图层是由 X5 基于 Mobile Chrome 57 内核来渲染的；"
+msgstr ""
+
+#: ../../source/framework/details.rst:14
+msgid "新版本，小程序逻辑层的 javascript 代码运行在 V8 中，视图层是由自研 XWeb 引擎基于 Mobile Chrome 67 内核来渲染的；"
+msgstr ""
+
+#: ../../source/framework/details.rst:16
+msgid "在 开发工具上，小程序逻辑层的 javascript 代码是运行在 NW.js 中，视图层是由 Chromium 60 Webview 来渲染的。"
+msgstr ""
+
+#: ../../source/framework/details.rst:19
+msgid "平台差异"
+msgstr ""
+
+#: ../../source/framework/details.rst:21
+msgid "尽管三端的环境是十分相似的，但是还是有些许区别："
+msgstr ""
+
+#: ../../source/framework/details.rst:23
+msgid "JavaScript 语法和 API 支持不一致：语法上开发者可以通过开启 ES6 转 ES5 的功能来规避（详情）；此外，小程序基础库内置了必要的Polyfill，来弥补API的差异（详情)。"
+msgstr ""
+
+#: ../../source/framework/details.rst:25
+msgid "WXSS 渲染表现不一致：尽管可以通过开启样式补全来规避大部分的问题 详情，还是建议开发者需要在 iOS 和 Android 上分别检查小程序的真实表现。"
+msgstr ""
+
+#: ../../source/framework/details.rst:27
+msgid "开发者工具仅供调试使用，最终的表现以客户端为准。"
+msgstr ""
+

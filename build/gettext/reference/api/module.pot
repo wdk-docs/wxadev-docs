@@ -1,0 +1,76 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019, Nosy
+# This file is distributed under the same license as the wxadev package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: wxadev \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-09 22:55+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/reference/api/module.rst:2
+msgid "模块化"
+msgstr ""
+
+#: ../../source/reference/api/module.rst:6
+msgid "当前模块对象"
+msgstr ""
+
+#: ../../source/reference/api/module.rst:0
+#: ../../source/reference/api/module.rst:0
+#: ../../source/reference/api/module.rst:0
+msgid "返回类型"
+msgstr ""
+
+#: ../../source/reference/api/module.rst:8
+#: ../../source/reference/api/module.rst:16
+#: ../../source/reference/api/module.rst:36
+msgid "Object"
+msgstr ""
+
+#: ../../source/reference/api/module.rst:14
+msgid "模块向外暴露的对象，使用require引用该模块时可以获取"
+msgstr ""
+
+#: ../../source/reference/api/module.rst:0
+msgid "rtype"
+msgstr ""
+
+#: ../../source/reference/api/module.rst:0
+#: ../../source/reference/api/module.rst:0
+#: ../../source/reference/api/module.rst:0
+msgid "示例"
+msgstr ""
+
+#: ../../source/reference/api/module.rst:0
+msgid "label"
+msgstr ""
+
+#: ../../source/reference/api/module.rst:35
+msgid "module.exports 的引用"
+msgstr ""
+
+#: ../../source/reference/api/module.rst:55
+msgid "引入模块。返回模块通过 module.exports 或 exports 暴露的接口。"
+msgstr ""
+
+#: ../../source/reference/api/module.rst:0
+msgid "参数"
+msgstr ""
+
+#: ../../source/reference/api/module.rst:57
+msgid "需要引入模块文件相对于当前文件的相对路径，或npm模块名，或npm模块路径。不支持绝对路径"
+msgstr ""
+
+#: ../../source/reference/api/module.rst:58
+msgid "any"
+msgstr ""
+

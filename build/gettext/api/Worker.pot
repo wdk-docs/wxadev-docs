@@ -1,0 +1,104 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019, Nosy
+# This file is distributed under the same license as the wxadev package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: wxadev \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-09 22:55+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/api/Worker.rst:2
+msgid ":wxapi:`Worker`"
+msgstr ""
+
+#: ../../source/api/Worker.rst:6
+msgid "低版本需做兼容处理。"
+msgstr ""
+
+#: ../../source/api/Worker.rst:8
+msgid "创建一个 Worker 线程。目前限制最多只能创建一个 Worker，创建下一个 :class:`Worker` 前请先调用 :func:`Worker.terminate`"
+msgstr ""
+
+#: ../../source/api/Worker.rst:0
+#: ../../source/api/Worker.rst:0
+#: ../../source/api/Worker.rst:0
+msgid "参数"
+msgstr ""
+
+#: ../../source/api/Worker.rst:10
+msgid "worker 入口文件的绝对路径"
+msgstr ""
+
+#: ../../source/api/Worker.rst:0
+msgid "返回"
+msgstr ""
+
+#: ../../source/api/Worker.rst:11
+msgid ":class:`Worker` 对象"
+msgstr ""
+
+#: ../../source/api/Worker.rst:15
+msgid "Worker 实例，主线程中可通过 :func:`wx.createWorker` 接口获取，worker 线程中可通过全局变量 worker 获取。"
+msgstr ""
+
+#: ../../source/api/Worker.rst:18
+msgid "方法"
+msgstr ""
+
+#: ../../source/api/Worker.rst:22
+msgid "向主线程/Worker 线程发送的消息。"
+msgstr ""
+
+#: ../../source/api/Worker.rst:24
+msgid "需要发送的消息，必须是一个可序列化的 JavaScript key-value 形式的对象。"
+msgstr ""
+
+#: ../../source/api/Worker.rst:0
+msgid "示例"
+msgstr ""
+
+#: ../../source/api/Worker.rst:28
+msgid "worker 线程中"
+msgstr ""
+
+#: ../../source/api/Worker.rst:36
+msgid "主线程中"
+msgstr ""
+
+#: ../../source/api/Worker.rst:48
+msgid "结束当前 Worker 线程。仅限在主线程 worker 对象上调用。"
+msgstr ""
+
+#: ../../source/api/Worker.rst:52
+msgid "监听主线程/Worker 线程向当前线程发送的消息的事件。"
+msgstr ""
+
+#: ../../source/api/Worker.rst:54
+msgid "主线程/Worker 线程向当前线程发送的消息  - message   Object  主线程/Worker 线程向当前线程发送的消息"
+msgstr ""
+
+#: ../../source/api/Worker.rst:54
+msgid "主线程/Worker 线程向当前线程发送的消息"
+msgstr ""
+
+#: ../../source/api/Worker.rst:56
+msgid "message   Object  主线程/Worker 线程向当前线程发送的消息"
+msgstr ""
+
+#: ../../source/api/Worker.rst:59
+msgid "示例代码"
+msgstr ""
+
+#: ../../source/api/Worker.rst:61
+msgid "运行以下代码需先进行基础配置，详细请查阅 多线程 文档了解基础知识和配置方法。"
+msgstr ""
+

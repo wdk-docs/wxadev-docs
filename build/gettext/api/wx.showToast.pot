@@ -1,0 +1,90 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019, Nosy
+# This file is distributed under the same license as the wxadev package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: wxadev \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-09 22:55+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/api/wx.showToast.rst:2
+msgid ":wxapi:`wx.showToast`"
+msgstr ""
+
+#: ../../source/api/wx.showToast.rst:6
+msgid "显示消息提示框"
+msgstr ""
+
+#: ../../source/api/wx.showToast.rst:0
+msgid "参数"
+msgstr ""
+
+#: ../../source/api/wx.showToast.rst:8
+msgid "提示的内容"
+msgstr ""
+
+#: ../../source/api/wx.showToast.rst:9
+msgid "**'success'**   图标  - *success*       显示成功图标，此时 title 文本最多显示 7 个汉字长度 - *loading*       显示加载图标，此时 title 文本最多显示 7 个汉字长度 - *none*  不显示图标，此时 title 文本最多可显示两行，1.9.0及以上版本支持"
+msgstr ""
+
+#: ../../source/api/wx.showToast.rst:9
+msgid "**'success'**   图标"
+msgstr ""
+
+#: ../../source/api/wx.showToast.rst:11
+msgid "*success*       显示成功图标，此时 title 文本最多显示 7 个汉字长度"
+msgstr ""
+
+#: ../../source/api/wx.showToast.rst:12
+msgid "*loading*       显示加载图标，此时 title 文本最多显示 7 个汉字长度"
+msgstr ""
+
+#: ../../source/api/wx.showToast.rst:13
+msgid "*none*  不显示图标，此时 title 文本最多可显示两行，1.9.0及以上版本支持"
+msgstr ""
+
+#: ../../source/api/wx.showToast.rst:15
+msgid "自定义图标的本地路径，image 的优先级高于 icon   1.1.0"
+msgstr ""
+
+#: ../../source/api/wx.showToast.rst:16
+msgid "**1500** 提示的延迟时间"
+msgstr ""
+
+#: ../../source/api/wx.showToast.rst:17
+msgid "**false** 是否显示透明蒙层，防止触摸穿透"
+msgstr ""
+
+#: ../../source/api/wx.showToast.rst:18
+msgid "接口调用成功的回调函数"
+msgstr ""
+
+#: ../../source/api/wx.showToast.rst:19
+msgid "接口调用失败的回调函数"
+msgstr ""
+
+#: ../../source/api/wx.showToast.rst:20
+msgid "接口调用结束的回调函数（调用成功、失败都会执行）"
+msgstr ""
+
+#: ../../source/api/wx.showToast.rst:0
+msgid "示例"
+msgstr ""
+
+#: ../../source/api/wx.showToast.rst:34
+msgid "wx.showLoading 和 wx.showToast 同时只能显示一个"
+msgstr ""
+
+#: ../../source/api/wx.showToast.rst:35
+msgid "wx.showToast 应与 wx.hideToast 配对使用"
+msgstr ""
+

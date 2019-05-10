@@ -1,0 +1,329 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019, Nosy
+# This file is distributed under the same license as the wxadev package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: wxadev \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-09 22:55+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/component/image.rst:4
+msgid ":wx_comp:`image ☁️ <image>`"
+msgstr ""
+
+#: ../../source/component/image.rst:6
+msgid "低版本需做 :ref:`compatibility` 。"
+msgstr ""
+
+#: ../../source/component/image.rst:8
+msgid "起支持云文件ID。"
+msgstr ""
+
+#: ../../source/component/image.rst:10
+msgid "图片。支持JPG、PNG、SVG格式，"
+msgstr ""
+
+#: ../../source/component/image.rst:13
+msgid "属性"
+msgstr ""
+
+#: ../../source/component/image.rst:13
+msgid "类型"
+msgstr ""
+
+#: ../../source/component/image.rst:13
+msgid "默认值"
+msgstr ""
+
+#: ../../source/component/image.rst:13
+msgid "必"
+msgstr ""
+
+#: ../../source/component/image.rst:13
+#: ../../source/component/image.rst:30
+msgid "说明"
+msgstr ""
+
+#: ../../source/component/image.rst:13
+msgid "最低版本"
+msgstr ""
+
+#: ../../source/component/image.rst:15
+msgid "src"
+msgstr ""
+
+#: ../../source/component/image.rst:15
+#: ../../source/component/image.rst:17
+msgid "string"
+msgstr ""
+
+#: ../../source/component/image.rst:15
+#: ../../source/component/image.rst:17
+#: ../../source/component/image.rst:19
+#: ../../source/component/image.rst:21
+#: ../../source/component/image.rst:23
+msgid "否"
+msgstr ""
+
+#: ../../source/component/image.rst:15
+msgid "图片资源地址"
+msgstr ""
+
+#: ../../source/component/image.rst:15
+#: ../../source/component/image.rst:17
+#: ../../source/component/image.rst:21
+#: ../../source/component/image.rst:23
+msgid "1.0.0"
+msgstr ""
+
+#: ../../source/component/image.rst:17
+msgid "mode"
+msgstr ""
+
+#: ../../source/component/image.rst:17
+#: ../../source/component/image.rst:32
+#: ../../source/component/image.rst:140
+msgid "scaleToFill"
+msgstr ""
+
+#: ../../source/component/image.rst:17
+msgid "图片裁剪、缩放的模式"
+msgstr ""
+
+#: ../../source/component/image.rst:19
+msgid "lazy-load"
+msgstr ""
+
+#: ../../source/component/image.rst:19
+msgid "boolean"
+msgstr ""
+
+#: ../../source/component/image.rst:19
+msgid "false"
+msgstr ""
+
+#: ../../source/component/image.rst:19
+msgid "图片懒加载，在即将进入一定范围（上下三屏）时才开始加载"
+msgstr ""
+
+#: ../../source/component/image.rst:19
+msgid "1.5.0"
+msgstr ""
+
+#: ../../source/component/image.rst:21
+msgid "binderror"
+msgstr ""
+
+#: ../../source/component/image.rst:21
+#: ../../source/component/image.rst:23
+msgid "eventhandle"
+msgstr ""
+
+#: ../../source/component/image.rst:21
+msgid "当错误发生时触发，，event.detail = {errMsg}"
+msgstr ""
+
+#: ../../source/component/image.rst:23
+msgid "bindload"
+msgstr ""
+
+#: ../../source/component/image.rst:23
+msgid "当图片载入完毕时触发，event.detail = {height, width}"
+msgstr ""
+
+#: ../../source/component/image.rst:27
+msgid "mode 的合法值"
+msgstr ""
+
+#: ../../source/component/image.rst:30
+msgid "值"
+msgstr ""
+
+#: ../../source/component/image.rst:32
+msgid "缩放模式，不保持纵横比缩放图片，使图片的宽高完全拉伸至填满 image 元素"
+msgstr ""
+
+#: ../../source/component/image.rst:34
+#: ../../source/component/image.rst:146
+msgid "aspectFit"
+msgstr ""
+
+#: ../../source/component/image.rst:34
+msgid "缩放模式，保持纵横比缩放图片，使图片的长边能完全显示出来。也就是说，可以完整地将图片显示出来。"
+msgstr ""
+
+#: ../../source/component/image.rst:36
+#: ../../source/component/image.rst:152
+msgid "aspectFill"
+msgstr ""
+
+#: ../../source/component/image.rst:36
+msgid "缩放模式，保持纵横比缩放图片，只保证图片的短边能完全显示出来。也就是说，图片通常只在水平或垂直方向是完整的，另一个方向将会发生截取。"
+msgstr ""
+
+#: ../../source/component/image.rst:38
+msgid "widthFix"
+msgstr ""
+
+#: ../../source/component/image.rst:38
+msgid "缩放模式，宽度不变，高度自动变化，保持原图宽高比不变"
+msgstr ""
+
+#: ../../source/component/image.rst:40
+#: ../../source/component/image.rst:158
+msgid "top"
+msgstr ""
+
+#: ../../source/component/image.rst:40
+msgid "裁剪模式，不缩放图片，只显示图片的顶部区域"
+msgstr ""
+
+#: ../../source/component/image.rst:42
+#: ../../source/component/image.rst:164
+msgid "bottom"
+msgstr ""
+
+#: ../../source/component/image.rst:42
+msgid "裁剪模式，不缩放图片，只显示图片的底部区域"
+msgstr ""
+
+#: ../../source/component/image.rst:44
+#: ../../source/component/image.rst:170
+msgid "center"
+msgstr ""
+
+#: ../../source/component/image.rst:44
+msgid "裁剪模式，不缩放图片，只显示图片的中间区域"
+msgstr ""
+
+#: ../../source/component/image.rst:46
+#: ../../source/component/image.rst:176
+msgid "left"
+msgstr ""
+
+#: ../../source/component/image.rst:46
+msgid "裁剪模式，不缩放图片，只显示图片的左边区域"
+msgstr ""
+
+#: ../../source/component/image.rst:48
+#: ../../source/component/image.rst:182
+msgid "right"
+msgstr ""
+
+#: ../../source/component/image.rst:48
+msgid "裁剪模式，不缩放图片，只显示图片的右边区域"
+msgstr ""
+
+#: ../../source/component/image.rst:50
+#: ../../source/component/image.rst:188
+msgid "top left"
+msgstr ""
+
+#: ../../source/component/image.rst:50
+msgid "裁剪模式，不缩放图片，只显示图片的左上边区域"
+msgstr ""
+
+#: ../../source/component/image.rst:52
+#: ../../source/component/image.rst:194
+msgid "top right"
+msgstr ""
+
+#: ../../source/component/image.rst:52
+msgid "裁剪模式，不缩放图片，只显示图片的右上边区域"
+msgstr ""
+
+#: ../../source/component/image.rst:54
+#: ../../source/component/image.rst:200
+msgid "bottom left"
+msgstr ""
+
+#: ../../source/component/image.rst:54
+msgid "裁剪模式，不缩放图片，只显示图片的左下边区域"
+msgstr ""
+
+#: ../../source/component/image.rst:56
+#: ../../source/component/image.rst:206
+msgid "bottom right"
+msgstr ""
+
+#: ../../source/component/image.rst:56
+msgid "裁剪模式，不缩放图片，只显示图片的右下边区域"
+msgstr ""
+
+#: ../../source/component/image.rst:59
+msgid "image组件默认宽度300px、高度225px"
+msgstr ""
+
+#: ../../source/component/image.rst:61
+msgid "image组件中二维码/小程序码图片不支持长按识别。仅在wx.previewImage中支持长按识别"
+msgstr ""
+
+#: ../../source/component/image.rst:63
+msgid "示例代码"
+msgstr ""
+
+#: ../../source/component/image.rst:65
+msgid "在开发者工具中预览效果"
+msgstr ""
+
+#: ../../source/component/image.rst:136
+msgid "原图"
+msgstr ""
+
+#: ../../source/component/image.rst:142
+msgid "不保持纵横比缩放图片，使图片完全适应"
+msgstr ""
+
+#: ../../source/component/image.rst:148
+msgid "保持纵横比缩放图片，使图片的长边能完全显示出来"
+msgstr ""
+
+#: ../../source/component/image.rst:154
+msgid "保持纵横比缩放图片，只保证图片的短边能完全显示出来"
+msgstr ""
+
+#: ../../source/component/image.rst:160
+msgid "不缩放图片，只显示图片的顶部区域"
+msgstr ""
+
+#: ../../source/component/image.rst:166
+msgid "不缩放图片，只显示图片的底部区域"
+msgstr ""
+
+#: ../../source/component/image.rst:172
+msgid "不缩放图片，只显示图片的中间区域"
+msgstr ""
+
+#: ../../source/component/image.rst:178
+msgid "不缩放图片，只显示图片的左边区域"
+msgstr ""
+
+#: ../../source/component/image.rst:184
+msgid "不缩放图片，只显示图片的右边边区域"
+msgstr ""
+
+#: ../../source/component/image.rst:190
+msgid "不缩放图片，只显示图片的左上边区域"
+msgstr ""
+
+#: ../../source/component/image.rst:196
+msgid "不缩放图片，只显示图片的右上边区域"
+msgstr ""
+
+#: ../../source/component/image.rst:202
+msgid "不缩放图片，只显示图片的左下边区域"
+msgstr ""
+
+#: ../../source/component/image.rst:208
+msgid "不缩放图片，只显示图片的右下边区域"
+msgstr ""
+

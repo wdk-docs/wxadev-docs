@@ -1,0 +1,127 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019, Nosy
+# This file is distributed under the same license as the wxadev package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: wxadev \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-09 22:55+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../../source/api/MapContext.rst:2
+msgid ":wxapi:`MapContext`"
+msgstr ""
+
+#: ../../source/api/MapContext.rst:4
+msgid "版本:|release| 更新:|today|"
+msgstr ""
+
+#: ../../source/api/MapContext.rst:8
+msgid "创建 map 上下文 :class:`MapContext` 对象。"
+msgstr ""
+
+#: ../../source/api/MapContext.rst
+msgid "参数"
+msgstr ""
+
+#: ../../source/api/MapContext.rst:10
+msgid ":ref:`<map> <map>` 组件的 id"
+msgstr ""
+
+#: ../../source/api/MapContext.rst:11
+msgid "在自定义组件下，当前组件实例的this，以操作组件内 :ref:`<map> <map>` 组件"
+msgstr ""
+
+#: ../../source/api/MapContext.rst
+msgid "返回"
+msgstr ""
+
+#: ../../source/api/MapContext.rst:12
+msgid ":class:`MapContext`"
+msgstr ""
+
+#: ../../source/api/MapContext.rst:16
+msgid ":class:`MapContext` 实例，可通过 :func:`wx.createMapContext` 获取。"
+msgstr ""
+
+#: ../../source/api/MapContext.rst:18
+msgid ""
+":class:`MapContext` 通过 id 跟一个 :ref:`<map> <map>` 组件绑定，操作对应的 :ref:`<map> "
+"<map>` 组件。"
+msgstr ""
+
+#: ../../source/api/MapContext.rst:21
+msgid "方法"
+msgstr ""
+
+#: ../../source/api/MapContext.rst:25
+msgid "获取当前地图中心的经纬度。返回的是 `gcj02` 坐标系，可以用于 :func:`wx.openLocation()`"
+msgstr ""
+
+#: ../../source/api/MapContext.rst:27
+msgid ""
+"接口调用成功的回调函数  - **longitude**     (*number*) - 经度 - **latitude**      "
+"(*number*) - 纬度"
+msgstr ""
+
+#: ../../source/api/MapContext.rst:27
+msgid "接口调用成功的回调函数"
+msgstr ""
+
+#: ../../source/api/MapContext.rst:29
+msgid "**longitude**     (*number*) - 经度"
+msgstr ""
+
+#: ../../source/api/MapContext.rst:30
+msgid "**latitude**      (*number*) - 纬度"
+msgstr ""
+
+#: ../../source/api/MapContext.rst:32
+msgid "接口调用失败的回调函数"
+msgstr ""
+
+#: ../../source/api/MapContext.rst:33
+msgid "接口调用结束的回调函数（调用成功、失败都会执行）"
+msgstr ""
+
+#: ../../source/api/MapContext.rst:37
+msgid "将地图中心移动到当前定位点。需要配合 :ref:`map` 组件的 ``show-location`` 使用"
+msgstr ""
+
+#: ../../source/api/MapContext.rst:41
+msgid "平移marker，带动画"
+msgstr ""
+
+#: ../../source/api/MapContext.rst:43 ../../source/api/MapContext.rst:49
+msgid "object"
+msgstr ""
+
+#: ../../source/api/MapContext.rst:47
+msgid "缩放视野展示所有经纬度"
+msgstr ""
+
+#: ../../source/api/MapContext.rst:53
+msgid "获取当前地图的视野范围"
+msgstr ""
+
+#: ../../source/api/MapContext.rst:57
+msgid "获取当前地图的缩放级别"
+msgstr ""
+
+#: ../../source/api/MapContext.rst:60
+msgid "示例代码"
+msgstr ""
+
+#: ../../source/api/MapContext.rst:62
+msgid ":download:`在开发者工具中预览效果 <https://developers.weixin.qq.com/s/3uVxpmmT6wY9>`"
+msgstr ""
+

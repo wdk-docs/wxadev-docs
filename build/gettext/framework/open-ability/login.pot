@@ -1,0 +1,54 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019, Nosy
+# This file is distributed under the same license as the wxadev package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: wxadev \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-09 22:55+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/framework/open-ability/login.rst:2
+msgid ":wxfrwk:`小程序登录 <open-ability/login>`"
+msgstr ""
+
+#: ../../source/framework/open-ability/login.rst:4
+msgid "小程序可以通过微信官方提供的登录能力方便地获取微信提供的用户身份标识，快速建立小程序内的用户体系。"
+msgstr ""
+
+#: ../../source/framework/open-ability/login.rst:6
+msgid "登录流程时序"
+msgstr ""
+
+#: ../../source/framework/open-ability/login.rst:10
+msgid "说明："
+msgstr ""
+
+#: ../../source/framework/open-ability/login.rst:12
+msgid "调用 wx.login() 获取 临时登录凭证code ，并回传到开发者服务器。"
+msgstr ""
+
+#: ../../source/framework/open-ability/login.rst:13
+msgid "调用 auth.code2Session 接口，换取 用户唯一标识 OpenID 和 会话密钥 session_key。"
+msgstr ""
+
+#: ../../source/framework/open-ability/login.rst:15
+msgid "之后开发者服务器可以根据用户标识来生成自定义登录态，用于后续业务逻辑中前后端交互时识别用户身份。"
+msgstr ""
+
+#: ../../source/framework/open-ability/login.rst:19
+msgid "会话密钥 session_key 是对用户数据进行 加密签名 的密钥。为了应用自身的数据安全，开发者服务器不应该把会话密钥下发到小程序，也不应该对外提供这个密钥。"
+msgstr ""
+
+#: ../../source/framework/open-ability/login.rst:20
+msgid "临时登录凭证 code 只能使用一次"
+msgstr ""
+

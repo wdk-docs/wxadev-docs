@@ -1,0 +1,93 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019, Nosy
+# This file is distributed under the same license as the wxadev package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: wxadev \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-09 22:55+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../../source/framework/view/wxs/statement.rst:4
+msgid ":wxfrwk:`语句 <view/wxs/05statement>`"
+msgstr ""
+
+#: ../../source/framework/view/wxs/statement.rst:7
+msgid "如果语句"
+msgstr ""
+
+#: ../../source/framework/view/wxs/statement.rst:9
+msgid "在WXS中，可以使用以下格式的if语句："
+msgstr ""
+
+#: ../../source/framework/view/wxs/statement.rst:11
+msgid "``if (expression) statement``：当expression为truthy时，执行statement。"
+msgstr ""
+
+#: ../../source/framework/view/wxs/statement.rst:12
+msgid ""
+"``if (expression) statement1 else "
+"statement2``：当expression为truthy时，执行statement1。否则，执行statement2"
+msgstr ""
+
+#: ../../source/framework/view/wxs/statement.rst:13
+msgid ""
+"``if ... else if ... else statementN`` "
+"通过该句型，可以在statement1〜statementN之间选其中一个执行。"
+msgstr ""
+
+#: ../../source/framework/view/wxs/statement.rst:15
+#: ../../source/framework/view/wxs/statement.rst:62
+#: ../../source/framework/view/wxs/statement.rst:108
+#: ../../source/framework/view/wxs/statement.rst:138
+msgid "示例语法："
+msgstr ""
+
+#: ../../source/framework/view/wxs/statement.rst:60
+msgid "切换语句"
+msgstr ""
+
+#: ../../source/framework/view/wxs/statement.rst:78
+msgid "``default`` 分支可以省略不写。"
+msgstr ""
+
+#: ../../source/framework/view/wxs/statement.rst:79
+msgid "``case`` 关键词后面只能使用变量：数字，字符串， 。"
+msgstr ""
+
+#: ../../source/framework/view/wxs/statement.rst:81
+#: ../../source/framework/view/wxs/statement.rst:121
+msgid "示例代码："
+msgstr ""
+
+#: ../../source/framework/view/wxs/statement.rst:101
+#: ../../source/framework/view/wxs/statement.rst:130
+msgid "输出::"
+msgstr ""
+
+#: ../../source/framework/view/wxs/statement.rst:106
+msgid "用语句"
+msgstr ""
+
+#: ../../source/framework/view/wxs/statement.rst:119
+#: ../../source/framework/view/wxs/statement.rst:154
+msgid "支持使用break，continue关键词。"
+msgstr ""
+
+#: ../../source/framework/view/wxs/statement.rst:136
+msgid "语句"
+msgstr ""
+
+#: ../../source/framework/view/wxs/statement.rst:153
+msgid "当表达式为真时，循环执行语句或代码块。"
+msgstr ""
+

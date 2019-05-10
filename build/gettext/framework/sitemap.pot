@@ -1,0 +1,62 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019, Nosy
+# This file is distributed under the same license as the wxadev package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: wxadev \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-09 22:55+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/framework/sitemap.rst:2
+msgid "sitemap 配置"
+msgstr ""
+
+#: ../../source/framework/sitemap.rst:4
+msgid "小程序根目录下的 sitemap.json 文件用来配置小程序及其页面是否允许被微信索引。"
+msgstr ""
+
+#: ../../source/framework/sitemap.rst:6
+msgid "完整配置项说明请参考 `小程序 sitemap 配置 <https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/sitemap.html>`_"
+msgstr ""
+
+#: ../../source/framework/sitemap.rst:8
+msgid "例1："
+msgstr ""
+
+#: ../../source/framework/sitemap.rst:21
+msgid "所有页面都会被微信索引，其他页面不会被索引"
+msgstr ""
+
+#: ../../source/framework/sitemap.rst:23
+msgid "例2："
+msgstr ""
+
+#: ../../source/framework/sitemap.rst:38
+msgid "包含 ``a`` 和 ``b`` 参数的 `path/to/page` 页面都会被微信索引，其他页面不会被索引，例如："
+msgstr ""
+
+#: ../../source/framework/sitemap.rst:40
+msgid "path/to/page => 不被索引"
+msgstr ""
+
+#: ../../source/framework/sitemap.rst:41
+msgid "path/to/page?a=1 => 不被索引"
+msgstr ""
+
+#: ../../source/framework/sitemap.rst:42
+msgid "path/to/page?a=1&b=2 => 被索引"
+msgstr ""
+
+#: ../../source/framework/sitemap.rst:43
+msgid "path/to/page?a=1&b=2&c=3 => 被索引"
+msgstr ""
+

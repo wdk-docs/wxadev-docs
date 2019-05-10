@@ -1,0 +1,142 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019, Nosy
+# This file is distributed under the same license as the wxadev package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: wxadev \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-09 22:55+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/api-backend/logistics.getAllDelivery.rst:2
+msgid ":wxbpi:`获取支持的快递公司列表 <logistics.getAllDelivery>`"
+msgstr ""
+
+#: ../../source/api-backend/logistics.getAllDelivery.rst:4
+msgid "logistics.getAllDelivery 本接口应在服务器端调用，详细说明参见服务端API。"
+msgstr ""
+
+#: ../../source/api-backend/logistics.getAllDelivery.rst:7
+msgid "本接口支持云调用。需开发者工具版本 >= 1.02.1904090（最新稳定版下载），wx-server-sdk >= 0.4.0"
+msgstr ""
+
+#: ../../source/api-backend/logistics.getAllDelivery.rst:11
+msgid "调用方式："
+msgstr ""
+
+#: ../../source/api-backend/logistics.getAllDelivery.rst:13
+msgid "一、HTTPS 调用 二、云调用"
+msgstr ""
+
+#: ../../source/api-backend/logistics.getAllDelivery.rst:16
+msgid "一、HTTPS 调用 请求地址 GET https://api.weixin.qq.com/cgi-bin/express/business/delivery/getall?access_token=ACCESS_TOKEN 请求参数 属性      类型      默认值     必填      说明 access_token    string          是       接口调用凭证 返回值 Object 属性      类型      说明 count   number  快递公司数量 data    Array.<Object>  快递公司信息列表 data 的结构"
+msgstr ""
+
+#: ../../source/api-backend/logistics.getAllDelivery.rst:29
+msgid "属性      类型      说明 delivery_id     string  快递公司 ID delivery_name   string  快递公司名称 返回数据示例"
+msgstr ""
+
+#: ../../source/api-backend/logistics.getAllDelivery.rst:74
+msgid "二、云调用 云调用是小程序·云开发提供的在云函数中调用微信开放接口的能力，需要在云函数中通过 wx-server-sdk 使用。"
+msgstr ""
+
+#: ../../source/api-backend/logistics.getAllDelivery.rst:77
+msgid "接口方法 openapi.logistics.getAllDelivery 需在 config.json 中配置 logistics.getAllDelivery API 的权限，详情"
+msgstr ""
+
+#: ../../source/api-backend/logistics.getAllDelivery.rst:81
+msgid "返回值 Object 属性      类型      说明 count   number  快递公司数量 data    Array.<Object>  快递公司信息列表 data 的结构"
+msgstr ""
+
+#: ../../source/api-backend/logistics.getAllDelivery.rst:88
+msgid "属性      类型      说明 deliveryId      string  快递公司 ID deliveryName    string  快递公司名称 请求示例 const cloud = require('wx-server-sdk') cloud.init() exports.main = async (event, context) => {"
+msgstr ""
+
+#: ../../source/api-backend/logistics.getAllDelivery.rst:97
+msgid "try {"
+msgstr ""
+
+#: ../../source/api-backend/logistics.getAllDelivery.rst:96
+msgid "const result = await cloud.openapi.logistics.getAllDelivery({}) console.log(result) return result"
+msgstr ""
+
+#: ../../source/api-backend/logistics.getAllDelivery.rst:100
+msgid "} catch (err) {"
+msgstr ""
+
+#: ../../source/api-backend/logistics.getAllDelivery.rst:100
+msgid "console.log(err) return err"
+msgstr ""
+
+#: ../../source/api-backend/logistics.getAllDelivery.rst:102
+#: ../../source/api-backend/logistics.getAllDelivery.rst:139
+#: ../../source/api-backend/logistics.getAllDelivery.rst:142
+msgid "}"
+msgstr ""
+
+#: ../../source/api-backend/logistics.getAllDelivery.rst:103
+msgid "} 返回数据示例 {"
+msgstr ""
+
+#: ../../source/api-backend/logistics.getAllDelivery.rst:106
+msgid "\"count\": 8, \"data\": ["
+msgstr ""
+
+#: ../../source/api-backend/logistics.getAllDelivery.rst:109
+msgid "{"
+msgstr ""
+
+#: ../../source/api-backend/logistics.getAllDelivery.rst:109
+msgid "\"deliveryId\": \"BEST\", \"deliveryName\": \"百世快递\""
+msgstr ""
+
+#: ../../source/api-backend/logistics.getAllDelivery.rst:111
+#: ../../source/api-backend/logistics.getAllDelivery.rst:115
+#: ../../source/api-backend/logistics.getAllDelivery.rst:119
+#: ../../source/api-backend/logistics.getAllDelivery.rst:123
+#: ../../source/api-backend/logistics.getAllDelivery.rst:127
+#: ../../source/api-backend/logistics.getAllDelivery.rst:131
+#: ../../source/api-backend/logistics.getAllDelivery.rst:135
+msgid "}, {"
+msgstr ""
+
+#: ../../source/api-backend/logistics.getAllDelivery.rst:113
+msgid "\"deliveryId\": \"EMS\", \"deliveryName\": \"中国邮政速递物流\""
+msgstr ""
+
+#: ../../source/api-backend/logistics.getAllDelivery.rst:117
+msgid "\"deliveryId\": \"OTP\", \"deliveryName\": \"承诺达特快\""
+msgstr ""
+
+#: ../../source/api-backend/logistics.getAllDelivery.rst:121
+msgid "\"deliveryId\": \"PJ\", \"deliveryName\": \"品骏物流\""
+msgstr ""
+
+#: ../../source/api-backend/logistics.getAllDelivery.rst:125
+msgid "\"deliveryId\": \"SF\", \"deliveryName\": \"顺丰速运\""
+msgstr ""
+
+#: ../../source/api-backend/logistics.getAllDelivery.rst:129
+msgid "\"deliveryId\": \"YTO\", \"deliveryName\": \"圆通速递\""
+msgstr ""
+
+#: ../../source/api-backend/logistics.getAllDelivery.rst:133
+msgid "\"deliveryId\": \"YUNDA\", \"deliveryName\": \"韵达快递\""
+msgstr ""
+
+#: ../../source/api-backend/logistics.getAllDelivery.rst:137
+msgid "\"deliveryId\": \"ZTO\", \"deliveryName\": \"中通快递\""
+msgstr ""
+
+#: ../../source/api-backend/logistics.getAllDelivery.rst:140
+msgid "], \"errMsg\": \"openapi.logistics.getAllDelivery:ok\""
+msgstr ""
+

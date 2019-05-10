@@ -1,0 +1,223 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2019, Nosy
+# This file is distributed under the same license as the wxadev package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: wxadev \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-09 23:21+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../../source/component/camera.rst:4
+msgid ":wx_comp:`camera`"
+msgstr ""
+
+#: ../../source/component/camera.rst:6
+msgid "低版本需做 :doc:`../framework/compatibility` 。"
+msgstr ""
+
+#: ../../source/component/camera.rst:8
+msgid "系统相机。扫码二维码功能，需升级微信客户端至6.7.3。 需要 :ref:`authorize` :data:`scope.camera` 。"
+msgstr ""
+
+#: ../../source/component/camera.rst:11
+msgid "相关api: :func:`wx.createCameraContext`"
+msgstr ""
+
+#: ../../source/component/camera.rst:14
+msgid "属性"
+msgstr ""
+
+#: ../../source/component/camera.rst:14
+msgid "类型"
+msgstr ""
+
+#: ../../source/component/camera.rst:14
+msgid "默认值"
+msgstr ""
+
+#: ../../source/component/camera.rst:14
+msgid "必填"
+msgstr ""
+
+#: ../../source/component/camera.rst:14 ../../source/component/camera.rst:32
+#: ../../source/component/camera.rst:42 ../../source/component/camera.rst:52
+msgid "说明"
+msgstr ""
+
+#: ../../source/component/camera.rst:14 ../../source/component/camera.rst:32
+#: ../../source/component/camera.rst:42 ../../source/component/camera.rst:52
+msgid "最低版本"
+msgstr ""
+
+#: ../../source/component/camera.rst:16
+msgid "mode"
+msgstr ""
+
+#: ../../source/component/camera.rst:16 ../../source/component/camera.rst:18
+#: ../../source/component/camera.rst:20
+msgid "string"
+msgstr ""
+
+#: ../../source/component/camera.rst:16 ../../source/component/camera.rst:34
+msgid "normal"
+msgstr ""
+
+#: ../../source/component/camera.rst:16 ../../source/component/camera.rst:18
+#: ../../source/component/camera.rst:20 ../../source/component/camera.rst:22
+#: ../../source/component/camera.rst:24 ../../source/component/camera.rst:26
+msgid "否"
+msgstr ""
+
+#: ../../source/component/camera.rst:16
+msgid "应用模式"
+msgstr ""
+
+#: ../../source/component/camera.rst:16 ../../source/component/camera.rst:26
+msgid "2.1.0"
+msgstr ""
+
+#: ../../source/component/camera.rst:18
+msgid "device-position"
+msgstr ""
+
+#: ../../source/component/camera.rst:18 ../../source/component/camera.rst:46
+msgid "back"
+msgstr ""
+
+#: ../../source/component/camera.rst:18
+msgid "摄像头朝向"
+msgstr ""
+
+#: ../../source/component/camera.rst:18 ../../source/component/camera.rst:20
+#: ../../source/component/camera.rst:22 ../../source/component/camera.rst:24
+msgid "1.0.0"
+msgstr ""
+
+#: ../../source/component/camera.rst:20
+msgid "flash"
+msgstr ""
+
+#: ../../source/component/camera.rst:20 ../../source/component/camera.rst:54
+msgid "auto"
+msgstr ""
+
+#: ../../source/component/camera.rst:20
+msgid "闪光灯，值为auto, on, off"
+msgstr ""
+
+#: ../../source/component/camera.rst:22
+msgid "bindstop"
+msgstr ""
+
+#: ../../source/component/camera.rst:22 ../../source/component/camera.rst:24
+#: ../../source/component/camera.rst:26
+msgid "eventhandle"
+msgstr ""
+
+#: ../../source/component/camera.rst:22
+msgid "摄像头在非正常终止时触发，如退出后台等情况"
+msgstr ""
+
+#: ../../source/component/camera.rst:24
+msgid "binderror"
+msgstr ""
+
+#: ../../source/component/camera.rst:24
+msgid "用户不允许使用摄像头时触发"
+msgstr ""
+
+#: ../../source/component/camera.rst:26
+msgid "bindscancode"
+msgstr ""
+
+#: ../../source/component/camera.rst:26
+msgid "在扫码识别成功时触发，仅在 mode=\"scanCode\" 时生效"
+msgstr ""
+
+#: ../../source/component/camera.rst:29
+msgid "mode 的合法值"
+msgstr ""
+
+#: ../../source/component/camera.rst:32 ../../source/component/camera.rst:42
+#: ../../source/component/camera.rst:52
+msgid "值"
+msgstr ""
+
+#: ../../source/component/camera.rst:34
+msgid "相机模式"
+msgstr ""
+
+#: ../../source/component/camera.rst:36
+msgid "scanCode"
+msgstr ""
+
+#: ../../source/component/camera.rst:36
+msgid "扫码模式"
+msgstr ""
+
+#: ../../source/component/camera.rst:39
+msgid "device-position 的合法值"
+msgstr ""
+
+#: ../../source/component/camera.rst:44
+msgid "front"
+msgstr ""
+
+#: ../../source/component/camera.rst:44
+msgid "前置"
+msgstr ""
+
+#: ../../source/component/camera.rst:46
+msgid "后置"
+msgstr ""
+
+#: ../../source/component/camera.rst:49
+msgid "flash 的合法值"
+msgstr ""
+
+#: ../../source/component/camera.rst:54
+msgid "自动"
+msgstr ""
+
+#: ../../source/component/camera.rst:56
+msgid "on"
+msgstr ""
+
+#: ../../source/component/camera.rst:56
+msgid "打开"
+msgstr ""
+
+#: ../../source/component/camera.rst:58
+msgid "off"
+msgstr ""
+
+#: ../../source/component/camera.rst:58
+msgid "关闭"
+msgstr ""
+
+#: ../../source/component/camera.rst:61
+msgid "同一页面只能插入一个 camera 组件。"
+msgstr ""
+
+#: ../../source/component/camera.rst:63
+msgid "请注意 :ref:`原生组件使用限制 <ncur>`"
+msgstr ""
+
+#: ../../source/component/camera.rst:65
+msgid "示例代码"
+msgstr ""
+
+#: ../../source/component/camera.rst:67
+msgid ":download:`在开发者工具中预览效果 <https://developers.weixin.qq.com/s/VBZ3Jim26zYu>`"
+msgstr ""
+
