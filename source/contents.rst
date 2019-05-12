@@ -6,7 +6,7 @@
    :alt: Documentation Status
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 5
    :glob:
 
    index
@@ -22,8 +22,8 @@
    wxcloud/index
    wxwork/index
 
+   todolist
    glossary
-   rst
 
 指数和表格
 ==================

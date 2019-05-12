@@ -118,12 +118,14 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../scene.html">场景值列表</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../api/index.html">框架接口说明</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../wxml/index.html">WXML</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../wxs/index.html">WXS 语法参考</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../wxcloud/index.html">云开发</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../wxwork/index.html">企业微信</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../todolist.html">待办事项</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../glossary.html">术语</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../rst.html">定义</a></li>
 </ul>
 
             
@@ -194,7 +196,7 @@
             
   <div class="section" id="id1">
 <h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html">全局配置</a><a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
-<p>更新: 2019 年 05 月 10 日</p>
+<p>更新: 2019 年 05 月 12 日</p>
 <p>小程序根目录下的 <code class="file docutils literal notranslate"><span class="pre">app.json</span></code> 文件用来对微信小程序进行全局配置。文件内容为一个 JSON 对象，有以下属性：</p>
 <p>配置项</p>
 <table class="docutils align-center">
@@ -311,11 +313,12 @@
 <dl class="envvar">
 <dt id="envvar-pages">
 <code class="descname">pages</code><a class="headerlink" href="#envvar-pages" title="永久链接至目标">¶</a></dt>
-<dd></dd></dl>
-
-<p>用于指定小程序由哪些页面组成，每一项都对应一个页面的 路径（含文件名） 信息。
+<dd><p>用于指定小程序由哪些页面组成，每一项都对应一个页面的 路径（含文件名） 信息。
 文件名不需要写文件后缀，框架会自动去寻找对于位置的 <code class="docutils literal notranslate"><span class="pre">.json</span></code> , <code class="docutils literal notranslate"><span class="pre">.js</span></code> , <code class="docutils literal notranslate"><span class="pre">.wxml</span></code> , <code class="docutils literal notranslate"><span class="pre">.wxss</span></code> 四个文件进行处理。</p>
-<p><strong>数组的第一项代表小程序的初始页面（首页）。小程序中新增/减少页面，都需要对 pages 数组进行修改。</strong></p>
+<ol class="arabic simple">
+<li><p>数组的 <strong>第一项</strong> 代表小程序的 <strong>初始页面（首页）</strong>。</p></li>
+<li><p>小程序中 <strong>新增/减少</strong> 页面，都需要对 <code class="docutils literal notranslate"><span class="pre">pages</span></code> 数组进行 <strong>修改</strong> 。</p></li>
+</ol>
 <p>如开发目录为:</p>
 <div class="highlight-js notranslate"><div class="highlight"><pre><span></span>├── app.js
 ├── app.json
@@ -338,6 +341,8 @@
 <span class="p">}</span>
 </pre></div>
 </div>
+</dd></dl>
+
 </div>
 <div class="section" id="window">
 <h2>window<a class="headerlink" href="#window" title="永久链接至标题">¶</a></h2>
@@ -345,45 +350,53 @@
 <dt>
 <code class="descname">window</code></dt>
 <dd><p>用于设置小程序的状态栏、导航条、标题、窗口背景色。</p>
-<dl class="field-list simple">
+<dl class="field-list">
 <dt class="field-odd">Object Properties</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>navigationBarBackgroundColor</strong> (HexColor <a class="footnote-reference brackets" href="#id5" id="id2">1</a>) – 导航栏背景颜色，如 #000000<span> (</span><em>#000000</em><span>)</span></p></li>
+<li><p><strong>navigationBarBackgroundColor</strong> (<em>HexColor</em>) – 导航栏背景颜色 <a class="footnote-reference brackets" href="#id5" id="id2">1</a>，如 #000000<span> (</span><em>#000000</em><span>)</span></p></li>
 <li><p><strong>navigationBarTextStyle</strong> (<a class="reference external" href="https://docs.python.org/library/stdtypes.html#str" title="Python String"><em>string</em></a>) – 导航栏标题颜色，仅支持 black/white<span> (</span><em>white</em><span>)</span></p></li>
 <li><p><strong>navigationBarTitleText</strong> (<a class="reference external" href="https://docs.python.org/library/stdtypes.html#str" title="Python String"><em>string</em></a>) – 导航栏标题文字内容</p></li>
 <li><p><strong>navigationStyle</strong> (<a class="reference external" href="https://docs.python.org/library/stdtypes.html#str" title="Python String"><em>string</em></a>) – 导航栏样式，仅支持以下值： default 默认样式 custom 自定义导航栏，只保留右上角胶囊按钮 <a class="footnote-reference brackets" href="#id6" id="id3">2</a> 。        微信客户端 6.6.0<span> (</span><em>default</em><span>)</span></p></li>
-<li><p><strong>backgroundColor</strong> (HexColor <a class="footnote-reference brackets" href="#id5" id="id4">1</a>) – 窗口的背景色<span> (</span><em>#ffffff</em><span>)</span></p></li>
+<li><p><strong>backgroundColor</strong> (<em>HexColor</em>) – 窗口的背景色 <a class="footnote-reference brackets" href="#id5" id="id4">1</a><span> (</span><em>#ffffff</em><span>)</span></p></li>
 <li><p><strong>backgroundTextStyle</strong> (<a class="reference external" href="https://docs.python.org/library/stdtypes.html#str" title="Python String"><em>string</em></a>) – 下拉 loading 的样式，仅支持 dark / light<span> (</span><em>dark</em><span>)</span></p></li>
 <li><p><strong>backgroundColorTop</strong> (<a class="reference external" href="https://docs.python.org/library/stdtypes.html#str" title="Python String"><em>string</em></a>) – 顶部窗口的背景色，仅 iOS 支持      微信客户端 6.5.16<span> (</span><em>#ffffff</em><span>)</span></p></li>
 <li><p><strong>backgroundColorBottom</strong> (<a class="reference external" href="https://docs.python.org/library/stdtypes.html#str" title="Python String"><em>string</em></a>) – 底部窗口的背景色，仅 iOS 支持   微信客户端 6.5.16<span> (</span><em>#ffffff</em><span>)</span></p></li>
 <li><p><strong>enablePullDownRefresh</strong> (<a class="reference external" href="https://docs.python.org/library/stdtypes.html#boolean-values" title="Python Boolean"><em>boolean</em></a>) – 是否开启全局的下拉刷新。详见 Page.onPullDownRefresh<span> (</span><em>false</em><span>)</span></p></li>
-<li><p><strong>onReachBottomDistance</strong> (<a class="reference external" href="https://docs.python.org/library/stdtypes.html#float" title="Python Float"><em>number</em></a>) – 页面上拉触底事件触发时距页面底部距离，单位为px。详见 Page.onReachBottom<span> (</span><em>50</em><span>)</span></p></li>
+<li><p><strong>onReachBottomDistance</strong> (<a class="reference external" href="https://docs.python.org/library/stdtypes.html#int" title="Python Integer"><em>int</em></a>) – 页面上拉触底事件触发时距页面底部距离，单位为px。详见 Page.onReachBottom<span> (</span><em>50</em><span>)</span></p></li>
 <li><p><strong>pageOrientation</strong> (<a class="reference external" href="https://docs.python.org/library/stdtypes.html#str" title="Python String"><em>string</em></a>) – 屏幕旋转设置，支持 auto/portrait/landscape 详见 响应显示区域变化     2.4.0 (auto) / 2.5.0 (landscape)<span> (</span><em>portrait</em><span>)</span></p></li>
 </ul>
 </dd>
+<dt class="field-even">示例</dt>
+<dd class="field-even"><div class="highlight-json notranslate"><div class="highlight"><pre><span></span> <span class="p">{</span>
+  <span class="nt">&quot;window&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;navigationBarBackgroundColor&quot;</span><span class="p">:</span> <span class="s2">&quot;#ffffff&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;navigationBarTextStyle&quot;</span><span class="p">:</span> <span class="s2">&quot;black&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;navigationBarTitleText&quot;</span><span class="p">:</span> <span class="s2">&quot;微信接口功能演示&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;backgroundColor&quot;</span><span class="p">:</span> <span class="s2">&quot;#eeeeee&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;backgroundTextStyle&quot;</span><span class="p">:</span> <span class="s2">&quot;light&quot;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</dd>
 </dl>
 <strong>JSON Example</strong><div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
-    <span class="nt">&quot;navigationBarBackgroundColor&quot;</span><span class="p">:</span> <span class="s2">&quot;{HexColor 1 object}&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;navigationBarTextStyle&quot;</span><span class="p">:</span> <span class="s2">&quot;OQmsZHhBPSoDyORQEodg&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;navigationBarTitleText&quot;</span><span class="p">:</span> <span class="s2">&quot;cvEmafwBygOliadIwQPI&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;navigationStyle&quot;</span><span class="p">:</span> <span class="s2">&quot;wOzanbNtJMVKKwHAVHaM&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;backgroundColor&quot;</span><span class="p">:</span> <span class="s2">&quot;{HexColor 1 object}&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;backgroundTextStyle&quot;</span><span class="p">:</span> <span class="s2">&quot;VoiwSsrcFijgJoanuSlx&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;backgroundColorTop&quot;</span><span class="p">:</span> <span class="s2">&quot;felaNMaItsDfpJEbrfbo&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;backgroundColorBottom&quot;</span><span class="p">:</span> <span class="s2">&quot;YMhgLjGIpLUPQREKlHts&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;enablePullDownRefresh&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
-    <span class="nt">&quot;onReachBottomDistance&quot;</span><span class="p">:</span> <span class="s2">&quot;{number object}&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;pageOrientation&quot;</span><span class="p">:</span> <span class="s2">&quot;SgpyPBppQdZYLJklMHqq&quot;</span>
+    <span class="nt">&quot;navigationBarBackgroundColor&quot;</span><span class="p">:</span> <span class="s2">&quot;{HexColor object}&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;navigationBarTextStyle&quot;</span><span class="p">:</span> <span class="s2">&quot;OCmKZgscyVsGnpPfOhgs&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;navigationBarTitleText&quot;</span><span class="p">:</span> <span class="s2">&quot;TKbHXgzyiZCmWjoRgHTb&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;navigationStyle&quot;</span><span class="p">:</span> <span class="s2">&quot;JdPMdwPjCpRZuwbpmeXE&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;backgroundColor&quot;</span><span class="p">:</span> <span class="s2">&quot;{HexColor object}&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;backgroundTextStyle&quot;</span><span class="p">:</span> <span class="s2">&quot;xYItBfwcqzdjvduDRNfS&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;backgroundColorTop&quot;</span><span class="p">:</span> <span class="s2">&quot;htvDKmsiyCLoVOyQZrvJ&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;backgroundColorBottom&quot;</span><span class="p">:</span> <span class="s2">&quot;hTUlEHFpvPaOZzkEdQYj&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;enablePullDownRefresh&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="nt">&quot;onReachBottomDistance&quot;</span><span class="p">:</span> <span class="mi">6784</span><span class="p">,</span>
+    <span class="nt">&quot;pageOrientation&quot;</span><span class="p">:</span> <span class="s2">&quot;amlTESFzZyzfCuymlSll&quot;</span>
 <span class="p">}</span>
 </pre></div>
 </div>
 </dd></dl>
 
-<dl class="field-list simple">
-<dt class="field-odd">proptype user</dt>
-<dd class="field-odd"><p><a class="reference internal" href="#window"><code class="xref json json-object docutils literal notranslate"><span class="pre">window</span></code></a></p>
-</dd>
-</dl>
 <dl class="footnote brackets">
 <dt class="label" id="id5"><span class="brackets">1</span><span class="fn-backref">(<a href="#id2">1</a>,<a href="#id4">2</a>)</span></dt>
 <dd><p>HexColor（十六进制颜色值），如”#ff00ff”</p>
@@ -397,18 +410,6 @@
 </ul>
 </dd>
 </dl>
-<p>示例代码：</p>
-<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
-  <span class="s2">&quot;window&quot;</span><span class="o">:</span> <span class="p">{</span>
-    <span class="s2">&quot;navigationBarBackgroundColor&quot;</span><span class="o">:</span> <span class="s2">&quot;#ffffff&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;navigationBarTextStyle&quot;</span><span class="o">:</span> <span class="s2">&quot;black&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;navigationBarTitleText&quot;</span><span class="o">:</span> <span class="s2">&quot;微信接口功能演示&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;backgroundColor&quot;</span><span class="o">:</span> <span class="s2">&quot;#eeeeee&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;backgroundTextStyle&quot;</span><span class="o">:</span> <span class="s2">&quot;light&quot;</span>
-  <span class="p">}</span>
-<span class="p">}</span>
-</pre></div>
-</div>
 </div>
 <div class="section" id="tabbar">
 <h2>tabBar<a class="headerlink" href="#tabbar" title="永久链接至标题">¶</a></h2>
@@ -807,6 +808,10 @@
   <span class="nt">&quot;navigateToMiniProgramAppIdList&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;wxe5f52902cf4de896&quot;</span><span class="p">]</span>
 <span class="p">}</span>
 </pre></div>
+</div>
+<div class="admonition-todo admonition" id="id8">
+<p class="admonition-title">待处理</p>
+<p>2019 年 05 月 12 日 研究输出json格式</p>
 </div>
 </div>
 </div>

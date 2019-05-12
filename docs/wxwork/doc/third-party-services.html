@@ -109,8 +109,8 @@
 <li class="toctree-l2"><a class="reference internal" href="../api/index.html">接口</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../../todolist.html">待办事项</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../glossary.html">术语</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../rst.html">定义</a></li>
 </ul>
 
             
@@ -199,14 +199,14 @@
 <dt id="get--qyapi--service-miniprogram-jscode2session">
 <code class="descname">GET </code><code class="descname">&lt;qyapi&gt;/service/miniprogram/jscode2session</code><a class="headerlink" href="#get--qyapi--service-miniprogram-jscode2session" title="永久链接至目标">¶</a></dt>
 <dd><dl class="field-list simple">
-<dt class="field-odd">Query Parameters</dt>
+<dt class="field-odd">查询参数</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>suite_access_token</strong> – <strong>必选</strong>   第三方应用凭证，获取方法见获取第三方应用凭证。要求必须由该小程序关联的第三方应用的secret获取</p></li>
 <li><p><strong>js_code</strong> – <strong>必选</strong>  登录时获取的 code</p></li>
 <li><p><strong>grant_type</strong> – <strong>必选</strong>   此处固定为 <code class="docutils literal notranslate"><span class="pre">authorization_code</span></code></p></li>
 </ul>
 </dd>
-<dt class="field-even">Response JSON Object</dt>
+<dt class="field-even">响应JSON对象</dt>
 <dd class="field-even"><ul class="simple">
 <li><p><strong>corpid</strong> (<em>string</em>) – 用户所属企业的corpid</p></li>
 <li><p><strong>userid</strong> (<em>string</em>) – 用户在企业内的UserID，对应管理端的帐号，企业内唯一。注意：如果该企业没有关联该小程序，则此处返回加密的userid</p></li>

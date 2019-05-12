@@ -111,8 +111,8 @@
 </li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../../../todolist.html">待办事项</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../glossary.html">术语</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../rst.html">定义</a></li>
 </ul>
 
             
@@ -198,7 +198,7 @@
 <dt id="get--qyapi--miniprogram-jscode2session">
 <code class="descname">GET </code><code class="descname">&lt;qyapi&gt;/miniprogram/jscode2session</code><a class="headerlink" href="#get--qyapi--miniprogram-jscode2session" title="永久链接至目标">¶</a></dt>
 <dd><dl class="field-list simple">
-<dt class="field-odd">Query Parameters</dt>
+<dt class="field-odd">查询参数</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>access_token</strong> – 必选 调用接口凭证(注意，此处的access_token 是企业微信应用的access_token，获取方法参见“获取access_token”。要求必须由该小程序关联的应用的secret获取</p></li>
 <li><p><strong>js_code</strong> – 必选 登录时获取的 code</p></li>
@@ -208,7 +208,7 @@
 <dt class="field-even">权限说明</dt>
 <dd class="field-even"><p>access_token必须是与小程序关联的应用secret所获得。</p>
 </dd>
-<dt class="field-odd">Response JSON Object</dt>
+<dt class="field-odd">响应JSON对象</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>corpid</strong> (<em>string</em>) – 用户所属企业的corpid</p></li>
 <li><p><strong>userid</strong> (<em>string</em>) – 用户在企业内的UserID，对应管理端的帐号，企业内唯一。注意：如果该企业没有关联该小程序，则此处返回加密的userid</p></li>

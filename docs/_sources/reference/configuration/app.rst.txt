@@ -46,34 +46,35 @@ pages
 
 .. envvar:: pages
 
-用于指定小程序由哪些页面组成，每一项都对应一个页面的 路径（含文件名） 信息。
-文件名不需要写文件后缀，框架会自动去寻找对于位置的 ``.json`` , ``.js`` , ``.wxml`` , ``.wxss`` 四个文件进行处理。
+  用于指定小程序由哪些页面组成，每一项都对应一个页面的 路径（含文件名） 信息。
+  文件名不需要写文件后缀，框架会自动去寻找对于位置的 ``.json`` , ``.js`` , ``.wxml`` , ``.wxss`` 四个文件进行处理。
 
-**数组的第一项代表小程序的初始页面（首页）。小程序中新增/减少页面，都需要对 pages 数组进行修改。**
+  1. 数组的 **第一项** 代表小程序的 **初始页面（首页）**。
+  2. 小程序中 **新增/减少** 页面，都需要对 ``pages`` 数组进行 **修改** 。
 
-如开发目录为::
+  如开发目录为::
 
-  ├── app.js
-  ├── app.json
-  ├── app.wxss
-  ├── pages
-  │   │── index
-  │   │   ├── index.wxml
-  │   │   ├── index.js
-  │   │   ├── index.json
-  │   │   └── index.wxss
-  │   └── logs
-  │       ├── logs.wxml
-  │       └── logs.js
-  └── utils
+    ├── app.js
+    ├── app.json
+    ├── app.wxss
+    ├── pages
+    │   │── index
+    │   │   ├── index.wxml
+    │   │   ├── index.js
+    │   │   ├── index.json
+    │   │   └── index.wxss
+    │   └── logs
+    │       ├── logs.wxml
+    │       └── logs.js
+    └── utils
 
-则需要在 :file:`app.json` 中写
+  则需要在 :file:`app.json` 中写
 
-.. code:: json
+  .. code:: json
 
-  {
-    "pages": ["pages/index/index", "pages/logs/logs"]
-  }
+    {
+      "pages": ["pages/index/index", "pages/logs/logs"]
+    }
 
 window
 ---------------------------------------------------
@@ -83,8 +84,8 @@ window
 
    用于设置小程序的状态栏、导航条、标题、窗口背景色。
 
-   :property navigationBarBackgroundColor: 导航栏背景颜色，如 #000000
-   :proptype navigationBarBackgroundColor: HexColor [1]_
+   :property navigationBarBackgroundColor: 导航栏背景颜色 [1]_，如 #000000
+   :proptype navigationBarBackgroundColor: HexColor
    :options navigationBarBackgroundColor: #000000
    :property navigationBarTextStyle: 导航栏标题颜色，仅支持 black/white
    :proptype navigationBarTextStyle: string
@@ -93,8 +94,8 @@ window
    :property navigationStyle: 导航栏样式，仅支持以下值： default 默认样式 custom 自定义导航栏，只保留右上角胶囊按钮 [2]_ 。	微信客户端 6.6.0
    :proptype navigationStyle: string
    :options navigationStyle: default
-   :property backgroundColor: 窗口的背景色
-   :proptype backgroundColor: HexColor [1]_
+   :property backgroundColor: 窗口的背景色 [1]_
+   :proptype backgroundColor: HexColor
    :options backgroundColor: #ffffff
    :property backgroundTextStyle: 下拉 loading 的样式，仅支持 dark / light
    :proptype backgroundTextStyle: string
@@ -109,13 +110,27 @@ window
    :proptype enablePullDownRefresh: boolean
    :options enablePullDownRefresh: false
    :property onReachBottomDistance: 页面上拉触底事件触发时距页面底部距离，单位为px。详见 Page.onReachBottom
-   :proptype onReachBottomDistance: number
+   :proptype onReachBottomDistance: int
    :options onReachBottomDistance: 50
    :property pageOrientation: 屏幕旋转设置，支持 auto/portrait/landscape 详见 响应显示区域变化	2.4.0 (auto) / 2.5.0 (landscape)
    :proptype pageOrientation: string
    :options pageOrientation: portrait
 
-:proptype user: :json:object:`window`
+   :示例:
+
+      .. code:: json
+
+          {
+           "window": {
+             "navigationBarBackgroundColor": "#ffffff",
+             "navigationBarTextStyle": "black",
+             "navigationBarTitleText": "微信接口功能演示",
+             "backgroundColor": "#eeeeee",
+             "backgroundTextStyle": "light"
+           }
+         }
+
+.. :json:object:`window`
 
 .. [1] HexColor（十六进制颜色值），如"#ff00ff"
 .. [2] 关于navigationStyle
@@ -123,21 +138,6 @@ window
   - 客户端 7.0.0 以下版本，navigationStyle 只在 app.json 中生效。
   - 客户端 6.7.2 版本开始，navigationStyle: custom 对 <web-view> 组件无效
   - 开启 custom 后，低版本客户端需要做好兼容。开发者工具基础库版本切到 1.7.0（不代表最低版本，只供调试用）可方便切到旧视觉
-
-示例代码：
-
-.. code::
-
-  {
-    "window": {
-      "navigationBarBackgroundColor": "#ffffff",
-      "navigationBarTextStyle": "black",
-      "navigationBarTitleText": "微信接口功能演示",
-      "backgroundColor": "#eeeeee",
-      "backgroundTextStyle": "light"
-    }
-  }
-
 
 tabBar
 ---------------------------------------------------
@@ -377,3 +377,7 @@ PermissionObject 结构
     "debug": true,
     "navigateToMiniProgramAppIdList": ["wxe5f52902cf4de896"]
   }
+
+.. todo::
+
+   |today| 研究输出json格式

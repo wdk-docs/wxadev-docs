@@ -13,7 +13,7 @@ WXS（WeiXin Script）是小程序的一套脚本语言，结合 WXML，可以�
     - WXS 函数不能作为组件的事件回调。
 
 由于运行环境的差异，在 iOS 设备上小程序内的 WXS 会比 JavaScript 代码快 2 ~ 20 倍。在 android 设备上二者运行效率无差异。
-以下是一些使用 WXS 的简单示例，要完整了解 WXS 语法，请参考WXS 语法参考。
+以下是一些使用 WXS 的简单示例，要完整了解 WXS 语法，请参考 :ref:`WXS 语法参考 <ref-wxs>` 。
 
 页面渲染
 
@@ -51,21 +51,11 @@ WXS（WeiXin Script）是小程序的一套脚本语言，结合 WXML，可以�
       max : array[i]); } return max; } module.exports.getMax = getMax;
     </wxs>
 
+.. code:: html
+
     <!-- 调用 wxs 里面的 getMax 函数，参数为 page.js 里面的 array -->
     <view>{{m1.getMax(array)}}</view>
 
 页面输出::
 
   5
-
-.. toctree::
-   :maxdepth: 1
-   :glob:
-
-   module
-   variate
-   annotation
-   operator
-   statement
-   datatype
-   basiclibrary

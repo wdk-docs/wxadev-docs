@@ -36,10 +36,11 @@ release = '1.0.0'
 
 extensions = [
     'sphinx.ext.extlinks',
-    'recommonmark',
     'sphinx.ext.githubpages',
+    'sphinx.ext.todo',
     'sphinxcontrib.httpdomain',
-    'sphinxjsondomain'
+    'sphinxjsondomain',
+    'recommonmark',
 ]
 
 # 相对于此目录，在此处添加包含模板的所有路径。
@@ -104,7 +105,8 @@ primary_domain = 'js'
 
 highlight_language = 'js'
 
-todo_include_todos = 'true'
+todo_include_todos = True
+todo_link_only = True
 
 locale_dirs = ['locale/']   # path is example but recommended.
 gettext_compact = False     # optional.
