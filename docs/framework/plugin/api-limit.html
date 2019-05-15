@@ -1,199 +1,132 @@
 
-
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-CN" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-CN" > <!--<![endif]-->
-<head>
-  <meta charset="utf-8">
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <title>插件调用 API 的限制 &mdash; wxadev 1.0.0 文档</title>
-  
 
-  
-  
-  
-  
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
+  <head>
+    <meta charset="utf-8" />
+    <title>插件调用 API 的限制 &#8212; wxadev 1.0.0 文档</title>
+    <link rel="stylesheet" href="../../_static/sphinx13.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/language_data.js"></script>
+    <script type="text/javascript" src="../../_static/translations.js"></script>
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="在 wxadev 1.0.0 文档 中搜索"
+          href="../../_static/opensearch.xml"/>
 
-  
-  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
-  
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../../_static/jquery.js"></script>
-        <script type="text/javascript" src="../../_static/underscore.js"></script>
-        <script type="text/javascript" src="../../_static/doctools.js"></script>
-        <script type="text/javascript" src="../../_static/language_data.js"></script>
-        <script type="text/javascript" src="../../_static/translations.js"></script>
-    
-    <script type="text/javascript" src="../../_static/js/theme.js"></script>
-
-    
-
-  
-  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="index" title="索引" href="../../genindex.html" />
     <link rel="search" title="搜索" href="../../search.html" />
     <link rel="next" title="插件使用组件的限制" href="component-limit.html" />
-    <link rel="prev" title="使用插件" href="using.html" /> 
-</head>
+    <link rel="prev" title="使用插件" href="using.html" />
+<link rel="canonical" href="http://www.sphinx-doc.org/en/master/framework/plugin/api-limit.html" />
 
-<body class="wy-body-for-nav">
-
-   
-  <div class="wy-grid-for-nav">
-    
-    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
-      <div class="wy-side-scroll">
-        <div class="wy-side-nav-search" >
-          
-
-          
-            <a href="../../contents.html" class="icon icon-home"> wxadev
-          
-
-          
-          </a>
-
-          
-            
-            
-          
-
-          
-<div role="search">
-  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
-    <input type="hidden" name="check_keywords" value="yes" />
-    <input type="hidden" name="area" value="default" />
-  </form>
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet" type="text/css" />
+ 
+<style type="text/css">
+  table.right { float: right; margin-left: 20px; }
+  table.right td { border: 1px solid #ccc; }
+  
+</style>
+<script type="text/javascript">
+  // intelligent scrolling of the sidebar content
+  $(window).scroll(function() {
+    var sb = $('.sphinxsidebarwrapper');
+    var win = $(window);
+    var sbh = sb.height();
+    var offset = $('.sphinxsidebar').position()['top'];
+    var wintop = win.scrollTop();
+    var winbot = wintop + win.innerHeight();
+    var curtop = sb.position()['top'];
+    var curbot = curtop + sbh;
+    // does sidebar fit in window?
+    if (sbh < win.innerHeight()) {
+      // yes: easy case -- always keep at the top
+      sb.css('top', $u.min([$u.max([0, wintop - offset - 10]), $(document).height() - sbh - 200]));
+    } else {
+      // no: only scroll if top/bottom edge of sidebar is at
+      // top/bottom edge of window
+      if (curtop > wintop && curbot > winbot) {
+        sb.css('top', $u.max([wintop - offset - 10, 0]));
+      } else if (curtop < wintop && curbot < winbot) {
+        sb.css('top', $u.min([winbot - sbh - offset - 20, $(document).height() - sbh - 200]));
+      }
+    }
+  });
+</script> 
+  </head><body>
+<div class="pageheader">
+  <ul>
+    <li><a href="../../index.html">主页</a></li>
+    <li><a href="../index.html">框架</a></li>
+    <li><a href="../../component/index.html">组件</a></li>
+    <li><a href="../../api/index.html">API</a></li>
+    <li><a href="../../api-backend/index.html">服务端</a></li>
+    <li><a href="../../contents.html">目录</a></li>
+  </ul>
+  <div>
+    <a href="../../index.html">
+      <img src="../../_static/wxaheader.png" alt="wxa" />
+    </a>
+  </div>
 </div>
 
-          
-        </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>导航</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="总目录"
+             accesskey="I">索引</a></li>
+        <li class="right" >
+          <a href="../../http-routingtable.html" title="微信小程序API"
+             >wxapi</a> |</li>
+        <li class="right" >
+          <a href="component-limit.html" title="插件使用组件的限制"
+             accesskey="N">下一页</a> |</li>
+        <li class="right" >
+          <a href="using.html" title="使用插件"
+             accesskey="P">上一页</a> |</li>
+<li><a href="../../index.html">主页</a>&#160;|</li>
+<li><a href="../../contents.html">文档</a> &#187;</li>
 
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-              
-            
-            
-              <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../../index.html">开发指南</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../dev.html">简介</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../basic/index.html">基础教程</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../guide/index.html">运行环境</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="../index.html">框架</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="../MINA.html">框架</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../structure.html">目录结构</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../config.html">小程序配置</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../sitemap.html">sitemap 配置</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../app-service/index.html">逻辑层 App Service</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../view/index.html">视图层 View</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../details.html">运行环境</a></li>
-<li class="toctree-l2 current"><a class="reference internal" href="index.html">插件</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="development.html">开发插件</a></li>
-<li class="toctree-l3"><a class="reference internal" href="using.html">使用插件</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">插件调用 API 的限制</a></li>
-<li class="toctree-l3"><a class="reference internal" href="component-limit.html">插件使用组件的限制</a></li>
-<li class="toctree-l3"><a class="reference internal" href="functional-pages/index.html">插件功能</a></li>
-<li class="toctree-l3"><a class="reference internal" href="functional-pages.html">plugin/functional-pages</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../ability/index.html">基础能力</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../device/index.html">硬件能力</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../open-ability/index.html">开放能力</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../usability.html">调试</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../usability/index.html">可用性</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../performance/index.html">性能</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../client-lib/index.html">基础库</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../compatibility.html">兼容处理</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../workers.html">多线程 Worker</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../server-ability/index.html">后端能力</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../release/index.html">版本更新</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../operating-mechanism.html">运行机制</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../custom-component/index.html">自定义组件</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../../component/index.html">组件</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../api/index.html">API</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../api-backend/index.html">服务端API</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../devtools/index.html">开发工具</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../reference/index.html">参考资料</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../wxcloud/index.html">云开发</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../wxwork/index.html">企业微信</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../todolist.html">待办事项</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../glossary.html">术语</a></li>
-</ul>
-
-            
-          
+          <li class="nav-item nav-item-1"><a href="../index.html" >框架</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="index.html" accesskey="U">插件</a> &#187;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h4>上一个主题</h4>
+  <p class="topless"><a href="using.html"
+                        title="上一章">使用插件</a></p>
+  <h4>下一个主题</h4>
+  <p class="topless"><a href="component-limit.html"
+                        title="下一章">插件使用组件的限制</a></p>
+  <div role="note" aria-label="source link">
+    <h3>本页</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../_sources/framework/plugin/api-limit.rst.txt"
+            rel="nofollow">显示源代码</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">快速搜索</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="转向" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
         </div>
       </div>
-    </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
-          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../../contents.html">wxadev</a>
-        
-      </nav>
-
-
-      <div class="wy-nav-content">
-        
-        <div class="rst-content">
-        
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-
-  <ul class="wy-breadcrumbs">
-    
-      <li><a href="../../contents.html">Docs</a> &raquo;</li>
-        
-          <li><a href="../index.html">框架</a> &raquo;</li>
-        
-          <li><a href="index.html">插件</a> &raquo;</li>
-        
-      <li>插件调用 API 的限制</li>
-    
-    
-      <li class="wy-breadcrumbs-aside">
-        
-            
-            <a href="../../_sources/framework/plugin/api-limit.rst.txt" rel="nofollow"> View page source</a>
-          
-        
-      </li>
-    
-  </ul>
-
-  
-  <hr/>
-</div>
-          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
-           <div itemprop="articleBody">
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
             
   <div class="section" id="api">
 <h1>插件调用 API 的限制<a class="headerlink" href="#api" title="永久链接至标题">¶</a></h1>
@@ -203,276 +136,260 @@
 有些接口虽然在插件中不能使用，但可以通过插件功能页来达到目的，请参考插件功能页。</p>
 <p>目前，允许插件调用的 API 及其对应版本要求如下：</p>
 <p>发起请求
-API     最低版本    备注
-wx.request      1.9.6
+API 最低版本 备注
+wx.request 1.9.6
 上传、下载
-API     最低版本    备注
+API 最低版本 备注
 wx.downloadFile 1.9.6
-wx.uploadFile   1.9.6
+wx.uploadFile 1.9.6
 WebSocket
-API     最低版本    备注
-wx.connectSocket        1.9.6
+API 最低版本 备注
+wx.connectSocket 1.9.6
 图片
-API     最低版本    备注
+API 最低版本 备注
 wx.previewImage 1.9.6
-wx.chooseImage  1.9.6
+wx.chooseImage 1.9.6
 wx.getImageInfo 1.9.6
-wx.saveImageToPhotosAlbum       1.9.6
+wx.saveImageToPhotosAlbum 1.9.6
 录音
-API     最低版本    备注
-wx.startRecord  1.9.6
-wx.stopRecord   1.9.6
+API 最低版本 备注
+wx.startRecord 1.9.6
+wx.stopRecord 1.9.6
 实时音视频
-API     最低版本    备注
-wx.createLivePlayerContext      1.9.6
-wx.createLivePusherContext      1.9.6
+API 最低版本 备注
+wx.createLivePlayerContext 1.9.6
+wx.createLivePusherContext 1.9.6
 录音管理
-API     最低版本    备注
-wx.getRecorderManager   1.9.94
+API 最低版本 备注
+wx.getRecorderManager 1.9.94
 音频播放控制
-API     最低版本    备注
-wx.pauseVoice   1.9.6
-wx.playVoice    1.9.6
-wx.stopVoice    1.9.6
+API 最低版本 备注
+wx.pauseVoice 1.9.6
+wx.playVoice 1.9.6
+wx.stopVoice 1.9.6
 音乐播放控制
-API     最低版本    备注
-wx.onBackgroundAudioPlay        1.9.6
-wx.getBackgroundAudioPlayerState        1.9.6
-wx.onBackgroundAudioStop        1.9.6
-wx.stopBackgroundAudio  1.9.6
-wx.onBackgroundAudioPause       1.9.6
-wx.seekBackgroundAudio  1.9.6
-wx.playBackgroundAudio  1.9.6
+API 最低版本 备注
+wx.onBackgroundAudioPlay 1.9.6
+wx.getBackgroundAudioPlayerState 1.9.6
+wx.onBackgroundAudioStop 1.9.6
+wx.stopBackgroundAudio 1.9.6
+wx.onBackgroundAudioPause 1.9.6
+wx.seekBackgroundAudio 1.9.6
+wx.playBackgroundAudio 1.9.6
 wx.pauseBackgroundAudio 1.9.6
 背景音频播放管理
-API     最低版本    备注
-wx.getBackgroundAudioManager    1.9.6
+API 最低版本 备注
+wx.getBackgroundAudioManager 1.9.6
 音频组件控制
-API     最低版本    备注
-wx.createInnerAudioContext      1.9.6
-wx.createAudioContext   1.9.6
+API 最低版本 备注
+wx.createInnerAudioContext 1.9.6
+wx.createAudioContext 1.9.6
 视频
-API     最低版本    备注
-wx.chooseVideo  1.9.6
-wx.saveVideoToPhotosAlbum       1.9.6
+API 最低版本 备注
+wx.chooseVideo 1.9.6
+wx.saveVideoToPhotosAlbum 1.9.6
 视频组件控制
-API     最低版本    备注
-wx.createVideoContext   1.9.6
+API 最低版本 备注
+wx.createVideoContext 1.9.6
 相机组件控制
-API     最低版本    备注
-wx.createCameraContext  1.9.6
+API 最低版本 备注
+wx.createCameraContext 1.9.6
 数据缓存
-API     最低版本    备注
-wx.setStorageSync       1.9.6
-wx.getStorage   1.9.6
-wx.removeStorageSync    1.9.6
-wx.setStorage   1.9.6
-wx.getStorageSync       1.9.6
-wx.removeStorage        1.9.6
+API 最低版本 备注
+wx.setStorageSync 1.9.6
+wx.getStorage 1.9.6
+wx.removeStorageSync 1.9.6
+wx.setStorage 1.9.6
+wx.getStorageSync 1.9.6
+wx.removeStorage 1.9.6
 获取位置
-API     最低版本    备注
-wx.getLocation  1.9.6
-wx.chooseLocation       1.9.6
+API 最低版本 备注
+wx.getLocation 1.9.6
+wx.chooseLocation 1.9.6
 查看位置
-API     最低版本    备注
+API 最低版本 备注
 wx.openLocation 1.9.6
 地图组件控制
-API     最低版本    备注
-wx.createMapContext     1.9.6
+API 最低版本 备注
+wx.createMapContext 1.9.6
 系统信息
-API     最低版本    备注
-wx.getSystemInfoSync    1.9.6
-wx.getSystemInfo        1.9.6
+API 最低版本 备注
+wx.getSystemInfoSync 1.9.6
+wx.getSystemInfo 1.9.6
 屏幕亮度
-API     最低版本    备注
-wx.setKeepScreenOn      1.9.6
-wx.setScreenBrightness  1.9.6
-wx.getScreenBrightness  1.9.6
+API 最低版本 备注
+wx.setKeepScreenOn 1.9.6
+wx.setScreenBrightness 1.9.6
+wx.getScreenBrightness 1.9.6
 用户截屏事件
-API     最低版本    备注
-wx.onUserCaptureScreen  1.9.6   仅限插件页面中调用
+API 最低版本 备注
+wx.onUserCaptureScreen 1.9.6 仅限插件页面中调用
 振动
-API     最低版本    备注
-wx.vibrateLong  1.9.6
+API 最低版本 备注
+wx.vibrateLong 1.9.6
 wx.vibrateShort 1.9.6
 手机联系人
-API     最低版本    备注
-wx.addPhoneContact      1.9.6
+API 最低版本 备注
+wx.addPhoneContact 1.9.6
 NFC
-API     最低版本    备注
-wx.sendHCEMessage       2.1.0
-wx.stopHCE      2.1.0
+API 最低版本 备注
+wx.sendHCEMessage 2.1.0
+wx.stopHCE 2.1.0
 wx.onHCEMessage 2.1.0
-wx.startHCE     2.1.0
-wx.getHCEState  2.1.0
+wx.startHCE 2.1.0
+wx.getHCEState 2.1.0
 网络状态
-API     最低版本    备注
-wx.onNetworkStatusChange        1.9.6
-wx.getNetworkType       1.9.6
+API 最低版本 备注
+wx.onNetworkStatusChange 1.9.6
+wx.getNetworkType 1.9.6
 加速度计
-API     最低版本    备注
-wx.startAccelerometer   1.9.6
-wx.stopAccelerometer    1.9.6
-wx.onAccelerometerChange        1.9.6
+API 最低版本 备注
+wx.startAccelerometer 1.9.6
+wx.stopAccelerometer 1.9.6
+wx.onAccelerometerChange 1.9.6
 罗盘
-API     最低版本    备注
-wx.onCompassChange      1.9.6
-wx.stopCompass  1.9.6
+API 最低版本 备注
+wx.onCompassChange 1.9.6
+wx.stopCompass 1.9.6
 wx.startCompass 1.9.6
 拨打电话
-API     最低版本    备注
-wx.makePhoneCall        1.9.6
+API 最低版本 备注
+wx.makePhoneCall 1.9.6
 扫码
-API     最低版本    备注
-wx.scanCode     1.9.6
+API 最低版本 备注
+wx.scanCode 1.9.6
 剪贴板
-API     最低版本    备注
-wx.setClipboardData     1.9.6
-wx.getClipboardData     1.9.6
+API 最低版本 备注
+wx.setClipboardData 1.9.6
+wx.getClipboardData 1.9.6
 蓝牙
-API     最低版本    备注
-wx.writeBLECharacteristicValue  1.9.6
-wx.startBluetoothDevicesDiscovery       1.9.6
+API 最低版本 备注
+wx.writeBLECharacteristicValue 1.9.6
+wx.startBluetoothDevicesDiscovery 1.9.6
 wx.getConnectedBluetoothDevices 1.9.6
-wx.notifyBLECharacteristicValueChange   1.9.6
-wx.onBluetoothDeviceFound       1.9.6
-wx.readBLECharacteristicValue   1.9.6
+wx.notifyBLECharacteristicValueChange 1.9.6
+wx.onBluetoothDeviceFound 1.9.6
+wx.readBLECharacteristicValue 1.9.6
 wx.openBluetoothAdapter 1.9.6
-wx.getBLEDeviceCharacteristics  1.9.6
-wx.stopBluetoothDevicesDiscovery        1.9.6
-wx.onBLEConnectionStateChange   1.9.6
-wx.getBluetoothDevices  1.9.6
-wx.getBluetoothAdapterState     1.9.6
-wx.onBluetoothAdapterStateChange        1.9.6
+wx.getBLEDeviceCharacteristics 1.9.6
+wx.stopBluetoothDevicesDiscovery 1.9.6
+wx.onBLEConnectionStateChange 1.9.6
+wx.getBluetoothDevices 1.9.6
+wx.getBluetoothAdapterState 1.9.6
+wx.onBluetoothAdapterStateChange 1.9.6
 wx.getBLEDeviceServices 1.9.6
-wx.onBLECharacteristicValueChange       1.9.6
-wx.createBLEConnection  1.9.6
-wx.closeBluetoothAdapter        1.9.6
-wx.closeBLEConnection   1.9.6
-wx.notifyBLECharacteristicValueChange   1.9.6
-wx.onBLEConnectionStateChange   1.9.6
+wx.onBLECharacteristicValueChange 1.9.6
+wx.createBLEConnection 1.9.6
+wx.closeBluetoothAdapter 1.9.6
+wx.closeBLEConnection 1.9.6
+wx.notifyBLECharacteristicValueChange 1.9.6
+wx.onBLEConnectionStateChange 1.9.6
 iBeacon
-API     最低版本    备注
-wx.getBeacons   1.9.6
+API 最低版本 备注
+wx.getBeacons 1.9.6
 wx.startBeaconDiscovery 1.9.6
-wx.onBeaconServiceChange        1.9.6
-wx.onBeaconUpdate       1.9.6
-wx.stopBeaconDiscovery  1.9.6
+wx.onBeaconServiceChange 1.9.6
+wx.onBeaconUpdate 1.9.6
+wx.stopBeaconDiscovery 1.9.6
 交互反馈
-API     最低版本    备注
-wx.hideLoading  1.9.6
-wx.showActionSheet      1.9.6
-wx.showLoading  1.9.6
-wx.hideToast    1.9.6
-wx.showToast    1.9.6
-wx.showModal    1.9.6
+API 最低版本 备注
+wx.hideLoading 1.9.6
+wx.showActionSheet 1.9.6
+wx.showLoading 1.9.6
+wx.hideToast 1.9.6
+wx.showToast 1.9.6
+wx.showModal 1.9.6
 设置导航条
-API     最低版本    备注
-wx.showNavigationBarLoading     2.1.0   仅限插件页面中调用
-wx.hideNavigationBarLoading     2.1.0   仅限插件页面中调用
-wx.setNavigationBarColor        2.1.0   仅限插件页面中调用
-wx.setNavigationBarTitle        2.1.0   仅限插件页面中调用
+API 最低版本 备注
+wx.showNavigationBarLoading 2.1.0 仅限插件页面中调用
+wx.hideNavigationBarLoading 2.1.0 仅限插件页面中调用
+wx.setNavigationBarColor 2.1.0 仅限插件页面中调用
+wx.setNavigationBarTitle 2.1.0 仅限插件页面中调用
 背景
-API     最低版本    备注
-wx.setBackgroundColor   2.4.0   仅限插件页面中调用
-wx.setBackgroundTextStyle       2.4.0   仅限插件页面中调用
+API 最低版本 备注
+wx.setBackgroundColor 2.4.0 仅限插件页面中调用
+wx.setBackgroundTextStyle 2.4.0 仅限插件页面中调用
 WXML节点信息
-API     最低版本    备注
-wx.createSelectorQuery  1.9.6
+API 最低版本 备注
+wx.createSelectorQuery 1.9.6
 WXML节点布局相交状态
-API     最低版本    备注
-wx.createIntersectionObserver   1.9.6
+API 最低版本 备注
+wx.createIntersectionObserver 1.9.6
 导航
-API     最低版本    备注
-wx.navigateBack 2.1.0   仅限插件页面中调用
-wx.navigateTo   2.2.2   仅限插件页面中调用
-wx.redirectTo   2.2.2   仅限插件页面中调用
-wx.switchTab    2.3.1   仅限插件页面中调用
-wx.reLaunch     2.3.1   仅限插件页面中调用
+API 最低版本 备注
+wx.navigateBack 2.1.0 仅限插件页面中调用
+wx.navigateTo 2.2.2 仅限插件页面中调用
+wx.redirectTo 2.2.2 仅限插件页面中调用
+wx.switchTab 2.3.1 仅限插件页面中调用
+wx.reLaunch 2.3.1 仅限插件页面中调用
 动画
-API     最低版本    备注
-wx.createAnimation      1.9.6
+API 最低版本 备注
+wx.createAnimation 1.9.6
 位置
-API     最低版本    备注
-wx.pageScrollTo 2.1.0   仅限插件页面中调用
+API 最低版本 备注
+wx.pageScrollTo 2.1.0 仅限插件页面中调用
 绘图
-API     最低版本    备注
-wx.canvasPutImageData   1.9.6
+API 最低版本 备注
+wx.canvasPutImageData 1.9.6
 wx.canvasToTempFilePath 1.9.6
-wx.createCanvasContext  1.9.6
-wx.canvasGetImageData   1.9.6
+wx.createCanvasContext 1.9.6
+wx.canvasGetImageData 1.9.6
 下拉刷新
-API     最低版本    备注
-wx.stopPullDownRefresh  2.1.0   仅限插件页面中调用
-wx.startPullDownRefresh 2.1.0   仅限插件页面中调用
+API 最低版本 备注
+wx.stopPullDownRefresh 2.1.0 仅限插件页面中调用
+wx.startPullDownRefresh 2.1.0 仅限插件页面中调用
 当前帐号信息
-API     最低版本    备注
-wx.getAccountInfoSync   2.2.2
+API 最低版本 备注
+wx.getAccountInfoSync 2.2.2
 转发
-API     最低版本    备注
-wx.hideShareMenu        2.1.0   仅限插件页面中调用
-wx.getShareInfo 2.1.0   仅限插件页面中调用
-wx.showShareMenu        2.1.0   仅限插件页面中调用
-wx.updateShareMenu      2.1.0   仅限插件页面中调用
+API 最低版本 备注
+wx.hideShareMenu 2.1.0 仅限插件页面中调用
+wx.getShareInfo 2.1.0 仅限插件页面中调用
+wx.showShareMenu 2.1.0 仅限插件页面中调用
+wx.updateShareMenu 2.1.0 仅限插件页面中调用
 其他
-API     最低版本    备注
-wx.reportAnalytics      1.9.6   见下方备注
+API 最低版本 备注
+wx.reportAnalytics 1.9.6 见下方备注
 登录和获取用户信息
 这一组接口仅限在用户信息功能页中获得用户授权之后调用。否则将返回 fail 。详见 用户信息功能页 。</p>
-<p>API     最低版本    备注
-wx.login        2.3.1
-wx.getUserInfo  2.3.1
+<p>API 最低版本 备注
+wx.login 2.3.1
+wx.getUserInfo 2.3.1
 Bugs &amp; Tips
 wx.reportAnalytics 可以被正常调用，但目前不会进行统计展示。</p>
 </div>
 
 
-           </div>
-           
           </div>
-          <footer>
-  
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="component-limit.html" class="btn btn-neutral float-right" title="插件使用组件的限制" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="using.html" class="btn btn-neutral float-left" title="使用插件" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
-    </div>
-  
-
-  <hr/>
-
-  <div role="contentinfo">
-    <p>
-        &copy; Copyright 2019, Nosy
-
-    </p>
-  </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
-
-</footer>
-
         </div>
       </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>导航</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="总目录"
+             >索引</a></li>
+        <li class="right" >
+          <a href="../../http-routingtable.html" title="微信小程序API"
+             >wxapi</a> |</li>
+        <li class="right" >
+          <a href="component-limit.html" title="插件使用组件的限制"
+             >下一页</a> |</li>
+        <li class="right" >
+          <a href="using.html" title="使用插件"
+             >上一页</a> |</li>
+<li><a href="../../index.html">主页</a>&#160;|</li>
+<li><a href="../../contents.html">文档</a> &#187;</li>
 
-    </section>
-
-  </div>
-  
-
-
-  <script type="text/javascript">
-      jQuery(function () {
-          SphinxRtdTheme.Navigation.enable(true);
-      });
-  </script>
-
-  
-  
-    
-   
-
-</body>
+          <li class="nav-item nav-item-1"><a href="../index.html" >框架</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="index.html" >插件</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; 版权所有 2019, Wxadev Docs.
+      由 <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.0+/40994a8 创建。
+    </div>
+  </body>
 </html>

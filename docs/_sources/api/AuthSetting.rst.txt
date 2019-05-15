@@ -6,7 +6,7 @@
 属性
 --------
 
-.. data:: scope.userInfo boolean
+.. data:: scope.userInfo
 
   是否授权用户信息
 

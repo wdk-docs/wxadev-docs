@@ -1,161 +1,110 @@
 
 
-
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-CN" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-CN" > <!--<![endif]-->
-<head>
-  <meta charset="utf-8">
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <title>索引 &mdash; wxadev 1.0.0 文档</title>
-  
 
-  
-  
-  
-  
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
+  <head>
+    <meta charset="utf-8" />
+    <title>索引 &#8212; wxadev 1.0.0 文档</title>
+    <link rel="stylesheet" href="_static/sphinx13.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="在 wxadev 1.0.0 文档 中搜索"
+          href="_static/opensearch.xml"/>
 
-  
-  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
-  
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-        <script type="text/javascript" src="_static/jquery.js"></script>
-        <script type="text/javascript" src="_static/underscore.js"></script>
-        <script type="text/javascript" src="_static/doctools.js"></script>
-        <script type="text/javascript" src="_static/language_data.js"></script>
-        <script type="text/javascript" src="_static/translations.js"></script>
-    
-    <script type="text/javascript" src="_static/js/theme.js"></script>
-
-    
-
-  
-  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="index" title="索引" href="#" />
-    <link rel="search" title="搜索" href="search.html" /> 
-</head>
+    <link rel="search" title="搜索" href="search.html" />
+<link rel="canonical" href="http://www.sphinx-doc.org/en/master/genindex.html" />
 
-<body class="wy-body-for-nav">
-
-   
-  <div class="wy-grid-for-nav">
-    
-    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
-      <div class="wy-side-scroll">
-        <div class="wy-side-nav-search" >
-          
-
-          
-            <a href="contents.html" class="icon icon-home"> wxadev
-          
-
-          
-          </a>
-
-          
-            
-            
-          
-
-          
-<div role="search">
-  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
-    <input type="hidden" name="check_keywords" value="yes" />
-    <input type="hidden" name="area" value="default" />
-  </form>
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet" type="text/css" />
+ 
+<style type="text/css">
+  table.right { float: right; margin-left: 20px; }
+  table.right td { border: 1px solid #ccc; }
+  
+</style>
+<script type="text/javascript">
+  // intelligent scrolling of the sidebar content
+  $(window).scroll(function() {
+    var sb = $('.sphinxsidebarwrapper');
+    var win = $(window);
+    var sbh = sb.height();
+    var offset = $('.sphinxsidebar').position()['top'];
+    var wintop = win.scrollTop();
+    var winbot = wintop + win.innerHeight();
+    var curtop = sb.position()['top'];
+    var curbot = curtop + sbh;
+    // does sidebar fit in window?
+    if (sbh < win.innerHeight()) {
+      // yes: easy case -- always keep at the top
+      sb.css('top', $u.min([$u.max([0, wintop - offset - 10]), $(document).height() - sbh - 200]));
+    } else {
+      // no: only scroll if top/bottom edge of sidebar is at
+      // top/bottom edge of window
+      if (curtop > wintop && curbot > winbot) {
+        sb.css('top', $u.max([wintop - offset - 10, 0]));
+      } else if (curtop < wintop && curbot < winbot) {
+        sb.css('top', $u.min([winbot - sbh - offset - 20, $(document).height() - sbh - 200]));
+      }
+    }
+  });
+</script> 
+  </head><body>
+<div class="pageheader">
+  <ul>
+    <li><a href="index.html">主页</a></li>
+    <li><a href="framework/index.html">框架</a></li>
+    <li><a href="component/index.html">组件</a></li>
+    <li><a href="api/index.html">API</a></li>
+    <li><a href="api-backend/index.html">服务端</a></li>
+    <li><a href="contents.html">目录</a></li>
+  </ul>
+  <div>
+    <a href="index.html">
+      <img src="_static/wxaheader.png" alt="wxa" />
+    </a>
+  </div>
 </div>
 
-          
-        </div>
-
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-              
-            
-            
-              <ul>
-<li class="toctree-l1"><a class="reference internal" href="index.html">开发指南</a></li>
-<li class="toctree-l1"><a class="reference internal" href="dev.html">简介</a></li>
-<li class="toctree-l1"><a class="reference internal" href="basic/index.html">基础教程</a></li>
-<li class="toctree-l1"><a class="reference internal" href="guide/index.html">运行环境</a></li>
-<li class="toctree-l1"><a class="reference internal" href="framework/index.html">框架</a></li>
-<li class="toctree-l1"><a class="reference internal" href="component/index.html">组件</a></li>
-<li class="toctree-l1"><a class="reference internal" href="api/index.html">API</a></li>
-<li class="toctree-l1"><a class="reference internal" href="api-backend/index.html">服务端API</a></li>
-<li class="toctree-l1"><a class="reference internal" href="devtools/index.html">开发工具</a></li>
-<li class="toctree-l1"><a class="reference internal" href="reference/index.html">参考资料</a></li>
-<li class="toctree-l1"><a class="reference internal" href="wxcloud/index.html">云开发</a></li>
-<li class="toctree-l1"><a class="reference internal" href="wxwork/index.html">企业微信</a></li>
-<li class="toctree-l1"><a class="reference internal" href="todolist.html">待办事项</a></li>
-<li class="toctree-l1"><a class="reference internal" href="glossary.html">术语</a></li>
-</ul>
-
-            
-          
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>导航</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="#" title="总目录"
+             accesskey="I">索引</a></li>
+        <li class="right" >
+          <a href="http-routingtable.html" title="微信小程序API"
+             >wxapi</a> |</li>
+<li><a href="index.html">主页</a>&#160;|</li>
+<li><a href="contents.html">文档</a> &#187;</li>
+ 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">快速搜索</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="转向" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
         </div>
       </div>
-    </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
-          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="contents.html">wxadev</a>
-        
-      </nav>
-
-
-      <div class="wy-nav-content">
-        
-        <div class="rst-content">
-        
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-
-  <ul class="wy-breadcrumbs">
-    
-      <li><a href="contents.html">Docs</a> &raquo;</li>
-        
-      <li>索引</li>
-    
-    
-      <li class="wy-breadcrumbs-aside">
-        
-            
-        
-      </li>
-    
-  </ul>
-
-  
-  <hr/>
-</div>
-          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
-           <div itemprop="articleBody">
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
             
 
 <h1 id="index">索引</h1>
@@ -164,12 +113,14 @@
  <a href="#A"><strong>A</strong></a>
  | <a href="#B"><strong>B</strong></a>
  | <a href="#C"><strong>C</strong></a>
+ | <a href="#D"><strong>D</strong></a>
  | <a href="#E"><strong>E</strong></a>
  | <a href="#F"><strong>F</strong></a>
  | <a href="#G"><strong>G</strong></a>
  | <a href="#I"><strong>I</strong></a>
  | <a href="#L"><strong>L</strong></a>
  | <a href="#M"><strong>M</strong></a>
+ | <a href="#N"><strong>N</strong></a>
  | <a href="#O"><strong>O</strong></a>
  | <a href="#P"><strong>P</strong></a>
  | <a href="#Q"><strong>Q</strong></a>
@@ -287,14 +238,126 @@
 </li>
       <li><a href="api/CameraContext.html#CameraContext.takePhoto">CameraContext.takePhoto() (CameraContext 方法)</a>
 </li>
+      <li><a href="api/CanvasContext.html#CanvasContext">CanvasContext() (类)</a>
+</li>
+      <li><a href="api/CanvasContext.html#CanvasContext.arc">CanvasContext.arc() (CanvasContext 方法)</a>
+</li>
+      <li><a href="api/CanvasContext.html#CanvasContext.arcTo">CanvasContext.arcTo() (CanvasContext 方法)</a>
+</li>
+      <li><a href="api/CanvasContext.html#CanvasContext.beginPath">CanvasContext.beginPath() (CanvasContext 方法)</a>
+</li>
+      <li><a href="api/CanvasContext.html#CanvasContext.bezierCurveTo">CanvasContext.bezierCurveTo() (CanvasContext 方法)</a>
+</li>
+      <li><a href="api/CanvasContext.html#CanvasContext.clearRect">CanvasContext.clearRect() (CanvasContext 方法)</a>
+</li>
+      <li><a href="api/CanvasContext.html#CanvasContext.clip">CanvasContext.clip() (CanvasContext 方法)</a>
+</li>
+      <li><a href="api/CanvasContext.html#CanvasContext.closePath">CanvasContext.closePath() (CanvasContext 方法)</a>
+</li>
+      <li><a href="api/CanvasContext.html#CanvasContext.createPattern">CanvasContext.createPattern() (CanvasContext 方法)</a>
+</li>
+      <li><a href="api/CanvasContext.html#CanvasContext.draw">CanvasContext.draw() (CanvasContext 方法)</a>
+</li>
+      <li><a href="api/CanvasContext.html#CanvasContext.drawImage">CanvasContext.drawImage() (CanvasContext 方法)</a>
+</li>
+      <li><a href="api/CanvasContext.html#CanvasContext.fill">CanvasContext.fill() (CanvasContext 方法)</a>
+</li>
+      <li><a href="api/CanvasContext.html#CanvasContext.fillRect">CanvasContext.fillRect() (CanvasContext 方法)</a>
+</li>
+      <li><a href="api/CanvasContext.html#CanvasContext.fillStyle">CanvasContext.fillStyle (CanvasContext 属性)</a>
+</li>
+      <li><a href="api/CanvasContext.html#CanvasContext.fillText">CanvasContext.fillText() (CanvasContext 方法)</a>
+</li>
+      <li><a href="api/CanvasContext.html#CanvasContext.font">CanvasContext.font (CanvasContext 属性)</a>
+</li>
+      <li><a href="api/CanvasContext.html#CanvasContext.globalAlpha">CanvasContext.globalAlpha (CanvasContext 属性)</a>
+</li>
+      <li><a href="api/CanvasContext.html#CanvasContext.globalCompositeOperation">CanvasContext.globalCompositeOperation (CanvasContext 属性)</a>
+</li>
+      <li><a href="api/CanvasContext.html#CanvasContext.lineCap">CanvasContext.lineCap (CanvasContext 属性)</a>
+</li>
+      <li><a href="api/CanvasContext.html#CanvasContext.lineDashOffset">CanvasContext.lineDashOffset (CanvasContext 属性)</a>
+</li>
+      <li><a href="api/CanvasContext.html#CanvasContext.lineJoin">CanvasContext.lineJoin (CanvasContext 属性)</a>
+</li>
+      <li><a href="api/CanvasContext.html#CanvasContext.lineTo">CanvasContext.lineTo() (CanvasContext 方法)</a>
+</li>
+      <li><a href="api/CanvasContext.html#CanvasContext.lineWidth">CanvasContext.lineWidth (CanvasContext 属性)</a>
+</li>
+      <li><a href="api/CanvasContext.html#CanvasContext.measureText">CanvasContext.measureText() (CanvasContext 方法)</a>
+</li>
+      <li><a href="api/CanvasContext.html#CanvasContext.miterLimit">CanvasContext.miterLimit (CanvasContext 属性)</a>
+</li>
+      <li><a href="api/CanvasContext.html#CanvasContext.quadraticCurveTo">CanvasContext.quadraticCurveTo() (CanvasContext 方法)</a>
+</li>
+      <li><a href="api/CanvasContext.html#CanvasContext.rect">CanvasContext.rect() (CanvasContext 方法)</a>
+</li>
+      <li><a href="api/CanvasContext.html#CanvasContext.restore">CanvasContext.restore() (CanvasContext 方法)</a>
+</li>
+      <li><a href="api/CanvasContext.html#CanvasContext.rotate">CanvasContext.rotate() (CanvasContext 方法)</a>
+</li>
+      <li><a href="api/CanvasContext.html#CanvasContext.save">CanvasContext.save() (CanvasContext 方法)</a>
+</li>
+      <li><a href="api/CanvasContext.html#CanvasContext.scale">CanvasContext.scale() (CanvasContext 方法)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/CanvasContext.html#CanvasContext.setFillStyle">CanvasContext.setFillStyle() (CanvasContext 方法)</a>
+</li>
+      <li><a href="api/CanvasContext.html#CanvasContext.setFontSize">CanvasContext.setFontSize() (CanvasContext 方法)</a>
+</li>
+      <li><a href="api/CanvasContext.html#CanvasContext.setGlobalAlpha">CanvasContext.setGlobalAlpha() (CanvasContext 方法)</a>
+</li>
+      <li><a href="api/CanvasContext.html#CanvasContext.setLineCap">CanvasContext.setLineCap() (CanvasContext 方法)</a>
+</li>
+      <li><a href="api/CanvasContext.html#CanvasContext.setLineDash">CanvasContext.setLineDash() (CanvasContext 方法)</a>
+</li>
+      <li><a href="api/CanvasContext.html#CanvasContext.setLineJoin">CanvasContext.setLineJoin() (CanvasContext 方法)</a>
+</li>
+      <li><a href="api/CanvasContext.html#CanvasContext.setLineWidth">CanvasContext.setLineWidth() (CanvasContext 方法)</a>
+</li>
+      <li><a href="api/CanvasContext.html#CanvasContext.setMiterLimit">CanvasContext.setMiterLimit() (CanvasContext 方法)</a>
+</li>
+      <li><a href="api/CanvasContext.html#CanvasContext.setShadow">CanvasContext.setShadow() (CanvasContext 方法)</a>
+</li>
+      <li><a href="api/CanvasContext.html#CanvasContext.setStrokeStyle">CanvasContext.setStrokeStyle() (CanvasContext 方法)</a>
+</li>
+      <li><a href="api/CanvasContext.html#CanvasContext.setTextAlign">CanvasContext.setTextAlign() (CanvasContext 方法)</a>
+</li>
+      <li><a href="api/CanvasContext.html#CanvasContext.setTextBaseline">CanvasContext.setTextBaseline() (CanvasContext 方法)</a>
+</li>
+      <li><a href="api/CanvasContext.html#CanvasContext.setTransform">CanvasContext.setTransform() (CanvasContext 方法)</a>
+</li>
+      <li><a href="api/CanvasContext.html#CanvasContext.shadowBlur">CanvasContext.shadowBlur (CanvasContext 属性)</a>
+</li>
+      <li><a href="api/CanvasContext.html#CanvasContext.shadowColor">CanvasContext.shadowColor (CanvasContext 属性)</a>
+</li>
+      <li><a href="api/CanvasContext.html#CanvasContext.shadowOffsetX">CanvasContext.shadowOffsetX (CanvasContext 属性)</a>
+</li>
+      <li><a href="api/CanvasContext.html#CanvasContext.shadowOffsetY">CanvasContext.shadowOffsetY (CanvasContext 属性)</a>
+</li>
+      <li><a href="api/CanvasContext.html#CanvasContext.stroke">CanvasContext.stroke() (CanvasContext 方法)</a>
+</li>
+      <li><a href="api/CanvasContext.html#CanvasContext.strokeRect">CanvasContext.strokeRect() (CanvasContext 方法)</a>
+</li>
+      <li><a href="api/CanvasContext.html#CanvasContext.strokeStyle">CanvasContext.strokeStyle (CanvasContext 属性)</a>
+</li>
+      <li><a href="api/CanvasContext.html#CanvasContext.strokeText">CanvasContext.strokeText() (CanvasContext 方法)</a>
+</li>
+      <li><a href="api/CanvasContext.html#CanvasContext.transform">CanvasContext.transform() (CanvasContext 方法)</a>
+</li>
+      <li><a href="api/CanvasContext.html#CanvasContext.translate">CanvasContext.translate() (CanvasContext 方法)</a>
+</li>
+      <li><a href="api/CanvasContext.html#CanvasGradient CanvasContext.createCircularGradient">CanvasGradient CanvasContext.createCircularGradient() (CanvasGradient CanvasContext 方法)</a>
+</li>
+      <li><a href="api/CanvasContext.html#CanvasGradient CanvasContext.createLinearGradient">CanvasGradient CanvasContext.createLinearGradient() (CanvasGradient CanvasContext 方法)</a>
+</li>
       <li><a href="reference/api/timer.html#clearInterval">clearInterval() (內置函数)</a>
 </li>
       <li><a href="reference/api/timer.html#clearTimeout">clearTimeout() (內置函数)</a>
 </li>
       <li><a href="reference/api/Component.html#Component">Component() (类)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api/console.html#console">console() (类)</a>, <a href="reference/api/console.html#console">[1]</a>
 </li>
       <li><a href="reference/api/console.html#console.debug">console.debug() (console 方法)</a>
@@ -314,13 +377,55 @@
   </ul></td>
 </tr></table>
 
-<h2 id="E">E</h2>
+<h2 id="D">D</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="api/wx.startPullDownRefresh.html#index-0">enablePullDownRefresh</a>, <a href="api/wx.stopPullDownRefresh.html#index-0">[1]</a>
+      <li><a href="api/DownloadTask.html#DownloadTask">DownloadTask() (类)</a>
+</li>
+      <li><a href="api/DownloadTask.html#DownloadTask.abort">DownloadTask.abort() (DownloadTask 方法)</a>
+</li>
+      <li><a href="api/DownloadTask.html#DownloadTask.offHeadersReceived">DownloadTask.offHeadersReceived() (DownloadTask 方法)</a>
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/DownloadTask.html#DownloadTask.offProgressUpdate">DownloadTask.offProgressUpdate() (DownloadTask 方法)</a>
+</li>
+      <li><a href="api/DownloadTask.html#DownloadTask.onHeadersReceived">DownloadTask.onHeadersReceived() (DownloadTask 方法)</a>
+</li>
+      <li><a href="api/DownloadTask.html#DownloadTask.onProgressUpdate">DownloadTask.onProgressUpdate() (DownloadTask 方法)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="E">E</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/EditorContext.html#EditorContext">EditorContext() (类)</a>
+</li>
+      <li><a href="api/EditorContext.html#EditorContext.clear">EditorContext.clear() (EditorContext 方法)</a>
+</li>
+      <li><a href="api/EditorContext.html#EditorContext.format">EditorContext.format() (EditorContext 方法)</a>
+</li>
+      <li><a href="api/EditorContext.html#EditorContext.getContents">EditorContext.getContents() (EditorContext 方法)</a>
+</li>
+      <li><a href="api/EditorContext.html#EditorContext.insertDivider">EditorContext.insertDivider() (EditorContext 方法)</a>
+</li>
+      <li><a href="api/EditorContext.html#EditorContext.insertImage">EditorContext.insertImage() (EditorContext 方法)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/EditorContext.html#EditorContext.insertText">EditorContext.insertText() (EditorContext 方法)</a>
+</li>
+      <li><a href="api/EditorContext.html#EditorContext.redo">EditorContext.redo() (EditorContext 方法)</a>
+</li>
+      <li><a href="api/EditorContext.html#EditorContext.removeFormat">EditorContext.removeFormat() (EditorContext 方法)</a>
+</li>
+      <li><a href="api/EditorContext.html#EditorContext.setContents">EditorContext.setContents() (EditorContext 方法)</a>
+</li>
+      <li><a href="api/EditorContext.html#EditorContext.undo">EditorContext.undo() (EditorContext 方法)</a>
+</li>
+      <li><a href="api/wx.startPullDownRefresh.html#index-0">enablePullDownRefresh</a>, <a href="api/wx.stopPullDownRefresh.html#index-0">[1]</a>
+</li>
       <li><a href="reference/api/module.html#exports">exports() (內置函数)</a>
 </li>
   </ul></td>
@@ -419,12 +524,12 @@
 </li>
       <li><a href="api/InnerAudioContext.html#InnerAudioContext.offWaiting">InnerAudioContext.offWaiting() (InnerAudioContext 方法)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api/InnerAudioContext.html#InnerAudioContext.onCanplay">InnerAudioContext.onCanplay() (InnerAudioContext 方法)</a>
 </li>
       <li><a href="api/InnerAudioContext.html#InnerAudioContext.onEnded">InnerAudioContext.onEnded() (InnerAudioContext 方法)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api/InnerAudioContext.html#InnerAudioContext.onError">InnerAudioContext.onError() (InnerAudioContext 方法)</a>
 </li>
       <li><a href="api/InnerAudioContext.html#InnerAudioContext.onPause">InnerAudioContext.onPause() (InnerAudioContext 方法)</a>
@@ -456,6 +561,16 @@
       <li><a href="api/InnerAudioContext.html#InnerAudioContext.stop">InnerAudioContext.stop() (InnerAudioContext 方法)</a>
 </li>
       <li><a href="api/InnerAudioContext.html#InnerAudioContext.volume">InnerAudioContext.volume (InnerAudioContext 属性)</a>
+</li>
+      <li><a href="api/IntersectionObserver.html#IntersectionObserver">IntersectionObserver() (类)</a>
+</li>
+      <li><a href="api/IntersectionObserver.html#IntersectionObserver.disconnect">IntersectionObserver.disconnect() (IntersectionObserver 方法)</a>
+</li>
+      <li><a href="api/IntersectionObserver.html#IntersectionObserver.observe">IntersectionObserver.observe() (IntersectionObserver 方法)</a>
+</li>
+      <li><a href="api/IntersectionObserver.html#IntersectionObserver.relativeTo">IntersectionObserver.relativeTo() (IntersectionObserver 方法)</a>
+</li>
+      <li><a href="api/IntersectionObserver.html#IntersectionObserver.relativeToViewport">IntersectionObserver.relativeToViewport() (IntersectionObserver 方法)</a>
 </li>
   </ul></td>
 </tr></table>
@@ -548,6 +663,24 @@
   </ul></td>
 </tr></table>
 
+<h2 id="N">N</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/NodesRef.html#NodesRef">NodesRef() (类)</a>
+</li>
+      <li><a href="api/NodesRef.html#NodesRef.boundingClientRect">NodesRef.boundingClientRect() (NodesRef 方法)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/NodesRef.html#NodesRef.context">NodesRef.context() (NodesRef 方法)</a>
+</li>
+      <li><a href="api/NodesRef.html#NodesRef.fields">NodesRef.fields() (NodesRef 方法)</a>
+</li>
+      <li><a href="api/NodesRef.html#NodesRef.scrollOffset">NodesRef.scrollOffset() (NodesRef 方法)</a>
+</li>
+  </ul></td>
+</tr></table>
+
 <h2 id="O">O</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
@@ -601,12 +734,12 @@
 </li>
       <li><a href="api/RecorderManager.html#RecorderManager.onResume">RecorderManager.onResume() (RecorderManager 方法)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api/RecorderManager.html#RecorderManager.onStart">RecorderManager.onStart() (RecorderManager 方法)</a>
 </li>
       <li><a href="api/RecorderManager.html#RecorderManager.onStop">RecorderManager.onStop() (RecorderManager 方法)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api/RecorderManager.html#RecorderManager.pause">RecorderManager.pause() (RecorderManager 方法)</a>
 </li>
       <li><a href="api/RecorderManager.html#RecorderManager.resume">RecorderManager.resume() (RecorderManager 方法)</a>
@@ -614,6 +747,14 @@
       <li><a href="api/RecorderManager.start.html#RecorderManager.start">RecorderManager.start() (RecorderManager 方法)</a>
 </li>
       <li><a href="api/RecorderManager.html#RecorderManager.stop">RecorderManager.stop() (RecorderManager 方法)</a>
+</li>
+      <li><a href="api/RequestTask.html#RequestTask">RequestTask() (类)</a>
+</li>
+      <li><a href="api/RequestTask.html#RequestTask.abort">RequestTask.abort() (RequestTask 方法)</a>
+</li>
+      <li><a href="api/RequestTask.html#RequestTask.offHeadersReceived">RequestTask.offHeadersReceived() (RequestTask 方法)</a>
+</li>
+      <li><a href="api/RequestTask.html#RequestTask.onHeadersReceived">RequestTask.onHeadersReceived() (RequestTask 方法)</a>
 </li>
       <li><a href="reference/api/module.html#require">require() (內置函数)</a>
 </li>
@@ -633,9 +774,7 @@
 </li>
       <li><a href="api/AuthSetting.html#scope.record">scope.record (全局变量或常量)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="api/AuthSetting.html#scope.userInfo boolean">scope.userInfo boolean (全局变量或常量)</a>
+      <li><a href="api/AuthSetting.html#scope.userInfo">scope.userInfo (全局变量或常量)</a>
 </li>
       <li><a href="api/AuthSetting.html#scope.userLocation">scope.userLocation (全局变量或常量)</a>
 </li>
@@ -643,9 +782,37 @@
 </li>
       <li><a href="api/AuthSetting.html#scope.writePhotosAlbum">scope.writePhotosAlbum (全局变量或常量)</a>
 </li>
+      <li><a href="api/SelectorQuery.html#SelectorQuery">SelectorQuery() (类)</a>
+</li>
+      <li><a href="api/SelectorQuery.html#SelectorQuery.exec">SelectorQuery.exec() (SelectorQuery 方法)</a>
+</li>
+      <li><a href="api/SelectorQuery.html#SelectorQuery.in">SelectorQuery.in() (SelectorQuery 方法)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/SelectorQuery.html#SelectorQuery.select">SelectorQuery.select() (SelectorQuery 方法)</a>
+</li>
+      <li><a href="api/SelectorQuery.html#SelectorQuery.selectAll">SelectorQuery.selectAll() (SelectorQuery 方法)</a>
+</li>
+      <li><a href="api/SelectorQuery.html#SelectorQuery.selectViewport">SelectorQuery.selectViewport() (SelectorQuery 方法)</a>
+</li>
       <li><a href="reference/api/timer.html#setInterval">setInterval() (內置函数)</a>
 </li>
       <li><a href="reference/api/timer.html#setTimeout">setTimeout() (內置函数)</a>
+</li>
+      <li><a href="api/SocketTask.html#SocketTask">SocketTask() (类)</a>
+</li>
+      <li><a href="api/SocketTask.html#SocketTask.close">SocketTask.close() (SocketTask 方法)</a>
+</li>
+      <li><a href="api/SocketTask.html#SocketTask.onClose">SocketTask.onClose() (SocketTask 方法)</a>
+</li>
+      <li><a href="api/SocketTask.html#SocketTask.onError">SocketTask.onError() (SocketTask 方法)</a>
+</li>
+      <li><a href="api/SocketTask.html#SocketTask.onMessage">SocketTask.onMessage() (SocketTask 方法)</a>
+</li>
+      <li><a href="api/SocketTask.html#SocketTask.onOpen">SocketTask.onOpen() (SocketTask 方法)</a>
+</li>
+      <li><a href="api/SocketTask.html#SocketTask.send">SocketTask.send() (SocketTask 方法)</a>
 </li>
   </ul></td>
 </tr></table>
@@ -653,11 +820,7 @@
 <h2 id="T">T</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="api/wx.navigateTo.html#index-0">tabBar</a>, <a href="api/wx.navigateTo.html#index-1">[1]</a>, <a href="framework/app-service/route.html#index-0">[2]</a>, <a href="framework/app-service/route.html#index-1">[3]</a>, <a href="framework/app-service/route.html#index-2">[4]</a>
-</li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="framework/app-service/route.html#index-3">tabBar。</a>
+      <li><a href="api/wx.navigateTo.html#index-0">tabBar</a>, <a href="api/wx.navigateTo.html#index-1">[1]</a>, <a href="framework/app-service/route.html#index-0">[2]</a>, <a href="framework/app-service/route.html#index-1">[3]</a>, <a href="framework/app-service/route.html#index-2">[4]</a>, <a href="framework/app-service/route.html#index-3">[5]</a>
 </li>
   </ul></td>
 </tr></table>
@@ -665,17 +828,69 @@
 <h2 id="U">U</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/UDPSocket.html#UDPSocket">UDPSocket() (类)</a>
+</li>
+      <li><a href="api/UDPSocket.html#UDPSocket.bind">UDPSocket.bind() (UDPSocket 方法)</a>
+</li>
+      <li><a href="api/UDPSocket.html#UDPSocket.close">UDPSocket.close() (UDPSocket 方法)</a>
+</li>
+      <li><a href="api/UDPSocket.html#UDPSocket.offClose">UDPSocket.offClose() (UDPSocket 方法)</a>
+</li>
+      <li><a href="api/UDPSocket.html#UDPSocket.offError">UDPSocket.offError() (UDPSocket 方法)</a>
+</li>
+      <li><a href="api/UDPSocket.html#UDPSocket.offListening">UDPSocket.offListening() (UDPSocket 方法)</a>
+</li>
+      <li><a href="api/UDPSocket.html#UDPSocket.offMessage">UDPSocket.offMessage() (UDPSocket 方法)</a>
+</li>
+      <li><a href="api/UDPSocket.html#UDPSocket.onClose">UDPSocket.onClose() (UDPSocket 方法)</a>
+</li>
+      <li><a href="api/UDPSocket.html#UDPSocket.onError">UDPSocket.onError() (UDPSocket 方法)</a>
+</li>
+      <li><a href="api/UDPSocket.html#UDPSocket.onListening">UDPSocket.onListening() (UDPSocket 方法)</a>
+</li>
+      <li><a href="api/UDPSocket.html#UDPSocket.onMessage">UDPSocket.onMessage() (UDPSocket 方法)</a>
+</li>
+      <li><a href="api/UDPSocket.html#UDPSocket.send">UDPSocket.send() (UDPSocket 方法)</a>
+</li>
       <li><a href="api/UpdateManager.html#UpdateManager">UpdateManager() (类)</a>
 </li>
       <li><a href="api/UpdateManager.html#UpdateManager.applyUpdate">UpdateManager.applyUpdate() (UpdateManager 方法)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api/UpdateManager.html#UpdateManager.onCheckForUpdate">UpdateManager.onCheckForUpdate() (UpdateManager 方法)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api/UpdateManager.html#UpdateManager.onUpdateFailed">UpdateManager.onUpdateFailed() (UpdateManager 方法)</a>
 </li>
       <li><a href="api/UpdateManager.html#UpdateManager.onUpdateReady">UpdateManager.onUpdateReady() (UpdateManager 方法)</a>
+</li>
+      <li><a href="api/UploadTask.html#UploadTask">UploadTask() (类)</a>
+</li>
+      <li><a href="api/UploadTask.html#UploadTask.abort">UploadTask.abort() (UploadTask 方法)</a>
+</li>
+      <li><a href="api/UploadTask.html#UploadTask.offHeadersReceived">UploadTask.offHeadersReceived() (UploadTask 方法)</a>
+</li>
+      <li><a href="api/UploadTask.html#UploadTask.offProgressUpdate">UploadTask.offProgressUpdate() (UploadTask 方法)</a>
+</li>
+      <li><a href="api/UploadTask.html#UploadTask.onHeadersReceived">UploadTask.onHeadersReceived() (UploadTask 方法)</a>
+</li>
+      <li><a href="api/UploadTask.html#UploadTask.onProgressUpdate">UploadTask.onProgressUpdate() (UploadTask 方法)</a>
+</li>
+      <li><a href="api/UserInfo.html#UserInfo">UserInfo (全局变量或常量)</a>
+</li>
+      <li><a href="api/UserInfo.html#UserInfo.avatarUrl">UserInfo.avatarUrl (全局变量或常量)</a>
+</li>
+      <li><a href="api/UserInfo.html#UserInfo.city">UserInfo.city (全局变量或常量)</a>
+</li>
+      <li><a href="api/UserInfo.html#UserInfo.country">UserInfo.country (全局变量或常量)</a>
+</li>
+      <li><a href="api/UserInfo.html#UserInfo.gender">UserInfo.gender (全局变量或常量)</a>
+</li>
+      <li><a href="api/UserInfo.html#UserInfo.language">UserInfo.language (全局变量或常量)</a>
+</li>
+      <li><a href="api/UserInfo.html#UserInfo.nickName">UserInfo.nickName (全局变量或常量)</a>
+</li>
+      <li><a href="api/UserInfo.html#UserInfo.province">UserInfo.province (全局变量或常量)</a>
 </li>
   </ul></td>
 </tr></table>
@@ -725,9 +940,37 @@
 </li>
       <li><a href="reference/api/wx.html#module-wx">wx (模块)</a>
 </li>
+      <li><a href="api/wx.addCard.html#wx.addCard">wx.addCard() (wx 方法)</a>
+</li>
+      <li><a href="api/wx.addPhoneContact.html#wx.addPhoneContact">wx.addPhoneContact() (wx 方法)</a>
+</li>
+      <li><a href="api/wx.arrayBufferToBase64.html#wx.arrayBufferToBase64">wx.arrayBufferToBase64() (wx 方法)</a>
+</li>
+      <li><a href="api/wx.authorize.html#wx.authorize">wx.authorize() (wx 方法)</a>
+</li>
+      <li><a href="api/wx.base64ToArrayBuffer.html#wx.base64ToArrayBuffer">wx.base64ToArrayBuffer() (wx 方法)</a>
+</li>
       <li><a href="api/wx.canIUse.html#wx.canIUse">wx.canIUse() (wx 方法)</a>
 </li>
+      <li><a href="api/wx.canvasGetImageData.html#wx.canvasGetImageData">wx.canvasGetImageData() (wx 方法)</a>
+</li>
+      <li><a href="api/wx.canvasPutImageData.html#wx.canvasPutImageData">wx.canvasPutImageData() (wx 方法)</a>
+</li>
+      <li><a href="api/wx.canvasToTempFilePath.html#wx.canvasToTempFilePath">wx.canvasToTempFilePath() (wx 方法)</a>
+</li>
+      <li><a href="api/wx.checkIsSoterEnrolledInDevice.html#wx.checkIsSoterEnrolledInDevice">wx.checkIsSoterEnrolledInDevice() (wx 方法)</a>
+</li>
+      <li><a href="api/wx.checkIsSupportSoterAuthentication.html#wx.checkIsSupportSoterAuthentication">wx.checkIsSupportSoterAuthentication() (wx 方法)</a>
+</li>
+      <li><a href="api/wx.checkSession.html#wx.checkSession">wx.checkSession() (wx 方法)</a>
+</li>
+      <li><a href="api/wx.chooseAddress.html#wx.chooseAddress">wx.chooseAddress() (wx 方法)</a>
+</li>
       <li><a href="api/wx.chooseImage.html#wx.chooseImage">wx.chooseImage() (wx 方法)</a>
+</li>
+      <li><a href="api/wx.chooseInvoice.html#wx.chooseInvoice">wx.chooseInvoice() (wx 方法)</a>
+</li>
+      <li><a href="api/wx.chooseInvoiceTitle.html#wx.chooseInvoiceTitle">wx.chooseInvoiceTitle() (wx 方法)</a>
 </li>
       <li><a href="api/wx.chooseLocation.html#wx.chooseLocation">wx.chooseLocation() (wx 方法)</a>
 </li>
@@ -739,31 +982,75 @@
 </li>
       <li><a href="api/wx.clearStorageSync.html#wx.clearStorageSync">wx.clearStorageSync() (wx 方法)</a>
 </li>
+      <li><a href="api/wx.closeBluetoothAdapter.html#wx.closeBluetoothAdapter">wx.closeBluetoothAdapter() (wx 方法)</a>
+</li>
+      <li><a href="api/wx.closeSocket.html#wx.closeSocket">wx.closeSocket() (wx 方法)</a>
+</li>
       <li><a href="api/wx.compressImage.html#wx.compressImage">wx.compressImage() (wx 方法)</a>
+</li>
+      <li><a href="api/wx.connectSocket.html#wx.connectSocket">wx.connectSocket() (wx 方法)</a>
+</li>
+      <li><a href="api/wx.connectWifi.html#wx.connectWifi">wx.connectWifi() (wx 方法)</a>
+</li>
+      <li><a href="api/wx.createAnimation.html#wx.createAnimation">wx.createAnimation() (wx 方法)</a>
 </li>
       <li><a href="api/wx.createAudioContext.html#wx.createAudioContext">wx.createAudioContext() (wx 方法)</a>
 </li>
-      <li><a href="api/CameraContext.html#wx.createCameraContext">wx.createCameraContext() (wx 方法)</a>
+      <li><a href="api/wx.createBLEConnection.html#wx.createBLEConnection">wx.createBLEConnection() (wx 方法)</a>
 </li>
-      <li><a href="api/InnerAudioContext.html#wx.createInnerAudioContext">wx.createInnerAudioContext() (wx 方法)</a>
+      <li><a href="api/CameraContext.html#wx.createCameraContext">wx.createCameraContext() (wx 方法)</a>, <a href="api/wx.createCameraContext.html#wx.createCameraContext">[1]</a>
 </li>
-      <li><a href="api/LivePlayerContext.html#wx.createLivePlayerContext">wx.createLivePlayerContext() (wx 方法)</a>
+      <li><a href="api/wx.createCanvasContext.html#wx.createCanvasContext">wx.createCanvasContext() (wx 方法)</a>
 </li>
-      <li><a href="api/LivePusherContext.html#wx.createLivePusherContext">wx.createLivePusherContext() (wx 方法)</a>
+      <li><a href="api/InnerAudioContext.html#wx.createInnerAudioContext">wx.createInnerAudioContext() (wx 方法)</a>, <a href="api/wx.createInnerAudioContext.html#wx.createInnerAudioContext">[1]</a>
 </li>
-      <li><a href="api/MapContext.html#wx.createMapContext">wx.createMapContext() (wx 方法)</a>
+      <li><a href="api/wx.createIntersectionObserver.html#wx.createIntersectionObserver">wx.createIntersectionObserver() (wx 方法)</a>
 </li>
-      <li><a href="api/VideoContext.html#wx.createVideoContext">wx.createVideoContext() (wx 方法)</a>
+      <li><a href="api/LivePlayerContext.html#wx.createLivePlayerContext">wx.createLivePlayerContext() (wx 方法)</a>, <a href="api/wx.createLivePlayerContext.html#wx.createLivePlayerContext">[1]</a>
 </li>
-      <li><a href="api/Worker.html#wx.createWorker">wx.createWorker() (wx 方法)</a>
+      <li><a href="api/LivePusherContext.html#wx.createLivePusherContext">wx.createLivePusherContext() (wx 方法)</a>, <a href="api/wx.createLivePusherContext.html#wx.createLivePusherContext">[1]</a>
+</li>
+      <li><a href="api/MapContext.html#wx.createMapContext">wx.createMapContext() (wx 方法)</a>, <a href="api/wx.createMapContext.html#wx.createMapContext">[1]</a>
+</li>
+      <li><a href="api/wx.createSelectorQuery.html#wx.createSelectorQuery">wx.createSelectorQuery() (wx 方法)</a>
+</li>
+      <li><a href="api/UDPSocket.html#wx.createUDPSocket">wx.createUDPSocket() (wx 方法)</a>
+</li>
+      <li><a href="api/VideoContext.html#wx.createVideoContext">wx.createVideoContext() (wx 方法)</a>, <a href="api/wx.createVideoContext.html#wx.createVideoContext">[1]</a>
+</li>
+      <li><a href="api/Worker.html#wx.createWorker">wx.createWorker() (wx 方法)</a>, <a href="api/wx.createWorker.html#wx.createWorker">[1]</a>
+</li>
+      <li><a href="api/wx.downloadFile.html#wx.downloadFile">wx.downloadFile() (wx 方法)</a>
 </li>
       <li><a href="reference/api/wx.html#wx.wx.env">wx.env() (类)</a>
 </li>
       <li><a href="reference/api/wx.html#wx.wx.env.USER_DATA_PATH">wx.env.USER_DATA_PATH (wx.env 属性)</a>
 </li>
+      <li><a href="api/wx.getAccountInfoSync.html#wx.getAccountInfoSync">wx.getAccountInfoSync() (wx 方法)</a>
+</li>
       <li><a href="api/wx.getAvailableAudioSources.html#wx.getAvailableAudioSources">wx.getAvailableAudioSources() (wx 方法)</a>
 </li>
       <li><a href="api/BackgroundAudioManager.html#wx.getBackgroundAudioManager">wx.getBackgroundAudioManager() (wx 方法)</a>
+</li>
+      <li><a href="api/wx.getBatteryInfo.html#wx.getBatteryInfo">wx.getBatteryInfo() (wx 方法)</a>
+</li>
+      <li><a href="api/wx.getBatteryInfoSync.html#wx.getBatteryInfoSync">wx.getBatteryInfoSync() (wx 方法)</a>
+</li>
+      <li><a href="api/wx.getBeacons.html#wx.getBeacons">wx.getBeacons() (wx 方法)</a>
+</li>
+      <li><a href="api/wx.getBLEDeviceCharacteristics.html#wx.getBLEDeviceCharacteristics">wx.getBLEDeviceCharacteristics() (wx 方法)</a>
+</li>
+      <li><a href="api/wx.getBLEDeviceServices.html#wx.getBLEDeviceServices">wx.getBLEDeviceServices() (wx 方法)</a>
+</li>
+      <li><a href="api/wx.getBluetoothAdapterState.html#wx.getBluetoothAdapterState">wx.getBluetoothAdapterState() (wx 方法)</a>
+</li>
+      <li><a href="api/wx.getBluetoothDevices.html#wx.getBluetoothDevices">wx.getBluetoothDevices() (wx 方法)</a>
+</li>
+      <li><a href="api/wx.getClipboardData.html#wx.getClipboardData">wx.getClipboardData() (wx 方法)</a>
+</li>
+      <li><a href="api/wx.getConnectedBluetoothDevices.html#wx.getConnectedBluetoothDevices">wx.getConnectedBluetoothDevices() (wx 方法)</a>
+</li>
+      <li><a href="api/wx.getConnectedWifi.html#wx.getConnectedWifi">wx.getConnectedWifi() (wx 方法)</a>
 </li>
       <li><a href="api/wx.getExtConfig.html#wx.getExtConfig">wx.getExtConfig() (wx 方法)</a>
 </li>
@@ -781,7 +1068,17 @@
 </li>
       <li><a href="api/wx.getMenuButtonBoundingClientRect.html#wx.getMenuButtonBoundingClientRect">wx.getMenuButtonBoundingClientRect() (wx 方法)</a>
 </li>
-      <li><a href="api/RecorderManager.html#wx.getRecorderManager">wx.getRecorderManager() (wx 方法)</a>
+      <li><a href="api/wx.getNetworkType.html#wx.getNetworkType">wx.getNetworkType() (wx 方法)</a>
+</li>
+      <li><a href="api/RecorderManager.html#wx.getRecorderManager">wx.getRecorderManager() (wx 方法)</a>, <a href="api/wx.getRecorderManager.html#wx.getRecorderManager">[1]</a>
+</li>
+      <li><a href="api/wx.getSavedFileInfo.html#wx.getSavedFileInfo">wx.getSavedFileInfo() (wx 方法)</a>
+</li>
+      <li><a href="api/wx.getSavedFileList.html#wx.getSavedFileList">wx.getSavedFileList() (wx 方法)</a>
+</li>
+      <li><a href="api/wx.getScreenBrightness.html#wx.getScreenBrightness">wx.getScreenBrightness() (wx 方法)</a>
+</li>
+      <li><a href="api/wx.getSetting.html#wx.getSetting">wx.getSetting() (wx 方法)</a>
 </li>
       <li><a href="api/wx.getShareInfo.html#wx.getShareInfo">wx.getShareInfo() (wx 方法)</a>
 </li>
@@ -797,19 +1094,43 @@
 </li>
       <li><a href="api/wx.getSystemInfoSync.html#wx.getSystemInfoSync">wx.getSystemInfoSync() (wx 方法)</a>, <a href="wxwork/api/foundation/wx.getSystemInfoSync.html#wx.getSystemInfoSync">[1]</a>
 </li>
-      <li><a href="api/UpdateManager.html#wx.getUpdateManager">wx.getUpdateManager() (wx 方法)</a>
+      <li><a href="api/UpdateManager.html#wx.getUpdateManager">wx.getUpdateManager() (wx 方法)</a>, <a href="api/wx.getUpdateManager.html#wx.getUpdateManager">[1]</a>
+</li>
+      <li><a href="api/wx.getUserInfo.html#wx.getUserInfo">wx.getUserInfo() (wx 方法)</a>
+</li>
+      <li><a href="api/wx.getWeRunData.html#wx.getWeRunData">wx.getWeRunData() (wx 方法)</a>
+</li>
+      <li><a href="api/wx.getWifiList.html#wx.getWifiList">wx.getWifiList() (wx 方法)</a>
 </li>
       <li><a href="api/wx.hideLoading.html#wx.hideLoading">wx.hideLoading() (wx 方法)</a>
 </li>
+      <li><a href="api/wx.hideNavigationBarLoading.html#wx.hideNavigationBarLoading">wx.hideNavigationBarLoading() (wx 方法)</a>
+</li>
       <li><a href="api/wx.hideShareMenu.html#wx.hideShareMenu">wx.hideShareMenu() (wx 方法)</a>
+</li>
+      <li><a href="api/wx.hideTabBar.html#wx.hideTabBar">wx.hideTabBar() (wx 方法)</a>
+</li>
+      <li><a href="api/wx.hideTabBarRedDot.html#wx.hideTabBarRedDot">wx.hideTabBarRedDot() (wx 方法)</a>
 </li>
       <li><a href="api/wx.hideToast.html#wx.hideToast">wx.hideToast() (wx 方法)</a>
 </li>
+      <li><a href="api/wx.loadFontFace.html#wx.loadFontFace">wx.loadFontFace() (wx 方法)</a>
+</li>
+      <li><a href="api/wx.login.html#wx.login">wx.login() (wx 方法)</a>
+</li>
+      <li><a href="api/wx.makePhoneCall.html#wx.makePhoneCall">wx.makePhoneCall() (wx 方法)</a>
+</li>
       <li><a href="api/wx.navigateBack.html#wx.navigateBack">wx.navigateBack() (wx 方法)</a>
+</li>
+      <li><a href="api/wx.navigateBackMiniProgram.html#wx.navigateBackMiniProgram">wx.navigateBackMiniProgram() (wx 方法)</a>
 </li>
       <li><a href="api/wx.navigateTo.html#wx.navigateTo">wx.navigateTo() (wx 方法)</a>
 </li>
+      <li><a href="api/wx.navigateToMiniProgram.html#wx.navigateToMiniProgram">wx.navigateToMiniProgram() (wx 方法)</a>
+</li>
       <li><a href="api/wx.nextTick.html#wx.nextTick">wx.nextTick() (wx 方法)</a>
+</li>
+      <li><a href="api/wx.notifyBLECharacteristicValueChange.html#wx.notifyBLECharacteristicValueChange">wx.notifyBLECharacteristicValueChange() (wx 方法)</a>
 </li>
       <li><a href="api/wx.offAppHide.html#wx.offAppHide">wx.offAppHide() (wx 方法)</a>
 </li>
@@ -819,25 +1140,83 @@
 </li>
       <li><a href="api/wx.offAudioInterruptionEnd.html#wx.offAudioInterruptionEnd">wx.offAudioInterruptionEnd() (wx 方法)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api/wx.offError.html#wx.offError">wx.offError() (wx 方法)</a>
 </li>
+      <li><a href="api/wx.offLocalServiceDiscoveryStop.html#wx.offLocalServiceDiscoveryStop">wx.offLocalServiceDiscoveryStop() (wx 方法)</a>
+</li>
+      <li><a href="api/wx.offLocalServiceFound.html#wx.offLocalServiceFound">wx.offLocalServiceFound() (wx 方法)</a>
+</li>
+      <li><a href="api/wx.offLocalServiceLost.html#wx.offLocalServiceLost">wx.offLocalServiceLost() (wx 方法)</a>
+</li>
+      <li><a href="api/wx.offLocalServiceResolveFail.html#wx.offLocalServiceResolveFail">wx.offLocalServiceResolveFail() (wx 方法)</a>
+</li>
       <li><a href="api/wx.offPageNotFound.html#wx.offPageNotFound">wx.offPageNotFound() (wx 方法)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/wx.offWindowResize.html#wx.offWindowResize">wx.offWindowResize() (wx 方法)</a>
 </li>
       <li><a href="api/wx.onAppHide.html#wx.onAppHide">wx.onAppHide() (wx 方法)</a>
 </li>
       <li><a href="api/wx.onAppShow.html#wx.onAppShow">wx.onAppShow() (wx 方法)</a>
 </li>
-      <li><a href="api/wx.onBackgroundAudioPause.html#wx.onAudioInterruptionBegin">wx.onAudioInterruptionBegin() (wx 方法)</a>
+      <li><a href="api/wx.onAudioInterruptionBegin.html#wx.onAudioInterruptionBegin">wx.onAudioInterruptionBegin() (wx 方法)</a>, <a href="api/wx.onBackgroundAudioPause.html#wx.onAudioInterruptionBegin">[1]</a>
 </li>
       <li><a href="api/wx.onAudioInterruptionEnd.html#wx.onAudioInterruptionEnd">wx.onAudioInterruptionEnd() (wx 方法)</a>
 </li>
+      <li><a href="api/wx.onBackgroundAudioPlay.html#wx.onBackgroundAudioPlay">wx.onBackgroundAudioPlay() (wx 方法)</a>
+</li>
+      <li><a href="api/wx.onBeaconServiceChange.html#wx.onBeaconServiceChange">wx.onBeaconServiceChange() (wx 方法)</a>
+</li>
+      <li><a href="api/wx.onBeaconUpdate.html#wx.onBeaconUpdate">wx.onBeaconUpdate() (wx 方法)</a>
+</li>
+      <li><a href="api/wx.onBLECharacteristicValueChange.html#wx.onBLECharacteristicValueChange">wx.onBLECharacteristicValueChange() (wx 方法)</a>
+</li>
+      <li><a href="api/wx.onBLEConnectionStateChange.html#wx.onBLEConnectionStateChange">wx.onBLEConnectionStateChange() (wx 方法)</a>
+</li>
+      <li><a href="api/wx.onBluetoothAdapterStateChange.html#wx.onBluetoothAdapterStateChange">wx.onBluetoothAdapterStateChange() (wx 方法)</a>
+</li>
+      <li><a href="api/wx.onBluetoothDeviceFound.html#wx.onBluetoothDeviceFound">wx.onBluetoothDeviceFound() (wx 方法)</a>
+</li>
+      <li><a href="api/wx.onCompassChange.html#wx.onCompassChange">wx.onCompassChange() (wx 方法)</a>
+</li>
+      <li><a href="api/wx.onDeviceMotionChange.html#wx.onDeviceMotionChange">wx.onDeviceMotionChange() (wx 方法)</a>
+</li>
       <li><a href="api/wx.onError.html#wx.onError">wx.onError() (wx 方法)</a>
+</li>
+      <li><a href="api/wx.onGetWifiList.html#wx.onGetWifiList">wx.onGetWifiList() (wx 方法)</a>
+</li>
+      <li><a href="api/wx.onGyroscopeChange.html#wx.onGyroscopeChange">wx.onGyroscopeChange() (wx 方法)</a>
+</li>
+      <li><a href="api/wx.onHCEMessage.html#wx.onHCEMessage">wx.onHCEMessage() (wx 方法)</a>
+</li>
+      <li><a href="api/wx.onLocalServiceDiscoveryStop.html#wx.onLocalServiceDiscoveryStop">wx.onLocalServiceDiscoveryStop() (wx 方法)</a>
+</li>
+      <li><a href="api/wx.onLocalServiceFound.html#wx.onLocalServiceFound">wx.onLocalServiceFound() (wx 方法)</a>
+</li>
+      <li><a href="api/wx.onLocalServiceLost.html#wx.onLocalServiceLost">wx.onLocalServiceLost() (wx 方法)</a>
+</li>
+      <li><a href="api/wx.onLocalServiceResolveFail.html#wx.onLocalServiceResolveFail">wx.onLocalServiceResolveFail() (wx 方法)</a>
+</li>
+      <li><a href="api/wx.onMemoryWarning.html#wx.onMemoryWarning">wx.onMemoryWarning() (wx 方法)</a>
 </li>
       <li><a href="api/wx.onPageNotFound.html#wx.onPageNotFound">wx.onPageNotFound() (wx 方法)</a>
 </li>
+      <li><a href="api/wx.onWindowResize.html#wx.onWindowResize">wx.onWindowResize() (wx 方法)</a>
+</li>
+      <li><a href="api/wx.openBluetoothAdapter.html#wx.openBluetoothAdapter">wx.openBluetoothAdapter() (wx 方法)</a>
+</li>
+      <li><a href="api/wx.openCard.html#wx.openCard">wx.openCard() (wx 方法)</a>
+</li>
+      <li><a href="api/wx.openDocument.html#wx.openDocument">wx.openDocument() (wx 方法)</a>
+</li>
       <li><a href="api/wx.openLocation.html#wx.openLocation">wx.openLocation() (wx 方法)</a>
+</li>
+      <li><a href="api/wx.openSetting.html#wx.openSetting">wx.openSetting() (wx 方法)</a>
+</li>
+      <li><a href="api/wx.pageScrollTo.html#wx.pageScrollTo">wx.pageScrollTo() (wx 方法)</a>
+</li>
+      <li><a href="api/wx.pauseBackgroundAudio.html#wx.pauseBackgroundAudio">wx.pauseBackgroundAudio() (wx 方法)</a>
 </li>
       <li><a href="api/wx.pauseVoice.html#wx.pauseVoice">wx.pauseVoice() (wx 方法)</a>
 </li>
@@ -877,17 +1256,43 @@
 </li>
       <li><a href="wxwork/api/nfc/wx.qy.stopNFCReader.html#wx.qy.stopNFCReader">wx.qy.stopNFCReader() (wx.qy 方法)</a>
 </li>
+      <li><a href="api/wx.readBLECharacteristicValue.html#wx.readBLECharacteristicValue">wx.readBLECharacteristicValue() (wx 方法)</a>
+</li>
       <li><a href="api/wx.redirectTo.html#wx.redirectTo">wx.redirectTo() (wx 方法)</a>
 </li>
       <li><a href="api/wx.reLaunch.html#wx.reLaunch">wx.reLaunch() (wx 方法)</a>
+</li>
+      <li><a href="api/wx.removeSavedFile.html#wx.removeSavedFile">wx.removeSavedFile() (wx 方法)</a>
 </li>
       <li><a href="api/wx.removeStorage.html#wx.removeStorage">wx.removeStorage() (wx 方法)</a>
 </li>
       <li><a href="api/wx.removeStorageSync.html#wx.removeStorageSync">wx.removeStorageSync() (wx 方法)</a>
 </li>
+      <li><a href="api/wx.removeTabBarBadge.html#wx.removeTabBarBadge">wx.removeTabBarBadge() (wx 方法)</a>
+</li>
+      <li><a href="api/wx.reportAnalytics.html#wx.reportAnalytics">wx.reportAnalytics() (wx 方法)</a>
+</li>
+      <li><a href="api/wx.reportMonitor.html#wx.reportMonitor">wx.reportMonitor() (wx 方法)</a>
+</li>
+      <li><a href="api/wx.request.html#wx.request">wx.request() (wx 方法)</a>
+</li>
+      <li><a href="api/wx.requestPayment.html#wx.requestPayment">wx.requestPayment() (wx 方法)</a>
+</li>
+      <li><a href="api/wx.saveFile.html#wx.saveFile">wx.saveFile() (wx 方法)</a>
+</li>
       <li><a href="api/wx.saveImageToPhotosAlbum.html#wx.saveImageToPhotosAlbum">wx.saveImageToPhotosAlbum() (wx 方法)</a>
 </li>
       <li><a href="api/wx.saveVideoToPhotosAlbum.html#wx.saveVideoToPhotosAlbum">wx.saveVideoToPhotosAlbum() (wx 方法)</a>
+</li>
+      <li><a href="api/wx.scanCode.html#wx.scanCode">wx.scanCode() (wx 方法)</a>
+</li>
+      <li><a href="api/wx.sendHCEMessage.html#wx.sendHCEMessage">wx.sendHCEMessage() (wx 方法)</a>
+</li>
+      <li><a href="api/wx.sendSocketMessage.html#wx.sendSocketMessage">wx.sendSocketMessage() (wx 方法)</a>
+</li>
+      <li><a href="api/wx.setBackgroundColor.html#wx.setBackgroundColor">wx.setBackgroundColor() (wx 方法)</a>
+</li>
+      <li><a href="api/wx.setClipboardData.html#wx.setClipboardData">wx.setClipboardData() (wx 方法)</a>
 </li>
       <li><a href="api/wx.setEnableDebug.html#wx.setEnableDebug">wx.setEnableDebug() (wx 方法)</a>
 </li>
@@ -907,11 +1312,49 @@
 </li>
       <li><a href="api/wx.showShareMenu.html#wx.showShareMenu">wx.showShareMenu() (wx 方法)</a>
 </li>
+      <li><a href="api/wx.showTabBar.html#wx.showTabBar">wx.showTabBar() (wx 方法)</a>
+</li>
+      <li><a href="api/wx.showTabBarRedDot.html#wx.showTabBarRedDot">wx.showTabBarRedDot() (wx 方法)</a>
+</li>
       <li><a href="api/wx.showToast.html#wx.showToast">wx.showToast() (wx 方法)</a>
+</li>
+      <li><a href="api/wx.startAccelerometer.html#wx.startAccelerometer">wx.startAccelerometer() (wx 方法)</a>
+</li>
+      <li><a href="api/wx.startBeaconDiscovery.html#wx.startBeaconDiscovery">wx.startBeaconDiscovery() (wx 方法)</a>
+</li>
+      <li><a href="api/wx.startBluetoothDevicesDiscovery.html#wx.startBluetoothDevicesDiscovery">wx.startBluetoothDevicesDiscovery() (wx 方法)</a>
+</li>
+      <li><a href="api/wx.startCompass.html#wx.startCompass">wx.startCompass() (wx 方法)</a>
+</li>
+      <li><a href="api/wx.startDeviceMotionListening.html#wx.startDeviceMotionListening">wx.startDeviceMotionListening() (wx 方法)</a>
+</li>
+      <li><a href="api/wx.startGyroscope.html#wx.startGyroscope">wx.startGyroscope() (wx 方法)</a>
+</li>
+      <li><a href="api/wx.startHCE.html#wx.startHCE">wx.startHCE() (wx 方法)</a>
+</li>
+      <li><a href="api/wx.startLocalServiceDiscovery.html#wx.startLocalServiceDiscovery">wx.startLocalServiceDiscovery() (wx 方法)</a>
 </li>
       <li><a href="api/wx.startPullDownRefresh.html#wx.startPullDownRefresh">wx.startPullDownRefresh() (wx 方法)</a>
 </li>
       <li><a href="api/wx.startRecord.html#wx.startRecord">wx.startRecord() (wx 方法)</a>
+</li>
+      <li><a href="api/wx.startSoterAuthentication.html#wx.startSoterAuthentication">wx.startSoterAuthentication() (wx 方法)</a>
+</li>
+      <li><a href="api/wx.startWifi.html#wx.startWifi">wx.startWifi() (wx 方法)</a>
+</li>
+      <li><a href="api/wx.stopAccelerometer.html#wx.stopAccelerometer">wx.stopAccelerometer() (wx 方法)</a>
+</li>
+      <li><a href="api/wx.stopBackgroundAudio.html#wx.stopBackgroundAudio">wx.stopBackgroundAudio() (wx 方法)</a>
+</li>
+      <li><a href="api/wx.stopBeaconDiscovery.html#wx.stopBeaconDiscovery">wx.stopBeaconDiscovery() (wx 方法)</a>
+</li>
+      <li><a href="api/wx.stopDeviceMotionListening.html#wx.stopDeviceMotionListening">wx.stopDeviceMotionListening() (wx 方法)</a>
+</li>
+      <li><a href="api/wx.stopGyroscope.html#wx.stopGyroscope">wx.stopGyroscope() (wx 方法)</a>
+</li>
+      <li><a href="api/wx.stopHCE.html#wx.stopHCE">wx.stopHCE() (wx 方法)</a>
+</li>
+      <li><a href="api/wx.stopLocalServiceDiscovery.html#wx.stopLocalServiceDiscovery">wx.stopLocalServiceDiscovery() (wx 方法)</a>
 </li>
       <li><a href="api/wx.stopPullDownRefresh.html#wx.stopPullDownRefresh">wx.stopPullDownRefresh() (wx 方法)</a>
 </li>
@@ -919,9 +1362,19 @@
 </li>
       <li><a href="api/wx.stopVoice.html#wx.stopVoice">wx.stopVoice() (wx 方法)</a>
 </li>
+      <li><a href="api/wx.stopWifi.html#wx.stopWifi">wx.stopWifi() (wx 方法)</a>
+</li>
       <li><a href="api/wx.switchTab.html#wx.switchTab">wx.switchTab() (wx 方法)</a>
 </li>
       <li><a href="api/wx.updateShareMenu.html#wx.updateShareMenu">wx.updateShareMenu() (wx 方法)</a>
+</li>
+      <li><a href="api/wx.uploadFile.html#wx.uploadFile">wx.uploadFile() (wx 方法)</a>
+</li>
+      <li><a href="api/wx.vibrateLong.html#wx.vibrateLong">wx.vibrateLong() (wx 方法)</a>
+</li>
+      <li><a href="api/wx.vibrateShort.html#wx.vibrateShort">wx.vibrateShort() (wx 方法)</a>
+</li>
+      <li><a href="api/wx.writeBLECharacteristicValue.html#wx.writeBLECharacteristicValue">wx.writeBLECharacteristicValue() (wx 方法)</a>
 </li>
       <li><a href="rst.html#directive-wxcomp">wxcomp (指令)</a>
 </li>
@@ -941,7 +1394,7 @@
 <h2 id="版">版</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="glossary.html#term"><strong>版本</strong></a>
+      <li><a href="glossary.html#term-0"><strong>版本</strong></a>
 </li>
   </ul></td>
 </tr></table>
@@ -977,9 +1430,7 @@
 </li>
         <li><a href="reference/configuration/app.html#envvar-subpackages">subpackages</a>
 </li>
-        <li><a href="api/wx.navigateTo.html#index-0">tabBar</a>, <a href="api/wx.navigateTo.html#index-1">[1]</a>, <a href="framework/app-service/route.html#index-0">[2]</a>, <a href="framework/app-service/route.html#index-1">[3]</a>, <a href="framework/app-service/route.html#index-2">[4]</a>, <a href="reference/configuration/app.html#envvar-tabBar">[5]</a>
-</li>
-        <li><a href="framework/app-service/route.html#index-3">tabBar。</a>
+        <li><a href="api/wx.navigateTo.html#index-0">tabBar</a>, <a href="api/wx.navigateTo.html#index-1">[1]</a>, <a href="framework/app-service/route.html#index-0">[2]</a>, <a href="framework/app-service/route.html#index-1">[3]</a>, <a href="framework/app-service/route.html#index-2">[4]</a>, <a href="framework/app-service/route.html#index-3">[5]</a>, <a href="reference/configuration/app.html#envvar-tabBar">[6]</a>
 </li>
         <li><a href="reference/configuration/app.html#envvar-usingComponents">usingComponents</a>
 </li>
@@ -993,43 +1444,28 @@
 
 
 
-           </div>
-           
           </div>
-          <footer>
-  
-
-  <hr/>
-
-  <div role="contentinfo">
-    <p>
-        &copy; Copyright 2019, Nosy
-
-    </p>
-  </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
-
-</footer>
-
         </div>
       </div>
-
-    </section>
-
-  </div>
-  
-
-
-  <script type="text/javascript">
-      jQuery(function () {
-          SphinxRtdTheme.Navigation.enable(true);
-      });
-  </script>
-
-  
-  
-    
-   
-
-</body>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>导航</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="#" title="总目录"
+             >索引</a></li>
+        <li class="right" >
+          <a href="http-routingtable.html" title="微信小程序API"
+             >wxapi</a> |</li>
+<li><a href="index.html">主页</a>&#160;|</li>
+<li><a href="contents.html">文档</a> &#187;</li>
+ 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; 版权所有 2019, Wxadev Docs.
+      由 <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.0+/40994a8 创建。
+    </div>
+  </body>
 </html>

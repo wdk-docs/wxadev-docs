@@ -37,7 +37,7 @@ msgid "一、HTTPS 调用"
 msgstr ""
 
 #: ../../source/api-backend/logistics.getPrinter.rst:15
-msgid "请求地址 GET https://api.weixin.qq.com/cgi-bin/express/business/printer/getall?access_token=ACCESS_TOKEN"
+msgid "请求地址 .. http:post:: /express/business/printer/getall?access_token=ACCESS_TOKEN"
 msgstr ""
 
 #: ../../source/api-backend/logistics.getPrinter.rst:18

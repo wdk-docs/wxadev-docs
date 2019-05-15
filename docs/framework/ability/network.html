@@ -1,206 +1,155 @@
 
-
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-CN" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-CN" > <!--<![endif]-->
-<head>
-  <meta charset="utf-8">
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <title>网络 &mdash; wxadev 1.0.0 文档</title>
-  
 
-  
-  
-  
-  
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
+  <head>
+    <meta charset="utf-8" />
+    <title>网络 &#8212; wxadev 1.0.0 文档</title>
+    <link rel="stylesheet" href="../../_static/sphinx13.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/language_data.js"></script>
+    <script type="text/javascript" src="../../_static/translations.js"></script>
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="在 wxadev 1.0.0 文档 中搜索"
+          href="../../_static/opensearch.xml"/>
 
-  
-  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
-  
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../../_static/jquery.js"></script>
-        <script type="text/javascript" src="../../_static/underscore.js"></script>
-        <script type="text/javascript" src="../../_static/doctools.js"></script>
-        <script type="text/javascript" src="../../_static/language_data.js"></script>
-        <script type="text/javascript" src="../../_static/translations.js"></script>
-    
-    <script type="text/javascript" src="../../_static/js/theme.js"></script>
-
-    
-
-  
-  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="index" title="索引" href="../../genindex.html" />
     <link rel="search" title="搜索" href="../../search.html" />
     <link rel="next" title="局域网通信" href="mDNS.html" />
-    <link rel="prev" title="基础能力" href="index.html" /> 
-</head>
+    <link rel="prev" title="基础能力" href="index.html" />
+<link rel="canonical" href="http://www.sphinx-doc.org/en/master/framework/ability/network.html" />
 
-<body class="wy-body-for-nav">
-
-   
-  <div class="wy-grid-for-nav">
-    
-    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
-      <div class="wy-side-scroll">
-        <div class="wy-side-nav-search" >
-          
-
-          
-            <a href="../../contents.html" class="icon icon-home"> wxadev
-          
-
-          
-          </a>
-
-          
-            
-            
-          
-
-          
-<div role="search">
-  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
-    <input type="hidden" name="check_keywords" value="yes" />
-    <input type="hidden" name="area" value="default" />
-  </form>
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet" type="text/css" />
+ 
+<style type="text/css">
+  table.right { float: right; margin-left: 20px; }
+  table.right td { border: 1px solid #ccc; }
+  
+</style>
+<script type="text/javascript">
+  // intelligent scrolling of the sidebar content
+  $(window).scroll(function() {
+    var sb = $('.sphinxsidebarwrapper');
+    var win = $(window);
+    var sbh = sb.height();
+    var offset = $('.sphinxsidebar').position()['top'];
+    var wintop = win.scrollTop();
+    var winbot = wintop + win.innerHeight();
+    var curtop = sb.position()['top'];
+    var curbot = curtop + sbh;
+    // does sidebar fit in window?
+    if (sbh < win.innerHeight()) {
+      // yes: easy case -- always keep at the top
+      sb.css('top', $u.min([$u.max([0, wintop - offset - 10]), $(document).height() - sbh - 200]));
+    } else {
+      // no: only scroll if top/bottom edge of sidebar is at
+      // top/bottom edge of window
+      if (curtop > wintop && curbot > winbot) {
+        sb.css('top', $u.max([wintop - offset - 10, 0]));
+      } else if (curtop < wintop && curbot < winbot) {
+        sb.css('top', $u.min([winbot - sbh - offset - 20, $(document).height() - sbh - 200]));
+      }
+    }
+  });
+</script> 
+  </head><body>
+<div class="pageheader">
+  <ul>
+    <li><a href="../../index.html">主页</a></li>
+    <li><a href="../index.html">框架</a></li>
+    <li><a href="../../component/index.html">组件</a></li>
+    <li><a href="../../api/index.html">API</a></li>
+    <li><a href="../../api-backend/index.html">服务端</a></li>
+    <li><a href="../../contents.html">目录</a></li>
+  </ul>
+  <div>
+    <a href="../../index.html">
+      <img src="../../_static/wxaheader.png" alt="wxa" />
+    </a>
+  </div>
 </div>
 
-          
-        </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>导航</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="总目录"
+             accesskey="I">索引</a></li>
+        <li class="right" >
+          <a href="../../http-routingtable.html" title="微信小程序API"
+             >wxapi</a> |</li>
+        <li class="right" >
+          <a href="mDNS.html" title="局域网通信"
+             accesskey="N">下一页</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="基础能力"
+             accesskey="P">上一页</a> |</li>
+<li><a href="../../index.html">主页</a>&#160;|</li>
+<li><a href="../../contents.html">文档</a> &#187;</li>
 
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-              
-            
-            
-              <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../../index.html">开发指南</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../dev.html">简介</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../basic/index.html">基础教程</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../guide/index.html">运行环境</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="../index.html">框架</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="../MINA.html">框架</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../structure.html">目录结构</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../config.html">小程序配置</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../sitemap.html">sitemap 配置</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../app-service/index.html">逻辑层 App Service</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../view/index.html">视图层 View</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../details.html">运行环境</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../plugin/index.html">插件</a></li>
-<li class="toctree-l2 current"><a class="reference internal" href="index.html">基础能力</a><ul class="current">
-<li class="toctree-l3 current"><a class="current reference internal" href="#">网络</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#id2">1. 服务器域名配置</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id4">2. 网络请求</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id9">3. 常见问题</a></li>
+          <li class="nav-item nav-item-1"><a href="../index.html" >框架</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="index.html" accesskey="U">基础能力</a> &#187;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../../contents.html">目录</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">网络</a><ul>
+<li><a class="reference internal" href="#id2">1. 服务器域名配置</a><ul>
+<li><a class="reference internal" href="#id3">配置流程</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="mDNS.html">局域网通信</a></li>
-<li class="toctree-l3"><a class="reference internal" href="storage.html">存储</a></li>
-<li class="toctree-l3"><a class="reference internal" href="file-system.html">文件系统</a></li>
-<li class="toctree-l3"><a class="reference internal" href="canvas.html">Canvas 画布</a></li>
-<li class="toctree-l3"><a class="reference internal" href="subpackages/index.html">分包加载</a></li>
-<li class="toctree-l3"><a class="reference internal" href="server-ability/index.html">服务端能力</a></li>
-<li class="toctree-l3"><a class="reference internal" href="custom-tabbar.html">自定义 tabBar</a></li>
+<li><a class="reference internal" href="#id4">2. 网络请求</a><ul>
+<li><a class="reference internal" href="#id5">超时时间</a></li>
+<li><a class="reference internal" href="#id6">使用限制</a></li>
+<li><a class="reference internal" href="#id7">返回值编码</a></li>
+<li><a class="reference internal" href="#id8">回调函数</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../device/index.html">硬件能力</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../open-ability/index.html">开放能力</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../usability.html">调试</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../usability/index.html">可用性</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../performance/index.html">性能</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../client-lib/index.html">基础库</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../compatibility.html">兼容处理</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../workers.html">多线程 Worker</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../server-ability/index.html">后端能力</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../release/index.html">版本更新</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../operating-mechanism.html">运行机制</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../custom-component/index.html">自定义组件</a></li>
+<li><a class="reference internal" href="#id9">3. 常见问题</a><ul>
+<li><a class="reference internal" href="#https">HTTPS 证书</a></li>
+<li><a class="reference internal" href="#id10">跳过域名校验</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../component/index.html">组件</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../api/index.html">API</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../api-backend/index.html">服务端API</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../devtools/index.html">开发工具</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../reference/index.html">参考资料</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../wxcloud/index.html">云开发</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../wxwork/index.html">企业微信</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../todolist.html">待办事项</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../glossary.html">术语</a></li>
+</ul>
+</li>
 </ul>
 
-            
-          
+  <h4>上一个主题</h4>
+  <p class="topless"><a href="index.html"
+                        title="上一章">基础能力</a></p>
+  <h4>下一个主题</h4>
+  <p class="topless"><a href="mDNS.html"
+                        title="下一章">局域网通信</a></p>
+  <div role="note" aria-label="source link">
+    <h3>本页</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../_sources/framework/ability/network.rst.txt"
+            rel="nofollow">显示源代码</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">快速搜索</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="转向" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
         </div>
       </div>
-    </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
-          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../../contents.html">wxadev</a>
-        
-      </nav>
-
-
-      <div class="wy-nav-content">
-        
-        <div class="rst-content">
-        
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-
-  <ul class="wy-breadcrumbs">
-    
-      <li><a href="../../contents.html">Docs</a> &raquo;</li>
-        
-          <li><a href="../index.html">框架</a> &raquo;</li>
-        
-          <li><a href="index.html">基础能力</a> &raquo;</li>
-        
-      <li>网络</li>
-    
-    
-      <li class="wy-breadcrumbs-aside">
-        
-            
-            <a href="../../_sources/framework/ability/network.rst.txt" rel="nofollow"> View page source</a>
-          
-        
-      </li>
-    
-  </ul>
-
-  
-  <hr/>
-</div>
-          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
-           <div itemprop="articleBody">
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
             
   <div class="section" id="id1">
 <h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/framework/ability/network.html">网络</a><a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
@@ -209,18 +158,18 @@
 <h2>1. 服务器域名配置<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
 <p>每个微信小程序需要事先设置一个通讯域名，小程序只可以跟指定的域名与进行网络通信。包括普通:</p>
 <ul class="simple">
-<li><p>HTTPS 请求（<code class="xref js js-func docutils literal notranslate"><span class="pre">wx.request()</span></code>）</p></li>
-<li><p>上传文件（<code class="xref js js-func docutils literal notranslate"><span class="pre">wx.uploadFile()</span></code>）</p></li>
-<li><p>下载文件（<code class="xref js js-func docutils literal notranslate"><span class="pre">wx.downloadFile()</span></code>)</p></li>
-<li><p>WebSocket 通信（<code class="xref js js-func docutils literal notranslate"><span class="pre">wx.connectSocket()</span></code>）</p></li>
+<li><p>HTTPS 请求（<a class="reference internal" href="../../api/wx.request.html#wx.request" title="wx.request"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.request()</span></code></a>）</p></li>
+<li><p>上传文件（<a class="reference internal" href="../../api/wx.uploadFile.html#wx.uploadFile" title="wx.uploadFile"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.uploadFile()</span></code></a>）</p></li>
+<li><p>下载文件（<a class="reference internal" href="../../api/wx.downloadFile.html#wx.downloadFile" title="wx.downloadFile"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.downloadFile()</span></code></a>)</p></li>
+<li><p>WebSocket 通信（<a class="reference internal" href="../../api/wx.connectSocket.html#wx.connectSocket" title="wx.connectSocket"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.connectSocket()</span></code></a>）</p></li>
 </ul>
 <div class="section" id="id3">
 <h3>配置流程<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h3>
 <p>服务器域名请在 「小程序后台-设置-开发设置-服务器域名」 中进行配置，配置时需要注意：</p>
 <ul class="simple">
 <li><p>域名只支持
-https (<code class="xref js js-func docutils literal notranslate"><span class="pre">wx.request()</span></code>、<code class="xref js js-func docutils literal notranslate"><span class="pre">wx.uploadFile()</span></code>、<code class="xref js js-func docutils literal notranslate"><span class="pre">wx.downloadFile()</span></code>)
-和 wss (<code class="xref js js-func docutils literal notranslate"><span class="pre">wx.connectSocket()</span></code>) 协议；</p></li>
+https (<a class="reference internal" href="../../api/wx.request.html#wx.request" title="wx.request"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.request()</span></code></a>、<a class="reference internal" href="../../api/wx.uploadFile.html#wx.uploadFile" title="wx.uploadFile"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.uploadFile()</span></code></a>、<a class="reference internal" href="../../api/wx.downloadFile.html#wx.downloadFile" title="wx.downloadFile"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.downloadFile()</span></code></a>)
+和 wss (<a class="reference internal" href="../../api/wx.connectSocket.html#wx.connectSocket" title="wx.connectSocket"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.connectSocket()</span></code></a>) 协议；</p></li>
 <li><p>域名不能使用 IP 地址或 localhost；</p></li>
 <li><p>可以配置端口，如 <em>https://myserver.com:8080</em> ，但是配置后只能向 <em>https://myserver.com:8080</em> 发起请求。
 如果向 <em>https://myserver.com</em> 、<em>https://myserver.com:9091</em> 等 URL 请求则会失败。</p></li>
@@ -309,52 +258,36 @@ https (<code class="xref js js-func docutils literal notranslate"><span class="p
 </div>
 
 
-           </div>
-           
           </div>
-          <footer>
-  
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="mDNS.html" class="btn btn-neutral float-right" title="局域网通信" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="index.html" class="btn btn-neutral float-left" title="基础能力" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
-    </div>
-  
-
-  <hr/>
-
-  <div role="contentinfo">
-    <p>
-        &copy; Copyright 2019, Nosy
-
-    </p>
-  </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
-
-</footer>
-
         </div>
       </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>导航</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="总目录"
+             >索引</a></li>
+        <li class="right" >
+          <a href="../../http-routingtable.html" title="微信小程序API"
+             >wxapi</a> |</li>
+        <li class="right" >
+          <a href="mDNS.html" title="局域网通信"
+             >下一页</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="基础能力"
+             >上一页</a> |</li>
+<li><a href="../../index.html">主页</a>&#160;|</li>
+<li><a href="../../contents.html">文档</a> &#187;</li>
 
-    </section>
-
-  </div>
-  
-
-
-  <script type="text/javascript">
-      jQuery(function () {
-          SphinxRtdTheme.Navigation.enable(true);
-      });
-  </script>
-
-  
-  
-    
-   
-
-</body>
+          <li class="nav-item nav-item-1"><a href="../index.html" >框架</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="index.html" >基础能力</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; 版权所有 2019, Wxadev Docs.
+      由 <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.0+/40994a8 创建。
+    </div>
+  </body>
 </html>

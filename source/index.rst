@@ -11,3 +11,20 @@
 *  小程序 :doc:`/component/index` 参考文档
 *  小程序 :doc:`/api/index` 参考文档
 *  小程序 :doc:`/api-backend/index` 参考文档
+
+
+指数和表格
+==================
+
+.. only:: builder_html
+
+   * :ref:`genindex`
+   * :ref:`modindex`
+   * :ref:`http-routingtable`
+   * :ref:`search`
+   * :ref:`glossary`
+
+.. only:: not builder_html
+
+   * :ref:`modindex`
+   * :ref:`glossary`

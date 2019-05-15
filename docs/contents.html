@@ -1,163 +1,129 @@
 
-
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-CN" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-CN" > <!--<![endif]-->
-<head>
-  <meta charset="utf-8">
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <title>开发教程 &mdash; wxadev 1.0.0 文档</title>
-  
 
-  
-  
-  
-  
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
+  <head>
+    <meta charset="utf-8" />
+    <title>开发教程 &#8212; wxadev 1.0.0 文档</title>
+    <link rel="stylesheet" href="_static/sphinx13.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="在 wxadev 1.0.0 文档 中搜索"
+          href="_static/opensearch.xml"/>
 
-  
-  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
-  
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-        <script type="text/javascript" src="_static/jquery.js"></script>
-        <script type="text/javascript" src="_static/underscore.js"></script>
-        <script type="text/javascript" src="_static/doctools.js"></script>
-        <script type="text/javascript" src="_static/language_data.js"></script>
-        <script type="text/javascript" src="_static/translations.js"></script>
-    
-    <script type="text/javascript" src="_static/js/theme.js"></script>
-
-    
-
-  
-  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="index" title="索引" href="genindex.html" />
     <link rel="search" title="搜索" href="search.html" />
-    <link rel="next" title="开发指南" href="index.html" /> 
-</head>
+    <link rel="next" title="开发指南" href="index.html" />
+<link rel="canonical" href="http://www.sphinx-doc.org/en/master/contents.html" />
 
-<body class="wy-body-for-nav">
-
-   
-  <div class="wy-grid-for-nav">
-    
-    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
-      <div class="wy-side-scroll">
-        <div class="wy-side-nav-search" >
-          
-
-          
-            <a href="#" class="icon icon-home"> wxadev
-          
-
-          
-          </a>
-
-          
-            
-            
-          
-
-          
-<div role="search">
-  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
-    <input type="hidden" name="check_keywords" value="yes" />
-    <input type="hidden" name="area" value="default" />
-  </form>
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet" type="text/css" />
+ 
+<style type="text/css">
+  table.right { float: right; margin-left: 20px; }
+  table.right td { border: 1px solid #ccc; }
+  
+</style>
+<script type="text/javascript">
+  // intelligent scrolling of the sidebar content
+  $(window).scroll(function() {
+    var sb = $('.sphinxsidebarwrapper');
+    var win = $(window);
+    var sbh = sb.height();
+    var offset = $('.sphinxsidebar').position()['top'];
+    var wintop = win.scrollTop();
+    var winbot = wintop + win.innerHeight();
+    var curtop = sb.position()['top'];
+    var curbot = curtop + sbh;
+    // does sidebar fit in window?
+    if (sbh < win.innerHeight()) {
+      // yes: easy case -- always keep at the top
+      sb.css('top', $u.min([$u.max([0, wintop - offset - 10]), $(document).height() - sbh - 200]));
+    } else {
+      // no: only scroll if top/bottom edge of sidebar is at
+      // top/bottom edge of window
+      if (curtop > wintop && curbot > winbot) {
+        sb.css('top', $u.max([wintop - offset - 10, 0]));
+      } else if (curtop < wintop && curbot < winbot) {
+        sb.css('top', $u.min([winbot - sbh - offset - 20, $(document).height() - sbh - 200]));
+      }
+    }
+  });
+</script> 
+  </head><body>
+<div class="pageheader">
+  <ul>
+    <li><a href="index.html">主页</a></li>
+    <li><a href="framework/index.html">框架</a></li>
+    <li><a href="component/index.html">组件</a></li>
+    <li><a href="api/index.html">API</a></li>
+    <li><a href="api-backend/index.html">服务端</a></li>
+    <li><a href="#">目录</a></li>
+  </ul>
+  <div>
+    <a href="index.html">
+      <img src="_static/wxaheader.png" alt="wxa" />
+    </a>
+  </div>
 </div>
 
-          
-        </div>
-
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-              
-            
-            
-              <ul>
-<li class="toctree-l1"><a class="reference internal" href="index.html">开发指南</a></li>
-<li class="toctree-l1"><a class="reference internal" href="dev.html">简介</a></li>
-<li class="toctree-l1"><a class="reference internal" href="basic/index.html">基础教程</a></li>
-<li class="toctree-l1"><a class="reference internal" href="guide/index.html">运行环境</a></li>
-<li class="toctree-l1"><a class="reference internal" href="framework/index.html">框架</a></li>
-<li class="toctree-l1"><a class="reference internal" href="component/index.html">组件</a></li>
-<li class="toctree-l1"><a class="reference internal" href="api/index.html">API</a></li>
-<li class="toctree-l1"><a class="reference internal" href="api-backend/index.html">服务端API</a></li>
-<li class="toctree-l1"><a class="reference internal" href="devtools/index.html">开发工具</a></li>
-<li class="toctree-l1"><a class="reference internal" href="reference/index.html">参考资料</a></li>
-<li class="toctree-l1"><a class="reference internal" href="wxcloud/index.html">云开发</a></li>
-<li class="toctree-l1"><a class="reference internal" href="wxwork/index.html">企业微信</a></li>
-<li class="toctree-l1"><a class="reference internal" href="todolist.html">待办事项</a></li>
-<li class="toctree-l1"><a class="reference internal" href="glossary.html">术语</a></li>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>导航</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="总目录"
+             accesskey="I">索引</a></li>
+        <li class="right" >
+          <a href="http-routingtable.html" title="微信小程序API"
+             >wxapi</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="开发指南"
+             accesskey="N">下一页</a> |</li>
+<li><a href="index.html">主页</a>&#160;|</li>
+<li><a href="#">文档</a> &#187;</li>
+ 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="#">目录</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">开发教程</a></li>
+<li><a class="reference internal" href="#id2">指数和表格</a></li>
 </ul>
 
-            
-          
+  <h4>下一个主题</h4>
+  <p class="topless"><a href="index.html"
+                        title="下一章">开发指南</a></p>
+  <div role="note" aria-label="source link">
+    <h3>本页</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/contents.rst.txt"
+            rel="nofollow">显示源代码</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">快速搜索</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="转向" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
         </div>
       </div>
-    </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
-          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="#">wxadev</a>
-        
-      </nav>
-
-
-      <div class="wy-nav-content">
-        
-        <div class="rst-content">
-        
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-
-  <ul class="wy-breadcrumbs">
-    
-      <li><a href="#">Docs</a> &raquo;</li>
-        
-      <li>开发教程</li>
-    
-    
-      <li class="wy-breadcrumbs-aside">
-        
-            
-            <a href="_sources/contents.rst.txt" rel="nofollow"> View page source</a>
-          
-        
-      </li>
-    
-  </ul>
-
-  
-  <hr/>
-</div>
-          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
-           <div itemprop="articleBody">
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
             
   <div class="section" id="id1">
 <h1>开发教程<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
@@ -165,6 +131,7 @@
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="index.html">开发指南</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index.html#id2">指数和表格</a></li>
 <li class="toctree-l1"><a class="reference internal" href="dev.html">简介</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="dev.html#id2">技术发展史</a></li>
 <li class="toctree-l2"><a class="reference internal" href="dev.html#id3">与普通网页开发的区别</a></li>
@@ -172,394 +139,38 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="basic/index.html">基础教程</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="basic/quickstart.html">起步</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="basic/quickstart.html#id2">申请帐号</a></li>
-<li class="toctree-l3"><a class="reference internal" href="basic/quickstart.html#id5">安装开发工具</a></li>
-<li class="toctree-l3"><a class="reference internal" href="basic/quickstart.html#id7">你的第一个小程序</a></li>
-<li class="toctree-l3"><a class="reference internal" href="basic/quickstart.html#id8">编译预览</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="basic/code.html">代码构成</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="basic/code.html#json">JSON 配置</a></li>
-<li class="toctree-l3"><a class="reference internal" href="basic/code.html#wxml">WXML 模板</a></li>
-<li class="toctree-l3"><a class="reference internal" href="basic/code.html#wxss">WXSS 样式</a></li>
-<li class="toctree-l3"><a class="reference internal" href="basic/code.html#js">JS 逻辑交互</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="basic/framework.html">宿主环境</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="basic/framework.html#id2">渲染层和逻辑层</a></li>
-<li class="toctree-l3"><a class="reference internal" href="basic/framework.html#id4">程序与页面</a></li>
-<li class="toctree-l3"><a class="reference internal" href="basic/framework.html#id5">组件</a></li>
-<li class="toctree-l3"><a class="reference internal" href="basic/framework.html#api">API</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="basic/release.html">协同工作和发布</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="basic/release.html#id2">协同工作</a></li>
-<li class="toctree-l3"><a class="reference internal" href="basic/release.html#id3">小程序成员管理</a></li>
-<li class="toctree-l3"><a class="reference internal" href="basic/release.html#id4">小程序的版本</a></li>
-<li class="toctree-l3"><a class="reference internal" href="basic/release.html#id5">发布上线</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="basic/release.html#id6">预览</a></li>
-<li class="toctree-l4"><a class="reference internal" href="basic/release.html#id7">提交审核</a></li>
-<li class="toctree-l4"><a class="reference internal" href="basic/release.html#id8">发布</a></li>
-<li class="toctree-l4"><a class="reference internal" href="basic/release.html#id9">小程序码</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="basic/release.html#id10">运营数据</a></li>
-</ul>
-</li>
+<li class="toctree-l2"><a class="reference internal" href="basic/quickstart.html">起步</a></li>
+<li class="toctree-l2"><a class="reference internal" href="basic/code.html">代码构成</a></li>
+<li class="toctree-l2"><a class="reference internal" href="basic/framework.html">宿主环境</a></li>
+<li class="toctree-l2"><a class="reference internal" href="basic/release.html">协同工作和发布</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="guide/index.html">运行环境</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="guide/runtime/index.html">运行环境</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="guide/runtime/js-support.html">JavaScript 支持情况</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="guide/runtime/js-support.html#id1">运行限制</a></li>
-<li class="toctree-l4"><a class="reference internal" href="guide/runtime/js-support.html#es6-api">客户端 ES6 API 支持情况</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="guide/runtime/update-mechanism.html">小程序更新机制</a></li>
-</ul>
-</li>
+<li class="toctree-l2"><a class="reference internal" href="guide/runtime/index.html">运行环境</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="framework/index.html">框架</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="framework/MINA.html">框架</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="framework/MINA.html#id2">响应的数据绑定</a></li>
-<li class="toctree-l3"><a class="reference internal" href="framework/MINA.html#id3">页面管理</a></li>
-<li class="toctree-l3"><a class="reference internal" href="framework/MINA.html#id4">基础组件</a></li>
-<li class="toctree-l3"><a class="reference internal" href="framework/MINA.html#api">丰富的 API</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="framework/structure.html">目录结构</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="framework/structure.html#id2">允许上传的文件</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="framework/config.html">小程序配置</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="framework/config.html#id2">全局配置</a></li>
-<li class="toctree-l3"><a class="reference internal" href="framework/config.html#id4">页面配置</a></li>
-</ul>
-</li>
+<li class="toctree-l2"><a class="reference internal" href="framework/MINA.html">框架</a></li>
+<li class="toctree-l2"><a class="reference internal" href="framework/structure.html">目录结构</a></li>
+<li class="toctree-l2"><a class="reference internal" href="framework/config.html">小程序配置</a></li>
 <li class="toctree-l2"><a class="reference internal" href="framework/sitemap.html">sitemap 配置</a></li>
-<li class="toctree-l2"><a class="reference internal" href="framework/app-service/index.html">逻辑层 App Service</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="framework/app-service/scene.html">场景值</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="framework/app-service/scene.html#id2">获取场景值</a></li>
-<li class="toctree-l4"><a class="reference internal" href="framework/app-service/scene.html#id3">返回来源信息的场景</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="framework/app-service/route.html">页面路由</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="framework/app-service/route.html#id2">页面栈</a></li>
-<li class="toctree-l4"><a class="reference internal" href="framework/app-service/route.html#id3">路由方式</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="framework/app-service/page.html">注册页面</a></li>
-<li class="toctree-l3"><a class="reference internal" href="framework/app-service/page-life-cycle.html">生命周期</a></li>
-<li class="toctree-l3"><a class="reference internal" href="framework/app-service/module.html">模块化</a></li>
-<li class="toctree-l3"><a class="reference internal" href="framework/app-service/app.html">注册小程序</a></li>
-<li class="toctree-l3"><a class="reference internal" href="framework/app-service/api.html">API</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="framework/view/index.html">视图层 View</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="framework/view/wxml/index.html">WXML</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="framework/view/wxml/data.html">数据绑定</a><ul>
-<li class="toctree-l5"><a class="reference internal" href="framework/view/wxml/data.html#id2">简单绑定</a></li>
-<li class="toctree-l5"><a class="reference internal" href="framework/view/wxml/data.html#id7">运算</a></li>
-<li class="toctree-l5"><a class="reference internal" href="framework/view/wxml/data.html#id13">组合</a></li>
-</ul>
-</li>
-<li class="toctree-l4"><a class="reference internal" href="framework/view/wxml/list.html">wx:for 列表渲染</a><ul>
-<li class="toctree-l5"><a class="reference internal" href="framework/view/wxml/list.html#id2">wx:for</a></li>
-<li class="toctree-l5"><a class="reference internal" href="framework/view/wxml/list.html#block-wx-for">block wx:for</a></li>
-<li class="toctree-l5"><a class="reference internal" href="framework/view/wxml/list.html#wx-key">wx:key</a></li>
-</ul>
-</li>
-<li class="toctree-l4"><a class="reference internal" href="framework/view/wxml/conditional.html">wx:if 条件渲染</a><ul>
-<li class="toctree-l5"><a class="reference internal" href="framework/view/wxml/conditional.html#id1">wx:if</a></li>
-<li class="toctree-l5"><a class="reference internal" href="framework/view/wxml/conditional.html#block-wx-if">block wx:if</a></li>
-<li class="toctree-l5"><a class="reference internal" href="framework/view/wxml/conditional.html#wx-if-vs-hidden">wx:if vs hidden</a></li>
-</ul>
-</li>
-<li class="toctree-l4"><a class="reference internal" href="framework/view/wxml/template.html">template 模板</a><ul>
-<li class="toctree-l5"><a class="reference internal" href="framework/view/wxml/template.html#id1">定义模板</a></li>
-<li class="toctree-l5"><a class="reference internal" href="framework/view/wxml/template.html#id2">使用模板</a></li>
-<li class="toctree-l5"><a class="reference internal" href="framework/view/wxml/template.html#id3">模板的作用域</a></li>
-</ul>
-</li>
-<li class="toctree-l4"><a class="reference internal" href="framework/view/wxml/import.html">import 引用</a><ul>
-<li class="toctree-l5"><a class="reference internal" href="framework/view/wxml/import.html#id1">import</a></li>
-<li class="toctree-l5"><a class="reference internal" href="framework/view/wxml/import.html#id2">import 的作用域</a></li>
-<li class="toctree-l5"><a class="reference internal" href="framework/view/wxml/import.html#include">include</a></li>
-</ul>
-</li>
-<li class="toctree-l4"><a class="reference internal" href="framework/view/wxml/event.html">bindtap 事件</a><ul>
-<li class="toctree-l5"><a class="reference internal" href="framework/view/wxml/event.html#id1">什么是事件</a></li>
-<li class="toctree-l5"><a class="reference internal" href="framework/view/wxml/event.html#id2">事件的使用方式</a></li>
-<li class="toctree-l5"><a class="reference internal" href="framework/view/wxml/event.html#wxs">使用WXS函数响应事件</a></li>
-<li class="toctree-l5"><a class="reference internal" href="framework/view/wxml/event.html#id3">事件详解</a></li>
-<li class="toctree-l5"><a class="reference internal" href="framework/view/wxml/event.html#id5">事件绑定和冒泡</a></li>
-<li class="toctree-l5"><a class="reference internal" href="framework/view/wxml/event.html#id6">事件的捕获阶段</a></li>
-<li class="toctree-l5"><a class="reference internal" href="framework/view/wxml/event.html#id7">事件对象</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="framework/view/wxss.html">WXSS</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="framework/view/wxss.html#id2">尺寸单位</a></li>
-<li class="toctree-l4"><a class="reference internal" href="framework/view/wxss.html#id3">内联样式</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="framework/view/wxs/index.html">WXS</a></li>
-<li class="toctree-l3"><a class="reference internal" href="framework/view/interactive-animation.html">频繁交互</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="framework/view/interactive-animation.html#id2">背景</a></li>
-<li class="toctree-l4"><a class="reference internal" href="framework/view/interactive-animation.html#id3">实现方案</a></li>
-<li class="toctree-l4"><a class="reference internal" href="framework/view/interactive-animation.html#id4">使用方法</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="framework/view/component.html">基础组件</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="framework/view/component.html#id2">属性类型</a></li>
-<li class="toctree-l4"><a class="reference internal" href="framework/view/component.html#id3">公共属性</a></li>
-<li class="toctree-l4"><a class="reference internal" href="framework/view/component.html#id4">特殊属性</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="framework/view/selector.html">获取界面上的节点信息</a></li>
-<li class="toctree-l3"><a class="reference internal" href="framework/view/resizable.html">响应显示区域变化</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="framework/view/resizable.html#id2">显示区域尺寸</a><ul>
-<li class="toctree-l5"><a class="reference internal" href="framework/view/resizable.html#id3">在手机上启用屏幕旋转支持</a></li>
-<li class="toctree-l5"><a class="reference internal" href="framework/view/resizable.html#ipad">在 iPad 上启用屏幕旋转支持</a></li>
-<li class="toctree-l5"><a class="reference internal" href="framework/view/resizable.html#id4">屏幕旋转事件</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="framework/view/animation.html">动画</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="framework/details.html">运行环境</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="framework/details.html#id2">平台差异</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="framework/plugin/index.html">插件</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="framework/plugin/development.html">开发插件</a></li>
-<li class="toctree-l3"><a class="reference internal" href="framework/plugin/using.html">使用插件</a></li>
-<li class="toctree-l3"><a class="reference internal" href="framework/plugin/api-limit.html">插件调用 API 的限制</a></li>
-<li class="toctree-l3"><a class="reference internal" href="framework/plugin/component-limit.html">插件使用组件的限制</a></li>
-<li class="toctree-l3"><a class="reference internal" href="framework/plugin/functional-pages/index.html">插件功能</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="framework/plugin/functional-pages/functional-pages.html">插件功能页</a></li>
-<li class="toctree-l4"><a class="reference internal" href="framework/plugin/functional-pages/user-info.html">用户信息功能页</a></li>
-<li class="toctree-l4"><a class="reference internal" href="framework/plugin/functional-pages/request-payment.html">支付功能页</a></li>
-<li class="toctree-l4"><a class="reference internal" href="framework/plugin/functional-pages/choose-address.html">收货地址功能页</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="framework/plugin/functional-pages.html">plugin/functional-pages</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="framework/ability/index.html">基础能力</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="framework/ability/network.html">网络</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="framework/ability/network.html#id2">1. 服务器域名配置</a><ul>
-<li class="toctree-l5"><a class="reference internal" href="framework/ability/network.html#id3">配置流程</a></li>
-</ul>
-</li>
-<li class="toctree-l4"><a class="reference internal" href="framework/ability/network.html#id4">2. 网络请求</a><ul>
-<li class="toctree-l5"><a class="reference internal" href="framework/ability/network.html#id5">超时时间</a></li>
-<li class="toctree-l5"><a class="reference internal" href="framework/ability/network.html#id6">使用限制</a></li>
-<li class="toctree-l5"><a class="reference internal" href="framework/ability/network.html#id7">返回值编码</a></li>
-<li class="toctree-l5"><a class="reference internal" href="framework/ability/network.html#id8">回调函数</a></li>
-</ul>
-</li>
-<li class="toctree-l4"><a class="reference internal" href="framework/ability/network.html#id9">3. 常见问题</a><ul>
-<li class="toctree-l5"><a class="reference internal" href="framework/ability/network.html#https">HTTPS 证书</a></li>
-<li class="toctree-l5"><a class="reference internal" href="framework/ability/network.html#id10">跳过域名校验</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="framework/ability/mDNS.html">局域网通信</a></li>
-<li class="toctree-l3"><a class="reference internal" href="framework/ability/storage.html">存储</a></li>
-<li class="toctree-l3"><a class="reference internal" href="framework/ability/file-system.html">文件系统</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="framework/ability/file-system.html#id2">代码包文件</a><ul>
-<li class="toctree-l5"><a class="reference internal" href="framework/ability/file-system.html#id3">访问代码包文件</a></li>
-<li class="toctree-l5"><a class="reference internal" href="framework/ability/file-system.html#id4">修改代码包文件</a></li>
-</ul>
-</li>
-<li class="toctree-l4"><a class="reference internal" href="framework/ability/file-system.html#id5">本地文件</a><ul>
-<li class="toctree-l5"><a class="reference internal" href="framework/ability/file-system.html#id6">本地临时文件</a></li>
-<li class="toctree-l5"><a class="reference internal" href="framework/ability/file-system.html#id7">本地缓存文件</a></li>
-<li class="toctree-l5"><a class="reference internal" href="framework/ability/file-system.html#id8">本地用户文件</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="framework/ability/canvas.html">Canvas 画布</a></li>
-<li class="toctree-l3"><a class="reference internal" href="framework/ability/subpackages/index.html">分包加载</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="framework/ability/subpackages/subpackages.html">分包加载</a></li>
-<li class="toctree-l4"><a class="reference internal" href="framework/ability/subpackages/basic.html">使用分包</a></li>
-<li class="toctree-l4"><a class="reference internal" href="framework/ability/subpackages/independent.html">独立分包</a></li>
-<li class="toctree-l4"><a class="reference internal" href="framework/ability/subpackages/preload.html">分包预下载</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="framework/ability/server-ability/index.html">服务端能力</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="framework/ability/server-ability/backend-api.html">后端 API</a></li>
-<li class="toctree-l4"><a class="reference internal" href="framework/ability/server-ability/message-push.html">消息推送</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="framework/ability/custom-tabbar.html">自定义 tabBar</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="framework/device/index.html">硬件能力</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="framework/device/bluetooth.html">蓝牙</a></li>
-<li class="toctree-l3"><a class="reference internal" href="framework/device/nfc.html">NFC</a></li>
-<li class="toctree-l3"><a class="reference internal" href="framework/device/wifi.html">Wi-Fi</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="framework/open-ability/index.html">开放能力</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="framework/open-ability/login.html">小程序登录</a></li>
-<li class="toctree-l3"><a class="reference internal" href="framework/open-ability/union-id.html">UnionID 机制</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="framework/open-ability/union-id.html#id1">UnionID获取途径</a></li>
-<li class="toctree-l4"><a class="reference internal" href="framework/open-ability/union-id.html#id2">微信开放平台绑定小程序流程</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="framework/open-ability/authorize.html">用户授权</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="framework/open-ability/authorize.html#id2">获取用户授权设置</a></li>
-<li class="toctree-l4"><a class="reference internal" href="framework/open-ability/authorize.html#id3">打开设置界面</a></li>
-<li class="toctree-l4"><a class="reference internal" href="framework/open-ability/authorize.html#id4">提前发起授权请求</a></li>
-<li class="toctree-l4"><a class="reference internal" href="framework/open-ability/authorize.html#scope">scope 列表</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="framework/open-ability/signature.html">开放数据校验与解密</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="framework/open-ability/signature.html#id2">数据签名校验</a></li>
-<li class="toctree-l4"><a class="reference internal" href="framework/open-ability/signature.html#id3">加密数据解密算法</a></li>
-<li class="toctree-l4"><a class="reference internal" href="framework/open-ability/signature.html#session-key">会话密钥 session_key 有效性</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="framework/open-ability/getPhoneNumber.html">获取手机号</a></li>
-<li class="toctree-l3"><a class="reference internal" href="framework/open-ability/bio-auth.html">生物认证</a></li>
-<li class="toctree-l3"><a class="reference internal" href="framework/open-ability/share.html">转发</a></li>
-<li class="toctree-l3"><a class="reference internal" href="framework/open-ability/updatable-message.html">动态消息</a></li>
-<li class="toctree-l3"><a class="reference internal" href="framework/open-ability/launchApp.html">打开 App</a></li>
-<li class="toctree-l3"><a class="reference internal" href="framework/open-ability/template-message.html">模板消息</a></li>
-<li class="toctree-l3"><a class="reference internal" href="framework/open-ability/uniform-message.html">统一服务消息</a></li>
-<li class="toctree-l3"><a class="reference internal" href="framework/open-ability/customer-message/index.html">客服消息</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="framework/open-ability/customer-message/customer-message.html">客服消息</a></li>
-<li class="toctree-l4"><a class="reference internal" href="framework/open-ability/customer-message/receive.html">接收消息和事件</a></li>
-<li class="toctree-l4"><a class="reference internal" href="framework/open-ability/customer-message/send.html">发送客服消息</a></li>
-<li class="toctree-l4"><a class="reference internal" href="framework/open-ability/customer-message/trans.html">转发客服消息</a></li>
-<li class="toctree-l4"><a class="reference internal" href="framework/open-ability/customer-message/typing.html">客服输入状态</a></li>
-<li class="toctree-l4"><a class="reference internal" href="framework/open-ability/customer-message/temp-media.html">在客服消息中使用临时素材</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="framework/open-ability/qr-code.html">获取小程序码</a></li>
-<li class="toctree-l3"><a class="reference internal" href="framework/open-ability/nearby.html">附近的小程序</a></li>
-<li class="toctree-l3"><a class="reference internal" href="framework/open-ability/express.html">微信物流助手（商户侧）</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="framework/open-ability/express.html#id2">产品优势</a><ul>
-<li class="toctree-l5"><a class="reference internal" href="framework/open-ability/express.html#id3">小程序开发者</a></li>
-<li class="toctree-l5"><a class="reference internal" href="framework/open-ability/express.html#id4">用户</a></li>
-</ul>
-</li>
-<li class="toctree-l4"><a class="reference internal" href="framework/open-ability/express.html#id5">小程序接入步骤</a></li>
-<li class="toctree-l4"><a class="reference internal" href="framework/open-ability/express.html#id6">已经支持的快递公司基本信息</a></li>
-<li class="toctree-l4"><a class="reference internal" href="framework/open-ability/express.html#id7">打印面单</a></li>
-<li class="toctree-l4"><a class="reference internal" href="framework/open-ability/express.html#id8">相关事件</a></li>
-<li class="toctree-l4"><a class="reference internal" href="framework/open-ability/express.html#id9">联系我们</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="framework/open-ability/express-download.html">物流助手-打单软件</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="framework/open-ability/express-download.html#id2">介绍</a></li>
-<li class="toctree-l4"><a class="reference internal" href="framework/open-ability/express-download.html#id3">使用说明</a></li>
-<li class="toctree-l4"><a class="reference internal" href="framework/open-ability/express-download.html#id4">最新版本下载地址</a></li>
-<li class="toctree-l4"><a class="reference internal" href="framework/open-ability/express-download.html#id5">更新日志</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="framework/open-ability/express-delivery.html">微信物流助手（快递侧）</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="framework/open-ability/express-delivery.html#id2">产品优势</a></li>
-<li class="toctree-l4"><a class="reference internal" href="framework/open-ability/express-delivery.html#id3">接入说明</a></li>
-<li class="toctree-l4"><a class="reference internal" href="framework/open-ability/express-delivery.html#id4">接入准备</a></li>
-<li class="toctree-l4"><a class="reference internal" href="framework/open-ability/express-delivery.html#id5">相关接口</a></li>
-<li class="toctree-l4"><a class="reference internal" href="framework/open-ability/express-delivery.html#id6">相关事件</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="framework/open-ability/data-analysis.html">数据分析接口</a></li>
-<li class="toctree-l3"><a class="reference internal" href="framework/open-ability/card/index.html">card</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="framework/open-ability/card/card.html">卡券</a></li>
-<li class="toctree-l4"><a class="reference internal" href="framework/open-ability/card/membership-card.html">会员卡组件</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="framework/usability.html">调试</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="framework/usability.html#vconsole">vConsole</a></li>
-<li class="toctree-l3"><a class="reference internal" href="framework/usability.html#id2">vConsole 使用说明</a></li>
-<li class="toctree-l3"><a class="reference internal" href="framework/usability.html#source-map">Source Map</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="framework/usability/index.html">可用性</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="framework/usability/debug.html">调试</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="framework/usability/debug.html#vconsole">vConsole</a></li>
-<li class="toctree-l4"><a class="reference internal" href="framework/usability/debug.html#id2">vConsole 使用说明</a></li>
-<li class="toctree-l4"><a class="reference internal" href="framework/usability/debug.html#source-map">Source Map</a></li>
-</ul>
-</li>
-</ul>
-</li>
+<li class="toctree-l2"><a class="reference internal" href="framework/app-service/index.html">逻辑层 App Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="framework/view/index.html">视图层 View</a></li>
+<li class="toctree-l2"><a class="reference internal" href="framework/details.html">运行环境</a></li>
+<li class="toctree-l2"><a class="reference internal" href="framework/plugin/index.html">插件</a></li>
+<li class="toctree-l2"><a class="reference internal" href="framework/ability/index.html">基础能力</a></li>
+<li class="toctree-l2"><a class="reference internal" href="framework/device/index.html">硬件能力</a></li>
+<li class="toctree-l2"><a class="reference internal" href="framework/open-ability/index.html">开放能力</a></li>
+<li class="toctree-l2"><a class="reference internal" href="framework/usability.html">调试</a></li>
+<li class="toctree-l2"><a class="reference internal" href="framework/usability/index.html">可用性</a></li>
 <li class="toctree-l2"><a class="reference internal" href="framework/performance/index.html">性能</a></li>
-<li class="toctree-l2"><a class="reference internal" href="framework/client-lib/index.html">基础库</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="framework/client-lib/client-lib.html">基础库</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="framework/client-lib/client-lib.html#id2">基础库与客户端之间的关系</a></li>
-<li class="toctree-l4"><a class="reference internal" href="framework/client-lib/client-lib.html#id3">基础库更新时机</a></li>
-<li class="toctree-l4"><a class="reference internal" href="framework/client-lib/client-lib.html#id4">基础库版本分布</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="framework/client-lib/version.html">基础库版本分布</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="framework/compatibility.html">兼容处理</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="framework/compatibility.html#id2">兼容处理</a></li>
-<li class="toctree-l3"><a class="reference internal" href="framework/compatibility.html#id3">设置最低基础库版本</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="framework/workers.html">多线程 Worker</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="framework/workers.html#id1">使用流程</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="framework/server-ability/index.html">后端能力</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="framework/server-ability/backend-api.html">服务端API</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="framework/server-ability/backend-api.html#access-token">access_token</a></li>
-<li class="toctree-l4"><a class="reference internal" href="framework/server-ability/backend-api.html#id1">请求参数说明</a></li>
-<li class="toctree-l4"><a class="reference internal" href="framework/server-ability/backend-api.html#id2">返回参数说明</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="framework/server-ability/message-push.html">消息推送</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="framework/release/index.html">版本更新</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="framework/release/v0.html">基础库更新日志 (v0.x版本)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="framework/release/v1.html">基础库更新日志 (v1.x版本)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="framework/release/v2.html">基础库更新日志 (v2.x版本)</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="framework/release/v2.html#id1">最新版本</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="framework/operating-mechanism.html">运行机制</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="framework/operating-mechanism.html#id2">小程序启动</a></li>
-<li class="toctree-l3"><a class="reference internal" href="framework/operating-mechanism.html#id3">前台/后台状态</a></li>
-<li class="toctree-l3"><a class="reference internal" href="framework/operating-mechanism.html#id4">小程序销毁</a></li>
-<li class="toctree-l3"><a class="reference internal" href="framework/operating-mechanism.html#id5">再次打开逻辑</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="framework/custom-component/index.html">自定义组件</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="framework/custom-component/create.html">自定义组件</a></li>
-<li class="toctree-l3"><a class="reference internal" href="framework/custom-component/behaviors.html">custom-component/behaviors</a></li>
-<li class="toctree-l3"><a class="reference internal" href="framework/custom-component/component.html">Component构造器</a></li>
-<li class="toctree-l3"><a class="reference internal" href="framework/custom-component/custom-component.html">custom-component/custom-component</a></li>
-<li class="toctree-l3"><a class="reference internal" href="framework/custom-component/events.html">组件间通信与事件</a></li>
-<li class="toctree-l3"><a class="reference internal" href="framework/custom-component/extend.html">custom-component/extend</a></li>
-<li class="toctree-l3"><a class="reference internal" href="framework/custom-component/generics.html">custom-component/generics</a></li>
-<li class="toctree-l3"><a class="reference internal" href="framework/custom-component/lifetimes.html">custom-component/lifetimes</a></li>
-<li class="toctree-l3"><a class="reference internal" href="framework/custom-component/observer.html">custom-component/observer</a></li>
-<li class="toctree-l3"><a class="reference internal" href="framework/custom-component/relations.html">custom-component/relations</a></li>
-<li class="toctree-l3"><a class="reference internal" href="framework/custom-component/trdparty.html">custom-component/trdparty</a></li>
-<li class="toctree-l3"><a class="reference internal" href="framework/custom-component/unit-test.html">custom-component/unit-test</a></li>
-<li class="toctree-l3"><a class="reference internal" href="framework/custom-component/wxml-wxss.html">组件模板和样式</a></li>
-</ul>
-</li>
+<li class="toctree-l2"><a class="reference internal" href="framework/client-lib/index.html">基础库</a></li>
+<li class="toctree-l2"><a class="reference internal" href="framework/compatibility.html">兼容处理</a></li>
+<li class="toctree-l2"><a class="reference internal" href="framework/workers.html">多线程 Worker</a></li>
+<li class="toctree-l2"><a class="reference internal" href="framework/server-ability/index.html">后端能力</a></li>
+<li class="toctree-l2"><a class="reference internal" href="framework/operating-mechanism.html">运行机制</a></li>
+<li class="toctree-l2"><a class="reference internal" href="framework/custom-component/index.html">自定义组件</a></li>
+<li class="toctree-l2"><a class="reference internal" href="framework/release/index.html">版本更新</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="component/index.html">组件</a><ul>
@@ -580,124 +191,29 @@
 <li class="toctree-l2"><a class="reference internal" href="api/index.html#id2">基础</a></li>
 <li class="toctree-l2"><a class="reference internal" href="api/index.html#id3">系统信息</a></li>
 <li class="toctree-l2"><a class="reference internal" href="api/index.html#id4">更新</a></li>
-<li class="toctree-l2"><a class="reference internal" href="api/index.html#id5">小程序</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="api/index.html#id6">生命周期</a></li>
-<li class="toctree-l3"><a class="reference internal" href="api/index.html#id7">应用级事件</a></li>
-</ul>
-</li>
+<li class="toctree-l2"><a class="reference internal" href="api/index.html#id5">小程序</a></li>
 <li class="toctree-l2"><a class="reference internal" href="api/index.html#id8">调试</a></li>
 <li class="toctree-l2"><a class="reference internal" href="api/index.html#id9">路由</a></li>
-<li class="toctree-l2"><a class="reference internal" href="api/index.html#id10">界面</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="api/index.html#id11">交互</a></li>
-<li class="toctree-l3"><a class="reference internal" href="api/index.html#id12">导航栏</a></li>
-<li class="toctree-l3"><a class="reference internal" href="api/index.html#id13">背景</a></li>
-<li class="toctree-l3"><a class="reference internal" href="api/index.html#tab-bar">Tab Bar</a></li>
-<li class="toctree-l3"><a class="reference internal" href="api/index.html#id14">字体</a></li>
-<li class="toctree-l3"><a class="reference internal" href="api/index.html#id15">下拉刷新</a></li>
-<li class="toctree-l3"><a class="reference internal" href="api/index.html#id16">滚动</a></li>
-<li class="toctree-l3"><a class="reference internal" href="api/index.html#id17">动画</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="api/index.html#animation">Animation</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="api/index.html#id18">置顶</a></li>
-<li class="toctree-l3"><a class="reference internal" href="api/index.html#id19">自定义组件</a></li>
-<li class="toctree-l3"><a class="reference internal" href="api/index.html#id20">菜单</a></li>
-<li class="toctree-l3"><a class="reference internal" href="api/index.html#id21">窗口</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="api/index.html#id22">网络</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="api/index.html#id23">发起请求</a></li>
-<li class="toctree-l3"><a class="reference internal" href="api/index.html#requesttask">RequestTask</a></li>
-<li class="toctree-l3"><a class="reference internal" href="api/index.html#id24">下载</a></li>
-<li class="toctree-l3"><a class="reference internal" href="api/index.html#downloadtask">DownloadTask</a></li>
-<li class="toctree-l3"><a class="reference internal" href="api/index.html#id25">上传</a></li>
-<li class="toctree-l3"><a class="reference internal" href="api/index.html#uploadtask">UploadTask</a></li>
-<li class="toctree-l3"><a class="reference internal" href="api/index.html#websocket">WebSocket</a></li>
-<li class="toctree-l3"><a class="reference internal" href="api/index.html#sockettask">SocketTask</a></li>
-<li class="toctree-l3"><a class="reference internal" href="api/index.html#mdns">mDNS</a></li>
-</ul>
-</li>
+<li class="toctree-l2"><a class="reference internal" href="api/index.html#id10">界面</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/index.html#id22">网络</a></li>
 <li class="toctree-l2"><a class="reference internal" href="api/index.html#id26">数据缓存</a></li>
-<li class="toctree-l2"><a class="reference internal" href="api/index.html#id27">媒体</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="api/index.html#id28">地图</a></li>
-<li class="toctree-l3"><a class="reference internal" href="api/index.html#id29">图片</a></li>
-<li class="toctree-l3"><a class="reference internal" href="api/index.html#id30">视频</a></li>
-<li class="toctree-l3"><a class="reference internal" href="api/index.html#id31">音频</a></li>
-<li class="toctree-l3"><a class="reference internal" href="api/index.html#id32">背景音频</a></li>
-<li class="toctree-l3"><a class="reference internal" href="api/index.html#id33">实时音视频</a></li>
-<li class="toctree-l3"><a class="reference internal" href="api/index.html#recordermanager">录音 RecorderManager</a></li>
-<li class="toctree-l3"><a class="reference internal" href="api/index.html#cameracontext">相机 CameraContext</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="api/index.html#id34">位置</a></li>
-<li class="toctree-l2"><a class="reference internal" href="api/index.html#id35">转发</a></li>
-<li class="toctree-l2"><a class="reference internal" href="api/index.html#id36">画布</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="api/index.html#canvasgradient">CanvasGradient</a></li>
-<li class="toctree-l3"><a class="reference internal" href="api/index.html#canvascontext">CanvasContext</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="api/index.html#id37">文件</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="api/index.html#stats">Stats</a></li>
-<li class="toctree-l3"><a class="reference internal" href="api/index.html#filesystemmanager">FileSystemManager</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="api/index.html#id38">开放接口</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="api/index.html#id39">登录</a></li>
-<li class="toctree-l3"><a class="reference internal" href="api/index.html#id40">小程序跳转</a></li>
-<li class="toctree-l3"><a class="reference internal" href="api/index.html#id41">帐号信息</a></li>
-<li class="toctree-l3"><a class="reference internal" href="api/index.html#id42">用户信息</a></li>
-<li class="toctree-l3"><a class="reference internal" href="api/index.html#id43">数据上报</a></li>
-<li class="toctree-l3"><a class="reference internal" href="api/index.html#id44">数据分析</a></li>
-<li class="toctree-l3"><a class="reference internal" href="api/index.html#id45">支付</a></li>
-<li class="toctree-l3"><a class="reference internal" href="api/index.html#id46">授权</a></li>
-<li class="toctree-l3"><a class="reference internal" href="api/index.html#id47">设置</a></li>
-<li class="toctree-l3"><a class="reference internal" href="api/index.html#id48">收货地址</a></li>
-<li class="toctree-l3"><a class="reference internal" href="api/index.html#id49">卡券</a></li>
-<li class="toctree-l3"><a class="reference internal" href="api/index.html#id50">发票</a></li>
-<li class="toctree-l3"><a class="reference internal" href="api/index.html#id51">生物认证</a></li>
-<li class="toctree-l3"><a class="reference internal" href="api/index.html#id52">微信运动</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="api/index.html#id53">设备</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="api/index.html#wi-fi">Wi-Fi</a></li>
-<li class="toctree-l3"><a class="reference internal" href="api/index.html#ibeacon">iBeacon</a></li>
-<li class="toctree-l3"><a class="reference internal" href="api/index.html#id54">联系人</a></li>
-<li class="toctree-l3"><a class="reference internal" href="api/index.html#id55">低功耗蓝牙</a></li>
-<li class="toctree-l3"><a class="reference internal" href="api/index.html#id56">蓝牙</a></li>
-<li class="toctree-l3"><a class="reference internal" href="api/index.html#id57">电量</a></li>
-<li class="toctree-l3"><a class="reference internal" href="api/index.html#id58">剪贴板</a></li>
-<li class="toctree-l3"><a class="reference internal" href="api/index.html#nfc">NFC</a></li>
-<li class="toctree-l3"><a class="reference internal" href="api/index.html#id59">网络</a></li>
-<li class="toctree-l3"><a class="reference internal" href="api/index.html#id60">屏幕</a></li>
-<li class="toctree-l3"><a class="reference internal" href="api/index.html#id61">电话</a></li>
-<li class="toctree-l3"><a class="reference internal" href="api/index.html#id62">加速计</a></li>
-<li class="toctree-l3"><a class="reference internal" href="api/index.html#id63">罗盘</a></li>
-<li class="toctree-l3"><a class="reference internal" href="api/index.html#id64">设备方向</a></li>
-<li class="toctree-l3"><a class="reference internal" href="api/index.html#id65">陀螺仪</a></li>
-<li class="toctree-l3"><a class="reference internal" href="api/index.html#id66">性能</a></li>
-<li class="toctree-l3"><a class="reference internal" href="api/index.html#id67">扫码</a></li>
-<li class="toctree-l3"><a class="reference internal" href="api/index.html#id68">振动</a></li>
-</ul>
-</li>
+<li class="toctree-l2"><a class="reference internal" href="api/index.html#id27">媒体</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/index.html#id35">位置</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/index.html#id36">转发</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/index.html#id37">画布</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/index.html#id38">文件</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/index.html#id39">开放接口</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/index.html#id54">设备</a></li>
 <li class="toctree-l2"><a class="reference internal" href="api/index.html#worker">Worker</a></li>
-<li class="toctree-l2"><a class="reference internal" href="api/index.html#id69">第三方平台</a></li>
-<li class="toctree-l2"><a class="reference internal" href="api/index.html#wxml">WXML</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="api/index.html#selectorquery">SelectorQuery</a></li>
-<li class="toctree-l3"><a class="reference internal" href="api/index.html#nodesref">NodesRef</a></li>
-<li class="toctree-l3"><a class="reference internal" href="api/index.html#intersectionobserver">IntersectionObserver</a></li>
-</ul>
-</li>
+<li class="toctree-l2"><a class="reference internal" href="api/index.html#id76">第三方平台</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/index.html#wxml">WXML</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="api-backend/index.html">服务端API</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="api-backend/index.html#id1">登录</a></li>
 <li class="toctree-l2"><a class="reference internal" href="api-backend/index.html#id2">用户信息</a></li>
 <li class="toctree-l2"><a class="reference internal" href="api-backend/index.html#id3">接口调用凭证</a></li>
-<li class="toctree-l2"><a class="reference internal" href="api-backend/index.html#id4">数据分析</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="api-backend/index.html#id5">访问留存</a></li>
-<li class="toctree-l3"><a class="reference internal" href="api-backend/index.html#id6">访问趋势</a></li>
-</ul>
-</li>
+<li class="toctree-l2"><a class="reference internal" href="api-backend/index.html#id4">数据分析</a></li>
 <li class="toctree-l2"><a class="reference internal" href="api-backend/index.html#id7">客服消息</a></li>
 <li class="toctree-l2"><a class="reference internal" href="api-backend/index.html#id8">模板消息</a></li>
 <li class="toctree-l2"><a class="reference internal" href="api-backend/index.html#id9">统一服务消息</a></li>
@@ -706,11 +222,7 @@
 <li class="toctree-l2"><a class="reference internal" href="api-backend/index.html#id12">附近的小程序</a></li>
 <li class="toctree-l2"><a class="reference internal" href="api-backend/index.html#id13">小程序码</a></li>
 <li class="toctree-l2"><a class="reference internal" href="api-backend/index.html#id14">内容安全</a></li>
-<li class="toctree-l2"><a class="reference internal" href="api-backend/index.html#id15">物流助手</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="api-backend/index.html#id16">小程序使用</a></li>
-<li class="toctree-l3"><a class="reference internal" href="api-backend/index.html#id17">服务提供方使用</a></li>
-</ul>
-</li>
+<li class="toctree-l2"><a class="reference internal" href="api-backend/index.html#id15">物流助手</a></li>
 <li class="toctree-l2"><a class="reference internal" href="api-backend/index.html#id18">生物认证</a></li>
 </ul>
 </li>
@@ -723,510 +235,23 @@
 <li class="toctree-l2"><a class="reference internal" href="devtools/sandbox.html">测试号</a></li>
 <li class="toctree-l2"><a class="reference internal" href="devtools/audits.html">工具插件</a></li>
 <li class="toctree-l2"><a class="reference internal" href="devtools/notsupport.html">API 实现差异</a></li>
-<li class="toctree-l2"><a class="reference internal" href="devtools/download.html">下载</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="devtools/download.html#id2">开发版 Nightly Build</a></li>
-<li class="toctree-l3"><a class="reference internal" href="devtools/download.html#id3">预发布版 RC Build</a></li>
-<li class="toctree-l3"><a class="reference internal" href="devtools/download.html#stable-build-1-02-1902010">稳定版 Stable Build (1.02.1902010)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="devtools/download.html#upgrade-build-1-03-1903211">内核升级版 Upgrade Build (1.03.1903211)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="devtools/download.html#id4">全部更新日志</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="devtools/change/index.html">更新日志</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="devtools/change/nightly.html">开发版 Nightly Build 更新日志</a></li>
-<li class="toctree-l3"><a class="reference internal" href="devtools/change/rc.html">预发布版 RC Build 更新日志</a></li>
-<li class="toctree-l3"><a class="reference internal" href="devtools/change/stable.html">稳定版 Stable Build 更新日志</a></li>
-<li class="toctree-l3"><a class="reference internal" href="devtools/change/upnwjs.html">微信开发者工具内核升级版公测</a></li>
-<li class="toctree-l3"><a class="reference internal" href="devtools/change/uplog.html">开发者工具更新日志</a></li>
-<li class="toctree-l3"><a class="reference internal" href="devtools/change/beta.html">change/beta</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="devtools/devtools.html">devtools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="devtools/download.html">下载</a></li>
+<li class="toctree-l2"><a class="reference internal" href="devtools/change/index.html">更新日志</a></li>
+<li class="toctree-l2"><a class="reference internal" href="devtools/devtools.html">概览</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="reference/index.html">参考资料</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="reference/configuration/index.html">小程序配置</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="reference/configuration/app.html">全局配置</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="reference/configuration/app.html#pages">pages</a></li>
-<li class="toctree-l4"><a class="reference internal" href="reference/configuration/app.html#window">window</a></li>
-<li class="toctree-l4"><a class="reference internal" href="reference/configuration/app.html#tabbar">tabBar</a></li>
-<li class="toctree-l4"><a class="reference internal" href="reference/configuration/app.html#networktimeout">networkTimeout</a></li>
-<li class="toctree-l4"><a class="reference internal" href="reference/configuration/app.html#debug">debug</a></li>
-<li class="toctree-l4"><a class="reference internal" href="reference/configuration/app.html#functionalpages">functionalPages</a></li>
-<li class="toctree-l4"><a class="reference internal" href="reference/configuration/app.html#subpackages">subpackages</a></li>
-<li class="toctree-l4"><a class="reference internal" href="reference/configuration/app.html#workers">workers</a></li>
-<li class="toctree-l4"><a class="reference internal" href="reference/configuration/app.html#requiredbackgroundmodes">requiredBackgroundModes</a></li>
-<li class="toctree-l4"><a class="reference internal" href="reference/configuration/app.html#plugins">plugins</a></li>
-<li class="toctree-l4"><a class="reference internal" href="reference/configuration/app.html#preloadrule">preloadRule</a></li>
-<li class="toctree-l4"><a class="reference internal" href="reference/configuration/app.html#resizable">resizable</a></li>
-<li class="toctree-l4"><a class="reference internal" href="reference/configuration/app.html#navigatetominiprogramappidlist">navigateToMiniProgramAppIdList</a></li>
-<li class="toctree-l4"><a class="reference internal" href="reference/configuration/app.html#usingcomponents">usingComponents</a></li>
-<li class="toctree-l4"><a class="reference internal" href="reference/configuration/app.html#permission">permission</a></li>
-<li class="toctree-l4"><a class="reference internal" href="reference/configuration/app.html#id7">配置示例</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="reference/configuration/page.html">页面配置</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="reference/configuration/page.html#id2">配置项</a></li>
-<li class="toctree-l4"><a class="reference internal" href="reference/configuration/page.html#id3">配置示例</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="reference/configuration/sitemap.html">sitemap 配置</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="reference/configuration/sitemap.html#id1">配置项</a></li>
-<li class="toctree-l4"><a class="reference internal" href="reference/configuration/sitemap.html#id2">配置示例</a></li>
-</ul>
-</li>
-</ul>
-</li>
+<li class="toctree-l2"><a class="reference internal" href="reference/configuration/index.html">小程序配置</a></li>
 <li class="toctree-l2"><a class="reference internal" href="reference/scene.html">场景值列表</a></li>
-<li class="toctree-l2"><a class="reference internal" href="reference/api/index.html">框架接口说明</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="reference/api/index.html#app">小程序 App</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="reference/api/App.html">注册小程序(App)</a></li>
-<li class="toctree-l4"><a class="reference internal" href="reference/api/getApp.html">获取到小程序全局唯一的 App 实例(getApp)</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="reference/api/index.html#id2">页面</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="reference/api/Page.html">页面(page)</a></li>
-<li class="toctree-l4"><a class="reference internal" href="reference/api/getCurrentPages.html">获取当前页面栈(getCurrentPages)</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="reference/api/index.html#id3">自定义组件</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="reference/api/Component.html">创建自定义组件(Component)</a></li>
-<li class="toctree-l4"><a class="reference internal" href="reference/api/Behavior.html">Behavior</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="reference/api/index.html#id4">其它</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="reference/api/module.html">模块化</a></li>
-<li class="toctree-l4"><a class="reference internal" href="reference/api/wx.html">小程序 API 全局对象(wx)</a></li>
-<li class="toctree-l4"><a class="reference internal" href="reference/api/console.html">打印日志(console)</a></li>
-<li class="toctree-l4"><a class="reference internal" href="reference/api/timer.html">定时器</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="reference/wxml/index.html">WXML</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="framework/view/wxml/data.html">数据绑定</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="framework/view/wxml/data.html#id2">简单绑定</a><ul>
-<li class="toctree-l5"><a class="reference internal" href="framework/view/wxml/data.html#id3">内容</a></li>
-<li class="toctree-l5"><a class="reference internal" href="framework/view/wxml/data.html#id4">组件属性(需要在双引号之内)</a></li>
-<li class="toctree-l5"><a class="reference internal" href="framework/view/wxml/data.html#id5">控制属性(需要在双引号之内)</a></li>
-<li class="toctree-l5"><a class="reference internal" href="framework/view/wxml/data.html#id6">关键字(需要在双引号之内)</a></li>
-</ul>
-</li>
-<li class="toctree-l4"><a class="reference internal" href="framework/view/wxml/data.html#id7">运算</a><ul>
-<li class="toctree-l5"><a class="reference internal" href="framework/view/wxml/data.html#id8">三元运算</a></li>
-<li class="toctree-l5"><a class="reference internal" href="framework/view/wxml/data.html#id9">算数运算</a></li>
-<li class="toctree-l5"><a class="reference internal" href="framework/view/wxml/data.html#id10">逻辑判断</a></li>
-<li class="toctree-l5"><a class="reference internal" href="framework/view/wxml/data.html#id11">字符串运算</a></li>
-<li class="toctree-l5"><a class="reference internal" href="framework/view/wxml/data.html#id12">数据路径运算</a></li>
-</ul>
-</li>
-<li class="toctree-l4"><a class="reference internal" href="framework/view/wxml/data.html#id13">组合</a><ul>
-<li class="toctree-l5"><a class="reference internal" href="framework/view/wxml/data.html#id14">数组</a></li>
-<li class="toctree-l5"><a class="reference internal" href="framework/view/wxml/data.html#id15">对象</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="framework/view/wxml/list.html">wx:for 列表渲染</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="framework/view/wxml/list.html#id2">wx:for</a></li>
-<li class="toctree-l4"><a class="reference internal" href="framework/view/wxml/list.html#block-wx-for">block wx:for</a></li>
-<li class="toctree-l4"><a class="reference internal" href="framework/view/wxml/list.html#wx-key">wx:key</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="framework/view/wxml/conditional.html">wx:if 条件渲染</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="framework/view/wxml/conditional.html#id1">wx:if</a></li>
-<li class="toctree-l4"><a class="reference internal" href="framework/view/wxml/conditional.html#block-wx-if">block wx:if</a></li>
-<li class="toctree-l4"><a class="reference internal" href="framework/view/wxml/conditional.html#wx-if-vs-hidden">wx:if vs hidden</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="framework/view/wxml/template.html">template 模板</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="framework/view/wxml/template.html#id1">定义模板</a></li>
-<li class="toctree-l4"><a class="reference internal" href="framework/view/wxml/template.html#id2">使用模板</a></li>
-<li class="toctree-l4"><a class="reference internal" href="framework/view/wxml/template.html#id3">模板的作用域</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="framework/view/wxml/import.html">import 引用</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="framework/view/wxml/import.html#id1">import</a></li>
-<li class="toctree-l4"><a class="reference internal" href="framework/view/wxml/import.html#id2">import 的作用域</a></li>
-<li class="toctree-l4"><a class="reference internal" href="framework/view/wxml/import.html#include">include</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="framework/view/wxml/event.html">bindtap 事件</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="framework/view/wxml/event.html#id1">什么是事件</a></li>
-<li class="toctree-l4"><a class="reference internal" href="framework/view/wxml/event.html#id2">事件的使用方式</a></li>
-<li class="toctree-l4"><a class="reference internal" href="framework/view/wxml/event.html#wxs">使用WXS函数响应事件</a></li>
-<li class="toctree-l4"><a class="reference internal" href="framework/view/wxml/event.html#id3">事件详解</a><ul>
-<li class="toctree-l5"><a class="reference internal" href="framework/view/wxml/event.html#id4">事件分类</a></li>
-</ul>
-</li>
-<li class="toctree-l4"><a class="reference internal" href="framework/view/wxml/event.html#id5">事件绑定和冒泡</a></li>
-<li class="toctree-l4"><a class="reference internal" href="framework/view/wxml/event.html#id6">事件的捕获阶段</a></li>
-<li class="toctree-l4"><a class="reference internal" href="framework/view/wxml/event.html#id7">事件对象</a><ul>
-<li class="toctree-l5"><a class="reference internal" href="framework/view/wxml/event.html#type">type</a></li>
-<li class="toctree-l5"><a class="reference internal" href="framework/view/wxml/event.html#timestamp">timeStamp</a></li>
-<li class="toctree-l5"><a class="reference internal" href="framework/view/wxml/event.html#target">target</a></li>
-<li class="toctree-l5"><a class="reference internal" href="framework/view/wxml/event.html#currenttarget">currentTarget</a></li>
-<li class="toctree-l5"><a class="reference internal" href="framework/view/wxml/event.html#dataset">dataset</a></li>
-<li class="toctree-l5"><a class="reference internal" href="framework/view/wxml/event.html#touches">touches</a></li>
-<li class="toctree-l5"><a class="reference internal" href="framework/view/wxml/event.html#touch">Touch 对象</a></li>
-<li class="toctree-l5"><a class="reference internal" href="framework/view/wxml/event.html#canvastouch">CanvasTouch 对象</a></li>
-<li class="toctree-l5"><a class="reference internal" href="framework/view/wxml/event.html#detail">detail</a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="reference/wxs/index.html">WXS 语法参考</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="framework/view/wxs/module.html">模块</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="framework/view/wxs/module.html#id2">模块</a></li>
-<li class="toctree-l4"><a class="reference internal" href="framework/view/wxs/module.html#wxs">.wxs 文件</a></li>
-<li class="toctree-l4"><a class="reference internal" href="framework/view/wxs/module.html#module">module 对象</a><ul>
-<li class="toctree-l5"><a class="reference internal" href="framework/view/wxs/module.html#id3">属性</a></li>
-</ul>
-</li>
-<li class="toctree-l4"><a class="reference internal" href="framework/view/wxs/module.html#require">require函数</a></li>
-<li class="toctree-l4"><a class="reference internal" href="framework/view/wxs/module.html#id4">&lt;wxs&gt; 标签</a><ul>
-<li class="toctree-l5"><a class="reference internal" href="framework/view/wxs/module.html#id5">module 属性</a></li>
-<li class="toctree-l5"><a class="reference internal" href="framework/view/wxs/module.html#src">src 属性</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="framework/view/wxs/variate.html">变量</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="framework/view/wxs/variate.html#id2">概念</a></li>
-<li class="toctree-l4"><a class="reference internal" href="framework/view/wxs/variate.html#id3">变量名</a></li>
-<li class="toctree-l4"><a class="reference internal" href="framework/view/wxs/variate.html#id4">保留标识符</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="framework/view/wxs/annotation.html">注释</a></li>
-<li class="toctree-l3"><a class="reference internal" href="framework/view/wxs/operator.html">运算符</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="framework/view/wxs/operator.html#id2">基本运算符</a></li>
-<li class="toctree-l4"><a class="reference internal" href="framework/view/wxs/operator.html#id3">一元运算符</a></li>
-<li class="toctree-l4"><a class="reference internal" href="framework/view/wxs/operator.html#id4">位运算符</a></li>
-<li class="toctree-l4"><a class="reference internal" href="framework/view/wxs/operator.html#id5">比较运算符</a></li>
-<li class="toctree-l4"><a class="reference internal" href="framework/view/wxs/operator.html#id6">等值运算符</a></li>
-<li class="toctree-l4"><a class="reference internal" href="framework/view/wxs/operator.html#id7">赋值运算符</a></li>
-<li class="toctree-l4"><a class="reference internal" href="framework/view/wxs/operator.html#id8">二元逻辑运算符</a></li>
-<li class="toctree-l4"><a class="reference internal" href="framework/view/wxs/operator.html#id9">其他运算符</a></li>
-<li class="toctree-l4"><a class="reference internal" href="framework/view/wxs/operator.html#id10">运算符优先级</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="framework/view/wxs/statement.html">语句</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="framework/view/wxs/statement.html#if">if 语句</a></li>
-<li class="toctree-l4"><a class="reference internal" href="framework/view/wxs/statement.html#switch">switch 语句</a></li>
-<li class="toctree-l4"><a class="reference internal" href="framework/view/wxs/statement.html#for">for 语句</a></li>
-<li class="toctree-l4"><a class="reference internal" href="framework/view/wxs/statement.html#while">while 语句</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="framework/view/wxs/datatype.html">数据类型</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="framework/view/wxs/datatype.html#number">number</a><ul>
-<li class="toctree-l5"><a class="reference internal" href="framework/view/wxs/datatype.html#id2">语法</a></li>
-<li class="toctree-l5"><a class="reference internal" href="framework/view/wxs/datatype.html#id3">属性</a></li>
-<li class="toctree-l5"><a class="reference internal" href="framework/view/wxs/datatype.html#id4">方法</a></li>
-</ul>
-</li>
-<li class="toctree-l4"><a class="reference internal" href="framework/view/wxs/datatype.html#string">string</a><ul>
-<li class="toctree-l5"><a class="reference internal" href="framework/view/wxs/datatype.html#id5">语法</a></li>
-<li class="toctree-l5"><a class="reference internal" href="framework/view/wxs/datatype.html#id6">属性</a></li>
-<li class="toctree-l5"><a class="reference internal" href="framework/view/wxs/datatype.html#id7">方法</a></li>
-</ul>
-</li>
-<li class="toctree-l4"><a class="reference internal" href="framework/view/wxs/datatype.html#boolean">boolean</a><ul>
-<li class="toctree-l5"><a class="reference internal" href="framework/view/wxs/datatype.html#id8">语法</a></li>
-<li class="toctree-l5"><a class="reference internal" href="framework/view/wxs/datatype.html#id9">属性</a></li>
-<li class="toctree-l5"><a class="reference internal" href="framework/view/wxs/datatype.html#id10">方法</a></li>
-</ul>
-</li>
-<li class="toctree-l4"><a class="reference internal" href="framework/view/wxs/datatype.html#object">object</a><ul>
-<li class="toctree-l5"><a class="reference internal" href="framework/view/wxs/datatype.html#id11">语法</a></li>
-<li class="toctree-l5"><a class="reference internal" href="framework/view/wxs/datatype.html#id12">属性</a></li>
-<li class="toctree-l5"><a class="reference internal" href="framework/view/wxs/datatype.html#id13">方法</a></li>
-</ul>
-</li>
-<li class="toctree-l4"><a class="reference internal" href="framework/view/wxs/datatype.html#function">function</a><ul>
-<li class="toctree-l5"><a class="reference internal" href="framework/view/wxs/datatype.html#id14">语法</a></li>
-<li class="toctree-l5"><a class="reference internal" href="framework/view/wxs/datatype.html#arguments">arguments</a></li>
-<li class="toctree-l5"><a class="reference internal" href="framework/view/wxs/datatype.html#id15">属性</a></li>
-<li class="toctree-l5"><a class="reference internal" href="framework/view/wxs/datatype.html#id16">方法</a></li>
-</ul>
-</li>
-<li class="toctree-l4"><a class="reference internal" href="framework/view/wxs/datatype.html#array">array</a><ul>
-<li class="toctree-l5"><a class="reference internal" href="framework/view/wxs/datatype.html#id17">语法</a></li>
-<li class="toctree-l5"><a class="reference internal" href="framework/view/wxs/datatype.html#id18">属性</a></li>
-<li class="toctree-l5"><a class="reference internal" href="framework/view/wxs/datatype.html#id19">方法</a></li>
-</ul>
-</li>
-<li class="toctree-l4"><a class="reference internal" href="framework/view/wxs/datatype.html#date">date</a><ul>
-<li class="toctree-l5"><a class="reference internal" href="framework/view/wxs/datatype.html#id20">语法</a></li>
-<li class="toctree-l5"><a class="reference internal" href="framework/view/wxs/datatype.html#id21">参数</a></li>
-<li class="toctree-l5"><a class="reference internal" href="framework/view/wxs/datatype.html#id22">属性</a></li>
-<li class="toctree-l5"><a class="reference internal" href="framework/view/wxs/datatype.html#id23">方法</a></li>
-</ul>
-</li>
-<li class="toctree-l4"><a class="reference internal" href="framework/view/wxs/datatype.html#regexp">regexp</a><ul>
-<li class="toctree-l5"><a class="reference internal" href="framework/view/wxs/datatype.html#id24">语法</a></li>
-<li class="toctree-l5"><a class="reference internal" href="framework/view/wxs/datatype.html#id25">参数：</a></li>
-<li class="toctree-l5"><a class="reference internal" href="framework/view/wxs/datatype.html#id26">属性</a></li>
-<li class="toctree-l5"><a class="reference internal" href="framework/view/wxs/datatype.html#id27">方法</a></li>
-</ul>
-</li>
-<li class="toctree-l4"><a class="reference internal" href="framework/view/wxs/datatype.html#id28">数据类型判断</a><ul>
-<li class="toctree-l5"><a class="reference internal" href="framework/view/wxs/datatype.html#constructor">constructor 属性</a></li>
-<li class="toctree-l5"><a class="reference internal" href="framework/view/wxs/datatype.html#typeof">typeof</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="framework/view/wxs/basiclibrary.html">基础类库</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="framework/view/wxs/basiclibrary.html#console">console</a></li>
-<li class="toctree-l4"><a class="reference internal" href="framework/view/wxs/basiclibrary.html#math">Math</a><ul>
-<li class="toctree-l5"><a class="reference internal" href="framework/view/wxs/basiclibrary.html#id2">属性</a></li>
-<li class="toctree-l5"><a class="reference internal" href="framework/view/wxs/basiclibrary.html#id3">方法</a></li>
-</ul>
-</li>
-<li class="toctree-l4"><a class="reference internal" href="framework/view/wxs/basiclibrary.html#json">JSON</a><ul>
-<li class="toctree-l5"><a class="reference internal" href="framework/view/wxs/basiclibrary.html#id4">方法</a></li>
-</ul>
-</li>
-<li class="toctree-l4"><a class="reference internal" href="framework/view/wxs/basiclibrary.html#number">Number</a><ul>
-<li class="toctree-l5"><a class="reference internal" href="framework/view/wxs/basiclibrary.html#id5">属性</a></li>
-</ul>
-</li>
-<li class="toctree-l4"><a class="reference internal" href="framework/view/wxs/basiclibrary.html#date">Date</a><ul>
-<li class="toctree-l5"><a class="reference internal" href="framework/view/wxs/basiclibrary.html#id6">属性</a></li>
-</ul>
-</li>
-<li class="toctree-l4"><a class="reference internal" href="framework/view/wxs/basiclibrary.html#global">Global</a><ul>
-<li class="toctree-l5"><a class="reference internal" href="framework/view/wxs/basiclibrary.html#id7">属性</a></li>
-<li class="toctree-l5"><a class="reference internal" href="framework/view/wxs/basiclibrary.html#id8">方法</a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
+<li class="toctree-l2"><a class="reference internal" href="reference/api/index.html">框架接口说明</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference/wxml/index.html">WXML</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference/wxs/index.html">WXS 语法参考</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="wxcloud/index.html">云开发</a></li>
 <li class="toctree-l1"><a class="reference internal" href="wxwork/index.html">企业微信</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="wxwork/doc/index.html">文档概述</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="wxwork/doc/notice.html">开发前须知</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="wxwork/doc/notice.html#id2">概述</a></li>
-<li class="toctree-l4"><a class="reference internal" href="wxwork/doc/notice.html#id3">企业微信小程序能力扩展</a></li>
-<li class="toctree-l4"><a class="reference internal" href="wxwork/doc/notice.html#id4">企业微信关联小程序</a></li>
-<li class="toctree-l4"><a class="reference internal" href="wxwork/doc/notice.html#id5">多企业关联同一个小程序</a></li>
-<li class="toctree-l4"><a class="reference internal" href="wxwork/doc/notice.html#id6">第三方小程序(服务商)</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="wxwork/doc/third-party-services.html">第三方小程序（服务商）</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="wxwork/doc/third-party-services.html#id2">第三方小程序登录流程示意图</a></li>
-<li class="toctree-l4"><a class="reference internal" href="wxwork/doc/third-party-services.html#id3">第三方登录凭证校验</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="wxwork/doc/devtool-plugin.html">开发者工具插件支持</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="wxwork/doc/devtool-plugin.html#id2">插件安装</a></li>
-<li class="toctree-l4"><a class="reference internal" href="wxwork/doc/devtool-plugin.html#id3">开发调试</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="wxwork/doc/wx-api-support.html">微信小程序API支持情况</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="wxwork/doc/wx-api-support.html#id1">基础</a></li>
-<li class="toctree-l4"><a class="reference internal" href="wxwork/doc/wx-api-support.html#id2">系统</a><ul>
-<li class="toctree-l5"><a class="reference internal" href="wxwork/doc/wx-api-support.html#id3">系统信息</a></li>
-</ul>
-</li>
-<li class="toctree-l4"><a class="reference internal" href="wxwork/doc/wx-api-support.html#id4">更新</a><ul>
-<li class="toctree-l5"><a class="reference internal" href="wxwork/doc/wx-api-support.html#updatemanager">UpdateManager</a></li>
-</ul>
-</li>
-<li class="toctree-l4"><a class="reference internal" href="wxwork/doc/wx-api-support.html#id5">小程序</a><ul>
-<li class="toctree-l5"><a class="reference internal" href="wxwork/doc/wx-api-support.html#id6">生命周期</a></li>
-<li class="toctree-l5"><a class="reference internal" href="wxwork/doc/wx-api-support.html#id7">应用级事件</a></li>
-</ul>
-</li>
-<li class="toctree-l4"><a class="reference internal" href="wxwork/doc/wx-api-support.html#id8">定时器</a></li>
-<li class="toctree-l4"><a class="reference internal" href="wxwork/doc/wx-api-support.html#id9">调试</a><ul>
-<li class="toctree-l5"><a class="reference internal" href="wxwork/doc/wx-api-support.html#console">console</a></li>
-</ul>
-</li>
-<li class="toctree-l4"><a class="reference internal" href="wxwork/doc/wx-api-support.html#logmanager">LogManager</a></li>
-<li class="toctree-l4"><a class="reference internal" href="wxwork/doc/wx-api-support.html#id10">路由</a></li>
-<li class="toctree-l4"><a class="reference internal" href="wxwork/doc/wx-api-support.html#id11">界面</a><ul>
-<li class="toctree-l5"><a class="reference internal" href="wxwork/doc/wx-api-support.html#id12">交互</a></li>
-</ul>
-</li>
-<li class="toctree-l4"><a class="reference internal" href="wxwork/doc/wx-api-support.html#id13">导航栏</a></li>
-<li class="toctree-l4"><a class="reference internal" href="wxwork/doc/wx-api-support.html#id14">背景</a></li>
-<li class="toctree-l4"><a class="reference internal" href="wxwork/doc/wx-api-support.html#tab-bar">Tab Bar</a></li>
-<li class="toctree-l4"><a class="reference internal" href="wxwork/doc/wx-api-support.html#id15">字体</a></li>
-<li class="toctree-l4"><a class="reference internal" href="wxwork/doc/wx-api-support.html#id16">下拉刷新</a></li>
-<li class="toctree-l4"><a class="reference internal" href="wxwork/doc/wx-api-support.html#id17">滚动</a></li>
-<li class="toctree-l4"><a class="reference internal" href="wxwork/doc/wx-api-support.html#id18">动画</a><ul>
-<li class="toctree-l5"><a class="reference internal" href="wxwork/doc/wx-api-support.html#animation">Animation</a></li>
-</ul>
-</li>
-<li class="toctree-l4"><a class="reference internal" href="wxwork/doc/wx-api-support.html#id19">置顶</a></li>
-<li class="toctree-l4"><a class="reference internal" href="wxwork/doc/wx-api-support.html#id20">自定义组件</a></li>
-<li class="toctree-l4"><a class="reference internal" href="wxwork/doc/wx-api-support.html#id21">菜单</a></li>
-<li class="toctree-l4"><a class="reference internal" href="wxwork/doc/wx-api-support.html#id22">窗口</a></li>
-<li class="toctree-l4"><a class="reference internal" href="wxwork/doc/wx-api-support.html#id23">键盘</a></li>
-<li class="toctree-l4"><a class="reference internal" href="wxwork/doc/wx-api-support.html#id24">网络</a><ul>
-<li class="toctree-l5"><a class="reference internal" href="wxwork/doc/wx-api-support.html#id25">发起请求</a></li>
-<li class="toctree-l5"><a class="reference internal" href="wxwork/doc/wx-api-support.html#id26">下载</a></li>
-<li class="toctree-l5"><a class="reference internal" href="wxwork/doc/wx-api-support.html#id27">上传</a></li>
-<li class="toctree-l5"><a class="reference internal" href="wxwork/doc/wx-api-support.html#websocket">WebSocket</a></li>
-<li class="toctree-l5"><a class="reference internal" href="wxwork/doc/wx-api-support.html#mdns">mDNS</a></li>
-</ul>
-</li>
-<li class="toctree-l4"><a class="reference internal" href="wxwork/doc/wx-api-support.html#id28">数据缓存</a></li>
-<li class="toctree-l4"><a class="reference internal" href="wxwork/doc/wx-api-support.html#id29">媒体</a><ul>
-<li class="toctree-l5"><a class="reference internal" href="wxwork/doc/wx-api-support.html#id30">地图</a></li>
-<li class="toctree-l5"><a class="reference internal" href="wxwork/doc/wx-api-support.html#id31">图片</a></li>
-<li class="toctree-l5"><a class="reference internal" href="wxwork/doc/wx-api-support.html#id32">视频</a></li>
-<li class="toctree-l5"><a class="reference internal" href="wxwork/doc/wx-api-support.html#id33">音频</a></li>
-</ul>
-</li>
-<li class="toctree-l4"><a class="reference internal" href="wxwork/doc/wx-api-support.html#inneraudiocontext">InnerAudioContext</a></li>
-<li class="toctree-l4"><a class="reference internal" href="wxwork/doc/wx-api-support.html#id34">背景音频</a><ul>
-<li class="toctree-l5"><a class="reference internal" href="wxwork/doc/wx-api-support.html#id35">实时音视频</a></li>
-<li class="toctree-l5"><a class="reference internal" href="wxwork/doc/wx-api-support.html#id36">录音</a></li>
-<li class="toctree-l5"><a class="reference internal" href="wxwork/doc/wx-api-support.html#id37">相机</a></li>
-</ul>
-</li>
-<li class="toctree-l4"><a class="reference internal" href="wxwork/doc/wx-api-support.html#id38">位置</a></li>
-<li class="toctree-l4"><a class="reference internal" href="wxwork/doc/wx-api-support.html#id39">转发</a></li>
-<li class="toctree-l4"><a class="reference internal" href="wxwork/doc/wx-api-support.html#id40">画布</a><ul>
-<li class="toctree-l5"><a class="reference internal" href="wxwork/doc/wx-api-support.html#canvascontext">CanvasContext</a></li>
-</ul>
-</li>
-<li class="toctree-l4"><a class="reference internal" href="wxwork/doc/wx-api-support.html#canvasgradient">CanvasGradient</a></li>
-<li class="toctree-l4"><a class="reference internal" href="wxwork/doc/wx-api-support.html#id41">文件</a><ul>
-<li class="toctree-l5"><a class="reference internal" href="wxwork/doc/wx-api-support.html#filesystemmanager">FileSystemManager</a></li>
-<li class="toctree-l5"><a class="reference internal" href="wxwork/doc/wx-api-support.html#stats">Stats</a></li>
-</ul>
-</li>
-<li class="toctree-l4"><a class="reference internal" href="wxwork/doc/wx-api-support.html#id42">开放接口</a><ul>
-<li class="toctree-l5"><a class="reference internal" href="wxwork/doc/wx-api-support.html#id43">登录</a></li>
-<li class="toctree-l5"><a class="reference internal" href="wxwork/doc/wx-api-support.html#id44">小程序跳转</a></li>
-<li class="toctree-l5"><a class="reference internal" href="wxwork/doc/wx-api-support.html#id45">帐号信息</a></li>
-<li class="toctree-l5"><a class="reference internal" href="wxwork/doc/wx-api-support.html#id46">用户信息</a></li>
-<li class="toctree-l5"><a class="reference internal" href="wxwork/doc/wx-api-support.html#id47">接口调用凭证</a></li>
-</ul>
-</li>
-<li class="toctree-l4"><a class="reference internal" href="wxwork/doc/wx-api-support.html#id48">数据上报</a></li>
-<li class="toctree-l4"><a class="reference internal" href="wxwork/doc/wx-api-support.html#id49">数据分析</a><ul>
-<li class="toctree-l5"><a class="reference internal" href="wxwork/doc/wx-api-support.html#id50">访问留存</a></li>
-<li class="toctree-l5"><a class="reference internal" href="wxwork/doc/wx-api-support.html#id51">访问趋势</a></li>
-</ul>
-</li>
-<li class="toctree-l4"><a class="reference internal" href="wxwork/doc/wx-api-support.html#id52">支付</a></li>
-<li class="toctree-l4"><a class="reference internal" href="wxwork/doc/wx-api-support.html#id53">授权</a></li>
-<li class="toctree-l4"><a class="reference internal" href="wxwork/doc/wx-api-support.html#id54">设置</a></li>
-<li class="toctree-l4"><a class="reference internal" href="wxwork/doc/wx-api-support.html#id55">客服消息</a></li>
-<li class="toctree-l4"><a class="reference internal" href="wxwork/doc/wx-api-support.html#id56">模板消息</a><ul>
-<li class="toctree-l5"><a class="reference internal" href="wxwork/doc/wx-api-support.html#id57">统一服务消息</a></li>
-<li class="toctree-l5"><a class="reference internal" href="wxwork/doc/wx-api-support.html#id58">动态消息</a></li>
-</ul>
-</li>
-<li class="toctree-l4"><a class="reference internal" href="wxwork/doc/wx-api-support.html#id59">插件管理</a></li>
-<li class="toctree-l4"><a class="reference internal" href="wxwork/doc/wx-api-support.html#id60">收货地址</a></li>
-<li class="toctree-l4"><a class="reference internal" href="wxwork/doc/wx-api-support.html#id61">卡券</a></li>
-<li class="toctree-l4"><a class="reference internal" href="wxwork/doc/wx-api-support.html#id62">发票</a></li>
-<li class="toctree-l4"><a class="reference internal" href="wxwork/doc/wx-api-support.html#id63">附近的小程序</a></li>
-<li class="toctree-l4"><a class="reference internal" href="wxwork/doc/wx-api-support.html#id64">二维码</a></li>
-<li class="toctree-l4"><a class="reference internal" href="wxwork/doc/wx-api-support.html#id65">内容安全</a><ul>
-<li class="toctree-l5"><a class="reference internal" href="wxwork/doc/wx-api-support.html#id66">生物认证</a></li>
-</ul>
-</li>
-<li class="toctree-l4"><a class="reference internal" href="wxwork/doc/wx-api-support.html#id67">微信运动</a></li>
-<li class="toctree-l4"><a class="reference internal" href="wxwork/doc/wx-api-support.html#id68">物流助手</a><ul>
-<li class="toctree-l5"><a class="reference internal" href="wxwork/doc/wx-api-support.html#id69">小程序使用</a></li>
-<li class="toctree-l5"><a class="reference internal" href="wxwork/doc/wx-api-support.html#id70">服务提供方使用</a></li>
-</ul>
-</li>
-<li class="toctree-l4"><a class="reference internal" href="wxwork/doc/wx-api-support.html#id71">设备</a><ul>
-<li class="toctree-l5"><a class="reference internal" href="wxwork/doc/wx-api-support.html#ibeacon">iBeacon</a></li>
-<li class="toctree-l5"><a class="reference internal" href="wxwork/doc/wx-api-support.html#wi-fi">Wi-Fi</a></li>
-<li class="toctree-l5"><a class="reference internal" href="wxwork/doc/wx-api-support.html#id72">联系人</a></li>
-<li class="toctree-l5"><a class="reference internal" href="wxwork/doc/wx-api-support.html#id73">低功耗蓝牙</a></li>
-<li class="toctree-l5"><a class="reference internal" href="wxwork/doc/wx-api-support.html#id74">蓝牙</a></li>
-<li class="toctree-l5"><a class="reference internal" href="wxwork/doc/wx-api-support.html#id75">电量</a></li>
-<li class="toctree-l5"><a class="reference internal" href="wxwork/doc/wx-api-support.html#id76">剪贴板</a></li>
-<li class="toctree-l5"><a class="reference internal" href="wxwork/doc/wx-api-support.html#nfc">NFC</a></li>
-<li class="toctree-l5"><a class="reference internal" href="wxwork/doc/wx-api-support.html#id77">网络</a></li>
-<li class="toctree-l5"><a class="reference internal" href="wxwork/doc/wx-api-support.html#id78">屏幕</a></li>
-<li class="toctree-l5"><a class="reference internal" href="wxwork/doc/wx-api-support.html#id79">电话</a></li>
-<li class="toctree-l5"><a class="reference internal" href="wxwork/doc/wx-api-support.html#id80">加速计</a></li>
-<li class="toctree-l5"><a class="reference internal" href="wxwork/doc/wx-api-support.html#id81">罗盘</a></li>
-<li class="toctree-l5"><a class="reference internal" href="wxwork/doc/wx-api-support.html#id82">设备方向</a></li>
-<li class="toctree-l5"><a class="reference internal" href="wxwork/doc/wx-api-support.html#id83">陀螺仪</a></li>
-</ul>
-</li>
-<li class="toctree-l4"><a class="reference internal" href="wxwork/doc/wx-api-support.html#id84">性能</a></li>
-<li class="toctree-l4"><a class="reference internal" href="wxwork/doc/wx-api-support.html#id85">扫码</a></li>
-<li class="toctree-l4"><a class="reference internal" href="wxwork/doc/wx-api-support.html#id86">振动</a></li>
-<li class="toctree-l4"><a class="reference internal" href="wxwork/doc/wx-api-support.html#worker">Worker</a><ul>
-<li class="toctree-l5"><a class="reference internal" href="wxwork/doc/wx-api-support.html#id87">Worker</a></li>
-</ul>
-</li>
-<li class="toctree-l4"><a class="reference internal" href="wxwork/doc/wx-api-support.html#id88">第三方平台</a></li>
-<li class="toctree-l4"><a class="reference internal" href="wxwork/doc/wx-api-support.html#wxml">WXML</a></li>
-<li class="toctree-l4"><a class="reference internal" href="wxwork/doc/wx-api-support.html#intersectionobserver">IntersectionObserver</a></li>
-<li class="toctree-l4"><a class="reference internal" href="wxwork/doc/wx-api-support.html#nodesref">NodesRef</a></li>
-<li class="toctree-l4"><a class="reference internal" href="wxwork/doc/wx-api-support.html#selectorquery">SelectorQuery</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="wxwork/doc/wx-component-support.html">微信小程序组件支持情况</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="wxwork/doc/wx-component-support.html#view-container">视图容器(View Container)：</a></li>
-<li class="toctree-l4"><a class="reference internal" href="wxwork/doc/wx-component-support.html#basic-content">基础内容(Basic Content)：</a></li>
-<li class="toctree-l4"><a class="reference internal" href="wxwork/doc/wx-component-support.html#form">表单(Form)：</a></li>
-<li class="toctree-l4"><a class="reference internal" href="wxwork/doc/wx-component-support.html#navigation">导航(Navigation)：</a></li>
-<li class="toctree-l4"><a class="reference internal" href="wxwork/doc/wx-component-support.html#media">多媒体(Media)：</a></li>
-<li class="toctree-l4"><a class="reference internal" href="wxwork/doc/wx-component-support.html#map">地图(Map)：</a></li>
-<li class="toctree-l4"><a class="reference internal" href="wxwork/doc/wx-component-support.html#canvas">画布(Canvas)：</a></li>
-<li class="toctree-l4"><a class="reference internal" href="wxwork/doc/wx-component-support.html#open-ability">开放能力(Open Ability)：</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="wxwork/api/index.html">接口</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="wxwork/api/login/index.html">登录</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="wxwork/api/login/wx.qy.login.html">wx.qy.login</a></li>
-<li class="toctree-l4"><a class="reference internal" href="wxwork/api/login/code2Session.html">code2Session</a></li>
-<li class="toctree-l4"><a class="reference internal" href="wxwork/api/login/wx.qy.checkSession.html">wx.qy.checkSession</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="wxwork/api/foundation/index.html">基础接口</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="wxwork/api/foundation/wx.getSystemInfo.html">wx.getSystemInfo</a></li>
-<li class="toctree-l4"><a class="reference internal" href="wxwork/api/foundation/wx.getSystemInfoSync.html">wx.getSystemInfoSync</a></li>
-<li class="toctree-l4"><a class="reference internal" href="wxwork/api/foundation/wx.qy.canIUse.html">wx.qy.canIUse</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="wxwork/api/corpmemberinfo/index.html">获取成员信息</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="wxwork/api/corpmemberinfo/wx.qy.getEnterpriseUserInfo.html">wx.qy.getEnterpriseUserInfo</a></li>
-<li class="toctree-l4"><a class="reference internal" href="wxwork/api/corpmemberinfo/wx.qy.getAvatar.html">wx.qy.getAvatar</a></li>
-<li class="toctree-l4"><a class="reference internal" href="wxwork/api/corpmemberinfo/wx.qy.getQrCode.html">wx.qy.getQrCode</a></li>
-<li class="toctree-l4"><a class="reference internal" href="wxwork/api/corpmemberinfo/wx.qy.getMobile.html">wx.qy.getMobile</a></li>
-<li class="toctree-l4"><a class="reference internal" href="wxwork/api/corpmemberinfo/wx.qy.getEmail.html">wx.qy.getEmail</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="wxwork/api/contact/index.html">企业通讯录与会话</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="wxwork/api/contact/wx.qy.selectEnterpriseContact.html">wx.qy.selectEnterpriseContact</a></li>
-<li class="toctree-l4"><a class="reference internal" href="wxwork/api/contact/wx.qy.openEnterpriseChat.html">wx.qy.openEnterpriseChat</a></li>
-<li class="toctree-l4"><a class="reference internal" href="wxwork/api/contact/wx.qy.selectExternalContact.html">wx.qy.selectExternalContact</a></li>
-<li class="toctree-l4"><a class="reference internal" href="wxwork/api/contact/wx.qy.getCurExternalContact.html">wx.qy.getCurExternalContact</a></li>
-<li class="toctree-l4"><a class="reference internal" href="wxwork/api/contact/wx.qy.openUserProfile.html">wx.qy.openUserProfile</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="wxwork/api/nfc/index.html">NFC接口</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="wxwork/api/nfc/wx.qy.getNFCReaderState.html">wx.qy.getNFCReaderState</a></li>
-<li class="toctree-l4"><a class="reference internal" href="wxwork/api/nfc/wx.qy.startNFCReader.html">wx.qy.startNFCReader</a></li>
-<li class="toctree-l4"><a class="reference internal" href="wxwork/api/nfc/wx.qy.stopNFCReader.html">wx.qy.stopNFCReader</a></li>
-<li class="toctree-l4"><a class="reference internal" href="wxwork/api/nfc/onNFCReadMessage.html">onNFCReadMessage</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="wxwork/api/miniprogram-msg.html">发送小程序消息</a></li>
-</ul>
-</li>
+<li class="toctree-l2"><a class="reference internal" href="wxwork/doc/index.html">文档概述</a></li>
+<li class="toctree-l2"><a class="reference internal" href="wxwork/api/index.html">接口</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="todolist.html">待办事项</a></li>
@@ -1239,56 +264,38 @@
 <ul class="simple">
 <li><p><a class="reference internal" href="genindex.html"><span class="std std-ref">索引</span></a></p></li>
 <li><p><a class="reference internal" href="py-modindex.html"><span class="std std-ref">模块索引</span></a></p></li>
+<li><p><span class="xref std std-ref">http-routingtable</span></p></li>
 <li><p><a class="reference internal" href="search.html"><span class="std std-ref">搜索页面</span></a></p></li>
 <li><p><a class="reference internal" href="glossary.html#glossary"><span class="std std-ref">术语</span></a></p></li>
 </ul>
 </div>
 
 
-           </div>
-           
           </div>
-          <footer>
-  
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="index.html" class="btn btn-neutral float-right" title="开发指南" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-    </div>
-  
-
-  <hr/>
-
-  <div role="contentinfo">
-    <p>
-        &copy; Copyright 2019, Nosy
-
-    </p>
-  </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
-
-</footer>
-
         </div>
       </div>
-
-    </section>
-
-  </div>
-  
-
-
-  <script type="text/javascript">
-      jQuery(function () {
-          SphinxRtdTheme.Navigation.enable(true);
-      });
-  </script>
-
-  
-  
-    
-   
-
-</body>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>导航</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="总目录"
+             >索引</a></li>
+        <li class="right" >
+          <a href="http-routingtable.html" title="微信小程序API"
+             >wxapi</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="开发指南"
+             >下一页</a> |</li>
+<li><a href="index.html">主页</a>&#160;|</li>
+<li><a href="#">文档</a> &#187;</li>
+ 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; 版权所有 2019, Wxadev Docs.
+      由 <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.0+/40994a8 创建。
+    </div>
+  </body>
 </html>

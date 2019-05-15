@@ -1,225 +1,257 @@
 
-
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-CN" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-CN" > <!--<![endif]-->
-<head>
-  <meta charset="utf-8">
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <title>开发指南 &mdash; wxadev 1.0.0 文档</title>
-  
 
-  
-  
-  
-  
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
+  <head>
+    <meta charset="utf-8" />
+    <title>概述 &#8212; wxadev 1.0.0 文档</title>
+    <link rel="stylesheet" href="_static/sphinx13.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <script type="text/javascript" src="_static/translations.js"></script>
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="在 wxadev 1.0.0 文档 中搜索"
+          href="_static/opensearch.xml"/>
 
-  
-  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
-  
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-        <script type="text/javascript" src="_static/jquery.js"></script>
-        <script type="text/javascript" src="_static/underscore.js"></script>
-        <script type="text/javascript" src="_static/doctools.js"></script>
-        <script type="text/javascript" src="_static/language_data.js"></script>
-        <script type="text/javascript" src="_static/translations.js"></script>
-    
-    <script type="text/javascript" src="_static/js/theme.js"></script>
-
-    
-
-  
-  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="index" title="索引" href="genindex.html" />
     <link rel="search" title="搜索" href="search.html" />
-    <link rel="next" title="简介" href="dev.html" />
-    <link rel="prev" title="开发教程" href="contents.html" /> 
-</head>
+<link rel="canonical" href="http://www.sphinx-doc.org/en/master/index.html" />
 
-<body class="wy-body-for-nav">
-
-   
-  <div class="wy-grid-for-nav">
-    
-    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
-      <div class="wy-side-scroll">
-        <div class="wy-side-nav-search" >
-          
-
-          
-            <a href="contents.html" class="icon icon-home"> wxadev
-          
-
-          
-          </a>
-
-          
-            
-            
-          
-
-          
-<div role="search">
-  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
-    <input type="hidden" name="check_keywords" value="yes" />
-    <input type="hidden" name="area" value="default" />
-  </form>
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet" type="text/css" />
+ 
+<style type="text/css">
+  table.right { float: right; margin-left: 20px; }
+  table.right td { border: 1px solid #ccc; }
+  
+  .related { display: none; }
+  
+</style>
+<script type="text/javascript">
+  // intelligent scrolling of the sidebar content
+  $(window).scroll(function() {
+    var sb = $('.sphinxsidebarwrapper');
+    var win = $(window);
+    var sbh = sb.height();
+    var offset = $('.sphinxsidebar').position()['top'];
+    var wintop = win.scrollTop();
+    var winbot = wintop + win.innerHeight();
+    var curtop = sb.position()['top'];
+    var curbot = curtop + sbh;
+    // does sidebar fit in window?
+    if (sbh < win.innerHeight()) {
+      // yes: easy case -- always keep at the top
+      sb.css('top', $u.min([$u.max([0, wintop - offset - 10]), $(document).height() - sbh - 200]));
+    } else {
+      // no: only scroll if top/bottom edge of sidebar is at
+      // top/bottom edge of window
+      if (curtop > wintop && curbot > winbot) {
+        sb.css('top', $u.max([wintop - offset - 10, 0]));
+      } else if (curtop < wintop && curbot < winbot) {
+        sb.css('top', $u.min([winbot - sbh - offset - 20, $(document).height() - sbh - 200]));
+      }
+    }
+  });
+</script> 
+  </head><body>
+<div class="pageheader">
+  <ul>
+    <li><a href="#">主页</a></li>
+    <li><a href="framework/index.html">框架</a></li>
+    <li><a href="component/index.html">组件</a></li>
+    <li><a href="api/index.html">API</a></li>
+    <li><a href="api-backend/index.html">服务端</a></li>
+    <li><a href="contents.html">目录</a></li>
+  </ul>
+  <div>
+    <a href="#">
+      <img src="_static/wxaheader.png" alt="wxa" />
+    </a>
+  </div>
 </div>
 
-          
-        </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>导航</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="总目录"
+             accesskey="I">索引</a></li>
+        <li class="right" >
+          <a href="http-routingtable.html" title="微信小程序API"
+             >wxapi</a> |</li>
+<li><a href="#">主页</a>&#160;|</li>
+<li><a href="contents.html">文档</a> &#187;</li>
+ 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper"><p class="logo">
+  <a href="https://developers.weixin.qq.com/">
+    微信开放社区
+  </a>
+</p>
 
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-              
-            
-            
-              <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">开发指南</a></li>
-<li class="toctree-l1"><a class="reference internal" href="dev.html">简介</a></li>
-<li class="toctree-l1"><a class="reference internal" href="basic/index.html">基础教程</a></li>
-<li class="toctree-l1"><a class="reference internal" href="guide/index.html">运行环境</a></li>
-<li class="toctree-l1"><a class="reference internal" href="framework/index.html">框架</a></li>
-<li class="toctree-l1"><a class="reference internal" href="component/index.html">组件</a></li>
-<li class="toctree-l1"><a class="reference internal" href="api/index.html">API</a></li>
-<li class="toctree-l1"><a class="reference internal" href="api-backend/index.html">服务端API</a></li>
-<li class="toctree-l1"><a class="reference internal" href="devtools/index.html">开发工具</a></li>
-<li class="toctree-l1"><a class="reference internal" href="reference/index.html">参考资料</a></li>
-<li class="toctree-l1"><a class="reference internal" href="wxcloud/index.html">云开发</a></li>
-<li class="toctree-l1"><a class="reference internal" href="wxwork/index.html">企业微信</a></li>
-<li class="toctree-l1"><a class="reference internal" href="todolist.html">待办事项</a></li>
-<li class="toctree-l1"><a class="reference internal" href="glossary.html">术语</a></li>
-</ul>
+<h3>开发者工具</h3>
+<p class="download">
+  <a href="https://developers.weixin.qq.com/miniprogram/dev/devtools/download.html" alt="devtools">
+    下载各平台版本
+  </a>
+</p>
+<!-- <p>Install WxAPP with:</p>
+<pre>pip install -U WxAPP</pre> -->
 
-            
-          
+<h3>开发者社区</h3>
+<p>
+  <a href="https://developers.weixin.qq.com/community">小程序交流</a>
+</p>
+<p>
+  <a href="https://developers.weixin.qq.com/community">小游戏交流</a>
+</p>
+<p>
+  <a href="https://developers.weixin.qq.com/community">微信支付交流</a>
+</p>
+<p><a href="http://kf.qq.com/product/wx_xcx.html">腾讯客服</a></p>
+<p>
+  You can also open an issue at the
+  <a href="https://github.com/wdk-docs/wxadev-docs/issues">tracker</a>.
+</p>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">快速搜索</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="转向" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
         </div>
       </div>
-    </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
-          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="contents.html">wxadev</a>
-        
-      </nav>
-
-
-      <div class="wy-nav-content">
-        
-        <div class="rst-content">
-        
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-
-  <ul class="wy-breadcrumbs">
-    
-      <li><a href="contents.html">Docs</a> &raquo;</li>
-        
-      <li>开发指南</li>
-    
-    
-      <li class="wy-breadcrumbs-aside">
-        
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
             
-            <a href="_sources/index.rst.txt" rel="nofollow"> View page source</a>
-          
-        
-      </li>
-    
-  </ul>
-
-  
-  <hr/>
+<h1>开发指南</h1>
+<div class="quotebar">
+  <p><em>简介</em></p>
+  <p>小程序提供了一个简单、高效的应用开发框架和丰富的组件及API，帮助开发者在微信中开发具有原生 APP 体验的服务。</p>
 </div>
-          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
-           <div itemprop="articleBody">
-            
-  <div class="section" id="id1">
-<h1>开发指南<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
-<p>小程序提供了一个简单、高效的应用开发框架和丰富的组件及API，帮助开发者在微信中开发具有原生 APP 体验的服务。</p>
+
 <p>本章分主题的介绍了小程序的开发语言、框架、能力、调试等内容，帮助开发者快速全面的了解小程序开发的方方面面。</p>
 <p>想要更具体了了关于框架、组件、API的详细内容，请参考对应的参考文档：</p>
-<ul class="simple">
-<li><p>小程序 <a class="reference internal" href="framework/index.html"><span class="doc">框架</span></a> 参考文档</p></li>
-<li><p>小程序 <a class="reference internal" href="component/index.html"><span class="doc">组件</span></a> 参考文档</p></li>
-<li><p>小程序 <a class="reference internal" href="api/index.html"><span class="doc">API</span></a> 参考文档</p></li>
-<li><p>小程序 <a class="reference internal" href="api-backend/index.html"><span class="doc">服务端API</span></a> 参考文档</p></li>
+<ul>
+  <li>小程序框架参考文档</li>
+  <li>小程序组件参考文档</li>
+  <li>小程序 API 参考文档</li>
+  <li>小程序服务端 API 参考文档</li>
 </ul>
-</div>
 
+<h2 style="margin-bottom: 0">文档</h2>
 
-           </div>
-           
+<table class="contentstable">
+  <tr>
+    <td>
+      <p class="biglink">
+        <a class="biglink" href="quickstart/basic/getstart.html">开发小程序的第一步</a><br />
+        <span class="linkdescr">注册管理，安装开发工具编译预览。</span>
+      </p>
+    </td>
+    <td>
+      <p class="biglink">
+        <a class="biglink" href="search.html">搜索页</a><br />
+        <span class="linkdescr">搜索文档内容</span>
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <p class="biglink">
+        <a class="biglink" href="contents.html">详细目录</a><br />
+        <span class="linkdescr">完整的目录结构</span>
+      </p>
+    </td>
+    <td>
+      <p class="biglink">
+        <a class="biglink" href="genindex.html">索引</a><br />
+        <span class="linkdescr">所的函数，类，术语生成的索引</span>
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <p class="biglink">
+        <a class="biglink" href="http-routingtable.html">服务接口</a><br />
+        <span class="linkdescr">服务端能力接口索引</span>
+      </p>
+    </td>
+    <td>
+      <p class="biglink">
+        <a class="biglink" href="framework/release/index.html">更新日志</a><br />
+        <span class="linkdescr">版本更新，发布历史</span>
+      </p>
+    </td>
+    <td>
+    </td>
+  </tr>
+</table>
+
+<p>更多内容请查看文档菜单</p>
+
+<h2>云开发</h2>
+<p>
+  已单独拆分为 <a href="https:://wdk-docs.github.io/wxcloud-docs" target="_blank">云开发文档</a>
+</p>
+
+<h2>开发企业微信小程序</h2>
+<p>
+  企业微信移动客户端从2.5.8版本开始，已内置微信小程序基础库，开发者无需适配（部分接口需要适配），
+  即可将微信小程序移植到企业微信上运行，同时开发者也可以针对企业微信提供的扩展接口开发出更适用于企业内部场景的小程序。
+</p>
+
+<h2>微信小游戏开发</h2>
+<p>
+  小游戏的运行环境在 iOS 上是 JavaScriptCore，在 Android 上是 V8。
+  更多查看 <a href="https://developers.weixin.qq.com/minigame/dev/index.html" target="_blank">开发文档</a>
+</p>
+
+<h2>关于本文档</h2>
+<p>
+  由于官方文档看起来不是很方便，使用<a href="https://wdk-docs.github.io/sphinx-docs/" target="_blank">sphinx-doc</a>重新整理官方文档。
+  文档采用sphinx-doc的官方支持模板sphinx13并做部分修改。
+  服务 http rest 接口采用<a href="https://wdk-docs.github.io/sphinx-docs/usage/extensions/httpdomain.html"
+    target="_blank">httpdomain</a>域进行编辑索引。
+</p>
+<ul>
+  <li><a href="authors.html">文档作者</a></li>
+</ul>
+
           </div>
-          <footer>
-  
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="dev.html" class="btn btn-neutral float-right" title="简介" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="contents.html" class="btn btn-neutral float-left" title="开发教程" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
-    </div>
-  
-
-  <hr/>
-
-  <div role="contentinfo">
-    <p>
-        &copy; Copyright 2019, Nosy
-
-    </p>
-  </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
-
-</footer>
-
         </div>
       </div>
-
-    </section>
-
-  </div>
-  
-
-
-  <script type="text/javascript">
-      jQuery(function () {
-          SphinxRtdTheme.Navigation.enable(true);
-      });
-  </script>
-
-  
-  
-    
-   
-
-</body>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>导航</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="总目录"
+             >索引</a></li>
+        <li class="right" >
+          <a href="http-routingtable.html" title="微信小程序API"
+             >wxapi</a> |</li>
+<li><a href="#">主页</a>&#160;|</li>
+<li><a href="contents.html">文档</a> &#187;</li>
+ 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; 版权所有 2019, Wxadev Docs.
+      由 <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.0+/40994a8 创建。
+    </div>
+  </body>
 </html>

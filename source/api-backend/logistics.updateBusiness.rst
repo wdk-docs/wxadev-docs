@@ -10,8 +10,9 @@ logistics.updateBusiness
 一、HTTPS 调用
 -----------------------
 
-请求地址
-POST https://api.weixin.qq.com/cgi-bin/express/delivery/service/business/update?access_token=ACCESS_TOKEN
+接口地址请求地址 :term:`api`
+
+.. http:post:: express/delivery/service/business/update?access_token=ACCESS_TOKEN
 
 请求参数
 

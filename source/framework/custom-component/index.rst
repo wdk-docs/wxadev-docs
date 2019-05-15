@@ -6,16 +6,14 @@
    :glob:
 
    create
-   behaviors
+   wxml-wxss
    component
-   custom-component
    events
+   lifetimes
+   behaviors
+   relations
+   observer
    extend
    generics
-   lifetimes
-   observer
-   relations
    trdparty
    unit-test
-   wxml-wxss
-

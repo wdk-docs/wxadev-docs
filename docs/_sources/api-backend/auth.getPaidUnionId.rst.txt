@@ -21,8 +21,9 @@ HTTPS 调用
 
 请求地址 :term:`api_wxa`
 
-.. http:get:: <api_wxa>getpaidunionid
+.. http:get:: getpaidunionid
 
+   :synopsis: 用户支付完成后，获取该用户的 UnionId，无需用户授权。本接口支持第三方平台代理查询。
    :query string access_token: *必选*	接口调用凭证
    :query string openid: *必选*	支付用户唯一标识
    :query string transaction_id: *非比选*	微信支付订单号

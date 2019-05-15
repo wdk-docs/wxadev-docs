@@ -10,8 +10,9 @@ logistics.getPath
 一、HTTPS 调用
 ------------------
 
-请求地址
-POST https://api.weixin.qq.com/cgi-bin/express/business/path/get?access_token=ACCESS_TOKEN
+接口地址请求地址 :term:`api`
+
+.. http:post:: express/business/path/get?access_token=ACCESS_TOKEN
 
 请求参数
 属性	类型	默认值	必填	说明

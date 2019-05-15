@@ -1,208 +1,226 @@
 
-
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-CN" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-CN" > <!--<![endif]-->
-<head>
-  <meta charset="utf-8">
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <title>开发者工具更新日志 &mdash; wxadev 1.0.0 文档</title>
-  
 
-  
-  
-  
-  
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
+  <head>
+    <meta charset="utf-8" />
+    <title>开发者工具更新日志 &#8212; wxadev 1.0.0 文档</title>
+    <link rel="stylesheet" href="../../_static/sphinx13.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/language_data.js"></script>
+    <script type="text/javascript" src="../../_static/translations.js"></script>
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="在 wxadev 1.0.0 文档 中搜索"
+          href="../../_static/opensearch.xml"/>
 
-  
-  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
-  
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../../_static/jquery.js"></script>
-        <script type="text/javascript" src="../../_static/underscore.js"></script>
-        <script type="text/javascript" src="../../_static/doctools.js"></script>
-        <script type="text/javascript" src="../../_static/language_data.js"></script>
-        <script type="text/javascript" src="../../_static/translations.js"></script>
-    
-    <script type="text/javascript" src="../../_static/js/theme.js"></script>
-
-    
-
-  
-  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="index" title="索引" href="../../genindex.html" />
     <link rel="search" title="搜索" href="../../search.html" />
     <link rel="next" title="change/beta" href="beta.html" />
-    <link rel="prev" title="微信开发者工具内核升级版公测" href="upnwjs.html" /> 
-</head>
+    <link rel="prev" title="微信开发者工具内核升级版公测" href="upnwjs.html" />
+<link rel="canonical" href="http://www.sphinx-doc.org/en/master/devtools/change/uplog.html" />
 
-<body class="wy-body-for-nav">
-
-   
-  <div class="wy-grid-for-nav">
-    
-    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
-      <div class="wy-side-scroll">
-        <div class="wy-side-nav-search" >
-          
-
-          
-            <a href="../../contents.html" class="icon icon-home"> wxadev
-          
-
-          
-          </a>
-
-          
-            
-            
-          
-
-          
-<div role="search">
-  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
-    <input type="hidden" name="check_keywords" value="yes" />
-    <input type="hidden" name="area" value="default" />
-  </form>
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet" type="text/css" />
+ 
+<style type="text/css">
+  table.right { float: right; margin-left: 20px; }
+  table.right td { border: 1px solid #ccc; }
+  
+</style>
+<script type="text/javascript">
+  // intelligent scrolling of the sidebar content
+  $(window).scroll(function() {
+    var sb = $('.sphinxsidebarwrapper');
+    var win = $(window);
+    var sbh = sb.height();
+    var offset = $('.sphinxsidebar').position()['top'];
+    var wintop = win.scrollTop();
+    var winbot = wintop + win.innerHeight();
+    var curtop = sb.position()['top'];
+    var curbot = curtop + sbh;
+    // does sidebar fit in window?
+    if (sbh < win.innerHeight()) {
+      // yes: easy case -- always keep at the top
+      sb.css('top', $u.min([$u.max([0, wintop - offset - 10]), $(document).height() - sbh - 200]));
+    } else {
+      // no: only scroll if top/bottom edge of sidebar is at
+      // top/bottom edge of window
+      if (curtop > wintop && curbot > winbot) {
+        sb.css('top', $u.max([wintop - offset - 10, 0]));
+      } else if (curtop < wintop && curbot < winbot) {
+        sb.css('top', $u.min([winbot - sbh - offset - 20, $(document).height() - sbh - 200]));
+      }
+    }
+  });
+</script> 
+  </head><body>
+<div class="pageheader">
+  <ul>
+    <li><a href="../../index.html">主页</a></li>
+    <li><a href="../../framework/index.html">框架</a></li>
+    <li><a href="../../component/index.html">组件</a></li>
+    <li><a href="../../api/index.html">API</a></li>
+    <li><a href="../../api-backend/index.html">服务端</a></li>
+    <li><a href="../../contents.html">目录</a></li>
+  </ul>
+  <div>
+    <a href="../../index.html">
+      <img src="../../_static/wxaheader.png" alt="wxa" />
+    </a>
+  </div>
 </div>
 
-          
-        </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>导航</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="总目录"
+             accesskey="I">索引</a></li>
+        <li class="right" >
+          <a href="../../http-routingtable.html" title="微信小程序API"
+             >wxapi</a> |</li>
+        <li class="right" >
+          <a href="beta.html" title="change/beta"
+             accesskey="N">下一页</a> |</li>
+        <li class="right" >
+          <a href="upnwjs.html" title="微信开发者工具内核升级版公测"
+             accesskey="P">上一页</a> |</li>
+<li><a href="../../index.html">主页</a>&#160;|</li>
+<li><a href="../../contents.html">文档</a> &#187;</li>
 
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-              
-            
-            
-              <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../../index.html">开发指南</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../dev.html">简介</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../basic/index.html">基础教程</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../guide/index.html">运行环境</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../framework/index.html">框架</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../component/index.html">组件</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../api/index.html">API</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../api-backend/index.html">服务端API</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="../index.html">开发工具</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="../page.html">界面</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../settings.html">设置页</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../edit.html">编辑区</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../debug.html">调试</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../ext.html">第三方平台开发</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../sandbox.html">测试号</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../audits.html">工具插件</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../notsupport.html">API 实现差异</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../download.html">下载</a></li>
-<li class="toctree-l2 current"><a class="reference internal" href="index.html">更新日志</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="nightly.html">开发版 Nightly Build 更新日志</a></li>
-<li class="toctree-l3"><a class="reference internal" href="rc.html">预发布版 RC Build 更新日志</a></li>
-<li class="toctree-l3"><a class="reference internal" href="stable.html">稳定版 Stable Build 更新日志</a></li>
-<li class="toctree-l3"><a class="reference internal" href="upnwjs.html">微信开发者工具内核升级版公测</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">开发者工具更新日志</a></li>
-<li class="toctree-l3"><a class="reference internal" href="beta.html">change/beta</a></li>
+          <li class="nav-item nav-item-1"><a href="../index.html" >开发工具</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="index.html" accesskey="U">更新日志</a> &#187;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../../contents.html">目录</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">开发者工具更新日志</a><ul>
+<li><a class="reference internal" href="#id2">2019.02.01</a></li>
+<li><a class="reference internal" href="#id3">2019.01.23</a></li>
+<li><a class="reference internal" href="#id4">2019.01.22</a></li>
+<li><a class="reference internal" href="#id5">2019.01.17</a></li>
+<li><a class="reference internal" href="#id6">2018.12.27</a></li>
+<li><a class="reference internal" href="#id7">2018.12.26</a></li>
+<li><a class="reference internal" href="#id8">2018.12.18</a></li>
+<li><a class="reference internal" href="#id9">2018.11.29</a></li>
+<li><a class="reference internal" href="#id10">2018.11.28</a></li>
+<li><a class="reference internal" href="#id11">2018.11.15</a></li>
+<li><a class="reference internal" href="#id12">2018.11.14</a></li>
+<li><a class="reference internal" href="#id13">2018.10.25</a></li>
+<li><a class="reference internal" href="#id14">2018.10.19</a></li>
+<li><a class="reference internal" href="#id15">2018.09.26</a></li>
+<li><a class="reference internal" href="#id16">2018.09.11</a></li>
+<li><a class="reference internal" href="#id17">2018.09.10</a></li>
+<li><a class="reference internal" href="#id18">2018.08.30</a></li>
+<li><a class="reference internal" href="#id19">2018.08.08</a></li>
+<li><a class="reference internal" href="#id20">2018.08.01</a></li>
+<li><a class="reference internal" href="#id21">2018.07.20</a></li>
+<li><a class="reference internal" href="#id22">2018.07.12</a></li>
+<li><a class="reference internal" href="#id23">2018.06.12</a></li>
+<li><a class="reference internal" href="#id24">2018.06.08</a></li>
+<li><a class="reference internal" href="#id25">2018.05.18</a></li>
+<li><a class="reference internal" href="#id26">2018.05.15</a></li>
+<li><a class="reference internal" href="#id27">2018.04.25</a></li>
+<li><a class="reference internal" href="#id28">2018.04.12</a></li>
+<li><a class="reference internal" href="#id29">2018.04.08</a></li>
+<li><a class="reference internal" href="#id30">2018.04.12</a></li>
+<li><a class="reference internal" href="#id31">2018.04.08</a></li>
+<li><a class="reference internal" href="#id32">2018.03.21</a></li>
+<li><a class="reference internal" href="#id33">2018.03.15</a></li>
+<li><a class="reference internal" href="#id34">2018.03.13</a></li>
+<li><a class="reference internal" href="#id35">2018.02.27</a></li>
+<li><a class="reference internal" href="#id36">2018.02.08</a></li>
+<li><a class="reference internal" href="#id37">2018.02.01</a></li>
+<li><a class="reference internal" href="#id38">2017.12.15</a></li>
+<li><a class="reference internal" href="#id39">2017.11.30</a></li>
+<li><a class="reference internal" href="#id40">2017.11.16</a></li>
+<li><a class="reference internal" href="#id41">2017.11.02</a></li>
+<li><a class="reference internal" href="#id42">2017.10.19</a></li>
+<li><a class="reference internal" href="#id43">2017.10.18</a></li>
+<li><a class="reference internal" href="#id44">2017.10.16</a></li>
+<li><a class="reference internal" href="#id45">2017.10.13</a></li>
+<li><a class="reference internal" href="#id46">2017.09.25</a></li>
+<li><a class="reference internal" href="#id47">2017.09.13</a></li>
+<li><a class="reference internal" href="#id48">2017.09.06</a></li>
+<li><a class="reference internal" href="#id49">2017.09.01</a></li>
+<li><a class="reference internal" href="#id50">2017.08.31</a></li>
+<li><a class="reference internal" href="#id51">2017.08.30</a></li>
+<li><a class="reference internal" href="#id52">2017.08.21</a></li>
+<li><a class="reference internal" href="#id53">2017.08.18</a></li>
+<li><a class="reference internal" href="#id54">2017.06.22</a></li>
+<li><a class="reference internal" href="#id55">2017.05.26</a></li>
+<li><a class="reference internal" href="#id56">2017.05.19</a></li>
+<li><a class="reference internal" href="#id57">2017.05.09</a></li>
+<li><a class="reference internal" href="#id58">2017.05.08</a></li>
+<li><a class="reference internal" href="#id59">2017.03.29</a></li>
+<li><a class="reference internal" href="#id60">2017.03.28</a></li>
+<li><a class="reference internal" href="#id61">2017.02.06</a></li>
+<li><a class="reference internal" href="#id62">2017.01.04</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../devtools.html">devtools</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../../reference/index.html">参考资料</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../wxcloud/index.html">云开发</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../wxwork/index.html">企业微信</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../todolist.html">待办事项</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../glossary.html">术语</a></li>
 </ul>
 
-            
-          
+  <h4>上一个主题</h4>
+  <p class="topless"><a href="upnwjs.html"
+                        title="上一章">微信开发者工具内核升级版公测</a></p>
+  <h4>下一个主题</h4>
+  <p class="topless"><a href="beta.html"
+                        title="下一章">change/beta</a></p>
+  <div role="note" aria-label="source link">
+    <h3>本页</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../_sources/devtools/change/uplog.rst.txt"
+            rel="nofollow">显示源代码</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">快速搜索</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="转向" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
         </div>
       </div>
-    </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
-          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../../contents.html">wxadev</a>
-        
-      </nav>
-
-
-      <div class="wy-nav-content">
-        
-        <div class="rst-content">
-        
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-
-  <ul class="wy-breadcrumbs">
-    
-      <li><a href="../../contents.html">Docs</a> &raquo;</li>
-        
-          <li><a href="../index.html">开发工具</a> &raquo;</li>
-        
-          <li><a href="index.html">更新日志</a> &raquo;</li>
-        
-      <li>开发者工具更新日志</li>
-    
-    
-      <li class="wy-breadcrumbs-aside">
-        
-            
-            <a href="../../_sources/devtools/change/uplog.rst.txt" rel="nofollow"> View page source</a>
-          
-        
-      </li>
-    
-  </ul>
-
-  
-  <hr/>
-</div>
-          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
-           <div itemprop="articleBody">
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
             
   <div class="section" id="id1">
 <h1>开发者工具更新日志<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
 <p>查看基础库更新日志 查看云开发更新日志</p>
-<ul>
-<li><p>2019.02.01</p>
-<ol class="arabic simple">
+<div class="section" id="id2">
+<h2>2019.02.01<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<blockquote>
+<div><ol class="arabic simple">
 <li><p>F 修复 界面调试样式信息显示不全的问题 反馈详情</p></li>
 </ol>
-</li>
-<li><p>2019.01.23</p>
-<ol class="arabic simple">
+</div></blockquote>
+</div>
+<div class="section" id="id3">
+<h2>2019.01.23<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
+<blockquote>
+<div><ol class="arabic simple">
 <li><p>F 修复 1.02.1901221 引入的 app.json usingComponent 没有扩散的问题 反馈详情</p></li>
 <li><p>F 修复 长路径的项目无法正常打开的问题 反馈详情</p></li>
 <li><p>F 修复 1.02.1901170 引入的 win 版经常弹项目列表窗口的问题 反馈详情</p></li>
 </ol>
-</li>
-<li><p>2019.01.22</p>
-<ol class="arabic simple">
+</div></blockquote>
+</div>
+<div class="section" id="id4">
+<h2>2019.01.22<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h2>
+<blockquote>
+<div><ol class="arabic simple">
 <li><p>F 修复 1.02.1901170 引入的 wx.previewImage 无效的问题 反馈详情</p></li>
 <li><p>F 修复 1.02.1901170 引入的预览时报 pageJSON 错误的问题 反馈详情</p></li>
 <li><p>F 修复 1.02.1901170 引入的 win 版经常弹项目列表窗口的问题 反馈详情</p></li>
@@ -212,9 +230,12 @@
 <li><p>F 修复 wx.setStorage key 允许为空字符的问题</p></li>
 <li><p>F 修复 第三方平台命令行上传代码异常问题 反馈详情</p></li>
 </ol>
-</li>
-<li><p>2019.01.17</p>
-<ol class="arabic simple">
+</div></blockquote>
+</div>
+<div class="section" id="id5">
+<h2>2019.01.17<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h2>
+<blockquote>
+<div><ol class="arabic simple">
 <li><p>A 新增 自定义 tabbar 调试支持 详情</p></li>
 <li><p>A 新增 微信开发者·代码管理 详情</p></li>
 <li><p>A 新增 安全设置，CLI/HTTP 调用默认关闭，需要手动开启 详情</p></li>
@@ -237,23 +258,32 @@
 <li><p>F 修复 2.4.4 基础库开发者工具切后台报错的问题 反馈详情</p></li>
 <li><p>F 修复 小程序分包中使用插件的页面会丢失样式的问题</p></li>
 </ol>
-</li>
-<li><p>2018.12.27</p>
-<p>#. windows 64 、 windows 32 、 mac
+</div></blockquote>
+</div>
+<div class="section" id="id6">
+<h2>2018.12.27<a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h2>
+<blockquote>
+<div><p>#. windows 64 、 windows 32 、 mac
 #.
 #. F 修复 1.02.1812260 引入的 first_column 的问题 反馈详情
 #. F 修复 getLocation 每次都会有授权弹窗的问题</p>
-</li>
-<li><p>2018.12.26</p>
-<ol class="arabic simple">
+</div></blockquote>
+</div>
+<div class="section" id="id7">
+<h2>2018.12.26<a class="headerlink" href="#id7" title="永久链接至标题">¶</a></h2>
+<blockquote>
+<div><ol class="arabic simple">
 <li><p>A 新增 app.json 支持 permission 字段</p></li>
 <li><p>A 新增 page.json 支持 navigationStyle 字段（仅对 2.4.3 基础库有效）</p></li>
 <li><p>F 修复 部分组件黑色主题样式问题</p></li>
 <li><p>F 修复 公众号网页调试没法打开外观设置的问题</p></li>
 </ol>
-</li>
-<li><p>2018.12.18</p>
-<ol class="arabic simple">
+</div></blockquote>
+</div>
+<div class="section" id="id8">
+<h2>2018.12.18<a class="headerlink" href="#id8" title="永久链接至标题">¶</a></h2>
+<blockquote>
+<div><ol class="arabic simple">
 <li><p>A 新增 黑色主题 详情</p></li>
 <li><p>A 新增 mDns 调试支持</p></li>
 <li><p>A 新增 模拟器在工具右侧展示</p></li>
@@ -279,27 +309,39 @@
 <li><p>F 修复 页面没有 json 文件的时，app.json 的 usingComponents 没有在该页面生效的问题 反馈详情</p></li>
 <li><p>F 修复 cli 发生错误时进程退出码为 0 的问题</p></li>
 </ol>
-</li>
-<li><p>2018.11.29</p>
-<p>#. windows 64 、 windows 32 、 mac
+</div></blockquote>
+</div>
+<div class="section" id="id9">
+<h2>2018.11.29<a class="headerlink" href="#id9" title="永久链接至标题">¶</a></h2>
+<blockquote>
+<div><p>#. windows 64 、 windows 32 、 mac
 #.
 #. F 修复 新建带有 miniprogramRoot 的项目后编译失败，需要任意修改一次 project.config.json 的问题</p>
-</li>
-<li><p>2018.11.28</p>
-<ol class="arabic simple">
+</div></blockquote>
+</div>
+<div class="section" id="id10">
+<h2>2018.11.28<a class="headerlink" href="#id10" title="永久链接至标题">¶</a></h2>
+<blockquote>
+<div><ol class="arabic simple">
 <li><p>A 新增 云函数定时触发器 详情</p></li>
 <li><p>F 修复 1.02.1811150 版本引入的部分 Windows 系统出现 wxml not found 的问题 反馈详情</p></li>
 <li><p>F 修复 小游戏分包加载失败的问题 反馈详情</p></li>
 </ol>
-</li>
-<li><p>2018.11.15</p>
-<ol class="arabic simple">
+</div></blockquote>
+</div>
+<div class="section" id="id11">
+<h2>2018.11.15<a class="headerlink" href="#id11" title="永久链接至标题">¶</a></h2>
+<blockquote>
+<div><ol class="arabic simple">
 <li><p>F 修复 1.02.1811141 版本引入的 page.json 设置无效的问题 反馈详情</p></li>
 <li><p>F 修复 1.02.1811141 版本引入的 wxml 本地调试丢失 rpx 原始信息的问题 反馈详情</p></li>
 </ol>
-</li>
-<li><p>2018.11.14</p>
-<ol class="arabic simple">
+</div></blockquote>
+</div>
+<div class="section" id="id12">
+<h2>2018.11.14<a class="headerlink" href="#id12" title="永久链接至标题">¶</a></h2>
+<blockquote>
+<div><ol class="arabic simple">
 <li><p>A 新增 typescript 支持 详情</p></li>
 <li><p>A 新增 云数据库索引可以增加唯一性限制 详情</p></li>
 <li><p>A 新增 云数据库导出 详情</p></li>
@@ -327,15 +369,21 @@
 <li><p>F 修复 小游戏广告无法关闭的问题</p></li>
 <li><p>F 修复 未开启多核心编译后小游戏无法正常运行的问题</p></li>
 </ol>
-</li>
-<li><p>2018.10.25</p>
-<p>#. windows 64 、 windows 32 、 mac
+</div></blockquote>
+</div>
+<div class="section" id="id13">
+<h2>2018.10.25<a class="headerlink" href="#id13" title="永久链接至标题">¶</a></h2>
+<blockquote>
+<div><p>#. windows 64 、 windows 32 、 mac
 #.
 #. F 修复 extAppid 与 appid 一致时导致 ext.json 上传时被忽略的问题 反馈详情
 #. F 修复 2.3.1 基础库打开小游戏加载异常的问题</p>
-</li>
-<li><p>2018.10.19</p>
-<ol class="arabic simple">
+</div></blockquote>
+</div>
+<div class="section" id="id14">
+<h2>2018.10.19<a class="headerlink" href="#id14" title="永久链接至标题">¶</a></h2>
+<blockquote>
+<div><ol class="arabic simple">
 <li><p>A 新增 云开发在线安装依赖功能</p></li>
 <li><p>A 新增 导入代码片段时支持使用测试号</p></li>
 <li><p>A 新增 代码保护功能 详情</p></li>
@@ -351,9 +399,12 @@
 <li><p>F 修复 font-size 最小为 12px 的问题</p></li>
 <li><p>U 优化 代码片段链接</p></li>
 </ol>
-</li>
-<li><p>2018.09.26</p>
-<ol class="arabic simple">
+</div></blockquote>
+</div>
+<div class="section" id="id15">
+<h2>2018.09.26<a class="headerlink" href="#id15" title="永久链接至标题">¶</a></h2>
+<blockquote>
+<div><ol class="arabic simple">
 <li><p>A 新增 项目详情页动态更新 AppID</p></li>
 <li><p>A 新增 project.config.json packOptions.ignore / debugOptions.hidedInDevtools 支持 Glob 和 RegExp 规则</p></li>
 <li><p>A 新增小游戏真机调试（需特定系统和客户端版本）详情</p></li>
@@ -376,14 +427,20 @@
 <li><p>F 修复 CLI/HTTP 调用返回的 JSON 结果在浏览器显示乱码的问题</p></li>
 <li><p>F 修复 预览二维码没有居中的问题 反馈详情</p></li>
 </ol>
-</li>
-<li><p>2018.09.11</p>
-<p>#. windows 64 、 windows 32 、 mac
+</div></blockquote>
+</div>
+<div class="section" id="id16">
+<h2>2018.09.11<a class="headerlink" href="#id16" title="永久链接至标题">¶</a></h2>
+<blockquote>
+<div><p>#. windows 64 、 windows 32 、 mac
 #.
 #. F 修复 1.02.1809101 版本在32位 windows 机器出现 wxml 编译失败导致异常的问题 反馈详情</p>
-</li>
-<li><p>2018.09.10</p>
-<ol class="arabic simple">
+</div></blockquote>
+</div>
+<div class="section" id="id17">
+<h2>2018.09.10<a class="headerlink" href="#id17" title="永久链接至标题">¶</a></h2>
+<blockquote>
+<div><ol class="arabic simple">
 <li><p>A 新增 小程序·云开发 详情</p></li>
 <li><p>F 修复 部分 windows 机器第一次点击预览会闪烁黑屏的问题</p></li>
 <li><p>F 修复 WXS 的 switch case 负数报错 反馈详情</p></li>
@@ -397,9 +454,12 @@
 #.
 #. A 新增 小游戏云开发 QuickStart
 #. F 修复 云开发控制台数据库经纬度显示反了 反馈详情</p>
-</li>
-<li><p>2018.08.30</p>
-<ol class="arabic simple">
+</div></blockquote>
+</div>
+<div class="section" id="id18">
+<h2>2018.08.30<a class="headerlink" href="#id18" title="永久链接至标题">¶</a></h2>
+<blockquote>
+<div><ol class="arabic simple">
 <li><p>A 新增 版本管理 详情</p></li>
 <li><p>A 新增 体验评分 详情</p></li>
 <li><p>A 新增 npm 支持 详情</p></li>
@@ -426,28 +486,40 @@
 <li><p>U 优化 上传时版本号过短的问题 反馈详情</p></li>
 <li><p>U 优化 API 回调的实现逻辑</p></li>
 </ol>
-</li>
-<li><p>2018.08.08</p>
-<ol class="arabic simple">
+</div></blockquote>
+</div>
+<div class="section" id="id19">
+<h2>2018.08.08<a class="headerlink" href="#id19" title="永久链接至标题">¶</a></h2>
+<blockquote>
+<div><ol class="arabic simple">
 <li><p>F 修复 Mac 版开发者工具代理一直是 “直连网络” 的问题</p></li>
 </ol>
-</li>
-<li><p>2018.08.01</p>
-<ol class="arabic simple">
+</div></blockquote>
+</div>
+<div class="section" id="id20">
+<h2>2018.08.01<a class="headerlink" href="#id20" title="永久链接至标题">¶</a></h2>
+<blockquote>
+<div><ol class="arabic simple">
 <li><p>F 修复 小程序使用分包后，云测试提示代码包上限有误的问题 反馈详情</p></li>
 <li><p>F 修复 素材管理文件列表内容重叠的问题 反馈详情</p></li>
 <li><p>F 修复 模拟器工具栏消失的问题 反馈详情</p></li>
 </ol>
-</li>
-<li><p>2018.07.20</p>
-<ol class="arabic simple">
+</div></blockquote>
+</div>
+<div class="section" id="id21">
+<h2>2018.07.20<a class="headerlink" href="#id21" title="永久链接至标题">¶</a></h2>
+<blockquote>
+<div><ol class="arabic simple">
 <li><p>F 修复 1.02.1807120 带来的编译不生效的问题 反馈详情</p></li>
 <li><p>F 修复 界面调试样式覆盖规则计算错误的问题 反馈详情</p></li>
 <li><p>F 修复 分包根目录名字后缀相同时报错的问题 反馈详情</p></li>
 </ol>
-</li>
-<li><p>2018.07.12</p>
-<ol class="arabic simple">
+</div></blockquote>
+</div>
+<div class="section" id="id22">
+<h2>2018.07.12<a class="headerlink" href="#id22" title="永久链接至标题">¶</a></h2>
+<blockquote>
+<div><ol class="arabic simple">
 <li><p>A 新增 多帐号调试 详情</p></li>
 <li><p>A 新增 iPad 及横屏调试</p></li>
 <li><p>A 新增 素材管理支持 svg 文件</p></li>
@@ -470,15 +542,21 @@
 <li><p>F 修复 自定义分析窗口无法再次打开的问题 反馈详情</p></li>
 <li><p>F 修复 分包根目录名字后缀相同时报错的问题 反馈详情</p></li>
 </ol>
-</li>
-<li><p>2018.06.12</p>
-<p>#. windows 64 、 windows 32 、 mac
+</div></blockquote>
+</div>
+<div class="section" id="id23">
+<h2>2018.06.12<a class="headerlink" href="#id23" title="永久链接至标题">¶</a></h2>
+<blockquote>
+<div><p>#. windows 64 、 windows 32 、 mac
 #.
 #. A 新增 TGit 工具栏入口 详情
 #. F 修复 远程调试分包中使用插件报错的问题</p>
-</li>
-<li><p>2018.06.08</p>
-<ol class="arabic simple">
+</div></blockquote>
+</div>
+<div class="section" id="id24">
+<h2>2018.06.08<a class="headerlink" href="#id24" title="永久链接至标题">¶</a></h2>
+<blockquote>
+<div><ol class="arabic simple">
 <li><p>A 新增 自动预览功能 详情</p></li>
 <li><p>A 新增 远程调试 Network 面板</p></li>
 <li><p>A 新增 模拟器静音功能</p></li>
@@ -497,9 +575,12 @@
 <li><p>F 修复 压缩后的 js 文件无法正常格式化的问题</p></li>
 <li><p>F 修复 小游戏视频广告在模拟器缩放的情况下尺寸异常的问题</p></li>
 </ol>
-</li>
-<li><p>2018.05.18</p>
-<p>#. windows 64 、 windows 32 、 mac
+</div></blockquote>
+</div>
+<div class="section" id="id25">
+<h2>2018.05.18<a class="headerlink" href="#id25" title="永久链接至标题">¶</a></h2>
+<blockquote>
+<div><p>#. windows 64 、 windows 32 、 mac
 #.
 #. F 修复 1.02.1805150 引入的 &lt;web-view&gt; 组件显示异常的问题 反馈详情
 #. F 修复 1.02.1805150 引入的小屏幕电脑上模拟器容器没有滚动条的问题
@@ -511,9 +592,12 @@
 #. F 修复 小游戏使用 fs.writeFileSync 写入一个 ArrayBuffer 类型的数据，encoding 指定为 binary 时会导致写入的文件内容错误的问题
 #. F 修复 使用插件时，插件中的图片没有显示的问题
 #. F 修复 小程序中带有 sourcemap 时解析失败导致上传报错的问题</p>
-</li>
-<li><p>2018.05.15</p>
-<ol class="arabic simple">
+</div></blockquote>
+</div>
+<div class="section" id="id26">
+<h2>2018.05.15<a class="headerlink" href="#id26" title="永久链接至标题">¶</a></h2>
+<blockquote>
+<div><ol class="arabic simple">
 <li><p>A 新增 素材管理功能 详情</p></li>
 <li><p>A 新增 工具栏右键进行工具栏管理 详情</p></li>
 <li><p>A 新增 独立窗口显示模拟器和调试器的功能 详情</p></li>
@@ -548,26 +632,35 @@
 <li><p>F 修复 referrerInfo.extraData 类型与文档不一致的问题 反馈详情</p></li>
 <li><p>F 修复 &lt;web-view&gt; src 没有更新的问题 反馈详情</p></li>
 </ol>
-</li>
-<li><p>2018.04.25</p>
-<ol class="arabic simple">
+</div></blockquote>
+</div>
+<div class="section" id="id27">
+<h2>2018.04.25<a class="headerlink" href="#id27" title="永久链接至标题">¶</a></h2>
+<blockquote>
+<div><ol class="arabic simple">
 <li><p>A 新增 搜索动态页 详情</p></li>
 <li><p>A 新增 wx.getUserInfo 升级提示</p></li>
 <li><p>F 修复 小游戏使用自定义编译条件预览时，真机没有 query 的问题</p></li>
 <li><p>F 修复 2.0.0 基础库 &lt;button open-type=”getUserInfo”&gt;&lt;/button&gt; 无效的问题 反馈详情</p></li>
 </ol>
-</li>
-<li><p>2018.04.12</p>
-<ol class="arabic simple">
+</div></blockquote>
+</div>
+<div class="section" id="id28">
+<h2>2018.04.12<a class="headerlink" href="#id28" title="永久链接至标题">¶</a></h2>
+<blockquote>
+<div><ol class="arabic simple">
 <li><p>F 修复 1.02.1804080 引入的编译条件为分包内页面时无法加载的问题 反馈详情</p></li>
 <li><p>F 修复 1.02.1804080 引入的页面白屏的问题 反馈详情</p></li>
 <li><p>F 修复 未使用插件时，出现 [non-writable] 的提示的问题</p></li>
 <li><p>F 修复 navigationStyle 为 ‘custom’ 时，获取的 windowHeight 与真机不一致的问题 反馈详情</p></li>
 <li><p>F 修复 wx.showModal 没有覆盖 tabbar 的问题</p></li>
 </ol>
-</li>
-<li><p>2018.04.08</p>
-<ol class="arabic simple">
+</div></blockquote>
+</div>
+<div class="section" id="id29">
+<h2>2018.04.08<a class="headerlink" href="#id29" title="永久链接至标题">¶</a></h2>
+<blockquote>
+<div><ol class="arabic simple">
 <li><p>A 新增 编辑器文件标签打开策略设置</p></li>
 <li><p>A 新增 iPhone X 刘海效果</p></li>
 <li><p>A 新增 App.onPageNotFound 的调试支持 详情</p></li>
@@ -591,18 +684,24 @@
 <li><p>F 修复 切换模拟器网络为 offline 后，Socket接口还能正常发送的问题。</p></li>
 <li><p>F 修复 BackgroundAudioManager 不回调 onCanplay 的问题 反馈详情</p></li>
 </ol>
-</li>
-<li><p>2018.04.12</p>
-<ol class="arabic simple">
+</div></blockquote>
+</div>
+<div class="section" id="id30">
+<h2>2018.04.12<a class="headerlink" href="#id30" title="永久链接至标题">¶</a></h2>
+<blockquote>
+<div><ol class="arabic simple">
 <li><p>F 修复 1.02.1804080 引入的编译条件为分包内页面时无法加载的问题 反馈详情</p></li>
 <li><p>F 修复 1.02.1804080 引入的页面白屏的问题 反馈详情</p></li>
 <li><p>F 修复 未使用插件时，出现 [non-writable] 的提示的问题</p></li>
 <li><p>F 修复 navigationStyle 为 ‘custom’ 时，获取的 windowHeight 与真机不一致的问题 反馈详情</p></li>
 <li><p>F 修复 wx.showModal 没有覆盖 tabbar 的问题</p></li>
 </ol>
-</li>
-<li><p>2018.04.08</p>
-<ol class="arabic simple">
+</div></blockquote>
+</div>
+<div class="section" id="id31">
+<h2>2018.04.08<a class="headerlink" href="#id31" title="永久链接至标题">¶</a></h2>
+<blockquote>
+<div><ol class="arabic simple">
 <li><p>A 新增 编辑器文件标签打开策略设置</p></li>
 <li><p>A 新增 iPhone X 刘海效果</p></li>
 <li><p>A 新增 App.onPageNotFound 的调试支持 详情</p></li>
@@ -626,17 +725,23 @@
 <li><p>F 修复 切换模拟器网络为 offline 后，Socket接口还能正常发送的问题。</p></li>
 <li><p>F 修复 BackgroundAudioManager 不回调 onCanplay 的问题 反馈详情</p></li>
 </ol>
-</li>
-<li><p>2018.03.21</p>
-<p>#. windows 64 、 windows 32 、 mac
+</div></blockquote>
+</div>
+<div class="section" id="id32">
+<h2>2018.03.21<a class="headerlink" href="#id32" title="永久链接至标题">¶</a></h2>
+<blockquote>
+<div><p>#. windows 64 、 windows 32 、 mac
 #.
 #. F 修复 TLS 版本校验出错的问题 反馈详情
 #. F 修复 wx.chooseVideo 没有回调的问题
 #. F 修复 插件中没有 WXML 文件时报错的问题
 #. F 修复 开发者工具更新逻辑异常的问题</p>
-</li>
-<li><p>2018.03.15</p>
-<ol class="arabic simple">
+</div></blockquote>
+</div>
+<div class="section" id="id33">
+<h2>2018.03.15<a class="headerlink" href="#id33" title="永久链接至标题">¶</a></h2>
+<blockquote>
+<div><ol class="arabic simple">
 <li><p>F 修复 上报更新导致 wx.uploadFile 返回值异常的问题</p></li>
 <li><p>F 修复 申请测试报告时报错的问题 反馈详情</p></li>
 <li><p>F 修复 频繁调用 wx.downloadFile 后 wx.saveFile 于同一网络图片时，可能出错的问题</p></li>
@@ -646,9 +751,12 @@
 <li><p>F 修复 审查节点时，WXML 面板没有高亮对应节点的问题 反馈详情</p></li>
 <li><p>F 修复 工具覆盖安装后出现无法监听文件变更的问题 反馈详情</p></li>
 </ol>
-</li>
-<li><p>2018.03.13</p>
-<ol class="arabic simple">
+</div></blockquote>
+</div>
+<div class="section" id="id34">
+<h2>2018.03.13<a class="headerlink" href="#id34" title="永久链接至标题">¶</a></h2>
+<blockquote>
+<div><ol class="arabic simple">
 <li><p>A 新增 小程序插件开发支持 详情</p></li>
 <li><p>A 新增 小程序代码片段功能 详情</p></li>
 <li><p>A 新增 通过二维码调试功能，可以调试获取二维码所生成的二维码</p></li>
@@ -665,15 +773,21 @@
 <li><p>F 修复 公众号网页调试地址栏下拉选择错误的问题</p></li>
 <li><p>U 优化 开发者工具卡顿的问题</p></li>
 </ol>
-</li>
-<li><p>2018.02.27</p>
-<ol class="arabic simple">
+</div></blockquote>
+</div>
+<div class="section" id="id35">
+<h2>2018.02.27<a class="headerlink" href="#id35" title="永久链接至标题">¶</a></h2>
+<blockquote>
+<div><ol class="arabic simple">
 <li><p>F 修复 长文本中文乱码问题 反馈详情</p></li>
 <li><p>F 修复 用命令行 / http 上传第三方平台小程序代码没有上传至对应用户的问题 反馈详情</p></li>
 </ol>
-</li>
-<li><p>2018.02.08</p>
-<ol class="arabic simple">
+</div></blockquote>
+</div>
+<div class="section" id="id36">
+<h2>2018.02.08<a class="headerlink" href="#id36" title="永久链接至标题">¶</a></h2>
+<blockquote>
+<div><ol class="arabic simple">
 <li><p>A 新增 iPhone X 尺寸</p></li>
 <li><p>U 更新 自动补全更新</p></li>
 <li><p>F 修复 多开时登录态丢失问题 反馈详情</p></li>
@@ -686,9 +800,12 @@
 <li><p>F 修复 在 app.json 编辑 pages 自动创建文件时，路径逾越了项目路径也能成功的问题</p></li>
 <li><p>F 修复 app.json 中 enablePullDownRefresh 没有严格校验类型的问题 反馈详情</p></li>
 </ol>
-</li>
-<li><p>2018.02.01</p>
-<ol class="arabic simple">
+</div></blockquote>
+</div>
+<div class="section" id="id37">
+<h2>2018.02.01<a class="headerlink" href="#id37" title="永久链接至标题">¶</a></h2>
+<blockquote>
+<div><ol class="arabic simple">
 <li><p>A 新增 多开项目</p></li>
 <li><p>A 新增 小程序远程调试(需要更新客户端版本) 详情</p></li>
 <li><p>A 新增 sourceMap 文件解析</p></li>
@@ -699,9 +816,12 @@
 <li><p>F 修复 部分系统上黑屏的问题 反馈详情</p></li>
 <li><p>F 修复 部分系统上无法获取 webgl 的问题 反馈详情</p></li>
 </ol>
-</li>
-<li><p>2017.12.15</p>
-<ol class="arabic simple">
+</div></blockquote>
+</div>
+<div class="section" id="id38">
+<h2>2017.12.15<a class="headerlink" href="#id38" title="永久链接至标题">¶</a></h2>
+<blockquote>
+<div><ol class="arabic simple">
 <li><p>A 新增 命令行调用工具执行打开、预览、上传等功能 详情</p></li>
 <li><p>A 新增 通过 HTTP 调用工具执行打开、预览、上传等功能 详情</p></li>
 <li><p>A 新增 编辑器 Git 展示支持 详情</p></li>
@@ -713,9 +833,12 @@
 <li><p>U 优化 项目列表小程序封面截图策略与性能</p></li>
 <li><p>U 优化 创建项目时目录不合法的提示</p></li>
 </ol>
-</li>
-<li><p>2017.11.30</p>
-<ol class="arabic simple">
+</div></blockquote>
+</div>
+<div class="section" id="id39">
+<h2>2017.11.30<a class="headerlink" href="#id39" title="永久链接至标题">¶</a></h2>
+<blockquote>
+<div><ol class="arabic simple">
 <li><p>A 新增 详情页中展示基础库用户使用率及线上版小程序设置的最低基础库</p></li>
 <li><p>A 新增 项目详情页显示业务域名（webview 可信域名）</p></li>
 <li><p>A 新增 开启不校验安全域名时，也不校验 webview 的业务域名</p></li>
@@ -728,9 +851,12 @@
 <li><p>U 优化 复制二维码的交互</p></li>
 <li><p>U 优化 创建项目页增加注册小程序的入口</p></li>
 </ol>
-</li>
-<li><p>2017.11.16</p>
-<ol class="arabic simple">
+</div></blockquote>
+</div>
+<div class="section" id="id40">
+<h2>2017.11.16<a class="headerlink" href="#id40" title="永久链接至标题">¶</a></h2>
+<blockquote>
+<div><ol class="arabic simple">
 <li><p>F 修复 导航条背景色错误时白屏问题 反馈详情</p></li>
 <li><p>F 修复 小程序页面跳转时 WXML 面板可能空白的问题 反馈详情</p></li>
 <li><p>F 修复 修复计算上传代码包错误的问题 反馈详情</p></li>
@@ -754,9 +880,12 @@
 <li><p>U 优化 编辑器显示目录树的功能图标位置固定。 反馈详情</p></li>
 <li><p>U 优化 预览/上传前先计算项目代码包大小再进行编译打包处理，避免项目过大导致内存溢出。</p></li>
 </ol>
-</li>
-<li><p>2017.11.02</p>
-<ol class="arabic simple">
+</div></blockquote>
+</div>
+<div class="section" id="id41">
+<h2>2017.11.02<a class="headerlink" href="#id41" title="永久链接至标题">¶</a></h2>
+<blockquote>
+<div><ol class="arabic simple">
 <li><p>A 新增 可以上传 php 代码到腾讯云，QuickStart Demo 地址</p></li>
 <li><p>A 新增 &lt;web-view&gt; 组件调试支持 详情</p></li>
 <li><p>A 新增 自定义组件调试支持，需在项目配置中勾选 “预览/上传时使用新特性” 选项 详情</p></li>
@@ -771,32 +900,44 @@
 <li><p>F 修复 1.01.171019 版本导致 wx.getImageInfo 报错的问题</p></li>
 <li><p>F 修复 wx.downloadFile 下载文件无法打开的问题 反馈详情</p></li>
 </ol>
-</li>
-<li><p>2017.10.19</p>
-<ol class="arabic simple">
+</div></blockquote>
+</div>
+<div class="section" id="id42">
+<h2>2017.10.19<a class="headerlink" href="#id42" title="永久链接至标题">¶</a></h2>
+<blockquote>
+<div><ol class="arabic simple">
 <li><p>F: 修复 1.01.171013 版本更新导致的 App.onLaunch 中 API 调用没有回调的问题</p></li>
 <li><p>F: 修复 1.01.171013 windows 版本可执行文件数字签名异常的问题</p></li>
 <li><p>F: 修复 getPhoneNumber 需要短信验证时依旧回调成功的问题</p></li>
 <li><p>F: 修复 公众号网页调试无法添加自定义设备的问题</p></li>
 </ol>
-</li>
-<li><p>2017.10.18</p>
-<ol class="arabic simple">
+</div></blockquote>
+</div>
+<div class="section" id="id43">
+<h2>2017.10.18<a class="headerlink" href="#id43" title="永久链接至标题">¶</a></h2>
+<blockquote>
+<div><ol class="arabic simple">
 <li><p>F: 修复 管理项目时选择多个项目，界面异常的问题 反馈详情</p></li>
 <li><p>F: 修复 域名检查大小写敏感的问题 反馈详情</p></li>
 <li><p>F: 修复 1.01.171013 版本更新导致的 wxml panel 空白的问题 反馈详情</p></li>
 <li><p>F: 修复 编辑器全局搜索某些字符时可能崩溃的问题 反馈详情</p></li>
 </ol>
-</li>
-<li><p>2017.10.16</p>
-<ol class="arabic simple">
+</div></blockquote>
+</div>
+<div class="section" id="id44">
+<h2>2017.10.16<a class="headerlink" href="#id44" title="永久链接至标题">¶</a></h2>
+<blockquote>
+<div><ol class="arabic simple">
 <li><p>F: 修复 wx.canvasToTempFilePath 出错的问题 反馈详情</p></li>
 <li><p>F: 修复 创建项目时， project.config.json 没有兼容旧版 svr/client 字段的问题，新字段为 qcloudRoot/miniprogramRoot</p></li>
 <li><p>F: 修复 image 组件 src 为空时有 404 提示的问题</p></li>
 </ol>
-</li>
-<li><p>2017.10.13</p>
-<ol class="arabic simple">
+</div></blockquote>
+</div>
+<div class="section" id="id45">
+<h2>2017.10.13<a class="headerlink" href="#id45" title="永久链接至标题">¶</a></h2>
+<blockquote>
+<div><ol class="arabic simple">
 <li><p>A: 新增 清除全部缓存功能</p></li>
 <li><p>A: 新增 清除登录状态功能</p></li>
 <li><p>A: 新增 控制台输入 showDecryptedInfo 可以获取加解密信息，帮助开发者验证解密结果是否正确</p></li>
@@ -813,9 +954,10 @@
 <li><p>U: 优化 模拟器加载小程序的方案调整为不通过代理直连本地服务器，减少代理设置异常对模拟器小程序加载的影响</p></li>
 <li><p>U: 优化 调试器 WXML、Storage 的某些内容展示方式</p></li>
 </ol>
-</li>
-<li><p>2017.09.25</p></li>
-</ul>
+</div></blockquote>
+</div>
+<div class="section" id="id46">
+<h2>2017.09.25<a class="headerlink" href="#id46" title="永久链接至标题">¶</a></h2>
 <blockquote>
 <div><dl class="simple">
 <dt>(1.01.170925)</dt><dd><ol class="arabic simple">
@@ -836,9 +978,9 @@
 </dd>
 </dl>
 </div></blockquote>
-<ul class="simple">
-<li><p>2017.09.13</p></li>
-</ul>
+</div>
+<div class="section" id="id47">
+<h2>2017.09.13<a class="headerlink" href="#id47" title="永久链接至标题">¶</a></h2>
 <blockquote>
 <div><dl class="simple">
 <dt>(1.01.170913)</dt><dd><ol class="arabic simple">
@@ -867,9 +1009,9 @@
 </dd>
 </dl>
 </div></blockquote>
-<ul class="simple">
-<li><p>2017.09.06</p></li>
-</ul>
+</div>
+<div class="section" id="id48">
+<h2>2017.09.06<a class="headerlink" href="#id48" title="永久链接至标题">¶</a></h2>
 <blockquote>
 <div><dl class="simple">
 <dt>(1.01.170906)</dt><dd><ol class="arabic simple">
@@ -905,9 +1047,11 @@
 </dd>
 </dl>
 </div></blockquote>
-<ul>
-<li><p>2017.09.01</p>
-<ol class="arabic simple">
+</div>
+<div class="section" id="id49">
+<h2>2017.09.01<a class="headerlink" href="#id49" title="永久链接至标题">¶</a></h2>
+<blockquote>
+<div><ol class="arabic simple">
 <li><p>F 修复 wxml panel 选中节点跳动的问题</p></li>
 <li><p>F 修复 wxml panel 鼠标为圆点的问题</p></li>
 <li><p>F 修复 编辑器快捷键格式化代码失效的问题</p></li>
@@ -924,9 +1068,12 @@
 <li><p>F 修复 修复了在外部编辑器编辑了文件，工具不能检测到更改的问题</p></li>
 <li><p>F 修复 设备选择时 wx.getSystemInfo 的内容不对的问题</p></li>
 </ol>
-</li>
-<li><p>2017.08.31</p>
-<ol class="arabic simple">
+</div></blockquote>
+</div>
+<div class="section" id="id50">
+<h2>2017.08.31<a class="headerlink" href="#id50" title="永久链接至标题">¶</a></h2>
+<blockquote>
+<div><ol class="arabic simple">
 <li><p>A 新增 快捷键 F8 显示隐藏工具栏</p></li>
 <li><p>U 优化 当有错误的时候 console 面板不会自动弹出</p></li>
 <li><p>F 修复 保存时自动编译，编译时自动保存无法保存所有文件的问题</p></li>
@@ -940,9 +1087,12 @@
 <li><p>F 修复 网页调试添加卡券屏幕缩放无效的问题</p></li>
 <li><p>F 修复 网页调试 urlbar 输入后自动匹配，按键盘向下键然后 load 不了</p></li>
 </ol>
-</li>
-<li><p>2017.08.30</p>
-<ol class="arabic simple">
+</div></blockquote>
+</div>
+<div class="section" id="id51">
+<h2>2017.08.30<a class="headerlink" href="#id51" title="永久链接至标题">¶</a></h2>
+<blockquote>
+<div><ol class="arabic simple">
 <li><p>A 新增 申请测试报告功能 详情</p></li>
 <li><p>A 新增 WXS 功能 详情</p></li>
 <li><p>A 新增 发布腾讯云功能 详情</p></li>
@@ -952,15 +1102,21 @@
 </ol>
 <p>#. windows 64 、 windows 32 、 mac
 #.</p>
-</li>
-<li><p>2017.08.21</p>
-<ol class="arabic simple">
+</div></blockquote>
+</div>
+<div class="section" id="id52">
+<h2>2017.08.21<a class="headerlink" href="#id52" title="永久链接至标题">¶</a></h2>
+<blockquote>
+<div><ol class="arabic simple">
 <li><p>F 修复 1.5.0 基础库造成开发工具 AppData panel 失效的问题</p></li>
 <li><p>F 修复 API chooseInvoiceTitle 出现脚本错误的问题</p></li>
 </ol>
-</li>
-<li><p>2017.08.18</p>
-<ol class="arabic simple">
+</div></blockquote>
+</div>
+<div class="section" id="id53">
+<h2>2017.08.18<a class="headerlink" href="#id53" title="永久链接至标题">¶</a></h2>
+<blockquote>
+<div><ol class="arabic simple">
 <li><p>新增 4 个全新 API 包括获取发票抬头，指纹识别，主动触发下拉刷新等</p></li>
 <li><p>更新 API shareAppMessage 支持分享时自定义卡片配图</p></li>
 <li><p>更新 组件 &lt;button&gt; 支持客服会话分享小程序卡片及传入源页面信息</p></li>
@@ -982,9 +1138,12 @@
 <li><p>F 修复 微信授权窗口没有设置缺省头像的问题</p></li>
 <li><p>F 修复 使用 button 触发分享时候工具会有两次 onShareAppMessage 事件的问题</p></li>
 </ol>
-</li>
-<li><p>2017.06.22</p>
-<ol class="arabic simple">
+</div></blockquote>
+</div>
+<div class="section" id="id54">
+<h2>2017.06.22<a class="headerlink" href="#id54" title="永久链接至标题">¶</a></h2>
+<blockquote>
+<div><ol class="arabic simple">
 <li><p>F 修复 开发工具中 wx.uploadFile header 设置无效的问题 反馈详情</p></li>
 <li><p>F 修复 开发者工具打开公众号网页报项目属性获取失败错误的问题</p></li>
 <li><p>0.18.182100</p></li>
@@ -1004,18 +1163,24 @@
 <li><p>F 修复 某些情况下上传代码会出现二维码无效提示的问题</p></li>
 <li><p>F 修复 上传成功后没有提示的问题</p></li>
 </ol>
-</li>
-<li><p>2017.05.26</p>
-<ol class="arabic simple">
+</div></blockquote>
+</div>
+<div class="section" id="id55">
+<h2>2017.05.26<a class="headerlink" href="#id55" title="永久链接至标题">¶</a></h2>
+<blockquote>
+<div><ol class="arabic simple">
 <li><p>A 新增 基础库 1.2.2 调试支持</p></li>
 <li><p>F 修复 基础库切换导致异常的问题</p></li>
 <li><p>F 修复 页面内分享会调用两次 Page.onShareAppMessage 的问题</p></li>
 <li><p>F 修复 工具外部修改代码文件或文件夹时出现编译异常的问题</p></li>
 <li><p>F 修复 wx.uploadFile 网络状态码不为 200 回调 fail 与客户端不一致的问题</p></li>
 </ol>
-</li>
-<li><p>2017.05.19</p>
-<ol class="arabic simple">
+</div></blockquote>
+</div>
+<div class="section" id="id56">
+<h2>2017.05.19<a class="headerlink" href="#id56" title="永久链接至标题">¶</a></h2>
+<blockquote>
+<div><ol class="arabic simple">
 <li><p>A 新增 基础库 1.2.1 调试支持。</p></li>
 <li><p>U 优化 App 和 Page 中的函数自动补全</p></li>
 <li><p>F 修复 条件编译中的 query 在 App.onLaunch 时多 decode 一次的问题</p></li>
@@ -1028,9 +1193,12 @@
 <li><p>F 修复 有时外部修改文件保存后自动编译时报网络错误的问题</p></li>
 <li><p>F 修复 有 tabbar 的小程序启动时还未加载完时快速切换到另一个 tab 然后马上切换回来会出错的问题</p></li>
 </ol>
-</li>
-<li><p>2017.05.09</p>
-<ol class="arabic simple">
+</div></blockquote>
+</div>
+<div class="section" id="id57">
+<h2>2017.05.09<a class="headerlink" href="#id57" title="永久链接至标题">¶</a></h2>
+<blockquote>
+<div><ol class="arabic simple">
 <li><p>F 修复 RapidSSL 证书被判断为非法证书的问题 反馈详情</p></li>
 <li><p>F 修复 wxss 压缩导致 &#64;import 文件丢失文件的问题</p></li>
 <li><p>F 修复 模拟器内容高度错误的问题 反馈详情</p></li>
@@ -1039,9 +1207,12 @@
 <li><p>F 修复 文件光标定位问题和从 wxss 栏打开文件双开问题 反馈详情</p></li>
 <li><p>F 修复 设置了文件名字大小写敏感的系统，无法打开开发工具的问题 反馈详情</p></li>
 </ol>
-</li>
-<li><p>2017.05.08</p>
-<ol class="arabic simple">
+</div></blockquote>
+</div>
+<div class="section" id="id58">
+<h2>2017.05.08<a class="headerlink" href="#id58" title="永久链接至标题">¶</a></h2>
+<blockquote>
+<div><ol class="arabic simple">
 <li><p>A 新增 wx.addCard、wx.openCard 调试支持</p></li>
 <li><p>A 新增 wx.request 时 https 证书的校验，非法证书将会请求失败</p></li>
 <li><p>A 新增 获取更多转发信息的调试支持 详情</p></li>
@@ -1091,18 +1262,24 @@
 <li><p>F 修复 wxml panel 在某些情况下不能正常显示的问题</p></li>
 <li><p>F 修复 对 TrustAsia 证书判断错误的问题</p></li>
 </ol>
-</li>
-<li><p>2017.03.29</p>
-<ol class="arabic simple">
+</div></blockquote>
+</div>
+<div class="section" id="id59">
+<h2>2017.03.29<a class="headerlink" href="#id59" title="永久链接至标题">¶</a></h2>
+<blockquote>
+<div><ol class="arabic simple">
 <li><p>F 修复 windows 版工具缺失文件的问题 反馈详情</p></li>
 <li><p>F 修复 wx.scanCode 失败的问题 反馈详情</p></li>
 <li><p>F 修复 API wx.redirect 第一次无效的问题 反馈详情</p></li>
 <li><p>F 修复 无 tabbar 的项目页面栈层数异常的问题 反馈详情</p></li>
 <li><p>F 修复 默认场景值为 0 的问题</p></li>
 </ol>
-</li>
-<li><p>2017.03.28</p>
-<ol class="arabic simple">
+</div></blockquote>
+</div>
+<div class="section" id="id60">
+<h2>2017.03.28<a class="headerlink" href="#id60" title="永久链接至标题">¶</a></h2>
+<blockquote>
+<div><ol class="arabic simple">
 <li><p>A 新增 mac 版开发工具支持蓝牙调试</p></li>
 <li><p>A 新增 wx.reLaunch wx.chooseAddress wx.openSetting wx.getClipboardData wx.setClipboardData wx.arrayBufferToBase64   #. wx.base64ToArrayBuffer wx.showLoading wx.hideLoading wx.startAccelerometer wx.stopAccelerometer wx.onNetworkStatusChange  #. wx.hideShareMenu wx.showShareMenu CanvasContext.setTextAlign 等 API 的调试支持</p></li>
 <li><p>A 新增 小程序项目列表页支持删除项目</p></li>
@@ -1126,9 +1303,12 @@
 <li><p>F 修复 某些情况下压缩代码出错的问题</p></li>
 <li><p>F 修复 wx.canvasToTempFilePath 不生效的问题</p></li>
 </ol>
-</li>
-<li><p>2017.02.06</p>
-<ol class="arabic simple">
+</div></blockquote>
+</div>
+<div class="section" id="id61">
+<h2>2017.02.06<a class="headerlink" href="#id61" title="永久链接至标题">¶</a></h2>
+<blockquote>
+<div><ol class="arabic simple">
 <li><p>A 新增 地理位置模拟的功能 详情</p></li>
 <li><p>A 新增 移动设备重力感应模拟的功能 详情</p></li>
 <li><p>A 新增 模拟器网络状态中新增无网络状态模拟的功能</p></li>
@@ -1158,9 +1338,12 @@
 <li><p>F 修复 获取用户信息时，取消授权没有保存到后台的问题</p></li>
 <li><p>F 修复 navigationBarTextStyle 未对颜色进行校验的问题</p></li>
 </ol>
-</li>
-<li><p>2017.01.04</p>
-<ol class="arabic simple">
+</div></blockquote>
+</div>
+<div class="section" id="id62">
+<h2>2017.01.04<a class="headerlink" href="#id62" title="永久链接至标题">¶</a></h2>
+<blockquote>
+<div><ol class="arabic simple">
 <li><p>A 新增 清除手机授权数据 (缓存-清除手机授权数据) 功能</p></li>
 <li><p>A 新增 提交预览或者上传代码时候校验文件编码功能</p></li>
 <li><p>U 升级 nwjs 到 19.4 版本, 更新至 Chrome55 内核</p></li>
@@ -1292,57 +1475,41 @@
 <li><p>F 修复 wx.setNavitionBarTitle 提示错误的问题</p></li>
 <li><p>F 修复 某些情况下文件修改不生效的问题</p></li>
 </ol>
-</li>
-</ul>
+</div></blockquote>
+</div>
 </div>
 
 
-           </div>
-           
           </div>
-          <footer>
-  
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="beta.html" class="btn btn-neutral float-right" title="change/beta" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="upnwjs.html" class="btn btn-neutral float-left" title="微信开发者工具内核升级版公测" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
-    </div>
-  
-
-  <hr/>
-
-  <div role="contentinfo">
-    <p>
-        &copy; Copyright 2019, Nosy
-
-    </p>
-  </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
-
-</footer>
-
         </div>
       </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>导航</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="总目录"
+             >索引</a></li>
+        <li class="right" >
+          <a href="../../http-routingtable.html" title="微信小程序API"
+             >wxapi</a> |</li>
+        <li class="right" >
+          <a href="beta.html" title="change/beta"
+             >下一页</a> |</li>
+        <li class="right" >
+          <a href="upnwjs.html" title="微信开发者工具内核升级版公测"
+             >上一页</a> |</li>
+<li><a href="../../index.html">主页</a>&#160;|</li>
+<li><a href="../../contents.html">文档</a> &#187;</li>
 
-    </section>
-
-  </div>
-  
-
-
-  <script type="text/javascript">
-      jQuery(function () {
-          SphinxRtdTheme.Navigation.enable(true);
-      });
-  </script>
-
-  
-  
-    
-   
-
-</body>
+          <li class="nav-item nav-item-1"><a href="../index.html" >开发工具</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="index.html" >更新日志</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; 版权所有 2019, Wxadev Docs.
+      由 <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.0+/40994a8 创建。
+    </div>
+  </body>
 </html>

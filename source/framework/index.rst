@@ -30,6 +30,6 @@
    compatibility
    workers
    server-ability/index
-   release/index
    operating-mechanism
    custom-component/index
+   release/index

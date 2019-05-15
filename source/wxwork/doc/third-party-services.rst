@@ -22,10 +22,11 @@
 第三方登录凭证校验
 ------------------------------
 
-接口地址
+接口地址请求地址 :term:`qyapi`
 
-.. http:get:: <qyapi>/service/miniprogram/jscode2session
+.. http:gett:: service/miniprogram/jscode2session
 
+    :synopsis: 服务商服务器以code换取 用户唯一标识 userid 、用户所在企业corpid 和 会话密钥 session_key
     :query suite_access_token: **必选**	第三方应用凭证，获取方法见获取第三方应用凭证。要求必须由该小程序关联的第三方应用的secret获取
     :query js_code:	**必选**	登录时获取的 code
     :query grant_type: **必选**	此处固定为 ``authorization_code``

@@ -1,236 +1,182 @@
 
-
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-CN" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-CN" > <!--<![endif]-->
-<head>
-  <meta charset="utf-8">
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <title>开放数据校验与解密 &mdash; wxadev 1.0.0 文档</title>
-  
 
-  
-  
-  
-  
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
+  <head>
+    <meta charset="utf-8" />
+    <title>开放数据校验与解密 &#8212; wxadev 1.0.0 文档</title>
+    <link rel="stylesheet" href="../../_static/sphinx13.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/language_data.js"></script>
+    <script type="text/javascript" src="../../_static/translations.js"></script>
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="在 wxadev 1.0.0 文档 中搜索"
+          href="../../_static/opensearch.xml"/>
 
-  
-  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
-  
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../../_static/jquery.js"></script>
-        <script type="text/javascript" src="../../_static/underscore.js"></script>
-        <script type="text/javascript" src="../../_static/doctools.js"></script>
-        <script type="text/javascript" src="../../_static/language_data.js"></script>
-        <script type="text/javascript" src="../../_static/translations.js"></script>
-    
-    <script type="text/javascript" src="../../_static/js/theme.js"></script>
-
-    
-
-  
-  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="index" title="索引" href="../../genindex.html" />
     <link rel="search" title="搜索" href="../../search.html" />
     <link rel="next" title="获取手机号" href="getPhoneNumber.html" />
-    <link rel="prev" title="用户授权" href="authorize.html" /> 
-</head>
+    <link rel="prev" title="用户授权" href="authorize.html" />
+<link rel="canonical" href="http://www.sphinx-doc.org/en/master/framework/open-ability/signature.html" />
 
-<body class="wy-body-for-nav">
-
-   
-  <div class="wy-grid-for-nav">
-    
-    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
-      <div class="wy-side-scroll">
-        <div class="wy-side-nav-search" >
-          
-
-          
-            <a href="../../contents.html" class="icon icon-home"> wxadev
-          
-
-          
-          </a>
-
-          
-            
-            
-          
-
-          
-<div role="search">
-  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
-    <input type="hidden" name="check_keywords" value="yes" />
-    <input type="hidden" name="area" value="default" />
-  </form>
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet" type="text/css" />
+ 
+<style type="text/css">
+  table.right { float: right; margin-left: 20px; }
+  table.right td { border: 1px solid #ccc; }
+  
+</style>
+<script type="text/javascript">
+  // intelligent scrolling of the sidebar content
+  $(window).scroll(function() {
+    var sb = $('.sphinxsidebarwrapper');
+    var win = $(window);
+    var sbh = sb.height();
+    var offset = $('.sphinxsidebar').position()['top'];
+    var wintop = win.scrollTop();
+    var winbot = wintop + win.innerHeight();
+    var curtop = sb.position()['top'];
+    var curbot = curtop + sbh;
+    // does sidebar fit in window?
+    if (sbh < win.innerHeight()) {
+      // yes: easy case -- always keep at the top
+      sb.css('top', $u.min([$u.max([0, wintop - offset - 10]), $(document).height() - sbh - 200]));
+    } else {
+      // no: only scroll if top/bottom edge of sidebar is at
+      // top/bottom edge of window
+      if (curtop > wintop && curbot > winbot) {
+        sb.css('top', $u.max([wintop - offset - 10, 0]));
+      } else if (curtop < wintop && curbot < winbot) {
+        sb.css('top', $u.min([winbot - sbh - offset - 20, $(document).height() - sbh - 200]));
+      }
+    }
+  });
+</script> 
+  </head><body>
+<div class="pageheader">
+  <ul>
+    <li><a href="../../index.html">主页</a></li>
+    <li><a href="../index.html">框架</a></li>
+    <li><a href="../../component/index.html">组件</a></li>
+    <li><a href="../../api/index.html">API</a></li>
+    <li><a href="../../api-backend/index.html">服务端</a></li>
+    <li><a href="../../contents.html">目录</a></li>
+  </ul>
+  <div>
+    <a href="../../index.html">
+      <img src="../../_static/wxaheader.png" alt="wxa" />
+    </a>
+  </div>
 </div>
 
-          
-        </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>导航</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="总目录"
+             accesskey="I">索引</a></li>
+        <li class="right" >
+          <a href="../../http-routingtable.html" title="微信小程序API"
+             >wxapi</a> |</li>
+        <li class="right" >
+          <a href="getPhoneNumber.html" title="获取手机号"
+             accesskey="N">下一页</a> |</li>
+        <li class="right" >
+          <a href="authorize.html" title="用户授权"
+             accesskey="P">上一页</a> |</li>
+<li><a href="../../index.html">主页</a>&#160;|</li>
+<li><a href="../../contents.html">文档</a> &#187;</li>
 
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-              
-            
-            
-              <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../../index.html">开发指南</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../dev.html">简介</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../basic/index.html">基础教程</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../guide/index.html">运行环境</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="../index.html">框架</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="../MINA.html">框架</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../structure.html">目录结构</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../config.html">小程序配置</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../sitemap.html">sitemap 配置</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../app-service/index.html">逻辑层 App Service</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../view/index.html">视图层 View</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../details.html">运行环境</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../plugin/index.html">插件</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../ability/index.html">基础能力</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../device/index.html">硬件能力</a></li>
-<li class="toctree-l2 current"><a class="reference internal" href="index.html">开放能力</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="login.html">小程序登录</a></li>
-<li class="toctree-l3"><a class="reference internal" href="union-id.html">UnionID 机制</a></li>
-<li class="toctree-l3"><a class="reference internal" href="authorize.html">用户授权</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">开放数据校验与解密</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#id2">数据签名校验</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id3">加密数据解密算法</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#session-key">会话密钥 session_key 有效性</a></li>
+          <li class="nav-item nav-item-1"><a href="../index.html" >框架</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="index.html" accesskey="U">开放能力</a> &#187;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../../contents.html">目录</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">开放数据校验与解密</a><ul>
+<li><a class="reference internal" href="#id2">服务端获取开放数据</a></li>
+<li><a class="reference internal" href="#id3">方式一：开发者后台校验与解密开放数据</a><ul>
+<li><a class="reference internal" href="#id4">数据签名校验</a></li>
+<li><a class="reference internal" href="#id5">加密数据解密算法</a></li>
+<li><a class="reference internal" href="#session-key">会话密钥 session_key 有效性</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="getPhoneNumber.html">获取手机号</a></li>
-<li class="toctree-l3"><a class="reference internal" href="bio-auth.html">生物认证</a></li>
-<li class="toctree-l3"><a class="reference internal" href="share.html">转发</a></li>
-<li class="toctree-l3"><a class="reference internal" href="updatable-message.html">动态消息</a></li>
-<li class="toctree-l3"><a class="reference internal" href="launchApp.html">打开 App</a></li>
-<li class="toctree-l3"><a class="reference internal" href="template-message.html">模板消息</a></li>
-<li class="toctree-l3"><a class="reference internal" href="uniform-message.html">统一服务消息</a></li>
-<li class="toctree-l3"><a class="reference internal" href="customer-message/index.html">客服消息</a></li>
-<li class="toctree-l3"><a class="reference internal" href="qr-code.html">获取小程序码</a></li>
-<li class="toctree-l3"><a class="reference internal" href="nearby.html">附近的小程序</a></li>
-<li class="toctree-l3"><a class="reference internal" href="express.html">微信物流助手（商户侧）</a></li>
-<li class="toctree-l3"><a class="reference internal" href="express-download.html">物流助手-打单软件</a></li>
-<li class="toctree-l3"><a class="reference internal" href="express-delivery.html">微信物流助手（快递侧）</a></li>
-<li class="toctree-l3"><a class="reference internal" href="data-analysis.html">数据分析接口</a></li>
-<li class="toctree-l3"><a class="reference internal" href="card/index.html">card</a></li>
+<li><a class="reference internal" href="#id6">方式二：云调用直接获取开放数据</a><ul>
+<li><a class="reference internal" href="#cloudid">1. 获取 cloudID</a></li>
+<li><a class="reference internal" href="#id7">2. 调用云函数</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../usability.html">调试</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../usability/index.html">可用性</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../performance/index.html">性能</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../client-lib/index.html">基础库</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../compatibility.html">兼容处理</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../workers.html">多线程 Worker</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../server-ability/index.html">后端能力</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../release/index.html">版本更新</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../operating-mechanism.html">运行机制</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../custom-component/index.html">自定义组件</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../component/index.html">组件</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../api/index.html">API</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../api-backend/index.html">服务端API</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../devtools/index.html">开发工具</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../reference/index.html">参考资料</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../wxcloud/index.html">云开发</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../wxwork/index.html">企业微信</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../todolist.html">待办事项</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../glossary.html">术语</a></li>
 </ul>
 
-            
-          
+  <h4>上一个主题</h4>
+  <p class="topless"><a href="authorize.html"
+                        title="上一章">用户授权</a></p>
+  <h4>下一个主题</h4>
+  <p class="topless"><a href="getPhoneNumber.html"
+                        title="下一章">获取手机号</a></p>
+  <div role="note" aria-label="source link">
+    <h3>本页</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../_sources/framework/open-ability/signature.rst.txt"
+            rel="nofollow">显示源代码</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">快速搜索</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="转向" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
         </div>
       </div>
-    </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
-          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../../contents.html">wxadev</a>
-        
-      </nav>
-
-
-      <div class="wy-nav-content">
-        
-        <div class="rst-content">
-        
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-
-  <ul class="wy-breadcrumbs">
-    
-      <li><a href="../../contents.html">Docs</a> &raquo;</li>
-        
-          <li><a href="../index.html">框架</a> &raquo;</li>
-        
-          <li><a href="index.html">开放能力</a> &raquo;</li>
-        
-      <li>开放数据校验与解密</li>
-    
-    
-      <li class="wy-breadcrumbs-aside">
-        
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
             
-            <a href="../../_sources/framework/open-ability/signature.rst.txt" rel="nofollow"> View page source</a>
-          
-        
-      </li>
-    
-  </ul>
-
-  
-  <hr/>
-</div>
-          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
-           <div itemprop="articleBody">
-            
-  <div class="section" id="id1">
-<h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/signature.html">开放数据校验与解密</a><a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
-<p>小程序可以通过各种前端接口获取微信提供的开放数据。考虑到开发者服务器也需要获取这些开放数据，微信会对这些数据做签名和加密处理。开发者后台拿到开放数据后可以对数据进行校验签名和解密，来保证数据不被篡改。</p>
-<img alt="https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/image/signature.jpg?t=19041921" src="https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/image/signature.jpg?t=19041921" />
-<p>签名校验以及数据加解密涉及用户的会话密钥 session_key。
-开发者应该事先通过 wx.login 登录流程获取会话密钥 session_key 并保存在服务器。为了数据不被篡改，
-开发者不应该把 session_key 传到小程序客户端等服务器外的环境。</p>
+  <div class="section" id="signature">
+<span id="id1"></span><h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/signature.html">开放数据校验与解密</a><a class="headerlink" href="#signature" title="永久链接至标题">¶</a></h1>
 <div class="section" id="id2">
-<h2>数据签名校验<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<h2>服务端获取开放数据<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<p>小程序可以通过各种前端接口获取微信提供的开放数据。
+考虑到开发者服务端也需要获取这些开放数据，微信提供了两种获取方式：</p>
+<ul class="simple">
+<li><p>方式一：开发者后台校验与解密开放数据</p></li>
+<li><p>方式二：云调用直接获取开放数据（云开发）</p></li>
+</ul>
+</div>
+<div class="section" id="id3">
+<h2>方式一：开发者后台校验与解密开放数据<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
+<p>微信会对这些开放数据做签名和加密处理。开发者后台拿到开放数据后可以对数据进行校验签名和解密，来保证数据不被篡改。</p>
+<img alt="https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/image/signature.jpg?t=19051021" src="https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/image/signature.jpg?t=19051021" />
+<p>签名校验以及数据加解密涉及用户的会话密钥 session_key。
+开发者应该事先通过 wx.login 登录流程获取会话密钥 session_key 并保存在服务器。
+为了数据不被篡改，开发者不应该把 session_key 传到小程序客户端等服务器外的环境。</p>
+<div class="section" id="id4">
+<h3>数据签名校验<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h3>
 <p>为了确保开放接口返回用户数据的安全性，微信会对明文数据进行签名。
 开发者可以根据业务需要对数据包进行签名校验，确保数据的完整性。</p>
-<p>通过调用接口（如 wx.getUserInfo）获取数据时，接口会同时返回 rawData、signature，
-其中 signature = sha1( rawData + session_key )
-开发者将 signature、rawData 发送到开发者服务器进行校验。
-服务器利用用户对应的 session_key 使用相同的算法计算出签名 signature2 ，
-比对 signature 与 signature2 即可校验数据的完整性。
-如 wx.getUserInfo的数据校验：</p>
-<p>接口返回的rawData：</p>
+<ol class="arabic simple">
+<li><p>通过调用接口（如 <a class="reference internal" href="../../api/wx.getUserInfo.html#wx.getUserInfo" title="wx.getUserInfo"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.getUserInfo()</span></code></a> ）获取数据时，接口会同时返回 <em>rawData</em> 、 <em>signature</em> ，
+其中 <code class="docutils literal notranslate"><span class="pre">signature</span> <span class="pre">=</span> <span class="pre">sha1(</span> <span class="pre">rawData</span> <span class="pre">+</span> <span class="pre">session_key</span> <span class="pre">)</span></code></p></li>
+<li><p>开发者将 <em>signature</em> 、 <em>rawData</em> 发送到开发者服务器进行校验。
+服务器利用用户对应的 <em>session_key</em> 使用相同的算法计算出签名 <em>signature2</em> ，
+比对 <em>signature</em> 与 <em>signature2</em> 即可校验数据的完整性。</p></li>
+</ol>
+<p>如 <a class="reference internal" href="../../api/wx.getUserInfo.html#wx.getUserInfo" title="wx.getUserInfo"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.getUserInfo()</span></code></a> 的数据校验接口返回的rawData:</p>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
   <span class="nt">&quot;nickName&quot;</span><span class="p">:</span> <span class="s2">&quot;Band&quot;</span><span class="p">,</span>
   <span class="nt">&quot;gender&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
@@ -242,34 +188,29 @@
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>用户的 session-key:</p>
-<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="nx">HyVFkGl5F5OQWJZZaNzBBg</span><span class="o">==</span>
+<p>用户的 session-key：</p>
+<p>HyVFkGl5F5OQWJZZaNzBBg==</p>
+<p>用于签名的字符串为：</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="o">{</span><span class="s2">&quot;nickName&quot;</span>:<span class="s2">&quot;Band&quot;</span>,<span class="s2">&quot;gender&quot;</span>:1,<span class="s2">&quot;language&quot;</span>:<span class="s2">&quot;zh_CN&quot;</span>,<span class="s2">&quot;city&quot;</span>:<span class="s2">&quot;Guangzhou&quot;</span>,<span class="s2">&quot;province&quot;</span>:<span class="s2">&quot;Guangdong&quot;</span>,<span class="s2">&quot;country&quot;</span>:<span class="s2">&quot;CN&quot;</span>,<span class="s2">&quot;avatarUrl&quot;</span>:<span class="s2">&quot;http://wx.qlogo.cn/mmopen/vi_32/1vZvI39NWFQ9XM4LtQpFrQJ1xlgZxx3w7bQxKARol6503Iuswjjn6nIGBiaycAjAtpujxyzYsrztuuICqIM5ibXQ/0&quot;</span><span class="o">}</span><span class="nv">HyVFkGl5F5OQWJZZaNzBBg</span><span class="o">==</span>
 </pre></div>
 </div>
-<p>用于签名的字符串为:</p>
-<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="s2">&quot;nickName&quot;</span><span class="o">:</span><span class="s2">&quot;Band&quot;</span><span class="p">,</span><span class="s2">&quot;gender&quot;</span><span class="o">:</span><span class="mi">1</span><span class="p">,</span><span class="s2">&quot;language&quot;</span><span class="o">:</span><span class="s2">&quot;zh_CN&quot;</span><span class="p">,</span><span class="s2">&quot;city&quot;</span><span class="o">:</span><span class="s2">&quot;Guangzhou&quot;</span><span class="p">,</span><span class="s2">&quot;province&quot;</span><span class="o">:</span><span class="s2">&quot;Guangdong&quot;</span><span class="p">,</span><span class="s2">&quot;country&quot;</span><span class="o">:</span><span class="s2">&quot;CN&quot;</span><span class="p">,</span><span class="s2">&quot;avatarUrl&quot;</span><span class="o">:</span><span class="s2">&quot;http://wx.qlogo.cn/mmopen/vi_32/1vZvI39NWFQ9XM4LtQpFrQJ1xlgZxx3w7bQxKARol6503Iuswjjn6nIGBiaycAjAtpujxyzYsrztuuICqIM5ibXQ/0&quot;</span><span class="p">}</span><span class="nx">HyVFkGl5F5OQWJZZaNzBBg</span><span class="o">==</span>
-</pre></div>
+<p>使用sha1得到的结果为</p>
+<p>75e81ceda165f4ffa64f4068af58c64b8f54b88c</p>
 </div>
-<p>使用sha1得到的结果为:</p>
-<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="mi">75</span><span class="nx">e81ceda165f4ffa64f4068af58c64b8f54b88c</span>
-</pre></div>
-</div>
-</div>
-<div class="section" id="id3">
-<h2>加密数据解密算法<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
-<p>接口如果涉及敏感数据（如wx.getUserInfo当中的 openId 和 unionId），
-接口的明文内容将不包含这些敏感数据。开发者如需要获取敏感数据，
-需要对接口返回的加密数据(encryptedData) 进行对称解密。 解密算法如下：</p>
+<div class="section" id="id5">
+<h3>加密数据解密算法<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h3>
+<p>接口如果涉及敏感数据（如 <a class="reference internal" href="../../api/wx.getUserInfo.html#wx.getUserInfo" title="wx.getUserInfo"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.getUserInfo()</span></code></a> 当中的 <cite>openId</cite> 和 <cite>unionId</cite> ），接口的明文内容将不包含这些敏感数据。
+开发者如需要获取敏感数据，需要对接口返回的加密数据(encryptedData) 进行对称解密。 解密算法如下：</p>
 <ol class="arabic simple">
 <li><p>对称解密使用的算法为 AES-128-CBC，数据采用PKCS#7填充。</p></li>
 <li><p>对称解密的目标密文为 Base64_Decode(encryptedData)。</p></li>
 <li><p>对称解密秘钥 aeskey = Base64_Decode(session_key), aeskey 是16字节。</p></li>
 <li><p>对称解密算法初始向量 为Base64_Decode(iv)，其中iv由数据接口返回。</p></li>
 </ol>
-<p>微信官方提供了多种编程语言的示例代码（点击下载）。每种语言类型的接口名字均一致。调用方式可以参照示例。</p>
+<p>微信官方提供了多种编程语言的示例代码（ <a class="reference download external" download="" href="https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/demo/aes-sample.zip"><code class="xref download docutils literal notranslate"><span class="pre">点击下载</span></code></a> ）。每种语言类型的接口名字均一致。调用方式可以参照示例。</p>
 <p>另外，为了应用能校验数据的有效性，会在敏感数据加上数据水印( watermark )</p>
-<p>watermark参数说明：</p>
-<table class="docutils align-center">
+<table class="docutils align-default" id="id8">
+<caption><span class="caption-text">watermark参数说明</span><a class="headerlink" href="#id8" title="永久链接至表格">¶</a></caption>
 <colgroup>
 <col style="width: 14%" />
 <col style="width: 10%" />
@@ -292,7 +233,7 @@
 </tr>
 </tbody>
 </table>
-<p>如接口 wx.getUserInfo 敏感数据当中的 watermark：</p>
+<p>如接口 <a class="reference internal" href="../../api/wx.getUserInfo.html#wx.getUserInfo" title="wx.getUserInfo"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.getUserInfo()</span></code></a> 敏感数据当中的 <cite>watermark</cite>:</p>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span>{
   &quot;openId&quot;: &quot;OPENID&quot;,
   &quot;nickName&quot;: &quot;NICKNAME&quot;,
@@ -309,74 +250,128 @@
 }
 </pre></div>
 </div>
-<div class="admonition tip">
-<p class="admonition-title">小技巧</p>
+<div class="admonition attention">
+<p class="admonition-title">注意</p>
 <p>解密后得到的json数据根据需求可能会增加新的字段，旧字段不会改变和删减，开发者需要预留足够的空间</p>
 </div>
 </div>
 <div class="section" id="session-key">
-<h2>会话密钥 session_key 有效性<a class="headerlink" href="#session-key" title="永久链接至标题">¶</a></h2>
+<h3>会话密钥 session_key 有效性<a class="headerlink" href="#session-key" title="永久链接至标题">¶</a></h3>
 <p>开发者如果遇到因为 session_key 不正确而校验签名失败或解密失败，请关注下面几个与 session_key 有关的注意事项。</p>
 <ol class="arabic simple">
-<li><p>wx.login 调用时，用户的 session_key 可能会被更新而致使旧 session_key 失效
-（刷新机制存在最短周期，如果同一个用户短时间内多次调用 wx.login，并非每次调用都导致 session_key 刷新）。
-开发者应该在明确需要重新登录时才调用 wx.login，及时通过 auth.code2Session 接口更新服务器存储的 session_key。</p></li>
+<li><p><a class="reference internal" href="../../api/wx.login.html#wx.login" title="wx.login"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.login()</span></code></a> 调用时，用户的 session_key 可能会被更新而致使旧 session_key 失效（刷新机制存在最短周期，
+如果同一个用户短时间内多次调用 <a class="reference internal" href="../../api/wx.login.html#wx.login" title="wx.login"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.login()</span></code></a> ，并非每次调用都导致 session_key 刷新）。
+开发者应该在明确需要重新登录时才调用 <a class="reference internal" href="../../api/wx.login.html#wx.login" title="wx.login"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.login()</span></code></a> ，及时通过 <code class="xref js js-data docutils literal notranslate"><span class="pre">auth.code2Session</span></code> 接口更新服务器存储的 session_key。</p></li>
 <li><p>微信不会把 session_key 的有效期告知开发者。
 我们会根据用户使用小程序的行为对 session_key 进行续期。用户越频繁使用小程序，session_key 有效期越长。</p></li>
 <li><p>开发者在 session_key 失效时，可以通过重新执行登录流程获取有效的 session_key。
-使用接口 wx.checkSession可以校验 session_key 是否有效，从而避免小程序反复执行登录流程。</p></li>
+使用接口 <a class="reference internal" href="../../api/wx.checkSession.html#wx.checkSession" title="wx.checkSession"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.checkSession()</span></code></a> 可以校验 session_key 是否有效，从而避免小程序反复执行登录流程。</p></li>
 <li><p>当开发者在实现自定义登录态时，可以考虑以 session_key 有效期作为自身登录态有效期，也可以实现自定义的时效性策略。</p></li>
 </ol>
 </div>
 </div>
+<div class="section" id="id6">
+<h2>方式二：云调用直接获取开放数据<a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h2>
+<p>接口如果涉及敏感数据（如 <a class="reference internal" href="../../api/wx.getWeRunData.html#wx.getWeRunData" title="wx.getWeRunData"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.getWeRunData()</span></code></a> ），接口的明文内容将不包含这些敏感数据，
+而是在返回的接口中包含对应敏感数据的 cloudID 字段，数据可以通过云函数获取。完整流程如下：</p>
+<div class="section" id="cloudid">
+<h3>1. 获取 cloudID<a class="headerlink" href="#cloudid" title="永久链接至标题">¶</a></h3>
+<div class="versionadded">
+<p><span class="versionmodified added">2.7.0 新版功能: </span>如果小程序已开通云开发，
+在开放数据接口的返回值中可以通过 <code class="docutils literal notranslate"><span class="pre">cloudID</span></code> 字段获取（与 <code class="docutils literal notranslate"><span class="pre">encryptedData</span></code> 同级）， <code class="docutils literal notranslate"><span class="pre">cloudID</span></code> 有效期五分钟。</p>
+</div>
+</div>
+<div class="section" id="id7">
+<h3>2. 调用云函数<a class="headerlink" href="#id7" title="永久链接至标题">¶</a></h3>
+<p>调用云函数时，对传入的 <code class="docutils literal notranslate"><span class="pre">data</span></code> 参数，如果有顶层字段的值为通过 <code class="xref js js-func docutils literal notranslate"><span class="pre">wx.cloud.CloudID()</span></code> 构造的 <code class="docutils literal notranslate"><span class="pre">CloudID</span></code> ，
+则调用云函数时，这些字段的值会被替换为 <code class="docutils literal notranslate"><span class="pre">cloudID</span></code> 对应的开放数据，一次调用最多可替换 5 个 <code class="docutils literal notranslate"><span class="pre">CloudID</span></code> 。</p>
+<p>示例：</p>
+<p>在小程序获取到 <code class="docutils literal notranslate"><span class="pre">cloudID</span></code> 之后发起调用:</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="nx">wx</span><span class="p">.</span><span class="nx">cloud</span><span class="p">.</span><span class="nx">callFunction</span><span class="p">({</span>
+  <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;myFunction&#39;</span><span class="p">,</span>
+  <span class="nx">data</span><span class="o">:</span> <span class="p">{</span>
+    <span class="nx">weRunData</span><span class="o">:</span> <span class="nx">wx</span><span class="p">.</span><span class="nx">cloud</span><span class="p">.</span><span class="nx">CloudID</span><span class="p">(</span><span class="s1">&#39;xxx&#39;</span><span class="p">),</span> <span class="c1">// 这个 CloudID 值到云函数端会被替换</span>
+    <span class="nx">obj</span><span class="o">:</span> <span class="p">{</span>
+      <span class="nx">shareInfo</span><span class="o">:</span> <span class="nx">wx</span><span class="p">.</span><span class="nx">cloud</span><span class="p">.</span><span class="nx">CloudID</span><span class="p">(</span><span class="s1">&#39;yyy&#39;</span><span class="p">),</span> <span class="c1">// 非顶层字段的 CloudID 不会被替换，会原样字符串展示</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">})</span>
+</pre></div>
+</div>
+<p>在云函数收到的 <code class="docutils literal notranslate"><span class="pre">event</span></code> 示例:</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="c1">// event</span>
+<span class="p">{</span>
+  <span class="c1">// weRunData 的值已被替换为开放数据</span>
+  <span class="s2">&quot;weRunData&quot;</span><span class="o">:</span> <span class="p">{</span>
+    <span class="s2">&quot;cloudID&quot;</span><span class="o">:</span> <span class="s2">&quot;xxx&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
+      <span class="s2">&quot;stepInfoList&quot;</span><span class="o">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+          <span class="s2">&quot;step&quot;</span><span class="o">:</span> <span class="mi">5000</span><span class="p">,</span>
+          <span class="s2">&quot;timestamp&quot;</span><span class="o">:</span> <span class="mi">1554814312</span><span class="p">,</span>
+        <span class="p">}</span>
+      <span class="p">],</span>
+      <span class="s2">&quot;watermark&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;appid&quot;</span><span class="o">:</span> <span class="s2">&quot;wx1111111111&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;timestampe&quot;</span><span class="o">:</span> <span class="mi">1554815786</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+  <span class="p">},</span>
+  <span class="s2">&quot;obj&quot;</span><span class="o">:</span> <span class="p">{</span>
+    <span class="c1">// 非顶层字段维持原样</span>
+    <span class="s2">&quot;shareInfo&quot;</span><span class="o">:</span> <span class="s2">&quot;yyy&quot;</span><span class="p">,</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>如果 <code class="docutils literal notranslate"><span class="pre">cloudID</span></code> 非法或过期，则在 <code class="docutils literal notranslate"><span class="pre">event</span></code> 中获取得到的将是一个有包含错误码、错误信息和原始 <code class="docutils literal notranslate"><span class="pre">cloudID</span></code> 的对象。
+过期 <code class="docutils literal notranslate"><span class="pre">cloudID</span></code> 换取结果示例:</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="c1">// event</span>
+<span class="p">{</span>
+  <span class="s2">&quot;weRunData&quot;</span><span class="o">:</span> <span class="p">{</span>
+    <span class="s2">&quot;cloudID&quot;</span><span class="o">:</span> <span class="s2">&quot;xxx&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;errCode&quot;</span><span class="o">:</span> <span class="o">-</span><span class="mi">601006</span><span class="p">,</span>
+    <span class="s2">&quot;errMsg&quot;</span><span class="o">:</span> <span class="s2">&quot;cloudID expired.&quot;</span>
+  <span class="p">},</span>
+  <span class="c1">// ...</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
 
 
-           </div>
-           
           </div>
-          <footer>
-  
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="getPhoneNumber.html" class="btn btn-neutral float-right" title="获取手机号" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="authorize.html" class="btn btn-neutral float-left" title="用户授权" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
-    </div>
-  
-
-  <hr/>
-
-  <div role="contentinfo">
-    <p>
-        &copy; Copyright 2019, Nosy
-
-    </p>
-  </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
-
-</footer>
-
         </div>
       </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>导航</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="总目录"
+             >索引</a></li>
+        <li class="right" >
+          <a href="../../http-routingtable.html" title="微信小程序API"
+             >wxapi</a> |</li>
+        <li class="right" >
+          <a href="getPhoneNumber.html" title="获取手机号"
+             >下一页</a> |</li>
+        <li class="right" >
+          <a href="authorize.html" title="用户授权"
+             >上一页</a> |</li>
+<li><a href="../../index.html">主页</a>&#160;|</li>
+<li><a href="../../contents.html">文档</a> &#187;</li>
 
-    </section>
-
-  </div>
-  
-
-
-  <script type="text/javascript">
-      jQuery(function () {
-          SphinxRtdTheme.Navigation.enable(true);
-      });
-  </script>
-
-  
-  
-    
-   
-
-</body>
+          <li class="nav-item nav-item-1"><a href="../index.html" >框架</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="index.html" >开放能力</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; 版权所有 2019, Wxadev Docs.
+      由 <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.0+/40994a8 创建。
+    </div>
+  </body>
 </html>

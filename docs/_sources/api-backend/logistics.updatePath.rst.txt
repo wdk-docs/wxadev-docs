@@ -1,21 +1,22 @@
-:wxbpi:`更新运单轨迹 <logistics.updatePath>`
+:wxbpi:`更新运单轨迹 logistics.updatePath <logistics.updatePath>`
 ============================================================
 
-logistics.updatePath
 本接口应在服务器端调用，详细说明参见服务端API。
 
 本接口支持云调用。需开发者工具版本 >= 1.02.1904090（最新稳定版下载），wx-server-sdk >= 0.4.0
 
-
-
 调用方式：
 
-一、HTTPS 调用
-二、云调用
+- 一、HTTPS 调用
+- 二、云调用
 
 一、HTTPS 调用
-请求地址
-POST https://api.weixin.qq.com/cgi-bin/express/delivery/path/update?access_token=ACCESS_TOKEN
+-----------------------------
+
+接口地址请求地址 :term:`api`
+
+.. http:post:: express/delivery/path/update?access_token=ACCESS_TOKEN
+
 请求参数
 属性	类型	默认值	必填	说明
 access_token	string		是	接口调用凭证
@@ -63,6 +64,8 @@ errcode 的合法值
 }
 
 二、云调用
+-----------------------------
+
 云调用是小程序·云开发提供的在云函数中调用微信开放接口的能力，需要在云函数中通过 wx-server-sdk 使用。
 
 接口方法

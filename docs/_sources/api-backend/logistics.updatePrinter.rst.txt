@@ -15,42 +15,46 @@
 一、HTTPS 调用
 ----------------
 
-.. http:get:: <api>/express/business/printer/update
+接口地址请求地址 :term:`api`
 
-  :term:`api`
+.. http:gett:: express/business/printer/update
 
-  :query string access_token: *必选*	接口调用凭证
-  :<json string openid: *必选*	打印员 openid
-  :<json string update_type: *必选*	更新类型 合法值:
+   :synopsis: 更新打印员
+   :query string access_token: *必选*	接口调用凭证
+   :<json string openid: *必选*	打印员 openid
+   :<json string update_type: *必选*	更新类型 合法值:
 
-    - *bind*	绑定
-    - *unbind*	解除绑定
+     - *bind*	绑定
+     - *unbind*	解除绑定
 
-  :>json number errcode: 错误码
+   :>json number errcode: 错误码
 
-    - *0*	成功
-    - *-1*	系统失败
-    - *9300517*	update_type 不正确
+     - *0*	成功
+     - *-1*	系统失败
+     - *9300517*	update_type 不正确
 
-  :>json string errmsg: 错误信息
+   :>json string errmsg: 错误信息
 
-  :请求示例:
+   :请求示例:
 
-    .. code::
+     .. code:: http
 
-      {
-        "openid": "oJ4v0wRAfiXcnIbM3SgGEUkTw3Qw",
-        "update_type": "bind"
-      }
+        GET /users/123/posts/web HTTP/1.1
+        Host: https://api.weixin.qq.com/cgi-bin/
+        Accept: application/json, text/javascript
+        {
+          "openid": "oJ4v0wRAfiXcnIbM3SgGEUkTw3Qw",
+          "update_type": "bind"
+        }
 
-  :返回示例:
+   :返回示例:
 
-    .. code::
+     .. code::
 
-      {
-        "errcode": 0,
-        "errmsg": "ok"
-      }
+       {
+         "errcode": 0,
+         "errmsg": "ok"
+       }
 
 二、云调用
 -------------

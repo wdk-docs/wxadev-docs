@@ -1,249 +1,322 @@
 
-
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-CN" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-CN" > <!--<![endif]-->
-<head>
-  <meta charset="utf-8">
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <title>Color &mdash; wxadev 1.0.0 文档</title>
-  
 
-  
-  
-  
-  
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
+  <head>
+    <meta charset="utf-8" />
+    <title>Color &#8212; wxadev 1.0.0 文档</title>
+    <link rel="stylesheet" href="../_static/sphinx13.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <script type="text/javascript" src="../_static/translations.js"></script>
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="在 wxadev 1.0.0 文档 中搜索"
+          href="../_static/opensearch.xml"/>
 
-  
-  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
-  
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../_static/jquery.js"></script>
-        <script type="text/javascript" src="../_static/underscore.js"></script>
-        <script type="text/javascript" src="../_static/doctools.js"></script>
-        <script type="text/javascript" src="../_static/language_data.js"></script>
-        <script type="text/javascript" src="../_static/translations.js"></script>
-    
-    <script type="text/javascript" src="../_static/js/theme.js"></script>
-
-    
-
-  
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜索" href="../search.html" />
     <link rel="next" title="CanvasGradient" href="CanvasGradient.html" />
-    <link rel="prev" title="wx.canvasGetImageData" href="wx.canvasGetImageData.html" /> 
-</head>
+    <link rel="prev" title="wx.canvasGetImageData" href="wx.canvasGetImageData.html" />
+<link rel="canonical" href="http://www.sphinx-doc.org/en/master/api/Color.html" />
 
-<body class="wy-body-for-nav">
-
-   
-  <div class="wy-grid-for-nav">
-    
-    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
-      <div class="wy-side-scroll">
-        <div class="wy-side-nav-search" >
-          
-
-          
-            <a href="../contents.html" class="icon icon-home"> wxadev
-          
-
-          
-          </a>
-
-          
-            
-            
-          
-
-          
-<div role="search">
-  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
-    <input type="hidden" name="check_keywords" value="yes" />
-    <input type="hidden" name="area" value="default" />
-  </form>
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet" type="text/css" />
+ 
+<style type="text/css">
+  table.right { float: right; margin-left: 20px; }
+  table.right td { border: 1px solid #ccc; }
+  
+</style>
+<script type="text/javascript">
+  // intelligent scrolling of the sidebar content
+  $(window).scroll(function() {
+    var sb = $('.sphinxsidebarwrapper');
+    var win = $(window);
+    var sbh = sb.height();
+    var offset = $('.sphinxsidebar').position()['top'];
+    var wintop = win.scrollTop();
+    var winbot = wintop + win.innerHeight();
+    var curtop = sb.position()['top'];
+    var curbot = curtop + sbh;
+    // does sidebar fit in window?
+    if (sbh < win.innerHeight()) {
+      // yes: easy case -- always keep at the top
+      sb.css('top', $u.min([$u.max([0, wintop - offset - 10]), $(document).height() - sbh - 200]));
+    } else {
+      // no: only scroll if top/bottom edge of sidebar is at
+      // top/bottom edge of window
+      if (curtop > wintop && curbot > winbot) {
+        sb.css('top', $u.max([wintop - offset - 10, 0]));
+      } else if (curtop < wintop && curbot < winbot) {
+        sb.css('top', $u.min([winbot - sbh - offset - 20, $(document).height() - sbh - 200]));
+      }
+    }
+  });
+</script> 
+  </head><body>
+<div class="pageheader">
+  <ul>
+    <li><a href="../index.html">主页</a></li>
+    <li><a href="../framework/index.html">框架</a></li>
+    <li><a href="../component/index.html">组件</a></li>
+    <li><a href="index.html">API</a></li>
+    <li><a href="../api-backend/index.html">服务端</a></li>
+    <li><a href="../contents.html">目录</a></li>
+  </ul>
+  <div>
+    <a href="../index.html">
+      <img src="../_static/wxaheader.png" alt="wxa" />
+    </a>
+  </div>
 </div>
 
-          
-        </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>导航</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="总目录"
+             accesskey="I">索引</a></li>
+        <li class="right" >
+          <a href="../http-routingtable.html" title="微信小程序API"
+             >wxapi</a> |</li>
+        <li class="right" >
+          <a href="CanvasGradient.html" title="CanvasGradient"
+             accesskey="N">下一页</a> |</li>
+        <li class="right" >
+          <a href="wx.canvasGetImageData.html" title="wx.canvasGetImageData"
+             accesskey="P">上一页</a> |</li>
+<li><a href="../index.html">主页</a>&#160;|</li>
+<li><a href="../contents.html">文档</a> &#187;</li>
 
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-              
-            
-            
-              <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../index.html">开发指南</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../dev.html">简介</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../basic/index.html">基础教程</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../guide/index.html">运行环境</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../framework/index.html">框架</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../component/index.html">组件</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="index.html">API</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="index.html#id2">基础</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#id3">系统信息</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#id4">更新</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#id5">小程序</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#id8">调试</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#id9">路由</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#id10">界面</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#id22">网络</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#id26">数据缓存</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#id27">媒体</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#id34">位置</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#id35">转发</a></li>
-<li class="toctree-l2 current"><a class="reference internal" href="index.html#id36">画布</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="CanvasContext.html">CanvasContext</a></li>
-<li class="toctree-l3"><a class="reference internal" href="wx.createCanvasContext.html">wx.createCanvasContext</a></li>
-<li class="toctree-l3"><a class="reference internal" href="wx.canvasToTempFilePath.html">wx.canvasToTempFilePath</a></li>
-<li class="toctree-l3"><a class="reference internal" href="wx.canvasPutImageData.html">wx.canvasPutImageData</a></li>
-<li class="toctree-l3"><a class="reference internal" href="wx.canvasGetImageData.html">wx.canvasGetImageData</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">Color</a></li>
-<li class="toctree-l3"><a class="reference internal" href="index.html#canvasgradient">CanvasGradient</a></li>
-<li class="toctree-l3"><a class="reference internal" href="index.html#canvascontext">CanvasContext</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#id37">文件</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#id38">开放接口</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#id53">设备</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#worker">Worker</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#id69">第三方平台</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#wxml">WXML</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../api-backend/index.html">服务端API</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../devtools/index.html">开发工具</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../reference/index.html">参考资料</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../wxcloud/index.html">云开发</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../wxwork/index.html">企业微信</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../todolist.html">待办事项</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../glossary.html">术语</a></li>
-</ul>
-
-            
-          
+          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">API</a> &#187;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h4>上一个主题</h4>
+  <p class="topless"><a href="wx.canvasGetImageData.html"
+                        title="上一章">wx.canvasGetImageData</a></p>
+  <h4>下一个主题</h4>
+  <p class="topless"><a href="CanvasGradient.html"
+                        title="下一章">CanvasGradient</a></p>
+  <div role="note" aria-label="source link">
+    <h3>本页</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/api/Color.rst.txt"
+            rel="nofollow">显示源代码</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">快速搜索</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="转向" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
         </div>
       </div>
-    </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
-          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../contents.html">wxadev</a>
-        
-      </nav>
-
-
-      <div class="wy-nav-content">
-        
-        <div class="rst-content">
-        
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-
-  <ul class="wy-breadcrumbs">
-    
-      <li><a href="../contents.html">Docs</a> &raquo;</li>
-        
-          <li><a href="index.html">API</a> &raquo;</li>
-        
-      <li>Color</li>
-    
-    
-      <li class="wy-breadcrumbs-aside">
-        
-            
-            <a href="../_sources/api/Color.rst.txt" rel="nofollow"> View page source</a>
-          
-        
-      </li>
-    
-  </ul>
-
-  
-  <hr/>
-</div>
-          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
-           <div itemprop="articleBody">
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
             
   <div class="section" id="color">
-<h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/api/Color.html">Color</a><a class="headerlink" href="#color" title="永久链接至标题">¶</a></h1>
+<span id="id1"></span><h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/api/Color.html">Color</a><a class="headerlink" href="#color" title="永久链接至标题">¶</a></h1>
+<p>Color</p>
+<p>颜色。可以用以下几种方式来表示 canvas 中使用的颜色：</p>
+<p>RGB 颜色： 如 ‘rgb(255, 0, 0)’
+RGBA 颜色：如 ‘rgba(255, 0, 0, 0.3)’
+16 进制颜色： 如 ‘#FF0000’
+预定义的颜色： 如 ‘red’
+其中预定义颜色有以下148个： 注意*: Color Name 大小写不敏感</p>
+<p>Color Name      HEX
+AliceBlue       #F0F8FF
+AntiqueWhite    #FAEBD7
+Aqua    #00FFFF
+Aquamarine      #7FFFD4
+Azure   #F0FFFF
+Beige   #F5F5DC
+Bisque  #FFE4C4
+Black   #000000
+BlanchedAlmond  #FFEBCD
+Blue    #0000FF
+BlueViolet      #8A2BE2
+Brown   #A52A2A
+BurlyWood       #DEB887
+CadetBlue       #5F9EA0
+Chartreuse      #7FFF00
+Chocolate       #D2691E
+Coral   #FF7F50
+CornflowerBlue  #6495ED
+Cornsilk        #FFF8DC
+Crimson #DC143C
+Cyan    #00FFFF
+DarkBlue        #00008B
+DarkCyan        #008B8B
+DarkGoldenRod   #B8860B
+DarkGray        #A9A9A9
+DarkGrey        #A9A9A9
+DarkGreen       #006400
+DarkKhaki       #BDB76B
+DarkMagenta     #8B008B
+DarkOliveGreen  #556B2F
+DarkOrange      #FF8C00
+DarkOrchid      #9932CC
+DarkRed #8B0000
+DarkSalmon      #E9967A
+DarkSeaGreen    #8FBC8F
+DarkSlateBlue   #483D8B
+DarkSlateGray   #2F4F4F
+DarkSlateGrey   #2F4F4F
+DarkTurquoise   #00CED1
+DarkViolet      #9400D3
+DeepPink        #FF1493
+DeepSkyBlue     #00BFFF
+DimGray #696969
+DimGrey #696969
+DodgerBlue      #1E90FF
+FireBrick       #B22222
+FloralWhite     #FFFAF0
+ForestGreen     #228B22
+Fuchsia #FF00FF
+Gainsboro       #DCDCDC
+GhostWhite      #F8F8FF
+Gold    #FFD700
+GoldenRod       #DAA520
+Gray    #808080
+Grey    #808080
+Green   #008000
+GreenYellow     #ADFF2F
+HoneyDew        #F0FFF0
+HotPink #FF69B4
+IndianRed       #CD5C5C
+Indigo  #4B0082
+Ivory   #FFFFF0
+Khaki   #F0E68C
+Lavender        #E6E6FA
+LavenderBlush   #FFF0F5
+LawnGreen       #7CFC00
+LemonChiffon    #FFFACD
+LightBlue       #ADD8E6
+LightCoral      #F08080
+LightCyan       #E0FFFF
+LightGoldenRodYellow    #FAFAD2
+LightGray       #D3D3D3
+LightGrey       #D3D3D3
+LightGreen      #90EE90
+LightPink       #FFB6C1
+LightSalmon     #FFA07A
+LightSeaGreen   #20B2AA
+LightSkyBlue    #87CEFA
+LightSlateGray  #778899
+LightSlateGrey  #778899
+LightSteelBlue  #B0C4DE
+LightYellow     #FFFFE0
+Lime    #00FF00
+LimeGreen       #32CD32
+Linen   #FAF0E6
+Magenta #FF00FF
+Maroon  #800000
+MediumAquaMarine        #66CDAA
+MediumBlue      #0000CD
+MediumOrchid    #BA55D3
+MediumPurple    #9370DB
+MediumSeaGreen  #3CB371
+MediumSlateBlue #7B68EE
+MediumSpringGreen       #00FA9A
+MediumTurquoise #48D1CC
+MediumVioletRed #C71585
+MidnightBlue    #191970
+MintCream       #F5FFFA
+MistyRose       #FFE4E1
+Moccasin        #FFE4B5
+NavajoWhite     #FFDEAD
+Navy    #000080
+OldLace #FDF5E6
+Olive   #808000
+OliveDrab       #6B8E23
+Orange  #FFA500
+OrangeRed       #FF4500
+Orchid  #DA70D6
+PaleGoldenRod   #EEE8AA
+PaleGreen       #98FB98
+PaleTurquoise   #AFEEEE
+PaleVioletRed   #DB7093
+PapayaWhip      #FFEFD5
+PeachPuff       #FFDAB9
+Peru    #CD853F
+Pink    #FFC0CB
+Plum    #DDA0DD
+PowderBlue      #B0E0E6
+Purple  #800080
+RebeccaPurple   #663399
+Red     #FF0000
+RosyBrown       #BC8F8F
+RoyalBlue       #4169E1
+SaddleBrown     #8B4513
+Salmon  #FA8072
+SandyBrown      #F4A460
+SeaGreen        #2E8B57
+SeaShell        #FFF5EE
+Sienna  #A0522D
+Silver  #C0C0C0
+SkyBlue #87CEEB
+SlateBlue       #6A5ACD
+SlateGray       #708090
+SlateGrey       #708090
+Snow    #FFFAFA
+SpringGreen     #00FF7F
+SteelBlue       #4682B4
+Tan     #D2B48C
+Teal    #008080
+Thistle #D8BFD8
+Tomato  #FF6347
+Turquoise       #40E0D0
+Violet  #EE82EE
+Wheat   #F5DEB3
+White   #FFFFFF
+WhiteSmoke      #F5F5F5
+Yellow  #FFFF00
+YellowGreen     #9ACD32</p>
 </div>
 
 
-           </div>
-           
           </div>
-          <footer>
-  
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="CanvasGradient.html" class="btn btn-neutral float-right" title="CanvasGradient" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="wx.canvasGetImageData.html" class="btn btn-neutral float-left" title="wx.canvasGetImageData" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
-    </div>
-  
-
-  <hr/>
-
-  <div role="contentinfo">
-    <p>
-        &copy; Copyright 2019, Nosy
-
-    </p>
-  </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
-
-</footer>
-
         </div>
       </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>导航</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="总目录"
+             >索引</a></li>
+        <li class="right" >
+          <a href="../http-routingtable.html" title="微信小程序API"
+             >wxapi</a> |</li>
+        <li class="right" >
+          <a href="CanvasGradient.html" title="CanvasGradient"
+             >下一页</a> |</li>
+        <li class="right" >
+          <a href="wx.canvasGetImageData.html" title="wx.canvasGetImageData"
+             >上一页</a> |</li>
+<li><a href="../index.html">主页</a>&#160;|</li>
+<li><a href="../contents.html">文档</a> &#187;</li>
 
-    </section>
-
-  </div>
-  
-
-
-  <script type="text/javascript">
-      jQuery(function () {
-          SphinxRtdTheme.Navigation.enable(true);
-      });
-  </script>
-
-  
-  
-    
-   
-
-</body>
+          <li class="nav-item nav-item-1"><a href="index.html" >API</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; 版权所有 2019, Wxadev Docs.
+      由 <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.0+/40994a8 创建。
+    </div>
+  </body>
 </html>

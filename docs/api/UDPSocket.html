@@ -1,0 +1,271 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
+  <head>
+    <meta charset="utf-8" />
+    <title>UDPSocket &#8212; wxadev 1.0.0 文档</title>
+    <link rel="stylesheet" href="../_static/sphinx13.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <script type="text/javascript" src="../_static/translations.js"></script>
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="在 wxadev 1.0.0 文档 中搜索"
+          href="../_static/opensearch.xml"/>
+
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜索" href="../search.html" />
+    <link rel="next" title="wx.setStorage" href="wx.setStorage.html" />
+    <link rel="prev" title="wx.offLocalServiceDiscoveryStop" href="wx.offLocalServiceDiscoveryStop.html" />
+<link rel="canonical" href="http://www.sphinx-doc.org/en/master/api/UDPSocket.html" />
+
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet" type="text/css" />
+ 
+<style type="text/css">
+  table.right { float: right; margin-left: 20px; }
+  table.right td { border: 1px solid #ccc; }
+  
+</style>
+<script type="text/javascript">
+  // intelligent scrolling of the sidebar content
+  $(window).scroll(function() {
+    var sb = $('.sphinxsidebarwrapper');
+    var win = $(window);
+    var sbh = sb.height();
+    var offset = $('.sphinxsidebar').position()['top'];
+    var wintop = win.scrollTop();
+    var winbot = wintop + win.innerHeight();
+    var curtop = sb.position()['top'];
+    var curbot = curtop + sbh;
+    // does sidebar fit in window?
+    if (sbh < win.innerHeight()) {
+      // yes: easy case -- always keep at the top
+      sb.css('top', $u.min([$u.max([0, wintop - offset - 10]), $(document).height() - sbh - 200]));
+    } else {
+      // no: only scroll if top/bottom edge of sidebar is at
+      // top/bottom edge of window
+      if (curtop > wintop && curbot > winbot) {
+        sb.css('top', $u.max([wintop - offset - 10, 0]));
+      } else if (curtop < wintop && curbot < winbot) {
+        sb.css('top', $u.min([winbot - sbh - offset - 20, $(document).height() - sbh - 200]));
+      }
+    }
+  });
+</script> 
+  </head><body>
+<div class="pageheader">
+  <ul>
+    <li><a href="../index.html">主页</a></li>
+    <li><a href="../framework/index.html">框架</a></li>
+    <li><a href="../component/index.html">组件</a></li>
+    <li><a href="index.html">API</a></li>
+    <li><a href="../api-backend/index.html">服务端</a></li>
+    <li><a href="../contents.html">目录</a></li>
+  </ul>
+  <div>
+    <a href="../index.html">
+      <img src="../_static/wxaheader.png" alt="wxa" />
+    </a>
+  </div>
+</div>
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>导航</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="总目录"
+             accesskey="I">索引</a></li>
+        <li class="right" >
+          <a href="../http-routingtable.html" title="微信小程序API"
+             >wxapi</a> |</li>
+        <li class="right" >
+          <a href="wx.setStorage.html" title="wx.setStorage"
+             accesskey="N">下一页</a> |</li>
+        <li class="right" >
+          <a href="wx.offLocalServiceDiscoveryStop.html" title="wx.offLocalServiceDiscoveryStop"
+             accesskey="P">上一页</a> |</li>
+<li><a href="../index.html">主页</a>&#160;|</li>
+<li><a href="../contents.html">文档</a> &#187;</li>
+
+          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">API</a> &#187;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../contents.html">目录</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">UDPSocket</a><ul>
+<li><a class="reference internal" href="#id1">方法</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>上一个主题</h4>
+  <p class="topless"><a href="wx.offLocalServiceDiscoveryStop.html"
+                        title="上一章">wx.offLocalServiceDiscoveryStop</a></p>
+  <h4>下一个主题</h4>
+  <p class="topless"><a href="wx.setStorage.html"
+                        title="下一章">wx.setStorage</a></p>
+  <div role="note" aria-label="source link">
+    <h3>本页</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/api/UDPSocket.rst.txt"
+            rel="nofollow">显示源代码</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">快速搜索</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="转向" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="udpsocket">
+<h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/api/UDPSocket.html">UDPSocket</a><a class="headerlink" href="#udpsocket" title="永久链接至标题">¶</a></h1>
+<dl class="function">
+<dt id="wx.createUDPSocket">
+<code class="descclassname">wx.</code><code class="descname">createUDPSocket</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#wx.createUDPSocket" title="永久链接至目标">¶</a></dt>
+<dd><div class="versionadded">
+<p><span class="versionmodified added">2.7.0 新版功能: </span>低版本需做兼容处理。</p>
+</div>
+<p>创建一个 UDP Socket 实例。使用前请注意阅读相关说明。</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#UDPSocket" title="UDPSocket"><code class="xref js js-class docutils literal notranslate"><span class="pre">UDPSocket()</span></code></a> 一个 UDP Socket 实例</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="class">
+<dt id="UDPSocket">
+<em class="property">class </em><code class="descname">UDPSocket</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#UDPSocket" title="永久链接至目标">¶</a></dt>
+<dd><div class="versionadded">
+<p><span class="versionmodified added">2.7.0 新版功能: </span>低版本需做兼容处理。</p>
+</div>
+<p>一个 UDP Socket 实例，默认使用 IPv4 协议。</p>
+</dd></dl>
+
+<div class="section" id="id1">
+<h2>方法<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h2>
+<dl class="function">
+<dt id="UDPSocket.bind">
+<code class="descclassname">UDPSocket.</code><code class="descname">bind</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#UDPSocket.bind" title="永久链接至目标">¶</a></dt>
+<dd><p>绑定一个系统随机分配的可用端口
+:return: number</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="UDPSocket.send">
+<code class="descclassname">UDPSocket.</code><code class="descname">send</code><span class="sig-paren">(</span><em>Object object</em><span class="sig-paren">)</span><a class="headerlink" href="#UDPSocket.send" title="永久链接至目标">¶</a></dt>
+<dd></dd></dl>
+
+<p>向指定的 IP 和 port 发送消息</p>
+<dl class="function">
+<dt id="UDPSocket.close">
+<code class="descclassname">UDPSocket.</code><code class="descname">close</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#UDPSocket.close" title="永久链接至目标">¶</a></dt>
+<dd></dd></dl>
+
+<p>关闭 UDP Socket 实例，相当于销毁。 在关闭之后，UDP Socket 实例不能再发送消息，
+每次调用 UDPSocket.send 将会触发错误事件，
+并且 message 事件回调函数也不会再也执行。
+在 UDPSocket 实例被创建后将被 Native 强引用，保证其不被 GC。
+在 UDPSocket.close 后将解除对其的强引用，让 UDPSocket 实例遵从 GC。</p>
+<dl class="function">
+<dt id="UDPSocket.onClose">
+<code class="descclassname">UDPSocket.</code><code class="descname">onClose</code><span class="sig-paren">(</span><em>function callback</em><span class="sig-paren">)</span><a class="headerlink" href="#UDPSocket.onClose" title="永久链接至目标">¶</a></dt>
+<dd></dd></dl>
+
+<p>监听关闭事件</p>
+<dl class="function">
+<dt id="UDPSocket.offClose">
+<code class="descclassname">UDPSocket.</code><code class="descname">offClose</code><span class="sig-paren">(</span><em>function callback</em><span class="sig-paren">)</span><a class="headerlink" href="#UDPSocket.offClose" title="永久链接至目标">¶</a></dt>
+<dd></dd></dl>
+
+<p>取消监听关闭事件</p>
+<dl class="function">
+<dt id="UDPSocket.onError">
+<code class="descclassname">UDPSocket.</code><code class="descname">onError</code><span class="sig-paren">(</span><em>function callback</em><span class="sig-paren">)</span><a class="headerlink" href="#UDPSocket.onError" title="永久链接至目标">¶</a></dt>
+<dd></dd></dl>
+
+<p>监听错误事件</p>
+<dl class="function">
+<dt id="UDPSocket.offError">
+<code class="descclassname">UDPSocket.</code><code class="descname">offError</code><span class="sig-paren">(</span><em>function callback</em><span class="sig-paren">)</span><a class="headerlink" href="#UDPSocket.offError" title="永久链接至目标">¶</a></dt>
+<dd></dd></dl>
+
+<p>取消监听错误事件</p>
+<dl class="function">
+<dt id="UDPSocket.onListening">
+<code class="descclassname">UDPSocket.</code><code class="descname">onListening</code><span class="sig-paren">(</span><em>function callback</em><span class="sig-paren">)</span><a class="headerlink" href="#UDPSocket.onListening" title="永久链接至目标">¶</a></dt>
+<dd></dd></dl>
+
+<p>监听开始监听数据包消息的事件</p>
+<dl class="function">
+<dt id="UDPSocket.offListening">
+<code class="descclassname">UDPSocket.</code><code class="descname">offListening</code><span class="sig-paren">(</span><em>function callback</em><span class="sig-paren">)</span><a class="headerlink" href="#UDPSocket.offListening" title="永久链接至目标">¶</a></dt>
+<dd></dd></dl>
+
+<p>取消监听开始监听数据包消息的事件</p>
+<dl class="function">
+<dt id="UDPSocket.onMessage">
+<code class="descclassname">UDPSocket.</code><code class="descname">onMessage</code><span class="sig-paren">(</span><em>function callback</em><span class="sig-paren">)</span><a class="headerlink" href="#UDPSocket.onMessage" title="永久链接至目标">¶</a></dt>
+<dd></dd></dl>
+
+<p>监听收到消息的事件</p>
+<dl class="function">
+<dt id="UDPSocket.offMessage">
+<code class="descclassname">UDPSocket.</code><code class="descname">offMessage</code><span class="sig-paren">(</span><em>function callback</em><span class="sig-paren">)</span><a class="headerlink" href="#UDPSocket.offMessage" title="永久链接至目标">¶</a></dt>
+<dd></dd></dl>
+
+<p>取消监听收到消息的事件</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>导航</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="总目录"
+             >索引</a></li>
+        <li class="right" >
+          <a href="../http-routingtable.html" title="微信小程序API"
+             >wxapi</a> |</li>
+        <li class="right" >
+          <a href="wx.setStorage.html" title="wx.setStorage"
+             >下一页</a> |</li>
+        <li class="right" >
+          <a href="wx.offLocalServiceDiscoveryStop.html" title="wx.offLocalServiceDiscoveryStop"
+             >上一页</a> |</li>
+<li><a href="../index.html">主页</a>&#160;|</li>
+<li><a href="../contents.html">文档</a> &#187;</li>
+
+          <li class="nav-item nav-item-1"><a href="index.html" >API</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; 版权所有 2019, Wxadev Docs.
+      由 <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.0+/40994a8 创建。
+    </div>
+  </body>
+</html>

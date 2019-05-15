@@ -1,0 +1,247 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
+  <head>
+    <meta charset="utf-8" />
+    <title>EditorContext &#8212; wxadev 1.0.0 文档</title>
+    <link rel="stylesheet" href="../_static/sphinx13.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <script type="text/javascript" src="../_static/translations.js"></script>
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="在 wxadev 1.0.0 文档 中搜索"
+          href="../_static/opensearch.xml"/>
+
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜索" href="../search.html" />
+    <link rel="next" title="wx.openLocation" href="wx.openLocation.html" />
+    <link rel="prev" title="CameraContext" href="CameraContext.html" />
+<link rel="canonical" href="http://www.sphinx-doc.org/en/master/api/EditorContext.html" />
+
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet" type="text/css" />
+ 
+<style type="text/css">
+  table.right { float: right; margin-left: 20px; }
+  table.right td { border: 1px solid #ccc; }
+  
+</style>
+<script type="text/javascript">
+  // intelligent scrolling of the sidebar content
+  $(window).scroll(function() {
+    var sb = $('.sphinxsidebarwrapper');
+    var win = $(window);
+    var sbh = sb.height();
+    var offset = $('.sphinxsidebar').position()['top'];
+    var wintop = win.scrollTop();
+    var winbot = wintop + win.innerHeight();
+    var curtop = sb.position()['top'];
+    var curbot = curtop + sbh;
+    // does sidebar fit in window?
+    if (sbh < win.innerHeight()) {
+      // yes: easy case -- always keep at the top
+      sb.css('top', $u.min([$u.max([0, wintop - offset - 10]), $(document).height() - sbh - 200]));
+    } else {
+      // no: only scroll if top/bottom edge of sidebar is at
+      // top/bottom edge of window
+      if (curtop > wintop && curbot > winbot) {
+        sb.css('top', $u.max([wintop - offset - 10, 0]));
+      } else if (curtop < wintop && curbot < winbot) {
+        sb.css('top', $u.min([winbot - sbh - offset - 20, $(document).height() - sbh - 200]));
+      }
+    }
+  });
+</script> 
+  </head><body>
+<div class="pageheader">
+  <ul>
+    <li><a href="../index.html">主页</a></li>
+    <li><a href="../framework/index.html">框架</a></li>
+    <li><a href="../component/index.html">组件</a></li>
+    <li><a href="index.html">API</a></li>
+    <li><a href="../api-backend/index.html">服务端</a></li>
+    <li><a href="../contents.html">目录</a></li>
+  </ul>
+  <div>
+    <a href="../index.html">
+      <img src="../_static/wxaheader.png" alt="wxa" />
+    </a>
+  </div>
+</div>
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>导航</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="总目录"
+             accesskey="I">索引</a></li>
+        <li class="right" >
+          <a href="../http-routingtable.html" title="微信小程序API"
+             >wxapi</a> |</li>
+        <li class="right" >
+          <a href="wx.openLocation.html" title="wx.openLocation"
+             accesskey="N">下一页</a> |</li>
+        <li class="right" >
+          <a href="CameraContext.html" title="CameraContext"
+             accesskey="P">上一页</a> |</li>
+<li><a href="../index.html">主页</a>&#160;|</li>
+<li><a href="../contents.html">文档</a> &#187;</li>
+
+          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">API</a> &#187;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../contents.html">目录</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">EditorContext</a><ul>
+<li><a class="reference internal" href="#id1">方法</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>上一个主题</h4>
+  <p class="topless"><a href="CameraContext.html"
+                        title="上一章">CameraContext</a></p>
+  <h4>下一个主题</h4>
+  <p class="topless"><a href="wx.openLocation.html"
+                        title="下一章">wx.openLocation</a></p>
+  <div role="note" aria-label="source link">
+    <h3>本页</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/api/EditorContext.rst.txt"
+            rel="nofollow">显示源代码</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">快速搜索</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="转向" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="editorcontext">
+<h1>EditorContext<a class="headerlink" href="#editorcontext" title="永久链接至标题">¶</a></h1>
+<div class="versionadded">
+<p><span class="versionmodified added">2.7.0 新版功能: </span>低版本需做 <a class="reference internal" href="../framework/compatibility.html#compatibility"><span class="std std-ref">兼容处理</span></a> 。</p>
+</div>
+<dl class="class">
+<dt id="EditorContext">
+<em class="property">class </em><code class="descname">EditorContext</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#EditorContext" title="永久链接至目标">¶</a></dt>
+<dd><p>可通过 <a class="reference internal" href="wx.createSelectorQuery.html#wx.createSelectorQuery" title="wx.createSelectorQuery"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.createSelectorQuery()</span></code></a> 获取。</p>
+<p>editorContext 通过 id 跟一个 <a class="reference internal" href="../component/editor.html#editor"><span class="std std-ref">&lt;editor&gt;</span></a> 组件绑定，操作对应的 <a class="reference internal" href="../component/editor.html#editor"><span class="std std-ref">&lt;editor&gt;</span></a> 组件。</p>
+</dd></dl>
+
+<div class="section" id="id1">
+<h2>方法<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h2>
+<dl class="function">
+<dt id="EditorContext.format">
+<code class="descclassname">EditorContext.</code><code class="descname">format</code><span class="sig-paren">(</span><em>string name</em>, <em>string value</em><span class="sig-paren">)</span><a class="headerlink" href="#EditorContext.format" title="永久链接至目标">¶</a></dt>
+<dd><p>修改样式</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="EditorContext.insertDivider">
+<code class="descclassname">EditorContext.</code><code class="descname">insertDivider</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#EditorContext.insertDivider" title="永久链接至目标">¶</a></dt>
+<dd><p>插入分割线</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="EditorContext.insertImage">
+<code class="descclassname">EditorContext.</code><code class="descname">insertImage</code><span class="sig-paren">(</span><em>Object object</em><span class="sig-paren">)</span><a class="headerlink" href="#EditorContext.insertImage" title="永久链接至目标">¶</a></dt>
+<dd><p>插入图片</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="EditorContext.insertText">
+<code class="descclassname">EditorContext.</code><code class="descname">insertText</code><span class="sig-paren">(</span><em>Object object</em><span class="sig-paren">)</span><a class="headerlink" href="#EditorContext.insertText" title="永久链接至目标">¶</a></dt>
+<dd><p>覆盖当前选区，设置一段文本</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="EditorContext.setContents">
+<code class="descclassname">EditorContext.</code><code class="descname">setContents</code><span class="sig-paren">(</span><em>Object object</em><span class="sig-paren">)</span><a class="headerlink" href="#EditorContext.setContents" title="永久链接至目标">¶</a></dt>
+<dd><p>初始化编辑器内容，hmlt和delta同时存在时仅delta生效</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="EditorContext.getContents">
+<code class="descclassname">EditorContext.</code><code class="descname">getContents</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#EditorContext.getContents" title="永久链接至目标">¶</a></dt>
+<dd><p>获取编辑器内容</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="EditorContext.clear">
+<code class="descclassname">EditorContext.</code><code class="descname">clear</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#EditorContext.clear" title="永久链接至目标">¶</a></dt>
+<dd><p>清空编辑器内容</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="EditorContext.removeFormat">
+<code class="descclassname">EditorContext.</code><code class="descname">removeFormat</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#EditorContext.removeFormat" title="永久链接至目标">¶</a></dt>
+<dd><p>清除当前选区的样式</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="EditorContext.undo">
+<code class="descclassname">EditorContext.</code><code class="descname">undo</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#EditorContext.undo" title="永久链接至目标">¶</a></dt>
+<dd><p>撤销</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="EditorContext.redo">
+<code class="descclassname">EditorContext.</code><code class="descname">redo</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#EditorContext.redo" title="永久链接至目标">¶</a></dt>
+<dd><p>恢复</p>
+</dd></dl>
+
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>导航</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="总目录"
+             >索引</a></li>
+        <li class="right" >
+          <a href="../http-routingtable.html" title="微信小程序API"
+             >wxapi</a> |</li>
+        <li class="right" >
+          <a href="wx.openLocation.html" title="wx.openLocation"
+             >下一页</a> |</li>
+        <li class="right" >
+          <a href="CameraContext.html" title="CameraContext"
+             >上一页</a> |</li>
+<li><a href="../index.html">主页</a>&#160;|</li>
+<li><a href="../contents.html">文档</a> &#187;</li>
+
+          <li class="nav-item nav-item-1"><a href="index.html" >API</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; 版权所有 2019, Wxadev Docs.
+      由 <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.0+/40994a8 创建。
+    </div>
+  </body>
+</html>

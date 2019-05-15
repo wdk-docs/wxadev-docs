@@ -1,742 +1,885 @@
 
-
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-CN" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-CN" > <!--<![endif]-->
-<head>
-  <meta charset="utf-8">
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <title>基础库更新日志 (v1.x版本) &mdash; wxadev 1.0.0 文档</title>
-  
 
-  
-  
-  
-  
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
+  <head>
+    <meta charset="utf-8" />
+    <title>基础库更新日志 (v1.x版本) &#8212; wxadev 1.0.0 文档</title>
+    <link rel="stylesheet" href="../../_static/sphinx13.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/language_data.js"></script>
+    <script type="text/javascript" src="../../_static/translations.js"></script>
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="在 wxadev 1.0.0 文档 中搜索"
+          href="../../_static/opensearch.xml"/>
 
-  
-  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
-  
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../../_static/jquery.js"></script>
-        <script type="text/javascript" src="../../_static/underscore.js"></script>
-        <script type="text/javascript" src="../../_static/doctools.js"></script>
-        <script type="text/javascript" src="../../_static/language_data.js"></script>
-        <script type="text/javascript" src="../../_static/translations.js"></script>
-    
-    <script type="text/javascript" src="../../_static/js/theme.js"></script>
-
-    
-
-  
-  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="index" title="索引" href="../../genindex.html" />
     <link rel="search" title="搜索" href="../../search.html" />
-    <link rel="next" title="基础库更新日志 (v2.x版本)" href="v2.html" />
-    <link rel="prev" title="基础库更新日志 (v0.x版本)" href="v0.html" /> 
-</head>
+    <link rel="next" title="基础库更新日志 (v0.x版本)" href="v0.html" />
+    <link rel="prev" title="基础库更新日志 (v2.x版本)" href="v2.html" />
+<link rel="canonical" href="http://www.sphinx-doc.org/en/master/framework/release/v1.html" />
 
-<body class="wy-body-for-nav">
-
-   
-  <div class="wy-grid-for-nav">
-    
-    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
-      <div class="wy-side-scroll">
-        <div class="wy-side-nav-search" >
-          
-
-          
-            <a href="../../contents.html" class="icon icon-home"> wxadev
-          
-
-          
-          </a>
-
-          
-            
-            
-          
-
-          
-<div role="search">
-  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
-    <input type="hidden" name="check_keywords" value="yes" />
-    <input type="hidden" name="area" value="default" />
-  </form>
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet" type="text/css" />
+ 
+<style type="text/css">
+  table.right { float: right; margin-left: 20px; }
+  table.right td { border: 1px solid #ccc; }
+  
+</style>
+<script type="text/javascript">
+  // intelligent scrolling of the sidebar content
+  $(window).scroll(function() {
+    var sb = $('.sphinxsidebarwrapper');
+    var win = $(window);
+    var sbh = sb.height();
+    var offset = $('.sphinxsidebar').position()['top'];
+    var wintop = win.scrollTop();
+    var winbot = wintop + win.innerHeight();
+    var curtop = sb.position()['top'];
+    var curbot = curtop + sbh;
+    // does sidebar fit in window?
+    if (sbh < win.innerHeight()) {
+      // yes: easy case -- always keep at the top
+      sb.css('top', $u.min([$u.max([0, wintop - offset - 10]), $(document).height() - sbh - 200]));
+    } else {
+      // no: only scroll if top/bottom edge of sidebar is at
+      // top/bottom edge of window
+      if (curtop > wintop && curbot > winbot) {
+        sb.css('top', $u.max([wintop - offset - 10, 0]));
+      } else if (curtop < wintop && curbot < winbot) {
+        sb.css('top', $u.min([winbot - sbh - offset - 20, $(document).height() - sbh - 200]));
+      }
+    }
+  });
+</script> 
+  </head><body>
+<div class="pageheader">
+  <ul>
+    <li><a href="../../index.html">主页</a></li>
+    <li><a href="../index.html">框架</a></li>
+    <li><a href="../../component/index.html">组件</a></li>
+    <li><a href="../../api/index.html">API</a></li>
+    <li><a href="../../api-backend/index.html">服务端</a></li>
+    <li><a href="../../contents.html">目录</a></li>
+  </ul>
+  <div>
+    <a href="../../index.html">
+      <img src="../../_static/wxaheader.png" alt="wxa" />
+    </a>
+  </div>
 </div>
 
-          
-        </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>导航</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="总目录"
+             accesskey="I">索引</a></li>
+        <li class="right" >
+          <a href="../../http-routingtable.html" title="微信小程序API"
+             >wxapi</a> |</li>
+        <li class="right" >
+          <a href="v0.html" title="基础库更新日志 (v0.x版本)"
+             accesskey="N">下一页</a> |</li>
+        <li class="right" >
+          <a href="v2.html" title="基础库更新日志 (v2.x版本)"
+             accesskey="P">上一页</a> |</li>
+<li><a href="../../index.html">主页</a>&#160;|</li>
+<li><a href="../../contents.html">文档</a> &#187;</li>
 
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-              
-            
-            
-              <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../../index.html">开发指南</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../dev.html">简介</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../basic/index.html">基础教程</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../guide/index.html">运行环境</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="../index.html">框架</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="../MINA.html">框架</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../structure.html">目录结构</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../config.html">小程序配置</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../sitemap.html">sitemap 配置</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../app-service/index.html">逻辑层 App Service</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../view/index.html">视图层 View</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../details.html">运行环境</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../plugin/index.html">插件</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../ability/index.html">基础能力</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../device/index.html">硬件能力</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../open-ability/index.html">开放能力</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../usability.html">调试</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../usability/index.html">可用性</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../performance/index.html">性能</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../client-lib/index.html">基础库</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../compatibility.html">兼容处理</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../workers.html">多线程 Worker</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../server-ability/index.html">后端能力</a></li>
-<li class="toctree-l2 current"><a class="reference internal" href="index.html">版本更新</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="v0.html">基础库更新日志 (v0.x版本)</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">基础库更新日志 (v1.x版本)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="v2.html">基础库更新日志 (v2.x版本)</a></li>
+          <li class="nav-item nav-item-1"><a href="../index.html" >框架</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="index.html" accesskey="U">版本更新</a> &#187;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../../contents.html">目录</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">基础库更新日志 (v1.x版本)</a><ul>
+<li><a class="reference internal" href="#v1-9-98-2018-04-04">v1.9.98 (2018.04.04)</a></li>
+<li><a class="reference internal" href="#v1-9-97-2018-03-30">v1.9.97 (2018.03.30)</a></li>
+<li><a class="reference internal" href="#v1-9-96-2018-03-22">v1.9.96 (2018.03.22)</a></li>
+<li><a class="reference internal" href="#v1-9-95-2018-03-20">v1.9.95 (2018.03.20)</a></li>
+<li><a class="reference internal" href="#v1-9-94-2018-03-15">v1.9.94 (2018.03.15)</a></li>
+<li><a class="reference internal" href="#v1-9-93-2018-03-08">v1.9.93 (2018.03.08)</a></li>
+<li><a class="reference internal" href="#v1-9-92-2018-03-05">v1.9.92 (2018.03.05)</a></li>
+<li><a class="reference internal" href="#v1-9-91-2018-02-09">v1.9.91 (2018.02.09)</a></li>
+<li><a class="reference internal" href="#v1-9-90-2018-02-07">v1.9.90 (2018.02.07)</a></li>
+<li><a class="reference internal" href="#v1-9-9-2018-02-05">v1.9.9 (2018.02.05)</a></li>
+<li><a class="reference internal" href="#v1-9-8-2018-02-03">v1.9.8 (2018.02.03)</a></li>
+<li><a class="reference internal" href="#v1-9-7">v1.9.7 废弃</a></li>
+<li><a class="reference internal" href="#v1-9-6-2018-01-29">v1.9.6 (2018.01.29)</a></li>
+<li><a class="reference internal" href="#v1-9-5-2018-01-24">v1.9.5 (2018.01.24)</a></li>
+<li><a class="reference internal" href="#v1-9-4-2018-01-25">v1.9.4 (2018.01.25)</a></li>
+<li><a class="reference internal" href="#v1-9-3-2018-01-23">v1.9.3 (2018.01.23)</a></li>
+<li><a class="reference internal" href="#v1-9-2-2018-01-09">v1.9.2 (2018.01.09)</a></li>
+<li><a class="reference internal" href="#v1-9-1-2018-01-04">v1.9.1 (2018.01.04)</a></li>
+<li><a class="reference internal" href="#v1-9-0-2018-01-02">v1.9.0 (2018.01.02)</a></li>
+<li><a class="reference internal" href="#v1-7-4-2017-12-22">v1.7.4 (2017.12.22)</a></li>
+<li><a class="reference internal" href="#v1-7-3-2017-12-19">v1.7.3 (2017.12.19)</a></li>
+<li><a class="reference internal" href="#v1-7-2-2017-12-15">v1.7.2 (2017.12.15)</a></li>
+<li><a class="reference internal" href="#v1-7-1-2017-12-08">v1.7.1 (2017.12.08)</a></li>
+<li><a class="reference internal" href="#v1-7-0-2017-12-04">v1.7.0 (2017.12.04)</a></li>
+<li><a class="reference internal" href="#v1-6-8-2017-12-20">v1.6.8 (2017.12.20)</a></li>
+<li><a class="reference internal" href="#v1-6-7-2017-12-15">v1.6.7 (2017.12.15)</a></li>
+<li><a class="reference internal" href="#v1-6-6-2017-11-15">v1.6.6 (2017.11.15)</a></li>
+<li><a class="reference internal" href="#v1-6-5-2017-11-07">v1.6.5 (2017.11.07)</a></li>
+<li><a class="reference internal" href="#v1-6-4-2017-10-30">v1.6.4 (2017.10.30)</a></li>
+<li><a class="reference internal" href="#v1-6-3-2017-10-23">v1.6.3 (2017.10.23)</a></li>
+<li><a class="reference internal" href="#v1-6-2-2017-10-19">v1.6.2 (2017.10.19)</a></li>
+<li><a class="reference internal" href="#v1-6-1-2017-10-14">v1.6.1 (2017.10.14)</a></li>
+<li><a class="reference internal" href="#v1-6-0-2017-10-11">v1.6.0 (2017.10.11)</a></li>
+<li><a class="reference internal" href="#v1-5-8-2017-12-06">v1.5.8 (2017.12.06)</a></li>
+<li><a class="reference internal" href="#v1-5-7-2017-10-03">v1.5.7 (2017.10.03)</a></li>
+<li><a class="reference internal" href="#v1-5-6-2017-09-27">v1.5.6 (2017.09.27)</a></li>
+<li><a class="reference internal" href="#v1-5-5-2017-09-26">v1.5.5 (2017.09.26)</a></li>
+<li><a class="reference internal" href="#v1-5-4-2017-09-21">v1.5.4 (2017.09.21)</a></li>
+<li><a class="reference internal" href="#v1-5-3-2017-08-28">v1.5.3 (2017.08.28)</a></li>
+<li><a class="reference internal" href="#v1-5-2-2017-08-23">v1.5.2 (2017.08.23)</a></li>
+<li><a class="reference internal" href="#v1-5-1-2017-08-18">v1.5.1 (2017.08.18)</a></li>
+<li><a class="reference internal" href="#v1-5-0-2017-08-17">v1.5.0 (2017.08.17)</a></li>
+<li><a class="reference internal" href="#v1-4-4-2017-07-26">v1.4.4 (2017.07.26)</a></li>
+<li><a class="reference internal" href="#v1-4-3-2017-07-20">v1.4.3 (2017.07.20)</a></li>
+<li><a class="reference internal" href="#v1-4-2-2017-07-19">v1.4.2 (2017.07.19)</a></li>
+<li><a class="reference internal" href="#v1-4-1-2017-07-17">v1.4.1 (2017.07.17)</a></li>
+<li><a class="reference internal" href="#v1-4-0-2017-07-10">v1.4.0 (2017.07.10)</a></li>
+<li><a class="reference internal" href="#v1-3-0-2017-06-21">v1.3.0 (2017.06.21)</a></li>
+<li><a class="reference internal" href="#v1-2-6-2017-06-20">v1.2.6 (2017.06.20)</a></li>
+<li><a class="reference internal" href="#v1-2-5-2017-06-09">v1.2.5 (2017.06.09)</a></li>
+<li><a class="reference internal" href="#v1-2-4-2017-06-05">v1.2.4 (2017.06.05)</a></li>
+<li><a class="reference internal" href="#v1-2-3-2017-06-01">v1.2.3 (2017.06.01)</a></li>
+<li><a class="reference internal" href="#v1-2-2-2017-05-23">v1.2.2 (2017.05.23)</a></li>
+<li><a class="reference internal" href="#v1-2-1-2017-05-20">v1.2.1 (2017.05.20)</a></li>
+<li><a class="reference internal" href="#v1-2-0-2017-05-18">v1.2.0 (2017.05.18)</a></li>
+<li><a class="reference internal" href="#v1-1-1-2017-04-13">v1.1.1 (2017.04.13)</a></li>
+<li><a class="reference internal" href="#v1-1-0-2017-03-31">v1.1.0 (2017.03.31)</a></li>
+<li><a class="reference internal" href="#v1-0-1-2017-03-03">v1.0.1 (2017.03.03)</a></li>
+<li><a class="reference internal" href="#v1-0-0-2017-02-06">v1.0.0 (2017.02.06)</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../operating-mechanism.html">运行机制</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../custom-component/index.html">自定义组件</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../../component/index.html">组件</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../api/index.html">API</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../api-backend/index.html">服务端API</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../devtools/index.html">开发工具</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../reference/index.html">参考资料</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../wxcloud/index.html">云开发</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../wxwork/index.html">企业微信</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../todolist.html">待办事项</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../glossary.html">术语</a></li>
 </ul>
 
-            
-          
+  <h4>上一个主题</h4>
+  <p class="topless"><a href="v2.html"
+                        title="上一章">基础库更新日志 (v2.x版本)</a></p>
+  <h4>下一个主题</h4>
+  <p class="topless"><a href="v0.html"
+                        title="下一章">基础库更新日志 (v0.x版本)</a></p>
+  <div role="note" aria-label="source link">
+    <h3>本页</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../_sources/framework/release/v1.rst.txt"
+            rel="nofollow">显示源代码</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">快速搜索</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="转向" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
         </div>
       </div>
-    </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
-          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../../contents.html">wxadev</a>
-        
-      </nav>
-
-
-      <div class="wy-nav-content">
-        
-        <div class="rst-content">
-        
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-
-  <ul class="wy-breadcrumbs">
-    
-      <li><a href="../../contents.html">Docs</a> &raquo;</li>
-        
-          <li><a href="../index.html">框架</a> &raquo;</li>
-        
-          <li><a href="index.html">版本更新</a> &raquo;</li>
-        
-      <li>基础库更新日志 (v1.x版本)</li>
-    
-    
-      <li class="wy-breadcrumbs-aside">
-        
-            
-            <a href="../../_sources/framework/release/v1.rst.txt" rel="nofollow"> View page source</a>
-          
-        
-      </li>
-    
-  </ul>
-
-  
-  <hr/>
-</div>
-          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
-           <div itemprop="articleBody">
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
             
   <div class="section" id="v1-x">
 <h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/framework/release/v1.html">基础库更新日志 (v1.x版本)</a><a class="headerlink" href="#v1-x" title="永久链接至标题">¶</a></h1>
 <p>最新版本</p>
-<p>v1.9.98 (2018.04.04)
-v1.9.97 (2018.03.30)
-v1.9.96 (2018.03.22)
-v1.9.95 (2018.03.20)
-v1.9.94 (2018.03.15)
-v1.9.93 (2018.03.08)
-v1.9.92 (2018.03.05)
-A 新增 API wx.createWorker 可创建多线程 Worker 详情
-A 新增 API wx.getUpdateManager 提供小程序强制更新机制 详情
-A 新增 API canvasContext.measureText 支持查看文本在当前canvas状态下的大小 详情
-A 新增 API canvasContext.globalCompositeOperation 支持设置要在绘制新形状时应用的合成操作的类型 详情
-A 新增 API canvasContext.arcTo 可根据控制点和半径绘制圆弧路径 详情
-A 新增 API canvasContext.strokeText 提供绘制文本的方法 详情
-A 新增 API canvasContext.lineDashOffset 可设置虚线偏移量 详情
-A 新增 API canvasContext.createPattern 可对指定的图像创建模式 详情
-A 新增 API canvasContext.shadowBlur/shadowColor/shadowOffsetX/shadowOffsetY 可设置阴影的相关样式 详情
-A 新增 API canvasContext.font 可设置当前字体样式 详情
-A 新增 API canvasContext.transform 可使用矩阵多次叠加当前变换 详情
-A 新增 API canvasContext.setTransform 使用矩阵重新设置（覆盖）当前变换 详情
-A 新增 API LivePusherContext.snapshot 可在推流中进行拍照 详情
-A 新增 配置 window.backgroundColorTop window.backgroundColorBottom 可分别设置窗口顶部和底部的背景颜色 详情
-U 更新 API wx.createInnerAudioContext 新增 volumn 属性，可调节音量 详情
-U 更新 API wx.login wx.getUserInfo wx.getShareInfo wx.getWeRunData 新增 timeout 参数，可设置超时时间 详情
-U 更新 API wx.getImageInfo 增加返回 orientation 和 type 值 详情
-U 更新 组件 &lt;cover-view&gt; 支持设置 overflow: scroll 产生局部滚动区域 详情
-U 更新 组件 &lt;cover-view&gt; 支持设置 position: fixed 使之相对窗口固定 详情
-U 更新 组件 &lt;open-data&gt; 支持渲染 userInfo 相关信息 详情
-U 更新 组件 &lt;movable-view&gt; 新增 bindchange 事件 详情
-U 更新 组件 &lt;movable-view&gt; 支持缩放手势 详情
-U 更新 组件 &lt;movable-view&gt; 新增 bindvtouchmove bindvtouchmove 事件 详情
-U 更新 组件 &lt;movable-view&gt; 新增 disabled 属性以禁用滑动 详情
-U 更新 组件 &lt;input&gt; &lt;textarea&gt; 新增 adjust-position 属性控制是否自动上推页面 详情
-U 更新 组件 &lt;input&gt; &lt;textarea&gt; 在 bindfocus 事件回调里返回键盘高度 详情
-U 更新 组件 &lt;picker&gt; 新增 bindcancel 事件 详情
-U 更新 组件 新增 bindtouchforcechange 事件 详情
-U 更新 自定义组件 样式前缀化支持类名传递 详情
-F 修复 API wx.showModal 的 cancelText 和 confirmText 只能输入 4 个英文字符的问题
-F 修复 组件 &lt;live-player&gt; 无法停止播放的问题 反馈详情
-F 修复 组件 &lt;input&gt; 多个空格在失焦时只显示一个空格的问题 反馈详情
-F 修复 组件 &lt;input&gt; 在 disabled 状态下设置 color 无效的问题
-F 修复 组件 &lt;slider&gt; 设置 transform 导致滑块滑动异常的问题
-F 修复 组件 &lt;form&gt; 在安卓下键盘弹起时不触发 submit 事件的问题
-F 修复 框架 在安卓滚动时点击会触发 tap 事件的问题
-F 修复 框架 onReachBottom 事件在快速滑动出现触发次数异常的问题 反馈详情
-F 修复 框架 转换 rpx 单位无效的问题 反馈详情
-v1.9.91 (2018.02.09)
-v1.9.90 (2018.02.07)
-v1.9.9 (2018.02.05)
-v1.9.8 (2018.02.03)
-v1.9.7 废弃
-v1.9.6 (2018.01.29)
-v1.9.5 (2018.01.24)
-A 新增 配置 window.navigationStyle 支持全屏显示小程序 详情
-U 更新 组件 &lt;button&gt; open-type 新增 launchApp 属性 详情
-v1.9.4 (2018.01.25)
-v1.9.3 (2018.01.23)
-v1.9.2 (2018.01.09)
-v1.9.1 (2018.01.04)
-v1.9.0 (2018.01.02)
-A 新增 API tabBar 相关接口 详情
-A 新增 API wx.canvasGetImageData 可返回 &lt;canvas&gt; 的像素数据 详情
-A 新增 API wx.canvasPutImageData 可将像素数据绘制到 &lt;canvas&gt; 详情
-U 更新 组件 &lt;swiper&gt; 增加 current-item-id、previous-margin、next-margin、display-multiple-items、skip-hidden-item-layout、bindanimationfinish 属性 详情
-U 更新 组件 &lt;input&gt; 支持 selection 选区 详情
-U 更新 组件 &lt;textarea&gt; 支持 selection 选区 详情
-U 更新 组件 &lt;live-player&gt; 增加 bindnetstatus 事件 详情
-U 更新 组件 &lt;live-pusher&gt; 增加 bindnetstatus 事件 详情
-U 更新 组件 &lt;video&gt; 可对控制栏进行更细粒度控制 详情
-U 更新 组件 &lt;slider&gt; 支持 block-size 设置滑块尺寸和 block-color 设置滑块颜色 详情
-U 更新 API 背景音频接口 backgroundAudioManager 支持直播流音频
-U 更新 API canvasContext.drawImage 支持从源图像裁剪后再画到 &lt;canvas&gt; 详情
-U 更新 API wx.showToast 文本统一限制为 7 个汉字长度，并增加无 icon 类型 详情
-F 修复 API wx.chooseVideo 接口的 compressed 参数不生效的问题
-F 修复 API WebSocket 接口在 Android 下服务连接失败的时候，没有立刻触发 error 和 close 事件，而是等到超时
-F 修复 API Android 背景音频接口 backgroundAudioManager 不能播放本地文件的问题 反馈详情)
-F 修复 API wx.setEnableDebug 接口在 Android 下会导致小程序一直在重启的问题
-F 修复 API wx.showToast 在 iOS 下连续调用两次再调用 wx.hideToast 时遮罩层没去掉的问题
-F 修复 API wx.startPullDownRefresh 在 iOS 下没有触发 onPullDownRefresh 事件的问题
-F 修复 API wx.previewImage 在 Android 下长按GIF发送后退出小程序的问题
-F 修复 API wx.pageScrollTo 导致 fixed 元素闪动的问题，并增加 duration 参数 详情
-F 修复 自定义组件通过动态设置的回调方法时会执行两遍的问题 反馈详情
-v1.7.4 (2017.12.22)
-v1.7.3 (2017.12.19)
-v1.7.2 (2017.12.15)
-v1.7.1 (2017.12.08)
-v1.7.0 (2017.12.04)
-A 新增 组件 &lt;camera&gt; 开发工具上的调试支持 详情
-U 更新 API WebSocket 支持创建多条 WebSocket 连接 详情
-U 更新 API wx.request 支持发送和接收 ArrayBuffer 类型的数据 详情
-U 更新 API wx.createCanvasContext 的 draw 接口，回调通知渲染完成 详情
-U 更新 API wx.canvasToTempFilePath 支持设置输出图片格式与质量参数 详情
-U 更新 API wx.createInnerAudioContext 去掉切到前台时恢复播放的策略
-U 更新 组件 &lt;slider&gt; 增加 bindchanging 事件 详情
-U 更新 组件 &lt;progress&gt; 增加 active-mode 属性 详情
-U 更新 组件 &lt;video&gt; 在 timeupdate 事件回调中新增返回 duration 参数 详情
-U 更新 组件 &lt;video&gt; 新增 direction 参数，支持全屏时设置画面方向 详情
-U 更新 组件 &lt;scroll-view&gt; 优化 scrolltoupper 与 scrolltolower 事件的触发频率
-U 更新 组件 &lt;cover-view&gt; 优化在安卓下的渲染性能
-F 修复 API wx.createInnerAudioContext 接口返回参数的时间单位不正确的问题
-F 修复 API wx.hideLoading 会把 wx.showToast 给隐藏掉的问题
-F 修复 API wx.hideLoading 一调用立即消失的问题 反馈详情
-F 修复 API wx.canvasToTempFilePath 在 &lt;canvas&gt; 不可见时导出失败以及导致crash的问题 反馈详情
-F 修复 API wx.uploadFile 文件格式的问题 反馈详情
-F 修复 API wx.getRecorderManager 在 iOS 下设置最大时长10分钟失效的问题
-F 修复 API wx.getRecorderManager 在安卓下小程序退到后台时，将默认行为从停止录音调整为暂停录音
-F 修复 组件 &lt;input&gt; disabled 时字体样式无效的问题 反馈详情
-F 修复 组件 &lt;navigator&gt; 快速点击时会新开两个页面的问题
-F 修复 组件 &lt;cover-view&gt; 在 iOS 下圆角半径的问题 反馈详情
-F 修复 组件 &lt;cover-view&gt; 设置 text-align: center 在安卓上下也会居中的问题
-F 修复 组件 &lt;cover-image&gt; 总是显示在 &lt;cover-view&gt; 之上的问题
-F 修复 组件 &lt;audio&gt; 在播放结束的时候没有恢复背景音乐的问题
-F 修复 组件 &lt;picker&gt; 偶现需要点击两次才能收起的问题
-F 修复 组件 &lt;image&gt; mode 从 widthFix 改成其他值时高度没更新的问题
-F 修复 组件 &lt;scroll-view&gt; 滚动时出现闪动的问题
-F 修复 组件 &lt;video&gt; 在全屏后拉起系统控制面板时退出全屏的问题
-F 修复 trace 面板无法连接设备的问题
-v1.6.8 (2017.12.20)
-v1.6.7 (2017.12.15)
-v1.6.6 (2017.11.15)
-v1.6.5 (2017.11.07)
-v1.6.4 (2017.10.30)
-v1.6.3 (2017.10.23)
-v1.6.2 (2017.10.19)
-v1.6.1 (2017.10.14)
-v1.6.0 (2017.10.11)
-A 新增 API checkIsSoterEnrolledInDevice 判断设备是否录入指纹等生物信息的接口 详情
-A 新增 API getRecorderManager 获取全局唯一的录音管理器 详情
-A 新增 API createInnerAudioContext 创建并返回内部 audio 上下文 innerAudioContext 对象 详情
-A 新增 组件 &lt;camera&gt; 相机组件 详情
-U 更新 API startRecord 增加 duration 参数用于设置最长录音时间 详情
-U 更新 API chooseVideo 增加 compressed 参数，用于设置是否压缩用户选择的视频 详情
-U 更新 组件 &lt;map&gt; polyline 支持 arrowIconPath 参数，用于更换箭头图标 详情
-U 更新 组件 &lt;map&gt; marker 的 label 参数增加样式设置 详情
-U 更新 组件 &lt;map&gt; 新增渲染更新完成事件 bindupdated 详情
-U 更新 组件 &lt;video&gt; 支持 pageGesture 属性，控制非全屏模式下是否开启声音和亮度手势 详情
-U 更新 组件 &lt;video&gt; 在 bindfullscreenchange 的 detail 中返回横竖屏信息
-U 更新 组件 &lt;video&gt; 支持 initial-time 属性用于指定初始化播放的位置 详情
-U 更新 组件 &lt;canvas&gt; 支持 clip 方法实现剪切 详情
-U 更新 组件 &lt;canvas&gt; 支持 setLineDash 方法实现设置虚线样式 详情
-U 更新 组件 &lt;cover-view&gt; 支持动画 详情
-U 更新 组件 &lt;cover-image&gt; iconPath 支持网络图片 详情
-U 更新 组件 &lt;textarea&gt; 支持 show-confirm-bar，用于设置是否显示键盘上方带有「完成」按钮那一栏 详情
-U 更新 组件 &lt;textarea&gt; 支持在 bindblur 回调中返回 cursor，收起键盘时返回光标位置 详情
-U 更新 组件 &lt;swiper&gt; 性能优化，支持隐藏当前页、前后页之外的页面，避免复杂页面切换卡顿
-U 更新 框架 referrerInfo.appId onLaunch 及 onShow 时部分跳转小程序场景增加返回 referrerInfo.appId 详情
-U 更新 调试 vConsole WXML 面板支持显示 Computed Styles
-F 修复 API openDocument 在 iOS 下打开带密码的 PDF 文件时无法输入密码的问题
-F 修复 API openDocument 在 iOS 下打开 Excel 无法切换 tab 的问题
-F 修复 API authorize scope 为数组时，三端回调行为不一致问题
-F 修复 API showActionSheet cancel 时会同时回调 success 和 fail 问题
-F 修复 API getSystemInfo 在开发者工具上未返回 brand 字段的问题
-F 修复 API chooseInvoiceTitle 在开发者工具上未返回 invoiceTitleInfo 字段的问题
-F 修复 API pageScrollTo 在开发者工具上失效问题
-F 修复 API startPullDownRefresh 在开发者工具上失效问题
-F 修复 API getFileInfo 在开发者工具上只回调 complete 问题
-F 修复 API startBluetoothDevicesDiscovery 在开发者工具上返回值和真机不一致问题
-F 修复 API onBluetoothDeviceFound 在开发者工具 devices 错误返回二维数组问题
-F 修复 API playBackgroundAudio 在 iOS 下失败报 fail no current music，但音乐正常播放问题
-F 修复 API request 被 abort 后仍然占据并发数问题
-F 修复 API createAnimation backgroundColor 无法使用渐变背景色问题
-F 修复 API setNavigationBarColor 在 iOS 下会导致导航栏 title 和按钮变成透明问题
-F 修复 组件 &lt;image&gt; 在 devtools 提示 404 但不影响显示问题
-F 修复 组件 &lt;map&gt; 在初始化时在各端事件派发不一致问题
-F 修复 组件 &lt;map&gt; markers 的 callout 没有限制 borderRadius 取值范围问题
-F 修复 组件 &lt;map&gt; markers 的 title 和 callout 在各端表现不一致问题
-F 修复 组件 &lt;map&gt; 在 Android 下 marker 的 callout 下方无三角形问题
-F 修复 组件 &lt;input&gt; 在开发者工具上，bindinput 派发的事件对象 timestamp 不为 timeStamp 的问题
-F 修复 组件 &lt;canvas&gt; longtap 事件在工具上触发类型为 binglongtap 的问题，应为 longtap
-F 修复 组件 &lt;video&gt; 在 iOS 下在全屏播放时会出现一部分下一个视频的内容的问题
-F 修复 组件 &lt;video&gt; 在开发者工具点击播放后 controls 无法进行控制问题
-F 修复 组件 &lt;input&gt; 在 Android 下输入汉字时，bindinput 会带上当前正在输入的英文字母问题
-F 修复 组件 &lt;textarea&gt; 在 Android 下使用 setData 设置 value，auto-height 失效问题
-F 修复 组件 &lt;picker&gt; 在 Android 下省市区选择器缺少中山市、东莞市地域信息
-F 修复 组件 &lt;picker&gt; 在 Android 下 year 小于 1970 不生效问题
-F 修复 组件 &lt;textarea&gt; 两个 textarea 连续切换未触发第一个 textarea 的 blur 问题
-F 修复 组件 &lt;swiper&gt; 只展示其中一部分的 bug 反馈详情
-F 修复 框架 iOS8 下 Promise 不会执行 resolve 的问题
-v1.5.8 (2017.12.06)
-v1.5.7 (2017.10.03)
-v1.5.6 (2017.09.27)
-v1.5.5 (2017.09.26)
-v1.5.4 (2017.09.21)
-v1.5.3 (2017.08.28)
-F 修复 组件 &lt;swiper&gt; 在 iOS 下首张图片在某些情况下初始不显示的问题
-F 修复 API canIUse 无法判断 getPhoneNumber 可用情况的问题
-v1.5.2 (2017.08.23)
-F 修复 组件 &lt;map&gt; markers 里同时没有设置 callout 和 title 属性时，点击时报 Cannot read property ‘always’ of null 错误的问题
-F 修复 组件 &lt;image&gt; bindload 被重复执行两次的问题
-F 修复 组件 &lt;image&gt; 连续更新 src 会显示图片错误
-F 修复 API chooseInvoiceTitle 在工具上报错问题
-F 修复 API SelectorQuery.selectViewport 失效问题
-v1.5.1 (2017.08.18)
-F 修复 组件 &lt;image&gt; 覆盖兄弟节点或图片圆角不显示问题
-v1.5.0 (2017.08.17)
-A 新增 API checkIsSupportSoterAuthentication startSoterAuthentication 生物认证接口 详情
-A 新增 API startPullDownRefresh 主动触发下拉刷新接口 详情
-A 新增 API chooseInvoiceTitle 选择发票抬头接口 详情
-A 新增 框架 触摸类事件增加 capture 阶段 详情
-A 新增 框架 长按事件 longpress 详情
-A 新增 框架 page.json 支持设置 onReachBottom 距离 详情
-U 更新 API getSystemInfo 增加 fontSizeSetting 支持读取用户字体大小设置 详情
-U 更新 API getSystemInfo 增加 brand 支持读取手机品牌字段 详情
-F 修复 API getSystemInfo 在华为或者魅族带虚拟按键的设备上获取 windowWidth 和 windowHeight 为 0 问题
-U 更新 API writeBLECharacteristicValue 根据写入属性特征值决定回调时机
-U 更新 API shareAppMessage 增加 imageUrl 参数支持分享自定义配图 详情
-U 更新 API getBluetoothDevices onBluetoothDeviceFound 设备信息增加 localName 字段 详情
-F 修复 API switchTab 在页面注册前调用会报错的问题
-F 修复 API selectorQuery movable-view 等组件无法在 selectorQuery 中被 class 选择器选中问题
-F 修复 API setNavigationBarColor 在 iOS 下被 app.json 里 navigationBarTextStyle 覆盖设置问题
-F 修复 API getSetting openSetting 在 iOS 下部分生命周期函数中调用失效
-F 修复 API canvasToTempFilePath 在 iOS 下导出的图片为白色背景的问题
-F 修复 API captureScreen 在 Android 下生成的文件扩展名为 unknown 问题
-F 修复 API getBeacons 在 Android 下未获取到设备时 beacons 字段缺失问题
-F 修复 API chooseLocation 在 Android 下回调函数 latitude、longitude 类型为 string 问题，应为 number
-F 修复 API connectSocket 在 Android 下接口的请求包 header 中没有 origin 问题
-F 修复 API previewImage 在 iOS 下导航栏没有显示当前图片索引位置(1/n)的问题
-F 修复 API previewImage 在 iOS 下横屏后退出，tabBar 漂移到页面中间问题
-F 修复 API chooseImage 在 Android 下未处理图片旋转的情况
-F 修复 API showToast showLoading 在 iOS 下异步 hide 后重新调用 show，show 不生效问题
-F 修复 API pageScrollTo 导致 video 组件错位问题
-U 更新 组件 &lt;picker&gt; 增加 custom-item，region 模式支持自定义项 详情
-F 修复 组件 &lt;picker&gt; 在 iOS 下 mode=year 时点击会 crash 问题
-U 更新 组件 &lt;picker-view&gt; 增加 mask-style、mask-class 支持自定义半透明蒙层的颜色 详情
-F 修复 组件 &lt;picker&gt; region 模式在 form submit 的 detail 没有应该返回省市区问题
-U 更新 组件 &lt;textarea&gt; &lt;input&gt; 增加 cursor 支持主动设置和读取光标位置 详情
-F 修复 组件 &lt;textarea&gt; 在 iOS 下编辑时切换键盘，光标会跳到最后的问题
-F 修复 组件 &lt;textarea&gt; 在 Android 下页面 onLoad 中设置 value 无效问题
-F 修复 组件 &lt;textarea&gt; 在 Android 下设置 cursor-spacing 无效问题
-F 修复 组件 &lt;form&gt; 在 textarea input 同时使用时，先点击 textarea，再点击 input 后，无法提交表单的问题
-F 修复 组件 &lt;input&gt; 在 Android 下 bindinput 事件回调函数缺少 detail.cursor 参数问题
-F 修复 组件 &lt;input&gt; 在 Android 下与 auto-height 的 textarea 同时使用，不会弹出数字键盘问题
-F 修复 组件 &lt;input&gt; bindfocus 中调用 chooseLocation 并 setData，导致所有 input 失效问题
-U 更新 组件 &lt;button&gt; 增加 show-message-card 等属性，支持客服会话分享卡片 详情
-U 更新 组件 &lt;image&gt; 支持图片懒加载
-F 修复 组件 &lt;image&gt; 传入本地文件路径在 iOS 上无法触发浏览器重绘的问题
-F 修复 组件 &lt;movable-view&gt;动态生成的 movable-view 定位不准确的问题 反馈详情
-F 修复 组件 &lt;cover-view&gt; 通过 wx:if 控制不生效的问题
-F 修复 组件 &lt;map&gt; 在 iOS 下 bindcontroltap 事件同时会触发 bindtap 的问题
-F 修复 组件 &lt;canvas&gt; 在 iOS 下线条的渐变、宽度同时设置会丢掉线条宽度的问题
-F 修复 组件 &lt;cover-view&gt; 在 Android 下 border-radius 无效问题
-F 修复 组件 &lt;rich-text&gt; 自动 trim 问题
-F 修复 组件 &lt;video&gt; 在 Android 下，未开始播放时，组件上无法触发页面滑动问题
-F 修复 组件 &lt;cover-view&gt; 点击时会穿透到 map，触发 map 的 tap 事件问题
-F 修复 video 上下文 seek 秒数会被取整，无法精确定位问题
-F 修复 框架 onReachBottom handler 不存在的 warning 在某些情况下异常出现的问题
-U 更新 框架 setData 支持异步回调 详情
-U 更新 框架 hover-stop-propagation 支持拦截点击态 详情
-U 更新 框架 后台拉起小程序时 reLaunch 优化
-U 更新 框架 页面跳转和弹窗授权类接口支持在 App onLaunch 时机调用
-F 修复 框架 在部分 Android 下出现页面放大的问题
-v1.4.4 (2017.07.26)
-v1.4.3 (2017.07.20)
-A 新增 API setTopBarText 设置置顶信息 详情
-v1.4.2 (2017.07.19)
-F 修复 组件 &lt;cover-view&gt; 在某些情况下真机上无法覆盖在 &lt;map&gt; 组件上的问题 反馈详情
-F 修复 组件 &lt;open-data&gt; 请求数据顺序的问题
-F 修复 组件 &lt;canvas&gt; 动态变化大小后 canvasToTempFilePath 的问题 反馈详情
-v1.4.1 (2017.07.17)
-U 更新 API createSelectorQuery 可获取元素的属性
-U 更新 API reLaunch 逻辑，此版本开始 reLaunch 不可在小程序进入后台后调用
-F 修复 API getBLEDeviceCharacteristics 在开发者工具中请求失败的问题 反馈详情
-F 修复 API canvasToTempFilePath 在 iOS 中坐标偏移的问题 反馈详情
-F 修复 组件 &lt;rich-text&gt; 没有检查参数为空的问题 反馈详情
-F 修复 组件 &lt;open-data&gt; 组件无法获取群名称的问题 反馈详情
-F 修复 组件 &lt;map&gt; 在开发者工具中无法移动和触发事件的问题 反馈详情
-F 修复 组件 &lt;cover-image&gt; 在开发者工具中无法预览临时图片的问题 反馈详情
-F 修复 组件 &lt;text-area /&gt; 在 iOS 中设置 color 无效的问题 反馈详情
-F 修复 基础框架 重新打开小程序的时 App.onShow 未正确获取 path 和 query 的问题
-v1.4.0 (2017.07.10)
-A 新增 API createSelectorQuery 获取元素布局信息 详情
-A 新增 API getFileInfo 获取文件信息 详情
-A 新增 API onUserCaptureScreen 监听用户进行截屏事件 详情
-A 新增 API pageScrollTo 使页面滚动到指定位置 详情
-A 新增 API setNavigationBarColor 支持小程序修改标题栏颜色 详情
-A 新增 API setEnableDebug 控制线上版本 vConsole 的打开关闭 详情
-A 新增 API setKeepScreenOn 允许小程序设置屏幕保持常亮 详情
-U 更新 API closeSocket 新增 code, reason 参数 详情
-U 更新 API connectSocket 接口增加 支持 protocols 参数定义子协议 详情
-U 更新 API getUserInfo 增加 lang 参数指定返回用户信息语言 详情
-U 更新 API openDocument 增加 fileType 参数用于指定文件类型 详情
-U 更新 API request 超过并发限制做队列处理
-U 更新 API request 返回 requestTask 支持 abort 操作 详情
-U 更新 API uploadFile downloadFile 返回 uploadTask/downloadTask 支持监听进度更新及 abort 操作 详情
-F 修复 API canvasToTempFilePath 在 iOS 下保存图片不清晰的问题
-F 修复 API chooseLocation 直接选第一个默认地址，成功后返回信息为空的问题
-F 修复 API chooseVideo 当录制视频超过 10s 时，播放结束会导致进度条错误的问题
-F 修复 API getSystemInfo 在 App 的 onLaunch 和 onShow 中返回不正确的 windowHeight 的问题
-F 修复 API onBluetoothDeviceFound 返回数据格式不正确的问题
-F 修复 API reLaunch 在客户端上跳转不成功的问题
-F 修复 API request 在 Android Http 状态码是 302 时异常的问题
-F 修复 API showToast 在 iOS 上页面滚动时出现会随着页面滚动的问题
-A 新增 canvas 上下文 setTextBaseline 接口 设置绘制文本时的文本基线 详情
-F 修复 canvas 上下文 setTextAlign iOS 中文字过长时 center 对齐方式失效的问题
-F 修复 canvas 上下文 disable-scroll 在客户端上设置失败的问题
-F 修复 canvas 上下文 drawImage 在工具中同时多次绘制相同图片时只生效一个的问题
-A 新增 map 上下文 translateMarker 增加 rotate 参数 详情
-A 新增 map 上下文 getScale getRegion 接口 支持返回当前缩放级别和视野范围 详情
-F 修复 map 上下文 translateMarker 接口自动旋转计算出错的问题
-F 修复 map 上下文 includeMapPoint 接口的 padding 参数单位错误的问题
-A 新增 video 上下文 requestFullScreen exitFullScreen 接口 支持全屏 详情
-A 新增 video 上下文 playbackRate 接口 支持倍速播放 详情
-F 修复 video 上下文 seek 接口 在播放前设置无效的问题
-A 新增 组件 &lt;cover-view&gt; 原生组件上显示基础原生视图 详情
-A 新增 组件 &lt;open-data&gt; 实现展示微信开放数据 详情
-A 新增 组件 &lt;rich-text&gt; 支持富文本 详情
-U 更新 组件 &lt;map&gt; 改变 scale 时增加动画过渡效果
-U 更新 组件 &lt;picker&gt; 新增多列模式和省市区类型 详情
-U 更新 组件 &lt;swiper&gt; 在 change 事件的返回值中增加 source 字段表示引起变化的原因
-U 更新 组件 &lt;text&gt; 增加 space 属性支持多空格显示 详情
-U 更新 组件 &lt;text&gt; 增加 decode 属性支持将 &amp;nbsp; 转成对应字符 详情
-U 更新 组件 &lt;video&gt; 增加 loop 属性支持循环播放 详情
-U 更新 组件 &lt;video&gt; 增加 muted 属性支持静音播放 详情
-U 更新 组件 &lt;video&gt; 增加 bindfullscreenchange 事件监听视频全屏变化 详情
-U 更新 组件 &lt;video&gt; 支持手势操作控制音量和亮度
-U 更新 组件 &lt;video&gt; 支持视频拖动增加 icon 提示
-U 更新 组件 &lt;video&gt; 在 Android 下切换成原生播放器
-F 修复 组件 &lt;canvas&gt; 在 Devtools 中 disable-scroll 和文档描述不符的问题
-F 修复 组件 &lt;input&gt; 在 Android 中收起键盘同时 update 会更新失败的问题
-F 修复 组件 &lt;input&gt; 在 bindfocus 时更新 value 失效的问题
-F 修复 组件 &lt;map&gt; longitude latitude scale 属性更新后地图没有变化的问题
-F 修复 组件 &lt;map&gt; 事件没有带上 target 等信息的问题
-F 修复 组件 &lt;scroll-view&gt; 同时更新列表与 scroll-top 参数时，scroll-top 不立即生效的问题
-F 修复 组件 &lt;swpier /&gt; 在 Android 和 Devtools 中的渲染延迟问题
-F 修复 组件 &lt;swiper&gt; 圆点区域滑动无效问题
-F 修复 组件 &lt;switch&gt; 因 label 点击而改变时没有触发 change 事件的问题
-F 修复 组件 &lt;textarea&gt; 设置了 auto-height 后底部出现多余空白的问题
-F 修复 组件 &lt;textarea&gt; disabled 变为 false 后更新不生效的问题
-F 修复 组件 &lt;video&gt; 视频续播退出后，位置不对的问题
-F 修复 组件 &lt;video&gt; 弹幕重叠问题
-A 新增 性能分析 开发者工具增加 Trace 功能 详情
-A 新增 性能建议文档 详情
-A 增加 页面事件 onPageScroll 监听页面滚动事件 详情
-U 更新 框架 小程序运行机制 详情
-F 修复 框架 app.json 中 backgroundColor 在 Android 设置错误问题
-F 修复 框架 背景音频播放在打开多个小程序时会被 kill 的问题
-A 新增 vConsole 加入 WXML 面板
-v1.3.0 (2017.06.21)
-A 新增 wx.navigateToMiniProgram 从一个小程序打开另一个小程序详情
-A 新增 wx.navigateBackMiniProgram 返回到上一个小程序详情
-v1.2.6 (2017.06.20)
-v1.2.5 (2017.06.09)
-v1.2.4 (2017.06.05)
-v1.2.3 (2017.06.01)
-v1.2.2 (2017.05.23)
-F 修复 API wx.getBackgroundAudioPlayerState 在开发工具音乐开始播放后也回调 fail 的问题
-F 修复 API mapContext.getCenterLocation 在开发者工具上无 success 回调问题
-v1.2.1 (2017.05.20)
-A 新增 API 6 个 iBeacon 相关接口 详情
-A 新增 API wx.getSetting 获取小程序的授权设置 详情
-A 新增 API wx.authorize 提前授权 详情
-A 新增 API wx.getScreenBrightness 获取屏幕亮度 详情
-A 新增 API wx.setScreenBrightness 设置屏幕亮度 详情
-A 新增 API wx.addPhoneContact 保存联系人到系统通讯录 详情
-A 新增 API wx.updateShareMenu 动态更新转发菜单设置 详情
-A 新增 API wx.vibrateShort wx.vibrateLong 振动 详情
-A 新增 API wx.getWeRunData 获取微信运动数据 详情
-A 新增 API wx.saveImageToPhotosAlbum 保存图片到系统相册 详情
-A 新增 API wx.saveVideoToPhotosAlbum 保存视频到系统相册 详情
-A 新增 API wx.getBackgroundAudioManager 获取背景音频管理器 详情
-U 更新 API wx.canvasToTempFilePath 增加 x y width height destWidth destHeight 参数 详情
-U 更新 API wx.getLocation 支持返回高度，水平/垂直精度 详情
-U 更新 API wx.scanCode 新增 onlyFromCamera 参数，指定扫码不能从相册选择 详情
-F 修复 API wx.getBluetoothDevices Android 上回调错误的问题
-F 修复 API wx.getLocation 在安卓上调用，移动后返回的位置不更新问题
-F 修复 API wx.makePhoneCall 在 Android 无法调用分机问题
-F 修复 API wx.setNavigationBarTitle 异常问题
-A 新增 组件 &lt;movable-view&gt; 实现拖拽能力 详情
-U 更新 组件 &lt;button&gt; open-type 新增 share 属性 详情
-U 更新 组件 &lt;map&gt; marker 上方支持气泡窗口 详情
-U 更新 组件 &lt;map&gt; marker 可以增加 label 标签 详情
-U 更新 组件 &lt;map&gt; 可以改变经纬度在 marker 图标的锚点 详情
-U 更新 组件 &lt;map&gt; 新增箭头样式路线 详情
-U 更新 组件 &lt;map&gt; 可以设置路线边框 详情
-U 更新 组件 &lt;map&gt; mapContext 新增 translateMarker 接口，支持 marker 平移动画 详情
-U 更新 组件 &lt;map&gt; mapContext 新增 includePoints 接口，可以设置 padding 详情
-U 优化 组件 &lt;scroll-view&gt; scroll-into-view 支持横向定位 详情
-U 优化 组件 &lt;switch&gt; 增加振动反馈 详情
-U 优化 组件 &lt;picker-view&gt; 滚动时增加声音和振动反馈 详情
-F 修复 组件 &lt;picker-view&gt; 中同时改变列表和 value 时显示不正确的问题
-F 修复 组件 &lt;scroll-view&gt; 横向滚动在频繁 setData 时卡顿的问题 详情
-F 修复 组件 &lt;scroll-view&gt; 横向滚动设置了 min-height 滚动异常问题
-F 修复 组件 &lt;scroll-view&gt; 通过 wx:if 隐藏后显示， enable-back-to-top 失效问题
-F 修复 组件 &lt;scroll-view&gt; 滑动时停止并快速点击，不触发 touch* 事件的问题
-F 修复 组件 &lt;swiper&gt; Android 下第一个指示点残缺问题
-F 修复 组件 &lt;image&gt; 动态设置 src=”” 已显示的图片没有消失的问题
-F 修复 组件 &lt;image&gt; src 属性带有空格导致微信中无法显示图片的问题
-F 修复 组件 &lt;image&gt; 在 iOS 中连续设置本地图片和网络图片的时序问题
-F 修复 组件 &lt;input&gt; 失焦的时候文本重影问题
-F 修复 组件 &lt;input&gt; 在 Android 下切换到另一个 &lt;input&gt; 时键盘不显示的问题
-F 修复 组件 &lt;input&gt; 密码类型重影问题
-F 修复 组件 &lt;video&gt; 在 iOS 中关闭屏幕锁定方向后开启全屏，视频方向不正常的问题
-F 修复 组件 &lt;video&gt; iOS 拍摄的视频在 Android 中播放方向颠倒问题
-F 修复 组件 &lt;video&gt; Android 中切换视频，上一个视频的弹幕任然显示的问题
-F 修复 组件 &lt;video&gt; 视频在全屏状态下弹幕不生效问题
-F 修复 组件 &lt;video&gt; iOS 最底部弹幕被进度条遮挡问题
-F 修复 组件 &lt;video&gt; iOS 全屏状态下进度条断层，并且闪烁的问题
-F 修复 组件 &lt;video&gt; iOS 播放器默认显示弹幕按钮的问题
-F 修复 组件 &lt;video&gt; iOS 播放时点击右上角查看小程序信息，返回后播放器卡住问题
-F 修复 组件 &lt;video&gt; iOS 播放过程中断网，已缓冲视频播放完后画面停止，但是进度条还在走动问题
-F 修复 组件 &lt;video&gt; iOS 在全屏播放的情况下，无法切换视频地址
-F 修复 组件 &lt;video&gt; 弹幕文字重叠的问题
-F 修复 组件 &lt;video&gt; 直播视频操作进度条问题
-F 修复 组件 &lt;video&gt; 全屏后导致原生组件层级错乱问题
-A 增加 框架能力 在 Page 实例中可以通过 route 字段获取页面路径 详情
-A 新增 开发体验 体验版支持打开 vConsole 调试
-A 新增 开发体验 客户端增加性能面板 详情
-U 优化 系统能力 Android 在锁屏情况下小程序被关闭
-U 优化 系统能力 iOS 下页面 crash 重启
-F 修复 自定义分析 在页面初始化之前的上报失败问题
-v1.2.0 (2017.05.18)
-v1.1.1 (2017.04.13)
-A 新增 API wx.canIUse 获取兼容性 详情
-U 优化 代码包限制从 1m 提高至 2m ，开发者可以点击工具 项目-配置信息-刷新 来更新项目配置
-F 修复 API wx.reLaunch 无法使用相对路径的问题
-F 修复 组件 &lt;swiper&gt; 动画中断时状态更新错误的问题
-F 修复 组件 &lt;scroll-view&gt; 横向滚动初次渲染高度错误的问题
-F 修复 组件 &lt;pick-view /&gt; 触发多余事件的问题
-F 修复 框架能力 App.onLaunch 和 App.onShow 的 query 没有缺省值的问题
-v1.1.0 (2017.03.31)
-A 新增 18 个蓝牙相关的 API 详情
-A 新增 API wx.chooseAddress 获取收货地址 详情
-A 新增 API wx.openSetting 打开小程序设置界面 详情
-A 新增 API wx.reLaunch 详情
-A 新增 API wx.arrayBufferToBase64、wx.base64ToArrayBuffer
-A 新增 API wx.showLoading、wx.hideLoading 详情
-A 新增 API wx.startAccelerometer、wx.stopAccelerometer 详情
-A 新增 API wx.startCompass、wx.stopCompass 详情
-A 新增 API wx.getClipboardData、wx.setClipboardData 操作剪贴板 详情
-A 新增 API wx.addCard、wx.openCard 支持微信卡券 详情
-A 新增 API wx.onNetworkStatusChange 监听网络变化 详情
-A 新增 API wx.hideShareMenu wx.showShareMenu 详情
-A 新增 API CanvasContext.setTextAlign 文字的对齐 API 详情
-U 更新 API wx.getSystemInfo 返回 screenWidth、screenHeight SDKVersion 详情
-U 更新 API wx.showModal 在用户点击取消情况下的返回值 详情
-U 更新 API wx.showToast 支持 image 参数自定义提示框图片 详情
-U 更新 API wx.getUserInfo 增加参数 withCredentials 详情
-F 修复 API wx.showNavigationBarLoading 在 iOS 下首次调用可能失败的问题
-F 修复 API 成功调用 wx.requestPayment 并完成支付后用户未点击本次支付的完成按钮时，模板消息无法下放的问题
-F 修复 API wx.onBackgroundAudioStop 在锁屏情况下偶现无法触发回调的问题
-F 修复 API wx.playBackgroundAudio 在 Android 环境中，某些情况无法继续播放已暂停音乐的问题
-F 修复 API wx.previewImage 在 Android 下返回的时候会触发 page.onShow 的问题
-F 修复 API wx.chooseImage 在选择图片的时候若对图片编辑会导致返回结果中没有图片地址的问题
-F 修复 API wx.onBackgroundAudioStop 在调用 wx.seekBackgroundAudio 时会意外触发的问题
-F 修复 API wx.getBackgroundAudioPlayerState 回调结果不统一的问题
-A 新增 框架能力 可通过 App.onLaunch、App.onShow 获取进入小程序的场景值 详情
-U 优化 框架能力 支持获取用户转发状态 详情
-U 更新 组件 &lt;swiper&gt; 属性 indicator-color、 indicator-active-color 支持修改面板指示点颜色 详情
-U 更新 组件 &lt;input&gt; 属性 confirm-type、confirm-hold 详情
-U 更新 组件 &lt;video&gt; 属性 duration 详情
-U 更新 组件 &lt;text&gt; 的 selectable 属性支持长按选择 详情
-U 更新 组件 &lt;navigator&gt; 的属性 open-type 的可选值 reLaunch、navigateBack 详情
-U 更新 组件 &lt;picker-view&gt; 的 indicator-class 属性
-U 优化 组件 &lt;map&gt; 的 iconPath marker、controls 支持临时文件
-U 优化 组件 &lt;video&gt; 的 src 属性错误时候，频繁触发 timeupdate 事件的问题
-U 优化 组件 &lt;image&gt; 支持 .svg 文件
-U 优化 组件 &lt;video&gt; 控制条的体验问题
-U 优化 组件 picker-view 的使用体验，支持快速滚动到所点击项
-U 优化 组件 &lt;swiper&gt; 在用户右滑返回时候的体验问题
-U 优化 组件 &lt;slider&gt; 和 &lt;process/&gt; 统一颜色设置的属性名 详情
-F 修复 组件 &lt;form&gt; 在拉起键盘时候，可能无法触发提交的问题
-F 修复 组件 &lt;slider&gt; 无法通过数据绑定来设置默认值的问题
-F 修复 组件 &lt;video&gt; 动态设置 danmuList 不生效的问题
-F 修复 组件 &lt;textarea&gt; 不支持样式 min-height、max-height 的问题
-F 修复 组件 &lt;picker-view&gt; 外层有hidden变化时显示空白的问题
-F 修复 组件 &lt;video&gt; 封面图片在 iOS 下会未自适应的问题
-F 修复 组件 &lt;video&gt; 在偶现播放视屏时候出现加载图标的问题
-F 修复 组件 &lt;swiper&gt; 在某些情况下图片无法显示的问题
-F 修复 组件 &lt;picker&gt; iOS 日期选择器，第二次选择只更新年份的情况下，对应月份没有更新的问题
-F 修复 组件属性 hover-class 由 none 变为其他值时点击态无效的问题
-F 修复 组件 &lt;textarea&gt; disabled 属性在默认隐藏再显示情况下不生效的问题
-F 修复 组件 &lt;swiper&gt; 内嵌 &lt;swiper&gt; 时内部 &lt;swiper&gt; 无法正常使用的问题
-F 修复 Android客户端 某些情况下调用 wx.request 返回 fail:interrupted 的问题
-F 修复 iOS客户端 打开个人热点并有连接时，tabBar 显示异常的问题
-v1.0.1 (2017.03.03)
-v1.0.0 (2017.02.06)
-A 新增 API wx.getNetworkType 在无网络返回状态 详情
-F 修复 API wx.request wx.uploadFile wx.downloadFile 在 Android 下 statusCode 不是 Number 类型的问题
-F 修复 API wx.scanCode 在 iOS 下取消扫码没有回调的问题
-F 修复 API wx.switchTab 在某些情况下未调用 onShow 的问题
-F 修复 API wx.reqeust data 中有特殊字符时无法发起请求的问题
-F 修复 API wx.getNetworkType 在 iOS 下返回参数错误的问题
-F 修复 API wx.downloadFile 在 iOS 下没有处理 header 参数的问题
-F 修复 API wx.playBackgroundAudio 在音乐暂停后不会正确播放其他音乐的问题
-F 修复 API wx.playBackgroundAudio 在 Android 下播放结束后会触发两次 onBackgroundAudioStop 的问题
-F 修复 API &lt;video&gt; 在 Android 下 seek 后播放失败的问题
-F 修复 API 需要授权弹框时，弹框重叠的问题
-F 修复 组件 &lt;video&gt; 在 iOS 全屏播放后无法使用控制栏的问题
-F 修复 组件 &lt;video&gt; 在 Android 下 seek 后播放失败的问题
-U 优化 App.onError 不捕获 API 的 fail 回调
-F 修复 wx:for 在遇到 wx:key 相同的场景时，出现渲染异常的问题
-F 修复 wx:for 在设置了 wx:key 并且数据发生添加、删除或者位置改变的时候出现 wx:index 错乱的问题
-F 修复 组件 &lt;picker-view-column&gt; 中内容动态变化后高度不正确的问题
-历史版本</p>
+<div class="section" id="v1-9-98-2018-04-04">
+<h2>v1.9.98 (2018.04.04)<a class="headerlink" href="#v1-9-98-2018-04-04" title="永久链接至标题">¶</a></h2>
+</div>
+<div class="section" id="v1-9-97-2018-03-30">
+<h2>v1.9.97 (2018.03.30)<a class="headerlink" href="#v1-9-97-2018-03-30" title="永久链接至标题">¶</a></h2>
+</div>
+<div class="section" id="v1-9-96-2018-03-22">
+<h2>v1.9.96 (2018.03.22)<a class="headerlink" href="#v1-9-96-2018-03-22" title="永久链接至标题">¶</a></h2>
+</div>
+<div class="section" id="v1-9-95-2018-03-20">
+<h2>v1.9.95 (2018.03.20)<a class="headerlink" href="#v1-9-95-2018-03-20" title="永久链接至标题">¶</a></h2>
+</div>
+<div class="section" id="v1-9-94-2018-03-15">
+<h2>v1.9.94 (2018.03.15)<a class="headerlink" href="#v1-9-94-2018-03-15" title="永久链接至标题">¶</a></h2>
+</div>
+<div class="section" id="v1-9-93-2018-03-08">
+<h2>v1.9.93 (2018.03.08)<a class="headerlink" href="#v1-9-93-2018-03-08" title="永久链接至标题">¶</a></h2>
+</div>
+<div class="section" id="v1-9-92-2018-03-05">
+<h2>v1.9.92 (2018.03.05)<a class="headerlink" href="#v1-9-92-2018-03-05" title="永久链接至标题">¶</a></h2>
+<ul class="simple">
+<li><p>A 新增 API wx.createWorker 可创建多线程 Worker 详情</p></li>
+<li><p>A 新增 API wx.getUpdateManager 提供小程序强制更新机制 详情</p></li>
+<li><p>A 新增 API canvasContext.measureText 支持查看文本在当前canvas状态下的大小 详情</p></li>
+<li><p>A 新增 API canvasContext.globalCompositeOperation 支持设置要在绘制新形状时应用的合成操作的类型 详情</p></li>
+<li><p>A 新增 API canvasContext.arcTo 可根据控制点和半径绘制圆弧路径 详情</p></li>
+<li><p>A 新增 API canvasContext.strokeText 提供绘制文本的方法 详情</p></li>
+<li><p>A 新增 API canvasContext.lineDashOffset 可设置虚线偏移量 详情</p></li>
+<li><p>A 新增 API canvasContext.createPattern 可对指定的图像创建模式 详情</p></li>
+<li><p>A 新增 API canvasContext.shadowBlur/shadowColor/shadowOffsetX/shadowOffsetY 可设置阴影的相关样式 详情</p></li>
+<li><p>A 新增 API canvasContext.font 可设置当前字体样式 详情</p></li>
+<li><p>A 新增 API canvasContext.transform 可使用矩阵多次叠加当前变换 详情</p></li>
+<li><p>A 新增 API canvasContext.setTransform 使用矩阵重新设置（覆盖）当前变换 详情</p></li>
+<li><p>A 新增 API LivePusherContext.snapshot 可在推流中进行拍照 详情</p></li>
+<li><p>A 新增 配置 window.backgroundColorTop window.backgroundColorBottom 可分别设置窗口顶部和底部的背景颜色 详情</p></li>
+<li><p>U 更新 API wx.createInnerAudioContext 新增 volumn 属性，可调节音量 详情</p></li>
+<li><p>U 更新 API wx.login wx.getUserInfo wx.getShareInfo wx.getWeRunData 新增 timeout 参数，可设置超时时间 详情</p></li>
+<li><p>U 更新 API wx.getImageInfo 增加返回 orientation 和 type 值 详情</p></li>
+<li><p>U 更新 组件 &lt;cover-view&gt; 支持设置 overflow: scroll 产生局部滚动区域 详情</p></li>
+<li><p>U 更新 组件 &lt;cover-view&gt; 支持设置 position: fixed 使之相对窗口固定 详情</p></li>
+<li><p>U 更新 组件 &lt;open-data&gt; 支持渲染 userInfo 相关信息 详情</p></li>
+<li><p>U 更新 组件 &lt;movable-view&gt; 新增 bindchange 事件 详情</p></li>
+<li><p>U 更新 组件 &lt;movable-view&gt; 支持缩放手势 详情</p></li>
+<li><p>U 更新 组件 &lt;movable-view&gt; 新增 bindvtouchmove bindvtouchmove 事件 详情</p></li>
+<li><p>U 更新 组件 &lt;movable-view&gt; 新增 disabled 属性以禁用滑动 详情</p></li>
+<li><p>U 更新 组件 &lt;input&gt; &lt;textarea&gt; 新增 adjust-position 属性控制是否自动上推页面 详情</p></li>
+<li><p>U 更新 组件 &lt;input&gt; &lt;textarea&gt; 在 bindfocus 事件回调里返回键盘高度 详情</p></li>
+<li><p>U 更新 组件 &lt;picker&gt; 新增 bindcancel 事件 详情</p></li>
+<li><p>U 更新 组件 新增 bindtouchforcechange 事件 详情</p></li>
+<li><p>U 更新 自定义组件 样式前缀化支持类名传递 详情</p></li>
+<li><p>F 修复 API wx.showModal 的 cancelText 和 confirmText 只能输入 4 个英文字符的问题</p></li>
+<li><p>F 修复 组件 &lt;live-player&gt; 无法停止播放的问题 反馈详情</p></li>
+<li><p>F 修复 组件 &lt;input&gt; 多个空格在失焦时只显示一个空格的问题 反馈详情</p></li>
+<li><p>F 修复 组件 &lt;input&gt; 在 disabled 状态下设置 color 无效的问题</p></li>
+<li><p>F 修复 组件 &lt;slider&gt; 设置 transform 导致滑块滑动异常的问题</p></li>
+<li><p>F 修复 组件 &lt;form&gt; 在安卓下键盘弹起时不触发 submit 事件的问题</p></li>
+<li><p>F 修复 框架 在安卓滚动时点击会触发 tap 事件的问题</p></li>
+<li><p>F 修复 框架 onReachBottom 事件在快速滑动出现触发次数异常的问题 反馈详情</p></li>
+<li><p>F 修复 框架 转换 rpx 单位无效的问题 反馈详情</p></li>
+</ul>
+</div>
+<div class="section" id="v1-9-91-2018-02-09">
+<h2>v1.9.91 (2018.02.09)<a class="headerlink" href="#v1-9-91-2018-02-09" title="永久链接至标题">¶</a></h2>
+</div>
+<div class="section" id="v1-9-90-2018-02-07">
+<h2>v1.9.90 (2018.02.07)<a class="headerlink" href="#v1-9-90-2018-02-07" title="永久链接至标题">¶</a></h2>
+</div>
+<div class="section" id="v1-9-9-2018-02-05">
+<h2>v1.9.9 (2018.02.05)<a class="headerlink" href="#v1-9-9-2018-02-05" title="永久链接至标题">¶</a></h2>
+</div>
+<div class="section" id="v1-9-8-2018-02-03">
+<h2>v1.9.8 (2018.02.03)<a class="headerlink" href="#v1-9-8-2018-02-03" title="永久链接至标题">¶</a></h2>
+</div>
+<div class="section" id="v1-9-7">
+<h2>v1.9.7 废弃<a class="headerlink" href="#v1-9-7" title="永久链接至标题">¶</a></h2>
+</div>
+<div class="section" id="v1-9-6-2018-01-29">
+<h2>v1.9.6 (2018.01.29)<a class="headerlink" href="#v1-9-6-2018-01-29" title="永久链接至标题">¶</a></h2>
+</div>
+<div class="section" id="v1-9-5-2018-01-24">
+<h2>v1.9.5 (2018.01.24)<a class="headerlink" href="#v1-9-5-2018-01-24" title="永久链接至标题">¶</a></h2>
+<ul class="simple">
+<li><p>A 新增 配置 window.navigationStyle 支持全屏显示小程序 详情</p></li>
+<li><p>U 更新 组件 &lt;button&gt; open-type 新增 launchApp 属性 详情</p></li>
+</ul>
+</div>
+<div class="section" id="v1-9-4-2018-01-25">
+<h2>v1.9.4 (2018.01.25)<a class="headerlink" href="#v1-9-4-2018-01-25" title="永久链接至标题">¶</a></h2>
+</div>
+<div class="section" id="v1-9-3-2018-01-23">
+<h2>v1.9.3 (2018.01.23)<a class="headerlink" href="#v1-9-3-2018-01-23" title="永久链接至标题">¶</a></h2>
+</div>
+<div class="section" id="v1-9-2-2018-01-09">
+<h2>v1.9.2 (2018.01.09)<a class="headerlink" href="#v1-9-2-2018-01-09" title="永久链接至标题">¶</a></h2>
+</div>
+<div class="section" id="v1-9-1-2018-01-04">
+<h2>v1.9.1 (2018.01.04)<a class="headerlink" href="#v1-9-1-2018-01-04" title="永久链接至标题">¶</a></h2>
+</div>
+<div class="section" id="v1-9-0-2018-01-02">
+<h2>v1.9.0 (2018.01.02)<a class="headerlink" href="#v1-9-0-2018-01-02" title="永久链接至标题">¶</a></h2>
+<ul class="simple">
+<li><p>A 新增 API tabBar 相关接口 详情</p></li>
+<li><p>A 新增 API wx.canvasGetImageData 可返回 &lt;canvas&gt; 的像素数据 详情</p></li>
+<li><p>A 新增 API wx.canvasPutImageData 可将像素数据绘制到 &lt;canvas&gt; 详情</p></li>
+<li><p>U 更新 组件 &lt;swiper&gt; 增加 current-item-id、previous-margin、next-margin、display-multiple-items、skip-hidden-item-layout、bindanimationfinish 属性 详情</p></li>
+<li><p>U 更新 组件 &lt;input&gt; 支持 selection 选区 详情</p></li>
+<li><p>U 更新 组件 &lt;textarea&gt; 支持 selection 选区 详情</p></li>
+<li><p>U 更新 组件 &lt;live-player&gt; 增加 bindnetstatus 事件 详情</p></li>
+<li><p>U 更新 组件 &lt;live-pusher&gt; 增加 bindnetstatus 事件 详情</p></li>
+<li><p>U 更新 组件 &lt;video&gt; 可对控制栏进行更细粒度控制 详情</p></li>
+<li><p>U 更新 组件 &lt;slider&gt; 支持 block-size 设置滑块尺寸和 block-color 设置滑块颜色 详情</p></li>
+<li><p>U 更新 API 背景音频接口 backgroundAudioManager 支持直播流音频</p></li>
+<li><p>U 更新 API canvasContext.drawImage 支持从源图像裁剪后再画到 &lt;canvas&gt; 详情</p></li>
+<li><p>U 更新 API wx.showToast 文本统一限制为 7 个汉字长度，并增加无 icon 类型 详情</p></li>
+<li><p>F 修复 API wx.chooseVideo 接口的 compressed 参数不生效的问题</p></li>
+<li><p>F 修复 API WebSocket 接口在 Android 下服务连接失败的时候，没有立刻触发 error 和 close 事件，而是等到超时</p></li>
+<li><p>F 修复 API Android 背景音频接口 backgroundAudioManager 不能播放本地文件的问题 反馈详情)</p></li>
+<li><p>F 修复 API wx.setEnableDebug 接口在 Android 下会导致小程序一直在重启的问题</p></li>
+<li><p>F 修复 API wx.showToast 在 iOS 下连续调用两次再调用 wx.hideToast 时遮罩层没去掉的问题</p></li>
+<li><p>F 修复 API wx.startPullDownRefresh 在 iOS 下没有触发 onPullDownRefresh 事件的问题</p></li>
+<li><p>F 修复 API wx.previewImage 在 Android 下长按GIF发送后退出小程序的问题</p></li>
+<li><p>F 修复 API wx.pageScrollTo 导致 fixed 元素闪动的问题，并增加 duration 参数 详情</p></li>
+<li><p>F 修复 自定义组件通过动态设置的回调方法时会执行两遍的问题 反馈详情</p></li>
+</ul>
+</div>
+<div class="section" id="v1-7-4-2017-12-22">
+<h2>v1.7.4 (2017.12.22)<a class="headerlink" href="#v1-7-4-2017-12-22" title="永久链接至标题">¶</a></h2>
+</div>
+<div class="section" id="v1-7-3-2017-12-19">
+<h2>v1.7.3 (2017.12.19)<a class="headerlink" href="#v1-7-3-2017-12-19" title="永久链接至标题">¶</a></h2>
+</div>
+<div class="section" id="v1-7-2-2017-12-15">
+<h2>v1.7.2 (2017.12.15)<a class="headerlink" href="#v1-7-2-2017-12-15" title="永久链接至标题">¶</a></h2>
+</div>
+<div class="section" id="v1-7-1-2017-12-08">
+<h2>v1.7.1 (2017.12.08)<a class="headerlink" href="#v1-7-1-2017-12-08" title="永久链接至标题">¶</a></h2>
+</div>
+<div class="section" id="v1-7-0-2017-12-04">
+<h2>v1.7.0 (2017.12.04)<a class="headerlink" href="#v1-7-0-2017-12-04" title="永久链接至标题">¶</a></h2>
+<ul class="simple">
+<li><p>A 新增 组件 &lt;camera&gt; 开发工具上的调试支持 详情</p></li>
+<li><p>U 更新 API WebSocket 支持创建多条 WebSocket 连接 详情</p></li>
+<li><p>U 更新 API wx.request 支持发送和接收 ArrayBuffer 类型的数据 详情</p></li>
+<li><p>U 更新 API wx.createCanvasContext 的 draw 接口，回调通知渲染完成 详情</p></li>
+<li><p>U 更新 API wx.canvasToTempFilePath 支持设置输出图片格式与质量参数 详情</p></li>
+<li><p>U 更新 API wx.createInnerAudioContext 去掉切到前台时恢复播放的策略</p></li>
+<li><p>U 更新 组件 &lt;slider&gt; 增加 bindchanging 事件 详情</p></li>
+<li><p>U 更新 组件 &lt;progress&gt; 增加 active-mode 属性 详情</p></li>
+<li><p>U 更新 组件 &lt;video&gt; 在 timeupdate 事件回调中新增返回 duration 参数 详情</p></li>
+<li><p>U 更新 组件 &lt;video&gt; 新增 direction 参数，支持全屏时设置画面方向 详情</p></li>
+<li><p>U 更新 组件 &lt;scroll-view&gt; 优化 scrolltoupper 与 scrolltolower 事件的触发频率</p></li>
+<li><p>U 更新 组件 &lt;cover-view&gt; 优化在安卓下的渲染性能</p></li>
+<li><p>F 修复 API wx.createInnerAudioContext 接口返回参数的时间单位不正确的问题</p></li>
+<li><p>F 修复 API wx.hideLoading 会把 wx.showToast 给隐藏掉的问题</p></li>
+<li><p>F 修复 API wx.hideLoading 一调用立即消失的问题 反馈详情</p></li>
+<li><p>F 修复 API wx.canvasToTempFilePath 在 &lt;canvas&gt; 不可见时导出失败以及导致crash的问题 反馈详情</p></li>
+<li><p>F 修复 API wx.uploadFile 文件格式的问题 反馈详情</p></li>
+<li><p>F 修复 API wx.getRecorderManager 在 iOS 下设置最大时长10分钟失效的问题</p></li>
+<li><p>F 修复 API wx.getRecorderManager 在安卓下小程序退到后台时，将默认行为从停止录音调整为暂停录音</p></li>
+<li><p>F 修复 组件 &lt;input&gt; disabled 时字体样式无效的问题 反馈详情</p></li>
+<li><p>F 修复 组件 &lt;navigator&gt; 快速点击时会新开两个页面的问题</p></li>
+<li><p>F 修复 组件 &lt;cover-view&gt; 在 iOS 下圆角半径的问题 反馈详情</p></li>
+<li><p>F 修复 组件 &lt;cover-view&gt; 设置 text-align: center 在安卓上下也会居中的问题</p></li>
+<li><p>F 修复 组件 &lt;cover-image&gt; 总是显示在 &lt;cover-view&gt; 之上的问题</p></li>
+<li><p>F 修复 组件 &lt;audio&gt; 在播放结束的时候没有恢复背景音乐的问题</p></li>
+<li><p>F 修复 组件 &lt;picker&gt; 偶现需要点击两次才能收起的问题</p></li>
+<li><p>F 修复 组件 &lt;image&gt; mode 从 widthFix 改成其他值时高度没更新的问题</p></li>
+<li><p>F 修复 组件 &lt;scroll-view&gt; 滚动时出现闪动的问题</p></li>
+<li><p>F 修复 组件 &lt;video&gt; 在全屏后拉起系统控制面板时退出全屏的问题</p></li>
+<li><p>F 修复 trace 面板无法连接设备的问题</p></li>
+</ul>
+</div>
+<div class="section" id="v1-6-8-2017-12-20">
+<h2>v1.6.8 (2017.12.20)<a class="headerlink" href="#v1-6-8-2017-12-20" title="永久链接至标题">¶</a></h2>
+</div>
+<div class="section" id="v1-6-7-2017-12-15">
+<h2>v1.6.7 (2017.12.15)<a class="headerlink" href="#v1-6-7-2017-12-15" title="永久链接至标题">¶</a></h2>
+</div>
+<div class="section" id="v1-6-6-2017-11-15">
+<h2>v1.6.6 (2017.11.15)<a class="headerlink" href="#v1-6-6-2017-11-15" title="永久链接至标题">¶</a></h2>
+</div>
+<div class="section" id="v1-6-5-2017-11-07">
+<h2>v1.6.5 (2017.11.07)<a class="headerlink" href="#v1-6-5-2017-11-07" title="永久链接至标题">¶</a></h2>
+</div>
+<div class="section" id="v1-6-4-2017-10-30">
+<h2>v1.6.4 (2017.10.30)<a class="headerlink" href="#v1-6-4-2017-10-30" title="永久链接至标题">¶</a></h2>
+</div>
+<div class="section" id="v1-6-3-2017-10-23">
+<h2>v1.6.3 (2017.10.23)<a class="headerlink" href="#v1-6-3-2017-10-23" title="永久链接至标题">¶</a></h2>
+</div>
+<div class="section" id="v1-6-2-2017-10-19">
+<h2>v1.6.2 (2017.10.19)<a class="headerlink" href="#v1-6-2-2017-10-19" title="永久链接至标题">¶</a></h2>
+</div>
+<div class="section" id="v1-6-1-2017-10-14">
+<h2>v1.6.1 (2017.10.14)<a class="headerlink" href="#v1-6-1-2017-10-14" title="永久链接至标题">¶</a></h2>
+</div>
+<div class="section" id="v1-6-0-2017-10-11">
+<h2>v1.6.0 (2017.10.11)<a class="headerlink" href="#v1-6-0-2017-10-11" title="永久链接至标题">¶</a></h2>
+<ul class="simple">
+<li><p>A 新增 API checkIsSoterEnrolledInDevice 判断设备是否录入指纹等生物信息的接口 详情</p></li>
+<li><p>A 新增 API getRecorderManager 获取全局唯一的录音管理器 详情</p></li>
+<li><p>A 新增 API createInnerAudioContext 创建并返回内部 audio 上下文 innerAudioContext 对象 详情</p></li>
+<li><p>A 新增 组件 &lt;camera&gt; 相机组件 详情</p></li>
+<li><p>U 更新 API startRecord 增加 duration 参数用于设置最长录音时间 详情</p></li>
+<li><p>U 更新 API chooseVideo 增加 compressed 参数，用于设置是否压缩用户选择的视频 详情</p></li>
+<li><p>U 更新 组件 &lt;map&gt; polyline 支持 arrowIconPath 参数，用于更换箭头图标 详情</p></li>
+<li><p>U 更新 组件 &lt;map&gt; marker 的 label 参数增加样式设置 详情</p></li>
+<li><p>U 更新 组件 &lt;map&gt; 新增渲染更新完成事件 bindupdated 详情</p></li>
+<li><p>U 更新 组件 &lt;video&gt; 支持 pageGesture 属性，控制非全屏模式下是否开启声音和亮度手势 详情</p></li>
+<li><p>U 更新 组件 &lt;video&gt; 在 bindfullscreenchange 的 detail 中返回横竖屏信息</p></li>
+<li><p>U 更新 组件 &lt;video&gt; 支持 initial-time 属性用于指定初始化播放的位置 详情</p></li>
+<li><p>U 更新 组件 &lt;canvas&gt; 支持 clip 方法实现剪切 详情</p></li>
+<li><p>U 更新 组件 &lt;canvas&gt; 支持 setLineDash 方法实现设置虚线样式 详情</p></li>
+<li><p>U 更新 组件 &lt;cover-view&gt; 支持动画 详情</p></li>
+<li><p>U 更新 组件 &lt;cover-image&gt; iconPath 支持网络图片 详情</p></li>
+<li><p>U 更新 组件 &lt;textarea&gt; 支持 show-confirm-bar，用于设置是否显示键盘上方带有「完成」按钮那一栏 详情</p></li>
+<li><p>U 更新 组件 &lt;textarea&gt; 支持在 bindblur 回调中返回 cursor，收起键盘时返回光标位置 详情</p></li>
+<li><p>U 更新 组件 &lt;swiper&gt; 性能优化，支持隐藏当前页、前后页之外的页面，避免复杂页面切换卡顿</p></li>
+<li><p>U 更新 框架 referrerInfo.appId onLaunch 及 onShow 时部分跳转小程序场景增加返回 referrerInfo.appId 详情</p></li>
+<li><p>U 更新 调试 vConsole WXML 面板支持显示 Computed Styles</p></li>
+<li><p>F 修复 API openDocument 在 iOS 下打开带密码的 PDF 文件时无法输入密码的问题</p></li>
+<li><p>F 修复 API openDocument 在 iOS 下打开 Excel 无法切换 tab 的问题</p></li>
+<li><p>F 修复 API authorize scope 为数组时，三端回调行为不一致问题</p></li>
+<li><p>F 修复 API showActionSheet cancel 时会同时回调 success 和 fail 问题</p></li>
+<li><p>F 修复 API getSystemInfo 在开发者工具上未返回 brand 字段的问题</p></li>
+<li><p>F 修复 API chooseInvoiceTitle 在开发者工具上未返回 invoiceTitleInfo 字段的问题</p></li>
+<li><p>F 修复 API pageScrollTo 在开发者工具上失效问题</p></li>
+<li><p>F 修复 API startPullDownRefresh 在开发者工具上失效问题</p></li>
+<li><p>F 修复 API getFileInfo 在开发者工具上只回调 complete 问题</p></li>
+<li><p>F 修复 API startBluetoothDevicesDiscovery 在开发者工具上返回值和真机不一致问题</p></li>
+<li><p>F 修复 API onBluetoothDeviceFound 在开发者工具 devices 错误返回二维数组问题</p></li>
+<li><p>F 修复 API playBackgroundAudio 在 iOS 下失败报 fail no current music，但音乐正常播放问题</p></li>
+<li><p>F 修复 API request 被 abort 后仍然占据并发数问题</p></li>
+<li><p>F 修复 API createAnimation backgroundColor 无法使用渐变背景色问题</p></li>
+<li><p>F 修复 API setNavigationBarColor 在 iOS 下会导致导航栏 title 和按钮变成透明问题</p></li>
+<li><p>F 修复 组件 &lt;image&gt; 在 devtools 提示 404 但不影响显示问题</p></li>
+<li><p>F 修复 组件 &lt;map&gt; 在初始化时在各端事件派发不一致问题</p></li>
+<li><p>F 修复 组件 &lt;map&gt; markers 的 callout 没有限制 borderRadius 取值范围问题</p></li>
+<li><p>F 修复 组件 &lt;map&gt; markers 的 title 和 callout 在各端表现不一致问题</p></li>
+<li><p>F 修复 组件 &lt;map&gt; 在 Android 下 marker 的 callout 下方无三角形问题</p></li>
+<li><p>F 修复 组件 &lt;input&gt; 在开发者工具上，bindinput 派发的事件对象 timestamp 不为 timeStamp 的问题</p></li>
+<li><p>F 修复 组件 &lt;canvas&gt; longtap 事件在工具上触发类型为 binglongtap 的问题，应为 longtap</p></li>
+<li><p>F 修复 组件 &lt;video&gt; 在 iOS 下在全屏播放时会出现一部分下一个视频的内容的问题</p></li>
+<li><p>F 修复 组件 &lt;video&gt; 在开发者工具点击播放后 controls 无法进行控制问题</p></li>
+<li><p>F 修复 组件 &lt;input&gt; 在 Android 下输入汉字时，bindinput 会带上当前正在输入的英文字母问题</p></li>
+<li><p>F 修复 组件 &lt;textarea&gt; 在 Android 下使用 setData 设置 value，auto-height 失效问题</p></li>
+<li><p>F 修复 组件 &lt;picker&gt; 在 Android 下省市区选择器缺少中山市、东莞市地域信息</p></li>
+<li><p>F 修复 组件 &lt;picker&gt; 在 Android 下 year 小于 1970 不生效问题</p></li>
+<li><p>F 修复 组件 &lt;textarea&gt; 两个 textarea 连续切换未触发第一个 textarea 的 blur 问题</p></li>
+<li><p>F 修复 组件 &lt;swiper&gt; 只展示其中一部分的 bug 反馈详情</p></li>
+<li><p>F 修复 框架 iOS8 下 Promise 不会执行 resolve 的问题</p></li>
+</ul>
+</div>
+<div class="section" id="v1-5-8-2017-12-06">
+<h2>v1.5.8 (2017.12.06)<a class="headerlink" href="#v1-5-8-2017-12-06" title="永久链接至标题">¶</a></h2>
+</div>
+<div class="section" id="v1-5-7-2017-10-03">
+<h2>v1.5.7 (2017.10.03)<a class="headerlink" href="#v1-5-7-2017-10-03" title="永久链接至标题">¶</a></h2>
+</div>
+<div class="section" id="v1-5-6-2017-09-27">
+<h2>v1.5.6 (2017.09.27)<a class="headerlink" href="#v1-5-6-2017-09-27" title="永久链接至标题">¶</a></h2>
+</div>
+<div class="section" id="v1-5-5-2017-09-26">
+<h2>v1.5.5 (2017.09.26)<a class="headerlink" href="#v1-5-5-2017-09-26" title="永久链接至标题">¶</a></h2>
+</div>
+<div class="section" id="v1-5-4-2017-09-21">
+<h2>v1.5.4 (2017.09.21)<a class="headerlink" href="#v1-5-4-2017-09-21" title="永久链接至标题">¶</a></h2>
+</div>
+<div class="section" id="v1-5-3-2017-08-28">
+<h2>v1.5.3 (2017.08.28)<a class="headerlink" href="#v1-5-3-2017-08-28" title="永久链接至标题">¶</a></h2>
+<ul class="simple">
+<li><p>F 修复 组件 &lt;swiper&gt; 在 iOS 下首张图片在某些情况下初始不显示的问题</p></li>
+<li><p>F 修复 API canIUse 无法判断 getPhoneNumber 可用情况的问题</p></li>
+</ul>
+</div>
+<div class="section" id="v1-5-2-2017-08-23">
+<h2>v1.5.2 (2017.08.23)<a class="headerlink" href="#v1-5-2-2017-08-23" title="永久链接至标题">¶</a></h2>
+<ul class="simple">
+<li><p>F 修复 组件 &lt;map&gt; markers 里同时没有设置 callout 和 title 属性时，点击时报 Cannot read property ‘always’ of null 错误的问题</p></li>
+<li><p>F 修复 组件 &lt;image&gt; bindload 被重复执行两次的问题</p></li>
+<li><p>F 修复 组件 &lt;image&gt; 连续更新 src 会显示图片错误</p></li>
+<li><p>F 修复 API chooseInvoiceTitle 在工具上报错问题</p></li>
+<li><p>F 修复 API SelectorQuery.selectViewport 失效问题</p></li>
+</ul>
+</div>
+<div class="section" id="v1-5-1-2017-08-18">
+<h2>v1.5.1 (2017.08.18)<a class="headerlink" href="#v1-5-1-2017-08-18" title="永久链接至标题">¶</a></h2>
+<ul class="simple">
+<li><p>F 修复 组件 &lt;image&gt; 覆盖兄弟节点或图片圆角不显示问题</p></li>
+</ul>
+</div>
+<div class="section" id="v1-5-0-2017-08-17">
+<h2>v1.5.0 (2017.08.17)<a class="headerlink" href="#v1-5-0-2017-08-17" title="永久链接至标题">¶</a></h2>
+<ul class="simple">
+<li><p>A 新增 API checkIsSupportSoterAuthentication startSoterAuthentication 生物认证接口 详情</p></li>
+<li><p>A 新增 API startPullDownRefresh 主动触发下拉刷新接口 详情</p></li>
+<li><p>A 新增 API chooseInvoiceTitle 选择发票抬头接口 详情</p></li>
+<li><p>A 新增 框架 触摸类事件增加 capture 阶段 详情</p></li>
+<li><p>A 新增 框架 长按事件 longpress 详情</p></li>
+<li><p>A 新增 框架 page.json 支持设置 onReachBottom 距离 详情</p></li>
+<li><p>U 更新 API getSystemInfo 增加 fontSizeSetting 支持读取用户字体大小设置 详情</p></li>
+<li><p>U 更新 API getSystemInfo 增加 brand 支持读取手机品牌字段 详情</p></li>
+<li><p>F 修复 API getSystemInfo 在华为或者魅族带虚拟按键的设备上获取 windowWidth 和 windowHeight 为 0 问题</p></li>
+<li><p>U 更新 API writeBLECharacteristicValue 根据写入属性特征值决定回调时机</p></li>
+<li><p>U 更新 API shareAppMessage 增加 imageUrl 参数支持分享自定义配图 详情</p></li>
+<li><p>U 更新 API getBluetoothDevices onBluetoothDeviceFound 设备信息增加 localName 字段 详情</p></li>
+<li><p>F 修复 API switchTab 在页面注册前调用会报错的问题</p></li>
+<li><p>F 修复 API selectorQuery movable-view 等组件无法在 selectorQuery 中被 class 选择器选中问题</p></li>
+<li><p>F 修复 API setNavigationBarColor 在 iOS 下被 app.json 里 navigationBarTextStyle 覆盖设置问题</p></li>
+<li><p>F 修复 API getSetting openSetting 在 iOS 下部分生命周期函数中调用失效</p></li>
+<li><p>F 修复 API canvasToTempFilePath 在 iOS 下导出的图片为白色背景的问题</p></li>
+<li><p>F 修复 API captureScreen 在 Android 下生成的文件扩展名为 unknown 问题</p></li>
+<li><p>F 修复 API getBeacons 在 Android 下未获取到设备时 beacons 字段缺失问题</p></li>
+<li><p>F 修复 API chooseLocation 在 Android 下回调函数 latitude、longitude 类型为 string 问题，应为 number</p></li>
+<li><p>F 修复 API connectSocket 在 Android 下接口的请求包 header 中没有 origin 问题</p></li>
+<li><p>F 修复 API previewImage 在 iOS 下导航栏没有显示当前图片索引位置(1/n)的问题</p></li>
+<li><p>F 修复 API previewImage 在 iOS 下横屏后退出，tabBar 漂移到页面中间问题</p></li>
+<li><p>F 修复 API chooseImage 在 Android 下未处理图片旋转的情况</p></li>
+<li><p>F 修复 API showToast showLoading 在 iOS 下异步 hide 后重新调用 show，show 不生效问题</p></li>
+<li><p>F 修复 API pageScrollTo 导致 video 组件错位问题</p></li>
+<li><p>U 更新 组件 &lt;picker&gt; 增加 custom-item，region 模式支持自定义项 详情</p></li>
+<li><p>F 修复 组件 &lt;picker&gt; 在 iOS 下 mode=year 时点击会 crash 问题</p></li>
+<li><p>U 更新 组件 &lt;picker-view&gt; 增加 mask-style、mask-class 支持自定义半透明蒙层的颜色 详情</p></li>
+<li><p>F 修复 组件 &lt;picker&gt; region 模式在 form submit 的 detail 没有应该返回省市区问题</p></li>
+<li><p>U 更新 组件 &lt;textarea&gt; &lt;input&gt; 增加 cursor 支持主动设置和读取光标位置 详情</p></li>
+<li><p>F 修复 组件 &lt;textarea&gt; 在 iOS 下编辑时切换键盘，光标会跳到最后的问题</p></li>
+<li><p>F 修复 组件 &lt;textarea&gt; 在 Android 下页面 onLoad 中设置 value 无效问题</p></li>
+<li><p>F 修复 组件 &lt;textarea&gt; 在 Android 下设置 cursor-spacing 无效问题</p></li>
+<li><p>F 修复 组件 &lt;form&gt; 在 textarea input 同时使用时，先点击 textarea，再点击 input 后，无法提交表单的问题</p></li>
+<li><p>F 修复 组件 &lt;input&gt; 在 Android 下 bindinput 事件回调函数缺少 detail.cursor 参数问题</p></li>
+<li><p>F 修复 组件 &lt;input&gt; 在 Android 下与 auto-height 的 textarea 同时使用，不会弹出数字键盘问题</p></li>
+<li><p>F 修复 组件 &lt;input&gt; bindfocus 中调用 chooseLocation 并 setData，导致所有 input 失效问题</p></li>
+<li><p>U 更新 组件 &lt;button&gt; 增加 show-message-card 等属性，支持客服会话分享卡片 详情</p></li>
+<li><p>U 更新 组件 &lt;image&gt; 支持图片懒加载</p></li>
+<li><p>F 修复 组件 &lt;image&gt; 传入本地文件路径在 iOS 上无法触发浏览器重绘的问题</p></li>
+<li><p>F 修复 组件 &lt;movable-view&gt;动态生成的 movable-view 定位不准确的问题 反馈详情</p></li>
+<li><p>F 修复 组件 &lt;cover-view&gt; 通过 wx:if 控制不生效的问题</p></li>
+<li><p>F 修复 组件 &lt;map&gt; 在 iOS 下 bindcontroltap 事件同时会触发 bindtap 的问题</p></li>
+<li><p>F 修复 组件 &lt;canvas&gt; 在 iOS 下线条的渐变、宽度同时设置会丢掉线条宽度的问题</p></li>
+<li><p>F 修复 组件 &lt;cover-view&gt; 在 Android 下 border-radius 无效问题</p></li>
+<li><p>F 修复 组件 &lt;rich-text&gt; 自动 trim 问题</p></li>
+<li><p>F 修复 组件 &lt;video&gt; 在 Android 下，未开始播放时，组件上无法触发页面滑动问题</p></li>
+<li><p>F 修复 组件 &lt;cover-view&gt; 点击时会穿透到 map，触发 map 的 tap 事件问题</p></li>
+<li><p>F 修复 video 上下文 seek 秒数会被取整，无法精确定位问题</p></li>
+<li><p>F 修复 框架 onReachBottom handler 不存在的 warning 在某些情况下异常出现的问题</p></li>
+<li><p>U 更新 框架 setData 支持异步回调 详情</p></li>
+<li><p>U 更新 框架 hover-stop-propagation 支持拦截点击态 详情</p></li>
+<li><p>U 更新 框架 后台拉起小程序时 reLaunch 优化</p></li>
+<li><p>U 更新 框架 页面跳转和弹窗授权类接口支持在 App onLaunch 时机调用</p></li>
+<li><p>F 修复 框架 在部分 Android 下出现页面放大的问题</p></li>
+</ul>
+</div>
+<div class="section" id="v1-4-4-2017-07-26">
+<h2>v1.4.4 (2017.07.26)<a class="headerlink" href="#v1-4-4-2017-07-26" title="永久链接至标题">¶</a></h2>
+</div>
+<div class="section" id="v1-4-3-2017-07-20">
+<h2>v1.4.3 (2017.07.20)<a class="headerlink" href="#v1-4-3-2017-07-20" title="永久链接至标题">¶</a></h2>
+<ul class="simple">
+<li><p>A 新增 API setTopBarText 设置置顶信息 详情</p></li>
+</ul>
+</div>
+<div class="section" id="v1-4-2-2017-07-19">
+<h2>v1.4.2 (2017.07.19)<a class="headerlink" href="#v1-4-2-2017-07-19" title="永久链接至标题">¶</a></h2>
+<ul class="simple">
+<li><p>F 修复 组件 &lt;cover-view&gt; 在某些情况下真机上无法覆盖在 &lt;map&gt; 组件上的问题 反馈详情</p></li>
+<li><p>F 修复 组件 &lt;open-data&gt; 请求数据顺序的问题</p></li>
+<li><p>F 修复 组件 &lt;canvas&gt; 动态变化大小后 canvasToTempFilePath 的问题 反馈详情</p></li>
+</ul>
+</div>
+<div class="section" id="v1-4-1-2017-07-17">
+<h2>v1.4.1 (2017.07.17)<a class="headerlink" href="#v1-4-1-2017-07-17" title="永久链接至标题">¶</a></h2>
+<ul class="simple">
+<li><p>U 更新 API createSelectorQuery 可获取元素的属性</p></li>
+<li><p>U 更新 API reLaunch 逻辑，此版本开始 reLaunch 不可在小程序进入后台后调用</p></li>
+<li><p>F 修复 API getBLEDeviceCharacteristics 在开发者工具中请求失败的问题 反馈详情</p></li>
+<li><p>F 修复 API canvasToTempFilePath 在 iOS 中坐标偏移的问题 反馈详情</p></li>
+<li><p>F 修复 组件 &lt;rich-text&gt; 没有检查参数为空的问题 反馈详情</p></li>
+<li><p>F 修复 组件 &lt;open-data&gt; 组件无法获取群名称的问题 反馈详情</p></li>
+<li><p>F 修复 组件 &lt;map&gt; 在开发者工具中无法移动和触发事件的问题 反馈详情</p></li>
+<li><p>F 修复 组件 &lt;cover-image&gt; 在开发者工具中无法预览临时图片的问题 反馈详情</p></li>
+<li><p>F 修复 组件 &lt;text-area /&gt; 在 iOS 中设置 color 无效的问题 反馈详情</p></li>
+<li><p>F 修复 基础框架 重新打开小程序的时 App.onShow 未正确获取 path 和 query 的问题</p></li>
+</ul>
+</div>
+<div class="section" id="v1-4-0-2017-07-10">
+<h2>v1.4.0 (2017.07.10)<a class="headerlink" href="#v1-4-0-2017-07-10" title="永久链接至标题">¶</a></h2>
+<ul class="simple">
+<li><p>A 新增 API createSelectorQuery 获取元素布局信息 详情</p></li>
+<li><p>A 新增 API getFileInfo 获取文件信息 详情</p></li>
+<li><p>A 新增 API onUserCaptureScreen 监听用户进行截屏事件 详情</p></li>
+<li><p>A 新增 API pageScrollTo 使页面滚动到指定位置 详情</p></li>
+<li><p>A 新增 API setNavigationBarColor 支持小程序修改标题栏颜色 详情</p></li>
+<li><p>A 新增 API setEnableDebug 控制线上版本 vConsole 的打开关闭 详情</p></li>
+<li><p>A 新增 API setKeepScreenOn 允许小程序设置屏幕保持常亮 详情</p></li>
+<li><p>U 更新 API closeSocket 新增 code, reason 参数 详情</p></li>
+<li><p>U 更新 API connectSocket 接口增加 支持 protocols 参数定义子协议 详情</p></li>
+<li><p>U 更新 API getUserInfo 增加 lang 参数指定返回用户信息语言 详情</p></li>
+<li><p>U 更新 API openDocument 增加 fileType 参数用于指定文件类型 详情</p></li>
+<li><p>U 更新 API request 超过并发限制做队列处理</p></li>
+<li><p>U 更新 API request 返回 requestTask 支持 abort 操作 详情</p></li>
+<li><p>U 更新 API uploadFile downloadFile 返回 uploadTask/downloadTask 支持监听进度更新及 abort 操作 详情</p></li>
+<li><p>F 修复 API canvasToTempFilePath 在 iOS 下保存图片不清晰的问题</p></li>
+<li><p>F 修复 API chooseLocation 直接选第一个默认地址，成功后返回信息为空的问题</p></li>
+<li><p>F 修复 API chooseVideo 当录制视频超过 10s 时，播放结束会导致进度条错误的问题</p></li>
+<li><p>F 修复 API getSystemInfo 在 App 的 onLaunch 和 onShow 中返回不正确的 windowHeight 的问题</p></li>
+<li><p>F 修复 API onBluetoothDeviceFound 返回数据格式不正确的问题</p></li>
+<li><p>F 修复 API reLaunch 在客户端上跳转不成功的问题</p></li>
+<li><p>F 修复 API request 在 Android Http 状态码是 302 时异常的问题</p></li>
+<li><p>F 修复 API showToast 在 iOS 上页面滚动时出现会随着页面滚动的问题</p></li>
+<li><p>A 新增 canvas 上下文 setTextBaseline 接口 设置绘制文本时的文本基线 详情</p></li>
+<li><p>F 修复 canvas 上下文 setTextAlign iOS 中文字过长时 center 对齐方式失效的问题</p></li>
+<li><p>F 修复 canvas 上下文 disable-scroll 在客户端上设置失败的问题</p></li>
+<li><p>F 修复 canvas 上下文 drawImage 在工具中同时多次绘制相同图片时只生效一个的问题</p></li>
+<li><p>A 新增 map 上下文 translateMarker 增加 rotate 参数 详情</p></li>
+<li><p>A 新增 map 上下文 getScale getRegion 接口 支持返回当前缩放级别和视野范围 详情</p></li>
+<li><p>F 修复 map 上下文 translateMarker 接口自动旋转计算出错的问题</p></li>
+<li><p>F 修复 map 上下文 includeMapPoint 接口的 padding 参数单位错误的问题</p></li>
+<li><p>A 新增 video 上下文 requestFullScreen exitFullScreen 接口 支持全屏 详情</p></li>
+<li><p>A 新增 video 上下文 playbackRate 接口 支持倍速播放 详情</p></li>
+<li><p>F 修复 video 上下文 seek 接口 在播放前设置无效的问题</p></li>
+<li><p>A 新增 组件 &lt;cover-view&gt; 原生组件上显示基础原生视图 详情</p></li>
+<li><p>A 新增 组件 &lt;open-data&gt; 实现展示微信开放数据 详情</p></li>
+<li><p>A 新增 组件 &lt;rich-text&gt; 支持富文本 详情</p></li>
+<li><p>U 更新 组件 &lt;map&gt; 改变 scale 时增加动画过渡效果</p></li>
+<li><p>U 更新 组件 &lt;picker&gt; 新增多列模式和省市区类型 详情</p></li>
+<li><p>U 更新 组件 &lt;swiper&gt; 在 change 事件的返回值中增加 source 字段表示引起变化的原因</p></li>
+<li><p>U 更新 组件 &lt;text&gt; 增加 space 属性支持多空格显示 详情</p></li>
+<li><p>U 更新 组件 &lt;text&gt; 增加 decode 属性支持将 &amp;nbsp; 转成对应字符 详情</p></li>
+<li><p>U 更新 组件 &lt;video&gt; 增加 loop 属性支持循环播放 详情</p></li>
+<li><p>U 更新 组件 &lt;video&gt; 增加 muted 属性支持静音播放 详情</p></li>
+<li><p>U 更新 组件 &lt;video&gt; 增加 bindfullscreenchange 事件监听视频全屏变化 详情</p></li>
+<li><p>U 更新 组件 &lt;video&gt; 支持手势操作控制音量和亮度</p></li>
+<li><p>U 更新 组件 &lt;video&gt; 支持视频拖动增加 icon 提示</p></li>
+<li><p>U 更新 组件 &lt;video&gt; 在 Android 下切换成原生播放器</p></li>
+<li><p>F 修复 组件 &lt;canvas&gt; 在 Devtools 中 disable-scroll 和文档描述不符的问题</p></li>
+<li><p>F 修复 组件 &lt;input&gt; 在 Android 中收起键盘同时 update 会更新失败的问题</p></li>
+<li><p>F 修复 组件 &lt;input&gt; 在 bindfocus 时更新 value 失效的问题</p></li>
+<li><p>F 修复 组件 &lt;map&gt; longitude latitude scale 属性更新后地图没有变化的问题</p></li>
+<li><p>F 修复 组件 &lt;map&gt; 事件没有带上 target 等信息的问题</p></li>
+<li><p>F 修复 组件 &lt;scroll-view&gt; 同时更新列表与 scroll-top 参数时，scroll-top 不立即生效的问题</p></li>
+<li><p>F 修复 组件 &lt;swpier /&gt; 在 Android 和 Devtools 中的渲染延迟问题</p></li>
+<li><p>F 修复 组件 &lt;swiper&gt; 圆点区域滑动无效问题</p></li>
+<li><p>F 修复 组件 &lt;switch&gt; 因 label 点击而改变时没有触发 change 事件的问题</p></li>
+<li><p>F 修复 组件 &lt;textarea&gt; 设置了 auto-height 后底部出现多余空白的问题</p></li>
+<li><p>F 修复 组件 &lt;textarea&gt; disabled 变为 false 后更新不生效的问题</p></li>
+<li><p>F 修复 组件 &lt;video&gt; 视频续播退出后，位置不对的问题</p></li>
+<li><p>F 修复 组件 &lt;video&gt; 弹幕重叠问题</p></li>
+<li><p>A 新增 性能分析 开发者工具增加 Trace 功能 详情</p></li>
+<li><p>A 新增 性能建议文档 详情</p></li>
+<li><p>A 增加 页面事件 onPageScroll 监听页面滚动事件 详情</p></li>
+<li><p>U 更新 框架 小程序运行机制 详情</p></li>
+<li><p>F 修复 框架 app.json 中 backgroundColor 在 Android 设置错误问题</p></li>
+<li><p>F 修复 框架 背景音频播放在打开多个小程序时会被 kill 的问题</p></li>
+<li><p>A 新增 vConsole 加入 WXML 面板</p></li>
+</ul>
+</div>
+<div class="section" id="v1-3-0-2017-06-21">
+<h2>v1.3.0 (2017.06.21)<a class="headerlink" href="#v1-3-0-2017-06-21" title="永久链接至标题">¶</a></h2>
+<ul class="simple">
+<li><p>A 新增 wx.navigateToMiniProgram 从一个小程序打开另一个小程序详情</p></li>
+<li><p>A 新增 wx.navigateBackMiniProgram 返回到上一个小程序详情</p></li>
+</ul>
+</div>
+<div class="section" id="v1-2-6-2017-06-20">
+<h2>v1.2.6 (2017.06.20)<a class="headerlink" href="#v1-2-6-2017-06-20" title="永久链接至标题">¶</a></h2>
+</div>
+<div class="section" id="v1-2-5-2017-06-09">
+<h2>v1.2.5 (2017.06.09)<a class="headerlink" href="#v1-2-5-2017-06-09" title="永久链接至标题">¶</a></h2>
+</div>
+<div class="section" id="v1-2-4-2017-06-05">
+<h2>v1.2.4 (2017.06.05)<a class="headerlink" href="#v1-2-4-2017-06-05" title="永久链接至标题">¶</a></h2>
+</div>
+<div class="section" id="v1-2-3-2017-06-01">
+<h2>v1.2.3 (2017.06.01)<a class="headerlink" href="#v1-2-3-2017-06-01" title="永久链接至标题">¶</a></h2>
+</div>
+<div class="section" id="v1-2-2-2017-05-23">
+<h2>v1.2.2 (2017.05.23)<a class="headerlink" href="#v1-2-2-2017-05-23" title="永久链接至标题">¶</a></h2>
+<ul class="simple">
+<li><p>F 修复 API wx.getBackgroundAudioPlayerState 在开发工具音乐开始播放后也回调 fail 的问题</p></li>
+<li><p>F 修复 API mapContext.getCenterLocation 在开发者工具上无 success 回调问题</p></li>
+</ul>
+</div>
+<div class="section" id="v1-2-1-2017-05-20">
+<h2>v1.2.1 (2017.05.20)<a class="headerlink" href="#v1-2-1-2017-05-20" title="永久链接至标题">¶</a></h2>
+<ul class="simple">
+<li><p>A 新增 API 6 个 iBeacon 相关接口 详情</p></li>
+<li><p>A 新增 API wx.getSetting 获取小程序的授权设置 详情</p></li>
+<li><p>A 新增 API wx.authorize 提前授权 详情</p></li>
+<li><p>A 新增 API wx.getScreenBrightness 获取屏幕亮度 详情</p></li>
+<li><p>A 新增 API wx.setScreenBrightness 设置屏幕亮度 详情</p></li>
+<li><p>A 新增 API wx.addPhoneContact 保存联系人到系统通讯录 详情</p></li>
+<li><p>A 新增 API wx.updateShareMenu 动态更新转发菜单设置 详情</p></li>
+<li><p>A 新增 API wx.vibrateShort wx.vibrateLong 振动 详情</p></li>
+<li><p>A 新增 API wx.getWeRunData 获取微信运动数据 详情</p></li>
+<li><p>A 新增 API wx.saveImageToPhotosAlbum 保存图片到系统相册 详情</p></li>
+<li><p>A 新增 API wx.saveVideoToPhotosAlbum 保存视频到系统相册 详情</p></li>
+<li><p>A 新增 API wx.getBackgroundAudioManager 获取背景音频管理器 详情</p></li>
+<li><p>U 更新 API wx.canvasToTempFilePath 增加 x y width height destWidth destHeight 参数 详情</p></li>
+<li><p>U 更新 API wx.getLocation 支持返回高度，水平/垂直精度 详情</p></li>
+<li><p>U 更新 API wx.scanCode 新增 onlyFromCamera 参数，指定扫码不能从相册选择 详情</p></li>
+<li><p>F 修复 API wx.getBluetoothDevices Android 上回调错误的问题</p></li>
+<li><p>F 修复 API wx.getLocation 在安卓上调用，移动后返回的位置不更新问题</p></li>
+<li><p>F 修复 API wx.makePhoneCall 在 Android 无法调用分机问题</p></li>
+<li><p>F 修复 API wx.setNavigationBarTitle 异常问题</p></li>
+<li><p>A 新增 组件 &lt;movable-view&gt; 实现拖拽能力 详情</p></li>
+<li><p>U 更新 组件 &lt;button&gt; open-type 新增 share 属性 详情</p></li>
+<li><p>U 更新 组件 &lt;map&gt; marker 上方支持气泡窗口 详情</p></li>
+<li><p>U 更新 组件 &lt;map&gt; marker 可以增加 label 标签 详情</p></li>
+<li><p>U 更新 组件 &lt;map&gt; 可以改变经纬度在 marker 图标的锚点 详情</p></li>
+<li><p>U 更新 组件 &lt;map&gt; 新增箭头样式路线 详情</p></li>
+<li><p>U 更新 组件 &lt;map&gt; 可以设置路线边框 详情</p></li>
+<li><p>U 更新 组件 &lt;map&gt; mapContext 新增 translateMarker 接口，支持 marker 平移动画 详情</p></li>
+<li><p>U 更新 组件 &lt;map&gt; mapContext 新增 includePoints 接口，可以设置 padding 详情</p></li>
+<li><p>U 优化 组件 &lt;scroll-view&gt; scroll-into-view 支持横向定位 详情</p></li>
+<li><p>U 优化 组件 &lt;switch&gt; 增加振动反馈 详情</p></li>
+<li><p>U 优化 组件 &lt;picker-view&gt; 滚动时增加声音和振动反馈 详情</p></li>
+<li><p>F 修复 组件 &lt;picker-view&gt; 中同时改变列表和 value 时显示不正确的问题</p></li>
+<li><p>F 修复 组件 &lt;scroll-view&gt; 横向滚动在频繁 setData 时卡顿的问题 详情</p></li>
+<li><p>F 修复 组件 &lt;scroll-view&gt; 横向滚动设置了 min-height 滚动异常问题</p></li>
+<li><p>F 修复 组件 &lt;scroll-view&gt; 通过 wx:if 隐藏后显示， enable-back-to-top 失效问题</p></li>
+<li><p>F 修复 组件 &lt;scroll-view&gt; 滑动时停止并快速点击，不触发 touch* 事件的问题</p></li>
+<li><p>F 修复 组件 &lt;swiper&gt; Android 下第一个指示点残缺问题</p></li>
+<li><p>F 修复 组件 &lt;image&gt; 动态设置 src=”” 已显示的图片没有消失的问题</p></li>
+<li><p>F 修复 组件 &lt;image&gt; src 属性带有空格导致微信中无法显示图片的问题</p></li>
+<li><p>F 修复 组件 &lt;image&gt; 在 iOS 中连续设置本地图片和网络图片的时序问题</p></li>
+<li><p>F 修复 组件 &lt;input&gt; 失焦的时候文本重影问题</p></li>
+<li><p>F 修复 组件 &lt;input&gt; 在 Android 下切换到另一个 &lt;input&gt; 时键盘不显示的问题</p></li>
+<li><p>F 修复 组件 &lt;input&gt; 密码类型重影问题</p></li>
+<li><p>F 修复 组件 &lt;video&gt; 在 iOS 中关闭屏幕锁定方向后开启全屏，视频方向不正常的问题</p></li>
+<li><p>F 修复 组件 &lt;video&gt; iOS 拍摄的视频在 Android 中播放方向颠倒问题</p></li>
+<li><p>F 修复 组件 &lt;video&gt; Android 中切换视频，上一个视频的弹幕任然显示的问题</p></li>
+<li><p>F 修复 组件 &lt;video&gt; 视频在全屏状态下弹幕不生效问题</p></li>
+<li><p>F 修复 组件 &lt;video&gt; iOS 最底部弹幕被进度条遮挡问题</p></li>
+<li><p>F 修复 组件 &lt;video&gt; iOS 全屏状态下进度条断层，并且闪烁的问题</p></li>
+<li><p>F 修复 组件 &lt;video&gt; iOS 播放器默认显示弹幕按钮的问题</p></li>
+<li><p>F 修复 组件 &lt;video&gt; iOS 播放时点击右上角查看小程序信息，返回后播放器卡住问题</p></li>
+<li><p>F 修复 组件 &lt;video&gt; iOS 播放过程中断网，已缓冲视频播放完后画面停止，但是进度条还在走动问题</p></li>
+<li><p>F 修复 组件 &lt;video&gt; iOS 在全屏播放的情况下，无法切换视频地址</p></li>
+<li><p>F 修复 组件 &lt;video&gt; 弹幕文字重叠的问题</p></li>
+<li><p>F 修复 组件 &lt;video&gt; 直播视频操作进度条问题</p></li>
+<li><p>F 修复 组件 &lt;video&gt; 全屏后导致原生组件层级错乱问题</p></li>
+<li><p>A 增加 框架能力 在 Page 实例中可以通过 route 字段获取页面路径 详情</p></li>
+<li><p>A 新增 开发体验 体验版支持打开 vConsole 调试</p></li>
+<li><p>A 新增 开发体验 客户端增加性能面板 详情</p></li>
+<li><p>U 优化 系统能力 Android 在锁屏情况下小程序被关闭</p></li>
+<li><p>U 优化 系统能力 iOS 下页面 crash 重启</p></li>
+<li><p>F 修复 自定义分析 在页面初始化之前的上报失败问题</p></li>
+</ul>
+</div>
+<div class="section" id="v1-2-0-2017-05-18">
+<h2>v1.2.0 (2017.05.18)<a class="headerlink" href="#v1-2-0-2017-05-18" title="永久链接至标题">¶</a></h2>
+</div>
+<div class="section" id="v1-1-1-2017-04-13">
+<h2>v1.1.1 (2017.04.13)<a class="headerlink" href="#v1-1-1-2017-04-13" title="永久链接至标题">¶</a></h2>
+<ul class="simple">
+<li><p>A 新增 API wx.canIUse 获取兼容性 详情</p></li>
+<li><p>U 优化 代码包限制从 1m 提高至 2m ，开发者可以点击工具 项目-配置信息-刷新 来更新项目配置</p></li>
+<li><p>F 修复 API wx.reLaunch 无法使用相对路径的问题</p></li>
+<li><p>F 修复 组件 &lt;swiper&gt; 动画中断时状态更新错误的问题</p></li>
+<li><p>F 修复 组件 &lt;scroll-view&gt; 横向滚动初次渲染高度错误的问题</p></li>
+<li><p>F 修复 组件 &lt;pick-view /&gt; 触发多余事件的问题</p></li>
+<li><p>F 修复 框架能力 App.onLaunch 和 App.onShow 的 query 没有缺省值的问题</p></li>
+</ul>
+</div>
+<div class="section" id="v1-1-0-2017-03-31">
+<h2>v1.1.0 (2017.03.31)<a class="headerlink" href="#v1-1-0-2017-03-31" title="永久链接至标题">¶</a></h2>
+<ul class="simple">
+<li><p>A 新增 18 个蓝牙相关的 API 详情</p></li>
+<li><p>A 新增 API wx.chooseAddress 获取收货地址 详情</p></li>
+<li><p>A 新增 API wx.openSetting 打开小程序设置界面 详情</p></li>
+<li><p>A 新增 API wx.reLaunch 详情</p></li>
+<li><p>A 新增 API wx.arrayBufferToBase64、wx.base64ToArrayBuffer</p></li>
+<li><p>A 新增 API wx.showLoading、wx.hideLoading 详情</p></li>
+<li><p>A 新增 API wx.startAccelerometer、wx.stopAccelerometer 详情</p></li>
+<li><p>A 新增 API wx.startCompass、wx.stopCompass 详情</p></li>
+<li><p>A 新增 API wx.getClipboardData、wx.setClipboardData 操作剪贴板 详情</p></li>
+<li><p>A 新增 API wx.addCard、wx.openCard 支持微信卡券 详情</p></li>
+<li><p>A 新增 API wx.onNetworkStatusChange 监听网络变化 详情</p></li>
+<li><p>A 新增 API wx.hideShareMenu wx.showShareMenu 详情</p></li>
+<li><p>A 新增 API CanvasContext.setTextAlign 文字的对齐 API 详情</p></li>
+<li><p>U 更新 API wx.getSystemInfo 返回 screenWidth、screenHeight SDKVersion 详情</p></li>
+<li><p>U 更新 API wx.showModal 在用户点击取消情况下的返回值 详情</p></li>
+<li><p>U 更新 API wx.showToast 支持 image 参数自定义提示框图片 详情</p></li>
+<li><p>U 更新 API wx.getUserInfo 增加参数 withCredentials 详情</p></li>
+<li><p>F 修复 API wx.showNavigationBarLoading 在 iOS 下首次调用可能失败的问题</p></li>
+<li><p>F 修复 API 成功调用 wx.requestPayment 并完成支付后用户未点击本次支付的完成按钮时，模板消息无法下放的问题</p></li>
+<li><p>F 修复 API wx.onBackgroundAudioStop 在锁屏情况下偶现无法触发回调的问题</p></li>
+<li><p>F 修复 API wx.playBackgroundAudio 在 Android 环境中，某些情况无法继续播放已暂停音乐的问题</p></li>
+<li><p>F 修复 API wx.previewImage 在 Android 下返回的时候会触发 page.onShow 的问题</p></li>
+<li><p>F 修复 API wx.chooseImage 在选择图片的时候若对图片编辑会导致返回结果中没有图片地址的问题</p></li>
+<li><p>F 修复 API wx.onBackgroundAudioStop 在调用 wx.seekBackgroundAudio 时会意外触发的问题</p></li>
+<li><p>F 修复 API wx.getBackgroundAudioPlayerState 回调结果不统一的问题</p></li>
+<li><p>A 新增 框架能力 可通过 App.onLaunch、App.onShow 获取进入小程序的场景值 详情</p></li>
+<li><p>U 优化 框架能力 支持获取用户转发状态 详情</p></li>
+<li><p>U 更新 组件 &lt;swiper&gt; 属性 indicator-color、 indicator-active-color 支持修改面板指示点颜色 详情</p></li>
+<li><p>U 更新 组件 &lt;input&gt; 属性 confirm-type、confirm-hold 详情</p></li>
+<li><p>U 更新 组件 &lt;video&gt; 属性 duration 详情</p></li>
+<li><p>U 更新 组件 &lt;text&gt; 的 selectable 属性支持长按选择 详情</p></li>
+<li><p>U 更新 组件 &lt;navigator&gt; 的属性 open-type 的可选值 reLaunch、navigateBack 详情</p></li>
+<li><p>U 更新 组件 &lt;picker-view&gt; 的 indicator-class 属性</p></li>
+<li><p>U 优化 组件 &lt;map&gt; 的 iconPath marker、controls 支持临时文件</p></li>
+<li><p>U 优化 组件 &lt;video&gt; 的 src 属性错误时候，频繁触发 timeupdate 事件的问题</p></li>
+<li><p>U 优化 组件 &lt;image&gt; 支持 .svg 文件</p></li>
+<li><p>U 优化 组件 &lt;video&gt; 控制条的体验问题</p></li>
+<li><p>U 优化 组件 picker-view 的使用体验，支持快速滚动到所点击项</p></li>
+<li><p>U 优化 组件 &lt;swiper&gt; 在用户右滑返回时候的体验问题</p></li>
+<li><p>U 优化 组件 &lt;slider&gt; 和 &lt;process/&gt; 统一颜色设置的属性名 详情</p></li>
+<li><p>F 修复 组件 &lt;form&gt; 在拉起键盘时候，可能无法触发提交的问题</p></li>
+<li><p>F 修复 组件 &lt;slider&gt; 无法通过数据绑定来设置默认值的问题</p></li>
+<li><p>F 修复 组件 &lt;video&gt; 动态设置 danmuList 不生效的问题</p></li>
+<li><p>F 修复 组件 &lt;textarea&gt; 不支持样式 min-height、max-height 的问题</p></li>
+<li><p>F 修复 组件 &lt;picker-view&gt; 外层有hidden变化时显示空白的问题</p></li>
+<li><p>F 修复 组件 &lt;video&gt; 封面图片在 iOS 下会未自适应的问题</p></li>
+<li><p>F 修复 组件 &lt;video&gt; 在偶现播放视屏时候出现加载图标的问题</p></li>
+<li><p>F 修复 组件 &lt;swiper&gt; 在某些情况下图片无法显示的问题</p></li>
+<li><p>F 修复 组件 &lt;picker&gt; iOS 日期选择器，第二次选择只更新年份的情况下，对应月份没有更新的问题</p></li>
+<li><p>F 修复 组件属性 hover-class 由 none 变为其他值时点击态无效的问题</p></li>
+<li><p>F 修复 组件 &lt;textarea&gt; disabled 属性在默认隐藏再显示情况下不生效的问题</p></li>
+<li><p>F 修复 组件 &lt;swiper&gt; 内嵌 &lt;swiper&gt; 时内部 &lt;swiper&gt; 无法正常使用的问题</p></li>
+<li><p>F 修复 Android客户端 某些情况下调用 wx.request 返回 fail:interrupted 的问题</p></li>
+<li><p>F 修复 iOS客户端 打开个人热点并有连接时，tabBar 显示异常的问题</p></li>
+</ul>
+</div>
+<div class="section" id="v1-0-1-2017-03-03">
+<h2>v1.0.1 (2017.03.03)<a class="headerlink" href="#v1-0-1-2017-03-03" title="永久链接至标题">¶</a></h2>
+</div>
+<div class="section" id="v1-0-0-2017-02-06">
+<h2>v1.0.0 (2017.02.06)<a class="headerlink" href="#v1-0-0-2017-02-06" title="永久链接至标题">¶</a></h2>
+<ul class="simple">
+<li><p>A 新增 API wx.getNetworkType 在无网络返回状态 详情</p></li>
+<li><p>F 修复 API wx.request wx.uploadFile wx.downloadFile 在 Android 下 statusCode 不是 Number 类型的问题</p></li>
+<li><p>F 修复 API wx.scanCode 在 iOS 下取消扫码没有回调的问题</p></li>
+<li><p>F 修复 API wx.switchTab 在某些情况下未调用 onShow 的问题</p></li>
+<li><p>F 修复 API wx.reqeust data 中有特殊字符时无法发起请求的问题</p></li>
+<li><p>F 修复 API wx.getNetworkType 在 iOS 下返回参数错误的问题</p></li>
+<li><p>F 修复 API wx.downloadFile 在 iOS 下没有处理 header 参数的问题</p></li>
+<li><p>F 修复 API wx.playBackgroundAudio 在音乐暂停后不会正确播放其他音乐的问题</p></li>
+<li><p>F 修复 API wx.playBackgroundAudio 在 Android 下播放结束后会触发两次 onBackgroundAudioStop 的问题</p></li>
+<li><p>F 修复 API &lt;video&gt; 在 Android 下 seek 后播放失败的问题</p></li>
+<li><p>F 修复 API 需要授权弹框时，弹框重叠的问题</p></li>
+<li><p>F 修复 组件 &lt;video&gt; 在 iOS 全屏播放后无法使用控制栏的问题</p></li>
+<li><p>F 修复 组件 &lt;video&gt; 在 Android 下 seek 后播放失败的问题</p></li>
+<li><p>U 优化 App.onError 不捕获 API 的 fail 回调</p></li>
+<li><p>F 修复 wx:for 在遇到 wx:key 相同的场景时，出现渲染异常的问题</p></li>
+<li><p>F 修复 wx:for 在设置了 wx:key 并且数据发生添加、删除或者位置改变的时候出现 wx:index 错乱的问题</p></li>
+<li><p>F 修复 组件 &lt;picker-view-column&gt; 中内容动态变化后高度不正确的问题</p></li>
+<li><p>历史版本</p></li>
+</ul>
+<hr class="docutils" />
+</div>
 </div>
 
 
-           </div>
-           
           </div>
-          <footer>
-  
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="v2.html" class="btn btn-neutral float-right" title="基础库更新日志 (v2.x版本)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="v0.html" class="btn btn-neutral float-left" title="基础库更新日志 (v0.x版本)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
-    </div>
-  
-
-  <hr/>
-
-  <div role="contentinfo">
-    <p>
-        &copy; Copyright 2019, Nosy
-
-    </p>
-  </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
-
-</footer>
-
         </div>
       </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>导航</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="总目录"
+             >索引</a></li>
+        <li class="right" >
+          <a href="../../http-routingtable.html" title="微信小程序API"
+             >wxapi</a> |</li>
+        <li class="right" >
+          <a href="v0.html" title="基础库更新日志 (v0.x版本)"
+             >下一页</a> |</li>
+        <li class="right" >
+          <a href="v2.html" title="基础库更新日志 (v2.x版本)"
+             >上一页</a> |</li>
+<li><a href="../../index.html">主页</a>&#160;|</li>
+<li><a href="../../contents.html">文档</a> &#187;</li>
 
-    </section>
-
-  </div>
-  
-
-
-  <script type="text/javascript">
-      jQuery(function () {
-          SphinxRtdTheme.Navigation.enable(true);
-      });
-  </script>
-
-  
-  
-    
-   
-
-</body>
+          <li class="nav-item nav-item-1"><a href="../index.html" >框架</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="index.html" >版本更新</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; 版权所有 2019, Wxadev Docs.
+      由 <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.0+/40994a8 创建。
+    </div>
+  </body>
 </html>

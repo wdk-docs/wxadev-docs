@@ -1,194 +1,164 @@
 
-
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-CN" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-CN" > <!--<![endif]-->
-<head>
-  <meta charset="utf-8">
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <title>bindtap 事件 &mdash; wxadev 1.0.0 文档</title>
-  
 
-  
-  
-  
-  
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
+  <head>
+    <meta charset="utf-8" />
+    <title>bindtap 事件 &#8212; wxadev 1.0.0 文档</title>
+    <link rel="stylesheet" href="../../../_static/sphinx13.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../_static/language_data.js"></script>
+    <script type="text/javascript" src="../../../_static/translations.js"></script>
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="在 wxadev 1.0.0 文档 中搜索"
+          href="../../../_static/opensearch.xml"/>
 
-  
-  <script type="text/javascript" src="../../../_static/js/modernizr.min.js"></script>
-  
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../../../_static/jquery.js"></script>
-        <script type="text/javascript" src="../../../_static/underscore.js"></script>
-        <script type="text/javascript" src="../../../_static/doctools.js"></script>
-        <script type="text/javascript" src="../../../_static/language_data.js"></script>
-        <script type="text/javascript" src="../../../_static/translations.js"></script>
-    
-    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
-
-    
-
-  
-  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
     <link rel="index" title="索引" href="../../../genindex.html" />
     <link rel="search" title="搜索" href="../../../search.html" />
     <link rel="next" title="WXSS" href="../wxss.html" />
-    <link rel="prev" title="import 引用" href="import.html" /> 
-</head>
+    <link rel="prev" title="import 引用" href="import.html" />
+<link rel="canonical" href="http://www.sphinx-doc.org/en/master/framework/view/wxml/event.html" />
 
-<body class="wy-body-for-nav">
-
-   
-  <div class="wy-grid-for-nav">
-    
-    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
-      <div class="wy-side-scroll">
-        <div class="wy-side-nav-search" >
-          
-
-          
-            <a href="../../../contents.html" class="icon icon-home"> wxadev
-          
-
-          
-          </a>
-
-          
-            
-            
-          
-
-          
-<div role="search">
-  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
-    <input type="hidden" name="check_keywords" value="yes" />
-    <input type="hidden" name="area" value="default" />
-  </form>
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet" type="text/css" />
+ 
+<style type="text/css">
+  table.right { float: right; margin-left: 20px; }
+  table.right td { border: 1px solid #ccc; }
+  
+</style>
+<script type="text/javascript">
+  // intelligent scrolling of the sidebar content
+  $(window).scroll(function() {
+    var sb = $('.sphinxsidebarwrapper');
+    var win = $(window);
+    var sbh = sb.height();
+    var offset = $('.sphinxsidebar').position()['top'];
+    var wintop = win.scrollTop();
+    var winbot = wintop + win.innerHeight();
+    var curtop = sb.position()['top'];
+    var curbot = curtop + sbh;
+    // does sidebar fit in window?
+    if (sbh < win.innerHeight()) {
+      // yes: easy case -- always keep at the top
+      sb.css('top', $u.min([$u.max([0, wintop - offset - 10]), $(document).height() - sbh - 200]));
+    } else {
+      // no: only scroll if top/bottom edge of sidebar is at
+      // top/bottom edge of window
+      if (curtop > wintop && curbot > winbot) {
+        sb.css('top', $u.max([wintop - offset - 10, 0]));
+      } else if (curtop < wintop && curbot < winbot) {
+        sb.css('top', $u.min([winbot - sbh - offset - 20, $(document).height() - sbh - 200]));
+      }
+    }
+  });
+</script> 
+  </head><body>
+<div class="pageheader">
+  <ul>
+    <li><a href="../../../index.html">主页</a></li>
+    <li><a href="../../index.html">框架</a></li>
+    <li><a href="../../../component/index.html">组件</a></li>
+    <li><a href="../../../api/index.html">API</a></li>
+    <li><a href="../../../api-backend/index.html">服务端</a></li>
+    <li><a href="../../../contents.html">目录</a></li>
+  </ul>
+  <div>
+    <a href="../../../index.html">
+      <img src="../../../_static/wxaheader.png" alt="wxa" />
+    </a>
+  </div>
 </div>
 
-          
-        </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>导航</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="总目录"
+             accesskey="I">索引</a></li>
+        <li class="right" >
+          <a href="../../../http-routingtable.html" title="微信小程序API"
+             >wxapi</a> |</li>
+        <li class="right" >
+          <a href="../wxss.html" title="WXSS"
+             accesskey="N">下一页</a> |</li>
+        <li class="right" >
+          <a href="import.html" title="import 引用"
+             accesskey="P">上一页</a> |</li>
+<li><a href="../../../index.html">主页</a>&#160;|</li>
+<li><a href="../../../contents.html">文档</a> &#187;</li>
 
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-              
-            
-            
-              <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../../../index.html">开发指南</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../dev.html">简介</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../basic/index.html">基础教程</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../guide/index.html">运行环境</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../index.html">框架</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../component/index.html">组件</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../api/index.html">API</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../api-backend/index.html">服务端API</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../devtools/index.html">开发工具</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="../../../reference/index.html">参考资料</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="../../../reference/configuration/index.html">小程序配置</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../reference/scene.html">场景值列表</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../reference/api/index.html">框架接口说明</a></li>
-<li class="toctree-l2 current"><a class="reference internal" href="../../../reference/wxml/index.html">WXML</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="data.html">数据绑定</a></li>
-<li class="toctree-l3"><a class="reference internal" href="list.html">wx:for 列表渲染</a></li>
-<li class="toctree-l3"><a class="reference internal" href="conditional.html">wx:if 条件渲染</a></li>
-<li class="toctree-l3"><a class="reference internal" href="template.html">template 模板</a></li>
-<li class="toctree-l3"><a class="reference internal" href="import.html">import 引用</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">bindtap 事件</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#id1">什么是事件</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id2">事件的使用方式</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#wxs">使用WXS函数响应事件</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id3">事件详解</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id5">事件绑定和冒泡</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id6">事件的捕获阶段</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id7">事件对象</a></li>
+          <li class="nav-item nav-item-1"><a href="../../index.html" >框架</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../index.html" >视图层 View</a> &#187;</li>
+          <li class="nav-item nav-item-3"><a href="index.html" accesskey="U">WXML</a> &#187;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../../../contents.html">目录</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">bindtap 事件</a><ul>
+<li><a class="reference internal" href="#id1">什么是事件</a></li>
+<li><a class="reference internal" href="#id2">事件的使用方式</a></li>
+<li><a class="reference internal" href="#wxs">使用WXS函数响应事件</a></li>
+<li><a class="reference internal" href="#id3">事件详解</a><ul>
+<li><a class="reference internal" href="#id4">事件分类</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id5">事件绑定和冒泡</a></li>
+<li><a class="reference internal" href="#id6">事件的捕获阶段</a></li>
+<li><a class="reference internal" href="#id7">事件对象</a><ul>
+<li><a class="reference internal" href="#type">type</a></li>
+<li><a class="reference internal" href="#timestamp">timeStamp</a></li>
+<li><a class="reference internal" href="#target">target</a></li>
+<li><a class="reference internal" href="#currenttarget">currentTarget</a></li>
+<li><a class="reference internal" href="#dataset">dataset</a></li>
+<li><a class="reference internal" href="#touches">touches</a></li>
+<li><a class="reference internal" href="#touch">Touch 对象</a></li>
+<li><a class="reference internal" href="#canvastouch">CanvasTouch 对象</a><ul>
+<li><a class="reference internal" href="#changedtouches">changedTouches</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#detail">detail</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../../reference/wxs/index.html">WXS 语法参考</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../../../wxcloud/index.html">云开发</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../wxwork/index.html">企业微信</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../todolist.html">待办事项</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../glossary.html">术语</a></li>
 </ul>
 
-            
-          
+  <h4>上一个主题</h4>
+  <p class="topless"><a href="import.html"
+                        title="上一章">import 引用</a></p>
+  <h4>下一个主题</h4>
+  <p class="topless"><a href="../wxss.html"
+                        title="下一章">WXSS</a></p>
+  <div role="note" aria-label="source link">
+    <h3>本页</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../../_sources/framework/view/wxml/event.rst.txt"
+            rel="nofollow">显示源代码</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">快速搜索</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="转向" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
         </div>
       </div>
-    </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
-          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../../../contents.html">wxadev</a>
-        
-      </nav>
-
-
-      <div class="wy-nav-content">
-        
-        <div class="rst-content">
-        
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-
-  <ul class="wy-breadcrumbs">
-    
-      <li><a href="../../../contents.html">Docs</a> &raquo;</li>
-        
-          <li><a href="../../index.html">框架</a> &raquo;</li>
-        
-          <li><a href="../index.html">视图层 View</a> &raquo;</li>
-        
-          <li><a href="index.html">WXML</a> &raquo;</li>
-        
-      <li>bindtap 事件</li>
-    
-    
-      <li class="wy-breadcrumbs-aside">
-        
-            
-            <a href="../../../_sources/framework/view/wxml/event.rst.txt" rel="nofollow"> View page source</a>
-          
-        
-      </li>
-    
-  </ul>
-
-  
-  <hr/>
-</div>
-          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
-           <div itemprop="articleBody">
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
             
   <div class="section" id="bindtap">
 <span id="wxml-event"></span><h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/framework/view/wxml/event.html">bindtap 事件</a><a class="headerlink" href="#bindtap" title="永久链接至标题">¶</a></h1>
@@ -296,7 +266,7 @@
 <li><p>非冒泡事件：当一个组件上的事件被触发后，该事件不会向父节点传递。</p></li>
 </ul>
 <p>WXML的冒泡事件列表：</p>
-<table class="docutils align-center">
+<table class="docutils align-default">
 <colgroup>
 <col style="width: 17%" />
 <col style="width: 75%" />
@@ -434,7 +404,7 @@ bind事件绑定不会阻止冒泡事件向上冒泡，catch事件绑定可以�
 <h2>事件对象<a class="headerlink" href="#id7" title="永久链接至标题">¶</a></h2>
 <p>如无特殊说明，当组件触发事件时，逻辑层绑定该事件的处理函数会收到一个事件对象。</p>
 <p>BaseEvent 基础事件对象属性列表：</p>
-<table class="docutils align-center">
+<table class="docutils align-default">
 <colgroup>
 <col style="width: 27%" />
 <col style="width: 16%" />
@@ -466,7 +436,7 @@ bind事件绑定不会阻止冒泡事件向上冒泡，catch事件绑定可以�
 </tbody>
 </table>
 <p>CustomEvent 自定义事件对象属性列表（继承 BaseEvent）：</p>
-<table class="docutils align-center">
+<table class="docutils align-default">
 <colgroup>
 <col style="width: 29%" />
 <col style="width: 29%" />
@@ -486,7 +456,7 @@ bind事件绑定不会阻止冒泡事件向上冒泡，catch事件绑定可以�
 </tbody>
 </table>
 <p>TouchEvent 触摸事件对象属性列表（继承 BaseEvent）：</p>
-<table class="docutils align-center">
+<table class="docutils align-default">
 <colgroup>
 <col style="width: 23%" />
 <col style="width: 10%" />
@@ -521,7 +491,7 @@ bind事件绑定不会阻止冒泡事件向上冒泡，catch事件绑定可以�
 <div class="section" id="target">
 <h3>target<a class="headerlink" href="#target" title="永久链接至标题">¶</a></h3>
 <p>触发事件的源组件。</p>
-<table class="docutils align-center">
+<table class="docutils align-default">
 <colgroup>
 <col style="width: 14%" />
 <col style="width: 13%" />
@@ -552,7 +522,7 @@ bind事件绑定不会阻止冒泡事件向上冒泡，catch事件绑定可以�
 <div class="section" id="currenttarget">
 <h3>currentTarget<a class="headerlink" href="#currenttarget" title="永久链接至标题">¶</a></h3>
 <p>事件绑定的当前组件。</p>
-<table class="docutils align-center">
+<table class="docutils align-default">
 <colgroup>
 <col style="width: 15%" />
 <col style="width: 13%" />
@@ -608,7 +578,7 @@ handleTap3 收到的事件对象 target 和 currentTarget 都是 inner，</p>
 </div>
 <div class="section" id="touch">
 <h3>Touch 对象<a class="headerlink" href="#touch" title="永久链接至标题">¶</a></h3>
-<table class="docutils align-center">
+<table class="docutils align-default">
 <colgroup>
 <col style="width: 19%" />
 <col style="width: 8%" />
@@ -638,7 +608,7 @@ handleTap3 收到的事件对象 target 和 currentTarget 都是 inner，</p>
 </div>
 <div class="section" id="canvastouch">
 <h3>CanvasTouch 对象<a class="headerlink" href="#canvastouch" title="永久链接至标题">¶</a></h3>
-<table class="docutils align-center">
+<table class="docutils align-default">
 <colgroup>
 <col style="width: 13%" />
 <col style="width: 9%" />
@@ -676,52 +646,37 @@ handleTap3 收到的事件对象 target 和 currentTarget 都是 inner，</p>
 </div>
 
 
-           </div>
-           
           </div>
-          <footer>
-  
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="../wxss.html" class="btn btn-neutral float-right" title="WXSS" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="import.html" class="btn btn-neutral float-left" title="import 引用" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
-    </div>
-  
-
-  <hr/>
-
-  <div role="contentinfo">
-    <p>
-        &copy; Copyright 2019, Nosy
-
-    </p>
-  </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
-
-</footer>
-
         </div>
       </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>导航</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="总目录"
+             >索引</a></li>
+        <li class="right" >
+          <a href="../../../http-routingtable.html" title="微信小程序API"
+             >wxapi</a> |</li>
+        <li class="right" >
+          <a href="../wxss.html" title="WXSS"
+             >下一页</a> |</li>
+        <li class="right" >
+          <a href="import.html" title="import 引用"
+             >上一页</a> |</li>
+<li><a href="../../../index.html">主页</a>&#160;|</li>
+<li><a href="../../../contents.html">文档</a> &#187;</li>
 
-    </section>
-
-  </div>
-  
-
-
-  <script type="text/javascript">
-      jQuery(function () {
-          SphinxRtdTheme.Navigation.enable(true);
-      });
-  </script>
-
-  
-  
-    
-   
-
-</body>
+          <li class="nav-item nav-item-1"><a href="../../index.html" >框架</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../index.html" >视图层 View</a> &#187;</li>
+          <li class="nav-item nav-item-3"><a href="index.html" >WXML</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; 版权所有 2019, Wxadev Docs.
+      由 <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.0+/40994a8 创建。
+    </div>
+  </body>
 </html>

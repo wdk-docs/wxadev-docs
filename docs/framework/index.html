@@ -1,187 +1,130 @@
 
-
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-CN" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-CN" > <!--<![endif]-->
-<head>
-  <meta charset="utf-8">
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <title>框架 &mdash; wxadev 1.0.0 文档</title>
-  
 
-  
-  
-  
-  
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
+  <head>
+    <meta charset="utf-8" />
+    <title>框架 &#8212; wxadev 1.0.0 文档</title>
+    <link rel="stylesheet" href="../_static/sphinx13.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <script type="text/javascript" src="../_static/translations.js"></script>
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="在 wxadev 1.0.0 文档 中搜索"
+          href="../_static/opensearch.xml"/>
 
-  
-  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
-  
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../_static/jquery.js"></script>
-        <script type="text/javascript" src="../_static/underscore.js"></script>
-        <script type="text/javascript" src="../_static/doctools.js"></script>
-        <script type="text/javascript" src="../_static/language_data.js"></script>
-        <script type="text/javascript" src="../_static/translations.js"></script>
-    
-    <script type="text/javascript" src="../_static/js/theme.js"></script>
-
-    
-
-  
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜索" href="../search.html" />
     <link rel="next" title="框架" href="MINA.html" />
-    <link rel="prev" title="小程序更新机制" href="../guide/runtime/update-mechanism.html" /> 
-</head>
+    <link rel="prev" title="小程序更新机制" href="../guide/runtime/update-mechanism.html" />
+<link rel="canonical" href="http://www.sphinx-doc.org/en/master/framework/index.html" />
 
-<body class="wy-body-for-nav">
-
-   
-  <div class="wy-grid-for-nav">
-    
-    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
-      <div class="wy-side-scroll">
-        <div class="wy-side-nav-search" >
-          
-
-          
-            <a href="../contents.html" class="icon icon-home"> wxadev
-          
-
-          
-          </a>
-
-          
-            
-            
-          
-
-          
-<div role="search">
-  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
-    <input type="hidden" name="check_keywords" value="yes" />
-    <input type="hidden" name="area" value="default" />
-  </form>
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet" type="text/css" />
+ 
+<style type="text/css">
+  table.right { float: right; margin-left: 20px; }
+  table.right td { border: 1px solid #ccc; }
+  
+</style>
+<script type="text/javascript">
+  // intelligent scrolling of the sidebar content
+  $(window).scroll(function() {
+    var sb = $('.sphinxsidebarwrapper');
+    var win = $(window);
+    var sbh = sb.height();
+    var offset = $('.sphinxsidebar').position()['top'];
+    var wintop = win.scrollTop();
+    var winbot = wintop + win.innerHeight();
+    var curtop = sb.position()['top'];
+    var curbot = curtop + sbh;
+    // does sidebar fit in window?
+    if (sbh < win.innerHeight()) {
+      // yes: easy case -- always keep at the top
+      sb.css('top', $u.min([$u.max([0, wintop - offset - 10]), $(document).height() - sbh - 200]));
+    } else {
+      // no: only scroll if top/bottom edge of sidebar is at
+      // top/bottom edge of window
+      if (curtop > wintop && curbot > winbot) {
+        sb.css('top', $u.max([wintop - offset - 10, 0]));
+      } else if (curtop < wintop && curbot < winbot) {
+        sb.css('top', $u.min([winbot - sbh - offset - 20, $(document).height() - sbh - 200]));
+      }
+    }
+  });
+</script> 
+  </head><body>
+<div class="pageheader">
+  <ul>
+    <li><a href="../index.html">主页</a></li>
+    <li><a href="#">框架</a></li>
+    <li><a href="../component/index.html">组件</a></li>
+    <li><a href="../api/index.html">API</a></li>
+    <li><a href="../api-backend/index.html">服务端</a></li>
+    <li><a href="../contents.html">目录</a></li>
+  </ul>
+  <div>
+    <a href="../index.html">
+      <img src="../_static/wxaheader.png" alt="wxa" />
+    </a>
+  </div>
 </div>
 
-          
-        </div>
-
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-              
-            
-            
-              <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../index.html">开发指南</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../dev.html">简介</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../basic/index.html">基础教程</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../guide/index.html">运行环境</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">框架</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="MINA.html">框架</a></li>
-<li class="toctree-l2"><a class="reference internal" href="structure.html">目录结构</a></li>
-<li class="toctree-l2"><a class="reference internal" href="config.html">小程序配置</a></li>
-<li class="toctree-l2"><a class="reference internal" href="sitemap.html">sitemap 配置</a></li>
-<li class="toctree-l2"><a class="reference internal" href="app-service/index.html">逻辑层 App Service</a></li>
-<li class="toctree-l2"><a class="reference internal" href="view/index.html">视图层 View</a></li>
-<li class="toctree-l2"><a class="reference internal" href="details.html">运行环境</a></li>
-<li class="toctree-l2"><a class="reference internal" href="plugin/index.html">插件</a></li>
-<li class="toctree-l2"><a class="reference internal" href="ability/index.html">基础能力</a></li>
-<li class="toctree-l2"><a class="reference internal" href="device/index.html">硬件能力</a></li>
-<li class="toctree-l2"><a class="reference internal" href="open-ability/index.html">开放能力</a></li>
-<li class="toctree-l2"><a class="reference internal" href="usability.html">调试</a></li>
-<li class="toctree-l2"><a class="reference internal" href="usability/index.html">可用性</a></li>
-<li class="toctree-l2"><a class="reference internal" href="performance/index.html">性能</a></li>
-<li class="toctree-l2"><a class="reference internal" href="client-lib/index.html">基础库</a></li>
-<li class="toctree-l2"><a class="reference internal" href="compatibility.html">兼容处理</a></li>
-<li class="toctree-l2"><a class="reference internal" href="workers.html">多线程 Worker</a></li>
-<li class="toctree-l2"><a class="reference internal" href="server-ability/index.html">后端能力</a></li>
-<li class="toctree-l2"><a class="reference internal" href="release/index.html">版本更新</a></li>
-<li class="toctree-l2"><a class="reference internal" href="operating-mechanism.html">运行机制</a></li>
-<li class="toctree-l2"><a class="reference internal" href="custom-component/index.html">自定义组件</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../component/index.html">组件</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../api/index.html">API</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../api-backend/index.html">服务端API</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../devtools/index.html">开发工具</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../reference/index.html">参考资料</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../wxcloud/index.html">云开发</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../wxwork/index.html">企业微信</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../todolist.html">待办事项</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../glossary.html">术语</a></li>
-</ul>
-
-            
-          
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>导航</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="总目录"
+             accesskey="I">索引</a></li>
+        <li class="right" >
+          <a href="../http-routingtable.html" title="微信小程序API"
+             >wxapi</a> |</li>
+        <li class="right" >
+          <a href="MINA.html" title="框架"
+             accesskey="N">下一页</a> |</li>
+        <li class="right" >
+          <a href="../guide/runtime/update-mechanism.html" title="小程序更新机制"
+             accesskey="P">上一页</a> |</li>
+<li><a href="../index.html">主页</a>&#160;|</li>
+<li><a href="../contents.html">文档</a> &#187;</li>
+ 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h4>上一个主题</h4>
+  <p class="topless"><a href="../guide/runtime/update-mechanism.html"
+                        title="上一章">小程序更新机制</a></p>
+  <h4>下一个主题</h4>
+  <p class="topless"><a href="MINA.html"
+                        title="下一章">框架</a></p>
+  <div role="note" aria-label="source link">
+    <h3>本页</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/framework/index.rst.txt"
+            rel="nofollow">显示源代码</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">快速搜索</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="转向" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
         </div>
       </div>
-    </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
-          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../contents.html">wxadev</a>
-        
-      </nav>
-
-
-      <div class="wy-nav-content">
-        
-        <div class="rst-content">
-        
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-
-  <ul class="wy-breadcrumbs">
-    
-      <li><a href="../contents.html">Docs</a> &raquo;</li>
-        
-      <li>框架</li>
-    
-    
-      <li class="wy-breadcrumbs-aside">
-        
-            
-            <a href="../_sources/framework/index.rst.txt" rel="nofollow"> View page source</a>
-          
-        
-      </li>
-    
-  </ul>
-
-  
-  <hr/>
-</div>
-          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
-           <div itemprop="articleBody">
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
             
   <div class="section" id="id1">
 <h1>框架<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
@@ -316,7 +259,13 @@
 <li class="toctree-l3"><a class="reference internal" href="plugin/functional-pages/choose-address.html">收货地址功能页</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="plugin/functional-pages.html">plugin/functional-pages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plugin/functional-pages.html">插件功能页</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="plugin/functional-pages.html#id2">激活功能页特性</a></li>
+<li class="toctree-l3"><a class="reference internal" href="plugin/functional-pages.html#id3">跳转到功能页</a></li>
+<li class="toctree-l3"><a class="reference internal" href="plugin/functional-pages.html#id4">真机开发测试的常规步骤</a></li>
+<li class="toctree-l3"><a class="reference internal" href="plugin/functional-pages.html#faq">功能页常见问题 FAQ</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="ability/index.html">基础能力</a><ul>
@@ -392,12 +341,26 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="open-ability/signature.html">开放数据校验与解密</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="open-ability/signature.html#id2">数据签名校验</a></li>
-<li class="toctree-l3"><a class="reference internal" href="open-ability/signature.html#id3">加密数据解密算法</a></li>
-<li class="toctree-l3"><a class="reference internal" href="open-ability/signature.html#session-key">会话密钥 session_key 有效性</a></li>
+<li class="toctree-l3"><a class="reference internal" href="open-ability/signature.html#id2">服务端获取开放数据</a></li>
+<li class="toctree-l3"><a class="reference internal" href="open-ability/signature.html#id3">方式一：开发者后台校验与解密开放数据</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="open-ability/signature.html#id4">数据签名校验</a></li>
+<li class="toctree-l4"><a class="reference internal" href="open-ability/signature.html#id5">加密数据解密算法</a></li>
+<li class="toctree-l4"><a class="reference internal" href="open-ability/signature.html#session-key">会话密钥 session_key 有效性</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="open-ability/getPhoneNumber.html">获取手机号</a></li>
+<li class="toctree-l3"><a class="reference internal" href="open-ability/signature.html#id6">方式二：云调用直接获取开放数据</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="open-ability/signature.html#cloudid">1. 获取 cloudID</a></li>
+<li class="toctree-l4"><a class="reference internal" href="open-ability/signature.html#id7">2. 调用云函数</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="open-ability/getPhoneNumber.html">获取手机号</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="open-ability/getPhoneNumber.html#id2">使用方法</a></li>
+<li class="toctree-l3"><a class="reference internal" href="open-ability/getPhoneNumber.html#id3">代码示例</a></li>
+<li class="toctree-l3"><a class="reference internal" href="open-ability/getPhoneNumber.html#id4">返回参数说明</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="open-ability/bio-auth.html">生物认证</a></li>
 <li class="toctree-l2"><a class="reference internal" href="open-ability/share.html">转发</a></li>
 <li class="toctree-l2"><a class="reference internal" href="open-ability/updatable-message.html">动态消息</a></li>
@@ -444,9 +407,20 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="open-ability/data-analysis.html">数据分析接口</a></li>
-<li class="toctree-l2"><a class="reference internal" href="open-ability/card/index.html">card</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="open-ability/card/card.html">卡券</a></li>
-<li class="toctree-l3"><a class="reference internal" href="open-ability/card/membership-card.html">会员卡组件</a></li>
+<li class="toctree-l2"><a class="reference internal" href="open-ability/card/index.html">卡券</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="open-ability/card/card.html">卡券</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="open-ability/card/card.html#id2">说明</a></li>
+<li class="toctree-l4"><a class="reference internal" href="open-ability/card/card.html#id4">使用条件</a></li>
+<li class="toctree-l4"><a class="reference internal" href="open-ability/card/card.html#id6">接口</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="open-ability/card/membership-card.html">会员卡组件</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="open-ability/card/membership-card.html#id3">参数说明</a></li>
+<li class="toctree-l4"><a class="reference internal" href="open-ability/card/membership-card.html#id4">返回参数</a></li>
+<li class="toctree-l4"><a class="reference internal" href="open-ability/card/membership-card.html#id5">示例代码</a></li>
+<li class="toctree-l4"><a class="reference internal" href="open-ability/card/membership-card.html#id6">返回说明</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -496,15 +470,6 @@
 <li class="toctree-l2"><a class="reference internal" href="server-ability/message-push.html">消息推送</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="release/index.html">版本更新</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="release/v0.html">基础库更新日志 (v0.x版本)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="release/v1.html">基础库更新日志 (v1.x版本)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="release/v2.html">基础库更新日志 (v2.x版本)</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="release/v2.html#id1">最新版本</a></li>
-</ul>
-</li>
-</ul>
-</li>
 <li class="toctree-l1"><a class="reference internal" href="operating-mechanism.html">运行机制</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="operating-mechanism.html#id2">小程序启动</a></li>
 <li class="toctree-l2"><a class="reference internal" href="operating-mechanism.html#id3">前台/后台状态</a></li>
@@ -513,19 +478,204 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="custom-component/index.html">自定义组件</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="custom-component/create.html">自定义组件</a></li>
-<li class="toctree-l2"><a class="reference internal" href="custom-component/behaviors.html">custom-component/behaviors</a></li>
-<li class="toctree-l2"><a class="reference internal" href="custom-component/component.html">Component构造器</a></li>
-<li class="toctree-l2"><a class="reference internal" href="custom-component/custom-component.html">custom-component/custom-component</a></li>
-<li class="toctree-l2"><a class="reference internal" href="custom-component/events.html">组件间通信与事件</a></li>
-<li class="toctree-l2"><a class="reference internal" href="custom-component/extend.html">custom-component/extend</a></li>
-<li class="toctree-l2"><a class="reference internal" href="custom-component/generics.html">custom-component/generics</a></li>
-<li class="toctree-l2"><a class="reference internal" href="custom-component/lifetimes.html">custom-component/lifetimes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="custom-component/observer.html">custom-component/observer</a></li>
-<li class="toctree-l2"><a class="reference internal" href="custom-component/relations.html">custom-component/relations</a></li>
-<li class="toctree-l2"><a class="reference internal" href="custom-component/trdparty.html">custom-component/trdparty</a></li>
-<li class="toctree-l2"><a class="reference internal" href="custom-component/unit-test.html">custom-component/unit-test</a></li>
-<li class="toctree-l2"><a class="reference internal" href="custom-component/wxml-wxss.html">组件模板和样式</a></li>
+<li class="toctree-l2"><a class="reference internal" href="custom-component/create.html">自定义组件</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="custom-component/create.html#id2">创建自定义组件</a></li>
+<li class="toctree-l3"><a class="reference internal" href="custom-component/create.html#id3">使用自定义组件</a></li>
+<li class="toctree-l3"><a class="reference internal" href="custom-component/create.html#id4">细节注意事项</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="custom-component/wxml-wxss.html">组件模板和样式</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="custom-component/wxml-wxss.html#id2">组件模板</a></li>
+<li class="toctree-l3"><a class="reference internal" href="custom-component/wxml-wxss.html#id3">模板数据绑定</a></li>
+<li class="toctree-l3"><a class="reference internal" href="custom-component/wxml-wxss.html#wxmlslot">组件wxml的slot</a></li>
+<li class="toctree-l3"><a class="reference internal" href="custom-component/wxml-wxss.html#id6">组件样式</a></li>
+<li class="toctree-l3"><a class="reference internal" href="custom-component/wxml-wxss.html#id11">组件样式隔离</a></li>
+<li class="toctree-l3"><a class="reference internal" href="custom-component/wxml-wxss.html#id16">外部样式类</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="custom-component/component.html">Component构造器</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="custom-component/component.html#id1">使用 Component 构造器构造页面</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="custom-component/events.html">组件间通信与事件</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="custom-component/events.html#id2">组件间通信</a></li>
+<li class="toctree-l3"><a class="reference internal" href="custom-component/events.html#id3">监听事件</a></li>
+<li class="toctree-l3"><a class="reference internal" href="custom-component/events.html#id4">触发事件</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="custom-component/lifetimes.html">组件生命周期</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="custom-component/lifetimes.html#id2">定义生命周期方法</a></li>
+<li class="toctree-l3"><a class="reference internal" href="custom-component/lifetimes.html#id3">组件所在页面的生命周期</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="custom-component/behaviors.html">behaviors</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="custom-component/behaviors.html#id1">组件中使用</a></li>
+<li class="toctree-l3"><a class="reference internal" href="custom-component/behaviors.html#id2">字段的覆盖和组合规则</a></li>
+<li class="toctree-l3"><a class="reference internal" href="custom-component/behaviors.html#id3">内置 behaviors</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="custom-component/relations.html">组件间关系</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="custom-component/relations.html#id2">定义和使用组件间关系</a></li>
+<li class="toctree-l3"><a class="reference internal" href="custom-component/relations.html#id3">关联一类组件</a></li>
+<li class="toctree-l3"><a class="reference internal" href="custom-component/relations.html#relations">relations 定义段</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="custom-component/observer.html">数据监听器</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="custom-component/observer.html#id2">使用数据监听器</a></li>
+<li class="toctree-l3"><a class="reference internal" href="custom-component/observer.html#id3">监听字段语法</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="custom-component/extend.html">自定义组件扩展</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="custom-component/extend.html#id2">扩展后的效果</a></li>
+<li class="toctree-l3"><a class="reference internal" href="custom-component/extend.html#id3">使用扩展</a></li>
+<li class="toctree-l3"><a class="reference internal" href="custom-component/extend.html#id4">真实案例</a></li>
+<li class="toctree-l3"><a class="reference internal" href="custom-component/extend.html#id5">官方扩展包</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="custom-component/generics.html">抽象节点</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="custom-component/generics.html#id2">在组件中使用抽象节点</a></li>
+<li class="toctree-l3"><a class="reference internal" href="custom-component/generics.html#id3">使用包含抽象节点的组件</a></li>
+<li class="toctree-l3"><a class="reference internal" href="custom-component/generics.html#id4">抽象节点的默认组件</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="custom-component/trdparty.html">开发第三方自定义组件</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="custom-component/trdparty.html#id2">准备</a></li>
+<li class="toctree-l3"><a class="reference internal" href="custom-component/trdparty.html#id3">下载模板</a></li>
+<li class="toctree-l3"><a class="reference internal" href="custom-component/trdparty.html#id4">命令行工具</a></li>
+<li class="toctree-l3"><a class="reference internal" href="custom-component/trdparty.html#id5">测试工具</a></li>
+<li class="toctree-l3"><a class="reference internal" href="custom-component/trdparty.html#id6">自定义组件示例</a></li>
+<li class="toctree-l3"><a class="reference internal" href="custom-component/trdparty.html#id7">自定义组件扩展示例</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="custom-component/unit-test.html">单元测试</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="custom-component/unit-test.html#id2">测试框架</a></li>
+<li class="toctree-l3"><a class="reference internal" href="custom-component/unit-test.html#id3">自定义组件测试工具集</a></li>
+<li class="toctree-l3"><a class="reference internal" href="custom-component/unit-test.html#id4">编写测试用例</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="release/index.html">版本更新</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="release/v.html">基础库更新日志</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="release/v.html#id2">查看开发者工具更新日志</a></li>
+<li class="toctree-l3"><a class="reference internal" href="release/v.html#id3">查看云开发更新日志</a></li>
+<li class="toctree-l3"><a class="reference internal" href="release/v.html#v2-7-0-2019-05-09">v2.7.0 (2019-05-09)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="release/v.html#v2-6-5-2019-04-02">v2.6.5 (2019.04.02)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="release/v.html#v2-6-4-2019-03-22">v2.6.4 (2019.03.22)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="release/v.html#v2-6-2-2019-02-27">v2.6.2 (2019.02.27)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="release/v.html#v2-6-1-2019-02-21">v2.6.1 (2019.02.21)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="release/v.html#v2-6-0-2019-02-01">v2.6.0 (2019.02.01)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="release/v.html#v2-5-2-2019-01-29">v2.5.2 (2019.01.29)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="release/v.html#v2-5-1-2019-01-22">v2.5.1 (2019.01.22)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="release/v.html#v2-5-0-2019-01-11">v2.5.0 (2019.01.11)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="release/v.html#id4">客户端 7.0.0 新增配置</a></li>
+<li class="toctree-l3"><a class="reference internal" href="release/v.html#id5">历史版本</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="release/v2.html">基础库更新日志 (v2.x版本)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="release/v2.html#id1">最新版本</a></li>
+<li class="toctree-l3"><a class="reference internal" href="release/v2.html#v2-4-4-2019-01-05">v2.4.4 (2019.01.05)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="release/v2.html#v2-4-3-2018-12-21">v2.4.3 (2018.12.21)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="release/v2.html#v2-4-2-2018-12-04">v2.4.2 (2018.12.04)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="release/v2.html#v2-4-1-2018-11-21">v2.4.1 (2018.11.21)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="release/v2.html#v2-4-0-2018-11-05">v2.4.0 (2018.11.05)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="release/v2.html#v2-3-2-2018-10-25">v2.3.2 (2018.10.25)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="release/v2.html#v2-3-1-2018-10-22">v2.3.1 (2018.10.22)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="release/v2.html#v2-3-0-2018-09-10">v2.3.0 (2018.09.10)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="release/v2.html#v2-2-5-2018-08-30">v2.2.5 (2018.08.30)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="release/v2.html#v2-2-4-2018-08-24">v2.2.4 (2018.08.24)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="release/v2.html#v2-2-3-2018-08-19">v2.2.3 (2018.08.19)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="release/v2.html#v2-2-2-2018-08-02">v2.2.2 (2018.08.02)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="release/v2.html#v2-2-1-2018-07-23">v2.2.1 (2018.07.23)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="release/v2.html#v2-1-3-2018-07-09">v2.1.3 (2018.07.09)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="release/v2.html#v2-1-2-2018-07-04">v2.1.2 (2018.07.04)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="release/v2.html#v2-1-1-2018-06-21">v2.1.1 (2018.06.21)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="release/v2.html#v2-1-0-2018-06-14">v2.1.0 (2018.06.14)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="release/v2.html#v2-0-9-2018-06-08">v2.0.9 (2018.06.08)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="release/v2.html#v2-0-8-2018-05-18">v2.0.8 (2018.05.18)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="release/v2.html#v2-0-7-2018-05-16">v2.0.7 (2018.05.16)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="release/v2.html#v2-0-6-2018-05-11">v2.0.6 (2018.05.11)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="release/v2.html#v2-0-5-2018-05-08">v2.0.5 (2018.05.08)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="release/v2.html#v2-0-4-2018-04-28">v2.0.4 (2018.04.28)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="release/v2.html#v2-0-3-2018-04-26">v2.0.3 (2018.04.26)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="release/v2.html#v2-0-2-2018-04-20">v2.0.2 (2018.04.20)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="release/v2.html#v2-0-1-2018-04-14">v2.0.1 (2018.04.14)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="release/v2.html#v2-0-0-2018-04-12">v2.0.0 (2018.04.12)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="release/v1.html">基础库更新日志 (v1.x版本)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="release/v1.html#v1-9-98-2018-04-04">v1.9.98 (2018.04.04)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="release/v1.html#v1-9-97-2018-03-30">v1.9.97 (2018.03.30)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="release/v1.html#v1-9-96-2018-03-22">v1.9.96 (2018.03.22)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="release/v1.html#v1-9-95-2018-03-20">v1.9.95 (2018.03.20)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="release/v1.html#v1-9-94-2018-03-15">v1.9.94 (2018.03.15)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="release/v1.html#v1-9-93-2018-03-08">v1.9.93 (2018.03.08)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="release/v1.html#v1-9-92-2018-03-05">v1.9.92 (2018.03.05)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="release/v1.html#v1-9-91-2018-02-09">v1.9.91 (2018.02.09)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="release/v1.html#v1-9-90-2018-02-07">v1.9.90 (2018.02.07)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="release/v1.html#v1-9-9-2018-02-05">v1.9.9 (2018.02.05)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="release/v1.html#v1-9-8-2018-02-03">v1.9.8 (2018.02.03)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="release/v1.html#v1-9-7">v1.9.7 废弃</a></li>
+<li class="toctree-l3"><a class="reference internal" href="release/v1.html#v1-9-6-2018-01-29">v1.9.6 (2018.01.29)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="release/v1.html#v1-9-5-2018-01-24">v1.9.5 (2018.01.24)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="release/v1.html#v1-9-4-2018-01-25">v1.9.4 (2018.01.25)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="release/v1.html#v1-9-3-2018-01-23">v1.9.3 (2018.01.23)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="release/v1.html#v1-9-2-2018-01-09">v1.9.2 (2018.01.09)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="release/v1.html#v1-9-1-2018-01-04">v1.9.1 (2018.01.04)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="release/v1.html#v1-9-0-2018-01-02">v1.9.0 (2018.01.02)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="release/v1.html#v1-7-4-2017-12-22">v1.7.4 (2017.12.22)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="release/v1.html#v1-7-3-2017-12-19">v1.7.3 (2017.12.19)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="release/v1.html#v1-7-2-2017-12-15">v1.7.2 (2017.12.15)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="release/v1.html#v1-7-1-2017-12-08">v1.7.1 (2017.12.08)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="release/v1.html#v1-7-0-2017-12-04">v1.7.0 (2017.12.04)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="release/v1.html#v1-6-8-2017-12-20">v1.6.8 (2017.12.20)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="release/v1.html#v1-6-7-2017-12-15">v1.6.7 (2017.12.15)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="release/v1.html#v1-6-6-2017-11-15">v1.6.6 (2017.11.15)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="release/v1.html#v1-6-5-2017-11-07">v1.6.5 (2017.11.07)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="release/v1.html#v1-6-4-2017-10-30">v1.6.4 (2017.10.30)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="release/v1.html#v1-6-3-2017-10-23">v1.6.3 (2017.10.23)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="release/v1.html#v1-6-2-2017-10-19">v1.6.2 (2017.10.19)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="release/v1.html#v1-6-1-2017-10-14">v1.6.1 (2017.10.14)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="release/v1.html#v1-6-0-2017-10-11">v1.6.0 (2017.10.11)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="release/v1.html#v1-5-8-2017-12-06">v1.5.8 (2017.12.06)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="release/v1.html#v1-5-7-2017-10-03">v1.5.7 (2017.10.03)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="release/v1.html#v1-5-6-2017-09-27">v1.5.6 (2017.09.27)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="release/v1.html#v1-5-5-2017-09-26">v1.5.5 (2017.09.26)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="release/v1.html#v1-5-4-2017-09-21">v1.5.4 (2017.09.21)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="release/v1.html#v1-5-3-2017-08-28">v1.5.3 (2017.08.28)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="release/v1.html#v1-5-2-2017-08-23">v1.5.2 (2017.08.23)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="release/v1.html#v1-5-1-2017-08-18">v1.5.1 (2017.08.18)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="release/v1.html#v1-5-0-2017-08-17">v1.5.0 (2017.08.17)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="release/v1.html#v1-4-4-2017-07-26">v1.4.4 (2017.07.26)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="release/v1.html#v1-4-3-2017-07-20">v1.4.3 (2017.07.20)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="release/v1.html#v1-4-2-2017-07-19">v1.4.2 (2017.07.19)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="release/v1.html#v1-4-1-2017-07-17">v1.4.1 (2017.07.17)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="release/v1.html#v1-4-0-2017-07-10">v1.4.0 (2017.07.10)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="release/v1.html#v1-3-0-2017-06-21">v1.3.0 (2017.06.21)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="release/v1.html#v1-2-6-2017-06-20">v1.2.6 (2017.06.20)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="release/v1.html#v1-2-5-2017-06-09">v1.2.5 (2017.06.09)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="release/v1.html#v1-2-4-2017-06-05">v1.2.4 (2017.06.05)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="release/v1.html#v1-2-3-2017-06-01">v1.2.3 (2017.06.01)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="release/v1.html#v1-2-2-2017-05-23">v1.2.2 (2017.05.23)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="release/v1.html#v1-2-1-2017-05-20">v1.2.1 (2017.05.20)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="release/v1.html#v1-2-0-2017-05-18">v1.2.0 (2017.05.18)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="release/v1.html#v1-1-1-2017-04-13">v1.1.1 (2017.04.13)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="release/v1.html#v1-1-0-2017-03-31">v1.1.0 (2017.03.31)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="release/v1.html#v1-0-1-2017-03-03">v1.0.1 (2017.03.03)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="release/v1.html#v1-0-0-2017-02-06">v1.0.0 (2017.02.06)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="release/v0.html">基础库更新日志 (v0.x版本)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="release/v0.html#id1">2017.01.06</a></li>
+<li class="toctree-l3"><a class="reference internal" href="release/v0.html#id2">2017.01.05</a></li>
+<li class="toctree-l3"><a class="reference internal" href="release/v0.html#id3">2017.01.04</a></li>
+<li class="toctree-l3"><a class="reference internal" href="release/v0.html#id4">2016-12-22</a></li>
+<li class="toctree-l3"><a class="reference internal" href="release/v0.html#id5">2016-12-21</a></li>
+<li class="toctree-l3"><a class="reference internal" href="release/v0.html#id6">2016.10.31</a></li>
+<li class="toctree-l3"><a class="reference internal" href="release/v0.html#id7">2016.10.28</a></li>
+<li class="toctree-l3"><a class="reference internal" href="release/v0.html#id8">2016.10.11</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -533,52 +683,34 @@
 </div>
 
 
-           </div>
-           
           </div>
-          <footer>
-  
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="MINA.html" class="btn btn-neutral float-right" title="框架" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="../guide/runtime/update-mechanism.html" class="btn btn-neutral float-left" title="小程序更新机制" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
-    </div>
-  
-
-  <hr/>
-
-  <div role="contentinfo">
-    <p>
-        &copy; Copyright 2019, Nosy
-
-    </p>
-  </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
-
-</footer>
-
         </div>
       </div>
-
-    </section>
-
-  </div>
-  
-
-
-  <script type="text/javascript">
-      jQuery(function () {
-          SphinxRtdTheme.Navigation.enable(true);
-      });
-  </script>
-
-  
-  
-    
-   
-
-</body>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>导航</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="总目录"
+             >索引</a></li>
+        <li class="right" >
+          <a href="../http-routingtable.html" title="微信小程序API"
+             >wxapi</a> |</li>
+        <li class="right" >
+          <a href="MINA.html" title="框架"
+             >下一页</a> |</li>
+        <li class="right" >
+          <a href="../guide/runtime/update-mechanism.html" title="小程序更新机制"
+             >上一页</a> |</li>
+<li><a href="../index.html">主页</a>&#160;|</li>
+<li><a href="../contents.html">文档</a> &#187;</li>
+ 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; 版权所有 2019, Wxadev Docs.
+      由 <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.0+/40994a8 创建。
+    </div>
+  </body>
 </html>

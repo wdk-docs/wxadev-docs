@@ -1,0 +1,194 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
+  <head>
+    <meta charset="utf-8" />
+    <title>wx.base64ToArrayBuffer &#8212; wxadev 1.0.0 文档</title>
+    <link rel="stylesheet" href="../_static/sphinx13.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <script type="text/javascript" src="../_static/translations.js"></script>
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="在 wxadev 1.0.0 文档 中搜索"
+          href="../_static/opensearch.xml"/>
+
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜索" href="../search.html" />
+    <link rel="next" title="wx.arrayBufferToBase64" href="wx.arrayBufferToBase64.html" />
+    <link rel="prev" title="wx.canIUse" href="wx.canIUse.html" />
+<link rel="canonical" href="http://www.sphinx-doc.org/en/master/api/wx.base64ToArrayBuffer.html" />
+
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet" type="text/css" />
+ 
+<style type="text/css">
+  table.right { float: right; margin-left: 20px; }
+  table.right td { border: 1px solid #ccc; }
+  
+</style>
+<script type="text/javascript">
+  // intelligent scrolling of the sidebar content
+  $(window).scroll(function() {
+    var sb = $('.sphinxsidebarwrapper');
+    var win = $(window);
+    var sbh = sb.height();
+    var offset = $('.sphinxsidebar').position()['top'];
+    var wintop = win.scrollTop();
+    var winbot = wintop + win.innerHeight();
+    var curtop = sb.position()['top'];
+    var curbot = curtop + sbh;
+    // does sidebar fit in window?
+    if (sbh < win.innerHeight()) {
+      // yes: easy case -- always keep at the top
+      sb.css('top', $u.min([$u.max([0, wintop - offset - 10]), $(document).height() - sbh - 200]));
+    } else {
+      // no: only scroll if top/bottom edge of sidebar is at
+      // top/bottom edge of window
+      if (curtop > wintop && curbot > winbot) {
+        sb.css('top', $u.max([wintop - offset - 10, 0]));
+      } else if (curtop < wintop && curbot < winbot) {
+        sb.css('top', $u.min([winbot - sbh - offset - 20, $(document).height() - sbh - 200]));
+      }
+    }
+  });
+</script> 
+  </head><body>
+<div class="pageheader">
+  <ul>
+    <li><a href="../index.html">主页</a></li>
+    <li><a href="../framework/index.html">框架</a></li>
+    <li><a href="../component/index.html">组件</a></li>
+    <li><a href="index.html">API</a></li>
+    <li><a href="../api-backend/index.html">服务端</a></li>
+    <li><a href="../contents.html">目录</a></li>
+  </ul>
+  <div>
+    <a href="../index.html">
+      <img src="../_static/wxaheader.png" alt="wxa" />
+    </a>
+  </div>
+</div>
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>导航</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="总目录"
+             accesskey="I">索引</a></li>
+        <li class="right" >
+          <a href="../http-routingtable.html" title="微信小程序API"
+             >wxapi</a> |</li>
+        <li class="right" >
+          <a href="wx.arrayBufferToBase64.html" title="wx.arrayBufferToBase64"
+             accesskey="N">下一页</a> |</li>
+        <li class="right" >
+          <a href="wx.canIUse.html" title="wx.canIUse"
+             accesskey="P">上一页</a> |</li>
+<li><a href="../index.html">主页</a>&#160;|</li>
+<li><a href="../contents.html">文档</a> &#187;</li>
+
+          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">API</a> &#187;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h4>上一个主题</h4>
+  <p class="topless"><a href="wx.canIUse.html"
+                        title="上一章">wx.canIUse</a></p>
+  <h4>下一个主题</h4>
+  <p class="topless"><a href="wx.arrayBufferToBase64.html"
+                        title="下一章">wx.arrayBufferToBase64</a></p>
+  <div role="note" aria-label="source link">
+    <h3>本页</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/api/wx.base64ToArrayBuffer.rst.txt"
+            rel="nofollow">显示源代码</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">快速搜索</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="转向" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="wx-base64toarraybuffer">
+<h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/api/wx.base64ToArrayBuffer.html">wx.base64ToArrayBuffer</a><a class="headerlink" href="#wx-base64toarraybuffer" title="永久链接至标题">¶</a></h1>
+<dl class="function">
+<dt id="wx.base64ToArrayBuffer">
+<code class="descclassname">wx.</code><code class="descname">base64ToArrayBuffer</code><span class="sig-paren">(</span><em>base64</em><span class="sig-paren">)</span><a class="headerlink" href="#wx.base64ToArrayBuffer" title="永久链接至目标">¶</a></dt>
+<dd><div class="versionadded">
+<p><span class="versionmodified added">1.1.0 新版功能: </span>低版本需做兼容处理。</p>
+</div>
+<div class="deprecated">
+<p><span class="versionmodified deprecated">2.4.0 版后已移除: </span>本接口停止维护</p>
+</div>
+<p>将 Base64 字符串转成 ArrayBuffer 对象</p>
+<dl class="field-list">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>base64</strong> (<em>string</em>) – 要转化成 ArrayBuffer 对象的 Base64 字符串</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return</dt>
+<dd class="field-even"><p>ArrayBuffer ArrayBuffer 对象</p>
+</dd>
+<dt class="field-odd">示例</dt>
+<dd class="field-odd"><div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="kr">const</span> <span class="nx">base64</span> <span class="o">=</span> <span class="s1">&#39;CxYh&#39;</span>
+<span class="kr">const</span> <span class="nx">arrayBuffer</span> <span class="o">=</span> <span class="nx">wx</span><span class="p">.</span><span class="nx">base64ToArrayBuffer</span><span class="p">(</span><span class="nx">base64</span><span class="p">)</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>导航</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="总目录"
+             >索引</a></li>
+        <li class="right" >
+          <a href="../http-routingtable.html" title="微信小程序API"
+             >wxapi</a> |</li>
+        <li class="right" >
+          <a href="wx.arrayBufferToBase64.html" title="wx.arrayBufferToBase64"
+             >下一页</a> |</li>
+        <li class="right" >
+          <a href="wx.canIUse.html" title="wx.canIUse"
+             >上一页</a> |</li>
+<li><a href="../index.html">主页</a>&#160;|</li>
+<li><a href="../contents.html">文档</a> &#187;</li>
+
+          <li class="nav-item nav-item-1"><a href="index.html" >API</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; 版权所有 2019, Wxadev Docs.
+      由 <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.0+/40994a8 创建。
+    </div>
+  </body>
+</html>

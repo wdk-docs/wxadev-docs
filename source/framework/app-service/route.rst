@@ -90,5 +90,5 @@ Tab 切换对应的生命周期（以 A、B 页面为 Tabbar 页面，C 是从 A
    - :func:`wx.navigateTo` , :func:`wx.redirectTo` 只能打开非 :envvar:`tabBar` 页面。
    - :func:`wx.switchTab` 只能打开 :envvar:`tabBar` 页面。
    - :func:`wx.reLaunch` 可以打开任意页面。
-   - 页面底部的 tabBar 由页面决定，即只要是定义为 :envvar:`tabBar` 的页面，底部都有 :envvar:`tabBar。`
+   - 页面底部的 tabBar 由页面决定，即只要是定义为 :envvar:`tabBar` 的页面，底部都有 :envvar:`tabBar` 。
    - 调用页面路由带的参数可以在目标页面的 onLoad 中获取。

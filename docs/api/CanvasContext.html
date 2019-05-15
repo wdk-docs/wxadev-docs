@@ -1,249 +1,640 @@
 
-
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-CN" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-CN" > <!--<![endif]-->
-<head>
-  <meta charset="utf-8">
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <title>CanvasContext &mdash; wxadev 1.0.0 文档</title>
-  
 
-  
-  
-  
-  
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
+  <head>
+    <meta charset="utf-8" />
+    <title>CanvasContext &#8212; wxadev 1.0.0 文档</title>
+    <link rel="stylesheet" href="../_static/sphinx13.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <script type="text/javascript" src="../_static/translations.js"></script>
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="在 wxadev 1.0.0 文档 中搜索"
+          href="../_static/opensearch.xml"/>
 
-  
-  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
-  
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../_static/jquery.js"></script>
-        <script type="text/javascript" src="../_static/underscore.js"></script>
-        <script type="text/javascript" src="../_static/doctools.js"></script>
-        <script type="text/javascript" src="../_static/language_data.js"></script>
-        <script type="text/javascript" src="../_static/translations.js"></script>
-    
-    <script type="text/javascript" src="../_static/js/theme.js"></script>
-
-    
-
-  
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜索" href="../search.html" />
     <link rel="next" title="wx.createCanvasContext" href="wx.createCanvasContext.html" />
-    <link rel="prev" title="wx.getShareInfo" href="wx.getShareInfo.html" /> 
-</head>
+    <link rel="prev" title="wx.getShareInfo" href="wx.getShareInfo.html" />
+<link rel="canonical" href="http://www.sphinx-doc.org/en/master/api/CanvasContext.html" />
 
-<body class="wy-body-for-nav">
-
-   
-  <div class="wy-grid-for-nav">
-    
-    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
-      <div class="wy-side-scroll">
-        <div class="wy-side-nav-search" >
-          
-
-          
-            <a href="../contents.html" class="icon icon-home"> wxadev
-          
-
-          
-          </a>
-
-          
-            
-            
-          
-
-          
-<div role="search">
-  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
-    <input type="hidden" name="check_keywords" value="yes" />
-    <input type="hidden" name="area" value="default" />
-  </form>
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet" type="text/css" />
+ 
+<style type="text/css">
+  table.right { float: right; margin-left: 20px; }
+  table.right td { border: 1px solid #ccc; }
+  
+</style>
+<script type="text/javascript">
+  // intelligent scrolling of the sidebar content
+  $(window).scroll(function() {
+    var sb = $('.sphinxsidebarwrapper');
+    var win = $(window);
+    var sbh = sb.height();
+    var offset = $('.sphinxsidebar').position()['top'];
+    var wintop = win.scrollTop();
+    var winbot = wintop + win.innerHeight();
+    var curtop = sb.position()['top'];
+    var curbot = curtop + sbh;
+    // does sidebar fit in window?
+    if (sbh < win.innerHeight()) {
+      // yes: easy case -- always keep at the top
+      sb.css('top', $u.min([$u.max([0, wintop - offset - 10]), $(document).height() - sbh - 200]));
+    } else {
+      // no: only scroll if top/bottom edge of sidebar is at
+      // top/bottom edge of window
+      if (curtop > wintop && curbot > winbot) {
+        sb.css('top', $u.max([wintop - offset - 10, 0]));
+      } else if (curtop < wintop && curbot < winbot) {
+        sb.css('top', $u.min([winbot - sbh - offset - 20, $(document).height() - sbh - 200]));
+      }
+    }
+  });
+</script> 
+  </head><body>
+<div class="pageheader">
+  <ul>
+    <li><a href="../index.html">主页</a></li>
+    <li><a href="../framework/index.html">框架</a></li>
+    <li><a href="../component/index.html">组件</a></li>
+    <li><a href="index.html">API</a></li>
+    <li><a href="../api-backend/index.html">服务端</a></li>
+    <li><a href="../contents.html">目录</a></li>
+  </ul>
+  <div>
+    <a href="../index.html">
+      <img src="../_static/wxaheader.png" alt="wxa" />
+    </a>
+  </div>
 </div>
 
-          
-        </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>导航</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="总目录"
+             accesskey="I">索引</a></li>
+        <li class="right" >
+          <a href="../http-routingtable.html" title="微信小程序API"
+             >wxapi</a> |</li>
+        <li class="right" >
+          <a href="wx.createCanvasContext.html" title="wx.createCanvasContext"
+             accesskey="N">下一页</a> |</li>
+        <li class="right" >
+          <a href="wx.getShareInfo.html" title="wx.getShareInfo"
+             accesskey="P">上一页</a> |</li>
+<li><a href="../index.html">主页</a>&#160;|</li>
+<li><a href="../contents.html">文档</a> &#187;</li>
 
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-              
-            
-            
-              <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../index.html">开发指南</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../dev.html">简介</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../basic/index.html">基础教程</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../guide/index.html">运行环境</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../framework/index.html">框架</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../component/index.html">组件</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="index.html">API</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="index.html#id2">基础</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#id3">系统信息</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#id4">更新</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#id5">小程序</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#id8">调试</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#id9">路由</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#id10">界面</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#id22">网络</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#id26">数据缓存</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#id27">媒体</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#id34">位置</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#id35">转发</a></li>
-<li class="toctree-l2 current"><a class="reference internal" href="index.html#id36">画布</a><ul class="current">
-<li class="toctree-l3 current"><a class="current reference internal" href="#">CanvasContext</a></li>
-<li class="toctree-l3"><a class="reference internal" href="wx.createCanvasContext.html">wx.createCanvasContext</a></li>
-<li class="toctree-l3"><a class="reference internal" href="wx.canvasToTempFilePath.html">wx.canvasToTempFilePath</a></li>
-<li class="toctree-l3"><a class="reference internal" href="wx.canvasPutImageData.html">wx.canvasPutImageData</a></li>
-<li class="toctree-l3"><a class="reference internal" href="wx.canvasGetImageData.html">wx.canvasGetImageData</a></li>
-<li class="toctree-l3"><a class="reference internal" href="Color.html">Color</a></li>
-<li class="toctree-l3"><a class="reference internal" href="index.html#canvasgradient">CanvasGradient</a></li>
-<li class="toctree-l3"><a class="reference internal" href="index.html#canvascontext">CanvasContext</a></li>
+          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">API</a> &#187;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../contents.html">目录</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">CanvasContext</a><ul>
+<li><a class="reference internal" href="#id1">属性</a></li>
+<li><a class="reference internal" href="#id2">方法</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#id37">文件</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#id38">开放接口</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#id53">设备</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#worker">Worker</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#id69">第三方平台</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#wxml">WXML</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../api-backend/index.html">服务端API</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../devtools/index.html">开发工具</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../reference/index.html">参考资料</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../wxcloud/index.html">云开发</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../wxwork/index.html">企业微信</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../todolist.html">待办事项</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../glossary.html">术语</a></li>
 </ul>
 
-            
-          
+  <h4>上一个主题</h4>
+  <p class="topless"><a href="wx.getShareInfo.html"
+                        title="上一章">wx.getShareInfo</a></p>
+  <h4>下一个主题</h4>
+  <p class="topless"><a href="wx.createCanvasContext.html"
+                        title="下一章">wx.createCanvasContext</a></p>
+  <div role="note" aria-label="source link">
+    <h3>本页</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/api/CanvasContext.rst.txt"
+            rel="nofollow">显示源代码</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">快速搜索</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="转向" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
         </div>
       </div>
-    </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
-          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../contents.html">wxadev</a>
-        
-      </nav>
-
-
-      <div class="wy-nav-content">
-        
-        <div class="rst-content">
-        
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-
-  <ul class="wy-breadcrumbs">
-    
-      <li><a href="../contents.html">Docs</a> &raquo;</li>
-        
-          <li><a href="index.html">API</a> &raquo;</li>
-        
-      <li>CanvasContext</li>
-    
-    
-      <li class="wy-breadcrumbs-aside">
-        
-            
-            <a href="../_sources/api/CanvasContext.rst.txt" rel="nofollow"> View page source</a>
-          
-        
-      </li>
-    
-  </ul>
-
-  
-  <hr/>
-</div>
-          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
-           <div itemprop="articleBody">
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
             
   <div class="section" id="canvascontext">
 <h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/api/CanvasContext.html">CanvasContext</a><a class="headerlink" href="#canvascontext" title="永久链接至标题">¶</a></h1>
+<dl class="class">
+<dt id="CanvasContext">
+<em class="property">class </em><code class="descname">CanvasContext</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#CanvasContext" title="永久链接至目标">¶</a></dt>
+<dd><p><a class="reference internal" href="../component/canvas.html#canvas"><span class="std std-ref">canvas</span></a> 组件的绘图上下文</p>
+</dd></dl>
+
+<div class="section" id="id1">
+<h2>属性<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h2>
+<dl class="attribute">
+<dt id="CanvasContext.fillStyle">
+<code class="descclassname">CanvasContext.</code><code class="descname">fillStyle</code><a class="headerlink" href="#CanvasContext.fillStyle" title="永久链接至目标">¶</a></dt>
+<dd><div class="versionadded">
+<p><span class="versionmodified added">1.9.90 新版功能: </span>低版本需做 <a class="reference internal" href="../framework/compatibility.html#compatibility"><span class="std std-ref">兼容处理</span></a> 。</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Return</dt>
+<dd class="field-odd"><p>string</p>
+</dd>
+</dl>
+<p>填充颜色。用法同 CanvasContext.setFillStyle()。</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="CanvasContext.strokeStyle">
+<code class="descclassname">CanvasContext.</code><code class="descname">strokeStyle</code><a class="headerlink" href="#CanvasContext.strokeStyle" title="永久链接至目标">¶</a></dt>
+<dd><div class="versionadded">
+<p><span class="versionmodified added">1.9.90 新版功能: </span>低版本需做 <a class="reference internal" href="../framework/compatibility.html#compatibility"><span class="std std-ref">兼容处理</span></a> 。</p>
+</div>
+<p>边框颜色。用法同 CanvasContext.setFillStyle()。</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return</dt>
+<dd class="field-odd"><p>string</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="CanvasContext.shadowOffsetX">
+<code class="descclassname">CanvasContext.</code><code class="descname">shadowOffsetX</code><a class="headerlink" href="#CanvasContext.shadowOffsetX" title="永久链接至目标">¶</a></dt>
+<dd><div class="versionadded">
+<p><span class="versionmodified added">1.9.90 新版功能: </span>低版本需做 <a class="reference internal" href="../framework/compatibility.html#compatibility"><span class="std std-ref">兼容处理</span></a> 。</p>
+</div>
+<p>阴影相对于形状在水平方向的偏移</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return</dt>
+<dd class="field-odd"><p>number</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="CanvasContext.shadowOffsetY">
+<code class="descclassname">CanvasContext.</code><code class="descname">shadowOffsetY</code><a class="headerlink" href="#CanvasContext.shadowOffsetY" title="永久链接至目标">¶</a></dt>
+<dd><div class="versionadded">
+<p><span class="versionmodified added">1.9.90 新版功能: </span>低版本需做 <a class="reference internal" href="../framework/compatibility.html#compatibility"><span class="std std-ref">兼容处理</span></a> 。</p>
+</div>
+<p>阴影相对于形状在竖直方向的偏移</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return</dt>
+<dd class="field-odd"><p>number</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="CanvasContext.shadowColor">
+<code class="descclassname">CanvasContext.</code><code class="descname">shadowColor</code><a class="headerlink" href="#CanvasContext.shadowColor" title="永久链接至目标">¶</a></dt>
+<dd><div class="versionadded">
+<p><span class="versionmodified added">1.9.90 新版功能: </span>低版本需做 <a class="reference internal" href="../framework/compatibility.html#compatibility"><span class="std std-ref">兼容处理</span></a> 。</p>
+</div>
+<p>阴影的颜色</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return</dt>
+<dd class="field-odd"><p>number</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="CanvasContext.shadowBlur">
+<code class="descclassname">CanvasContext.</code><code class="descname">shadowBlur</code><a class="headerlink" href="#CanvasContext.shadowBlur" title="永久链接至目标">¶</a></dt>
+<dd><div class="versionadded">
+<p><span class="versionmodified added">1.9.90 新版功能: </span>低版本需做 <a class="reference internal" href="../framework/compatibility.html#compatibility"><span class="std std-ref">兼容处理</span></a> 。</p>
+</div>
+<p>阴影的模糊级别</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return</dt>
+<dd class="field-odd"><p>number</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="CanvasContext.lineWidth">
+<code class="descclassname">CanvasContext.</code><code class="descname">lineWidth</code><a class="headerlink" href="#CanvasContext.lineWidth" title="永久链接至目标">¶</a></dt>
+<dd><div class="versionadded">
+<p><span class="versionmodified added">1.9.90 新版功能: </span>低版本需做 <a class="reference internal" href="../framework/compatibility.html#compatibility"><span class="std std-ref">兼容处理</span></a> 。</p>
+</div>
+<p>线条的宽度。用法同 CanvasContext.setLineWidth()。</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return</dt>
+<dd class="field-odd"><p>number</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="CanvasContext.lineCap">
+<code class="descclassname">CanvasContext.</code><code class="descname">lineCap</code><a class="headerlink" href="#CanvasContext.lineCap" title="永久链接至目标">¶</a></dt>
+<dd><div class="versionadded">
+<p><span class="versionmodified added">1.9.90 新版功能: </span>低版本需做 <a class="reference internal" href="../framework/compatibility.html#compatibility"><span class="std std-ref">兼容处理</span></a> 。</p>
+</div>
+<p>线条的端点样式。用法同 CanvasContext.setLineCap()。</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return</dt>
+<dd class="field-odd"><p>number</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="CanvasContext.lineJoin">
+<code class="descclassname">CanvasContext.</code><code class="descname">lineJoin</code><a class="headerlink" href="#CanvasContext.lineJoin" title="永久链接至目标">¶</a></dt>
+<dd><div class="versionadded">
+<p><span class="versionmodified added">1.9.90 新版功能: </span>低版本需做 <a class="reference internal" href="../framework/compatibility.html#compatibility"><span class="std std-ref">兼容处理</span></a> 。</p>
+</div>
+<p>线条的交点样式。用法同 CanvasContext.setLineJoin()。</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return</dt>
+<dd class="field-odd"><p>number</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="CanvasContext.miterLimit">
+<code class="descclassname">CanvasContext.</code><code class="descname">miterLimit</code><a class="headerlink" href="#CanvasContext.miterLimit" title="永久链接至目标">¶</a></dt>
+<dd><div class="versionadded">
+<p><span class="versionmodified added">1.9.90 新版功能: </span>低版本需做 <a class="reference internal" href="../framework/compatibility.html#compatibility"><span class="std std-ref">兼容处理</span></a> 。</p>
+</div>
+<p>最大斜接长度。用法同 CanvasContext.setMiterLimit()。</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return</dt>
+<dd class="field-odd"><p>number</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="CanvasContext.lineDashOffset">
+<code class="descclassname">CanvasContext.</code><code class="descname">lineDashOffset</code><a class="headerlink" href="#CanvasContext.lineDashOffset" title="永久链接至目标">¶</a></dt>
+<dd><div class="versionadded">
+<p><span class="versionmodified added">1.9.90 新版功能: </span>低版本需做 <a class="reference internal" href="../framework/compatibility.html#compatibility"><span class="std std-ref">兼容处理</span></a> 。</p>
+</div>
+<p>虚线偏移量，初始值为0</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return</dt>
+<dd class="field-odd"><p>number</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="CanvasContext.font">
+<code class="descclassname">CanvasContext.</code><code class="descname">font</code><a class="headerlink" href="#CanvasContext.font" title="永久链接至目标">¶</a></dt>
+<dd><div class="versionadded">
+<p><span class="versionmodified added">1.9.90 新版功能: </span>低版本需做 <a class="reference internal" href="../framework/compatibility.html#compatibility"><span class="std std-ref">兼容处理</span></a> 。</p>
+</div>
+<p>当前字体样式的属性。符合 CSS font 语法 的 DOMString 字符串，至少需要提供字体大小和字体族名。默认值为 10px sans-serif。</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return</dt>
+<dd class="field-odd"><p>string</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="CanvasContext.globalAlpha">
+<code class="descclassname">CanvasContext.</code><code class="descname">globalAlpha</code><a class="headerlink" href="#CanvasContext.globalAlpha" title="永久链接至目标">¶</a></dt>
+<dd><p>全局画笔透明度。范围 0-1，0 表示完全透明，1 表示完全不透明。</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return</dt>
+<dd class="field-odd"><p>number</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="CanvasContext.globalCompositeOperation">
+<code class="descclassname">CanvasContext.</code><code class="descname">globalCompositeOperation</code><a class="headerlink" href="#CanvasContext.globalCompositeOperation" title="永久链接至目标">¶</a></dt>
+<dd><div class="versionadded">
+<p><span class="versionmodified added">1.9.90 新版功能: </span>低版本需做 <a class="reference internal" href="../framework/compatibility.html#compatibility"><span class="std std-ref">兼容处理</span></a> 。</p>
+</div>
+<p>在绘制新形状时应用的合成操作的类型。目前安卓版本只适用于 fill 填充块的合成，用于 stroke 线段的合成效果都是 source-over。</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return</dt>
+<dd class="field-odd"><p>string</p>
+</dd>
+</dl>
+<p>目前支持的操作有</p>
+<p>安卓：xor, source-over, source-atop, destination-out, lighter, overlay, darken, lighten, hard-light
+iOS：xor, source-over, source-atop, destination-over, destination-out, lighter, multiply, overlay, darken, lighten, color-dodge, color-burn, hard-light, soft-light, difference, exclusion, saturation, luminosity</p>
+</dd></dl>
+
+</div>
+<div class="section" id="id2">
+<h2>方法<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<dl class="function">
+<dt id="CanvasContext.draw">
+<code class="descclassname">CanvasContext.</code><code class="descname">draw</code><span class="sig-paren">(</span><em>boolean reserve</em>, <em>function callback</em><span class="sig-paren">)</span><a class="headerlink" href="#CanvasContext.draw" title="永久链接至目标">¶</a></dt>
+<dd><p>将之前在绘图上下文中的描述（路径、变形、样式）画到 canvas 中。</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="CanvasGradient CanvasContext.createLinearGradient">
+<code class="descclassname">CanvasGradient CanvasContext.</code><code class="descname">createLinearGradient</code><span class="sig-paren">(</span><em>number x0</em>, <em>number y0</em>, <em>number x1</em>, <em>number y1</em><span class="sig-paren">)</span><a class="headerlink" href="#CanvasGradient CanvasContext.createLinearGradient" title="永久链接至目标">¶</a></dt>
+<dd><p>创建一个线性的渐变颜色。返回的CanvasGradient对象需要使用 CanvasGradient.addColorStop() 来指定渐变点，至少要两个。</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="CanvasGradient CanvasContext.createCircularGradient">
+<code class="descclassname">CanvasGradient CanvasContext.</code><code class="descname">createCircularGradient</code><span class="sig-paren">(</span><em>number x</em>, <em>number y</em>, <em>number r</em><span class="sig-paren">)</span><a class="headerlink" href="#CanvasGradient CanvasContext.createCircularGradient" title="永久链接至目标">¶</a></dt>
+<dd><p>创建一个圆形的渐变颜色。起点在圆心，终点在圆环。返回的CanvasGradient对象需要使用 CanvasGradient.addColorStop() 来指定渐变点，至少要两个。</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="CanvasContext.createPattern">
+<code class="descclassname">CanvasContext.</code><code class="descname">createPattern</code><span class="sig-paren">(</span><em>string image</em>, <em>string repetition</em><span class="sig-paren">)</span><a class="headerlink" href="#CanvasContext.createPattern" title="永久链接至目标">¶</a></dt>
+<dd><p>对指定的图像创建模式的方法，可在指定的方向上重复元图像</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="CanvasContext.measureText">
+<code class="descclassname">CanvasContext.</code><code class="descname">measureText</code><span class="sig-paren">(</span><em>string text</em><span class="sig-paren">)</span><a class="headerlink" href="#CanvasContext.measureText" title="永久链接至目标">¶</a></dt>
+<dd><p>测量文本尺寸信息。目前仅返回文本宽度。同步接口。</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return</dt>
+<dd class="field-odd"><p>Object</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="CanvasContext.save">
+<code class="descclassname">CanvasContext.</code><code class="descname">save</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#CanvasContext.save" title="永久链接至目标">¶</a></dt>
+<dd><p>保存绘图上下文。</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="CanvasContext.restore">
+<code class="descclassname">CanvasContext.</code><code class="descname">restore</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#CanvasContext.restore" title="永久链接至目标">¶</a></dt>
+<dd><p>恢复之前保存的绘图上下文。</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="CanvasContext.beginPath">
+<code class="descclassname">CanvasContext.</code><code class="descname">beginPath</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#CanvasContext.beginPath" title="永久链接至目标">¶</a></dt>
+<dd><p>开始创建一个路径。需要调用 fill 或者 stroke 才会使用路径进行填充或描边</p>
+<p>在最开始的时候相当于调用了一次 beginPath。
+同一个路径内的多次 setFillStyle、setStrokeStyle、setLineWidth等设置，以最后一次设置为准。
+CanvasContext.moveTo(number x, number y)
+把路径移动到画布中的指定点，不创建线条。用 stroke 方法来画线条</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="CanvasContext.lineTo">
+<code class="descclassname">CanvasContext.</code><code class="descname">lineTo</code><span class="sig-paren">(</span><em>number x</em>, <em>number y</em><span class="sig-paren">)</span><a class="headerlink" href="#CanvasContext.lineTo" title="永久链接至目标">¶</a></dt>
+<dd><p>增加一个新点，然后创建一条从上次指定点到目标点的线。用 stroke 方法来画线条</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="CanvasContext.quadraticCurveTo">
+<code class="descclassname">CanvasContext.</code><code class="descname">quadraticCurveTo</code><span class="sig-paren">(</span><em>number cpx</em>, <em>number cpy</em>, <em>number x</em>, <em>number y</em><span class="sig-paren">)</span><a class="headerlink" href="#CanvasContext.quadraticCurveTo" title="永久链接至目标">¶</a></dt>
+<dd><p>创建二次贝塞尔曲线路径。曲线的起始点为路径中前一个点。</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="CanvasContext.bezierCurveTo">
+<code class="descclassname">CanvasContext.</code><code class="descname">bezierCurveTo</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#CanvasContext.bezierCurveTo" title="永久链接至目标">¶</a></dt>
+<dd><p>创建三次方贝塞尔曲线路径。曲线的起始点为路径中前一个点。</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="CanvasContext.arc">
+<code class="descclassname">CanvasContext.</code><code class="descname">arc</code><span class="sig-paren">(</span><em>number x</em>, <em>number y</em>, <em>number r</em>, <em>number sAngle</em>, <em>number eAngle</em>, <em>boolean counterclockwise</em><span class="sig-paren">)</span><a class="headerlink" href="#CanvasContext.arc" title="永久链接至目标">¶</a></dt>
+<dd><p>创建一条弧线。</p>
+<p>创建一个圆可以指定起始弧度为 0，终止弧度为 2 * Math.PI。
+用 stroke 或者 fill 方法来在 canvas 中画弧线。</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="CanvasContext.rect">
+<code class="descclassname">CanvasContext.</code><code class="descname">rect</code><span class="sig-paren">(</span><em>number x</em>, <em>number y</em>, <em>number width</em>, <em>number height</em><span class="sig-paren">)</span><a class="headerlink" href="#CanvasContext.rect" title="永久链接至目标">¶</a></dt>
+<dd><p>创建一个矩形路径。需要用 fill 或者 stroke 方法将矩形真正的画到 canvas 中</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="CanvasContext.arcTo">
+<code class="descclassname">CanvasContext.</code><code class="descname">arcTo</code><span class="sig-paren">(</span><em>number x1</em>, <em>number y1</em>, <em>number x2</em>, <em>number y2</em>, <em>number radius</em><span class="sig-paren">)</span><a class="headerlink" href="#CanvasContext.arcTo" title="永久链接至目标">¶</a></dt>
+<dd><p>根据控制点和半径绘制圆弧路径。</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="CanvasContext.clip">
+<code class="descclassname">CanvasContext.</code><code class="descname">clip</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#CanvasContext.clip" title="永久链接至目标">¶</a></dt>
+<dd><p>从原始画布中剪切任意形状和尺寸。一旦剪切了某个区域，则所有之后的绘图都会被限制在被剪切的区域内（不能访问画布上的其他区域）。可以在使用 clip 方法前通过使用 save 方法对当前画布区域进行保存，并在以后的任意时间通过restore方法对其进行恢复。</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="CanvasContext.fillRect">
+<code class="descclassname">CanvasContext.</code><code class="descname">fillRect</code><span class="sig-paren">(</span><em>number x</em>, <em>number y</em>, <em>number width</em>, <em>number height</em><span class="sig-paren">)</span><a class="headerlink" href="#CanvasContext.fillRect" title="永久链接至目标">¶</a></dt>
+<dd><p>填充一个矩形。用 setFillStyle 设置矩形的填充色，如果没设置默认是黑色。</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="CanvasContext.strokeRect">
+<code class="descclassname">CanvasContext.</code><code class="descname">strokeRect</code><span class="sig-paren">(</span><em>number x</em>, <em>number y</em>, <em>number width</em>, <em>number height</em><span class="sig-paren">)</span><a class="headerlink" href="#CanvasContext.strokeRect" title="永久链接至目标">¶</a></dt>
+<dd><p>画一个矩形(非填充)。 用 setStrokeStyle 设置矩形线条的颜色，如果没设置默认是黑色。</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="CanvasContext.clearRect">
+<code class="descclassname">CanvasContext.</code><code class="descname">clearRect</code><span class="sig-paren">(</span><em>number x</em>, <em>number y</em>, <em>number width</em>, <em>number height</em><span class="sig-paren">)</span><a class="headerlink" href="#CanvasContext.clearRect" title="永久链接至目标">¶</a></dt>
+<dd><p>清除画布上在该矩形区域内的内容</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="CanvasContext.fill">
+<code class="descclassname">CanvasContext.</code><code class="descname">fill</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#CanvasContext.fill" title="永久链接至目标">¶</a></dt>
+<dd><p>对当前路径中的内容进行填充。默认的填充色为黑色。</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="CanvasContext.stroke">
+<code class="descclassname">CanvasContext.</code><code class="descname">stroke</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#CanvasContext.stroke" title="永久链接至目标">¶</a></dt>
+<dd><p>画出当前路径的边框。默认颜色色为黑色。</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="CanvasContext.closePath">
+<code class="descclassname">CanvasContext.</code><code class="descname">closePath</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#CanvasContext.closePath" title="永久链接至目标">¶</a></dt>
+<dd><p>关闭一个路径。会连接起点和终点。如果关闭路径后没有调用 fill 或者 stroke 并开启了新的路径，那之前的路径将不会被渲染。</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="CanvasContext.scale">
+<code class="descclassname">CanvasContext.</code><code class="descname">scale</code><span class="sig-paren">(</span><em>number scaleWidth</em>, <em>number scaleHeight</em><span class="sig-paren">)</span><a class="headerlink" href="#CanvasContext.scale" title="永久链接至目标">¶</a></dt>
+<dd></dd></dl>
+
+<p>在调用后，之后创建的路径其横纵坐标会被缩放。多次调用倍数会相乘。</p>
+<dl class="function">
+<dt id="CanvasContext.rotate">
+<code class="descclassname">CanvasContext.</code><code class="descname">rotate</code><span class="sig-paren">(</span><em>number rotate</em><span class="sig-paren">)</span><a class="headerlink" href="#CanvasContext.rotate" title="永久链接至目标">¶</a></dt>
+<dd><p>以原点为中心顺时针旋转当前坐标轴。多次调用旋转的角度会叠加。原点可以用 translate 方法修改。</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="CanvasContext.translate">
+<code class="descclassname">CanvasContext.</code><code class="descname">translate</code><span class="sig-paren">(</span><em>number x</em>, <em>number y</em><span class="sig-paren">)</span><a class="headerlink" href="#CanvasContext.translate" title="永久链接至目标">¶</a></dt>
+<dd><p>对当前坐标系的原点 (0, 0) 进行变换。默认的坐标系原点为页面左上角。</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="CanvasContext.drawImage">
+<code class="descclassname">CanvasContext.</code><code class="descname">drawImage</code><span class="sig-paren">(</span><em>string imageResource</em>, <em>number sx</em>, <em>number sy</em>, <em>number sWidth</em>, <em>number sHeight</em>, <em>number dx</em>, <em>number dy</em>, <em>number dWidth</em>, <em>number dHeight</em><span class="sig-paren">)</span><a class="headerlink" href="#CanvasContext.drawImage" title="永久链接至目标">¶</a></dt>
+<dd><p>绘制图像到画布</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="CanvasContext.strokeText">
+<code class="descclassname">CanvasContext.</code><code class="descname">strokeText</code><span class="sig-paren">(</span><em>string text</em>, <em>number x</em>, <em>number y</em>, <em>number maxWidth</em><span class="sig-paren">)</span><a class="headerlink" href="#CanvasContext.strokeText" title="永久链接至目标">¶</a></dt>
+<dd><p>给定的 (x, y) 位置绘制文本描边的方法</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="CanvasContext.transform">
+<code class="descclassname">CanvasContext.</code><code class="descname">transform</code><span class="sig-paren">(</span><em>number scaleX</em>, <em>number scaleY</em>, <em>number skewX</em>, <em>number skewY</em>, <em>number translateX</em>, <em>number translateY</em><span class="sig-paren">)</span><a class="headerlink" href="#CanvasContext.transform" title="永久链接至目标">¶</a></dt>
+<dd><p>使用矩阵多次叠加当前变换的方法</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="CanvasContext.setTransform">
+<code class="descclassname">CanvasContext.</code><code class="descname">setTransform</code><span class="sig-paren">(</span><em>number scaleX</em>, <em>number scaleY</em>, <em>number skewX</em>, <em>number skewY</em>, <em>number translateX</em>, <em>number translateY</em><span class="sig-paren">)</span><a class="headerlink" href="#CanvasContext.setTransform" title="永久链接至目标">¶</a></dt>
+<dd><p>使用矩阵重新设置（覆盖）当前变换的方法</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="CanvasContext.setFillStyle">
+<code class="descclassname">CanvasContext.</code><code class="descname">setFillStyle</code><span class="sig-paren">(</span><em>Color color</em><span class="sig-paren">)</span><a class="headerlink" href="#CanvasContext.setFillStyle" title="永久链接至目标">¶</a></dt>
+<dd><p>设置填充色。</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="CanvasContext.setStrokeStyle">
+<code class="descclassname">CanvasContext.</code><code class="descname">setStrokeStyle</code><span class="sig-paren">(</span><em>Color color</em><span class="sig-paren">)</span><a class="headerlink" href="#CanvasContext.setStrokeStyle" title="永久链接至目标">¶</a></dt>
+<dd><p>设置描边颜色。</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="CanvasContext.setShadow">
+<code class="descclassname">CanvasContext.</code><code class="descname">setShadow</code><span class="sig-paren">(</span><em>number offsetX</em>, <em>number offsetY</em>, <em>number blur</em>, <em>string color</em><span class="sig-paren">)</span><a class="headerlink" href="#CanvasContext.setShadow" title="永久链接至目标">¶</a></dt>
+<dd><p>设定阴影样式。</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="CanvasContext.setGlobalAlpha">
+<code class="descclassname">CanvasContext.</code><code class="descname">setGlobalAlpha</code><span class="sig-paren">(</span><em>number alpha</em><span class="sig-paren">)</span><a class="headerlink" href="#CanvasContext.setGlobalAlpha" title="永久链接至目标">¶</a></dt>
+<dd><p>设置全局画笔透明度。</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="CanvasContext.setLineWidth">
+<code class="descclassname">CanvasContext.</code><code class="descname">setLineWidth</code><span class="sig-paren">(</span><em>number lineWidth</em><span class="sig-paren">)</span><a class="headerlink" href="#CanvasContext.setLineWidth" title="永久链接至目标">¶</a></dt>
+<dd><p>设置线条的宽度</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="CanvasContext.setLineJoin">
+<code class="descclassname">CanvasContext.</code><code class="descname">setLineJoin</code><span class="sig-paren">(</span><em>string lineJoin</em><span class="sig-paren">)</span><a class="headerlink" href="#CanvasContext.setLineJoin" title="永久链接至目标">¶</a></dt>
+<dd><p>设置线条的交点样式</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="CanvasContext.setLineCap">
+<code class="descclassname">CanvasContext.</code><code class="descname">setLineCap</code><span class="sig-paren">(</span><em>string lineCap</em><span class="sig-paren">)</span><a class="headerlink" href="#CanvasContext.setLineCap" title="永久链接至目标">¶</a></dt>
+<dd><p>设置线条的端点样式</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="CanvasContext.setLineDash">
+<code class="descclassname">CanvasContext.</code><code class="descname">setLineDash</code><span class="sig-paren">(</span><em>Array.&lt;number&gt; pattern</em>, <em>number offset</em><span class="sig-paren">)</span><a class="headerlink" href="#CanvasContext.setLineDash" title="永久链接至目标">¶</a></dt>
+<dd><p>设置虚线样式。</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="CanvasContext.setMiterLimit">
+<code class="descclassname">CanvasContext.</code><code class="descname">setMiterLimit</code><span class="sig-paren">(</span><em>number miterLimit</em><span class="sig-paren">)</span><a class="headerlink" href="#CanvasContext.setMiterLimit" title="永久链接至目标">¶</a></dt>
+<dd><p>设置最大斜接长度。斜接长度指的是在两条线交汇处内角和外角之间的距离。当 CanvasContext.setLineJoin() 为 miter 时才有效。超过最大倾斜长度的，连接处将以 lineJoin 为 bevel 来显示。</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="CanvasContext.fillText">
+<code class="descclassname">CanvasContext.</code><code class="descname">fillText</code><span class="sig-paren">(</span><em>string text</em>, <em>number x</em>, <em>number y</em>, <em>number maxWidth</em><span class="sig-paren">)</span><a class="headerlink" href="#CanvasContext.fillText" title="永久链接至目标">¶</a></dt>
+<dd><p>在画布上绘制被填充的文本</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="CanvasContext.setFontSize">
+<code class="descclassname">CanvasContext.</code><code class="descname">setFontSize</code><span class="sig-paren">(</span><em>number fontSize</em><span class="sig-paren">)</span><a class="headerlink" href="#CanvasContext.setFontSize" title="永久链接至目标">¶</a></dt>
+<dd><p>设置字体的字号</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="CanvasContext.setTextAlign">
+<code class="descclassname">CanvasContext.</code><code class="descname">setTextAlign</code><span class="sig-paren">(</span><em>string align</em><span class="sig-paren">)</span><a class="headerlink" href="#CanvasContext.setTextAlign" title="永久链接至目标">¶</a></dt>
+<dd><p>设置文字的对齐</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="CanvasContext.setTextBaseline">
+<code class="descclassname">CanvasContext.</code><code class="descname">setTextBaseline</code><span class="sig-paren">(</span><em>string textBaseline</em><span class="sig-paren">)</span><a class="headerlink" href="#CanvasContext.setTextBaseline" title="永久链接至目标">¶</a></dt>
+<dd><p>设置文字的竖直对齐</p>
+</dd></dl>
+
+</div>
 </div>
 
 
-           </div>
-           
           </div>
-          <footer>
-  
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="wx.createCanvasContext.html" class="btn btn-neutral float-right" title="wx.createCanvasContext" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="wx.getShareInfo.html" class="btn btn-neutral float-left" title="wx.getShareInfo" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
-    </div>
-  
-
-  <hr/>
-
-  <div role="contentinfo">
-    <p>
-        &copy; Copyright 2019, Nosy
-
-    </p>
-  </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
-
-</footer>
-
         </div>
       </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>导航</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="总目录"
+             >索引</a></li>
+        <li class="right" >
+          <a href="../http-routingtable.html" title="微信小程序API"
+             >wxapi</a> |</li>
+        <li class="right" >
+          <a href="wx.createCanvasContext.html" title="wx.createCanvasContext"
+             >下一页</a> |</li>
+        <li class="right" >
+          <a href="wx.getShareInfo.html" title="wx.getShareInfo"
+             >上一页</a> |</li>
+<li><a href="../index.html">主页</a>&#160;|</li>
+<li><a href="../contents.html">文档</a> &#187;</li>
 
-    </section>
-
-  </div>
-  
-
-
-  <script type="text/javascript">
-      jQuery(function () {
-          SphinxRtdTheme.Navigation.enable(true);
-      });
-  </script>
-
-  
-  
-    
-   
-
-</body>
+          <li class="nav-item nav-item-1"><a href="index.html" >API</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; 版权所有 2019, Wxadev Docs.
+      由 <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.0+/40994a8 创建。
+    </div>
+  </body>
 </html>

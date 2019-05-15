@@ -1,251 +1,296 @@
 
-
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-CN" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-CN" > <!--<![endif]-->
-<head>
-  <meta charset="utf-8">
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <title>plugin/functional-pages &mdash; wxadev 1.0.0 文档</title>
-  
 
-  
-  
-  
-  
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
+  <head>
+    <meta charset="utf-8" />
+    <title>插件功能页 &#8212; wxadev 1.0.0 文档</title>
+    <link rel="stylesheet" href="../../_static/sphinx13.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/language_data.js"></script>
+    <script type="text/javascript" src="../../_static/translations.js"></script>
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="在 wxadev 1.0.0 文档 中搜索"
+          href="../../_static/opensearch.xml"/>
 
-  
-  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
-  
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../../_static/jquery.js"></script>
-        <script type="text/javascript" src="../../_static/underscore.js"></script>
-        <script type="text/javascript" src="../../_static/doctools.js"></script>
-        <script type="text/javascript" src="../../_static/language_data.js"></script>
-        <script type="text/javascript" src="../../_static/translations.js"></script>
-    
-    <script type="text/javascript" src="../../_static/js/theme.js"></script>
-
-    
-
-  
-  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="index" title="索引" href="../../genindex.html" />
     <link rel="search" title="搜索" href="../../search.html" />
     <link rel="next" title="基础能力" href="../ability/index.html" />
-    <link rel="prev" title="收货地址功能页" href="functional-pages/choose-address.html" /> 
-</head>
+    <link rel="prev" title="收货地址功能页" href="functional-pages/choose-address.html" />
+<link rel="canonical" href="http://www.sphinx-doc.org/en/master/framework/plugin/functional-pages.html" />
 
-<body class="wy-body-for-nav">
-
-   
-  <div class="wy-grid-for-nav">
-    
-    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
-      <div class="wy-side-scroll">
-        <div class="wy-side-nav-search" >
-          
-
-          
-            <a href="../../contents.html" class="icon icon-home"> wxadev
-          
-
-          
-          </a>
-
-          
-            
-            
-          
-
-          
-<div role="search">
-  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
-    <input type="hidden" name="check_keywords" value="yes" />
-    <input type="hidden" name="area" value="default" />
-  </form>
-</div>
-
-          
-        </div>
-
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-              
-            
-            
-              <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../../index.html">开发指南</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../dev.html">简介</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../basic/index.html">基础教程</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../guide/index.html">运行环境</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="../index.html">框架</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="../MINA.html">框架</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../structure.html">目录结构</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../config.html">小程序配置</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../sitemap.html">sitemap 配置</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../app-service/index.html">逻辑层 App Service</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../view/index.html">视图层 View</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../details.html">运行环境</a></li>
-<li class="toctree-l2 current"><a class="reference internal" href="index.html">插件</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="development.html">开发插件</a></li>
-<li class="toctree-l3"><a class="reference internal" href="using.html">使用插件</a></li>
-<li class="toctree-l3"><a class="reference internal" href="api-limit.html">插件调用 API 的限制</a></li>
-<li class="toctree-l3"><a class="reference internal" href="component-limit.html">插件使用组件的限制</a></li>
-<li class="toctree-l3"><a class="reference internal" href="functional-pages/index.html">插件功能</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">plugin/functional-pages</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../ability/index.html">基础能力</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../device/index.html">硬件能力</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../open-ability/index.html">开放能力</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../usability.html">调试</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../usability/index.html">可用性</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../performance/index.html">性能</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../client-lib/index.html">基础库</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../compatibility.html">兼容处理</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../workers.html">多线程 Worker</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../server-ability/index.html">后端能力</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../release/index.html">版本更新</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../operating-mechanism.html">运行机制</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../custom-component/index.html">自定义组件</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../../component/index.html">组件</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../api/index.html">API</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../api-backend/index.html">服务端API</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../devtools/index.html">开发工具</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../reference/index.html">参考资料</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../wxcloud/index.html">云开发</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../wxwork/index.html">企业微信</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../todolist.html">待办事项</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../glossary.html">术语</a></li>
-</ul>
-
-            
-          
-        </div>
-      </div>
-    </nav>
-
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
-          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../../contents.html">wxadev</a>
-        
-      </nav>
-
-
-      <div class="wy-nav-content">
-        
-        <div class="rst-content">
-        
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-
-  <ul class="wy-breadcrumbs">
-    
-      <li><a href="../../contents.html">Docs</a> &raquo;</li>
-        
-          <li><a href="../index.html">框架</a> &raquo;</li>
-        
-          <li><a href="index.html">插件</a> &raquo;</li>
-        
-      <li>plugin/functional-pages</li>
-    
-    
-      <li class="wy-breadcrumbs-aside">
-        
-            
-            <a href="../../_sources/framework/plugin/functional-pages.rst.txt" rel="nofollow"> View page source</a>
-          
-        
-      </li>
-    
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet" type="text/css" />
+ 
+<style type="text/css">
+  table.right { float: right; margin-left: 20px; }
+  table.right td { border: 1px solid #ccc; }
+  
+</style>
+<script type="text/javascript">
+  // intelligent scrolling of the sidebar content
+  $(window).scroll(function() {
+    var sb = $('.sphinxsidebarwrapper');
+    var win = $(window);
+    var sbh = sb.height();
+    var offset = $('.sphinxsidebar').position()['top'];
+    var wintop = win.scrollTop();
+    var winbot = wintop + win.innerHeight();
+    var curtop = sb.position()['top'];
+    var curbot = curtop + sbh;
+    // does sidebar fit in window?
+    if (sbh < win.innerHeight()) {
+      // yes: easy case -- always keep at the top
+      sb.css('top', $u.min([$u.max([0, wintop - offset - 10]), $(document).height() - sbh - 200]));
+    } else {
+      // no: only scroll if top/bottom edge of sidebar is at
+      // top/bottom edge of window
+      if (curtop > wintop && curbot > winbot) {
+        sb.css('top', $u.max([wintop - offset - 10, 0]));
+      } else if (curtop < wintop && curbot < winbot) {
+        sb.css('top', $u.min([winbot - sbh - offset - 20, $(document).height() - sbh - 200]));
+      }
+    }
+  });
+</script> 
+  </head><body>
+<div class="pageheader">
+  <ul>
+    <li><a href="../../index.html">主页</a></li>
+    <li><a href="../index.html">框架</a></li>
+    <li><a href="../../component/index.html">组件</a></li>
+    <li><a href="../../api/index.html">API</a></li>
+    <li><a href="../../api-backend/index.html">服务端</a></li>
+    <li><a href="../../contents.html">目录</a></li>
   </ul>
-
-  
-  <hr/>
-</div>
-          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
-           <div itemprop="articleBody">
-            
-  <div class="section" id="plugin-functional-pages">
-<h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/framework/plugin/functional-pages.html">plugin/functional-pages</a><a class="headerlink" href="#plugin-functional-pages" title="永久链接至标题">¶</a></h1>
-</div>
-
-
-           </div>
-           
-          </div>
-          <footer>
-  
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="../ability/index.html" class="btn btn-neutral float-right" title="基础能力" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="functional-pages/choose-address.html" class="btn btn-neutral float-left" title="收货地址功能页" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
-    </div>
-  
-
-  <hr/>
-
-  <div role="contentinfo">
-    <p>
-        &copy; Copyright 2019, Nosy
-
-    </p>
+  <div>
+    <a href="../../index.html">
+      <img src="../../_static/wxaheader.png" alt="wxa" />
+    </a>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+</div>
 
-</footer>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>导航</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="总目录"
+             accesskey="I">索引</a></li>
+        <li class="right" >
+          <a href="../../http-routingtable.html" title="微信小程序API"
+             >wxapi</a> |</li>
+        <li class="right" >
+          <a href="../ability/index.html" title="基础能力"
+             accesskey="N">下一页</a> |</li>
+        <li class="right" >
+          <a href="functional-pages/choose-address.html" title="收货地址功能页"
+             accesskey="P">上一页</a> |</li>
+<li><a href="../../index.html">主页</a>&#160;|</li>
+<li><a href="../../contents.html">文档</a> &#187;</li>
 
+          <li class="nav-item nav-item-1"><a href="../index.html" >框架</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="index.html" accesskey="U">插件</a> &#187;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../../contents.html">目录</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">插件功能页</a><ul>
+<li><a class="reference internal" href="#id2">激活功能页特性</a></li>
+<li><a class="reference internal" href="#id3">跳转到功能页</a></li>
+<li><a class="reference internal" href="#id4">真机开发测试的常规步骤</a></li>
+<li><a class="reference internal" href="#faq">功能页常见问题 FAQ</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>上一个主题</h4>
+  <p class="topless"><a href="functional-pages/choose-address.html"
+                        title="上一章">收货地址功能页</a></p>
+  <h4>下一个主题</h4>
+  <p class="topless"><a href="../ability/index.html"
+                        title="下一章">基础能力</a></p>
+  <div role="note" aria-label="source link">
+    <h3>本页</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../_sources/framework/plugin/functional-pages.rst.txt"
+            rel="nofollow">显示源代码</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">快速搜索</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="转向" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
         </div>
       </div>
 
-    </section>
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="id1">
+<h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/framework/plugin/functional-pages.html">插件功能页</a><a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
+<p>某些接口不能在插件中直接调用（如 wx.login），但插件开发者可以使用插件功能页的方式来实现功能。目前，插件功能页包括：</p>
+<p>获取用户信息，包括 openid 和昵称等（相当于 wx.login 和 wx.getUserInfo 的功能），详见用户信息功能页；
+支付（相当于 wx.requestPayment），详见支付功能页；
+获取收货地址（相当于 wx.chooseAddress），详见收货地址功能页。
+要使用插件功能页，需要先激活功能页特性，配置对应的功能页函数，再使用 &lt;functional-page-navigator&gt; 组件跳转到插件功能页，
+从而实现对应的功能。详情请参考下文。</p>
+<p>插件所有者小程序
+开始开发之前，我们需要知道，插件功能页是指 插件所有者小程序 中的一个特殊页面。</p>
+<p>插件所有者小程序，指的是与插件 AppID 相同的小程序。例如，“小程序示例”小程序开发了一个“小程序示例插件”，
+那么无论这个插件被哪个小程序使用，这个插件的 插件所有者小程序 都是“小程序示例”。下文中会继续使用 插件所有者小程序 这个说法。</p>
+<div class="section" id="id2">
+<h2>激活功能页特性<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<p>要在插件中调用插件功能页，需要先激活插件所有者小程序的功能页特性。
+具体来说，在插件所有者小程序的 app.json 文件中添加 functionalPages 定义段，并令其值为 true ，例如：</p>
+<p>代码示例：</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;functionalPages&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;independent&quot;</span><span class="p">:</span> <span class="kc">true</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>目前，兼容旧式写法：</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;functionalPages&quot;</span><span class="p">:</span> <span class="kc">true</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>旧式写法将在未来将被移除支持，未来将不能编译上传。</p>
+<p>这两种写法的区别在于，新式的写法 “independent”: true 会使得插件功能页的代码独立于其他代码，
+这意味着插件功能页可以被独立下载、加载，具有更好的性能表现。
+但也同时使得插件功能页目录 functional-pages/ （支付功能页会使用其中的文件）
+不能 require 这个目录以外的文件（反之亦然：这个目录以外的文件也不能调用这个目录内的）。</p>
+<p>注意，新增或改变这个字段时，需要这个小程序发布新版本，才能在正式环境中使用插件功能页。</p>
+</div>
+<div class="section" id="id3">
+<h2>跳转到功能页<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
+<p>功能页不能使用 wx.navigateTo 来进行跳转，而是需要一个名为 &lt;functional-page-navigator&gt; 的组件。
+以获取用户信息为例，可以在插件中放置如下的 &lt;functional-page-navigator&gt;：</p>
+<p>代码示例：</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;functional-page-navigator</span>
+  <span class="na">name=</span><span class="s">&quot;loginAndGetUserInfo&quot;</span>
+  <span class="na">args=</span><span class="s">&quot;&quot;</span>
+  <span class="na">version=</span><span class="s">&quot;develop&quot;</span>
+  <span class="na">bind:success=</span><span class="s">&quot;loginSuccess&quot;</span>
+<span class="nt">&gt;</span>
+  <span class="nt">&lt;button&gt;</span>登录到插件<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;/functional-page-navigator&gt;</span>
+</pre></div>
+</div>
+<p>用户在点击这个 navigator 时，会自动跳转到插件所有者小程序的对应功能页。功能页会提示用户进行登录或其他相应的操作。操作结果会以组件事件的方式返回。</p>
+<p>&lt;functional-page-navigator&gt; 的参数和详细使用方法可以参考组件说明 。</p>
+<div class="versionadded">
+<p><span class="versionmodified added">2.4.0 新版功能: </span>支持插件所有者小程序跳转到自己的功能页。在基础库版本低于 2.4.0 时，点击跳转到自己的功能页的 &lt;functional-page-navigator&gt; 将没有任何反应。</p>
+</div>
+</div>
+<div class="section" id="id4">
+<h2>真机开发测试的常规步骤<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h2>
+<p>目前，功能页的跳转目前不支持在开发者工具中调试，请在真机上测试。初次进行真机开发测试时，通常步骤如下：</p>
+<p>在开发者工具上打开插件所有者小程序项目，并点击“预览”；
+用测试用的真机扫一下预览二维码，此时会进入插件所有者小程序，进入后就可以直接退出这个小程序；
+在开发者工具上打开插件项目，将插件中 &lt;functional-page-navigator&gt; 中的 version 属性设置为 develop；
+点击预览可以生成插件预览二维码，用测试用的真机扫码即可预览功能页；如果更改了插件代码，重新生成并扫描插件的预览二维码即可；
+如果过了一段时间之后，跳转功能页时出现“开发版已过期”这样的提示，从第1步开始重试一次。</p>
+<div class="admonition attention">
+<p class="admonition-title">注意</p>
+<p>functional-page-navigator 的 version=develop 仅用于调试，因此在插件提审前，需要：</p>
+<ul class="simple">
+<li><p>确保已发布设置了 “functionalPages”: true 的插件所有者小程序；</p></li>
+<li><p>确保所有的 functional-page-navigator 组件属性设置为 version=”release” 。</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="faq">
+<h2>功能页常见问题 FAQ<a class="headerlink" href="#faq" title="永久链接至标题">¶</a></h2>
+<dl class="simple">
+<dt>… 如何正确编辑插件所有者小程序？</dt><dd><p>应该在开发者工具的“小程序”类型项目中编辑，而不是在“插件”类型的项目中编辑。
+比如，“小程序示例插件”的所有者小程序是“小程序示例”，它们的 AppID 都是 wxidxxxxxxxxxxxxxx ，
+如果是初次开发“小程序示例”小程序，可以在开发者工具中创建一个小程序项目，其 AppID 为 wxidxxxxxxxxxxxxxx ；
+如果之前开发过“小程序示例”小程序，直接打开之前的小程序项目即可。</p>
+</dd>
+<dt>… 点击 &lt;functional-page-navigator&gt; 之后没有任何反应。</dt><dd><p>请检查引用插件的小程序和插件本身是不是同一个 AppID ，如果是，跳转到自己的功能页需要基础库 2.4.0 支持，
+否则使用 &lt;functional-page-navigator&gt; 不会有任何反应。</p>
+</dd>
+<dt>… 点击 &lt;functional-page-navigator&gt; 之后，展示了一个页面提示“页面不存在”。</dt><dd><p>这种情况是因为插件所有者小程序没有正确设置 “functionalPages”: true 。
+如果 functional-page-navigator 的 version=”develop” ，这部手机需要扫码并进入插件所有者小程序一次；
+如果 version=”release” ，请确保包含 “functionalPages”: true 的插件所有者小程序已被发布。</p>
+</dd>
+<dt>… 点击 &lt;functional-page-navigator version=”develop”&gt; 之后，弹窗提示“小程序开发版已过期”。</dt><dd><p>遇到这种情况，重新扫码并进入插件所有者小程序一次即可。</p>
+</dd>
+<dt>… 点击 &lt;functional-page-navigator name=”requestPayment”&gt; 之后，展示了一个页面提示“该功能无法使用”。</dt><dd><p>在使用插件功能页时，小程序不能是个人小程序，同时，
+插件也需要额外的步骤申请开通插件支付权限（位于 管理后台 -&gt; 小程序插件 -&gt; 基本设置 -&gt; 支付能力 ）。</p>
+</dd>
+<dt>… 点击 &lt;functional-page-navigator name=”requestPayment”&gt; 之后，点击页面中的“支付”按钮，立刻退出了支付功能页。</dt><dd><p>这通常是因为没有找到功能页函数 beforeRequestPayment ，
+请检查插件所有者小程序的 functional-pages/request-payment.js 文件和其中的 beforeRequestPayment 函数是否存在。</p>
+</dd>
+<dt>… 点击 &lt;functional-page-navigator&gt; 之后，展示了一个仅有返回按钮的页面。</dt><dd><p>请检查 &lt;functional-page-navigator&gt; 的 name 属性是否被正确设置。</p>
+</dd>
+<dt>… 开发版可以正常跳转，但审核反馈不能跳转。</dt><dd><p>请发布设置了 “functionalPages”: true 的插件所有者小程序，
+且所有的 functional-page-navigator 组件属性设置为 version=”release” 。</p>
+</dd>
+</dl>
+<div class="admonition tip">
+<p class="admonition-title">小技巧</p>
+<ul class="simple">
+<li><p>功能页是插件所有者小程序中的一个特殊页面，开发者不能自定义这个页面的外观。</p></li>
+<li><p>在功能页展示时，一些与界面展示相关的接口将被禁用（接口调用返回 fail ）。</p></li>
+<li><p>&lt;functional-page-navigator&gt; 可以在开发者工具中使用，但功能页的跳转目前不支持在开发者工具中调试，请在真机上测试。</p></li>
+</ul>
+</div>
+<div class="admonition error">
+<p class="admonition-title">错误</p>
+<ul class="simple">
+<li><p>在微信版本 6.6.7 中，功能页被拉起时会触发 App 的部分生命周期并使得功能页启动时间变得比较长。在后续的微信版本中这一行为会发生变更，使 App 生命周期不再被触发。</p></li>
+</ul>
+</div>
+</div>
+</div>
 
-  </div>
-  
 
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>导航</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="总目录"
+             >索引</a></li>
+        <li class="right" >
+          <a href="../../http-routingtable.html" title="微信小程序API"
+             >wxapi</a> |</li>
+        <li class="right" >
+          <a href="../ability/index.html" title="基础能力"
+             >下一页</a> |</li>
+        <li class="right" >
+          <a href="functional-pages/choose-address.html" title="收货地址功能页"
+             >上一页</a> |</li>
+<li><a href="../../index.html">主页</a>&#160;|</li>
+<li><a href="../../contents.html">文档</a> &#187;</li>
 
-  <script type="text/javascript">
-      jQuery(function () {
-          SphinxRtdTheme.Navigation.enable(true);
-      });
-  </script>
-
-  
-  
-    
-   
-
-</body>
+          <li class="nav-item nav-item-1"><a href="../index.html" >框架</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="index.html" >插件</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; 版权所有 2019, Wxadev Docs.
+      由 <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.0+/40994a8 创建。
+    </div>
+  </body>
 </html>

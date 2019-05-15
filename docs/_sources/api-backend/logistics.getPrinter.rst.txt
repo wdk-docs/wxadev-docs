@@ -12,8 +12,9 @@ logistics.getPrinter
 一、HTTPS 调用
 -------------------
 
-请求地址
-GET https://api.weixin.qq.com/cgi-bin/express/business/printer/getall?access_token=ACCESS_TOKEN
+接口地址请求地址 :term:`api`
+
+.. http:post:: express/business/printer/getall?access_token=ACCESS_TOKEN
 
 请求参数
 属性	类型	默认值	必填	说明

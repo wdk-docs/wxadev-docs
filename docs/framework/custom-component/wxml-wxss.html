@@ -1,212 +1,152 @@
 
-
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-CN" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-CN" > <!--<![endif]-->
-<head>
-  <meta charset="utf-8">
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <title>组件模板和样式 &mdash; wxadev 1.0.0 文档</title>
-  
 
-  
-  
-  
-  
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
+  <head>
+    <meta charset="utf-8" />
+    <title>组件模板和样式 &#8212; wxadev 1.0.0 文档</title>
+    <link rel="stylesheet" href="../../_static/sphinx13.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/language_data.js"></script>
+    <script type="text/javascript" src="../../_static/translations.js"></script>
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="在 wxadev 1.0.0 文档 中搜索"
+          href="../../_static/opensearch.xml"/>
 
-  
-  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
-  
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../../_static/jquery.js"></script>
-        <script type="text/javascript" src="../../_static/underscore.js"></script>
-        <script type="text/javascript" src="../../_static/doctools.js"></script>
-        <script type="text/javascript" src="../../_static/language_data.js"></script>
-        <script type="text/javascript" src="../../_static/translations.js"></script>
-    
-    <script type="text/javascript" src="../../_static/js/theme.js"></script>
-
-    
-
-  
-  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="index" title="索引" href="../../genindex.html" />
     <link rel="search" title="搜索" href="../../search.html" />
-    <link rel="next" title="组件" href="../../component/index.html" />
-    <link rel="prev" title="custom-component/unit-test" href="unit-test.html" /> 
-</head>
+    <link rel="next" title="Component构造器" href="component.html" />
+    <link rel="prev" title="自定义组件" href="create.html" />
+<link rel="canonical" href="http://www.sphinx-doc.org/en/master/framework/custom-component/wxml-wxss.html" />
 
-<body class="wy-body-for-nav">
-
-   
-  <div class="wy-grid-for-nav">
-    
-    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
-      <div class="wy-side-scroll">
-        <div class="wy-side-nav-search" >
-          
-
-          
-            <a href="../../contents.html" class="icon icon-home"> wxadev
-          
-
-          
-          </a>
-
-          
-            
-            
-          
-
-          
-<div role="search">
-  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
-    <input type="hidden" name="check_keywords" value="yes" />
-    <input type="hidden" name="area" value="default" />
-  </form>
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet" type="text/css" />
+ 
+<style type="text/css">
+  table.right { float: right; margin-left: 20px; }
+  table.right td { border: 1px solid #ccc; }
+  
+</style>
+<script type="text/javascript">
+  // intelligent scrolling of the sidebar content
+  $(window).scroll(function() {
+    var sb = $('.sphinxsidebarwrapper');
+    var win = $(window);
+    var sbh = sb.height();
+    var offset = $('.sphinxsidebar').position()['top'];
+    var wintop = win.scrollTop();
+    var winbot = wintop + win.innerHeight();
+    var curtop = sb.position()['top'];
+    var curbot = curtop + sbh;
+    // does sidebar fit in window?
+    if (sbh < win.innerHeight()) {
+      // yes: easy case -- always keep at the top
+      sb.css('top', $u.min([$u.max([0, wintop - offset - 10]), $(document).height() - sbh - 200]));
+    } else {
+      // no: only scroll if top/bottom edge of sidebar is at
+      // top/bottom edge of window
+      if (curtop > wintop && curbot > winbot) {
+        sb.css('top', $u.max([wintop - offset - 10, 0]));
+      } else if (curtop < wintop && curbot < winbot) {
+        sb.css('top', $u.min([winbot - sbh - offset - 20, $(document).height() - sbh - 200]));
+      }
+    }
+  });
+</script> 
+  </head><body>
+<div class="pageheader">
+  <ul>
+    <li><a href="../../index.html">主页</a></li>
+    <li><a href="../index.html">框架</a></li>
+    <li><a href="../../component/index.html">组件</a></li>
+    <li><a href="../../api/index.html">API</a></li>
+    <li><a href="../../api-backend/index.html">服务端</a></li>
+    <li><a href="../../contents.html">目录</a></li>
+  </ul>
+  <div>
+    <a href="../../index.html">
+      <img src="../../_static/wxaheader.png" alt="wxa" />
+    </a>
+  </div>
 </div>
 
-          
-        </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>导航</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="总目录"
+             accesskey="I">索引</a></li>
+        <li class="right" >
+          <a href="../../http-routingtable.html" title="微信小程序API"
+             >wxapi</a> |</li>
+        <li class="right" >
+          <a href="component.html" title="Component构造器"
+             accesskey="N">下一页</a> |</li>
+        <li class="right" >
+          <a href="create.html" title="自定义组件"
+             accesskey="P">上一页</a> |</li>
+<li><a href="../../index.html">主页</a>&#160;|</li>
+<li><a href="../../contents.html">文档</a> &#187;</li>
 
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-              
-            
-            
-              <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../../index.html">开发指南</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../dev.html">简介</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../basic/index.html">基础教程</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../guide/index.html">运行环境</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="../index.html">框架</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="../MINA.html">框架</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../structure.html">目录结构</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../config.html">小程序配置</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../sitemap.html">sitemap 配置</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../app-service/index.html">逻辑层 App Service</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../view/index.html">视图层 View</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../details.html">运行环境</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../plugin/index.html">插件</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../ability/index.html">基础能力</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../device/index.html">硬件能力</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../open-ability/index.html">开放能力</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../usability.html">调试</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../usability/index.html">可用性</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../performance/index.html">性能</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../client-lib/index.html">基础库</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../compatibility.html">兼容处理</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../workers.html">多线程 Worker</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../server-ability/index.html">后端能力</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../release/index.html">版本更新</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../operating-mechanism.html">运行机制</a></li>
-<li class="toctree-l2 current"><a class="reference internal" href="index.html">自定义组件</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="create.html">自定义组件</a></li>
-<li class="toctree-l3"><a class="reference internal" href="behaviors.html">custom-component/behaviors</a></li>
-<li class="toctree-l3"><a class="reference internal" href="component.html">Component构造器</a></li>
-<li class="toctree-l3"><a class="reference internal" href="custom-component.html">custom-component/custom-component</a></li>
-<li class="toctree-l3"><a class="reference internal" href="events.html">组件间通信与事件</a></li>
-<li class="toctree-l3"><a class="reference internal" href="extend.html">custom-component/extend</a></li>
-<li class="toctree-l3"><a class="reference internal" href="generics.html">custom-component/generics</a></li>
-<li class="toctree-l3"><a class="reference internal" href="lifetimes.html">custom-component/lifetimes</a></li>
-<li class="toctree-l3"><a class="reference internal" href="observer.html">custom-component/observer</a></li>
-<li class="toctree-l3"><a class="reference internal" href="relations.html">custom-component/relations</a></li>
-<li class="toctree-l3"><a class="reference internal" href="trdparty.html">custom-component/trdparty</a></li>
-<li class="toctree-l3"><a class="reference internal" href="unit-test.html">custom-component/unit-test</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">组件模板和样式</a></li>
+          <li class="nav-item nav-item-1"><a href="../index.html" >框架</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="index.html" accesskey="U">自定义组件</a> &#187;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../../contents.html">目录</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">组件模板和样式</a><ul>
+<li><a class="reference internal" href="#id2">组件模板</a></li>
+<li><a class="reference internal" href="#id3">模板数据绑定</a></li>
+<li><a class="reference internal" href="#wxmlslot">组件wxml的slot</a></li>
+<li><a class="reference internal" href="#id6">组件样式</a></li>
+<li><a class="reference internal" href="#id11">组件样式隔离</a></li>
+<li><a class="reference internal" href="#id16">外部样式类</a></li>
 </ul>
 </li>
 </ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../../component/index.html">组件</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../api/index.html">API</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../api-backend/index.html">服务端API</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../devtools/index.html">开发工具</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../reference/index.html">参考资料</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../wxcloud/index.html">云开发</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../wxwork/index.html">企业微信</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../todolist.html">待办事项</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../glossary.html">术语</a></li>
-</ul>
 
-            
-          
+  <h4>上一个主题</h4>
+  <p class="topless"><a href="create.html"
+                        title="上一章">自定义组件</a></p>
+  <h4>下一个主题</h4>
+  <p class="topless"><a href="component.html"
+                        title="下一章">Component构造器</a></p>
+  <div role="note" aria-label="source link">
+    <h3>本页</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../_sources/framework/custom-component/wxml-wxss.rst.txt"
+            rel="nofollow">显示源代码</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">快速搜索</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="转向" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
         </div>
       </div>
-    </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
-          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../../contents.html">wxadev</a>
-        
-      </nav>
-
-
-      <div class="wy-nav-content">
-        
-        <div class="rst-content">
-        
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-
-  <ul class="wy-breadcrumbs">
-    
-      <li><a href="../../contents.html">Docs</a> &raquo;</li>
-        
-          <li><a href="../index.html">框架</a> &raquo;</li>
-        
-          <li><a href="index.html">自定义组件</a> &raquo;</li>
-        
-      <li>组件模板和样式</li>
-    
-    
-      <li class="wy-breadcrumbs-aside">
-        
-            
-            <a href="../../_sources/framework/custom-component/wxml-wxss.rst.txt" rel="nofollow"> View page source</a>
-          
-        
-      </li>
-    
-  </ul>
-
-  
-  <hr/>
-</div>
-          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
-           <div itemprop="articleBody">
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
             
   <div class="section" id="id1">
-<h1>组件模板和样式<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
+<h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/framework/custom-component/wxml-wxss.html">组件模板和样式</a><a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
 <p>类似于页面，自定义组件拥有自己的 wxml 模板和 wxss 样式。</p>
-<p>组件模板
-组件模板的写法与页面模板相同。组件模板与组件数据结合后生成的节点树，将被插入到组件的引用位置上。</p>
+<div class="section" id="id2">
+<h2>组件模板<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<p>组件模板的写法与页面模板相同。组件模板与组件数据结合后生成的节点树，将被插入到组件的引用位置上。</p>
 <p>在组件模板中可以提供一个 &lt;slot&gt; 节点，用于承载组件引用时提供的子节点。</p>
 <p>代码示例：</p>
 <p>在开发者工具中预览效果</p>
@@ -229,8 +169,10 @@
 </div></blockquote>
 <p>&lt;/view&gt;
 注意，在模板中引用到的自定义组件及其对应的节点名需要在 json 文件中显式定义，否则会被当作一个无意义的节点。除此以外，节点名也可以被声明为抽象节点。</p>
-<p>模板数据绑定
-与普通的 WXML 模板类似，可以使用数据绑定，这样就可以向子组件的属性传递动态数据。</p>
+</div>
+<div class="section" id="id3">
+<h2>模板数据绑定<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
+<p>与普通的 WXML 模板类似，可以使用数据绑定，这样就可以向子组件的属性传递动态数据。</p>
 <p>代码示例：</p>
 <p>&lt;!– 引用组件的页面模板 –&gt;
 &lt;view&gt;</p>
@@ -245,8 +187,10 @@
 <p>&lt;/view&gt;
 在以上例子中，组件的属性 propA 和 propB 将收到页面传递的数据。页面可以通过 setData 来改变绑定的数据字段。</p>
 <p>注意：这样的数据绑定只能传递 JSON 兼容数据。自基础库版本 2.0.9 开始，还可以在数据中包含函数（但这些函数不能在 WXML 中直接调用，只能传递给子组件）。</p>
-<p>组件wxml的slot
-在组件的wxml中可以包含 slot 节点，用于承载组件使用者提供的wxml结构。</p>
+</div>
+<div class="section" id="wxmlslot">
+<h2>组件wxml的slot<a class="headerlink" href="#wxmlslot" title="永久链接至标题">¶</a></h2>
+<p>在组件的wxml中可以包含 slot 节点，用于承载组件使用者提供的wxml结构。</p>
 <p>默认情况下，一个组件的wxml中只能有一个slot。需要使用多slot时，可以在组件js中声明启用。</p>
 <dl>
 <dt>Component({</dt><dd><dl class="simple">
@@ -255,7 +199,7 @@
 </dl>
 <p>},
 properties: { /* … <em>/ },
-methods: { /</em> … <a href="#id2"><span class="problematic" id="id3">*</span></a>/ }</p>
+methods: { /</em> … <a href="#id4"><span class="problematic" id="id5">*</span></a>/ }</p>
 </dd>
 </dl>
 <p>})
@@ -281,14 +225,16 @@ methods: { /</em> … <a href="#id2"><span class="problematic" id="id3">*</span>
 </dl>
 <p>&lt;/component-tag-name&gt;</p>
 </div></blockquote>
-<p>&lt;/view&gt;
-组件样式
-组件对应 wxss 文件的样式，只对组件wxml内的节点生效。编写组件样式时，需要注意以下几点：</p>
+<p>&lt;/view&gt;</p>
+</div>
+<div class="section" id="id6">
+<h2>组件样式<a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h2>
+<p>组件对应 wxss 文件的样式，只对组件wxml内的节点生效。编写组件样式时，需要注意以下几点：</p>
 <p>组件和引用组件的页面不能使用id选择器（#a）、属性选择器（[a]）和标签名选择器，请改用class选择器。
 组件和引用组件的页面中使用后代选择器（.a .b）在一些极端情况下会有非预期的表现，如遇，请避免使用。
 子元素选择器（.a&gt;.b）只能用于 view 组件与其子节点之间，用于其他组件可能导致非预期的情况。
 继承样式，如 font 、 color ，会从组件外继承到组件内。
-除继承样式外， app.wxss 中的样式、组件所在页面的的样式对自定义组件无效。
+除继承样式外， app.wxss 中的样式、组件所在页面的的样式对自定义组件无效（除非更改组件样式隔离选项）。
 #a {
 } /* 在组件中不能使用 <em>/
 [a] {
@@ -296,24 +242,76 @@ methods: { /</em> … <a href="#id2"><span class="problematic" id="id3">*</span>
 button {
 } /</em> 在组件中不能使用 <em>/
 .a &gt; .b {
-} /</em> 除非 .a 是 view 组件节点，否则不一定会生效 <a href="#id4"><span class="problematic" id="id5">*</span></a>/
+} /</em> 除非 .a 是 view 组件节点，否则不一定会生效 <a href="#id7"><span class="problematic" id="id8">*</span></a>/
 除此以外，组件可以指定它所在节点的默认样式，使用 :host 选择器（需要包含基础库 1.7.2 或更高版本的开发者工具支持）。</p>
 <p>代码示例：</p>
 <p>在开发者工具中预览效果</p>
-<p>/* 组件 custom-component.wxss <a href="#id6"><span class="problematic" id="id7">*</span></a>/
+<p>/* 组件 custom-component.wxss <a href="#id9"><span class="problematic" id="id10">*</span></a>/
 :host {</p>
 <blockquote>
 <div><p>color: yellow;</p>
 </div></blockquote>
 <p>}
 &lt;!– 页面的 WXML –&gt;
-&lt;custom-component&gt;这段文本是黄色的&lt;/custom-component&gt;
-外部样式类
-有时，组件希望接受外部传入的样式类。此时可以在 Component 中用 externalClasses 定义段定义若干个外部样式类。这个特性从小程序基础库版本 1.9.90 开始支持。</p>
+&lt;custom-component&gt;这段文本是黄色的&lt;/custom-component&gt;</p>
+</div>
+<div class="section" id="id11">
+<h2>组件样式隔离<a class="headerlink" href="#id11" title="永久链接至标题">¶</a></h2>
+<p>默认情况下，自定义组件的样式只受到自定义组件 wxss 的影响。除非以下两种情况：</p>
+<p>app.wxss 或页面的 wxss 中使用了标签名选择器（或一些其他特殊选择器）来直接指定样式，这些选择器会影响到页面和全部组件。通常情况下这是不推荐的做法。
+指定特殊的样式隔离选项 styleIsolation 。
+Component({</p>
+<blockquote>
+<div><dl class="simple">
+<dt>options: {</dt><dd><p>styleIsolation: ‘isolated’</p>
+</dd>
+</dl>
+<p>}</p>
+</div></blockquote>
+<p>})
+在开发者工具中预览效果</p>
+<p>styleIsolation 选项从基础库版本 2.6.5 开始支持。它支持以下取值：</p>
+<p>isolated 表示启用样式隔离，在自定义组件内外，使用 class 指定的样式将不会相互影响（一般情况下的默认值）；
+apply-shared 表示页面 wxss 样式将影响到自定义组件，但自定义组件 wxss 中指定的样式不会影响页面；
+shared 表示页面 wxss 样式将影响到自定义组件，自定义组件 wxss 中指定的样式也会影响页面和其他设置了 apply-shared 或 shared 的自定义组件。（这个选项在插件中不可用。）
+使用后两者时，请务必注意组件间样式的相互影响。</p>
+<p>如果这个 Component 构造器用于构造页面 ，则默认值为 shared ，且还有以下几个额外的样式隔离选项可用：</p>
+<p>page-isolated 表示在这个页面禁用 app.wxss ，同时，页面的 wxss 不会影响到其他自定义组件；
+page-apply-shared 表示在这个页面禁用 app.wxss ，同时，页面 wxss 样式不会影响到其他自定义组件，但设为 shared 的自定义组件会影响到页面；
+page-shared 表示在这个页面禁用 app.wxss ，同时，页面 wxss 样式会影响到其他设为 apply-shared 或 shared 的自定义组件，也会受到设为 shared 的自定义组件的影响。
+此外，小程序基础库版本 2.2.3 以上支持 addGlobalClass 选项，即在 Component 的 options 中设置 addGlobalClass: true 。 这个选项等价于设置 styleIsolation: apply-shared ，但设置了 styleIsolation 选项后这个选项会失效。</p>
+<p>代码示例：</p>
+<p>在开发者工具中预览效果</p>
+<p>/* 组件 custom-component.js <a href="#id12"><span class="problematic" id="id13">*</span></a>/
+Component({</p>
+<blockquote>
+<div><dl class="simple">
+<dt>options: {</dt><dd><p>addGlobalClass: true,</p>
+</dd>
+</dl>
+<p>}</p>
+</div></blockquote>
+<p>})
+&lt;!– 组件 custom-component.wxml –&gt;
+&lt;text class=”red-text”&gt;</p>
+<blockquote>
+<div><p>这段文本的颜色由 <cite>app.wxss</cite> 和页面 <cite>wxss</cite> 中的样式定义来决定</p>
+</div></blockquote>
+<p>&lt;/text&gt;
+/* app.wxss <a href="#id14"><span class="problematic" id="id15">*</span></a>/
+.red-text {</p>
+<blockquote>
+<div><p>color: red;</p>
+</div></blockquote>
+<p>}</p>
+</div>
+<div class="section" id="id16">
+<h2>外部样式类<a class="headerlink" href="#id16" title="永久链接至标题">¶</a></h2>
+<p>有时，组件希望接受外部传入的样式类。此时可以在 Component 中用 externalClasses 定义段定义若干个外部样式类。这个特性从小程序基础库版本 1.9.90 开始支持。</p>
 <p>这个特性可以用于实现类似于 view 组件的 hover-class 属性：页面可以提供一个样式类，赋予 view 的 hover-class ，这个样式类本身写在页面中而非 view 组件的实现中。</p>
 <p>注意：在同一个节点上使用普通样式类和外部样式类时，两个类的优先级是未定义的，因此最好避免这种情况。</p>
 <p>代码示例：</p>
-<p>/* 组件 custom-component.js <a href="#id8"><span class="problematic" id="id9">*</span></a>/
+<p>/* 组件 custom-component.js <a href="#id17"><span class="problematic" id="id18">*</span></a>/
 Component({</p>
 <blockquote>
 <div><p>externalClasses: [‘my-class’]</p>
@@ -334,86 +332,41 @@ Component({</p>
 <blockquote>
 <div><p>color: red;</p>
 </div></blockquote>
-<p>}
-使组件接受全局样式
-默认情况下，自定义组件的样式只受到自定义组件 wxss 的影响。除非以下两种情况：</p>
-<p>app.wxss 或页面的 wxss 中使用了标签名选择器（或一些其他特殊选择器）来直接指定样式，这些选择器会影响到页面和全部组件。通常情况下这是不推荐的做法。
-在特定的自定义组件激活了 addGlobalClass 选项，这使得这个自定义组件能被 app.wxss 或页面的 wxss 中的所有的样式定义影响。
-要激活 addGlobalClass 选项，只需要在 Component 构造器中将 options.addGlobalClass 字段置为 true 。这个特性从小程序基础库版本 2.2.3 开始支持。</p>
-<p>注意：当激活了 addGlobalClass 选项后，存在外部样式污染组件样式的风险，请谨慎选择。</p>
-<p>代码示例：</p>
-<p>在开发者工具中预览效果</p>
-<p>/* 组件 custom-component.js <a href="#id10"><span class="problematic" id="id11">*</span></a>/
-Component({</p>
-<blockquote>
-<div><dl class="simple">
-<dt>options: {</dt><dd><p>addGlobalClass: true,</p>
-</dd>
-</dl>
 <p>}</p>
-</div></blockquote>
-<p>})
-&lt;!– 组件 custom-component.wxml –&gt;
-&lt;text class=”red-text”&gt;</p>
-<blockquote>
-<div><p>这段文本的颜色由 <cite>app.wxss</cite> 和页面 <cite>wxss</cite> 中的样式定义来决定</p>
-</div></blockquote>
-<p>&lt;/text&gt;
-/* app.wxss <a href="#id12"><span class="problematic" id="id13">*</span></a>/
-.red-text {</p>
-<blockquote>
-<div><p>color: red;</p>
-</div></blockquote>
-<p>}</p>
+</div>
 </div>
 
 
-           </div>
-           
           </div>
-          <footer>
-  
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="../../component/index.html" class="btn btn-neutral float-right" title="组件" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="unit-test.html" class="btn btn-neutral float-left" title="custom-component/unit-test" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
-    </div>
-  
-
-  <hr/>
-
-  <div role="contentinfo">
-    <p>
-        &copy; Copyright 2019, Nosy
-
-    </p>
-  </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
-
-</footer>
-
         </div>
       </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>导航</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="总目录"
+             >索引</a></li>
+        <li class="right" >
+          <a href="../../http-routingtable.html" title="微信小程序API"
+             >wxapi</a> |</li>
+        <li class="right" >
+          <a href="component.html" title="Component构造器"
+             >下一页</a> |</li>
+        <li class="right" >
+          <a href="create.html" title="自定义组件"
+             >上一页</a> |</li>
+<li><a href="../../index.html">主页</a>&#160;|</li>
+<li><a href="../../contents.html">文档</a> &#187;</li>
 
-    </section>
-
-  </div>
-  
-
-
-  <script type="text/javascript">
-      jQuery(function () {
-          SphinxRtdTheme.Navigation.enable(true);
-      });
-  </script>
-
-  
-  
-    
-   
-
-</body>
+          <li class="nav-item nav-item-1"><a href="../index.html" >框架</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="index.html" >自定义组件</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; 版权所有 2019, Wxadev Docs.
+      由 <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.0+/40994a8 创建。
+    </div>
+  </body>
 </html>

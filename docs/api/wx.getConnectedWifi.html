@@ -1,270 +1,200 @@
 
-
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-CN" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-CN" > <!--<![endif]-->
-<head>
-  <meta charset="utf-8">
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <title>wx.getConnectedWifi &mdash; wxadev 1.0.0 文档</title>
-  
 
-  
-  
-  
-  
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
+  <head>
+    <meta charset="utf-8" />
+    <title>wx.getConnectedWifi &#8212; wxadev 1.0.0 文档</title>
+    <link rel="stylesheet" href="../_static/sphinx13.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <script type="text/javascript" src="../_static/translations.js"></script>
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="在 wxadev 1.0.0 文档 中搜索"
+          href="../_static/opensearch.xml"/>
 
-  
-  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
-  
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../_static/jquery.js"></script>
-        <script type="text/javascript" src="../_static/underscore.js"></script>
-        <script type="text/javascript" src="../_static/doctools.js"></script>
-        <script type="text/javascript" src="../_static/language_data.js"></script>
-        <script type="text/javascript" src="../_static/translations.js"></script>
-    
-    <script type="text/javascript" src="../_static/js/theme.js"></script>
-
-    
-
-  
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜索" href="../search.html" />
     <link rel="next" title="wx.connectWifi" href="wx.connectWifi.html" />
-    <link rel="prev" title="wx.getWifiList" href="wx.getWifiList.html" /> 
-</head>
+    <link rel="prev" title="wx.getWifiList" href="wx.getWifiList.html" />
+<link rel="canonical" href="http://www.sphinx-doc.org/en/master/api/wx.getConnectedWifi.html" />
 
-<body class="wy-body-for-nav">
-
-   
-  <div class="wy-grid-for-nav">
-    
-    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
-      <div class="wy-side-scroll">
-        <div class="wy-side-nav-search" >
-          
-
-          
-            <a href="../contents.html" class="icon icon-home"> wxadev
-          
-
-          
-          </a>
-
-          
-            
-            
-          
-
-          
-<div role="search">
-  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
-    <input type="hidden" name="check_keywords" value="yes" />
-    <input type="hidden" name="area" value="default" />
-  </form>
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet" type="text/css" />
+ 
+<style type="text/css">
+  table.right { float: right; margin-left: 20px; }
+  table.right td { border: 1px solid #ccc; }
+  
+</style>
+<script type="text/javascript">
+  // intelligent scrolling of the sidebar content
+  $(window).scroll(function() {
+    var sb = $('.sphinxsidebarwrapper');
+    var win = $(window);
+    var sbh = sb.height();
+    var offset = $('.sphinxsidebar').position()['top'];
+    var wintop = win.scrollTop();
+    var winbot = wintop + win.innerHeight();
+    var curtop = sb.position()['top'];
+    var curbot = curtop + sbh;
+    // does sidebar fit in window?
+    if (sbh < win.innerHeight()) {
+      // yes: easy case -- always keep at the top
+      sb.css('top', $u.min([$u.max([0, wintop - offset - 10]), $(document).height() - sbh - 200]));
+    } else {
+      // no: only scroll if top/bottom edge of sidebar is at
+      // top/bottom edge of window
+      if (curtop > wintop && curbot > winbot) {
+        sb.css('top', $u.max([wintop - offset - 10, 0]));
+      } else if (curtop < wintop && curbot < winbot) {
+        sb.css('top', $u.min([winbot - sbh - offset - 20, $(document).height() - sbh - 200]));
+      }
+    }
+  });
+</script> 
+  </head><body>
+<div class="pageheader">
+  <ul>
+    <li><a href="../index.html">主页</a></li>
+    <li><a href="../framework/index.html">框架</a></li>
+    <li><a href="../component/index.html">组件</a></li>
+    <li><a href="index.html">API</a></li>
+    <li><a href="../api-backend/index.html">服务端</a></li>
+    <li><a href="../contents.html">目录</a></li>
+  </ul>
+  <div>
+    <a href="../index.html">
+      <img src="../_static/wxaheader.png" alt="wxa" />
+    </a>
+  </div>
 </div>
 
-          
-        </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>导航</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="总目录"
+             accesskey="I">索引</a></li>
+        <li class="right" >
+          <a href="../http-routingtable.html" title="微信小程序API"
+             >wxapi</a> |</li>
+        <li class="right" >
+          <a href="wx.connectWifi.html" title="wx.connectWifi"
+             accesskey="N">下一页</a> |</li>
+        <li class="right" >
+          <a href="wx.getWifiList.html" title="wx.getWifiList"
+             accesskey="P">上一页</a> |</li>
+<li><a href="../index.html">主页</a>&#160;|</li>
+<li><a href="../contents.html">文档</a> &#187;</li>
 
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-              
-            
-            
-              <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../index.html">开发指南</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../dev.html">简介</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../basic/index.html">基础教程</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../guide/index.html">运行环境</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../framework/index.html">框架</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../component/index.html">组件</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="index.html">API</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="index.html#id2">基础</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#id3">系统信息</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#id4">更新</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#id5">小程序</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#id8">调试</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#id9">路由</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#id10">界面</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#id22">网络</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#id26">数据缓存</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#id27">媒体</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#id34">位置</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#id35">转发</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#id36">画布</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#id37">文件</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#id38">开放接口</a></li>
-<li class="toctree-l2 current"><a class="reference internal" href="index.html#id53">设备</a><ul class="current">
-<li class="toctree-l3 current"><a class="reference internal" href="index.html#wi-fi">Wi-Fi</a><ul class="current">
-<li class="toctree-l4"><a class="reference internal" href="wx.stopWifi.html">wx.stopWifi</a></li>
-<li class="toctree-l4"><a class="reference internal" href="wx.startWifi.html">wx.startWifi</a></li>
-<li class="toctree-l4"><a class="reference internal" href="wx.setWifiList.html">wx.setWifiList</a></li>
-<li class="toctree-l4"><a class="reference internal" href="wx.onWifiConnected.html">wx.onWifiConnected</a></li>
-<li class="toctree-l4"><a class="reference internal" href="wx.onGetWifiList.html">wx.onGetWifiList</a></li>
-<li class="toctree-l4"><a class="reference internal" href="wx.getWifiList.html">wx.getWifiList</a></li>
-<li class="toctree-l4 current"><a class="current reference internal" href="#">wx.getConnectedWifi</a></li>
-<li class="toctree-l4"><a class="reference internal" href="wx.connectWifi.html">wx.connectWifi</a></li>
-<li class="toctree-l4"><a class="reference internal" href="WifiInfo.html">WifiInfo</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="index.html#ibeacon">iBeacon</a></li>
-<li class="toctree-l3"><a class="reference internal" href="index.html#id54">联系人</a></li>
-<li class="toctree-l3"><a class="reference internal" href="index.html#id55">低功耗蓝牙</a></li>
-<li class="toctree-l3"><a class="reference internal" href="index.html#id56">蓝牙</a></li>
-<li class="toctree-l3"><a class="reference internal" href="index.html#id57">电量</a></li>
-<li class="toctree-l3"><a class="reference internal" href="index.html#id58">剪贴板</a></li>
-<li class="toctree-l3"><a class="reference internal" href="index.html#nfc">NFC</a></li>
-<li class="toctree-l3"><a class="reference internal" href="index.html#id59">网络</a></li>
-<li class="toctree-l3"><a class="reference internal" href="index.html#id60">屏幕</a></li>
-<li class="toctree-l3"><a class="reference internal" href="index.html#id61">电话</a></li>
-<li class="toctree-l3"><a class="reference internal" href="index.html#id62">加速计</a></li>
-<li class="toctree-l3"><a class="reference internal" href="index.html#id63">罗盘</a></li>
-<li class="toctree-l3"><a class="reference internal" href="index.html#id64">设备方向</a></li>
-<li class="toctree-l3"><a class="reference internal" href="index.html#id65">陀螺仪</a></li>
-<li class="toctree-l3"><a class="reference internal" href="index.html#id66">性能</a></li>
-<li class="toctree-l3"><a class="reference internal" href="index.html#id67">扫码</a></li>
-<li class="toctree-l3"><a class="reference internal" href="index.html#id68">振动</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#worker">Worker</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#id69">第三方平台</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#wxml">WXML</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../api-backend/index.html">服务端API</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../devtools/index.html">开发工具</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../reference/index.html">参考资料</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../wxcloud/index.html">云开发</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../wxwork/index.html">企业微信</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../todolist.html">待办事项</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../glossary.html">术语</a></li>
-</ul>
-
-            
-          
+          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">API</a> &#187;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h4>上一个主题</h4>
+  <p class="topless"><a href="wx.getWifiList.html"
+                        title="上一章">wx.getWifiList</a></p>
+  <h4>下一个主题</h4>
+  <p class="topless"><a href="wx.connectWifi.html"
+                        title="下一章">wx.connectWifi</a></p>
+  <div role="note" aria-label="source link">
+    <h3>本页</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/api/wx.getConnectedWifi.rst.txt"
+            rel="nofollow">显示源代码</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">快速搜索</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="转向" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
         </div>
       </div>
-    </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
-          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../contents.html">wxadev</a>
-        
-      </nav>
-
-
-      <div class="wy-nav-content">
-        
-        <div class="rst-content">
-        
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-
-  <ul class="wy-breadcrumbs">
-    
-      <li><a href="../contents.html">Docs</a> &raquo;</li>
-        
-          <li><a href="index.html">API</a> &raquo;</li>
-        
-      <li>wx.getConnectedWifi</li>
-    
-    
-      <li class="wy-breadcrumbs-aside">
-        
-            
-            <a href="../_sources/api/wx.getConnectedWifi.rst.txt" rel="nofollow"> View page source</a>
-          
-        
-      </li>
-    
-  </ul>
-
-  
-  <hr/>
-</div>
-          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
-           <div itemprop="articleBody">
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
             
   <div class="section" id="wx-getconnectedwifi">
 <h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/api/wx.getConnectedWifi.html">wx.getConnectedWifi</a><a class="headerlink" href="#wx-getconnectedwifi" title="永久链接至标题">¶</a></h1>
+<dl class="function">
+<dt id="wx.getConnectedWifi">
+<code class="descclassname">wx.</code><code class="descname">getConnectedWifi</code><span class="sig-paren">(</span><em>Object object</em><span class="sig-paren">)</span><a class="headerlink" href="#wx.getConnectedWifi" title="永久链接至目标">¶</a></dt>
+<dd></dd></dl>
+
+<p>基础库 1.6.0 开始支持，低版本需做兼容处理。</p>
+<p>获取已连接中的 Wi-Fi 信息。</p>
+<p>参数
+Object object
+属性      类型      默认值     必填      说明
+success function                否       接口调用成功的回调函数
+fail    function                否       接口调用失败的回调函数
+complete        function                否       接口调用结束的回调函数（调用成功、失败都会执行）
+object.success 回调函数
+参数
+Object res
+属性      类型      说明
+wifi    WifiInfo        Wi-Fi 信息
+错误
+错误码     错误信息    说明
+0       ok      正常
+12000   not init        未先调用 startWifi 接口
+12001   system not support      当前系统不支持相关能力
+12002   password error Wi-Fi    密码错误
+12003   connection timeout      连接超时
+12004   duplicate request       重复连接 Wi-Fi
+12005   wifi not turned on      Android 特有，未打开 Wi-Fi 开关
+12006   gps not turned on       Android 特有，未打开 GPS 定位开关
+12007   user denied     用户拒绝授权链接 Wi-Fi
+12008   invalid SSID    无效 SSID
+12009   system config err       系统运营商配置拒绝连接 Wi-Fi
+12010   system internal error   系统其他错误，需要在 errmsg 打印具体的错误原因
+12011   weapp in background     应用在后台无法配置 Wi-Fi
+12013   wifi config may be expired      系统保存的 Wi-Fi 配置过期，建议忘记 Wi-Fi 后重试</p>
 </div>
 
 
-           </div>
-           
           </div>
-          <footer>
-  
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="wx.connectWifi.html" class="btn btn-neutral float-right" title="wx.connectWifi" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="wx.getWifiList.html" class="btn btn-neutral float-left" title="wx.getWifiList" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
-    </div>
-  
-
-  <hr/>
-
-  <div role="contentinfo">
-    <p>
-        &copy; Copyright 2019, Nosy
-
-    </p>
-  </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
-
-</footer>
-
         </div>
       </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>导航</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="总目录"
+             >索引</a></li>
+        <li class="right" >
+          <a href="../http-routingtable.html" title="微信小程序API"
+             >wxapi</a> |</li>
+        <li class="right" >
+          <a href="wx.connectWifi.html" title="wx.connectWifi"
+             >下一页</a> |</li>
+        <li class="right" >
+          <a href="wx.getWifiList.html" title="wx.getWifiList"
+             >上一页</a> |</li>
+<li><a href="../index.html">主页</a>&#160;|</li>
+<li><a href="../contents.html">文档</a> &#187;</li>
 
-    </section>
-
-  </div>
-  
-
-
-  <script type="text/javascript">
-      jQuery(function () {
-          SphinxRtdTheme.Navigation.enable(true);
-      });
-  </script>
-
-  
-  
-    
-   
-
-</body>
+          <li class="nav-item nav-item-1"><a href="index.html" >API</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; 版权所有 2019, Wxadev Docs.
+      由 <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.0+/40994a8 创建。
+    </div>
+  </body>
 </html>

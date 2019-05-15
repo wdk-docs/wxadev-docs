@@ -37,7 +37,7 @@ msgid "一、HTTPS 调用 二、云调用"
 msgstr ""
 
 #: ../../source/api-backend/logistics.getAllDelivery.rst:16
-msgid "一、HTTPS 调用 请求地址 GET https://api.weixin.qq.com/cgi-bin/express/business/delivery/getall?access_token=ACCESS_TOKEN 请求参数 属性      类型      默认值     必填      说明 access_token    string          是       接口调用凭证 返回值 Object 属性      类型      说明 count   number  快递公司数量 data    Array.<Object>  快递公司信息列表 data 的结构"
+msgid "一、HTTPS 调用 请求地址 .. http:post:: /express/business/delivery/getall?access_token=ACCESS_TOKEN 请求参数 属性      类型      默认值     必填      说明 access_token    string          是       接口调用凭证 返回值 Object 属性      类型      说明 count   number  快递公司数量 data    Array.<Object>  快递公司信息列表 data 的结构"
 msgstr ""
 
 #: ../../source/api-backend/logistics.getAllDelivery.rst:29

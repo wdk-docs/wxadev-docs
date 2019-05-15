@@ -6,7 +6,7 @@
    :alt: Documentation Status
 
 .. toctree::
-   :maxdepth: 5
+   :maxdepth: 2
    :glob:
 
    index
@@ -32,6 +32,7 @@
 
    * :ref:`genindex`
    * :ref:`modindex`
+   * :ref:`http-routingtable`
    * :ref:`search`
    * :ref:`glossary`
 

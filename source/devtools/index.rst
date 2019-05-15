@@ -11,7 +11,7 @@
 .. image:: https://developers.weixin.qq.com/miniprogram/dev/devtools/image/devtools2/main.png?t=19041222
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 3
    :glob:
 
    page

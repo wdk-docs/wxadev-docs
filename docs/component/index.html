@@ -1,245 +1,154 @@
 
-
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-CN" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-CN" > <!--<![endif]-->
-<head>
-  <meta charset="utf-8">
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <title>组件 &mdash; wxadev 1.0.0 文档</title>
-  
 
-  
-  
-  
-  
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
+  <head>
+    <meta charset="utf-8" />
+    <title>组件 &#8212; wxadev 1.0.0 文档</title>
+    <link rel="stylesheet" href="../_static/sphinx13.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <script type="text/javascript" src="../_static/translations.js"></script>
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="在 wxadev 1.0.0 文档 中搜索"
+          href="../_static/opensearch.xml"/>
 
-  
-  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
-  
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../_static/jquery.js"></script>
-        <script type="text/javascript" src="../_static/underscore.js"></script>
-        <script type="text/javascript" src="../_static/doctools.js"></script>
-        <script type="text/javascript" src="../_static/language_data.js"></script>
-        <script type="text/javascript" src="../_static/translations.js"></script>
-    
-    <script type="text/javascript" src="../_static/js/theme.js"></script>
-
-    
-
-  
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜索" href="../search.html" />
     <link rel="next" title="cover-image" href="cover-image.html" />
-    <link rel="prev" title="组件模板和样式" href="../framework/custom-component/wxml-wxss.html" /> 
-</head>
+    <link rel="prev" title="基础库更新日志 (v0.x版本)" href="../framework/release/v0.html" />
+<link rel="canonical" href="http://www.sphinx-doc.org/en/master/component/index.html" />
 
-<body class="wy-body-for-nav">
-
-   
-  <div class="wy-grid-for-nav">
-    
-    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
-      <div class="wy-side-scroll">
-        <div class="wy-side-nav-search" >
-          
-
-          
-            <a href="../contents.html" class="icon icon-home"> wxadev
-          
-
-          
-          </a>
-
-          
-            
-            
-          
-
-          
-<div role="search">
-  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
-    <input type="hidden" name="check_keywords" value="yes" />
-    <input type="hidden" name="area" value="default" />
-  </form>
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet" type="text/css" />
+ 
+<style type="text/css">
+  table.right { float: right; margin-left: 20px; }
+  table.right td { border: 1px solid #ccc; }
+  
+</style>
+<script type="text/javascript">
+  // intelligent scrolling of the sidebar content
+  $(window).scroll(function() {
+    var sb = $('.sphinxsidebarwrapper');
+    var win = $(window);
+    var sbh = sb.height();
+    var offset = $('.sphinxsidebar').position()['top'];
+    var wintop = win.scrollTop();
+    var winbot = wintop + win.innerHeight();
+    var curtop = sb.position()['top'];
+    var curbot = curtop + sbh;
+    // does sidebar fit in window?
+    if (sbh < win.innerHeight()) {
+      // yes: easy case -- always keep at the top
+      sb.css('top', $u.min([$u.max([0, wintop - offset - 10]), $(document).height() - sbh - 200]));
+    } else {
+      // no: only scroll if top/bottom edge of sidebar is at
+      // top/bottom edge of window
+      if (curtop > wintop && curbot > winbot) {
+        sb.css('top', $u.max([wintop - offset - 10, 0]));
+      } else if (curtop < wintop && curbot < winbot) {
+        sb.css('top', $u.min([winbot - sbh - offset - 20, $(document).height() - sbh - 200]));
+      }
+    }
+  });
+</script> 
+  </head><body>
+<div class="pageheader">
+  <ul>
+    <li><a href="../index.html">主页</a></li>
+    <li><a href="../framework/index.html">框架</a></li>
+    <li><a href="#">组件</a></li>
+    <li><a href="../api/index.html">API</a></li>
+    <li><a href="../api-backend/index.html">服务端</a></li>
+    <li><a href="../contents.html">目录</a></li>
+  </ul>
+  <div>
+    <a href="../index.html">
+      <img src="../_static/wxaheader.png" alt="wxa" />
+    </a>
+  </div>
 </div>
 
-          
-        </div>
-
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-              
-            
-            
-              <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../index.html">开发指南</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../dev.html">简介</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../basic/index.html">基础教程</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../guide/index.html">运行环境</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../framework/index.html">框架</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">组件</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#id2">视图容器</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="cover-image.html">cover-image</a></li>
-<li class="toctree-l3"><a class="reference internal" href="cover-view.html">cover-view</a></li>
-<li class="toctree-l3"><a class="reference internal" href="movable-area.html">movable-area</a></li>
-<li class="toctree-l3"><a class="reference internal" href="movable-view.html">movable-view</a></li>
-<li class="toctree-l3"><a class="reference internal" href="scroll-view.html">scroll-view</a></li>
-<li class="toctree-l3"><a class="reference internal" href="swiper.html">swiper</a></li>
-<li class="toctree-l3"><a class="reference internal" href="swiper-item.html">swiper-item</a></li>
-<li class="toctree-l3"><a class="reference internal" href="view.html">view</a></li>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>导航</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="总目录"
+             accesskey="I">索引</a></li>
+        <li class="right" >
+          <a href="../http-routingtable.html" title="微信小程序API"
+             >wxapi</a> |</li>
+        <li class="right" >
+          <a href="cover-image.html" title="cover-image"
+             accesskey="N">下一页</a> |</li>
+        <li class="right" >
+          <a href="../framework/release/v0.html" title="基础库更新日志 (v0.x版本)"
+             accesskey="P">上一页</a> |</li>
+<li><a href="../index.html">主页</a>&#160;|</li>
+<li><a href="../contents.html">文档</a> &#187;</li>
+ 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../contents.html">目录</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">组件</a><ul>
+<li><a class="reference internal" href="#id2">视图容器</a></li>
+<li><a class="reference internal" href="#id3">基础内容</a></li>
+<li><a class="reference internal" href="#id4">表单</a></li>
+<li><a class="reference internal" href="#id5">导航</a></li>
+<li><a class="reference internal" href="#id6">媒体</a></li>
+<li><a class="reference internal" href="#id7">地图</a></li>
+<li><a class="reference internal" href="#id8">画布</a></li>
+<li><a class="reference internal" href="#id9">开放能力</a></li>
+<li><a class="reference internal" href="#id10">原生组件说明</a></li>
+<li><a class="reference internal" href="#ncur">原生组件的使用限制</a></li>
+<li><a class="reference internal" href="#id12">无妨碍访问</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#id3">基础内容</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="icon.html">icon</a></li>
-<li class="toctree-l3"><a class="reference internal" href="progress.html">progress</a></li>
-<li class="toctree-l3"><a class="reference internal" href="rich-text.html">rich-text</a></li>
-<li class="toctree-l3"><a class="reference internal" href="text.html">text</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="#id4">表单</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="button.html">button</a></li>
-<li class="toctree-l3"><a class="reference internal" href="checkbox.html">checkbox</a></li>
-<li class="toctree-l3"><a class="reference internal" href="checkbox-group.html">checkbox-group</a></li>
-<li class="toctree-l3"><a class="reference internal" href="form.html">form</a></li>
-<li class="toctree-l3"><a class="reference internal" href="input.html">input</a></li>
-<li class="toctree-l3"><a class="reference internal" href="label.html">label</a></li>
-<li class="toctree-l3"><a class="reference internal" href="picker.html">picker</a></li>
-<li class="toctree-l3"><a class="reference internal" href="picker-view.html">picker-view</a></li>
-<li class="toctree-l3"><a class="reference internal" href="picker-view-column.html">picker-view-column</a></li>
-<li class="toctree-l3"><a class="reference internal" href="radio.html">radio</a></li>
-<li class="toctree-l3"><a class="reference internal" href="radio-group.html">radio-group</a></li>
-<li class="toctree-l3"><a class="reference internal" href="slider.html">slider</a></li>
-<li class="toctree-l3"><a class="reference internal" href="switch.html">switch</a></li>
-<li class="toctree-l3"><a class="reference internal" href="textarea.html">textarea</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="#id5">导航</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="functional-page-navigator.html">functional-page-navigator</a></li>
-<li class="toctree-l3"><a class="reference internal" href="navigator.html">navigator</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="#id6">媒体</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="image.html">image ☁️</a></li>
-<li class="toctree-l3"><a class="reference internal" href="audio.html">audio 🗑</a></li>
-<li class="toctree-l3"><a class="reference internal" href="video.html">video ☁️</a></li>
-<li class="toctree-l3"><a class="reference internal" href="live-pusher.html">live-pusher</a></li>
-<li class="toctree-l3"><a class="reference internal" href="live-player.html">live-player</a></li>
-<li class="toctree-l3"><a class="reference internal" href="camera.html">camera</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="#id7">地图</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="map.html">map</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="#id8">画布</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="canvas.html">canvas</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="#id9">开放能力</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="ad.html">ad</a></li>
-<li class="toctree-l3"><a class="reference internal" href="official-account.html">official-account</a></li>
-<li class="toctree-l3"><a class="reference internal" href="open-data.html">open-data</a></li>
-<li class="toctree-l3"><a class="reference internal" href="web-view.html">web-view</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="#id10">原生组件说明</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#ncur">原生组件的使用限制</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="native-component.html">原生组件</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="#id12">无妨碍访问</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="aria-component.html">aria-component</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../api/index.html">API</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../api-backend/index.html">服务端API</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../devtools/index.html">开发工具</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../reference/index.html">参考资料</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../wxcloud/index.html">云开发</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../wxwork/index.html">企业微信</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../todolist.html">待办事项</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../glossary.html">术语</a></li>
 </ul>
 
-            
-          
+  <h4>上一个主题</h4>
+  <p class="topless"><a href="../framework/release/v0.html"
+                        title="上一章">基础库更新日志 (v0.x版本)</a></p>
+  <h4>下一个主题</h4>
+  <p class="topless"><a href="cover-image.html"
+                        title="下一章">cover-image</a></p>
+  <div role="note" aria-label="source link">
+    <h3>本页</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/component/index.rst.txt"
+            rel="nofollow">显示源代码</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">快速搜索</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="转向" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
         </div>
       </div>
-    </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
-          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../contents.html">wxadev</a>
-        
-      </nav>
-
-
-      <div class="wy-nav-content">
-        
-        <div class="rst-content">
-        
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-
-  <ul class="wy-breadcrumbs">
-    
-      <li><a href="../contents.html">Docs</a> &raquo;</li>
-        
-      <li>组件</li>
-    
-    
-      <li class="wy-breadcrumbs-aside">
-        
-            
-            <a href="../_sources/component/index.rst.txt" rel="nofollow"> View page source</a>
-          
-        
-      </li>
-    
-  </ul>
-
-  
-  <hr/>
-</div>
-          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
-           <div itemprop="articleBody">
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
             
   <div class="section" id="component">
 <span id="id1"></span><h1>组件<a class="headerlink" href="#component" title="永久链接至标题">¶</a></h1>
 <div class="section" id="id2">
 <h2>视图容器<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
-<table class="docutils align-center">
+<table class="docutils align-default">
 <colgroup>
 <col style="width: 31%" />
 <col style="width: 69%" />
@@ -281,7 +190,7 @@
 </div>
 <div class="section" id="id3">
 <h2>基础内容<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
-<table class="docutils align-center">
+<table class="docutils align-default">
 <colgroup>
 <col style="width: 64%" />
 <col style="width: 36%" />
@@ -311,7 +220,7 @@
 </div>
 <div class="section" id="id4">
 <h2>表单<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h2>
-<table class="docutils align-center">
+<table class="docutils align-default">
 <colgroup>
 <col style="width: 42%" />
 <col style="width: 58%" />
@@ -331,37 +240,40 @@
 <tr class="row-even"><td><p><a class="reference internal" href="checkbox-group.html"><span class="doc">checkbox-group</span></a></p></td>
 <td><p>多项选择器，内部由多个checkbox组成</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="form.html"><span class="doc">form</span></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="editor.html"><span class="doc">editor</span></a></p></td>
+<td><p>多项选择器，内部由多个checkbox组成</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="form.html"><span class="doc">form</span></a></p></td>
 <td><p>表单</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="input.html"><span class="doc">input</span></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="input.html"><span class="doc">input</span></a></p></td>
 <td><p>输入框</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="label.html"><span class="doc">label</span></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="label.html"><span class="doc">label</span></a></p></td>
 <td><p>用来改进表单组件的可用性</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="picker.html"><span class="doc">picker</span></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="picker.html"><span class="doc">picker</span></a></p></td>
 <td><p>从底部弹起的滚动选择器</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="picker-view.html"><span class="doc">picker-view</span></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="picker-view.html"><span class="doc">picker-view</span></a></p></td>
 <td><p>嵌入页面的滚动选择器</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="picker-view-column.html"><span class="doc">picker-view-column</span></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="picker-view-column.html"><span class="doc">picker-view-column</span></a></p></td>
 <td><p>滚动选择器子项</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="radio.html"><span class="doc">radio</span></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="radio.html"><span class="doc">radio</span></a></p></td>
 <td><p>单选项目</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="radio-group.html"><span class="doc">radio-group</span></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="radio-group.html"><span class="doc">radio-group</span></a></p></td>
 <td><p>单项选择器，内部由多个 &lt;radio&gt; 组成</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="slider.html"><span class="doc">slider</span></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="slider.html"><span class="doc">slider</span></a></p></td>
 <td><p>滑动选择器</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="switch.html"><span class="doc">switch</span></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="switch.html"><span class="doc">switch</span></a></p></td>
 <td><p>开关选择器</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="textarea.html"><span class="doc">textarea</span></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="textarea.html"><span class="doc">textarea</span></a></p></td>
 <td><p>多行输入框</p></td>
 </tr>
 </tbody>
@@ -371,7 +283,7 @@
 </div>
 <div class="section" id="id5">
 <h2>导航<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h2>
-<table class="docutils align-center">
+<table class="docutils align-default">
 <colgroup>
 <col style="width: 47%" />
 <col style="width: 53%" />
@@ -395,7 +307,7 @@
 </div>
 <div class="section" id="id6">
 <h2>媒体<a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h2>
-<table class="docutils align-center">
+<table class="docutils align-default">
 <colgroup>
 <col style="width: 56%" />
 <col style="width: 44%" />
@@ -431,7 +343,7 @@
 </div>
 <div class="section" id="id7">
 <h2>地图<a class="headerlink" href="#id7" title="永久链接至标题">¶</a></h2>
-<table class="docutils align-center">
+<table class="docutils align-default">
 <colgroup>
 <col style="width: 55%" />
 <col style="width: 45%" />
@@ -452,7 +364,7 @@
 </div>
 <div class="section" id="id8">
 <h2>画布<a class="headerlink" href="#id8" title="永久链接至标题">¶</a></h2>
-<table class="docutils align-center">
+<table class="docutils align-default">
 <colgroup>
 <col style="width: 60%" />
 <col style="width: 40%" />
@@ -473,7 +385,7 @@
 </div>
 <div class="section" id="id9">
 <h2>开放能力<a class="headerlink" href="#id9" title="永久链接至标题">¶</a></h2>
-<table class="docutils align-center">
+<table class="docutils align-default">
 <colgroup>
 <col style="width: 51%" />
 <col style="width: 49%" />
@@ -503,7 +415,7 @@
 </div>
 <div class="section" id="id10">
 <h2>原生组件说明<a class="headerlink" href="#id10" title="永久链接至标题">¶</a></h2>
-<table class="docutils align-center">
+<table class="docutils align-default">
 <colgroup>
 <col style="width: 66%" />
 <col style="width: 34%" />
@@ -544,7 +456,7 @@
 <h2>无妨碍访问<a class="headerlink" href="#id12" title="永久链接至标题">¶</a></h2>
 <div class="toctree-wrapper compound">
 </div>
-<table class="docutils align-center">
+<table class="docutils align-default">
 <colgroup>
 <col style="width: 61%" />
 <col style="width: 39%" />
@@ -567,52 +479,34 @@
 </div>
 
 
-           </div>
-           
           </div>
-          <footer>
-  
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="cover-image.html" class="btn btn-neutral float-right" title="cover-image" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="../framework/custom-component/wxml-wxss.html" class="btn btn-neutral float-left" title="组件模板和样式" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
-    </div>
-  
-
-  <hr/>
-
-  <div role="contentinfo">
-    <p>
-        &copy; Copyright 2019, Nosy
-
-    </p>
-  </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
-
-</footer>
-
         </div>
       </div>
-
-    </section>
-
-  </div>
-  
-
-
-  <script type="text/javascript">
-      jQuery(function () {
-          SphinxRtdTheme.Navigation.enable(true);
-      });
-  </script>
-
-  
-  
-    
-   
-
-</body>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>导航</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="总目录"
+             >索引</a></li>
+        <li class="right" >
+          <a href="../http-routingtable.html" title="微信小程序API"
+             >wxapi</a> |</li>
+        <li class="right" >
+          <a href="cover-image.html" title="cover-image"
+             >下一页</a> |</li>
+        <li class="right" >
+          <a href="../framework/release/v0.html" title="基础库更新日志 (v0.x版本)"
+             >上一页</a> |</li>
+<li><a href="../index.html">主页</a>&#160;|</li>
+<li><a href="../contents.html">文档</a> &#187;</li>
+ 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; 版权所有 2019, Wxadev Docs.
+      由 <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.0+/40994a8 创建。
+    </div>
+  </body>
 </html>

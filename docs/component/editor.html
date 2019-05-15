@@ -1,0 +1,397 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
+  <head>
+    <meta charset="utf-8" />
+    <title>editor &#8212; wxadev 1.0.0 文档</title>
+    <link rel="stylesheet" href="../_static/sphinx13.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <script type="text/javascript" src="../_static/translations.js"></script>
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="在 wxadev 1.0.0 文档 中搜索"
+          href="../_static/opensearch.xml"/>
+
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜索" href="../search.html" />
+    <link rel="next" title="form" href="form.html" />
+    <link rel="prev" title="checkbox-group" href="checkbox-group.html" />
+<link rel="canonical" href="http://www.sphinx-doc.org/en/master/component/editor.html" />
+
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet" type="text/css" />
+ 
+<style type="text/css">
+  table.right { float: right; margin-left: 20px; }
+  table.right td { border: 1px solid #ccc; }
+  
+</style>
+<script type="text/javascript">
+  // intelligent scrolling of the sidebar content
+  $(window).scroll(function() {
+    var sb = $('.sphinxsidebarwrapper');
+    var win = $(window);
+    var sbh = sb.height();
+    var offset = $('.sphinxsidebar').position()['top'];
+    var wintop = win.scrollTop();
+    var winbot = wintop + win.innerHeight();
+    var curtop = sb.position()['top'];
+    var curbot = curtop + sbh;
+    // does sidebar fit in window?
+    if (sbh < win.innerHeight()) {
+      // yes: easy case -- always keep at the top
+      sb.css('top', $u.min([$u.max([0, wintop - offset - 10]), $(document).height() - sbh - 200]));
+    } else {
+      // no: only scroll if top/bottom edge of sidebar is at
+      // top/bottom edge of window
+      if (curtop > wintop && curbot > winbot) {
+        sb.css('top', $u.max([wintop - offset - 10, 0]));
+      } else if (curtop < wintop && curbot < winbot) {
+        sb.css('top', $u.min([winbot - sbh - offset - 20, $(document).height() - sbh - 200]));
+      }
+    }
+  });
+</script> 
+  </head><body>
+<div class="pageheader">
+  <ul>
+    <li><a href="../index.html">主页</a></li>
+    <li><a href="../framework/index.html">框架</a></li>
+    <li><a href="index.html">组件</a></li>
+    <li><a href="../api/index.html">API</a></li>
+    <li><a href="../api-backend/index.html">服务端</a></li>
+    <li><a href="../contents.html">目录</a></li>
+  </ul>
+  <div>
+    <a href="../index.html">
+      <img src="../_static/wxaheader.png" alt="wxa" />
+    </a>
+  </div>
+</div>
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>导航</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="总目录"
+             accesskey="I">索引</a></li>
+        <li class="right" >
+          <a href="../http-routingtable.html" title="微信小程序API"
+             >wxapi</a> |</li>
+        <li class="right" >
+          <a href="form.html" title="form"
+             accesskey="N">下一页</a> |</li>
+        <li class="right" >
+          <a href="checkbox-group.html" title="checkbox-group"
+             accesskey="P">上一页</a> |</li>
+<li><a href="../index.html">主页</a>&#160;|</li>
+<li><a href="../contents.html">文档</a> &#187;</li>
+
+          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">组件</a> &#187;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../contents.html">目录</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">editor</a><ul>
+<li><a class="reference internal" href="#id3">支持的标签</a></li>
+<li><a class="reference internal" href="#id4">支持的内连样式</a></li>
+<li><a class="reference internal" href="#id5">示例代码</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>上一个主题</h4>
+  <p class="topless"><a href="checkbox-group.html"
+                        title="上一章">checkbox-group</a></p>
+  <h4>下一个主题</h4>
+  <p class="topless"><a href="form.html"
+                        title="下一章">form</a></p>
+  <div role="note" aria-label="source link">
+    <h3>本页</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/component/editor.rst.txt"
+            rel="nofollow">显示源代码</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">快速搜索</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="转向" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="editor">
+<span id="id1"></span><h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/component/editor.html">editor</a><a class="headerlink" href="#editor" title="永久链接至标题">¶</a></h1>
+<div class="versionadded">
+<p><span class="versionmodified added">2.7.0 新版功能: </span>低版本需做 <a class="reference internal" href="../framework/compatibility.html#compatibility"><span class="std std-ref">兼容处理</span></a> 。</p>
+</div>
+<p>富文本编辑器，可以对图片、文字进行编辑。</p>
+<p>编辑器导出内容支持带标签的 <code class="docutils literal notranslate"><span class="pre">html</span></code> 和纯文本的 <code class="docutils literal notranslate"><span class="pre">text</span></code> ，编辑器内部采用 <a class="reference external" href="https://wdk-docs.github.io/delta/">delta</a> 格式进行存储。</p>
+<p>通过 <a class="reference internal" href="../api/EditorContext.html#EditorContext.setContents" title="EditorContext.setContents"><code class="xref js js-func docutils literal notranslate"><span class="pre">setContents</span></code></a> 接口设置内容时，
+解析插入的 <code class="docutils literal notranslate"><span class="pre">html</span></code> 可能会由于一些非法标签导致解析错误，
+建议开发者在小程序内使用时通过 <a class="reference external" href="https://wdk-docs.github.io/delta/">delta</a> 进行插入。</p>
+<p>富文本组件内部引入了一些基本的样式使得内容可以正确的展示，开发时可以进行覆盖。</p>
+<div class="admonition attention">
+<p class="admonition-title">注意</p>
+<p>在其它组件或环境中使用富文本组件导出的html时，
+需要额外引入 <a class="reference external" href="https://github.com/wechat-miniprogram/editor-style/blob/master/editor.css">这段样式</a> ，
+并维护 <code class="docutils literal notranslate"><span class="pre">&lt;ql-container&gt;&lt;ql-editor&gt;&lt;/ql-editor&gt;&lt;/ql-container&gt;</span></code> 的结构。</p>
+</div>
+<p>图片控件仅初始化时设置有效。</p>
+<p>相关 api： <a class="reference internal" href="../api/EditorContext.html#EditorContext" title="EditorContext"><code class="xref js js-class docutils literal notranslate"><span class="pre">EditorContext()</span></code></a></p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 15%" />
+<col style="width: 11%" />
+<col style="width: 7%" />
+<col style="width: 5%" />
+<col style="width: 53%" />
+<col style="width: 8%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>属性</p></th>
+<th class="head"><p>类型</p></th>
+<th class="head"><p>默认值</p></th>
+<th class="head"><p>必填</p></th>
+<th class="head"><p>说明</p></th>
+<th class="head"><p>最低版本</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>read-only</p></td>
+<td><p>boolean</p></td>
+<td><p>false</p></td>
+<td><p>否</p></td>
+<td><p>设置编辑器为只读</p></td>
+<td><p>2.7.0</p></td>
+</tr>
+<tr class="row-odd"><td><p>placeholder</p></td>
+<td><p>string</p></td>
+<td></td>
+<td><p>否</p></td>
+<td><p>提示信息</p></td>
+<td><p>2.7.0</p></td>
+</tr>
+<tr class="row-even"><td><p>show-img-size</p></td>
+<td><p>boolean</p></td>
+<td><p>false</p></td>
+<td><p>否</p></td>
+<td><p>点击图片时显示图片大小控件</p></td>
+<td><p>2.7.0</p></td>
+</tr>
+<tr class="row-odd"><td><p>show-img-toolbar</p></td>
+<td><p>boolean</p></td>
+<td><p>false</p></td>
+<td><p>否</p></td>
+<td><p>点击图片时显示工具栏控件</p></td>
+<td><p>2.7.0</p></td>
+</tr>
+<tr class="row-even"><td><p>show-img-resize</p></td>
+<td><p>boolean</p></td>
+<td><p>false</p></td>
+<td><p>否</p></td>
+<td><p>点击图片时显示修改尺寸控件</p></td>
+<td><p>2.7.0</p></td>
+</tr>
+<tr class="row-odd"><td><p>bindready</p></td>
+<td><p>eventhandle</p></td>
+<td></td>
+<td><p>否</p></td>
+<td><p>编辑器初始化完成时触发</p></td>
+<td><p>2.7.0</p></td>
+</tr>
+<tr class="row-even"><td><p>bindfocus</p></td>
+<td><p>eventhandle</p></td>
+<td></td>
+<td><p>否</p></td>
+<td><p>编辑器聚焦时触发，event.detail = {html, text, delta}</p></td>
+<td><p>2.7.0</p></td>
+</tr>
+<tr class="row-odd"><td><p>bindblur</p></td>
+<td><p>eventhandle</p></td>
+<td></td>
+<td><p>否</p></td>
+<td><p>编辑器失去焦点时触发，detail = {html, text, delta}</p></td>
+<td><p>2.7.0</p></td>
+</tr>
+<tr class="row-even"><td><p>bindinput</p></td>
+<td><p>eventhandle</p></td>
+<td></td>
+<td><p>否</p></td>
+<td><p>编辑器内容改变时触发，detail = {html, text, delta}</p></td>
+<td><p>2.7.0</p></td>
+</tr>
+<tr class="row-odd"><td><p>bindstatuschange</p></td>
+<td><p>eventhandle</p></td>
+<td></td>
+<td><p>否</p></td>
+<td><p>通过 Context 方法改变编辑器内样式时触发，返回选区已设置的样式</p></td>
+<td><p>2.7.0</p></td>
+</tr>
+</tbody>
+</table>
+<p>编辑器内支持部分 <code class="docutils literal notranslate"><span class="pre">HTML</span></code> 标签和内连样式，不支持 <code class="docutils literal notranslate"><span class="pre">class</span></code> 和 <code class="docutils literal notranslate"><span class="pre">id</span></code></p>
+<div class="section" id="id3">
+<h2>支持的标签<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
+<ul class="simple">
+<li><p>不满足的标签会被忽略，<code class="docutils literal notranslate"><span class="pre">&lt;div&gt;</span></code> 会被转行为 <code class="docutils literal notranslate"><span class="pre">&lt;p&gt;</span></code> 储存。</p></li>
+</ul>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 12%" />
+<col style="width: 88%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>类型</p></th>
+<th class="head"><p>节点</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>行内元素</p></td>
+<td><p>&lt;span&gt; &lt;strong&gt; &lt;b&gt; &lt;ins&gt; &lt;em&gt; &lt;i&gt; &lt;u&gt; &lt;a&gt; &lt;del&gt; &lt;s&gt; &lt;sub&gt; &lt;sup&gt; &lt;img&gt;</p></td>
+</tr>
+<tr class="row-odd"><td><p>块级元素</p></td>
+<td><p>&lt;p&gt; &lt;h1&gt; &lt;h2&gt; &lt;h3&gt; &lt;h4&gt; &lt;h5&gt; &lt;h6&gt; &lt;hr&gt; &lt;ol&gt; &lt;ul&gt; &lt;li&gt;</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id4">
+<h2>支持的内连样式<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h2>
+<p>内联样式仅能设置在行内元素或块级元素上，不能同时设置。例如 <code class="docutils literal notranslate"><span class="pre">font-size</span></code> 归类为行内元素属性，在 p 标签上设置是无效的。</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>类型</p></th>
+<th class="head"><p>样式</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>块级样式</p></td>
+<td><p>text-align direction margin margin-top margin-left margin-right margin-bottom</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>padding padding-top padding-left padding-right padding-bottom line-height text-indent</p></td>
+</tr>
+<tr class="row-even"><td><p>行内样式</p></td>
+<td><p>font font-size font-style font-variant font-weight font-family</p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>letter-spacing text-decoration color background-color</p></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition tip">
+<p class="admonition-title">小技巧</p>
+<p>插入的 html 中事件绑定会被移除</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">小技巧</p>
+<p>formats 中的 color 属性会统一以 hex 格式返回</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">小技巧</p>
+<p>粘贴时仅纯文本内容会被拷贝进编辑器</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">小技巧</p>
+<p>插入 html 到编辑器内时，编辑器会删除一些不必要的标签，以保证内容的统一。例如&lt;p&gt;&lt;span&gt;xxx&lt;/span&gt;&lt;/p&gt;会改写为&lt;p&gt;xxx&lt;/p&gt;</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">小技巧</p>
+<p>编辑器聚焦时页面会被上推，系统行为以保证编辑区可见</p>
+</div>
+</div>
+<div class="section" id="id5">
+<h2>示例代码<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h2>
+<p><a class="reference download external" download="" href="https://developers.weixin.qq.com/s/siL4iemP7n8W"><code class="xref download docutils literal notranslate"><span class="pre">在开发者工具中预览效果</span></code></a></p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">editor</span>
+  <span class="na">id</span><span class="o">=</span><span class="s">&quot;editor&quot;</span>
+  <span class="na">class</span><span class="o">=</span><span class="s">&quot;ql-container&quot;</span>
+  <span class="na">placeholder</span><span class="o">=</span><span class="s">&quot;{{placeholder}}&quot;</span>
+  <span class="na">showImgSize</span>
+  <span class="na">showImgToolbar</span>
+  <span class="na">showImgResize</span>
+  <span class="na">bindstatuschange</span><span class="o">=</span><span class="s">&quot;onStatusChange&quot;</span>
+  <span class="na">read-only</span><span class="o">=</span><span class="s">&quot;{{readOnly}}&quot;</span>
+  <span class="na">bindready</span><span class="o">=</span><span class="s">&quot;onEditorReady&quot;</span>
+<span class="p">&gt;&lt;/</span><span class="nt">editor</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="nx">Page</span><span class="p">({</span>
+  <span class="nx">readOnlyChange</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">setData</span><span class="p">({</span>
+      <span class="nx">readOnly</span><span class="o">:</span> <span class="o">!</span><span class="k">this</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">readOnly</span>
+    <span class="p">})</span>
+  <span class="p">},</span>
+  <span class="nx">onEditorReady</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kr">const</span> <span class="nx">that</span> <span class="o">=</span> <span class="k">this</span>
+    <span class="nx">wx</span><span class="p">.</span><span class="nx">createSelectorQuery</span><span class="p">().</span><span class="nx">select</span><span class="p">(</span><span class="s1">&#39;#editor&#39;</span><span class="p">).</span><span class="nx">context</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
+      <span class="nx">that</span><span class="p">.</span><span class="nx">editorCtx</span> <span class="o">=</span> <span class="nx">res</span><span class="p">.</span><span class="nx">context</span>
+    <span class="p">}).</span><span class="nx">exec</span><span class="p">()</span>
+  <span class="p">},</span>
+  <span class="nx">format</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kr">const</span> <span class="p">{</span><span class="nx">name</span><span class="p">,</span> <span class="nx">value</span><span class="p">}</span> <span class="o">=</span> <span class="nx">e</span><span class="p">.</span><span class="nx">target</span><span class="p">.</span><span class="nx">dataset</span>
+    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">name</span><span class="p">)</span> <span class="k">return</span>
+    <span class="c1">// console.log(&#39;format&#39;, name, value)</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">editorCtx</span><span class="p">.</span><span class="nx">format</span><span class="p">(</span><span class="nx">name</span><span class="p">,</span> <span class="nx">value</span><span class="p">)</span>
+  <span class="p">},</span>
+<span class="p">})</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>导航</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="总目录"
+             >索引</a></li>
+        <li class="right" >
+          <a href="../http-routingtable.html" title="微信小程序API"
+             >wxapi</a> |</li>
+        <li class="right" >
+          <a href="form.html" title="form"
+             >下一页</a> |</li>
+        <li class="right" >
+          <a href="checkbox-group.html" title="checkbox-group"
+             >上一页</a> |</li>
+<li><a href="../index.html">主页</a>&#160;|</li>
+<li><a href="../contents.html">文档</a> &#187;</li>
+
+          <li class="nav-item nav-item-1"><a href="index.html" >组件</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; 版权所有 2019, Wxadev Docs.
+      由 <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.0+/40994a8 创建。
+    </div>
+  </body>
+</html>
