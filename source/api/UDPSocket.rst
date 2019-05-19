@@ -3,7 +3,7 @@
 
 .. function:: wx.createUDPSocket()
 
-   .. versionadded:: 2.7.0 低版本需做兼容处理。
+   .. versionadded:: 2.7.0 低版本需做 :ref:`compatibility` 。
 
    创建一个 UDP Socket 实例。使用前请注意阅读相关说明。
 
@@ -11,7 +11,7 @@
 
 .. class:: UDPSocket
 
-    .. versionadded:: 2.7.0 低版本需做兼容处理。
+    .. versionadded:: 2.7.0 低版本需做 :ref:`compatibility` 。
 
     一个 UDP Socket 实例，默认使用 IPv4 协议。
 

@@ -3,7 +3,7 @@
 :wx_comp:`movable-view`
 ===========================
 
-.. versionadded:: 1.2.0 开始支持，低版本需做 :ref:`compatibility` 。
+.. versionadded:: 1.2.0  低版本需做 :ref:`compatibility` 。
 
 可移动的视图容器，在页面中可以拖拽滑动。<:doc:`movable-view`>必须在 <:doc:`movable-area`> 组件中，并且必须是直接子节点，否则不能移动。
 

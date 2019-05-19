@@ -60,10 +60,12 @@
 <div class="pageheader">
   <ul>
     <li><a href="../index.html">主页</a></li>
+    <li><a href="../basic/index.html">入门</a></li>
     <li><a href="../framework/index.html">框架</a></li>
     <li><a href="../component/index.html">组件</a></li>
     <li><a href="index.html">API</a></li>
     <li><a href="../api-backend/index.html">服务端</a></li>
+    <li><a href="../reference/index.html">参考</a></li>
     <li><a href="../contents.html">目录</a></li>
   </ul>
   <div>
@@ -129,6 +131,32 @@
             
   <div class="section" id="wx-settabbarstyle">
 <h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/api/wx.setTabBarStyle.html">wx.setTabBarStyle</a><a class="headerlink" href="#wx-settabbarstyle" title="永久链接至标题">¶</a></h1>
+<p>wx.setTabBarStyle(Object object)</p>
+<blockquote>
+<div><div class="versionadded">
+<p><span class="versionmodified added">1.9.0 新版功能: </span>低版本需做 <a class="reference internal" href="../framework/compatibility.html#compatibility"><span class="std std-ref">兼容处理</span></a> 。</p>
+</div>
+</div></blockquote>
+<p>动态设置 tabBar 的整体样式</p>
+<p>参数
+Object object
+属性      类型      默认值     必填      说明
+color   string          是       tab 上的文字默认颜色，HexColor
+selectedColor   string          是       tab 上的文字选中时的颜色，HexColor
+backgroundColor string          是       tab 的背景色，HexColor
+borderStyle     string          是       tabBar上边框的颜色， 仅支持 black/white
+success function                否       接口调用成功的回调函数
+fail    function                否       接口调用失败的回调函数
+complete        function                否       接口调用结束的回调函数（调用成功、失败都会执行）
+示例代码
+wx.setTabBarStyle({</p>
+<blockquote>
+<div><p>color: ‘#FF0000’,
+selectedColor: ‘#00FF00’,
+backgroundColor: ‘#0000FF’,
+borderStyle: ‘white’</p>
+</div></blockquote>
+<p>})</p>
 </div>
 
 
@@ -160,7 +188,7 @@
     </div>
     <div class="footer" role="contentinfo">
         &#169; 版权所有 2019, Wxadev Docs.
-      由 <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.0+/40994a8 创建。
+      由 <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.0+/c95e5e1 创建。
     </div>
   </body>
 </html>

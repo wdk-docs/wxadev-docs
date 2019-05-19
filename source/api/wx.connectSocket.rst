@@ -17,7 +17,8 @@ fail	function		否	接口调用失败的回调函数
 complete	function		否	接口调用结束的回调函数（调用成功、失败都会执行）
 返回值
 SocketTask
-基础库 1.7.0 开始支持，低版本需做兼容处理。
+
+   .. versionadded:: 1.7.0 低版本需做 :ref:`compatibility` 。
 
 WebSocket 任务
 

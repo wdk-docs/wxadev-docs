@@ -3,7 +3,7 @@
 
 .. function:: wx.startPullDownRefresh([success][, fail][, complete])
 
-  .. version:: 1.5.0 低版本需做兼容处理。
+  .. version:: 1.5.0 低版本需做 :ref:`compatibility` 。
 
   开始下拉刷新。调用后触发下拉刷新动画，效果与用户手动下拉刷新一致。参加: :envvar:`enablePullDownRefresh`
 

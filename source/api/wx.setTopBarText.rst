@@ -3,7 +3,8 @@
 
 .. function:: wx.setTopBarText(Object object)
 
-  基础库 1.4.3 开始支持，低版本需做兼容处理。
+
+   .. versionadded:: 1.4.3 低版本需做 :ref:`compatibility` 。
 
 从基础库 1.9.9 开始，本接口停止维护
 

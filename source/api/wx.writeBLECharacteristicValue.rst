@@ -3,7 +3,8 @@
 
 .. function:: wx.writeBLECharacteristicValue(Object object)
 
-基础库 1.1.0 开始支持，低版本需做兼容处理。
+
+   .. versionadded:: 1.1.0 低版本需做 :ref:`compatibility` 。
 
 向低功耗蓝牙设备特征值中写入二进制数据。注意：必须设备的特征值支持 write 才可以成功调用。
 

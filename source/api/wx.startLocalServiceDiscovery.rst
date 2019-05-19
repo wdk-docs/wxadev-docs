@@ -3,7 +3,7 @@
 
 .. function:: wx.startLocalServiceDiscovery(Object object)
 
-   .. versionadded:: 2.4.0 低版本需做兼容处理。
+   .. versionadded:: 2.4.0 低版本需做 :ref:`compatibility` 。
 
    开始搜索局域网下的 mDNS 服务。搜索的结果会通过 :func:`wx.onLocalService` 事件返回。
 

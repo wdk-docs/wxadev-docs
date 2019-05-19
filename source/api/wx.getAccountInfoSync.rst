@@ -3,7 +3,8 @@
 
 .. function:: wx.getAccountInfoSync()
 
-基础库 2.2.2 开始支持，低版本需做兼容处理。
+
+   .. versionadded:: 2.2.2 低版本需做 :ref:`compatibility` 。
 
 获取当前帐号信息
 

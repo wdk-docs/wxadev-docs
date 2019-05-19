@@ -3,7 +3,8 @@
 
 .. function:: wx.removeTabBarBadge(Object object)
 
-基础库 1.9.0 开始支持，低版本需做兼容处理。
+
+   .. versionadded:: 1.9.0 低版本需做 :ref:`compatibility` 。
 
 移除 tabBar 某一项右上角的文本
 

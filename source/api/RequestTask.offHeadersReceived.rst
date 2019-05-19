@@ -2,7 +2,8 @@
 ============================================
 
 RequestTask.offHeadersReceived(function callback)
-基础库 2.1.0 开始支持，低版本需做兼容处理。
+
+   .. versionadded:: 2.1.0 低版本需做 :ref:`compatibility` 。
 
 取消监听 HTTP Response Header 事件
 

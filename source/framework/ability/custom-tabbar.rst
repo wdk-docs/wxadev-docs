@@ -1,7 +1,8 @@
 自定义 tabBar
 =============
 
-基础库 2.5.0 开始支持，低版本需做 :ref:`compatibility` 。
+
+   .. versionadded:: 2.5.0 低版本需做 :ref:`compatibility` 。
 
 自定义 tabBar 可以让开发者更加灵活地设置 tabBar 样式，以满足更多个性化的场景。
 

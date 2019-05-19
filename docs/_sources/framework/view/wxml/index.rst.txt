@@ -3,6 +3,8 @@
 :wxfrwk:`WXML <view/wxml/index>`
 ======================================
 
+版本:|release| 更新:|today|
+
 WXML（WeiXin Markup Language）是框架设计的一套标签语言，结合基础组件、事件系统，可以构建出页面的结构。
 
 要完整了解 WXML 语法，请参考WXML 语法参考。

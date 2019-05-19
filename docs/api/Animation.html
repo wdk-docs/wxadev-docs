@@ -60,10 +60,12 @@
 <div class="pageheader">
   <ul>
     <li><a href="../index.html">主页</a></li>
+    <li><a href="../basic/index.html">入门</a></li>
     <li><a href="../framework/index.html">框架</a></li>
     <li><a href="../component/index.html">组件</a></li>
     <li><a href="index.html">API</a></li>
     <li><a href="../api-backend/index.html">服务端</a></li>
+    <li><a href="../reference/index.html">参考</a></li>
     <li><a href="../contents.html">目录</a></li>
   </ul>
   <div>
@@ -129,6 +131,148 @@
             
   <div class="section" id="animation">
 <h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/api/Animation.html">Animation</a><a class="headerlink" href="#animation" title="永久链接至标题">¶</a></h1>
+<p>Animation
+动画对象</p>
+<p>方法
+Array.&lt;Object&gt; Animation.export()
+导出动画队列。export 方法每次调用后会清掉之前的动画操作。</p>
+<p>Animation Animation.step(Object object)
+表示一组动画完成。可以在一组动画中调用任意多个动画方法，一组动画中的所有动画会同时开始，一组动画完成后才会进行下一组动画。</p>
+<p>Animation Animation.matrix()
+同 transform-function matrix</p>
+<p>Animation Animation.matrix3d()
+同 transform-function matrix3d</p>
+<p>Animation Animation.rotate(number angle)
+从原点顺时针旋转一个角度</p>
+<p>Animation Animation.rotate3d(number x, number y, number z, number angle)
+从 X 轴顺时针旋转一个角度</p>
+<p>Animation Animation.rotateX(number angle)
+从 X 轴顺时针旋转一个角度</p>
+<p>Animation Animation.rotateY(number angle)
+从 Y 轴顺时针旋转一个角度</p>
+<p>Animation Animation.rotateZ(number angle)
+从 Z 轴顺时针旋转一个角度</p>
+<p>Animation Animation.scale(number sx, number sy)
+缩放</p>
+<p>Animation Animation.scale3d(number sx, number sy, number sz)
+缩放</p>
+<p>Animation Animation.scaleX(number scale)
+缩放 X 轴</p>
+<p>Animation Animation.scaleY(number scale)
+缩放 Y 轴</p>
+<p>Animation Animation.scaleZ(number scale)
+缩放 Z 轴</p>
+<p>Animation Animation.skew(number ax, number ay)
+对 X、Y 轴坐标进行倾斜</p>
+<p>Animation Animation.skewX(number angle)
+对 X 轴坐标进行倾斜</p>
+<p>Animation Animation.skewY(number angle)
+对 Y 轴坐标进行倾斜</p>
+<p>Animation Animation.translate(number tx, number ty)
+平移变换</p>
+<p>Animation Animation.translate3d(number tx, number ty, number tz)
+对 xyz 坐标进行平移变换</p>
+<p>Animation Animation.translateX(number translation)
+对 X 轴平移</p>
+<p>Animation Animation.translateY(number translation)
+对 Y 轴平移</p>
+<p>Animation Animation.translateZ(number translation)
+对 Z 轴平移</p>
+<p>Animation Animation.opacity(number value)
+设置透明度</p>
+<p>Animation Animation.backgroundColor(string value)
+设置背景色</p>
+<p>Animation Animation.width(number|string value)
+设置宽度</p>
+<p>Animation Animation.height(number|string value)
+设置高度</p>
+<p>Animation Animation.left(number|string value)
+设置 left 值</p>
+<p>Animation Animation.right(number|string value)
+设置 right 值</p>
+<p>Animation Animation.top(number|string value)
+设置 top 值</p>
+<p>Animation Animation.bottom(number|string value)
+设置 bottom 值</p>
+<p>示例代码
+在开发者工具中预览效果</p>
+<dl class="simple">
+<dt>&lt;view</dt><dd><p>animation=”{{animationData}}”
+style=”background:red;height:100rpx;width:100rpx”</p>
+</dd>
+</dl>
+<p>&gt;&lt;/view&gt;
+Page({</p>
+<blockquote>
+<div><dl class="simple">
+<dt>data: {</dt><dd><p>animationData: {}</p>
+</dd>
+</dl>
+<p>},
+onShow() {</p>
+<blockquote>
+<div><dl class="simple">
+<dt>const animation = wx.createAnimation({</dt><dd><p>duration: 1000,
+timingFunction: ‘ease’,</p>
+</dd>
+</dl>
+<p>})</p>
+<p>this.animation = animation</p>
+<p>animation.scale(2, 2).rotate(45).step()</p>
+<dl class="simple">
+<dt>this.setData({</dt><dd><p>animationData: animation.export()</p>
+</dd>
+</dl>
+<p>})</p>
+<dl>
+<dt>setTimeout(function () {</dt><dd><p>animation.translate(30).step()
+this.setData({</p>
+<blockquote>
+<div><p>animationData: animation.export()</p>
+</div></blockquote>
+<p>})</p>
+</dd>
+</dl>
+<p>}.bind(this), 1000)</p>
+</div></blockquote>
+<p>},
+rotateAndScale() {</p>
+<blockquote>
+<div><p>// 旋转同时放大
+this.animation.rotate(45).scale(2, 2).step()
+this.setData({</p>
+<blockquote>
+<div><p>animationData: this.animation.export()</p>
+</div></blockquote>
+<p>})</p>
+</div></blockquote>
+<p>},
+rotateThenScale() {</p>
+<blockquote>
+<div><p>// 先旋转后放大
+this.animation.rotate(45).step()
+this.animation.scale(2, 2).step()
+this.setData({</p>
+<blockquote>
+<div><p>animationData: this.animation.export()</p>
+</div></blockquote>
+<p>})</p>
+</div></blockquote>
+<p>},
+rotateAndScaleThenTranslate() {</p>
+<blockquote>
+<div><p>// 先旋转同时放大，然后平移
+this.animation.rotate(45).scale(2, 2).step()
+this.animation.translate(100, 100).step({duration: 1000})
+this.setData({</p>
+<blockquote>
+<div><p>animationData: this.animation.export()</p>
+</div></blockquote>
+<p>})</p>
+</div></blockquote>
+<p>}</p>
+</div></blockquote>
+<p>})</p>
 </div>
 
 
@@ -160,7 +304,7 @@
     </div>
     <div class="footer" role="contentinfo">
         &#169; 版权所有 2019, Wxadev Docs.
-      由 <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.0+/40994a8 创建。
+      由 <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.0+/c95e5e1 创建。
     </div>
   </body>
 </html>

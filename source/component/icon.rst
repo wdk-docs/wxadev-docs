@@ -3,7 +3,7 @@
 :wx_comp:`icon <icon>`
 =================================
 
-.. versionadded:: 1.0.0 开始支持，低版本需做 :ref:`compatibility` 。
+.. versionadded:: 1.0.0  低版本需做 :ref:`compatibility` 。
 
 组件属性的长度单位默认为px，2.4.0起支持传入单位(rpx/px)。
 

@@ -3,7 +3,8 @@
 
 .. function:: wx.getHCEState(Object object)
 
-基础库 1.7.0 开始支持，低版本需做兼容处理。
+
+   .. versionadded:: 1.7.0 低版本需做 :ref:`compatibility` 。
 
 判断当前设备是否支持 HCE 能力。
 

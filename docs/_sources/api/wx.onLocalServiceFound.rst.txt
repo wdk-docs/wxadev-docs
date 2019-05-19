@@ -4,7 +4,8 @@
 .. function:: wx.onLocalServiceFound(function callback)
 
 
-基础库 2.4.0 开始支持，低版本需做兼容处理。
+
+   .. versionadded:: 2.4.0 低版本需做 :ref:`compatibility` 。
 
 监听 mDNS 服务发现的事件
 

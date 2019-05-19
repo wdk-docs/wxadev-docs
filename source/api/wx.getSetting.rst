@@ -3,7 +3,8 @@
 
 .. function:: wx.getSetting(Object object)
 
-基础库 1.2.0 开始支持，低版本需做兼容处理。
+
+   .. versionadded:: 1.2.0 低版本需做 :ref:`compatibility` 。
 
 获取用户的当前设置。返回值中只会出现小程序已经向用户请求过的权限。
 

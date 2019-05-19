@@ -3,7 +3,8 @@
 
 .. function:: wx.stopBeaconDiscovery(Object object)
 
-基础库 1.2.0 开始支持，低版本需做兼容处理。
+
+   .. versionadded:: 1.2.0 低版本需做 :ref:`compatibility` 。
 
 停止搜索附近的 iBeacon 设备
 

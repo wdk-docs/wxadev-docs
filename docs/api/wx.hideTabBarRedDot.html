@@ -60,10 +60,12 @@
 <div class="pageheader">
   <ul>
     <li><a href="../index.html">主页</a></li>
+    <li><a href="../basic/index.html">入门</a></li>
     <li><a href="../framework/index.html">框架</a></li>
     <li><a href="../component/index.html">组件</a></li>
     <li><a href="index.html">API</a></li>
     <li><a href="../api-backend/index.html">服务端</a></li>
+    <li><a href="../reference/index.html">参考</a></li>
     <li><a href="../contents.html">目录</a></li>
   </ul>
   <div>
@@ -132,17 +134,22 @@
 <dl class="function">
 <dt id="wx.hideTabBarRedDot">
 <code class="descclassname">wx.</code><code class="descname">hideTabBarRedDot</code><span class="sig-paren">(</span><em>Object object</em><span class="sig-paren">)</span><a class="headerlink" href="#wx.hideTabBarRedDot" title="永久链接至目标">¶</a></dt>
-<dd></dd></dl>
-
-<p>基础库 1.9.0 开始支持，低版本需做兼容处理。</p>
+<dd><div class="versionadded">
+<p><span class="versionmodified added">1.9.0 新版功能: </span>低版本需做 <a class="reference internal" href="../framework/compatibility.html#compatibility"><span class="std std-ref">兼容处理</span></a> 。</p>
+</div>
 <p>隐藏 tabBar 某一项的右上角的红点</p>
-<p>参数
-Object object
-属性      类型      默认值     必填      说明
-index   number          是       tabBar 的哪一项，从左边算起
-success function                否       接口调用成功的回调函数
-fail    function                否       接口调用失败的回调函数
-complete        function                否       接口调用结束的回调函数（调用成功、失败都会执行）</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>index</strong> (<em>number</em>) – 是 tabBar 的哪一项，从左边算起</p></li>
+<li><p><strong>success</strong> (<em>function</em>) – 接口调用成功的回调函数</p></li>
+<li><p><strong>fail</strong> (<em>function</em>) – 接口调用失败的回调函数</p></li>
+<li><p><strong>complete</strong> (<em>function</em>) – 接口调用结束的回调函数（调用成功、失败都会执行）</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
 </div>
 
 
@@ -174,7 +181,7 @@ complete        function                否       接口调用结束的回调函
     </div>
     <div class="footer" role="contentinfo">
         &#169; 版权所有 2019, Wxadev Docs.
-      由 <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.0+/40994a8 创建。
+      由 <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.0+/c95e5e1 创建。
     </div>
   </body>
 </html>

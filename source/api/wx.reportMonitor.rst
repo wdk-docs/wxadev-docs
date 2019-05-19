@@ -3,7 +3,8 @@
 
 .. function:: wx.reportMonitor(string name, number value)
 
-基础库 2.0.1 开始支持，低版本需做兼容处理。
+
+   .. versionadded:: 2.0.1 低版本需做 :ref:`compatibility` 。
 
 自定义业务数据监控上报接口。
 

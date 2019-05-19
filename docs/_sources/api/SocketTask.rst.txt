@@ -3,7 +3,8 @@
 
 .. class:: SocketTask
 
-基础库 1.7.0 开始支持，低版本需做兼容处理。
+
+   .. versionadded:: 1.7.0 低版本需做 :ref:`compatibility` 。
 
 WebSocket 任务，可通过 :func:`wx.connectSocket()` 接口创建返回
 

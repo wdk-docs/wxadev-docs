@@ -1,3 +1,5 @@
+.. _logistics.updatePrinter:
+
 :wxbpi:`更新打印员 <logistics.updatePrinter>`
 ============================================================
 

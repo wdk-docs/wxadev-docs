@@ -3,6 +3,8 @@
 :wxfrwk:`WXS <view/wxs/index>`
 =========================================
 
+版本:|release| 更新:|today|
+
 WXS（WeiXin Script）是小程序的一套脚本语言，结合 WXML，可以构建出页面的结构。
 
 .. attention::

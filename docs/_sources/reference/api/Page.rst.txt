@@ -94,13 +94,13 @@
 
   :param function onResize:  **页面事件处理函数** - 页面尺寸改变时触发，详见 响应显示区域变化
 
-    .. versionadded:: 2.4.0 低版本需做兼容处理。
+    .. versionadded:: 2.4.0 低版本需做 :ref:`compatibility` 。
 
     小程序屏幕旋转时触发。详见 响应显示区域变化
 
   :param function onTabItemTap({index, pagePath, text}):  **页面事件处理函数** - 点击 tab 时触发
 
-    .. versionadded:: 1.9.0 低版本需做兼容处理。
+    .. versionadded:: 1.9.0 低版本需做 :ref:`compatibility` 。
 
     - **index**	(*String*) -	被点击tabItem的序号，从0开始
     - **pagePath**	(*String*) -	被点击tabItem的页面路径
@@ -194,7 +194,7 @@
 
 .. attribute:: Page.route
 
-  .. versionadded:: 1.2.0 低版本需做兼容处理。
+  .. versionadded:: 1.2.0 低版本需做 :ref:`compatibility` 。
 
   到当前页面的路径，类型为String。
 

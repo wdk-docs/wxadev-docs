@@ -3,7 +3,7 @@
 
 .. function:: wx.onMemoryWarning(function callback)
 
-   .. version:: 2.0.2 开始支持，低版本需做兼容处理。
+   .. version:: 2.0.2  低版本需做 :ref:`compatibility` 。
 
 监听内存不足告警事件。
 

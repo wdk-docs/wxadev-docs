@@ -3,7 +3,7 @@
 
 .. function:: wx.hideShareMenu({[success][, fail][, complete]})
 
-   基础库 1.1.0 开始支持，低版本需做  :ref:`compatibility`
+   .. versionadded: 1.1.0 低版本需做  :ref:`compatibility`
 
    隐藏转发按钮
 

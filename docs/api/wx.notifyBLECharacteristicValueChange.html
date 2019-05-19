@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
   <head>
     <meta charset="utf-8" />
-    <title>:wxapi:wx.notifyBLECharacteristicValueChange &#8212; wxadev 1.0.0 文档</title>
+    <title>wx.notifyBLECharacteristicValueChange &#8212; wxadev 1.0.0 文档</title>
     <link rel="stylesheet" href="../_static/sphinx13.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
@@ -60,10 +60,12 @@
 <div class="pageheader">
   <ul>
     <li><a href="../index.html">主页</a></li>
+    <li><a href="../basic/index.html">入门</a></li>
     <li><a href="../framework/index.html">框架</a></li>
     <li><a href="../component/index.html">组件</a></li>
     <li><a href="index.html">API</a></li>
     <li><a href="../api-backend/index.html">服务端</a></li>
+    <li><a href="../reference/index.html">参考</a></li>
     <li><a href="../contents.html">目录</a></li>
   </ul>
   <div>
@@ -127,14 +129,16 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="wxapi-wx-notifyblecharacteristicvaluechange">
-<h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/api/:wxapi:wx.notifyBLECharacteristicValueChange.html">:wxapi:wx.notifyBLECharacteristicValueChange</a><a class="headerlink" href="#wxapi-wx-notifyblecharacteristicvaluechange" title="永久链接至标题">¶</a></h1>
+  <div class="section" id="wx-notifyblecharacteristicvaluechange">
+<h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/api/wx.notifyBLECharacteristicValueChange.html">wx.notifyBLECharacteristicValueChange</a><a class="headerlink" href="#wx-notifyblecharacteristicvaluechange" title="永久链接至标题">¶</a></h1>
 <dl class="function">
 <dt id="wx.notifyBLECharacteristicValueChange">
 <code class="descclassname">wx.</code><code class="descname">notifyBLECharacteristicValueChange</code><span class="sig-paren">(</span><em>Object object</em><span class="sig-paren">)</span><a class="headerlink" href="#wx.notifyBLECharacteristicValueChange" title="永久链接至目标">¶</a></dt>
-<dd></dd></dl>
+<dd><div class="versionadded">
+<p><span class="versionmodified added">1.1.0 新版功能: </span>低版本需做 <a class="reference internal" href="../framework/compatibility.html#compatibility"><span class="std std-ref">兼容处理</span></a> 。</p>
+</div>
+</dd></dl>
 
-<p>基础库 1.1.0 开始支持，低版本需做兼容处理。</p>
 <p>启用低功耗蓝牙设备特征值变化时的 notify 功能，订阅特征值。注意：必须设备的特征值支持 notify 或者 indicate 才可以成功调用。</p>
 <p>另外，必须先启用 notifyBLECharacteristicValueChange 才能监听到设备 characteristicValueChange 事件</p>
 <p>参数
@@ -214,7 +218,7 @@ success(res) {</p>
     </div>
     <div class="footer" role="contentinfo">
         &#169; 版权所有 2019, Wxadev Docs.
-      由 <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.0+/40994a8 创建。
+      由 <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.0+/c95e5e1 创建。
     </div>
   </body>
 </html>

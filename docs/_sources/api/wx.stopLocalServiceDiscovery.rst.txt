@@ -3,7 +3,8 @@
 
 .. function:: wx.stopLocalServiceDiscovery(Object object)
 
-基础库 2.4.0 开始支持，低版本需做兼容处理。
+
+   .. versionadded:: 2.4.0 低版本需做 :ref:`compatibility` 。
 
 停止搜索 mDNS 服务
 

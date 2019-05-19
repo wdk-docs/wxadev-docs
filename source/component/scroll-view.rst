@@ -3,7 +3,7 @@
 :wx_comp:`scroll-view`
 ===========================
 
-.. versionadded:: 1.0.0 开始支持，低版本需做 :ref:`compatibility` 。
+.. versionadded:: 1.0.0  低版本需做 :ref:`compatibility` 。
 
 可滚动视图区域。使用竖向滚动时，需要给<:doc:`scroll-view`>一个固定高度，通过 WXSS 设置 height。组件属性的长度单位默认为px，2.4.0起支持传入单位(rpx/px)。
 

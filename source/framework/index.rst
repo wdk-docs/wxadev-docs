@@ -9,7 +9,7 @@
 想要更具体了了关于框架、组件、API的详细内容，请参考对应的参考文档：
 
 .. toctree::
-   :maxdepth: 4
+   :maxdepth: 3
    :glob:
 
    MINA

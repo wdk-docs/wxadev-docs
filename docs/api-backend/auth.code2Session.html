@@ -60,10 +60,12 @@
 <div class="pageheader">
   <ul>
     <li><a href="../index.html">主页</a></li>
+    <li><a href="../basic/index.html">入门</a></li>
     <li><a href="../framework/index.html">框架</a></li>
     <li><a href="../component/index.html">组件</a></li>
     <li><a href="../api/index.html">API</a></li>
     <li><a href="index.html">服务端</a></li>
+    <li><a href="../reference/index.html">参考</a></li>
     <li><a href="../contents.html">目录</a></li>
   </ul>
   <div>
@@ -128,7 +130,43 @@
           <div class="body" role="main">
             
   <div class="section" id="auth-code2session">
-<h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/api-backend/auth.code2Session.html">auth.code2Session</a><a class="headerlink" href="#auth-code2session" title="永久链接至标题">¶</a></h1>
+<span id="id1"></span><h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/api-backend/auth.code2Session.html">auth.code2Session</a><a class="headerlink" href="#auth-code2session" title="永久链接至标题">¶</a></h1>
+<p>本接口应在服务器端调用，详细说明参见服务端API。</p>
+<p>请求地址 <a class="reference internal" href="../glossary.html#term-api-sns"><span class="xref std std-term">api_sns</span></a></p>
+<dl class="get">
+<dt id="get-jscode2session">
+<code class="descname">GET </code><code class="descname">jscode2session</code><a class="headerlink" href="#get-jscode2session" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Synopsis</dt>
+<dd class="field-odd"><p>登录凭证校验。通过 wx.login() 接口获得临时登录凭证 code 后传到开发者服务器调用此接口完成登录流程。更多使用方法详见 小程序登录。</p>
+</dd>
+<dt class="field-even">参数</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>appid</strong> (<em>string</em>) – 是 小程序 appId</p></li>
+<li><p><strong>secret</strong> (<em>string</em>) – 是 小程序 appSecret</p></li>
+<li><p><strong>js_code</strong> (<em>string</em>) – 是 登录时获取的 code</p></li>
+<li><p><strong>grant_type</strong> (<em>string</em>) – 是 授权类型，此处只需填写 authorization_code</p></li>
+</ul>
+</dd>
+<dt class="field-odd">响应JSON对象</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>openid</strong> (<em>string</em>) – 用户唯一标识</p></li>
+<li><p><strong>session_key</strong> (<em>string</em>) – 会话密钥</p></li>
+<li><p><strong>unionid</strong> (<em>string</em>) – 用户在开放平台的唯一标识符，在满足 UnionID 下发条件的情况下会返回，详见 UnionID 机制说明。</p></li>
+<li><p><strong>errcode</strong> (<em>number</em>) – <p>错误码</p>
+<ul>
+<li><p><em>-1</em> 系统繁忙，此时请开发者稍候再试</p></li>
+<li><p><em>0</em> 请求成功</p></li>
+<li><p><em>40029</em> code 无效</p></li>
+<li><p><em>45011</em> 频率限制，每个用户每分钟100次</p></li>
+</ul>
+</p></li>
+<li><p><strong>errmsg</strong> (<em>string</em>) – 错误信息</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
 </div>
 
 
@@ -160,7 +198,7 @@
     </div>
     <div class="footer" role="contentinfo">
         &#169; 版权所有 2019, Wxadev Docs.
-      由 <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.0+/40994a8 创建。
+      由 <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.0+/c95e5e1 创建。
     </div>
   </body>
 </html>

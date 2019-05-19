@@ -1,6 +1,4 @@
-{% extends "layout.html" %}
-{% set title = _('Overview') %}
-{% block body %}
+{% extends "layout.html" %} {% set title = _('Overview') %} {% block body %}
 <h1>开发指南</h1>
 <div class="quotebar">
   <p><em>简介</em></p>
@@ -22,14 +20,14 @@
   <tr>
     <td>
       <p class="biglink">
-        <a class="biglink" href="{{ pathto("quickstart/basic/getstart") }}">开发小程序的第一步</a><br />
+        <a class="biglink" href="{{ pathto('basic/quickstart') }}">开发小程序的第一步</a><br />
         <span class="linkdescr">注册管理，安装开发工具编译预览。</span>
       </p>
     </td>
     <td>
       {%- if hasdoc('search') %}
       <p class="biglink">
-        <a class="biglink" href="{{ pathto("search") }}">搜索页</a><br />
+        <a class="biglink" href="{{ pathto('search') }}">搜索页</a><br />
         <span class="linkdescr">搜索文档内容</span>
       </p>
       {%- endif %}
@@ -38,14 +36,14 @@
   <tr>
     <td>
       <p class="biglink">
-        <a class="biglink" href="{{ pathto("contents") }}">详细目录</a><br />
+        <a class="biglink" href="{{ pathto('contents') }}">详细目录</a><br />
         <span class="linkdescr">完整的目录结构</span>
       </p>
     </td>
     <td>
       {%- if hasdoc('genindex') %}
       <p class="biglink">
-        <a class="biglink" href="{{ pathto("genindex") }}">索引</a><br />
+        <a class="biglink" href="{{ pathto('genindex') }}">索引</a><br />
         <span class="linkdescr">所的函数，类，术语生成的索引</span>
       </p>
       {%- endif %}
@@ -54,18 +52,17 @@
   <tr>
     <td>
       <p class="biglink">
-        <a class="biglink" href="{{ pathto("http-routingtable") }}">服务接口</a><br />
+        <a class="biglink" href="{{ pathto('http-routingtable') }}">服务接口</a><br />
         <span class="linkdescr">服务端能力接口索引</span>
       </p>
     </td>
     <td>
       <p class="biglink">
-        <a class="biglink" href="{{ pathto("framework/release/index") }}">更新日志</a><br />
+        <a class="biglink" href="{{ pathto('framework/release/index') }}">更新日志</a><br />
         <span class="linkdescr">版本更新，发布历史</span>
       </p>
     </td>
-    <td>
-    </td>
+    <td></td>
   </tr>
 </table>
 
@@ -73,29 +70,33 @@
 
 <h2>云开发</h2>
 <p>
-  已单独拆分为 <a href="https:://wdk-docs.github.io/wxcloud-docs" target="_blank">云开发文档</a>
+  开发者可以使用云开发开发微信小程序、小游戏，无需搭建服务器，即可使用云端能力。 已单独拆分为
+  <a href="https://wdk-docs.github.io/wxcloud-docs" target="_blank">云开发文档</a>
 </p>
 
 <h2>开发企业微信小程序</h2>
 <p>
   企业微信移动客户端从2.5.8版本开始，已内置微信小程序基础库，开发者无需适配（部分接口需要适配），
   即可将微信小程序移植到企业微信上运行，同时开发者也可以针对企业微信提供的扩展接口开发出更适用于企业内部场景的小程序。
+  更多查看<a href="{{ pathto('wxwork/index') }}">小程序企业微信开发文档</a>
 </p>
 
 <h2>微信小游戏开发</h2>
 <p>
-  小游戏的运行环境在 iOS 上是 JavaScriptCore，在 Android 上是 V8。
-  更多查看 <a href="https://developers.weixin.qq.com/minigame/dev/index.html" target="_blank">开发文档</a>
+  小游戏的运行环境在 iOS 上是 JavaScriptCore，在 Android 上是 V8。 更多查看
+  <a href="https://developers.weixin.qq.com/minigame/dev/index.html" target="_blank">开发文档</a>
 </p>
 
 <h2>关于本文档</h2>
 <p>
-  由于官方文档看起来不是很方便，使用<a href="https://wdk-docs.github.io/sphinx-docs/" target="_blank">sphinx-doc</a>重新整理官方文档。
-  文档采用sphinx-doc的官方支持模板sphinx13并做部分修改。
-  服务 http rest 接口采用<a href="https://wdk-docs.github.io/sphinx-docs/usage/extensions/httpdomain.html"
-    target="_blank">httpdomain</a>域进行编辑索引。
+  由于官方文档看起来不是很方便，使用<a href="https://wdk-docs.github.io/sphinx-docs/" target="_blank">sphinx-doc</a
+  >重新整理官方文档。 文档采用sphinx-doc的官方支持模板sphinx13并做部分修改。 服务 http rest 接口采用<a
+    href="https://wdk-docs.github.io/sphinx-docs/usage/extensions/httpdomain.html"
+    target="_blank"
+    >httpdomain</a
+  >域进行编辑索引。
 </p>
 <ul>
-  <li><a href="{{ pathto("authors") }}">文档作者</a></li>
+  <li><a href="{{ pathto('authors') }}">文档作者</a></li>
 </ul>
 {% endblock %}

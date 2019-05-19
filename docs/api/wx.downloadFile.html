@@ -60,10 +60,12 @@
 <div class="pageheader">
   <ul>
     <li><a href="../index.html">主页</a></li>
+    <li><a href="../basic/index.html">入门</a></li>
     <li><a href="../framework/index.html">框架</a></li>
     <li><a href="../component/index.html">组件</a></li>
     <li><a href="index.html">API</a></li>
     <li><a href="../api-backend/index.html">服务端</a></li>
+    <li><a href="../reference/index.html">参考</a></li>
     <li><a href="../contents.html">目录</a></li>
   </ul>
   <div>
@@ -156,8 +158,12 @@ tempFilePath    string  临时文件路径。没传入 filePath 指定文件存�
 filePath        string  用户文件路径。传入 filePath 时会返回，跟传入的 filePath 一致
 statusCode      number  开发者服务器返回的 HTTP 状态码
 返回值
-DownloadTask
-基础库 1.4.0 开始支持，低版本需做兼容处理。</p>
+DownloadTask</p>
+<blockquote>
+<div><div class="versionadded">
+<p><span class="versionmodified added">1.4.0 新版功能: </span>低版本需做 <a class="reference internal" href="../framework/compatibility.html#compatibility"><span class="std std-ref">兼容处理</span></a> 。</p>
+</div>
+</div></blockquote>
 <p>一个可以监听下载进度变化事件和取消下载的对象</p>
 <p>示例代码</p>
 <div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="nx">wx</span><span class="p">.</span><span class="nx">downloadFile</span><span class="p">({</span>
@@ -204,7 +210,7 @@ DownloadTask
     </div>
     <div class="footer" role="contentinfo">
         &#169; 版权所有 2019, Wxadev Docs.
-      由 <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.0+/40994a8 创建。
+      由 <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.0+/c95e5e1 创建。
     </div>
   </body>
 </html>

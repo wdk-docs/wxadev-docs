@@ -3,7 +3,8 @@
 
 .. function:: wx.connectWifi(Object object)
 
-基础库 1.6.0 开始支持，低版本需做兼容处理。
+
+   .. versionadded:: 1.6.0 低版本需做 :ref:`compatibility` 。
 
 连接 Wi-Fi。若已知 Wi-Fi 信息，可以直接利用该接口连接。仅 Android 与 iOS 11 以上版本支持。
 

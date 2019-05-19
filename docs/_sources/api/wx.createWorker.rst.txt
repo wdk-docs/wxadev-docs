@@ -7,7 +7,8 @@ Worker
 
 .. function:: wx.createWorker(string scriptPath)
 
-基础库 1.9.90 开始支持，低版本需做兼容处理。
+
+   .. versionadded:: 1.9.90 低版本需做 :ref:`compatibility` 。
 
 创建一个 Worker 线程。目前限制最多只能创建一个 Worker，创建下一个 Worker 前请先调用 Worker.terminate
 

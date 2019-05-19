@@ -1,8 +1,10 @@
 企业微信
 ============
 
+版本:|release| 更新:|today|
+
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 3
    :glob:
 
    doc/index

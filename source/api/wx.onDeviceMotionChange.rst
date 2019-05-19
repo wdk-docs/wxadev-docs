@@ -4,7 +4,8 @@
 
 .. function:: wx.onDeviceMotionChange(function callback)
 
-基础库 2.3.0 开始支持，低版本需做兼容处理。
+
+   .. versionadded:: 2.3.0 低版本需做 :ref:`compatibility` 。
 
 监听设备方向变化事件。频率根据 wx.startDeviceMotionListening() 的 interval 参数。可以使用 wx.stopDeviceMotionListening() 停止监听。
 

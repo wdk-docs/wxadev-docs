@@ -3,7 +3,8 @@
 
 .. function:: wx.onBLECharacteristicValueChange(function callback)
 
-基础库 1.1.0 开始支持，低版本需做兼容处理。
+
+   .. versionadded:: 1.1.0 低版本需做 :ref:`compatibility` 。
 
 监听低功耗蓝牙设备的特征值变化事件。必须先启用 notifyBLECharacteristicValueChange 接口才能接收到设备推送的 notification。
 

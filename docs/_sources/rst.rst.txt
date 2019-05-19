@@ -3,6 +3,8 @@
 定义
 ======
 
+版本:|release| 更新:|today|
+
 
 .. rst:directive:: wxcomp
 

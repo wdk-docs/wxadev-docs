@@ -7,7 +7,8 @@ LivePlayerContext
 
 .. function:: wx.createLivePlayerContext(string id, Object this)
 
-基础库 1.7.0 开始支持，低版本需做兼容处理。
+
+   .. versionadded:: 1.7.0 低版本需做 :ref:`compatibility` 。
 
 创建 live-player 上下文 LivePlayerContext 对象。
 

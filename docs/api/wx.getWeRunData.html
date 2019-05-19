@@ -60,10 +60,12 @@
 <div class="pageheader">
   <ul>
     <li><a href="../index.html">主页</a></li>
+    <li><a href="../basic/index.html">入门</a></li>
     <li><a href="../framework/index.html">框架</a></li>
     <li><a href="../component/index.html">组件</a></li>
     <li><a href="index.html">API</a></li>
     <li><a href="../api-backend/index.html">服务端</a></li>
+    <li><a href="../reference/index.html">参考</a></li>
     <li><a href="../contents.html">目录</a></li>
   </ul>
   <div>
@@ -132,9 +134,11 @@
 <dl class="function">
 <dt id="wx.getWeRunData">
 <code class="descclassname">wx.</code><code class="descname">getWeRunData</code><span class="sig-paren">(</span><em>Object object</em><span class="sig-paren">)</span><a class="headerlink" href="#wx.getWeRunData" title="永久链接至目标">¶</a></dt>
-<dd></dd></dl>
+<dd><div class="versionadded">
+<p><span class="versionmodified added">1.2.0 新版功能: </span>低版本需做 <a class="reference internal" href="../framework/compatibility.html#compatibility"><span class="std std-ref">兼容处理</span></a> 。</p>
+</div>
+</dd></dl>
 
-<p>基础库 1.2.0 开始支持，低版本需做兼容处理。</p>
 <p>调用前需要 用户授权 scope.werun</p>
 <p>获取用户过去三十天微信运动步数。需要先调用 wx.login 接口。步数信息会在用户主动进入小程序时更新。</p>
 <p>参数
@@ -220,7 +224,7 @@ step    number  微信运动步数</p>
     </div>
     <div class="footer" role="contentinfo">
         &#169; 版权所有 2019, Wxadev Docs.
-      由 <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.0+/40994a8 创建。
+      由 <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.0+/c95e5e1 创建。
     </div>
   </body>
 </html>

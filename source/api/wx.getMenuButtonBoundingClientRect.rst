@@ -3,7 +3,7 @@
 
 .. function:: wx.getMenuButtonBoundingClientRect()
 
-   .. versionadded:: 2.1.0 开始支持，低版本需做兼容处理。
+   .. versionadded:: 2.1.0  低版本需做 :ref:`compatibility` 。
 
 获取菜单按钮（右上角胶囊按钮）的布局位置信息。坐标信息以屏幕左上角为原点。
 

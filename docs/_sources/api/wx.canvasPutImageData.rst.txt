@@ -3,7 +3,8 @@
 
 .. function:: wx.canvasPutImageData(Object object, Object this)
 
-基础库 1.9.0 开始支持，低版本需做兼容处理。
+
+   .. versionadded:: 1.9.0 低版本需做 :ref:`compatibility` 。
 
 将像素数据绘制到画布。在自定义组件下，第二个参数传入自定义组件实例 this，以操作组件内 <canvas> 组件
 

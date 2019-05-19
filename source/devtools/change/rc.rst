@@ -12,7 +12,7 @@
   #. F 修复 HTTP 调用无法上传的问题 反馈详情
   #. F 修复 tabBar 字体颜色支持 rgb 格式与客户端不一致的问题
   #. F 修复 tabBar 被蒙层遮住的问题
-  #. F 修复 App.onLaunch 中无法调用企业微信 api 的问题
+  #. F 修复 :func:`App.onLaunch` 中无法调用企业微信 api 的问题
   #. F 修复 wx.getBackgroundAudioManager 实现与客户端不一致的问题 反馈详情
   #. F 修复 navigationStyle: custom 有 <web-view> 组件的页面没有顶部导航栏的问题
   #. F 修复 命令行调用上传时 --upload-desc 会截断空格后内容的问题 反馈详情

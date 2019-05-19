@@ -3,7 +3,8 @@
 
 .. function:: wx.canvasGetImageData(Object object, Object this)
 
-基础库 1.9.0 开始支持，低版本需做兼容处理。
+
+   .. versionadded:: 1.9.0 低版本需做 :ref:`compatibility` 。
 
 获取 canvas 区域隐含的像素数据。
 

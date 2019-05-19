@@ -60,10 +60,12 @@
 <div class="pageheader">
   <ul>
     <li><a href="../index.html">主页</a></li>
+    <li><a href="../basic/index.html">入门</a></li>
     <li><a href="../framework/index.html">框架</a></li>
     <li><a href="../component/index.html">组件</a></li>
     <li><a href="../api/index.html">API</a></li>
     <li><a href="index.html">服务端</a></li>
+    <li><a href="../reference/index.html">参考</a></li>
     <li><a href="../contents.html">目录</a></li>
   </ul>
   <div>
@@ -127,8 +129,8 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="id1">
-<h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/api-backend/logistics.cancelOrder.html">取消运单</a><a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
+  <div class="section" id="logistics-addorder">
+<span id="id1"></span><h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/api-backend/logistics.cancelOrder.html">取消运单</a><a class="headerlink" href="#logistics-addorder" title="永久链接至标题">¶</a></h1>
 <p>logistics.cancelOrder
 本接口应在服务器端调用，详细说明参见服务端API。</p>
 <p>本接口支持云调用。需开发者工具版本 &gt;= 1.02.1904090（最新稳定版下载），wx-server-sdk &gt;= 0.4.0</p>
@@ -178,9 +180,13 @@ errcode 的合法值</p>
 <p>}</p>
 <p>二、云调用
 云调用是小程序·云开发提供的在云函数中调用微信开放接口的能力，需要在云函数中通过 wx-server-sdk 使用。</p>
-<p>接口方法
-openapi.logistics.cancelOrder
-需在 config.json 中配置 logistics.cancelOrder API 的权限，详情</p>
+<p>接口方法</p>
+<dl class="function">
+<dt id="openapi.logistics.cancelOrder">
+<code class="descclassname">openapi.logistics.</code><code class="descname">cancelOrder</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#openapi.logistics.cancelOrder" title="永久链接至目标">¶</a></dt>
+<dd></dd></dl>
+
+<p>需在 config.json 中配置 logistics.cancelOrder API 的权限，详情</p>
 <p>请求参数
 属性      类型      默认值     必填      说明
 orderId string          是       订单 ID，需保证全局唯一
@@ -264,7 +270,7 @@ errCode 的合法值</p>
     </div>
     <div class="footer" role="contentinfo">
         &#169; 版权所有 2019, Wxadev Docs.
-      由 <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.0+/40994a8 创建。
+      由 <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.0+/c95e5e1 创建。
     </div>
   </body>
 </html>

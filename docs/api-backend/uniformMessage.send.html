@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
   <head>
     <meta charset="utf-8" />
-    <title>服务器端调用 &#8212; wxadev 1.0.0 文档</title>
+    <title>下发统一服务消息 &#8212; wxadev 1.0.0 文档</title>
     <link rel="stylesheet" href="../_static/sphinx13.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
@@ -60,10 +60,12 @@
 <div class="pageheader">
   <ul>
     <li><a href="../index.html">主页</a></li>
+    <li><a href="../basic/index.html">入门</a></li>
     <li><a href="../framework/index.html">框架</a></li>
     <li><a href="../component/index.html">组件</a></li>
     <li><a href="../api/index.html">API</a></li>
     <li><a href="index.html">服务端</a></li>
+    <li><a href="../reference/index.html">参考</a></li>
     <li><a href="../contents.html">目录</a></li>
   </ul>
   <div>
@@ -98,9 +100,12 @@
         <div class="sphinxsidebarwrapper">
   <h3><a href="../contents.html">目录</a></h3>
   <ul>
-<li><a class="reference internal" href="#">服务器端调用</a></li>
-<li><a class="reference internal" href="#id2">云调用</a></li>
-<li><a class="reference internal" href="#id3">错误码</a></li>
+<li><a class="reference internal" href="#">下发统一服务消息</a><ul>
+<li><a class="reference internal" href="#id2">服务器端调用</a></li>
+<li><a class="reference internal" href="#id3">云调用</a></li>
+<li><a class="reference internal" href="#id4">错误码</a></li>
+</ul>
+</li>
 </ul>
 
   <h4>上一个主题</h4>
@@ -134,14 +139,12 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <blockquote>
-<div><p>wxbpi:<cite>下发统一服务消息 &lt;uniformMessage.send&gt;</cite></p>
-</div></blockquote>
-<hr class="docutils" />
+  <div class="section" id="uniformmessage-send">
+<span id="id1"></span><h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/api-backend/uniformMessage.send.html">下发统一服务消息</a><a class="headerlink" href="#uniformmessage-send" title="永久链接至标题">¶</a></h1>
 <p>..:: 本接口应在服务器端调用，详细说明参见服务端API。</p>
 <p>..:: 本接口支持云调用。</p>
-<div class="section" id="id1">
-<h1>服务器端调用<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
+<div class="section" id="id2">
+<h2>服务器端调用<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
 <p>接口地址请求地址 <a class="reference internal" href="../glossary.html#term-api"><span class="xref std std-term">api</span></a></p>
 <dl class="post">
 <dt id="post-message-wxopen-template-uniform_send?access_token=(ACCESS_TOKEN)">
@@ -188,124 +191,6 @@
 </ul>
 </dd>
 </dl>
-<div class="literal-block-wrapper docutils container" id="uniformmessage-send-request-example">
-<div class="code-block-caption"><span class="caption-text">请求示例</span><a class="headerlink" href="#uniformmessage-send-request-example" title="永久链接至代码">¶</a></div>
-<div class="highlight-http notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23
-24
-25
-26
-27
-28
-29
-30
-31
-32
-33
-34
-35
-36
-37
-38
-39
-40
-41
-42
-43
-44
-45
-46
-47
-48
-49
-50
-51
-52
-53
-54
-55
-56
-57</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="hll">POST message/wxopen/template/uniform_send HTTP/1.1
-</span><span class="hll">Host: https://api.weixin.qq.com/cgi-bin/
-</span>Accept: application/json, text/javascript
-{
-  &quot;touser&quot;: &quot;OPENID&quot;,
-  &quot;weapp_template_msg&quot;: {
-    &quot;template_id&quot;: &quot;TEMPLATE_ID&quot;,
-    &quot;page&quot;: &quot;page/page/index&quot;,
-    &quot;form_id&quot;: &quot;FORMID&quot;,
-    &quot;data&quot;: {
-      &quot;keyword1&quot;: {
-        &quot;value&quot;: &quot;339208499&quot;
-      },
-      &quot;keyword2&quot;: {
-        &quot;value&quot;: &quot;2015年01月05日 12:30&quot;
-      },
-      &quot;keyword3&quot;: {
-        &quot;value&quot;: &quot;腾讯微信总部&quot;
-      },
-      &quot;keyword4&quot;: {
-        &quot;value&quot;: &quot;广州市海珠区新港中路397号&quot;
-      }
-    },
-    &quot;emphasis_keyword&quot;: &quot;keyword1.DATA&quot;
-  },
-  &quot;mp_template_msg&quot;: {
-    &quot;appid&quot;: &quot;APPID &quot;,
-    &quot;template_id&quot;: &quot;TEMPLATE_ID&quot;,
-    &quot;url&quot;: &quot;http://weixin.qq.com/download&quot;,
-    &quot;miniprogram&quot;: {
-      &quot;appid&quot;: &quot;xiaochengxuappid12345&quot;,
-      &quot;pagepath&quot;: &quot;index?foo=bar&quot;
-    },
-    &quot;data&quot;: {
-      &quot;first&quot;: {
-        &quot;value&quot;: &quot;恭喜你购买成功！&quot;,
-        &quot;color&quot;: &quot;#173177&quot;
-      },
-      &quot;keyword1&quot;: {
-        &quot;value&quot;: &quot;巧克力&quot;,
-        &quot;color&quot;: &quot;#173177&quot;
-      },
-      &quot;keyword2&quot;: {
-        &quot;value&quot;: &quot;39.8元&quot;,
-        &quot;color&quot;: &quot;#173177&quot;
-      },
-      &quot;keyword3&quot;: {
-        &quot;value&quot;: &quot;2014年9月22日&quot;,
-        &quot;color&quot;: &quot;#173177&quot;
-      },
-      &quot;remark&quot;: {
-        &quot;value&quot;: &quot;欢迎再次购买！&quot;,
-        &quot;color&quot;: &quot;#173177&quot;
-      }
-    }
-  }
-}
-</pre></div>
-</td></tr></table></div>
-</div>
 <div class="literal-block-wrapper docutils container" id="uniformmessage-send-response-example">
 <div class="code-block-caption"><span class="caption-text">响应示例</span><a class="headerlink" href="#uniformmessage-send-response-example" title="永久链接至代码">¶</a></div>
 <div class="highlight-http notranslate"><div class="highlight"><pre><span></span>HTTP/1.1 200 OK
@@ -321,8 +206,8 @@ Content-Type: text/javascript
 </dd></dl>
 
 </div>
-<div class="section" id="id2">
-<h1>云调用<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h1>
+<div class="section" id="id3">
+<h2>云调用<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
 <dl class="function">
 <dt id="openapi.uniformMessage.send">
 <code class="descclassname">openapi.uniformMessage.</code><code class="descname">send</code><span class="sig-paren">(</span><em>{touser</em>, <em>weappTemplateMsg</em>, <em>mpTemplateMsg}</em><span class="sig-paren">)</span><a class="headerlink" href="#openapi.uniformMessage.send" title="永久链接至目标">¶</a></dt>
@@ -444,8 +329,8 @@ Content-Type: text/javascript
 </dd></dl>
 
 </div>
-<div class="section" id="id3">
-<h1>错误码<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h1>
+<div class="section" id="id4">
+<h2>错误码<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h2>
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 9%" />
@@ -481,6 +366,7 @@ Content-Type: text/javascript
 </tbody>
 </table>
 </div>
+</div>
 
 
           </div>
@@ -511,7 +397,7 @@ Content-Type: text/javascript
     </div>
     <div class="footer" role="contentinfo">
         &#169; 版权所有 2019, Wxadev Docs.
-      由 <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.0+/40994a8 创建。
+      由 <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.0+/c95e5e1 创建。
     </div>
   </body>
 </html>

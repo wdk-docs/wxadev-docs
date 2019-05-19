@@ -60,10 +60,12 @@
 <div class="pageheader">
   <ul>
     <li><a href="../index.html">主页</a></li>
+    <li><a href="../basic/index.html">入门</a></li>
     <li><a href="../framework/index.html">框架</a></li>
     <li><a href="../component/index.html">组件</a></li>
     <li><a href="../api/index.html">API</a></li>
     <li><a href="index.html">服务端</a></li>
+    <li><a href="../reference/index.html">参考</a></li>
     <li><a href="../contents.html">目录</a></li>
   </ul>
   <div>
@@ -138,7 +140,7 @@
             
   <div class="section" id="auth-getpaidunionid">
 <span id="id1"></span><h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/api-backend/auth.getPaidUnionId.html">auth.getPaidUnionId</a><a class="headerlink" href="#auth-getpaidunionid" title="永久链接至标题">¶</a></h1>
-<p>本接口应在服务器端调用，详细说明参见 <a class="reference internal" href="../framework/server-ability/backend-api.html#ability-bpi"><span class="std std-ref">服务端API</span></a> 。</p>
+<p>本接口应在服务器端调用，详细说明参见 <span class="xref std std-ref">ability_bpi</span> 。</p>
 <p>本接口支持云调用。需开发者工具版本 <code class="docutils literal notranslate"><span class="pre">&gt;=</span> <span class="pre">1.02.1904090</span></code> （最新稳定版下载）， <code class="docutils literal notranslate"><span class="pre">wx-server-sdk</span> <span class="pre">&gt;=</span> <span class="pre">0.4.0</span></code></p>
 <p>用户支付完成后，获取该用户的 UnionId，无需用户授权。本接口支持第三方平台代理查询。</p>
 <div class="admonition attention">
@@ -210,7 +212,11 @@
 <h2>云调用<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
 <p>云调用是小程序·云开发提供的在云函数中调用微信开放接口的能力，需要在云函数中通过 wx-server-sdk 使用。</p>
 <p>接口方法</p>
-<p>openapi.auth.getPaidUnionId</p>
+<dl class="function">
+<dt id="openapi.auth.getPaidUnionId">
+<code class="descclassname">openapi.auth.</code><code class="descname">getPaidUnionId</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#openapi.auth.getPaidUnionId" title="永久链接至目标">¶</a></dt>
+<dd></dd></dl>
+
 <p>需在 config.json 中配置 auth.getPaidUnionId API 的权限，详情</p>
 <p>请求参数
 属性      类型      默认值     必填      说明
@@ -300,7 +306,7 @@ errCode 的合法值</p>
     </div>
     <div class="footer" role="contentinfo">
         &#169; 版权所有 2019, Wxadev Docs.
-      由 <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.0+/40994a8 创建。
+      由 <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.0+/c95e5e1 创建。
     </div>
   </body>
 </html>

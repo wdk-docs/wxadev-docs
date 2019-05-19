@@ -1,3 +1,5 @@
+.. _logistics.addOrder:
+
 :wxbpi:`生成运单 <logistics.addOrder>`
 =============================================
 
@@ -216,7 +218,9 @@ errcode 的合法值
 云调用是小程序·云开发提供的在云函数中调用微信开放接口的能力，需要在云函数中通过 wx-server-sdk 使用。
 
 接口方法
-openapi.logistics.addOrder
+
+.. function:: openapi.logistics.addOrder
+
 需在 config.json 中配置 logistics.addOrder API 的权限，详情
 
 请求参数

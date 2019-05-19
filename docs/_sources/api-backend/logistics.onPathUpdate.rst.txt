@@ -1,3 +1,5 @@
+.. _logistics.onPathUpdate:
+
 :wxbpi:`运单轨迹更新事件 <logistics.onPathUpdate>`
 ============================================================
 

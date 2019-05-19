@@ -3,7 +3,7 @@
 :wx_comp:`radio`
 =====================
 
-.. versionadded:: 1.0.0 开始支持，低版本需做 :ref:`compatibility` 。
+.. versionadded:: 1.0.0  低版本需做 :ref:`compatibility` 。
 
 单选项目。
 

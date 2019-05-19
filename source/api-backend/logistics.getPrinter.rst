@@ -40,7 +40,9 @@ openid	Array.<string>	打印员 openid 列表
 云调用是小程序·云开发提供的在云函数中调用微信开放接口的能力，需要在云函数中通过 wx-server-sdk 使用。
 
 接口方法
-openapi.logistics.getPrinter
+
+.. function:: openapi.logistics.getPrinter
+
 需在 config.json 中配置 logistics.getPrinter API 的权限，详情
 
 返回值

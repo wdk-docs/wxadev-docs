@@ -1,3 +1,5 @@
+.. _logistics.onCheckBusiness:
+
 :wxbpi:`审核商户事件 <logistics.onCheckBusiness>`
 ============================================================
 

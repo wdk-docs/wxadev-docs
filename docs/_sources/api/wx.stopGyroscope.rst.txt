@@ -3,7 +3,8 @@
 
 .. function:: wx.stopGyroscope(Object object)
 
-基础库 2.3.0 开始支持，低版本需做兼容处理。
+
+   .. versionadded:: 2.3.0 低版本需做 :ref:`compatibility` 。
 
 停止监听陀螺仪数据。
 

@@ -3,7 +3,7 @@
 
 .. function:: wx.vibrateLong(Object object)
 
-   .. version:: 1.2.0 低版本需做兼容处理。
+   .. version:: 1.2.0 低版本需做 :ref:`compatibility` 。
 
    使手机发生较长时间的振动（400 ms)
 

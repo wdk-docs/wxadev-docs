@@ -3,7 +3,7 @@
 :wx_comp:`cover-image`
 ===========================
 
-.. versionadded:: 1.4.0 开始支持，低版本需做 :ref:`compatibility` 。
+.. versionadded:: 1.4.0  低版本需做 :ref:`compatibility` 。
 
 覆盖在原生组件之上的图片视图。可覆盖的原生组件同<:doc:`cover-view`>，支持嵌套在<:doc:`cover-view`>里。
 

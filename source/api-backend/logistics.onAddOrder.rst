@@ -1,3 +1,5 @@
+.. _logistics.addOrder:
+
 :wxbpi:`请求下单事件 <logistics.onAddOrder>`
 ============================================================
 

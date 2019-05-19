@@ -3,7 +3,8 @@
 
 .. function:: wx.getBLEDeviceCharacteristics(Object object)
 
-基础库 1.1.0 开始支持，低版本需做兼容处理。
+
+   .. versionadded:: 1.1.0 低版本需做 :ref:`compatibility` 。
 
 获取蓝牙设备某个服务中所有特征值(characteristic)。
 

@@ -3,7 +3,8 @@
 
 .. class:: DownloadTask
 
-   基础库 1.4.0 开始支持，低版本需做兼容处理。
+
+   .. versionadded:: 1.4.0 低版本需做 :ref:`compatibility` 。
 
    一个可以监听下载进度变化事件，以及取消下载任务的对象
 

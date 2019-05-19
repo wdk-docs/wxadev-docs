@@ -3,7 +3,7 @@
 :wx_comp:`swiper-item`
 ===========================
 
-.. versionadded:: 1.0.0 开始支持，低版本需做 :ref:`compatibility` 。
+.. versionadded:: 1.0.0  低版本需做 :ref:`compatibility` 。
 
 仅可放置在<:doc:`swiper`>组件中，宽高自动设置为100%。
 

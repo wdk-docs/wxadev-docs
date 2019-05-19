@@ -1,8 +1,10 @@
 基础教程
 ============
 
+版本:|release| 更新:|today|
+
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 3
    :glob:
 
    quickstart

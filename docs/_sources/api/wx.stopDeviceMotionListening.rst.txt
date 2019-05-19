@@ -3,7 +3,8 @@
 
 .. function:: wx.stopDeviceMotionListening(Object object)
 
-基础库 2.3.0 开始支持，低版本需做兼容处理。
+
+   .. versionadded:: 2.3.0 低版本需做 :ref:`compatibility` 。
 
 停止监听设备方向的变化。
 

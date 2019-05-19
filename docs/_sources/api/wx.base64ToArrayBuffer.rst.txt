@@ -3,7 +3,7 @@
 
 .. function:: wx.base64ToArrayBuffer(base64)
 
-   .. versionadded:: 1.1.0 低版本需做兼容处理。
+   .. versionadded:: 1.1.0 低版本需做 :ref:`compatibility` 。
 
    .. deprecated:: 2.4.0 本接口停止维护
 

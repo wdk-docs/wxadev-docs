@@ -1,3 +1,5 @@
+.. _logistics.previewTemplate:
+
 :wxbpi:`预览面单模板 <logistics.previewTemplate>`
 ============================================================
 
@@ -185,7 +187,7 @@ custom.service.service_name	服务名称
 
 接口方法
 
-openapi.logistics.previewTemplate
+.. function:: openapi.logistics.previewTemplate
 
 需在 config.json 中配置 logistics.previewTemplate API 的权限，详情
 

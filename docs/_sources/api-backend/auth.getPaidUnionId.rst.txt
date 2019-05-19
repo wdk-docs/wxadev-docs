@@ -69,7 +69,7 @@ HTTPS 调用
 
 接口方法
 
-openapi.auth.getPaidUnionId
+.. function:: openapi.auth.getPaidUnionId
 
 需在 config.json 中配置 auth.getPaidUnionId API 的权限，详情
 

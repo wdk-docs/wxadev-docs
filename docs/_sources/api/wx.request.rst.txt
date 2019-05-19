@@ -47,7 +47,8 @@ statusCode number 开发者服务器返回的 HTTP 状态码
 header Object 开发者服务器返回的 HTTP Response Header 1.2.0
 返回值
 RequestTask
-基础库 1.4.0 开始支持，低版本需做兼容处理。
+
+   .. versionadded:: 1.4.0 低版本需做 :ref:`compatibility` 。
 
 请求任务对象
 

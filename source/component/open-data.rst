@@ -3,7 +3,7 @@
 :wx_comp:`open-data`
 ===========================
 
-.. versionadded:: 1.4.0 开始支持，低版本需做 :ref:`compatibility` 。
+.. versionadded:: 1.4.0  低版本需做 :ref:`compatibility` 。
 
 用于展示微信开放的数据。
 

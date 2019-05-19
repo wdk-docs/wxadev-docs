@@ -60,10 +60,12 @@
 <div class="pageheader">
   <ul>
     <li><a href="../../index.html">主页</a></li>
+    <li><a href="../../basic/index.html">入门</a></li>
     <li><a href="../../framework/index.html">框架</a></li>
     <li><a href="../../component/index.html">组件</a></li>
     <li><a href="../../api/index.html">API</a></li>
     <li><a href="../../api-backend/index.html">服务端</a></li>
+    <li><a href="../index.html">参考</a></li>
     <li><a href="../../contents.html">目录</a></li>
   </ul>
   <div>
@@ -148,8 +150,9 @@
 <div class="versionadded">
 <p><span class="versionmodified added">1.9.90 新版功能: </span>低版本需做 <a class="reference internal" href="../../framework/compatibility.html#compatibility"><span class="std std-ref">兼容处理</span></a> 。</p>
 </div>
-<p>示例代码：</p>
-<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="nx">App</span><span class="p">({</span>
+<dl class="field-list">
+<dt class="field-odd">示例</dt>
+<dd class="field-odd"><div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="nx">App</span><span class="p">({</span>
   <span class="nx">onPageNotFound</span><span class="p">(</span><span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
     <span class="nx">wx</span><span class="p">.</span><span class="nx">redirectTo</span><span class="p">({</span>
       <span class="nx">url</span><span class="o">:</span> <span class="s1">&#39;pages/...&#39;</span>
@@ -158,6 +161,8 @@
 <span class="p">})</span>
 </pre></div>
 </div>
+</dd>
+</dl>
 </p></li>
 <li><p><strong>其他</strong> (<em>any</em>) – 开发者可以添加任意的函数或数据变量到 Object 参数中，用 this 可以访问</p></li>
 </ul>
@@ -182,6 +187,56 @@
 <span class="p">})</span>
 </pre></div>
 </div>
+</dd></dl>
+
+<dl class="function">
+<dt id="App.onLaunch">
+<code class="descclassname">App.</code><code class="descname">onLaunch</code><span class="sig-paren">(</span><em>Object object</em><span class="sig-paren">)</span><a class="headerlink" href="#App.onLaunch" title="永久链接至目标">¶</a></dt>
+<dd><p>小程序初始化完成时触发，全局只触发一次。参数也可以使用 <a class="reference internal" href="../../api/wx.getLaunchOptionsSync.html#wx.getLaunchOptionsSync" title="wx.getLaunchOptionsSync"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.getLaunchOptionsSync()</span></code></a> 获取。</p>
+<p>参数：与 <a class="reference internal" href="../../api/wx.getLaunchOptionsSync.html#wx.getLaunchOptionsSync" title="wx.getLaunchOptionsSync"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.getLaunchOptionsSync()</span></code></a> 一致</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="App.onShow">
+<code class="descclassname">App.</code><code class="descname">onShow</code><span class="sig-paren">(</span><em>Object object</em><span class="sig-paren">)</span><a class="headerlink" href="#App.onShow" title="永久链接至目标">¶</a></dt>
+<dd><p>小程序启动，或从后台进入前台显示时触发。也可以使用 <a class="reference internal" href="../../api/wx.onAppShow.html#wx.onAppShow" title="wx.onAppShow"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.onAppShow()</span></code></a> 绑定监听。</p>
+<p>参数：与 <a class="reference internal" href="../../api/wx.onAppShow.html#wx.onAppShow" title="wx.onAppShow"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.onAppShow()</span></code></a> 一致</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="App.onHide">
+<code class="descclassname">App.</code><code class="descname">onHide</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#App.onHide" title="永久链接至目标">¶</a></dt>
+<dd><p>小程序从前台进入后台时触发。也可以使用 <a class="reference internal" href="../../api/wx.onAppHide.html#wx.onAppHide" title="wx.onAppHide"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.onAppHide()</span></code></a> 绑定监听。</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="App.onError">
+<code class="descclassname">App.</code><code class="descname">onError</code><span class="sig-paren">(</span><em>String error</em><span class="sig-paren">)</span><a class="headerlink" href="#App.onError" title="永久链接至目标">¶</a></dt>
+<dd><p>小程序发生脚本错误或 API 调用报错时触发。也可以使用 <a class="reference internal" href="../../api/wx.onError.html#wx.onError" title="wx.onError"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.onError()</span></code></a> 绑定监听。</p>
+<p>参数：与 <a class="reference internal" href="../../api/wx.onError.html#wx.onError" title="wx.onError"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.onError()</span></code></a> 一致</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="App.onPageNotFound">
+<code class="descclassname">App.</code><code class="descname">onPageNotFound</code><span class="sig-paren">(</span><em>Object object</em><span class="sig-paren">)</span><a class="headerlink" href="#App.onPageNotFound" title="永久链接至目标">¶</a></dt>
+<dd><div class="versionadded">
+<p><span class="versionmodified added">1.9.90 新版功能: </span>低版本需做 <a class="reference internal" href="../../framework/compatibility.html#compatibility"><span class="std std-ref">兼容处理</span></a> 。</p>
+</div>
+<p>小程序要打开的页面不存在时触发。也可以使用 <a class="reference internal" href="../../api/wx.onPageNotFound.html#wx.onPageNotFound" title="wx.onPageNotFound"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.onPageNotFound()</span></code></a> 绑定监听。注意事项请参考 <a class="reference internal" href="../../api/wx.onPageNotFound.html#wx.onPageNotFound" title="wx.onPageNotFound"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.onPageNotFound()</span></code></a> 。</p>
+<p>参数：与 <a class="reference internal" href="../../api/wx.onPageNotFound.html#wx.onPageNotFound" title="wx.onPageNotFound"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.onPageNotFound()</span></code></a> 一致</p>
+<dl class="field-list">
+<dt class="field-odd">示例</dt>
+<dd class="field-odd"><div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="nx">App</span><span class="p">({</span>
+  <span class="nx">onPageNotFound</span><span class="p">(</span><span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">wx</span><span class="p">.</span><span class="nx">redirectTo</span><span class="p">({</span>
+      <span class="nx">url</span><span class="o">:</span> <span class="s1">&#39;pages/...&#39;</span>
+    <span class="p">})</span> <span class="c1">// 如果是 tabbar 页面，请使用 wx.switchTab</span>
+  <span class="p">}</span>
+<span class="p">})</span>
+</pre></div>
+</div>
+</dd>
+</dl>
 </dd></dl>
 
 </div>
@@ -216,7 +271,7 @@
     </div>
     <div class="footer" role="contentinfo">
         &#169; 版权所有 2019, Wxadev Docs.
-      由 <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.0+/40994a8 创建。
+      由 <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.0+/c95e5e1 创建。
     </div>
   </body>
 </html>

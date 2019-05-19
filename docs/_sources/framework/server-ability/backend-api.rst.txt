@@ -1,4 +1,4 @@
-.. _ability_bpi:
+.. _backend-api:
 
 :wxfrwk:`服务端API <server-ability/backend-api>`
 =====================================================

@@ -3,7 +3,8 @@
 
 .. function:: wx.checkIsSupportSoterAuthentication(Object object)
 
-基础库 1.5.0 开始支持，低版本需做兼容处理。
+
+   .. versionadded:: 1.5.0 低版本需做 :ref:`compatibility` 。
 
 获取本机支持的 SOTER 生物认证方式
 

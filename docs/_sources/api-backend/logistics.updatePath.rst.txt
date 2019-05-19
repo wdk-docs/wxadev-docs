@@ -1,5 +1,7 @@
+.. _logistics.updatePath:
+
 :wxbpi:`更新运单轨迹 logistics.updatePath <logistics.updatePath>`
-============================================================
+===================================================================
 
 本接口应在服务器端调用，详细说明参见服务端API。
 
@@ -69,7 +71,9 @@ errcode 的合法值
 云调用是小程序·云开发提供的在云函数中调用微信开放接口的能力，需要在云函数中通过 wx-server-sdk 使用。
 
 接口方法
-openapi.logistics.updatePath
+
+.. function:: openapi.logistics.updatePath
+
 需在 config.json 中配置 logistics.updatePath API 的权限，详情
 
 请求参数

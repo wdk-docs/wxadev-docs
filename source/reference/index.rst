@@ -1,6 +1,8 @@
 :wxref:`参考资料 <index>`
 =============================================
 
+版本:|release| 更新:|today|
+
 .. toctree::
    :maxdepth: 3
    :glob:

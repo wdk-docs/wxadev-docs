@@ -3,7 +3,8 @@
 
 .. function:: wx.closeBluetoothAdapter(Object object)
 
-基础库 1.1.0 开始支持，低版本需做兼容处理。
+
+   .. versionadded:: 1.1.0 低版本需做 :ref:`compatibility` 。
 
 关闭蓝牙模块。调用该方法将断开所有已建立的连接并释放系统资源。建议在使用蓝牙流程后，与 wx.openBluetoothAdapter 成对调用。
 

@@ -1,3 +1,5 @@
+.. _logistics.onCancelOrder:
+
 :wxbpi:`取消订单事件 <logistics.onCancelOrder>`
 ============================================================
 

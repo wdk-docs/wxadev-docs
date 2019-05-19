@@ -3,9 +3,9 @@
 
 .. function:: wx.showLoading({title[, mask][, success][, fail][, complete]})
 
-    基础库 1.1.0 开始支持，低版本需做兼容处理。
+    .. versionadded:: 1.1.0  低版本需做 :ref:`compatibility` 。
 
-    显示 loading 提示框。需主动调用 wx.hideLoading 才能关闭提示框
+    显示 loading 提示框。需主动调用 :func:`wx.hideLoading` 才能关闭提示框
 
     :param string title: 提示的内容
     :param boolean mask: **false** 是否显示透明蒙层，防止触摸穿透
@@ -26,5 +26,5 @@
 
 .. attention::
 
-  - wx.showLoading 和 wx.showToast 同时只能显示一个
-  - wx.showLoading 应与 wx.hideLoading 配对使用
+  - :func:`wx.showLoading` 和 :func:`wx.showToast` 同时只能显示一个
+  - :func:`wx.showLoading` 应与 :func:`wx.hideLoading` 配对使用

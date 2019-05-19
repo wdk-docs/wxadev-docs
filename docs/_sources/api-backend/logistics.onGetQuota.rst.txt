@@ -1,3 +1,5 @@
+.. _logistics.onGetQuota:
+
 :wxbpi:`查询商户余额事件 <logistics.onGetQuota>`
 ============================================================
 

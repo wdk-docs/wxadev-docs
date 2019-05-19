@@ -1,7 +1,7 @@
 蓝牙
 =====
 
-iOS 微信客户端 6.5.6 版本开始支持，Android 6.5.7 版本开始支持
+iOS 微信客户端 6.5.6 版本 Android 6.5.7 版本开始支持
 
 蓝牙适配器模块生效周期为调用 wx.openBluetoothAdapter 至调用 wx.closeBluetoothAdapter 或小程序被销毁为止。
 

@@ -60,10 +60,12 @@
 <div class="pageheader">
   <ul>
     <li><a href="../index.html">主页</a></li>
+    <li><a href="../basic/index.html">入门</a></li>
     <li><a href="../framework/index.html">框架</a></li>
     <li><a href="../component/index.html">组件</a></li>
     <li><a href="index.html">API</a></li>
     <li><a href="../api-backend/index.html">服务端</a></li>
+    <li><a href="../reference/index.html">参考</a></li>
     <li><a href="../contents.html">目录</a></li>
   </ul>
   <div>
@@ -135,26 +137,27 @@
 <dd><div class="versionadded">
 <p><span class="versionmodified added">2.1.2 新版功能: </span>低版本需做 <a class="reference internal" href="../framework/compatibility.html#compatibility"><span class="std std-ref">兼容处理</span></a> 。</p>
 </div>
-<p>监听小程序要打开的页面不存在事件。该事件与 App.onPageNotFound 的回调时机一致。</p>
+<p>监听小程序要打开的页面不存在事件。该事件与 <a class="reference internal" href="../reference/api/App.html#App.onPageNotFound" title="App.onPageNotFound"><code class="xref js js-func docutils literal notranslate"><span class="pre">App.onPageNotFound()</span></code></a> 的回调时机一致。</p>
 <dl class="field-list simple">
 <dt class="field-odd">参数</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>callback</strong> (<em>function</em>) – 小程序要打开的页面不存在事件的回调函数</p></li>
+<li><p><strong>callback(path, query, isEntryPage)</strong> (<em>function</em>) – 小程序要打开的页面不存在事件的回调函数</p></li>
+<li><p><strong>path</strong> (<em>string</em>) – 不存在页面的路径</p></li>
+<li><p><strong>query</strong> (<em>Object</em>) – 打开不存在页面的 query 参数</p></li>
+<li><p><strong>isEntryPage</strong> (<em>boolean</em>) – 是否本次启动的首个页面（例如从分享等入口进来，首个页面是开发者配置的分享页面）</p></li>
 </ul>
 </dd>
 </dl>
+<div class="admonition attention">
+<p class="admonition-title">注意</p>
+<ul class="simple">
+<li><p>开发者可以在回调中进行页面重定向，但必须在回调中同步处理，异步处理（例如 <a class="reference internal" href="../reference/api/timer.html#setTimeout" title="setTimeout"><code class="xref js js-func docutils literal notranslate"><span class="pre">setTimeout()</span></code></a> 异步执行）无效。</p></li>
+<li><p>若开发者没有调用 <a class="reference internal" href="#wx.onPageNotFound" title="wx.onPageNotFound"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.onPageNotFound()</span></code></a> 绑定监听，也没有声明 <a class="reference internal" href="../reference/api/App.html#App.onPageNotFound" title="App.onPageNotFound"><code class="xref js js-func docutils literal notranslate"><span class="pre">App.onPageNotFound()</span></code></a> ，当跳转页面不存在时，将推入微信客户端原生的页面不存在提示页面。</p></li>
+<li><p>如果回调中又重定向到另一个不存在的页面，将推入微信客户端原生的页面不存在提示页面，并且不再第二次回调。</p></li>
+</ul>
+</div>
 </dd></dl>
 
-<p>参数
-Object res
-属性      类型      说明
-path    string  不存在页面的路径
-query   Object  打开不存在页面的 query 参数
-isEntryPage     boolean 是否本次启动的首个页面（例如从分享等入口进来，首个页面是开发者配置的分享页面）
-注意
-开发者可以在回调中进行页面重定向，但必须在回调中同步处理，异步处理（例如 setTimeout 异步执行）无效。
-若开发者没有调用 wx.onPageNotFound 绑定监听，也没有声明 App.onPageNotFound，当跳转页面不存在时，将推入微信客户端原生的页面不存在提示页面。
-如果回调中又重定向到另一个不存在的页面，将推入微信客户端原生的页面不存在提示页面，并且不再第二次回调。</p>
 </div>
 
 
@@ -186,7 +189,7 @@ isEntryPage     boolean 是否本次启动的首个页面（例如从分享等�
     </div>
     <div class="footer" role="contentinfo">
         &#169; 版权所有 2019, Wxadev Docs.
-      由 <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.0+/40994a8 创建。
+      由 <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.0+/c95e5e1 创建。
     </div>
   </body>
 </html>

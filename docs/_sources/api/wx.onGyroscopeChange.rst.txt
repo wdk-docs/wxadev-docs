@@ -3,7 +3,8 @@
 
 .. function:: wx.onGyroscopeChange(function callback)
 
-基础库 2.3.0 开始支持，低版本需做兼容处理。
+
+   .. versionadded:: 2.3.0 低版本需做 :ref:`compatibility` 。
 
 监听陀螺仪数据变化事件。频率根据 wx.startGyroscope() 的 interval 参数。可以使用 wx.stopGyroscope() 停止监听。
 

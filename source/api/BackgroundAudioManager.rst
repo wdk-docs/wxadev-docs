@@ -73,7 +73,7 @@
 
 .. attribute:: BackgroundAudioManager.protocol
 
-  .. versionadded::  1.9.94 低版本需做兼容处理。
+  .. versionadded::  1.9.94 低版本需做 :ref:`compatibility` 。
 
   音频协议。默认值为 ``'http'``，设置 ``'hls'`` 可以支持播放 **HLS** 协议的直播音频。
 

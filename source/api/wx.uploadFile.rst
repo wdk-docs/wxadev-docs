@@ -24,7 +24,8 @@ data	string	开发者服务器返回的数据
 statusCode	number	开发者服务器返回的 HTTP 状态码
 返回值
 UploadTask
-基础库 1.4.0 开始支持，低版本需做兼容处理。
+
+   .. versionadded:: 1.4.0 低版本需做 :ref:`compatibility` 。
 
 一个可以监听上传进度进度变化的事件和取消上传的对象
 

@@ -3,7 +3,8 @@
 
 .. function:: wx.onBLEConnectionStateChange(function callback)
 
-基础库 1.1.1 开始支持，低版本需做兼容处理。
+
+   .. versionadded:: 1.1.1 低版本需做 :ref:`compatibility` 。
 
 监听低功耗蓝牙连接状态的改变事件。包括开发者主动连接或断开连接，设备丢失，连接异常断开等等
 

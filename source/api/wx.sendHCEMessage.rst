@@ -3,7 +3,8 @@
 
 .. function:: wx.sendHCEMessage(Object object)
 
-基础库 1.7.0 开始支持，低版本需做兼容处理。
+
+   .. versionadded:: 1.7.0 低版本需做 :ref:`compatibility` 。
 
 发送 NFC 消息。仅在安卓系统下有效。
 

@@ -1,4 +1,6 @@
- wxbpi:`下发统一服务消息 <uniformMessage.send>`
+.. _uniformMessage.send:
+
+:wxbpi:`下发统一服务消息 <uniformMessage.send>`
 =============================================
 
 ..:: 本接口应在服务器端调用，详细说明参见服务端API。
@@ -38,87 +40,86 @@
    :>json number errcode: 错误码
 
    .. code-block:: http
-       :caption: 请求示例
-       :name: uniformMessage.send-request-example
-       :linenos:
-       :lineno-start: 1
-       :emphasize-lines: 1,2
-
-       POST message/wxopen/template/uniform_send HTTP/1.1
-       Host: https://api.weixin.qq.com/cgi-bin/
-       Accept: application/json, text/javascript
-       {
-         "touser": "OPENID",
-         "weapp_template_msg": {
-           "template_id": "TEMPLATE_ID",
-           "page": "page/page/index",
-           "form_id": "FORMID",
-           "data": {
-             "keyword1": {
-               "value": "339208499"
-             },
-             "keyword2": {
-               "value": "2015年01月05日 12:30"
-             },
-             "keyword3": {
-               "value": "腾讯微信总部"
-             },
-             "keyword4": {
-               "value": "广州市海珠区新港中路397号"
-             }
-           },
-           "emphasis_keyword": "keyword1.DATA"
-         },
-         "mp_template_msg": {
-           "appid": "APPID ",
-           "template_id": "TEMPLATE_ID",
-           "url": "http://weixin.qq.com/download",
-           "miniprogram": {
-             "appid": "xiaochengxuappid12345",
-             "pagepath": "index?foo=bar"
-           },
-           "data": {
-             "first": {
-               "value": "恭喜你购买成功！",
-               "color": "#173177"
-             },
-             "keyword1": {
-               "value": "巧克力",
-               "color": "#173177"
-             },
-             "keyword2": {
-               "value": "39.8元",
-               "color": "#173177"
-             },
-             "keyword3": {
-               "value": "2014年9月22日",
-               "color": "#173177"
-             },
-             "remark": {
-               "value": "欢迎再次购买！",
-               "color": "#173177"
-             }
-           }
-         }
-       }
+      :caption: 请求示例
+      :name: uniformMessage.send-request-example
+      :linenos:
+      :lineno-start: 1
+      :emphasize-lines: 1,2
+      POST message/wxopen/template/uniform_send HTTP/1.1
+      Host: https://api.weixin.qq.com/cgi-bin/
+      Accept: application/json, text/javascript
+      {
+        "touser": "OPENID",
+        "weapp_template_msg": {
+          "template_id": "TEMPLATE_ID",
+          "page": "page/page/index",
+          "form_id": "FORMID",
+          "data": {
+            "keyword1": {
+              "value": "339208499"
+            },
+            "keyword2": {
+              "value": "2015年01月05日 12:30"
+            },
+            "keyword3": {
+              "value": "腾讯微信总部"
+            },
+            "keyword4": {
+              "value": "广州市海珠区新港中路397号"
+            }
+          },
+          "emphasis_keyword": "keyword1.DATA"
+        },
+        "mp_template_msg": {
+          "appid": "APPID ",
+          "template_id": "TEMPLATE_ID",
+          "url": "http://weixin.qq.com/download",
+          "miniprogram": {
+            "appid": "xiaochengxuappid12345",
+            "pagepath": "index?foo=bar"
+          },
+          "data": {
+            "first": {
+              "value": "恭喜你购买成功！",
+              "color": "#173177"
+            },
+            "keyword1": {
+              "value": "巧克力",
+              "color": "#173177"
+            },
+            "keyword2": {
+              "value": "39.8元",
+              "color": "#173177"
+            },
+            "keyword3": {
+              "value": "2014年9月22日",
+              "color": "#173177"
+            },
+            "remark": {
+              "value": "欢迎再次购买！",
+              "color": "#173177"
+            }
+          }
+        }
+      }
 
    .. code-block:: http
-    :caption: 响应示例
-    :name: uniformMessage.send-response-example
+      :caption: 响应示例
+      :name: uniformMessage.send-response-example
 
-    HTTP/1.1 200 OK
-    Vary: Accept
-    Content-Type: text/javascript
-    {
-      "errcode": 0,
-      "errmsg": "ok"
-    }
+      HTTP/1.1 200 OK
+      Vary: Accept
+      Content-Type: text/javascript
+      {
+        "errcode": 0,
+        "errmsg": "ok"
+      }
 
 
 云调用
 -----------
 
-.. js:function:: openapi.uniformMessage.send({touser,weappTemplateMsg,mpTemplateMsg})
+.. function:: openapi.uniformMessage.send({touser,weappTemplateMsg,mpTemplateMsg})
 
     云调用是小程序·云开发提供的在云函数中调用微信开放接口的能力，需要在云函数中通过 wx-server-sdk 使用。
 

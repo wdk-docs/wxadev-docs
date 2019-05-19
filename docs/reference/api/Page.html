@@ -60,10 +60,12 @@
 <div class="pageheader">
   <ul>
     <li><a href="../../index.html">主页</a></li>
+    <li><a href="../../basic/index.html">入门</a></li>
     <li><a href="../../framework/index.html">框架</a></li>
     <li><a href="../../component/index.html">组件</a></li>
     <li><a href="../../api/index.html">API</a></li>
     <li><a href="../../api-backend/index.html">服务端</a></li>
+    <li><a href="../index.html">参考</a></li>
     <li><a href="../../contents.html">目录</a></li>
   </ul>
   <div>
@@ -165,7 +167,7 @@
 <li><p><strong>onReady</strong> (<em>function</em>) – <p><strong>生命周期回调函数</strong> — 监听页面初次渲染完成, 页面初次渲染完成时触发。一个页面只会调用一次，代表页面已经准备妥当，可以和视图层进行交互。</p>
 <div class="admonition attention">
 <p class="admonition-title">注意</p>
-<p>对界面内容进行设置的 API 如 <code class="xref js js-func docutils literal notranslate"><span class="pre">wx.setNavigationBarTitle()</span></code> ，请在onReady之后进行。详见生命周期</p>
+<p>对界面内容进行设置的 API 如 <a class="reference internal" href="../../api/wx.setNavigationBarTitle.html#wx.setNavigationBarTitle" title="wx.setNavigationBarTitle"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.setNavigationBarTitle()</span></code></a> ，请在onReady之后进行。详见生命周期</p>
 </div>
 </p></li>
 <li><p><strong>onHide</strong> (<em>function</em>) – <strong>生命周期回调函数</strong> — 监听页面隐藏, 页面隐藏/切入后台时触发。 如 <a class="reference internal" href="../../api/wx.navigateTo.html#wx.navigateTo" title="wx.navigateTo"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.navigateTo()</span></code></a> 或底部 tab 切换到其他页面，小程序切入后台等。</p></li>
@@ -236,13 +238,13 @@
 </p></li>
 <li><p><strong>onResize</strong> (<em>function</em>) – <p><strong>页面事件处理函数</strong> - 页面尺寸改变时触发，详见 响应显示区域变化</p>
 <div class="versionadded">
-<p><span class="versionmodified added">2.4.0 新版功能: </span>低版本需做兼容处理。</p>
+<p><span class="versionmodified added">2.4.0 新版功能: </span>低版本需做 <a class="reference internal" href="../../framework/compatibility.html#compatibility"><span class="std std-ref">兼容处理</span></a> 。</p>
 </div>
 <p>小程序屏幕旋转时触发。详见 响应显示区域变化</p>
 </p></li>
 <li><p><strong>onTabItemTap({index, pagePath, text})</strong> (<em>function</em>) – <p><strong>页面事件处理函数</strong> - 点击 tab 时触发</p>
 <div class="versionadded">
-<p><span class="versionmodified added">1.9.0 新版功能: </span>低版本需做兼容处理。</p>
+<p><span class="versionmodified added">1.9.0 新版功能: </span>低版本需做 <a class="reference internal" href="../../framework/compatibility.html#compatibility"><span class="std std-ref">兼容处理</span></a> 。</p>
 </div>
 <ul>
 <li><p><strong>index</strong> (<em>String</em>) -    被点击tabItem的序号，从0开始</p></li>
@@ -346,7 +348,7 @@
 <dt id="Page.route">
 <code class="descclassname">Page.</code><code class="descname">route</code><a class="headerlink" href="#Page.route" title="永久链接至目标">¶</a></dt>
 <dd><div class="versionadded">
-<p><span class="versionmodified added">1.2.0 新版功能: </span>低版本需做兼容处理。</p>
+<p><span class="versionmodified added">1.2.0 新版功能: </span>低版本需做 <a class="reference internal" href="../../framework/compatibility.html#compatibility"><span class="std std-ref">兼容处理</span></a> 。</p>
 </div>
 <p>到当前页面的路径，类型为String。</p>
 <div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="nx">Page</span><span class="p">({</span>
@@ -481,7 +483,7 @@
     </div>
     <div class="footer" role="contentinfo">
         &#169; 版权所有 2019, Wxadev Docs.
-      由 <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.0+/40994a8 创建。
+      由 <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.0+/c95e5e1 创建。
     </div>
   </body>
 </html>

@@ -3,7 +3,8 @@
 
 .. function:: wx.addCard(Object object)
 
-基础库 1.1.0 开始支持，低版本需做兼容处理。
+
+   .. versionadded:: 1.1.0 低版本需做 :ref:`compatibility` 。
 
 批量添加卡券。只有通过 认证 的小程序或文化互动类目的小游戏才能使用。更多文档请参考 微信卡券接口文档。
 

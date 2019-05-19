@@ -387,6 +387,7 @@ div.topic {
 }
 
 table {
+  width: 100%;
   border-collapse: collapse;
   margin: 0 -0.5em 0 -0.5em;
 }

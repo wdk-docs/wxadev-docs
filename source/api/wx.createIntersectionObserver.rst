@@ -5,7 +5,8 @@ IntersectionObserver
 
 .. function:: wx.createIntersectionObserver(Object this, Object options)
 
-基础库 1.9.3 开始支持，低版本需做兼容处理。
+
+   .. versionadded:: 1.9.3 低版本需做 :ref:`compatibility` 。
 
 创建并返回一个 IntersectionObserver 对象实例。在自定义组件或包含自定义组件的页面中，应使用 this.createIntersectionObserver([options]) 来代替。
 

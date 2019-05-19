@@ -3,7 +3,8 @@
 
 .. function:: wx.setClipboardData(Object object)
 
-基础库 1.1.0 开始支持，低版本需做兼容处理。
+
+   .. versionadded:: 1.1.0 低版本需做 :ref:`compatibility` 。
 
 设置系统剪贴板的内容
 

@@ -3,7 +3,7 @@
 
 .. function:: wx.stopPullDownRefresh([success][, fail][, complete])
 
-  .. version:: 1.5.0 低版本需做兼容处理。
+  .. version:: 1.5.0 低版本需做 :ref:`compatibility` 。
 
   停止当前页面下拉刷新。 参加: :envvar:`enablePullDownRefresh`
 

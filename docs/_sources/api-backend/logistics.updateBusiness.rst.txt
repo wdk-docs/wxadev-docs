@@ -1,3 +1,5 @@
+.. _logistics.updateBusiness:
+
 :wxbpi:`更新商户审核结果 <logistics.updateBusiness>`
 ============================================================
 
@@ -63,7 +65,8 @@ errcode 的合法值
 
 接口方法
 
-openapi.logistics.updateBusiness
+.. function::  openapi.logistics.updateBusiness
+
 需在 config.json 中配置 logistics.updateBusiness API 的权限，详情
 
 请求参数

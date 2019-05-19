@@ -3,7 +3,7 @@
 :wx_comp:`picker-view`
 ===========================
 
-.. versionadded:: 1.0.0 开始支持，低版本需做 :ref:`compatibility` 。
+.. versionadded:: 1.0.0  低版本需做 :ref:`compatibility` 。
 
 嵌入页面的滚动选择器。其中只可放置 :doc:`picker-view-column` 组件，其它节点不会显示。
 

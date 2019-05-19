@@ -60,10 +60,12 @@
 <div class="pageheader">
   <ul>
     <li><a href="../index.html">主页</a></li>
+    <li><a href="../basic/index.html">入门</a></li>
     <li><a href="index.html">框架</a></li>
     <li><a href="../component/index.html">组件</a></li>
     <li><a href="../api/index.html">API</a></li>
     <li><a href="../api-backend/index.html">服务端</a></li>
+    <li><a href="../reference/index.html">参考</a></li>
     <li><a href="../contents.html">目录</a></li>
   </ul>
   <div>
@@ -99,8 +101,13 @@
   <h3><a href="../contents.html">目录</a></h3>
   <ul>
 <li><a class="reference internal" href="#">兼容处理</a><ul>
-<li><a class="reference internal" href="#id2">兼容处理</a></li>
-<li><a class="reference internal" href="#id3">设置最低基础库版本</a></li>
+<li><a class="reference internal" href="#id2">兼容处理</a><ul>
+<li><a class="reference internal" href="#id3">1. 版本号比较</a></li>
+<li><a class="reference internal" href="#api">2. API 存在判断</a></li>
+<li><a class="reference internal" href="#wx-caniuse">3. <code class="xref js js-func docutils literal notranslate"><span class="pre">wx.canIUse()</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id4">设置最低基础库版本</a></li>
 </ul>
 </li>
 </ul>
@@ -142,9 +149,8 @@
 <h2>兼容处理<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
 <p>小程序的功能不断的增加，但是旧版本的微信客户端并不支持新功能，所以在使用这些新能力的时候需要做兼容。</p>
 <p>开发者可以通过以下方式进行低版本的兼容：</p>
-<ol class="arabic simple">
-<li><p>版本号比较</p></li>
-</ol>
+<div class="section" id="id3">
+<h3>1. 版本号比较<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h3>
 <blockquote>
 <div><p>微信客户端和小程序基础库的版本号风格为 Major.Minor.Patch（主版本号.次版本号.修订版本号）。</p>
 <p>文档中会在组件，API等页面描述中带上各个功能所要求的最低基础库版本号。</p>
@@ -194,9 +200,9 @@
 </pre></div>
 </div>
 </div></blockquote>
-<ol class="arabic simple" start="2">
-<li><p>API 存在判断</p></li>
-</ol>
+</div>
+<div class="section" id="api">
+<h3>2. API 存在判断<a class="headerlink" href="#api" title="永久链接至标题">¶</a></h3>
 <blockquote>
 <div><p>对于新增的 API，可以通过判断该API是否存在来判断是否支持用户使用的基础库版本。例如：</p>
 <div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="p">(</span><span class="nx">wx</span><span class="p">.</span><span class="nx">openBluetoothAdapter</span><span class="p">)</span> <span class="p">{</span>
@@ -211,9 +217,9 @@
 </pre></div>
 </div>
 </div></blockquote>
-<ol class="arabic simple" start="3">
-<li><p><a class="reference internal" href="../api/wx.canIUse.html#wx.canIUse" title="wx.canIUse"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.canIUse()</span></code></a></p></li>
-</ol>
+</div>
+<div class="section" id="wx-caniuse">
+<h3>3. <a class="reference internal" href="../api/wx.canIUse.html#wx.canIUse" title="wx.canIUse"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.canIUse()</span></code></a><a class="headerlink" href="#wx-caniuse" title="永久链接至标题">¶</a></h3>
 <blockquote>
 <div><p>除了直接通过版本号判断，也可以通过 wx.canIUse 来判断是否可以在该基础库版本下直接使用。例如：</p>
 <p>API 参数或返回值</p>
@@ -244,8 +250,9 @@
 <p>canIUse 的数据文件随基础库进行更新，新版本中的新功能可能出现遗漏的情况，建议开发者在使用时提前测试。</p>
 </div></blockquote>
 </div>
-<div class="section" id="id3">
-<h2>设置最低基础库版本<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
+</div>
+<div class="section" id="id4">
+<h2>设置最低基础库版本<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h2>
 <p>需要 iOS 6.5.8 / 安卓 6.5.7 及以上版本微信客户端支持</p>
 <p>为便于开发者解决低版本基础库无法兼容小程序的新功能的问题，开发者可设置小程序最低基础库版本要求。</p>
 <p>开发者可以登录小程序管理后台，进入「设置 - 基本设置 - 基础库最低版本设置」进行配置。
@@ -285,7 +292,7 @@
     </div>
     <div class="footer" role="contentinfo">
         &#169; 版权所有 2019, Wxadev Docs.
-      由 <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.0+/40994a8 创建。
+      由 <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.0+/c95e5e1 创建。
     </div>
   </body>
 </html>

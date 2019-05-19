@@ -3,7 +3,7 @@
 :wx_comp:`button`
 ===========================
 
-.. versionadded:: 1.0.0 开始支持，低版本需做 :ref:`compatibility` 。
+.. versionadded:: 1.0.0  低版本需做 :ref:`compatibility` 。
 
 按钮。
 
@@ -129,7 +129,7 @@ zh_TW  繁体中文
 
 .. tip:: button-hover 默认为{background-color: rgba(0, 0, 0, 0.1); opacity: 0.7;}
 
-.. tip:: bindgetphonenumber 从1.2.0 开始支持，但是在1.5.3以下版本中无法使用wx.canIUse进行检测，建议使用基础库版本进行判断。
+.. tip:: bindgetphonenumber 从1.2.0  但是在1.5.3以下版本中无法使用wx.canIUse进行检测，建议使用基础库版本进行判断。
 
 .. tip:: 在bindgetphonenumber 等返回加密信息的回调中调用 wx.login 登录，可能会刷新登录态。此时服务器使用 code 换取的 sessionKey 不是加密时使用的 sessionKey，导致解密失败。建议开发者提前进行 login；或者在回调中先使用 checkSession 进行登录态检查，避免 login 刷新登录态。
 

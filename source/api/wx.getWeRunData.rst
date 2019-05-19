@@ -3,7 +3,8 @@
 
 .. function:: wx.getWeRunData(Object object)
 
-基础库 1.2.0 开始支持，低版本需做兼容处理。
+
+   .. versionadded:: 1.2.0 低版本需做 :ref:`compatibility` 。
 
 调用前需要 用户授权 scope.werun
 

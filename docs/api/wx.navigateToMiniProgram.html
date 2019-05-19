@@ -60,10 +60,12 @@
 <div class="pageheader">
   <ul>
     <li><a href="../index.html">主页</a></li>
+    <li><a href="../basic/index.html">入门</a></li>
     <li><a href="../framework/index.html">框架</a></li>
     <li><a href="../component/index.html">组件</a></li>
     <li><a href="index.html">API</a></li>
     <li><a href="../api-backend/index.html">服务端</a></li>
+    <li><a href="../reference/index.html">参考</a></li>
     <li><a href="../contents.html">目录</a></li>
   </ul>
   <div>
@@ -132,15 +134,23 @@
 <dl class="function">
 <dt id="wx.navigateToMiniProgram">
 <code class="descclassname">wx.</code><code class="descname">navigateToMiniProgram</code><span class="sig-paren">(</span><em>Object object</em><span class="sig-paren">)</span><a class="headerlink" href="#wx.navigateToMiniProgram" title="永久链接至目标">¶</a></dt>
-<dd><p>基础库 1.3.0 开始支持，低版本需做兼容处理。</p>
+<dd><div class="versionadded">
+<p><span class="versionmodified added">1.3.0 新版功能: </span>低版本需做 <a class="reference internal" href="../framework/compatibility.html#compatibility"><span class="std std-ref">兼容处理</span></a> 。</p>
+</div>
 <p>打开另一个小程序</p>
 <dl class="field-list simple">
 <dt class="field-odd">参数</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>appId</strong> (<em>string</em>) – 是       要打开的小程序 appId</p></li>
-<li><p><strong>path</strong> (<em>string</em>) – 打开的页面路径，如果为空则打开首页。path 中 ? 后面的部分会成为 query，在小程序的 App.onLaunch、App.onShow 和 Page.onLoad 的回调函数或小游戏的 wx.onShow 回调函数、wx.getLaunchOptionsSync 中可以获取到 query 数据。对于小游戏，可以只传入 query 部分，来实现传参效果，如：传入 “?foo=bar”。</p></li>
-<li><p><strong>extraData</strong> (<em>object</em>) – 需要传递给目标小程序的数据，目标小程序可在 App.onLaunch，App.onShow 中获取到这份数据。如果跳转的是小游戏，可以在 wx.onShow、wx.getLaunchOptionsSync 中可以获取到这份数据数据。</p></li>
-<li><p><strong>envVersion</strong> (<em>string</em>) – release    否       要打开的小程序版本。仅在当前小程序为开发版或体验版时此参数有效。如果当前小程序是正式版，则打开的小程序必定是正式版。</p></li>
+<li><p><strong>path</strong> (<em>string</em>) – 打开的页面路径，如果为空则打开首页。path 中 ? 后面的部分会成为 query，在小程序的 <a class="reference internal" href="../reference/api/App.html#App.onLaunch" title="App.onLaunch"><code class="xref js js-func docutils literal notranslate"><span class="pre">App.onLaunch()</span></code></a> 、 <a class="reference internal" href="../reference/api/App.html#App.onShow" title="App.onShow"><code class="xref js js-func docutils literal notranslate"><span class="pre">App.onShow()</span></code></a> 和 <code class="xref js js-func docutils literal notranslate"><span class="pre">Page.onLoad()</span></code> 的回调函数或小游戏的 <code class="xref js js-func docutils literal notranslate"><span class="pre">wx.onShow()</span></code> 回调函数、 <a class="reference internal" href="wx.getLaunchOptionsSync.html#wx.getLaunchOptionsSync" title="wx.getLaunchOptionsSync"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.getLaunchOptionsSync()</span></code></a> 中可以获取到 query 数据。对于小游戏，可以只传入 query 部分，来实现传参效果，如：传入  <code class="docutils literal notranslate"><span class="pre">&quot;?foo=bar&quot;</span></code> 。</p></li>
+<li><p><strong>extraData</strong> (<em>object</em>) – 需要传递给目标小程序的数据，目标小程序可在 <a class="reference internal" href="../reference/api/App.html#App.onLaunch" title="App.onLaunch"><code class="xref js js-func docutils literal notranslate"><span class="pre">App.onLaunch()</span></code></a> ， <a class="reference internal" href="../reference/api/App.html#App.onShow" title="App.onShow"><code class="xref js js-func docutils literal notranslate"><span class="pre">App.onShow()</span></code></a> 中获取到这份数据。如果跳转的是小游戏，可以在 <code class="xref js js-func docutils literal notranslate"><span class="pre">wx.onShow()</span></code> 、 <a class="reference internal" href="wx.getLaunchOptionsSync.html#wx.getLaunchOptionsSync" title="wx.getLaunchOptionsSync"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.getLaunchOptionsSync()</span></code></a> 中可以获取到这份数据数据。</p></li>
+<li><p><strong>envVersion</strong> (<em>string</em>) – <p>release    否       要打开的小程序版本。仅在当前小程序为开发版或体验版时此参数有效。如果当前小程序是正式版，则打开的小程序必定是正式版。</p>
+<ul>
+<li><p><em>develop</em>       开发版</p></li>
+<li><p><em>trial</em> 体验版</p></li>
+<li><p><em>release</em>       正式版</p></li>
+</ul>
+</p></li>
 <li><p><strong>success</strong> (<em>function</em>) – 接口调用成功的回调函数</p></li>
 <li><p><strong>fail</strong> (<em>function</em>) – 接口调用失败的回调函数</p></li>
 <li><p><strong>complete</strong> (<em>function</em>) – 接口调用结束的回调函数（调用成功、失败都会执行）</p></li>
@@ -149,11 +159,6 @@
 </dl>
 </dd></dl>
 
-<p>object.envVersion 的合法值</p>
-<p>值       说明      最低版本
-develop 开发版
-trial   体验版
-release 正式版</p>
 <p>使用限制</p>
 <p>需要用户触发跳转
 从 2.3.0 版本开始，若用户未点击小程序页面任意位置，则开发者将无法调用此接口自动跳转至其他小程序。</p>
@@ -214,7 +219,7 @@ release 正式版</p>
     </div>
     <div class="footer" role="contentinfo">
         &#169; 版权所有 2019, Wxadev Docs.
-      由 <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.0+/40994a8 创建。
+      由 <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.0+/c95e5e1 创建。
     </div>
   </body>
 </html>

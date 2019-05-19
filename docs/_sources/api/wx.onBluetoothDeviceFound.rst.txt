@@ -3,7 +3,8 @@
 
 .. function:: wx.onBluetoothDeviceFound(function callback)
 
-基础库 1.1.0 开始支持，低版本需做兼容处理。
+
+   .. versionadded:: 1.1.0 低版本需做 :ref:`compatibility` 。
 
 监听寻找到新设备的事件
 

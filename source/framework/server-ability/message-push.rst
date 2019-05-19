@@ -1,4 +1,4 @@
-.. ability_msg_push:
+.. _message-push:
 
 :wxfrwk:`消息推送 <server-ability/message-push>`
 ====================================================

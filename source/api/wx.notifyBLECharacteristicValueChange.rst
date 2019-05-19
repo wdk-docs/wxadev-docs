@@ -1,9 +1,10 @@
-:wxapi:`:wxapi:wx.notifyBLECharacteristicValueChange`
+:wxapi:`wx.notifyBLECharacteristicValueChange`
 ============================================================
 
 .. function:: wx.notifyBLECharacteristicValueChange(Object object)
 
-基础库 1.1.0 开始支持，低版本需做兼容处理。
+
+   .. versionadded:: 1.1.0 低版本需做 :ref:`compatibility` 。
 
 启用低功耗蓝牙设备特征值变化时的 notify 功能，订阅特征值。注意：必须设备的特征值支持 notify 或者 indicate 才可以成功调用。
 

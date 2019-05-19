@@ -1,6 +1,8 @@
 开发教程
 ============
 
+版本:|release| 更新:|today|
+
 .. image:: https://readthedocs.org/projects/wxadev-docs/badge/?version=latest
    :target: https://wxadev-docs.readthedocs.io/en/latest/?badge=latest
    :alt: Documentation Status
@@ -9,7 +11,6 @@
    :maxdepth: 2
    :glob:
 
-   index
    dev
    basic/index
    guide/index

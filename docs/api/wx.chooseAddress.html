@@ -60,10 +60,12 @@
 <div class="pageheader">
   <ul>
     <li><a href="../index.html">主页</a></li>
+    <li><a href="../basic/index.html">入门</a></li>
     <li><a href="../framework/index.html">框架</a></li>
     <li><a href="../component/index.html">组件</a></li>
     <li><a href="index.html">API</a></li>
     <li><a href="../api-backend/index.html">服务端</a></li>
+    <li><a href="../reference/index.html">参考</a></li>
     <li><a href="../contents.html">目录</a></li>
   </ul>
   <div>
@@ -132,48 +134,51 @@
 <dl class="function">
 <dt id="wx.chooseAddress">
 <code class="descclassname">wx.</code><code class="descname">chooseAddress</code><span class="sig-paren">(</span><em>Object object</em><span class="sig-paren">)</span><a class="headerlink" href="#wx.chooseAddress" title="永久链接至目标">¶</a></dt>
-<dd></dd></dl>
-
-<p>基础库 1.1.0 开始支持，低版本需做兼容处理。</p>
-<p>调用前需要 用户授权 scope.address</p>
+<dd><div class="versionadded">
+<p><span class="versionmodified added">1.1.0 新版功能: </span>低版本需做 <a class="reference internal" href="../framework/compatibility.html#compatibility"><span class="std std-ref">兼容处理</span></a> 。</p>
+</div>
+<p>调用前需要 用户授权 <a class="reference internal" href="AuthSetting.html#scope.address" title="scope.address"><code class="xref js js-data docutils literal notranslate"><span class="pre">scope.address</span></code></a></p>
 <p>获取用户收货地址。调起用户编辑收货地址原生界面，并在编辑完成后返回用户选择的地址。</p>
-<p>参数
-Object object
-属性      类型      默认值     必填      说明
-success function                否       接口调用成功的回调函数
-fail    function                否       接口调用失败的回调函数
-complete        function                否       接口调用结束的回调函数（调用成功、失败都会执行）
-object.success 回调函数
-参数
-Object res
-属性      类型      说明
-userName        string  收货人姓名
-postalCode      string  邮编
-provinceName    string  国标收货地址第一级地址
-cityName        string  国标收货地址第一级地址
-countyName      string  国标收货地址第一级地址
-detailInfo      string  详细收货地址信息
-nationalCode    string  收货地址国家码
-telNumber       string  收货人手机号码
-errMsg  string  错误信息
-示例代码
-在开发者工具中预览效果</p>
-<dl>
-<dt>wx.chooseAddress({</dt><dd><dl class="simple">
-<dt>success(res) {</dt><dd><p>console.log(res.userName)
-console.log(res.postalCode)
-console.log(res.provinceName)
-console.log(res.cityName)
-console.log(res.countyName)
-console.log(res.detailInfo)
-console.log(res.nationalCode)
-console.log(res.telNumber)</p>
+<dl class="field-list">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>success({...arg})</strong> (<em>function</em>) – <p>接口调用成功的回调函数</p>
+<ul>
+<li><p><strong>userName</strong>     string  收货人姓名</p></li>
+<li><p><strong>postalCode</strong>   string  邮编</p></li>
+<li><p><strong>provinceName</strong> string  国标收货地址第一级地址</p></li>
+<li><p><strong>cityName</strong>     string  国标收货地址第一级地址</p></li>
+<li><p><strong>countyName</strong>   string  国标收货地址第一级地址</p></li>
+<li><p><strong>detailInfo</strong>   string  详细收货地址信息</p></li>
+<li><p><strong>nationalCode</strong> string  收货地址国家码</p></li>
+<li><p><strong>telNumber</strong>    string  收货人手机号码</p></li>
+<li><p><strong>errMsg</strong>       string  错误信息</p></li>
+</ul>
+</p></li>
+<li><p><strong>fail</strong> (<em>function</em>) – 接口调用失败的回调函数</p></li>
+<li><p><strong>complete</strong> (<em>function</em>) – 接口调用结束的回调函数（调用成功、失败都会执行）</p></li>
+</ul>
+</dd>
+<dt class="field-even">示例代码</dt>
+<dd class="field-even"><p>在开发者工具中预览效果</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="nx">wx</span><span class="p">.</span><span class="nx">chooseAddress</span><span class="p">({</span>
+  <span class="nx">success</span><span class="p">(</span><span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">res</span><span class="p">.</span><span class="nx">userName</span><span class="p">)</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">res</span><span class="p">.</span><span class="nx">postalCode</span><span class="p">)</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">res</span><span class="p">.</span><span class="nx">provinceName</span><span class="p">)</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">res</span><span class="p">.</span><span class="nx">cityName</span><span class="p">)</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">res</span><span class="p">.</span><span class="nx">countyName</span><span class="p">)</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">res</span><span class="p">.</span><span class="nx">detailInfo</span><span class="p">)</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">res</span><span class="p">.</span><span class="nx">nationalCode</span><span class="p">)</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">res</span><span class="p">.</span><span class="nx">telNumber</span><span class="p">)</span>
+  <span class="p">}</span>
+<span class="p">})</span>
+</pre></div>
+</div>
 </dd>
 </dl>
-<p>}</p>
-</dd>
-</dl>
-<p>})</p>
+</dd></dl>
+
 </div>
 
 
@@ -205,7 +210,7 @@ console.log(res.telNumber)</p>
     </div>
     <div class="footer" role="contentinfo">
         &#169; 版权所有 2019, Wxadev Docs.
-      由 <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.0+/40994a8 创建。
+      由 <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.0+/c95e5e1 创建。
     </div>
   </body>
 </html>

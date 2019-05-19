@@ -1,3 +1,5 @@
+.. _logistics.addOrder:
+
 :wxbpi:`获取运单数据 <logistics.getOrder>`
 ===================================================
 
@@ -68,7 +70,9 @@ value	string	运单信息 value
 云调用是小程序·云开发提供的在云函数中调用微信开放接口的能力，需要在云函数中通过 wx-server-sdk 使用。
 
 接口方法
-openapi.logistics.getOrder
+
+.. function:: openapi.logistics.getOrder
+
 需在 config.json 中配置 logistics.getOrder API 的权限，详情
 
 请求参数

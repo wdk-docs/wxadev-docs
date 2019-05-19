@@ -3,7 +3,7 @@
 
 .. function:: wx.createWorker(scriptPath)
 
-   .. versionadded:: 1.9.90 低版本需做兼容处理。
+   .. versionadded:: 1.9.90 低版本需做 :ref:`compatibility` 。
 
    创建一个 Worker 线程。目前限制最多只能创建一个 Worker，创建下一个 :class:`Worker` 前请先调用 :func:`Worker.terminate`
 

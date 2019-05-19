@@ -3,7 +3,8 @@
 
 .. function:: wx.reLaunch({url[, success][, fail][, complete]})
 
-   基础库 1.1.0 开始支持，低版本需做兼容处理。
+
+   .. versionadded:: 1.1.0 低版本需做 :ref:`compatibility` 。
 
    关闭所有页面，打开到应用内的某个页面
 

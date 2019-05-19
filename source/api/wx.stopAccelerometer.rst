@@ -3,7 +3,8 @@
 
 .. function:: wx.stopAccelerometer(Object object)
 
-基础库 1.1.0 开始支持，低版本需做兼容处理。
+
+   .. versionadded:: 1.1.0 低版本需做 :ref:`compatibility` 。
 
 停止监听加速度数据。
 

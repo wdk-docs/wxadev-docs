@@ -3,7 +3,8 @@
 
 .. function:: wx.getWifiList(Object object)
 
-基础库 1.6.0 开始支持，低版本需做兼容处理。
+
+   .. versionadded:: 1.6.0 低版本需做 :ref:`compatibility` 。
 
 请求获取 Wi-Fi 列表。在 onGetWifiList 注册的回调中返回 wifiList 数据。Android 调用前需要 用户授权 scope.userLocation
 

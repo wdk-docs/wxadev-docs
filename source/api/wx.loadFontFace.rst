@@ -3,7 +3,8 @@
 
 .. function:: wx.loadFontFace(Object object)
 
-基础库 2.1.0 开始支持，低版本需做兼容处理。
+
+   .. versionadded:: 2.1.0 低版本需做 :ref:`compatibility` 。
 
 动态加载网络字体。文件地址需为下载类型。iOS 仅支持 https 格式文件地址。
 

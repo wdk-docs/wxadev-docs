@@ -3,7 +3,7 @@
 
 .. function:: wx.vibrateShort(Object object)
 
-   .. versionadded:: 1.2.0 低版本需做兼容处理。
+   .. versionadded:: 1.2.0 低版本需做 :ref:`compatibility` 。
 
    使手机发生较短时间的振动（15 ms）。仅在 iPhone 7 / 7 Plus 以上及 Android 机型生效
 

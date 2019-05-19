@@ -5,7 +5,7 @@
 
   .. versionadded:: 2.1.2 低版本需做 :ref:`compatibility` 。
 
-  获取小程序启动时的参数。与 ``App.onLaunch`` 的回调参数一致。
+  获取小程序启动时的参数。与 :func:`App.onLaunch` 的回调参数一致。
 
   :rtype: Object
   :returns:

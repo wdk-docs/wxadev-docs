@@ -31,5 +31,5 @@
 
 .. attention::
 
-  - wx.showLoading 和 wx.showToast 同时只能显示一个
-  - wx.showToast 应与 wx.hideToast 配对使用
+  - :func:`wx.showLoading` 和 :func:`wx.showToast` 同时只能显示一个
+  - :func:`wx.showToast` 应与 :func:`wx.hideToast` 配对使用

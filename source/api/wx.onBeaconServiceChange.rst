@@ -3,7 +3,8 @@
 
 .. function:: wx.onBeaconServiceChange(function callback)
 
-基础库 1.2.0 开始支持，低版本需做兼容处理。
+
+   .. versionadded:: 1.2.0 低版本需做 :ref:`compatibility` 。
 
 监听 iBeacon 服务状态变化事件
 

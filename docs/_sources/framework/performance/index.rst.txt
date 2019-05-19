@@ -2,6 +2,7 @@
 :wxfrwk:`性能 <performance>`
 =======================================
 
+版本:|release| 更新:|today|
 
 .. versionadded::  6.5.8
 

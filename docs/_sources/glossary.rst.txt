@@ -3,6 +3,8 @@
 术语
 ========
 
+版本:|release| 更新:|today|
+
 .. glossary::
 
    版本
@@ -19,4 +21,10 @@
 
    api_wxa
     https://api.weixin.qq.com/wxa/
+
+   api_sns
+    https://api.weixin.qq.com/sns/
+
+   api_datacube
+     https://api.weixin.qq.com/datacube/
 

@@ -3,7 +3,7 @@
 
 .. function:: wx.navigateBack({delta[, success][, fail][, complete]})
 
-   关闭当前页面，返回上一页面或多级页面。可通过 getCurrentPages 获取当前的页面栈，决定需要返回几层。
+   关闭当前页面，返回上一页面或多级页面。可通过 :func:`getCurrentPages` 获取当前的页面栈，决定需要返回几层。
 
    :param number delta: 返回的页面数，如果 delta 大于现有页面数，则返回到首页。
    :param funcion success: 接口调用成功的回调函数

@@ -3,7 +3,8 @@
 
 .. function:: wx.onGetWifiList(function callback)
 
-基础库 1.6.0 开始支持，低版本需做兼容处理。
+
+   .. versionadded:: 1.6.0 低版本需做 :ref:`compatibility` 。
 
 监听获取到 Wi-Fi 列表数据事件
 

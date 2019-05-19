@@ -3,7 +3,7 @@
 
 .. class:: FileSystemManager
 
-  ..versonadded:: 1.9.9 开始支持，低版本需做兼容处理。
+  ..versonadded:: 1.9.9  低版本需做 :ref:`compatibility` 。
 
   文件管理器
 

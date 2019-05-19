@@ -5,7 +5,7 @@
 
     .. versionadded:: 1.1.0 低版本需做 :ref:`compatibility`。
 
-    隐藏 loading 提示框
+    隐藏 :func:`wx.showLoading` 提示框
 
     :param function success: 接口调用成功的回调函数
     :param function fail:  接口调用失败的回调函数
