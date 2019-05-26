@@ -41,6 +41,7 @@ extensions = [
     'sphinxcontrib.httpdomain',
     'sphinxjsondomain',
     'recommonmark',
+    # 'sphinx_js'
 ]
 
 # 相对于此目录，在此处添加包含模板的所有路径。
@@ -121,3 +122,7 @@ locale_dirs = ['locale/']   # path is example but recommended.
 gettext_compact = False     # optional.
 
 html_domain_indices = True
+
+# js_language = 'javascript'
+# js_source_path = 'src'
+# jsdoc_config_path = '../src/conf.json'

@@ -4,5 +4,7 @@
   "workbench.iconTheme": "vscode-icons",
   "files.insertFinalNewline": true,
   "editor.tabSize": 2,
-  "editor.renderWhitespace": "boundary"
+  "editor.renderWhitespace": "boundary",
+  "python.linting.pylintEnabled": true,
+  "python.linting.enabled": true
 }

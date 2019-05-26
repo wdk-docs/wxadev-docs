@@ -164,11 +164,11 @@
 </dd>
 <dt class="field-even">查询参数</dt>
 <dd class="field-even"><ul class="simple">
-<li><p><strong>access_token</strong> (<em>string</em>) – <em>必选</em>     接口调用凭证</p></li>
-<li><p><strong>openid</strong> (<em>string</em>) – <em>必选</em>   支付用户唯一标识</p></li>
-<li><p><strong>transaction_id</strong> (<em>string</em>) – <em>非比选</em>  微信支付订单号</p></li>
-<li><p><strong>mch_id</strong> (<em>string</em>) – <em>非必选</em>  微信支付分配的商户号，和商户订单号配合使用</p></li>
-<li><p><strong>out_trade_no</strong> (<em>string</em>) – <em>非必选</em>    微信支付商户订单号，和商户号配合使用</p></li>
+<li><p><strong>access_token</strong> (<em>string</em>) – <em>必选</em> 接口调用凭证</p></li>
+<li><p><strong>openid</strong> (<em>string</em>) – <em>必选</em> 支付用户唯一标识</p></li>
+<li><p><strong>transaction_id</strong> (<em>string</em>) – <em>非比选</em> 微信支付订单号</p></li>
+<li><p><strong>mch_id</strong> (<em>string</em>) – <em>非必选</em> 微信支付分配的商户号，和商户订单号配合使用</p></li>
+<li><p><strong>out_trade_no</strong> (<em>string</em>) – <em>非必选</em> 微信支付商户订单号，和商户号配合使用</p></li>
 </ul>
 </dd>
 <dt class="field-odd">响应JSON对象</dt>
@@ -176,11 +176,11 @@
 <li><p><strong>unionid</strong> (<em>string</em>) – 用户唯一标识，调用成功后返回</p></li>
 <li><p><strong>serrcode</strong> (<em>number</em>) – <p>错误码, 合法值如下</p>
 <ul>
-<li><p><strong>-1</strong>  系统繁忙，此时请开发者稍候再试</p></li>
-<li><p><strong>0</strong>   请求成功</p></li>
-<li><p><strong>40003</strong>       openid 错误</p></li>
-<li><p><strong>89002</strong>       没有绑定开放平台帐号</p></li>
-<li><p><strong>89300</strong>       订单无效</p></li>
+<li><p><strong>-1</strong> 系统繁忙，此时请开发者稍候再试</p></li>
+<li><p><strong>0</strong> 请求成功</p></li>
+<li><p><strong>40003</strong> openid 错误</p></li>
+<li><p><strong>89002</strong> 没有绑定开放平台帐号</p></li>
+<li><p><strong>89300</strong> 订单无效</p></li>
 </ul>
 </p></li>
 <li><p><strong>errmsg</strong> (<em>string</em>) – 错误信息</p></li>
@@ -192,11 +192,13 @@
 <p>使用说明</p>
 <p>以下两种方式任选其一。</p>
 <p>微信支付订单号（transaction_id）:</p>
-<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="nx">https</span><span class="o">:</span><span class="c1">//api.weixin.qq.com/wxa/getpaidunionid?access_token=ACCESS_TOKEN&amp;openid=OPENID&amp;transaction_id=TRANSACTION_ID</span>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="nx">https</span><span class="o">:</span><span class="c1">//api.weixin.qq.com/wxa/getpaidunionid?</span>
+<span class="nx">access_token</span><span class="o">=</span><span class="nx">ACCESS_TOKEN</span><span class="o">&amp;</span><span class="nx">openid</span><span class="o">=</span><span class="nx">OPENID</span><span class="o">&amp;</span><span class="nx">transaction_id</span><span class="o">=</span><span class="nx">TRANSACTION_ID</span>
 </pre></div>
 </div>
 <p>微信支付商户订单号和微信支付商户号（out_trade_no 及 mch_id）:</p>
-<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="nx">https</span><span class="o">:</span><span class="c1">//api.weixin.qq.com/wxa/getpaidunionid?access_token=ACCESS_TOKEN&amp;openid=OPENID&amp;mch_id=MCH_ID&amp;out_trade_no=OUT_TRADE_NO</span>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="nx">https</span><span class="o">:</span><span class="c1">//api.weixin.qq.com/wxa/getpaidunionid?</span>
+<span class="nx">access_token</span><span class="o">=</span><span class="nx">ACCESS_TOKEN</span><span class="o">&amp;</span><span class="nx">openid</span><span class="o">=</span><span class="nx">OPENID</span><span class="o">&amp;</span><span class="nx">mch_id</span><span class="o">=</span><span class="nx">MCH_ID</span><span class="o">&amp;</span><span class="nx">out_trade_no</span><span class="o">=</span><span class="nx">OUT_TRADE_NO</span>
 </pre></div>
 </div>
 <p>返回数据示例</p>
@@ -211,43 +213,50 @@
 <div class="section" id="id2">
 <h2>云调用<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
 <p>云调用是小程序·云开发提供的在云函数中调用微信开放接口的能力，需要在云函数中通过 wx-server-sdk 使用。</p>
-<p>接口方法</p>
 <dl class="function">
 <dt id="openapi.auth.getPaidUnionId">
-<code class="descclassname">openapi.auth.</code><code class="descname">getPaidUnionId</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#openapi.auth.getPaidUnionId" title="永久链接至目标">¶</a></dt>
-<dd></dd></dl>
-
-<p>需在 config.json 中配置 auth.getPaidUnionId API 的权限，详情</p>
-<p>请求参数
-属性      类型      默认值     必填      说明
-openid  string          是       支付用户唯一标识
-transactionId   string          否       微信支付订单号
-mchId   string          否       微信支付分配的商户号，和商户订单号配合使用
-outTradeNo      string          否       微信支付商户订单号，和商户号配合使用</p>
-<p>返回值
-Object
-返回的 JSON 数据包</p>
-<p>属性      类型      说明
-unionid string  用户唯一标识，调用成功后返回
-errCode number  错误码
-errMsg  string  错误信息
-errCode 的合法值</p>
-<p>值       说明      最低版本
-0       成功
-异常
-Object
-抛出的异常</p>
-<p>属性      类型      说明
-errCode number  错误码
-errMsg  string  错误信息
-errCode 的合法值</p>
-<p>值       说明      最低版本
--1      系统繁忙，此时请开发者稍候再试
-40003   openid 错误
-89002   没有绑定开放平台帐号
-89300   订单无效
-请求示例</p>
-<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="kr">const</span> <span class="nx">cloud</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;wx-server-sdk&#39;</span><span class="p">)</span>
+<code class="descclassname">openapi.auth.</code><code class="descname">getPaidUnionId</code><span class="sig-paren">(</span><em>{openid[, transactionId][, mchId][, outTradeNo]}</em><span class="sig-paren">)</span><a class="headerlink" href="#openapi.auth.getPaidUnionId" title="永久链接至目标">¶</a></dt>
+<dd><p>需在 <cite>config.json</cite> 中配置 <cite>auth.getPaidUnionId</cite> API 的权限，详情</p>
+<dl class="field-list">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>openid</strong> (<em>string</em>) – 是 支付用户唯一标识</p></li>
+<li><p><strong>transactionId</strong> (<em>string</em>) – 否 微信支付订单号</p></li>
+<li><p><strong>mchId</strong> (<em>string</em>) – 否 微信支付分配的商户号，和商户订单号配合使用</p></li>
+<li><p><strong>outTradeNo</strong> (<em>string</em>) – 否 微信支付商户订单号，和商户号配合使用</p></li>
+</ul>
+</dd>
+<dt class="field-even">Rtype</dt>
+<dd class="field-even"><p>Object</p>
+</dd>
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>返回的 JSON 数据包</p>
+<ul class="simple">
+<li><p><strong>unionid</strong> <em>string</em> 用户唯一标识，调用成功后返回</p></li>
+<li><p><strong>errCode</strong> <em>number</em> 错误码</p>
+<ul>
+<li><p><em>0</em> 成功</p></li>
+</ul>
+</li>
+<li><p><strong>errMsg</strong> <em>string</em> 错误信息</p></li>
+</ul>
+</dd>
+<dt class="field-even">Throws SomeError</dt>
+<dd class="field-even"><p>异常 Object 抛出的异常</p>
+<ul class="simple">
+<li><p><strong>errCode</strong> <em>number</em> 错误码</p>
+<ul>
+<li><p><em>-1</em> 系统繁忙，此时请开发者稍候再试</p></li>
+<li><p><em>40003</em> openid 错误</p></li>
+<li><p><em>89002</em> 没有绑定开放平台帐号</p></li>
+<li><p><em>89300</em> 订单无效</p></li>
+</ul>
+</li>
+<li><p><strong>errMsg</strong> <em>string</em> 错误信息</p></li>
+</ul>
+</dd>
+<dt class="field-odd">请求示例</dt>
+<dd class="field-odd"><div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="kr">const</span> <span class="nx">cloud</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;wx-server-sdk&#39;</span><span class="p">)</span>
 <span class="nx">cloud</span><span class="p">.</span><span class="nx">init</span><span class="p">()</span>
 <span class="nx">exports</span><span class="p">.</span><span class="nx">main</span> <span class="o">=</span> <span class="nx">async</span> <span class="p">(</span><span class="nx">event</span><span class="p">,</span> <span class="nx">context</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
   <span class="k">try</span> <span class="p">{</span>
@@ -266,14 +275,19 @@ errCode 的合法值</p>
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>返回数据示例</p>
-<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+</dd>
+<dt class="field-even">返回示例</dt>
+<dd class="field-even"><div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
   <span class="nt">&quot;unionid&quot;</span><span class="p">:</span> <span class="s2">&quot;oTmHYjg-tElZ68xxxxxxxxhy1Rgk&quot;</span><span class="p">,</span>
   <span class="nt">&quot;errCode&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
   <span class="nt">&quot;errMsg&quot;</span><span class="p">:</span> <span class="s2">&quot;openapi.auth.getPaidUnionId:ok&quot;</span>
 <span class="p">}</span>
 </pre></div>
 </div>
+</dd>
+</dl>
+</dd></dl>
+
 </div>
 </div>
 
@@ -306,7 +320,7 @@ errCode 的合法值</p>
     </div>
     <div class="footer" role="contentinfo">
         &#169; 版权所有 2019, Wxadev Docs.
-      由 <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.0+/c95e5e1 创建。
+      由 <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.0+/529a72d 创建。
     </div>
   </body>
 </html>

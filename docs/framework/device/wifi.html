@@ -131,18 +131,26 @@
           <div class="body" role="main">
             
   <div class="section" id="wi-fi">
-<h1>Wi-Fi<a class="headerlink" href="#wi-fi" title="永久链接至标题">¶</a></h1>
+<h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/framework/device/wifi.html">Wi-Fi</a><a class="headerlink" href="#wi-fi" title="永久链接至标题">¶</a></h1>
 <p>在小程序中支持搜索周边的 Wi-Fi，同时可以针对指定 Wi-Fi，传入密码发起连接。</p>
-<p>该系列接口为系统原生能力，如需查看「微信连Wi-Fi」能力及配置跳转小程序，请参考文档。</p>
+<p>该系列接口为系统原生能力，如需查看「微信连Wi-Fi」能力及配置跳转小程序，请参考 <a class="reference external" href="https://mp.weixin.qq.com/wiki?t=resource/res_main&amp;id=215135855720FBA0">文档</a> 。</p>
 <p>连接指定 Wi-Fi 接口调用时序：</p>
-<p>Android：startWifi —&gt; connectWifi —&gt; onWifiConnected
-iOS（仅iOS 11及以上版本支持）：startWifi —&gt; connectWifi —&gt; onWifiConnected
-连周边 Wi-Fi 接口调用时序：</p>
-<p>Android：startWifi —&gt; getWifiList —&gt; onGetWifiList —&gt; connectWifi —&gt; onWifiConnected
-iOS（iOS 11.0及11.1版本因系统原因暂不支持）：startWifi —&gt; getWifiList —&gt; onGetWifiList —&gt; setWifiList —&gt; onWifiConnected
-注意：</p>
-<p>Wi-Fi 相关接口暂不可用 wx.canIUse 接口判断。
-Android 6.0 以上版本，在没有打开定位开关的时候会导致设备不能正常获取周边的 Wi-Fi 信息。</p>
+<ul class="simple">
+<li><p>Android：startWifi —&gt; connectWifi —&gt; onWifiConnected</p></li>
+<li><p>iOS（仅iOS 11及以上版本支持）：startWifi —&gt; connectWifi —&gt; onWifiConnected</p></li>
+</ul>
+<p>连周边 Wi-Fi 接口调用时序：</p>
+<ul class="simple">
+<li><p>Android: <span class="menuselection">startWifi —&gt; getWifiList —&gt; onGetWifiList —&gt; connectWifi —&gt; onWifiConnected</span></p></li>
+<li><p>iOS（iOS 11.0及11.1版本因系统原因暂不支持）: <span class="menuselection">startWifi —&gt; getWifiList —&gt; onGetWifiList —&gt; setWifiList —&gt; onWifiConnected</span></p></li>
+</ul>
+<div class="admonition attention">
+<p class="admonition-title">注意</p>
+<ul class="simple">
+<li><p>Wi-Fi 相关接口暂不可用 <a class="reference internal" href="../../api/wx.canIUse.html#wx.canIUse" title="wx.canIUse"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.canIUse()</span></code></a> 接口判断。</p></li>
+<li><p>Android 6.0 以上版本，在没有打开定位开关的时候会导致设备不能正常获取周边的 Wi-Fi 信息。</p></li>
+</ul>
+</div>
 </div>
 
 
@@ -175,7 +183,7 @@ Android 6.0 以上版本，在没有打开定位开关的时候会导致设备�
     </div>
     <div class="footer" role="contentinfo">
         &#169; 版权所有 2019, Wxadev Docs.
-      由 <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.0+/c95e5e1 创建。
+      由 <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.0+/529a72d 创建。
     </div>
   </body>
 </html>

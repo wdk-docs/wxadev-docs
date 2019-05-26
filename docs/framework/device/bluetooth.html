@@ -99,6 +99,16 @@
     </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
+  <h3><a href="../../contents.html">目录</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">蓝牙</a><ul>
+<li><a class="reference internal" href="#id2">注意</a></li>
+<li><a class="reference internal" href="#ble">低功耗蓝牙（BLE）注意事项</a></li>
+<li><a class="reference internal" href="#id3">示例代码</a></li>
+</ul>
+</li>
+</ul>
+
   <h4>上一个主题</h4>
   <p class="topless"><a href="index.html"
                         title="上一章">硬件能力</a></p>
@@ -131,17 +141,31 @@
           <div class="body" role="main">
             
   <div class="section" id="id1">
-<h1>蓝牙<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
-<p>iOS 微信客户端 6.5.6 版本 Android 6.5.7 版本开始支持</p>
-<p>蓝牙适配器模块生效周期为调用 wx.openBluetoothAdapter 至调用 wx.closeBluetoothAdapter 或小程序被销毁为止。</p>
+<h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/framework/device/bluetooth.html">蓝牙</a><a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="nx">iOS</span> <span class="nx">微信客户端</span> <span class="mf">6.5.6</span> <span class="nx">版本</span> <span class="nx">Android</span> <span class="mf">6.5.7</span> <span class="nx">版本开始支持</span>
+</pre></div>
+</div>
+<p>蓝牙适配器模块生效周期为调用 <a class="reference internal" href="../../api/wx.openBluetoothAdapter.html#wx.openBluetoothAdapter" title="wx.openBluetoothAdapter"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.openBluetoothAdapter()</span></code></a> 至调用 <a class="reference internal" href="../../api/wx.closeBluetoothAdapter.html#wx.closeBluetoothAdapter" title="wx.closeBluetoothAdapter"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.closeBluetoothAdapter()</span></code></a> 或小程序被销毁为止。</p>
 <p>在小程序蓝牙适配器模块生效期间，开发者才能够正常调用蓝牙相关的小程序 API，并收到蓝牙模块相关的事件回调。</p>
-<p>注意
-由于系统限制，Android 上获取到的 deviceId 为设备 MAC 地址，iOS 上则为设备 uuid。因此 deviceId 不能硬编码到代码中。
-目前不支持在开发者工具上进行蓝牙功能的调试，需要使用真机才能正常调用小程序蓝牙接口。
-低功耗蓝牙（BLE）注意事项
-iOS 上对特征值的 read、write、notify操作，由于系统需要获取特征值实例，传入的 serviceId 与 characteristicId 必须由 wx.getBLEDeviceServices 与 wx.getBLEDeviceCharacteristics 中获取到后才能使用。建议双平台统一在建立连接后先执行 wx.getBLEDeviceServices 与 wx.getBLEDeviceCharacteristics 后再进行与蓝牙设备的数据交互。
-示例代码
-在开发者工具中预览效果</p>
+<div class="section" id="id2">
+<h2>注意<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<ul class="simple">
+<li><p>由于系统限制，Android 上获取到的 deviceId 为设备 MAC 地址，iOS 上则为设备 uuid。因此 deviceId 不能硬编码到代码中。</p></li>
+<li><p>目前不支持在开发者工具上进行蓝牙功能的调试，需要使用真机才能正常调用小程序蓝牙接口。</p></li>
+</ul>
+</div>
+<div class="section" id="ble">
+<h2>低功耗蓝牙（BLE）注意事项<a class="headerlink" href="#ble" title="永久链接至标题">¶</a></h2>
+<ul class="simple">
+<li><p>iOS 上对特征值的 read、write、notify操作，由于系统需要获取特征值实例，
+传入的 serviceId 与 characteristicId 必须由 <a class="reference internal" href="../../api/wx.getBLEDeviceServices.html#wx.getBLEDeviceServices" title="wx.getBLEDeviceServices"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.getBLEDeviceServices()</span></code></a> 与 <a class="reference internal" href="../../api/wx.getBLEDeviceCharacteristics.html#wx.getBLEDeviceCharacteristics" title="wx.getBLEDeviceCharacteristics"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.getBLEDeviceCharacteristics()</span></code></a> 中获取到后才能使用。
+建议双平台统一在建立连接后先执行 <a class="reference internal" href="../../api/wx.getBLEDeviceServices.html#wx.getBLEDeviceServices" title="wx.getBLEDeviceServices"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.getBLEDeviceServices()</span></code></a> 与 <a class="reference internal" href="../../api/wx.getBLEDeviceCharacteristics.html#wx.getBLEDeviceCharacteristics" title="wx.getBLEDeviceCharacteristics"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.getBLEDeviceCharacteristics()</span></code></a> 后再进行与蓝牙设备的数据交互。</p></li>
+</ul>
+</div>
+<div class="section" id="id3">
+<h2>示例代码<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
+<p><a class="reference download external" download="" href="https://developers.weixin.qq.com/s/OF4Y9Gme6rZ4"><code class="xref download docutils literal notranslate"><span class="pre">在开发者工具中预览效果</span></code></a></p>
+</div>
 </div>
 
 
@@ -174,7 +198,7 @@ iOS 上对特征值的 read、write、notify操作，由于系统需要获取特
     </div>
     <div class="footer" role="contentinfo">
         &#169; 版权所有 2019, Wxadev Docs.
-      由 <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.0+/c95e5e1 创建。
+      由 <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.0+/529a72d 创建。
     </div>
   </body>
 </html>

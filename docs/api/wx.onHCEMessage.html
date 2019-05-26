@@ -134,25 +134,30 @@
 <dl class="function">
 <dt id="wx.onHCEMessage">
 <code class="descclassname">wx.</code><code class="descname">onHCEMessage</code><span class="sig-paren">(</span><em>function callback</em><span class="sig-paren">)</span><a class="headerlink" href="#wx.onHCEMessage" title="永久链接至目标">¶</a></dt>
-<dd><div class="versionadded">
+<dd><p>监听接收 NFC 设备消息事件</p>
+<div class="versionadded">
 <p><span class="versionmodified added">1.7.0 新版功能: </span>低版本需做 <a class="reference internal" href="../framework/compatibility.html#compatibility"><span class="std std-ref">兼容处理</span></a> 。</p>
 </div>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>callback({messageType, data, reason})</strong> (<em>function</em>) – <p>接收 NFC 设备消息事件的回调函数</p>
+<ul>
+<li><p><strong>messageType</strong> (<em>number</em>) - 消息类型</p>
+<ol class="arabic simple">
+<li><p>HCE APDU Command类型，小程序需对此指令进行处理，并调用 sendHCEMessage 接口返回处理指令</p></li>
+<li><p>设备离场事件类型</p></li>
+</ol>
+</li>
+<li><p><strong>data</strong> (<em>ArrayBuffer</em>) - messageType=1 时 ,客户端接收到 NFC 设备的指令</p></li>
+<li><p><strong>reason</strong> (<em>number</em>) - messageType=2 时，原因</p></li>
+</ul>
+</p></li>
+</ul>
+</dd>
+</dl>
 </dd></dl>
 
-<p>监听接收 NFC 设备消息事件</p>
-<p>参数
-function callback
-接收 NFC 设备消息事件的回调函数</p>
-<p>参数
-Object res
-属性      类型      说明
-messageType     number  消息类型
-data    ArrayBuffer     messageType=1 时 ,客户端接收到 NFC 设备的指令
-reason  number  messageType=2 时，原因
-messageType 的合法值</p>
-<p>值       说明      最低版本
-1       HCE APDU Command类型，小程序需对此指令进行处理，并调用 sendHCEMessage 接口返回处理指令
-2       设备离场事件类型</p>
 </div>
 
 
@@ -184,7 +189,7 @@ messageType 的合法值</p>
     </div>
     <div class="footer" role="contentinfo">
         &#169; 版权所有 2019, Wxadev Docs.
-      由 <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.0+/c95e5e1 创建。
+      由 <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.0+/529a72d 创建。
     </div>
   </body>
 </html>
