@@ -14,18 +14,21 @@
 
 在开发者工具中预览效果
 
-<!-- 组件模板 -->
-<view class="wrapper">
-  <view>这里是组件的内部节点</view>
-  <slot></slot>
-</view>
-<!-- 引用组件的页面模板 -->
-<view>
-  <component-tag-name>
-    <!-- 这部分内容将被放置在组件 <slot> 的位置上 -->
-    <view>这里是插入到组件slot中的内容</view>
-  </component-tag-name>
-</view>
+.. code-block:: xml
+
+  <!-- 组件模板 -->
+  <view class="wrapper">
+    <view>这里是组件的内部节点</view>
+    <slot></slot>
+  </view>
+  <!-- 引用组件的页面模板 -->
+  <view>
+    <component-tag-name>
+      <!-- 这部分内容将被放置在组件 <slot> 的位置上 -->
+      <view>这里是插入到组件slot中的内容</view>
+    </component-tag-name>
+  </view>
+
 注意，在模板中引用到的自定义组件及其对应的节点名需要在 json 文件中显式定义，否则会被当作一个无意义的节点。除此以外，节点名也可以被声明为抽象节点。
 
 模板数据绑定
@@ -35,13 +38,16 @@
 
 代码示例：
 
-<!-- 引用组件的页面模板 -->
-<view>
-  <component-tag-name prop-a="{{dataFieldA}}" prop-b="{{dataFieldB}}">
-    <!-- 这部分内容将被放置在组件 <slot> 的位置上 -->
-    <view>这里是插入到组件slot中的内容</view>
-  </component-tag-name>
-</view>
+.. code-block:: xml
+
+  <!-- 引用组件的页面模板 -->
+  <view>
+    <component-tag-name prop-a="{{dataFieldA}}" prop-b="{{dataFieldB}}">
+      <!-- 这部分内容将被放置在组件 <slot> 的位置上 -->
+      <view>这里是插入到组件slot中的内容</view>
+    </component-tag-name>
+  </view>
+
 在以上例子中，组件的属性 propA 和 propB 将收到页面传递的数据。页面可以通过 setData 来改变绑定的数据字段。
 
 注意：这样的数据绑定只能传递 JSON 兼容数据。自基础库版本 2.0.9 开始，还可以在数据中包含函数（但这些函数不能在 WXML 中直接调用，只能传递给子组件）。
@@ -53,32 +59,40 @@
 
 默认情况下，一个组件的wxml中只能有一个slot。需要使用多slot时，可以在组件js中声明启用。
 
-Component({
-  options: {
-    multipleSlots: true // 在组件定义时的选项中启用多slot支持
-  },
-  properties: { /* ... */ },
-  methods: { /* ... */ }
-})
+.. code-block:: xml
+
+  Component({
+    options: {
+      multipleSlots: true // 在组件定义时的选项中启用多slot支持
+    },
+    properties: { /* ... */ },
+    methods: { /* ... */ }
+  })
+
 此时，可以在这个组件的wxml中使用多个slot，以不同的 name 来区分。
 
-<!-- 组件模板 -->
-<view class="wrapper">
-  <slot name="before"></slot>
-  <view>这里是组件的内部细节</view>
-  <slot name="after"></slot>
-</view>
+.. code-block:: xml
+
+  <!-- 组件模板 -->
+  <view class="wrapper">
+    <slot name="before"></slot>
+    <view>这里是组件的内部细节</view>
+    <slot name="after"></slot>
+  </view>
+
 使用时，用 slot 属性来将节点插入到不同的slot上。
 
-<!-- 引用组件的页面模板 -->
-<view>
-  <component-tag-name>
-    <!-- 这部分内容将被放置在组件 <slot name="before"> 的位置上 -->
-    <view slot="before">这里是插入到组件slot name="before"中的内容</view>
-    <!-- 这部分内容将被放置在组件 <slot name="after"> 的位置上 -->
-    <view slot="after">这里是插入到组件slot name="after"中的内容</view>
-  </component-tag-name>
-</view>
+.. code-block:: xml
+
+  <!-- 引用组件的页面模板 -->
+  <view>
+    <component-tag-name>
+      <!-- 这部分内容将被放置在组件 <slot name="before"> 的位置上 -->
+      <view slot="before">这里是插入到组件slot name="before"中的内容</view>
+      <!-- 这部分内容将被放置在组件 <slot name="after"> 的位置上 -->
+      <view slot="after">这里是插入到组件slot name="after"中的内容</view>
+    </component-tag-name>
+  </view>
 
 组件样式
 ------------------------------------
@@ -90,26 +104,36 @@ Component({
 子元素选择器（.a>.b）只能用于 view 组件与其子节点之间，用于其他组件可能导致非预期的情况。
 继承样式，如 font 、 color ，会从组件外继承到组件内。
 除继承样式外， app.wxss 中的样式、组件所在页面的的样式对自定义组件无效（除非更改组件样式隔离选项）。
-#a {
-} /* 在组件中不能使用 */
-[a] {
-} /* 在组件中不能使用 */
-button {
-} /* 在组件中不能使用 */
-.a > .b {
-} /* 除非 .a 是 view 组件节点，否则不一定会生效 */
+
+.. code-block:: css
+
+  #a {
+  } /* 在组件中不能使用 */
+  [a] {
+  } /* 在组件中不能使用 */
+  button {
+  } /* 在组件中不能使用 */
+  .a > .b {
+  } /* 除非 .a 是 view 组件节点，否则不一定会生效 */
+
 除此以外，组件可以指定它所在节点的默认样式，使用 :host 选择器（需要包含基础库 1.7.2 或更高版本的开发者工具支持）。
 
 代码示例：
 
 在开发者工具中预览效果
 
-/* 组件 custom-component.wxss */
-:host {
-  color: yellow;
-}
-<!-- 页面的 WXML -->
-<custom-component>这段文本是黄色的</custom-component>
+.. code-block:: css
+
+  /* 组件 custom-component.wxss */
+  :host {
+    color: yellow;
+  }
+
+.. code-block:: xml
+
+
+  <!-- 页面的 WXML -->
+  <custom-component>这段文本是黄色的</custom-component>
 
 组件样式隔离
 ------------------------------------
@@ -118,12 +142,17 @@ button {
 
 app.wxss 或页面的 wxss 中使用了标签名选择器（或一些其他特殊选择器）来直接指定样式，这些选择器会影响到页面和全部组件。通常情况下这是不推荐的做法。
 指定特殊的样式隔离选项 styleIsolation 。
-Component({
-  options: {
-    styleIsolation: 'isolated'
-  }
-})
+
+.. code-block:: js
+
+  Component({
+    options: {
+      styleIsolation: 'isolated'
+    }
+  })
+
 在开发者工具中预览效果
+
 
 styleIsolation 选项从基础库版本 2.6.5 开始支持。它支持以下取值：
 
@@ -143,20 +172,28 @@ page-shared 表示在这个页面禁用 app.wxss ，同时，页面 wxss 样式�
 
 在开发者工具中预览效果
 
-/* 组件 custom-component.js */
-Component({
-  options: {
-    addGlobalClass: true,
+.. code-block:: js
+
+  /* 组件 custom-component.js */
+  Component({
+    options: {
+      addGlobalClass: true,
+    }
+  })
+
+.. code-block:: xml
+
+  <!-- 组件 custom-component.wxml -->
+  <text class="red-text">
+    这段文本的颜色由 `app.wxss` 和页面 `wxss` 中的样式定义来决定
+  </text>
+
+.. code-block:: css
+
+  /* app.wxss */
+  .red-text {
+    color: red;
   }
-})
-<!-- 组件 custom-component.wxml -->
-<text class="red-text">
-  这段文本的颜色由 `app.wxss` 和页面 `wxss` 中的样式定义来决定
-</text>
-/* app.wxss */
-.red-text {
-  color: red;
-}
 
 外部样式类
 ------------------------------------
@@ -169,22 +206,33 @@ Component({
 
 代码示例：
 
-/* 组件 custom-component.js */
-Component({
-  externalClasses: ['my-class']
-})
-<!-- 组件 custom-component.wxml -->
-<custom-component class="my-class">
-  这段文本的颜色由组件外的 class 决定
-</custom-component>
+.. code-block:: js
+
+  /* 组件 custom-component.js */
+  Component({
+    externalClasses: ['my-class']
+  })
+
+.. code-block:: xml
+
+  <!-- 组件 custom-component.wxml -->
+  <custom-component class="my-class">
+    这段文本的颜色由组件外的 class 决定
+  </custom-component>
+
 这样，组件的使用者可以指定这个样式类对应的 class ，就像使用普通属性一样。
 
 代码示例：
 
 在开发者工具中预览效果
 
-<!-- 页面的 WXML -->
-<custom-component my-class="red-text" />
-.red-text {
-  color: red;
-}
+.. code-block:: xml
+
+  <!-- 页面的 WXML -->
+  <custom-component my-class="red-text" />
+
+.. code-block:: css
+
+  .red-text {
+    color: red;
+  }

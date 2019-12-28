@@ -5,7 +5,7 @@
 
 RecorderManager
 
-.. function:: wx.getRecorderManager()
+function:: wx.getRecorderManager()
 
 
    .. versionadded:: 1.6.0 低版本需做 :ref:`compatibility` 。

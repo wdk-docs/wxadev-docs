@@ -1,7 +1,7 @@
 :wxapi:`wx.showModal`
 ============================================
 
-.. function:: wx.showModal({title, content[, showCancel][, cancelText][, cancel][, confirmText][, confirmText]})
+.. function:: wx.showModal({title, content[, showCancel][, cancelText][, cancelColor][, confirmText][, confirmColor][, success][,fail][, complete]})
 
    显示模态对话框
 
@@ -40,4 +40,3 @@
 
   - Android 6.7.2 以下版本，点击取消或蒙层时，回调 fail, errMsg 为 "fail cancel"；
   - Android 6.7.2 及以上版本 和 iOS 点击蒙层不会关闭模态弹窗，所以尽量避免使用「取消」分支中实现业务逻辑
-  

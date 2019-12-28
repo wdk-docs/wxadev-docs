@@ -1,4 +1,6 @@
 
+.. _custom-component:
+
 :wxfrwk:`自定义组件 <custom-component/index>`
 ==============================================================
 

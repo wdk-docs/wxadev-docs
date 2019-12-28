@@ -1,5 +1,7 @@
 
-:wxfrwk:`频繁交互 <view/interactive-animation>`
+.. _interactive-animation:
+
+:wxfrwk:`WXS响应事件 <view/interactive-animation>`
 =====================================================
 
 .. versionadded:: 2.4.4 低版本需做 :ref:`compatibility`

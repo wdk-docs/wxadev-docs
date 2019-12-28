@@ -134,28 +134,33 @@
 <p>Animation</p>
 <dl class="function">
 <dt id="wx.createAnimation">
-<code class="descclassname">wx.</code><code class="descname">createAnimation</code><span class="sig-paren">(</span><em>Object object</em><span class="sig-paren">)</span><a class="headerlink" href="#wx.createAnimation" title="永久链接至目标">¶</a></dt>
-<dd></dd></dl>
+<code class="descclassname">wx.</code><code class="descname">createAnimation</code><span class="sig-paren">(</span><em>{[duration][, timingFunction][, delay][, transformOrigin]}</em><span class="sig-paren">)</span><a class="headerlink" href="#wx.createAnimation" title="永久链接至目标">¶</a></dt>
+<dd><p>创建一个动画实例 animation。调用实例的方法来描述动画。最后通过动画实例的 export 方法导出动画数据传递给组件的 animation 属性。</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>duration</strong> (<em>number</em>) – <strong>400</strong> 动画持续时间，单位 ms</p></li>
+<li><p><strong>timingFunction</strong> (<em>string</em>) – <p><strong>‘linear’</strong> 动画的效果</p>
+<ul>
+<li><p><em>’linear’</em> 动画从头到尾的速度是相同的</p></li>
+<li><p><em>’ease’</em> 动画以低速开始，然后加快，在结束前变慢</p></li>
+<li><p><em>’ease-in’</em> 动画以低速开始</p></li>
+<li><p><em>’ease-in-out’</em> 动画以低速开始和结束</p></li>
+<li><p><em>’ease-out’</em> 动画以低速结束</p></li>
+<li><p><em>’step-start’</em> 动画第一帧就跳至结束状态直到结束</p></li>
+<li><p><em>’step-end’</em> 动画一直保持开始状态，最后一帧跳到结束状态</p></li>
+</ul>
+</p></li>
+<li><p><strong>delay</strong> (<em>number</em>) – <strong>0</strong> 动画延迟时间，单位 ms</p></li>
+<li><p><strong>transformOrigin</strong> (<em>string</em>) – <strong>‘50% 50% 0’</strong></p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><a class="reference internal" href="Animation.html#Animation" title="Animation"><code class="xref js js-class docutils literal notranslate"><span class="pre">Animation()</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
 
-<p>创建一个动画实例 animation。调用实例的方法来描述动画。最后通过动画实例的 export 方法导出动画数据传递给组件的 animation 属性。</p>
-<p>参数
-Object object
-属性      类型      默认值     必填      说明
-duration        number  400     否       动画持续时间，单位 ms
-timingFunction  string  ‘linear’        否       动画的效果
-delay   number  0       否       动画延迟时间，单位 ms
-transformOrigin string  ‘50% 50% 0’     否
-timingFunction 的合法值</p>
-<p>值       说明      最低版本
-‘linear’        动画从头到尾的速度是相同的
-‘ease’  动画以低速开始，然后加快，在结束前变慢
-‘ease-in’       动画以低速开始
-‘ease-in-out’   动画以低速开始和结束
-‘ease-out’      动画以低速结束
-‘step-start’    动画第一帧就跳至结束状态直到结束
-‘step-end’      动画一直保持开始状态，最后一帧跳到结束状态
-返回值
-Animation</p>
 </div>
 
 
@@ -187,7 +192,7 @@ Animation</p>
     </div>
     <div class="footer" role="contentinfo">
         &#169; 版权所有 2019, Wxadev Docs.
-      由 <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.0+/529a72d 创建。
+      由 <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.0+/0e60d4d 创建。
     </div>
   </body>
 </html>

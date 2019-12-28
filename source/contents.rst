@@ -11,6 +11,7 @@
    :maxdepth: 2
    :glob:
 
+   index
    dev
    basic/index
    guide/index
@@ -33,7 +34,6 @@
 
    * :ref:`genindex`
    * :ref:`modindex`
-   * :ref:`http-routingtable`
    * :ref:`search`
    * :ref:`glossary`
 

@@ -98,6 +98,15 @@
     </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
+  <h3><a href="../contents.html">目录</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Animation</a><ul>
+<li><a class="reference internal" href="#id1">方法</a></li>
+<li><a class="reference internal" href="#id2">示例代码</a></li>
+</ul>
+</li>
+</ul>
+
   <h4>上一个主题</h4>
   <p class="topless"><a href="wx.createAnimation.html"
                         title="上一章">wx.createAnimation</a></p>
@@ -131,148 +140,510 @@
             
   <div class="section" id="animation">
 <h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/api/Animation.html">Animation</a><a class="headerlink" href="#animation" title="永久链接至标题">¶</a></h1>
-<p>Animation
-动画对象</p>
-<p>方法
-Array.&lt;Object&gt; Animation.export()
-导出动画队列。export 方法每次调用后会清掉之前的动画操作。</p>
-<p>Animation Animation.step(Object object)
-表示一组动画完成。可以在一组动画中调用任意多个动画方法，一组动画中的所有动画会同时开始，一组动画完成后才会进行下一组动画。</p>
-<p>Animation Animation.matrix()
-同 transform-function matrix</p>
-<p>Animation Animation.matrix3d()
-同 transform-function matrix3d</p>
-<p>Animation Animation.rotate(number angle)
-从原点顺时针旋转一个角度</p>
-<p>Animation Animation.rotate3d(number x, number y, number z, number angle)
-从 X 轴顺时针旋转一个角度</p>
-<p>Animation Animation.rotateX(number angle)
-从 X 轴顺时针旋转一个角度</p>
-<p>Animation Animation.rotateY(number angle)
-从 Y 轴顺时针旋转一个角度</p>
-<p>Animation Animation.rotateZ(number angle)
-从 Z 轴顺时针旋转一个角度</p>
-<p>Animation Animation.scale(number sx, number sy)
-缩放</p>
-<p>Animation Animation.scale3d(number sx, number sy, number sz)
-缩放</p>
-<p>Animation Animation.scaleX(number scale)
-缩放 X 轴</p>
-<p>Animation Animation.scaleY(number scale)
-缩放 Y 轴</p>
-<p>Animation Animation.scaleZ(number scale)
-缩放 Z 轴</p>
-<p>Animation Animation.skew(number ax, number ay)
-对 X、Y 轴坐标进行倾斜</p>
-<p>Animation Animation.skewX(number angle)
-对 X 轴坐标进行倾斜</p>
-<p>Animation Animation.skewY(number angle)
-对 Y 轴坐标进行倾斜</p>
-<p>Animation Animation.translate(number tx, number ty)
-平移变换</p>
-<p>Animation Animation.translate3d(number tx, number ty, number tz)
-对 xyz 坐标进行平移变换</p>
-<p>Animation Animation.translateX(number translation)
-对 X 轴平移</p>
-<p>Animation Animation.translateY(number translation)
-对 Y 轴平移</p>
-<p>Animation Animation.translateZ(number translation)
-对 Z 轴平移</p>
-<p>Animation Animation.opacity(number value)
-设置透明度</p>
-<p>Animation Animation.backgroundColor(string value)
-设置背景色</p>
-<p>Animation Animation.width(number|string value)
-设置宽度</p>
-<p>Animation Animation.height(number|string value)
-设置高度</p>
-<p>Animation Animation.left(number|string value)
-设置 left 值</p>
-<p>Animation Animation.right(number|string value)
-设置 right 值</p>
-<p>Animation Animation.top(number|string value)
-设置 top 值</p>
-<p>Animation Animation.bottom(number|string value)
-设置 bottom 值</p>
-<p>示例代码
-在开发者工具中预览效果</p>
-<dl class="simple">
-<dt>&lt;view</dt><dd><p>animation=”{{animationData}}”
-style=”background:red;height:100rpx;width:100rpx”</p>
+<dl class="class">
+<dt id="Animation">
+<em class="property">class </em><code class="descname">Animation</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Animation" title="永久链接至目标">¶</a></dt>
+<dd><p>动画对象 由 <a class="reference internal" href="wx.createAnimation.html#wx.createAnimation" title="wx.createAnimation"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.createAnimation()</span></code></a> 创建</p>
+</dd></dl>
+
+<div class="section" id="id1">
+<h2>方法<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h2>
+<dl class="function">
+<dt id="Animation.export">
+<code class="descclassname">Animation.</code><code class="descname">export</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Animation.export" title="永久链接至目标">¶</a></dt>
+<dd><p>导出动画队列。export 方法每次调用后会清掉之前的动画操作。</p>
+<dl class="field-list simple">
+<dt class="field-odd">返回类型</dt>
+<dd class="field-odd"><p>Array.&lt;Object&gt;</p>
+</dd>
+<dt class="field-even">返回</dt>
+<dd class="field-even"><p>animationData</p>
 </dd>
 </dl>
-<p>&gt;&lt;/view&gt;
-Page({</p>
-<blockquote>
-<div><dl class="simple">
-<dt>data: {</dt><dd><p>animationData: {}</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="Animation.step">
+<code class="descclassname">Animation.</code><code class="descname">step</code><span class="sig-paren">(</span><em>Object object</em><span class="sig-paren">)</span><a class="headerlink" href="#Animation.step" title="永久链接至目标">¶</a></dt>
+<dd><p>表示一组动画完成。可以在一组动画中调用任意多个动画方法，一组动画中的所有动画会同时开始，一组动画完成后才会进行下一组动画。</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>duration</strong> (<em>number</em>) – 400 否 动画持续时间，单位 ms</p></li>
+<li><p><strong>timingFunction</strong> (<em>string</em>) – <p>‘linear’ 否 动画的效果</p>
+<ul>
+<li><p>’linear’ 动画从头到尾的速度是相同的</p></li>
+<li><p>’ease’ 动画以低速开始，然后加快，在结束前变慢</p></li>
+<li><p>’ease-in’ 动画以低速开始</p></li>
+<li><p>’ease-in-out’ 动画以低速开始和结束</p></li>
+<li><p>’ease-out’ 动画以低速结束</p></li>
+<li><p>’step-start’ 动画第一帧就跳至结束状态直到结束</p></li>
+<li><p>’step-end’ 动画一直保持开始状态，最后一帧跳到结束状态</p></li>
+</ul>
+</p></li>
+<li><p><strong>delay</strong> (<em>number</em>) – 0 否 动画延迟时间，单位 ms</p></li>
+<li><p><strong>transformOrigin</strong> (<em>string</em>) – ‘50% 50% 0’ 否</p></li>
+</ul>
+</dd>
+<dt class="field-even">返回类型</dt>
+<dd class="field-even"><p>Animation</p>
+</dd>
+<dt class="field-odd">返回</dt>
+<dd class="field-odd"><p>animation</p>
 </dd>
 </dl>
-<p>},
-onShow() {</p>
-<blockquote>
-<div><dl class="simple">
-<dt>const animation = wx.createAnimation({</dt><dd><p>duration: 1000,
-timingFunction: ‘ease’,</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="Animation.matrix">
+<code class="descclassname">Animation.</code><code class="descname">matrix</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Animation.matrix" title="永久链接至目标">¶</a></dt>
+<dd><p>同 <a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/matrix">transform-function matrix</a></p>
+<dl class="field-list simple">
+<dt class="field-odd">返回类型</dt>
+<dd class="field-odd"><p>Animation</p>
+</dd>
+<dt class="field-even">返回</dt>
+<dd class="field-even"><p>animation</p>
 </dd>
 </dl>
-<p>})</p>
-<p>this.animation = animation</p>
-<p>animation.scale(2, 2).rotate(45).step()</p>
-<dl class="simple">
-<dt>this.setData({</dt><dd><p>animationData: animation.export()</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="Animation.matrix3d">
+<code class="descclassname">Animation.</code><code class="descname">matrix3d</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Animation.matrix3d" title="永久链接至目标">¶</a></dt>
+<dd><p>同 <a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/matrix3d">transform-function matrix3d</a></p>
+<dl class="field-list simple">
+<dt class="field-odd">返回类型</dt>
+<dd class="field-odd"><p>Animation</p>
+</dd>
+<dt class="field-even">返回</dt>
+<dd class="field-even"><p>animation</p>
 </dd>
 </dl>
-<p>})</p>
-<dl>
-<dt>setTimeout(function () {</dt><dd><p>animation.translate(30).step()
-this.setData({</p>
-<blockquote>
-<div><p>animationData: animation.export()</p>
-</div></blockquote>
-<p>})</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="Animation.rotate">
+<code class="descclassname">Animation.</code><code class="descname">rotate</code><span class="sig-paren">(</span><em>number angle</em><span class="sig-paren">)</span><a class="headerlink" href="#Animation.rotate" title="永久链接至目标">¶</a></dt>
+<dd><p>从原点顺时针旋转一个角度</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>angle</strong> (<em>number</em>) – 旋转的角度。范围 [-180, 180]</p></li>
+</ul>
+</dd>
+<dt class="field-even">返回类型</dt>
+<dd class="field-even"><p>Animation</p>
+</dd>
+<dt class="field-odd">返回</dt>
+<dd class="field-odd"><p>animation</p>
 </dd>
 </dl>
-<p>}.bind(this), 1000)</p>
-</div></blockquote>
-<p>},
-rotateAndScale() {</p>
-<blockquote>
-<div><p>// 旋转同时放大
-this.animation.rotate(45).scale(2, 2).step()
-this.setData({</p>
-<blockquote>
-<div><p>animationData: this.animation.export()</p>
-</div></blockquote>
-<p>})</p>
-</div></blockquote>
-<p>},
-rotateThenScale() {</p>
-<blockquote>
-<div><p>// 先旋转后放大
-this.animation.rotate(45).step()
-this.animation.scale(2, 2).step()
-this.setData({</p>
-<blockquote>
-<div><p>animationData: this.animation.export()</p>
-</div></blockquote>
-<p>})</p>
-</div></blockquote>
-<p>},
-rotateAndScaleThenTranslate() {</p>
-<blockquote>
-<div><p>// 先旋转同时放大，然后平移
-this.animation.rotate(45).scale(2, 2).step()
-this.animation.translate(100, 100).step({duration: 1000})
-this.setData({</p>
-<blockquote>
-<div><p>animationData: this.animation.export()</p>
-</div></blockquote>
-<p>})</p>
-</div></blockquote>
-<p>}</p>
-</div></blockquote>
-<p>})</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="Animation.rotate3d">
+<code class="descclassname">Animation.</code><code class="descname">rotate3d</code><span class="sig-paren">(</span><em>number x</em>, <em>number y</em>, <em>number z</em>, <em>number angle</em><span class="sig-paren">)</span><a class="headerlink" href="#Animation.rotate3d" title="永久链接至目标">¶</a></dt>
+<dd><p>从 X 轴顺时针旋转一个角度</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> (<em>number</em>) – 旋转轴的 x 坐标</p></li>
+<li><p><strong>y</strong> (<em>number</em>) – 旋转轴的 y 坐标</p></li>
+<li><p><strong>z</strong> (<em>number</em>) – 旋转轴的 z 坐标</p></li>
+<li><p><strong>angle</strong> (<em>number</em>) – 旋转的角度。范围 [-180, 180]</p></li>
+</ul>
+</dd>
+<dt class="field-even">返回类型</dt>
+<dd class="field-even"><p>Animation</p>
+</dd>
+<dt class="field-odd">返回</dt>
+<dd class="field-odd"><p>animation</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="Animation.rotateX">
+<code class="descclassname">Animation.</code><code class="descname">rotateX</code><span class="sig-paren">(</span><em>number angle</em><span class="sig-paren">)</span><a class="headerlink" href="#Animation.rotateX" title="永久链接至目标">¶</a></dt>
+<dd><p>从 X 轴顺时针旋转一个角度</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>angle</strong> (<em>number</em>) – 旋转的角度。范围 [-180, 180]</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="Animation.rotateY">
+<code class="descclassname">Animation.</code><code class="descname">rotateY</code><span class="sig-paren">(</span><em>number angle</em><span class="sig-paren">)</span><a class="headerlink" href="#Animation.rotateY" title="永久链接至目标">¶</a></dt>
+<dd><p>从 Y 轴顺时针旋转一个角度</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>angle</strong> (<em>number</em>) – 旋转的角度。范围 [-180, 180]</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="Animation.rotateZ">
+<code class="descclassname">Animation.</code><code class="descname">rotateZ</code><span class="sig-paren">(</span><em>number angle</em><span class="sig-paren">)</span><a class="headerlink" href="#Animation.rotateZ" title="永久链接至目标">¶</a></dt>
+<dd><p>从 Z 轴顺时针旋转一个角度</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>angle</strong> (<em>number</em>) – 旋转的角度。范围 [-180, 180]</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="Animation.scale">
+<code class="descclassname">Animation.</code><code class="descname">scale</code><span class="sig-paren">(</span><em>number sx</em>, <em>number sy</em><span class="sig-paren">)</span><a class="headerlink" href="#Animation.scale" title="永久链接至目标">¶</a></dt>
+<dd><p>缩放</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>sx</strong> (<em>number</em>) – 当仅有 sx 参数时，表示在 X 轴、Y 轴同时缩放sx倍数</p></li>
+<li><p><strong>sy</strong> (<em>number</em>) – 在 Y 轴缩放 sy 倍数</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="Animation.scale3d">
+<code class="descclassname">Animation.</code><code class="descname">scale3d</code><span class="sig-paren">(</span><em>number sx</em>, <em>number sy</em>, <em>number sz</em><span class="sig-paren">)</span><a class="headerlink" href="#Animation.scale3d" title="永久链接至目标">¶</a></dt>
+<dd><p>缩放</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>sx</strong> (<em>number</em>) – x 轴的缩放倍数</p></li>
+<li><p><strong>sy</strong> (<em>number</em>) – y 轴的缩放倍数</p></li>
+<li><p><strong>sz</strong> (<em>number</em>) – z 轴的缩放倍数</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="Animation.scaleX">
+<code class="descclassname">Animation.</code><code class="descname">scaleX</code><span class="sig-paren">(</span><em>number scale</em><span class="sig-paren">)</span><a class="headerlink" href="#Animation.scaleX" title="永久链接至目标">¶</a></dt>
+<dd><p>缩放 X 轴</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>scale</strong> (<em>number</em>) – X 轴的缩放倍数</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="Animation.scaleY">
+<code class="descclassname">Animation.</code><code class="descname">scaleY</code><span class="sig-paren">(</span><em>number scale</em><span class="sig-paren">)</span><a class="headerlink" href="#Animation.scaleY" title="永久链接至目标">¶</a></dt>
+<dd><p>缩放 Y 轴</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>scale</strong> (<em>number</em>) – Y 轴的缩放倍数</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="Animation.scaleZ">
+<code class="descclassname">Animation.</code><code class="descname">scaleZ</code><span class="sig-paren">(</span><em>number scale</em><span class="sig-paren">)</span><a class="headerlink" href="#Animation.scaleZ" title="永久链接至目标">¶</a></dt>
+<dd><p>缩放 Z 轴</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>scale</strong> (<em>number</em>) – Z 轴的缩放倍数</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="Animation.skew">
+<code class="descclassname">Animation.</code><code class="descname">skew</code><span class="sig-paren">(</span><em>number ax</em>, <em>number ay</em><span class="sig-paren">)</span><a class="headerlink" href="#Animation.skew" title="永久链接至目标">¶</a></dt>
+<dd><p>对 X、Y 轴坐标进行倾斜</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>ax</strong> (<em>number</em>) – 对 X 轴坐标倾斜的角度，范围 [-180, 180]</p></li>
+<li><p><strong>ay</strong> (<em>number</em>) – 对 Y 轴坐标倾斜的角度，范围 [-180, 180]</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="Animation.skewX">
+<code class="descclassname">Animation.</code><code class="descname">skewX</code><span class="sig-paren">(</span><em>number angle</em><span class="sig-paren">)</span><a class="headerlink" href="#Animation.skewX" title="永久链接至目标">¶</a></dt>
+<dd><p>对 X 轴坐标进行倾斜</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>angle</strong> (<em>number</em>) – 倾斜的角度，范围 [-180, 180]</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="Animation.skewY">
+<code class="descclassname">Animation.</code><code class="descname">skewY</code><span class="sig-paren">(</span><em>number angle</em><span class="sig-paren">)</span><a class="headerlink" href="#Animation.skewY" title="永久链接至目标">¶</a></dt>
+<dd><p>对 Y 轴坐标进行倾斜</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>angle</strong> (<em>number</em>) – 倾斜的角度，范围 [-180, 180]</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="Animation.translate">
+<code class="descclassname">Animation.</code><code class="descname">translate</code><span class="sig-paren">(</span><em>number tx</em>, <em>number ty</em><span class="sig-paren">)</span><a class="headerlink" href="#Animation.translate" title="永久链接至目标">¶</a></dt>
+<dd><p>平移变换</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>tx</strong> (<em>number</em>) – 当仅有该参数时表示在 X 轴偏移 tx，单位 px</p></li>
+<li><p><strong>ty</strong> (<em>number</em>) – 在 Y 轴平移的距离，单位为 px</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="Animation.translate3d">
+<code class="descclassname">Animation.</code><code class="descname">translate3d</code><span class="sig-paren">(</span><em>number tx</em>, <em>number ty</em>, <em>number tz</em><span class="sig-paren">)</span><a class="headerlink" href="#Animation.translate3d" title="永久链接至目标">¶</a></dt>
+<dd><p>对 xyz 坐标进行平移变换</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>tx</strong> (<em>number</em>) – 在 X 轴平移的距离，单位为 px</p></li>
+<li><p><strong>ty</strong> (<em>number</em>) – 在 Y 轴平移的距离，单位为 px</p></li>
+<li><p><strong>tz</strong> (<em>number</em>) – 在 Z 轴平移的距离，单位为 px</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="Animation.translateX">
+<code class="descclassname">Animation.</code><code class="descname">translateX</code><span class="sig-paren">(</span><em>number translation</em><span class="sig-paren">)</span><a class="headerlink" href="#Animation.translateX" title="永久链接至目标">¶</a></dt>
+<dd><p>对 X 轴平移</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>translation</strong> (<em>number</em>) – 在 X 轴平移的距离，单位为 px</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="Animation.translateY">
+<code class="descclassname">Animation.</code><code class="descname">translateY</code><span class="sig-paren">(</span><em>number translation</em><span class="sig-paren">)</span><a class="headerlink" href="#Animation.translateY" title="永久链接至目标">¶</a></dt>
+<dd><p>对 Y 轴平移</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>translation</strong> (<em>number</em>) – 在 Y 轴平移的距离，单位为 px</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="Animation.translateZ">
+<code class="descclassname">Animation.</code><code class="descname">translateZ</code><span class="sig-paren">(</span><em>number translation</em><span class="sig-paren">)</span><a class="headerlink" href="#Animation.translateZ" title="永久链接至目标">¶</a></dt>
+<dd><p>对 Z 轴平移</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>translation</strong> (<em>number</em>) – 在 Z 轴平移的距离，单位为 px</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="Animation.opacity">
+<code class="descclassname">Animation.</code><code class="descname">opacity</code><span class="sig-paren">(</span><em>number value</em><span class="sig-paren">)</span><a class="headerlink" href="#Animation.opacity" title="永久链接至目标">¶</a></dt>
+<dd><p>设置透明度</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>value</strong> (<em>number</em>) – 透明度，范围 0-1</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="Animation.backgroundColor">
+<code class="descclassname">Animation.</code><code class="descname">backgroundColor</code><span class="sig-paren">(</span><em>string value</em><span class="sig-paren">)</span><a class="headerlink" href="#Animation.backgroundColor" title="永久链接至目标">¶</a></dt>
+<dd><p>设置背景色</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>value</strong> (<em>string</em>) – 颜色值</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="Animation.width">
+<code class="descclassname">Animation.</code><code class="descname">width</code><span class="sig-paren">(</span><em>number|string value</em><span class="sig-paren">)</span><a class="headerlink" href="#Animation.width" title="永久链接至目标">¶</a></dt>
+<dd><p>设置宽度</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>value</strong> (<em>number|string</em>) – 长度值，如果传入 number 则默认使用 px，可传入其他自定义单位的长度值</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="Animation.height">
+<code class="descclassname">Animation.</code><code class="descname">height</code><span class="sig-paren">(</span><em>number|string value</em><span class="sig-paren">)</span><a class="headerlink" href="#Animation.height" title="永久链接至目标">¶</a></dt>
+<dd><p>设置高度</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>value</strong> (<em>number|string</em>) – 长度值，如果传入 number 则默认使用 px，可传入其他自定义单位的长度值</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="Animation.left">
+<code class="descclassname">Animation.</code><code class="descname">left</code><span class="sig-paren">(</span><em>number|string value</em><span class="sig-paren">)</span><a class="headerlink" href="#Animation.left" title="永久链接至目标">¶</a></dt>
+<dd><p>设置 left 值</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>value</strong> (<em>number|string</em>) – 长度值，如果传入 number 则默认使用 px，可传入其他自定义单位的长度值</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="Animation.right">
+<code class="descclassname">Animation.</code><code class="descname">right</code><span class="sig-paren">(</span><em>number|string value</em><span class="sig-paren">)</span><a class="headerlink" href="#Animation.right" title="永久链接至目标">¶</a></dt>
+<dd><p>设置 right 值</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>value</strong> (<em>number|string</em>) – 长度值，如果传入 number 则默认使用 px，可传入其他自定义单位的长度值</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="Animation.top">
+<code class="descclassname">Animation.</code><code class="descname">top</code><span class="sig-paren">(</span><em>number|string value</em><span class="sig-paren">)</span><a class="headerlink" href="#Animation.top" title="永久链接至目标">¶</a></dt>
+<dd><p>设置 top 值</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>value</strong> (<em>number|string</em>) – 长度值，如果传入 number 则默认使用 px，可传入其他自定义单位的长度值</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="Animation.bottom">
+<code class="descclassname">Animation.</code><code class="descname">bottom</code><span class="sig-paren">(</span><em>number|string value</em><span class="sig-paren">)</span><a class="headerlink" href="#Animation.bottom" title="永久链接至目标">¶</a></dt>
+<dd><p>设置 bottom 值</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>value</strong> (<em>number|string</em>) – 长度值，如果传入 number 则默认使用 px，可传入其他自定义单位的长度值</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="id2">
+<h2>示例代码<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<p><a class="reference download external" download="" href="https://developers.weixin.qq.com/s/Swab8kmW7v2V"><code class="xref download docutils literal notranslate"><span class="pre">在开发者工具中预览效果</span></code></a></p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">view</span>
+  <span class="na">animation</span><span class="o">=</span><span class="s">&quot;{{animationData}}&quot;</span>
+  <span class="na">style</span><span class="o">=</span><span class="s">&quot;background:red;height:100rpx;width:100rpx&quot;</span>
+<span class="p">&gt;&lt;/</span><span class="nt">view</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="nx">Page</span><span class="p">({</span>
+  <span class="nx">data</span><span class="o">:</span> <span class="p">{</span>
+    <span class="nx">animationData</span><span class="o">:</span> <span class="p">{}</span>
+  <span class="p">},</span>
+  <span class="nx">onShow</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kr">const</span> <span class="nx">animation</span> <span class="o">=</span> <span class="nx">wx</span><span class="p">.</span><span class="nx">createAnimation</span><span class="p">({</span>
+      <span class="nx">duration</span><span class="o">:</span> <span class="mi">1000</span><span class="p">,</span>
+      <span class="nx">timingFunction</span><span class="o">:</span> <span class="s1">&#39;ease&#39;</span><span class="p">,</span>
+    <span class="p">})</span>
+
+    <span class="k">this</span><span class="p">.</span><span class="nx">animation</span> <span class="o">=</span> <span class="nx">animation</span>
+
+    <span class="nx">animation</span><span class="p">.</span><span class="nx">scale</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">).</span><span class="nx">rotate</span><span class="p">(</span><span class="mi">45</span><span class="p">).</span><span class="nx">step</span><span class="p">()</span>
+
+    <span class="k">this</span><span class="p">.</span><span class="nx">setData</span><span class="p">({</span>
+      <span class="nx">animationData</span><span class="o">:</span> <span class="nx">animation</span><span class="p">.</span><span class="kr">export</span><span class="p">()</span>
+    <span class="p">})</span>
+
+    <span class="nx">setTimeout</span><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+      <span class="nx">animation</span><span class="p">.</span><span class="nx">translate</span><span class="p">(</span><span class="mi">30</span><span class="p">).</span><span class="nx">step</span><span class="p">()</span>
+      <span class="k">this</span><span class="p">.</span><span class="nx">setData</span><span class="p">({</span>
+        <span class="nx">animationData</span><span class="o">:</span> <span class="nx">animation</span><span class="p">.</span><span class="kr">export</span><span class="p">()</span>
+      <span class="p">})</span>
+    <span class="p">}.</span><span class="nx">bind</span><span class="p">(</span><span class="k">this</span><span class="p">),</span> <span class="mi">1000</span><span class="p">)</span>
+  <span class="p">},</span>
+  <span class="nx">rotateAndScale</span><span class="p">()</span> <span class="p">{</span>
+    <span class="c1">// 旋转同时放大</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">animation</span><span class="p">.</span><span class="nx">rotate</span><span class="p">(</span><span class="mi">45</span><span class="p">).</span><span class="nx">scale</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">).</span><span class="nx">step</span><span class="p">()</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">setData</span><span class="p">({</span>
+      <span class="nx">animationData</span><span class="o">:</span> <span class="k">this</span><span class="p">.</span><span class="nx">animation</span><span class="p">.</span><span class="kr">export</span><span class="p">()</span>
+    <span class="p">})</span>
+  <span class="p">},</span>
+  <span class="nx">rotateThenScale</span><span class="p">()</span> <span class="p">{</span>
+    <span class="c1">// 先旋转后放大</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">animation</span><span class="p">.</span><span class="nx">rotate</span><span class="p">(</span><span class="mi">45</span><span class="p">).</span><span class="nx">step</span><span class="p">()</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">animation</span><span class="p">.</span><span class="nx">scale</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">).</span><span class="nx">step</span><span class="p">()</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">setData</span><span class="p">({</span>
+      <span class="nx">animationData</span><span class="o">:</span> <span class="k">this</span><span class="p">.</span><span class="nx">animation</span><span class="p">.</span><span class="kr">export</span><span class="p">()</span>
+    <span class="p">})</span>
+  <span class="p">},</span>
+  <span class="nx">rotateAndScaleThenTranslate</span><span class="p">()</span> <span class="p">{</span>
+    <span class="c1">// 先旋转同时放大，然后平移</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">animation</span><span class="p">.</span><span class="nx">rotate</span><span class="p">(</span><span class="mi">45</span><span class="p">).</span><span class="nx">scale</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">).</span><span class="nx">step</span><span class="p">()</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">animation</span><span class="p">.</span><span class="nx">translate</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">).</span><span class="nx">step</span><span class="p">({</span><span class="nx">duration</span><span class="o">:</span> <span class="mi">1000</span><span class="p">})</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">setData</span><span class="p">({</span>
+      <span class="nx">animationData</span><span class="o">:</span> <span class="k">this</span><span class="p">.</span><span class="nx">animation</span><span class="p">.</span><span class="kr">export</span><span class="p">()</span>
+    <span class="p">})</span>
+  <span class="p">}</span>
+<span class="p">})</span>
+</pre></div>
+</div>
+</div>
 </div>
 
 
@@ -304,7 +675,7 @@ this.setData({</p>
     </div>
     <div class="footer" role="contentinfo">
         &#169; 版权所有 2019, Wxadev Docs.
-      由 <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.0+/529a72d 创建。
+      由 <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.0+/0e60d4d 创建。
     </div>
   </body>
 </html>

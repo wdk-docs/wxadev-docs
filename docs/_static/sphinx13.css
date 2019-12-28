@@ -317,12 +317,30 @@ cite,
 code,
 tt {
   font-family: 'Consolas', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', monospace;
-  font-size: 14px;
   letter-spacing: -0.02em;
+  white-space: nowrap;
+  max-width: 100%;
+  background: #fff;
+  border: solid 1px #e1e4e5;
+  font-size: 75%;
+  padding: 2px 5px;
+  font-family: SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', Courier, monospace;
+  color: #a2881d;
+  overflow-x: auto;
 }
 
 table.deprecated code.literal {
   word-break: break-all;
+  color: #a2881d;
+}
+
+code.descclassname {
+  border: none;
+  padding: 0;
+}
+code.descname {
+  border: none;
+  padding: 0;
 }
 
 tt {

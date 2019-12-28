@@ -8,14 +8,15 @@
 
 .. function:: RecorderManager.start({[duration][,sampleRate][,numberOfChannels][,encodeBitRate][,format][,frameSize][,audioSource]})
 
-  :label: :class:`RecorderManager` 开始录音
-  :param number duration:	``60000``	录音的时长，单位 ms，最大值 600000（10 分钟）
-  :param number sampleRate:	``8000``	采样率
-  :param number numberOfChannels:	``2``	录音通道数
-  :param number encodeBitRate:	``48000``	编码码率，有效值见下表格
-  :param string format:	``aac``	音频格式
-  :param number frameSize:		指定帧大小，单位 KB。传入 frameSize 后，每录制指定帧大小的内容后，会回调录制的文件内容，不指定则不会回调。暂仅支持 mp3 格式。
-  :param 	string audioSource:	``auto``	指定录音的音频输入源，可通过 :func:`wx.getAvailableAudioSources()` 获取当前可用的音频源
+   :class:`RecorderManager` 开始录音
+
+   :param number duration:	``60000``	录音的时长，单位 ms，最大值 600000（10 分钟）
+   :param number sampleRate:	``8000``	采样率
+   :param number numberOfChannels:	``2``	录音通道数
+   :param number encodeBitRate:	``48000``	编码码率，有效值见下表格
+   :param string format:	``aac``	音频格式
+   :param number frameSize:		指定帧大小，单位 KB。传入 frameSize 后，每录制指定帧大小的内容后，会回调录制的文件内容，不指定则不会回调。暂仅支持 mp3 格式。
+   :param 	string audioSource:	``auto``	指定录音的音频输入源，可通过 :func:`wx.getAvailableAudioSources()` 获取当前可用的音频源
 
 
 sampleRate 的合法值

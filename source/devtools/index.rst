@@ -27,3 +27,4 @@
    download
    change/index
    devtools
+   npm

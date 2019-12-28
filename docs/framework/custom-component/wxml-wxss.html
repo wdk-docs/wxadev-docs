@@ -105,9 +105,9 @@
 <li><a class="reference internal" href="#id2">组件模板</a></li>
 <li><a class="reference internal" href="#id3">模板数据绑定</a></li>
 <li><a class="reference internal" href="#wxmlslot">组件wxml的slot</a></li>
-<li><a class="reference internal" href="#id6">组件样式</a></li>
-<li><a class="reference internal" href="#id11">组件样式隔离</a></li>
-<li><a class="reference internal" href="#id16">外部样式类</a></li>
+<li><a class="reference internal" href="#id4">组件样式</a></li>
+<li><a class="reference internal" href="#id5">组件样式隔离</a></li>
+<li><a class="reference internal" href="#id6">外部样式类</a></li>
 </ul>
 </li>
 </ul>
@@ -152,126 +152,118 @@
 <p>在组件模板中可以提供一个 &lt;slot&gt; 节点，用于承载组件引用时提供的子节点。</p>
 <p>代码示例：</p>
 <p>在开发者工具中预览效果</p>
-<p>&lt;!– 组件模板 –&gt;
-&lt;view class=”wrapper”&gt;</p>
-<blockquote>
-<div><p>&lt;view&gt;这里是组件的内部节点&lt;/view&gt;
-&lt;slot&gt;&lt;/slot&gt;</p>
-</div></blockquote>
-<p>&lt;/view&gt;
-&lt;!– 引用组件的页面模板 –&gt;
-&lt;view&gt;</p>
-<blockquote>
-<div><dl class="simple">
-<dt>&lt;component-tag-name&gt;</dt><dd><p>&lt;!– 这部分内容将被放置在组件 &lt;slot&gt; 的位置上 –&gt;
-&lt;view&gt;这里是插入到组件slot中的内容&lt;/view&gt;</p>
-</dd>
-</dl>
-<p>&lt;/component-tag-name&gt;</p>
-</div></blockquote>
-<p>&lt;/view&gt;
-注意，在模板中引用到的自定义组件及其对应的节点名需要在 json 文件中显式定义，否则会被当作一个无意义的节点。除此以外，节点名也可以被声明为抽象节点。</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="c">&lt;!-- 组件模板 --&gt;</span>
+<span class="nt">&lt;view</span> <span class="na">class=</span><span class="s">&quot;wrapper&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;view&gt;</span>这里是组件的内部节点<span class="nt">&lt;/view&gt;</span>
+  <span class="nt">&lt;slot&gt;&lt;/slot&gt;</span>
+<span class="nt">&lt;/view&gt;</span>
+<span class="c">&lt;!-- 引用组件的页面模板 --&gt;</span>
+<span class="nt">&lt;view&gt;</span>
+  <span class="nt">&lt;component-tag-name&gt;</span>
+    <span class="c">&lt;!-- 这部分内容将被放置在组件 &lt;slot&gt; 的位置上 --&gt;</span>
+    <span class="nt">&lt;view&gt;</span>这里是插入到组件slot中的内容<span class="nt">&lt;/view&gt;</span>
+  <span class="nt">&lt;/component-tag-name&gt;</span>
+<span class="nt">&lt;/view&gt;</span>
+</pre></div>
+</div>
+<p>注意，在模板中引用到的自定义组件及其对应的节点名需要在 json 文件中显式定义，否则会被当作一个无意义的节点。除此以外，节点名也可以被声明为抽象节点。</p>
 </div>
 <div class="section" id="id3">
 <h2>模板数据绑定<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
 <p>与普通的 WXML 模板类似，可以使用数据绑定，这样就可以向子组件的属性传递动态数据。</p>
 <p>代码示例：</p>
-<p>&lt;!– 引用组件的页面模板 –&gt;
-&lt;view&gt;</p>
-<blockquote>
-<div><dl class="simple">
-<dt>&lt;component-tag-name prop-a=”{{dataFieldA}}” prop-b=”{{dataFieldB}}”&gt;</dt><dd><p>&lt;!– 这部分内容将被放置在组件 &lt;slot&gt; 的位置上 –&gt;
-&lt;view&gt;这里是插入到组件slot中的内容&lt;/view&gt;</p>
-</dd>
-</dl>
-<p>&lt;/component-tag-name&gt;</p>
-</div></blockquote>
-<p>&lt;/view&gt;
-在以上例子中，组件的属性 propA 和 propB 将收到页面传递的数据。页面可以通过 setData 来改变绑定的数据字段。</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="c">&lt;!-- 引用组件的页面模板 --&gt;</span>
+<span class="nt">&lt;view&gt;</span>
+  <span class="nt">&lt;component-tag-name</span> <span class="na">prop-a=</span><span class="s">&quot;{{dataFieldA}}&quot;</span> <span class="na">prop-b=</span><span class="s">&quot;{{dataFieldB}}&quot;</span><span class="nt">&gt;</span>
+    <span class="c">&lt;!-- 这部分内容将被放置在组件 &lt;slot&gt; 的位置上 --&gt;</span>
+    <span class="nt">&lt;view&gt;</span>这里是插入到组件slot中的内容<span class="nt">&lt;/view&gt;</span>
+  <span class="nt">&lt;/component-tag-name&gt;</span>
+<span class="nt">&lt;/view&gt;</span>
+</pre></div>
+</div>
+<p>在以上例子中，组件的属性 propA 和 propB 将收到页面传递的数据。页面可以通过 setData 来改变绑定的数据字段。</p>
 <p>注意：这样的数据绑定只能传递 JSON 兼容数据。自基础库版本 2.0.9 开始，还可以在数据中包含函数（但这些函数不能在 WXML 中直接调用，只能传递给子组件）。</p>
 </div>
 <div class="section" id="wxmlslot">
 <h2>组件wxml的slot<a class="headerlink" href="#wxmlslot" title="永久链接至标题">¶</a></h2>
 <p>在组件的wxml中可以包含 slot 节点，用于承载组件使用者提供的wxml结构。</p>
 <p>默认情况下，一个组件的wxml中只能有一个slot。需要使用多slot时，可以在组件js中声明启用。</p>
-<dl>
-<dt>Component({</dt><dd><dl class="simple">
-<dt>options: {</dt><dd><p>multipleSlots: true // 在组件定义时的选项中启用多slot支持</p>
-</dd>
-</dl>
-<p>},
-properties: { /* … <em>/ },
-methods: { /</em> … <a href="#id4"><span class="problematic" id="id5">*</span></a>/ }</p>
-</dd>
-</dl>
-<p>})
-此时，可以在这个组件的wxml中使用多个slot，以不同的 name 来区分。</p>
-<p>&lt;!– 组件模板 –&gt;
-&lt;view class=”wrapper”&gt;</p>
-<blockquote>
-<div><p>&lt;slot name=”before”&gt;&lt;/slot&gt;
-&lt;view&gt;这里是组件的内部细节&lt;/view&gt;
-&lt;slot name=”after”&gt;&lt;/slot&gt;</p>
-</div></blockquote>
-<p>&lt;/view&gt;
-使用时，用 slot 属性来将节点插入到不同的slot上。</p>
-<p>&lt;!– 引用组件的页面模板 –&gt;
-&lt;view&gt;</p>
-<blockquote>
-<div><dl class="simple">
-<dt>&lt;component-tag-name&gt;</dt><dd><p>&lt;!– 这部分内容将被放置在组件 &lt;slot name=”before”&gt; 的位置上 –&gt;
-&lt;view slot=”before”&gt;这里是插入到组件slot name=”before”中的内容&lt;/view&gt;
-&lt;!– 这部分内容将被放置在组件 &lt;slot name=”after”&gt; 的位置上 –&gt;
-&lt;view slot=”after”&gt;这里是插入到组件slot name=”after”中的内容&lt;/view&gt;</p>
-</dd>
-</dl>
-<p>&lt;/component-tag-name&gt;</p>
-</div></blockquote>
-<p>&lt;/view&gt;</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span>Component({
+  options: {
+    multipleSlots: true // 在组件定义时的选项中启用多slot支持
+  },
+  properties: { /* ... */ },
+  methods: { /* ... */ }
+})
+</pre></div>
 </div>
-<div class="section" id="id6">
-<h2>组件样式<a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h2>
+<p>此时，可以在这个组件的wxml中使用多个slot，以不同的 name 来区分。</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="c">&lt;!-- 组件模板 --&gt;</span>
+<span class="nt">&lt;view</span> <span class="na">class=</span><span class="s">&quot;wrapper&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;slot</span> <span class="na">name=</span><span class="s">&quot;before&quot;</span><span class="nt">&gt;&lt;/slot&gt;</span>
+  <span class="nt">&lt;view&gt;</span>这里是组件的内部细节<span class="nt">&lt;/view&gt;</span>
+  <span class="nt">&lt;slot</span> <span class="na">name=</span><span class="s">&quot;after&quot;</span><span class="nt">&gt;&lt;/slot&gt;</span>
+<span class="nt">&lt;/view&gt;</span>
+</pre></div>
+</div>
+<p>使用时，用 slot 属性来将节点插入到不同的slot上。</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="c">&lt;!-- 引用组件的页面模板 --&gt;</span>
+<span class="nt">&lt;view&gt;</span>
+  <span class="nt">&lt;component-tag-name&gt;</span>
+    <span class="c">&lt;!-- 这部分内容将被放置在组件 &lt;slot name=&quot;before&quot;&gt; 的位置上 --&gt;</span>
+    <span class="nt">&lt;view</span> <span class="na">slot=</span><span class="s">&quot;before&quot;</span><span class="nt">&gt;</span>这里是插入到组件slot name=&quot;before&quot;中的内容<span class="nt">&lt;/view&gt;</span>
+    <span class="c">&lt;!-- 这部分内容将被放置在组件 &lt;slot name=&quot;after&quot;&gt; 的位置上 --&gt;</span>
+    <span class="nt">&lt;view</span> <span class="na">slot=</span><span class="s">&quot;after&quot;</span><span class="nt">&gt;</span>这里是插入到组件slot name=&quot;after&quot;中的内容<span class="nt">&lt;/view&gt;</span>
+  <span class="nt">&lt;/component-tag-name&gt;</span>
+<span class="nt">&lt;/view&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id4">
+<h2>组件样式<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h2>
 <p>组件对应 wxss 文件的样式，只对组件wxml内的节点生效。编写组件样式时，需要注意以下几点：</p>
 <p>组件和引用组件的页面不能使用id选择器（#a）、属性选择器（[a]）和标签名选择器，请改用class选择器。
 组件和引用组件的页面中使用后代选择器（.a .b）在一些极端情况下会有非预期的表现，如遇，请避免使用。
 子元素选择器（.a&gt;.b）只能用于 view 组件与其子节点之间，用于其他组件可能导致非预期的情况。
 继承样式，如 font 、 color ，会从组件外继承到组件内。
-除继承样式外， app.wxss 中的样式、组件所在页面的的样式对自定义组件无效（除非更改组件样式隔离选项）。
-#a {
-} /* 在组件中不能使用 <em>/
-[a] {
-} /</em> 在组件中不能使用 <em>/
-button {
-} /</em> 在组件中不能使用 <em>/
-.a &gt; .b {
-} /</em> 除非 .a 是 view 组件节点，否则不一定会生效 <a href="#id7"><span class="problematic" id="id8">*</span></a>/
-除此以外，组件可以指定它所在节点的默认样式，使用 :host 选择器（需要包含基础库 1.7.2 或更高版本的开发者工具支持）。</p>
+除继承样式外， app.wxss 中的样式、组件所在页面的的样式对自定义组件无效（除非更改组件样式隔离选项）。</p>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="p">#</span><span class="nn">a</span> <span class="p">{</span>
+<span class="p">}</span> <span class="c">/* 在组件中不能使用 */</span>
+<span class="o">[</span><span class="nt">a</span><span class="o">]</span> <span class="p">{</span>
+<span class="p">}</span> <span class="c">/* 在组件中不能使用 */</span>
+<span class="nt">button</span> <span class="p">{</span>
+<span class="p">}</span> <span class="c">/* 在组件中不能使用 */</span>
+<span class="p">.</span><span class="nc">a</span> <span class="o">&gt;</span> <span class="p">.</span><span class="nc">b</span> <span class="p">{</span>
+<span class="p">}</span> <span class="c">/* 除非 .a 是 view 组件节点，否则不一定会生效 */</span>
+</pre></div>
+</div>
+<p>除此以外，组件可以指定它所在节点的默认样式，使用 :host 选择器（需要包含基础库 1.7.2 或更高版本的开发者工具支持）。</p>
 <p>代码示例：</p>
 <p>在开发者工具中预览效果</p>
-<p>/* 组件 custom-component.wxss <a href="#id9"><span class="problematic" id="id10">*</span></a>/
-:host {</p>
-<blockquote>
-<div><p>color: yellow;</p>
-</div></blockquote>
-<p>}
-&lt;!– 页面的 WXML –&gt;
-&lt;custom-component&gt;这段文本是黄色的&lt;/custom-component&gt;</p>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="c">/* 组件 custom-component.wxss */</span>
+<span class="p">:</span><span class="nd">host</span> <span class="p">{</span>
+  <span class="k">color</span><span class="p">:</span> <span class="kc">yellow</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
 </div>
-<div class="section" id="id11">
-<h2>组件样式隔离<a class="headerlink" href="#id11" title="永久链接至标题">¶</a></h2>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="c">&lt;!-- 页面的 WXML --&gt;</span>
+<span class="nt">&lt;custom-component&gt;</span>这段文本是黄色的<span class="nt">&lt;/custom-component&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id5">
+<h2>组件样式隔离<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h2>
 <p>默认情况下，自定义组件的样式只受到自定义组件 wxss 的影响。除非以下两种情况：</p>
 <p>app.wxss 或页面的 wxss 中使用了标签名选择器（或一些其他特殊选择器）来直接指定样式，这些选择器会影响到页面和全部组件。通常情况下这是不推荐的做法。
-指定特殊的样式隔离选项 styleIsolation 。
-Component({</p>
-<blockquote>
-<div><dl class="simple">
-<dt>options: {</dt><dd><p>styleIsolation: ‘isolated’</p>
-</dd>
-</dl>
-<p>}</p>
-</div></blockquote>
-<p>})
-在开发者工具中预览效果</p>
+指定特殊的样式隔离选项 styleIsolation 。</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="nx">Component</span><span class="p">({</span>
+  <span class="nx">options</span><span class="o">:</span> <span class="p">{</span>
+    <span class="nx">styleIsolation</span><span class="o">:</span> <span class="s1">&#39;isolated&#39;</span>
+  <span class="p">}</span>
+<span class="p">})</span>
+</pre></div>
+</div>
+<p>在开发者工具中预览效果</p>
 <p>styleIsolation 选项从基础库版本 2.6.5 开始支持。它支持以下取值：</p>
 <p>isolated 表示启用样式隔离，在自定义组件内外，使用 class 指定的样式将不会相互影响（一般情况下的默认值）；
 apply-shared 表示页面 wxss 样式将影响到自定义组件，但自定义组件 wxss 中指定的样式不会影响页面；
@@ -284,57 +276,57 @@ page-shared 表示在这个页面禁用 app.wxss ，同时，页面 wxss 样式�
 此外，小程序基础库版本 2.2.3 以上支持 addGlobalClass 选项，即在 Component 的 options 中设置 addGlobalClass: true 。 这个选项等价于设置 styleIsolation: apply-shared ，但设置了 styleIsolation 选项后这个选项会失效。</p>
 <p>代码示例：</p>
 <p>在开发者工具中预览效果</p>
-<p>/* 组件 custom-component.js <a href="#id12"><span class="problematic" id="id13">*</span></a>/
-Component({</p>
-<blockquote>
-<div><dl class="simple">
-<dt>options: {</dt><dd><p>addGlobalClass: true,</p>
-</dd>
-</dl>
-<p>}</p>
-</div></blockquote>
-<p>})
-&lt;!– 组件 custom-component.wxml –&gt;
-&lt;text class=”red-text”&gt;</p>
-<blockquote>
-<div><p>这段文本的颜色由 <cite>app.wxss</cite> 和页面 <cite>wxss</cite> 中的样式定义来决定</p>
-</div></blockquote>
-<p>&lt;/text&gt;
-/* app.wxss <a href="#id14"><span class="problematic" id="id15">*</span></a>/
-.red-text {</p>
-<blockquote>
-<div><p>color: red;</p>
-</div></blockquote>
-<p>}</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="cm">/* 组件 custom-component.js */</span>
+<span class="nx">Component</span><span class="p">({</span>
+  <span class="nx">options</span><span class="o">:</span> <span class="p">{</span>
+    <span class="nx">addGlobalClass</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+  <span class="p">}</span>
+<span class="p">})</span>
+</pre></div>
 </div>
-<div class="section" id="id16">
-<h2>外部样式类<a class="headerlink" href="#id16" title="永久链接至标题">¶</a></h2>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="c">&lt;!-- 组件 custom-component.wxml --&gt;</span>
+<span class="nt">&lt;text</span> <span class="na">class=</span><span class="s">&quot;red-text&quot;</span><span class="nt">&gt;</span>
+  这段文本的颜色由 `app.wxss` 和页面 `wxss` 中的样式定义来决定
+<span class="nt">&lt;/text&gt;</span>
+</pre></div>
+</div>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="c">/* app.wxss */</span>
+<span class="p">.</span><span class="nc">red-text</span> <span class="p">{</span>
+  <span class="k">color</span><span class="p">:</span> <span class="kc">red</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id6">
+<h2>外部样式类<a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h2>
 <p>有时，组件希望接受外部传入的样式类。此时可以在 Component 中用 externalClasses 定义段定义若干个外部样式类。这个特性从小程序基础库版本 1.9.90 开始支持。</p>
 <p>这个特性可以用于实现类似于 view 组件的 hover-class 属性：页面可以提供一个样式类，赋予 view 的 hover-class ，这个样式类本身写在页面中而非 view 组件的实现中。</p>
 <p>注意：在同一个节点上使用普通样式类和外部样式类时，两个类的优先级是未定义的，因此最好避免这种情况。</p>
 <p>代码示例：</p>
-<p>/* 组件 custom-component.js <a href="#id17"><span class="problematic" id="id18">*</span></a>/
-Component({</p>
-<blockquote>
-<div><p>externalClasses: [‘my-class’]</p>
-</div></blockquote>
-<p>})
-&lt;!– 组件 custom-component.wxml –&gt;
-&lt;custom-component class=”my-class”&gt;</p>
-<blockquote>
-<div><p>这段文本的颜色由组件外的 class 决定</p>
-</div></blockquote>
-<p>&lt;/custom-component&gt;
-这样，组件的使用者可以指定这个样式类对应的 class ，就像使用普通属性一样。</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="cm">/* 组件 custom-component.js */</span>
+<span class="nx">Component</span><span class="p">({</span>
+  <span class="nx">externalClasses</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;my-class&#39;</span><span class="p">]</span>
+<span class="p">})</span>
+</pre></div>
+</div>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="c">&lt;!-- 组件 custom-component.wxml --&gt;</span>
+<span class="nt">&lt;custom-component</span> <span class="na">class=</span><span class="s">&quot;my-class&quot;</span><span class="nt">&gt;</span>
+  这段文本的颜色由组件外的 class 决定
+<span class="nt">&lt;/custom-component&gt;</span>
+</pre></div>
+</div>
+<p>这样，组件的使用者可以指定这个样式类对应的 class ，就像使用普通属性一样。</p>
 <p>代码示例：</p>
 <p>在开发者工具中预览效果</p>
-<p>&lt;!– 页面的 WXML –&gt;
-&lt;custom-component my-class=”red-text” /&gt;
-.red-text {</p>
-<blockquote>
-<div><p>color: red;</p>
-</div></blockquote>
-<p>}</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="c">&lt;!-- 页面的 WXML --&gt;</span>
+<span class="nt">&lt;custom-component</span> <span class="na">my-class=</span><span class="s">&quot;red-text&quot;</span> <span class="nt">/&gt;</span>
+</pre></div>
+</div>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="p">.</span><span class="nc">red-text</span> <span class="p">{</span>
+  <span class="k">color</span><span class="p">:</span> <span class="kc">red</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
 </div>
 </div>
 
@@ -368,7 +360,7 @@ Component({</p>
     </div>
     <div class="footer" role="contentinfo">
         &#169; 版权所有 2019, Wxadev Docs.
-      由 <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.0+/529a72d 创建。
+      由 <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.0+/0e60d4d 创建。
     </div>
   </body>
 </html>
