@@ -1,18 +1,19 @@
 
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
+<html lang="zh_CN">
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>auth.getPaidUnionId &#8212; wxadev 1.0.0 文档</title>
-    <link rel="stylesheet" href="../_static/sphinx13.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-    <script type="text/javascript" src="../_static/jquery.js"></script>
-    <script type="text/javascript" src="../_static/underscore.js"></script>
-    <script type="text/javascript" src="../_static/doctools.js"></script>
-    <script type="text/javascript" src="../_static/language_data.js"></script>
-    <script type="text/javascript" src="../_static/translations.js"></script>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx13.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/translations.js"></script>
     <link rel="search" type="application/opensearchdescription+xml"
           title="在 wxadev 1.0.0 文档 中搜索"
           href="../_static/opensearch.xml"/>
@@ -93,7 +94,8 @@
 <li><a href="../index.html">主页</a>&#160;|</li>
 <li><a href="../contents.html">文档</a> &#187;</li>
 
-          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">服务端API</a> &#187;</li> 
+          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">服务端API</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">auth.getPaidUnionId</a></li> 
       </ul>
     </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
@@ -124,12 +126,12 @@
   <h3 id="searchlabel">快速搜索</h3>
     <div class="searchformwrapper">
     <form class="search" action="../search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
       <input type="submit" value="转向" />
     </form>
     </div>
 </div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
+<script>$('#searchbox').show(0);</script>
         </div>
       </div>
 
@@ -138,7 +140,7 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="auth-getpaidunionid">
+  <section id="auth-getpaidunionid">
 <span id="id1"></span><h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/api-backend/auth.getPaidUnionId.html">auth.getPaidUnionId</a><a class="headerlink" href="#auth-getpaidunionid" title="永久链接至标题">¶</a></h1>
 <p>本接口应在服务器端调用，详细说明参见 <span class="xref std std-ref">ability_bpi</span> 。</p>
 <p>本接口支持云调用。需开发者工具版本 <code class="docutils literal notranslate"><span class="pre">&gt;=</span> <span class="pre">1.02.1904090</span></code> （最新稳定版下载）， <code class="docutils literal notranslate"><span class="pre">wx-server-sdk</span> <span class="pre">&gt;=</span> <span class="pre">0.4.0</span></code></p>
@@ -152,17 +154,17 @@
 <span class="mf">2.</span> <span class="nx">云调用</span>
 </pre></div>
 </div>
-<div class="section" id="https">
+<section id="https">
 <h2>HTTPS 调用<a class="headerlink" href="#https" title="永久链接至标题">¶</a></h2>
-<p>请求地址 <a class="reference internal" href="../glossary.html#term-api-wxa"><span class="xref std std-term">api_wxa</span></a></p>
-<dl class="get">
-<dt id="get-getpaidunionid">
-<code class="descname">GET </code><code class="descname">getpaidunionid</code><a class="headerlink" href="#get-getpaidunionid" title="永久链接至目标">¶</a></dt>
+<p>请求地址 <a class="reference internal" href="../glossary.html#term-api_wxa"><span class="xref std std-term">api_wxa</span></a></p>
+<dl class="http get">
+<dt class="sig sig-object http" id="get-getpaidunionid">
+<span class="sig-name descname"><span class="pre">GET</span> </span><span class="sig-name descname"><span class="pre">getpaidunionid</span></span><a class="headerlink" href="#get-getpaidunionid" title="永久链接至目标">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Synopsis</dt>
 <dd class="field-odd"><p>用户支付完成后，获取该用户的 UnionId，无需用户授权。本接口支持第三方平台代理查询。</p>
 </dd>
-<dt class="field-even">查询参数</dt>
+<dt class="field-even">Query Parameters</dt>
 <dd class="field-even"><ul class="simple">
 <li><p><strong>access_token</strong> (<em>string</em>) – <em>必选</em> 接口调用凭证</p></li>
 <li><p><strong>openid</strong> (<em>string</em>) – <em>必选</em> 支付用户唯一标识</p></li>
@@ -171,7 +173,7 @@
 <li><p><strong>out_trade_no</strong> (<em>string</em>) – <em>非必选</em> 微信支付商户订单号，和商户号配合使用</p></li>
 </ul>
 </dd>
-<dt class="field-odd">响应JSON对象</dt>
+<dt class="field-odd">Response JSON Object</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>unionid</strong> (<em>string</em>) – 用户唯一标识，调用成功后返回</p></li>
 <li><p><strong>serrcode</strong> (<em>number</em>) – <p>错误码, 合法值如下</p>
@@ -204,33 +206,33 @@
 <p>返回数据示例</p>
 <div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
   <span class="s2">&quot;unionid&quot;</span><span class="o">:</span> <span class="s2">&quot;oTmHYjg-tElZ68xxxxxxxxhy1Rgk&quot;</span><span class="p">,</span>
-  <span class="s2">&quot;errcode&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+  <span class="s2">&quot;errcode&quot;</span><span class="o">:</span> <span class="mf">0</span><span class="p">,</span>
   <span class="s2">&quot;errmsg&quot;</span><span class="o">:</span> <span class="s2">&quot;ok&quot;</span>
 <span class="p">}</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="id2">
+</section>
+<section id="id2">
 <h2>云调用<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
 <p>云调用是小程序·云开发提供的在云函数中调用微信开放接口的能力，需要在云函数中通过 wx-server-sdk 使用。</p>
-<dl class="function">
-<dt id="openapi.auth.getPaidUnionId">
-<code class="descclassname">openapi.auth.</code><code class="descname">getPaidUnionId</code><span class="sig-paren">(</span><em>{openid[, transactionId][, mchId][, outTradeNo]}</em><span class="sig-paren">)</span><a class="headerlink" href="#openapi.auth.getPaidUnionId" title="永久链接至目标">¶</a></dt>
+<dl class="js function">
+<dt class="sig sig-object js" id="openapi.auth.getPaidUnionId">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">openapi</span></span><span class="p"><span class="pre">.</span></span><span class="n"><span class="pre">auth</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">getPaidUnionId</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">{openid[,</span> <span class="pre">transactionId][,</span> <span class="pre">mchId][,</span> <span class="pre">outTradeNo]}</span></em><span class="sig-paren">)</span><a class="headerlink" href="#openapi.auth.getPaidUnionId" title="永久链接至目标">¶</a></dt>
 <dd><p>需在 <cite>config.json</cite> 中配置 <cite>auth.getPaidUnionId</cite> API 的权限，详情</p>
 <dl class="field-list">
 <dt class="field-odd">参数</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>openid</strong> (<em>string</em>) – 是 支付用户唯一标识</p></li>
-<li><p><strong>transactionId</strong> (<em>string</em>) – 否 微信支付订单号</p></li>
-<li><p><strong>mchId</strong> (<em>string</em>) – 否 微信支付分配的商户号，和商户订单号配合使用</p></li>
-<li><p><strong>outTradeNo</strong> (<em>string</em>) – 否 微信支付商户订单号，和商户号配合使用</p></li>
+<li><p><strong>openid</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">string()</span></code></span>) – 是 支付用户唯一标识</p></li>
+<li><p><strong>transactionId</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">string()</span></code></span>) – 否 微信支付订单号</p></li>
+<li><p><strong>mchId</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">string()</span></code></span>) – 否 微信支付分配的商户号，和商户订单号配合使用</p></li>
+<li><p><strong>outTradeNo</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">string()</span></code></span>) – 否 微信支付商户订单号，和商户号配合使用</p></li>
 </ul>
 </dd>
-<dt class="field-even">Rtype</dt>
+<dt class="field-even">返回类型</dt>
 <dd class="field-even"><p>Object</p>
 </dd>
-<dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p>返回的 JSON 数据包</p>
+<dt class="field-odd">返回</dt>
+<dd class="field-odd"><p><p>返回的 JSON 数据包</p>
 <ul class="simple">
 <li><p><strong>unionid</strong> <em>string</em> 用户唯一标识，调用成功后返回</p></li>
 <li><p><strong>errCode</strong> <em>number</em> 错误码</p>
@@ -240,9 +242,10 @@
 </li>
 <li><p><strong>errMsg</strong> <em>string</em> 错误信息</p></li>
 </ul>
+</p>
 </dd>
-<dt class="field-even">Throws SomeError</dt>
-<dd class="field-even"><p>异常 Object 抛出的异常</p>
+<dt class="field-even">抛出</dt>
+<dd class="field-even"><p><span><code class="xref js js-func docutils literal notranslate"><span class="pre">SomeError()</span></code></span> – <p>异常 Object 抛出的异常</p>
 <ul class="simple">
 <li><p><strong>errCode</strong> <em>number</em> 错误码</p>
 <ul>
@@ -254,13 +257,14 @@
 </li>
 <li><p><strong>errMsg</strong> <em>string</em> 错误信息</p></li>
 </ul>
+</p>
 </dd>
 <dt class="field-odd">请求示例</dt>
-<dd class="field-odd"><div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="kr">const</span> <span class="nx">cloud</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;wx-server-sdk&#39;</span><span class="p">)</span>
+<dd class="field-odd"><div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="kd">const</span> <span class="nx">cloud</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;wx-server-sdk&#39;</span><span class="p">)</span>
 <span class="nx">cloud</span><span class="p">.</span><span class="nx">init</span><span class="p">()</span>
-<span class="nx">exports</span><span class="p">.</span><span class="nx">main</span> <span class="o">=</span> <span class="nx">async</span> <span class="p">(</span><span class="nx">event</span><span class="p">,</span> <span class="nx">context</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+<span class="nx">exports</span><span class="p">.</span><span class="nx">main</span> <span class="o">=</span> <span class="k">async</span> <span class="p">(</span><span class="nx">event</span><span class="p">,</span> <span class="nx">context</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
   <span class="k">try</span> <span class="p">{</span>
-    <span class="kr">const</span> <span class="nx">result</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">cloud</span><span class="p">.</span><span class="nx">openapi</span><span class="p">.</span><span class="nx">auth</span><span class="p">.</span><span class="nx">getPaidUnionId</span><span class="p">({</span>
+    <span class="kd">const</span> <span class="nx">result</span> <span class="o">=</span> <span class="k">await</span> <span class="nx">cloud</span><span class="p">.</span><span class="nx">openapi</span><span class="p">.</span><span class="nx">auth</span><span class="p">.</span><span class="nx">getPaidUnionId</span><span class="p">({</span>
       <span class="nx">openid</span><span class="o">:</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
       <span class="nx">transactionId</span><span class="o">:</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
       <span class="nx">mchId</span><span class="o">:</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
@@ -288,10 +292,11 @@
 </dl>
 </dd></dl>
 
-</div>
-</div>
+</section>
+</section>
 
 
+            <div class="clearer"></div>
           </div>
         </div>
       </div>
@@ -315,12 +320,13 @@
 <li><a href="../index.html">主页</a>&#160;|</li>
 <li><a href="../contents.html">文档</a> &#187;</li>
 
-          <li class="nav-item nav-item-1"><a href="index.html" >服务端API</a> &#187;</li> 
+          <li class="nav-item nav-item-1"><a href="index.html" >服务端API</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">auth.getPaidUnionId</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
         &#169; 版权所有 2019, Wxadev Docs.
-      由 <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.0+/0e60d4d 创建。
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.1.
     </div>
   </body>
 </html>

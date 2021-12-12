@@ -1,18 +1,19 @@
 
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
+<html lang="zh_CN">
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>wx.addPhoneContact &#8212; wxadev 1.0.0 文档</title>
-    <link rel="stylesheet" href="../_static/sphinx13.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-    <script type="text/javascript" src="../_static/jquery.js"></script>
-    <script type="text/javascript" src="../_static/underscore.js"></script>
-    <script type="text/javascript" src="../_static/doctools.js"></script>
-    <script type="text/javascript" src="../_static/language_data.js"></script>
-    <script type="text/javascript" src="../_static/translations.js"></script>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx13.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/translations.js"></script>
     <link rel="search" type="application/opensearchdescription+xml"
           title="在 wxadev 1.0.0 文档 中搜索"
           href="../_static/opensearch.xml"/>
@@ -93,7 +94,8 @@
 <li><a href="../index.html">主页</a>&#160;|</li>
 <li><a href="../contents.html">文档</a> &#187;</li>
 
-          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">API</a> &#187;</li> 
+          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">API</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">wx.addPhoneContact</a></li> 
       </ul>
     </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
@@ -115,12 +117,12 @@
   <h3 id="searchlabel">快速搜索</h3>
     <div class="searchformwrapper">
     <form class="search" action="../search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
       <input type="submit" value="转向" />
     </form>
     </div>
 </div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
+<script>$('#searchbox').show(0);</script>
         </div>
       </div>
 
@@ -129,58 +131,59 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="wx-addphonecontact">
+  <section id="wx-addphonecontact">
 <h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/api/wx.addPhoneContact.html">wx.addPhoneContact</a><a class="headerlink" href="#wx-addphonecontact" title="永久链接至标题">¶</a></h1>
-<dl class="function">
-<dt id="wx.addPhoneContact">
-<code class="descclassname">wx.</code><code class="descname">addPhoneContact</code><span class="sig-paren">(</span><em>Object object</em><span class="sig-paren">)</span><a class="headerlink" href="#wx.addPhoneContact" title="永久链接至目标">¶</a></dt>
+<dl class="js function">
+<dt class="sig sig-object js" id="wx.addPhoneContact">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">wx</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">addPhoneContact</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">Object</span> <span class="pre">object</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#wx.addPhoneContact" title="永久链接至目标">¶</a></dt>
 <dd><p>添加手机通讯录联系人。用户可以选择将该表单以「新增联系人」或「添加到已有联系人」的方式，写入手机系统通讯录。</p>
 <dl class="field-list simple">
 <dt class="field-odd">参数</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>firstName</strong> (<em>string</em>) – 是   名字</p></li>
-<li><p><strong>photoFilePath</strong> (<em>string</em>) – 头像本地文件路径</p></li>
-<li><p><strong>nickName</strong> (<em>string</em>) – 昵称</p></li>
-<li><p><strong>lastName</strong> (<em>string</em>) – 姓氏</p></li>
-<li><p><strong>middleName</strong> (<em>string</em>) – 中间名</p></li>
-<li><p><strong>remark</strong> (<em>string</em>) – 备注</p></li>
-<li><p><strong>mobilePhoneNumber</strong> (<em>string</em>) – 手机号</p></li>
-<li><p><strong>weChatNumber</strong> (<em>string</em>) – 微信号</p></li>
-<li><p><strong>addressCountry</strong> (<em>string</em>) – 联系地址国家</p></li>
-<li><p><strong>addressState</strong> (<em>string</em>) – 联系地址省份</p></li>
-<li><p><strong>addressCity</strong> (<em>string</em>) – 联系地址城市</p></li>
-<li><p><strong>addressStreet</strong> (<em>string</em>) – 联系地址街道</p></li>
-<li><p><strong>addressPostalCode</strong> (<em>string</em>) – 联系地址邮政编码</p></li>
-<li><p><strong>organization</strong> (<em>string</em>) – 公司</p></li>
-<li><p><strong>title</strong> (<em>string</em>) – 职位</p></li>
-<li><p><strong>workFaxNumber</strong> (<em>string</em>) – 工作传真</p></li>
-<li><p><strong>workPhoneNumber</strong> (<em>string</em>) – 工作电话</p></li>
-<li><p><strong>hostNumber</strong> (<em>string</em>) – 公司电话</p></li>
-<li><p><strong>email</strong> (<em>string</em>) – 电子邮件</p></li>
-<li><p><strong>url</strong> (<em>string</em>) – 网站</p></li>
-<li><p><strong>workAddressCountry</strong> (<em>string</em>) – 工作地址国家</p></li>
-<li><p><strong>workAddressState</strong> (<em>string</em>) – 工作地址省份</p></li>
-<li><p><strong>workAddressCity</strong> (<em>string</em>) – 工作地址城市</p></li>
-<li><p><strong>workAddressStreet</strong> (<em>string</em>) – 工作地址街道</p></li>
-<li><p><strong>workAddressPostalCode</strong> (<em>string</em>) – 工作地址邮政编码</p></li>
-<li><p><strong>homeFaxNumber</strong> (<em>string</em>) – 住宅传真</p></li>
-<li><p><strong>homePhoneNumber</strong> (<em>string</em>) – 住宅电话</p></li>
-<li><p><strong>homeAddressCountry</strong> (<em>string</em>) – 住宅地址国家</p></li>
-<li><p><strong>homeAddressState</strong> (<em>string</em>) – 住宅地址省份</p></li>
-<li><p><strong>homeAddressCity</strong> (<em>string</em>) – 住宅地址城市</p></li>
-<li><p><strong>homeAddressStreet</strong> (<em>string</em>) – 住宅地址街道</p></li>
-<li><p><strong>homeAddressPostalCode</strong> (<em>string</em>) – 住宅地址邮政编码</p></li>
-<li><p><strong>success</strong> (<em>function</em>) – 接口调用成功的回调函数</p></li>
-<li><p><strong>fail</strong> (<em>function</em>) – 接口调用失败的回调函数</p></li>
-<li><p><strong>complete</strong> (<em>function</em>) – 接口调用结束的回调函数（调用成功、失败都会执行）</p></li>
+<li><p><strong>firstName</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">string()</span></code></span>) – 是   名字</p></li>
+<li><p><strong>photoFilePath</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">string()</span></code></span>) – 头像本地文件路径</p></li>
+<li><p><strong>nickName</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">string()</span></code></span>) – 昵称</p></li>
+<li><p><strong>lastName</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">string()</span></code></span>) – 姓氏</p></li>
+<li><p><strong>middleName</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">string()</span></code></span>) – 中间名</p></li>
+<li><p><strong>remark</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">string()</span></code></span>) – 备注</p></li>
+<li><p><strong>mobilePhoneNumber</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">string()</span></code></span>) – 手机号</p></li>
+<li><p><strong>weChatNumber</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">string()</span></code></span>) – 微信号</p></li>
+<li><p><strong>addressCountry</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">string()</span></code></span>) – 联系地址国家</p></li>
+<li><p><strong>addressState</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">string()</span></code></span>) – 联系地址省份</p></li>
+<li><p><strong>addressCity</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">string()</span></code></span>) – 联系地址城市</p></li>
+<li><p><strong>addressStreet</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">string()</span></code></span>) – 联系地址街道</p></li>
+<li><p><strong>addressPostalCode</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">string()</span></code></span>) – 联系地址邮政编码</p></li>
+<li><p><strong>organization</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">string()</span></code></span>) – 公司</p></li>
+<li><p><strong>title</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">string()</span></code></span>) – 职位</p></li>
+<li><p><strong>workFaxNumber</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">string()</span></code></span>) – 工作传真</p></li>
+<li><p><strong>workPhoneNumber</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">string()</span></code></span>) – 工作电话</p></li>
+<li><p><strong>hostNumber</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">string()</span></code></span>) – 公司电话</p></li>
+<li><p><strong>email</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">string()</span></code></span>) – 电子邮件</p></li>
+<li><p><strong>url</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">string()</span></code></span>) – 网站</p></li>
+<li><p><strong>workAddressCountry</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">string()</span></code></span>) – 工作地址国家</p></li>
+<li><p><strong>workAddressState</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">string()</span></code></span>) – 工作地址省份</p></li>
+<li><p><strong>workAddressCity</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">string()</span></code></span>) – 工作地址城市</p></li>
+<li><p><strong>workAddressStreet</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">string()</span></code></span>) – 工作地址街道</p></li>
+<li><p><strong>workAddressPostalCode</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">string()</span></code></span>) – 工作地址邮政编码</p></li>
+<li><p><strong>homeFaxNumber</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">string()</span></code></span>) – 住宅传真</p></li>
+<li><p><strong>homePhoneNumber</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">string()</span></code></span>) – 住宅电话</p></li>
+<li><p><strong>homeAddressCountry</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">string()</span></code></span>) – 住宅地址国家</p></li>
+<li><p><strong>homeAddressState</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">string()</span></code></span>) – 住宅地址省份</p></li>
+<li><p><strong>homeAddressCity</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">string()</span></code></span>) – 住宅地址城市</p></li>
+<li><p><strong>homeAddressStreet</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">string()</span></code></span>) – 住宅地址街道</p></li>
+<li><p><strong>homeAddressPostalCode</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">string()</span></code></span>) – 住宅地址邮政编码</p></li>
+<li><p><strong>success</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">function()</span></code></span>) – 接口调用成功的回调函数</p></li>
+<li><p><strong>fail</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">function()</span></code></span>) – 接口调用失败的回调函数</p></li>
+<li><p><strong>complete</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">function()</span></code></span>) – 接口调用结束的回调函数（调用成功、失败都会执行）</p></li>
 </ul>
 </dd>
 </dl>
 </dd></dl>
 
-</div>
+</section>
 
 
+            <div class="clearer"></div>
           </div>
         </div>
       </div>
@@ -204,12 +207,13 @@
 <li><a href="../index.html">主页</a>&#160;|</li>
 <li><a href="../contents.html">文档</a> &#187;</li>
 
-          <li class="nav-item nav-item-1"><a href="index.html" >API</a> &#187;</li> 
+          <li class="nav-item nav-item-1"><a href="index.html" >API</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">wx.addPhoneContact</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
         &#169; 版权所有 2019, Wxadev Docs.
-      由 <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.0+/0e60d4d 创建。
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.1.
     </div>
   </body>
 </html>

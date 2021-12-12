@@ -1,18 +1,19 @@
 
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
+<html lang="zh_CN">
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>onNFCReadMessage &#8212; wxadev 1.0.0 文档</title>
-    <link rel="stylesheet" href="../../../_static/sphinx13.css" type="text/css" />
-    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
-    <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
-    <script type="text/javascript" src="../../../_static/jquery.js"></script>
-    <script type="text/javascript" src="../../../_static/underscore.js"></script>
-    <script type="text/javascript" src="../../../_static/doctools.js"></script>
-    <script type="text/javascript" src="../../../_static/language_data.js"></script>
-    <script type="text/javascript" src="../../../_static/translations.js"></script>
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx13.css" />
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/translations.js"></script>
     <link rel="search" type="application/opensearchdescription+xml"
           title="在 wxadev 1.0.0 文档 中搜索"
           href="../../../_static/opensearch.xml"/>
@@ -95,7 +96,8 @@
 
           <li class="nav-item nav-item-1"><a href="../../index.html" >企业微信</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="../index.html" >接口</a> &#187;</li>
-          <li class="nav-item nav-item-3"><a href="index.html" accesskey="U">NFC接口</a> &#187;</li> 
+          <li class="nav-item nav-item-3"><a href="index.html" accesskey="U">NFC接口</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">onNFCReadMessage</a></li> 
       </ul>
     </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
@@ -117,12 +119,12 @@
   <h3 id="searchlabel">快速搜索</h3>
     <div class="searchformwrapper">
     <form class="search" action="../../../search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
       <input type="submit" value="转向" />
     </form>
     </div>
 </div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
+<script>$('#searchbox').show(0);</script>
         </div>
       </div>
 
@@ -131,18 +133,18 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="onnfcreadmessage">
+  <section id="onnfcreadmessage">
 <h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/dev_wxwork/dev-doc/qywx-api/nfc/onNFCReadMessage.html">onNFCReadMessage</a><a class="headerlink" href="#onnfcreadmessage" title="永久链接至标题">¶</a></h1>
-<dl class="function">
-<dt id="onNFCReadMessage">
-<code class="descname">onNFCReadMessage</code><span class="sig-paren">(</span><em>callback</em><span class="sig-paren">)</span><a class="headerlink" href="#onNFCReadMessage" title="永久链接至目标">¶</a></dt>
+<dl class="js function">
+<dt class="sig sig-object js" id="onNFCReadMessage">
+<span class="sig-name descname"><span class="n"><span class="pre">onNFCReadMessage</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">callback</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#onNFCReadMessage" title="永久链接至目标">¶</a></dt>
 <dd><dl class="field-list">
 <dt class="field-odd">Label</dt>
 <dd class="field-odd"><p>监听NFC设备的消息回调。当用户离开小程序后，此接口无效。</p>
 </dd>
 <dt class="field-even">参数</dt>
 <dd class="field-even"><ul class="simple">
-<li><p><strong>callback({messageType, data})</strong> (<em>function</em>) – <p>NFC设备有事件时的回调函数</p>
+<li><p><strong>data})</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">function</span> <span class="pre">callback({messageType,()</span></code></span>) – <p>NFC设备有事件时的回调函数</p>
 <ul>
 <li><p><strong>messageType</strong>   (<em>number</em>) -    消息类型如下:</p>
 <ul>
@@ -165,17 +167,17 @@
 <dt class="field-odd">示例</dt>
 <dd class="field-odd"><div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="nx">Page</span><span class="p">({</span>
   <span class="nx">onNFCReadMessage</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">e</span><span class="p">))</span>
-    <span class="k">if</span> <span class="p">(</span><span class="nx">e</span><span class="p">.</span><span class="nx">messageType</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nb">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">e</span><span class="p">))</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">e</span><span class="p">.</span><span class="nx">messageType</span> <span class="o">==</span> <span class="mf">1</span><span class="p">)</span> <span class="p">{</span>
       <span class="nx">wx</span><span class="p">.</span><span class="nx">showModal</span><span class="p">({</span>
         <span class="nx">title</span><span class="o">:</span> <span class="s1">&#39;NFC-Id&#39;</span><span class="p">,</span>
-        <span class="nx">content</span><span class="o">:</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">e</span><span class="p">),</span>
+        <span class="nx">content</span><span class="o">:</span> <span class="nb">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">e</span><span class="p">),</span>
       <span class="p">})</span>
-    <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nx">e</span><span class="p">.</span><span class="nx">messageType</span> <span class="o">==</span> <span class="mi">2</span><span class="p">)</span> <span class="p">{</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nx">e</span><span class="p">.</span><span class="nx">messageType</span> <span class="o">==</span> <span class="mf">2</span><span class="p">)</span> <span class="p">{</span>
       <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Auto-Stop&#39;</span><span class="p">)</span>
       <span class="nx">wx</span><span class="p">.</span><span class="nx">showModal</span><span class="p">({</span>
         <span class="nx">title</span><span class="o">:</span> <span class="s1">&#39;NFC-Auto-Stop&#39;</span><span class="p">,</span>
-        <span class="nx">content</span><span class="o">:</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">e</span><span class="p">),</span>
+        <span class="nx">content</span><span class="o">:</span> <span class="nb">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">e</span><span class="p">),</span>
       <span class="p">})</span>
     <span class="p">}</span>
   <span class="p">}</span>
@@ -186,9 +188,10 @@
 </dl>
 </dd></dl>
 
-</div>
+</section>
 
 
+            <div class="clearer"></div>
           </div>
         </div>
       </div>
@@ -214,12 +217,13 @@
 
           <li class="nav-item nav-item-1"><a href="../../index.html" >企业微信</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="../index.html" >接口</a> &#187;</li>
-          <li class="nav-item nav-item-3"><a href="index.html" >NFC接口</a> &#187;</li> 
+          <li class="nav-item nav-item-3"><a href="index.html" >NFC接口</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">onNFCReadMessage</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
         &#169; 版权所有 2019, Wxadev Docs.
-      由 <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.0+/0e60d4d 创建。
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.1.
     </div>
   </body>
 </html>

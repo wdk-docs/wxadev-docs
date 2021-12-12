@@ -1,18 +1,19 @@
 
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
+<html lang="zh_CN">
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>wx:for 列表渲染 &#8212; wxadev 1.0.0 文档</title>
-    <link rel="stylesheet" href="../../../_static/sphinx13.css" type="text/css" />
-    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
-    <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
-    <script type="text/javascript" src="../../../_static/jquery.js"></script>
-    <script type="text/javascript" src="../../../_static/underscore.js"></script>
-    <script type="text/javascript" src="../../../_static/doctools.js"></script>
-    <script type="text/javascript" src="../../../_static/language_data.js"></script>
-    <script type="text/javascript" src="../../../_static/translations.js"></script>
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx13.css" />
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/translations.js"></script>
     <link rel="search" type="application/opensearchdescription+xml"
           title="在 wxadev 1.0.0 文档 中搜索"
           href="../../../_static/opensearch.xml"/>
@@ -95,7 +96,8 @@
 
           <li class="nav-item nav-item-1"><a href="../../index.html" >框架</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="../index.html" >视图层 View</a> &#187;</li>
-          <li class="nav-item nav-item-3"><a href="index.html" accesskey="U">WXML</a> &#187;</li> 
+          <li class="nav-item nav-item-3"><a href="index.html" accesskey="U">WXML</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">wx:for 列表渲染</a></li> 
       </ul>
     </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
@@ -127,12 +129,12 @@
   <h3 id="searchlabel">快速搜索</h3>
     <div class="searchformwrapper">
     <form class="search" action="../../../search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
       <input type="submit" value="转向" />
     </form>
     </div>
 </div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
+<script>$('#searchbox').show(0);</script>
         </div>
       </div>
 
@@ -141,7 +143,7 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="wx-for">
+  <section id="wx-for">
 <span id="wxml-list"></span><h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/framework/view/wxml/list.html">wx:for 列表渲染</a><a class="headerlink" href="#wx-for" title="永久链接至标题">¶</a></h1>
 <ul class="simple" id="id1">
 <li><p><code class="docutils literal notranslate"><span class="pre">wx:for</span></code> <code class="docutils literal notranslate"><span class="pre">wx:for-item</span></code> <code class="docutils literal notranslate"><span class="pre">wx:for-index</span></code> <code class="docutils literal notranslate"><span class="pre">wx:key=&quot;*this&quot;</span></code></p>
@@ -150,7 +152,7 @@
 </ul>
 </li>
 </ul>
-<div class="section" id="id2">
+<section id="id2">
 <h2>wx:for<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
 <p>在组件上使用 wx:for 控制属性绑定一个数组，即可使用数组中各项的数据重复渲染该组件。</p>
 <p>默认数组的当前项的下标变量名默认为 index，数组当前项的变量名默认为 item</p>
@@ -187,8 +189,8 @@
 <span class="p">&lt;/</span><span class="nt">view</span><span class="p">&gt;</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="block-wx-for">
+</section>
+<section id="block-wx-for">
 <span id="id3"></span><h2>block wx:for<a class="headerlink" href="#block-wx-for" title="永久链接至标题">¶</a></h2>
 <p>类似 block wx:if，也可以将 wx:for 用在&lt;block/&gt;标签上，以渲染一个包含多节点的结构块。例如：</p>
 <div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">block</span> <span class="na">wx:for</span><span class="o">=</span><span class="s">&quot;{{[1, 2, 3]}}&quot;</span><span class="p">&gt;</span>
@@ -197,8 +199,8 @@
 <span class="p">&lt;/</span><span class="nt">block</span><span class="p">&gt;</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="wx-key">
+</section>
+<section id="wx-key">
 <span id="id4"></span><h2>wx:key<a class="headerlink" href="#wx-key" title="永久链接至标题">¶</a></h2>
 <p>如果列表中项目的位置会动态改变或者有新的项目添加到列表中，
 并且希望列表中的项目保持自己的特征和状态（如 &lt;input&gt; 中的输入内容，&lt;switch&gt; 的选中状态），
@@ -229,21 +231,21 @@
 <div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="nx">Page</span><span class="p">({</span>
   <span class="nx">data</span><span class="o">:</span> <span class="p">{</span>
     <span class="nx">objectArray</span><span class="o">:</span> <span class="p">[</span>
-      <span class="p">{</span><span class="nx">id</span><span class="o">:</span> <span class="mi">5</span><span class="p">,</span> <span class="nx">unique</span><span class="o">:</span> <span class="s1">&#39;unique_5&#39;</span><span class="p">},</span>
-      <span class="p">{</span><span class="nx">id</span><span class="o">:</span> <span class="mi">4</span><span class="p">,</span> <span class="nx">unique</span><span class="o">:</span> <span class="s1">&#39;unique_4&#39;</span><span class="p">},</span>
-      <span class="p">{</span><span class="nx">id</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span> <span class="nx">unique</span><span class="o">:</span> <span class="s1">&#39;unique_3&#39;</span><span class="p">},</span>
-      <span class="p">{</span><span class="nx">id</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span> <span class="nx">unique</span><span class="o">:</span> <span class="s1">&#39;unique_2&#39;</span><span class="p">},</span>
-      <span class="p">{</span><span class="nx">id</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span> <span class="nx">unique</span><span class="o">:</span> <span class="s1">&#39;unique_1&#39;</span><span class="p">},</span>
-      <span class="p">{</span><span class="nx">id</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span> <span class="nx">unique</span><span class="o">:</span> <span class="s1">&#39;unique_0&#39;</span><span class="p">},</span>
+      <span class="p">{</span><span class="nx">id</span><span class="o">:</span> <span class="mf">5</span><span class="p">,</span> <span class="nx">unique</span><span class="o">:</span> <span class="s1">&#39;unique_5&#39;</span><span class="p">},</span>
+      <span class="p">{</span><span class="nx">id</span><span class="o">:</span> <span class="mf">4</span><span class="p">,</span> <span class="nx">unique</span><span class="o">:</span> <span class="s1">&#39;unique_4&#39;</span><span class="p">},</span>
+      <span class="p">{</span><span class="nx">id</span><span class="o">:</span> <span class="mf">3</span><span class="p">,</span> <span class="nx">unique</span><span class="o">:</span> <span class="s1">&#39;unique_3&#39;</span><span class="p">},</span>
+      <span class="p">{</span><span class="nx">id</span><span class="o">:</span> <span class="mf">2</span><span class="p">,</span> <span class="nx">unique</span><span class="o">:</span> <span class="s1">&#39;unique_2&#39;</span><span class="p">},</span>
+      <span class="p">{</span><span class="nx">id</span><span class="o">:</span> <span class="mf">1</span><span class="p">,</span> <span class="nx">unique</span><span class="o">:</span> <span class="s1">&#39;unique_1&#39;</span><span class="p">},</span>
+      <span class="p">{</span><span class="nx">id</span><span class="o">:</span> <span class="mf">0</span><span class="p">,</span> <span class="nx">unique</span><span class="o">:</span> <span class="s1">&#39;unique_0&#39;</span><span class="p">},</span>
     <span class="p">],</span>
-    <span class="nx">numberArray</span><span class="o">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+    <span class="nx">numberArray</span><span class="o">:</span> <span class="p">[</span><span class="mf">1</span><span class="p">,</span> <span class="mf">2</span><span class="p">,</span> <span class="mf">3</span><span class="p">,</span> <span class="mf">4</span><span class="p">]</span>
   <span class="p">},</span>
   <span class="k">switch</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
-    <span class="kr">const</span> <span class="nx">length</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">objectArray</span><span class="p">.</span><span class="nx">length</span>
-    <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">length</span><span class="p">;</span> <span class="o">++</span><span class="nx">i</span><span class="p">)</span> <span class="p">{</span>
-      <span class="kr">const</span> <span class="nx">x</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">floor</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">()</span> <span class="o">*</span> <span class="nx">length</span><span class="p">)</span>
-      <span class="kr">const</span> <span class="nx">y</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">floor</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">()</span> <span class="o">*</span> <span class="nx">length</span><span class="p">)</span>
-      <span class="kr">const</span> <span class="nx">temp</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">objectArray</span><span class="p">[</span><span class="nx">x</span><span class="p">]</span>
+    <span class="kd">const</span> <span class="nx">length</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">objectArray</span><span class="p">.</span><span class="nx">length</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mf">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">length</span><span class="p">;</span> <span class="o">++</span><span class="nx">i</span><span class="p">)</span> <span class="p">{</span>
+      <span class="kd">const</span> <span class="nx">x</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">floor</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">()</span> <span class="o">*</span> <span class="nx">length</span><span class="p">)</span>
+      <span class="kd">const</span> <span class="nx">y</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">floor</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">()</span> <span class="o">*</span> <span class="nx">length</span><span class="p">)</span>
+      <span class="kd">const</span> <span class="nx">temp</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">objectArray</span><span class="p">[</span><span class="nx">x</span><span class="p">]</span>
       <span class="k">this</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">objectArray</span><span class="p">[</span><span class="nx">x</span><span class="p">]</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">objectArray</span><span class="p">[</span><span class="nx">y</span><span class="p">]</span>
       <span class="k">this</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">objectArray</span><span class="p">[</span><span class="nx">y</span><span class="p">]</span> <span class="o">=</span> <span class="nx">temp</span>
     <span class="p">}</span>
@@ -252,14 +254,14 @@
     <span class="p">})</span>
   <span class="p">},</span>
   <span class="nx">addToFront</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
-    <span class="kr">const</span> <span class="nx">length</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">objectArray</span><span class="p">.</span><span class="nx">length</span>
+    <span class="kd">const</span> <span class="nx">length</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">objectArray</span><span class="p">.</span><span class="nx">length</span>
     <span class="k">this</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">objectArray</span> <span class="o">=</span> <span class="p">[{</span><span class="nx">id</span><span class="o">:</span> <span class="nx">length</span><span class="p">,</span> <span class="nx">unique</span><span class="o">:</span> <span class="s1">&#39;unique_&#39;</span> <span class="o">+</span> <span class="nx">length</span><span class="p">}].</span><span class="nx">concat</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">objectArray</span><span class="p">)</span>
     <span class="k">this</span><span class="p">.</span><span class="nx">setData</span><span class="p">({</span>
       <span class="nx">objectArray</span><span class="o">:</span> <span class="k">this</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">objectArray</span>
     <span class="p">})</span>
   <span class="p">},</span>
   <span class="nx">addNumberToFront</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
-    <span class="k">this</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">numberArray</span> <span class="o">=</span> <span class="p">[</span><span class="k">this</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">numberArray</span><span class="p">.</span><span class="nx">length</span> <span class="o">+</span> <span class="mi">1</span><span class="p">].</span><span class="nx">concat</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">numberArray</span><span class="p">)</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">numberArray</span> <span class="o">=</span> <span class="p">[</span><span class="k">this</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">numberArray</span><span class="p">.</span><span class="nx">length</span> <span class="o">+</span> <span class="mf">1</span><span class="p">].</span><span class="nx">concat</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">numberArray</span><span class="p">)</span>
     <span class="k">this</span><span class="p">.</span><span class="nx">setData</span><span class="p">({</span>
       <span class="nx">numberArray</span><span class="o">:</span> <span class="k">this</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">numberArray</span>
     <span class="p">})</span>
@@ -297,10 +299,11 @@
 <span class="p">&lt;/</span><span class="nt">view</span><span class="p">&gt;</span>
 </pre></div>
 </div>
-</div>
-</div>
+</section>
+</section>
 
 
+            <div class="clearer"></div>
           </div>
         </div>
       </div>
@@ -326,12 +329,13 @@
 
           <li class="nav-item nav-item-1"><a href="../../index.html" >框架</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="../index.html" >视图层 View</a> &#187;</li>
-          <li class="nav-item nav-item-3"><a href="index.html" >WXML</a> &#187;</li> 
+          <li class="nav-item nav-item-3"><a href="index.html" >WXML</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">wx:for 列表渲染</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
         &#169; 版权所有 2019, Wxadev Docs.
-      由 <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.0+/0e60d4d 创建。
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.1.
     </div>
   </body>
 </html>

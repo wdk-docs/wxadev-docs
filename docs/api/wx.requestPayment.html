@@ -1,18 +1,19 @@
 
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
+<html lang="zh_CN">
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>wx.requestPayment &#8212; wxadev 1.0.0 文档</title>
-    <link rel="stylesheet" href="../_static/sphinx13.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-    <script type="text/javascript" src="../_static/jquery.js"></script>
-    <script type="text/javascript" src="../_static/underscore.js"></script>
-    <script type="text/javascript" src="../_static/doctools.js"></script>
-    <script type="text/javascript" src="../_static/language_data.js"></script>
-    <script type="text/javascript" src="../_static/translations.js"></script>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx13.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/translations.js"></script>
     <link rel="search" type="application/opensearchdescription+xml"
           title="在 wxadev 1.0.0 文档 中搜索"
           href="../_static/opensearch.xml"/>
@@ -93,7 +94,8 @@
 <li><a href="../index.html">主页</a>&#160;|</li>
 <li><a href="../contents.html">文档</a> &#187;</li>
 
-          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">API</a> &#187;</li> 
+          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">API</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">wx.requestPayment</a></li> 
       </ul>
     </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
@@ -115,12 +117,12 @@
   <h3 id="searchlabel">快速搜索</h3>
     <div class="searchformwrapper">
     <form class="search" action="../search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
       <input type="submit" value="转向" />
     </form>
     </div>
 </div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
+<script>$('#searchbox').show(0);</script>
         </div>
       </div>
 
@@ -129,28 +131,28 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="wx-requestpayment">
+  <section id="wx-requestpayment">
 <h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/api/wx.requestPayment.html">wx.requestPayment</a><a class="headerlink" href="#wx-requestpayment" title="永久链接至标题">¶</a></h1>
-<dl class="function">
-<dt id="wx.requestPayment">
-<code class="descclassname">wx.</code><code class="descname">requestPayment</code><span class="sig-paren">(</span><em>Object object</em><span class="sig-paren">)</span><a class="headerlink" href="#wx.requestPayment" title="永久链接至目标">¶</a></dt>
+<dl class="js function">
+<dt class="sig sig-object js" id="wx.requestPayment">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">wx</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">requestPayment</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">Object</span> <span class="pre">object</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#wx.requestPayment" title="永久链接至目标">¶</a></dt>
 <dd><p>发起微信支付。了解更多信息，请查看微信支付接口文档</p>
 <dl class="field-list simple">
 <dt class="field-odd">参数</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>timeStamp</strong> (<em>string</em>) – 是 时间戳，从 1970 年 1 月 1 日 00:00:00 至今的秒数，即当前的时间</p></li>
-<li><p><strong>nonceStr</strong> (<em>string</em>) – 是 随机字符串，长度为32个字符以下</p></li>
-<li><p><strong>package</strong> (<em>string</em>) – 是 统一下单接口返回的 prepay_id 参数值，提交格式如：prepay_id=***</p></li>
-<li><p><strong>signType</strong> (<em>string</em>) – <p>MD5 否 签名算法</p>
+<li><p><strong>timeStamp</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">string()</span></code></span>) – 是 时间戳，从 1970 年 1 月 1 日 00:00:00 至今的秒数，即当前的时间</p></li>
+<li><p><strong>nonceStr</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">string()</span></code></span>) – 是 随机字符串，长度为32个字符以下</p></li>
+<li><p><strong>package</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">string()</span></code></span>) – 是 统一下单接口返回的 prepay_id 参数值，提交格式如：prepay_id=***</p></li>
+<li><p><strong>signType</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">string()</span></code></span>) – <p>MD5 否 签名算法</p>
 <ul>
 <li><p><strong>MD5</strong> MD5</p></li>
 <li><p><strong>HMAC-SHA256</strong> HMAC-SHA256</p></li>
 </ul>
 </p></li>
-<li><p><strong>paySign</strong> (<em>string</em>) – 是 签名，具体签名方案参见 小程序支付接口文档</p></li>
-<li><p><strong>success</strong> (<em>function</em>) – 接口调用成功的回调函数</p></li>
-<li><p><strong>fail</strong> (<em>function</em>) – 接口调用失败的回调函数</p></li>
-<li><p><strong>complete</strong> (<em>string</em>) – 接口调用结束的回调函数（调用成功、失败都会执行）</p></li>
+<li><p><strong>paySign</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">string()</span></code></span>) – 是 签名，具体签名方案参见 小程序支付接口文档</p></li>
+<li><p><strong>success</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">function()</span></code></span>) – 接口调用成功的回调函数</p></li>
+<li><p><strong>fail</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">function()</span></code></span>) – 接口调用失败的回调函数</p></li>
+<li><p><strong>complete</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">string()</span></code></span>) – 接口调用结束的回调函数（调用成功、失败都会执行）</p></li>
 </ul>
 </dd>
 <dt class="field-even">示例代码</dt>
@@ -169,9 +171,10 @@
 </div>
 </dd></dl>
 
-</div>
+</section>
 
 
+            <div class="clearer"></div>
           </div>
         </div>
       </div>
@@ -195,12 +198,13 @@
 <li><a href="../index.html">主页</a>&#160;|</li>
 <li><a href="../contents.html">文档</a> &#187;</li>
 
-          <li class="nav-item nav-item-1"><a href="index.html" >API</a> &#187;</li> 
+          <li class="nav-item nav-item-1"><a href="index.html" >API</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">wx.requestPayment</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
         &#169; 版权所有 2019, Wxadev Docs.
-      由 <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.0+/0e60d4d 创建。
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.1.
     </div>
   </body>
 </html>

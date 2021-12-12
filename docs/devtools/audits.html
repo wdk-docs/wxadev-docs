@@ -1,18 +1,19 @@
 
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
+<html lang="zh_CN">
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>工具插件 &#8212; wxadev 1.0.0 文档</title>
-    <link rel="stylesheet" href="../_static/sphinx13.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-    <script type="text/javascript" src="../_static/jquery.js"></script>
-    <script type="text/javascript" src="../_static/underscore.js"></script>
-    <script type="text/javascript" src="../_static/doctools.js"></script>
-    <script type="text/javascript" src="../_static/language_data.js"></script>
-    <script type="text/javascript" src="../_static/translations.js"></script>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx13.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/translations.js"></script>
     <link rel="search" type="application/opensearchdescription+xml"
           title="在 wxadev 1.0.0 文档 中搜索"
           href="../_static/opensearch.xml"/>
@@ -93,7 +94,8 @@
 <li><a href="../index.html">主页</a>&#160;|</li>
 <li><a href="../contents.html">文档</a> &#187;</li>
 
-          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">开发工具</a> &#187;</li> 
+          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">开发工具</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">工具插件</a></li> 
       </ul>
     </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
@@ -125,12 +127,12 @@
   <h3 id="searchlabel">快速搜索</h3>
     <div class="searchformwrapper">
     <form class="search" action="../search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
       <input type="submit" value="转向" />
     </form>
     </div>
 </div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
+<script>$('#searchbox').show(0);</script>
         </div>
       </div>
 
@@ -139,18 +141,18 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="dt-page">
+  <section id="dt-page">
 <span id="id1"></span><h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/devtools/audits.html">工具插件</a><a class="headerlink" href="#dt-page" title="永久链接至标题">¶</a></h1>
 <p>体验评分是一项给小程序的体验好坏打分的功能，它会在小程序运行过程中实时检查，
 分析出一些可能导致体验不好的地方，并且定位出哪里有问题，以及给出一些优化建议。</p>
-<div class="section" id="id2">
+<section id="id2">
 <h2>运行环境要求<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
 <ul class="simple">
 <li><p>下载并安装 1.02.1808300 或以上版本的开发者工具， <a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/devtools/download.html">下载地址</a> 。</p></li>
 <li><p>基础库需要切到 2.2.0 或以上版本。</p></li>
 </ul>
-</div>
-<div class="section" id="id3">
+</section>
+<section id="id3">
 <h2>使用流程<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
 <ol class="arabic simple">
 <li><p>打开开发者工具，在详情里切换基础库到 2.2.0 或以上版本</p></li>
@@ -158,23 +160,24 @@
 <li><p>点击左上角”开始“按钮（见下图），然后自行操作小程序界面，运行过的页面就会被“体验评分”检测到</p></li>
 <li><p>点击 “Stop” 停止分析，就会看到一份分析报告，之后便可根据分析报告进行相关优化</p></li>
 </ol>
-<div class="figure align-default">
+<figure class="align-default">
 <img alt="audits" src="https://developers.weixin.qq.com/miniprogram/dev/devtools/image/devtools/audits.png?t=19051421" />
-</div>
-</div>
-<div class="section" id="id4">
+</figure>
+</section>
+<section id="id4">
 <h2>自动运行<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h2>
 <p>为了方便开发者能够及时发现小程序的体验问题，从开发者工具 1.02.1811150 版本起支持体验评分的 “自动运行” 功能。</p>
 <p>该功能会在开发调试小程序时，实时检查，一旦发现体验分数低于某个阈值时，
 会在 console 面板打印一个 warning 信息提示开发者，此时开发者可以切到 Audits 面板查看详情。</p>
 <p>开发者在工具的右上角 “详情” 面板里勾选 “自动运行体验评分” 选项即可开启。</p>
-<div class="figure align-default">
+<figure class="align-default">
 <img alt="autorun" src="https://developers.weixin.qq.com/miniprogram/dev/devtools/image/devtools/audits_autorun.png?t=19051421" />
-</div>
-</div>
-</div>
+</figure>
+</section>
+</section>
 
 
+            <div class="clearer"></div>
           </div>
         </div>
       </div>
@@ -198,12 +201,13 @@
 <li><a href="../index.html">主页</a>&#160;|</li>
 <li><a href="../contents.html">文档</a> &#187;</li>
 
-          <li class="nav-item nav-item-1"><a href="index.html" >开发工具</a> &#187;</li> 
+          <li class="nav-item nav-item-1"><a href="index.html" >开发工具</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">工具插件</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
         &#169; 版权所有 2019, Wxadev Docs.
-      由 <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.0+/0e60d4d 创建。
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.1.
     </div>
   </body>
 </html>

@@ -1,18 +1,19 @@
 
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
+<html lang="zh_CN">
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>简介 &#8212; wxadev 1.0.0 文档</title>
-    <link rel="stylesheet" href="_static/sphinx13.css" type="text/css" />
-    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-    <script type="text/javascript" src="_static/jquery.js"></script>
-    <script type="text/javascript" src="_static/underscore.js"></script>
-    <script type="text/javascript" src="_static/doctools.js"></script>
-    <script type="text/javascript" src="_static/language_data.js"></script>
-    <script type="text/javascript" src="_static/translations.js"></script>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx13.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/translations.js"></script>
     <link rel="search" type="application/opensearchdescription+xml"
           title="在 wxadev 1.0.0 文档 中搜索"
           href="_static/opensearch.xml"/>
@@ -20,7 +21,7 @@
     <link rel="index" title="索引" href="genindex.html" />
     <link rel="search" title="搜索" href="search.html" />
     <link rel="next" title="基础教程" href="basic/index.html" />
-    <link rel="prev" title="开发教程" href="contents.html" />
+    <link rel="prev" title="开发指南" href="index.html" />
 <link rel="canonical" href="http://www.sphinx-doc.org/en/master/dev.html" />
 
 <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet" type="text/css" />
@@ -88,11 +89,12 @@
           <a href="basic/index.html" title="基础教程"
              accesskey="N">下一页</a> |</li>
         <li class="right" >
-          <a href="contents.html" title="开发教程"
+          <a href="index.html" title="开发指南"
              accesskey="P">上一页</a> |</li>
 <li><a href="index.html">主页</a>&#160;|</li>
 <li><a href="contents.html">文档</a> &#187;</li>
- 
+
+        <li class="nav-item nav-item-this"><a href="">简介</a></li> 
       </ul>
     </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
@@ -108,8 +110,8 @@
 </ul>
 
   <h4>上一个主题</h4>
-  <p class="topless"><a href="contents.html"
-                        title="上一章">开发教程</a></p>
+  <p class="topless"><a href="index.html"
+                        title="上一章">开发指南</a></p>
   <h4>下一个主题</h4>
   <p class="topless"><a href="basic/index.html"
                         title="下一章">基础教程</a></p>
@@ -124,12 +126,12 @@
   <h3 id="searchlabel">快速搜索</h3>
     <div class="searchformwrapper">
     <form class="search" action="search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
       <input type="submit" value="转向" />
     </form>
     </div>
 </div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
+<script>$('#searchbox').show(0);</script>
         </div>
       </div>
 
@@ -138,11 +140,11 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="id1">
+  <section id="id1">
 <h1>简介<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
-<p>版本:1.0.0 更新:2019 年 06 月 30 日</p>
+<p>版本:1.0.0 更新:2021 年 12 月 12 日</p>
 <p>小程序是一种全新的连接用户与服务的方式，它可以在微信内被便捷地获取和传播，同时具有出色的使用体验。</p>
-<div class="section" id="id2">
+<section id="id2">
 <h2>技术发展史<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
 <p>​小程序并非凭空冒出来的一个概念。当微信中的 WebView 逐渐成为移动 Web 的一个重要入口时，微信就有相关的 JS API 了。</p>
 <p>代码清单1-1 使用 WeixinJSBridge 预览图片</p>
@@ -206,8 +208,8 @@
 <li><p>高效和简单的开发</p></li>
 </ul>
 <p>这就是小程序的由来。</p>
-</div>
-<div class="section" id="id3">
+</section>
+<section id="id3">
 <h2>与普通网页开发的区别<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
 <p>​小程序的主要开发语言是 JavaScript ，小程序的开发同普通的网页开发相比有很大的相似性。
 对于前端开发者而言，从网页开发迁移到小程序的开发成本并不高，但是二者还是有些许区别的。</p>
@@ -249,16 +251,17 @@
 </tbody>
 </table>
 <p>​网页开发者在开发网页的时候，只需要使用到浏览器，并且搭配上一些辅助工具或者编辑器即可。小程序的开发则有所不同，需要经过申请小程序帐号、安装小程序开发者工具、配置项目等等过程方可完成。</p>
-</div>
-<div class="section" id="id4">
+</section>
+<section id="id4">
 <h2>体验小程序<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h2>
 <p>开发者可使用微信客户端(6.7.2 及以上版本)扫码下方小程序码，体验小程序。</p>
 <p><a class="reference external" href="https://github.com/wechat-miniprogram/miniprogram-demo">查看小程序示例源码</a></p>
 <img alt="https://developers.weixin.qq.com/miniprogram/dev/image/demo.jpg?t=19041921" src="https://developers.weixin.qq.com/miniprogram/dev/image/demo.jpg?t=19041921" />
-</div>
-</div>
+</section>
+</section>
 
 
+            <div class="clearer"></div>
           </div>
         </div>
       </div>
@@ -277,16 +280,17 @@
           <a href="basic/index.html" title="基础教程"
              >下一页</a> |</li>
         <li class="right" >
-          <a href="contents.html" title="开发教程"
+          <a href="index.html" title="开发指南"
              >上一页</a> |</li>
 <li><a href="index.html">主页</a>&#160;|</li>
 <li><a href="contents.html">文档</a> &#187;</li>
- 
+
+        <li class="nav-item nav-item-this"><a href="">简介</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
         &#169; 版权所有 2019, Wxadev Docs.
-      由 <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.0+/0e60d4d 创建。
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.1.
     </div>
   </body>
 </html>

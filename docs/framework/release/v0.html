@@ -1,18 +1,19 @@
 
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
+<html lang="zh_CN">
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>基础库更新日志 (v0.x版本) &#8212; wxadev 1.0.0 文档</title>
-    <link rel="stylesheet" href="../../_static/sphinx13.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-    <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
-    <script type="text/javascript" src="../../_static/jquery.js"></script>
-    <script type="text/javascript" src="../../_static/underscore.js"></script>
-    <script type="text/javascript" src="../../_static/doctools.js"></script>
-    <script type="text/javascript" src="../../_static/language_data.js"></script>
-    <script type="text/javascript" src="../../_static/translations.js"></script>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx13.css" />
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/translations.js"></script>
     <link rel="search" type="application/opensearchdescription+xml"
           title="在 wxadev 1.0.0 文档 中搜索"
           href="../../_static/opensearch.xml"/>
@@ -94,7 +95,8 @@
 <li><a href="../../contents.html">文档</a> &#187;</li>
 
           <li class="nav-item nav-item-1"><a href="../index.html" >框架</a> &#187;</li>
-          <li class="nav-item nav-item-2"><a href="index.html" accesskey="U">版本更新</a> &#187;</li> 
+          <li class="nav-item nav-item-2"><a href="index.html" accesskey="U">版本更新</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">基础库更新日志 (v0.x版本)</a></li> 
       </ul>
     </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
@@ -131,12 +133,12 @@
   <h3 id="searchlabel">快速搜索</h3>
     <div class="searchformwrapper">
     <form class="search" action="../../search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
       <input type="submit" value="转向" />
     </form>
     </div>
 </div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
+<script>$('#searchbox').show(0);</script>
         </div>
       </div>
 
@@ -145,22 +147,22 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="v0-x">
+  <section id="v0-x">
 <h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/framework/release/v0.html">基础库更新日志 (v0.x版本)</a><a class="headerlink" href="#v0-x" title="永久链接至标题">¶</a></h1>
 <p>最新版本</p>
-<div class="section" id="id1">
+<section id="id1">
 <h2>2017.01.06<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h2>
 <ul class="simple">
 <li><p>U: 更新 获取小程序页面二维码接口的调用总次数为 十万 次 详情</p></li>
 </ul>
-</div>
-<div class="section" id="id2">
+</section>
+<section id="id2">
 <h2>2017.01.05<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
 <ul class="simple">
 <li><p>F: 修复 touch 事件在开发工具上出现 preventDefault inside passive event 的问题</p></li>
 </ul>
-</div>
-<div class="section" id="id3">
+</section>
+<section id="id3">
 <h2>2017.01.04<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
 <ul class="simple">
 <li><p>U 更新 API wx.getLocation wx.getUserInfo wx.chooseLocation wx.startRecord 调用时需要用户授权确认，当用户拒绝授权时，回调 “${APIName}:fail auth deny”</p></li>
@@ -183,16 +185,16 @@
 <li><p>F 修复 连续 setData 时序异常的问题</p></li>
 <li><p>F 修复 iOS8 上大量引用本地路径图片会导致页面卡死的问题</p></li>
 </ul>
-</div>
-<div class="section" id="id4">
+</section>
+<section id="id4">
 <h2>2016-12-22<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h2>
 <ul class="simple">
 <li><p>F 修复 &lt;input&gt; 组件在开发者工具上失去焦点时清空内容的问题</p></li>
 <li><p>F 修复 开发者工具在项目编译后不触发 App.onShow 的问题</p></li>
 <li><p>F 修复 在 &lt;template /&gt; 中使用 wx:for 中取不到 data 中的值的问题</p></li>
 </ul>
-</div>
-<div class="section" id="id5">
+</section>
+<section id="id5">
 <h2>2016-12-21<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h2>
 <ul class="simple">
 <li><p>A 新增 API wx.switchTab 详情</p></li>
@@ -289,16 +291,16 @@
 <li><p>D 即将移除 &lt;input&gt; auto-focus 属性，直接使用 focus 属性即可</p></li>
 <li><p>D 即将移除 &lt;map&gt; covers 属性</p></li>
 </ul>
-</div>
-<div class="section" id="id6">
+</section>
+<section id="id6">
 <h2>2016.10.31<a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h2>
 <ul class="simple">
 <li><p>F 修复 &lt;button&gt; 组件的部分事件调用的问题</p></li>
 <li><p>F 修复 动态变更 &lt;swiper-item&gt; 组件列表时存在的 &lt;swiper&gt; 组件更新的问题</p></li>
 <li><p>F 修复 部分 rpx 无效</p></li>
 </ul>
-</div>
-<div class="section" id="id7">
+</section>
+<section id="id7">
 <h2>2016.10.28<a class="headerlink" href="#id7" title="永久链接至标题">¶</a></h2>
 <ul class="simple">
 <li><p>F 修复 page.prototype.setData 在 onLoad 和 onShow 中未及时设置的问题</p></li>
@@ -345,8 +347,8 @@
 <li><p>D 即将移除 &lt;audio&gt; action 属性，可使用更方便的音频组件控制 API 替代 详情</p></li>
 <li><p>D 即将移除组件： &lt;toast/&gt; &lt;loading/&gt; &lt;action-sheet/&gt; &lt;modal/&gt;, 可使用更方便的交互反馈 API 替代 详情</p></li>
 </ul>
-</div>
-<div class="section" id="id8">
+</section>
+<section id="id8">
 <h2>2016.10.11<a class="headerlink" href="#id8" title="永久链接至标题">¶</a></h2>
 <ul class="simple">
 <li><p>A 增加 &lt;video&gt; Android 添加了默认的控件</p></li>
@@ -366,10 +368,11 @@
 <li><p>R 移除 &lt;view&gt; 标签 inline 属性</p></li>
 <li><p>R 移除 &lt;page/&gt; 标签的 height 100% 的默认样式</p></li>
 </ul>
-</div>
-</div>
+</section>
+</section>
 
 
+            <div class="clearer"></div>
           </div>
         </div>
       </div>
@@ -394,12 +397,13 @@
 <li><a href="../../contents.html">文档</a> &#187;</li>
 
           <li class="nav-item nav-item-1"><a href="../index.html" >框架</a> &#187;</li>
-          <li class="nav-item nav-item-2"><a href="index.html" >版本更新</a> &#187;</li> 
+          <li class="nav-item nav-item-2"><a href="index.html" >版本更新</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">基础库更新日志 (v0.x版本)</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
         &#169; 版权所有 2019, Wxadev Docs.
-      由 <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.0+/0e60d4d 创建。
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.1.
     </div>
   </body>
 </html>

@@ -1,18 +1,19 @@
 
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
+<html lang="zh_CN">
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>wx.getLocation &#8212; wxadev 1.0.0 文档</title>
-    <link rel="stylesheet" href="../_static/sphinx13.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-    <script type="text/javascript" src="../_static/jquery.js"></script>
-    <script type="text/javascript" src="../_static/underscore.js"></script>
-    <script type="text/javascript" src="../_static/doctools.js"></script>
-    <script type="text/javascript" src="../_static/language_data.js"></script>
-    <script type="text/javascript" src="../_static/translations.js"></script>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx13.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/translations.js"></script>
     <link rel="search" type="application/opensearchdescription+xml"
           title="在 wxadev 1.0.0 文档 中搜索"
           href="../_static/opensearch.xml"/>
@@ -93,7 +94,8 @@
 <li><a href="../index.html">主页</a>&#160;|</li>
 <li><a href="../contents.html">文档</a> &#187;</li>
 
-          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">API</a> &#187;</li> 
+          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">API</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">wx.getLocation</a></li> 
       </ul>
     </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
@@ -115,12 +117,12 @@
   <h3 id="searchlabel">快速搜索</h3>
     <div class="searchformwrapper">
     <form class="search" action="../search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
       <input type="submit" value="转向" />
     </form>
     </div>
 </div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
+<script>$('#searchbox').show(0);</script>
         </div>
       </div>
 
@@ -129,24 +131,24 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="wx-getlocation">
+  <section id="wx-getlocation">
 <h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/api/wx.getLocation.html">wx.getLocation</a><a class="headerlink" href="#wx-getlocation" title="永久链接至标题">¶</a></h1>
-<dl class="function">
-<dt id="wx.getLocation">
-<code class="descclassname">wx.</code><code class="descname">getLocation</code><span class="sig-paren">(</span><em>{[type][, altitude][, success][, fail][, complete]}</em><span class="sig-paren">)</span><a class="headerlink" href="#wx.getLocation" title="永久链接至目标">¶</a></dt>
+<dl class="js function">
+<dt class="sig sig-object js" id="wx.getLocation">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">wx</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">getLocation</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">{[type][,</span> <span class="pre">altitude][,</span> <span class="pre">success][,</span> <span class="pre">fail][,</span> <span class="pre">complete]}</span></em><span class="sig-paren">)</span><a class="headerlink" href="#wx.getLocation" title="永久链接至目标">¶</a></dt>
 <dd><p>调用前需要 用户授权 <a class="reference internal" href="AuthSetting.html#scope.userLocation" title="scope.userLocation"><code class="xref js js-data docutils literal notranslate"><span class="pre">scope.userLocation</span></code></a></p>
 <p>获取当前的地理位置、速度。当用户离开小程序后，此接口无法调用。</p>
 <dl class="field-list">
 <dt class="field-odd">参数</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>type</strong> (<em>string</em>) – <p><strong>wgs84</strong></p>
+<li><p><strong>type</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">string()</span></code></span>) – <p><strong>wgs84</strong></p>
 <ul>
 <li><p><em>wgs84</em> 返回 gps 坐标</p></li>
 <li><p><em>gcj02</em> 返回 可用于 <a class="reference internal" href="wx.openLocation.html#wx.openLocation" title="wx.openLocation"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.openLocation()</span></code></a> 的坐标</p></li>
 </ul>
 </p></li>
-<li><p><strong>altitude</strong> (<em>string</em>) – <strong>false</strong> 传入 true 会返回高度信息，由于获取高度需要较高精确度，会减慢接口返回速度  1.6.0</p></li>
-<li><p><strong>success</strong> (<em>function</em>) – <p>接口调用成功的回调函数</p>
+<li><p><strong>altitude</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">string()</span></code></span>) – <strong>false</strong> 传入 true 会返回高度信息，由于获取高度需要较高精确度，会减慢接口返回速度  1.6.0</p></li>
+<li><p><strong>success</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">function()</span></code></span>) – <p>接口调用成功的回调函数</p>
 <ul>
 <li><p><strong>latitude</strong> (<em>number</em>) - 纬度，范围为 -90~90，负数表示南纬</p></li>
 <li><p><strong>longitude</strong> (<em>number</em>) - 经度，范围为 -180~180，负数表示西经</p></li>
@@ -157,18 +159,18 @@
 <li><p><strong>horizontalAccuracy</strong> (<em>number</em>) - 水平精度，单位 m  1.2.0</p></li>
 </ul>
 </p></li>
-<li><p><strong>fail</strong> (<em>function</em>) – 接口调用失败的回调函数</p></li>
-<li><p><strong>complete</strong> (<em>function</em>) – 接口调用结束的回调函数（调用成功、失败都会执行）</p></li>
+<li><p><strong>fail</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">function()</span></code></span>) – 接口调用失败的回调函数</p></li>
+<li><p><strong>complete</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">function()</span></code></span>) – 接口调用结束的回调函数（调用成功、失败都会执行）</p></li>
 </ul>
 </dd>
 <dt class="field-even">示例</dt>
 <dd class="field-even"><div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="nx">wx</span><span class="p">.</span><span class="nx">getLocation</span><span class="p">({</span>
   <span class="nx">type</span><span class="o">:</span> <span class="s1">&#39;wgs84&#39;</span><span class="p">,</span>
   <span class="nx">success</span><span class="p">(</span><span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
-    <span class="kr">const</span> <span class="nx">latitude</span> <span class="o">=</span> <span class="nx">res</span><span class="p">.</span><span class="nx">latitude</span>
-    <span class="kr">const</span> <span class="nx">longitude</span> <span class="o">=</span> <span class="nx">res</span><span class="p">.</span><span class="nx">longitude</span>
-    <span class="kr">const</span> <span class="nx">speed</span> <span class="o">=</span> <span class="nx">res</span><span class="p">.</span><span class="nx">speed</span>
-    <span class="kr">const</span> <span class="nx">accuracy</span> <span class="o">=</span> <span class="nx">res</span><span class="p">.</span><span class="nx">accuracy</span>
+    <span class="kd">const</span> <span class="nx">latitude</span> <span class="o">=</span> <span class="nx">res</span><span class="p">.</span><span class="nx">latitude</span>
+    <span class="kd">const</span> <span class="nx">longitude</span> <span class="o">=</span> <span class="nx">res</span><span class="p">.</span><span class="nx">longitude</span>
+    <span class="kd">const</span> <span class="nx">speed</span> <span class="o">=</span> <span class="nx">res</span><span class="p">.</span><span class="nx">speed</span>
+    <span class="kd">const</span> <span class="nx">accuracy</span> <span class="o">=</span> <span class="nx">res</span><span class="p">.</span><span class="nx">accuracy</span>
   <span class="p">}</span>
 <span class="p">})</span>
 </pre></div>
@@ -182,9 +184,10 @@
 <p>工具中定位模拟使用IP定位，可能会有一定误差。且工具目前仅支持 gcj02 坐标。
 使用第三方服务进行逆地址解析时，请确认第三方服务默认的坐标系，正确进行坐标转换。</p>
 </div>
-</div>
+</section>
 
 
+            <div class="clearer"></div>
           </div>
         </div>
       </div>
@@ -208,12 +211,13 @@
 <li><a href="../index.html">主页</a>&#160;|</li>
 <li><a href="../contents.html">文档</a> &#187;</li>
 
-          <li class="nav-item nav-item-1"><a href="index.html" >API</a> &#187;</li> 
+          <li class="nav-item nav-item-1"><a href="index.html" >API</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">wx.getLocation</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
         &#169; 版权所有 2019, Wxadev Docs.
-      由 <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.0+/0e60d4d 创建。
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.1.
     </div>
   </body>
 </html>

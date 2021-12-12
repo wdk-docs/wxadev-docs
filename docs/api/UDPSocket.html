@@ -1,18 +1,19 @@
 
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
+<html lang="zh_CN">
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>UDPSocket &#8212; wxadev 1.0.0 文档</title>
-    <link rel="stylesheet" href="../_static/sphinx13.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-    <script type="text/javascript" src="../_static/jquery.js"></script>
-    <script type="text/javascript" src="../_static/underscore.js"></script>
-    <script type="text/javascript" src="../_static/doctools.js"></script>
-    <script type="text/javascript" src="../_static/language_data.js"></script>
-    <script type="text/javascript" src="../_static/translations.js"></script>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx13.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/translations.js"></script>
     <link rel="search" type="application/opensearchdescription+xml"
           title="在 wxadev 1.0.0 文档 中搜索"
           href="../_static/opensearch.xml"/>
@@ -93,7 +94,8 @@
 <li><a href="../index.html">主页</a>&#160;|</li>
 <li><a href="../contents.html">文档</a> &#187;</li>
 
-          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">API</a> &#187;</li> 
+          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">API</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">UDPSocket</a></li> 
       </ul>
     </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
@@ -123,12 +125,12 @@
   <h3 id="searchlabel">快速搜索</h3>
     <div class="searchformwrapper">
     <form class="search" action="../search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
       <input type="submit" value="转向" />
     </form>
     </div>
 </div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
+<script>$('#searchbox').show(0);</script>
         </div>
       </div>
 
@@ -137,49 +139,49 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="udpsocket">
+  <section id="udpsocket">
 <h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/api/UDPSocket.html">UDPSocket</a><a class="headerlink" href="#udpsocket" title="永久链接至标题">¶</a></h1>
-<dl class="function">
-<dt id="wx.createUDPSocket">
-<code class="descclassname">wx.</code><code class="descname">createUDPSocket</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#wx.createUDPSocket" title="永久链接至目标">¶</a></dt>
+<dl class="js function">
+<dt class="sig sig-object js" id="wx.createUDPSocket">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">wx</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">createUDPSocket</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#wx.createUDPSocket" title="永久链接至目标">¶</a></dt>
 <dd><div class="versionadded">
 <p><span class="versionmodified added">2.7.0 新版功能: </span>低版本需做 <a class="reference internal" href="../framework/compatibility.html#compatibility"><span class="std std-ref">兼容处理</span></a> 。</p>
 </div>
 <p>创建一个 UDP Socket 实例。使用前请注意阅读相关说明。</p>
 <dl class="field-list simple">
-<dt class="field-odd">Return</dt>
+<dt class="field-odd">返回</dt>
 <dd class="field-odd"><p><a class="reference internal" href="#UDPSocket" title="UDPSocket"><code class="xref js js-class docutils literal notranslate"><span class="pre">UDPSocket()</span></code></a> 一个 UDP Socket 实例</p>
 </dd>
 </dl>
 </dd></dl>
 
-<dl class="class">
-<dt id="UDPSocket">
-<em class="property">class </em><code class="descname">UDPSocket</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#UDPSocket" title="永久链接至目标">¶</a></dt>
+<dl class="js class">
+<dt class="sig sig-object js" id="UDPSocket">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="n"><span class="pre">UDPSocket</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#UDPSocket" title="永久链接至目标">¶</a></dt>
 <dd><div class="versionadded">
 <p><span class="versionmodified added">2.7.0 新版功能: </span>低版本需做 <a class="reference internal" href="../framework/compatibility.html#compatibility"><span class="std std-ref">兼容处理</span></a> 。</p>
 </div>
 <p>一个 UDP Socket 实例，默认使用 IPv4 协议。</p>
 </dd></dl>
 
-<div class="section" id="id1">
+<section id="id1">
 <h2>方法<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h2>
-<dl class="function">
-<dt id="UDPSocket.bind">
-<code class="descclassname">UDPSocket.</code><code class="descname">bind</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#UDPSocket.bind" title="永久链接至目标">¶</a></dt>
+<dl class="js function">
+<dt class="sig sig-object js" id="UDPSocket.bind">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">UDPSocket</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">bind</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#UDPSocket.bind" title="永久链接至目标">¶</a></dt>
 <dd><p>绑定一个系统随机分配的可用端口
 :return: number</p>
 </dd></dl>
 
-<dl class="function">
-<dt id="UDPSocket.send">
-<code class="descclassname">UDPSocket.</code><code class="descname">send</code><span class="sig-paren">(</span><em>Object object</em><span class="sig-paren">)</span><a class="headerlink" href="#UDPSocket.send" title="永久链接至目标">¶</a></dt>
+<dl class="js function">
+<dt class="sig sig-object js" id="UDPSocket.send">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">UDPSocket</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">send</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">Object</span> <span class="pre">object</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#UDPSocket.send" title="永久链接至目标">¶</a></dt>
 <dd></dd></dl>
 
 <p>向指定的 IP 和 port 发送消息</p>
-<dl class="function">
-<dt id="UDPSocket.close">
-<code class="descclassname">UDPSocket.</code><code class="descname">close</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#UDPSocket.close" title="永久链接至目标">¶</a></dt>
+<dl class="js function">
+<dt class="sig sig-object js" id="UDPSocket.close">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">UDPSocket</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">close</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#UDPSocket.close" title="永久链接至目标">¶</a></dt>
 <dd></dd></dl>
 
 <p>关闭 UDP Socket 实例，相当于销毁。 在关闭之后，UDP Socket 实例不能再发送消息，
@@ -187,58 +189,59 @@
 并且 message 事件回调函数也不会再也执行。
 在 UDPSocket 实例被创建后将被 Native 强引用，保证其不被 GC。
 在 UDPSocket.close 后将解除对其的强引用，让 UDPSocket 实例遵从 GC。</p>
-<dl class="function">
-<dt id="UDPSocket.onClose">
-<code class="descclassname">UDPSocket.</code><code class="descname">onClose</code><span class="sig-paren">(</span><em>function callback</em><span class="sig-paren">)</span><a class="headerlink" href="#UDPSocket.onClose" title="永久链接至目标">¶</a></dt>
+<dl class="js function">
+<dt class="sig sig-object js" id="UDPSocket.onClose">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">UDPSocket</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">onClose</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">function</span> <span class="pre">callback</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#UDPSocket.onClose" title="永久链接至目标">¶</a></dt>
 <dd></dd></dl>
 
 <p>监听关闭事件</p>
-<dl class="function">
-<dt id="UDPSocket.offClose">
-<code class="descclassname">UDPSocket.</code><code class="descname">offClose</code><span class="sig-paren">(</span><em>function callback</em><span class="sig-paren">)</span><a class="headerlink" href="#UDPSocket.offClose" title="永久链接至目标">¶</a></dt>
+<dl class="js function">
+<dt class="sig sig-object js" id="UDPSocket.offClose">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">UDPSocket</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">offClose</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">function</span> <span class="pre">callback</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#UDPSocket.offClose" title="永久链接至目标">¶</a></dt>
 <dd></dd></dl>
 
 <p>取消监听关闭事件</p>
-<dl class="function">
-<dt id="UDPSocket.onError">
-<code class="descclassname">UDPSocket.</code><code class="descname">onError</code><span class="sig-paren">(</span><em>function callback</em><span class="sig-paren">)</span><a class="headerlink" href="#UDPSocket.onError" title="永久链接至目标">¶</a></dt>
+<dl class="js function">
+<dt class="sig sig-object js" id="UDPSocket.onError">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">UDPSocket</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">onError</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">function</span> <span class="pre">callback</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#UDPSocket.onError" title="永久链接至目标">¶</a></dt>
 <dd></dd></dl>
 
 <p>监听错误事件</p>
-<dl class="function">
-<dt id="UDPSocket.offError">
-<code class="descclassname">UDPSocket.</code><code class="descname">offError</code><span class="sig-paren">(</span><em>function callback</em><span class="sig-paren">)</span><a class="headerlink" href="#UDPSocket.offError" title="永久链接至目标">¶</a></dt>
+<dl class="js function">
+<dt class="sig sig-object js" id="UDPSocket.offError">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">UDPSocket</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">offError</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">function</span> <span class="pre">callback</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#UDPSocket.offError" title="永久链接至目标">¶</a></dt>
 <dd></dd></dl>
 
 <p>取消监听错误事件</p>
-<dl class="function">
-<dt id="UDPSocket.onListening">
-<code class="descclassname">UDPSocket.</code><code class="descname">onListening</code><span class="sig-paren">(</span><em>function callback</em><span class="sig-paren">)</span><a class="headerlink" href="#UDPSocket.onListening" title="永久链接至目标">¶</a></dt>
+<dl class="js function">
+<dt class="sig sig-object js" id="UDPSocket.onListening">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">UDPSocket</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">onListening</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">function</span> <span class="pre">callback</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#UDPSocket.onListening" title="永久链接至目标">¶</a></dt>
 <dd></dd></dl>
 
 <p>监听开始监听数据包消息的事件</p>
-<dl class="function">
-<dt id="UDPSocket.offListening">
-<code class="descclassname">UDPSocket.</code><code class="descname">offListening</code><span class="sig-paren">(</span><em>function callback</em><span class="sig-paren">)</span><a class="headerlink" href="#UDPSocket.offListening" title="永久链接至目标">¶</a></dt>
+<dl class="js function">
+<dt class="sig sig-object js" id="UDPSocket.offListening">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">UDPSocket</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">offListening</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">function</span> <span class="pre">callback</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#UDPSocket.offListening" title="永久链接至目标">¶</a></dt>
 <dd></dd></dl>
 
 <p>取消监听开始监听数据包消息的事件</p>
-<dl class="function">
-<dt id="UDPSocket.onMessage">
-<code class="descclassname">UDPSocket.</code><code class="descname">onMessage</code><span class="sig-paren">(</span><em>function callback</em><span class="sig-paren">)</span><a class="headerlink" href="#UDPSocket.onMessage" title="永久链接至目标">¶</a></dt>
+<dl class="js function">
+<dt class="sig sig-object js" id="UDPSocket.onMessage">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">UDPSocket</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">onMessage</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">function</span> <span class="pre">callback</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#UDPSocket.onMessage" title="永久链接至目标">¶</a></dt>
 <dd></dd></dl>
 
 <p>监听收到消息的事件</p>
-<dl class="function">
-<dt id="UDPSocket.offMessage">
-<code class="descclassname">UDPSocket.</code><code class="descname">offMessage</code><span class="sig-paren">(</span><em>function callback</em><span class="sig-paren">)</span><a class="headerlink" href="#UDPSocket.offMessage" title="永久链接至目标">¶</a></dt>
+<dl class="js function">
+<dt class="sig sig-object js" id="UDPSocket.offMessage">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">UDPSocket</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">offMessage</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">function</span> <span class="pre">callback</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#UDPSocket.offMessage" title="永久链接至目标">¶</a></dt>
 <dd></dd></dl>
 
 <p>取消监听收到消息的事件</p>
-</div>
-</div>
+</section>
+</section>
 
 
+            <div class="clearer"></div>
           </div>
         </div>
       </div>
@@ -262,12 +265,13 @@
 <li><a href="../index.html">主页</a>&#160;|</li>
 <li><a href="../contents.html">文档</a> &#187;</li>
 
-          <li class="nav-item nav-item-1"><a href="index.html" >API</a> &#187;</li> 
+          <li class="nav-item nav-item-1"><a href="index.html" >API</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">UDPSocket</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
         &#169; 版权所有 2019, Wxadev Docs.
-      由 <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.0+/0e60d4d 创建。
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.1.
     </div>
   </body>
 </html>

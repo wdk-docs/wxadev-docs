@@ -1,18 +1,19 @@
 
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
+<html lang="zh_CN">
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>AudioContext &#8212; wxadev 1.0.0 文档</title>
-    <link rel="stylesheet" href="../_static/sphinx13.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-    <script type="text/javascript" src="../_static/jquery.js"></script>
-    <script type="text/javascript" src="../_static/underscore.js"></script>
-    <script type="text/javascript" src="../_static/doctools.js"></script>
-    <script type="text/javascript" src="../_static/language_data.js"></script>
-    <script type="text/javascript" src="../_static/translations.js"></script>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx13.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/translations.js"></script>
     <link rel="search" type="application/opensearchdescription+xml"
           title="在 wxadev 1.0.0 文档 中搜索"
           href="../_static/opensearch.xml"/>
@@ -84,7 +85,8 @@
              >wxapi</a> |</li>
 <li><a href="../index.html">主页</a>&#160;|</li>
 <li><a href="../contents.html">文档</a> &#187;</li>
- 
+
+        <li class="nav-item nav-item-this"><a href="">AudioContext</a></li> 
       </ul>
     </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
@@ -108,12 +110,12 @@
   <h3 id="searchlabel">快速搜索</h3>
     <div class="searchformwrapper">
     <form class="search" action="../search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
       <input type="submit" value="转向" />
     </form>
     </div>
 </div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
+<script>$('#searchbox').show(0);</script>
         </div>
       </div>
 
@@ -122,38 +124,38 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="audiocontext">
+  <section id="audiocontext">
 <h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/api/AudioContext.html">AudioContext</a><a class="headerlink" href="#audiocontext" title="永久链接至标题">¶</a></h1>
-<dl class="class">
-<dt id="AudioContext">
-<em class="property">class </em><code class="descname">AudioContext</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#AudioContext" title="永久链接至目标">¶</a></dt>
+<dl class="js class">
+<dt class="sig sig-object js" id="AudioContext">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="n"><span class="pre">AudioContext</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#AudioContext" title="永久链接至目标">¶</a></dt>
 <dd><p>AudioContext 实例，可通过 <a class="reference internal" href="wx.createAudioContext.html#wx.createAudioContext" title="wx.createAudioContext"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.createAudioContext()</span></code></a> 获取。</p>
 <p>audioContext 通过 id 跟一个 &lt;<a class="reference internal" href="../component/audio.html#audio"><span class="std std-ref">audio 🗑</span></a>&gt; 组件绑定，操作对应的 &lt;<a class="reference internal" href="../component/audio.html#audio"><span class="std std-ref">audio 🗑</span></a>&gt; 组件。</p>
 </dd></dl>
 
-<div class="section" id="id1">
+<section id="id1">
 <h2>方法<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h2>
-<dl class="function">
-<dt id="AudioContext.setSrc">
-<code class="descclassname">AudioContext.</code><code class="descname">setSrc</code><span class="sig-paren">(</span><em>string src</em><span class="sig-paren">)</span><a class="headerlink" href="#AudioContext.setSrc" title="永久链接至目标">¶</a></dt>
+<dl class="js function">
+<dt class="sig sig-object js" id="AudioContext.setSrc">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">AudioContext</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">setSrc</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">string</span> <span class="pre">src</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#AudioContext.setSrc" title="永久链接至目标">¶</a></dt>
 <dd><p>设置音频地址</p>
 </dd></dl>
 
-<dl class="function">
-<dt id="AudioContext.play">
-<code class="descclassname">AudioContext.</code><code class="descname">play</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#AudioContext.play" title="永久链接至目标">¶</a></dt>
+<dl class="js function">
+<dt class="sig sig-object js" id="AudioContext.play">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">AudioContext</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">play</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#AudioContext.play" title="永久链接至目标">¶</a></dt>
 <dd><p>播放音频。</p>
 </dd></dl>
 
-<dl class="function">
-<dt id="AudioContext.pause">
-<code class="descclassname">AudioContext.</code><code class="descname">pause</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#AudioContext.pause" title="永久链接至目标">¶</a></dt>
+<dl class="js function">
+<dt class="sig sig-object js" id="AudioContext.pause">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">AudioContext</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">pause</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#AudioContext.pause" title="永久链接至目标">¶</a></dt>
 <dd><p>暂停音频。</p>
 </dd></dl>
 
-<dl class="function">
-<dt id="AudioContext.seek">
-<code class="descclassname">AudioContext.</code><code class="descname">seek</code><span class="sig-paren">(</span><em>number position</em><span class="sig-paren">)</span><a class="headerlink" href="#AudioContext.seek" title="永久链接至目标">¶</a></dt>
+<dl class="js function">
+<dt class="sig sig-object js" id="AudioContext.seek">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">AudioContext</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">seek</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">number</span> <span class="pre">position</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#AudioContext.seek" title="永久链接至目标">¶</a></dt>
 <dd><p>跳转到指定位置。</p>
 </dd></dl>
 
@@ -185,18 +187,19 @@
     <span class="k">this</span><span class="p">.</span><span class="nx">audioCtx</span><span class="p">.</span><span class="nx">pause</span><span class="p">()</span>
   <span class="p">},</span>
   <span class="nx">audio14</span><span class="p">()</span> <span class="p">{</span>
-    <span class="k">this</span><span class="p">.</span><span class="nx">audioCtx</span><span class="p">.</span><span class="nx">seek</span><span class="p">(</span><span class="mi">14</span><span class="p">)</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">audioCtx</span><span class="p">.</span><span class="nx">seek</span><span class="p">(</span><span class="mf">14</span><span class="p">)</span>
   <span class="p">},</span>
   <span class="nx">audioStart</span><span class="p">()</span> <span class="p">{</span>
-    <span class="k">this</span><span class="p">.</span><span class="nx">audioCtx</span><span class="p">.</span><span class="nx">seek</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">audioCtx</span><span class="p">.</span><span class="nx">seek</span><span class="p">(</span><span class="mf">0</span><span class="p">)</span>
   <span class="p">}</span>
 <span class="p">})</span>
 </pre></div>
 </div>
-</div>
-</div>
+</section>
+</section>
 
 
+            <div class="clearer"></div>
           </div>
         </div>
       </div>
@@ -213,12 +216,13 @@
              >wxapi</a> |</li>
 <li><a href="../index.html">主页</a>&#160;|</li>
 <li><a href="../contents.html">文档</a> &#187;</li>
- 
+
+        <li class="nav-item nav-item-this"><a href="">AudioContext</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
         &#169; 版权所有 2019, Wxadev Docs.
-      由 <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.0+/0e60d4d 创建。
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.1.
     </div>
   </body>
 </html>

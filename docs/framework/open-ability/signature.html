@@ -1,18 +1,19 @@
 
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
+<html lang="zh_CN">
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>开放数据校验与解密 &#8212; wxadev 1.0.0 文档</title>
-    <link rel="stylesheet" href="../../_static/sphinx13.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-    <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
-    <script type="text/javascript" src="../../_static/jquery.js"></script>
-    <script type="text/javascript" src="../../_static/underscore.js"></script>
-    <script type="text/javascript" src="../../_static/doctools.js"></script>
-    <script type="text/javascript" src="../../_static/language_data.js"></script>
-    <script type="text/javascript" src="../../_static/translations.js"></script>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx13.css" />
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/translations.js"></script>
     <link rel="search" type="application/opensearchdescription+xml"
           title="在 wxadev 1.0.0 文档 中搜索"
           href="../../_static/opensearch.xml"/>
@@ -94,7 +95,8 @@
 <li><a href="../../contents.html">文档</a> &#187;</li>
 
           <li class="nav-item nav-item-1"><a href="../index.html" >框架</a> &#187;</li>
-          <li class="nav-item nav-item-2"><a href="index.html" accesskey="U">开放能力</a> &#187;</li> 
+          <li class="nav-item nav-item-2"><a href="index.html" accesskey="U">开放能力</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">开放数据校验与解密</a></li> 
       </ul>
     </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
@@ -135,12 +137,12 @@
   <h3 id="searchlabel">快速搜索</h3>
     <div class="searchformwrapper">
     <form class="search" action="../../search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
       <input type="submit" value="转向" />
     </form>
     </div>
 </div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
+<script>$('#searchbox').show(0);</script>
         </div>
       </div>
 
@@ -149,9 +151,9 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="signature">
+  <section id="signature">
 <span id="id1"></span><h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/signature.html">开放数据校验与解密</a><a class="headerlink" href="#signature" title="永久链接至标题">¶</a></h1>
-<div class="section" id="id2">
+<section id="id2">
 <h2>服务端获取开放数据<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
 <p>小程序可以通过各种前端接口获取微信提供的开放数据。
 考虑到开发者服务端也需要获取这些开放数据，微信提供了两种获取方式：</p>
@@ -159,15 +161,15 @@
 <li><p>方式一：开发者后台校验与解密开放数据</p></li>
 <li><p>方式二：云调用直接获取开放数据（云开发）</p></li>
 </ul>
-</div>
-<div class="section" id="id3">
+</section>
+<section id="id3">
 <h2>方式一：开发者后台校验与解密开放数据<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
 <p>微信会对这些开放数据做签名和加密处理。开发者后台拿到开放数据后可以对数据进行校验签名和解密，来保证数据不被篡改。</p>
 <img alt="https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/image/signature.jpg?t=19051021" src="https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/image/signature.jpg?t=19051021" />
 <p>签名校验以及数据加解密涉及用户的会话密钥 session_key。
 开发者应该事先通过 wx.login 登录流程获取会话密钥 session_key 并保存在服务器。
 为了数据不被篡改，开发者不应该把 session_key 传到小程序客户端等服务器外的环境。</p>
-<div class="section" id="id4">
+<section id="id4">
 <h3>数据签名校验<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h3>
 <p>为了确保开放接口返回用户数据的安全性，微信会对明文数据进行签名。
 开发者可以根据业务需要对数据包进行签名校验，确保数据的完整性。</p>
@@ -198,8 +200,8 @@
 </div>
 <p>使用sha1得到的结果为</p>
 <p>75e81ceda165f4ffa64f4068af58c64b8f54b88c</p>
-</div>
-<div class="section" id="id5">
+</section>
+<section id="id5">
 <h3>加密数据解密算法<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h3>
 <p>接口如果涉及敏感数据（如 <a class="reference internal" href="../../api/wx.getUserInfo.html#wx.getUserInfo" title="wx.getUserInfo"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.getUserInfo()</span></code></a> 当中的 <cite>openId</cite> 和 <cite>unionId</cite> ），接口的明文内容将不包含这些敏感数据。
 开发者如需要获取敏感数据，需要对接口返回的加密数据(encryptedData) 进行对称解密。 解密算法如下：</p>
@@ -256,8 +258,8 @@
 <p class="admonition-title">注意</p>
 <p>解密后得到的json数据根据需求可能会增加新的字段，旧字段不会改变和删减，开发者需要预留足够的空间</p>
 </div>
-</div>
-<div class="section" id="session-key">
+</section>
+<section id="session-key">
 <h3>会话密钥 session_key 有效性<a class="headerlink" href="#session-key" title="永久链接至标题">¶</a></h3>
 <p>开发者如果遇到因为 session_key 不正确而校验签名失败或解密失败，请关注下面几个与 session_key 有关的注意事项。</p>
 <ol class="arabic simple">
@@ -270,20 +272,20 @@
 使用接口 <a class="reference internal" href="../../api/wx.checkSession.html#wx.checkSession" title="wx.checkSession"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.checkSession()</span></code></a> 可以校验 session_key 是否有效，从而避免小程序反复执行登录流程。</p></li>
 <li><p>当开发者在实现自定义登录态时，可以考虑以 session_key 有效期作为自身登录态有效期，也可以实现自定义的时效性策略。</p></li>
 </ol>
-</div>
-</div>
-<div class="section" id="id6">
+</section>
+</section>
+<section id="id6">
 <h2>方式二：云调用直接获取开放数据<a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h2>
 <p>接口如果涉及敏感数据（如 <a class="reference internal" href="../../api/wx.getWeRunData.html#wx.getWeRunData" title="wx.getWeRunData"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.getWeRunData()</span></code></a> ），接口的明文内容将不包含这些敏感数据，
 而是在返回的接口中包含对应敏感数据的 cloudID 字段，数据可以通过云函数获取。完整流程如下：</p>
-<div class="section" id="cloudid">
+<section id="cloudid">
 <h3>1. 获取 cloudID<a class="headerlink" href="#cloudid" title="永久链接至标题">¶</a></h3>
 <div class="versionadded">
 <p><span class="versionmodified added">2.7.0 新版功能: </span>如果小程序已开通云开发，
 在开放数据接口的返回值中可以通过 <code class="docutils literal notranslate"><span class="pre">cloudID</span></code> 字段获取（与 <code class="docutils literal notranslate"><span class="pre">encryptedData</span></code> 同级）， <code class="docutils literal notranslate"><span class="pre">cloudID</span></code> 有效期五分钟。</p>
 </div>
-</div>
-<div class="section" id="id7">
+</section>
+<section id="id7">
 <h3>2. 调用云函数<a class="headerlink" href="#id7" title="永久链接至标题">¶</a></h3>
 <p>调用云函数时，对传入的 <code class="docutils literal notranslate"><span class="pre">data</span></code> 参数，如果有顶层字段的值为通过 <code class="xref js js-func docutils literal notranslate"><span class="pre">wx.cloud.CloudID()</span></code> 构造的 <code class="docutils literal notranslate"><span class="pre">CloudID</span></code> ，
 则调用云函数时，这些字段的值会被替换为 <code class="docutils literal notranslate"><span class="pre">cloudID</span></code> 对应的开放数据，一次调用最多可替换 5 个 <code class="docutils literal notranslate"><span class="pre">CloudID</span></code> 。</p>
@@ -309,13 +311,13 @@
     <span class="s2">&quot;data&quot;</span><span class="o">:</span> <span class="p">{</span>
       <span class="s2">&quot;stepInfoList&quot;</span><span class="o">:</span> <span class="p">[</span>
         <span class="p">{</span>
-          <span class="s2">&quot;step&quot;</span><span class="o">:</span> <span class="mi">5000</span><span class="p">,</span>
-          <span class="s2">&quot;timestamp&quot;</span><span class="o">:</span> <span class="mi">1554814312</span><span class="p">,</span>
+          <span class="s2">&quot;step&quot;</span><span class="o">:</span> <span class="mf">5000</span><span class="p">,</span>
+          <span class="s2">&quot;timestamp&quot;</span><span class="o">:</span> <span class="mf">1554814312</span><span class="p">,</span>
         <span class="p">}</span>
       <span class="p">],</span>
       <span class="s2">&quot;watermark&quot;</span><span class="o">:</span> <span class="p">{</span>
         <span class="s2">&quot;appid&quot;</span><span class="o">:</span> <span class="s2">&quot;wx1111111111&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;timestampe&quot;</span><span class="o">:</span> <span class="mi">1554815786</span>
+        <span class="s2">&quot;timestampe&quot;</span><span class="o">:</span> <span class="mf">1554815786</span>
       <span class="p">}</span>
     <span class="p">}</span>
   <span class="p">},</span>
@@ -332,18 +334,19 @@
 <span class="p">{</span>
   <span class="s2">&quot;weRunData&quot;</span><span class="o">:</span> <span class="p">{</span>
     <span class="s2">&quot;cloudID&quot;</span><span class="o">:</span> <span class="s2">&quot;xxx&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;errCode&quot;</span><span class="o">:</span> <span class="o">-</span><span class="mi">601006</span><span class="p">,</span>
+    <span class="s2">&quot;errCode&quot;</span><span class="o">:</span> <span class="o">-</span><span class="mf">601006</span><span class="p">,</span>
     <span class="s2">&quot;errMsg&quot;</span><span class="o">:</span> <span class="s2">&quot;cloudID expired.&quot;</span>
   <span class="p">},</span>
   <span class="c1">// ...</span>
 <span class="p">}</span>
 </pre></div>
 </div>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
 
+            <div class="clearer"></div>
           </div>
         </div>
       </div>
@@ -368,12 +371,13 @@
 <li><a href="../../contents.html">文档</a> &#187;</li>
 
           <li class="nav-item nav-item-1"><a href="../index.html" >框架</a> &#187;</li>
-          <li class="nav-item nav-item-2"><a href="index.html" >开放能力</a> &#187;</li> 
+          <li class="nav-item nav-item-2"><a href="index.html" >开放能力</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">开放数据校验与解密</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
         &#169; 版权所有 2019, Wxadev Docs.
-      由 <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.0+/0e60d4d 创建。
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.1.
     </div>
   </body>
 </html>

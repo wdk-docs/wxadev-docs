@@ -1,25 +1,26 @@
 
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
+<html lang="zh_CN">
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>框架接口说明 &#8212; wxadev 1.0.0 文档</title>
-    <link rel="stylesheet" href="../../_static/sphinx13.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-    <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
-    <script type="text/javascript" src="../../_static/jquery.js"></script>
-    <script type="text/javascript" src="../../_static/underscore.js"></script>
-    <script type="text/javascript" src="../../_static/doctools.js"></script>
-    <script type="text/javascript" src="../../_static/language_data.js"></script>
-    <script type="text/javascript" src="../../_static/translations.js"></script>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx13.css" />
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/translations.js"></script>
     <link rel="search" type="application/opensearchdescription+xml"
           title="在 wxadev 1.0.0 文档 中搜索"
           href="../../_static/opensearch.xml"/>
 
     <link rel="index" title="索引" href="../../genindex.html" />
     <link rel="search" title="搜索" href="../../search.html" />
-    <link rel="next" title="注册小程序(App)" href="App.html" />
+    <link rel="next" title="注册小程序(App)" href="app.html" />
     <link rel="prev" title="场景值列表" href="../scene.html" />
 <link rel="canonical" href="http://www.sphinx-doc.org/en/master/reference/api/index.html" />
 
@@ -85,7 +86,7 @@
           <a href="../../http-routingtable.html" title="微信小程序API"
              >wxapi</a> |</li>
         <li class="right" >
-          <a href="App.html" title="注册小程序(App)"
+          <a href="app.html" title="注册小程序(App)"
              accesskey="N">下一页</a> |</li>
         <li class="right" >
           <a href="../scene.html" title="场景值列表"
@@ -93,7 +94,8 @@
 <li><a href="../../index.html">主页</a>&#160;|</li>
 <li><a href="../../contents.html">文档</a> &#187;</li>
 
-          <li class="nav-item nav-item-1"><a href="../index.html" accesskey="U">参考资料</a> &#187;</li> 
+          <li class="nav-item nav-item-1"><a href="../index.html" accesskey="U">参考资料</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">框架接口说明</a></li> 
       </ul>
     </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
@@ -113,7 +115,7 @@
   <p class="topless"><a href="../scene.html"
                         title="上一章">场景值列表</a></p>
   <h4>下一个主题</h4>
-  <p class="topless"><a href="App.html"
+  <p class="topless"><a href="app.html"
                         title="下一章">注册小程序(App)</a></p>
   <div role="note" aria-label="source link">
     <h3>本页</h3>
@@ -126,12 +128,12 @@
   <h3 id="searchlabel">快速搜索</h3>
     <div class="searchformwrapper">
     <form class="search" action="../../search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
       <input type="submit" value="转向" />
     </form>
     </div>
 </div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
+<script>$('#searchbox').show(0);</script>
         </div>
       </div>
 
@@ -140,27 +142,27 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="id1">
+  <section id="id1">
 <h1>框架接口说明<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
-<div class="section" id="app">
+<section id="app">
 <h2>小程序 App<a class="headerlink" href="#app" title="永久链接至标题">¶</a></h2>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="App.html">注册小程序(App)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="app.html">注册小程序(App)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="getApp.html">获取到小程序全局唯一的 App 实例(getApp)</a></li>
 </ul>
 </div>
-</div>
-<div class="section" id="id2">
+</section>
+<section id="id2">
 <h2>页面<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="Page.html">页面(page)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="page.html">页面(page)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="getCurrentPages.html">获取当前页面栈(getCurrentPages)</a></li>
 </ul>
 </div>
-</div>
-<div class="section" id="id3">
+</section>
+<section id="id3">
 <h2>自定义组件<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
 <div class="toctree-wrapper compound">
 <ul>
@@ -168,8 +170,8 @@
 <li class="toctree-l1"><a class="reference internal" href="Behavior.html">Behavior</a></li>
 </ul>
 </div>
-</div>
-<div class="section" id="id4">
+</section>
+<section id="id4">
 <h2>其它<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h2>
 <div class="toctree-wrapper compound">
 <ul>
@@ -179,10 +181,11 @@
 <li class="toctree-l1"><a class="reference internal" href="timer.html">定时器</a></li>
 </ul>
 </div>
-</div>
-</div>
+</section>
+</section>
 
 
+            <div class="clearer"></div>
           </div>
         </div>
       </div>
@@ -198,7 +201,7 @@
           <a href="../../http-routingtable.html" title="微信小程序API"
              >wxapi</a> |</li>
         <li class="right" >
-          <a href="App.html" title="注册小程序(App)"
+          <a href="app.html" title="注册小程序(App)"
              >下一页</a> |</li>
         <li class="right" >
           <a href="../scene.html" title="场景值列表"
@@ -206,12 +209,13 @@
 <li><a href="../../index.html">主页</a>&#160;|</li>
 <li><a href="../../contents.html">文档</a> &#187;</li>
 
-          <li class="nav-item nav-item-1"><a href="../index.html" >参考资料</a> &#187;</li> 
+          <li class="nav-item nav-item-1"><a href="../index.html" >参考资料</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">框架接口说明</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
         &#169; 版权所有 2019, Wxadev Docs.
-      由 <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.0+/0e60d4d 创建。
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.1.
     </div>
   </body>
 </html>

@@ -1,18 +1,19 @@
 
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
+<html lang="zh_CN">
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>微信小程序API支持情况 &#8212; wxadev 1.0.0 文档</title>
-    <link rel="stylesheet" href="../../_static/sphinx13.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-    <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
-    <script type="text/javascript" src="../../_static/jquery.js"></script>
-    <script type="text/javascript" src="../../_static/underscore.js"></script>
-    <script type="text/javascript" src="../../_static/doctools.js"></script>
-    <script type="text/javascript" src="../../_static/language_data.js"></script>
-    <script type="text/javascript" src="../../_static/translations.js"></script>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx13.css" />
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/translations.js"></script>
     <link rel="search" type="application/opensearchdescription+xml"
           title="在 wxadev 1.0.0 文档 中搜索"
           href="../../_static/opensearch.xml"/>
@@ -94,7 +95,8 @@
 <li><a href="../../contents.html">文档</a> &#187;</li>
 
           <li class="nav-item nav-item-1"><a href="../index.html" >企业微信</a> &#187;</li>
-          <li class="nav-item nav-item-2"><a href="index.html" accesskey="U">文档概述</a> &#187;</li> 
+          <li class="nav-item nav-item-2"><a href="index.html" accesskey="U">文档概述</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">微信小程序API支持情况</a></li> 
       </ul>
     </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
@@ -295,12 +297,12 @@
   <h3 id="searchlabel">快速搜索</h3>
     <div class="searchformwrapper">
     <form class="search" action="../../search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
       <input type="submit" value="转向" />
     </form>
     </div>
 </div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
+<script>$('#searchbox').show(0);</script>
         </div>
       </div>
 
@@ -309,9 +311,9 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="api">
+  <section id="api">
 <h1>微信小程序API支持情况<a class="headerlink" href="#api" title="永久链接至标题">¶</a></h1>
-<div class="section" id="id1">
+<section id="id1">
 <h2>基础<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h2>
 <table class="docutils align-default">
 <colgroup>
@@ -332,10 +334,10 @@
 </tr>
 </tbody>
 </table>
-</div>
-<div class="section" id="id2">
+</section>
+<section id="id2">
 <h2>系统<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
-<div class="section" id="id3">
+<section id="id3">
 <h3>系统信息<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h3>
 <table class="docutils align-default">
 <colgroup>
@@ -360,9 +362,9 @@
 </tr>
 </tbody>
 </table>
-</div>
-</div>
-<div class="section" id="id4">
+</section>
+</section>
+<section id="id4">
 <h2>更新<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h2>
 <table class="docutils align-default">
 <colgroup>
@@ -383,7 +385,7 @@
 </tr>
 </tbody>
 </table>
-<div class="section" id="updatemanager">
+<section id="updatemanager">
 <h3>UpdateManager<a class="headerlink" href="#updatemanager" title="永久链接至标题">¶</a></h3>
 <table class="docutils align-default">
 <colgroup>
@@ -416,16 +418,16 @@
 </tr>
 </tbody>
 </table>
-</div>
-</div>
-<div class="section" id="id5">
+</section>
+</section>
+<section id="id5">
 <h2>小程序<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h2>
-<div class="section" id="id6">
+<section id="id6">
 <h3>生命周期<a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h3>
 <p>API     说明      企业微信支持情况
 wx.getLaunchOptionsSync 获取小程序启动时的参数     支持</p>
-</div>
-<div class="section" id="id7">
+</section>
+<section id="id7">
 <h3>应用级事件<a class="headerlink" href="#id7" title="永久链接至标题">¶</a></h3>
 <p>API     说明      企业微信支持情况
 wx.onPageNotFound       监听小程序要打开的页面不存在事件        支持
@@ -436,22 +438,22 @@ wx.offPageNotFound      取消监听小程序要打开的页面不存在事件  
 wx.offError     取消监听小程序错误事件     支持
 wx.offAppShow   取消监听小程序切前台事件    支持
 wx.offAppHide   取消监听小程序切后台事件    支持</p>
-</div>
-</div>
-<div class="section" id="id8">
+</section>
+</section>
+<section id="id8">
 <h2>定时器<a class="headerlink" href="#id8" title="永久链接至标题">¶</a></h2>
 <p>API     说明      企业微信支持情况
 clearInterval   取消由 setInterval 设置的定时器  支持
 clearTimeout    取消由 setTimeout 设置的定时器   支持
 setInterval     设定一个定时器 支持
 setTimeout      设定一个定时器 支持</p>
-</div>
-<div class="section" id="id9">
+</section>
+<section id="id9">
 <h2>调试<a class="headerlink" href="#id9" title="永久链接至标题">¶</a></h2>
 <p>API     说明      企业微信支持情况
 wx.setEnableDebug       设置是否打开调试开关      支持
 wx.getLogManager        获取日志管理器对象       支持</p>
-<div class="section" id="console">
+<section id="console">
 <h3>console<a class="headerlink" href="#console" title="永久链接至标题">¶</a></h3>
 <p>API     说明      企业微信支持情况
 console.debug   向调试面板中打印 debug 日志       支持
@@ -461,17 +463,17 @@ console.groupEnd        结束由 console.group 创建的分组 支持
 console.info    向调试面板中打印 info 日志        支持
 console.log     向调试面板中打印 log 日志 支持
 console.warn    向调试面板中打印 warn 日志        支持</p>
-</div>
-</div>
-<div class="section" id="logmanager">
+</section>
+</section>
+<section id="logmanager">
 <h2>LogManager<a class="headerlink" href="#logmanager" title="永久链接至标题">¶</a></h2>
 <p>API     说明      企业微信支持情况
 LogManager.debug        写 debug 日志      支持
 LogManager.info 写 info 日志       支持
 LogManager.log  写 log 日志        支持
 LogManager.warn 写 warn 日志       支持</p>
-</div>
-<div class="section" id="id10">
+</section>
+<section id="id10">
 <h2>路由<a class="headerlink" href="#id10" title="永久链接至标题">¶</a></h2>
 <p>API     说明      企业微信支持情况
 wx.switchTab    跳转到 tabBar 页面，并关闭其他所有非 tabBar 页面        支持
@@ -479,10 +481,10 @@ wx.reLaunch     关闭所有页面，打开到应用内的某个页面      支�
 wx.redirectTo   关闭当前页面，跳转到应用内的某个页面      支持
 wx.navigateTo   保留当前页面，跳转到应用内的某个页面      支持
 wx.navigateBack 关闭当前页面，返回上一页面或多级页面      支持</p>
-</div>
-<div class="section" id="id11">
+</section>
+<section id="id11">
 <h2>界面<a class="headerlink" href="#id11" title="永久链接至标题">¶</a></h2>
-<div class="section" id="id12">
+<section id="id12">
 <h3>交互<a class="headerlink" href="#id12" title="永久链接至标题">¶</a></h3>
 <p>API     说明      企业微信支持情况
 wx.showToast    显示消息提示框 支持
@@ -491,23 +493,23 @@ wx.showLoading  显示 loading 提示框  支持
 wx.showActionSheet      显示操作菜单  支持
 wx.hideToast    隐藏消息提示框 支持
 wx.hideLoading  隐藏 loading 提示框  支持</p>
-</div>
-</div>
-<div class="section" id="id13">
+</section>
+</section>
+<section id="id13">
 <h2>导航栏<a class="headerlink" href="#id13" title="永久链接至标题">¶</a></h2>
 <p>API     说明      企业微信支持情况
 wx.showNavigationBarLoading     在当前页面显示导航条加载动画  支持
 wx.setNavigationBarTitle        动态设置当前页面的标题     支持
 wx.setNavigationBarColor        设置页面导航条颜色       支持
 wx.hideNavigationBarLoading     在当前页面隐藏导航条加载动画  支持</p>
-</div>
-<div class="section" id="id14">
+</section>
+<section id="id14">
 <h2>背景<a class="headerlink" href="#id14" title="永久链接至标题">¶</a></h2>
 <p>API     说明      企业微信支持情况
 wx.setBackgroundTextStyle       动态设置下拉背景字体、loading 图的样式 支持
 wx.setBackgroundColor   动态设置窗口的背景色      支持</p>
-</div>
-<div class="section" id="tab-bar">
+</section>
+<section id="tab-bar">
 <h2>Tab Bar<a class="headerlink" href="#tab-bar" title="永久链接至标题">¶</a></h2>
 <p>API     说明      企业微信支持情况
 wx.showTabBarRedDot     显示 tabBar 某一项的右上角的红点    支持
@@ -518,13 +520,13 @@ wx.setTabBarBadge       为 tabBar 某一项的右上角添加文本    支持
 wx.removeTabBarBadge    移除 tabBar 某一项右上角的文本     支持
 wx.hideTabBarRedDot     隐藏 tabBar 某一项的右上角的红点    支持
 wx.hideTabBar   隐藏 tabBar       支持</p>
-</div>
-<div class="section" id="id15">
+</section>
+<section id="id15">
 <h2>字体<a class="headerlink" href="#id15" title="永久链接至标题">¶</a></h2>
 <p>API     说明      企业微信支持情况
 wx.loadFontFace 动态加载网络字体        支持</p>
-</div>
-<div class="section" id="id16">
+</section>
+<section id="id16">
 <h2>下拉刷新<a class="headerlink" href="#id16" title="永久链接至标题">¶</a></h2>
 <table class="docutils align-default">
 <colgroup>
@@ -549,17 +551,17 @@ wx.loadFontFace 动态加载网络字体        支持</p>
 </tr>
 </tbody>
 </table>
-</div>
-<div class="section" id="id17">
+</section>
+<section id="id17">
 <h2>滚动<a class="headerlink" href="#id17" title="永久链接至标题">¶</a></h2>
 <p>API     说明      企业微信支持情况
 wx.pageScrollTo 将页面滚动到目标位置      支持</p>
-</div>
-<div class="section" id="id18">
+</section>
+<section id="id18">
 <h2>动画<a class="headerlink" href="#id18" title="永久链接至标题">¶</a></h2>
 <p>API     说明      企业微信支持情况
 wx.createAnimation      创建一个动画实例 animation      支持</p>
-<div class="section" id="animation">
+<section id="animation">
 <h3>Animation<a class="headerlink" href="#animation" title="永久链接至标题">¶</a></h3>
 <p>API     说明      企业微信支持情况
 Animation.backgroundColor       设置背景色   支持
@@ -592,53 +594,53 @@ Animation.translateX    对 X 轴平移 支持
 Animation.translateY    对 Y 轴平移 支持
 Animation.translateZ    对 Z 轴平移 支持
 Animation.width 设置宽度    支持</p>
-</div>
-</div>
-<div class="section" id="id19">
+</section>
+</section>
+<section id="id19">
 <h2>置顶<a class="headerlink" href="#id19" title="永久链接至标题">¶</a></h2>
 <p>API     说明      企业微信支持情况
 wx.setTopBarText        动态设置置顶栏文字内容     不支持</p>
-</div>
-<div class="section" id="id20">
+</section>
+<section id="id20">
 <h2>自定义组件<a class="headerlink" href="#id20" title="永久链接至标题">¶</a></h2>
 <p>API     说明      企业微信支持情况
 wx.nextTick     延迟一部分操作到下一个时间片再执行       不支持</p>
-</div>
-<div class="section" id="id21">
+</section>
+<section id="id21">
 <h2>菜单<a class="headerlink" href="#id21" title="永久链接至标题">¶</a></h2>
 <p>API     说明      企业微信支持情况
 wx.getMenuButtonBoundingClientRect      获取菜单按钮（右上角胶囊按钮）的布局位置信息  支持</p>
-</div>
-<div class="section" id="id22">
+</section>
+<section id="id22">
 <h2>窗口<a class="headerlink" href="#id22" title="永久链接至标题">¶</a></h2>
 <p>API     说明      企业微信支持情况
 wx.onWindowResize       监听窗口尺寸变化事件      不支持
 wx.offWindowResize      取消监听窗口尺寸变化事件    不支持</p>
-</div>
-<div class="section" id="id23">
+</section>
+<section id="id23">
 <h2>键盘<a class="headerlink" href="#id23" title="永久链接至标题">¶</a></h2>
 <p>API     说明      企业微信支持情况
 wx.onKeyboardHeightChange       监听键盘高度变化        不支持</p>
-</div>
-<div class="section" id="id24">
+</section>
+<section id="id24">
 <h2>网络<a class="headerlink" href="#id24" title="永久链接至标题">¶</a></h2>
-<div class="section" id="id25">
+<section id="id25">
 <h3>发起请求<a class="headerlink" href="#id25" title="永久链接至标题">¶</a></h3>
 <p>API     说明      企业微信支持情况
 wx.request      发起 HTTPS 网络请求   支持</p>
-<div class="section" id="requesttask">
+<section id="requesttask">
 <h4>RequestTask<a class="headerlink" href="#requesttask" title="永久链接至标题">¶</a></h4>
 <p>API     说明      企业微信支持情况
 RequestTask.abort       中断请求任务  支持
 RequestTask.offHeadersReceived  取消监听 HTTP Response Header 事件    支持
 RequestTask.onHeadersReceived   监听 HTTP Response Header 事件      支持</p>
-</div>
-</div>
-<div class="section" id="id26">
+</section>
+</section>
+<section id="id26">
 <h3>下载<a class="headerlink" href="#id26" title="永久链接至标题">¶</a></h3>
 <p>API     说明      企业微信支持情况
 wx.downloadFile 下载文件资源到本地       支持</p>
-<div class="section" id="downloadtask">
+<section id="downloadtask">
 <h4>DownloadTask<a class="headerlink" href="#downloadtask" title="永久链接至标题">¶</a></h4>
 <p>API     说明      企业微信支持情况
 DownloadTask.abort      中断下载任务  支持
@@ -646,13 +648,13 @@ DownloadTask.offHeadersReceived 取消监听 HTTP Response Header 事件    支�
 DownloadTask.offProgressUpdate  取消监听下载进度变化事件    支持
 DownloadTask.onHeadersReceived  监听 HTTP Response Header 事件      支持
 DownloadTask.onProgressUpdate   监听下载进度变化事件      支持</p>
-</div>
-</div>
-<div class="section" id="id27">
+</section>
+</section>
+<section id="id27">
 <h3>上传<a class="headerlink" href="#id27" title="永久链接至标题">¶</a></h3>
 <p>API     说明      企业微信支持情况
 wx.uploadFile   将本地资源上传到服务器     支持</p>
-<div class="section" id="uploadtask">
+<section id="uploadtask">
 <h4>UploadTask<a class="headerlink" href="#uploadtask" title="永久链接至标题">¶</a></h4>
 <p>API     说明      企业微信支持情况
 UploadTask.abort        中断上传任务  支持
@@ -660,9 +662,9 @@ UploadTask.offHeadersReceived   取消监听 HTTP Response Header 事件    支�
 UploadTask.offProgressUpdate    取消监听上传进度变化事件    支持
 UploadTask.onHeadersReceived    监听 HTTP Response Header 事件      支持
 UploadTask.onProgressUpdate     监听上传进度变化事件      支持</p>
-</div>
-</div>
-<div class="section" id="websocket">
+</section>
+</section>
+<section id="websocket">
 <h3>WebSocket<a class="headerlink" href="#websocket" title="永久链接至标题">¶</a></h3>
 <p>API     说明      企业微信支持情况
 wx.sendSocketMessage    通过 WebSocket 连接发送数据     支持
@@ -672,7 +674,7 @@ wx.onSocketError        监听 WebSocket 错误事件       支持
 wx.onSocketClose        监听 WebSocket 连接关闭事件     支持
 wx.connectSocket        创建一个 WebSocket 连接       支持
 wx.closeSocket  关闭 WebSocket 连接 支持</p>
-<div class="section" id="sockettask">
+<section id="sockettask">
 <h4>SocketTask<a class="headerlink" href="#sockettask" title="永久链接至标题">¶</a></h4>
 <p>API     说明      企业微信支持情况
 SocketTask.close        关闭 WebSocket 连接 支持
@@ -681,9 +683,9 @@ SocketTask.onError      监听 WebSocket 错误事件       支持
 SocketTask.onMessage    监听 WebSocket 接受到服务器的消息事件        支持
 SocketTask.onOpen       监听 WebSocket 连接打开事件     支持
 SocketTask.send 通过 WebSocket 连接发送数据     支持</p>
-</div>
-</div>
-<div class="section" id="mdns">
+</section>
+</section>
+<section id="mdns">
 <h3>mDNS<a class="headerlink" href="#mdns" title="永久链接至标题">¶</a></h3>
 <p>API     说明      企业微信支持情况
 wx.stopLocalServiceDiscovery    停止搜索 mDNS 服务    不支持
@@ -696,9 +698,9 @@ wx.offLocalServiceResolveFail   取消监听 mDNS 服务解析失败的事件   
 wx.offLocalServiceLost  取消监听 mDNS 服务离开的事件       不支持
 wx.offLocalServiceFound 取消监听 mDNS 服务发现的事件       不支持
 wx.offLocalServiceDiscoveryStop 取消监听 mDNS 服务停止搜索的事件     不支持</p>
-</div>
-</div>
-<div class="section" id="id28">
+</section>
+</section>
+<section id="id28">
 <h2>数据缓存<a class="headerlink" href="#id28" title="永久链接至标题">¶</a></h2>
 <p>API     说明      企业微信支持情况
 wx.setStorageSync       wx.setStorage 的同步版本     支持
@@ -711,14 +713,14 @@ wx.getStorageInfo       异步获取当前storage的相关信息      支持
 wx.getStorage   从本地缓存中异步获取指定 key 的内容    支持
 wx.clearStorageSync     wx.clearStorage 的同步版本   支持
 wx.clearStorage 清理本地数据缓存        支持</p>
-</div>
-<div class="section" id="id29">
+</section>
+<section id="id29">
 <h2>媒体<a class="headerlink" href="#id29" title="永久链接至标题">¶</a></h2>
-<div class="section" id="id30">
+<section id="id30">
 <h3>地图<a class="headerlink" href="#id30" title="永久链接至标题">¶</a></h3>
 <p>API     说明      企业微信支持情况
 wx.createMapContext     创建 map 上下文 MapContext 对象        支持</p>
-<div class="section" id="mapcontext">
+<section id="mapcontext">
 <h4>MapContext<a class="headerlink" href="#mapcontext" title="永久链接至标题">¶</a></h4>
 <p>API     说明      企业微信支持情况
 MapContext.getCenterLocation    获取当前地图中心的经纬度    支持
@@ -727,9 +729,9 @@ MapContext.getScale     获取当前地图的缩放级别     支持
 MapContext.includePoints        缩放视野展示所有经纬度     支持
 MapContext.moveToLocation       将地图中心移动到当前定位点   支持
 MapContext.translateMarker      平移marker，带动画    iOS不支持动画</p>
-</div>
-</div>
-<div class="section" id="id31">
+</section>
+</section>
+<section id="id31">
 <h3>图片<a class="headerlink" href="#id31" title="永久链接至标题">¶</a></h3>
 <p>API     说明      企业微信支持情况
 wx.saveImageToPhotosAlbum       保存图片到系统相册       支持
@@ -738,14 +740,14 @@ wx.getImageInfo 获取图片信息  支持
 wx.compressImage        压缩图片接口，可选压缩质量   支持
 wx.chooseMessageFile    从客户端会话选择文件      不支持
 wx.chooseImage  从本地相册选择图片或使用相机拍照        支持</p>
-</div>
-<div class="section" id="id32">
+</section>
+<section id="id32">
 <h3>视频<a class="headerlink" href="#id32" title="永久链接至标题">¶</a></h3>
 <p>API     说明      企业微信支持情况
 wx.saveVideoToPhotosAlbum       保存视频到系统相册       支持
 wx.createVideoContext   创建 video 上下文 VideoContext 对象    支持
 wx.chooseVideo  拍摄视频或从手机相册中选视频  支持</p>
-<div class="section" id="videocontext">
+<section id="videocontext">
 <h4>VideoContext<a class="headerlink" href="#videocontext" title="永久链接至标题">¶</a></h4>
 <p>API     说明      企业微信支持情况
 VideoContext.exitFullScreen     退出全屏    支持
@@ -758,9 +760,9 @@ VideoContext.seek       跳转到指定位置 支持
 VideoContext.sendDanmu  发送弹幕    支持
 VideoContext.showStatusBar      显示状态栏，仅在iOS全屏下有效        支持
 VideoContext.stop       停止视频    支持</p>
-</div>
-</div>
-<div class="section" id="id33">
+</section>
+</section>
+<section id="id33">
 <h3>音频<a class="headerlink" href="#id33" title="永久链接至标题">¶</a></h3>
 <p>API     说明      企业微信支持情况
 wx.stopVoice    结束播放语音  支持
@@ -770,17 +772,17 @@ wx.pauseVoice   暂停正在播放的语音       支持
 wx.getAvailableAudioSources     获取当前支持的音频输入源    支持
 wx.createInnerAudioContext      创建内部 audio 上下文 InnerAudioContext 对象     支持
 wx.createAudioContext   创建 audio 上下文 AudioContext 对象    支持</p>
-<div class="section" id="audiocontext">
+<section id="audiocontext">
 <h4>AudioContext<a class="headerlink" href="#audiocontext" title="永久链接至标题">¶</a></h4>
 <p>API     说明      企业微信支持情况
 AudioContext.pause      暂停音频    支持
 AudioContext.play       播放音频    支持
 AudioContext.seek       跳转到指定位置 支持
 AudioContext.setSrc     设置音频地址  支持</p>
-</div>
-</div>
-</div>
-<div class="section" id="inneraudiocontext">
+</section>
+</section>
+</section>
+<section id="inneraudiocontext">
 <h2>InnerAudioContext<a class="headerlink" href="#inneraudiocontext" title="永久链接至标题">¶</a></h2>
 <p>API     说明      企业微信支持情况
 InnerAudioContext.destroy       销毁当前实例  支持
@@ -808,8 +810,8 @@ InnerAudioContext.pause 暂停      支持
 InnerAudioContext.play  播放      支持
 InnerAudioContext.seek  跳转到指定位置 支持
 InnerAudioContext.stop  停止      支持</p>
-</div>
-<div class="section" id="id34">
+</section>
+<section id="id34">
 <h2>背景音频<a class="headerlink" href="#id34" title="永久链接至标题">¶</a></h2>
 <p>API     说明      企业微信支持情况
 wx.stopBackgroundAudio  停止播放音乐  不支持
@@ -838,12 +840,12 @@ BackgroundAudioManager.pause    暂停音乐    不支持
 BackgroundAudioManager.play     播放音乐    不支持
 BackgroundAudioManager.seek     跳转到指定位置 不支持
 BackgroundAudioManager.stop     停止音乐    不支持</p>
-<div class="section" id="id35">
+<section id="id35">
 <h3>实时音视频<a class="headerlink" href="#id35" title="永久链接至标题">¶</a></h3>
 <p>API     说明      企业微信支持情况
 wx.createLivePusherContext      创建 live-pusher 上下文 LivePusherContext 对象 支持
 wx.createLivePlayerContext      创建 live-player 上下文 LivePlayerContext 对象 支持</p>
-<div class="section" id="liveplayercontext">
+<section id="liveplayercontext">
 <h4>LivePlayerContext<a class="headerlink" href="#liveplayercontext" title="永久链接至标题">¶</a></h4>
 <p>API     说明      企业微信支持情况
 LivePlayerContext.exitFullScreen        退出全屏    支持
@@ -853,8 +855,8 @@ LivePlayerContext.play  播放      支持
 LivePlayerContext.requestFullScreen     进入全屏    支持
 LivePlayerContext.resume        恢复      支持
 LivePlayerContext.stop  停止      支持</p>
-</div>
-<div class="section" id="livepushercontext">
+</section>
+<section id="livepushercontext">
 <h4>LivePusherContext<a class="headerlink" href="#livepushercontext" title="永久链接至标题">¶</a></h4>
 <p>API     说明      企业微信支持情况
 LivePusherContext.pause 暂停推流    支持
@@ -869,15 +871,15 @@ LivePusherContext.stop  停止推流    支持
 LivePusherContext.stopBGM       停止背景音   支持
 LivePusherContext.switchCamera  切换前后摄像头 支持
 LivePusherContext.toggleTorch   切换      支持</p>
-</div>
-</div>
-<div class="section" id="id36">
+</section>
+</section>
+<section id="id36">
 <h3>录音<a class="headerlink" href="#id36" title="永久链接至标题">¶</a></h3>
 <p>API     说明      企业微信支持情况
 wx.stopRecord   停止录音    支持
 wx.startRecord  开始录音    支持
 wx.getRecorderManager   获取全局唯一的录音管理器 RecorderManager    支持</p>
-<div class="section" id="recordermanager">
+<section id="recordermanager">
 <h4>RecorderManager<a class="headerlink" href="#recordermanager" title="永久链接至标题">¶</a></h4>
 <p>API     说明      企业微信支持情况
 RecorderManager.onError 监听录音错误事件        支持
@@ -892,9 +894,9 @@ RecorderManager.pause   暂停录音    支持
 RecorderManager.resume  继续录音    支持
 RecorderManager.start   开始录音    支持
 RecorderManager.stop    停止录音    支持</p>
-</div>
-</div>
-<div class="section" id="id37">
+</section>
+</section>
+<section id="id37">
 <h3>相机<a class="headerlink" href="#id37" title="永久链接至标题">¶</a></h3>
 <p>API     说明      企业微信支持情况
 wx.createCameraContext  创建 camera 上下文 CameraContext 对象  不支持
@@ -903,31 +905,31 @@ API     说明      企业微信支持情况
 CameraContext.startRecord       开始录像    不支持
 CameraContext.stopRecord        结束录像    不支持
 CameraContext.takePhoto 拍摄照片    不支持</p>
-</div>
-</div>
-<div class="section" id="id38">
+</section>
+</section>
+<section id="id38">
 <h2>位置<a class="headerlink" href="#id38" title="永久链接至标题">¶</a></h2>
 <p>API     说明      企业微信支持情况
 wx.openLocation 使用微信内置地图查看位置    支持
 wx.getLocation  获取当前的地理位置、速度    支持
 wx.chooseLocation       打开地图选择位置        支持</p>
-</div>
-<div class="section" id="id39">
+</section>
+<section id="id39">
 <h2>转发<a class="headerlink" href="#id39" title="永久链接至标题">¶</a></h2>
 <p>API     说明      企业微信支持情况
 wx.updateShareMenu      更新转发属性  不支持
 wx.showShareMenu        显示当前页面的转发按钮     不支持 withShareTicket 参数
 wx.hideShareMenu        隐藏转发按钮  支持
 wx.getShareInfo 获取转发详细信息        不支持 shareTicket 参数</p>
-</div>
-<div class="section" id="id40">
+</section>
+<section id="id40">
 <h2>画布<a class="headerlink" href="#id40" title="永久链接至标题">¶</a></h2>
 <p>API     说明      企业微信支持情况
 wx.createCanvasContext  创建 canvas 的绘图上下文 CanvasContext 对象       支持
 wx.canvasToTempFilePath 把当前画布指定区域的内容导出生成指定大小的图片 支持
 wx.canvasPutImageData   将像素数据绘制到画布      支持
 wx.canvasGetImageData   获取 canvas 区域隐含的像素数据     支持</p>
-<div class="section" id="canvascontext">
+<section id="canvascontext">
 <h3>CanvasContext<a class="headerlink" href="#canvascontext" title="永久链接至标题">¶</a></h3>
 <p>API     说明      企业微信支持情况
 CanvasContext.arc       创建一条弧线  支持
@@ -972,15 +974,15 @@ CanvasContext.strokeRect        画一个矩形(非填充)      支持
 CanvasContext.strokeText        给定的 (x, y) 位置绘制文本描边的方法  支持
 CanvasContext.transform 使用矩阵多次叠加当前变换的方法 支持
 CanvasContext.translate 对当前坐标系的原点 (0, 0) 进行变换   支持</p>
-</div>
-</div>
-<div class="section" id="canvasgradient">
+</section>
+</section>
+<section id="canvasgradient">
 <h2>CanvasGradient<a class="headerlink" href="#canvasgradient" title="永久链接至标题">¶</a></h2>
 <p>API     说明      企业微信支持情况
 CanvasGradient.addColorStop     添加颜色的渐变点        支持
 Color   颜色      支持</p>
-</div>
-<div class="section" id="id41">
+</section>
+<section id="id41">
 <h2>文件<a class="headerlink" href="#id41" title="永久链接至标题">¶</a></h2>
 <p>API     说明      企业微信支持情况
 wx.saveFile     保存文件到本地 支持
@@ -990,7 +992,7 @@ wx.getSavedFileList     获取该小程序下已保存的本地缓存文件列�
 wx.getSavedFileInfo     获取本地文件的文件信息     支持
 wx.getFileSystemManager 获取全局唯一的文件管理器    支持
 wx.getFileInfo  获取文件信息  支持</p>
-<div class="section" id="filesystemmanager">
+<section id="filesystemmanager">
 <h3>FileSystemManager<a class="headerlink" href="#filesystemmanager" title="永久链接至标题">¶</a></h3>
 <p>API     说明      企业微信支持情况
 FileSystemManager.access        判断文件/目录是否存在     支持
@@ -1021,65 +1023,65 @@ FileSystemManager.unlinkSync    FileSystemManager.unlink 的同步版本  支持
 FileSystemManager.unzip 解压文件    支持
 FileSystemManager.writeFile     写文件     支持
 FileSystemManager.writeFileSync FileSystemManager.writeFile 的同步版本       支持</p>
-</div>
-<div class="section" id="stats">
+</section>
+<section id="stats">
 <h3>Stats<a class="headerlink" href="#stats" title="永久链接至标题">¶</a></h3>
 <p>API     说明      企业微信支持情况
 Stats.isDirectory       判断当前文件是否一个目录    支持
 Stats.isFile    判断当前文件是否一个普通文件  支持</p>
-</div>
-</div>
-<div class="section" id="id42">
+</section>
+</section>
+<section id="id42">
 <h2>开放接口<a class="headerlink" href="#id42" title="永久链接至标题">¶</a></h2>
-<div class="section" id="id43">
+<section id="id43">
 <h3>登录<a class="headerlink" href="#id43" title="永久链接至标题">¶</a></h3>
 <p>API     说明      企业微信支持情况
 wx.login        调用接口获取登录凭证（code）        支持
 wx.checkSession 检查登录态是否过期       支持
 code2Session    登录凭证校验  支持</p>
-</div>
-<div class="section" id="id44">
+</section>
+<section id="id44">
 <h3>小程序跳转<a class="headerlink" href="#id44" title="永久链接至标题">¶</a></h3>
 <p>API     说明      企业微信支持情况
 wx.navigateToMiniProgram        打开另一个小程序        支持
 wx.navigateBackMiniProgram      返回到上一个小程序       支持</p>
-</div>
-<div class="section" id="id45">
+</section>
+<section id="id45">
 <h3>帐号信息<a class="headerlink" href="#id45" title="永久链接至标题">¶</a></h3>
 <p>API     说明      企业微信支持情况
 wx.getAccountInfoSync   获取当前帐号信息        不支持</p>
-</div>
-<div class="section" id="id46">
+</section>
+<section id="id46">
 <h3>用户信息<a class="headerlink" href="#id46" title="永久链接至标题">¶</a></h3>
 <p>API     说明      企业微信支持情况
 wx.getUserInfo  获取用户信息  支持
 getPaidUnionId  用户支付完成后，获取该用户的 UnionId，无需用户授权   支持
 UserInfo        用户信息    支持</p>
-</div>
-<div class="section" id="id47">
+</section>
+<section id="id47">
 <h3>接口调用凭证<a class="headerlink" href="#id47" title="永久链接至标题">¶</a></h3>
 <p>API     说明      企业微信支持情况
 getAccessToken  获取小程序全局唯一后台接口调用凭据（access_token） 支持</p>
-</div>
-</div>
-<div class="section" id="id48">
+</section>
+</section>
+<section id="id48">
 <h2>数据上报<a class="headerlink" href="#id48" title="永久链接至标题">¶</a></h2>
 <p>API     说明      企业微信支持情况
 wx.reportMonitor        自定义业务数据监控上报接口   不支持</p>
-</div>
-<div class="section" id="id49">
+</section>
+<section id="id49">
 <h2>数据分析<a class="headerlink" href="#id49" title="永久链接至标题">¶</a></h2>
 <p>API     说明      企业微信支持情况
 wx.reportAnalytics      自定义分析数据上报接口     不支持</p>
-<div class="section" id="id50">
+<section id="id50">
 <h3>访问留存<a class="headerlink" href="#id50" title="永久链接至标题">¶</a></h3>
 <p>API     说明      企业微信支持情况
 getAnalysisDailyRetain  获取用户访问小程序日留存    不支持
 getAnalysisMonthlyRetain        获取用户访问小程序月留存    不支持
 getAnalysisWeeklyRetain 获取用户访问小程序周留存    不支持
 getAnalysisDailySummary 获取用户访问小程序数据概况   不支持</p>
-</div>
-<div class="section" id="id51">
+</section>
+<section id="id51">
 <h3>访问趋势<a class="headerlink" href="#id51" title="永久链接至标题">¶</a></h3>
 <p>API     说明      企业微信支持情况
 getAnalysisDailyVisitTrend      获取用户访问小程序数据日趋势  不支持
@@ -1088,34 +1090,34 @@ getAnalysisWeeklyVisitTrend     获取用户访问小程序数据周趋势  不�
 getAnalysisUserPortrait 获取小程序新增或活跃用户的画像分布数据     不支持
 getAnalysisVisitDistribution    获取用户小程序访问分布数据   不支持
 getAnalysisVisitPage    访问页面    不支持</p>
-</div>
-</div>
-<div class="section" id="id52">
+</section>
+</section>
+<section id="id52">
 <h2>支付<a class="headerlink" href="#id52" title="永久链接至标题">¶</a></h2>
 <p>API     说明      企业微信支持情况
 wx.requestPayment       发起微信支付  支持</p>
-</div>
-<div class="section" id="id53">
+</section>
+<section id="id53">
 <h2>授权<a class="headerlink" href="#id53" title="永久链接至标题">¶</a></h2>
 <p>API     说明      企业微信支持情况
 wx.authorize    提前向用户发起授权请求     支持</p>
-</div>
-<div class="section" id="id54">
+</section>
+<section id="id54">
 <h2>设置<a class="headerlink" href="#id54" title="永久链接至标题">¶</a></h2>
 <p>API     说明      企业微信支持情况
 wx.openSetting  调起客户端小程序设置界面，返回用户设置的操作结果        支持
 wx.getSetting   获取用户的当前设置       支持
 AuthSetting     用户授权设置信息，详情参考权限 支持</p>
-</div>
-<div class="section" id="id55">
+</section>
+<section id="id55">
 <h2>客服消息<a class="headerlink" href="#id55" title="永久链接至标题">¶</a></h2>
 <p>API     说明      企业微信支持情况
 customerTyping  下发客服当前输入状态给用户   不支持
 getTempMedia    获取客服消息内的临时素材    不支持
 sendCustomerMessage     发送客服消息给用户       不支持
 uploadTempMedia 把媒体文件上传到微信服务器   不支持</p>
-</div>
-<div class="section" id="id56">
+</section>
+<section id="id56">
 <h2>模板消息<a class="headerlink" href="#id56" title="永久链接至标题">¶</a></h2>
 <p>API     说明      企业微信支持情况
 addTemplate     组合模板并添加至帐号下的个人模板库       不支持
@@ -1124,19 +1126,19 @@ getTemplateLibraryById  获取模板库某个模板标题下关键词库        
 getTemplateLibraryList  获取小程序模板库标题列表    不支持
 getTemplateList 获取帐号下已存在的模板列表   不支持
 sendTemplateMessage     发送模板消息  不支持</p>
-<div class="section" id="id57">
+<section id="id57">
 <h3>统一服务消息<a class="headerlink" href="#id57" title="永久链接至标题">¶</a></h3>
 <p>API     说明      企业微信支持情况
 sendUniformMessage      下发小程序和公众号统一的服务消息        支持</p>
-</div>
-<div class="section" id="id58">
+</section>
+<section id="id58">
 <h3>动态消息<a class="headerlink" href="#id58" title="永久链接至标题">¶</a></h3>
 <p>API     说明      企业微信支持情况
 createActivityId        创建被分享动态消息的 activity_id  不支持
 setUpdatableMsg 修改被分享的动态消息      不支持</p>
-</div>
-</div>
-<div class="section" id="id59">
+</section>
+</section>
+<section id="id59">
 <h2>插件管理<a class="headerlink" href="#id59" title="永久链接至标题">¶</a></h2>
 <p>API     说明      企业微信支持情况
 applyPlugin     向插件开发者发起使用插件的申请 支持
@@ -1144,60 +1146,60 @@ getPluginDevApplyList   获取当前所有插件使用方（供插件开发者�
 getPluginList   查询已添加的插件        支持
 setDevPluginApplyStatus 修改插件使用申请的状态（供插件开发者调用）   支持
 unbindPlugin    删除已添加的插件        支持</p>
-</div>
-<div class="section" id="id60">
+</section>
+<section id="id60">
 <h2>收货地址<a class="headerlink" href="#id60" title="永久链接至标题">¶</a></h2>
 <p>API     说明      企业微信支持情况
 wx.chooseAddress        获取用户收货地址        支持</p>
-</div>
-<div class="section" id="id61">
+</section>
+<section id="id61">
 <h2>卡券<a class="headerlink" href="#id61" title="永久链接至标题">¶</a></h2>
 <p>API     说明      企业微信支持情况
 wx.openCard     查看微信卡包中的卡券      不支持
 wx.addCard      批量添加卡券  不支持</p>
-</div>
-<div class="section" id="id62">
+</section>
+<section id="id62">
 <h2>发票<a class="headerlink" href="#id62" title="永久链接至标题">¶</a></h2>
 <p>API     说明      企业微信支持情况
 wx.chooseInvoiceTitle   选择用户的发票抬头       不支持
 wx.chooseInvoice        选择用户已有的发票       不支持</p>
-</div>
-<div class="section" id="id63">
+</section>
+<section id="id63">
 <h2>附近的小程序<a class="headerlink" href="#id63" title="永久链接至标题">¶</a></h2>
 <p>API     说明      企业微信支持情况
 addNearbyPoi    添加地点    不支持
 deleteNearbyPoi 删除地点    不支持
 getNearbyPoiList        查看地点列表  不支持
 setNearbyPoiShowStatus  展示/取消展示附近小程序    不支持</p>
-</div>
-<div class="section" id="id64">
+</section>
+<section id="id64">
 <h2>二维码<a class="headerlink" href="#id64" title="永久链接至标题">¶</a></h2>
 <p>API     说明      企业微信支持情况
 createWXAQRCode 获取小程序二维码，适用于需要的码数量较少的业务场景       支持
 getWXACode      获取小程序码，适用于需要的码数量较少的业务场景 支持
 getWXACodeUnlimit       获取小程序码，适用于需要的码数量极多的业务场景 支持</p>
-</div>
-<div class="section" id="id65">
+</section>
+<section id="id65">
 <h2>内容安全<a class="headerlink" href="#id65" title="永久链接至标题">¶</a></h2>
 <p>API     说明      企业微信支持情况
 imgSecCheck     校验一张图片是否含有违法违规内容        支持
 msgSecCheck     检查一段文本是否含有违法违规内容        支持</p>
-<div class="section" id="id66">
+<section id="id66">
 <h3>生物认证<a class="headerlink" href="#id66" title="永久链接至标题">¶</a></h3>
 <p>API     说明      企业微信支持情况
 wx.startSoterAuthentication     开始 SOTER 生物认证   不支持
 wx.checkIsSupportSoterAuthentication    获取本机支持的 SOTER 生物认证方式    不支持
 wx.checkIsSoterEnrolledInDevice 获取设备内是否录入如指纹等生物信息的接口    不支持</p>
-</div>
-</div>
-<div class="section" id="id67">
+</section>
+</section>
+<section id="id67">
 <h2>微信运动<a class="headerlink" href="#id67" title="永久链接至标题">¶</a></h2>
 <p>API     说明      企业微信支持情况
 wx.getWeRunData 获取用户过去三十天微信运动步数 不支持</p>
-</div>
-<div class="section" id="id68">
+</section>
+<section id="id68">
 <h2>物流助手<a class="headerlink" href="#id68" title="永久链接至标题">¶</a></h2>
-<div class="section" id="id69">
+<section id="id69">
 <h3>小程序使用<a class="headerlink" href="#id69" title="永久链接至标题">¶</a></h3>
 <p>API     说明      企业微信支持情况
 addOrder        生成运单    支持
@@ -1209,8 +1211,8 @@ getPrinter      获取打印员   支持
 getQuota        获取电子面单余额        支持
 onPathUpdate    运单轨迹更新事件        支持
 updatePrinter   更新打印员   支持</p>
-</div>
-<div class="section" id="id70">
+</section>
+<section id="id70">
 <h3>服务提供方使用<a class="headerlink" href="#id70" title="永久链接至标题">¶</a></h3>
 <p>API     说明      企业微信支持情况
 getContact      获取面单联系人信息       支持
@@ -1221,11 +1223,11 @@ onGetQuota      查询商户余额事件        支持
 previewTemplate 预览面单模板  支持
 updateBusiness  更新商户审核结果        支持
 updatePath      更新运单轨迹  支持</p>
-</div>
-</div>
-<div class="section" id="id71">
+</section>
+</section>
+<section id="id71">
 <h2>设备<a class="headerlink" href="#id71" title="永久链接至标题">¶</a></h2>
-<div class="section" id="ibeacon">
+<section id="ibeacon">
 <h3>iBeacon<a class="headerlink" href="#ibeacon" title="永久链接至标题">¶</a></h3>
 <p>API     说明      企业微信支持情况
 wx.stopBeaconDiscovery  停止搜索附近的 iBeacon 设备      支持
@@ -1234,8 +1236,8 @@ wx.onBeaconUpdate       监听 iBeacon 设备更新事件       支持
 wx.onBeaconServiceChange        监听 iBeacon 服务状态变化事件     支持
 wx.getBeacons   获取所有已搜索到的 iBeacon 设备    支持
 IBeaconInfo             支持</p>
-</div>
-<div class="section" id="wi-fi">
+</section>
+<section id="wi-fi">
 <h3>Wi-Fi<a class="headerlink" href="#wi-fi" title="永久链接至标题">¶</a></h3>
 <p>API     说明      企业微信支持情况
 wx.stopWifi     关闭 Wi-Fi 模块     支持
@@ -1247,13 +1249,13 @@ wx.getWifiList  请求获取 Wi-Fi 列表   支持
 wx.getConnectedWifi     获取已连接中的 Wi-Fi 信息        支持
 wx.connectWifi  连接 Wi-Fi        支持
 WifiInfo        Wifi 信息 支持</p>
-</div>
-<div class="section" id="id72">
+</section>
+<section id="id72">
 <h3>联系人<a class="headerlink" href="#id72" title="永久链接至标题">¶</a></h3>
 <p>API     说明      企业微信支持情况
 wx.addPhoneContact      添加手机通讯录联系人      支持</p>
-</div>
-<div class="section" id="id73">
+</section>
+<section id="id73">
 <h3>低功耗蓝牙<a class="headerlink" href="#id73" title="永久链接至标题">¶</a></h3>
 <p>API     说明      企业微信支持情况
 wx.writeBLECharacteristicValue  向低功耗蓝牙设备特征值中写入二进制数据     支持
@@ -1265,8 +1267,8 @@ wx.getBLEDeviceServices 获取蓝牙设备所有服务(service)     支持
 wx.getBLEDeviceCharacteristics  获取蓝牙设备某个服务中所有特征值(characteristic)        支持
 wx.createBLEConnection  连接低功耗蓝牙设备       支持
 wx.closeBLEConnection   断开与低功耗蓝牙设备的连接   支持</p>
-</div>
-<div class="section" id="id74">
+</section>
+<section id="id74">
 <h3>蓝牙<a class="headerlink" href="#id74" title="永久链接至标题">¶</a></h3>
 <p>API     说明      企业微信支持情况
 wx.stopBluetoothDevicesDiscovery        停止搜寻附近的蓝牙外围设备   支持
@@ -1278,20 +1280,20 @@ wx.getConnectedBluetoothDevices 根据 uuid 获取处于已连接状态的设备
 wx.getBluetoothDevices  获取在蓝牙模块生效期间所有已发现的蓝牙设备   支持
 wx.getBluetoothAdapterState     获取本机蓝牙适配器状态     支持
 wx.closeBluetoothAdapter        关闭蓝牙模块  支持</p>
-</div>
-<div class="section" id="id75">
+</section>
+<section id="id75">
 <h3>电量<a class="headerlink" href="#id75" title="永久链接至标题">¶</a></h3>
 <p>API     说明      企业微信支持情况
 wx.getBatteryInfoSync   wx.getBatteryInfo 的同步版本 支持
 wx.getBatteryInfo       获取设备电量  支持</p>
-</div>
-<div class="section" id="id76">
+</section>
+<section id="id76">
 <h3>剪贴板<a class="headerlink" href="#id76" title="永久链接至标题">¶</a></h3>
 <p>API     说明      企业微信支持情况
 wx.setClipboardData     设置系统剪贴板的内容      支持
 wx.getClipboardData     获取系统剪贴板的内容      支持</p>
-</div>
-<div class="section" id="nfc">
+</section>
+<section id="nfc">
 <h3>NFC<a class="headerlink" href="#nfc" title="永久链接至标题">¶</a></h3>
 <p>API     说明      企业微信支持情况
 wx.stopHCE      关闭 NFC 模块       不支持
@@ -1299,112 +1301,112 @@ wx.startHCE     初始化 NFC 模块      不支持
 wx.sendHCEMessage       发送 NFC 消息       不支持
 wx.onHCEMessage 监听接收 NFC 设备消息事件 不支持
 wx.getHCEState  判断当前设备是否支持 HCE 能力       不支持</p>
-</div>
-<div class="section" id="id77">
+</section>
+<section id="id77">
 <h3>网络<a class="headerlink" href="#id77" title="永久链接至标题">¶</a></h3>
 <p>API     说明      企业微信支持情况
 wx.onNetworkStatusChange        监听网络状态变化事件      支持
 wx.getNetworkType       获取网络类型  支持</p>
-</div>
-<div class="section" id="id78">
+</section>
+<section id="id78">
 <h3>屏幕<a class="headerlink" href="#id78" title="永久链接至标题">¶</a></h3>
 <p>API     说明      企业微信支持情况
 wx.setScreenBrightness  设置屏幕亮度  支持
 wx.setKeepScreenOn      设置是否保持常亮状态      支持
 wx.onUserCaptureScreen  监听用户主动截屏事件      支持
 wx.getScreenBrightness  获取屏幕亮度  支持</p>
-</div>
-<div class="section" id="id79">
+</section>
+<section id="id79">
 <h3>电话<a class="headerlink" href="#id79" title="永久链接至标题">¶</a></h3>
 <p>API     说明      企业微信支持情况
 wx.makePhoneCall        拨打电话    支持</p>
-</div>
-<div class="section" id="id80">
+</section>
+<section id="id80">
 <h3>加速计<a class="headerlink" href="#id80" title="永久链接至标题">¶</a></h3>
 <p>API     说明      企业微信支持情况
 wx.stopAccelerometer    停止监听加速度数据       支持
 wx.startAccelerometer   开始监听加速度数据       支持
 wx.onAccelerometerChange        监听加速度数据事件       支持</p>
-</div>
-<div class="section" id="id81">
+</section>
+<section id="id81">
 <h3>罗盘<a class="headerlink" href="#id81" title="永久链接至标题">¶</a></h3>
 <p>API     说明      企业微信支持情况
 wx.stopCompass  停止监听罗盘数据        支持
 wx.startCompass 开始监听罗盘数据        支持
 wx.onCompassChange      监听罗盘数据变化事件      支持</p>
-</div>
-<div class="section" id="id82">
+</section>
+<section id="id82">
 <h3>设备方向<a class="headerlink" href="#id82" title="永久链接至标题">¶</a></h3>
 <p>API     说明      企业微信支持情况
 wx.stopDeviceMotionListening    停止监听设备方向的变化     不支持
 wx.startDeviceMotionListening   开始监听设备方向的变化     不支持
 wx.onDeviceMotionChange 监听设备方向变化事件      不支持</p>
-</div>
-<div class="section" id="id83">
+</section>
+<section id="id83">
 <h3>陀螺仪<a class="headerlink" href="#id83" title="永久链接至标题">¶</a></h3>
 <p>API     说明      企业微信支持情况
 wx.stopGyroscope        停止监听陀螺仪数据       不支持
 wx.startGyroscope       开始监听陀螺仪数据       不支持
 wx.onGyroscopeChange    监听陀螺仪数据变化事件     不支持</p>
-</div>
-</div>
-<div class="section" id="id84">
+</section>
+</section>
+<section id="id84">
 <h2>性能<a class="headerlink" href="#id84" title="永久链接至标题">¶</a></h2>
 <p>API     说明      企业微信支持情况
 wx.onMemoryWarning      监听内存不足告警事件      支持</p>
-</div>
-<div class="section" id="id85">
+</section>
+<section id="id85">
 <h2>扫码<a class="headerlink" href="#id85" title="永久链接至标题">¶</a></h2>
 <p>API     说明      企业微信支持情况
 wx.scanCode     调起客户端扫码界面进行扫码   支持</p>
-</div>
-<div class="section" id="id86">
+</section>
+<section id="id86">
 <h2>振动<a class="headerlink" href="#id86" title="永久链接至标题">¶</a></h2>
 <p>API     说明      企业微信支持情况
 wx.vibrateShort 使手机发生较短时间的振动（15 ms）     支持
 wx.vibrateLong  使手机发生较长时间的振动（400 ms)    支持</p>
-</div>
-<div class="section" id="worker">
+</section>
+<section id="worker">
 <h2>Worker<a class="headerlink" href="#worker" title="永久链接至标题">¶</a></h2>
 <p>API     说明      企业微信支持情况
 wx.createWorker 创建一个 [Worker 线程](<a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/api">https://developers.weixin.qq.com/miniprogram/dev/api</a>/多线程 Worker.html)  支持</p>
-<div class="section" id="id87">
+<section id="id87">
 <h3>Worker<a class="headerlink" href="#id87" title="永久链接至标题">¶</a></h3>
 <p>API     说明      企业微信支持情况
 Worker.onMessage        监听主线程/Worker 线程向当前线程发送的消息的事件    支持
 Worker.postMessage      向主线程/Worker 线程发送的消息     支持
 Worker.terminate        结束当前 Worker 线程  支持</p>
-</div>
-</div>
-<div class="section" id="id88">
+</section>
+</section>
+<section id="id88">
 <h2>第三方平台<a class="headerlink" href="#id88" title="永久链接至标题">¶</a></h2>
 <p>API     说明      企业微信支持情况
 wx.getExtConfigSync     wx.getExtConfig 的同步版本   不支持
 wx.getExtConfig 获取第三方平台自定义的数据字段 不支持</p>
-</div>
-<div class="section" id="wxml">
+</section>
+<section id="wxml">
 <h2>WXML<a class="headerlink" href="#wxml" title="永久链接至标题">¶</a></h2>
 <p>API     说明      企业微信支持情况
 wx.createSelectorQuery  返回一个 SelectorQuery 对象实例 支持
 wx.createIntersectionObserver   创建并返回一个 IntersectionObserver 对象实例       支持</p>
-</div>
-<div class="section" id="intersectionobserver">
+</section>
+<section id="intersectionobserver">
 <h2>IntersectionObserver<a class="headerlink" href="#intersectionobserver" title="永久链接至标题">¶</a></h2>
 <p>API     说明      企业微信支持情况
 IntersectionObserver.disconnect 停止监听    支持
 IntersectionObserver.observe    指定目标节点并开始监听相交状态变化情况     支持
 IntersectionObserver.relativeTo 使用选择器指定一个节点，作为参照区域之一    支持
 IntersectionObserver.relativeToViewport 指定页面显示区域作为参照区域之一        支持</p>
-</div>
-<div class="section" id="nodesref">
+</section>
+<section id="nodesref">
 <h2>NodesRef<a class="headerlink" href="#nodesref" title="永久链接至标题">¶</a></h2>
 <p>API     说明      企业微信支持情况
 NodesRef.boundingClientRect     添加节点的布局位置的查询请求  支持
 NodesRef.context        添加节点的 Context 对象查询请求    不支持
 NodesRef.fields 获取节点的相关信息       支持
 NodesRef.scrollOffset   添加节点的滚动位置查询请求   支持</p>
-</div>
-<div class="section" id="selectorquery">
+</section>
+<section id="selectorquery">
 <h2>SelectorQuery<a class="headerlink" href="#selectorquery" title="永久链接至标题">¶</a></h2>
 <p>API     说明      企业微信支持情况
 SelectorQuery.exec      执行所有的请求 支持
@@ -1412,10 +1414,11 @@ SelectorQuery.in        将选择器的选取范围更改为自定义组件 comp
 SelectorQuery.select    在当前页面下选择第一个匹配选择器 selector 的节点   支持
 SelectorQuery.selectAll 在当前页面下选择匹配选择器 selector 的所有节点    支持
 SelectorQuery.selectViewport    选择显示区域  支持</p>
-</div>
-</div>
+</section>
+</section>
 
 
+            <div class="clearer"></div>
           </div>
         </div>
       </div>
@@ -1440,12 +1443,13 @@ SelectorQuery.selectViewport    选择显示区域  支持</p>
 <li><a href="../../contents.html">文档</a> &#187;</li>
 
           <li class="nav-item nav-item-1"><a href="../index.html" >企业微信</a> &#187;</li>
-          <li class="nav-item nav-item-2"><a href="index.html" >文档概述</a> &#187;</li> 
+          <li class="nav-item nav-item-2"><a href="index.html" >文档概述</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">微信小程序API支持情况</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
         &#169; 版权所有 2019, Wxadev Docs.
-      由 <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.0+/0e60d4d 创建。
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.1.
     </div>
   </body>
 </html>

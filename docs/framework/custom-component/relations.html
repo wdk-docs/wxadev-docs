@@ -1,18 +1,19 @@
 
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
+<html lang="zh_CN">
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>组件间关系 &#8212; wxadev 1.0.0 文档</title>
-    <link rel="stylesheet" href="../../_static/sphinx13.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-    <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
-    <script type="text/javascript" src="../../_static/jquery.js"></script>
-    <script type="text/javascript" src="../../_static/underscore.js"></script>
-    <script type="text/javascript" src="../../_static/doctools.js"></script>
-    <script type="text/javascript" src="../../_static/language_data.js"></script>
-    <script type="text/javascript" src="../../_static/translations.js"></script>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx13.css" />
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/translations.js"></script>
     <link rel="search" type="application/opensearchdescription+xml"
           title="在 wxadev 1.0.0 文档 中搜索"
           href="../../_static/opensearch.xml"/>
@@ -94,7 +95,8 @@
 <li><a href="../../contents.html">文档</a> &#187;</li>
 
           <li class="nav-item nav-item-1"><a href="../index.html" >框架</a> &#187;</li>
-          <li class="nav-item nav-item-2"><a href="index.html" accesskey="U">自定义组件</a> &#187;</li> 
+          <li class="nav-item nav-item-2"><a href="index.html" accesskey="U">自定义组件</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">组件间关系</a></li> 
       </ul>
     </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
@@ -126,12 +128,12 @@
   <h3 id="searchlabel">快速搜索</h3>
     <div class="searchformwrapper">
     <form class="search" action="../../search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
       <input type="submit" value="转向" />
     </form>
     </div>
 </div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
+<script>$('#searchbox').show(0);</script>
         </div>
       </div>
 
@@ -140,9 +142,9 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="id1">
+  <section id="id1">
 <h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/framework/custom-component/relations.html">组件间关系</a><a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
-<div class="section" id="id2">
+<section id="id2">
 <h2>定义和使用组件间关系<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
 <p>有时需要实现这样的组件：</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;custom-ul&gt;</span>
@@ -172,7 +174,7 @@
   <span class="nx">methods</span><span class="o">:</span> <span class="p">{</span>
     <span class="nx">_getAllLi</span><span class="p">()</span> <span class="p">{</span>
       <span class="c1">// 使用getRelationNodes可以获得nodes数组，包含所有已关联的custom-li，且是有序的</span>
-      <span class="kr">const</span> <span class="nx">nodes</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">getRelationNodes</span><span class="p">(</span><span class="s1">&#39;path/to/custom-li&#39;</span><span class="p">)</span>
+      <span class="kd">const</span> <span class="nx">nodes</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">getRelationNodes</span><span class="p">(</span><span class="s1">&#39;path/to/custom-li&#39;</span><span class="p">)</span>
     <span class="p">}</span>
   <span class="p">},</span>
   <span class="nx">ready</span><span class="p">()</span> <span class="p">{</span>
@@ -199,8 +201,8 @@
 </pre></div>
 </div>
 <p>注意：必须在两个组件定义中都加入relations定义，否则不会生效。</p>
-</div>
-<div class="section" id="id3">
+</section>
+<section id="id3">
 <h2>关联一类组件<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
 <p>在开发者工具中预览效果</p>
 <p>有时，需要关联的是一类组件，如：</p>
@@ -219,7 +221,7 @@
   <span class="c1">// ...</span>
 <span class="p">})</span>
 <span class="c1">// path/to/custom-input.js</span>
-<span class="kr">const</span> <span class="nx">customFormControls</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;./custom-form-controls&#39;</span><span class="p">)</span>
+<span class="kd">const</span> <span class="nx">customFormControls</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;./custom-form-controls&#39;</span><span class="p">)</span>
 <span class="nx">Component</span><span class="p">({</span>
   <span class="nx">behaviors</span><span class="o">:</span> <span class="p">[</span><span class="nx">customFormControls</span><span class="p">],</span>
   <span class="nx">relations</span><span class="o">:</span> <span class="p">{</span>
@@ -229,7 +231,7 @@
   <span class="p">}</span>
 <span class="p">})</span>
 <span class="c1">// path/to/custom-submit.js</span>
-<span class="kr">const</span> <span class="nx">customFormControls</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;./custom-form-controls&#39;</span><span class="p">)</span>
+<span class="kd">const</span> <span class="nx">customFormControls</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;./custom-form-controls&#39;</span><span class="p">)</span>
 <span class="nx">Component</span><span class="p">({</span>
   <span class="nx">behaviors</span><span class="o">:</span> <span class="p">[</span><span class="nx">customFormControls</span><span class="p">],</span>
   <span class="nx">relations</span><span class="o">:</span> <span class="p">{</span>
@@ -242,7 +244,7 @@
 </div>
 <p>则在 relations 关系定义中，可使用这个behavior来代替组件路径作为关联的目标节点：</p>
 <div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="c1">// path/to/custom-form.js</span>
-<span class="kr">const</span> <span class="nx">customFormControls</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;./custom-form-controls&#39;</span><span class="p">)</span>
+<span class="kd">const</span> <span class="nx">customFormControls</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;./custom-form-controls&#39;</span><span class="p">)</span>
 <span class="nx">Component</span><span class="p">({</span>
   <span class="nx">relations</span><span class="o">:</span> <span class="p">{</span>
     <span class="nx">customFormControls</span><span class="o">:</span> <span class="p">{</span>
@@ -253,8 +255,8 @@
 <span class="p">})</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="relations">
+</section>
+<section id="relations">
 <h2>relations 定义段<a class="headerlink" href="#relations" title="永久链接至标题">¶</a></h2>
 <p>relations 定义段包含目标组件路径及其对应选项，可包含的选项见下表。</p>
 <p>选项      类型      是否必填    描述
@@ -263,10 +265,11 @@ linked  Function        否       关系生命周期函数，当关系被建立�
 linkChanged     Function        否       关系生命周期函数，当关系在页面节点树中发生改变时触发，触发时机在组件moved生命周期之后
 unlinked        Function        否       关系生命周期函数，当关系脱离页面节点树时触发，触发时机在组件detached生命周期之后
 target  String  否       如果这一项被设置，则它表示关联的目标节点所应具有的behavior，所有拥有这一behavior的组件节点都会被关联</p>
-</div>
-</div>
+</section>
+</section>
 
 
+            <div class="clearer"></div>
           </div>
         </div>
       </div>
@@ -291,12 +294,13 @@ target  String  否       如果这一项被设置，则它表示关联的目标
 <li><a href="../../contents.html">文档</a> &#187;</li>
 
           <li class="nav-item nav-item-1"><a href="../index.html" >框架</a> &#187;</li>
-          <li class="nav-item nav-item-2"><a href="index.html" >自定义组件</a> &#187;</li> 
+          <li class="nav-item nav-item-2"><a href="index.html" >自定义组件</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">组件间关系</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
         &#169; 版权所有 2019, Wxadev Docs.
-      由 <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.0+/0e60d4d 创建。
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.1.
     </div>
   </body>
 </html>

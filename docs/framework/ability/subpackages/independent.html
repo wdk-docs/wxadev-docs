@@ -1,18 +1,19 @@
 
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
+<html lang="zh_CN">
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>独立分包 &#8212; wxadev 1.0.0 文档</title>
-    <link rel="stylesheet" href="../../../_static/sphinx13.css" type="text/css" />
-    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
-    <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
-    <script type="text/javascript" src="../../../_static/jquery.js"></script>
-    <script type="text/javascript" src="../../../_static/underscore.js"></script>
-    <script type="text/javascript" src="../../../_static/doctools.js"></script>
-    <script type="text/javascript" src="../../../_static/language_data.js"></script>
-    <script type="text/javascript" src="../../../_static/translations.js"></script>
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx13.css" />
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/translations.js"></script>
     <link rel="search" type="application/opensearchdescription+xml"
           title="在 wxadev 1.0.0 文档 中搜索"
           href="../../../_static/opensearch.xml"/>
@@ -95,7 +96,8 @@
 
           <li class="nav-item nav-item-1"><a href="../../index.html" >框架</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="../index.html" >基础能力</a> &#187;</li>
-          <li class="nav-item nav-item-3"><a href="index.html" accesskey="U">分包加载</a> &#187;</li> 
+          <li class="nav-item nav-item-3"><a href="index.html" accesskey="U">分包加载</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">独立分包</a></li> 
       </ul>
     </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
@@ -117,12 +119,12 @@
   <h3 id="searchlabel">快速搜索</h3>
     <div class="searchformwrapper">
     <form class="search" action="../../../search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
       <input type="submit" value="转向" />
     </form>
     </div>
 </div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
+<script>$('#searchbox').show(0);</script>
         </div>
       </div>
 
@@ -131,7 +133,7 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="id1">
+  <section id="id1">
 <h1>独立分包<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
 <p>微信客户端 6.7.2，基础库 2.3.0 及以上版本开始支持。开发者工具请使用 1.02.1808300 及以上版本，可点此下载。</p>
 <p>独立分包是小程序中一种特殊类型的分包，可以独立于主包和其他分包运行。从独立分包中页面进入小程序时，不需要下载主包。当用户进入普通分包或主包内页面时，主包才会被下载。</p>
@@ -210,9 +212,10 @@ other: ‘hello’</p>
 <p>低版本兼容
 在低于6.7.2版本的微信中运行时，独立分包视为普通分包处理，不具备独立运行的特性。</p>
 <p>注意：在兼容模式下，主包中的 app.wxss 可能会对独立分包中的页面产生影响，因此应避免在独立分包页面中使用 app.wxss 中的样式。</p>
-</div>
+</section>
 
 
+            <div class="clearer"></div>
           </div>
         </div>
       </div>
@@ -238,12 +241,13 @@ other: ‘hello’</p>
 
           <li class="nav-item nav-item-1"><a href="../../index.html" >框架</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="../index.html" >基础能力</a> &#187;</li>
-          <li class="nav-item nav-item-3"><a href="index.html" >分包加载</a> &#187;</li> 
+          <li class="nav-item nav-item-3"><a href="index.html" >分包加载</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">独立分包</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
         &#169; 版权所有 2019, Wxadev Docs.
-      由 <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.0+/0e60d4d 创建。
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.1.
     </div>
   </body>
 </html>

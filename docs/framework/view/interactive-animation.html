@@ -1,18 +1,19 @@
 
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
+<html lang="zh_CN">
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>WXS响应事件 &#8212; wxadev 1.0.0 文档</title>
-    <link rel="stylesheet" href="../../_static/sphinx13.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-    <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
-    <script type="text/javascript" src="../../_static/jquery.js"></script>
-    <script type="text/javascript" src="../../_static/underscore.js"></script>
-    <script type="text/javascript" src="../../_static/doctools.js"></script>
-    <script type="text/javascript" src="../../_static/language_data.js"></script>
-    <script type="text/javascript" src="../../_static/translations.js"></script>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx13.css" />
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/translations.js"></script>
     <link rel="search" type="application/opensearchdescription+xml"
           title="在 wxadev 1.0.0 文档 中搜索"
           href="../../_static/opensearch.xml"/>
@@ -94,7 +95,8 @@
 <li><a href="../../contents.html">文档</a> &#187;</li>
 
           <li class="nav-item nav-item-1"><a href="../index.html" >框架</a> &#187;</li>
-          <li class="nav-item nav-item-2"><a href="index.html" accesskey="U">视图层 View</a> &#187;</li> 
+          <li class="nav-item nav-item-2"><a href="index.html" accesskey="U">视图层 View</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">WXS响应事件</a></li> 
       </ul>
     </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
@@ -126,12 +128,12 @@
   <h3 id="searchlabel">快速搜索</h3>
     <div class="searchformwrapper">
     <form class="search" action="../../search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
       <input type="submit" value="转向" />
     </form>
     </div>
 </div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
+<script>$('#searchbox').show(0);</script>
         </div>
       </div>
 
@@ -140,12 +142,12 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="wxs">
+  <section id="wxs">
 <span id="interactive-animation"></span><h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/framework/view/interactive-animation.html">WXS响应事件</a><a class="headerlink" href="#wxs" title="永久链接至标题">¶</a></h1>
 <div class="versionadded">
 <p><span class="versionmodified added">2.4.4 新版功能: </span>低版本需做 <a class="reference internal" href="../compatibility.html#compatibility"><span class="std std-ref">兼容处理</span></a></p>
 </div>
-<div class="section" id="id1">
+<section id="id1">
 <h2>背景<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h2>
 <p>有频繁用户交互的效果在小程序上表现是比较卡顿的，例如页面有 2 个元素 A 和 B，用户在 A 上做 touchmove 手势，
 要求 B 也跟随移动，&lt;<a class="reference internal" href="../../component/movable-view.html#movable-view"><span class="std std-ref">movable-view</span></a>&gt; 就是一个典型的例子。一次 touchmove 事件的响应过程为：</p>
@@ -155,8 +157,8 @@
 </ol>
 <p>一次 touchmove 的响应需要经过 2 次的逻辑层和渲染层的通信以及一次渲染，通信的耗时比较大。
 此外 setData 渲染也会阻塞其它脚本执行，导致了整个用户交互的动画过程会有延迟。</p>
-</div>
-<div class="section" id="id2">
+</section>
+<section id="id2">
 <h2>实现方案<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
 <p>本方案基本的思路是减少通信的次数，让事件在视图层（Webview）响应。
 小程序的框架分为视图层（Webview）和逻辑层（App Service），这样分层的目的是管控，开发者的代码只能运行在逻辑层（App Service），
@@ -165,8 +167,8 @@
 <p>使用 <a class="reference internal" href="wxs/index.html#wxs"><span class="std std-ref">WXS</span></a> 函数用来响应小程序事件，目前只能响应内置组件的事件，不支持自定义组件事件。
 WXS 函数的除了纯逻辑的运算，还可以通过封装好的ComponentDescriptor 实例来访问以及设置组件的 class 和样式，对于交互动画，
 设置 style 和 class 足够了。WXS 函数的例子如下：</p>
-<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="kr">const</span> <span class="nx">wxsFunction</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">event</span><span class="p">,</span> <span class="nx">ownerInstance</span><span class="p">)</span> <span class="p">{</span>
-  <span class="kr">const</span> <span class="nx">instance</span> <span class="o">=</span> <span class="nx">ownerInstance</span><span class="p">.</span><span class="nx">selectComponent</span><span class="p">(</span><span class="s1">&#39;.classSelector&#39;</span><span class="p">)</span> <span class="c1">// 返回组件的实例</span>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="kd">const</span> <span class="nx">wxsFunction</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">event</span><span class="p">,</span> <span class="nx">ownerInstance</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kd">const</span> <span class="nx">instance</span> <span class="o">=</span> <span class="nx">ownerInstance</span><span class="p">.</span><span class="nx">selectComponent</span><span class="p">(</span><span class="s1">&#39;.classSelector&#39;</span><span class="p">)</span> <span class="c1">// 返回组件的实例</span>
   <span class="nx">instance</span><span class="p">.</span><span class="nx">setStyle</span><span class="p">({</span>
     <span class="s1">&#39;font-size&#39;</span><span class="o">:</span> <span class="s1">&#39;14px&#39;</span> <span class="c1">// 支持rpx</span>
   <span class="p">})</span>
@@ -184,8 +186,8 @@ ownerInstance 表示的是页面实例。</p>
 <p>WXS 运行在视图层（Webview），里面的逻辑毕竟能做的事件比较少，需要有一个机制和逻辑层（App Service）开发者的代码通信，
 上面的 callMethod 是 WXS 里面调用逻辑层（App Service）开发者的代码的方法，
 而 WxsPropObserver 是逻辑层（App Service）开发者的代码调用 WXS 逻辑的机制。</p>
-</div>
-<div class="section" id="id3">
+</section>
+<section id="id3">
 <h2>使用方法<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
 <p>WXML定义事件：</p>
 <div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">wxs</span> <span class="na">module</span><span class="o">=</span><span class="s">&quot;test&quot;</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;./test.wxs&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">wxs</span><span class="p">&gt;</span>
@@ -207,7 +209,7 @@ ownerInstance 表示的是页面实例。</p>
 <p>WXS文件test.wxs里面定义并导出事件处理函数和属性改变触发的函数：</p>
 <div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="p">{</span>
   <span class="nx">touchmove</span><span class="p">(</span><span class="nx">event</span><span class="p">,</span> <span class="nx">instance</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;log event&#39;</span><span class="p">,</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">event</span><span class="p">))</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;log event&#39;</span><span class="p">,</span> <span class="nb">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">event</span><span class="p">))</span>
   <span class="p">},</span>
   <span class="nx">propObserver</span><span class="p">(</span><span class="nx">newValue</span><span class="p">,</span> <span class="nx">oldValue</span><span class="p">,</span> <span class="nx">ownerInstance</span><span class="p">,</span> <span class="nx">instance</span><span class="p">)</span> <span class="p">{</span>
     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;prop observer&#39;</span><span class="p">,</span> <span class="nx">newValue</span><span class="p">,</span> <span class="nx">oldValue</span><span class="p">)</span>
@@ -222,10 +224,11 @@ ownerInstance 表示的是页面实例。</p>
 1.02.1901170及以后版本的开发者工具上支持交互动画，最低版本基础库是2.4.4
 目前在WXS函数里面仅支持console.log方式打日志定位问题，注意连续的重复日志会被过滤掉。</p>
 </div>
-</div>
-</div>
+</section>
+</section>
 
 
+            <div class="clearer"></div>
           </div>
         </div>
       </div>
@@ -250,12 +253,13 @@ ownerInstance 表示的是页面实例。</p>
 <li><a href="../../contents.html">文档</a> &#187;</li>
 
           <li class="nav-item nav-item-1"><a href="../index.html" >框架</a> &#187;</li>
-          <li class="nav-item nav-item-2"><a href="index.html" >视图层 View</a> &#187;</li> 
+          <li class="nav-item nav-item-2"><a href="index.html" >视图层 View</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">WXS响应事件</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
         &#169; 版权所有 2019, Wxadev Docs.
-      由 <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.0+/0e60d4d 创建。
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.1.
     </div>
   </body>
 </html>

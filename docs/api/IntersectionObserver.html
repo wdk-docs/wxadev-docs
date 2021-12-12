@@ -1,18 +1,19 @@
 
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
+<html lang="zh_CN">
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>IntersectionObserver &#8212; wxadev 1.0.0 文档</title>
-    <link rel="stylesheet" href="../_static/sphinx13.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-    <script type="text/javascript" src="../_static/jquery.js"></script>
-    <script type="text/javascript" src="../_static/underscore.js"></script>
-    <script type="text/javascript" src="../_static/doctools.js"></script>
-    <script type="text/javascript" src="../_static/language_data.js"></script>
-    <script type="text/javascript" src="../_static/translations.js"></script>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx13.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/translations.js"></script>
     <link rel="search" type="application/opensearchdescription+xml"
           title="在 wxadev 1.0.0 文档 中搜索"
           href="../_static/opensearch.xml"/>
@@ -93,7 +94,8 @@
 <li><a href="../index.html">主页</a>&#160;|</li>
 <li><a href="../contents.html">文档</a> &#187;</li>
 
-          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">API</a> &#187;</li> 
+          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">API</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">IntersectionObserver</a></li> 
       </ul>
     </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
@@ -115,12 +117,12 @@
   <h3 id="searchlabel">快速搜索</h3>
     <div class="searchformwrapper">
     <form class="search" action="../search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
       <input type="submit" value="转向" />
     </form>
     </div>
 </div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
+<script>$('#searchbox').show(0);</script>
         </div>
       </div>
 
@@ -129,42 +131,43 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="intersectionobserver">
+  <section id="intersectionobserver">
 <h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/api/IntersectionObserver.html">IntersectionObserver</a><a class="headerlink" href="#intersectionobserver" title="永久链接至标题">¶</a></h1>
-<dl class="class">
-<dt id="IntersectionObserver">
-<em class="property">class </em><code class="descname">IntersectionObserver</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#IntersectionObserver" title="永久链接至目标">¶</a></dt>
+<dl class="js class">
+<dt class="sig sig-object js" id="IntersectionObserver">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="n"><span class="pre">IntersectionObserver</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#IntersectionObserver" title="永久链接至目标">¶</a></dt>
 <dd></dd></dl>
 
 <p>IntersectionObserver 对象，用于推断某些节点是否可以被用户看见、有多大比例可以被用户看见。</p>
 <p>方法</p>
-<dl class="function">
-<dt id="IntersectionObserver.relativeTo">
-<code class="descclassname">IntersectionObserver.</code><code class="descname">relativeTo</code><span class="sig-paren">(</span><em>string selector</em>, <em>Object margins</em><span class="sig-paren">)</span><a class="headerlink" href="#IntersectionObserver.relativeTo" title="永久链接至目标">¶</a></dt>
+<dl class="js function">
+<dt class="sig sig-object js" id="IntersectionObserver.relativeTo">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">IntersectionObserver</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">relativeTo</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">string</span> <span class="pre">selector</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Object</span> <span class="pre">margins</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#IntersectionObserver.relativeTo" title="永久链接至目标">¶</a></dt>
 <dd></dd></dl>
 
 <p>使用选择器指定一个节点，作为参照区域之一。</p>
-<dl class="function">
-<dt id="IntersectionObserver.relativeToViewport">
-<code class="descclassname">IntersectionObserver.</code><code class="descname">relativeToViewport</code><span class="sig-paren">(</span><em>Object margins</em><span class="sig-paren">)</span><a class="headerlink" href="#IntersectionObserver.relativeToViewport" title="永久链接至目标">¶</a></dt>
+<dl class="js function">
+<dt class="sig sig-object js" id="IntersectionObserver.relativeToViewport">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">IntersectionObserver</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">relativeToViewport</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">Object</span> <span class="pre">margins</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#IntersectionObserver.relativeToViewport" title="永久链接至目标">¶</a></dt>
 <dd></dd></dl>
 
 <p>指定页面显示区域作为参照区域之一</p>
-<dl class="function">
-<dt id="IntersectionObserver.observe">
-<code class="descclassname">IntersectionObserver.</code><code class="descname">observe</code><span class="sig-paren">(</span><em>string targetSelector</em>, <em>IntersectionObserver.observeCallback callback</em><span class="sig-paren">)</span><a class="headerlink" href="#IntersectionObserver.observe" title="永久链接至目标">¶</a></dt>
+<dl class="js function">
+<dt class="sig sig-object js" id="IntersectionObserver.observe">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">IntersectionObserver</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">observe</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">string</span> <span class="pre">targetSelector</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">IntersectionObserver.observeCallback</span> <span class="pre">callback</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#IntersectionObserver.observe" title="永久链接至目标">¶</a></dt>
 <dd></dd></dl>
 
 <p>指定目标节点并开始监听相交状态变化情况</p>
-<dl class="function">
-<dt id="IntersectionObserver.disconnect">
-<code class="descclassname">IntersectionObserver.</code><code class="descname">disconnect</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#IntersectionObserver.disconnect" title="永久链接至目标">¶</a></dt>
+<dl class="js function">
+<dt class="sig sig-object js" id="IntersectionObserver.disconnect">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">IntersectionObserver</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">disconnect</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#IntersectionObserver.disconnect" title="永久链接至目标">¶</a></dt>
 <dd></dd></dl>
 
 <p>停止监听。回调函数将不再触发</p>
-</div>
+</section>
 
 
+            <div class="clearer"></div>
           </div>
         </div>
       </div>
@@ -188,12 +191,13 @@
 <li><a href="../index.html">主页</a>&#160;|</li>
 <li><a href="../contents.html">文档</a> &#187;</li>
 
-          <li class="nav-item nav-item-1"><a href="index.html" >API</a> &#187;</li> 
+          <li class="nav-item nav-item-1"><a href="index.html" >API</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">IntersectionObserver</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
         &#169; 版权所有 2019, Wxadev Docs.
-      由 <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.0+/0e60d4d 创建。
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.1.
     </div>
   </body>
 </html>

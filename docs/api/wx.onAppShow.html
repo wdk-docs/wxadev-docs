@@ -1,18 +1,19 @@
 
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
+<html lang="zh_CN">
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>wx.onAppShow &#8212; wxadev 1.0.0 文档</title>
-    <link rel="stylesheet" href="../_static/sphinx13.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-    <script type="text/javascript" src="../_static/jquery.js"></script>
-    <script type="text/javascript" src="../_static/underscore.js"></script>
-    <script type="text/javascript" src="../_static/doctools.js"></script>
-    <script type="text/javascript" src="../_static/language_data.js"></script>
-    <script type="text/javascript" src="../_static/translations.js"></script>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx13.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/translations.js"></script>
     <link rel="search" type="application/opensearchdescription+xml"
           title="在 wxadev 1.0.0 文档 中搜索"
           href="../_static/opensearch.xml"/>
@@ -93,7 +94,8 @@
 <li><a href="../index.html">主页</a>&#160;|</li>
 <li><a href="../contents.html">文档</a> &#187;</li>
 
-          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">API</a> &#187;</li> 
+          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">API</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">wx.onAppShow</a></li> 
       </ul>
     </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
@@ -115,12 +117,12 @@
   <h3 id="searchlabel">快速搜索</h3>
     <div class="searchformwrapper">
     <form class="search" action="../search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
       <input type="submit" value="转向" />
     </form>
     </div>
 </div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
+<script>$('#searchbox').show(0);</script>
         </div>
       </div>
 
@@ -129,21 +131,21 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="wx-onappshow">
+  <section id="wx-onappshow">
 <h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/api/wx.onAppShow.html">wx.onAppShow</a><a class="headerlink" href="#wx-onappshow" title="永久链接至标题">¶</a></h1>
-<dl class="function">
-<dt id="wx.onAppShow">
-<code class="descclassname">wx.</code><code class="descname">onAppShow</code><span class="sig-paren">(</span><em>function callback</em><span class="sig-paren">)</span><a class="headerlink" href="#wx.onAppShow" title="永久链接至目标">¶</a></dt>
+<dl class="js function">
+<dt class="sig sig-object js" id="wx.onAppShow">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">wx</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">onAppShow</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">function</span> <span class="pre">callback</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#wx.onAppShow" title="永久链接至目标">¶</a></dt>
 <dd><div class="versionadded">
 <p><span class="versionmodified added">2.1.2 新版功能: </span>低版本需做 <a class="reference internal" href="../framework/compatibility.html#compatibility"><span class="std std-ref">兼容处理</span></a> 。</p>
 </div>
-<p>监听小程序切前台事件。该事件与 <a class="reference internal" href="../reference/api/App.html#App.onShow" title="App.onShow"><code class="xref js js-func docutils literal notranslate"><span class="pre">App.onShow()</span></code></a> 的回调参数一致。</p>
+<p>监听小程序切前台事件。该事件与 <a class="reference internal" href="../reference/api/app.html#App.onShow" title="App.onShow"><code class="xref js js-func docutils literal notranslate"><span class="pre">App.onShow()</span></code></a> 的回调参数一致。</p>
 <dl class="field-list simple">
 <dt class="field-odd">参数</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>callback</strong> (<em>function</em>) – 小程序切前台事件的回调函数</p></li>
-<li><p><strong>path</strong> (<em>string</em>) – 小程序切前台的路径</p></li>
-<li><p><strong>scene</strong> (<em>number</em>) – <p>小程序切前台的场景值</p>
+<li><p><strong>callback</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">function()</span></code></span>) – 小程序切前台事件的回调函数</p></li>
+<li><p><strong>path</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">string()</span></code></span>) – 小程序切前台的路径</p></li>
+<li><p><strong>scene</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">number()</span></code></span>) – <p>小程序切前台的场景值</p>
 <ul>
 <li><p><em>1020</em> 公众号 profile 页相关小程序列表      来源公众号</p></li>
 <li><p><em>1035</em> 公众号自定义菜单  来源公众号</p></li>
@@ -153,9 +155,9 @@
 <li><p><em>1043</em> 公众号模板消息   来源公众号</p></li>
 </ul>
 </p></li>
-<li><p><strong>query</strong> (<em>Object</em>) – 小程序切前台的 query 参数</p></li>
-<li><p><strong>shareTicket</strong> (<em>string</em>) – shareTicket，详见获取更多转发信息</p></li>
-<li><p><strong>referrerInfo</strong> (<em>string</em>) – <p>来源信息。从另一个小程序、公众号或 App 进入小程序时返回。否则返回 {}。(参见后文注意)</p>
+<li><p><strong>query</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">Object()</span></code></span>) – 小程序切前台的 query 参数</p></li>
+<li><p><strong>shareTicket</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">string()</span></code></span>) – shareTicket，详见获取更多转发信息</p></li>
+<li><p><strong>referrerInfo</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">string()</span></code></span>) – <p>来源信息。从另一个小程序、公众号或 App 进入小程序时返回。否则返回 {}。(参见后文注意)</p>
 <ul>
 <li><p><em>appId</em> - 来源小程序、公众号或 App 的 appId</p></li>
 <li><p><em>extraData</em> Object - 来源小程序传过来的数据，scene=1037或1038时支持</p></li>
@@ -171,9 +173,10 @@
 </div>
 </dd></dl>
 
-</div>
+</section>
 
 
+            <div class="clearer"></div>
           </div>
         </div>
       </div>
@@ -197,12 +200,13 @@
 <li><a href="../index.html">主页</a>&#160;|</li>
 <li><a href="../contents.html">文档</a> &#187;</li>
 
-          <li class="nav-item nav-item-1"><a href="index.html" >API</a> &#187;</li> 
+          <li class="nav-item nav-item-1"><a href="index.html" >API</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">wx.onAppShow</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
         &#169; 版权所有 2019, Wxadev Docs.
-      由 <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.0+/0e60d4d 创建。
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.1.
     </div>
   </body>
 </html>

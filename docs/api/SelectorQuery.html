@@ -1,18 +1,19 @@
 
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
+<html lang="zh_CN">
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>SelectorQuery &#8212; wxadev 1.0.0 文档</title>
-    <link rel="stylesheet" href="../_static/sphinx13.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-    <script type="text/javascript" src="../_static/jquery.js"></script>
-    <script type="text/javascript" src="../_static/underscore.js"></script>
-    <script type="text/javascript" src="../_static/doctools.js"></script>
-    <script type="text/javascript" src="../_static/language_data.js"></script>
-    <script type="text/javascript" src="../_static/translations.js"></script>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx13.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/translations.js"></script>
     <link rel="search" type="application/opensearchdescription+xml"
           title="在 wxadev 1.0.0 文档 中搜索"
           href="../_static/opensearch.xml"/>
@@ -93,7 +94,8 @@
 <li><a href="../index.html">主页</a>&#160;|</li>
 <li><a href="../contents.html">文档</a> &#187;</li>
 
-          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">API</a> &#187;</li> 
+          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">API</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">SelectorQuery</a></li> 
       </ul>
     </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
@@ -123,12 +125,12 @@
   <h3 id="searchlabel">快速搜索</h3>
     <div class="searchformwrapper">
     <form class="search" action="../search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
       <input type="submit" value="转向" />
     </form>
     </div>
 </div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
+<script>$('#searchbox').show(0);</script>
         </div>
       </div>
 
@@ -137,55 +139,56 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="selectorquery">
+  <section id="selectorquery">
 <h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/api/SelectorQuery.html">SelectorQuery</a><a class="headerlink" href="#selectorquery" title="永久链接至标题">¶</a></h1>
-<dl class="class">
-<dt id="SelectorQuery">
-<em class="property">class </em><code class="descname">SelectorQuery</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#SelectorQuery" title="永久链接至目标">¶</a></dt>
+<dl class="js class">
+<dt class="sig sig-object js" id="SelectorQuery">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="n"><span class="pre">SelectorQuery</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#SelectorQuery" title="永久链接至目标">¶</a></dt>
 <dd><p>查询节点信息的对象</p>
 </dd></dl>
 
-<div class="section" id="id1">
+<section id="id1">
 <h2>方法<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h2>
 <p>SelectorQuery</p>
-<dl class="function">
-<dt id="SelectorQuery.in">
-<code class="descclassname">SelectorQuery.</code><code class="descname">in</code><span class="sig-paren">(</span><em>Component component</em><span class="sig-paren">)</span><a class="headerlink" href="#SelectorQuery.in" title="永久链接至目标">¶</a></dt>
+<dl class="js function">
+<dt class="sig sig-object js" id="SelectorQuery.in">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">SelectorQuery</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">in</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">Component</span> <span class="pre">component</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#SelectorQuery.in" title="永久链接至目标">¶</a></dt>
 <dd><p>将选择器的选取范围更改为自定义组件 component 内。（初始时，选择器仅选取页面范围的节点，不会选取任何自定义组件中的节点）。</p>
 </dd></dl>
 
 <p>NodesRef</p>
-<dl class="function">
-<dt id="SelectorQuery.select">
-<code class="descclassname">SelectorQuery.</code><code class="descname">select</code><span class="sig-paren">(</span><em>string selector</em><span class="sig-paren">)</span><a class="headerlink" href="#SelectorQuery.select" title="永久链接至目标">¶</a></dt>
+<dl class="js function">
+<dt class="sig sig-object js" id="SelectorQuery.select">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">SelectorQuery</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">select</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">string</span> <span class="pre">selector</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#SelectorQuery.select" title="永久链接至目标">¶</a></dt>
 <dd><p>在当前页面下选择第一个匹配选择器 selector 的节点。返回一个 NodesRef 对象实例，可以用于获取节点信息。</p>
 </dd></dl>
 
 <p>NodesRef</p>
-<dl class="function">
-<dt id="SelectorQuery.selectAll">
-<code class="descclassname">SelectorQuery.</code><code class="descname">selectAll</code><span class="sig-paren">(</span><em>string selector</em><span class="sig-paren">)</span><a class="headerlink" href="#SelectorQuery.selectAll" title="永久链接至目标">¶</a></dt>
+<dl class="js function">
+<dt class="sig sig-object js" id="SelectorQuery.selectAll">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">SelectorQuery</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">selectAll</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">string</span> <span class="pre">selector</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#SelectorQuery.selectAll" title="永久链接至目标">¶</a></dt>
 <dd><p>在当前页面下选择匹配选择器 selector 的所有节点。</p>
 </dd></dl>
 
 <p>NodesRef</p>
-<dl class="function">
-<dt id="SelectorQuery.selectViewport">
-<code class="descclassname">SelectorQuery.</code><code class="descname">selectViewport</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#SelectorQuery.selectViewport" title="永久链接至目标">¶</a></dt>
+<dl class="js function">
+<dt class="sig sig-object js" id="SelectorQuery.selectViewport">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">SelectorQuery</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">selectViewport</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#SelectorQuery.selectViewport" title="永久链接至目标">¶</a></dt>
 <dd><p>选择显示区域。可用于获取显示区域的尺寸、滚动位置等信息。</p>
 </dd></dl>
 
 <p>NodesRef</p>
-<dl class="function">
-<dt id="SelectorQuery.exec">
-<code class="descclassname">SelectorQuery.</code><code class="descname">exec</code><span class="sig-paren">(</span><em>function callback</em><span class="sig-paren">)</span><a class="headerlink" href="#SelectorQuery.exec" title="永久链接至目标">¶</a></dt>
+<dl class="js function">
+<dt class="sig sig-object js" id="SelectorQuery.exec">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">SelectorQuery</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">exec</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">function</span> <span class="pre">callback</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#SelectorQuery.exec" title="永久链接至目标">¶</a></dt>
 <dd><p>执行所有的请求。请求结果按请求次序构成数组，在callback的第一个参数中返回。</p>
 </dd></dl>
 
-</div>
-</div>
+</section>
+</section>
 
 
+            <div class="clearer"></div>
           </div>
         </div>
       </div>
@@ -209,12 +212,13 @@
 <li><a href="../index.html">主页</a>&#160;|</li>
 <li><a href="../contents.html">文档</a> &#187;</li>
 
-          <li class="nav-item nav-item-1"><a href="index.html" >API</a> &#187;</li> 
+          <li class="nav-item nav-item-1"><a href="index.html" >API</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">SelectorQuery</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
         &#169; 版权所有 2019, Wxadev Docs.
-      由 <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.0+/0e60d4d 创建。
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.1.
     </div>
   </body>
 </html>

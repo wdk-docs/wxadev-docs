@@ -2,3 +2,9 @@
 =========================
 
 用sphinx-doc编辑小程序api
+
+## 运行
+##
+```sh
+sphinx-autobuild source docs
+```

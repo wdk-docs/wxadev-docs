@@ -1,18 +1,19 @@
 
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
+<html lang="zh_CN">
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>picker &#8212; wxadev 1.0.0 文档</title>
-    <link rel="stylesheet" href="../_static/sphinx13.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-    <script type="text/javascript" src="../_static/jquery.js"></script>
-    <script type="text/javascript" src="../_static/underscore.js"></script>
-    <script type="text/javascript" src="../_static/doctools.js"></script>
-    <script type="text/javascript" src="../_static/language_data.js"></script>
-    <script type="text/javascript" src="../_static/translations.js"></script>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx13.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/translations.js"></script>
     <link rel="search" type="application/opensearchdescription+xml"
           title="在 wxadev 1.0.0 文档 中搜索"
           href="../_static/opensearch.xml"/>
@@ -93,7 +94,8 @@
 <li><a href="../index.html">主页</a>&#160;|</li>
 <li><a href="../contents.html">文档</a> &#187;</li>
 
-          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">组件</a> &#187;</li> 
+          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">组件</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">picker</a></li> 
       </ul>
     </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
@@ -115,12 +117,12 @@
   <h3 id="searchlabel">快速搜索</h3>
     <div class="searchformwrapper">
     <form class="search" action="../search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
       <input type="submit" value="转向" />
     </form>
     </div>
 </div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
+<script>$('#searchbox').show(0);</script>
         </div>
       </div>
 
@@ -129,7 +131,7 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="picker">
+  <section id="picker">
 <span id="id1"></span><h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/component/picker.html">picker</a><a class="headerlink" href="#picker" title="永久链接至标题">¶</a></h1>
 <div class="versionadded">
 <p><span class="versionmodified added">1.0.0 新版功能: </span>低版本需做 <a class="reference internal" href="../framework/compatibility.html#compatibility"><span class="std std-ref">兼容处理</span></a> 。</p>
@@ -342,67 +344,67 @@ bindchange      eventhandle             value 改变时触发 change 事件，ev
     <span class="nx">array</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;美国&#39;</span><span class="p">,</span> <span class="s1">&#39;中国&#39;</span><span class="p">,</span> <span class="s1">&#39;巴西&#39;</span><span class="p">,</span> <span class="s1">&#39;日本&#39;</span><span class="p">],</span>
     <span class="nx">objectArray</span><span class="o">:</span> <span class="p">[</span>
       <span class="p">{</span>
-        <span class="nx">id</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="nx">id</span><span class="o">:</span> <span class="mf">0</span><span class="p">,</span>
         <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;美国&#39;</span>
       <span class="p">},</span>
       <span class="p">{</span>
-        <span class="nx">id</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="nx">id</span><span class="o">:</span> <span class="mf">1</span><span class="p">,</span>
         <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;中国&#39;</span>
       <span class="p">},</span>
       <span class="p">{</span>
-        <span class="nx">id</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
+        <span class="nx">id</span><span class="o">:</span> <span class="mf">2</span><span class="p">,</span>
         <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;巴西&#39;</span>
       <span class="p">},</span>
       <span class="p">{</span>
-        <span class="nx">id</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>
+        <span class="nx">id</span><span class="o">:</span> <span class="mf">3</span><span class="p">,</span>
         <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;日本&#39;</span>
       <span class="p">}</span>
     <span class="p">],</span>
-    <span class="nx">index</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="nx">index</span><span class="o">:</span> <span class="mf">0</span><span class="p">,</span>
     <span class="nx">multiArray</span><span class="o">:</span> <span class="p">[[</span><span class="s1">&#39;无脊柱动物&#39;</span><span class="p">,</span> <span class="s1">&#39;脊柱动物&#39;</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;扁性动物&#39;</span><span class="p">,</span> <span class="s1">&#39;线形动物&#39;</span><span class="p">,</span> <span class="s1">&#39;环节动物&#39;</span><span class="p">,</span> <span class="s1">&#39;软体动物&#39;</span><span class="p">,</span> <span class="s1">&#39;节肢动物&#39;</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;猪肉绦虫&#39;</span><span class="p">,</span> <span class="s1">&#39;吸血虫&#39;</span><span class="p">]],</span>
     <span class="nx">objectMultiArray</span><span class="o">:</span> <span class="p">[</span>
       <span class="p">[</span>
         <span class="p">{</span>
-          <span class="nx">id</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+          <span class="nx">id</span><span class="o">:</span> <span class="mf">0</span><span class="p">,</span>
           <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;无脊柱动物&#39;</span>
         <span class="p">},</span>
         <span class="p">{</span>
-          <span class="nx">id</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+          <span class="nx">id</span><span class="o">:</span> <span class="mf">1</span><span class="p">,</span>
           <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;脊柱动物&#39;</span>
         <span class="p">}</span>
       <span class="p">],</span> <span class="p">[</span>
         <span class="p">{</span>
-          <span class="nx">id</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+          <span class="nx">id</span><span class="o">:</span> <span class="mf">0</span><span class="p">,</span>
           <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;扁性动物&#39;</span>
         <span class="p">},</span>
         <span class="p">{</span>
-          <span class="nx">id</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+          <span class="nx">id</span><span class="o">:</span> <span class="mf">1</span><span class="p">,</span>
           <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;线形动物&#39;</span>
         <span class="p">},</span>
         <span class="p">{</span>
-          <span class="nx">id</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
+          <span class="nx">id</span><span class="o">:</span> <span class="mf">2</span><span class="p">,</span>
           <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;环节动物&#39;</span>
         <span class="p">},</span>
         <span class="p">{</span>
-          <span class="nx">id</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>
+          <span class="nx">id</span><span class="o">:</span> <span class="mf">3</span><span class="p">,</span>
           <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;软体动物&#39;</span>
         <span class="p">},</span>
         <span class="p">{</span>
-          <span class="nx">id</span><span class="o">:</span> <span class="mi">3</span><span class="p">,</span>
+          <span class="nx">id</span><span class="o">:</span> <span class="mf">3</span><span class="p">,</span>
           <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;节肢动物&#39;</span>
         <span class="p">}</span>
       <span class="p">],</span> <span class="p">[</span>
         <span class="p">{</span>
-          <span class="nx">id</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+          <span class="nx">id</span><span class="o">:</span> <span class="mf">0</span><span class="p">,</span>
           <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;猪肉绦虫&#39;</span>
         <span class="p">},</span>
         <span class="p">{</span>
-          <span class="nx">id</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+          <span class="nx">id</span><span class="o">:</span> <span class="mf">1</span><span class="p">,</span>
           <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;吸血虫&#39;</span>
         <span class="p">}</span>
       <span class="p">]</span>
     <span class="p">],</span>
-    <span class="nx">multiIndex</span><span class="o">:</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
+    <span class="nx">multiIndex</span><span class="o">:</span> <span class="p">[</span><span class="mf">0</span><span class="p">,</span> <span class="mf">0</span><span class="p">,</span> <span class="mf">0</span><span class="p">],</span>
     <span class="nx">date</span><span class="o">:</span> <span class="s1">&#39;2016-09-01&#39;</span><span class="p">,</span>
     <span class="nx">time</span><span class="o">:</span> <span class="s1">&#39;12:01&#39;</span><span class="p">,</span>
     <span class="nx">region</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;广东省&#39;</span><span class="p">,</span> <span class="s1">&#39;广州市&#39;</span><span class="p">,</span> <span class="s1">&#39;海珠区&#39;</span><span class="p">],</span>
@@ -422,62 +424,62 @@ bindchange      eventhandle             value 改变时触发 change 事件，ev
   <span class="p">},</span>
   <span class="nx">bindMultiPickerColumnChange</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;修改的列为&#39;</span><span class="p">,</span> <span class="nx">e</span><span class="p">.</span><span class="nx">detail</span><span class="p">.</span><span class="nx">column</span><span class="p">,</span> <span class="s1">&#39;，值为&#39;</span><span class="p">,</span> <span class="nx">e</span><span class="p">.</span><span class="nx">detail</span><span class="p">.</span><span class="nx">value</span><span class="p">)</span>
-    <span class="kr">const</span> <span class="nx">data</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="kd">const</span> <span class="nx">data</span> <span class="o">=</span> <span class="p">{</span>
       <span class="nx">multiArray</span><span class="o">:</span> <span class="k">this</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">multiArray</span><span class="p">,</span>
       <span class="nx">multiIndex</span><span class="o">:</span> <span class="k">this</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">multiIndex</span>
     <span class="p">}</span>
     <span class="nx">data</span><span class="p">.</span><span class="nx">multiIndex</span><span class="p">[</span><span class="nx">e</span><span class="p">.</span><span class="nx">detail</span><span class="p">.</span><span class="nx">column</span><span class="p">]</span> <span class="o">=</span> <span class="nx">e</span><span class="p">.</span><span class="nx">detail</span><span class="p">.</span><span class="nx">value</span>
     <span class="k">switch</span> <span class="p">(</span><span class="nx">e</span><span class="p">.</span><span class="nx">detail</span><span class="p">.</span><span class="nx">column</span><span class="p">)</span> <span class="p">{</span>
-      <span class="k">case</span> <span class="mi">0</span><span class="o">:</span>
-        <span class="k">switch</span> <span class="p">(</span><span class="nx">data</span><span class="p">.</span><span class="nx">multiIndex</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="p">{</span>
-          <span class="k">case</span> <span class="mi">0</span><span class="o">:</span>
-            <span class="nx">data</span><span class="p">.</span><span class="nx">multiArray</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;扁性动物&#39;</span><span class="p">,</span> <span class="s1">&#39;线形动物&#39;</span><span class="p">,</span> <span class="s1">&#39;环节动物&#39;</span><span class="p">,</span> <span class="s1">&#39;软体动物&#39;</span><span class="p">,</span> <span class="s1">&#39;节肢动物&#39;</span><span class="p">]</span>
-            <span class="nx">data</span><span class="p">.</span><span class="nx">multiArray</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;猪肉绦虫&#39;</span><span class="p">,</span> <span class="s1">&#39;吸血虫&#39;</span><span class="p">]</span>
+      <span class="k">case</span> <span class="mf">0</span><span class="o">:</span>
+        <span class="k">switch</span> <span class="p">(</span><span class="nx">data</span><span class="p">.</span><span class="nx">multiIndex</span><span class="p">[</span><span class="mf">0</span><span class="p">])</span> <span class="p">{</span>
+          <span class="k">case</span> <span class="mf">0</span><span class="o">:</span>
+            <span class="nx">data</span><span class="p">.</span><span class="nx">multiArray</span><span class="p">[</span><span class="mf">1</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;扁性动物&#39;</span><span class="p">,</span> <span class="s1">&#39;线形动物&#39;</span><span class="p">,</span> <span class="s1">&#39;环节动物&#39;</span><span class="p">,</span> <span class="s1">&#39;软体动物&#39;</span><span class="p">,</span> <span class="s1">&#39;节肢动物&#39;</span><span class="p">]</span>
+            <span class="nx">data</span><span class="p">.</span><span class="nx">multiArray</span><span class="p">[</span><span class="mf">2</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;猪肉绦虫&#39;</span><span class="p">,</span> <span class="s1">&#39;吸血虫&#39;</span><span class="p">]</span>
             <span class="k">break</span>
-          <span class="k">case</span> <span class="mi">1</span><span class="o">:</span>
-            <span class="nx">data</span><span class="p">.</span><span class="nx">multiArray</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;鱼&#39;</span><span class="p">,</span> <span class="s1">&#39;两栖动物&#39;</span><span class="p">,</span> <span class="s1">&#39;爬行动物&#39;</span><span class="p">]</span>
-            <span class="nx">data</span><span class="p">.</span><span class="nx">multiArray</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;鲫鱼&#39;</span><span class="p">,</span> <span class="s1">&#39;带鱼&#39;</span><span class="p">]</span>
+          <span class="k">case</span> <span class="mf">1</span><span class="o">:</span>
+            <span class="nx">data</span><span class="p">.</span><span class="nx">multiArray</span><span class="p">[</span><span class="mf">1</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;鱼&#39;</span><span class="p">,</span> <span class="s1">&#39;两栖动物&#39;</span><span class="p">,</span> <span class="s1">&#39;爬行动物&#39;</span><span class="p">]</span>
+            <span class="nx">data</span><span class="p">.</span><span class="nx">multiArray</span><span class="p">[</span><span class="mf">2</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;鲫鱼&#39;</span><span class="p">,</span> <span class="s1">&#39;带鱼&#39;</span><span class="p">]</span>
             <span class="k">break</span>
         <span class="p">}</span>
-        <span class="nx">data</span><span class="p">.</span><span class="nx">multiIndex</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
-        <span class="nx">data</span><span class="p">.</span><span class="nx">multiIndex</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="nx">data</span><span class="p">.</span><span class="nx">multiIndex</span><span class="p">[</span><span class="mf">1</span><span class="p">]</span> <span class="o">=</span> <span class="mf">0</span>
+        <span class="nx">data</span><span class="p">.</span><span class="nx">multiIndex</span><span class="p">[</span><span class="mf">2</span><span class="p">]</span> <span class="o">=</span> <span class="mf">0</span>
         <span class="k">break</span>
-      <span class="k">case</span> <span class="mi">1</span><span class="o">:</span>
-        <span class="k">switch</span> <span class="p">(</span><span class="nx">data</span><span class="p">.</span><span class="nx">multiIndex</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="p">{</span>
-          <span class="k">case</span> <span class="mi">0</span><span class="o">:</span>
-            <span class="k">switch</span> <span class="p">(</span><span class="nx">data</span><span class="p">.</span><span class="nx">multiIndex</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span> <span class="p">{</span>
-              <span class="k">case</span> <span class="mi">0</span><span class="o">:</span>
-                <span class="nx">data</span><span class="p">.</span><span class="nx">multiArray</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;猪肉绦虫&#39;</span><span class="p">,</span> <span class="s1">&#39;吸血虫&#39;</span><span class="p">]</span>
+      <span class="k">case</span> <span class="mf">1</span><span class="o">:</span>
+        <span class="k">switch</span> <span class="p">(</span><span class="nx">data</span><span class="p">.</span><span class="nx">multiIndex</span><span class="p">[</span><span class="mf">0</span><span class="p">])</span> <span class="p">{</span>
+          <span class="k">case</span> <span class="mf">0</span><span class="o">:</span>
+            <span class="k">switch</span> <span class="p">(</span><span class="nx">data</span><span class="p">.</span><span class="nx">multiIndex</span><span class="p">[</span><span class="mf">1</span><span class="p">])</span> <span class="p">{</span>
+              <span class="k">case</span> <span class="mf">0</span><span class="o">:</span>
+                <span class="nx">data</span><span class="p">.</span><span class="nx">multiArray</span><span class="p">[</span><span class="mf">2</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;猪肉绦虫&#39;</span><span class="p">,</span> <span class="s1">&#39;吸血虫&#39;</span><span class="p">]</span>
                 <span class="k">break</span>
-              <span class="k">case</span> <span class="mi">1</span><span class="o">:</span>
-                <span class="nx">data</span><span class="p">.</span><span class="nx">multiArray</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;蛔虫&#39;</span><span class="p">]</span>
+              <span class="k">case</span> <span class="mf">1</span><span class="o">:</span>
+                <span class="nx">data</span><span class="p">.</span><span class="nx">multiArray</span><span class="p">[</span><span class="mf">2</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;蛔虫&#39;</span><span class="p">]</span>
                 <span class="k">break</span>
-              <span class="k">case</span> <span class="mi">2</span><span class="o">:</span>
-                <span class="nx">data</span><span class="p">.</span><span class="nx">multiArray</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;蚂蚁&#39;</span><span class="p">,</span> <span class="s1">&#39;蚂蟥&#39;</span><span class="p">]</span>
+              <span class="k">case</span> <span class="mf">2</span><span class="o">:</span>
+                <span class="nx">data</span><span class="p">.</span><span class="nx">multiArray</span><span class="p">[</span><span class="mf">2</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;蚂蚁&#39;</span><span class="p">,</span> <span class="s1">&#39;蚂蟥&#39;</span><span class="p">]</span>
                 <span class="k">break</span>
-              <span class="k">case</span> <span class="mi">3</span><span class="o">:</span>
-                <span class="nx">data</span><span class="p">.</span><span class="nx">multiArray</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;河蚌&#39;</span><span class="p">,</span> <span class="s1">&#39;蜗牛&#39;</span><span class="p">,</span> <span class="s1">&#39;蛞蝓&#39;</span><span class="p">]</span>
+              <span class="k">case</span> <span class="mf">3</span><span class="o">:</span>
+                <span class="nx">data</span><span class="p">.</span><span class="nx">multiArray</span><span class="p">[</span><span class="mf">2</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;河蚌&#39;</span><span class="p">,</span> <span class="s1">&#39;蜗牛&#39;</span><span class="p">,</span> <span class="s1">&#39;蛞蝓&#39;</span><span class="p">]</span>
                 <span class="k">break</span>
-              <span class="k">case</span> <span class="mi">4</span><span class="o">:</span>
-                <span class="nx">data</span><span class="p">.</span><span class="nx">multiArray</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;昆虫&#39;</span><span class="p">,</span> <span class="s1">&#39;甲壳动物&#39;</span><span class="p">,</span> <span class="s1">&#39;蛛形动物&#39;</span><span class="p">,</span> <span class="s1">&#39;多足动物&#39;</span><span class="p">]</span>
+              <span class="k">case</span> <span class="mf">4</span><span class="o">:</span>
+                <span class="nx">data</span><span class="p">.</span><span class="nx">multiArray</span><span class="p">[</span><span class="mf">2</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;昆虫&#39;</span><span class="p">,</span> <span class="s1">&#39;甲壳动物&#39;</span><span class="p">,</span> <span class="s1">&#39;蛛形动物&#39;</span><span class="p">,</span> <span class="s1">&#39;多足动物&#39;</span><span class="p">]</span>
                 <span class="k">break</span>
             <span class="p">}</span>
             <span class="k">break</span>
-          <span class="k">case</span> <span class="mi">1</span><span class="o">:</span>
-            <span class="k">switch</span> <span class="p">(</span><span class="nx">data</span><span class="p">.</span><span class="nx">multiIndex</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span> <span class="p">{</span>
-              <span class="k">case</span> <span class="mi">0</span><span class="o">:</span>
-                <span class="nx">data</span><span class="p">.</span><span class="nx">multiArray</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;鲫鱼&#39;</span><span class="p">,</span> <span class="s1">&#39;带鱼&#39;</span><span class="p">]</span>
+          <span class="k">case</span> <span class="mf">1</span><span class="o">:</span>
+            <span class="k">switch</span> <span class="p">(</span><span class="nx">data</span><span class="p">.</span><span class="nx">multiIndex</span><span class="p">[</span><span class="mf">1</span><span class="p">])</span> <span class="p">{</span>
+              <span class="k">case</span> <span class="mf">0</span><span class="o">:</span>
+                <span class="nx">data</span><span class="p">.</span><span class="nx">multiArray</span><span class="p">[</span><span class="mf">2</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;鲫鱼&#39;</span><span class="p">,</span> <span class="s1">&#39;带鱼&#39;</span><span class="p">]</span>
                 <span class="k">break</span>
-              <span class="k">case</span> <span class="mi">1</span><span class="o">:</span>
-                <span class="nx">data</span><span class="p">.</span><span class="nx">multiArray</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;青蛙&#39;</span><span class="p">,</span> <span class="s1">&#39;娃娃鱼&#39;</span><span class="p">]</span>
+              <span class="k">case</span> <span class="mf">1</span><span class="o">:</span>
+                <span class="nx">data</span><span class="p">.</span><span class="nx">multiArray</span><span class="p">[</span><span class="mf">2</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;青蛙&#39;</span><span class="p">,</span> <span class="s1">&#39;娃娃鱼&#39;</span><span class="p">]</span>
                 <span class="k">break</span>
-              <span class="k">case</span> <span class="mi">2</span><span class="o">:</span>
-                <span class="nx">data</span><span class="p">.</span><span class="nx">multiArray</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;蜥蜴&#39;</span><span class="p">,</span> <span class="s1">&#39;龟&#39;</span><span class="p">,</span> <span class="s1">&#39;壁虎&#39;</span><span class="p">]</span>
+              <span class="k">case</span> <span class="mf">2</span><span class="o">:</span>
+                <span class="nx">data</span><span class="p">.</span><span class="nx">multiArray</span><span class="p">[</span><span class="mf">2</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;蜥蜴&#39;</span><span class="p">,</span> <span class="s1">&#39;龟&#39;</span><span class="p">,</span> <span class="s1">&#39;壁虎&#39;</span><span class="p">]</span>
                 <span class="k">break</span>
             <span class="p">}</span>
             <span class="k">break</span>
         <span class="p">}</span>
-        <span class="nx">data</span><span class="p">.</span><span class="nx">multiIndex</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="nx">data</span><span class="p">.</span><span class="nx">multiIndex</span><span class="p">[</span><span class="mf">2</span><span class="p">]</span> <span class="o">=</span> <span class="mf">0</span>
         <span class="k">break</span>
     <span class="p">}</span>
     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">data</span><span class="p">.</span><span class="nx">multiIndex</span><span class="p">)</span>
@@ -504,9 +506,10 @@ bindchange      eventhandle             value 改变时触发 change 事件，ev
 <span class="p">})</span>
 </pre></div>
 </div>
-</div>
+</section>
 
 
+            <div class="clearer"></div>
           </div>
         </div>
       </div>
@@ -530,12 +533,13 @@ bindchange      eventhandle             value 改变时触发 change 事件，ev
 <li><a href="../index.html">主页</a>&#160;|</li>
 <li><a href="../contents.html">文档</a> &#187;</li>
 
-          <li class="nav-item nav-item-1"><a href="index.html" >组件</a> &#187;</li> 
+          <li class="nav-item nav-item-1"><a href="index.html" >组件</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">picker</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
         &#169; 版权所有 2019, Wxadev Docs.
-      由 <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.0+/0e60d4d 创建。
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.1.
     </div>
   </body>
 </html>

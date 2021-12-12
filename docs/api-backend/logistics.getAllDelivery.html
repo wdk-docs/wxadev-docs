@@ -1,18 +1,19 @@
 
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
+<html lang="zh_CN">
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>获取支持的快递公司列表 &#8212; wxadev 1.0.0 文档</title>
-    <link rel="stylesheet" href="../_static/sphinx13.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-    <script type="text/javascript" src="../_static/jquery.js"></script>
-    <script type="text/javascript" src="../_static/underscore.js"></script>
-    <script type="text/javascript" src="../_static/doctools.js"></script>
-    <script type="text/javascript" src="../_static/language_data.js"></script>
-    <script type="text/javascript" src="../_static/translations.js"></script>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx13.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/translations.js"></script>
     <link rel="search" type="application/opensearchdescription+xml"
           title="在 wxadev 1.0.0 文档 中搜索"
           href="../_static/opensearch.xml"/>
@@ -93,7 +94,8 @@
 <li><a href="../index.html">主页</a>&#160;|</li>
 <li><a href="../contents.html">文档</a> &#187;</li>
 
-          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">服务端API</a> &#187;</li> 
+          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">服务端API</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">获取支持的快递公司列表</a></li> 
       </ul>
     </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
@@ -115,12 +117,12 @@
   <h3 id="searchlabel">快速搜索</h3>
     <div class="searchformwrapper">
     <form class="search" action="../search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
       <input type="submit" value="转向" />
     </form>
     </div>
 </div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
+<script>$('#searchbox').show(0);</script>
         </div>
       </div>
 
@@ -129,7 +131,7 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="logistics-addorder">
+  <section id="logistics-addorder">
 <span id="id1"></span><h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/api-backend/logistics.getAllDelivery.html">获取支持的快递公司列表</a><a class="headerlink" href="#logistics-addorder" title="永久链接至标题">¶</a></h1>
 <p>logistics.getAllDelivery
 本接口应在服务器端调用，详细说明参见服务端API。</p>
@@ -139,9 +141,9 @@
 二、云调用</p>
 <p>一、HTTPS 调用</p>
 <p>接口地址请求地址 <a class="reference internal" href="../glossary.html#term-api"><span class="xref std std-term">api</span></a></p>
-<dl class="post">
-<dt id="post-express-business-delivery-getall?access_token=ACCESS_TOKEN">
-<code class="descname">POST </code><code class="descname">express/business/delivery/getall?access_token=ACCESS_TOKEN</code><a class="headerlink" href="#post-express-business-delivery-getall?access_token=ACCESS_TOKEN" title="永久链接至目标">¶</a></dt>
+<dl class="http post">
+<dt class="sig sig-object http" id="post-express-business-delivery-getall?access_token=ACCESS_TOKEN">
+<span class="sig-name descname"><span class="pre">POST</span> </span><span class="sig-name descname"><span class="pre">express/business/delivery/getall?access_token=ACCESS_TOKEN</span></span><a class="headerlink" href="#post-express-business-delivery-getall?access_token=ACCESS_TOKEN" title="永久链接至目标">¶</a></dt>
 <dd></dd></dl>
 
 <p>请求参数
@@ -199,9 +201,9 @@ delivery_name   string  快递公司名称
 <p>二、云调用
 云调用是小程序·云开发提供的在云函数中调用微信开放接口的能力，需要在云函数中通过 wx-server-sdk 使用。</p>
 <p>接口方法</p>
-<dl class="function">
-<dt id="openapi.logistics.getAllDelivery">
-<code class="descclassname">openapi.logistics.</code><code class="descname">getAllDelivery</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#openapi.logistics.getAllDelivery" title="永久链接至目标">¶</a></dt>
+<dl class="js function">
+<dt class="sig sig-object js" id="openapi.logistics.getAllDelivery">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">openapi</span></span><span class="p"><span class="pre">.</span></span><span class="n"><span class="pre">logistics</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">getAllDelivery</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#openapi.logistics.getAllDelivery" title="永久链接至目标">¶</a></dt>
 <dd></dd></dl>
 
 <p>需在 config.json 中配置 logistics.getAllDelivery API 的权限，详情</p>
@@ -290,9 +292,10 @@ return err</p>
 “errMsg”: “openapi.logistics.getAllDelivery:ok”</p>
 </div></blockquote>
 <p>}</p>
-</div>
+</section>
 
 
+            <div class="clearer"></div>
           </div>
         </div>
       </div>
@@ -316,12 +319,13 @@ return err</p>
 <li><a href="../index.html">主页</a>&#160;|</li>
 <li><a href="../contents.html">文档</a> &#187;</li>
 
-          <li class="nav-item nav-item-1"><a href="index.html" >服务端API</a> &#187;</li> 
+          <li class="nav-item nav-item-1"><a href="index.html" >服务端API</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">获取支持的快递公司列表</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
         &#169; 版权所有 2019, Wxadev Docs.
-      由 <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.0+/0e60d4d 创建。
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.1.
     </div>
   </body>
 </html>

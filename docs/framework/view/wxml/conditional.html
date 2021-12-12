@@ -1,18 +1,19 @@
 
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
+<html lang="zh_CN">
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>wx:if 条件渲染 &#8212; wxadev 1.0.0 文档</title>
-    <link rel="stylesheet" href="../../../_static/sphinx13.css" type="text/css" />
-    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
-    <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
-    <script type="text/javascript" src="../../../_static/jquery.js"></script>
-    <script type="text/javascript" src="../../../_static/underscore.js"></script>
-    <script type="text/javascript" src="../../../_static/doctools.js"></script>
-    <script type="text/javascript" src="../../../_static/language_data.js"></script>
-    <script type="text/javascript" src="../../../_static/translations.js"></script>
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx13.css" />
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/translations.js"></script>
     <link rel="search" type="application/opensearchdescription+xml"
           title="在 wxadev 1.0.0 文档 中搜索"
           href="../../../_static/opensearch.xml"/>
@@ -95,7 +96,8 @@
 
           <li class="nav-item nav-item-1"><a href="../../index.html" >框架</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="../index.html" >视图层 View</a> &#187;</li>
-          <li class="nav-item nav-item-3"><a href="index.html" accesskey="U">WXML</a> &#187;</li> 
+          <li class="nav-item nav-item-3"><a href="index.html" accesskey="U">WXML</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">wx:if 条件渲染</a></li> 
       </ul>
     </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
@@ -127,12 +129,12 @@
   <h3 id="searchlabel">快速搜索</h3>
     <div class="searchformwrapper">
     <form class="search" action="../../../search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
       <input type="submit" value="转向" />
     </form>
     </div>
 </div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
+<script>$('#searchbox').show(0);</script>
         </div>
       </div>
 
@@ -141,9 +143,9 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="wx-if">
+  <section id="wx-if">
 <span id="wxml-conditional"></span><h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/framework/view/wxml/conditional.html">wx:if 条件渲染</a><a class="headerlink" href="#wx-if" title="永久链接至标题">¶</a></h1>
-<div class="section" id="id1">
+<section id="id1">
 <h2>wx:if<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h2>
 <p>在框架中，使用 <code class="docutils literal notranslate"><span class="pre">wx:if=&quot;{{condition}}&quot;</span></code> 来判断是否需要渲染该代码块：</p>
 <div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">view</span> <span class="na">wx:if</span><span class="o">=</span><span class="s">&quot;{{condition}}&quot;</span><span class="p">&gt;</span>True<span class="p">&lt;/</span><span class="nt">view</span><span class="p">&gt;</span>
@@ -155,8 +157,8 @@
 <span class="p">&lt;</span><span class="nt">view</span> <span class="na">wx:else</span><span class="p">&gt;</span>3<span class="p">&lt;/</span><span class="nt">view</span><span class="p">&gt;</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="block-wx-if">
+</section>
+<section id="block-wx-if">
 <h2>block wx:if<a class="headerlink" href="#block-wx-if" title="永久链接至标题">¶</a></h2>
 <p>因为 <code class="docutils literal notranslate"><span class="pre">wx:if</span></code> 是一个控制属性，需要将它添加到一个标签上。如果要一次性判断多个组件标签，
 可以使用一个 <code class="docutils literal notranslate"><span class="pre">&lt;block/&gt;</span></code> 标签将多个组件包装起来，并在上边使用 wx:if 控制属性。</p>
@@ -170,18 +172,19 @@
 <p class="admonition-title">注意</p>
 <p>&lt;block/&gt; 并不是一个组件，它仅仅是一个包装元素，不会在页面中做任何渲染，只接受控制属性。</p>
 </div>
-</div>
-<div class="section" id="wx-if-vs-hidden">
+</section>
+<section id="wx-if-vs-hidden">
 <h2>wx:if vs hidden<a class="headerlink" href="#wx-if-vs-hidden" title="永久链接至标题">¶</a></h2>
 <p>因为 wx:if 之中的模板也可能包含数据绑定，所以当 wx:if 的条件值切换时，框架有一个局部渲染的过程，因为它会确保条件块在切换时销毁或重新渲染。</p>
 <p>同时 wx:if 也是惰性的，如果在初始渲染条件为 false，框架什么也不做，在条件第一次变成真的时候才开始局部渲染。</p>
 <p>相比之下， <code class="docutils literal notranslate"><span class="pre">hidden</span></code> 就简单的多，组件始终会被渲染，只是简单的控制显示与隐藏。</p>
 <p>一般来说，wx:if 有更高的切换消耗而 hidden 有更高的初始渲染消耗。因此，如果需要频繁切换的情景下，
 用 hidden 更好，如果在运行时条件不大可能改变则 wx:if 较好。</p>
-</div>
-</div>
+</section>
+</section>
 
 
+            <div class="clearer"></div>
           </div>
         </div>
       </div>
@@ -207,12 +210,13 @@
 
           <li class="nav-item nav-item-1"><a href="../../index.html" >框架</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="../index.html" >视图层 View</a> &#187;</li>
-          <li class="nav-item nav-item-3"><a href="index.html" >WXML</a> &#187;</li> 
+          <li class="nav-item nav-item-3"><a href="index.html" >WXML</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">wx:if 条件渲染</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
         &#169; 版权所有 2019, Wxadev Docs.
-      由 <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.0+/0e60d4d 创建。
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.1.
     </div>
   </body>
 </html>

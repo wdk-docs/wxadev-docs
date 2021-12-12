@@ -1,18 +1,19 @@
 
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
+<html lang="zh_CN">
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>BackgroundAudioManager ☁️ &#8212; wxadev 1.0.0 文档</title>
-    <link rel="stylesheet" href="../_static/sphinx13.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-    <script type="text/javascript" src="../_static/jquery.js"></script>
-    <script type="text/javascript" src="../_static/underscore.js"></script>
-    <script type="text/javascript" src="../_static/doctools.js"></script>
-    <script type="text/javascript" src="../_static/language_data.js"></script>
-    <script type="text/javascript" src="../_static/translations.js"></script>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx13.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/translations.js"></script>
     <link rel="search" type="application/opensearchdescription+xml"
           title="在 wxadev 1.0.0 文档 中搜索"
           href="../_static/opensearch.xml"/>
@@ -93,7 +94,8 @@
 <li><a href="../index.html">主页</a>&#160;|</li>
 <li><a href="../contents.html">文档</a> &#187;</li>
 
-          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">API</a> &#187;</li> 
+          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">API</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">BackgroundAudioManager ☁️</a></li> 
       </ul>
     </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
@@ -125,12 +127,12 @@
   <h3 id="searchlabel">快速搜索</h3>
     <div class="searchformwrapper">
     <form class="search" action="../search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
       <input type="submit" value="转向" />
     </form>
     </div>
 </div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
+<script>$('#searchbox').show(0);</script>
         </div>
       </div>
 
@@ -139,11 +141,11 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="backgroundaudiomanager">
+  <section id="backgroundaudiomanager">
 <h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/api/BackgroundAudioManager.html">BackgroundAudioManager ☁️</a><a class="headerlink" href="#backgroundaudiomanager" title="永久链接至标题">¶</a></h1>
-<dl class="function">
-<dt id="wx.getBackgroundAudioManager">
-<code class="descclassname">wx.</code><code class="descname">getBackgroundAudioManager</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#wx.getBackgroundAudioManager" title="永久链接至目标">¶</a></dt>
+<dl class="js function">
+<dt class="sig sig-object js" id="wx.getBackgroundAudioManager">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">wx</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">getBackgroundAudioManager</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#wx.getBackgroundAudioManager" title="永久链接至目标">¶</a></dt>
 <dd><div class="versionadded">
 <p><span class="versionmodified added">1.2.0 新版功能: </span>低版本需做 <a class="reference internal" href="../framework/compatibility.html#compatibility"><span class="std std-ref">兼容处理</span></a> 。</p>
 </div>
@@ -153,23 +155,23 @@
 需要在 <code class="file docutils literal notranslate"><span class="pre">app.json</span></code> 中配置 <code class="docutils literal notranslate"><span class="pre">requiredBackgroundModes</span></code> 属性。
 开发版和体验版上可以直接生效，正式版还需通过审核。</p>
 <dl class="field-list simple">
-<dt class="field-odd">Return</dt>
+<dt class="field-odd">返回</dt>
 <dd class="field-odd"><p><a class="reference internal" href="#BackgroundAudioManager" title="BackgroundAudioManager"><code class="xref js js-class docutils literal notranslate"><span class="pre">BackgroundAudioManager()</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
 
-<dl class="class">
-<dt id="BackgroundAudioManager">
-<em class="property">class </em><code class="descname">BackgroundAudioManager</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BackgroundAudioManager" title="永久链接至目标">¶</a></dt>
+<dl class="js class">
+<dt class="sig sig-object js" id="BackgroundAudioManager">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="n"><span class="pre">BackgroundAudioManager</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BackgroundAudioManager" title="永久链接至目标">¶</a></dt>
 <dd><p>BackgroundAudioManager 实例，可通过 <a class="reference internal" href="#wx.getBackgroundAudioManager" title="wx.getBackgroundAudioManager"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.getBackgroundAudioManager()</span></code></a> 获取。</p>
 </dd></dl>
 
-<div class="section" id="id1">
+<section id="id1">
 <h2>属性<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h2>
-<dl class="attribute">
-<dt id="BackgroundAudioManager.src">
-<code class="descclassname">BackgroundAudioManager.</code><code class="descname">src</code><a class="headerlink" href="#BackgroundAudioManager.src" title="永久链接至目标">¶</a></dt>
+<dl class="js attribute">
+<dt class="sig sig-object js" id="BackgroundAudioManager.src">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">BackgroundAudioManager</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">src</span></span></span><a class="headerlink" href="#BackgroundAudioManager.src" title="永久链接至目标">¶</a></dt>
 <dd><div class="versionadded">
 <p><span class="versionmodified added">2.2.3 新版功能: </span>开始支持 <strong>云文件ID</strong></p>
 </div>
@@ -190,9 +192,9 @@
 </dl>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="BackgroundAudioManager.startTime">
-<code class="descclassname">BackgroundAudioManager.</code><code class="descname">startTime</code><a class="headerlink" href="#BackgroundAudioManager.startTime" title="永久链接至目标">¶</a></dt>
+<dl class="js attribute">
+<dt class="sig sig-object js" id="BackgroundAudioManager.startTime">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">BackgroundAudioManager</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">startTime</span></span></span><a class="headerlink" href="#BackgroundAudioManager.startTime" title="永久链接至目标">¶</a></dt>
 <dd><p>音频开始播放的位置(单位：s)。</p>
 <dl class="field-list simple">
 <dt class="field-odd">Rtype</dt>
@@ -201,9 +203,9 @@
 </dl>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="BackgroundAudioManager.title">
-<code class="descclassname">BackgroundAudioManager.</code><code class="descname">title</code><a class="headerlink" href="#BackgroundAudioManager.title" title="永久链接至目标">¶</a></dt>
+<dl class="js attribute">
+<dt class="sig sig-object js" id="BackgroundAudioManager.title">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">BackgroundAudioManager</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">title</span></span></span><a class="headerlink" href="#BackgroundAudioManager.title" title="永久链接至目标">¶</a></dt>
 <dd><p>音频标题，用于原生音频播放器音频标题(必填)。原生音频播放器中的分享功能，分享出去的卡片标题，也将使用该值。</p>
 <dl class="field-list simple">
 <dt class="field-odd">Rtype</dt>
@@ -212,9 +214,9 @@
 </dl>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="BackgroundAudioManager.epname">
-<code class="descclassname">BackgroundAudioManager.</code><code class="descname">epname</code><a class="headerlink" href="#BackgroundAudioManager.epname" title="永久链接至目标">¶</a></dt>
+<dl class="js attribute">
+<dt class="sig sig-object js" id="BackgroundAudioManager.epname">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">BackgroundAudioManager</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">epname</span></span></span><a class="headerlink" href="#BackgroundAudioManager.epname" title="永久链接至目标">¶</a></dt>
 <dd><p>专辑名，原生音频播放器中的分享功能，分享出去的卡片简介，也将使用该值。</p>
 <dl class="field-list simple">
 <dt class="field-odd">Rtype</dt>
@@ -223,9 +225,9 @@
 </dl>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="BackgroundAudioManager.singer">
-<code class="descclassname">BackgroundAudioManager.</code><code class="descname">singer</code><a class="headerlink" href="#BackgroundAudioManager.singer" title="永久链接至目标">¶</a></dt>
+<dl class="js attribute">
+<dt class="sig sig-object js" id="BackgroundAudioManager.singer">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">BackgroundAudioManager</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">singer</span></span></span><a class="headerlink" href="#BackgroundAudioManager.singer" title="永久链接至目标">¶</a></dt>
 <dd><p>歌手名，原生音频播放器中的分享功能，分享出去的卡片简介，也将使用该值。</p>
 <dl class="field-list simple">
 <dt class="field-odd">Rtype</dt>
@@ -234,9 +236,9 @@
 </dl>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="BackgroundAudioManager.coverImgUrl">
-<code class="descclassname">BackgroundAudioManager.</code><code class="descname">coverImgUrl</code><a class="headerlink" href="#BackgroundAudioManager.coverImgUrl" title="永久链接至目标">¶</a></dt>
+<dl class="js attribute">
+<dt class="sig sig-object js" id="BackgroundAudioManager.coverImgUrl">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">BackgroundAudioManager</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">coverImgUrl</span></span></span><a class="headerlink" href="#BackgroundAudioManager.coverImgUrl" title="永久链接至目标">¶</a></dt>
 <dd><p>封面图 URL，用于做原生音频播放器背景图。原生音频播放器中的分享功能，分享出去的卡片配图及背景也将使用该图。</p>
 <dl class="field-list simple">
 <dt class="field-odd">Rtype</dt>
@@ -245,9 +247,9 @@
 </dl>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="BackgroundAudioManager.webUrl">
-<code class="descclassname">BackgroundAudioManager.</code><code class="descname">webUrl</code><a class="headerlink" href="#BackgroundAudioManager.webUrl" title="永久链接至目标">¶</a></dt>
+<dl class="js attribute">
+<dt class="sig sig-object js" id="BackgroundAudioManager.webUrl">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">BackgroundAudioManager</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">webUrl</span></span></span><a class="headerlink" href="#BackgroundAudioManager.webUrl" title="永久链接至目标">¶</a></dt>
 <dd><p>页面链接，原生音频播放器中的分享功能，分享出去的卡片简介，也将使用该值。</p>
 <dl class="field-list simple">
 <dt class="field-odd">Rtype</dt>
@@ -256,9 +258,9 @@
 </dl>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="BackgroundAudioManager.protocol">
-<code class="descclassname">BackgroundAudioManager.</code><code class="descname">protocol</code><a class="headerlink" href="#BackgroundAudioManager.protocol" title="永久链接至目标">¶</a></dt>
+<dl class="js attribute">
+<dt class="sig sig-object js" id="BackgroundAudioManager.protocol">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">BackgroundAudioManager</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">protocol</span></span></span><a class="headerlink" href="#BackgroundAudioManager.protocol" title="永久链接至目标">¶</a></dt>
 <dd><div class="versionadded">
 <p><span class="versionmodified added">1.9.94 新版功能: </span>低版本需做 <a class="reference internal" href="../framework/compatibility.html#compatibility"><span class="std std-ref">兼容处理</span></a> 。</p>
 </div>
@@ -270,9 +272,9 @@
 </dl>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="BackgroundAudioManager.duration">
-<code class="descclassname">BackgroundAudioManager.</code><code class="descname">duration</code><a class="headerlink" href="#BackgroundAudioManager.duration" title="永久链接至目标">¶</a></dt>
+<dl class="js attribute">
+<dt class="sig sig-object js" id="BackgroundAudioManager.duration">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">BackgroundAudioManager</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">duration</span></span></span><a class="headerlink" href="#BackgroundAudioManager.duration" title="永久链接至目标">¶</a></dt>
 <dd><p>当前音频的长度(单位：<code class="docutils literal notranslate"><span class="pre">s</span></code>)，只有在有合法 <code class="docutils literal notranslate"><span class="pre">src</span></code> 时返回。</p>
 <dl class="field-list simple">
 <dt class="field-odd">Rtype</dt>
@@ -281,9 +283,9 @@
 </dl>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="BackgroundAudioManager.currentTime">
-<code class="descclassname">BackgroundAudioManager.</code><code class="descname">currentTime</code><a class="headerlink" href="#BackgroundAudioManager.currentTime" title="永久链接至目标">¶</a></dt>
+<dl class="js attribute">
+<dt class="sig sig-object js" id="BackgroundAudioManager.currentTime">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">BackgroundAudioManager</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">currentTime</span></span></span><a class="headerlink" href="#BackgroundAudioManager.currentTime" title="永久链接至目标">¶</a></dt>
 <dd><p>当前音频的播放位置(单位：<code class="docutils literal notranslate"><span class="pre">s</span></code>)，只有在有合法 <code class="docutils literal notranslate"><span class="pre">src</span></code> 时返回。</p>
 <dl class="field-list simple">
 <dt class="field-odd">Rtype</dt>
@@ -292,9 +294,9 @@
 </dl>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="BackgroundAudioManager.paused">
-<code class="descclassname">BackgroundAudioManager.</code><code class="descname">paused</code><a class="headerlink" href="#BackgroundAudioManager.paused" title="永久链接至目标">¶</a></dt>
+<dl class="js attribute">
+<dt class="sig sig-object js" id="BackgroundAudioManager.paused">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">BackgroundAudioManager</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">paused</span></span></span><a class="headerlink" href="#BackgroundAudioManager.paused" title="永久链接至目标">¶</a></dt>
 <dd><p>当前是否暂停或停止。</p>
 <dl class="field-list simple">
 <dt class="field-odd">Rtype</dt>
@@ -303,9 +305,9 @@
 </dl>
 </dd></dl>
 
-<dl class="attribute">
-<dt id="BackgroundAudioManager.buffered">
-<code class="descclassname">BackgroundAudioManager.</code><code class="descname">buffered</code><a class="headerlink" href="#BackgroundAudioManager.buffered" title="永久链接至目标">¶</a></dt>
+<dl class="js attribute">
+<dt class="sig sig-object js" id="BackgroundAudioManager.buffered">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">BackgroundAudioManager</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">buffered</span></span></span><a class="headerlink" href="#BackgroundAudioManager.buffered" title="永久链接至目标">¶</a></dt>
 <dd><p>音频已缓冲的时间，仅保证当前播放时间点到此时间点内容已缓冲。</p>
 <dl class="field-list simple">
 <dt class="field-odd">Rtype</dt>
@@ -314,187 +316,187 @@
 </dl>
 </dd></dl>
 
-</div>
-<div class="section" id="id2">
+</section>
+<section id="id2">
 <h2>方法<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
-<dl class="function">
-<dt id="BackgroundAudioManager.play">
-<code class="descclassname">BackgroundAudioManager.</code><code class="descname">play</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BackgroundAudioManager.play" title="永久链接至目标">¶</a></dt>
+<dl class="js function">
+<dt class="sig sig-object js" id="BackgroundAudioManager.play">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">BackgroundAudioManager</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">play</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BackgroundAudioManager.play" title="永久链接至目标">¶</a></dt>
 <dd><p>播放音乐</p>
 </dd></dl>
 
-<dl class="function">
-<dt id="BackgroundAudioManager.pause">
-<code class="descclassname">BackgroundAudioManager.</code><code class="descname">pause</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BackgroundAudioManager.pause" title="永久链接至目标">¶</a></dt>
+<dl class="js function">
+<dt class="sig sig-object js" id="BackgroundAudioManager.pause">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">BackgroundAudioManager</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">pause</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BackgroundAudioManager.pause" title="永久链接至目标">¶</a></dt>
 <dd><p>暂停音乐</p>
 </dd></dl>
 
-<dl class="function">
-<dt id="BackgroundAudioManager.seek">
-<code class="descclassname">BackgroundAudioManager.</code><code class="descname">seek</code><span class="sig-paren">(</span><em>currentTime</em><span class="sig-paren">)</span><a class="headerlink" href="#BackgroundAudioManager.seek" title="永久链接至目标">¶</a></dt>
+<dl class="js function">
+<dt class="sig sig-object js" id="BackgroundAudioManager.seek">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">BackgroundAudioManager</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">seek</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">currentTime</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#BackgroundAudioManager.seek" title="永久链接至目标">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">参数</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>currentTime</strong> (<em>number</em>) – 跳转到指定位置</p></li>
+<li><p><strong>currentTime</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">number()</span></code></span>) – 跳转到指定位置</p></li>
 </ul>
 </dd>
 </dl>
 </dd></dl>
 
-<dl class="function">
-<dt id="BackgroundAudioManager.stop">
-<code class="descclassname">BackgroundAudioManager.</code><code class="descname">stop</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BackgroundAudioManager.stop" title="永久链接至目标">¶</a></dt>
+<dl class="js function">
+<dt class="sig sig-object js" id="BackgroundAudioManager.stop">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">BackgroundAudioManager</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">stop</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#BackgroundAudioManager.stop" title="永久链接至目标">¶</a></dt>
 <dd><p>停止音乐</p>
 </dd></dl>
 
-<dl class="function">
-<dt id="BackgroundAudioManager.onCanplay">
-<code class="descclassname">BackgroundAudioManager.</code><code class="descname">onCanplay</code><span class="sig-paren">(</span><em>callback</em><span class="sig-paren">)</span><a class="headerlink" href="#BackgroundAudioManager.onCanplay" title="永久链接至目标">¶</a></dt>
+<dl class="js function">
+<dt class="sig sig-object js" id="BackgroundAudioManager.onCanplay">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">BackgroundAudioManager</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">onCanplay</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">callback</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#BackgroundAudioManager.onCanplay" title="永久链接至目标">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">参数</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>callback</strong> (<em>function</em>) – 监听背景音频进入可播放状态事件。但不保证后面可以流畅播放</p></li>
+<li><p><strong>callback</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">function()</span></code></span>) – 监听背景音频进入可播放状态事件。但不保证后面可以流畅播放</p></li>
 </ul>
 </dd>
 </dl>
 </dd></dl>
 
-<dl class="function">
-<dt id="BackgroundAudioManager.onWaiting">
-<code class="descclassname">BackgroundAudioManager.</code><code class="descname">onWaiting</code><span class="sig-paren">(</span><em>callback</em><span class="sig-paren">)</span><a class="headerlink" href="#BackgroundAudioManager.onWaiting" title="永久链接至目标">¶</a></dt>
+<dl class="js function">
+<dt class="sig sig-object js" id="BackgroundAudioManager.onWaiting">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">BackgroundAudioManager</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">onWaiting</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">callback</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#BackgroundAudioManager.onWaiting" title="永久链接至目标">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">参数</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>callback</strong> (<em>function</em>) – 监听音频加载中事件。当音频因为数据不足，需要停下来加载时会触发</p></li>
+<li><p><strong>callback</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">function()</span></code></span>) – 监听音频加载中事件。当音频因为数据不足，需要停下来加载时会触发</p></li>
 </ul>
 </dd>
 </dl>
 </dd></dl>
 
-<dl class="function">
-<dt id="BackgroundAudioManager.onError">
-<code class="descclassname">BackgroundAudioManager.</code><code class="descname">onError</code><span class="sig-paren">(</span><em>callback</em><span class="sig-paren">)</span><a class="headerlink" href="#BackgroundAudioManager.onError" title="永久链接至目标">¶</a></dt>
+<dl class="js function">
+<dt class="sig sig-object js" id="BackgroundAudioManager.onError">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">BackgroundAudioManager</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">onError</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">callback</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#BackgroundAudioManager.onError" title="永久链接至目标">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">参数</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>callback</strong> (<em>function</em>) – 监听背景音频播放错误事件</p></li>
+<li><p><strong>callback</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">function()</span></code></span>) – 监听背景音频播放错误事件</p></li>
 </ul>
 </dd>
 </dl>
 </dd></dl>
 
-<dl class="function">
-<dt id="BackgroundAudioManager.onPlay">
-<code class="descclassname">BackgroundAudioManager.</code><code class="descname">onPlay</code><span class="sig-paren">(</span><em>callback</em><span class="sig-paren">)</span><a class="headerlink" href="#BackgroundAudioManager.onPlay" title="永久链接至目标">¶</a></dt>
+<dl class="js function">
+<dt class="sig sig-object js" id="BackgroundAudioManager.onPlay">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">BackgroundAudioManager</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">onPlay</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">callback</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#BackgroundAudioManager.onPlay" title="永久链接至目标">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">参数</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>callback</strong> (<em>function</em>) – 监听背景音频播放事件</p></li>
+<li><p><strong>callback</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">function()</span></code></span>) – 监听背景音频播放事件</p></li>
 </ul>
 </dd>
 </dl>
 </dd></dl>
 
-<dl class="function">
-<dt id="BackgroundAudioManager.onPause">
-<code class="descclassname">BackgroundAudioManager.</code><code class="descname">onPause</code><span class="sig-paren">(</span><em>callback</em><span class="sig-paren">)</span><a class="headerlink" href="#BackgroundAudioManager.onPause" title="永久链接至目标">¶</a></dt>
+<dl class="js function">
+<dt class="sig sig-object js" id="BackgroundAudioManager.onPause">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">BackgroundAudioManager</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">onPause</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">callback</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#BackgroundAudioManager.onPause" title="永久链接至目标">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">参数</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>callback</strong> (<em>function</em>) – 监听背景音频暂停事件</p></li>
+<li><p><strong>callback</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">function()</span></code></span>) – 监听背景音频暂停事件</p></li>
 </ul>
 </dd>
 </dl>
 </dd></dl>
 
-<dl class="function">
-<dt id="BackgroundAudioManager.onSeeking">
-<code class="descclassname">BackgroundAudioManager.</code><code class="descname">onSeeking</code><span class="sig-paren">(</span><em>callback</em><span class="sig-paren">)</span><a class="headerlink" href="#BackgroundAudioManager.onSeeking" title="永久链接至目标">¶</a></dt>
+<dl class="js function">
+<dt class="sig sig-object js" id="BackgroundAudioManager.onSeeking">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">BackgroundAudioManager</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">onSeeking</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">callback</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#BackgroundAudioManager.onSeeking" title="永久链接至目标">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">参数</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>callback</strong> (<em>function</em>) – 监听背景音频开始跳转操作事件</p></li>
+<li><p><strong>callback</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">function()</span></code></span>) – 监听背景音频开始跳转操作事件</p></li>
 </ul>
 </dd>
 </dl>
 </dd></dl>
 
-<dl class="function">
-<dt id="BackgroundAudioManager.onSeeked">
-<code class="descclassname">BackgroundAudioManager.</code><code class="descname">onSeeked</code><span class="sig-paren">(</span><em>callback</em><span class="sig-paren">)</span><a class="headerlink" href="#BackgroundAudioManager.onSeeked" title="永久链接至目标">¶</a></dt>
+<dl class="js function">
+<dt class="sig sig-object js" id="BackgroundAudioManager.onSeeked">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">BackgroundAudioManager</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">onSeeked</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">callback</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#BackgroundAudioManager.onSeeked" title="永久链接至目标">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">参数</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>callback</strong> (<em>function</em>) – 监听背景音频完成跳转操作事件</p></li>
+<li><p><strong>callback</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">function()</span></code></span>) – 监听背景音频完成跳转操作事件</p></li>
 </ul>
 </dd>
 </dl>
 </dd></dl>
 
-<dl class="function">
-<dt id="BackgroundAudioManager.onEnded">
-<code class="descclassname">BackgroundAudioManager.</code><code class="descname">onEnded</code><span class="sig-paren">(</span><em>callback</em><span class="sig-paren">)</span><a class="headerlink" href="#BackgroundAudioManager.onEnded" title="永久链接至目标">¶</a></dt>
+<dl class="js function">
+<dt class="sig sig-object js" id="BackgroundAudioManager.onEnded">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">BackgroundAudioManager</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">onEnded</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">callback</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#BackgroundAudioManager.onEnded" title="永久链接至目标">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">参数</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>callback</strong> (<em>function</em>) – 监听背景音频自然播放结束事件</p></li>
+<li><p><strong>callback</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">function()</span></code></span>) – 监听背景音频自然播放结束事件</p></li>
 </ul>
 </dd>
 </dl>
 </dd></dl>
 
-<dl class="function">
-<dt id="BackgroundAudioManager.onStop">
-<code class="descclassname">BackgroundAudioManager.</code><code class="descname">onStop</code><span class="sig-paren">(</span><em>callback</em><span class="sig-paren">)</span><a class="headerlink" href="#BackgroundAudioManager.onStop" title="永久链接至目标">¶</a></dt>
+<dl class="js function">
+<dt class="sig sig-object js" id="BackgroundAudioManager.onStop">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">BackgroundAudioManager</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">onStop</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">callback</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#BackgroundAudioManager.onStop" title="永久链接至目标">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">参数</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>callback</strong> (<em>function</em>) – 监听背景音频停止事件</p></li>
+<li><p><strong>callback</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">function()</span></code></span>) – 监听背景音频停止事件</p></li>
 </ul>
 </dd>
 </dl>
 </dd></dl>
 
-<dl class="function">
-<dt id="BackgroundAudioManager.onTimeUpdate">
-<code class="descclassname">BackgroundAudioManager.</code><code class="descname">onTimeUpdate</code><span class="sig-paren">(</span><em>callback</em><span class="sig-paren">)</span><a class="headerlink" href="#BackgroundAudioManager.onTimeUpdate" title="永久链接至目标">¶</a></dt>
+<dl class="js function">
+<dt class="sig sig-object js" id="BackgroundAudioManager.onTimeUpdate">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">BackgroundAudioManager</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">onTimeUpdate</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">callback</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#BackgroundAudioManager.onTimeUpdate" title="永久链接至目标">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">参数</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>callback</strong> (<em>function</em>) – 监听背景音频播放进度更新事件</p></li>
+<li><p><strong>callback</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">function()</span></code></span>) – 监听背景音频播放进度更新事件</p></li>
 </ul>
 </dd>
 </dl>
 </dd></dl>
 
-<dl class="function">
-<dt id="BackgroundAudioManager.onNext">
-<code class="descclassname">BackgroundAudioManager.</code><code class="descname">onNext</code><span class="sig-paren">(</span><em>callback</em><span class="sig-paren">)</span><a class="headerlink" href="#BackgroundAudioManager.onNext" title="永久链接至目标">¶</a></dt>
+<dl class="js function">
+<dt class="sig sig-object js" id="BackgroundAudioManager.onNext">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">BackgroundAudioManager</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">onNext</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">callback</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#BackgroundAudioManager.onNext" title="永久链接至目标">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">参数</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>callback</strong> (<em>function</em>) – 监听用户在系统音乐播放面板点击下一曲事件(仅iOS)</p></li>
+<li><p><strong>callback</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">function()</span></code></span>) – 监听用户在系统音乐播放面板点击下一曲事件(仅iOS)</p></li>
 </ul>
 </dd>
 </dl>
 </dd></dl>
 
-<dl class="function">
-<dt id="BackgroundAudioManager.onPrev">
-<code class="descclassname">BackgroundAudioManager.</code><code class="descname">onPrev</code><span class="sig-paren">(</span><em>callback</em><span class="sig-paren">)</span><a class="headerlink" href="#BackgroundAudioManager.onPrev" title="永久链接至目标">¶</a></dt>
+<dl class="js function">
+<dt class="sig sig-object js" id="BackgroundAudioManager.onPrev">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">BackgroundAudioManager</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">onPrev</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">callback</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#BackgroundAudioManager.onPrev" title="永久链接至目标">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">参数</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>callback</strong> (<em>function</em>) – 监听用户在系统音乐播放面板点击上一曲事件(仅iOS)</p></li>
+<li><p><strong>callback</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">function()</span></code></span>) – 监听用户在系统音乐播放面板点击上一曲事件(仅iOS)</p></li>
 </ul>
 </dd>
 </dl>
 </dd></dl>
 
-</div>
-<div class="section" id="id3">
+</section>
+<section id="id3">
 <h2>示例代码<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
-<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="kr">const</span> <span class="nx">backgroundAudioManager</span> <span class="o">=</span> <span class="nx">wx</span><span class="p">.</span><span class="nx">getBackgroundAudioManager</span><span class="p">()</span>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="kd">const</span> <span class="nx">backgroundAudioManager</span> <span class="o">=</span> <span class="nx">wx</span><span class="p">.</span><span class="nx">getBackgroundAudioManager</span><span class="p">()</span>
 
 <span class="nx">backgroundAudioManager</span><span class="p">.</span><span class="nx">title</span> <span class="o">=</span> <span class="s1">&#39;此时此刻&#39;</span>
 <span class="nx">backgroundAudioManager</span><span class="p">.</span><span class="nx">epname</span> <span class="o">=</span> <span class="s1">&#39;此时此刻&#39;</span>
@@ -504,10 +506,11 @@
 <span class="nx">backgroundAudioManager</span><span class="p">.</span><span class="nx">src</span> <span class="o">=</span> <span class="s1">&#39;http://ws.stream.qqmusic.qq.com/M500001VfvsJ21xFqb.mp3?guid=ffffffff82def4af4b12b3cd9337d5e7&amp;uin=346897220&amp;vkey=6292F51E1E384E061FF02C31F716658E5C81F5594D561F2E88B854E81CAAB7806D5E4F103E55D33C16F3FAC506D1AB172DE8600B37E43FAD&amp;fromtag=46&#39;</span>
 </pre></div>
 </div>
-</div>
-</div>
+</section>
+</section>
 
 
+            <div class="clearer"></div>
           </div>
         </div>
       </div>
@@ -531,12 +534,13 @@
 <li><a href="../index.html">主页</a>&#160;|</li>
 <li><a href="../contents.html">文档</a> &#187;</li>
 
-          <li class="nav-item nav-item-1"><a href="index.html" >API</a> &#187;</li> 
+          <li class="nav-item nav-item-1"><a href="index.html" >API</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">BackgroundAudioManager ☁️</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
         &#169; 版权所有 2019, Wxadev Docs.
-      由 <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.0+/0e60d4d 创建。
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.1.
     </div>
   </body>
 </html>

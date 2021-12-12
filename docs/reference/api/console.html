@@ -1,18 +1,19 @@
 
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
+<html lang="zh_CN">
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>打印日志(console) &#8212; wxadev 1.0.0 文档</title>
-    <link rel="stylesheet" href="../../_static/sphinx13.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-    <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
-    <script type="text/javascript" src="../../_static/jquery.js"></script>
-    <script type="text/javascript" src="../../_static/underscore.js"></script>
-    <script type="text/javascript" src="../../_static/doctools.js"></script>
-    <script type="text/javascript" src="../../_static/language_data.js"></script>
-    <script type="text/javascript" src="../../_static/translations.js"></script>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx13.css" />
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/translations.js"></script>
     <link rel="search" type="application/opensearchdescription+xml"
           title="在 wxadev 1.0.0 文档 中搜索"
           href="../../_static/opensearch.xml"/>
@@ -94,7 +95,8 @@
 <li><a href="../../contents.html">文档</a> &#187;</li>
 
           <li class="nav-item nav-item-1"><a href="../index.html" >参考资料</a> &#187;</li>
-          <li class="nav-item nav-item-2"><a href="index.html" accesskey="U">框架接口说明</a> &#187;</li> 
+          <li class="nav-item nav-item-2"><a href="index.html" accesskey="U">框架接口说明</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">打印日志(console)</a></li> 
       </ul>
     </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
@@ -116,12 +118,12 @@
   <h3 id="searchlabel">快速搜索</h3>
     <div class="searchformwrapper">
     <form class="search" action="../../search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
       <input type="submit" value="转向" />
     </form>
     </div>
 </div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
+<script>$('#searchbox').show(0);</script>
         </div>
       </div>
 
@@ -130,87 +132,87 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="console">
+  <section id="console">
 <h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/reference/api/console.html">打印日志(console)</a><a class="headerlink" href="#console" title="永久链接至标题">¶</a></h1>
-<dl class="class">
-<dt>
-<em class="property">class </em><code class="descname">console</code><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dl class="js class">
+<dt class="sig sig-object js" id="id0">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="n"><span class="pre">console</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#id0" title="永久链接至目标">¶</a></dt>
 <dd><p>向调试面板中打印日志。console 是一个全局对象，可以直接访问。在微信客户端中，向 vConsole 中输出日志。</p>
 </dd></dl>
 
-<dl class="function">
-<dt id="console.debug">
-<code class="descclassname">console.</code><code class="descname">debug</code><span class="sig-paren">(</span><em>...args</em><span class="sig-paren">)</span><a class="headerlink" href="#console.debug" title="永久链接至目标">¶</a></dt>
+<dl class="js function">
+<dt class="sig sig-object js" id="console.debug">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">console</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">debug</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">...args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#console.debug" title="永久链接至目标">¶</a></dt>
 <dd><p>向调试面板中打印 debug 日志</p>
 <dl class="field-list simple">
 <dt class="field-odd">参数</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>...args</strong> (<em>any</em>) – 日志内容，可以有任意多个。</p></li>
+<li><p><strong>...args</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">any()</span></code></span>) – 日志内容，可以有任意多个。</p></li>
 </ul>
 </dd>
 </dl>
 </dd></dl>
 
-<dl class="function">
-<dt id="console.error">
-<code class="descclassname">console.</code><code class="descname">error</code><span class="sig-paren">(</span><em>...args</em><span class="sig-paren">)</span><a class="headerlink" href="#console.error" title="永久链接至目标">¶</a></dt>
+<dl class="js function">
+<dt class="sig sig-object js" id="console.error">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">console</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">error</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">...args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#console.error" title="永久链接至目标">¶</a></dt>
 <dd><p>向调试面板中打印 error 日志</p>
 <dl class="field-list simple">
 <dt class="field-odd">参数</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>...args</strong> (<em>any</em>) – 日志内容，可以有任意多个。</p></li>
+<li><p><strong>...args</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">any()</span></code></span>) – 日志内容，可以有任意多个。</p></li>
 </ul>
 </dd>
 </dl>
 </dd></dl>
 
-<dl class="function">
-<dt id="console.info">
-<code class="descclassname">console.</code><code class="descname">info</code><span class="sig-paren">(</span><em>...args</em><span class="sig-paren">)</span><a class="headerlink" href="#console.info" title="永久链接至目标">¶</a></dt>
+<dl class="js function">
+<dt class="sig sig-object js" id="console.info">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">console</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">info</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">...args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#console.info" title="永久链接至目标">¶</a></dt>
 <dd><p>向调试面板中打印 info 日志</p>
 <dl class="field-list simple">
 <dt class="field-odd">参数</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>...args</strong> (<em>any</em>) – 日志内容，可以有任意多个。</p></li>
+<li><p><strong>...args</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">any()</span></code></span>) – 日志内容，可以有任意多个。</p></li>
 </ul>
 </dd>
 </dl>
 </dd></dl>
 
-<dl class="function">
-<dt id="console.log">
-<code class="descclassname">console.</code><code class="descname">log</code><span class="sig-paren">(</span><em>..args</em><span class="sig-paren">)</span><a class="headerlink" href="#console.log" title="永久链接至目标">¶</a></dt>
+<dl class="js function">
+<dt class="sig sig-object js" id="console.log">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">console</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">log</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">..args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#console.log" title="永久链接至目标">¶</a></dt>
 <dd><p>向调试面板中打印 log 日志</p>
 <dl class="field-list simple">
 <dt class="field-odd">参数</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>...args</strong> (<em>any</em>) – 日志内容，可以有任意多个。</p></li>
+<li><p><strong>...args</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">any()</span></code></span>) – 日志内容，可以有任意多个。</p></li>
 </ul>
 </dd>
 </dl>
 </dd></dl>
 
-<dl class="function">
-<dt id="console.warn">
-<code class="descclassname">console.</code><code class="descname">warn</code><span class="sig-paren">(</span><em>...args</em><span class="sig-paren">)</span><a class="headerlink" href="#console.warn" title="永久链接至目标">¶</a></dt>
+<dl class="js function">
+<dt class="sig sig-object js" id="console.warn">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">console</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">warn</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">...args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#console.warn" title="永久链接至目标">¶</a></dt>
 <dd><p>向调试面板中打印 warn 日志</p>
 <dl class="field-list simple">
 <dt class="field-odd">参数</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>...args</strong> (<em>any</em>) – 日志内容，可以有任意多个。</p></li>
+<li><p><strong>...args</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">any()</span></code></span>) – 日志内容，可以有任意多个。</p></li>
 </ul>
 </dd>
 </dl>
 </dd></dl>
 
-<dl class="function">
-<dt id="console.group">
-<code class="descclassname">console.</code><code class="descname">group</code><span class="sig-paren">(</span><em>label</em><span class="sig-paren">)</span><a class="headerlink" href="#console.group" title="永久链接至目标">¶</a></dt>
+<dl class="js function">
+<dt class="sig sig-object js" id="console.group">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">console</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">group</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">label</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#console.group" title="永久链接至目标">¶</a></dt>
 <dd><p>在调试面板中创建一个新的分组。随后输出的内容都会被添加一个缩进，表示该内容属于当前分组。调用 console.groupEnd之后分组结束。</p>
 <dl class="field-list simple">
 <dt class="field-odd">参数</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>label</strong> (<em>string</em>) – 分组标记，可选。</p></li>
+<li><p><strong>label</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">string()</span></code></span>) – 分组标记，可选。</p></li>
 </ul>
 </dd>
 </dl>
@@ -220,9 +222,9 @@
 </div>
 </dd></dl>
 
-<dl class="function">
-<dt id="console.groupEnd">
-<code class="descclassname">console.</code><code class="descname">groupEnd</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#console.groupEnd" title="永久链接至目标">¶</a></dt>
+<dl class="js function">
+<dt class="sig sig-object js" id="console.groupEnd">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">console</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">groupEnd</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#console.groupEnd" title="永久链接至目标">¶</a></dt>
 <dd><p>结束由 console.group 创建的分组</p>
 <div class="admonition attention">
 <p class="admonition-title">注意</p>
@@ -237,9 +239,10 @@
 <li><p>部分内容展示的限制请参见调试</p></li>
 </ul>
 </div>
-</div>
+</section>
 
 
+            <div class="clearer"></div>
           </div>
         </div>
       </div>
@@ -264,12 +267,13 @@
 <li><a href="../../contents.html">文档</a> &#187;</li>
 
           <li class="nav-item nav-item-1"><a href="../index.html" >参考资料</a> &#187;</li>
-          <li class="nav-item nav-item-2"><a href="index.html" >框架接口说明</a> &#187;</li> 
+          <li class="nav-item nav-item-2"><a href="index.html" >框架接口说明</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">打印日志(console)</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
         &#169; 版权所有 2019, Wxadev Docs.
-      由 <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.0+/0e60d4d 创建。
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.1.
     </div>
   </body>
 </html>

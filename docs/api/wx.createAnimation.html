@@ -1,18 +1,19 @@
 
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
+<html lang="zh_CN">
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>wx.createAnimation &#8212; wxadev 1.0.0 文档</title>
-    <link rel="stylesheet" href="../_static/sphinx13.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-    <script type="text/javascript" src="../_static/jquery.js"></script>
-    <script type="text/javascript" src="../_static/underscore.js"></script>
-    <script type="text/javascript" src="../_static/doctools.js"></script>
-    <script type="text/javascript" src="../_static/language_data.js"></script>
-    <script type="text/javascript" src="../_static/translations.js"></script>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx13.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/translations.js"></script>
     <link rel="search" type="application/opensearchdescription+xml"
           title="在 wxadev 1.0.0 文档 中搜索"
           href="../_static/opensearch.xml"/>
@@ -93,7 +94,8 @@
 <li><a href="../index.html">主页</a>&#160;|</li>
 <li><a href="../contents.html">文档</a> &#187;</li>
 
-          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">API</a> &#187;</li> 
+          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">API</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">wx.createAnimation</a></li> 
       </ul>
     </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
@@ -115,12 +117,12 @@
   <h3 id="searchlabel">快速搜索</h3>
     <div class="searchformwrapper">
     <form class="search" action="../search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
       <input type="submit" value="转向" />
     </form>
     </div>
 </div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
+<script>$('#searchbox').show(0);</script>
         </div>
       </div>
 
@@ -129,18 +131,18 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="wx-createanimation">
+  <section id="wx-createanimation">
 <h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/api/wx.createAnimation.html">wx.createAnimation</a><a class="headerlink" href="#wx-createanimation" title="永久链接至标题">¶</a></h1>
 <p>Animation</p>
-<dl class="function">
-<dt id="wx.createAnimation">
-<code class="descclassname">wx.</code><code class="descname">createAnimation</code><span class="sig-paren">(</span><em>{[duration][, timingFunction][, delay][, transformOrigin]}</em><span class="sig-paren">)</span><a class="headerlink" href="#wx.createAnimation" title="永久链接至目标">¶</a></dt>
+<dl class="js function">
+<dt class="sig sig-object js" id="wx.createAnimation">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">wx</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">createAnimation</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">{[duration][,</span> <span class="pre">timingFunction][,</span> <span class="pre">delay][,</span> <span class="pre">transformOrigin]}</span></em><span class="sig-paren">)</span><a class="headerlink" href="#wx.createAnimation" title="永久链接至目标">¶</a></dt>
 <dd><p>创建一个动画实例 animation。调用实例的方法来描述动画。最后通过动画实例的 export 方法导出动画数据传递给组件的 animation 属性。</p>
 <dl class="field-list simple">
 <dt class="field-odd">参数</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>duration</strong> (<em>number</em>) – <strong>400</strong> 动画持续时间，单位 ms</p></li>
-<li><p><strong>timingFunction</strong> (<em>string</em>) – <p><strong>‘linear’</strong> 动画的效果</p>
+<li><p><strong>duration</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">number()</span></code></span>) – <strong>400</strong> 动画持续时间，单位 ms</p></li>
+<li><p><strong>timingFunction</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">string()</span></code></span>) – <p><strong>‘linear’</strong> 动画的效果</p>
 <ul>
 <li><p><em>’linear’</em> 动画从头到尾的速度是相同的</p></li>
 <li><p><em>’ease’</em> 动画以低速开始，然后加快，在结束前变慢</p></li>
@@ -151,19 +153,20 @@
 <li><p><em>’step-end’</em> 动画一直保持开始状态，最后一帧跳到结束状态</p></li>
 </ul>
 </p></li>
-<li><p><strong>delay</strong> (<em>number</em>) – <strong>0</strong> 动画延迟时间，单位 ms</p></li>
-<li><p><strong>transformOrigin</strong> (<em>string</em>) – <strong>‘50% 50% 0’</strong></p></li>
+<li><p><strong>delay</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">number()</span></code></span>) – <strong>0</strong> 动画延迟时间，单位 ms</p></li>
+<li><p><strong>transformOrigin</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">string()</span></code></span>) – <strong>‘50% 50% 0’</strong></p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">返回</dt>
 <dd class="field-even"><p><a class="reference internal" href="Animation.html#Animation" title="Animation"><code class="xref js js-class docutils literal notranslate"><span class="pre">Animation()</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
 
-</div>
+</section>
 
 
+            <div class="clearer"></div>
           </div>
         </div>
       </div>
@@ -187,12 +190,13 @@
 <li><a href="../index.html">主页</a>&#160;|</li>
 <li><a href="../contents.html">文档</a> &#187;</li>
 
-          <li class="nav-item nav-item-1"><a href="index.html" >API</a> &#187;</li> 
+          <li class="nav-item nav-item-1"><a href="index.html" >API</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">wx.createAnimation</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
         &#169; 版权所有 2019, Wxadev Docs.
-      由 <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.0+/0e60d4d 创建。
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.1.
     </div>
   </body>
 </html>

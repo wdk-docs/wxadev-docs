@@ -1,18 +1,19 @@
 
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
+<html lang="zh_CN">
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>网络 &#8212; wxadev 1.0.0 文档</title>
-    <link rel="stylesheet" href="../../_static/sphinx13.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-    <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
-    <script type="text/javascript" src="../../_static/jquery.js"></script>
-    <script type="text/javascript" src="../../_static/underscore.js"></script>
-    <script type="text/javascript" src="../../_static/doctools.js"></script>
-    <script type="text/javascript" src="../../_static/language_data.js"></script>
-    <script type="text/javascript" src="../../_static/translations.js"></script>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx13.css" />
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/translations.js"></script>
     <link rel="search" type="application/opensearchdescription+xml"
           title="在 wxadev 1.0.0 文档 中搜索"
           href="../../_static/opensearch.xml"/>
@@ -94,7 +95,8 @@
 <li><a href="../../contents.html">文档</a> &#187;</li>
 
           <li class="nav-item nav-item-1"><a href="../index.html" >框架</a> &#187;</li>
-          <li class="nav-item nav-item-2"><a href="index.html" accesskey="U">基础能力</a> &#187;</li> 
+          <li class="nav-item nav-item-2"><a href="index.html" accesskey="U">基础能力</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">网络</a></li> 
       </ul>
     </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
@@ -139,12 +141,12 @@
   <h3 id="searchlabel">快速搜索</h3>
     <div class="searchformwrapper">
     <form class="search" action="../../search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
       <input type="submit" value="转向" />
     </form>
     </div>
 </div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
+<script>$('#searchbox').show(0);</script>
         </div>
       </div>
 
@@ -153,10 +155,10 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="id1">
+  <section id="id1">
 <h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/framework/ability/network.html">网络</a><a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
 <p>在小程序/小游戏中使用网络相关的 API 时，需要注意下列问题，请开发者提前了解。</p>
-<div class="section" id="id2">
+<section id="id2">
 <h2>1. 服务器域名配置<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
 <p>每个微信小程序需要事先设置一个通讯域名，小程序只可以跟指定的域名与进行网络通信。包括普通:</p>
 <ul class="simple">
@@ -165,7 +167,7 @@
 <li><p>下载文件（<a class="reference internal" href="../../api/wx.downloadFile.html#wx.downloadFile" title="wx.downloadFile"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.downloadFile()</span></code></a>)</p></li>
 <li><p>WebSocket 通信（<a class="reference internal" href="../../api/wx.connectSocket.html#wx.connectSocket" title="wx.connectSocket"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.connectSocket()</span></code></a>）</p></li>
 </ul>
-<div class="section" id="id3">
+<section id="id3">
 <h3>配置流程<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h3>
 <p>服务器域名请在 「小程序后台-设置-开发设置-服务器域名」 中进行配置，配置时需要注意：</p>
 <ul class="simple">
@@ -184,18 +186,18 @@ https (<a class="reference internal" href="../../api/wx.request.html#wx.request"
 接口获取 access_token，并调用相关 API；</p></li>
 <li><p>对于每个接口，分别可以配置最多 20 个域名。</p></li>
 </ul>
-</div>
-</div>
-<div class="section" id="id4">
+</section>
+</section>
+<section id="id4">
 <h2>2. 网络请求<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h2>
-<div class="section" id="id5">
+<section id="id5">
 <h3>超时时间<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h3>
 <ul class="simple">
 <li><p>默认超时时间和最大超时时间都是 60s；</p></li>
 <li><p>超时时间可以在 app.json 或 game.json 中通过 networktimeout 配置。</p></li>
 </ul>
-</div>
-<div class="section" id="id6">
+</section>
+<section id="id6">
 <h3>使用限制<a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h3>
 <ul class="simple">
 <li><p>网络请求的 referer header 不可设置。
@@ -206,24 +208,24 @@ https (<a class="reference internal" href="../../api/wx.request.html#wx.request"
 <li><p>小程序进入后台运行后（非置顶聊天），如果 5s 内网络请求没有结束，会回调错误信息 fail interrupted；
 在回到前台之前，网络请求接口调用都会无法调用。</p></li>
 </ul>
-</div>
-<div class="section" id="id7">
+</section>
+<section id="id7">
 <h3>返回值编码<a class="headerlink" href="#id7" title="永久链接至标题">¶</a></h3>
 <ul class="simple">
 <li><p>建议服务器返回值使用 UTF-8 编码。对于非 UTF-8 编码，小程序会尝试进行转换，但是会有转换失败的可能。</p></li>
 <li><p>小程序会自动对 BOM 头进行过滤（只过滤一个BOM头）。</p></li>
 </ul>
-</div>
-<div class="section" id="id8">
+</section>
+<section id="id8">
 <h3>回调函数<a class="headerlink" href="#id8" title="永久链接至标题">¶</a></h3>
 <ul class="simple">
 <li><p>只要成功接收到服务器返回，无论 statusCode 是多少，都会进入 success 回调。请开发者根据业务逻辑对返回值进行判断。</p></li>
 </ul>
-</div>
-</div>
-<div class="section" id="id9">
+</section>
+</section>
+<section id="id9">
 <h2>3. 常见问题<a class="headerlink" href="#id9" title="永久链接至标题">¶</a></h2>
-<div class="section" id="https">
+<section id="https">
 <h3>HTTPS 证书<a class="headerlink" href="#https" title="永久链接至标题">¶</a></h3>
 <p>小程序必须使用 HTTPS/WSS 发起网络请求。请求时系统会对服务器域名使用的 HTTPS 证书进行校验，如果校验失败，则请求不能成功发起。
 由于系统限制，不同平台对于证书要求的严格程度不同。为了保证小程序的兼容性，建议开发者按照最高标准进行证书配置，并使用相关工具检查现有证书是否符合要求。</p>
@@ -248,18 +250,19 @@ https (<a class="reference internal" href="../../api/wx.request.html#wx.request"
 </pre></div>
 </div>
 <p>除了网络请求 API 外，小程序中其他 HTTPS 请求如果出现异常，也请按上述流程进行检查。如 https 的图片无法加载、音视频无法播放等。</p>
-</div>
-<div class="section" id="id10">
+</section>
+<section id="id10">
 <h3>跳过域名校验<a class="headerlink" href="#id10" title="永久链接至标题">¶</a></h3>
 <p>在微信开发者工具中，可以临时开启 开发环境不校验请求域名、TLS版本及HTTPS证书 选项，跳过服务器域名的校验。
 此时，在微信开发者工具中及手机开启调试模式时，不会进行服务器域名的校验。</p>
 <p>在服务器域名配置成功后，建议开发者关闭此选项进行开发，并在各平台下进行测试，以确认服务器域名配置正确。</p>
 <p>如果手机上出现 “打开调试模式可以发出请求，关闭调试模式无法发出请求” 的现象，请确认是否跳过了域名校验，并确认服务器域名和证书配置是否正确。</p>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
 
+            <div class="clearer"></div>
           </div>
         </div>
       </div>
@@ -284,12 +287,13 @@ https (<a class="reference internal" href="../../api/wx.request.html#wx.request"
 <li><a href="../../contents.html">文档</a> &#187;</li>
 
           <li class="nav-item nav-item-1"><a href="../index.html" >框架</a> &#187;</li>
-          <li class="nav-item nav-item-2"><a href="index.html" >基础能力</a> &#187;</li> 
+          <li class="nav-item nav-item-2"><a href="index.html" >基础能力</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">网络</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
         &#169; 版权所有 2019, Wxadev Docs.
-      由 <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.0+/0e60d4d 创建。
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.1.
     </div>
   </body>
 </html>

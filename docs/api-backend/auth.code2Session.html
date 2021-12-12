@@ -1,18 +1,19 @@
 
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
+<html lang="zh_CN">
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>auth.code2Session &#8212; wxadev 1.0.0 文档</title>
-    <link rel="stylesheet" href="../_static/sphinx13.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-    <script type="text/javascript" src="../_static/jquery.js"></script>
-    <script type="text/javascript" src="../_static/underscore.js"></script>
-    <script type="text/javascript" src="../_static/doctools.js"></script>
-    <script type="text/javascript" src="../_static/language_data.js"></script>
-    <script type="text/javascript" src="../_static/translations.js"></script>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx13.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/translations.js"></script>
     <link rel="search" type="application/opensearchdescription+xml"
           title="在 wxadev 1.0.0 文档 中搜索"
           href="../_static/opensearch.xml"/>
@@ -93,7 +94,8 @@
 <li><a href="../index.html">主页</a>&#160;|</li>
 <li><a href="../contents.html">文档</a> &#187;</li>
 
-          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">服务端API</a> &#187;</li> 
+          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">服务端API</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">auth.code2Session</a></li> 
       </ul>
     </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
@@ -115,12 +117,12 @@
   <h3 id="searchlabel">快速搜索</h3>
     <div class="searchformwrapper">
     <form class="search" action="../search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
       <input type="submit" value="转向" />
     </form>
     </div>
 </div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
+<script>$('#searchbox').show(0);</script>
         </div>
       </div>
 
@@ -129,18 +131,18 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="auth-code2session">
+  <section id="auth-code2session">
 <span id="id1"></span><h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/api-backend/auth.code2Session.html">auth.code2Session</a><a class="headerlink" href="#auth-code2session" title="永久链接至标题">¶</a></h1>
 <p>本接口应在服务器端调用，详细说明参见服务端API。</p>
-<p>请求地址 <a class="reference internal" href="../glossary.html#term-api-sns"><span class="xref std std-term">api_sns</span></a></p>
-<dl class="get">
-<dt id="get-jscode2session">
-<code class="descname">GET </code><code class="descname">jscode2session</code><a class="headerlink" href="#get-jscode2session" title="永久链接至目标">¶</a></dt>
+<p>请求地址 <a class="reference internal" href="../glossary.html#term-api_sns"><span class="xref std std-term">api_sns</span></a></p>
+<dl class="http get">
+<dt class="sig sig-object http" id="get-jscode2session">
+<span class="sig-name descname"><span class="pre">GET</span> </span><span class="sig-name descname"><span class="pre">jscode2session</span></span><a class="headerlink" href="#get-jscode2session" title="永久链接至目标">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Synopsis</dt>
 <dd class="field-odd"><p>登录凭证校验。通过 wx.login() 接口获得临时登录凭证 code 后传到开发者服务器调用此接口完成登录流程。更多使用方法详见 小程序登录。</p>
 </dd>
-<dt class="field-even">参数</dt>
+<dt class="field-even">Parameters</dt>
 <dd class="field-even"><ul class="simple">
 <li><p><strong>appid</strong> (<em>string</em>) – 是 小程序 appId</p></li>
 <li><p><strong>secret</strong> (<em>string</em>) – 是 小程序 appSecret</p></li>
@@ -148,7 +150,7 @@
 <li><p><strong>grant_type</strong> (<em>string</em>) – 是 授权类型，此处只需填写 authorization_code</p></li>
 </ul>
 </dd>
-<dt class="field-odd">响应JSON对象</dt>
+<dt class="field-odd">Response JSON Object</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>openid</strong> (<em>string</em>) – 用户唯一标识</p></li>
 <li><p><strong>session_key</strong> (<em>string</em>) – 会话密钥</p></li>
@@ -167,9 +169,10 @@
 </dl>
 </dd></dl>
 
-</div>
+</section>
 
 
+            <div class="clearer"></div>
           </div>
         </div>
       </div>
@@ -193,12 +196,13 @@
 <li><a href="../index.html">主页</a>&#160;|</li>
 <li><a href="../contents.html">文档</a> &#187;</li>
 
-          <li class="nav-item nav-item-1"><a href="index.html" >服务端API</a> &#187;</li> 
+          <li class="nav-item nav-item-1"><a href="index.html" >服务端API</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">auth.code2Session</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
         &#169; 版权所有 2019, Wxadev Docs.
-      由 <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.0+/0e60d4d 创建。
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.1.
     </div>
   </body>
 </html>

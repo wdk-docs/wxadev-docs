@@ -1,18 +1,19 @@
 
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
+<html lang="zh_CN">
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>动画 &#8212; wxadev 1.0.0 文档</title>
-    <link rel="stylesheet" href="../../_static/sphinx13.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-    <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
-    <script type="text/javascript" src="../../_static/jquery.js"></script>
-    <script type="text/javascript" src="../../_static/underscore.js"></script>
-    <script type="text/javascript" src="../../_static/doctools.js"></script>
-    <script type="text/javascript" src="../../_static/language_data.js"></script>
-    <script type="text/javascript" src="../../_static/translations.js"></script>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx13.css" />
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/translations.js"></script>
     <link rel="search" type="application/opensearchdescription+xml"
           title="在 wxadev 1.0.0 文档 中搜索"
           href="../../_static/opensearch.xml"/>
@@ -94,7 +95,8 @@
 <li><a href="../../contents.html">文档</a> &#187;</li>
 
           <li class="nav-item nav-item-1"><a href="../index.html" >框架</a> &#187;</li>
-          <li class="nav-item nav-item-2"><a href="index.html" accesskey="U">视图层 View</a> &#187;</li> 
+          <li class="nav-item nav-item-2"><a href="index.html" accesskey="U">视图层 View</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">动画</a></li> 
       </ul>
     </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
@@ -125,12 +127,12 @@
   <h3 id="searchlabel">快速搜索</h3>
     <div class="searchformwrapper">
     <form class="search" action="../../search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
       <input type="submit" value="转向" />
     </form>
     </div>
 </div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
+<script>$('#searchbox').show(0);</script>
         </div>
       </div>
 
@@ -139,9 +141,9 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="id1">
+  <section id="id1">
 <h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/framework/view/animation.html">动画</a><a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
-<div class="section" id="id2">
+<section id="id2">
 <h2>界面动画的常见方式<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
 <p>在小程序中，通常可以使用 <a class="reference external" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions">CSS 渐变</a> 和 <a class="reference external" href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS_Animations/Using_CSS_animations">CSS 动画</a> 来创建简易的界面动画。</p>
 <p><a class="reference download external" download="" href="https://developers.weixin.qq.com/s/oHKxDPm47h5k"><code class="xref download docutils literal notranslate"><span class="pre">在开发者工具中预览效果</span></code></a></p>
@@ -177,8 +179,8 @@
 <p class="admonition-title">小技巧</p>
 <p>这几个事件都不是冒泡事件，需要绑定在真正发生了动画的节点上才会生效。</p>
 </div>
-</div>
-<div class="section" id="id4">
+</section>
+<section id="id4">
 <h2>高级的动画方式<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h2>
 <p>在一些复杂场景下，上述的动画方法可能并不适用。</p>
 <p><a class="reference internal" href="interactive-animation.html#interactive-animation"><span class="std std-ref">WXS响应事件</span></a> 的方式可以通过使用 WXS 来响应事件的方法来动态调整节点的 style 属性。
@@ -188,10 +190,11 @@
 此时可以通过将页面的 setData 改为 <a class="reference internal" href="../custom-component/create.html#custom-component"><span class="std std-ref">自定义组件</span></a> 中的 setData 来提升性能。
 下面的例子是使用 setData 来实现秒表动画的示例。</p>
 <p><a class="reference download external" download="" href="https://developers.weixin.qq.com/s/cRTvdPmO7d5T"><code class="xref download docutils literal notranslate"><span class="pre">在开发者工具中预览效果</span></code></a></p>
-</div>
-</div>
+</section>
+</section>
 
 
+            <div class="clearer"></div>
           </div>
         </div>
       </div>
@@ -216,12 +219,13 @@
 <li><a href="../../contents.html">文档</a> &#187;</li>
 
           <li class="nav-item nav-item-1"><a href="../index.html" >框架</a> &#187;</li>
-          <li class="nav-item nav-item-2"><a href="index.html" >视图层 View</a> &#187;</li> 
+          <li class="nav-item nav-item-2"><a href="index.html" >视图层 View</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">动画</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
         &#169; 版权所有 2019, Wxadev Docs.
-      由 <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.0+/0e60d4d 创建。
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.1.
     </div>
   </body>
 </html>

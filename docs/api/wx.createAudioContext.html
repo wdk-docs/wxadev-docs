@@ -1,18 +1,19 @@
 
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
+<html lang="zh_CN">
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>wx.createAudioContext &#8212; wxadev 1.0.0 文档</title>
-    <link rel="stylesheet" href="../_static/sphinx13.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-    <script type="text/javascript" src="../_static/jquery.js"></script>
-    <script type="text/javascript" src="../_static/underscore.js"></script>
-    <script type="text/javascript" src="../_static/doctools.js"></script>
-    <script type="text/javascript" src="../_static/language_data.js"></script>
-    <script type="text/javascript" src="../_static/translations.js"></script>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx13.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/translations.js"></script>
     <link rel="search" type="application/opensearchdescription+xml"
           title="在 wxadev 1.0.0 文档 中搜索"
           href="../_static/opensearch.xml"/>
@@ -84,7 +85,8 @@
              >wxapi</a> |</li>
 <li><a href="../index.html">主页</a>&#160;|</li>
 <li><a href="../contents.html">文档</a> &#187;</li>
- 
+
+        <li class="nav-item nav-item-this"><a href="">wx.createAudioContext</a></li> 
       </ul>
     </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
@@ -100,12 +102,12 @@
   <h3 id="searchlabel">快速搜索</h3>
     <div class="searchformwrapper">
     <form class="search" action="../search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
       <input type="submit" value="转向" />
     </form>
     </div>
 </div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
+<script>$('#searchbox').show(0);</script>
         </div>
       </div>
 
@@ -114,11 +116,11 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="wx-createaudiocontext">
+  <section id="wx-createaudiocontext">
 <h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/api/wx.createAudioContext.html">wx.createAudioContext</a><a class="headerlink" href="#wx-createaudiocontext" title="永久链接至标题">¶</a></h1>
-<dl class="function">
-<dt id="wx.createAudioContext">
-<code class="descclassname">wx.</code><code class="descname">createAudioContext</code><span class="sig-paren">(</span><em>string id</em>, <em>Object this</em><span class="sig-paren">)</span><a class="headerlink" href="#wx.createAudioContext" title="永久链接至目标">¶</a></dt>
+<dl class="js function">
+<dt class="sig sig-object js" id="wx.createAudioContext">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">wx</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">createAudioContext</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">string</span> <span class="pre">id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Object</span> <span class="pre">this</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#wx.createAudioContext" title="永久链接至目标">¶</a></dt>
 <dd><div class="deprecated">
 <p><span class="versionmodified deprecated">1.6.0 版后已移除: </span>请使用 <a class="reference internal" href="InnerAudioContext.html#wx.createInnerAudioContext" title="wx.createInnerAudioContext"><code class="xref js js-class docutils literal notranslate"><span class="pre">wx.createInnerAudioContext()</span></code></a> 代替</p>
 </div>
@@ -128,19 +130,20 @@
 </dd>
 <dt class="field-even">参数</dt>
 <dd class="field-even"><ul class="simple">
-<li><p><strong>id</strong> (<em>string</em>) – &lt;<a class="reference internal" href="../component/audio.html#audio"><span class="std std-ref">audio 🗑</span></a>&gt; 组件的 id</p></li>
-<li><p><strong>this</strong> (<em>object</em>) – 在自定义组件下，当前组件实例的this，以操作组件内 &lt;<a class="reference internal" href="../component/audio.html#audio"><span class="std std-ref">audio 🗑</span></a>&gt; 组件</p></li>
+<li><p><strong>id</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">string()</span></code></span>) – &lt;<a class="reference internal" href="../component/audio.html#audio"><span class="std std-ref">audio 🗑</span></a>&gt; 组件的 id</p></li>
+<li><p><strong>this</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">object()</span></code></span>) – 在自定义组件下，当前组件实例的this，以操作组件内 &lt;<a class="reference internal" href="../component/audio.html#audio"><span class="std std-ref">audio 🗑</span></a>&gt; 组件</p></li>
 </ul>
 </dd>
-<dt class="field-odd">Return</dt>
+<dt class="field-odd">返回</dt>
 <dd class="field-odd"><p><a class="reference internal" href="AudioContext.html#AudioContext" title="AudioContext"><code class="xref js js-class docutils literal notranslate"><span class="pre">AudioContext()</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
 
-</div>
+</section>
 
 
+            <div class="clearer"></div>
           </div>
         </div>
       </div>
@@ -157,12 +160,13 @@
              >wxapi</a> |</li>
 <li><a href="../index.html">主页</a>&#160;|</li>
 <li><a href="../contents.html">文档</a> &#187;</li>
- 
+
+        <li class="nav-item nav-item-this"><a href="">wx.createAudioContext</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
         &#169; 版权所有 2019, Wxadev Docs.
-      由 <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.0+/0e60d4d 创建。
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.1.
     </div>
   </body>
 </html>

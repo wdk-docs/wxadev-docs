@@ -1,18 +1,19 @@
 
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
+<html lang="zh_CN">
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>开发第三方自定义组件 &#8212; wxadev 1.0.0 文档</title>
-    <link rel="stylesheet" href="../../_static/sphinx13.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-    <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
-    <script type="text/javascript" src="../../_static/jquery.js"></script>
-    <script type="text/javascript" src="../../_static/underscore.js"></script>
-    <script type="text/javascript" src="../../_static/doctools.js"></script>
-    <script type="text/javascript" src="../../_static/language_data.js"></script>
-    <script type="text/javascript" src="../../_static/translations.js"></script>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx13.css" />
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/translations.js"></script>
     <link rel="search" type="application/opensearchdescription+xml"
           title="在 wxadev 1.0.0 文档 中搜索"
           href="../../_static/opensearch.xml"/>
@@ -94,7 +95,8 @@
 <li><a href="../../contents.html">文档</a> &#187;</li>
 
           <li class="nav-item nav-item-1"><a href="../index.html" >框架</a> &#187;</li>
-          <li class="nav-item nav-item-2"><a href="index.html" accesskey="U">自定义组件</a> &#187;</li> 
+          <li class="nav-item nav-item-2"><a href="index.html" accesskey="U">自定义组件</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">开发第三方自定义组件</a></li> 
       </ul>
     </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
@@ -129,12 +131,12 @@
   <h3 id="searchlabel">快速搜索</h3>
     <div class="searchformwrapper">
     <form class="search" action="../../search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
       <input type="submit" value="转向" />
     </form>
     </div>
 </div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
+<script>$('#searchbox').show(0);</script>
         </div>
       </div>
 
@@ -143,20 +145,20 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="id1">
+  <section id="id1">
 <h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/framework/custom-component/trdparty.html">开发第三方自定义组件</a><a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
 <div class="versionadded">
 <p><span class="versionmodified added">2.2.1 新版功能: </span>开始支持使用 <a class="reference internal" href="../../devtools/npm.html#npm"><span class="std std-ref">npm</span></a> 安装第三方包，因此也支持开发和使用第三方自定义组件包。</p>
 </div>
-<div class="section" id="id2">
+<section id="id2">
 <h2>准备<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
 <p>开发一个开源的自定义组件包给他人使用，首先需要明确他人是要如何使用这个包的，
 如果只是拷贝小程序目录下直接使用的话，可以跳过此文档。
 此文档中后续内容是以 npm 管理自定义组件包的前提下进行说明的。</p>
 <p>在开发之前，要求开发者具有基础的 node.js 和 npm 相关的知识，
 同时需要准备好支持 npm 功能的开发者工具， <a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/devtools/download.html">点此下载</a> 。</p>
-</div>
-<div class="section" id="id3">
+</section>
+<section id="id3">
 <h2>下载模板<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
 <p>为了方便开发者能够快速搭建好一个可用于开发、调试、测试的自定义组件包项目，
 官方提供了一个 <a class="reference external" href="https://github.com/wechat-miniprogram/miniprogram-custom-component">项目模板</a> ，
@@ -167,8 +169,8 @@
 项目模板中的构建是基于 gulp + webpack 来执行的，支持开发、构建、测试等命令，
 详情可参阅项目模板的
 <a class="reference external" href="https://github.com/wechat-miniprogram/miniprogram-custom-component/blob/master/README.md">README.md</a> 文件。</p>
-</div>
-<div class="section" id="id4">
+</section>
+<section id="id4">
 <h2>命令行工具<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h2>
 <p>官方提供了 <a class="reference external" href="https://github.com/wechat-miniprogram/miniprogram-cli">命令行工具</a> ，
 用于快速初始化一个项目。执行如下命令安装命令行工具：</p>
@@ -184,12 +186,12 @@
 之后开发者可直接在此之上进行开发修改。</p>
 <p>命令行工具的更多用法可以查看 github 仓库上的 <a class="reference external" href="https://github.com/wechat-miniprogram/miniprogram-cli/blob/master/README.md">README.md</a> 文件。</p>
 <p>PS：第一次使用 miniprogram init 初始化项目会去 github 上拉取模板，因此需要保证网络畅通。</p>
-</div>
-<div class="section" id="id5">
+</section>
+<section id="id5">
 <h2>测试工具<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h2>
 <p>针对自定义组件的单元测试，可参阅文档 <a class="reference internal" href="unit-test.html"><span class="doc">单元测试</span></a> 。</p>
-</div>
-<div class="section" id="id6">
+</section>
+<section id="id6">
 <h2>自定义组件示例<a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h2>
 <p>以下为官方提供的自定义组件，可以参考并使用：</p>
 <ul class="simple">
@@ -197,17 +199,18 @@
 <li><p><a class="reference external" href="https://github.com/wechat-miniprogram/navigation-bar">navigation-bar</a></p></li>
 <li><p><a class="reference external" href="https://github.com/wechat-miniprogram/recycle-view">recycle-view</a></p></li>
 </ul>
-</div>
-<div class="section" id="id7">
+</section>
+<section id="id7">
 <h2>自定义组件扩展示例<a class="headerlink" href="#id7" title="永久链接至标题">¶</a></h2>
 <p>以下为官方提供的自定义组件扩展，可以参考并使用：</p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://github.com/wechat-miniprogram/computed">computed</a></p></li>
 </ul>
-</div>
-</div>
+</section>
+</section>
 
 
+            <div class="clearer"></div>
           </div>
         </div>
       </div>
@@ -232,12 +235,13 @@
 <li><a href="../../contents.html">文档</a> &#187;</li>
 
           <li class="nav-item nav-item-1"><a href="../index.html" >框架</a> &#187;</li>
-          <li class="nav-item nav-item-2"><a href="index.html" >自定义组件</a> &#187;</li> 
+          <li class="nav-item nav-item-2"><a href="index.html" >自定义组件</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">开发第三方自定义组件</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
         &#169; 版权所有 2019, Wxadev Docs.
-      由 <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.0+/0e60d4d 创建。
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.1.
     </div>
   </body>
 </html>

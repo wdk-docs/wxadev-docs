@@ -1,18 +1,19 @@
 
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
+<html lang="zh_CN">
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>数据监听器 &#8212; wxadev 1.0.0 文档</title>
-    <link rel="stylesheet" href="../../_static/sphinx13.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-    <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
-    <script type="text/javascript" src="../../_static/jquery.js"></script>
-    <script type="text/javascript" src="../../_static/underscore.js"></script>
-    <script type="text/javascript" src="../../_static/doctools.js"></script>
-    <script type="text/javascript" src="../../_static/language_data.js"></script>
-    <script type="text/javascript" src="../../_static/translations.js"></script>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx13.css" />
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/translations.js"></script>
     <link rel="search" type="application/opensearchdescription+xml"
           title="在 wxadev 1.0.0 文档 中搜索"
           href="../../_static/opensearch.xml"/>
@@ -94,7 +95,8 @@
 <li><a href="../../contents.html">文档</a> &#187;</li>
 
           <li class="nav-item nav-item-1"><a href="../index.html" >框架</a> &#187;</li>
-          <li class="nav-item nav-item-2"><a href="index.html" accesskey="U">自定义组件</a> &#187;</li> 
+          <li class="nav-item nav-item-2"><a href="index.html" accesskey="U">自定义组件</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">数据监听器</a></li> 
       </ul>
     </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
@@ -125,12 +127,12 @@
   <h3 id="searchlabel">快速搜索</h3>
     <div class="searchformwrapper">
     <form class="search" action="../../search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
       <input type="submit" value="转向" />
     </form>
     </div>
 </div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
+<script>$('#searchbox').show(0);</script>
         </div>
       </div>
 
@@ -139,18 +141,18 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="id1">
+  <section id="id1">
 <h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/framework/custom-component/observer.html">数据监听器</a><a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
 <p>数据监听器可以用于监听和响应任何属性和数据字段的变化。从小程序基础库版本 2.6.1 开始支持。</p>
-<div class="section" id="id2">
+<section id="id2">
 <h2>使用数据监听器<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
 <p>有时，在一些数据字段被 setData 设置时，需要执行一些操作。</p>
 <p>例如， this.data.sum 永远是 this.data.numberA 与 this.data.numberB 的和。此时，可以使用数据监听器进行如下实现。</p>
 <div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="nx">Component</span><span class="p">({</span>
   <span class="nx">attached</span><span class="p">()</span> <span class="p">{</span>
     <span class="k">this</span><span class="p">.</span><span class="nx">setData</span><span class="p">({</span>
-      <span class="nx">numberA</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
-      <span class="nx">numberB</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
+      <span class="nx">numberA</span><span class="o">:</span> <span class="mf">1</span><span class="p">,</span>
+      <span class="nx">numberB</span><span class="o">:</span> <span class="mf">2</span><span class="p">,</span>
     <span class="p">})</span>
   <span class="p">},</span>
   <span class="nx">observers</span><span class="o">:</span> <span class="p">{</span>
@@ -165,8 +167,8 @@
 </pre></div>
 </div>
 <p>在开发者工具中预览效果</p>
-</div>
-<div class="section" id="id3">
+</section>
+<section id="id3">
 <h2>监听字段语法<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
 <p>数据监听器支持监听属性或内部数据的变化，可以同时监听多个。一次 setData 最多触发每个监听器一次。</p>
 <p>同时，监听器可以监听子数据字段，如下例所示。</p>
@@ -228,10 +230,11 @@ Component({
 <p>数据监听器监听的是 setData 涉及到的数据字段，即使这些数据字段的值没有发生变化，数据监听器依然会被触发。
 如果在数据监听器函数中使用 setData 设置本身监听的数据字段，可能会导致死循环，需要特别留意。
 数据监听器和属性的 observer 相比，数据监听器更强大且通常具有更好的性能。</p>
-</div>
-</div>
+</section>
+</section>
 
 
+            <div class="clearer"></div>
           </div>
         </div>
       </div>
@@ -256,12 +259,13 @@ Component({
 <li><a href="../../contents.html">文档</a> &#187;</li>
 
           <li class="nav-item nav-item-1"><a href="../index.html" >框架</a> &#187;</li>
-          <li class="nav-item nav-item-2"><a href="index.html" >自定义组件</a> &#187;</li> 
+          <li class="nav-item nav-item-2"><a href="index.html" >自定义组件</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">数据监听器</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
         &#169; 版权所有 2019, Wxadev Docs.
-      由 <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.0+/0e60d4d 创建。
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.1.
     </div>
   </body>
 </html>

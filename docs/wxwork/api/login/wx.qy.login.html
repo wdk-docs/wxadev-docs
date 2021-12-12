@@ -1,18 +1,19 @@
 
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
+<html lang="zh_CN">
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>wx.qy.login &#8212; wxadev 1.0.0 文档</title>
-    <link rel="stylesheet" href="../../../_static/sphinx13.css" type="text/css" />
-    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
-    <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
-    <script type="text/javascript" src="../../../_static/jquery.js"></script>
-    <script type="text/javascript" src="../../../_static/underscore.js"></script>
-    <script type="text/javascript" src="../../../_static/doctools.js"></script>
-    <script type="text/javascript" src="../../../_static/language_data.js"></script>
-    <script type="text/javascript" src="../../../_static/translations.js"></script>
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx13.css" />
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/translations.js"></script>
     <link rel="search" type="application/opensearchdescription+xml"
           title="在 wxadev 1.0.0 文档 中搜索"
           href="../../../_static/opensearch.xml"/>
@@ -95,7 +96,8 @@
 
           <li class="nav-item nav-item-1"><a href="../../index.html" >企业微信</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="../index.html" >接口</a> &#187;</li>
-          <li class="nav-item nav-item-3"><a href="index.html" accesskey="U">登录</a> &#187;</li> 
+          <li class="nav-item nav-item-3"><a href="index.html" accesskey="U">登录</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">wx.qy.login</a></li> 
       </ul>
     </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
@@ -117,12 +119,12 @@
   <h3 id="searchlabel">快速搜索</h3>
     <div class="searchformwrapper">
     <form class="search" action="../../../search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
       <input type="submit" value="转向" />
     </form>
     </div>
 </div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
+<script>$('#searchbox').show(0);</script>
         </div>
       </div>
 
@@ -131,26 +133,26 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="wx-qy-login">
+  <section id="wx-qy-login">
 <h1>wx.qy.login<a class="headerlink" href="#wx-qy-login" title="永久链接至标题">¶</a></h1>
-<dl class="function">
-<dt id="wx.qy.login">
-<code class="descclassname">wx.qy.</code><code class="descname">login</code><span class="sig-paren">(</span><em>{[timeout][, success][, fail][, complete]}</em><span class="sig-paren">)</span><a class="headerlink" href="#wx.qy.login" title="永久链接至目标">¶</a></dt>
+<dl class="js function">
+<dt class="sig sig-object js" id="wx.qy.login">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">wx</span></span><span class="p"><span class="pre">.</span></span><span class="n"><span class="pre">qy</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">login</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">{[timeout][,</span> <span class="pre">success][,</span> <span class="pre">fail][,</span> <span class="pre">complete]}</span></em><span class="sig-paren">)</span><a class="headerlink" href="#wx.qy.login" title="永久链接至目标">¶</a></dt>
 <dd><dl class="field-list">
 <dt class="field-odd">Label</dt>
 <dd class="field-odd"><p>获取企业微信派发的临时登录凭证</p>
 </dd>
 <dt class="field-even">参数</dt>
 <dd class="field-even"><ul class="simple">
-<li><p><strong>timeout</strong> (<em>number</em>) – 超时时间，单位 ms</p></li>
-<li><p><strong>success</strong> (<em>function</em>) – <p>接口调用成功的回调函数</p>
+<li><p><strong>timeout</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">number()</span></code></span>) – 超时时间，单位 ms</p></li>
+<li><p><strong>success</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">function()</span></code></span>) – <p>接口调用成功的回调函数</p>
 <ul>
 <li><p><strong>errMsg</strong>        (<em>string</em>) -    调用结果</p></li>
 <li><p><strong>code</strong>  (<em>string</em>) -    用户登录凭证（有效期五分钟）。开发者需要在开发者服务器后台调用 api，使用 code 换取 userid 和 session_key 等信息</p></li>
 </ul>
 </p></li>
-<li><p><strong>fail</strong> (<em>function</em>) – 接口调用失败的回调函数</p></li>
-<li><p><strong>complete</strong> (<em>function</em>) – 接口调用结束的回调函数（调用成功、失败都会执行）</p></li>
+<li><p><strong>fail</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">function()</span></code></span>) – 接口调用失败的回调函数</p></li>
+<li><p><strong>complete</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">function()</span></code></span>) – 接口调用结束的回调函数（调用成功、失败都会执行）</p></li>
 </ul>
 </dd>
 <dt class="field-odd">示例代码</dt>
@@ -181,9 +183,10 @@
 </dl>
 </dd></dl>
 
-</div>
+</section>
 
 
+            <div class="clearer"></div>
           </div>
         </div>
       </div>
@@ -209,12 +212,13 @@
 
           <li class="nav-item nav-item-1"><a href="../../index.html" >企业微信</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="../index.html" >接口</a> &#187;</li>
-          <li class="nav-item nav-item-3"><a href="index.html" >登录</a> &#187;</li> 
+          <li class="nav-item nav-item-3"><a href="index.html" >登录</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">wx.qy.login</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
         &#169; 版权所有 2019, Wxadev Docs.
-      由 <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.0+/0e60d4d 创建。
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.1.
     </div>
   </body>
 </html>

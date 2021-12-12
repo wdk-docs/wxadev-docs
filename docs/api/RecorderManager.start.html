@@ -1,18 +1,19 @@
 
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
+<html lang="zh_CN">
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>RecorderManager.start &#8212; wxadev 1.0.0 文档</title>
-    <link rel="stylesheet" href="../_static/sphinx13.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-    <script type="text/javascript" src="../_static/jquery.js"></script>
-    <script type="text/javascript" src="../_static/underscore.js"></script>
-    <script type="text/javascript" src="../_static/doctools.js"></script>
-    <script type="text/javascript" src="../_static/language_data.js"></script>
-    <script type="text/javascript" src="../_static/translations.js"></script>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx13.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/translations.js"></script>
     <link rel="search" type="application/opensearchdescription+xml"
           title="在 wxadev 1.0.0 文档 中搜索"
           href="../_static/opensearch.xml"/>
@@ -84,7 +85,8 @@
              >wxapi</a> |</li>
 <li><a href="../index.html">主页</a>&#160;|</li>
 <li><a href="../contents.html">文档</a> &#187;</li>
- 
+
+        <li class="nav-item nav-item-this"><a href="">RecorderManager.start</a></li> 
       </ul>
     </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
@@ -113,12 +115,12 @@
   <h3 id="searchlabel">快速搜索</h3>
     <div class="searchformwrapper">
     <form class="search" action="../search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
       <input type="submit" value="转向" />
     </form>
     </div>
 </div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
+<script>$('#searchbox').show(0);</script>
         </div>
       </div>
 
@@ -127,31 +129,31 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="recordermanager-start">
+  <section id="recordermanager-start">
 <h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/api/RecorderManager.start.html">RecorderManager.start</a><a class="headerlink" href="#recordermanager-start" title="永久链接至标题">¶</a></h1>
-<div class="section" id="id1">
+<section id="id1">
 <h2>函数定义<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h2>
-<dl class="function">
-<dt id="RecorderManager.start">
-<code class="descclassname">RecorderManager.</code><code class="descname">start</code><span class="sig-paren">(</span><em>{[duration][,sampleRate][,numberOfChannels][,encodeBitRate][,format][,frameSize][,audioSource]}</em><span class="sig-paren">)</span><a class="headerlink" href="#RecorderManager.start" title="永久链接至目标">¶</a></dt>
+<dl class="js function">
+<dt class="sig sig-object js" id="RecorderManager.start">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">RecorderManager</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">start</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">{[duration][,sampleRate][,numberOfChannels][,encodeBitRate][,format][,frameSize][,audioSource]}</span></em><span class="sig-paren">)</span><a class="headerlink" href="#RecorderManager.start" title="永久链接至目标">¶</a></dt>
 <dd><p><a class="reference internal" href="RecorderManager.html#RecorderManager" title="RecorderManager"><code class="xref js js-class docutils literal notranslate"><span class="pre">RecorderManager()</span></code></a> 开始录音</p>
 <dl class="field-list simple">
 <dt class="field-odd">参数</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>duration</strong> (<em>number</em>) – <code class="docutils literal notranslate"><span class="pre">60000</span></code>       录音的时长，单位 ms，最大值 600000（10 分钟）</p></li>
-<li><p><strong>sampleRate</strong> (<em>number</em>) – <code class="docutils literal notranslate"><span class="pre">8000</span></code>        采样率</p></li>
-<li><p><strong>numberOfChannels</strong> (<em>number</em>) – <code class="docutils literal notranslate"><span class="pre">2</span></code>   录音通道数</p></li>
-<li><p><strong>encodeBitRate</strong> (<em>number</em>) – <code class="docutils literal notranslate"><span class="pre">48000</span></code>       编码码率，有效值见下表格</p></li>
-<li><p><strong>format</strong> (<em>string</em>) – <code class="docutils literal notranslate"><span class="pre">aac</span></code> 音频格式</p></li>
-<li><p><strong>frameSize</strong> (<em>number</em>) – 指定帧大小，单位 KB。传入 frameSize 后，每录制指定帧大小的内容后，会回调录制的文件内容，不指定则不会回调。暂仅支持 mp3 格式。</p></li>
-<li><p><strong>audioSource</strong> (<em>string</em>) – <code class="docutils literal notranslate"><span class="pre">auto</span></code>        指定录音的音频输入源，可通过 <a class="reference internal" href="wx.getAvailableAudioSources.html#wx.getAvailableAudioSources" title="wx.getAvailableAudioSources"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.getAvailableAudioSources()</span></code></a> 获取当前可用的音频源</p></li>
+<li><p><strong>duration</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">number()</span></code></span>) – <code class="docutils literal notranslate"><span class="pre">60000</span></code>       录音的时长，单位 ms，最大值 600000（10 分钟）</p></li>
+<li><p><strong>sampleRate</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">number()</span></code></span>) – <code class="docutils literal notranslate"><span class="pre">8000</span></code>        采样率</p></li>
+<li><p><strong>numberOfChannels</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">number()</span></code></span>) – <code class="docutils literal notranslate"><span class="pre">2</span></code>   录音通道数</p></li>
+<li><p><strong>encodeBitRate</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">number()</span></code></span>) – <code class="docutils literal notranslate"><span class="pre">48000</span></code>       编码码率，有效值见下表格</p></li>
+<li><p><strong>format</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">string()</span></code></span>) – <code class="docutils literal notranslate"><span class="pre">aac</span></code> 音频格式</p></li>
+<li><p><strong>frameSize</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">number()</span></code></span>) – 指定帧大小，单位 KB。传入 frameSize 后，每录制指定帧大小的内容后，会回调录制的文件内容，不指定则不会回调。暂仅支持 mp3 格式。</p></li>
+<li><p><strong>audioSource</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">string()</span></code></span>) – <code class="docutils literal notranslate"><span class="pre">auto</span></code>        指定录音的音频输入源，可通过 <a class="reference internal" href="wx.getAvailableAudioSources.html#wx.getAvailableAudioSources" title="wx.getAvailableAudioSources"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.getAvailableAudioSources()</span></code></a> 获取当前可用的音频源</p></li>
 </ul>
 </dd>
 </dl>
 </dd></dl>
 
-</div>
-<div class="section" id="samplerate">
+</section>
+<section id="samplerate">
 <h2>sampleRate 的合法值<a class="headerlink" href="#samplerate" title="永久链接至标题">¶</a></h2>
 <table class="docutils align-default">
 <colgroup>
@@ -193,8 +195,8 @@
 </tr>
 </tbody>
 </table>
-</div>
-<div class="section" id="numberofchannels">
+</section>
+<section id="numberofchannels">
 <h2>numberOfChannels 的合法值<a class="headerlink" href="#numberofchannels" title="永久链接至标题">¶</a></h2>
 <table class="docutils align-default">
 <colgroup>
@@ -219,8 +221,8 @@
 </tr>
 </tbody>
 </table>
-</div>
-<div class="section" id="format">
+</section>
+<section id="format">
 <h2>format 的合法值<a class="headerlink" href="#format" title="永久链接至标题">¶</a></h2>
 <table class="docutils align-default">
 <colgroup>
@@ -243,8 +245,8 @@
 </tr>
 </tbody>
 </table>
-</div>
-<div class="section" id="audiosource">
+</section>
+<section id="audiosource">
 <h2>audioSource 的合法值<a class="headerlink" href="#audiosource" title="永久链接至标题">¶</a></h2>
 <table class="docutils align-default">
 <colgroup>
@@ -280,8 +282,8 @@
 </tr>
 </tbody>
 </table>
-</div>
-<div class="section" id="id2">
+</section>
+<section id="id2">
 <h2>采样率与编码码率限制<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
 <p>每种采样率有对应的编码码率范围有效值，设置不合法的采样率或编码码率会导致录音失败，具体对应关系如下表。</p>
 <table class="docutils align-default">
@@ -324,10 +326,11 @@
 </tr>
 </tbody>
 </table>
-</div>
-</div>
+</section>
+</section>
 
 
+            <div class="clearer"></div>
           </div>
         </div>
       </div>
@@ -344,12 +347,13 @@
              >wxapi</a> |</li>
 <li><a href="../index.html">主页</a>&#160;|</li>
 <li><a href="../contents.html">文档</a> &#187;</li>
- 
+
+        <li class="nav-item nav-item-this"><a href="">RecorderManager.start</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
         &#169; 版权所有 2019, Wxadev Docs.
-      由 <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.0+/0e60d4d 创建。
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.1.
     </div>
   </body>
 </html>

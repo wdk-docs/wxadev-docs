@@ -1,18 +1,19 @@
 
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
+<html lang="zh_CN">
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>微信物流助手（快递侧） &#8212; wxadev 1.0.0 文档</title>
-    <link rel="stylesheet" href="../../_static/sphinx13.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-    <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
-    <script type="text/javascript" src="../../_static/jquery.js"></script>
-    <script type="text/javascript" src="../../_static/underscore.js"></script>
-    <script type="text/javascript" src="../../_static/doctools.js"></script>
-    <script type="text/javascript" src="../../_static/language_data.js"></script>
-    <script type="text/javascript" src="../../_static/translations.js"></script>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx13.css" />
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/translations.js"></script>
     <link rel="search" type="application/opensearchdescription+xml"
           title="在 wxadev 1.0.0 文档 中搜索"
           href="../../_static/opensearch.xml"/>
@@ -94,7 +95,8 @@
 <li><a href="../../contents.html">文档</a> &#187;</li>
 
           <li class="nav-item nav-item-1"><a href="../index.html" >框架</a> &#187;</li>
-          <li class="nav-item nav-item-2"><a href="index.html" accesskey="U">开放能力</a> &#187;</li> 
+          <li class="nav-item nav-item-2"><a href="index.html" accesskey="U">开放能力</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">微信物流助手（快递侧）</a></li> 
       </ul>
     </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
@@ -128,12 +130,12 @@
   <h3 id="searchlabel">快速搜索</h3>
     <div class="searchformwrapper">
     <form class="search" action="../../search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
       <input type="submit" value="转向" />
     </form>
     </div>
 </div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
+<script>$('#searchbox').show(0);</script>
         </div>
       </div>
 
@@ -142,21 +144,21 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="express-delivery">
+  <section id="express-delivery">
 <span id="id1"></span><h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/express-delivery.html">微信物流助手（快递侧）</a><a class="headerlink" href="#express-delivery" title="永久链接至标题">¶</a></h1>
 <p>物流助手，帮助有物流需求的开发者，快速高效对接多家物流公司。对接后用户可通过微信服务通知接收实时物流状态，提升用户体验。</p>
-<div class="section" id="id2">
+<section id="id2">
 <h2>产品优势<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
 <ol class="arabic simple">
 <li><p>承接微信生态订单：通过微信统一接口，一次性服务微信生态内有寄件需求的商户。</p></li>
 <li><p>提升用户回访：关键物流状态会通过微信服务通知发送给用户，用户点击后可回访快递公司小程序查看该订单的物流状态或进行后续操作。</p></li>
 </ol>
-</div>
-<div class="section" id="id3">
+</section>
+<section id="id3">
 <h2>接入说明<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
 <p>目前物流助手采用定向邀请方式接入物流公司。</p>
-</div>
-<div class="section" id="id4">
+</section>
+<section id="id4">
 <h2>接入准备<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h2>
 <ol class="arabic simple">
 <li><p>小程序</p></li>
@@ -180,8 +182,8 @@
 <blockquote>
 <div><p>标注各个区域的尺寸、字号等。可参考模板示例</p>
 </div></blockquote>
-</div>
-<div class="section" id="id5">
+</section>
+<section id="id5">
 <h2>相关接口<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h2>
 <ul class="simple">
 <li><p>获取面单联系人信息</p></li>
@@ -189,8 +191,8 @@
 <li><p>更新商户审核结果</p></li>
 <li><p>更新运单轨迹</p></li>
 </ul>
-</div>
-<div class="section" id="id6">
+</section>
+<section id="id6">
 <h2>相关事件<a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h2>
 <ul class="simple">
 <li><p>请求下单</p></li>
@@ -198,10 +200,11 @@
 <li><p>审核商户</p></li>
 <li><p>查询商户余额</p></li>
 </ul>
-</div>
-</div>
+</section>
+</section>
 
 
+            <div class="clearer"></div>
           </div>
         </div>
       </div>
@@ -226,12 +229,13 @@
 <li><a href="../../contents.html">文档</a> &#187;</li>
 
           <li class="nav-item nav-item-1"><a href="../index.html" >框架</a> &#187;</li>
-          <li class="nav-item nav-item-2"><a href="index.html" >开放能力</a> &#187;</li> 
+          <li class="nav-item nav-item-2"><a href="index.html" >开放能力</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">微信物流助手（快递侧）</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
         &#169; 版权所有 2019, Wxadev Docs.
-      由 <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.0+/0e60d4d 创建。
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.1.
     </div>
   </body>
 </html>

@@ -8,7 +8,7 @@
    :maxdepth: 3
    :glob:
 
-   App
+   app
    getApp
 
 页面
@@ -18,7 +18,7 @@
    :maxdepth: 3
    :glob:
 
-   Page
+   page
    getCurrentPages
 
 自定义组件

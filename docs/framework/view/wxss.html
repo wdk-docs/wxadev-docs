@@ -1,18 +1,19 @@
 
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
+<html lang="zh_CN">
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>WXSS &#8212; wxadev 1.0.0 文档</title>
-    <link rel="stylesheet" href="../../_static/sphinx13.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-    <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
-    <script type="text/javascript" src="../../_static/jquery.js"></script>
-    <script type="text/javascript" src="../../_static/underscore.js"></script>
-    <script type="text/javascript" src="../../_static/doctools.js"></script>
-    <script type="text/javascript" src="../../_static/language_data.js"></script>
-    <script type="text/javascript" src="../../_static/translations.js"></script>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx13.css" />
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/translations.js"></script>
     <link rel="search" type="application/opensearchdescription+xml"
           title="在 wxadev 1.0.0 文档 中搜索"
           href="../../_static/opensearch.xml"/>
@@ -94,7 +95,8 @@
 <li><a href="../../contents.html">文档</a> &#187;</li>
 
           <li class="nav-item nav-item-1"><a href="../index.html" >框架</a> &#187;</li>
-          <li class="nav-item nav-item-2"><a href="index.html" accesskey="U">视图层 View</a> &#187;</li> 
+          <li class="nav-item nav-item-2"><a href="index.html" accesskey="U">视图层 View</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">WXSS</a></li> 
       </ul>
     </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
@@ -125,12 +127,12 @@
   <h3 id="searchlabel">快速搜索</h3>
     <div class="searchformwrapper">
     <form class="search" action="../../search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
       <input type="submit" value="转向" />
     </form>
     </div>
 </div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
+<script>$('#searchbox').show(0);</script>
         </div>
       </div>
 
@@ -139,7 +141,7 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="wxss">
+  <section id="wxss">
 <span id="id1"></span><h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/framework/view/wxss.html">WXSS</a><a class="headerlink" href="#wxss" title="永久链接至标题">¶</a></h1>
 <p>WXSS (WeiXin Style Sheets)是一套样式语言，用于描述 WXML 的组件样式。</p>
 <p>WXSS 用来决定 WXML 的组件应该怎么显示。</p>
@@ -149,7 +151,7 @@
 <li><p>尺寸单位</p></li>
 <li><p>样式导入</p></li>
 </ul>
-<div class="section" id="id2">
+<section id="id2">
 <h2>尺寸单位<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
 <p>rpx（responsive pixel）: 可以根据屏幕宽度进行自适应。规定屏幕宽为750rpx。
 如在 iPhone6 上，屏幕宽度为375px，共有750个物理像素，
@@ -192,8 +194,8 @@
 <span class="p">}</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="id3">
+</section>
+<section id="id3">
 <h2>内联样式<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
 <p>框架组件上支持使用 style、class 属性来控制组件的样式。</p>
 <p>style：静态的样式统一写到 class 中。style 接收动态的样式，在运行时会进行解析，请尽量避免将静态的样式写进 style 中，以免影响渲染速度。</p>
@@ -216,10 +218,11 @@ element, element        view, checkbox  选择所有文档的 view 组件和所�
 <p>全局样式与局部样式</p>
 <p>定义在 app.wxss 中的样式为全局样式，作用于每一个页面。在 page 的 wxss 文件中定义的样式为局部样式，
 只作用在对应的页面，并会覆盖 app.wxss 中相同的选择器。</p>
-</div>
-</div>
+</section>
+</section>
 
 
+            <div class="clearer"></div>
           </div>
         </div>
       </div>
@@ -244,12 +247,13 @@ element, element        view, checkbox  选择所有文档的 view 组件和所�
 <li><a href="../../contents.html">文档</a> &#187;</li>
 
           <li class="nav-item nav-item-1"><a href="../index.html" >框架</a> &#187;</li>
-          <li class="nav-item nav-item-2"><a href="index.html" >视图层 View</a> &#187;</li> 
+          <li class="nav-item nav-item-2"><a href="index.html" >视图层 View</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">WXSS</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
         &#169; 版权所有 2019, Wxadev Docs.
-      由 <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.0+/0e60d4d 创建。
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.1.
     </div>
   </body>
 </html>

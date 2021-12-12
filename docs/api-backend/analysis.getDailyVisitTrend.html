@@ -1,18 +1,19 @@
 
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
+<html lang="zh_CN">
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>analysis.getDailyVisitTrend &#8212; wxadev 1.0.0 文档</title>
-    <link rel="stylesheet" href="../_static/sphinx13.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-    <script type="text/javascript" src="../_static/jquery.js"></script>
-    <script type="text/javascript" src="../_static/underscore.js"></script>
-    <script type="text/javascript" src="../_static/doctools.js"></script>
-    <script type="text/javascript" src="../_static/language_data.js"></script>
-    <script type="text/javascript" src="../_static/translations.js"></script>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx13.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/translations.js"></script>
     <link rel="search" type="application/opensearchdescription+xml"
           title="在 wxadev 1.0.0 文档 中搜索"
           href="../_static/opensearch.xml"/>
@@ -93,7 +94,8 @@
 <li><a href="../index.html">主页</a>&#160;|</li>
 <li><a href="../contents.html">文档</a> &#187;</li>
 
-          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">服务端API</a> &#187;</li> 
+          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">服务端API</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">analysis.getDailyVisitTrend</a></li> 
       </ul>
     </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
@@ -124,12 +126,12 @@
   <h3 id="searchlabel">快速搜索</h3>
     <div class="searchformwrapper">
     <form class="search" action="../search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
       <input type="submit" value="转向" />
     </form>
     </div>
 </div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
+<script>$('#searchbox').show(0);</script>
         </div>
       </div>
 
@@ -138,31 +140,31 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="analysis-getdailyvisittrend">
+  <section id="analysis-getdailyvisittrend">
 <span id="id1"></span><h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/api-backend/analysis.getDailyVisitTrend.html">analysis.getDailyVisitTrend</a><a class="headerlink" href="#analysis-getdailyvisittrend" title="永久链接至标题">¶</a></h1>
 <p>本接口应在服务器端调用，详细说明参见 <a class="reference internal" href="../framework/server-ability/backend-api.html#backend-api"><span class="std std-ref">服务端API</span></a> 。</p>
 <p>本接口支持 <a class="reference external" href="https://wdk-docs.github.io/wxcloud-docs/guide/openapi/openapi">云调用</a> 。
 需开发者工具版本 &gt;= 1.02.1904090（ <a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/devtools/stable.html">最新稳定版下载</a> ），wx-server-sdk &gt;= 0.4.0</p>
 <p>获取用户访问小程序数据日趋势</p>
-<div class="section" id="https">
+<section id="https">
 <h2>HTTPS 调用<a class="headerlink" href="#https" title="永久链接至标题">¶</a></h2>
-<p>请求地址 <a class="reference internal" href="../glossary.html#term-api-datacube"><span class="xref std std-term">api_datacube</span></a></p>
-<dl class="post">
-<dt id="post-getweanalysisappiddailyvisittrend">
-<code class="descname">POST </code><code class="descname">getweanalysisappiddailyvisittrend</code><a class="headerlink" href="#post-getweanalysisappiddailyvisittrend" title="永久链接至目标">¶</a></dt>
+<p>请求地址 <a class="reference internal" href="../glossary.html#term-api_datacube"><span class="xref std std-term">api_datacube</span></a></p>
+<dl class="http post">
+<dt class="sig sig-object http" id="post-getweanalysisappiddailyvisittrend">
+<span class="sig-name descname"><span class="pre">POST</span> </span><span class="sig-name descname"><span class="pre">getweanalysisappiddailyvisittrend</span></span><a class="headerlink" href="#post-getweanalysisappiddailyvisittrend" title="永久链接至目标">¶</a></dt>
 <dd><dl class="field-list simple">
-<dt class="field-odd">查询参数</dt>
+<dt class="field-odd">Query Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>access_token</strong> (<em>string</em>) – <strong>*</strong> <a class="reference internal" href="auth.getAccessToken.html#auth-getaccesstoken"><span class="std std-ref">接口调用凭证</span></a></p></li>
 </ul>
 </dd>
-<dt class="field-even">请求JSON对象</dt>
+<dt class="field-even">Request JSON Object</dt>
 <dd class="field-even"><ul class="simple">
 <li><p><strong>begin_date</strong> (<em>string</em>) – 是  开始日期。格式为 yyyymmdd</p></li>
 <li><p><strong>end_date</strong> (<em>string</em>) – 是    结束日期，限定查询1天数据，允许设置的最大值为昨日。格式为 yyyymmdd</p></li>
 </ul>
 </dd>
-<dt class="field-odd">响应JSON对象数组</dt>
+<dt class="field-odd">Response JSON Array of Objects</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>list</strong> (<em>Array.&lt;Object&gt;</em>) – 数据列表</p></li>
 <li><p><strong>.ref_date</strong> (<em>string</em>) – 日期，格式为 yyyymmdd</p></li>
@@ -211,26 +213,26 @@ Content-Type: text/javascript
 </div>
 </dd></dl>
 
-</div>
-<div class="section" id="id2">
+</section>
+<section id="id2">
 <h2>云调用<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
 <p>云调用是小程序·云开发提供的在云函数中调用微信开放接口的能力，需要在云函数中通过 <span class="xref std std-ref">wx-server-sdk</span> 使用。</p>
-<dl class="function">
-<dt id="openapi.analysis.getDailyVisitTrend">
-<code class="descclassname">openapi.analysis.</code><code class="descname">getDailyVisitTrend</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#openapi.analysis.getDailyVisitTrend" title="永久链接至目标">¶</a></dt>
+<dl class="js function">
+<dt class="sig sig-object js" id="openapi.analysis.getDailyVisitTrend">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">openapi</span></span><span class="p"><span class="pre">.</span></span><span class="n"><span class="pre">analysis</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">getDailyVisitTrend</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#openapi.analysis.getDailyVisitTrend" title="永久链接至目标">¶</a></dt>
 <dd><p>需在 <span class="xref std std-ref">config.json</span> 中配置 <a class="reference internal" href="#analysis-getdailyvisittrend"><span class="std std-ref">analysis.getDailyVisitTrend</span></a> API 的权限，详情</p>
 <dl class="field-list">
 <dt class="field-odd">参数</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>beginDate</strong> (<em>date</em>) – 是     开始日期。格式为 yyyymmdd</p></li>
-<li><p><strong>endDate</strong> (<em>date</em>) – 是       结束日期，限定查询1天数据，允许设置的最大值为昨日。格式为 yyyymmdd</p></li>
+<li><p><strong>beginDate</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">date()</span></code></span>) – 是     开始日期。格式为 yyyymmdd</p></li>
+<li><p><strong>endDate</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">date()</span></code></span>) – 是       结束日期，限定查询1天数据，允许设置的最大值为昨日。格式为 yyyymmdd</p></li>
 </ul>
 </dd>
-<dt class="field-even">Rtype</dt>
+<dt class="field-even">返回类型</dt>
 <dd class="field-even"><p>Object</p>
 </dd>
-<dt class="field-odd">Return</dt>
-<dd class="field-odd"><p>返回的 JSON 数据包 list  Array.&lt;Object&gt;  数据列表 list 的结构</p>
+<dt class="field-odd">返回</dt>
+<dd class="field-odd"><p><p>返回的 JSON 数据包 list  Array.&lt;Object&gt;  数据列表 list 的结构</p>
 <ul class="simple">
 <li><p><strong>refDate</strong>     (<em>string</em>)      日期，格式为 yyyymmdd</p></li>
 <li><p><strong>sessionCnt</strong>: 打开次数</p></li>
@@ -241,13 +243,14 @@ Content-Type: text/javascript
 <li><p><strong>stayTimeSession</strong>: 次均停留时长 (浮点型，单位：秒)</p></li>
 <li><p><strong>visitDepth</strong>: 平均访问深度 (浮点型)</p></li>
 </ul>
+</p>
 </dd>
 <dt class="field-even">请求数据示例</dt>
-<dd class="field-even"><div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="kr">const</span> <span class="nx">cloud</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;wx-server-sdk&#39;</span><span class="p">)</span>
+<dd class="field-even"><div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="kd">const</span> <span class="nx">cloud</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;wx-server-sdk&#39;</span><span class="p">)</span>
 <span class="nx">cloud</span><span class="p">.</span><span class="nx">init</span><span class="p">()</span>
-<span class="nx">exports</span><span class="p">.</span><span class="nx">main</span> <span class="o">=</span> <span class="nx">async</span> <span class="p">(</span><span class="nx">event</span><span class="p">,</span> <span class="nx">context</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+<span class="nx">exports</span><span class="p">.</span><span class="nx">main</span> <span class="o">=</span> <span class="k">async</span> <span class="p">(</span><span class="nx">event</span><span class="p">,</span> <span class="nx">context</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
   <span class="k">try</span> <span class="p">{</span>
-    <span class="kr">const</span> <span class="nx">result</span> <span class="o">=</span> <span class="nx">await</span> <span class="nx">cloud</span><span class="p">.</span><span class="nx">openapi</span><span class="p">.</span><span class="nx">analysis</span><span class="p">.</span><span class="nx">getDailyVisitTrend</span><span class="p">({</span>
+    <span class="kd">const</span> <span class="nx">result</span> <span class="o">=</span> <span class="k">await</span> <span class="nx">cloud</span><span class="p">.</span><span class="nx">openapi</span><span class="p">.</span><span class="nx">analysis</span><span class="p">.</span><span class="nx">getDailyVisitTrend</span><span class="p">({</span>
       <span class="nx">beginDate</span><span class="o">:</span> <span class="s1">&#39;20170313&#39;</span><span class="p">,</span>
       <span class="nx">endDate</span><span class="o">:</span> <span class="s1">&#39;20170313&#39;</span>
     <span class="p">})</span>
@@ -282,10 +285,11 @@ Content-Type: text/javascript
 </dl>
 </dd></dl>
 
-</div>
-</div>
+</section>
+</section>
 
 
+            <div class="clearer"></div>
           </div>
         </div>
       </div>
@@ -309,12 +313,13 @@ Content-Type: text/javascript
 <li><a href="../index.html">主页</a>&#160;|</li>
 <li><a href="../contents.html">文档</a> &#187;</li>
 
-          <li class="nav-item nav-item-1"><a href="index.html" >服务端API</a> &#187;</li> 
+          <li class="nav-item nav-item-1"><a href="index.html" >服务端API</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">analysis.getDailyVisitTrend</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
         &#169; 版权所有 2019, Wxadev Docs.
-      由 <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.0+/0e60d4d 创建。
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.1.
     </div>
   </body>
 </html>

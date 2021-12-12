@@ -1,18 +1,19 @@
 
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
+<html lang="zh_CN">
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>UpdateManager &#8212; wxadev 1.0.0 文档</title>
-    <link rel="stylesheet" href="../_static/sphinx13.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-    <script type="text/javascript" src="../_static/jquery.js"></script>
-    <script type="text/javascript" src="../_static/underscore.js"></script>
-    <script type="text/javascript" src="../_static/doctools.js"></script>
-    <script type="text/javascript" src="../_static/language_data.js"></script>
-    <script type="text/javascript" src="../_static/translations.js"></script>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx13.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/translations.js"></script>
     <link rel="search" type="application/opensearchdescription+xml"
           title="在 wxadev 1.0.0 文档 中搜索"
           href="../_static/opensearch.xml"/>
@@ -93,7 +94,8 @@
 <li><a href="../index.html">主页</a>&#160;|</li>
 <li><a href="../contents.html">文档</a> &#187;</li>
 
-          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">API</a> &#187;</li> 
+          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">API</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">UpdateManager</a></li> 
       </ul>
     </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
@@ -115,12 +117,12 @@
   <h3 id="searchlabel">快速搜索</h3>
     <div class="searchformwrapper">
     <form class="search" action="../search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
       <input type="submit" value="转向" />
     </form>
     </div>
 </div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
+<script>$('#searchbox').show(0);</script>
         </div>
       </div>
 
@@ -129,79 +131,79 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="updatemanager">
+  <section id="updatemanager">
 <h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/api/UpdateManager.html">UpdateManager</a><a class="headerlink" href="#updatemanager" title="永久链接至标题">¶</a></h1>
-<dl class="function">
-<dt id="wx.getUpdateManager">
-<code class="descclassname">wx.</code><code class="descname">getUpdateManager</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#wx.getUpdateManager" title="永久链接至目标">¶</a></dt>
+<dl class="js function">
+<dt class="sig sig-object js" id="wx.getUpdateManager">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">wx</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">getUpdateManager</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#wx.getUpdateManager" title="永久链接至目标">¶</a></dt>
 <dd><div class="versionadded">
 <p><span class="versionmodified added">1.9.90 新版功能: </span>低版本需做 <a class="reference internal" href="../framework/compatibility.html#compatibility"><span class="std std-ref">兼容处理</span></a> 。</p>
 </div>
 <p>获取全局唯一的版本更新管理器，用于管理小程序更新。
 关于小程序的更新机制，可以查看 <a class="reference internal" href="../framework/operating-mechanism.html#operating-mechanism"><span class="std std-ref">运行机制</span></a> 文档。</p>
 <dl class="field-list simple">
-<dt class="field-odd">Rtype</dt>
+<dt class="field-odd">返回类型</dt>
 <dd class="field-odd"><p>class</p>
 </dd>
-<dt class="field-even">Return</dt>
+<dt class="field-even">返回</dt>
 <dd class="field-even"><p>更新管理器对象 <a class="reference internal" href="#UpdateManager" title="UpdateManager"><code class="xref js js-class docutils literal notranslate"><span class="pre">UpdateManager()</span></code></a></p>
 </dd>
 </dl>
 </dd></dl>
 
-<dl class="class">
-<dt id="UpdateManager">
-<em class="property">class </em><code class="descname">UpdateManager</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#UpdateManager" title="永久链接至目标">¶</a></dt>
+<dl class="js class">
+<dt class="sig sig-object js" id="UpdateManager">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="n"><span class="pre">UpdateManager</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#UpdateManager" title="永久链接至目标">¶</a></dt>
 <dd><p>UpdateManager 对象，用来管理更新，可通过 <a class="reference internal" href="wx.getUpdateManager.html#wx.getUpdateManager" title="wx.getUpdateManager"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.getUpdateManager()</span></code></a> 接口获取实例。</p>
 </dd></dl>
 
-<dl class="function">
-<dt id="UpdateManager.applyUpdate">
-<code class="descclassname">UpdateManager.</code><code class="descname">applyUpdate</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#UpdateManager.applyUpdate" title="永久链接至目标">¶</a></dt>
+<dl class="js function">
+<dt class="sig sig-object js" id="UpdateManager.applyUpdate">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">UpdateManager</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">applyUpdate</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#UpdateManager.applyUpdate" title="永久链接至目标">¶</a></dt>
 <dd><p>强制小程序重启并使用新版本。在小程序新版本下载完成后（即收到 onUpdateReady 回调）调用。</p>
 </dd></dl>
 
-<dl class="function">
-<dt id="UpdateManager.onCheckForUpdate">
-<code class="descclassname">UpdateManager.</code><code class="descname">onCheckForUpdate</code><span class="sig-paren">(</span><em>{hasUpdate}</em><span class="sig-paren">)</span><a class="headerlink" href="#UpdateManager.onCheckForUpdate" title="永久链接至目标">¶</a></dt>
+<dl class="js function">
+<dt class="sig sig-object js" id="UpdateManager.onCheckForUpdate">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">UpdateManager</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">onCheckForUpdate</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">{hasUpdate}</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#UpdateManager.onCheckForUpdate" title="永久链接至目标">¶</a></dt>
 <dd><p>监听向微信后台请求检查更新结果事件。微信在小程序冷启动时自动检查更新，不需由开发者主动触发。</p>
 <dl class="field-list simple">
 <dt class="field-odd">参数</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>hasUpdate</strong> (<em>boolean</em>) – 是否有新版本</p></li>
+<li><p><strong>hasUpdate</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">boolean()</span></code></span>) – 是否有新版本</p></li>
 </ul>
 </dd>
 </dl>
 </dd></dl>
 
-<dl class="function">
-<dt id="UpdateManager.onUpdateReady">
-<code class="descclassname">UpdateManager.</code><code class="descname">onUpdateReady</code><span class="sig-paren">(</span><em>callback</em><span class="sig-paren">)</span><a class="headerlink" href="#UpdateManager.onUpdateReady" title="永久链接至目标">¶</a></dt>
+<dl class="js function">
+<dt class="sig sig-object js" id="UpdateManager.onUpdateReady">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">UpdateManager</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">onUpdateReady</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">callback</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#UpdateManager.onUpdateReady" title="永久链接至目标">¶</a></dt>
 <dd><p>监听小程序有版本更新事件。客户端主动触发下载（无需开发者触发），下载成功后回调</p>
 <dl class="field-list simple">
 <dt class="field-odd">参数</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>callback</strong> (<em>function</em>) – 小程序有版本更新事件的回调函数</p></li>
+<li><p><strong>callback</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">function()</span></code></span>) – 小程序有版本更新事件的回调函数</p></li>
 </ul>
 </dd>
 </dl>
 </dd></dl>
 
-<dl class="function">
-<dt id="UpdateManager.onUpdateFailed">
-<code class="descclassname">UpdateManager.</code><code class="descname">onUpdateFailed</code><span class="sig-paren">(</span><em>callback</em><span class="sig-paren">)</span><a class="headerlink" href="#UpdateManager.onUpdateFailed" title="永久链接至目标">¶</a></dt>
+<dl class="js function">
+<dt class="sig sig-object js" id="UpdateManager.onUpdateFailed">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">UpdateManager</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">onUpdateFailed</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">callback</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#UpdateManager.onUpdateFailed" title="永久链接至目标">¶</a></dt>
 <dd><p>监听小程序更新失败事件。小程序有新版本，客户端主动触发下载（无需开发者触发），下载失败（可能是网络原因等）后回调</p>
 <dl class="field-list simple">
 <dt class="field-odd">参数</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>callback</strong> (<em>function</em>) – 小程序有版本更新事件的回调函数</p></li>
+<li><p><strong>callback</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">function()</span></code></span>) – 小程序有版本更新事件的回调函数</p></li>
 </ul>
 </dd>
 </dl>
 </dd></dl>
 
 <p>示例代码</p>
-<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="kr">const</span> <span class="nx">updateManager</span> <span class="o">=</span> <span class="nx">wx</span><span class="p">.</span><span class="nx">getUpdateManager</span><span class="p">()</span>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="kd">const</span> <span class="nx">updateManager</span> <span class="o">=</span> <span class="nx">wx</span><span class="p">.</span><span class="nx">getUpdateManager</span><span class="p">()</span>
 
 <span class="nx">updateManager</span><span class="p">.</span><span class="nx">onCheckForUpdate</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
   <span class="c1">// 请求完新版本信息的回调</span>
@@ -231,9 +233,10 @@
 <p>微信开发者工具上可以通过「编译模式」下的「下次编译模拟更新」开关来调试
 小程序开发版/体验版没有「版本」概念，所以无法在开发版/体验版上测试更版本更新情况</p>
 </div>
-</div>
+</section>
 
 
+            <div class="clearer"></div>
           </div>
         </div>
       </div>
@@ -257,12 +260,13 @@
 <li><a href="../index.html">主页</a>&#160;|</li>
 <li><a href="../contents.html">文档</a> &#187;</li>
 
-          <li class="nav-item nav-item-1"><a href="index.html" >API</a> &#187;</li> 
+          <li class="nav-item nav-item-1"><a href="index.html" >API</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">UpdateManager</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
         &#169; 版权所有 2019, Wxadev Docs.
-      由 <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.0+/0e60d4d 创建。
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.1.
     </div>
   </body>
 </html>

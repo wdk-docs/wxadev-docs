@@ -1,18 +1,19 @@
 
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
+<html lang="zh_CN">
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>兼容处理 &#8212; wxadev 1.0.0 文档</title>
-    <link rel="stylesheet" href="../_static/sphinx13.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-    <script type="text/javascript" src="../_static/jquery.js"></script>
-    <script type="text/javascript" src="../_static/underscore.js"></script>
-    <script type="text/javascript" src="../_static/doctools.js"></script>
-    <script type="text/javascript" src="../_static/language_data.js"></script>
-    <script type="text/javascript" src="../_static/translations.js"></script>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx13.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/translations.js"></script>
     <link rel="search" type="application/opensearchdescription+xml"
           title="在 wxadev 1.0.0 文档 中搜索"
           href="../_static/opensearch.xml"/>
@@ -93,7 +94,8 @@
 <li><a href="../index.html">主页</a>&#160;|</li>
 <li><a href="../contents.html">文档</a> &#187;</li>
 
-          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">框架</a> &#187;</li> 
+          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">框架</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">兼容处理</a></li> 
       </ul>
     </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
@@ -129,12 +131,12 @@
   <h3 id="searchlabel">快速搜索</h3>
     <div class="searchformwrapper">
     <form class="search" action="../search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
       <input type="submit" value="转向" />
     </form>
     </div>
 </div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
+<script>$('#searchbox').show(0);</script>
         </div>
       </div>
 
@@ -143,13 +145,13 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="compatibility">
+  <section id="compatibility">
 <span id="id1"></span><h1>兼容处理<a class="headerlink" href="#compatibility" title="永久链接至标题">¶</a></h1>
-<div class="section" id="id2">
+<section id="id2">
 <h2>兼容处理<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
 <p>小程序的功能不断的增加，但是旧版本的微信客户端并不支持新功能，所以在使用这些新能力的时候需要做兼容。</p>
 <p>开发者可以通过以下方式进行低版本的兼容：</p>
-<div class="section" id="id3">
+<section id="id3">
 <h3>1. 版本号比较<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h3>
 <blockquote>
 <div><p>微信客户端和小程序基础库的版本号风格为 Major.Minor.Patch（主版本号.次版本号.修订版本号）。</p>
@@ -162,7 +164,7 @@
 <div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="kd">function</span> <span class="nx">compareVersion</span><span class="p">(</span><span class="nx">v1</span><span class="p">,</span> <span class="nx">v2</span><span class="p">)</span> <span class="p">{</span>
   <span class="nx">v1</span> <span class="o">=</span> <span class="nx">v1</span><span class="p">.</span><span class="nx">split</span><span class="p">(</span><span class="s1">&#39;.&#39;</span><span class="p">)</span>
   <span class="nx">v2</span> <span class="o">=</span> <span class="nx">v2</span><span class="p">.</span><span class="nx">split</span><span class="p">(</span><span class="s1">&#39;.&#39;</span><span class="p">)</span>
-  <span class="kr">const</span> <span class="nx">len</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">max</span><span class="p">(</span><span class="nx">v1</span><span class="p">.</span><span class="nx">length</span><span class="p">,</span> <span class="nx">v2</span><span class="p">.</span><span class="nx">length</span><span class="p">)</span>
+  <span class="kd">const</span> <span class="nx">len</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">max</span><span class="p">(</span><span class="nx">v1</span><span class="p">.</span><span class="nx">length</span><span class="p">,</span> <span class="nx">v2</span><span class="p">.</span><span class="nx">length</span><span class="p">)</span>
 
   <span class="k">while</span> <span class="p">(</span><span class="nx">v1</span><span class="p">.</span><span class="nx">length</span> <span class="o">&lt;</span> <span class="nx">len</span><span class="p">)</span> <span class="p">{</span>
     <span class="nx">v1</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="s1">&#39;0&#39;</span><span class="p">)</span>
@@ -171,24 +173,24 @@
     <span class="nx">v2</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="s1">&#39;0&#39;</span><span class="p">)</span>
   <span class="p">}</span>
 
-  <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">len</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-    <span class="kr">const</span> <span class="nx">num1</span> <span class="o">=</span> <span class="nb">parseInt</span><span class="p">(</span><span class="nx">v1</span><span class="p">[</span><span class="nx">i</span><span class="p">])</span>
-    <span class="kr">const</span> <span class="nx">num2</span> <span class="o">=</span> <span class="nb">parseInt</span><span class="p">(</span><span class="nx">v2</span><span class="p">[</span><span class="nx">i</span><span class="p">])</span>
+  <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mf">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">len</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">const</span> <span class="nx">num1</span> <span class="o">=</span> <span class="nb">parseInt</span><span class="p">(</span><span class="nx">v1</span><span class="p">[</span><span class="nx">i</span><span class="p">])</span>
+    <span class="kd">const</span> <span class="nx">num2</span> <span class="o">=</span> <span class="nb">parseInt</span><span class="p">(</span><span class="nx">v2</span><span class="p">[</span><span class="nx">i</span><span class="p">])</span>
 
     <span class="k">if</span> <span class="p">(</span><span class="nx">num1</span> <span class="o">&gt;</span> <span class="nx">num2</span><span class="p">)</span> <span class="p">{</span>
-      <span class="k">return</span> <span class="mi">1</span>
+      <span class="k">return</span> <span class="mf">1</span>
     <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nx">num1</span> <span class="o">&lt;</span> <span class="nx">num2</span><span class="p">)</span> <span class="p">{</span>
-      <span class="k">return</span> <span class="o">-</span><span class="mi">1</span>
+      <span class="k">return</span> <span class="o">-</span><span class="mf">1</span>
     <span class="p">}</span>
   <span class="p">}</span>
 
-  <span class="k">return</span> <span class="mi">0</span>
+  <span class="k">return</span> <span class="mf">0</span>
 <span class="p">}</span>
 
 <span class="nx">compareVersion</span><span class="p">(</span><span class="s1">&#39;1.11.0&#39;</span><span class="p">,</span> <span class="s1">&#39;1.9.9&#39;</span><span class="p">)</span> <span class="c1">// 1</span>
-<span class="kr">const</span> <span class="nx">version</span> <span class="o">=</span> <span class="nx">wx</span><span class="p">.</span><span class="nx">getSystemInfoSync</span><span class="p">().</span><span class="nx">SDKVersion</span>
+<span class="kd">const</span> <span class="nx">version</span> <span class="o">=</span> <span class="nx">wx</span><span class="p">.</span><span class="nx">getSystemInfoSync</span><span class="p">().</span><span class="nx">SDKVersion</span>
 
-<span class="k">if</span> <span class="p">(</span><span class="nx">compareVersion</span><span class="p">(</span><span class="nx">version</span><span class="p">,</span> <span class="s1">&#39;1.1.0&#39;</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+<span class="k">if</span> <span class="p">(</span><span class="nx">compareVersion</span><span class="p">(</span><span class="nx">version</span><span class="p">,</span> <span class="s1">&#39;1.1.0&#39;</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="mf">0</span><span class="p">)</span> <span class="p">{</span>
   <span class="nx">wx</span><span class="p">.</span><span class="nx">openBluetoothAdapter</span><span class="p">()</span>
 <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
   <span class="c1">// 如果希望用户在最新版本的客户端上体验您的小程序，可以这样子提示</span>
@@ -200,8 +202,8 @@
 </pre></div>
 </div>
 </div></blockquote>
-</div>
-<div class="section" id="api">
+</section>
+<section id="api">
 <h3>2. API 存在判断<a class="headerlink" href="#api" title="永久链接至标题">¶</a></h3>
 <blockquote>
 <div><p>对于新增的 API，可以通过判断该API是否存在来判断是否支持用户使用的基础库版本。例如：</p>
@@ -217,8 +219,8 @@
 </pre></div>
 </div>
 </div></blockquote>
-</div>
-<div class="section" id="wx-caniuse">
+</section>
+<section id="wx-caniuse">
 <h3>3. <a class="reference internal" href="../api/wx.canIUse.html#wx.canIUse" title="wx.canIUse"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.canIUse()</span></code></a><a class="headerlink" href="#wx-caniuse" title="永久链接至标题">¶</a></h3>
 <blockquote>
 <div><p>除了直接通过版本号判断，也可以通过 wx.canIUse 来判断是否可以在该基础库版本下直接使用。例如：</p>
@@ -249,9 +251,9 @@
 </div>
 <p>canIUse 的数据文件随基础库进行更新，新版本中的新功能可能出现遗漏的情况，建议开发者在使用时提前测试。</p>
 </div></blockquote>
-</div>
-</div>
-<div class="section" id="id4">
+</section>
+</section>
+<section id="id4">
 <h2>设置最低基础库版本<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h2>
 <p>需要 iOS 6.5.8 / 安卓 6.5.7 及以上版本微信客户端支持</p>
 <p>为便于开发者解决低版本基础库无法兼容小程序的新功能的问题，开发者可设置小程序最低基础库版本要求。</p>
@@ -260,10 +262,11 @@
 <img alt="https://developers.weixin.qq.com/miniprogram/dev/framework/image/least-version-config.png?t=19041921" src="https://developers.weixin.qq.com/miniprogram/dev/framework/image/least-version-config.png?t=19041921" />
 <p>设置后，若用户基础库版本低于设置值，则无法正常打开小程序，并提示用户更新客户端版本。</p>
 <img alt="https://developers.weixin.qq.com/miniprogram/dev/framework/image/least-version-tips.jpg?t=19041921" src="https://developers.weixin.qq.com/miniprogram/dev/framework/image/least-version-tips.jpg?t=19041921" />
-</div>
-</div>
+</section>
+</section>
 
 
+            <div class="clearer"></div>
           </div>
         </div>
       </div>
@@ -287,12 +290,13 @@
 <li><a href="../index.html">主页</a>&#160;|</li>
 <li><a href="../contents.html">文档</a> &#187;</li>
 
-          <li class="nav-item nav-item-1"><a href="index.html" >框架</a> &#187;</li> 
+          <li class="nav-item nav-item-1"><a href="index.html" >框架</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">兼容处理</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
         &#169; 版权所有 2019, Wxadev Docs.
-      由 <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.0+/0e60d4d 创建。
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.1.
     </div>
   </body>
 </html>

@@ -1,18 +1,19 @@
 
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
+<html lang="zh_CN">
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>wx.getStorageSync &#8212; wxadev 1.0.0 文档</title>
-    <link rel="stylesheet" href="../_static/sphinx13.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-    <script type="text/javascript" src="../_static/jquery.js"></script>
-    <script type="text/javascript" src="../_static/underscore.js"></script>
-    <script type="text/javascript" src="../_static/doctools.js"></script>
-    <script type="text/javascript" src="../_static/language_data.js"></script>
-    <script type="text/javascript" src="../_static/translations.js"></script>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx13.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/translations.js"></script>
     <link rel="search" type="application/opensearchdescription+xml"
           title="在 wxadev 1.0.0 文档 中搜索"
           href="../_static/opensearch.xml"/>
@@ -93,7 +94,8 @@
 <li><a href="../index.html">主页</a>&#160;|</li>
 <li><a href="../contents.html">文档</a> &#187;</li>
 
-          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">API</a> &#187;</li> 
+          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">API</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">wx.getStorageSync</a></li> 
       </ul>
     </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
@@ -115,12 +117,12 @@
   <h3 id="searchlabel">快速搜索</h3>
     <div class="searchformwrapper">
     <form class="search" action="../search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
       <input type="submit" value="转向" />
     </form>
     </div>
 </div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
+<script>$('#searchbox').show(0);</script>
         </div>
       </div>
 
@@ -129,22 +131,23 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="wx-getstoragesync">
+  <section id="wx-getstoragesync">
 <h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/api/wx.getStorageSync.html">wx.getStorageSync</a><a class="headerlink" href="#wx-getstoragesync" title="永久链接至标题">¶</a></h1>
-<dl class="function">
-<dt id="wx.getStorageSync">
-<code class="descclassname">wx.</code><code class="descname">getStorageSync</code><span class="sig-paren">(</span><em>string key</em><span class="sig-paren">)</span><a class="headerlink" href="#wx.getStorageSync" title="永久链接至目标">¶</a></dt>
+<dl class="js function">
+<dt class="sig sig-object js" id="wx.getStorageSync">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">wx</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">getStorageSync</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">string</span> <span class="pre">key</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#wx.getStorageSync" title="永久链接至目标">¶</a></dt>
 <dd><p><a class="reference internal" href="wx.getStorage.html#wx.getStorage" title="wx.getStorage"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.getStorage()</span></code></a> 的同步版本</p>
 <dl class="field-list simple">
 <dt class="field-odd">参数</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>key</strong> (<em>string</em>) – 本地缓存中指定的 key</p></li>
+<li><p><strong>key</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">string()</span></code></span>) – 本地缓存中指定的 key</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><ul class="simple">
+<dt class="field-even">返回</dt>
+<dd class="field-even"><p><ul class="simple">
 <li><p><strong>any</strong> <em>data</em> - key对应的内容</p></li>
 </ul>
+</p>
 </dd>
 <dt class="field-odd">示例</dt>
 <dd class="field-odd"><p></p></dd>
@@ -158,7 +161,7 @@
 </pre></div>
 </div>
 <div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="k">try</span> <span class="p">{</span>
-  <span class="kr">const</span> <span class="nx">value</span> <span class="o">=</span> <span class="nx">wx</span><span class="p">.</span><span class="nx">getStorageSync</span><span class="p">(</span><span class="s1">&#39;key&#39;</span><span class="p">)</span>
+  <span class="kd">const</span> <span class="nx">value</span> <span class="o">=</span> <span class="nx">wx</span><span class="p">.</span><span class="nx">getStorageSync</span><span class="p">(</span><span class="s1">&#39;key&#39;</span><span class="p">)</span>
   <span class="k">if</span> <span class="p">(</span><span class="nx">value</span><span class="p">)</span> <span class="p">{</span>
     <span class="c1">// Do something with return value</span>
   <span class="p">}</span>
@@ -169,9 +172,10 @@
 </div>
 </dd></dl>
 
-</div>
+</section>
 
 
+            <div class="clearer"></div>
           </div>
         </div>
       </div>
@@ -195,12 +199,13 @@
 <li><a href="../index.html">主页</a>&#160;|</li>
 <li><a href="../contents.html">文档</a> &#187;</li>
 
-          <li class="nav-item nav-item-1"><a href="index.html" >API</a> &#187;</li> 
+          <li class="nav-item nav-item-1"><a href="index.html" >API</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">wx.getStorageSync</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
         &#169; 版权所有 2019, Wxadev Docs.
-      由 <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.0+/0e60d4d 创建。
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.1.
     </div>
   </body>
 </html>

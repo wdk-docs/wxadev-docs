@@ -1,27 +1,26 @@
 
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
+<html lang="zh_CN">
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>注册小程序(App) &#8212; wxadev 1.0.0 文档</title>
-    <link rel="stylesheet" href="../../_static/sphinx13.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-    <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
-    <script type="text/javascript" src="../../_static/jquery.js"></script>
-    <script type="text/javascript" src="../../_static/underscore.js"></script>
-    <script type="text/javascript" src="../../_static/doctools.js"></script>
-    <script type="text/javascript" src="../../_static/language_data.js"></script>
-    <script type="text/javascript" src="../../_static/translations.js"></script>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx13.css" />
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/translations.js"></script>
     <link rel="search" type="application/opensearchdescription+xml"
           title="在 wxadev 1.0.0 文档 中搜索"
           href="../../_static/opensearch.xml"/>
 
     <link rel="index" title="索引" href="../../genindex.html" />
     <link rel="search" title="搜索" href="../../search.html" />
-    <link rel="next" title="获取到小程序全局唯一的 App 实例(getApp)" href="getApp.html" />
-    <link rel="prev" title="框架接口说明" href="index.html" />
-<link rel="canonical" href="http://www.sphinx-doc.org/en/master/reference/api/App.html" />
+<link rel="canonical" href="http://www.sphinx-doc.org/en/master/reference/api/app.html" />
 
 <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet" type="text/css" />
  
@@ -84,31 +83,18 @@
         <li class="right" >
           <a href="../../http-routingtable.html" title="微信小程序API"
              >wxapi</a> |</li>
-        <li class="right" >
-          <a href="getApp.html" title="获取到小程序全局唯一的 App 实例(getApp)"
-             accesskey="N">下一页</a> |</li>
-        <li class="right" >
-          <a href="index.html" title="框架接口说明"
-             accesskey="P">上一页</a> |</li>
 <li><a href="../../index.html">主页</a>&#160;|</li>
 <li><a href="../../contents.html">文档</a> &#187;</li>
 
-          <li class="nav-item nav-item-1"><a href="../index.html" >参考资料</a> &#187;</li>
-          <li class="nav-item nav-item-2"><a href="index.html" accesskey="U">框架接口说明</a> &#187;</li> 
+        <li class="nav-item nav-item-this"><a href="">注册小程序(App)</a></li> 
       </ul>
     </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-  <h4>上一个主题</h4>
-  <p class="topless"><a href="index.html"
-                        title="上一章">框架接口说明</a></p>
-  <h4>下一个主题</h4>
-  <p class="topless"><a href="getApp.html"
-                        title="下一章">获取到小程序全局唯一的 App 实例(getApp)</a></p>
   <div role="note" aria-label="source link">
     <h3>本页</h3>
     <ul class="this-page-menu">
-      <li><a href="../../_sources/reference/api/App.rst.txt"
+      <li><a href="../../_sources/reference/api/app.rst.txt"
             rel="nofollow">显示源代码</a></li>
     </ul>
    </div>
@@ -116,12 +102,12 @@
   <h3 id="searchlabel">快速搜索</h3>
     <div class="searchformwrapper">
     <form class="search" action="../../search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
       <input type="submit" value="转向" />
     </form>
     </div>
 </div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
+<script>$('#searchbox').show(0);</script>
         </div>
       </div>
 
@@ -130,22 +116,22 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="app">
+  <section id="app">
 <h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/reference/api/App.html">注册小程序(App)</a><a class="headerlink" href="#app" title="永久链接至标题">¶</a></h1>
-<dl class="class">
-<dt id="App">
-<em class="property">class </em><code class="descname">App</code><span class="sig-paren">(</span><em>{[onLaunch][, onShow][, onHide][, onError][, onPageNotFound][...]}</em><span class="sig-paren">)</span><a class="headerlink" href="#App" title="永久链接至目标">¶</a></dt>
+<dl class="js class">
+<dt class="sig sig-object js" id="App">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="n"><span class="pre">App</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">{[onLaunch][,</span> <span class="pre">onShow][,</span> <span class="pre">onHide][,</span> <span class="pre">onError][,</span> <span class="pre">onPageNotFound][...]}</span></em><span class="sig-paren">)</span><a class="headerlink" href="#App" title="永久链接至目标">¶</a></dt>
 <dd><p>接受一个 Object 参数，其指定小程序的生命周期回调等。</p>
 <p><a class="reference internal" href="#App" title="App"><code class="xref js js-class docutils literal notranslate"><span class="pre">App()</span></code></a> 必须在 <code class="docutils literal notranslate"><span class="pre">app.js</span></code> 中调用，必须调用且只能调用一次。不然会出现无法预期的后果。</p>
 <p>关于小程序前后台的定义和小程序的运行机制，请参考 <a class="reference internal" href="../../framework/operating-mechanism.html#operating-mechanism"><span class="std std-ref">运行机制</span></a> 章节。</p>
 <dl class="field-list simple">
 <dt class="field-odd">参数</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>onLaunch</strong> (<em>function</em>) – 监听小程序初始化。小程序初始化完成时触发，全局只触发一次。参数也可以使用 <a class="reference internal" href="../../api/wx.getLaunchOptionsSync.html#wx.getLaunchOptionsSync" title="wx.getLaunchOptionsSync"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.getLaunchOptionsSync()</span></code></a> 获取。</p></li>
-<li><p><strong>onShow</strong> (<em>function</em>) – 监听小程序启动或切前台。小程序启动，或从后台进入前台显示时触发。也可以使用 <a class="reference internal" href="../../api/wx.onAppShow.html#wx.onAppShow" title="wx.onAppShow"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.onAppShow()</span></code></a> 绑定监听。</p></li>
-<li><p><strong>onHide</strong> (<em>function</em>) – 监听小程序切后台。小程序从前台进入后台时触发。也可以使用 <a class="reference internal" href="../../api/wx.onAppHide.html#wx.onAppHide" title="wx.onAppHide"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.onAppHide()</span></code></a> 绑定监听。</p></li>
-<li><p><strong>onError</strong> (<em>function</em>) – 错误监听函数。小程序发生脚本错误或 API 调用报错时触发。也可以使用 <a class="reference internal" href="../../api/wx.onError.html#wx.onError" title="wx.onError"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.onError()</span></code></a> 绑定监听。</p></li>
-<li><p><strong>onPageNotFound</strong> (<em>function</em>) – <p>页面不存在监听函数。
+<li><p><strong>onLaunch</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">function()</span></code></span>) – 监听小程序初始化。小程序初始化完成时触发，全局只触发一次。参数也可以使用 <a class="reference internal" href="../../api/wx.getLaunchOptionsSync.html#wx.getLaunchOptionsSync" title="wx.getLaunchOptionsSync"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.getLaunchOptionsSync()</span></code></a> 获取。</p></li>
+<li><p><strong>onShow</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">function()</span></code></span>) – 监听小程序启动或切前台。小程序启动，或从后台进入前台显示时触发。也可以使用 <a class="reference internal" href="../../api/wx.onAppShow.html#wx.onAppShow" title="wx.onAppShow"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.onAppShow()</span></code></a> 绑定监听。</p></li>
+<li><p><strong>onHide</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">function()</span></code></span>) – 监听小程序切后台。小程序从前台进入后台时触发。也可以使用 <a class="reference internal" href="../../api/wx.onAppHide.html#wx.onAppHide" title="wx.onAppHide"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.onAppHide()</span></code></a> 绑定监听。</p></li>
+<li><p><strong>onError</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">function()</span></code></span>) – 错误监听函数。小程序发生脚本错误或 API 调用报错时触发。也可以使用 <a class="reference internal" href="../../api/wx.onError.html#wx.onError" title="wx.onError"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.onError()</span></code></a> 绑定监听。</p></li>
+<li><p><strong>onPageNotFound</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">function()</span></code></span>) – <p>页面不存在监听函数。
 小程序要打开的页面不存在时触发。也可以使用 <a class="reference internal" href="../../api/wx.onPageNotFound.html#wx.onPageNotFound" title="wx.onPageNotFound"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.onPageNotFound()</span></code></a> 绑定监听。注意事项请参考 <a class="reference internal" href="../../api/wx.onPageNotFound.html#wx.onPageNotFound" title="wx.onPageNotFound"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.onPageNotFound()</span></code></a> 。</p>
 <div class="versionadded">
 <p><span class="versionmodified added">1.9.90 新版功能: </span>低版本需做 <a class="reference internal" href="../../framework/compatibility.html#compatibility"><span class="std std-ref">兼容处理</span></a> 。</p>
@@ -164,7 +150,7 @@
 </dd>
 </dl>
 </p></li>
-<li><p><strong>其他</strong> (<em>any</em>) – 开发者可以添加任意的函数或数据变量到 Object 参数中，用 this 可以访问</p></li>
+<li><p><strong>其他</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">any()</span></code></span>) – 开发者可以添加任意的函数或数据变量到 Object 参数中，用 this 可以访问</p></li>
 </ul>
 </dd>
 <dt class="field-even">示例</dt>
@@ -189,36 +175,36 @@
 </div>
 </dd></dl>
 
-<dl class="function">
-<dt id="App.onLaunch">
-<code class="descclassname">App.</code><code class="descname">onLaunch</code><span class="sig-paren">(</span><em>Object object</em><span class="sig-paren">)</span><a class="headerlink" href="#App.onLaunch" title="永久链接至目标">¶</a></dt>
+<dl class="js function">
+<dt class="sig sig-object js" id="App.onLaunch">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">App</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">onLaunch</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">Object</span> <span class="pre">object</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#App.onLaunch" title="永久链接至目标">¶</a></dt>
 <dd><p>小程序初始化完成时触发，全局只触发一次。参数也可以使用 <a class="reference internal" href="../../api/wx.getLaunchOptionsSync.html#wx.getLaunchOptionsSync" title="wx.getLaunchOptionsSync"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.getLaunchOptionsSync()</span></code></a> 获取。</p>
 <p>参数：与 <a class="reference internal" href="../../api/wx.getLaunchOptionsSync.html#wx.getLaunchOptionsSync" title="wx.getLaunchOptionsSync"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.getLaunchOptionsSync()</span></code></a> 一致</p>
 </dd></dl>
 
-<dl class="function">
-<dt id="App.onShow">
-<code class="descclassname">App.</code><code class="descname">onShow</code><span class="sig-paren">(</span><em>Object object</em><span class="sig-paren">)</span><a class="headerlink" href="#App.onShow" title="永久链接至目标">¶</a></dt>
+<dl class="js function">
+<dt class="sig sig-object js" id="App.onShow">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">App</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">onShow</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">Object</span> <span class="pre">object</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#App.onShow" title="永久链接至目标">¶</a></dt>
 <dd><p>小程序启动，或从后台进入前台显示时触发。也可以使用 <a class="reference internal" href="../../api/wx.onAppShow.html#wx.onAppShow" title="wx.onAppShow"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.onAppShow()</span></code></a> 绑定监听。</p>
 <p>参数：与 <a class="reference internal" href="../../api/wx.onAppShow.html#wx.onAppShow" title="wx.onAppShow"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.onAppShow()</span></code></a> 一致</p>
 </dd></dl>
 
-<dl class="function">
-<dt id="App.onHide">
-<code class="descclassname">App.</code><code class="descname">onHide</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#App.onHide" title="永久链接至目标">¶</a></dt>
+<dl class="js function">
+<dt class="sig sig-object js" id="App.onHide">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">App</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">onHide</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#App.onHide" title="永久链接至目标">¶</a></dt>
 <dd><p>小程序从前台进入后台时触发。也可以使用 <a class="reference internal" href="../../api/wx.onAppHide.html#wx.onAppHide" title="wx.onAppHide"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.onAppHide()</span></code></a> 绑定监听。</p>
 </dd></dl>
 
-<dl class="function">
-<dt id="App.onError">
-<code class="descclassname">App.</code><code class="descname">onError</code><span class="sig-paren">(</span><em>String error</em><span class="sig-paren">)</span><a class="headerlink" href="#App.onError" title="永久链接至目标">¶</a></dt>
+<dl class="js function">
+<dt class="sig sig-object js" id="App.onError">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">App</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">onError</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">String</span> <span class="pre">error</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#App.onError" title="永久链接至目标">¶</a></dt>
 <dd><p>小程序发生脚本错误或 API 调用报错时触发。也可以使用 <a class="reference internal" href="../../api/wx.onError.html#wx.onError" title="wx.onError"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.onError()</span></code></a> 绑定监听。</p>
 <p>参数：与 <a class="reference internal" href="../../api/wx.onError.html#wx.onError" title="wx.onError"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.onError()</span></code></a> 一致</p>
 </dd></dl>
 
-<dl class="function">
-<dt id="App.onPageNotFound">
-<code class="descclassname">App.</code><code class="descname">onPageNotFound</code><span class="sig-paren">(</span><em>Object object</em><span class="sig-paren">)</span><a class="headerlink" href="#App.onPageNotFound" title="永久链接至目标">¶</a></dt>
+<dl class="js function">
+<dt class="sig sig-object js" id="App.onPageNotFound">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">App</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">onPageNotFound</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">Object</span> <span class="pre">object</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#App.onPageNotFound" title="永久链接至目标">¶</a></dt>
 <dd><div class="versionadded">
 <p><span class="versionmodified added">1.9.90 新版功能: </span>低版本需做 <a class="reference internal" href="../../framework/compatibility.html#compatibility"><span class="std std-ref">兼容处理</span></a> 。</p>
 </div>
@@ -239,9 +225,10 @@
 </dl>
 </dd></dl>
 
-</div>
+</section>
 
 
+            <div class="clearer"></div>
           </div>
         </div>
       </div>
@@ -256,22 +243,15 @@
         <li class="right" >
           <a href="../../http-routingtable.html" title="微信小程序API"
              >wxapi</a> |</li>
-        <li class="right" >
-          <a href="getApp.html" title="获取到小程序全局唯一的 App 实例(getApp)"
-             >下一页</a> |</li>
-        <li class="right" >
-          <a href="index.html" title="框架接口说明"
-             >上一页</a> |</li>
 <li><a href="../../index.html">主页</a>&#160;|</li>
 <li><a href="../../contents.html">文档</a> &#187;</li>
 
-          <li class="nav-item nav-item-1"><a href="../index.html" >参考资料</a> &#187;</li>
-          <li class="nav-item nav-item-2"><a href="index.html" >框架接口说明</a> &#187;</li> 
+        <li class="nav-item nav-item-this"><a href="">注册小程序(App)</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
         &#169; 版权所有 2019, Wxadev Docs.
-      由 <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.0+/0e60d4d 创建。
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.1.
     </div>
   </body>
 </html>

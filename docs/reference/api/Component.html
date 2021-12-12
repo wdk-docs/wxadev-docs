@@ -1,18 +1,19 @@
 
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
+<html lang="zh_CN">
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>创建自定义组件(Component) &#8212; wxadev 1.0.0 文档</title>
-    <link rel="stylesheet" href="../../_static/sphinx13.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-    <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
-    <script type="text/javascript" src="../../_static/jquery.js"></script>
-    <script type="text/javascript" src="../../_static/underscore.js"></script>
-    <script type="text/javascript" src="../../_static/doctools.js"></script>
-    <script type="text/javascript" src="../../_static/language_data.js"></script>
-    <script type="text/javascript" src="../../_static/translations.js"></script>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx13.css" />
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/translations.js"></script>
     <link rel="search" type="application/opensearchdescription+xml"
           title="在 wxadev 1.0.0 文档 中搜索"
           href="../../_static/opensearch.xml"/>
@@ -94,7 +95,8 @@
 <li><a href="../../contents.html">文档</a> &#187;</li>
 
           <li class="nav-item nav-item-1"><a href="../index.html" >参考资料</a> &#187;</li>
-          <li class="nav-item nav-item-2"><a href="index.html" accesskey="U">框架接口说明</a> &#187;</li> 
+          <li class="nav-item nav-item-2"><a href="index.html" accesskey="U">框架接口说明</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">创建自定义组件(Component)</a></li> 
       </ul>
     </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
@@ -116,12 +118,12 @@
   <h3 id="searchlabel">快速搜索</h3>
     <div class="searchformwrapper">
     <form class="search" action="../../search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
       <input type="submit" value="转向" />
     </form>
     </div>
 </div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
+<script>$('#searchbox').show(0);</script>
         </div>
       </div>
 
@@ -130,31 +132,31 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="component">
+  <section id="component">
 <h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/reference/api/Component.html">创建自定义组件(Component)</a><a class="headerlink" href="#component" title="永久链接至标题">¶</a></h1>
-<dl class="class">
-<dt id="Component">
-<em class="property">class </em><code class="descname">Component</code><span class="sig-paren">(</span><em>Object object</em><span class="sig-paren">)</span><a class="headerlink" href="#Component" title="永久链接至目标">¶</a></dt>
+<dl class="js class">
+<dt class="sig sig-object js" id="Component">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="n"><span class="pre">Component</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">Object</span> <span class="pre">object</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Component" title="永久链接至目标">¶</a></dt>
 <dd><p>创建自定义组件，接受一个 Object 类型的参数。</p>
 <dl class="field-list simple">
 <dt class="field-odd">参数</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>properties</strong> (<em>object</em>) – Object Map      否       组件的对外属性，是属性名到属性设置的映射表</p></li>
-<li><p><strong>data</strong> (<em>object</em>) – 组件的内部数据，和 properties 一同用于组件的模板渲染</p></li>
-<li><p><strong>observers</strong> (<em>object</em>) – 组件数据字段监听器，用于监听 properties 和 data 的变化，参见 数据监听器   2.6.1</p></li>
-<li><p><strong>methods</strong> (<em>object</em>) – 组件的方法，包括事件响应函数和任意的自定义方法，关于事件响应函数的使用，参见 组件间通信与事件</p></li>
-<li><p><strong>behaviors</strong> (<em>string</em>) – Array  否       类似于mixins和traits的组件间代码复用机制，参见 behaviors</p></li>
-<li><p><strong>created</strong> (<em>function</em>) – 组件生命周期函数-在组件实例刚刚被创建时执行，注意此时不能调用 setData )</p></li>
-<li><p><strong>attached</strong> (<em>function</em>) – 组件生命周期函数-在组件实例进入页面节点树时执行)</p></li>
-<li><p><strong>ready</strong> (<em>function</em>) – 组件生命周期函数-在组件布局完成后执行)</p></li>
-<li><p><strong>moved</strong> (<em>function</em>) – 组件生命周期函数-在组件实例被移动到节点树另一个位置时执行)</p></li>
-<li><p><strong>detached</strong> (<em>function</em>) – 组件生命周期函数-在组件实例被从页面节点树移除时执行)</p></li>
-<li><p><strong>relations</strong> (<em>object</em>) – 组件间关系定义，参见 组件间关系</p></li>
-<li><p><strong>externalClasses</strong> (<em>string</em>) – Array  否       组件接受的外部样式类，参见 外部样式类</p></li>
-<li><p><strong>options</strong> (<em>object</em>) – Object Map      否       一些选项（文档中介绍相关特性时会涉及具体的选项设置，这里暂不列举）</p></li>
-<li><p><strong>lifetimes</strong> (<em>object</em>) – 组件生命周期声明对象，参见 组件生命周期    2.2.3</p></li>
-<li><p><strong>pageLifetimes</strong> (<em>object</em>) – 组件所在页面的生命周期声明对象，参见 组件生命周期       2.2.3</p></li>
-<li><p><strong>definitionFilter</strong> (<em>function</em>) – 定义段过滤器，用于自定义组件扩展，参见 自定义组件扩展 2.2.3</p></li>
+<li><p><strong>properties</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">object()</span></code></span>) – Object Map      否       组件的对外属性，是属性名到属性设置的映射表</p></li>
+<li><p><strong>data</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">object()</span></code></span>) – 组件的内部数据，和 properties 一同用于组件的模板渲染</p></li>
+<li><p><strong>observers</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">object()</span></code></span>) – 组件数据字段监听器，用于监听 properties 和 data 的变化，参见 数据监听器   2.6.1</p></li>
+<li><p><strong>methods</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">object()</span></code></span>) – 组件的方法，包括事件响应函数和任意的自定义方法，关于事件响应函数的使用，参见 组件间通信与事件</p></li>
+<li><p><strong>behaviors</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">string()</span></code></span>) – Array  否       类似于mixins和traits的组件间代码复用机制，参见 behaviors</p></li>
+<li><p><strong>created</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">function()</span></code></span>) – 组件生命周期函数-在组件实例刚刚被创建时执行，注意此时不能调用 setData )</p></li>
+<li><p><strong>attached</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">function()</span></code></span>) – 组件生命周期函数-在组件实例进入页面节点树时执行)</p></li>
+<li><p><strong>ready</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">function()</span></code></span>) – 组件生命周期函数-在组件布局完成后执行)</p></li>
+<li><p><strong>moved</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">function()</span></code></span>) – 组件生命周期函数-在组件实例被移动到节点树另一个位置时执行)</p></li>
+<li><p><strong>detached</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">function()</span></code></span>) – 组件生命周期函数-在组件实例被从页面节点树移除时执行)</p></li>
+<li><p><strong>relations</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">object()</span></code></span>) – 组件间关系定义，参见 组件间关系</p></li>
+<li><p><strong>externalClasses</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">string()</span></code></span>) – Array  否       组件接受的外部样式类，参见 外部样式类</p></li>
+<li><p><strong>options</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">object()</span></code></span>) – Object Map      否       一些选项（文档中介绍相关特性时会涉及具体的选项设置，这里暂不列举）</p></li>
+<li><p><strong>lifetimes</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">object()</span></code></span>) – 组件生命周期声明对象，参见 组件生命周期    2.2.3</p></li>
+<li><p><strong>pageLifetimes</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">object()</span></code></span>) – 组件所在页面的生命周期声明对象，参见 组件生命周期       2.2.3</p></li>
+<li><p><strong>definitionFilter</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">function()</span></code></span>) – 定义段过滤器，用于自定义组件扩展，参见 自定义组件扩展 2.2.3</p></li>
 </ul>
 </dd>
 </dl>
@@ -299,9 +301,10 @@ Bug &amp; Tips:
 从基础库 2.0.9 开始，对象类型的属性和 data 字段中可以包含函数类型的子字段，即可以通过对象类型的属性字段来传递函数。低于这一版本的基础库不支持这一特性。
 bug : 对于 type 为 Object 或 Array 的属性，如果通过该组件自身的 this.setData 来改变属性值的一个子字段，则依旧会触发属性 observer ，且 observer 接收到的 newVal 是变化的那个子字段的值， oldVal 为空， changedPath 包含子字段的字段名相关信息。
 bug : 位于 slot 中的自定义组件没有触发 pageLifetimes 中声明的页面生命周期，此问题在 2.5.2 中修复。</p>
-</div>
+</section>
 
 
+            <div class="clearer"></div>
           </div>
         </div>
       </div>
@@ -326,12 +329,13 @@ bug : 位于 slot 中的自定义组件没有触发 pageLifetimes 中声明的�
 <li><a href="../../contents.html">文档</a> &#187;</li>
 
           <li class="nav-item nav-item-1"><a href="../index.html" >参考资料</a> &#187;</li>
-          <li class="nav-item nav-item-2"><a href="index.html" >框架接口说明</a> &#187;</li> 
+          <li class="nav-item nav-item-2"><a href="index.html" >框架接口说明</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">创建自定义组件(Component)</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
         &#169; 版权所有 2019, Wxadev Docs.
-      由 <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.0+/0e60d4d 创建。
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.1.
     </div>
   </body>
 </html>

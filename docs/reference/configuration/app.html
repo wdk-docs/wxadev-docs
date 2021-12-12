@@ -1,18 +1,19 @@
 
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml" lang="zh_CN">
+<html lang="zh_CN">
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>全局配置 &#8212; wxadev 1.0.0 文档</title>
-    <link rel="stylesheet" href="../../_static/sphinx13.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-    <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
-    <script type="text/javascript" src="../../_static/jquery.js"></script>
-    <script type="text/javascript" src="../../_static/underscore.js"></script>
-    <script type="text/javascript" src="../../_static/doctools.js"></script>
-    <script type="text/javascript" src="../../_static/language_data.js"></script>
-    <script type="text/javascript" src="../../_static/translations.js"></script>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx13.css" />
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/translations.js"></script>
     <link rel="search" type="application/opensearchdescription+xml"
           title="在 wxadev 1.0.0 文档 中搜索"
           href="../../_static/opensearch.xml"/>
@@ -94,7 +95,8 @@
 <li><a href="../../contents.html">文档</a> &#187;</li>
 
           <li class="nav-item nav-item-1"><a href="../index.html" >参考资料</a> &#187;</li>
-          <li class="nav-item nav-item-2"><a href="index.html" accesskey="U">小程序配置</a> &#187;</li> 
+          <li class="nav-item nav-item-2"><a href="index.html" accesskey="U">小程序配置</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">全局配置</a></li> 
       </ul>
     </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
@@ -139,12 +141,12 @@
   <h3 id="searchlabel">快速搜索</h3>
     <div class="searchformwrapper">
     <form class="search" action="../../search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
       <input type="submit" value="转向" />
     </form>
     </div>
 </div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
+<script>$('#searchbox').show(0);</script>
         </div>
       </div>
 
@@ -153,9 +155,9 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="id1">
+  <section id="id1">
 <h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html">全局配置</a><a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
-<p>更新: 2019 年 06 月 30 日</p>
+<p>更新: 2021 年 12 月 12 日</p>
 <p>小程序根目录下的 <code class="file docutils literal notranslate"><span class="pre">app.json</span></code> 文件用来对微信小程序进行全局配置。文件内容为一个 JSON 对象，有以下属性：</p>
 <p>配置项</p>
 <table class="docutils align-default">
@@ -267,11 +269,11 @@
 </tr>
 </tbody>
 </table>
-<div class="section" id="pages">
+<section id="pages">
 <h2>pages<a class="headerlink" href="#pages" title="永久链接至标题">¶</a></h2>
-<dl class="envvar">
-<dt id="envvar-pages">
-<code class="descname">pages</code><a class="headerlink" href="#envvar-pages" title="永久链接至目标">¶</a></dt>
+<dl class="std envvar">
+<dt class="sig sig-object std" id="envvar-pages">
+<span class="sig-name descname"><span class="pre">pages</span></span><a class="headerlink" href="#envvar-pages" title="永久链接至目标">¶</a></dt>
 <dd><p>用于指定小程序由哪些页面组成，每一项都对应一个页面的 路径（含文件名） 信息。
 文件名不需要写文件后缀，框架会自动去寻找对于位置的 <code class="docutils literal notranslate"><span class="pre">.json</span></code> , <code class="docutils literal notranslate"><span class="pre">.js</span></code> , <code class="docutils literal notranslate"><span class="pre">.wxml</span></code> , <code class="docutils literal notranslate"><span class="pre">.wxss</span></code> 四个文件进行处理。</p>
 <ol class="arabic simple">
@@ -302,76 +304,28 @@
 </div>
 </dd></dl>
 
-</div>
-<div class="section" id="window">
+</section>
+<section id="window">
 <h2>window<a class="headerlink" href="#window" title="永久链接至标题">¶</a></h2>
-<dl class="object">
-<dt>
-<code class="descname">window</code></dt>
+<dl>
+<dt class="sig sig-object json">
+<span class="sig-name descname"><span class="pre">window</span></span></dt>
 <dd><p>用于设置小程序的状态栏、导航条、标题、窗口背景色。</p>
 <dl class="field-list">
-<dt class="field-odd">Property navigationBarBackgroundColor</dt>
-<dd class="field-odd"><p>导航栏背景颜色 <a class="footnote-reference brackets" href="#id5" id="id2">1</a>，如 #000000<span> (</span><em>#000000</em><span>)</span></p>
-</dd>
-<dt class="field-even">Proptype navigationBarBackgroundColor</dt>
-<dd class="field-even"><p>HexColor</p>
-</dd>
-<dt class="field-odd">Property navigationBarTextStyle</dt>
-<dd class="field-odd"><p>导航栏标题颜色，仅支持 black/white<span> (</span><em>white</em><span>)</span></p>
-</dd>
-<dt class="field-even">Proptype navigationBarTextStyle</dt>
-<dd class="field-even"><p>string</p>
-</dd>
-<dt class="field-odd">Property string navigationBarTitleText</dt>
-<dd class="field-odd"><p>导航栏标题文字内容</p>
-</dd>
-<dt class="field-even">Property navigationStyle</dt>
-<dd class="field-even"><p>导航栏样式，仅支持以下值： default 默认样式 custom 自定义导航栏，只保留右上角胶囊按钮 <a class="footnote-reference brackets" href="#id6" id="id3">2</a> 。        微信客户端 6.6.0<span> (</span><em>default</em><span>)</span></p>
-</dd>
-<dt class="field-odd">Proptype navigationStyle</dt>
-<dd class="field-odd"><p>string</p>
-</dd>
-<dt class="field-even">Property backgroundColor</dt>
-<dd class="field-even"><p>窗口的背景色 <a class="footnote-reference brackets" href="#id5" id="id4">1</a><span> (</span><em>#ffffff</em><span>)</span></p>
-</dd>
-<dt class="field-odd">Proptype backgroundColor</dt>
-<dd class="field-odd"><p>HexColor</p>
-</dd>
-<dt class="field-even">Property backgroundTextStyle</dt>
-<dd class="field-even"><p>下拉 loading 的样式，仅支持 dark / light<span> (</span><em>dark</em><span>)</span></p>
-</dd>
-<dt class="field-odd">Proptype backgroundTextStyle</dt>
-<dd class="field-odd"><p>string</p>
-</dd>
-<dt class="field-even">Property backgroundColorTop</dt>
-<dd class="field-even"><p>顶部窗口的背景色，仅 iOS 支持      微信客户端 6.5.16<span> (</span><em>#ffffff</em><span>)</span></p>
-</dd>
-<dt class="field-odd">Proptype backgroundColorTop</dt>
-<dd class="field-odd"><p>string</p>
-</dd>
-<dt class="field-even">Property backgroundColorBottom</dt>
-<dd class="field-even"><p>底部窗口的背景色，仅 iOS 支持   微信客户端 6.5.16<span> (</span><em>#ffffff</em><span>)</span></p>
-</dd>
-<dt class="field-odd">Proptype backgroundColorBottom</dt>
-<dd class="field-odd"><p>string</p>
-</dd>
-<dt class="field-even">Property enablePullDownRefresh</dt>
-<dd class="field-even"><p>是否开启全局的下拉刷新。详见 Page.onPullDownRefresh<span> (</span><em>false</em><span>)</span></p>
-</dd>
-<dt class="field-odd">Proptype enablePullDownRefresh</dt>
-<dd class="field-odd"><p>boolean</p>
-</dd>
-<dt class="field-even">Property onReachBottomDistance</dt>
-<dd class="field-even"><p>页面上拉触底事件触发时距页面底部距离，单位为px。详见 Page.onReachBottom<span> (</span><em>50</em><span>)</span></p>
-</dd>
-<dt class="field-odd">Proptype onReachBottomDistance</dt>
-<dd class="field-odd"><p>int</p>
-</dd>
-<dt class="field-even">Property pageOrientation</dt>
-<dd class="field-even"><p>屏幕旋转设置，支持 auto/portrait/landscape 详见 响应显示区域变化     2.4.0 (auto) / 2.5.0 (landscape)<span> (</span><em>portrait</em><span>)</span></p>
-</dd>
-<dt class="field-odd">Proptype pageOrientation</dt>
-<dd class="field-odd"><p>string</p>
+<dt class="field-odd">Object Properties</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>navigationBarBackgroundColor</strong> (<em>HexColor</em>) – 导航栏背景颜色 <a class="footnote-reference brackets" href="#id5" id="id2">1</a>，如 #000000<span> (</span><em>#000000</em><span>)</span></p></li>
+<li><p><strong>navigationBarTextStyle</strong> (<a class="reference external" href="https://docs.python.org/library/stdtypes.html#str" title="Python String"><em>string</em></a>) – 导航栏标题颜色，仅支持 black/white<span> (</span><em>white</em><span>)</span></p></li>
+<li><p><strong>navigationBarTitleText</strong> (<a class="reference external" href="https://docs.python.org/library/stdtypes.html#str" title="Python String"><em>string</em></a>) – 导航栏标题文字内容</p></li>
+<li><p><strong>navigationStyle</strong> (<a class="reference external" href="https://docs.python.org/library/stdtypes.html#str" title="Python String"><em>string</em></a>) – 导航栏样式，仅支持以下值： default 默认样式 custom 自定义导航栏，只保留右上角胶囊按钮 <a class="footnote-reference brackets" href="#id6" id="id3">2</a> 。        微信客户端 6.6.0<span> (</span><em>default</em><span>)</span></p></li>
+<li><p><strong>backgroundColor</strong> (<em>HexColor</em>) – 窗口的背景色 <a class="footnote-reference brackets" href="#id5" id="id4">1</a><span> (</span><em>#ffffff</em><span>)</span></p></li>
+<li><p><strong>backgroundTextStyle</strong> (<a class="reference external" href="https://docs.python.org/library/stdtypes.html#str" title="Python String"><em>string</em></a>) – 下拉 loading 的样式，仅支持 dark / light<span> (</span><em>dark</em><span>)</span></p></li>
+<li><p><strong>backgroundColorTop</strong> (<a class="reference external" href="https://docs.python.org/library/stdtypes.html#str" title="Python String"><em>string</em></a>) – 顶部窗口的背景色，仅 iOS 支持      微信客户端 6.5.16<span> (</span><em>#ffffff</em><span>)</span></p></li>
+<li><p><strong>backgroundColorBottom</strong> (<a class="reference external" href="https://docs.python.org/library/stdtypes.html#str" title="Python String"><em>string</em></a>) – 底部窗口的背景色，仅 iOS 支持   微信客户端 6.5.16<span> (</span><em>#ffffff</em><span>)</span></p></li>
+<li><p><strong>enablePullDownRefresh</strong> (<a class="reference external" href="https://docs.python.org/library/stdtypes.html#boolean-values" title="Python Boolean"><em>boolean</em></a>) – 是否开启全局的下拉刷新。详见 Page.onPullDownRefresh<span> (</span><em>false</em><span>)</span></p></li>
+<li><p><strong>onReachBottomDistance</strong> (<a class="reference external" href="https://docs.python.org/library/stdtypes.html#int" title="Python Integer"><em>int</em></a>) – 页面上拉触底事件触发时距页面底部距离，单位为px。详见 Page.onReachBottom<span> (</span><em>50</em><span>)</span></p></li>
+<li><p><strong>pageOrientation</strong> (<a class="reference external" href="https://docs.python.org/library/stdtypes.html#str" title="Python String"><em>string</em></a>) – 屏幕旋转设置，支持 auto/portrait/landscape 详见 响应显示区域变化     2.4.0 (auto) / 2.5.0 (landscape)<span> (</span><em>portrait</em><span>)</span></p></li>
+</ul>
 </dd>
 <dt class="field-even">示例</dt>
 <dd class="field-even"><div class="highlight-json notranslate"><div class="highlight"><pre><span></span> <span class="p">{</span>
@@ -389,16 +343,16 @@
 </dl>
 <strong>JSON Example</strong><div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
     <span class="nt">&quot;navigationBarBackgroundColor&quot;</span><span class="p">:</span> <span class="s2">&quot;{HexColor object}&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;navigationBarTextStyle&quot;</span><span class="p">:</span> <span class="s2">&quot;GGcCZNalGWRSahPIEtAv&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;navigationBarTitleText&quot;</span><span class="p">:</span> <span class="s2">&quot;PxyUpnNrLdhLsuMMMhZx&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;navigationStyle&quot;</span><span class="p">:</span> <span class="s2">&quot;defkdcTBIYnkaiXUViFW&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;navigationBarTextStyle&quot;</span><span class="p">:</span> <span class="s2">&quot;MJrCGITklLDpFgXeIvOI&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;navigationBarTitleText&quot;</span><span class="p">:</span> <span class="s2">&quot;KruaSOLQEDpviHqVhyXv&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;navigationStyle&quot;</span><span class="p">:</span> <span class="s2">&quot;usCorlWjYdpZqOaJwKOF&quot;</span><span class="p">,</span>
     <span class="nt">&quot;backgroundColor&quot;</span><span class="p">:</span> <span class="s2">&quot;{HexColor object}&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;backgroundTextStyle&quot;</span><span class="p">:</span> <span class="s2">&quot;SCDHikNkEbEgNeDEHsRU&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;backgroundColorTop&quot;</span><span class="p">:</span> <span class="s2">&quot;JYFMvULhwPnRDKoYrCvZ&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;backgroundColorBottom&quot;</span><span class="p">:</span> <span class="s2">&quot;OXmHqTUGhFwsuvTqgHan&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;enablePullDownRefresh&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-    <span class="nt">&quot;onReachBottomDistance&quot;</span><span class="p">:</span> <span class="mi">5878</span><span class="p">,</span>
-    <span class="nt">&quot;pageOrientation&quot;</span><span class="p">:</span> <span class="s2">&quot;waAZPOqmdctKxfxVRboT&quot;</span>
+    <span class="nt">&quot;backgroundTextStyle&quot;</span><span class="p">:</span> <span class="s2">&quot;oCakOSKLTOcwPHBRzvNS&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;backgroundColorTop&quot;</span><span class="p">:</span> <span class="s2">&quot;IIDlcAMyJHxAhjLZMqFQ&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;backgroundColorBottom&quot;</span><span class="p">:</span> <span class="s2">&quot;zgqkSJaGzVAAybmmhRCT&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;enablePullDownRefresh&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+    <span class="nt">&quot;onReachBottomDistance&quot;</span><span class="p">:</span> <span class="mi">7388</span><span class="p">,</span>
+    <span class="nt">&quot;pageOrientation&quot;</span><span class="p">:</span> <span class="s2">&quot;EPHiwCOYneeIonfqivWB&quot;</span>
 <span class="p">}</span>
 </pre></div>
 </div>
@@ -417,12 +371,12 @@
 </ul>
 </dd>
 </dl>
-</div>
-<div class="section" id="tabbar">
+</section>
+<section id="tabbar">
 <h2>tabBar<a class="headerlink" href="#tabbar" title="永久链接至标题">¶</a></h2>
-<dl class="envvar">
-<dt id="envvar-tabBar">
-<code class="descname">tabBar</code><a class="headerlink" href="#envvar-tabBar" title="永久链接至目标">¶</a></dt>
+<dl class="std envvar">
+<dt class="sig sig-object std" id="envvar-tabBar">
+<span class="sig-name descname"><span class="pre">tabBar</span></span><a class="headerlink" href="#envvar-tabBar" title="永久链接至目标">¶</a></dt>
 <dd><p>如果小程序是一个多 tab 应用（客户端窗口的底部或顶部有 tab 栏可以切换页面），
 可以通过 tabBar 配置项指定 tab 栏的表现，以及 tab 切换时显示的对应页面。</p>
 <table class="docutils align-default">
@@ -536,12 +490,12 @@
 </table>
 </dd></dl>
 
-</div>
-<div class="section" id="networktimeout">
+</section>
+<section id="networktimeout">
 <h2>networkTimeout<a class="headerlink" href="#networktimeout" title="永久链接至标题">¶</a></h2>
-<dl class="envvar">
-<dt id="envvar-networkTimeout">
-<code class="descname">networkTimeout</code><a class="headerlink" href="#envvar-networkTimeout" title="永久链接至目标">¶</a></dt>
+<dl class="std envvar">
+<dt class="sig sig-object std" id="envvar-networkTimeout">
+<span class="sig-name descname"><span class="pre">networkTimeout</span></span><a class="headerlink" href="#envvar-networkTimeout" title="永久链接至目标">¶</a></dt>
 <dd></dd></dl>
 
 <p>各类网络请求的超时时间，单位均为毫秒。</p>
@@ -588,35 +542,35 @@
 </tr>
 </tbody>
 </table>
-</div>
-<div class="section" id="debug">
+</section>
+<section id="debug">
 <h2>debug<a class="headerlink" href="#debug" title="永久链接至标题">¶</a></h2>
-<dl class="envvar">
-<dt id="envvar-debug">
-<code class="descname">debug</code><a class="headerlink" href="#envvar-debug" title="永久链接至目标">¶</a></dt>
+<dl class="std envvar">
+<dt class="sig sig-object std" id="envvar-debug">
+<span class="sig-name descname"><span class="pre">debug</span></span><a class="headerlink" href="#envvar-debug" title="永久链接至目标">¶</a></dt>
 <dd></dd></dl>
 
 <p>可以在开发者工具中开启 debug 模式，在开发者工具的控制台面板，
 调试信息以 info 的形式给出，其信息有Page的注册，页面路由，数据更新，事件触发等。
 可以帮助开发者快速定位一些常见的问题。</p>
-</div>
-<div class="section" id="functionalpages">
+</section>
+<section id="functionalpages">
 <h2>functionalPages<a class="headerlink" href="#functionalpages" title="永久链接至标题">¶</a></h2>
-<dl class="envvar">
-<dt id="envvar-functionalPages">
-<code class="descname">functionalPages</code><a class="headerlink" href="#envvar-functionalPages" title="永久链接至目标">¶</a></dt>
+<dl class="std envvar">
+<dt class="sig sig-object std" id="envvar-functionalPages">
+<span class="sig-name descname"><span class="pre">functionalPages</span></span><a class="headerlink" href="#envvar-functionalPages" title="永久链接至目标">¶</a></dt>
 <dd></dd></dl>
 
 <div class="versionadded">
 <p><span class="versionmodified added">2.1.0 新版功能: </span>低版本需做 <a class="reference internal" href="../../framework/compatibility.html#compatibility"><span class="std std-ref">兼容处理</span></a> 。</p>
 </div>
 <p>插件所有者小程序需要设置这一项来启用插件功能页。</p>
-</div>
-<div class="section" id="subpackages">
+</section>
+<section id="subpackages">
 <h2>subpackages<a class="headerlink" href="#subpackages" title="永久链接至标题">¶</a></h2>
-<dl class="envvar">
-<dt id="envvar-subpackages">
-<code class="descname">subpackages</code><a class="headerlink" href="#envvar-subpackages" title="永久链接至目标">¶</a></dt>
+<dl class="std envvar">
+<dt class="sig sig-object std" id="envvar-subpackages">
+<span class="sig-name descname"><span class="pre">subpackages</span></span><a class="headerlink" href="#envvar-subpackages" title="永久链接至目标">¶</a></dt>
 <dd></dd></dl>
 
 <p>微信客户端 6.6.0 ，</p>
@@ -625,24 +579,24 @@
 </div>
 <p>启用分包加载时，声明项目分包结构。</p>
 <p>写成 subPackages 也支持。</p>
-</div>
-<div class="section" id="workers">
+</section>
+<section id="workers">
 <h2>workers<a class="headerlink" href="#workers" title="永久链接至标题">¶</a></h2>
-<dl class="envvar">
-<dt id="envvar-workers">
-<code class="descname">workers</code><a class="headerlink" href="#envvar-workers" title="永久链接至目标">¶</a></dt>
+<dl class="std envvar">
+<dt class="sig sig-object std" id="envvar-workers">
+<span class="sig-name descname"><span class="pre">workers</span></span><a class="headerlink" href="#envvar-workers" title="永久链接至目标">¶</a></dt>
 <dd></dd></dl>
 
 <div class="versionadded">
 <p><span class="versionmodified added">1.9.90 新版功能: </span>低版本需做 <a class="reference internal" href="../../framework/compatibility.html#compatibility"><span class="std std-ref">兼容处理</span></a> 。</p>
 </div>
 <p>使用 Worker 处理多线程任务时，设置 Worker 代码放置的目录</p>
-</div>
-<div class="section" id="requiredbackgroundmodes">
+</section>
+<section id="requiredbackgroundmodes">
 <h2>requiredBackgroundModes<a class="headerlink" href="#requiredbackgroundmodes" title="永久链接至标题">¶</a></h2>
-<dl class="envvar">
-<dt id="envvar-requiredBackgroundModes">
-<code class="descname">requiredBackgroundModes</code><a class="headerlink" href="#envvar-requiredBackgroundModes" title="永久链接至目标">¶</a></dt>
+<dl class="std envvar">
+<dt class="sig sig-object std" id="envvar-requiredBackgroundModes">
+<span class="sig-name descname"><span class="pre">requiredBackgroundModes</span></span><a class="headerlink" href="#envvar-requiredBackgroundModes" title="永久链接至目标">¶</a></dt>
 <dd></dd></dl>
 
 <p>微信客户端 6.7.2 及以上版本支持</p>
@@ -656,48 +610,48 @@
 </pre></div>
 </div>
 <p>注：在此处申明了后台运行的接口，开发版和体验版上可以直接生效，正式版还需通过审核。</p>
-</div>
-<div class="section" id="plugins">
+</section>
+<section id="plugins">
 <h2>plugins<a class="headerlink" href="#plugins" title="永久链接至标题">¶</a></h2>
-<dl class="envvar">
-<dt id="envvar-plugins">
-<code class="descname">plugins</code><a class="headerlink" href="#envvar-plugins" title="永久链接至目标">¶</a></dt>
+<dl class="std envvar">
+<dt class="sig sig-object std" id="envvar-plugins">
+<span class="sig-name descname"><span class="pre">plugins</span></span><a class="headerlink" href="#envvar-plugins" title="永久链接至目标">¶</a></dt>
 <dd></dd></dl>
 
 <div class="versionadded">
 <p><span class="versionmodified added">1.9.6 新版功能: </span>低版本需做 <a class="reference internal" href="../../framework/compatibility.html#compatibility"><span class="std std-ref">兼容处理</span></a> 。</p>
 </div>
 <p>声明小程序需要使用的插件。</p>
-</div>
-<div class="section" id="preloadrule">
+</section>
+<section id="preloadrule">
 <h2>preloadRule<a class="headerlink" href="#preloadrule" title="永久链接至标题">¶</a></h2>
-<dl class="envvar">
-<dt id="envvar-preloadRule">
-<code class="descname">preloadRule</code><a class="headerlink" href="#envvar-preloadRule" title="永久链接至目标">¶</a></dt>
+<dl class="std envvar">
+<dt class="sig sig-object std" id="envvar-preloadRule">
+<span class="sig-name descname"><span class="pre">preloadRule</span></span><a class="headerlink" href="#envvar-preloadRule" title="永久链接至目标">¶</a></dt>
 <dd></dd></dl>
 
 <div class="versionadded">
 <p><span class="versionmodified added">2.3.0 新版功能: </span>低版本需做 <a class="reference internal" href="../../framework/compatibility.html#compatibility"><span class="std std-ref">兼容处理</span></a> 。</p>
 </div>
 <p>声明分包预下载的规则。</p>
-</div>
-<div class="section" id="resizable">
+</section>
+<section id="resizable">
 <h2>resizable<a class="headerlink" href="#resizable" title="永久链接至标题">¶</a></h2>
-<dl class="envvar">
-<dt id="envvar-resizable">
-<code class="descname">resizable</code><a class="headerlink" href="#envvar-resizable" title="永久链接至目标">¶</a></dt>
+<dl class="std envvar">
+<dt class="sig sig-object std" id="envvar-resizable">
+<span class="sig-name descname"><span class="pre">resizable</span></span><a class="headerlink" href="#envvar-resizable" title="永久链接至目标">¶</a></dt>
 <dd></dd></dl>
 
 <div class="versionadded">
 <p><span class="versionmodified added">2.3.0 新版功能: </span>低版本需做 <a class="reference internal" href="../../framework/compatibility.html#compatibility"><span class="std std-ref">兼容处理</span></a> 。</p>
 </div>
 <p>在 iPad 上运行的小程序可以设置支持屏幕旋转。</p>
-</div>
-<div class="section" id="navigatetominiprogramappidlist">
+</section>
+<section id="navigatetominiprogramappidlist">
 <h2>navigateToMiniProgramAppIdList<a class="headerlink" href="#navigatetominiprogramappidlist" title="永久链接至标题">¶</a></h2>
-<dl class="envvar">
-<dt id="envvar-navigateToMiniProgramAppIdList">
-<code class="descname">navigateToMiniProgramAppIdList</code><a class="headerlink" href="#envvar-navigateToMiniProgramAppIdList" title="永久链接至目标">¶</a></dt>
+<dl class="std envvar">
+<dt class="sig sig-object std" id="envvar-navigateToMiniProgramAppIdList">
+<span class="sig-name descname"><span class="pre">navigateToMiniProgramAppIdList</span></span><a class="headerlink" href="#envvar-navigateToMiniProgramAppIdList" title="永久链接至目标">¶</a></dt>
 <dd></dd></dl>
 
 <div class="versionadded">
@@ -705,22 +659,22 @@
 </div>
 <p>当小程序需要使用 wx.navigateToMiniProgram 接口跳转到其他小程序时，
 需要先在配置文件中声明需要跳转的小程序 appId 列表，最多允许填写 10 个。</p>
-</div>
-<div class="section" id="usingcomponents">
+</section>
+<section id="usingcomponents">
 <h2>usingComponents<a class="headerlink" href="#usingcomponents" title="永久链接至标题">¶</a></h2>
-<dl class="envvar">
-<dt id="envvar-usingComponents">
-<code class="descname">usingComponents</code><a class="headerlink" href="#envvar-usingComponents" title="永久链接至目标">¶</a></dt>
+<dl class="std envvar">
+<dt class="sig sig-object std" id="envvar-usingComponents">
+<span class="sig-name descname"><span class="pre">usingComponents</span></span><a class="headerlink" href="#envvar-usingComponents" title="永久链接至目标">¶</a></dt>
 <dd></dd></dl>
 
 <p>开发者工具 1.02.1810190 及以上版本支持</p>
 <p>在此处声明的自定义组件视为全局自定义组件，在小程序内的页面或自定义组件中可以直接使用而无需再声明。</p>
-</div>
-<div class="section" id="permission">
+</section>
+<section id="permission">
 <h2>permission<a class="headerlink" href="#permission" title="永久链接至标题">¶</a></h2>
-<dl class="envvar">
-<dt id="envvar-permission">
-<code class="descname">permission</code><a class="headerlink" href="#envvar-permission" title="永久链接至目标">¶</a></dt>
+<dl class="std envvar">
+<dt class="sig sig-object std" id="envvar-permission">
+<span class="sig-name descname"><span class="pre">permission</span></span><a class="headerlink" href="#envvar-permission" title="永久链接至目标">¶</a></dt>
 <dd></dd></dl>
 
 <p>微信客户端 7.0.0 及以上版本支持</p>
@@ -787,8 +741,8 @@
 <span class="p">}</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="id7">
+</section>
+<section id="id7">
 <h2>配置示例<a class="headerlink" href="#id7" title="永久链接至标题">¶</a></h2>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
   <span class="nt">&quot;pages&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;pages/index/index&quot;</span><span class="p">,</span> <span class="s2">&quot;pages/logs/index&quot;</span><span class="p">],</span>
@@ -818,12 +772,13 @@
 </div>
 <div class="admonition-todo admonition" id="id8">
 <p class="admonition-title">待处理</p>
-<p>2019 年 06 月 30 日 研究输出json格式</p>
+<p>2021 年 12 月 12 日 研究输出json格式</p>
 </div>
-</div>
-</div>
+</section>
+</section>
 
 
+            <div class="clearer"></div>
           </div>
         </div>
       </div>
@@ -848,12 +803,13 @@
 <li><a href="../../contents.html">文档</a> &#187;</li>
 
           <li class="nav-item nav-item-1"><a href="../index.html" >参考资料</a> &#187;</li>
-          <li class="nav-item nav-item-2"><a href="index.html" >小程序配置</a> &#187;</li> 
+          <li class="nav-item nav-item-2"><a href="index.html" >小程序配置</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">全局配置</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
         &#169; 版权所有 2019, Wxadev Docs.
-      由 <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.0+/0e60d4d 创建。
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.1.
     </div>
   </body>
 </html>
