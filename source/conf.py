@@ -26,7 +26,7 @@ copyright = '2019, Wxadev Docs'
 author = 'Band Cap'
 
 # 完整版，包括 alpha/beta/rc 标签
-release = '1.0.0'
+release = 'v2.21.0'
 
 
 # -- 一般配置 ---------------------------------------------------
