@@ -1,0 +1,250 @@
+
+<!DOCTYPE html>
+
+<html lang="zh_CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>代码注入优化 &#8212; wxadev v2.21.0 文档</title>
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx13.css" />
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/translations.js"></script>
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="在 wxadev v2.21.0 文档 中搜索"
+          href="../../../_static/opensearch.xml"/>
+
+    <link rel="index" title="索引" href="../../../genindex.html" />
+    <link rel="search" title="搜索" href="../../../search.html" />
+    <link rel="next" title="页面渲染优化" href="start_optimizeC.html" />
+    <link rel="prev" title="代码包体积优化" href="start_optimizeA.html" />
+<link rel="canonical" href="http://www.sphinx-doc.org/en/master/framework/performance/tips/start_optimizeB.html" />
+
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet" type="text/css" />
+ 
+<style type="text/css">
+  table.right { float: right; margin-left: 20px; }
+  table.right td { border: 1px solid #ccc; }
+  
+</style>
+<script type="text/javascript">
+  // intelligent scrolling of the sidebar content
+  $(window).scroll(function() {
+    var sb = $('.sphinxsidebarwrapper');
+    var win = $(window);
+    var sbh = sb.height();
+    var offset = $('.sphinxsidebar').position()['top'];
+    var wintop = win.scrollTop();
+    var winbot = wintop + win.innerHeight();
+    var curtop = sb.position()['top'];
+    var curbot = curtop + sbh;
+    // does sidebar fit in window?
+    if (sbh < win.innerHeight()) {
+      // yes: easy case -- always keep at the top
+      sb.css('top', $u.min([$u.max([0, wintop - offset - 10]), $(document).height() - sbh - 200]));
+    } else {
+      // no: only scroll if top/bottom edge of sidebar is at
+      // top/bottom edge of window
+      if (curtop > wintop && curbot > winbot) {
+        sb.css('top', $u.max([wintop - offset - 10, 0]));
+      } else if (curtop < wintop && curbot < winbot) {
+        sb.css('top', $u.min([winbot - sbh - offset - 20, $(document).height() - sbh - 200]));
+      }
+    }
+  });
+</script> 
+  </head><body>
+<div class="pageheader">
+  <ul>
+    <li><a href="../../../index.html">主页</a></li>
+    <li><a href="../../../basic/index.html">入门</a></li>
+    <li><a href="../../index.html">框架</a></li>
+    <li><a href="../../../component/index.html">组件</a></li>
+    <li><a href="../../../api/index.html">API</a></li>
+    <li><a href="../../../api-backend/index.html">服务端</a></li>
+    <li><a href="../../../reference/index.html">参考</a></li>
+    <li><a href="../../../contents.html">目录</a></li>
+  </ul>
+  <div>
+    <a href="../../../index.html">
+      <img src="../../../_static/wxaheader.png" alt="wxa" />
+    </a>
+  </div>
+</div>
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>导航</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="总目录"
+             accesskey="I">索引</a></li>
+        <li class="right" >
+          <a href="../../../http-routingtable.html" title="微信小程序API"
+             >wxapi</a> |</li>
+        <li class="right" >
+          <a href="start_optimizeC.html" title="页面渲染优化"
+             accesskey="N">下一页</a> |</li>
+        <li class="right" >
+          <a href="start_optimizeA.html" title="代码包体积优化"
+             accesskey="P">上一页</a> |</li>
+<li><a href="../../../index.html">主页</a>&#160;|</li>
+<li><a href="../../../contents.html">文档</a> &#187;</li>
+
+          <li class="nav-item nav-item-1"><a href="../../index.html" >框架</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../index.html" >性能</a> &#187;</li>
+          <li class="nav-item nav-item-3"><a href="index.html" accesskey="U">启动性能</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">代码注入优化</a></li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../../../contents.html">目录</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">代码注入优化</a><ul>
+<li><a class="reference internal" href="#id2">1. 使用按需注入</a></li>
+<li><a class="reference internal" href="#id3">2. 使用用时注入</a></li>
+<li><a class="reference internal" href="#api">3. 避免启动过程同步 API 调用</a><ul>
+<li><a class="reference internal" href="#getsysteminfo-getsysteminfosync">3.1 getSystemInfo/getSystemInfoSync</a></li>
+<li><a class="reference internal" href="#getstoragesync-setstoragesync">3.2 getStorageSync/setStorageSync</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id4">4. 避免启动过程进行复杂运算</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>上一个主题</h4>
+  <p class="topless"><a href="start_optimizeA.html"
+                        title="上一章">代码包体积优化</a></p>
+  <h4>下一个主题</h4>
+  <p class="topless"><a href="start_optimizeC.html"
+                        title="下一章">页面渲染优化</a></p>
+  <div role="note" aria-label="source link">
+    <h3>本页</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../../_sources/framework/performance/tips/start_optimizeB.rst.txt"
+            rel="nofollow">显示源代码</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">快速搜索</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="转向" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="id1">
+<h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/framework/performance/tips/start_optimizeB.html">代码注入优化</a><a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
+<p>小程序代码注入的优化可以从优化代码量和优化执行耗时两个角度着手。</p>
+<section id="id2">
+<h2>1. 使用按需注入<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<div class="admonition important">
+<p class="admonition-title">重要</p>
+<p>推荐所有小程序使用</p>
+</div>
+<p>通常情况下，在小程序启动时，启动页面所在分包和主包（独立分包除外）的所有 JS 代码会全部合并注入，
+包括其他未访问的页面以及未用到自定义组件，造成很多没有使用的代码注入到小程序运行环境中，影响注入耗时和内存占用。</p>
+<p>自基础库版本 2.11.1 起，可以通过开启「按需注入」特性避免无用代码注入，以降低小程序的启动时间和运行时内存。</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;lazyCodeLoading&quot;</span><span class="p">:</span> <span class="s2">&quot;requiredComponents&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="id3">
+<h2>2. 使用用时注入<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
+<p>在打开上述「按需注入」特性的前提下，可以通过「用时注入」特性使一部分自定义组件不在启动时注入，
+而是在真正被渲染时才进行注入，进一步降低小程序的启动和首屏时间。</p>
+</section>
+<section id="api">
+<h2>3. 避免启动过程同步 API 调用<a class="headerlink" href="#api" title="永久链接至标题">¶</a></h2>
+<p>在小程序启动流程中，会注入开发者代码并顺序同步执行 App.onLaunch, App.onShow, Page.onLoad, Page.onShow。</p>
+<p>在小程序初始化代码（Page，App 定义之外的内容）和上述启动相关的几个生命周期中，应尽量避免调用同步 API。绝大多数同步 API 会以 Sync 结尾，但有部分特例，比如 getSystemInfo。</p>
+<p>同步 API 虽然使用起来更简单，但是会阻塞当前 JS 线程，影响代码执行。如非必要，应尽可能的使用异步 API 代替同步，并将启动过程中非必要的同步 API 调用延迟到启动完成后进行。</p>
+<p>常见的开发者容易在启动时过于频繁调用的 API 有：</p>
+<section id="getsysteminfo-getsysteminfosync">
+<h3>3.1 getSystemInfo/getSystemInfoSync<a class="headerlink" href="#getsysteminfo-getsysteminfosync" title="永久链接至标题">¶</a></h3>
+<p>由于历史原因，这两个接口都是同步实现。由于 getSystemInfo 接口里承载了过多内容，单次调用可能比较久。</p>
+<p>如非必要，建议开发者对调用结果进行缓存，避免重复调用。启动过程中应尽可能最多调用一次。</p>
+<p>建议优先使用拆分后的 getSystemSetting/getAppAuthorizeSetting/getDeviceInfo/getWindowInfo/getAppBaseInfo 按需获取信息，或使用使用异步版本 getSystemInfoSync。</p>
+</section>
+<section id="getstoragesync-setstoragesync">
+<h3>3.2 getStorageSync/setStorageSync<a class="headerlink" href="#getstoragesync-setstoragesync" title="永久链接至标题">¶</a></h3>
+<p>getStorageSync/setStorageSync 应只用来进行数据的持久化存储，不应用于运行时的数据传递或全局状态管理。启动过程中过多的读写存储，也会显著影响小程序代码注入的耗时。</p>
+<p>对于简单的数据共享，可以使用在 App 上增加全局数据对象完成：</p>
+<div class="highlight-JavaScript notranslate"><div class="highlight"><pre><span></span><span class="c1">// app.js</span>
+<span class="nx">App</span><span class="p">({</span>
+  <span class="nx">globalData</span><span class="o">:</span> <span class="p">{</span> <span class="c1">// 全局共享的数据</span>
+    <span class="nx">userName</span><span class="o">:</span> <span class="s1">&#39;Wechat&#39;</span>
+  <span class="p">}</span>
+<span class="p">})</span>
+
+<span class="c1">// pages/index.js</span>
+<span class="kd">const</span> <span class="nx">app</span> <span class="o">=</span> <span class="nx">getApp</span><span class="p">()</span>
+<span class="nx">Page</span><span class="p">({</span>
+  <span class="nx">onLoad</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">const</span> <span class="p">{</span> <span class="nx">userName</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">app</span><span class="p">.</span><span class="nx">globalData</span>
+  <span class="p">}</span>
+<span class="p">})</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="id4">
+<h2>4. 避免启动过程进行复杂运算<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h2>
+<p>在小程序初始化代码（Page，App 定义之外的内容）和启动相关的几个生命周期中，应避免执行复杂的运算逻辑。复杂运算也会阻塞当前 JS 线程，影响启动耗时。建议将复杂的运算延迟到启动完成后进行。</p>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>导航</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="总目录"
+             >索引</a></li>
+        <li class="right" >
+          <a href="../../../http-routingtable.html" title="微信小程序API"
+             >wxapi</a> |</li>
+        <li class="right" >
+          <a href="start_optimizeC.html" title="页面渲染优化"
+             >下一页</a> |</li>
+        <li class="right" >
+          <a href="start_optimizeA.html" title="代码包体积优化"
+             >上一页</a> |</li>
+<li><a href="../../../index.html">主页</a>&#160;|</li>
+<li><a href="../../../contents.html">文档</a> &#187;</li>
+
+          <li class="nav-item nav-item-1"><a href="../../index.html" >框架</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../index.html" >性能</a> &#187;</li>
+          <li class="nav-item nav-item-3"><a href="index.html" >启动性能</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">代码注入优化</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; 版权所有 2019, Wxadev Docs.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.1.
+    </div>
+  </body>
+</html>

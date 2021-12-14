@@ -20,7 +20,7 @@
 
     <link rel="index" title="索引" href="../../genindex.html" />
     <link rel="search" title="搜索" href="../../search.html" />
-    <link rel="next" title="小程序登录" href="login.html" />
+    <link rel="next" title="用户信息" href="user/index.html" />
     <link rel="prev" title="Wi-Fi" href="../device/wifi.html" />
 <link rel="canonical" href="http://www.sphinx-doc.org/en/master/framework/open-ability/index.html" />
 
@@ -86,7 +86,7 @@
           <a href="../../http-routingtable.html" title="微信小程序API"
              >wxapi</a> |</li>
         <li class="right" >
-          <a href="login.html" title="小程序登录"
+          <a href="user/index.html" title="用户信息"
              accesskey="N">下一页</a> |</li>
         <li class="right" >
           <a href="../device/wifi.html" title="Wi-Fi"
@@ -104,8 +104,8 @@
   <p class="topless"><a href="../device/wifi.html"
                         title="上一章">Wi-Fi</a></p>
   <h4>下一个主题</h4>
-  <p class="topless"><a href="login.html"
-                        title="下一章">小程序登录</a></p>
+  <p class="topless"><a href="user/index.html"
+                        title="下一章">用户信息</a></p>
   <div role="note" aria-label="source link">
     <h3>本页</h3>
     <ul class="this-page-menu">
@@ -133,45 +133,57 @@
             
   <section id="id1">
 <h1>开放能力<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
-<p>版本:v2.21.0 更新:2021 年 12 月 12 日</p>
+<p>版本:v2.21.0 更新:2021 年 12 月 14 日</p>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="login.html">小程序登录</a></li>
-<li class="toctree-l1"><a class="reference internal" href="union-id.html">UnionID 机制</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="union-id.html#id1">UnionID获取途径</a></li>
-<li class="toctree-l2"><a class="reference internal" href="union-id.html#id2">微信开放平台绑定小程序流程</a></li>
+<li class="toctree-l1"><a class="reference internal" href="user/index.html">用户信息</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="user/login.html">小程序登录</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user/union-id.html">UnionID 机制</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user/authorize.html">用户授权</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user/signature.html">开放数据校验与解密</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user/getPhoneNumber.html">获取手机号</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user/bio-auth.html">生物认证</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="authorize.html">用户授权</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="authorize.html#id2">获取用户授权设置</a></li>
-<li class="toctree-l2"><a class="reference internal" href="authorize.html#id3">打开设置界面</a></li>
-<li class="toctree-l2"><a class="reference internal" href="authorize.html#id4">提前发起授权请求</a></li>
-<li class="toctree-l2"><a class="reference internal" href="authorize.html#scope">scope 列表</a></li>
+<li class="toctree-l1"><a class="reference internal" href="share-timeline.html">分享到朋友圈 Beta</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="share-timeline.html#id1">设置分享状态</a></li>
+<li class="toctree-l2"><a class="reference internal" href="share-timeline.html#id2">单页模式</a></li>
+<li class="toctree-l2"><a class="reference internal" href="share-timeline.html#id3">页面适配</a></li>
+<li class="toctree-l2"><a class="reference internal" href="share-timeline.html#id4">单页模式下的限制</a></li>
+<li class="toctree-l2"><a class="reference internal" href="share-timeline.html#id5">运营须知</a></li>
+<li class="toctree-l2"><a class="reference internal" href="share-timeline.html#id6">注意事项</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="signature.html">开放数据校验与解密</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="signature.html#id2">服务端获取开放数据</a></li>
-<li class="toctree-l2"><a class="reference internal" href="signature.html#id3">方式一：开发者后台校验与解密开放数据</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="signature.html#id4">数据签名校验</a></li>
-<li class="toctree-l3"><a class="reference internal" href="signature.html#id5">加密数据解密算法</a></li>
-<li class="toctree-l3"><a class="reference internal" href="signature.html#session-key">会话密钥 session_key 有效性</a></li>
+<li class="toctree-l1"><a class="reference internal" href="share/index.html">转发</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="share/share.html">转发</a></li>
+<li class="toctree-l2"><a class="reference internal" href="share/updatable-message.html">动态消息</a></li>
+<li class="toctree-l2"><a class="reference internal" href="share/private-message.html">小程序私密消息</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="signature.html#id6">方式二：云调用直接获取开放数据</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="signature.html#cloudid">1. 获取 cloudID</a></li>
-<li class="toctree-l3"><a class="reference internal" href="signature.html#id7">2. 调用云函数</a></li>
+<li class="toctree-l1"><a class="reference internal" href="favorite.html">收藏</a></li>
+<li class="toctree-l1"><a class="reference internal" href="material/index.html">聊天素材支持小程序打开</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="material/index.html#id2">功能介绍</a></li>
+<li class="toctree-l2"><a class="reference internal" href="material/index.html#id3">使用说明</a></li>
+<li class="toctree-l2"><a class="reference internal" href="material/index.html#id8">小程序启动参数</a></li>
+<li class="toctree-l2"><a class="reference internal" href="material/index.html#id9">发布</a></li>
+<li class="toctree-l2"><a class="reference internal" href="material/index.html#id10">调试</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="security/index.html">安全</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="security/user-encryptkey.html">小程序加密网络通道</a></li>
+<li class="toctree-l2"><a class="reference internal" href="security/safe-password.html">安全键盘</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="getPhoneNumber.html">获取手机号</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="getPhoneNumber.html#id2">使用方法</a></li>
-<li class="toctree-l2"><a class="reference internal" href="getPhoneNumber.html#id3">代码示例</a></li>
-<li class="toctree-l2"><a class="reference internal" href="getPhoneNumber.html#id4">返回参数说明</a></li>
+<li class="toctree-l1"><a class="reference internal" href="share-werun.html">动态分享数据到微信运动消息</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="share-werun.html#id2">申请开通</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="bio-auth.html">生物认证</a></li>
-<li class="toctree-l1"><a class="reference internal" href="share.html">转发</a></li>
+<li class="toctree-l1"><a class="reference internal" href="voip-chat.html">多人音视频对话</a></li>
+<li class="toctree-l1"><a class="reference internal" href="channels/index.html">视频号</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="channels/channels-activity.html">视频号视频</a></li>
+<li class="toctree-l2"><a class="reference internal" href="channels/channels-live.html">视频号直播</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="updatable-message.html">动态消息</a></li>
 <li class="toctree-l1"><a class="reference internal" href="launchApp.html">打开 App</a></li>
 <li class="toctree-l1"><a class="reference internal" href="template-message.html">模板消息</a></li>
@@ -188,11 +200,7 @@
 <li class="toctree-l1"><a class="reference internal" href="qr-code.html">获取小程序码</a></li>
 <li class="toctree-l1"><a class="reference internal" href="nearby.html">附近的小程序</a></li>
 <li class="toctree-l1"><a class="reference internal" href="express.html">微信物流助手（商户侧）</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="express.html#id2">产品优势</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="express.html#id3">小程序开发者</a></li>
-<li class="toctree-l3"><a class="reference internal" href="express.html#id4">用户</a></li>
-</ul>
-</li>
+<li class="toctree-l2"><a class="reference internal" href="express.html#id2">产品优势</a></li>
 <li class="toctree-l2"><a class="reference internal" href="express.html#id5">小程序接入步骤</a></li>
 <li class="toctree-l2"><a class="reference internal" href="express.html#id6">已经支持的快递公司基本信息</a></li>
 <li class="toctree-l2"><a class="reference internal" href="express.html#id7">打印面单</a></li>
@@ -217,19 +225,8 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="data-analysis.html">数据分析接口</a></li>
 <li class="toctree-l1"><a class="reference internal" href="card/index.html">卡券</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="card/card.html">卡券</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="card/card.html#id2">说明</a></li>
-<li class="toctree-l3"><a class="reference internal" href="card/card.html#id4">使用条件</a></li>
-<li class="toctree-l3"><a class="reference internal" href="card/card.html#id6">接口</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="card/membership-card.html">会员卡组件</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="card/membership-card.html#id3">参数说明</a></li>
-<li class="toctree-l3"><a class="reference internal" href="card/membership-card.html#id4">返回参数</a></li>
-<li class="toctree-l3"><a class="reference internal" href="card/membership-card.html#id5">示例代码</a></li>
-<li class="toctree-l3"><a class="reference internal" href="card/membership-card.html#id6">返回说明</a></li>
-</ul>
-</li>
+<li class="toctree-l2"><a class="reference internal" href="card/card.html">卡券</a></li>
+<li class="toctree-l2"><a class="reference internal" href="card/membership-card.html">会员卡组件</a></li>
 </ul>
 </li>
 </ul>
@@ -253,7 +250,7 @@
           <a href="../../http-routingtable.html" title="微信小程序API"
              >wxapi</a> |</li>
         <li class="right" >
-          <a href="login.html" title="小程序登录"
+          <a href="user/index.html" title="用户信息"
              >下一页</a> |</li>
         <li class="right" >
           <a href="../device/wifi.html" title="Wi-Fi"

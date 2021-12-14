@@ -1,0 +1,224 @@
+
+<!DOCTYPE html>
+
+<html lang="zh_CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>体验评分 &#8212; wxadev v2.21.0 文档</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx13.css" />
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/translations.js"></script>
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="在 wxadev v2.21.0 文档 中搜索"
+          href="../../_static/opensearch.xml"/>
+
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="搜索" href="../../search.html" />
+    <link rel="next" title="评分方法" href="scoring.html" />
+    <link rel="prev" title="单元测试" href="../custom-component/unit-test.html" />
+<link rel="canonical" href="http://www.sphinx-doc.org/en/master/framework/audits/index.html" />
+
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet" type="text/css" />
+ 
+<style type="text/css">
+  table.right { float: right; margin-left: 20px; }
+  table.right td { border: 1px solid #ccc; }
+  
+</style>
+<script type="text/javascript">
+  // intelligent scrolling of the sidebar content
+  $(window).scroll(function() {
+    var sb = $('.sphinxsidebarwrapper');
+    var win = $(window);
+    var sbh = sb.height();
+    var offset = $('.sphinxsidebar').position()['top'];
+    var wintop = win.scrollTop();
+    var winbot = wintop + win.innerHeight();
+    var curtop = sb.position()['top'];
+    var curbot = curtop + sbh;
+    // does sidebar fit in window?
+    if (sbh < win.innerHeight()) {
+      // yes: easy case -- always keep at the top
+      sb.css('top', $u.min([$u.max([0, wintop - offset - 10]), $(document).height() - sbh - 200]));
+    } else {
+      // no: only scroll if top/bottom edge of sidebar is at
+      // top/bottom edge of window
+      if (curtop > wintop && curbot > winbot) {
+        sb.css('top', $u.max([wintop - offset - 10, 0]));
+      } else if (curtop < wintop && curbot < winbot) {
+        sb.css('top', $u.min([winbot - sbh - offset - 20, $(document).height() - sbh - 200]));
+      }
+    }
+  });
+</script> 
+  </head><body>
+<div class="pageheader">
+  <ul>
+    <li><a href="../../index.html">主页</a></li>
+    <li><a href="../../basic/index.html">入门</a></li>
+    <li><a href="../index.html">框架</a></li>
+    <li><a href="../../component/index.html">组件</a></li>
+    <li><a href="../../api/index.html">API</a></li>
+    <li><a href="../../api-backend/index.html">服务端</a></li>
+    <li><a href="../../reference/index.html">参考</a></li>
+    <li><a href="../../contents.html">目录</a></li>
+  </ul>
+  <div>
+    <a href="../../index.html">
+      <img src="../../_static/wxaheader.png" alt="wxa" />
+    </a>
+  </div>
+</div>
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>导航</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="总目录"
+             accesskey="I">索引</a></li>
+        <li class="right" >
+          <a href="../../http-routingtable.html" title="微信小程序API"
+             >wxapi</a> |</li>
+        <li class="right" >
+          <a href="scoring.html" title="评分方法"
+             accesskey="N">下一页</a> |</li>
+        <li class="right" >
+          <a href="../custom-component/unit-test.html" title="单元测试"
+             accesskey="P">上一页</a> |</li>
+<li><a href="../../index.html">主页</a>&#160;|</li>
+<li><a href="../../contents.html">文档</a> &#187;</li>
+
+          <li class="nav-item nav-item-1"><a href="../index.html" accesskey="U">框架</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">体验评分</a></li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../../contents.html">目录</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">体验评分</a><ul>
+<li><a class="reference internal" href="#id2">运行环境要求</a></li>
+<li><a class="reference internal" href="#id3">使用流程</a></li>
+<li><a class="reference internal" href="#id4">自动运行</a></li>
+<li><a class="reference internal" href="#id5">评分规则</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>上一个主题</h4>
+  <p class="topless"><a href="../custom-component/unit-test.html"
+                        title="上一章">单元测试</a></p>
+  <h4>下一个主题</h4>
+  <p class="topless"><a href="scoring.html"
+                        title="下一章">评分方法</a></p>
+  <div role="note" aria-label="source link">
+    <h3>本页</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../_sources/framework/audits/index.rst.txt"
+            rel="nofollow">显示源代码</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">快速搜索</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="转向" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="id1">
+<h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/framework/audits/index.html">体验评分</a><a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
+<p>体验评分是一项给小程序的体验好坏打分的功能，它会在小程序运行过程中实时检查，分析出一些可能导致体验不好的地方，并且定位出哪里有问题，以及给出一些优化建议。</p>
+<section id="id2">
+<h2>运行环境要求<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<ul class="simple">
+<li><p>下载并安装 1.02.1808300 或以上版本的开发者工具，下载地址。</p></li>
+<li><p>基础库需要切到 2.2.0 或以上版本。</p></li>
+</ul>
+</section>
+<section id="id3">
+<h2>使用流程<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
+<ol class="arabic">
+<li><p>打开开发者工具，在详情里切换基础库到 2.2.0 或以上版本。</p></li>
+<li><p>在调试器区域切换到 Audits 面板。</p></li>
+<li><p>点击”开始“按钮，然后自行操作小程序界面，运行过的页面就会被“体验评分”检测到。</p>
+<img alt="https://res.wx.qq.com/wxdoc/dist/assets/img/start.8773023b.png" src="https://res.wx.qq.com/wxdoc/dist/assets/img/start.8773023b.png" />
+</li>
+<li><p>点击 “停止” 则结束检测，在当前面板显示相应的检测报告，开发者可根据报告中的建议对相应功能进行优化。</p></li>
+<li><p>如需再次运行体验评分，可点击报告上方的“清空体验评分”恢复初始状态。请注意，目前系统不提供报告存储服务，一旦清空体验评分，将无法再查看本次评分结果。</p>
+<img alt="https://res.wx.qq.com/wxdoc/dist/assets/img/finish.5fb85a1d.png" src="https://res.wx.qq.com/wxdoc/dist/assets/img/finish.5fb85a1d.png" />
+</li>
+</ol>
+</section>
+<section id="id4">
+<h2>自动运行<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h2>
+<p>为了方便开发者能够及时发现小程序的体验问题，从开发者工具 1.02.1811150 版本起支持体验评分的 “自动运行” 功能。</p>
+<p>该功能会在开发调试小程序时，实时检查，一旦发现体验分数低于 70 分时，系统会在 console 面板打印一个 warning 信息提示开发者，此时开发者可以切到 Audits 面板查看详情。</p>
+<p>开发者在工具的右上角 “详情” 面板的 本地设置 中勾选 “自动运行体验评分” 选项即可开启。</p>
+<img alt="autorun" src="https://res.wx.qq.com/wxdoc/dist/assets/img/autorun.80170928.png" />
+</section>
+<section id="id5">
+<h2>评分规则<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h2>
+<p>具体的评分细则和详情的规则说明可参考下列文档：</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="scoring.html">评分方法</a></li>
+<li class="toctree-l1"><a class="reference internal" href="performance.html">性能</a></li>
+<li class="toctree-l1"><a class="reference internal" href="accessibility.html">体验</a></li>
+<li class="toctree-l1"><a class="reference internal" href="best-practice.html">最佳实践</a></li>
+</ul>
+</div>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>导航</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="总目录"
+             >索引</a></li>
+        <li class="right" >
+          <a href="../../http-routingtable.html" title="微信小程序API"
+             >wxapi</a> |</li>
+        <li class="right" >
+          <a href="scoring.html" title="评分方法"
+             >下一页</a> |</li>
+        <li class="right" >
+          <a href="../custom-component/unit-test.html" title="单元测试"
+             >上一页</a> |</li>
+<li><a href="../../index.html">主页</a>&#160;|</li>
+<li><a href="../../contents.html">文档</a> &#187;</li>
+
+          <li class="nav-item nav-item-1"><a href="../index.html" >框架</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">体验评分</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; 版权所有 2019, Wxadev Docs.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.1.
+    </div>
+  </body>
+</html>

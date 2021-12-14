@@ -1,0 +1,238 @@
+
+<!DOCTYPE html>
+
+<html lang="zh_CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>代码包体积优化 &#8212; wxadev v2.21.0 文档</title>
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx13.css" />
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/translations.js"></script>
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="在 wxadev v2.21.0 文档 中搜索"
+          href="../../../_static/opensearch.xml"/>
+
+    <link rel="index" title="索引" href="../../../genindex.html" />
+    <link rel="search" title="搜索" href="../../../search.html" />
+    <link rel="next" title="代码注入优化" href="start_optimizeB.html" />
+    <link rel="prev" title="小程序启动流程介绍" href="start_process.html" />
+<link rel="canonical" href="http://www.sphinx-doc.org/en/master/framework/performance/tips/start_optimizeA.html" />
+
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet" type="text/css" />
+ 
+<style type="text/css">
+  table.right { float: right; margin-left: 20px; }
+  table.right td { border: 1px solid #ccc; }
+  
+</style>
+<script type="text/javascript">
+  // intelligent scrolling of the sidebar content
+  $(window).scroll(function() {
+    var sb = $('.sphinxsidebarwrapper');
+    var win = $(window);
+    var sbh = sb.height();
+    var offset = $('.sphinxsidebar').position()['top'];
+    var wintop = win.scrollTop();
+    var winbot = wintop + win.innerHeight();
+    var curtop = sb.position()['top'];
+    var curbot = curtop + sbh;
+    // does sidebar fit in window?
+    if (sbh < win.innerHeight()) {
+      // yes: easy case -- always keep at the top
+      sb.css('top', $u.min([$u.max([0, wintop - offset - 10]), $(document).height() - sbh - 200]));
+    } else {
+      // no: only scroll if top/bottom edge of sidebar is at
+      // top/bottom edge of window
+      if (curtop > wintop && curbot > winbot) {
+        sb.css('top', $u.max([wintop - offset - 10, 0]));
+      } else if (curtop < wintop && curbot < winbot) {
+        sb.css('top', $u.min([winbot - sbh - offset - 20, $(document).height() - sbh - 200]));
+      }
+    }
+  });
+</script> 
+  </head><body>
+<div class="pageheader">
+  <ul>
+    <li><a href="../../../index.html">主页</a></li>
+    <li><a href="../../../basic/index.html">入门</a></li>
+    <li><a href="../../index.html">框架</a></li>
+    <li><a href="../../../component/index.html">组件</a></li>
+    <li><a href="../../../api/index.html">API</a></li>
+    <li><a href="../../../api-backend/index.html">服务端</a></li>
+    <li><a href="../../../reference/index.html">参考</a></li>
+    <li><a href="../../../contents.html">目录</a></li>
+  </ul>
+  <div>
+    <a href="../../../index.html">
+      <img src="../../../_static/wxaheader.png" alt="wxa" />
+    </a>
+  </div>
+</div>
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>导航</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="总目录"
+             accesskey="I">索引</a></li>
+        <li class="right" >
+          <a href="../../../http-routingtable.html" title="微信小程序API"
+             >wxapi</a> |</li>
+        <li class="right" >
+          <a href="start_optimizeB.html" title="代码注入优化"
+             accesskey="N">下一页</a> |</li>
+        <li class="right" >
+          <a href="start_process.html" title="小程序启动流程介绍"
+             accesskey="P">上一页</a> |</li>
+<li><a href="../../../index.html">主页</a>&#160;|</li>
+<li><a href="../../../contents.html">文档</a> &#187;</li>
+
+          <li class="nav-item nav-item-1"><a href="../../index.html" >框架</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../index.html" >性能</a> &#187;</li>
+          <li class="nav-item nav-item-3"><a href="index.html" accesskey="U">启动性能</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">代码包体积优化</a></li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../../../contents.html">目录</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">代码包体积优化</a><ul>
+<li><a class="reference internal" href="#id2">1. 合理使用分包加载</a><ul>
+<li><a class="reference internal" href="#id3">1.1 独立分包</a></li>
+<li><a class="reference internal" href="#id4">1.2 分包预下载</a></li>
+<li><a class="reference internal" href="#id5">1.3 分包异步化</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id6">2. 避免非必要的全局自定义组件和插件</a></li>
+<li><a class="reference internal" href="#id7">3. 控制代码包内的资源文件</a></li>
+<li><a class="reference internal" href="#id8">4. 及时清理无用代码和资源</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>上一个主题</h4>
+  <p class="topless"><a href="start_process.html"
+                        title="上一章">小程序启动流程介绍</a></p>
+  <h4>下一个主题</h4>
+  <p class="topless"><a href="start_optimizeB.html"
+                        title="下一章">代码注入优化</a></p>
+  <div role="note" aria-label="source link">
+    <h3>本页</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../../_sources/framework/performance/tips/start_optimizeA.rst.txt"
+            rel="nofollow">显示源代码</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">快速搜索</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="转向" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="id1">
+<h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/framework/performance/tips/start_optimizeA.html">代码包体积优化</a><a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
+<p>启动性能优化最直接的手段是降低代码包大小，代码包大小直接影响了下载耗时，影响用户启动小程序时的体验。</p>
+<p>开发者可以采取以下手段优化代码包体积：</p>
+<section id="id2">
+<h2>1. 合理使用分包加载<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<p>推荐所有小程序使用</p>
+<p>使用 分包加载 是优化小程序启动耗时效果最明显的手段。建议开发者按照功能划分，将小程序的页面按使用频率和场景拆分成不同分包，实现代码包的按需加载。</p>
+<p>分包加载具有以下优势：</p>
+<ul class="simple">
+<li><p>承载更多功能：小程序单个代码包的体积上限为 2M，使用分包可以提升小程序代码包总体积上限，承载更多的功能与服务。</p></li>
+<li><p>降低代码包下载耗时：使用分包后可以显著减少启动时需要下载的代码包大小，在不影响功能正常使用的前提下，有效降低启动耗时。</p></li>
+<li><p>降低小程序代码注入耗时：小程序启动时会一次性注入全部的开发者代码，使用分包后可以降低注入的代码量，从而降低注入耗时。</p></li>
+<li><p>降低页面渲染耗时：使用分包可以避免不必要的组件和页面初始化。</p></li>
+</ul>
+<p>此外，结合分包加载的几个扩展功能，可以进一步优化启动耗时：</p>
+<section id="id3">
+<h3>1.1 独立分包<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h3>
+<p>小程序中的某些场景（如广告页、活动页、支付页等），通常功能不是很复杂且相对独立，对启动性能有很高的要求。独立分包可以独立于主包和其他分包运行。从独立分包页面进入小程序时，不需要下载主包。建议开发者将部分对启动性能要求很高的页面放到特殊的独立分包中。</p>
+</section>
+<section id="id4">
+<h3>1.2 分包预下载<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h3>
+<p>在使用「分包加载」后，虽然能够显著提升小程序的启动速度，但是当用户在使用小程序过程中跳转到分包内页面时，需要等待分包下载完成后才能进入页面，造成页面切换的延迟，影响小程序的使用体验。分包预下载便是为了解决首次进入分包页面时的延迟问题而设计的。</p>
+<p>独立分包和分包预下载可以配合使用，获得更好的效果，详情请参考独立分包与分包预下载教程</p>
+</section>
+<section id="id5">
+<h3>1.3 分包异步化<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h3>
+<p>「分包异步化」将小程序的分包从页面粒度细化到组件甚至文件粒度。这使得本来只能放在主包内页面的部分组件和代码逻辑可以剥离到分包中，并在运行时异步加载，从而进一步降低启动所需的包大小和代码量。分包异步化也能有效解决主包大小过度膨胀的问题。</p>
+</section>
+</section>
+<section id="id6">
+<h2>2. 避免非必要的全局自定义组件和插件<a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h2>
+<p>在 app.json 中通过 usingComponents 全局引用的自定义组件和通过 plugins 全局引入的插件，会包含在小程序的主包中，增加主包的包大小。</p>
+<p>如果自定义组件只在某个分包的页面中使用，应定义在页面的配置文件中
+如果插件只在某个分包的中使用，请仅在分包中引用插件
+全局引入的自定义组件会被认为是所有分包、所有页面都需要的，会影响「按需注入」的效果和小程序代码注入的耗时。</p>
+</section>
+<section id="id7">
+<h2>3. 控制代码包内的资源文件<a class="headerlink" href="#id7" title="永久链接至标题">¶</a></h2>
+<p>小程序代码包在下载时会使用 ZSTD 算法进行压缩，图片、音频、视频、字体等资源文件会占用较多代码包体积，并且通常难以进一步被压缩，对于下载耗时的影响比代码文件大得多。</p>
+<p>建议开发者在代码包内的图片一般应只包含一些体积较小的图标，避免在代码包中包含或在 WXSS 中使用 base64 内联过多、过大的图片等资源文件。这类文件应尽可能部署到 CDN，并使用 URL 引入。</p>
+</section>
+<section id="id8">
+<h2>4. 及时清理无用代码和资源<a class="headerlink" href="#id8" title="永久链接至标题">¶</a></h2>
+<p>除了工具默认忽略或开发者明确声明忽略的文件外，小程序打包会将工程目录下所有文件都打入代码包内。意外引入的第三方库、版本迭代中被废弃的代码或依赖、产品环境不需要的测试代码、未使用的组件、插件、扩展库，这些没有被实际使用到的文件和资源也会被打入到代码包里，从而影响到代码包的大小。</p>
+<p>建议使用微信开发者工具提供的「代码静态依赖分析」，不定期地分析代码包的文件构成和依赖关系，以此优化代码包大小和内容。对于仅用于本地开发调试，不应包含在小程序代码包的文件，可以使用工具设置的 packOptions.ignore 配置忽略规则。</p>
+<p>在使用打包工具（如 Webpack、Rollup 等）对小程序代码进行预处理时，可以利用 tree-shaking 等特性去除冗余代码，也要注意防止打包时引入不需要的库和依赖。</p>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>导航</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="总目录"
+             >索引</a></li>
+        <li class="right" >
+          <a href="../../../http-routingtable.html" title="微信小程序API"
+             >wxapi</a> |</li>
+        <li class="right" >
+          <a href="start_optimizeB.html" title="代码注入优化"
+             >下一页</a> |</li>
+        <li class="right" >
+          <a href="start_process.html" title="小程序启动流程介绍"
+             >上一页</a> |</li>
+<li><a href="../../../index.html">主页</a>&#160;|</li>
+<li><a href="../../../contents.html">文档</a> &#187;</li>
+
+          <li class="nav-item nav-item-1"><a href="../../index.html" >框架</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../index.html" >性能</a> &#187;</li>
+          <li class="nav-item nav-item-3"><a href="index.html" >启动性能</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">代码包体积优化</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; 版权所有 2019, Wxadev Docs.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.1.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,215 @@
+
+<!DOCTYPE html>
+
+<html lang="zh_CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>体验 &#8212; wxadev v2.21.0 文档</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx13.css" />
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/translations.js"></script>
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="在 wxadev v2.21.0 文档 中搜索"
+          href="../../_static/opensearch.xml"/>
+
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="搜索" href="../../search.html" />
+    <link rel="next" title="最佳实践" href="best-practice.html" />
+    <link rel="prev" title="性能" href="performance.html" />
+<link rel="canonical" href="http://www.sphinx-doc.org/en/master/framework/audits/accessibility.html" />
+
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet" type="text/css" />
+ 
+<style type="text/css">
+  table.right { float: right; margin-left: 20px; }
+  table.right td { border: 1px solid #ccc; }
+  
+</style>
+<script type="text/javascript">
+  // intelligent scrolling of the sidebar content
+  $(window).scroll(function() {
+    var sb = $('.sphinxsidebarwrapper');
+    var win = $(window);
+    var sbh = sb.height();
+    var offset = $('.sphinxsidebar').position()['top'];
+    var wintop = win.scrollTop();
+    var winbot = wintop + win.innerHeight();
+    var curtop = sb.position()['top'];
+    var curbot = curtop + sbh;
+    // does sidebar fit in window?
+    if (sbh < win.innerHeight()) {
+      // yes: easy case -- always keep at the top
+      sb.css('top', $u.min([$u.max([0, wintop - offset - 10]), $(document).height() - sbh - 200]));
+    } else {
+      // no: only scroll if top/bottom edge of sidebar is at
+      // top/bottom edge of window
+      if (curtop > wintop && curbot > winbot) {
+        sb.css('top', $u.max([wintop - offset - 10, 0]));
+      } else if (curtop < wintop && curbot < winbot) {
+        sb.css('top', $u.min([winbot - sbh - offset - 20, $(document).height() - sbh - 200]));
+      }
+    }
+  });
+</script> 
+  </head><body>
+<div class="pageheader">
+  <ul>
+    <li><a href="../../index.html">主页</a></li>
+    <li><a href="../../basic/index.html">入门</a></li>
+    <li><a href="../index.html">框架</a></li>
+    <li><a href="../../component/index.html">组件</a></li>
+    <li><a href="../../api/index.html">API</a></li>
+    <li><a href="../../api-backend/index.html">服务端</a></li>
+    <li><a href="../../reference/index.html">参考</a></li>
+    <li><a href="../../contents.html">目录</a></li>
+  </ul>
+  <div>
+    <a href="../../index.html">
+      <img src="../../_static/wxaheader.png" alt="wxa" />
+    </a>
+  </div>
+</div>
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>导航</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="总目录"
+             accesskey="I">索引</a></li>
+        <li class="right" >
+          <a href="../../http-routingtable.html" title="微信小程序API"
+             >wxapi</a> |</li>
+        <li class="right" >
+          <a href="best-practice.html" title="最佳实践"
+             accesskey="N">下一页</a> |</li>
+        <li class="right" >
+          <a href="performance.html" title="性能"
+             accesskey="P">上一页</a> |</li>
+<li><a href="../../index.html">主页</a>&#160;|</li>
+<li><a href="../../contents.html">文档</a> &#187;</li>
+
+          <li class="nav-item nav-item-1"><a href="../index.html" >框架</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="index.html" accesskey="U">体验评分</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">体验</a></li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h4>上一个主题</h4>
+  <p class="topless"><a href="performance.html"
+                        title="上一章">性能</a></p>
+  <h4>下一个主题</h4>
+  <p class="topless"><a href="best-practice.html"
+                        title="下一章">最佳实践</a></p>
+  <div role="note" aria-label="source link">
+    <h3>本页</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../_sources/framework/audits/accessibility.rst.txt"
+            rel="nofollow">显示源代码</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">快速搜索</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="转向" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="id1">
+<h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/framework/audits/accessibility.html">体验</a><a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
+<ol class="arabic">
+<li><p>开启惯性滚动</p>
+<p>惯性滚动会使滚动比较顺畅，在安卓下默认有惯性滚动，而在 iOS 下需要额外设置-webkit-overflow-scrolling: touch的样式；</p>
+<p><strong>得分条件：wxss中带有overflow: scroll的元素，在 iOS 下需要设置-webkit-overflow-scrolling: touch样式</strong></p>
+</li>
+<li><p>避免使用:active伪类来实现点击态</p>
+<p>使用 css :active伪类来实现点击态，很容易触发，并且滚动或滑动时点击态不会消失，体验较差。建议使用小程序内置组件的 ‘hover-class’ 属性来实现</p>
+<p><strong>得分条件：不使用:active伪类，并使用hover-class替换:active</strong></p>
+</li>
+<li><p>保持图片大小比例</p>
+<p>图片若没有按原图宽高比例显示，可能导致图片歪曲，不美观，甚至导致用户识别困难。可根据情况设置 image 组件的 mode 属性，以保持原图宽高比。</p>
+</li>
+</ol>
+<blockquote>
+<div><p><strong>得分条件：显示的高/宽与原图的高/宽不超过 15%</strong></p>
+</div></blockquote>
+<ol class="arabic" start="4">
+<li><p>可点击元素的响应区域</p>
+<p>我们应该合理地设置好可点击元素的响应区域大小，如果过小会导致用户很难点中，体验很差。</p>
+<p><strong>得分条件：可点击元素的宽高都不小于 20px</strong></p>
+</li>
+<li><p>iPhone X 兼容</p></li>
+<li><p>窗口变化适配</p>
+<p>对于支持调整大小的页面，需要对不同窗口尺寸进行UI适配，已达到良好体验。</p>
+<p>可以使用 match-media 组件、MatchMediaObserver 或者 &#64;media 媒体查询对页面补充适配逻辑。</p>
+<p><strong>得分条件：支持调整大小的页面有相关适配逻辑</strong></p>
+</li>
+<li><p>合理的颜色搭配</p>
+<p>文字颜色与背景色需要搭配得当，适宜的颜色对比度可以让用户更好地阅读，提升小程序的用户体验。</p>
+<p>由于颜色搭配的计算方法较为复杂，目前算法还在不断优化中。因此该指标仅作为评分的提醒项，不计入总分中。</p>
+<p>判断标准：</p>
+<ol class="arabic simple">
+<li><p><strong>对于较大字体（font-size &gt;= 24px，或同时满足font-size &gt;= 19px与font-weight &gt;= 700），文字颜色和背景颜色的对比度不小于3</strong></p></li>
+<li><p><strong>其他字体，文字颜色和背景颜色的对比度不小于4.5</strong></p></li>
+</ol>
+</li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">注解</p>
+<p>对比度计算方法参考W3C标准</p>
+</div>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>导航</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="总目录"
+             >索引</a></li>
+        <li class="right" >
+          <a href="../../http-routingtable.html" title="微信小程序API"
+             >wxapi</a> |</li>
+        <li class="right" >
+          <a href="best-practice.html" title="最佳实践"
+             >下一页</a> |</li>
+        <li class="right" >
+          <a href="performance.html" title="性能"
+             >上一页</a> |</li>
+<li><a href="../../index.html">主页</a>&#160;|</li>
+<li><a href="../../contents.html">文档</a> &#187;</li>
+
+          <li class="nav-item nav-item-1"><a href="../index.html" >框架</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="index.html" >体验评分</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">体验</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; 版权所有 2019, Wxadev Docs.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.1.
+    </div>
+  </body>
+</html>

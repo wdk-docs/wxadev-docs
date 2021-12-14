@@ -1,0 +1,243 @@
+
+<!DOCTYPE html>
+
+<html lang="zh_CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>用户授权 &#8212; wxadev v2.21.0 文档</title>
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx13.css" />
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/translations.js"></script>
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="在 wxadev v2.21.0 文档 中搜索"
+          href="../../../_static/opensearch.xml"/>
+
+    <link rel="index" title="索引" href="../../../genindex.html" />
+    <link rel="search" title="搜索" href="../../../search.html" />
+<link rel="canonical" href="http://www.sphinx-doc.org/en/master/framework/open-ability/user/authorize.html" />
+
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet" type="text/css" />
+ 
+<style type="text/css">
+  table.right { float: right; margin-left: 20px; }
+  table.right td { border: 1px solid #ccc; }
+  
+</style>
+<script type="text/javascript">
+  // intelligent scrolling of the sidebar content
+  $(window).scroll(function() {
+    var sb = $('.sphinxsidebarwrapper');
+    var win = $(window);
+    var sbh = sb.height();
+    var offset = $('.sphinxsidebar').position()['top'];
+    var wintop = win.scrollTop();
+    var winbot = wintop + win.innerHeight();
+    var curtop = sb.position()['top'];
+    var curbot = curtop + sbh;
+    // does sidebar fit in window?
+    if (sbh < win.innerHeight()) {
+      // yes: easy case -- always keep at the top
+      sb.css('top', $u.min([$u.max([0, wintop - offset - 10]), $(document).height() - sbh - 200]));
+    } else {
+      // no: only scroll if top/bottom edge of sidebar is at
+      // top/bottom edge of window
+      if (curtop > wintop && curbot > winbot) {
+        sb.css('top', $u.max([wintop - offset - 10, 0]));
+      } else if (curtop < wintop && curbot < winbot) {
+        sb.css('top', $u.min([winbot - sbh - offset - 20, $(document).height() - sbh - 200]));
+      }
+    }
+  });
+</script> 
+  </head><body>
+<div class="pageheader">
+  <ul>
+    <li><a href="../../../index.html">主页</a></li>
+    <li><a href="../../../basic/index.html">入门</a></li>
+    <li><a href="../../index.html">框架</a></li>
+    <li><a href="../../../component/index.html">组件</a></li>
+    <li><a href="../../../api/index.html">API</a></li>
+    <li><a href="../../../api-backend/index.html">服务端</a></li>
+    <li><a href="../../../reference/index.html">参考</a></li>
+    <li><a href="../../../contents.html">目录</a></li>
+  </ul>
+  <div>
+    <a href="../../../index.html">
+      <img src="../../../_static/wxaheader.png" alt="wxa" />
+    </a>
+  </div>
+</div>
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>导航</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="总目录"
+             accesskey="I">索引</a></li>
+        <li class="right" >
+          <a href="../../../http-routingtable.html" title="微信小程序API"
+             >wxapi</a> |</li>
+<li><a href="../../../index.html">主页</a>&#160;|</li>
+<li><a href="../../../contents.html">文档</a> &#187;</li>
+
+        <li class="nav-item nav-item-this"><a href="">用户授权</a></li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../../../contents.html">目录</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">用户授权</a><ul>
+<li><a class="reference internal" href="#id2">获取用户授权设置</a></li>
+<li><a class="reference internal" href="#id3">打开设置界面</a></li>
+<li><a class="reference internal" href="#id4">提前发起授权请求</a></li>
+<li><a class="reference internal" href="#scope">scope 列表</a></li>
+</ul>
+</li>
+</ul>
+
+  <div role="note" aria-label="source link">
+    <h3>本页</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../../_sources/framework/open-ability/user/authorize.rst.txt"
+            rel="nofollow">显示源代码</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">快速搜索</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="转向" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="authorize">
+<span id="id1"></span><h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/authorize.html">用户授权</a><a class="headerlink" href="#authorize" title="永久链接至标题">¶</a></h1>
+<p>部分接口需要经过用户授权同意才能调用。我们把这些接口按使用范围分成多个 scope ，
+用户选择对 scope 来进行授权，当授权给一个 scope 之后，其对应的所有接口都可以直接使用。</p>
+<p>部分接口需要获得用户授权同意后才能调用。此类接口调用时：</p>
+<ul class="simple">
+<li><p>如果用户未接受或拒绝过此权限，会弹窗询问用户，用户点击同意后方可调用接口；</p></li>
+<li><p>如果用户已授权，可以直接调用接口；</p></li>
+<li><p>如果用户已拒绝授权，则不会出现弹窗，而是直接进入接口 fail 回调。请开发者兼容用户拒绝授权的场景。</p></li>
+</ul>
+<section id="id2">
+<h2>获取用户授权设置<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<p>开发者可以使用  <a class="reference internal" href="../../../api/wx.getSetting.html#wx.getSetting" title="wx.getSetting"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.getSetting()</span></code></a> 获取用户当前的授权状态。</p>
+</section>
+<section id="id3">
+<h2>打开设置界面<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
+<p>用户可以在小程序设置界面(<span class="menuselection">「右上角」 - 「关于」 - 「右上角」 - 「设置」</span>)中控制对该小程序的授权状态。</p>
+<p>开发者可以调用  <a class="reference internal" href="../../../api/wx.openSetting.html#wx.openSetting" title="wx.openSetting"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.openSetting()</span></code></a> 打开设置界面，引导用户开启授权。</p>
+</section>
+<section id="id4">
+<h2>提前发起授权请求<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h2>
+<p>开发者可以使用  <a class="reference internal" href="../../../api/wx.authorize.html#wx.authorize" title="wx.authorize"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.authorize()</span></code></a> 在调用需授权 API 之前，提前向用户发起授权请求。</p>
+</section>
+<section id="scope">
+<h2>scope 列表<a class="headerlink" href="#scope" title="永久链接至标题">¶</a></h2>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 27%" />
+<col style="width: 61%" />
+<col style="width: 12%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>scope</p></th>
+<th class="head"><p>对应接口</p></th>
+<th class="head"><p>描述</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="../../../api/AuthSetting.html#scope.userInfo" title="scope.userInfo"><code class="xref js js-data docutils literal notranslate"><span class="pre">scope.userInfo</span></code></a></p></td>
+<td><p><a class="reference internal" href="../../../api/wx.getUserInfo.html#wx.getUserInfo" title="wx.getUserInfo"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.getUserInfo()</span></code></a></p></td>
+<td><p>用户信息</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../../api/AuthSetting.html#scope.userLocation" title="scope.userLocation"><code class="xref js js-data docutils literal notranslate"><span class="pre">scope.userLocation</span></code></a></p></td>
+<td><p><a class="reference internal" href="../../../api/wx.getLocation.html#wx.getLocation" title="wx.getLocation"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.getLocation()</span></code></a>,  <a class="reference internal" href="../../../api/wx.chooseLocation.html#wx.chooseLocation" title="wx.chooseLocation"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.chooseLocation()</span></code></a></p></td>
+<td><p>地理位置</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../../../api/AuthSetting.html#scope.address" title="scope.address"><code class="xref js js-data docutils literal notranslate"><span class="pre">scope.address</span></code></a></p></td>
+<td><p><a class="reference internal" href="../../../api/wx.chooseAddress.html#wx.chooseAddress" title="wx.chooseAddress"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.chooseAddress()</span></code></a></p></td>
+<td><p>通讯地址</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../../api/AuthSetting.html#scope.invoiceTitle" title="scope.invoiceTitle"><code class="xref js js-data docutils literal notranslate"><span class="pre">scope.invoiceTitle</span></code></a></p></td>
+<td><p><a class="reference internal" href="../../../api/wx.chooseInvoiceTitle.html#wx.chooseInvoiceTitle" title="wx.chooseInvoiceTitle"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.chooseInvoiceTitle()</span></code></a></p></td>
+<td><p>发票抬头</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../../../api/AuthSetting.html#scope.invoice" title="scope.invoice"><code class="xref js js-data docutils literal notranslate"><span class="pre">scope.invoice</span></code></a></p></td>
+<td><p><a class="reference internal" href="../../../api/wx.chooseInvoice.html#wx.chooseInvoice" title="wx.chooseInvoice"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.chooseInvoice()</span></code></a></p></td>
+<td><p>获取发票</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../../api/AuthSetting.html#scope.werun" title="scope.werun"><code class="xref js js-data docutils literal notranslate"><span class="pre">scope.werun</span></code></a></p></td>
+<td><p><a class="reference internal" href="../../../api/wx.getWeRunData.html#wx.getWeRunData" title="wx.getWeRunData"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.getWeRunData()</span></code></a></p></td>
+<td><p>微信运动步数</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../../../api/AuthSetting.html#scope.record" title="scope.record"><code class="xref js js-data docutils literal notranslate"><span class="pre">scope.record</span></code></a></p></td>
+<td><p><a class="reference internal" href="../../../api/wx.startRecord.html#wx.startRecord" title="wx.startRecord"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.startRecord()</span></code></a></p></td>
+<td><p>录音功能</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../../../api/AuthSetting.html#scope.writePhotosAlbum" title="scope.writePhotosAlbum"><code class="xref js js-data docutils literal notranslate"><span class="pre">scope.writePhotosAlbum</span></code></a></p></td>
+<td><p><a class="reference internal" href="../../../api/wx.saveImageToPhotosAlbum.html#wx.saveImageToPhotosAlbum" title="wx.saveImageToPhotosAlbum"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.saveImageToPhotosAlbum()</span></code></a>,  <a class="reference internal" href="../../../api/wx.saveVideoToPhotosAlbum.html#wx.saveVideoToPhotosAlbum" title="wx.saveVideoToPhotosAlbum"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.saveVideoToPhotosAlbum()</span></code></a></p></td>
+<td><p>保存到相册</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../../../api/AuthSetting.html#scope.camera" title="scope.camera"><code class="xref js js-data docutils literal notranslate"><span class="pre">scope.camera</span></code></a></p></td>
+<td><p>&lt;camera /&gt; 组件</p></td>
+<td><p>摄像头</p></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition attention">
+<p class="admonition-title">注意</p>
+<ol class="arabic simple">
+<li><p><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.authorize`({scope:</span> <span class="pre">&quot;</span> <span class="pre">:data:`scope.userInfo()</span></code>”})，不会弹出授权窗口，请使用 &lt;button open-type=”getUserInfo”/&gt;</p></li>
+<li><p>需要授权  <a class="reference internal" href="../../../api/AuthSetting.html#scope.userLocation" title="scope.userLocation"><code class="xref js js-data docutils literal notranslate"><span class="pre">scope.userLocation</span></code></a> 时必须配置地理位置用途说明。</p></li>
+</ol>
+</div>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>导航</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="总目录"
+             >索引</a></li>
+        <li class="right" >
+          <a href="../../../http-routingtable.html" title="微信小程序API"
+             >wxapi</a> |</li>
+<li><a href="../../../index.html">主页</a>&#160;|</li>
+<li><a href="../../../contents.html">文档</a> &#187;</li>
+
+        <li class="nav-item nav-item-this"><a href="">用户授权</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; 版权所有 2019, Wxadev Docs.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.1.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,215 @@
+
+<!DOCTYPE html>
+
+<html lang="zh_CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>WXWebAssembly &#8212; wxadev v2.21.0 文档</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx13.css" />
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/translations.js"></script>
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="在 wxadev v2.21.0 文档 中搜索"
+          href="../../_static/opensearch.xml"/>
+
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="搜索" href="../../search.html" />
+    <link rel="next" title="接口调用频率规范" href="api-frequency.html" />
+    <link rel="prev" title="分析工具" href="tools.html" />
+<link rel="canonical" href="http://www.sphinx-doc.org/en/master/framework/performance/wasm.html" />
+
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet" type="text/css" />
+ 
+<style type="text/css">
+  table.right { float: right; margin-left: 20px; }
+  table.right td { border: 1px solid #ccc; }
+  
+</style>
+<script type="text/javascript">
+  // intelligent scrolling of the sidebar content
+  $(window).scroll(function() {
+    var sb = $('.sphinxsidebarwrapper');
+    var win = $(window);
+    var sbh = sb.height();
+    var offset = $('.sphinxsidebar').position()['top'];
+    var wintop = win.scrollTop();
+    var winbot = wintop + win.innerHeight();
+    var curtop = sb.position()['top'];
+    var curbot = curtop + sbh;
+    // does sidebar fit in window?
+    if (sbh < win.innerHeight()) {
+      // yes: easy case -- always keep at the top
+      sb.css('top', $u.min([$u.max([0, wintop - offset - 10]), $(document).height() - sbh - 200]));
+    } else {
+      // no: only scroll if top/bottom edge of sidebar is at
+      // top/bottom edge of window
+      if (curtop > wintop && curbot > winbot) {
+        sb.css('top', $u.max([wintop - offset - 10, 0]));
+      } else if (curtop < wintop && curbot < winbot) {
+        sb.css('top', $u.min([winbot - sbh - offset - 20, $(document).height() - sbh - 200]));
+      }
+    }
+  });
+</script> 
+  </head><body>
+<div class="pageheader">
+  <ul>
+    <li><a href="../../index.html">主页</a></li>
+    <li><a href="../../basic/index.html">入门</a></li>
+    <li><a href="../index.html">框架</a></li>
+    <li><a href="../../component/index.html">组件</a></li>
+    <li><a href="../../api/index.html">API</a></li>
+    <li><a href="../../api-backend/index.html">服务端</a></li>
+    <li><a href="../../reference/index.html">参考</a></li>
+    <li><a href="../../contents.html">目录</a></li>
+  </ul>
+  <div>
+    <a href="../../index.html">
+      <img src="../../_static/wxaheader.png" alt="wxa" />
+    </a>
+  </div>
+</div>
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>导航</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="总目录"
+             accesskey="I">索引</a></li>
+        <li class="right" >
+          <a href="../../http-routingtable.html" title="微信小程序API"
+             >wxapi</a> |</li>
+        <li class="right" >
+          <a href="api-frequency.html" title="接口调用频率规范"
+             accesskey="N">下一页</a> |</li>
+        <li class="right" >
+          <a href="tools.html" title="分析工具"
+             accesskey="P">上一页</a> |</li>
+<li><a href="../../index.html">主页</a>&#160;|</li>
+<li><a href="../../contents.html">文档</a> &#187;</li>
+
+          <li class="nav-item nav-item-1"><a href="../index.html" >框架</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="index.html" accesskey="U">性能</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">WXWebAssembly</a></li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../../contents.html">目录</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">WXWebAssembly</a><ul>
+<li><a class="reference internal" href="#wxwebassembly-instantiate-path-imports">WXWebAssembly.instantiate(path, imports)</a></li>
+<li><a class="reference internal" href="#webassembly">与 WebAssembly 的异同</a></li>
+<li><a class="reference internal" href="#id1">其他说明</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>上一个主题</h4>
+  <p class="topless"><a href="tools.html"
+                        title="上一章">分析工具</a></p>
+  <h4>下一个主题</h4>
+  <p class="topless"><a href="api-frequency.html"
+                        title="下一章">接口调用频率规范</a></p>
+  <div role="note" aria-label="source link">
+    <h3>本页</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../_sources/framework/performance/wasm.rst.txt"
+            rel="nofollow">显示源代码</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">快速搜索</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="转向" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="wxwebassembly">
+<h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/framework/performance/wasm.html">WXWebAssembly</a><a class="headerlink" href="#wxwebassembly" title="永久链接至标题">¶</a></h1>
+<p>WXWebAssembly 类似于 Web 标准 WebAssembly，能够在一定程度上提高小程序的性能。</p>
+<p>从基础库 v2.13.0 开始，小程序可以在全局访问并使用 WXWebAssembly 对象。</p>
+<p>从基础库 v2.15.0 开始，小程序支持在 Worker 内使用 WXWebAssembly。</p>
+<section id="wxwebassembly-instantiate-path-imports">
+<h2>WXWebAssembly.instantiate(path, imports)<a class="headerlink" href="#wxwebassembly-instantiate-path-imports" title="永久链接至标题">¶</a></h2>
+<p>和标准 WebAssembly.instantiate 类似，差别是第一个参数只接受一个字符串类型的代码包路径，指向代码包内 .wasm 文件</p>
+</section>
+<section id="webassembly">
+<h2>与 WebAssembly 的异同<a class="headerlink" href="#webassembly" title="永久链接至标题">¶</a></h2>
+<ol class="arabic simple">
+<li><p>WXWebAssembly.instantiate(path, imports) 方法，path为代码包内路径（支持.wasm和.wasm.br后缀）</p></li>
+<li><p>支持 WXWebAssembly.Memory</p></li>
+<li><p>支持 WXWebAssembly.Table</p></li>
+<li><p>支持 WXWebAssembly.Global</p></li>
+<li><p>export 支持函数、Memory、Table，iOS 平台暂不支持 Global</p></li>
+</ol>
+</section>
+<section id="id1">
+<h2>其他说明<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h2>
+<ul class="simple">
+<li><p>关于 WebAssembly 的文档可以参考 <a class="reference external" href="https://webassembly.org/">https://webassembly.org/</a></p></li>
+<li><p>基础库 v2.14.0 之后，新增了一些 WXWebAssembly 特性</p>
+<ul>
+<li><p>代码包路径允许传入 brotli 压缩的 wasm 文件，如 .wasm.br</p></li>
+<li><p>增加对 WXWebAssembly.Global 的支持</p></li>
+</ul>
+</li>
+<li><p>小程序插件从基础库 v2.18.1 开始支持 WXWebAssembly</p></li>
+<li><p>在 Worker 内使用 WXWebAssembly 时，.wasm 文件需要放置在 worker 目录外，因为 worker 目录只会打包 .js 文件，非 .js 文件会被忽略</p></li>
+</ul>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>导航</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="总目录"
+             >索引</a></li>
+        <li class="right" >
+          <a href="../../http-routingtable.html" title="微信小程序API"
+             >wxapi</a> |</li>
+        <li class="right" >
+          <a href="api-frequency.html" title="接口调用频率规范"
+             >下一页</a> |</li>
+        <li class="right" >
+          <a href="tools.html" title="分析工具"
+             >上一页</a> |</li>
+<li><a href="../../index.html">主页</a>&#160;|</li>
+<li><a href="../../contents.html">文档</a> &#187;</li>
+
+          <li class="nav-item nav-item-1"><a href="../index.html" >框架</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="index.html" >性能</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">WXWebAssembly</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; 版权所有 2019, Wxadev Docs.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.1.
+    </div>
+  </body>
+</html>

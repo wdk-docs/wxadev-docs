@@ -1,0 +1,305 @@
+
+<!DOCTYPE html>
+
+<html lang="zh_CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>小程序私密消息 &#8212; wxadev v2.21.0 文档</title>
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx13.css" />
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/translations.js"></script>
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="在 wxadev v2.21.0 文档 中搜索"
+          href="../../../_static/opensearch.xml"/>
+
+    <link rel="index" title="索引" href="../../../genindex.html" />
+    <link rel="search" title="搜索" href="../../../search.html" />
+    <link rel="next" title="动态消息" href="../updatable-message.html" />
+    <link rel="prev" title="动态消息" href="updatable-message.html" />
+<link rel="canonical" href="http://www.sphinx-doc.org/en/master/framework/open-ability/share/private-message.html" />
+
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet" type="text/css" />
+ 
+<style type="text/css">
+  table.right { float: right; margin-left: 20px; }
+  table.right td { border: 1px solid #ccc; }
+  
+</style>
+<script type="text/javascript">
+  // intelligent scrolling of the sidebar content
+  $(window).scroll(function() {
+    var sb = $('.sphinxsidebarwrapper');
+    var win = $(window);
+    var sbh = sb.height();
+    var offset = $('.sphinxsidebar').position()['top'];
+    var wintop = win.scrollTop();
+    var winbot = wintop + win.innerHeight();
+    var curtop = sb.position()['top'];
+    var curbot = curtop + sbh;
+    // does sidebar fit in window?
+    if (sbh < win.innerHeight()) {
+      // yes: easy case -- always keep at the top
+      sb.css('top', $u.min([$u.max([0, wintop - offset - 10]), $(document).height() - sbh - 200]));
+    } else {
+      // no: only scroll if top/bottom edge of sidebar is at
+      // top/bottom edge of window
+      if (curtop > wintop && curbot > winbot) {
+        sb.css('top', $u.max([wintop - offset - 10, 0]));
+      } else if (curtop < wintop && curbot < winbot) {
+        sb.css('top', $u.min([winbot - sbh - offset - 20, $(document).height() - sbh - 200]));
+      }
+    }
+  });
+</script> 
+  </head><body>
+<div class="pageheader">
+  <ul>
+    <li><a href="../../../index.html">主页</a></li>
+    <li><a href="../../../basic/index.html">入门</a></li>
+    <li><a href="../../index.html">框架</a></li>
+    <li><a href="../../../component/index.html">组件</a></li>
+    <li><a href="../../../api/index.html">API</a></li>
+    <li><a href="../../../api-backend/index.html">服务端</a></li>
+    <li><a href="../../../reference/index.html">参考</a></li>
+    <li><a href="../../../contents.html">目录</a></li>
+  </ul>
+  <div>
+    <a href="../../../index.html">
+      <img src="../../../_static/wxaheader.png" alt="wxa" />
+    </a>
+  </div>
+</div>
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>导航</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="总目录"
+             accesskey="I">索引</a></li>
+        <li class="right" >
+          <a href="../../../http-routingtable.html" title="微信小程序API"
+             >wxapi</a> |</li>
+        <li class="right" >
+          <a href="../updatable-message.html" title="动态消息"
+             accesskey="N">下一页</a> |</li>
+        <li class="right" >
+          <a href="updatable-message.html" title="动态消息"
+             accesskey="P">上一页</a> |</li>
+<li><a href="../../../index.html">主页</a>&#160;|</li>
+<li><a href="../../../contents.html">文档</a> &#187;</li>
+
+          <li class="nav-item nav-item-1"><a href="../../index.html" >框架</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../index.html" >开放能力</a> &#187;</li>
+          <li class="nav-item nav-item-3"><a href="index.html" accesskey="U">转发</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">小程序私密消息</a></li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../../../contents.html">目录</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">小程序私密消息</a><ul>
+<li><a class="reference internal" href="#id2">功能介绍</a></li>
+<li><a class="reference internal" href="#id3">使用说明</a><ul>
+<li><a class="reference internal" href="#id4">1. 分享</a></li>
+<li><a class="reference internal" href="#id5">2. 验证</a></li>
+<li><a class="reference internal" href="#id6">接口参数</a></li>
+<li><a class="reference internal" href="#success">success回调</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id7">注意事项</a></li>
+<li><a class="reference internal" href="#id8">示例代码</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>上一个主题</h4>
+  <p class="topless"><a href="updatable-message.html"
+                        title="上一章">动态消息</a></p>
+  <h4>下一个主题</h4>
+  <p class="topless"><a href="../updatable-message.html"
+                        title="下一章">动态消息</a></p>
+  <div role="note" aria-label="source link">
+    <h3>本页</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../../_sources/framework/open-ability/share/private-message.rst.txt"
+            rel="nofollow">显示源代码</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">快速搜索</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="转向" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="id1">
+<h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/share/private-message.html">小程序私密消息</a><a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
+<section id="id2">
+<h2>功能介绍<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<p>小程序私密消息功能是这样一种能力：当分享者分享小程序卡片给其他用户或者微信群后，
+其他用户点击此小程序卡片时，开发者可以鉴别出点击卡片的用户是否被分享者分享过小程序卡片。</p>
+</section>
+<section id="id3">
+<h2>使用说明<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
+<section id="id4">
+<h3>1. 分享<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h3>
+<p>创建业务活动后、分享小程序消息前，需要通过后台接口 createActivityId 创建activityId，建立一个activityId与一个业务活动id唯一关联。</p>
+<p>然后通过 wx.updateShareMenu 接口声明本次分享的消息为私密消息，私密消息具有不可二次转发性。</p>
+<p>声明完成后，可以通过右上角菜单、分享按钮组件、wx.shareAppMessage（仅小游戏）分享私密消息给个人、群聊。</p>
+<p>场景一： 个人分享给个人 <cite>A –&gt; B</cite></p>
+<p>场景二： 个人分享给群 <cite>A –&gt; [B, C, D, E]</cite></p>
+<p>示例代码</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="nx">wx</span><span class="p">.</span><span class="nx">updateShareMenu</span><span class="p">({</span>
+  <span class="nx">withShareTicket</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+  <span class="nx">isPrivateMessage</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+  <span class="nx">activityId</span><span class="o">:</span> <span class="s1">&#39;xxx&#39;</span><span class="p">,</span>
+<span class="p">})</span>
+</pre></div>
+</div>
+</section>
+<section id="id5">
+<h3>2. 验证<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h3>
+<p>从群聊、单聊消息卡片进入小程序时，通过 <code class="docutils literal notranslate"><span class="pre">wx.authPrivateMessage</span></code> 接口可以验证当前用户是否是私密消息的接收者，
+即验证这条消息是否是A直接转发给B或者A转发给B所在的群。</p>
+<p>该接口使用前，需要通过 <code class="docutils literal notranslate"><span class="pre">wx.login()</span></code> 接口登录小程序。</p>
+</section>
+<section id="id6">
+<h3>接口参数<a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h3>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 8%" />
+<col style="width: 5%" />
+<col style="width: 88%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>参数</p></th>
+<th class="head"><p>类型</p></th>
+<th class="head"><p>说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>shareTicket</p></td>
+<td><p>string</p></td>
+<td><p>shareTicket</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="success">
+<h3>success回调<a class="headerlink" href="#success" title="永久链接至标题">¶</a></h3>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 8%" />
+<col style="width: 5%" />
+<col style="width: 88%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>参数</p></th>
+<th class="head"><p>类型</p></th>
+<th class="head"><p>说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>valid</p></td>
+<td><p>Boolean</p></td>
+<td><p>验证是否通过</p></td>
+</tr>
+<tr class="row-odd"><td><p>iv</p></td>
+<td><p>String</p></td>
+<td><p>加密算法的初始向量，详细见加密数据解密算法</p></td>
+</tr>
+<tr class="row-even"><td><p>encryptedData</p></td>
+<td><p>String</p></td>
+<td><p>经过加密的activityId，解密后可得到原始的activityId。若解密后得到的activityId可以与开发者后台的活动id对应上则验证通过，否则表明valid字段不可靠（被篡改） 详细见加密数据解密算法</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="id7">
+<h2>注意事项<a class="headerlink" href="#id7" title="永久链接至标题">¶</a></h2>
+<ul class="simple">
+<li><p>若返回的valid字段为false，表示此次验证不通过。</p></li>
+<li><p>若返回的valid字段为true，表示验证通过。但是为了安全起见，预防valid字段被篡改的可能，可以把encryptedData和iv传到开发者后台去解密。若解密后得到的activityId就是当前活动所对应的activityId 则验证通过，否则表示验证不通过。</p></li>
+<li><p>当私密消息分享给群时，是按鉴别时刻用户是否在群里作为判断。</p></li>
+<li><p>activityId创建后7天内分享有效，120天内验证有效。</p></li>
+</ul>
+</section>
+<section id="id8">
+<h2>示例代码<a class="headerlink" href="#id8" title="永久链接至标题">¶</a></h2>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="nx">wx</span><span class="p">.</span><span class="nx">authPrivateMessage</span><span class="p">({</span>
+  <span class="nx">shareTicket</span><span class="o">:</span> <span class="s1">&#39;xxxxxx&#39;</span><span class="p">,</span>
+  <span class="nx">success</span><span class="p">(</span><span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;authPrivateMessage success&#39;</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span>
+    <span class="c1">// res</span>
+    <span class="c1">// {</span>
+    <span class="c1">//   errMsg: &#39;authPrivateMessage:ok&#39;</span>
+    <span class="c1">//   valid: true</span>
+    <span class="c1">//   iv: &#39;xxxx&#39;,</span>
+    <span class="c1">//   encryptedData: &#39;xxxxxx&#39;</span>
+    <span class="c1">// }</span>
+  <span class="p">},</span>
+  <span class="nx">fail</span><span class="p">(</span><span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;authPrivateMessage fail&#39;</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span>
+  <span class="p">}</span>
+<span class="p">})</span>
+</pre></div>
+</div>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>导航</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="总目录"
+             >索引</a></li>
+        <li class="right" >
+          <a href="../../../http-routingtable.html" title="微信小程序API"
+             >wxapi</a> |</li>
+        <li class="right" >
+          <a href="../updatable-message.html" title="动态消息"
+             >下一页</a> |</li>
+        <li class="right" >
+          <a href="updatable-message.html" title="动态消息"
+             >上一页</a> |</li>
+<li><a href="../../../index.html">主页</a>&#160;|</li>
+<li><a href="../../../contents.html">文档</a> &#187;</li>
+
+          <li class="nav-item nav-item-1"><a href="../../index.html" >框架</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../index.html" >开放能力</a> &#187;</li>
+          <li class="nav-item nav-item-3"><a href="index.html" >转发</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">小程序私密消息</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; 版权所有 2019, Wxadev Docs.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.1.
+    </div>
+  </body>
+</html>

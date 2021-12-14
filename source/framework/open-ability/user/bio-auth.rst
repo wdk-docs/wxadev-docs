@@ -7,7 +7,7 @@
 
 调用流程
 
-.. image:: https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/image/soter.png?t=19041921
+.. image:: https://res.wx.qq.com/wxdoc/dist/assets/img/soter.e18d4893.png
 
 流程步骤说明
 

@@ -1,0 +1,303 @@
+
+<!DOCTYPE html>
+
+<html lang="zh_CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>接口调用频率规范 &#8212; wxadev v2.21.0 文档</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx13.css" />
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/translations.js"></script>
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="在 wxadev v2.21.0 文档 中搜索"
+          href="../../_static/opensearch.xml"/>
+
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="搜索" href="../../search.html" />
+    <link rel="next" title="网络调优" href="network.html" />
+    <link rel="prev" title="WXWebAssembly" href="wasm.html" />
+<link rel="canonical" href="http://www.sphinx-doc.org/en/master/framework/performance/api-frequency.html" />
+
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet" type="text/css" />
+ 
+<style type="text/css">
+  table.right { float: right; margin-left: 20px; }
+  table.right td { border: 1px solid #ccc; }
+  
+</style>
+<script type="text/javascript">
+  // intelligent scrolling of the sidebar content
+  $(window).scroll(function() {
+    var sb = $('.sphinxsidebarwrapper');
+    var win = $(window);
+    var sbh = sb.height();
+    var offset = $('.sphinxsidebar').position()['top'];
+    var wintop = win.scrollTop();
+    var winbot = wintop + win.innerHeight();
+    var curtop = sb.position()['top'];
+    var curbot = curtop + sbh;
+    // does sidebar fit in window?
+    if (sbh < win.innerHeight()) {
+      // yes: easy case -- always keep at the top
+      sb.css('top', $u.min([$u.max([0, wintop - offset - 10]), $(document).height() - sbh - 200]));
+    } else {
+      // no: only scroll if top/bottom edge of sidebar is at
+      // top/bottom edge of window
+      if (curtop > wintop && curbot > winbot) {
+        sb.css('top', $u.max([wintop - offset - 10, 0]));
+      } else if (curtop < wintop && curbot < winbot) {
+        sb.css('top', $u.min([winbot - sbh - offset - 20, $(document).height() - sbh - 200]));
+      }
+    }
+  });
+</script> 
+  </head><body>
+<div class="pageheader">
+  <ul>
+    <li><a href="../../index.html">主页</a></li>
+    <li><a href="../../basic/index.html">入门</a></li>
+    <li><a href="../index.html">框架</a></li>
+    <li><a href="../../component/index.html">组件</a></li>
+    <li><a href="../../api/index.html">API</a></li>
+    <li><a href="../../api-backend/index.html">服务端</a></li>
+    <li><a href="../../reference/index.html">参考</a></li>
+    <li><a href="../../contents.html">目录</a></li>
+  </ul>
+  <div>
+    <a href="../../index.html">
+      <img src="../../_static/wxaheader.png" alt="wxa" />
+    </a>
+  </div>
+</div>
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>导航</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="总目录"
+             accesskey="I">索引</a></li>
+        <li class="right" >
+          <a href="../../http-routingtable.html" title="微信小程序API"
+             >wxapi</a> |</li>
+        <li class="right" >
+          <a href="network.html" title="网络调优"
+             accesskey="N">下一页</a> |</li>
+        <li class="right" >
+          <a href="wasm.html" title="WXWebAssembly"
+             accesskey="P">上一页</a> |</li>
+<li><a href="../../index.html">主页</a>&#160;|</li>
+<li><a href="../../contents.html">文档</a> &#187;</li>
+
+          <li class="nav-item nav-item-1"><a href="../index.html" >框架</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="index.html" accesskey="U">性能</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">接口调用频率规范</a></li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../../contents.html">目录</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">接口调用频率规范</a><ul>
+<li><a class="reference internal" href="#id2">概念介绍</a></li>
+<li><a class="reference internal" href="#id3">频率规范</a></li>
+<li><a class="reference internal" href="#id4">优化方法</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>上一个主题</h4>
+  <p class="topless"><a href="wasm.html"
+                        title="上一章">WXWebAssembly</a></p>
+  <h4>下一个主题</h4>
+  <p class="topless"><a href="network.html"
+                        title="下一章">网络调优</a></p>
+  <div role="note" aria-label="source link">
+    <h3>本页</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../_sources/framework/performance/api-frequency.rst.txt"
+            rel="nofollow">显示源代码</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">快速搜索</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="转向" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="id1">
+<h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/framework/performance/api-frequency.html">接口调用频率规范</a><a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
+<section id="id2">
+<h2>概念介绍<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<p>小程序wx接口可分为“普通接口”和“限频接口”。</p>
+<p>“限频接口”指的是一个用户在一段时间内不允许频繁调用的wx接口，此类接口一般会调用到微信后台系统资源，为了保护系统，同时防止用户资源被滥用，开发者需要对此类接口做适度的频率限制，不能无节制地调用。</p>
+<p>平台会对小程序内“限频接口”的调用情况做监控，如果小程序对此类接口的调用频率超出平台的规范，将会收到站内信提醒。系统会在资源紧张的情况下优先保障合理使用的小程序的服务。</p>
+<p>开发者可登录小程序管理后台-开发管理-接口设置中查看“限频接口”调用情况。</p>
+<p>目前，“限频接口”包括以下接口：</p>
+<ul class="simple">
+<li><p>wx.login</p></li>
+<li><p>wx.checkSession</p></li>
+<li><p>wx.getSetting</p></li>
+<li><p>wx.getUserInfo</p></li>
+<li><p>wx.getUserProfile</p></li>
+</ul>
+</section>
+<section id="id3">
+<h2>频率规范<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 28%" />
+<col style="width: 58%" />
+<col style="width: 14%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>API</p></th>
+<th class="head"><p>规范</p></th>
+<th class="head"><p>其他说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>wx.login</p></td>
+<td><p>一天的调用总次数不多于该小程序pv的两倍</p></td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+</tr>
+<tr class="row-odd"><td><p>wx.checkSession</p></td>
+<td><p>一天的调用总次数不多于该小程序pv的两倍</p></td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+</tr>
+<tr class="row-even"><td><p>wx.getSetting</p></td>
+<td><p>一天的调用总次数不多于该小程序pv的两倍</p></td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+</tr>
+<tr class="row-odd"><td><p>wx.getUserInfo</p></td>
+<td><p>一天的调用总次数不多于该小程序pv的两倍</p></td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+</tr>
+<tr class="row-even"><td><p>wx.getUserProfile</p></td>
+<td><p>一天的调用总次数不多于该小程序pv的两倍</p></td>
+<td><ul class="simple">
+<li></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="id4">
+<h2>优化方法<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h2>
+<p>开发者可以参考以下方法对“限频接口”的调用频率做优化：</p>
+<p>把上一次调用接口的返回结果缓存下来以供后续逻辑复用，而不是重新调用接口
+避免在定时循环的逻辑内重复调用“限频接口”
+避免在页面初始化事件onLoad、onShow、onReady中调用限频接口，应该在小程序初始化事件onLaunch中调用</p>
+<p>以下是错误用法和正确用法示例：</p>
+<p>wx.getSetting 错误用法:</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="nx">setInterval</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+  <span class="nx">wx</span><span class="p">.</span><span class="nx">getSetting</span><span class="p">()</span>
+<span class="p">},</span> <span class="mf">5000</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>wx.getSetting 正确用法:</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="kd">let</span> <span class="nx">setting</span>
+<span class="nx">wx</span><span class="p">.</span><span class="nx">getSetting</span><span class="p">({</span>
+  <span class="nx">success</span><span class="p">(</span><span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">setting</span> <span class="o">=</span> <span class="nx">res</span>
+  <span class="p">}</span>
+<span class="p">})</span>
+
+<span class="c1">// 在需要获取地理位置时</span>
+<span class="k">if</span> <span class="p">(</span><span class="nx">setting</span><span class="p">.</span><span class="nx">authSetting</span><span class="p">[</span><span class="s1">&#39;scope.userLocation&#39;</span><span class="p">])</span> <span class="p">{</span>
+  <span class="nx">wx</span><span class="p">.</span><span class="nx">getLocation</span><span class="p">({</span>
+    <span class="nx">success</span><span class="p">(</span><span class="nx">res</span><span class="p">)</span> <span class="p">{},</span>
+    <span class="nx">fail</span><span class="p">(</span><span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">if</span> <span class="p">(</span><span class="nx">res</span><span class="p">.</span><span class="nx">errMsg</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="s1">&#39;auth deny&#39;</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="mf">0</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// 如果权限没有开，引导用户打开设置页开启地理位置授权</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+  <span class="p">})</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>wx.getUserInfo 错误用法:</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="nx">Page</span><span class="p">({</span>
+  <span class="nx">onShow</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">wx</span><span class="p">.</span><span class="nx">getUserInfo</span><span class="p">()</span>
+  <span class="p">}</span>
+<span class="p">})</span>
+</pre></div>
+</div>
+<p>wx.getUserInfo 正确用法:</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="nx">App</span><span class="p">({</span>
+  <span class="nx">onLaunch</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">wx</span><span class="p">.</span><span class="nx">getUserInfo</span><span class="p">()</span>
+  <span class="p">}</span>
+<span class="p">})</span>
+</pre></div>
+</div>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>导航</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="总目录"
+             >索引</a></li>
+        <li class="right" >
+          <a href="../../http-routingtable.html" title="微信小程序API"
+             >wxapi</a> |</li>
+        <li class="right" >
+          <a href="network.html" title="网络调优"
+             >下一页</a> |</li>
+        <li class="right" >
+          <a href="wasm.html" title="WXWebAssembly"
+             >上一页</a> |</li>
+<li><a href="../../index.html">主页</a>&#160;|</li>
+<li><a href="../../contents.html">文档</a> &#187;</li>
+
+          <li class="nav-item nav-item-1"><a href="../index.html" >框架</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="index.html" >性能</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">接口调用频率规范</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; 版权所有 2019, Wxadev Docs.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.1.
+    </div>
+  </body>
+</html>

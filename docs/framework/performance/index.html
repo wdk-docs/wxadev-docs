@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>性能 &#8212; wxadev v2.21.0 文档</title>
+    <title>优化 &#8212; wxadev v2.21.0 文档</title>
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx13.css" />
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
@@ -20,7 +20,7 @@
 
     <link rel="index" title="索引" href="../../genindex.html" />
     <link rel="search" title="搜索" href="../../search.html" />
-    <link rel="next" title="优化建议" href="tips.html" />
+    <link rel="next" title="启动性能" href="tips/index.html" />
     <link rel="prev" title="调试" href="../usability/debug.html" />
 <link rel="canonical" href="http://www.sphinx-doc.org/en/master/framework/performance/index.html" />
 
@@ -86,7 +86,7 @@
           <a href="../../http-routingtable.html" title="微信小程序API"
              >wxapi</a> |</li>
         <li class="right" >
-          <a href="tips.html" title="优化建议"
+          <a href="tips/index.html" title="启动性能"
              accesskey="N">下一页</a> |</li>
         <li class="right" >
           <a href="../usability/debug.html" title="调试"
@@ -95,7 +95,7 @@
 <li><a href="../../contents.html">文档</a> &#187;</li>
 
           <li class="nav-item nav-item-1"><a href="../index.html" accesskey="U">框架</a> &#187;</li>
-        <li class="nav-item nav-item-this"><a href="">性能</a></li> 
+        <li class="nav-item nav-item-this"><a href="">优化</a></li> 
       </ul>
     </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
@@ -104,8 +104,8 @@
   <p class="topless"><a href="../usability/debug.html"
                         title="上一章">调试</a></p>
   <h4>下一个主题</h4>
-  <p class="topless"><a href="tips.html"
-                        title="下一章">优化建议</a></p>
+  <p class="topless"><a href="tips/index.html"
+                        title="下一章">启动性能</a></p>
   <div role="note" aria-label="source link">
     <h3>本页</h3>
     <ul class="this-page-menu">
@@ -132,60 +132,69 @@
           <div class="body" role="main">
             
   <section id="id1">
-<h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/framework/performance.html">性能</a><a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
-<p>版本:v2.21.0 更新:2021 年 12 月 12 日</p>
+<h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/framework/performance.html">优化</a><a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
+<p>版本:v2.21.0 更新:2021 年 12 月 14 日</p>
 <div class="versionadded">
 <p><span class="versionmodified added">6.5.8 新版功能.</span></p>
 </div>
-<p>在某些情况下，开发者需要了解当前小程序的性能情况。</p>
-<p>我们提供了性能面板让开发者了解小程序的性能。
-开发者可以在开发版小程序下打开性能面板，打开方法：进入开发版小程序，
-进入右上角更多按钮，点击「显示性能窗口」。</p>
-<p>后续我们会提供更多的性能分析工具让开发者定位性能问题。</p>
-<img alt="https://mp.weixin.qq.com/debug/wxadoc/dev/image/performance/panel.jpg?t=2017711" src="https://mp.weixin.qq.com/debug/wxadoc/dev/image/performance/panel.jpg?t=2017711" />
-<p>性能面板指标说明</p>
-<table class="docutils align-default">
-<colgroup>
-<col style="width: 20%" />
-<col style="width: 80%" />
-</colgroup>
-<thead>
-<tr class="row-odd"><th class="head"><p>指标</p></th>
-<th class="head"><p>说明</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>CPU</p></td>
-<td><p>小程序进程的 CPU 占用率，仅 Android 下提供</p></td>
-</tr>
-<tr class="row-odd"><td><p>内存</p></td>
-<td><p>小程序进程的内存占用（Total Pss)，仅 Android 下提供</p></td>
-</tr>
-<tr class="row-even"><td><p>启动耗时</p></td>
-<td><p>小程序启动总耗时</p></td>
-</tr>
-<tr class="row-odd"><td><p>下载耗时</p></td>
-<td><p>小程序包下载耗时，首次打开或资源包需更新时会进行下载</p></td>
-</tr>
-<tr class="row-even"><td><p>页面切换耗时</p></td>
-<td><p>小程序页面切换的耗时</p></td>
-</tr>
-<tr class="row-odd"><td><p>帧率/FPS</p></td>
-<td></td>
-</tr>
-<tr class="row-even"><td><p>首次渲染耗时</p></td>
-<td><p>页面次首次渲染的耗时</p></td>
-</tr>
-<tr class="row-odd"><td><p>再次渲染耗时</p></td>
-<td><p>页面再次渲染的耗时（通常由开发者的 setData 操作触发）</p></td>
-</tr>
-<tr class="row-even"><td><p>数据缓存</p></td>
-<td><p>小程序通过 Storage 接口储存的缓存大小</p></td>
-</tr>
-</tbody>
-</table>
-<p>目前，我们提供了两种性能分析工具，和几个性能优化上的建议，开发者可以参考使用。</p>
+<p>目前，我们提供了两种性能分析工具，一个体验评分插件，和几个性能优化上的建议，开发者可以参考使用。</p>
 <div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="tips/index.html">启动性能</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="tips/start.html">启动性能</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tips/start_process.html">小程序启动流程介绍</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tips/start_optimizeA.html">代码包体积优化</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tips/start_optimizeB.html">代码注入优化</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tips/start_optimizeC.html">页面渲染优化</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="tips.html">运行时性能</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="tips.html#setdata">setData</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tips.html#id2">工作原理</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tips.html#id3">图片资源</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="perf_data.html">性能数据</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="perf_data.html#id2">1. 获取性能数据</a></li>
+<li class="toctree-l2"><a class="reference internal" href="perf_data.html#id5">2. 影响启动耗时的因素</a></li>
+<li class="toctree-l2"><a class="reference internal" href="perf_data.html#faq">3. 启动数据 FAQ</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="performanceReport.html">小程序测速</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="performanceReport.html#id">新建监控 ID</a></li>
+<li class="toctree-l2"><a class="reference internal" href="performanceReport.html#id2">测速上报</a></li>
+<li class="toctree-l2"><a class="reference internal" href="performanceReport.html#id3">数据观察</a></li>
+<li class="toctree-l2"><a class="reference internal" href="performanceReport.html#id4">自定义维度(可选功能)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="performanceReport.html#q-a">Q&amp;A</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="debug/index.html">性能与体验调试工具</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="debug/remote_debug_2.html">真机调试 2.0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="debug/tools.html">Trace 工具</a></li>
+<li class="toctree-l2"><a class="reference internal" href="debug/panel.html">性能面板</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="wasm.html">WXWebAssembly</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="wasm.html#wxwebassembly-instantiate-path-imports">WXWebAssembly.instantiate(path, imports)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="wasm.html#webassembly">与 WebAssembly 的异同</a></li>
+<li class="toctree-l2"><a class="reference internal" href="wasm.html#id1">其他说明</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="api-frequency.html">接口调用频率规范</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api-frequency.html#id2">概念介绍</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api-frequency.html#id3">频率规范</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api-frequency.html#id4">优化方法</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="network.html">网络调优</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="network.html#id2">网络接口的构成</a></li>
+<li class="toctree-l2"><a class="reference internal" href="network.html#id3">不同平台的实现</a></li>
+<li class="toctree-l2"><a class="reference internal" href="network.html#id5">性能分析</a></li>
+<li class="toctree-l2"><a class="reference internal" href="network.html#id9">优化建议</a></li>
+<li class="toctree-l2"><a class="reference internal" href="network.html#id12">问题排查</a></li>
+</ul>
+</li>
+</ul>
 </div>
 </section>
 
@@ -206,7 +215,7 @@
           <a href="../../http-routingtable.html" title="微信小程序API"
              >wxapi</a> |</li>
         <li class="right" >
-          <a href="tips.html" title="优化建议"
+          <a href="tips/index.html" title="启动性能"
              >下一页</a> |</li>
         <li class="right" >
           <a href="../usability/debug.html" title="调试"
@@ -215,7 +224,7 @@
 <li><a href="../../contents.html">文档</a> &#187;</li>
 
           <li class="nav-item nav-item-1"><a href="../index.html" >框架</a> &#187;</li>
-        <li class="nav-item nav-item-this"><a href="">性能</a></li> 
+        <li class="nav-item nav-item-this"><a href="">优化</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">

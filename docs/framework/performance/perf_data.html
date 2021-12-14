@@ -1,0 +1,250 @@
+
+<!DOCTYPE html>
+
+<html lang="zh_CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>性能数据 &#8212; wxadev v2.21.0 文档</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx13.css" />
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/translations.js"></script>
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="在 wxadev v2.21.0 文档 中搜索"
+          href="../../_static/opensearch.xml"/>
+
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="搜索" href="../../search.html" />
+    <link rel="next" title="小程序测速" href="performanceReport.html" />
+    <link rel="prev" title="运行时性能" href="tips.html" />
+<link rel="canonical" href="http://www.sphinx-doc.org/en/master/framework/performance/perf_data.html" />
+
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet" type="text/css" />
+ 
+<style type="text/css">
+  table.right { float: right; margin-left: 20px; }
+  table.right td { border: 1px solid #ccc; }
+  
+</style>
+<script type="text/javascript">
+  // intelligent scrolling of the sidebar content
+  $(window).scroll(function() {
+    var sb = $('.sphinxsidebarwrapper');
+    var win = $(window);
+    var sbh = sb.height();
+    var offset = $('.sphinxsidebar').position()['top'];
+    var wintop = win.scrollTop();
+    var winbot = wintop + win.innerHeight();
+    var curtop = sb.position()['top'];
+    var curbot = curtop + sbh;
+    // does sidebar fit in window?
+    if (sbh < win.innerHeight()) {
+      // yes: easy case -- always keep at the top
+      sb.css('top', $u.min([$u.max([0, wintop - offset - 10]), $(document).height() - sbh - 200]));
+    } else {
+      // no: only scroll if top/bottom edge of sidebar is at
+      // top/bottom edge of window
+      if (curtop > wintop && curbot > winbot) {
+        sb.css('top', $u.max([wintop - offset - 10, 0]));
+      } else if (curtop < wintop && curbot < winbot) {
+        sb.css('top', $u.min([winbot - sbh - offset - 20, $(document).height() - sbh - 200]));
+      }
+    }
+  });
+</script> 
+  </head><body>
+<div class="pageheader">
+  <ul>
+    <li><a href="../../index.html">主页</a></li>
+    <li><a href="../../basic/index.html">入门</a></li>
+    <li><a href="../index.html">框架</a></li>
+    <li><a href="../../component/index.html">组件</a></li>
+    <li><a href="../../api/index.html">API</a></li>
+    <li><a href="../../api-backend/index.html">服务端</a></li>
+    <li><a href="../../reference/index.html">参考</a></li>
+    <li><a href="../../contents.html">目录</a></li>
+  </ul>
+  <div>
+    <a href="../../index.html">
+      <img src="../../_static/wxaheader.png" alt="wxa" />
+    </a>
+  </div>
+</div>
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>导航</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="总目录"
+             accesskey="I">索引</a></li>
+        <li class="right" >
+          <a href="../../http-routingtable.html" title="微信小程序API"
+             >wxapi</a> |</li>
+        <li class="right" >
+          <a href="performanceReport.html" title="小程序测速"
+             accesskey="N">下一页</a> |</li>
+        <li class="right" >
+          <a href="tips.html" title="运行时性能"
+             accesskey="P">上一页</a> |</li>
+<li><a href="../../index.html">主页</a>&#160;|</li>
+<li><a href="../../contents.html">文档</a> &#187;</li>
+
+          <li class="nav-item nav-item-1"><a href="../index.html" >框架</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="index.html" accesskey="U">性能</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">性能数据</a></li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../../contents.html">目录</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">性能数据</a><ul>
+<li><a class="reference internal" href="#id2">1. 获取性能数据</a><ul>
+<li><a class="reference internal" href="#id3">1.1 小程序助手「性能分析」板块</a></li>
+<li><a class="reference internal" href="#id4">1.2 通过服务端接口</a></li>
+<li><a class="reference internal" href="#api">1.3 通过 API 在小程序内获取</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id5">2. 影响启动耗时的因素</a></li>
+<li><a class="reference internal" href="#faq">3. 启动数据 FAQ</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>上一个主题</h4>
+  <p class="topless"><a href="tips.html"
+                        title="上一章">运行时性能</a></p>
+  <h4>下一个主题</h4>
+  <p class="topless"><a href="performanceReport.html"
+                        title="下一章">小程序测速</a></p>
+  <div role="note" aria-label="source link">
+    <h3>本页</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../_sources/framework/performance/perf_data.rst.txt"
+            rel="nofollow">显示源代码</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">快速搜索</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="转向" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="id1">
+<h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/framework/performance/perf_data.html">性能数据</a><a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
+<p>为了更好的帮助开发者了解和分析小程序性能状况，我们在「小程序助手」小程序上提供了性能相关的数据统计。同时，开发者也可以根据业务需要自己进行上报分析。</p>
+<section id="id2">
+<h2>1. 获取性能数据<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<section id="id3">
+<h3>1.1 小程序助手「性能分析」板块<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h3>
+<p>建议开发者使用小程序助手中「性能分析」板块，持续关注小程序性能。</p>
+<p>性能分析从 启动性能、运行性能和网络性能 三个维度提供性能数据，供开发者根据平台、机型、网络环境和访问来源等条件做精细化分析。扫描下方小程序码即可立即体验。</p>
+<p>小程序助手中提供了小程序启动和运行过程中与小程序开发者相关的下载耗时、JS 注入耗时和初次渲染耗时供开发者优化参考。</p>
+<p>目前，小程序助手中只包括微信客户端 &gt;= 7.0.3 版本的正式版小程序数据。</p>
+</section>
+<section id="id4">
+<h3>1.2 通过服务端接口<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h3>
+<p>「小程序助手」提供的数据，也可以通过服务端接口 analysis.getPerformanceData 获取。</p>
+</section>
+<section id="api">
+<h3>1.3 通过 API 在小程序内获取<a class="headerlink" href="#api" title="永久链接至标题">¶</a></h3>
+<p>开发者可以使用 wx.getPerformance 获取当前小程序性能相关的信息，包括无法在 JS 代码中直接打点获取的一些时间信息。此外，开发者也可以在小程序中根据自身业务需要进行打点。</p>
+<p>在获取到数据后，开发者可以自行上报或使用「小程序测速」进行测速分析。</p>
+</section>
+</section>
+<section id="id5">
+<h2>2. 影响启动耗时的因素<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h2>
+<p>需要对小程序启动耗时数据进行分析前，强烈建议仔细阅读本节，避免无意义的工作。</p>
+<p>根据《小程序启动流程》 一节介绍的启动流程，影响小程序启动耗时的因素众多，分析小程序启动性能是一个十分复杂的过程。</p>
+<p>对于同一个小程序，以下因素会直接影响大盘平均启动耗时：</p>
+<ul class="simple">
+<li><p>平台: 不同平台下（安卓、iOS、PC 等）设备性能、操作系统、框架实现、优化方案存在较大差异，启动耗时也存在较大的差异。只有分平台比较启动耗时（包括各阶段的耗时）才有意义。</p></li>
+<li><p>下载比例: 代码包下载和更新都会显著影响小程序启动耗时，在其他流程耗时稳定的情况下，下载比例升高会影响大盘启动耗时。</p></li>
+<li><p>入口页面：不同页面启动时，根据所在分包的不同，需要下载的代码包数量和大小和代码注入量都存在差异。不同页面渲染耗时也存在差异。</p></li>
+<li><p>机型分布：启动耗时和设备性能有较强关联，不同小程序或使用场景用户群体的差异可能导致机型分布的差异，进而影响大盘启动耗时。</p></li>
+<li><p>网络环境：网络环境主要影响网络请求的耗时，如小程序信息获取、代码包下载等。</p></li>
+</ul>
+<p>此外，下列情况也会间接影响启动耗时：</p>
+<ul class="simple">
+<li><p>场景/访问来源：不同场景下，用户访问的页面不同，新用户比例也有差异，对启动耗时会有一定影响。此外，用户访问的目的性和自身的等待意愿也有差异，也会影响打开率。</p></li>
+<li><p>首次访问用户比例：用户首次访问小程序时，需要完整的进行小程序信息准备、代码包下载的流程，代码缓存也需要重新生成，启动耗时会比非首次访问高。</p></li>
+<li><p>小程序版本更新：小程序版本更新时，用户需要更新小程序信息和代码包，代码缓存也需要重新生成，启动耗时会出现上涨。</p></li>
+</ul>
+</section>
+<section id="faq">
+<h2>3. 启动数据 FAQ<a class="headerlink" href="#faq" title="永久链接至标题">¶</a></h2>
+<dl>
+<dt>… 1. 为什么「启动总耗时」与 「下载耗时」、「js 注入耗时」、「初次渲染耗时」之和差异很大？</dt><dd><p>虽然启动总耗时包含下载、js 注入和初次渲染的阶段，但性能数据中的 「启动总耗时」 与 「下载耗时 + js 注入耗时 + 初次渲染耗时」之间并不存在必然关联。原因有几方面：</p>
+<p>这几项指标的粒度是不一致的：启动总耗时是以一次冷启动为粒度，下载耗时是以代码包为粒度，js 注入耗时是以文件为粒度，初次渲染耗时是以页面为粒度，之间并不是一对一的。
+下载、js 注入、初次渲染都不仅发生在启动阶段。
+下载也可能发生在页面切换、分包预下载的场景。启动过程中不一定会下载代码包，也不一定只下载一个代码包。
+js 注入也可能发生在页面切换和小程序运行过程中。启动过程中可能会注入一个或多个文件，且受到缓存等维度的影响。
+首次渲染也可能发生在页面切换过程中，也受到缓存等维度的影响
+这几个耗时本身是平均值，涉及不同的维度，没有对应关系，求和无意义。
+下载耗时、js 注入耗时、初次渲染耗时只是提供给开发者参考优化每个阶段的耗时，并不能用来计算与启动总耗时的关系
+启动过程中，除了这三部分耗时，某些条件下也存在小程序相关信息和运行环境准备的耗时。这部分耗时也与 「启动总耗时 - 下载耗时 - js 注入耗时 - 初次渲染耗时」没有必然关系。</p>
+</dd>
+<dt>… 2. 为什么启动每个阶段耗时都下降了，总耗时反而上升了？</dt><dd><p>各阶段耗时平均值的下降不一定反应在总耗时的下降。例如</p>
+<p>小程序新版本发布后，即使各阶段耗时都下降，下载比例的升高反而可能导致总耗时的上升。
+某个很小的分包下载量突然飙升，可能降低了平均下载耗时，但是对启动没有明显影响。</p>
+</dd>
+<dt>… 3. 为什么每次小程序版本版本发布都会导致一段时间内启动耗时的上涨？</dt><dd><p>小程序新版本发布后，为了保障用户尽快的切换到最新版本，用户启动小程序时需要等待小程序同步更新（具体策略请参考小程序更新机制）。</p>
+<p>此外，版本更新会引起包含小程序信息缓存、Code Caching、初始渲染缓存在内的各类缓存发生更新，也会影响更新后小程序首次启动的耗时。一般来说，启动耗时会在版本发布几天内恢复到稳定水平。</p>
+</dd>
+</dl>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>导航</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="总目录"
+             >索引</a></li>
+        <li class="right" >
+          <a href="../../http-routingtable.html" title="微信小程序API"
+             >wxapi</a> |</li>
+        <li class="right" >
+          <a href="performanceReport.html" title="小程序测速"
+             >下一页</a> |</li>
+        <li class="right" >
+          <a href="tips.html" title="运行时性能"
+             >上一页</a> |</li>
+<li><a href="../../index.html">主页</a>&#160;|</li>
+<li><a href="../../contents.html">文档</a> &#187;</li>
+
+          <li class="nav-item nav-item-1"><a href="../index.html" >框架</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="index.html" >性能</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">性能数据</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; 版权所有 2019, Wxadev Docs.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.1.
+    </div>
+  </body>
+</html>

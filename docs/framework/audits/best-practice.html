@@ -1,0 +1,219 @@
+
+<!DOCTYPE html>
+
+<html lang="zh_CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>最佳实践 &#8212; wxadev v2.21.0 文档</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx13.css" />
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/translations.js"></script>
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="在 wxadev v2.21.0 文档 中搜索"
+          href="../../_static/opensearch.xml"/>
+
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="搜索" href="../../search.html" />
+    <link rel="next" title="版本更新" href="../release/index.html" />
+    <link rel="prev" title="体验" href="accessibility.html" />
+<link rel="canonical" href="http://www.sphinx-doc.org/en/master/framework/audits/best-practice.html" />
+
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet" type="text/css" />
+ 
+<style type="text/css">
+  table.right { float: right; margin-left: 20px; }
+  table.right td { border: 1px solid #ccc; }
+  
+</style>
+<script type="text/javascript">
+  // intelligent scrolling of the sidebar content
+  $(window).scroll(function() {
+    var sb = $('.sphinxsidebarwrapper');
+    var win = $(window);
+    var sbh = sb.height();
+    var offset = $('.sphinxsidebar').position()['top'];
+    var wintop = win.scrollTop();
+    var winbot = wintop + win.innerHeight();
+    var curtop = sb.position()['top'];
+    var curbot = curtop + sbh;
+    // does sidebar fit in window?
+    if (sbh < win.innerHeight()) {
+      // yes: easy case -- always keep at the top
+      sb.css('top', $u.min([$u.max([0, wintop - offset - 10]), $(document).height() - sbh - 200]));
+    } else {
+      // no: only scroll if top/bottom edge of sidebar is at
+      // top/bottom edge of window
+      if (curtop > wintop && curbot > winbot) {
+        sb.css('top', $u.max([wintop - offset - 10, 0]));
+      } else if (curtop < wintop && curbot < winbot) {
+        sb.css('top', $u.min([winbot - sbh - offset - 20, $(document).height() - sbh - 200]));
+      }
+    }
+  });
+</script> 
+  </head><body>
+<div class="pageheader">
+  <ul>
+    <li><a href="../../index.html">主页</a></li>
+    <li><a href="../../basic/index.html">入门</a></li>
+    <li><a href="../index.html">框架</a></li>
+    <li><a href="../../component/index.html">组件</a></li>
+    <li><a href="../../api/index.html">API</a></li>
+    <li><a href="../../api-backend/index.html">服务端</a></li>
+    <li><a href="../../reference/index.html">参考</a></li>
+    <li><a href="../../contents.html">目录</a></li>
+  </ul>
+  <div>
+    <a href="../../index.html">
+      <img src="../../_static/wxaheader.png" alt="wxa" />
+    </a>
+  </div>
+</div>
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>导航</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="总目录"
+             accesskey="I">索引</a></li>
+        <li class="right" >
+          <a href="../../http-routingtable.html" title="微信小程序API"
+             >wxapi</a> |</li>
+        <li class="right" >
+          <a href="../release/index.html" title="版本更新"
+             accesskey="N">下一页</a> |</li>
+        <li class="right" >
+          <a href="accessibility.html" title="体验"
+             accesskey="P">上一页</a> |</li>
+<li><a href="../../index.html">主页</a>&#160;|</li>
+<li><a href="../../contents.html">文档</a> &#187;</li>
+
+          <li class="nav-item nav-item-1"><a href="../index.html" >框架</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="index.html" accesskey="U">体验评分</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">最佳实践</a></li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h4>上一个主题</h4>
+  <p class="topless"><a href="accessibility.html"
+                        title="上一章">体验</a></p>
+  <h4>下一个主题</h4>
+  <p class="topless"><a href="../release/index.html"
+                        title="下一章">版本更新</a></p>
+  <div role="note" aria-label="source link">
+    <h3>本页</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../_sources/framework/audits/best-practice.rst.txt"
+            rel="nofollow">显示源代码</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">快速搜索</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="转向" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="id1">
+<h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/framework/audits/best-practice.html">最佳实践</a><a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
+<ol class="arabic">
+<li><p>避免JS异常</p>
+<p>出现 JavaScript 异常可能导致程序的交互无法进行下去，我们应当追求零异常，保证程序的高鲁棒性和高可用性。</p>
+<p><strong>得分条件：不出现任何JS异常</strong></p>
+</li>
+<li><p>避免网络请求异常</p>
+<p>请求失败可能导致程序的交互无法进行下去，应当保证所有请求都能成功。</p>
+<p><strong>得分条件：所有已授权网络请求都正常返回，未授权网络请求需要给出 401 或 403 这两种状态码</strong></p>
+</li>
+<li><p>不使用废弃接口</p>
+<p>使用即将废弃或已废弃接口，可能导致小程序运行不正常。一般而言，接口不会立即去掉，但保险起见，建议不要使用，避免后续小程序突然运行异常。</p>
+<p><strong>得分条件：不使用任何文档中提示废弃的接口</strong></p>
+</li>
+<li><p>使用HTTPS</p>
+<p>使用HTTPS，可以让你的小程序更加安全，而HTTP是明文传输的，存在可能被篡改内容的风险</p>
+<p><strong>得分条件：所有网络请求都使用HTTPS</strong></p>
+</li>
+<li><p>避免setData数据冗余</p></li>
+</ol>
+<blockquote>
+<div><p>setData操作会引起框架处理一些渲染界面相关的工作，一个未绑定的变量意味着与界面渲染无关，传入setData会造成不必要的性能消耗。</p>
+<p><strong>得分条件：setData传入的所有数据都在模板渲染中有相关依赖</strong></p>
+</div></blockquote>
+<ol class="arabic" start="6">
+<li><p>最低基础库版本</p>
+<p>当使用的组件/API 的支持版本大于配置的线上最低基础库版本时，可能导致相应功能不可用。开发者可通过调整最低基础库版本或在代码上兼容的方式解决该问题。</p>
+<p>由于用户可以通过代码兼容的方式解决该问题，因此该指标仅作为评分的提醒项，不计入总分中。</p>
+<p><strong>判断标准：不存在使用的组件/API 的支持版本大于配置的线上最低基础库版本</strong></p>
+</li>
+<li><p>移除不可访问到的页面</p>
+<p>小程序的包大小会影响加载时间，应该尽量控制包体积大小，避免将不会被使用的文件打包进去。</p>
+<p>由于该项指标依赖开发者的操作路径，因此仅作为评分的提醒项，不计入总分中。</p>
+<p><strong>判断标准：不存在访问不到的页面被打包到小程序中</strong></p>
+</li>
+<li><p>WXSS使用率</p>
+<p>我们应该按需引入 wxss 资源，如果小程序中存在大量未使用的样式，会增加小程序包体积大小，从而在一定程度上影响加载速度。</p>
+<p>由于该项指标依赖开发者的操作路径，因此仅作为评分的提醒项，不计入总分中。</p>
+<p><strong>判断标准：每个 wxss 资源的未使用部分不超过 2KB</strong></p>
+</li>
+<li><p>及时回收定时器</p>
+<p>定时器是全局的，并不是跟页面绑定的，当小程序从一个页面路由到另一个页面之后，前一个页面定时器应注意手动回收。</p>
+<p>由于该项指标依赖开发者的操作路径，因此仅作为评分的提醒项，不计入总分中。</p>
+<p><strong>判断标准：所有定时器的回调执行时所在的页面都与设置定时器的页面一致</strong></p>
+</li>
+</ol>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>导航</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="总目录"
+             >索引</a></li>
+        <li class="right" >
+          <a href="../../http-routingtable.html" title="微信小程序API"
+             >wxapi</a> |</li>
+        <li class="right" >
+          <a href="../release/index.html" title="版本更新"
+             >下一页</a> |</li>
+        <li class="right" >
+          <a href="accessibility.html" title="体验"
+             >上一页</a> |</li>
+<li><a href="../../index.html">主页</a>&#160;|</li>
+<li><a href="../../contents.html">文档</a> &#187;</li>
+
+          <li class="nav-item nav-item-1"><a href="../index.html" >框架</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="index.html" >体验评分</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">最佳实践</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; 版权所有 2019, Wxadev Docs.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.1.
+    </div>
+  </body>
+</html>

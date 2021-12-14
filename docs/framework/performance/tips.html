@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>优化建议 &#8212; wxadev v2.21.0 文档</title>
+    <title>运行时性能 &#8212; wxadev v2.21.0 文档</title>
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx13.css" />
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
@@ -21,7 +21,7 @@
     <link rel="index" title="索引" href="../../genindex.html" />
     <link rel="search" title="搜索" href="../../search.html" />
     <link rel="next" title="分析工具" href="tools.html" />
-    <link rel="prev" title="性能" href="index.html" />
+    <link rel="prev" title="页面渲染优化" href="tips/start_optimizeC.html" />
 <link rel="canonical" href="http://www.sphinx-doc.org/en/master/framework/performance/tips.html" />
 
 <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet" type="text/css" />
@@ -89,21 +89,37 @@
           <a href="tools.html" title="分析工具"
              accesskey="N">下一页</a> |</li>
         <li class="right" >
-          <a href="index.html" title="性能"
+          <a href="tips/start_optimizeC.html" title="页面渲染优化"
              accesskey="P">上一页</a> |</li>
 <li><a href="../../index.html">主页</a>&#160;|</li>
 <li><a href="../../contents.html">文档</a> &#187;</li>
 
           <li class="nav-item nav-item-1"><a href="../index.html" >框架</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="index.html" accesskey="U">性能</a> &#187;</li>
-        <li class="nav-item nav-item-this"><a href="">优化建议</a></li> 
+        <li class="nav-item nav-item-this"><a href="">运行时性能</a></li> 
       </ul>
     </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
+  <h3><a href="../../contents.html">目录</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">运行时性能</a><ul>
+<li><a class="reference internal" href="#setdata">setData</a></li>
+<li><a class="reference internal" href="#id2">工作原理</a></li>
+<li><a class="reference internal" href="#id3">图片资源</a><ul>
+<li><a class="reference internal" href="#id4">图片对内存的影响</a></li>
+<li><a class="reference internal" href="#id5">图片对页面切换的影响</a></li>
+<li><a class="reference internal" href="#id6">代码包大小的优化</a></li>
+<li><a class="reference internal" href="#id7">控制代码包内图片资源</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
   <h4>上一个主题</h4>
-  <p class="topless"><a href="index.html"
-                        title="上一章">性能</a></p>
+  <p class="topless"><a href="tips/start_optimizeC.html"
+                        title="上一章">页面渲染优化</a></p>
   <h4>下一个主题</h4>
   <p class="topless"><a href="tools.html"
                         title="下一章">分析工具</a></p>
@@ -133,37 +149,54 @@
           <div class="body" role="main">
             
   <section id="id1">
-<h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/framework/performance/tips.html">优化建议</a><a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
-<p>setData
-setData 是小程序开发中使用最频繁的接口，也是最容易引发性能问题的接口。在介绍常见的错误用法前，先简单介绍一下 setData 背后的工作原理。</p>
-<p>工作原理
-小程序的视图层目前使用 WebView 作为渲染载体，而逻辑层是由独立的 JavascriptCore 作为运行环境。在架构上，WebView 和 JavascriptCore 都是独立的模块，并不具备数据直接共享的通道。当前，视图层和逻辑层的数据传输，实际上通过两边提供的 evaluateJavascript 所实现。即用户传输的数据，需要将其转换为字符串形式传递，同时把转换后的数据内容拼接成一份 JS 脚本，再通过执行 JS 脚本的形式传递到两边独立环境。</p>
+<h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/framework/performance/tips.html">运行时性能</a><a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
+<section id="setdata">
+<h2>setData<a class="headerlink" href="#setdata" title="永久链接至标题">¶</a></h2>
+<p>setData 是小程序开发中使用最频繁的接口，也是最容易引发性能问题的接口。在介绍常见的错误用法前，先简单介绍一下 setData 背后的工作原理。</p>
+</section>
+<section id="id2">
+<h2>工作原理<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<p>小程序的视图层目前使用 WebView 作为渲染载体，而逻辑层是由独立的 JavascriptCore 作为运行环境。在架构上，WebView 和 JavascriptCore 都是独立的模块，并不具备数据直接共享的通道。当前，视图层和逻辑层的数据传输，实际上通过两边提供的 evaluateJavascript 所实现。即用户传输的数据，需要将其转换为字符串形式传递，同时把转换后的数据内容拼接成一份 JS 脚本，再通过执行 JS 脚本的形式传递到两边独立环境。</p>
 <p>而 evaluateJavascript 的执行会受很多方面的影响，数据到达视图层并不是实时的。</p>
-<p>常见的 setData 操作错误
-1. 频繁的去 setData</p>
+<p>常见的 setData 操作错误</p>
+<ol class="arabic">
+<li><p>频繁的去 setData</p>
 <p>在我们分析过的一些案例里，部分小程序会非常频繁（毫秒级）的去setData，其导致了两个后果：</p>
 <p>Android 下用户在滑动时会感觉到卡顿，操作反馈延迟严重，因为 JS 线程一直在编译执行渲染，未能及时将用户操作事件传递到逻辑层，逻辑层亦无法及时将操作处理结果及时传递到视图层；
-渲染有出现延时，由于 WebView 的 JS 线程一直处于忙碌状态，逻辑层到页面层的通信耗时上升，视图层收到的数据消息时距离发出时间已经过去了几百毫秒，渲染的结果并不实时；
-2. 每次 setData 都传递大量新数据</p>
+渲染有出现延时，由于 WebView 的 JS 线程一直处于忙碌状态，逻辑层到页面层的通信耗时上升，视图层收到的数据消息时距离发出时间已经过去了几百毫秒，渲染的结果并不实时；</p>
+</li>
+<li><p>每次 setData 都传递大量新数据</p>
 <p>由setData的底层实现可知，我们的数据传输实际是一次 evaluateJavascript 脚本过程，当数据量过大时会增加脚本的编译执行时间，占用 WebView JS 线程，</p>
-<ol class="arabic simple" start="3">
-<li><p>后台态页面进行 setData</p></li>
-</ol>
+</li>
+<li><p>后台态页面进行 setData</p>
 <p>当页面进入后台态（用户不可见），不应该继续去进行setData，后台态页面的渲染用户是无法感受的，另外后台态页面去setData也会抢占前台页面的执行。</p>
-<p>图片资源
-目前图片资源的主要性能问题在于大图片和长列表图片上，这两种情况都有可能导致 iOS 客户端内存占用上升，从而触发系统回收小程序页面。</p>
-<p>图片对内存的影响
-在 iOS 上，小程序的页面是由多个 WKWebView 组成的，在系统内存紧张时，会回收掉一部分 WKWebView。从过去我们分析的案例来看，大图片和长列表图片的使用会引起 WKWebView 的回收。</p>
-<p>图片对页面切换的影响
-除了内存问题外，大图片也会造成页面切换的卡顿。我们分析过的案例中，有一部分小程序会在页面中引用大图片，在页面后退切换中会出现掉帧卡顿的情况。</p>
+</li>
+</ol>
+</section>
+<section id="id3">
+<h2>图片资源<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
+<p>目前图片资源的主要性能问题在于大图片和长列表图片上，这两种情况都有可能导致 iOS 客户端内存占用上升，从而触发系统回收小程序页面。</p>
+<section id="id4">
+<h3>图片对内存的影响<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h3>
+<p>在 iOS 上，小程序的页面是由多个 WKWebView 组成的，在系统内存紧张时，会回收掉一部分 WKWebView。从过去我们分析的案例来看，大图片和长列表图片的使用会引起 WKWebView 的回收。</p>
+</section>
+<section id="id5">
+<h3>图片对页面切换的影响<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h3>
+<p>除了内存问题外，大图片也会造成页面切换的卡顿。我们分析过的案例中，有一部分小程序会在页面中引用大图片，在页面后退切换中会出现掉帧卡顿的情况。</p>
 <p>当前我们建议开发者尽量减少使用大图片资源。</p>
-<p>代码包大小的优化
-小程序一开始时代码包限制为 1MB，但我们收到了很多反馈说代码包大小不够用，经过评估后我们放开了这个限制，增加到 2MB 。代码包上限的增加对于开发者来说，能够实现更丰富的功能，但对于用户来说，也增加了下载流量和本地空间的占用。</p>
+</section>
+<section id="id6">
+<h3>代码包大小的优化<a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h3>
+<p>小程序一开始时代码包限制为 1MB，但我们收到了很多反馈说代码包大小不够用，经过评估后我们放开了这个限制，增加到 2MB 。代码包上限的增加对于开发者来说，能够实现更丰富的功能，但对于用户来说，也增加了下载流量和本地空间的占用。</p>
 <p>开发者在实现业务逻辑同时也有必要尽量减少代码包的大小，因为代码包大小直接影响到下载速度，从而影响用户的首次打开体验。除了代码自身的重构优化外，还可以从这两方面着手优化代码大小：</p>
-<p>控制代码包内图片资源
-小程序代码包经过编译后，会放在微信的 CDN 上供用户下载，CDN 开启了 GZIP 压缩，所以用户下载的是压缩后的 GZIP 包，其大小比代码包原体积会更小。 但我们分析数据发现，不同小程序之间的代码包压缩比差异也挺大的，部分可以达到 30%，而部分只有 80%，而造成这部分差异的一个原因，就是图片资源的使用。GZIP 对基于文本资源的压缩效果最好，在压缩较大文件时往往可高达 70%-80% 的压缩率，而如果对已经压缩的资源（例如大多数的图片格式）则效果甚微。</p>
+</section>
+<section id="id7">
+<h3>控制代码包内图片资源<a class="headerlink" href="#id7" title="永久链接至标题">¶</a></h3>
+<p>小程序代码包经过编译后，会放在微信的 CDN 上供用户下载，CDN 开启了 GZIP 压缩，所以用户下载的是压缩后的 GZIP 包，其大小比代码包原体积会更小。 但我们分析数据发现，不同小程序之间的代码包压缩比差异也挺大的，部分可以达到 30%，而部分只有 80%，而造成这部分差异的一个原因，就是图片资源的使用。GZIP 对基于文本资源的压缩效果最好，在压缩较大文件时往往可高达 70%-80% 的压缩率，而如果对已经压缩的资源（例如大多数的图片格式）则效果甚微。</p>
 <p>及时清理没有使用到的代码和资源
 在日常开发的时候，我们可能引入了一些新的库文件，而过了一段时间后，由于各种原因又不再使用这个库了，我们常常会只是去掉了代码里的引用，而忘记删掉这类库文件了。目前小程序打包是会将工程下所有文件都打入代码包内，也就是说，这些没有被实际使用到的库文件和资源也会被打入到代码包里，从而影响到整体代码包的大小。</p>
+</section>
+</section>
 </section>
 
 
@@ -186,14 +219,14 @@ setData 是小程序开发中使用最频繁的接口，也是最容易引发性
           <a href="tools.html" title="分析工具"
              >下一页</a> |</li>
         <li class="right" >
-          <a href="index.html" title="性能"
+          <a href="tips/start_optimizeC.html" title="页面渲染优化"
              >上一页</a> |</li>
 <li><a href="../../index.html">主页</a>&#160;|</li>
 <li><a href="../../contents.html">文档</a> &#187;</li>
 
           <li class="nav-item nav-item-1"><a href="../index.html" >框架</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="index.html" >性能</a> &#187;</li>
-        <li class="nav-item nav-item-this"><a href="">优化建议</a></li> 
+        <li class="nav-item nav-item-this"><a href="">运行时性能</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">

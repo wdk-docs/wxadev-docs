@@ -1,0 +1,335 @@
+
+<!DOCTYPE html>
+
+<html lang="zh_CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>小程序启动流程介绍 &#8212; wxadev v2.21.0 文档</title>
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx13.css" />
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/translations.js"></script>
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="在 wxadev v2.21.0 文档 中搜索"
+          href="../../../_static/opensearch.xml"/>
+
+    <link rel="index" title="索引" href="../../../genindex.html" />
+    <link rel="search" title="搜索" href="../../../search.html" />
+    <link rel="next" title="代码包体积优化" href="start_optimizeA.html" />
+    <link rel="prev" title="启动性能" href="start.html" />
+<link rel="canonical" href="http://www.sphinx-doc.org/en/master/framework/performance/tips/start_process.html" />
+
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet" type="text/css" />
+ 
+<style type="text/css">
+  table.right { float: right; margin-left: 20px; }
+  table.right td { border: 1px solid #ccc; }
+  
+</style>
+<script type="text/javascript">
+  // intelligent scrolling of the sidebar content
+  $(window).scroll(function() {
+    var sb = $('.sphinxsidebarwrapper');
+    var win = $(window);
+    var sbh = sb.height();
+    var offset = $('.sphinxsidebar').position()['top'];
+    var wintop = win.scrollTop();
+    var winbot = wintop + win.innerHeight();
+    var curtop = sb.position()['top'];
+    var curbot = curtop + sbh;
+    // does sidebar fit in window?
+    if (sbh < win.innerHeight()) {
+      // yes: easy case -- always keep at the top
+      sb.css('top', $u.min([$u.max([0, wintop - offset - 10]), $(document).height() - sbh - 200]));
+    } else {
+      // no: only scroll if top/bottom edge of sidebar is at
+      // top/bottom edge of window
+      if (curtop > wintop && curbot > winbot) {
+        sb.css('top', $u.max([wintop - offset - 10, 0]));
+      } else if (curtop < wintop && curbot < winbot) {
+        sb.css('top', $u.min([winbot - sbh - offset - 20, $(document).height() - sbh - 200]));
+      }
+    }
+  });
+</script> 
+  </head><body>
+<div class="pageheader">
+  <ul>
+    <li><a href="../../../index.html">主页</a></li>
+    <li><a href="../../../basic/index.html">入门</a></li>
+    <li><a href="../../index.html">框架</a></li>
+    <li><a href="../../../component/index.html">组件</a></li>
+    <li><a href="../../../api/index.html">API</a></li>
+    <li><a href="../../../api-backend/index.html">服务端</a></li>
+    <li><a href="../../../reference/index.html">参考</a></li>
+    <li><a href="../../../contents.html">目录</a></li>
+  </ul>
+  <div>
+    <a href="../../../index.html">
+      <img src="../../../_static/wxaheader.png" alt="wxa" />
+    </a>
+  </div>
+</div>
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>导航</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="总目录"
+             accesskey="I">索引</a></li>
+        <li class="right" >
+          <a href="../../../http-routingtable.html" title="微信小程序API"
+             >wxapi</a> |</li>
+        <li class="right" >
+          <a href="start_optimizeA.html" title="代码包体积优化"
+             accesskey="N">下一页</a> |</li>
+        <li class="right" >
+          <a href="start.html" title="启动性能"
+             accesskey="P">上一页</a> |</li>
+<li><a href="../../../index.html">主页</a>&#160;|</li>
+<li><a href="../../../contents.html">文档</a> &#187;</li>
+
+          <li class="nav-item nav-item-1"><a href="../../index.html" >框架</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../index.html" >性能</a> &#187;</li>
+          <li class="nav-item nav-item-3"><a href="index.html" accesskey="U">启动性能</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">小程序启动流程介绍</a></li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../../../contents.html">目录</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">小程序启动流程介绍</a><ul>
+<li><a class="reference internal" href="#id2">1. 资源准备</a><ul>
+<li><a class="reference internal" href="#id3">1.1 小程序相关信息准备</a></li>
+<li><a class="reference internal" href="#id4">1.2 运行环境准备</a></li>
+<li><a class="reference internal" href="#id5">1.3 代码包准备</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id6">2. 小程序代码注入（逻辑层）</a></li>
+<li><a class="reference internal" href="#id7">3. 小程序代码注入（视图层）</a></li>
+<li><a class="reference internal" href="#id8">4. 首页（初次）渲染</a></li>
+<li><a class="reference internal" href="#id9">5. 首屏内容展示</a></li>
+<li><a class="reference internal" href="#id10">常见问题</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>上一个主题</h4>
+  <p class="topless"><a href="start.html"
+                        title="上一章">启动性能</a></p>
+  <h4>下一个主题</h4>
+  <p class="topless"><a href="start_optimizeA.html"
+                        title="下一章">代码包体积优化</a></p>
+  <div role="note" aria-label="source link">
+    <h3>本页</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../../_sources/framework/performance/tips/start_process.rst.txt"
+            rel="nofollow">显示源代码</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">快速搜索</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="转向" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="id1">
+<h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/framework/performance/tips/start_process.html">小程序启动流程介绍</a><a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
+<p>在进行启动优化之前，我们先介绍一下小程序的启动过程。了解小程序的启动流程，可以帮助开发者更有针对性地选择性能优化的手段，分析性能优化的效果。</p>
+<div class="admonition note">
+<p class="admonition-title">注解</p>
+<p>本文的启动流程以安卓和 iOS 为准，其他平台可能会略有差异。</p>
+</div>
+<p>小程序启动过程主要包括以下几个环节：</p>
+<div class="admonition note">
+<p class="admonition-title">注解</p>
+<p>小程序启动的各流程不是串行的，会尽可能的并行。计算耗时不能简单加和。</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">注解</p>
+<p>小程序启动的各流程不是每次启动都完整进行的，会尽可能的利用缓存。</p>
+</div>
+<section id="id2">
+<h2>1. 资源准备<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<section id="id3">
+<h3>1.1 小程序相关信息准备<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h3>
+<p>在用户访问小程序时，微信客户端需要从微信后台获取小程序的头像、昵称、版本、配置、权限等相关信息，以对小程序进行必要的版本管理、权限控制和校验等。</p>
+<p>为了在保证信息实时性的前提下，尽量降低对启动耗时的影响，这些信息会在本地缓存，并通过一定的机制定期进行更新。</p>
+<p>信息的获取和更新需要发起网络请求。请求分为两种情况：</p>
+<ol class="arabic simple">
+<li><p>同步请求：会阻塞小程序的启动流程，影响小程序的启动耗时。有以下情况需要进行同步请求：</p>
+<ul class="simple">
+<li><p>首次请求：用户首次访问该小程序（或小程序被清理）时，客户端没有缓存，需要同步请求小程序相关信息。</p></li>
+<li><p>同步更新：微信会在后台定期检查经常使用的小程序是否更新。如果启动时已知小程序有新版本，会同步更新信息。</p></li>
+<li><p>强制更新：用户长时间未使用小程序时，为保障信息的实时性，会强制同步更新信息。</p></li>
+</ul>
+</li>
+<li><p>异步请求：与启动流程并行，不影响启动耗时。主要发生在：</p>
+<ul class="simple">
+<li><p>异步更新：已使用过的小程序，定期检查暂未发现小程序有新版本，则优先使用本地缓存的信息完成启动，并异步进行更新。</p></li>
+</ul>
+</li>
+</ol>
+<p><strong>对启动耗时的影响</strong></p>
+<p>在用户首次访问小程序、小程序版本更新或使用长期未使用的小程序时，信息的获取和更新会影响小程序的启动耗时，耗时长短与网络环境有关。</p>
+</section>
+<section id="id4">
+<h3>1.2 运行环境准备<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h3>
+<p>小程序的运行环境包括小程序进程、客户端原生部分的系统组件和 UI 元素（如 导航栏、tabBar 等）、渲染页面使用的 WebView 容器、开发者 JavaScript 代码的运行环境、小程序基础库等等。</p>
+<p>部分环境（如 JavaScript 引擎、小程序基础库）需要在执行小程序代码之前准备完成，其他的会与代码注入并行进行。运行环境的准备时间相对较长（尤其是在低端设备上），会对小程序启动产生严重影响。</p>
+<p>为了尽可能的降低运行环境准备对启动耗时的影响，微信客户端会根据用户的使用场景和设备资源的使用情况，依照一定策略在小程序启动前对运行环境进行部分地预加载，以降低启动耗时。我们希望小程序启动时尽可能都使用预加载的环境，但由于受到设备资源和操作系统调度的影响，预加载会有一定的失败率，并不能保证每次小程序启动时都可以命中预加载的环境。</p>
+<p><strong>对启动耗时的影响</strong></p>
+<p>运行环境准备耗时较长，如果启动时没有命中预加载的环境，对小程序的启动耗时会有明显影响。耗时长短与平台、设备性能、预加载比例有关。</p>
+<p>由于系统功能和启动流程实现的差异，通常安卓系统运行环境准备耗时要远高于 iOS。
+低端机系统资源比较紧张，预加载的环境会更容易被系统清理，导致预加载比例偏低。
+预加载比例越高，平均启动耗时一般可以越低。</p>
+</section>
+<section id="id5">
+<h3>1.3 代码包准备<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h3>
+<p>小程序启动时，需要根据用户访问的页面，从服务器获取代码包地址，下载小程序代码包，并对代码包进行校验。根据小程序页面所在分包和使用的插件不同，一次启动可能需要下载多个代码包或插件包。</p>
+<p>除了启动过程，代码包下载在页面跳转、预下载、使用分包异步化等过程中也会触发。</p>
+<p>为了在保证用户尽可能访问新版本的前提下，尽量降低对启动耗时的影响，小程序代码包会在本地缓存，并通过更新机制定期进行更新。</p>
+<p>和相关信息准备类似，代码包下载也会有同步和异步两种情况：</p>
+<ol class="arabic">
+<li><p>同步下载：会阻塞小程序的启动流程，影响小程序的启动耗时。有以下情况需要进行同步下载：</p>
+<ul class="simple">
+<li><p>首次下载：用户首次访问该小程序（或小程序被清理）时，客户端没有缓存，需要同步下载代码包。</p></li>
+<li><p>同步更新：对于小程序信息发生「同步更新」或「强制更新」的情况，如果检测到小程序版本更新，会同步下载代码包。</p></li>
+</ul>
+</li>
+<li><p>异步下载：与启动流程并行，不影响启动耗时。主要发生在：</p>
+<ul class="simple">
+<li><p>异步更新：对于小程序信息发生「异步更新」的情况，如果检测到小程序版本更新，会异步更新代码包。</p></li>
+</ul>
+<p>为了降低代码包下载的耗时，我们采用了包括但不限于以下方式：</p>
+<ul class="simple">
+<li><p>代码包压缩：采用 Zstandard 算法对小程序代码包进行压缩，以尽可能降低下载过程中传输的数据量。</p></li>
+<li><p>增量更新：当代码包发生更新，不需要重新下载完整的代码包，只需要下载根据算法生成的体积很小的增量包进行更新。</p></li>
+<li><p>更高效的网络协议：下载代码包优先使用 QUIC 和 HTTP/2。</p></li>
+<li><p>预先建立连接：在下载发生前，提前和 CDN 建立连接，降低下载过程中 DNS 请求和连接建立的耗时。</p></li>
+</ul>
+</li>
+</ol>
+<p><strong>对启动耗时的影响</strong></p>
+<p>下载耗时是启动耗时中的重要瓶颈，在用户首次访问小程序或小程序版本更新时，代码包的下载会对启动耗时造成影响。耗时长短与网络环境，代码包压缩后大小，以及是否命中增量更新有关。</p>
+<p>考虑到包大小对用户体验的影响，平台限制单个小程序代码包的大小上限为 2M。代码包上限的增加，对于开发者来说能够实现更丰富的功能，但对于用户来说也增加了流量和本地空间的占用。为了保证启动速度，开发者应该尽可能的控制启动时用到的代码包大小。</p>
+</section>
+</section>
+<section id="id6">
+<h2>2. 小程序代码注入（逻辑层）<a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h2>
+<p>小程序启动时需要从代码包内读取小程序的配置和代码，并注入到 JavaScript 引擎中。在主包代码注入过程中，会触发小程序的 App.onLaunch 和 App.onShow 生命周期。</p>
+<p>为了降低小程序代码注入的耗时，我们采用了包括但不限于以下方式：</p>
+<ul class="simple">
+<li><p>Code Caching：在部分平台上，微信客户端会使用 V8 引擎的 Code Caching 技术对代码编译结果进行缓存，降低非首次注入时的编译耗时。</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">注解</p>
+<p>注意：如果代码中使用了 use asm，会导致 V8 的 Code Caching 失效。</p>
+</div>
+<p><strong>对启动耗时的影响</strong></p>
+<p>小程序代码的注入耗时直接影响小程序的启动耗时。耗时长短与代码复杂度、同步接口调用和一些复杂的计算有关。如果未启用「按需注入」，耗时还会与启动使用到分包内的页面和自定义组件总数有关。</p>
+<p>由于「首页渲染」需要使用逻辑层发送的数据，如果小程序代码注入耗时过长，会延迟「首页渲染」开始的时间。</p>
+</section>
+<section id="id7">
+<h2>3. 小程序代码注入（视图层）<a class="headerlink" href="#id7" title="永久链接至标题">¶</a></h2>
+<p>开发者的 WXSS 和 WXML 会编译成 JavaScript 代码注入到视图层，包含页面渲染需要的页面结构和样式信息。</p>
+<p>我们采用和「小程序代码注入（逻辑层）」相似的方式优化注入耗时。</p>
+<p>视图层和逻辑层的小程序代码注入是并行进行的。</p>
+<p><strong>对启动耗时的影响</strong></p>
+<p>小程序代码的注入耗时直接影响小程序的启动耗时。耗时长短与当前页面结构复杂度和页面使用的自定义组件数量有关。如果未启用「按需注入」，耗时还会与启动使用到分包内的页面和自定义组件总数有关。</p>
+<p>由于「首页渲染」需要使用视图层的页面结构和样式信息，如果小程序代码注入耗时过长，会影响渲染数据从逻辑层到达视图层的时间，影响「首页渲染」的耗时。</p>
+</section>
+<section id="id8">
+<h2>4. 首页（初次）渲染<a class="headerlink" href="#id8" title="永久链接至标题">¶</a></h2>
+<p>在逻辑层小程序代码注入完成后，小程序框架会根据用户访问的页面，进行页面组件树初始化，并依次触发首页的 Page.onLoad, Page.onShow 生命周期，并将初始数据发送到视图层。</p>
+<p>在完成视图层代码注入，并收到逻辑层发送的初始数据后，结合从初始数据和视图层得到的页面结构和样式信息，小程序框架会进行小程序首页的渲染，展示小程序首屏，并触发首页的 Page.onReady 事件。</p>
+<p>如果开启了「初始渲染缓存」，「首页渲染」可以直接使用缓存完成，不依赖逻辑层的初始数据，降低启动耗时。</p>
+<p>初始数据包括 Page 初始化参数中 data 属性值，和部分比较早发出的 setData 数据（哪些 setData 可以计入首页渲染与渲染层和逻辑层之间的初始化时序相关，目前没有可以保证一定能够计入的情况）。</p>
+<p>小程序框架层面，以 Page.onReady 事件触发标志小程序启动过程完成。</p>
+<p><strong>对启动耗时的影响</strong></p>
+<p>首页渲染耗时是启动过程的最后一环，直接影响小程序的启动耗时。耗时长短与页面结构复杂度、参与渲染的自定义组件数量有关。</p>
+<p>如果启用了「按需注入」，部分组件代码注入会被延迟到本阶段执行，导致阶段耗时上涨，但总耗时一般会下降。</p>
+</section>
+<section id="id9">
+<h2>5. 首屏内容展示<a class="headerlink" href="#id9" title="永久链接至标题">¶</a></h2>
+<p>「首页渲染」完成后，小程序启动流程完成，Loading 消失，此时一般情况下用户应该能立刻看到首屏内容。</p>
+<p>但是如果首页的主体内容依赖网络请求（例如 wx.request）等异步来源，用户并不一定能立刻看的有意义的完整界面，可能看到的仍然是白屏界面。需要等待网络请求异步返回后，调用 setData 进行页面更新，才能呈现真正的页面。</p>
+<p>通常情况下，开发者也会选择先展示「骨架屏」来避免白屏，以优化用户体验。</p>
+<p><strong>对启动耗时的影响</strong></p>
+<p>异步 setData 触发绘制的首屏内容展示不一定会计入启动耗时统计，但是会延迟用户看到页面内容的时间，影响用户体验。</p>
+</section>
+<section id="id10">
+<h2>常见问题<a class="headerlink" href="#id10" title="永久链接至标题">¶</a></h2>
+<ol class="arabic">
+<li><p>为什么「开发版」和「体验版」小程序启动比「正式版」慢一些？</p>
+<p>「开发版」和「体验版」小程序的启动流程和代码包下载链路会和「正式版」有所差别，也会有更严格的权限控制，因此启动耗时要慢于「正式版」小程序。</p>
+<p>对于「开发版」小程序，为了方便开发调试，基础库会启用很多调试相关的能力，例如 vConsole、sourceMap 等，日志输出的等级也会更低，因此启动耗时和页面切换耗时也会有一定延长。</p>
+</li>
+<li><p>为什么安卓和 iOS 的启动耗时差异那么大？</p>
+<p>两个平台的设备性能、系统功能和启动流程实现存在一定差异：</p>
+<ul class="simple">
+<li><p>iOS 设备的平均性能要好于安卓；</p></li>
+<li><p>iOS 小程序和微信共用进程，而 Android 上小程序运行在独立进程，需要额外的进程创建和一些基础模块的初始化流程；</p></li>
+<li><p>iOS 上需要使用系统提供的 WebView 和 JavaScript Core，初始化开销几乎可以忽略；</p></li>
+<li><p>安卓 UI 和系统组件的创建的开销远高于 iOS。</p></li>
+</ul>
+</li>
+</ol>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>导航</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="总目录"
+             >索引</a></li>
+        <li class="right" >
+          <a href="../../../http-routingtable.html" title="微信小程序API"
+             >wxapi</a> |</li>
+        <li class="right" >
+          <a href="start_optimizeA.html" title="代码包体积优化"
+             >下一页</a> |</li>
+        <li class="right" >
+          <a href="start.html" title="启动性能"
+             >上一页</a> |</li>
+<li><a href="../../../index.html">主页</a>&#160;|</li>
+<li><a href="../../../contents.html">文档</a> &#187;</li>
+
+          <li class="nav-item nav-item-1"><a href="../../index.html" >框架</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../index.html" >性能</a> &#187;</li>
+          <li class="nav-item nav-item-3"><a href="index.html" >启动性能</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">小程序启动流程介绍</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; 版权所有 2019, Wxadev Docs.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.1.
+    </div>
+  </body>
+</html>

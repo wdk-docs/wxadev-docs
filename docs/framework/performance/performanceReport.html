@@ -1,0 +1,248 @@
+
+<!DOCTYPE html>
+
+<html lang="zh_CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>小程序测速 &#8212; wxadev v2.21.0 文档</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx13.css" />
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/translations.js"></script>
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="在 wxadev v2.21.0 文档 中搜索"
+          href="../../_static/opensearch.xml"/>
+
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="搜索" href="../../search.html" />
+    <link rel="next" title="分析工具" href="tools.html" />
+    <link rel="prev" title="性能数据" href="perf_data.html" />
+<link rel="canonical" href="http://www.sphinx-doc.org/en/master/framework/performance/performanceReport.html" />
+
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet" type="text/css" />
+ 
+<style type="text/css">
+  table.right { float: right; margin-left: 20px; }
+  table.right td { border: 1px solid #ccc; }
+  
+</style>
+<script type="text/javascript">
+  // intelligent scrolling of the sidebar content
+  $(window).scroll(function() {
+    var sb = $('.sphinxsidebarwrapper');
+    var win = $(window);
+    var sbh = sb.height();
+    var offset = $('.sphinxsidebar').position()['top'];
+    var wintop = win.scrollTop();
+    var winbot = wintop + win.innerHeight();
+    var curtop = sb.position()['top'];
+    var curbot = curtop + sbh;
+    // does sidebar fit in window?
+    if (sbh < win.innerHeight()) {
+      // yes: easy case -- always keep at the top
+      sb.css('top', $u.min([$u.max([0, wintop - offset - 10]), $(document).height() - sbh - 200]));
+    } else {
+      // no: only scroll if top/bottom edge of sidebar is at
+      // top/bottom edge of window
+      if (curtop > wintop && curbot > winbot) {
+        sb.css('top', $u.max([wintop - offset - 10, 0]));
+      } else if (curtop < wintop && curbot < winbot) {
+        sb.css('top', $u.min([winbot - sbh - offset - 20, $(document).height() - sbh - 200]));
+      }
+    }
+  });
+</script> 
+  </head><body>
+<div class="pageheader">
+  <ul>
+    <li><a href="../../index.html">主页</a></li>
+    <li><a href="../../basic/index.html">入门</a></li>
+    <li><a href="../index.html">框架</a></li>
+    <li><a href="../../component/index.html">组件</a></li>
+    <li><a href="../../api/index.html">API</a></li>
+    <li><a href="../../api-backend/index.html">服务端</a></li>
+    <li><a href="../../reference/index.html">参考</a></li>
+    <li><a href="../../contents.html">目录</a></li>
+  </ul>
+  <div>
+    <a href="../../index.html">
+      <img src="../../_static/wxaheader.png" alt="wxa" />
+    </a>
+  </div>
+</div>
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>导航</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="总目录"
+             accesskey="I">索引</a></li>
+        <li class="right" >
+          <a href="../../http-routingtable.html" title="微信小程序API"
+             >wxapi</a> |</li>
+        <li class="right" >
+          <a href="tools.html" title="分析工具"
+             accesskey="N">下一页</a> |</li>
+        <li class="right" >
+          <a href="perf_data.html" title="性能数据"
+             accesskey="P">上一页</a> |</li>
+<li><a href="../../index.html">主页</a>&#160;|</li>
+<li><a href="../../contents.html">文档</a> &#187;</li>
+
+          <li class="nav-item nav-item-1"><a href="../index.html" >框架</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="index.html" accesskey="U">性能</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">小程序测速</a></li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../../contents.html">目录</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">小程序测速</a><ul>
+<li><a class="reference internal" href="#id">新建监控 ID</a></li>
+<li><a class="reference internal" href="#id2">测速上报</a></li>
+<li><a class="reference internal" href="#id3">数据观察</a></li>
+<li><a class="reference internal" href="#id4">自定义维度(可选功能)</a></li>
+<li><a class="reference internal" href="#q-a">Q&amp;A</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>上一个主题</h4>
+  <p class="topless"><a href="perf_data.html"
+                        title="上一章">性能数据</a></p>
+  <h4>下一个主题</h4>
+  <p class="topless"><a href="tools.html"
+                        title="下一章">分析工具</a></p>
+  <div role="note" aria-label="source link">
+    <h3>本页</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../_sources/framework/performance/performanceReport.rst.txt"
+            rel="nofollow">显示源代码</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">快速搜索</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="转向" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="id1">
+<h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/framework/performance/performanceReport.html">小程序测速</a><a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
+<p>为帮助开发者优化小程序性能，我们推出了”小程序测速”功能。”小程序测速”可以简单方便地统计小程序内某一事件的实时耗时情况，并可根据地域、运营商、操作系统、网络类型、机型等关键维度进行实时交叉分析。从基础库2.9.2开始，开发者通过“测速上报”接口上报某一指标的耗时情况后，可在小程序管理后台”开发 -运维中心 -小程序测速” 查看各指标耗时趋势，并支持分钟级数据实时查看。</p>
+<section id="id">
+<h2>新建监控 ID<a class="headerlink" href="#id" title="永久链接至标题">¶</a></h2>
+<p>为了实现对某一指标的耗时监控，开发者需要先定义监控指标。在小程序管理后台（mp.weixin.qq.com）的 ：”开发 -运维中心 -小程序测速”中新建监控 ID，并填写监控指标的名称和解释。</p>
+<p>img</p>
+<p>点击”新建”可以新建 ID ，你需要选择指标类型，并填写指标名称和指标对应的解释。 监控指标分为两类：</p>
+<p>网络请求类： 此类耗时主要受网络环境影响，包含操作系统、运营商、网络环境、地区等统计维度。如：网络 api 耗时、云调用耗时、网络数据读写耗时等。注意此类指标最多可创建20个。</p>
+<p>加载/渲染类：此类耗时主要受设备性能影响，包含操作系统、机型类别等统计维度。可以用来测量页面切换耗时、组件渲染耗时等。 注意此类指标最多可创建20个。</p>
+<p>img</p>
+<p>新建后，可以看到上报需要使用的监控 ID 。</p>
+<p>img</p>
+</section>
+<section id="id2">
+<h2>测速上报<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<p>开发者定义监控ID后，需要在小程序代码中调用 wx.reportPerformance 接口上报耗时数值，才可实现耗时监控：</p>
+<p>上报方法1： 使用 canIUse 进行判断</p>
+<div class="highlight-JS notranslate"><div class="highlight"><pre><span></span>// * 需要使用 canIUse 判断接口是否可用
+if (wx.canIUse(&#39;reportPerformance&#39;)) {
+  wx.reportPerformance(id, val)
+}
+上报方法2：使用 compareVersion 进行判断
+
+// * 需要先使用 compareVersion 判断接口是否可用
+const sdkVersion = wx.getSystemInfoSync().SDKVersion
+if (compareVersion(sdkVersion, &#39;2.9.2&#39;) &gt;= 0) {
+  wx.reportPerformance(id, val)
+}
+</pre></div>
+</div>
+<p>​id 和 val 均为 uint32 类型，其中 id 为小程序管理后台定义的监控 ID，val 为本次要上报的耗时数值（由开发者自行计算）。接口调用需要基础库的版本号高于 2.9.2，否则在一些低版本基础库可能报错。</p>
+<p>(compareVersion 定义)</p>
+</section>
+<section id="id3">
+<h2>数据观察<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
+<p>完成代码上报后，可在小程序管理后台”开发 -运维中心 -小程序测速” 查看各指标耗时趋势。目前线上数据约有15分钟数据时延，上报数据保留 7 天，可按照 1 分钟 - 1 小时等不同的时间粒度进行聚合。</p>
+<p>每个指标可以观察到两条曲线，分别为平均值曲线和上报次数曲线。</p>
+<p>​ img</p>
+<p>​同时对于不同维度的数据，我们提供了交叉对比功能，以帮助大家快速便捷的完成分析，注意交叉对比的曲线数最多不能超过10条。 img</p>
+<p>​对于网络请求类指标，我们提供了区域地图，以帮助大家快速的定位区域资源问题。 img</p>
+</section>
+<section id="id4">
+<h2>自定义维度(可选功能)<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h2>
+<p>对于更复杂的用户场景，用户可能需要将测速数据根据url、页面等维度进行细分，所以我们提供了自定义维度，用户可以将一些业务层面的维度字符串填入至自定义维度中，以方便业务分析。 目前每个指标的自定义纬度值的数量需要限制在50以内（超限制的数据会被丢弃），自定义维度值的长度需要限制在256字节内（超限制的值会被截断）。自定义维度的使用效果如下： img
+想要使用自定义维度，只需要给wx.reportPerformance加上第三个参数dimensions，即可上报自定义维度：</p>
+<div class="highlight-JS notranslate"><div class="highlight"><pre><span></span><span class="nx">wx</span><span class="p">.</span><span class="nx">reportPerformance</span><span class="p">(</span><span class="nx">id</span><span class="p">,</span> <span class="nx">value</span><span class="p">,</span> <span class="nx">dimensions</span><span class="p">)</span>
+<span class="p">(</span><span class="nx">wx</span><span class="p">.</span><span class="nx">reportPerformance</span> <span class="nx">文档</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="q-a">
+<h2>Q&amp;A<a class="headerlink" href="#q-a" title="永久链接至标题">¶</a></h2>
+<dl class="simple">
+<dt>… Q<span class="classifier">测速系统可以在哪些场景发挥作用？</span></dt><dd><p>A : 可以测量网络类指标（如网络调用/云调用耗时、网络数据读写速度等）和非网络类指标（页面切换加载速度、组件渲染速度等）。可以查看这些指标在不同维度下的数量分布和性能差异。在一些计算视频首屏时延、帧率等场景也可以发挥作用。</p>
+</dd>
+<dt>… Q ：上报API需要的基础库版本是多少？</dt><dd><p>A ： 需要基础库版本 2.9.2 以上。在一些低版本基础库上可能报错，后续会支持用 canIUse 接口来进行判断。</p>
+</dd>
+<dt>… Q： 系统是否可以在测试版使用？上报的时延大概是多少？数据保存的时间是多久？</dt><dd><p>A ： 可以在测试版使用，目前上报的时延为 15 分钟左右。数据会保存 7 天。</p>
+</dd>
+<dt>… Q： 我可以定义多少指标 ID？</dt><dd><p>A ： 单个小程序每个类别可以定义 20 个 ID。</p>
+</dd>
+</dl>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>导航</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="总目录"
+             >索引</a></li>
+        <li class="right" >
+          <a href="../../http-routingtable.html" title="微信小程序API"
+             >wxapi</a> |</li>
+        <li class="right" >
+          <a href="tools.html" title="分析工具"
+             >下一页</a> |</li>
+        <li class="right" >
+          <a href="perf_data.html" title="性能数据"
+             >上一页</a> |</li>
+<li><a href="../../index.html">主页</a>&#160;|</li>
+<li><a href="../../contents.html">文档</a> &#187;</li>
+
+          <li class="nav-item nav-item-1"><a href="../index.html" >框架</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="index.html" >性能</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">小程序测速</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; 版权所有 2019, Wxadev Docs.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.1.
+    </div>
+  </body>
+</html>

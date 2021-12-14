@@ -1,0 +1,218 @@
+
+<!DOCTYPE html>
+
+<html lang="zh_CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>小程序加密网络通道 &#8212; wxadev v2.21.0 文档</title>
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx13.css" />
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/translations.js"></script>
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="在 wxadev v2.21.0 文档 中搜索"
+          href="../../../_static/opensearch.xml"/>
+
+    <link rel="index" title="索引" href="../../../genindex.html" />
+    <link rel="search" title="搜索" href="../../../search.html" />
+    <link rel="next" title="安全键盘" href="safe-password.html" />
+    <link rel="prev" title="安全" href="index.html" />
+<link rel="canonical" href="http://www.sphinx-doc.org/en/master/framework/open-ability/security/user-encryptkey.html" />
+
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet" type="text/css" />
+ 
+<style type="text/css">
+  table.right { float: right; margin-left: 20px; }
+  table.right td { border: 1px solid #ccc; }
+  
+</style>
+<script type="text/javascript">
+  // intelligent scrolling of the sidebar content
+  $(window).scroll(function() {
+    var sb = $('.sphinxsidebarwrapper');
+    var win = $(window);
+    var sbh = sb.height();
+    var offset = $('.sphinxsidebar').position()['top'];
+    var wintop = win.scrollTop();
+    var winbot = wintop + win.innerHeight();
+    var curtop = sb.position()['top'];
+    var curbot = curtop + sbh;
+    // does sidebar fit in window?
+    if (sbh < win.innerHeight()) {
+      // yes: easy case -- always keep at the top
+      sb.css('top', $u.min([$u.max([0, wintop - offset - 10]), $(document).height() - sbh - 200]));
+    } else {
+      // no: only scroll if top/bottom edge of sidebar is at
+      // top/bottom edge of window
+      if (curtop > wintop && curbot > winbot) {
+        sb.css('top', $u.max([wintop - offset - 10, 0]));
+      } else if (curtop < wintop && curbot < winbot) {
+        sb.css('top', $u.min([winbot - sbh - offset - 20, $(document).height() - sbh - 200]));
+      }
+    }
+  });
+</script> 
+  </head><body>
+<div class="pageheader">
+  <ul>
+    <li><a href="../../../index.html">主页</a></li>
+    <li><a href="../../../basic/index.html">入门</a></li>
+    <li><a href="../../index.html">框架</a></li>
+    <li><a href="../../../component/index.html">组件</a></li>
+    <li><a href="../../../api/index.html">API</a></li>
+    <li><a href="../../../api-backend/index.html">服务端</a></li>
+    <li><a href="../../../reference/index.html">参考</a></li>
+    <li><a href="../../../contents.html">目录</a></li>
+  </ul>
+  <div>
+    <a href="../../../index.html">
+      <img src="../../../_static/wxaheader.png" alt="wxa" />
+    </a>
+  </div>
+</div>
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>导航</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="总目录"
+             accesskey="I">索引</a></li>
+        <li class="right" >
+          <a href="../../../http-routingtable.html" title="微信小程序API"
+             >wxapi</a> |</li>
+        <li class="right" >
+          <a href="safe-password.html" title="安全键盘"
+             accesskey="N">下一页</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="安全"
+             accesskey="P">上一页</a> |</li>
+<li><a href="../../../index.html">主页</a>&#160;|</li>
+<li><a href="../../../contents.html">文档</a> &#187;</li>
+
+          <li class="nav-item nav-item-1"><a href="../../index.html" >框架</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../index.html" >开放能力</a> &#187;</li>
+          <li class="nav-item nav-item-3"><a href="index.html" accesskey="U">安全</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">小程序加密网络通道</a></li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../../../contents.html">目录</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">小程序加密网络通道</a><ul>
+<li><a class="reference internal" href="#id2">功能介绍</a></li>
+<li><a class="reference internal" href="#id3">使用说明</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>上一个主题</h4>
+  <p class="topless"><a href="index.html"
+                        title="上一章">安全</a></p>
+  <h4>下一个主题</h4>
+  <p class="topless"><a href="safe-password.html"
+                        title="下一章">安全键盘</a></p>
+  <div role="note" aria-label="source link">
+    <h3>本页</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../../_sources/framework/open-ability/security/user-encryptkey.rst.txt"
+            rel="nofollow">显示源代码</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">快速搜索</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="转向" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="id1">
+<h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/user-encryptkey.html">小程序加密网络通道</a><a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
+<p>从基础库 2.17.3 开始支持</p>
+<section id="id2">
+<h2>功能介绍<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<p>为了避免小程序与开发者后台通信时数据被截取和篡改，微信侧维护了一个用户维度的可靠key，用于小程序和后台通信时进行加密和签名。</p>
+<p>开发者可以分别通过小程序前端和微信后台提供的接口，获取用户的加密 key。</p>
+</section>
+<section id="id3">
+<h2>使用说明<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
+<p>在小程序中开发者可以使用UserCryptoManager.getLatestUserKey获取获取用户最新的加密密钥信息。</p>
+<p>前端调用示例</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="kd">const</span> <span class="nx">somedata</span> <span class="o">=</span> <span class="s1">&#39;xxxxx&#39;</span>
+<span class="kd">const</span> <span class="nx">userCryptoManager</span> <span class="o">=</span> <span class="nx">wx</span><span class="p">.</span><span class="nx">getUserCryptoManager</span><span class="p">()</span>
+<span class="nx">userCryptoManager</span><span class="p">.</span><span class="nx">getLatestUserKey</span><span class="p">({</span>
+    <span class="nx">success</span><span class="p">({</span><span class="nx">encryptKey</span><span class="p">,</span> <span class="nx">iv</span><span class="p">,</span> <span class="nx">version</span><span class="p">,</span> <span class="nx">expireTime</span><span class="p">})</span> <span class="p">{</span>
+        <span class="kd">const</span> <span class="nx">encryptedData</span> <span class="o">=</span> <span class="nx">someAESEncryptMethod</span><span class="p">(</span><span class="nx">encryptKey</span><span class="p">,</span> <span class="nx">iv</span><span class="p">,</span> <span class="nx">somedata</span><span class="p">)</span>
+        <span class="nx">wx</span><span class="p">.</span><span class="nx">request</span><span class="p">({</span>
+          <span class="nx">data</span><span class="o">:</span> <span class="nx">encryptedData</span><span class="p">,</span>
+          <span class="nx">success</span><span class="p">(</span><span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
+                <span class="kd">const</span> <span class="nx">decryptedData</span> <span class="o">=</span> <span class="nx">someAESDEcryptMethod</span><span class="p">(</span><span class="nx">encryptKey</span><span class="p">,</span> <span class="nx">iv</span><span class="p">,</span> <span class="nx">res</span><span class="p">.</span><span class="nx">data</span><span class="p">)</span>
+                <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">decryptedData</span><span class="p">)</span>
+          <span class="p">}</span>
+        <span class="p">})</span>
+    <span class="p">}</span>
+<span class="p">})</span>
+</pre></div>
+</div>
+<p>someAESEncryptMethod 和 someAESDEcryptMethod 分别为加解密函数，由开发者自行引入加解密库来实现，基础库暂时不提供加解密能力。 开发者可参考开源加密库: <a class="reference external" href="https://github.com/flash1293/aes-wasm">https://github.com/flash1293/aes-wasm</a> <a class="reference external" href="https://github.com/ricmoo/aes-js">https://github.com/ricmoo/aes-js</a></p>
+<p>在开发者服务端，可以调用getUserEncryptKey后台接口获取用户最近三次的key。在获取key的同时，接口会携带version信息，开发者可以比较version版本来选择使用对应的key对数据进行加解密。</p>
+<p>服务端调用示例</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>curl -X POST <span class="s2">&quot;https://api.weixin.qq.com/wxa/business/getuserencryptkey?access_token=ACCESS_TOKEN&amp;openid=OPENID&amp;signature=SIGNATURE&amp;sig_method=hmac_sha256&quot;</span>
+</pre></div>
+</div>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>导航</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="总目录"
+             >索引</a></li>
+        <li class="right" >
+          <a href="../../../http-routingtable.html" title="微信小程序API"
+             >wxapi</a> |</li>
+        <li class="right" >
+          <a href="safe-password.html" title="安全键盘"
+             >下一页</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="安全"
+             >上一页</a> |</li>
+<li><a href="../../../index.html">主页</a>&#160;|</li>
+<li><a href="../../../contents.html">文档</a> &#187;</li>
+
+          <li class="nav-item nav-item-1"><a href="../../index.html" >框架</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../index.html" >开放能力</a> &#187;</li>
+          <li class="nav-item nav-item-3"><a href="index.html" >安全</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">小程序加密网络通道</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; 版权所有 2019, Wxadev Docs.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.1.
+    </div>
+  </body>
+</html>

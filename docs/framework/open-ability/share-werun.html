@@ -1,0 +1,256 @@
+
+<!DOCTYPE html>
+
+<html lang="zh_CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>动态分享数据到微信运动消息 &#8212; wxadev v2.21.0 文档</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx13.css" />
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/translations.js"></script>
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="在 wxadev v2.21.0 文档 中搜索"
+          href="../../_static/opensearch.xml"/>
+
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="搜索" href="../../search.html" />
+    <link rel="next" title="多人音视频对话" href="voip-chat.html" />
+    <link rel="prev" title="安全键盘" href="security/safe-password.html" />
+<link rel="canonical" href="http://www.sphinx-doc.org/en/master/framework/open-ability/share-werun.html" />
+
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet" type="text/css" />
+ 
+<style type="text/css">
+  table.right { float: right; margin-left: 20px; }
+  table.right td { border: 1px solid #ccc; }
+  
+</style>
+<script type="text/javascript">
+  // intelligent scrolling of the sidebar content
+  $(window).scroll(function() {
+    var sb = $('.sphinxsidebarwrapper');
+    var win = $(window);
+    var sbh = sb.height();
+    var offset = $('.sphinxsidebar').position()['top'];
+    var wintop = win.scrollTop();
+    var winbot = wintop + win.innerHeight();
+    var curtop = sb.position()['top'];
+    var curbot = curtop + sbh;
+    // does sidebar fit in window?
+    if (sbh < win.innerHeight()) {
+      // yes: easy case -- always keep at the top
+      sb.css('top', $u.min([$u.max([0, wintop - offset - 10]), $(document).height() - sbh - 200]));
+    } else {
+      // no: only scroll if top/bottom edge of sidebar is at
+      // top/bottom edge of window
+      if (curtop > wintop && curbot > winbot) {
+        sb.css('top', $u.max([wintop - offset - 10, 0]));
+      } else if (curtop < wintop && curbot < winbot) {
+        sb.css('top', $u.min([winbot - sbh - offset - 20, $(document).height() - sbh - 200]));
+      }
+    }
+  });
+</script> 
+  </head><body>
+<div class="pageheader">
+  <ul>
+    <li><a href="../../index.html">主页</a></li>
+    <li><a href="../../basic/index.html">入门</a></li>
+    <li><a href="../index.html">框架</a></li>
+    <li><a href="../../component/index.html">组件</a></li>
+    <li><a href="../../api/index.html">API</a></li>
+    <li><a href="../../api-backend/index.html">服务端</a></li>
+    <li><a href="../../reference/index.html">参考</a></li>
+    <li><a href="../../contents.html">目录</a></li>
+  </ul>
+  <div>
+    <a href="../../index.html">
+      <img src="../../_static/wxaheader.png" alt="wxa" />
+    </a>
+  </div>
+</div>
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>导航</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="总目录"
+             accesskey="I">索引</a></li>
+        <li class="right" >
+          <a href="../../http-routingtable.html" title="微信小程序API"
+             >wxapi</a> |</li>
+        <li class="right" >
+          <a href="voip-chat.html" title="多人音视频对话"
+             accesskey="N">下一页</a> |</li>
+        <li class="right" >
+          <a href="security/safe-password.html" title="安全键盘"
+             accesskey="P">上一页</a> |</li>
+<li><a href="../../index.html">主页</a>&#160;|</li>
+<li><a href="../../contents.html">文档</a> &#187;</li>
+
+          <li class="nav-item nav-item-1"><a href="../index.html" >框架</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="index.html" accesskey="U">开放能力</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">动态分享数据到微信运动消息</a></li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../../contents.html">目录</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">动态分享数据到微信运动消息</a><ul>
+<li><a class="reference internal" href="#id2">申请开通</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>上一个主题</h4>
+  <p class="topless"><a href="security/safe-password.html"
+                        title="上一章">安全键盘</a></p>
+  <h4>下一个主题</h4>
+  <p class="topless"><a href="voip-chat.html"
+                        title="下一章">多人音视频对话</a></p>
+  <div role="note" aria-label="source link">
+    <h3>本页</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../_sources/framework/open-ability/share-werun.rst.txt"
+            rel="nofollow">显示源代码</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">快速搜索</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="转向" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="id1">
+<h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/share-werun.html">动态分享数据到微信运动消息</a><a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
+<p>从基础库 2.14.0 开始支持</p>
+<p>可将用户在小程序内的运动数据分享到微信运动。</p>
+<section id="id2">
+<h2>申请开通<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<p>小程序管理后台，「开发」-「接口设置」中自助开通该组件权限。 只针对「体育-在线健身」类目的小程序开放。</p>
+<p>调用流程
+开发者通过调用wx.shareToWeRun传入用户的运动数据，会触发弹窗，用户点击确定后即可在微信运动排行榜与详情页中展示运动数据。 avatar</p>
+<p>注意事项
+对于开发版和体验版小程序，可以在小程序内正常调用该接口，但不会展示到微信运动中。开发者在开发时可以以调用接口是否成功作为是否打卡成功的依据。
+用户每次打卡都会记录到微信运动中，请开发者妥善处理用户打卡成功的场景，避免重复打卡。
+微信运动排行榜中，展示的是最近一次打卡的第一条记录。
+运动类型
+当前支持以下运动类型的传入如下，不同运动类型支持传入的单位不同：</p>
+<p>运动类型|typeId|支持传入单位
+锻炼|1001|time/calorie
+体能训练|1002|time/calorie
+功能性训练|1003|time/calorie
+瑜伽|2001|time/calorie
+钓鱼|2002|time/calorie
+广场舞|2003|time/calorie
+踢足球|2004|time/calorie
+打篮球|2005|time/calorie
+打羽毛球|2006|time/calorie
+打乒乓球|2007|time/calorie
+打网球|2008|time/calorie
+跑步|3001|time/distance/calorie
+登山|3002|time/distance/calorie
+骑车|3003|time/distance/calorie
+游泳|3004|time/distance/calorie
+滑雪|3005|time/distance/calorie
+跳绳|4001|number/calorie
+俯卧撑|4002|number/calorie
+深蹲|4003|number/calorie
+不同单位支持传入的数量限制如下：</p>
+<p>单位|说明|有效值
+number|运动个数，单位：个|有效值1-10000
+distance|运动距离，单位：米|有效值1-100000
+time|运动时间，单位：分钟|有效值1-1440
+代码示例
+wx.shareToWeRun({</p>
+<blockquote>
+<div><blockquote>
+<div><dl class="simple">
+<dt>recordList: [{</dt><dd><p>typeId: 4001,
+number: 180</p>
+</dd>
+<dt>}, {</dt><dd><p>typeId: 3001,
+distance: 100000</p>
+</dd>
+</dl>
+<p>}],
+success(res) {</p>
+<blockquote>
+<div><dl class="simple">
+<dt>wx.showToast({</dt><dd><p>title: ‘打卡成功’,</p>
+</dd>
+</dl>
+<p>})</p>
+</div></blockquote>
+<p>},
+fail(res) {</p>
+<blockquote>
+<div><dl class="simple">
+<dt>wx.showToast({</dt><dd><p>icon: “none”,
+title: ‘打卡失败’,</p>
+</dd>
+</dl>
+<p>})</p>
+</div></blockquote>
+<p>}</p>
+</div></blockquote>
+<p>})</p>
+</div></blockquote>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>导航</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="总目录"
+             >索引</a></li>
+        <li class="right" >
+          <a href="../../http-routingtable.html" title="微信小程序API"
+             >wxapi</a> |</li>
+        <li class="right" >
+          <a href="voip-chat.html" title="多人音视频对话"
+             >下一页</a> |</li>
+        <li class="right" >
+          <a href="security/safe-password.html" title="安全键盘"
+             >上一页</a> |</li>
+<li><a href="../../index.html">主页</a>&#160;|</li>
+<li><a href="../../contents.html">文档</a> &#187;</li>
+
+          <li class="nav-item nav-item-1"><a href="../index.html" >框架</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="index.html" >开放能力</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">动态分享数据到微信运动消息</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; 版权所有 2019, Wxadev Docs.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.1.
+    </div>
+  </body>
+</html>

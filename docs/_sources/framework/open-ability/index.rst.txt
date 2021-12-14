@@ -4,16 +4,18 @@
 版本:|release| 更新:|today|
 
 .. toctree::
-   :maxdepth: 3
+   :maxdepth: 2
    :glob:
 
-   login
-   union-id
-   authorize
-   signature
-   getPhoneNumber
-   bio-auth
-   share
+   user/index
+   share-timeline
+   share/index
+   favorite
+   material/index
+   security/index
+   share-werun
+   voip-chat
+   channels/index
    updatable-message
    launchApp
    template-message

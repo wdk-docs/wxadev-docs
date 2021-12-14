@@ -1,0 +1,217 @@
+
+<!DOCTYPE html>
+
+<html lang="zh_CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>视频号直播 &#8212; wxadev v2.21.0 文档</title>
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx13.css" />
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/translations.js"></script>
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="在 wxadev v2.21.0 文档 中搜索"
+          href="../../../_static/opensearch.xml"/>
+
+    <link rel="index" title="索引" href="../../../genindex.html" />
+    <link rel="search" title="搜索" href="../../../search.html" />
+    <link rel="next" title="动态消息" href="../updatable-message.html" />
+    <link rel="prev" title="视频号视频" href="channels-activity.html" />
+<link rel="canonical" href="http://www.sphinx-doc.org/en/master/framework/open-ability/channels/channels-live.html" />
+
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet" type="text/css" />
+ 
+<style type="text/css">
+  table.right { float: right; margin-left: 20px; }
+  table.right td { border: 1px solid #ccc; }
+  
+</style>
+<script type="text/javascript">
+  // intelligent scrolling of the sidebar content
+  $(window).scroll(function() {
+    var sb = $('.sphinxsidebarwrapper');
+    var win = $(window);
+    var sbh = sb.height();
+    var offset = $('.sphinxsidebar').position()['top'];
+    var wintop = win.scrollTop();
+    var winbot = wintop + win.innerHeight();
+    var curtop = sb.position()['top'];
+    var curbot = curtop + sbh;
+    // does sidebar fit in window?
+    if (sbh < win.innerHeight()) {
+      // yes: easy case -- always keep at the top
+      sb.css('top', $u.min([$u.max([0, wintop - offset - 10]), $(document).height() - sbh - 200]));
+    } else {
+      // no: only scroll if top/bottom edge of sidebar is at
+      // top/bottom edge of window
+      if (curtop > wintop && curbot > winbot) {
+        sb.css('top', $u.max([wintop - offset - 10, 0]));
+      } else if (curtop < wintop && curbot < winbot) {
+        sb.css('top', $u.min([winbot - sbh - offset - 20, $(document).height() - sbh - 200]));
+      }
+    }
+  });
+</script> 
+  </head><body>
+<div class="pageheader">
+  <ul>
+    <li><a href="../../../index.html">主页</a></li>
+    <li><a href="../../../basic/index.html">入门</a></li>
+    <li><a href="../../index.html">框架</a></li>
+    <li><a href="../../../component/index.html">组件</a></li>
+    <li><a href="../../../api/index.html">API</a></li>
+    <li><a href="../../../api-backend/index.html">服务端</a></li>
+    <li><a href="../../../reference/index.html">参考</a></li>
+    <li><a href="../../../contents.html">目录</a></li>
+  </ul>
+  <div>
+    <a href="../../../index.html">
+      <img src="../../../_static/wxaheader.png" alt="wxa" />
+    </a>
+  </div>
+</div>
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>导航</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="总目录"
+             accesskey="I">索引</a></li>
+        <li class="right" >
+          <a href="../../../http-routingtable.html" title="微信小程序API"
+             >wxapi</a> |</li>
+        <li class="right" >
+          <a href="../updatable-message.html" title="动态消息"
+             accesskey="N">下一页</a> |</li>
+        <li class="right" >
+          <a href="channels-activity.html" title="视频号视频"
+             accesskey="P">上一页</a> |</li>
+<li><a href="../../../index.html">主页</a>&#160;|</li>
+<li><a href="../../../contents.html">文档</a> &#187;</li>
+
+          <li class="nav-item nav-item-1"><a href="../../index.html" >框架</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../index.html" >开放能力</a> &#187;</li>
+          <li class="nav-item nav-item-3"><a href="index.html" accesskey="U">视频号</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">视频号直播</a></li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h4>上一个主题</h4>
+  <p class="topless"><a href="channels-activity.html"
+                        title="上一章">视频号视频</a></p>
+  <h4>下一个主题</h4>
+  <p class="topless"><a href="../updatable-message.html"
+                        title="下一章">动态消息</a></p>
+  <div role="note" aria-label="source link">
+    <h3>本页</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../../_sources/framework/open-ability/channels/channels-live.rst.txt"
+            rel="nofollow">显示源代码</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">快速搜索</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="转向" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="id1">
+<h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/channels-live.html">视频号直播</a><a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
+<p>若小程序与视频号的主体相同或为关联主体，可以跳转到视频号直播间或在小程序内发起视频号直播预约。</p>
+<p>主体判断
+主体信息查询
+小程序主体信息可通过小程序资料页-开发团队进行查询，视频号主体信息可通过视频号首页-认证进行查询。</p>
+<p>视频号id需通过视频号助手获取。</p>
+<p>主体判断逻辑
+若小程序与视频号的主体相同，则可以调用相关接口。 若小程序与视频号的主体不同，需同时满足以下3个条件则可以调用相关接口：</p>
+<p>小程序绑定了微信开放平台账号
+小程序与微信开放平台账号的关系为同主体或关联主体
+微信开放平台账号的主体与关联主体列表中包含视频号的主体 关联主体申请流程可以参考：<a class="reference external" href="https://kf.qq.com/faq/190726e6JFja190726qMJBn6.html">https://kf.qq.com/faq/190726e6JFja190726qMJBn6.html</a>
+使用方法
+小程序跳转视频号直播间
+从基础库 2.15.0 开始支持</p>
+<p>开发者首先通过wx.getChannelsLiveInfo传入视频号id用于获取视频号直播信息，包括直播id（feedId与nonceId两个参数）与直播状态。其中直播状态含义如下：
+status=2：直播中，此时返回的feedId与nonceId为当前直播id
+status=3：直播已结束，此时返回的feedId与nonceId为最近一次直播id
+获取直播信息后，开发者可以通过wx.openChannelsLive打开视频号直播。若当前未在直播，则会跳转到最近一场直播的结束页。该接口使用限制如下：
+需要用户触发跳转，若用户未点击小程序页面任意位置，则开发者将无法调用此接口。
+需要用户确认跳转，在跳转至视频号直播前，将统一增加弹窗，询问是否跳转，用户确认后才可以跳转视频号直播。
+小程序内发起预约视频号直播
+从基础库 2.19.0 开始支持</p>
+<p>开发者首先通过wx.getChannelsLiveNoticeInfo传入视频号id用于获取视频号直播预告id（noticeId），若当前没有可预约的直播预告，将返回失败。</p>
+<p>获取直播预告信息后，开发者可以通过wx.reserveChannelsLive唤起预约弹窗，用户可以进行预约操作。成功唤起弹窗即为接口调用成功，通过state可以获取用户具体操作行为：</p>
+<p>state = 1，正在直播中，用户点击“取消”拒绝前往直播
+state = 2，正在直播中，用户点击“允许”前往直播
+state = 3，预告已取消
+state = 4，直播已结束
+state = 5，用户此前未预约，在弹窗中未预约直播直接收起弹窗
+state = 6，用户此前未预约，在弹窗中预约了直播
+state = 7，用户此前已预约，在弹窗中取消了预约
+state = 8，用户此前已预约，直接收起弹窗
+state = 9，弹窗唤起前用户直接取消
+state = 10，直播预约已过期
+使用规范
+wx.getChannelsLiveInfo与wx.getChannelsLiveNoticeInfo会调用到微信后台系统资源，为了保护系统，开发者请遵守《接口调用频率规范》对接口做适度的频率限制，不能无节制地调用。
+平台将坚决打击诱导跳转视频号直播、诱导预约视频号直播等行为，使用此功能时请严格遵守《微信小程序平台运营规范》。
+注意事项
+该接口在开发版与体验版中均可调用。开发者在调试过程中，可以在视频号选择可见范围进行开播，方便测试。
+若小程序与视频号主体信息不一致，会返回100008错误码。
+wx.getChannelsLiveInfo与wx.getChannelsLiveNoticeInfo回调函数不继承用户点击事件，无法在wx.getChannelsLiveInfo的success回调中再调用wx.openChannelsLive。
+开发者工具暂未支持此能力，请先使用真机调试。</p>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>导航</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="总目录"
+             >索引</a></li>
+        <li class="right" >
+          <a href="../../../http-routingtable.html" title="微信小程序API"
+             >wxapi</a> |</li>
+        <li class="right" >
+          <a href="../updatable-message.html" title="动态消息"
+             >下一页</a> |</li>
+        <li class="right" >
+          <a href="channels-activity.html" title="视频号视频"
+             >上一页</a> |</li>
+<li><a href="../../../index.html">主页</a>&#160;|</li>
+<li><a href="../../../contents.html">文档</a> &#187;</li>
+
+          <li class="nav-item nav-item-1"><a href="../../index.html" >框架</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../index.html" >开放能力</a> &#187;</li>
+          <li class="nav-item nav-item-3"><a href="index.html" >视频号</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">视频号直播</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; 版权所有 2019, Wxadev Docs.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.1.
+    </div>
+  </body>
+</html>

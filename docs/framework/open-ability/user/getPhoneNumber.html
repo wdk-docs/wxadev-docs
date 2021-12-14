@@ -1,0 +1,262 @@
+
+<!DOCTYPE html>
+
+<html lang="zh_CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>获取手机号 &#8212; wxadev v2.21.0 文档</title>
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx13.css" />
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/translations.js"></script>
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="在 wxadev v2.21.0 文档 中搜索"
+          href="../../../_static/opensearch.xml"/>
+
+    <link rel="index" title="索引" href="../../../genindex.html" />
+    <link rel="search" title="搜索" href="../../../search.html" />
+<link rel="canonical" href="http://www.sphinx-doc.org/en/master/framework/open-ability/user/getPhoneNumber.html" />
+
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet" type="text/css" />
+ 
+<style type="text/css">
+  table.right { float: right; margin-left: 20px; }
+  table.right td { border: 1px solid #ccc; }
+  
+</style>
+<script type="text/javascript">
+  // intelligent scrolling of the sidebar content
+  $(window).scroll(function() {
+    var sb = $('.sphinxsidebarwrapper');
+    var win = $(window);
+    var sbh = sb.height();
+    var offset = $('.sphinxsidebar').position()['top'];
+    var wintop = win.scrollTop();
+    var winbot = wintop + win.innerHeight();
+    var curtop = sb.position()['top'];
+    var curbot = curtop + sbh;
+    // does sidebar fit in window?
+    if (sbh < win.innerHeight()) {
+      // yes: easy case -- always keep at the top
+      sb.css('top', $u.min([$u.max([0, wintop - offset - 10]), $(document).height() - sbh - 200]));
+    } else {
+      // no: only scroll if top/bottom edge of sidebar is at
+      // top/bottom edge of window
+      if (curtop > wintop && curbot > winbot) {
+        sb.css('top', $u.max([wintop - offset - 10, 0]));
+      } else if (curtop < wintop && curbot < winbot) {
+        sb.css('top', $u.min([winbot - sbh - offset - 20, $(document).height() - sbh - 200]));
+      }
+    }
+  });
+</script> 
+  </head><body>
+<div class="pageheader">
+  <ul>
+    <li><a href="../../../index.html">主页</a></li>
+    <li><a href="../../../basic/index.html">入门</a></li>
+    <li><a href="../../index.html">框架</a></li>
+    <li><a href="../../../component/index.html">组件</a></li>
+    <li><a href="../../../api/index.html">API</a></li>
+    <li><a href="../../../api-backend/index.html">服务端</a></li>
+    <li><a href="../../../reference/index.html">参考</a></li>
+    <li><a href="../../../contents.html">目录</a></li>
+  </ul>
+  <div>
+    <a href="../../../index.html">
+      <img src="../../../_static/wxaheader.png" alt="wxa" />
+    </a>
+  </div>
+</div>
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>导航</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="总目录"
+             accesskey="I">索引</a></li>
+        <li class="right" >
+          <a href="../../../http-routingtable.html" title="微信小程序API"
+             >wxapi</a> |</li>
+<li><a href="../../../index.html">主页</a>&#160;|</li>
+<li><a href="../../../contents.html">文档</a> &#187;</li>
+
+        <li class="nav-item nav-item-this"><a href="">获取手机号</a></li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../../../contents.html">目录</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">获取手机号</a><ul>
+<li><a class="reference internal" href="#id2">使用方法</a></li>
+<li><a class="reference internal" href="#id3">代码示例</a></li>
+<li><a class="reference internal" href="#id4">返回参数说明</a></li>
+</ul>
+</li>
+</ul>
+
+  <div role="note" aria-label="source link">
+    <h3>本页</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../../_sources/framework/open-ability/user/getPhoneNumber.rst.txt"
+            rel="nofollow">显示源代码</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">快速搜索</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="转向" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="id1">
+<h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/getPhoneNumber.html">获取手机号</a><a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
+<p>获取微信用户绑定的手机号，需先调用 <a class="reference internal" href="../../../api/wx.login.html#wx.login" title="wx.login"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.login()</span></code></a> 接口。</p>
+<p>因为需要用户主动触发才能发起获取手机号接口，所以该功能不由 API 来调用，需用 <a class="reference internal" href="../../../component/button.html#button"><span class="std std-ref">&lt;button&gt;</span></a> 组件的点击来触发。</p>
+<div class="admonition attention">
+<p class="admonition-title">注意</p>
+<p>目前该接口针对非个人开发者，且完成了认证的小程序开放（不包含海外主体）。
+需谨慎使用，若用户举报较多或被发现在不必要场景下使用，微信有权永久回收该小程序的该接口权限。</p>
+</div>
+<section id="id2">
+<h2>使用方法<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<p>需要将 <a class="reference internal" href="../../../component/button.html#button"><span class="std std-ref">&lt;button&gt;</span></a> 组件 <code class="docutils literal notranslate"><span class="pre">open-type</span></code> 的值设置为 <code class="docutils literal notranslate"><span class="pre">getPhoneNumber</span></code> ，当用户点击并同意之后，
+可以通过 bindgetphonenumber 事件回调获取到微信服务器返回的加密数据，
+然后在第三方服务端结合 session_key 以及 app_id 进行解密获取手机号。</p>
+<div class="admonition attention">
+<p class="admonition-title">注意</p>
+<p>在回调中调用 <a class="reference internal" href="../../../api/wx.login.html#wx.login" title="wx.login"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.login()</span></code></a> 登录，可能会刷新登录态。
+此时服务器使用 code 换取的 sessionKey 不是加密时使用的 sessionKey，
+导致解密失败。建议开发者提前进行 login；或者在回调中先使用 checkSession 进行登录态检查，避免 login 刷新登录态。</p>
+</div>
+</section>
+<section id="id3">
+<h2>代码示例<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">button</span> <span class="na">open-type</span><span class="o">=</span><span class="s">&quot;getPhoneNumber&quot;</span> <span class="na">bindgetphonenumber</span><span class="o">=</span><span class="s">&quot;getPhoneNumber&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="nx">Page</span><span class="p">({</span>
+  <span class="nx">getPhoneNumber</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">e</span><span class="p">.</span><span class="nx">detail</span><span class="p">.</span><span class="nx">errMsg</span><span class="p">)</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">e</span><span class="p">.</span><span class="nx">detail</span><span class="p">.</span><span class="nx">iv</span><span class="p">)</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">e</span><span class="p">.</span><span class="nx">detail</span><span class="p">.</span><span class="nx">encryptedData</span><span class="p">)</span>
+  <span class="p">}</span>
+<span class="p">})</span>
+</pre></div>
+</div>
+</section>
+<section id="id4">
+<h2>返回参数说明<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h2>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 17%" />
+<col style="width: 9%" />
+<col style="width: 74%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>参数</p></th>
+<th class="head"><p>类型</p></th>
+<th class="head"><p>说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>encryptedData</p></td>
+<td><p>String</p></td>
+<td><p>包括敏感数据在内的完整用户信息的加密数据，详细见加密数据解密算法</p></td>
+</tr>
+<tr class="row-odd"><td><p>iv</p></td>
+<td><p>String</p></td>
+<td><p>加密算法的初始向量，详细见加密数据解密算法</p></td>
+</tr>
+<tr class="row-even"><td><p>encryptedData</p></td>
+<td></td>
+<td><p>解密后为以下 JSON 结构，详见加密数据解密算法</p></td>
+</tr>
+</tbody>
+</table>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="s2">&quot;phoneNumber&quot;</span><span class="o">:</span> <span class="s2">&quot;13580006666&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;purePhoneNumber&quot;</span><span class="o">:</span> <span class="s2">&quot;13580006666&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;countryCode&quot;</span><span class="o">:</span> <span class="s2">&quot;86&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;watermark&quot;</span><span class="o">:</span> <span class="p">{</span>
+    <span class="s2">&quot;appid&quot;</span><span class="o">:</span> <span class="s2">&quot;APPID&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;timestamp&quot;</span><span class="o">:</span> <span class="nx">TIMESTAMP</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 26%" />
+<col style="width: 12%" />
+<col style="width: 62%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>参数</p></th>
+<th class="head"><p>类型</p></th>
+<th class="head"><p>说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>phoneNumber</p></td>
+<td><p>String</p></td>
+<td><p>用户绑定的手机号（国外手机号会有区号）</p></td>
+</tr>
+<tr class="row-odd"><td><p>purePhoneNumber</p></td>
+<td><p>String</p></td>
+<td><p>没有区号的手机号</p></td>
+</tr>
+<tr class="row-even"><td><p>countryCode</p></td>
+<td><p>String</p></td>
+<td><p>区号</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>导航</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="总目录"
+             >索引</a></li>
+        <li class="right" >
+          <a href="../../../http-routingtable.html" title="微信小程序API"
+             >wxapi</a> |</li>
+<li><a href="../../../index.html">主页</a>&#160;|</li>
+<li><a href="../../../contents.html">文档</a> &#187;</li>
+
+        <li class="nav-item nav-item-this"><a href="">获取手机号</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; 版权所有 2019, Wxadev Docs.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.1.
+    </div>
+  </body>
+</html>
