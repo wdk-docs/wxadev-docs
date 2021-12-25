@@ -1,0 +1,186 @@
+
+<!DOCTYPE html>
+
+<html lang="zh_CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>auth.code2Session &#8212; wxadev v2.21.0 文档</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx13.css" />
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/translations.js"></script>
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="在 wxadev v2.21.0 文档 中搜索"
+          href="../../_static/opensearch.xml"/>
+
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="搜索" href="../../search.html" />
+<link rel="canonical" href="http://www.sphinx-doc.org/en/master/api-backend/auth/auth.code2Session.html" />
+
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet" type="text/css" />
+ 
+<style type="text/css">
+  table.right { float: right; margin-left: 20px; }
+  table.right td { border: 1px solid #ccc; }
+  
+</style>
+<script type="text/javascript">
+  // intelligent scrolling of the sidebar content
+  $(window).scroll(function() {
+    var sb = $('.sphinxsidebarwrapper');
+    var win = $(window);
+    var sbh = sb.height();
+    var offset = $('.sphinxsidebar').position()['top'];
+    var wintop = win.scrollTop();
+    var winbot = wintop + win.innerHeight();
+    var curtop = sb.position()['top'];
+    var curbot = curtop + sbh;
+    // does sidebar fit in window?
+    if (sbh < win.innerHeight()) {
+      // yes: easy case -- always keep at the top
+      sb.css('top', $u.min([$u.max([0, wintop - offset - 10]), $(document).height() - sbh - 200]));
+    } else {
+      // no: only scroll if top/bottom edge of sidebar is at
+      // top/bottom edge of window
+      if (curtop > wintop && curbot > winbot) {
+        sb.css('top', $u.max([wintop - offset - 10, 0]));
+      } else if (curtop < wintop && curbot < winbot) {
+        sb.css('top', $u.min([winbot - sbh - offset - 20, $(document).height() - sbh - 200]));
+      }
+    }
+  });
+</script> 
+  </head><body>
+<div class="pageheader">
+  <ul>
+    <li><a href="../../index.html">主页</a></li>
+    <li><a href="../../basic/index.html">入门</a></li>
+    <li><a href="../../framework/index.html">框架</a></li>
+    <li><a href="../../component/index.html">组件</a></li>
+    <li><a href="../../api/index.html">API</a></li>
+    <li><a href="../index.html">服务端</a></li>
+    <li><a href="../../reference/index.html">参考</a></li>
+    <li><a href="../../contents.html">目录</a></li>
+  </ul>
+  <div>
+    <a href="../../index.html">
+      <img src="../../_static/wxaheader.png" alt="wxa" />
+    </a>
+  </div>
+</div>
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>导航</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="总目录"
+             accesskey="I">索引</a></li>
+        <li class="right" >
+          <a href="../../http-routingtable.html" title="微信小程序API"
+             >wxapi</a> |</li>
+<li><a href="../../index.html">主页</a>&#160;|</li>
+<li><a href="../../contents.html">文档</a> &#187;</li>
+
+        <li class="nav-item nav-item-this"><a href="">auth.code2Session</a></li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div role="note" aria-label="source link">
+    <h3>本页</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../_sources/api-backend/auth/auth.code2Session.rst.txt"
+            rel="nofollow">显示源代码</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">快速搜索</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="转向" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="auth-code2session">
+<span id="id1"></span><h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/api-backend/auth.code2Session.html">auth.code2Session</a><a class="headerlink" href="#auth-code2session" title="永久链接至标题">¶</a></h1>
+<p>本接口应在服务器端调用，详细说明参见服务端API。</p>
+<p>请求地址 <a class="reference internal" href="../../glossary.html#term-api_sns"><span class="xref std std-term">api_sns</span></a></p>
+<dl class="http get">
+<dt class="sig sig-object http" id="get-jscode2session">
+<span class="sig-name descname"><span class="pre">GET</span> </span><span class="sig-name descname"><span class="pre">jscode2session</span></span><a class="headerlink" href="#get-jscode2session" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Synopsis</dt>
+<dd class="field-odd"><p>登录凭证校验。通过 wx.login() 接口获得临时登录凭证 code 后传到开发者服务器调用此接口完成登录流程。更多使用方法详见 小程序登录。</p>
+</dd>
+<dt class="field-even">Parameters</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>appid</strong> (<em>string</em>) – 是 小程序 appId</p></li>
+<li><p><strong>secret</strong> (<em>string</em>) – 是 小程序 appSecret</p></li>
+<li><p><strong>js_code</strong> (<em>string</em>) – 是 登录时获取的 code</p></li>
+<li><p><strong>grant_type</strong> (<em>string</em>) – 是 授权类型，此处只需填写 authorization_code</p></li>
+</ul>
+</dd>
+<dt class="field-odd">Response JSON Object</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>openid</strong> (<em>string</em>) – 用户唯一标识</p></li>
+<li><p><strong>session_key</strong> (<em>string</em>) – 会话密钥</p></li>
+<li><p><strong>unionid</strong> (<em>string</em>) – 用户在开放平台的唯一标识符，在满足 UnionID 下发条件的情况下会返回，详见 UnionID 机制说明。</p></li>
+<li><p><strong>errcode</strong> (<em>number</em>) – <p>错误码</p>
+<ul>
+<li><p><em>-1</em> 系统繁忙，此时请开发者稍候再试</p></li>
+<li><p><em>0</em> 请求成功</p></li>
+<li><p><em>40029</em> code 无效</p></li>
+<li><p><em>45011</em> 频率限制，每个用户每分钟100次</p></li>
+</ul>
+</p></li>
+<li><p><strong>errmsg</strong> (<em>string</em>) – 错误信息</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>导航</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="总目录"
+             >索引</a></li>
+        <li class="right" >
+          <a href="../../http-routingtable.html" title="微信小程序API"
+             >wxapi</a> |</li>
+<li><a href="../../index.html">主页</a>&#160;|</li>
+<li><a href="../../contents.html">文档</a> &#187;</li>
+
+        <li class="nav-item nav-item-this"><a href="">auth.code2Session</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; 版权所有 2019, Wxadev Docs.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.1.
+    </div>
+  </body>
+</html>

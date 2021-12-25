@@ -1,0 +1,276 @@
+
+<!DOCTYPE html>
+
+<html lang="zh_CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>wx.requestSubscribeMessage &#8212; wxadev v2.21.0 文档</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx13.css" />
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/translations.js"></script>
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="在 wxadev v2.21.0 文档 中搜索"
+          href="../../_static/opensearch.xml"/>
+
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="搜索" href="../../search.html" />
+<link rel="canonical" href="http://www.sphinx-doc.org/en/master/api/subscribe-message/wx.requestSubscribeMessage.html" />
+
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet" type="text/css" />
+ 
+<style type="text/css">
+  table.right { float: right; margin-left: 20px; }
+  table.right td { border: 1px solid #ccc; }
+  
+</style>
+<script type="text/javascript">
+  // intelligent scrolling of the sidebar content
+  $(window).scroll(function() {
+    var sb = $('.sphinxsidebarwrapper');
+    var win = $(window);
+    var sbh = sb.height();
+    var offset = $('.sphinxsidebar').position()['top'];
+    var wintop = win.scrollTop();
+    var winbot = wintop + win.innerHeight();
+    var curtop = sb.position()['top'];
+    var curbot = curtop + sbh;
+    // does sidebar fit in window?
+    if (sbh < win.innerHeight()) {
+      // yes: easy case -- always keep at the top
+      sb.css('top', $u.min([$u.max([0, wintop - offset - 10]), $(document).height() - sbh - 200]));
+    } else {
+      // no: only scroll if top/bottom edge of sidebar is at
+      // top/bottom edge of window
+      if (curtop > wintop && curbot > winbot) {
+        sb.css('top', $u.max([wintop - offset - 10, 0]));
+      } else if (curtop < wintop && curbot < winbot) {
+        sb.css('top', $u.min([winbot - sbh - offset - 20, $(document).height() - sbh - 200]));
+      }
+    }
+  });
+</script> 
+  </head><body>
+<div class="pageheader">
+  <ul>
+    <li><a href="../../index.html">主页</a></li>
+    <li><a href="../../basic/index.html">入门</a></li>
+    <li><a href="../../framework/index.html">框架</a></li>
+    <li><a href="../../component/index.html">组件</a></li>
+    <li><a href="../index.html">API</a></li>
+    <li><a href="../../api-backend/index.html">服务端</a></li>
+    <li><a href="../../reference/index.html">参考</a></li>
+    <li><a href="../../contents.html">目录</a></li>
+  </ul>
+  <div>
+    <a href="../../index.html">
+      <img src="../../_static/wxaheader.png" alt="wxa" />
+    </a>
+  </div>
+</div>
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>导航</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="总目录"
+             accesskey="I">索引</a></li>
+        <li class="right" >
+          <a href="../../http-routingtable.html" title="微信小程序API"
+             >wxapi</a> |</li>
+<li><a href="../../index.html">主页</a>&#160;|</li>
+<li><a href="../../contents.html">文档</a> &#187;</li>
+
+        <li class="nav-item nav-item-this"><a href="">wx.requestSubscribeMessage</a></li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div role="note" aria-label="source link">
+    <h3>本页</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../_sources/api/subscribe-message/wx.requestSubscribeMessage.rst.txt"
+            rel="nofollow">显示源代码</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">快速搜索</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="转向" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="wx-requestsubscribemessage">
+<h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/api/wx.requestSubscribeMessage.html">wx.requestSubscribeMessage</a><a class="headerlink" href="#wx-requestsubscribemessage" title="永久链接至标题">¶</a></h1>
+<dl class="js function">
+<dt class="sig sig-object js" id="wx.requestSubscribeMessage">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">wx</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">requestSubscribeMessage</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">{tmplIds[,success][,fail][,complete]}</span></em><span class="sig-paren">)</span><a class="headerlink" href="#wx.requestSubscribeMessage" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list">
+<dt class="field-odd">Label</dt>
+<dd class="field-odd"><p>调起客户端小程序订阅消息界面，返回用户订阅消息的操作结果。
+当用户勾选了订阅面板中的“总是保持以上选择，不再询问”时，模板消息会被添加到用户的小程序设置页，
+通过 wx.getSetting 接口可获取用户对相关模板消息的订阅状态。</p>
+<p>以 Promise 风格 调用：支持</p>
+<p>小程序插件：不支持</p>
+<p>微信 Windows 版：支持</p>
+<p>微信 Mac 版：支持</p>
+</dd>
+<dt class="field-even">Note</dt>
+<dd class="field-even"><p>注意事项</p>
+<ul class="simple">
+<li><p>一次性模板 id 和永久模板 id 不可同时使用。</p></li>
+<li><p>低版本基础库2.4.4~2.8.3 已支持订阅消息接口调用，仅支持传入一个一次性 tmplId / 永久 tmplId。</p></li>
+<li><p>2.8.2 版本开始，用户发生点击行为或者发起支付回调后，才可以调起订阅消息界面。</p></li>
+<li><p>2.10.0 版本开始，开发版和体验版小程序将禁止使用模板消息 formId。</p></li>
+<li><p>一次授权调用里，每个tmplId对应的模板标题不能存在相同的，若出现相同的，只保留一个。</p></li>
+<li><p>2.10.0 版本开始，支持订阅语音消息提醒，详情</p></li>
+</ul>
+</dd>
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>tmplIds</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">Array()</span></code></span>) – 需要订阅的消息模板的id的集合，一次调用最多可订阅3条消息（注意：iOS客户端7.0.6版本、Android客户端7.0.7版本之后的一次性订阅/长期订阅才支持多个模板消息，iOS客户端7.0.5版本、Android客户端7.0.6版本之前的一次订阅只支持一个模板消息）消息模板id在[微信公众平台(mp.weixin.qq.com)-功能-订阅消息]中配置。每个tmplId对应的模板标题需要不相同，否则会被过滤。</p></li>
+<li><p><strong>success({errMsg,TEMPLATE_ID})</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">function()</span></code></span>) – <p>接口调用成功的回调函数</p>
+<ul>
+<li><p><strong>errMsg**|(**String</strong>)|接口调用成功时errMsg值为’requestSubscribeMessage:ok’</p></li>
+<li><p><strong>TEMPLATE_ID**|(**String</strong>)|[TEMPLATE_ID]是动态的键，即模板id，值包括</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><strong>accept</strong> 表示用户同意订阅该条id对应的模板消息，</p></li>
+<li><p><strong>reject</strong> 表示用户拒绝订阅该条id对应的模板消息，</p></li>
+<li><p><strong>ban</strong> 表示已被后台封禁，</p></li>
+<li><p><strong>filter</strong> 表示该模板因为模板标题同名被后台过滤</p></li>
+</ul>
+<p>例如</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span>{
+  errMsg: &quot;requestSubscribeMessage:ok&quot;,
+  zun-LzcQyW-edafCVvzPkK4de2Rllr1fFpw2A_x0oXE: &quot;accept&quot;
+}
+</pre></div>
+</div>
+<p>表示用户同意订阅 <cite>zun-LzcQyW-edafCVvzPkK4de2Rllr1fFpw2A_x0oXE</cite> 这条消息</p>
+</div></blockquote>
+</li>
+</ul>
+</p></li>
+<li><p><strong>fail({errMsg,errCode})</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">function()</span></code></span>) – <p>否|接口调用失败的回调函数</p>
+<ul>
+<li><p><a href="#id1"><span class="problematic" id="id2">**</span></a>errMsg**|(<em>String</em>)|接口调用失败错误信息</p></li>
+<li><p><a href="#id3"><span class="problematic" id="id4">**</span></a>errCode**|(<em>Number</em>)|接口调用失败错误码</p></li>
+</ul>
+</p></li>
+<li><p><strong>complete</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">function()</span></code></span>) – 否|接口调用结束的回调函数（调用成功、失败都会执行）</p></li>
+</ul>
+</dd>
+<dt class="field-even">示例</dt>
+<dd class="field-even"><div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="nx">wx</span><span class="p">.</span><span class="nx">requestSubscribeMessage</span><span class="p">({</span>
+  <span class="nx">tmplIds</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;&#39;</span><span class="p">],</span>
+  <span class="nx">success</span> <span class="p">(</span><span class="nx">res</span><span class="p">)</span> <span class="p">{</span> <span class="p">}</span>
+<span class="p">})</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</dd></dl>
+
+<p>错误码</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 7%" />
+<col style="width: 43%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>errCode</p></th>
+<th class="head"><p>errMsg</p></th>
+<th class="head"><p>说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>10001</p></td>
+<td><p>TmplIds can’t be empty</p></td>
+<td><p>参数传空了</p></td>
+</tr>
+<tr class="row-odd"><td><p>10002</p></td>
+<td><p>Request list fail</p></td>
+<td><p>网络问题，请求消息列表失败</p></td>
+</tr>
+<tr class="row-even"><td><p>10003</p></td>
+<td><p>Request subscribe fail</p></td>
+<td><p>网络问题，订阅请求发送失败</p></td>
+</tr>
+<tr class="row-odd"><td><p>10004</p></td>
+<td><p>Invalid template id</p></td>
+<td><p>参数类型错误</p></td>
+</tr>
+<tr class="row-even"><td><p>10005</p></td>
+<td><p>Cannot show subscribe message UI</p></td>
+<td><p>无法展示 UI，一般是小程序这个时候退后台了导致的</p></td>
+</tr>
+<tr class="row-odd"><td><p>20001</p></td>
+<td><p>No template data return, verify the template id exist</p></td>
+<td><p>没有模板数据，一般是模板 ID 不存在 或者和模板类型不对应 导致的</p></td>
+</tr>
+<tr class="row-even"><td><p>20002</p></td>
+<td><p>Templates type must be same</p></td>
+<td><p>模板消息类型 既有一次性的又有永久的</p></td>
+</tr>
+<tr class="row-odd"><td><p>20003</p></td>
+<td><p>Templates count out of max bounds</p></td>
+<td><p>模板消息数量超过上限</p></td>
+</tr>
+<tr class="row-even"><td><p>20004</p></td>
+<td><p>The main switch is switched off</p></td>
+<td><p>用户关闭了主开关，无法进行订阅</p></td>
+</tr>
+<tr class="row-odd"><td><p>20005</p></td>
+<td><p>This mini program was banned from subscribing messages</p></td>
+<td><p>小程序被禁封</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>导航</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="总目录"
+             >索引</a></li>
+        <li class="right" >
+          <a href="../../http-routingtable.html" title="微信小程序API"
+             >wxapi</a> |</li>
+<li><a href="../../index.html">主页</a>&#160;|</li>
+<li><a href="../../contents.html">文档</a> &#187;</li>
+
+        <li class="nav-item nav-item-this"><a href="">wx.requestSubscribeMessage</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; 版权所有 2019, Wxadev Docs.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.1.
+    </div>
+  </body>
+</html>

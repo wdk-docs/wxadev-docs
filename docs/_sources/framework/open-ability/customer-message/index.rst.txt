@@ -4,7 +4,7 @@
 版本:|release| 更新:|today|
 
 .. toctree::
-   :maxdepth: 3
+   :maxdepth: 2
    :glob:
 
    customer-message

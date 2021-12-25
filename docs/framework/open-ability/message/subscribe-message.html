@@ -1,0 +1,493 @@
+
+<!DOCTYPE html>
+
+<html lang="zh_CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>小程序订阅消息 &#8212; wxadev v2.21.0 文档</title>
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx13.css" />
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/translations.js"></script>
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="在 wxadev v2.21.0 文档 中搜索"
+          href="../../../_static/opensearch.xml"/>
+
+    <link rel="index" title="索引" href="../../../genindex.html" />
+    <link rel="search" title="搜索" href="../../../search.html" />
+    <link rel="next" title="模板消息(已作废)" href="template-message.html" />
+    <link rel="prev" title="消息" href="index.html" />
+<link rel="canonical" href="http://www.sphinx-doc.org/en/master/framework/open-ability/message/subscribe-message.html" />
+
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet" type="text/css" />
+ 
+<style type="text/css">
+  table.right { float: right; margin-left: 20px; }
+  table.right td { border: 1px solid #ccc; }
+  
+</style>
+<script type="text/javascript">
+  // intelligent scrolling of the sidebar content
+  $(window).scroll(function() {
+    var sb = $('.sphinxsidebarwrapper');
+    var win = $(window);
+    var sbh = sb.height();
+    var offset = $('.sphinxsidebar').position()['top'];
+    var wintop = win.scrollTop();
+    var winbot = wintop + win.innerHeight();
+    var curtop = sb.position()['top'];
+    var curbot = curtop + sbh;
+    // does sidebar fit in window?
+    if (sbh < win.innerHeight()) {
+      // yes: easy case -- always keep at the top
+      sb.css('top', $u.min([$u.max([0, wintop - offset - 10]), $(document).height() - sbh - 200]));
+    } else {
+      // no: only scroll if top/bottom edge of sidebar is at
+      // top/bottom edge of window
+      if (curtop > wintop && curbot > winbot) {
+        sb.css('top', $u.max([wintop - offset - 10, 0]));
+      } else if (curtop < wintop && curbot < winbot) {
+        sb.css('top', $u.min([winbot - sbh - offset - 20, $(document).height() - sbh - 200]));
+      }
+    }
+  });
+</script> 
+  </head><body>
+<div class="pageheader">
+  <ul>
+    <li><a href="../../../index.html">主页</a></li>
+    <li><a href="../../../basic/index.html">入门</a></li>
+    <li><a href="../../index.html">框架</a></li>
+    <li><a href="../../../component/index.html">组件</a></li>
+    <li><a href="../../../api/index.html">API</a></li>
+    <li><a href="../../../api-backend/index.html">服务端</a></li>
+    <li><a href="../../../reference/index.html">参考</a></li>
+    <li><a href="../../../contents.html">目录</a></li>
+  </ul>
+  <div>
+    <a href="../../../index.html">
+      <img src="../../../_static/wxaheader.png" alt="wxa" />
+    </a>
+  </div>
+</div>
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>导航</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="总目录"
+             accesskey="I">索引</a></li>
+        <li class="right" >
+          <a href="../../../http-routingtable.html" title="微信小程序API"
+             >wxapi</a> |</li>
+        <li class="right" >
+          <a href="template-message.html" title="模板消息(已作废)"
+             accesskey="N">下一页</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="消息"
+             accesskey="P">上一页</a> |</li>
+<li><a href="../../../index.html">主页</a>&#160;|</li>
+<li><a href="../../../contents.html">文档</a> &#187;</li>
+
+          <li class="nav-item nav-item-1"><a href="../../index.html" >框架</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../index.html" >开放能力</a> &#187;</li>
+          <li class="nav-item nav-item-3"><a href="index.html" accesskey="U">消息</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">小程序订阅消息</a></li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../../../contents.html">目录</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">小程序订阅消息</a><ul>
+<li><a class="reference internal" href="#id2">功能介绍</a></li>
+<li><a class="reference internal" href="#id3">消息类型</a></li>
+<li><a class="reference internal" href="#id4">订阅消息语音提醒</a></li>
+<li><a class="reference internal" href="#id5">使用说明</a><ul>
+<li><a class="reference internal" href="#id">步骤一：获取模板 ID</a></li>
+<li><a class="reference internal" href="#id6">步骤二：获取下发权限</a></li>
+<li><a class="reference internal" href="#id7">步骤三：调用接口下发订阅消息</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id8">注意事项</a></li>
+<li><a class="reference internal" href="#id9">订阅消息事件推送</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>上一个主题</h4>
+  <p class="topless"><a href="index.html"
+                        title="上一章">消息</a></p>
+  <h4>下一个主题</h4>
+  <p class="topless"><a href="template-message.html"
+                        title="下一章">模板消息(已作废)</a></p>
+  <div role="note" aria-label="source link">
+    <h3>本页</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../../_sources/framework/open-ability/message/subscribe-message.rst.txt"
+            rel="nofollow">显示源代码</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">快速搜索</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="转向" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="id1">
+<h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/subscribe-message.html">小程序订阅消息</a><a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
+<section id="id2">
+<h2>功能介绍<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<p>消息能力是小程序能力中的重要组成，我们为开发者提供了订阅消息能力，以便实现服务的闭环和更优的体验。</p>
+<ul class="simple">
+<li><p>订阅消息推送位置：服务通知</p></li>
+<li><p>订阅消息下发条件：用户自主订阅</p></li>
+<li><p>订阅消息卡片跳转能力：点击查看详情可跳转至该小程序的页面</p></li>
+</ul>
+<img alt="https://res.wx.qq.com/wxdoc/dist/assets/img/request-subscribe-message.3851318e.jpg" src="https://res.wx.qq.com/wxdoc/dist/assets/img/request-subscribe-message.3851318e.jpg" />
+</section>
+<section id="id3">
+<h2>消息类型<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
+<ol class="arabic">
+<li><p>一次性订阅消息</p>
+<p>一次性订阅消息用于解决用户使用小程序后，后续服务环节的通知问题。用户自主订阅后，
+开发者可不限时间地下发一条对应的服务消息；每条消息可单独订阅或退订。</p>
+</li>
+<li><p>长期订阅消息</p>
+<p>一次性订阅消息可满足小程序的大部分服务场景需求，但线下公共服务领域存在一次性订阅无法满足的场景，
+如航班延误，需根据航班实时动态来多次发送消息提醒。
+为便于服务，我们提供了长期性订阅消息，用户订阅一次后，开发者可长期下发多条消息。</p>
+<p>目前长期性订阅消息仅向政务民生、医疗、交通、金融、教育等线下公共服务开放，后期将逐步支持到其他线下公共服务业务。</p>
+</li>
+</ol>
+</section>
+<section id="id4">
+<h2>订阅消息语音提醒<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h2>
+<p>当前小程序订阅消息通知与微信消息的通知的提示音是一样的，对于部分订阅消息模板，增加语音提醒能力，播报预料部分字段支持开发者定义。</p>
+<p>当开发者调用 <a class="reference internal" href="../../../api/subscribe-message/wx.requestSubscribeMessage.html#wx.requestSubscribeMessage" title="wx.requestSubscribeMessage"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.requestSubscribeMessage()</span></code></a> 时仅订阅1条消息且该模板支持开启语音提醒，用户在订阅时可以选择开启语音提醒。
+开启后将在接收订阅消息时会同步播报语音提醒。当用户开启了语音提醒，该模板的订阅状态为’acceptWithAudio’。</p>
+<p>订阅弹窗样式如下：</p>
+<img alt="https://res.wx.qq.com/wxdoc/dist/assets/img/request-subscribe-message-with-audio.477c085f.png" src="https://res.wx.qq.com/wxdoc/dist/assets/img/request-subscribe-message-with-audio.477c085f.png" />
+<p>当前支持开启语音提醒的模板及播报语料如下：</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 32%" />
+<col style="width: 23%" />
+<col style="width: 14%" />
+<col style="width: 32%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>标题</p></th>
+<th class="head"><p>类型</p></th>
+<th class="head"><p>类目</p></th>
+<th class="head"><p>播报语料</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>收款到账通知</p></td>
+<td><p>长期订阅</p></td>
+<td><p>银行</p></td>
+<td><p>小程序收款元</p></td>
+</tr>
+</tbody>
+</table>
+<p>以下情况会导致语音提醒无法播报：</p>
+<ol class="arabic simple">
+<li><p>用户将服务通知设置为免打扰</p></li>
+<li><p>用户开启了手机静音模式或手机音量过低</p></li>
+<li><p>用户未打开微信新消息通知，可引导用户前往微信-“我”-“设置”-“新消息通知”中打开</p></li>
+<li><p>用户未打开系统对微信的通知</p></li>
+<li><p>用户开启了低电量模式</p></li>
+<li><p>用户版本过低：需要iOS 8.0.6与安卓8.0.3及以上</p></li>
+</ol>
+</section>
+<section id="id5">
+<h2>使用说明<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h2>
+<section id="id">
+<h3>步骤一：获取模板 ID<a class="headerlink" href="#id" title="永久链接至标题">¶</a></h3>
+<p>在微信公众平台手动配置获取模板 ID：
+登录 <a class="reference external" href="https://mp.weixin.qq.com">https://mp.weixin.qq.com</a> 获取模板，如果没有合适的模板，可以申请添加新模板，审核通过后可使用。</p>
+<img alt="https://res.wx.qq.com/wxdoc/dist/assets/img/subscribe-message.b562750a.jpg" src="https://res.wx.qq.com/wxdoc/dist/assets/img/subscribe-message.b562750a.jpg" />
+</section>
+<section id="id6">
+<h3>步骤二：获取下发权限<a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h3>
+<p>详见小程序端消息订阅接口 <a class="reference internal" href="../../../api/subscribe-message/wx.requestSubscribeMessage.html#wx.requestSubscribeMessage" title="wx.requestSubscribeMessage"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.requestSubscribeMessage()</span></code></a></p>
+</section>
+<section id="id7">
+<h3>步骤三：调用接口下发订阅消息<a class="headerlink" href="#id7" title="永久链接至标题">¶</a></h3>
+<p>详见服务端消息发送接口 <code class="xref js js-func docutils literal notranslate"><span class="pre">subscribeMessage.send()</span></code></p>
+</section>
+</section>
+<section id="id8">
+<h2>注意事项<a class="headerlink" href="#id8" title="永久链接至标题">¶</a></h2>
+<p>用户勾选 “总是保持以上选择，不再询问” 之后，下次订阅调用 <a class="reference internal" href="../../../api/subscribe-message/wx.requestSubscribeMessage.html#wx.requestSubscribeMessage" title="wx.requestSubscribeMessage"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.requestSubscribeMessage()</span></code></a> 不会弹窗，
+保持之前的选择，修改选择需要打开小程序设置进行修改。</p>
+</section>
+<section id="id9">
+<h2>订阅消息事件推送<a class="headerlink" href="#id9" title="永久链接至标题">¶</a></h2>
+<ol class="arabic">
+<li><p>当用户触发订阅消息弹框后，用户的相关行为事件结果会推送至开发者所配置的服务器地址。</p>
+<p>XML格式示例</p>
+<div class="highlight-XML notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;xml&gt;</span>
+    <span class="nt">&lt;ToUserName&gt;</span><span class="cp">&lt;![CDATA[gh_123456789abc]]&gt;</span><span class="nt">&lt;/ToUserName&gt;</span>
+    <span class="nt">&lt;FromUserName&gt;</span><span class="cp">&lt;![CDATA[otFpruAK8D-E6EfStSYonYSBZ8_4]]&gt;</span><span class="nt">&lt;/FromUserName&gt;</span>
+    <span class="nt">&lt;CreateTime&gt;</span>1610969440<span class="nt">&lt;/CreateTime&gt;</span>
+    <span class="nt">&lt;MsgType&gt;</span><span class="cp">&lt;![CDATA[event]]&gt;</span><span class="nt">&lt;/MsgType&gt;</span>
+    <span class="nt">&lt;Event&gt;</span><span class="cp">&lt;![CDATA[subscribe_msg_popup_event]]&gt;</span><span class="nt">&lt;/Event&gt;</span>
+    <span class="nt">&lt;SubscribeMsgPopupEvent&gt;</span>
+        <span class="nt">&lt;List&gt;</span>
+            <span class="nt">&lt;TemplateId&gt;</span><span class="cp">&lt;![CDATA[VRR0UEO9VJOLs0MHlU0OilqX6MVFDwH3_3gz3Oc0NIc]]&gt;</span><span class="nt">&lt;/TemplateId&gt;</span>
+            <span class="nt">&lt;SubscribeStatusString&gt;</span><span class="cp">&lt;![CDATA[accept]]&gt;</span><span class="nt">&lt;/SubscribeStatusString&gt;</span>
+            <span class="nt">&lt;PopupScene&gt;</span>2<span class="nt">&lt;/PopupScene&gt;</span>
+        <span class="nt">&lt;/List&gt;</span>
+        <span class="nt">&lt;List&gt;</span>
+            <span class="nt">&lt;TemplateId&gt;</span><span class="cp">&lt;![CDATA[9nLIlbOQZC5Y89AZteFEux3WCXRRRG5Wfzkpssu4bLI]]&gt;</span><span class="nt">&lt;/TemplateId&gt;</span>
+            <span class="nt">&lt;SubscribeStatusString&gt;</span><span class="cp">&lt;![CDATA[reject]]&gt;</span><span class="nt">&lt;/SubscribeStatusString&gt;</span>
+            <span class="nt">&lt;PopupScene&gt;</span>2<span class="nt">&lt;/PopupScene&gt;</span>
+        <span class="nt">&lt;/List&gt;</span>
+    <span class="nt">&lt;/SubscribeMsgPopupEvent&gt;</span>
+<span class="nt">&lt;/xml&gt;</span>
+</pre></div>
+</div>
+<p>JSON 格式示例</p>
+<div class="highlight-JSON notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;ToUserName&quot;</span><span class="p">:</span> <span class="s2">&quot;gh_123456789abc&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;FromUserName&quot;</span><span class="p">:</span> <span class="s2">&quot;o7esq5OI1Uej6Xixw1lA2H7XDVbc&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;CreateTime&quot;</span><span class="p">:</span> <span class="s2">&quot;1620973045&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;MsgType&quot;</span><span class="p">:</span> <span class="s2">&quot;event&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;Event&quot;</span><span class="p">:</span> <span class="s2">&quot;subscribe_msg_popup_event&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;SubscribeMsgPopupEvent&quot;</span><span class="p">:</span> <span class="p">[</span>   <span class="p">{</span>
+        <span class="nt">&quot;TemplateId&quot;</span><span class="p">:</span> <span class="s2">&quot;hD-ixGOhYmUfjOnI8MCzQMPshzGVeux_2vzyvQu7O68&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;SubscribeStatusString&quot;</span><span class="p">:</span> <span class="s2">&quot;accept&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;PopupScene&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span>
+    <span class="p">}],</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>参数说明</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 39%" />
+<col style="width: 61%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>参数</p></th>
+<th class="head"><p>说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>ToUserName</p></td>
+<td><p>小程序帐号ID</p></td>
+</tr>
+<tr class="row-odd"><td><p>FromUserName</p></td>
+<td><p>用户openid</p></td>
+</tr>
+<tr class="row-even"><td><p>CreateTime</p></td>
+<td><p>时间戳</p></td>
+</tr>
+<tr class="row-odd"><td><p>TemplateId</p></td>
+<td><p>模板id（一次订阅可能有多个id）</p></td>
+</tr>
+<tr class="row-even"><td><p>SubscribeStatusString</p></td>
+<td><p>订阅结果（accept接收；reject拒收）</p></td>
+</tr>
+<tr class="row-odd"><td><p>PopupScene</p></td>
+<td><p>弹框场景，0代表在小程序页面内</p></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li><p><strong>当用户在手机端服务通知里消息卡片右上角“…”管理消息时，或者在小程序设置管理中的订阅消息管理页面内管理消息时，相应的行为事件会推送至开发者所配置的服务器地址。（目前只推送取消订阅的事件，即对消息设置“拒收”）</strong></p>
+<p>XML 格式示例</p>
+<div class="highlight-XML notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;xml&gt;</span>
+    <span class="nt">&lt;ToUserName&gt;</span><span class="cp">&lt;![CDATA[gh_123456789abc]]&gt;</span><span class="nt">&lt;/ToUserName&gt;</span>
+    <span class="nt">&lt;FromUserName&gt;</span><span class="cp">&lt;![CDATA[otFpruAK8D-E6EfStSYonYSBZ8_4]]&gt;</span><span class="nt">&lt;/FromUserName&gt;</span>
+    <span class="nt">&lt;CreateTime&gt;</span>1610969440<span class="nt">&lt;/CreateTime&gt;</span>
+    <span class="nt">&lt;MsgType&gt;</span><span class="cp">&lt;![CDATA[event]]&gt;</span><span class="nt">&lt;/MsgType&gt;</span>
+    <span class="nt">&lt;Event&gt;</span><span class="cp">&lt;![CDATA[subscribe_msg_change_event]]&gt;</span><span class="nt">&lt;/Event&gt;</span>
+    <span class="nt">&lt;SubscribeMsgChangeEvent&gt;</span>
+        <span class="nt">&lt;List&gt;</span>          <span class="nt">&lt;TemplateId&gt;</span><span class="cp">&lt;![CDATA[VRR0UEO9VJOLs0MHlU0OilqX6MVFDwH3_3gz3Oc0NIc]]&gt;</span><span class="nt">&lt;/TemplateId&gt;</span>
+            <span class="nt">&lt;SubscribeStatusString&gt;</span><span class="cp">&lt;![CDATA[reject]]&gt;</span><span class="nt">&lt;/SubscribeStatusString&gt;</span>
+        <span class="nt">&lt;/List&gt;</span>
+    <span class="nt">&lt;/SubscribeMsgChangeEvent&gt;</span>
+<span class="nt">&lt;/xml&gt;</span>
+</pre></div>
+</div>
+<p>JSON 格式示例</p>
+<div class="highlight-JSONv notranslate"><div class="highlight"><pre><span></span>{
+      &quot;ToUserName&quot;: &quot;gh_123456789abc&quot;,
+      &quot;FromUserName&quot;: &quot;o7esq5OI1Uej6Xixw1lA2H7XDVbc&quot;,
+      &quot;CreateTime&quot;: &quot;1610968440&quot;,
+      &quot;MsgType&quot;: &quot;event&quot;,
+      &quot;Event&quot;: &quot;subscribe_msg_change_event&quot;,
+      &quot;SubscribeMsgChangeEvent&quot;: [  {
+                &quot;TemplateId&quot;:&quot;BEwX0BOT3MqK3Uc5oTU3CGBqzjpndk2jzUf7VfExd8&quot;,
+                &quot;SubscribeStatusString&quot;: &quot;reject&quot;
+      }],
+}
+</pre></div>
+</div>
+<p>参数说明</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 42%" />
+<col style="width: 58%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>参数</p></th>
+<th class="head"><p>说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>ToUserName</p></td>
+<td><p>小程序帐号ID</p></td>
+</tr>
+<tr class="row-odd"><td><p>FromUserName</p></td>
+<td><p>用户openid</p></td>
+</tr>
+<tr class="row-even"><td><p>CreateTime</p></td>
+<td><p>时间戳</p></td>
+</tr>
+<tr class="row-odd"><td><p>TemplateId</p></td>
+<td><p>模板id（一次订阅可能有多个id）</p></td>
+</tr>
+<tr class="row-even"><td><p>SubscribeStatusString</p></td>
+<td><p>订阅结果（reject拒收）</p></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li><p><strong>调用订阅消息接口发送消息给用户的最终结果，会推送下发结果事件至开发者所配置的服务器地址。</strong></p>
+<p>XML格式示例</p>
+<div class="highlight-XML notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;xml&gt;</span>
+    <span class="nt">&lt;ToUserName&gt;</span><span class="cp">&lt;![CDATA[gh_123456789abc]]&gt;</span><span class="nt">&lt;/ToUserName&gt;</span>
+    <span class="nt">&lt;FromUserName&gt;</span><span class="cp">&lt;![CDATA[otFpruAK8D-E6EfStSYonYSBZ8_4]]&gt;</span><span class="nt">&lt;/FromUserName&gt;</span>
+    <span class="nt">&lt;CreateTime&gt;</span>1610969468<span class="nt">&lt;/CreateTime&gt;</span>
+    <span class="nt">&lt;MsgType&gt;</span><span class="cp">&lt;![CDATA[event]]&gt;</span><span class="nt">&lt;/MsgType&gt;</span>
+    <span class="nt">&lt;Event&gt;</span><span class="cp">&lt;![CDATA[subscribe_msg_sent_event]]&gt;</span><span class="nt">&lt;/Event&gt;</span>
+    <span class="nt">&lt;SubscribeMsgSentEvent&gt;</span>
+        <span class="nt">&lt;List&gt;</span>       <span class="nt">&lt;TemplateId&gt;</span><span class="cp">&lt;![CDATA[VRR0UEO9VJOLs0MHlU0OilqX6MVFDwH3_3gz3Oc0NIc]]&gt;</span><span class="nt">&lt;/TemplateId&gt;</span>
+            <span class="nt">&lt;MsgID&gt;</span>1700827132819554304<span class="nt">&lt;/MsgID&gt;</span>
+            <span class="nt">&lt;ErrorCode&gt;</span>0<span class="nt">&lt;/ErrorCode&gt;</span>
+            <span class="nt">&lt;ErrorStatus&gt;</span><span class="cp">&lt;![CDATA[success]]&gt;</span><span class="nt">&lt;/ErrorStatus&gt;</span>
+        <span class="nt">&lt;/List&gt;</span>
+    <span class="nt">&lt;/SubscribeMsgSentEvent&gt;</span>
+<span class="nt">&lt;/xml&gt;</span>
+</pre></div>
+</div>
+<p>JSON 格式示例</p>
+<div class="highlight-JSON notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;ToUserName&quot;</span><span class="p">:</span> <span class="s2">&quot;gh_123456789abc&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;FromUserName&quot;</span><span class="p">:</span> <span class="s2">&quot;o7esq5PHRGBQYmeNyfG064wEFVpQ&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;CreateTime&quot;</span><span class="p">:</span> <span class="s2">&quot;1620963428&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;MsgType&quot;</span><span class="p">:</span> <span class="s2">&quot;event&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;Event&quot;</span><span class="p">:</span> <span class="s2">&quot;subscribe_msg_sent_event&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;SubscribeMsgSentEvent&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;List&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;TemplateId&quot;</span><span class="p">:</span> <span class="s2">&quot;BEwX0BO-T3MqK3Uc5oTU3CGBqzjpndk2jzUf7VfExd8&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;MsgID&quot;</span><span class="p">:</span> <span class="s2">&quot;1864323726461255680&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;ErrorCode&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;ErrorStatus&quot;</span><span class="p">:</span> <span class="s2">&quot;success&quot;</span>
+          <span class="p">}</span>
+      <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>参数说明</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 30%" />
+<col style="width: 70%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>参数</p></th>
+<th class="head"><p>说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>ToUserName</p></td>
+<td><p>小程序帐号ID</p></td>
+</tr>
+<tr class="row-odd"><td><p>FromUserName</p></td>
+<td><p>用户openid</p></td>
+</tr>
+<tr class="row-even"><td><p>CreateTime</p></td>
+<td><p>时间戳</p></td>
+</tr>
+<tr class="row-odd"><td><p>TemplateId</p></td>
+<td><p>模板id（一次订阅可能有多个id）</p></td>
+</tr>
+<tr class="row-even"><td><p>MsgID</p></td>
+<td><p>消息id（调用接口时也会返回）</p></td>
+</tr>
+<tr class="row-odd"><td><p>ErrorCode</p></td>
+<td><p>推送结果状态码（0表示成功）</p></td>
+</tr>
+<tr class="row-even"><td><p>ErrorStatus</p></td>
+<td><p>推送结果状态码对应的含义</p></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">注解</p>
+<p>注意：失败仅包含因异步推送导致的系统失败</p>
+</div>
+</li>
+</ol>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>导航</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="总目录"
+             >索引</a></li>
+        <li class="right" >
+          <a href="../../../http-routingtable.html" title="微信小程序API"
+             >wxapi</a> |</li>
+        <li class="right" >
+          <a href="template-message.html" title="模板消息(已作废)"
+             >下一页</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="消息"
+             >上一页</a> |</li>
+<li><a href="../../../index.html">主页</a>&#160;|</li>
+<li><a href="../../../contents.html">文档</a> &#187;</li>
+
+          <li class="nav-item nav-item-1"><a href="../../index.html" >框架</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../index.html" >开放能力</a> &#187;</li>
+          <li class="nav-item nav-item-3"><a href="index.html" >消息</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">小程序订阅消息</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; 版权所有 2019, Wxadev Docs.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.1.
+    </div>
+  </body>
+</html>

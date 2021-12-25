@@ -1,0 +1,237 @@
+
+<!DOCTYPE html>
+
+<html lang="zh_CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>查询商户余额事件 &#8212; wxadev v2.21.0 文档</title>
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx13.css" />
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/translations.js"></script>
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="在 wxadev v2.21.0 文档 中搜索"
+          href="../../../_static/opensearch.xml"/>
+
+    <link rel="index" title="索引" href="../../../genindex.html" />
+    <link rel="search" title="搜索" href="../../../search.html" />
+<link rel="canonical" href="http://www.sphinx-doc.org/en/master/api-backend/express/by-business/logistics.onGetQuota.html" />
+
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet" type="text/css" />
+ 
+<style type="text/css">
+  table.right { float: right; margin-left: 20px; }
+  table.right td { border: 1px solid #ccc; }
+  
+</style>
+<script type="text/javascript">
+  // intelligent scrolling of the sidebar content
+  $(window).scroll(function() {
+    var sb = $('.sphinxsidebarwrapper');
+    var win = $(window);
+    var sbh = sb.height();
+    var offset = $('.sphinxsidebar').position()['top'];
+    var wintop = win.scrollTop();
+    var winbot = wintop + win.innerHeight();
+    var curtop = sb.position()['top'];
+    var curbot = curtop + sbh;
+    // does sidebar fit in window?
+    if (sbh < win.innerHeight()) {
+      // yes: easy case -- always keep at the top
+      sb.css('top', $u.min([$u.max([0, wintop - offset - 10]), $(document).height() - sbh - 200]));
+    } else {
+      // no: only scroll if top/bottom edge of sidebar is at
+      // top/bottom edge of window
+      if (curtop > wintop && curbot > winbot) {
+        sb.css('top', $u.max([wintop - offset - 10, 0]));
+      } else if (curtop < wintop && curbot < winbot) {
+        sb.css('top', $u.min([winbot - sbh - offset - 20, $(document).height() - sbh - 200]));
+      }
+    }
+  });
+</script> 
+  </head><body>
+<div class="pageheader">
+  <ul>
+    <li><a href="../../../index.html">主页</a></li>
+    <li><a href="../../../basic/index.html">入门</a></li>
+    <li><a href="../../../framework/index.html">框架</a></li>
+    <li><a href="../../../component/index.html">组件</a></li>
+    <li><a href="../../../api/index.html">API</a></li>
+    <li><a href="../../index.html">服务端</a></li>
+    <li><a href="../../../reference/index.html">参考</a></li>
+    <li><a href="../../../contents.html">目录</a></li>
+  </ul>
+  <div>
+    <a href="../../../index.html">
+      <img src="../../../_static/wxaheader.png" alt="wxa" />
+    </a>
+  </div>
+</div>
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>导航</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="总目录"
+             accesskey="I">索引</a></li>
+        <li class="right" >
+          <a href="../../../http-routingtable.html" title="微信小程序API"
+             >wxapi</a> |</li>
+<li><a href="../../../index.html">主页</a>&#160;|</li>
+<li><a href="../../../contents.html">文档</a> &#187;</li>
+
+        <li class="nav-item nav-item-this"><a href="">查询商户余额事件</a></li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div role="note" aria-label="source link">
+    <h3>本页</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../../_sources/api-backend/express/by-business/logistics.onGetQuota.rst.txt"
+            rel="nofollow">显示源代码</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">快速搜索</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="转向" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="logistics-ongetquota">
+<span id="id1"></span><h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/api-backend/logistics.onGetQuota.html">查询商户余额事件</a><a class="headerlink" href="#logistics-ongetquota" title="永久链接至标题">¶</a></h1>
+<p>logistics.onGetQuota
+本文档描述服务器端接收的消息或事件，详细说明参见消息推送。</p>
+<p>一、HTTPS 调用
+消息参数
+Object
+属性      类型      说明
+ToUserName      string  快递公司小程序 UserName
+FromUserName    string  微信团队的 OpenID （固定值）
+CreateTime      number  事件时间，Unix时间戳
+MsgType string  消息类型，固定为 event
+Event   string  事件类型，固定为 get_quota，不区分大小写
+BizID   string  商户ID，即商户在快递注册的客户编码或月结账户名
+BizPwd  string  BizID 对应的密码
+ShopAppID       string  商户小程序的 AppID
+消息返回
+属性      类型      默认值     必填      说明
+ToUserName      string          是       原样返回请求中的 FromUserName
+FromUserName    string          是       快递公司小程序 UserName
+CreateTime      number          是       事件时间，Unix时间戳
+MsgType string          是       消息类型，固定为event
+Event   string          是       事件类型，固定为get_quota，不区分大小写
+BizID   string          是       商户ID
+ResultCode      number          是       处理结果错误码
+ResultMsg       string          是       处理结果详情
+Quota   number          是       商户可用余额，0 表示无可用余额
+ResultCode 的合法值</p>
+<p>值       说明      最低版本
+0       查询成功
+-1      其他错误
+10001   客户编码或者月结账户不存在
+10002   客户密码不正确
+消息数据包示例
+XML 格式</p>
+<dl class="simple">
+<dt>&lt;xml&gt;</dt><dd><p>&lt;ToUserName&gt;&lt;![CDATA[gh_abcdefg]]&gt;&lt;/ToUserName&gt;
+&lt;FromUserName&gt;&lt;![CDATA[oABCD]]&gt;&lt;/FromUserName&gt;
+&lt;CreateTime&gt;1533042556&lt;/CreateTime&gt;
+&lt;MsgType&gt;&lt;![CDATA[event]]&gt;&lt;/MsgType&gt;
+&lt;Event&gt;&lt;![CDATA[get_quota]]&gt;&lt;/Event&gt;
+&lt;BizID&gt;&lt;![CDATA[xyz]]&gt;&lt;/BizID&gt;
+&lt;BizPwd&gt;&lt;![CDATA[xyz123]]&gt;&lt;/BizPwd&gt;
+&lt;ShopAppID&gt;&lt;![CDATA[wxABCD]]&gt;&lt;/ShopAppID&gt;</p>
+</dd>
+</dl>
+<p>&lt;/xml&gt;
+JSON 格式</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;ToUserName&quot;</span><span class="p">:</span> <span class="s2">&quot;gh_abcdefg&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;FromUserName&quot;</span><span class="p">:</span> <span class="s2">&quot;oABCD&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;CreateTime&quot;</span><span class="p">:</span> <span class="mi">1533042556</span><span class="p">,</span>
+  <span class="nt">&quot;MsgType&quot;</span><span class="p">:</span> <span class="s2">&quot;event&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;Event&quot;</span><span class="p">:</span> <span class="s2">&quot;get_quota&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;BizID&quot;</span><span class="p">:</span> <span class="s2">&quot;xyz&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;BizPwd&quot;</span><span class="p">:</span> <span class="s2">&quot;xyz123&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;ShopAppID&quot;</span><span class="p">:</span> <span class="s2">&quot;wxABCD&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>返回数据包示例
+XML 格式</p>
+<dl class="simple">
+<dt>&lt;xml&gt;</dt><dd><p>&lt;ToUserName&gt;&lt;![CDATA[oABCD]]&gt;&lt;/ToUserName&gt;
+&lt;FromUserName&gt;&lt;![CDATA[gh_abcdefg]]&gt;&lt;/FromUserName&gt;
+&lt;CreateTime&gt;1533042556&lt;/CreateTime&gt;
+&lt;MsgType&gt;&lt;![CDATA[event]]&gt;&lt;/MsgType&gt;
+&lt;Event&gt;&lt;![CDATA[get_quota]]&gt;&lt;/Event&gt;
+&lt;BizID&gt;&lt;![CDATA[xyz]]&gt;&lt;/BizID&gt;
+&lt;ResultCode&gt;0&lt;/ResultCode&gt;
+&lt;ResultMsg&gt;&lt;![CDATA[success]]&gt;&lt;/ResultMsg&gt;
+&lt;Quota&gt;0&lt;/Quota&gt;</p>
+</dd>
+</dl>
+<p>&lt;/xml&gt;
+JSON 格式</p>
+<dl class="simple">
+<dt>{</dt><dd><p>“ToUserName”: “oABCD”,
+“FromUserName”: “gh_abcdefg”,
+“CreateTime”: 1533042556,
+“MsgType”: “event”,
+“Event”: “get_quota”,
+“BizID”: “xyz”,
+“ResultCode”: 0,
+“ResultMsg”: “success”,
+“Quota”: 0</p>
+</dd>
+</dl>
+<p>}</p>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>导航</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="总目录"
+             >索引</a></li>
+        <li class="right" >
+          <a href="../../../http-routingtable.html" title="微信小程序API"
+             >wxapi</a> |</li>
+<li><a href="../../../index.html">主页</a>&#160;|</li>
+<li><a href="../../../contents.html">文档</a> &#187;</li>
+
+        <li class="nav-item nav-item-this"><a href="">查询商户余额事件</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; 版权所有 2019, Wxadev Docs.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.1.
+    </div>
+  </body>
+</html>

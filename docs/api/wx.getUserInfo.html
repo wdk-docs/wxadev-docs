@@ -136,7 +136,7 @@
 <dl class="js function">
 <dt class="sig sig-object js" id="wx.getUserInfo">
 <span class="sig-prename descclassname"><span class="n"><span class="pre">wx</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">getUserInfo</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">{[withCredentials][,</span> <span class="pre">lang][,</span> <span class="pre">success][,</span> <span class="pre">fail][,</span> <span class="pre">complete]}</span></em><span class="sig-paren">)</span><a class="headerlink" href="#wx.getUserInfo" title="永久链接至目标">¶</a></dt>
-<dd><p>调用前需要 <a class="reference internal" href="../framework/open-ability/authorize.html#authorize"><span class="std std-ref">用户授权</span></a> <a class="reference internal" href="AuthSetting.html#scope.userInfo" title="scope.userInfo"><code class="xref js js-data docutils literal notranslate"><span class="pre">scope.userInfo</span></code></a> 。</p>
+<dd><p>调用前需要 <a class="reference internal" href="../framework/open-ability/user/authorize.html#authorize"><span class="std std-ref">用户授权</span></a> <a class="reference internal" href="AuthSetting.html#scope.userInfo" title="scope.userInfo"><code class="xref js js-data docutils literal notranslate"><span class="pre">scope.userInfo</span></code></a> 。</p>
 <p>获取用户信息。</p>
 <dl class="field-list">
 <dt class="field-odd">参数</dt>
@@ -160,10 +160,10 @@
 <ul>
 <li><p><strong>userInfo</strong> <a class="reference internal" href="UserInfo.html#UserInfo" title="UserInfo"><code class="xref js js-data docutils literal notranslate"><span class="pre">UserInfo</span></code></a> - 用户信息对象，不包含 openid 等敏感信息</p></li>
 <li><p><strong>rawData</strong> (<em>string</em>) - 不包括敏感信息的原始数据字符串，用于计算签名</p></li>
-<li><p><strong>signature</strong> (<em>string</em>) - 使用 <code class="docutils literal notranslate"><span class="pre">sha1(</span> <span class="pre">rawData</span> <span class="pre">+</span> <span class="pre">sessionkey</span> <span class="pre">)</span></code> 得到字符串，用于校验用户信息，详见 <a class="reference internal" href="../framework/open-ability/signature.html#signature"><span class="std std-ref">用户数据的签名验证和加解密</span></a></p></li>
+<li><p><strong>signature</strong> (<em>string</em>) - 使用 <code class="docutils literal notranslate"><span class="pre">sha1(</span> <span class="pre">rawData</span> <span class="pre">+</span> <span class="pre">sessionkey</span> <span class="pre">)</span></code> 得到字符串，用于校验用户信息，详见 <a class="reference internal" href="../framework/open-ability/user/signature.html#signature"><span class="std std-ref">用户数据的签名验证和加解密</span></a></p></li>
 <li><p><strong>encryptedData</strong> (<em>string</em>) - 包括敏感数据在内的完整用户信息的加密数据，详见 用户数据的签名验证和加解密</p></li>
-<li><p><strong>iv</strong> (<em>string</em>) - 加密算法的初始向量，详见 <a class="reference internal" href="../framework/open-ability/signature.html#signature"><span class="std std-ref">用户数据的签名验证和加解密</span></a></p></li>
-<li><p><strong>cloudID</strong> (<em>string</em>) - 敏感数据对应的云 ID，开通 <a class="reference external" href="https://wdk-docs.github.io/wxcloud-docs/basis/getting-started">云开发</a> 的小程序才会返回，可通过云调用直接获取开放数据，详细见 <a class="reference internal" href="../framework/open-ability/signature.html#signature"><span class="std std-ref">云调用直接获取开放数据</span></a></p>
+<li><p><strong>iv</strong> (<em>string</em>) - 加密算法的初始向量，详见 <a class="reference internal" href="../framework/open-ability/user/signature.html#signature"><span class="std std-ref">用户数据的签名验证和加解密</span></a></p></li>
+<li><p><strong>cloudID</strong> (<em>string</em>) - 敏感数据对应的云 ID，开通 <a class="reference external" href="https://wdk-docs.github.io/wxcloud-docs/basis/getting-started">云开发</a> 的小程序才会返回，可通过云调用直接获取开放数据，详细见 <a class="reference internal" href="../framework/open-ability/user/signature.html#signature"><span class="std std-ref">云调用直接获取开放数据</span></a></p>
 <blockquote>
 <div><div class="versionadded">
 <p><span class="versionmodified added">2.7.0 新版功能.</span></p>
@@ -194,8 +194,8 @@
 </dd>
 <dt class="field-odd">敏感数据</dt>
 <dd class="field-odd"><ol class="arabic simple">
-<li><p>使用 <a class="reference internal" href="../framework/open-ability/signature.html#signature"><span class="std std-ref">加密数据解密算法</span></a> 将 encryptedData 在开发者后台解密，</p></li>
-<li><p>使用 <a class="reference internal" href="../framework/open-ability/signature.html#signature"><span class="std std-ref">云调用直接通过 cloudID 获取开放数据</span></a> 。 获取得到的开放数据为以下 json 结构：</p></li>
+<li><p>使用 <a class="reference internal" href="../framework/open-ability/user/signature.html#signature"><span class="std std-ref">加密数据解密算法</span></a> 将 encryptedData 在开发者后台解密，</p></li>
+<li><p>使用 <a class="reference internal" href="../framework/open-ability/user/signature.html#signature"><span class="std std-ref">云调用直接通过 cloudID 获取开放数据</span></a> 。 获取得到的开放数据为以下 json 结构：</p></li>
 </ol>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span>{
   &quot;openId&quot;: &quot;OPENID&quot;,

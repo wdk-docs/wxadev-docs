@@ -20,8 +20,8 @@
 
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜索" href="../search.html" />
-    <link rel="next" title="auth.code2Session" href="auth.code2Session.html" />
-    <link rel="prev" title="IntersectionObserver.relativeToViewport" href="../api/IntersectionObserver.relativeToViewport.html" />
+    <link rel="next" title="下发统一服务消息" href="uniform-message/uniformMessage.send.html" />
+    <link rel="prev" title="wx.createIntersectionObserver" href="../api/wx.createIntersectionObserver.html" />
 <link rel="canonical" href="http://www.sphinx-doc.org/en/master/api-backend/index.html" />
 
 <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet" type="text/css" />
@@ -86,10 +86,10 @@
           <a href="../http-routingtable.html" title="微信小程序API"
              >wxapi</a> |</li>
         <li class="right" >
-          <a href="auth.code2Session.html" title="auth.code2Session"
+          <a href="uniform-message/uniformMessage.send.html" title="下发统一服务消息"
              accesskey="N">下一页</a> |</li>
         <li class="right" >
-          <a href="../api/IntersectionObserver.relativeToViewport.html" title="IntersectionObserver.relativeToViewport"
+          <a href="../api/wx.createIntersectionObserver.html" title="wx.createIntersectionObserver"
              accesskey="P">上一页</a> |</li>
 <li><a href="../index.html">主页</a>&#160;|</li>
 <li><a href="../contents.html">文档</a> &#187;</li>
@@ -124,16 +124,17 @@
 </ul>
 </li>
 <li><a class="reference internal" href="#id18">生物认证</a></li>
+<li><a class="reference internal" href="#id19">订阅消息</a></li>
 </ul>
 </li>
 </ul>
 
   <h4>上一个主题</h4>
-  <p class="topless"><a href="../api/IntersectionObserver.relativeToViewport.html"
-                        title="上一章">IntersectionObserver.relativeToViewport</a></p>
+  <p class="topless"><a href="../api/wx.createIntersectionObserver.html"
+                        title="上一章">wx.createIntersectionObserver</a></p>
   <h4>下一个主题</h4>
-  <p class="topless"><a href="auth.code2Session.html"
-                        title="下一章">auth.code2Session</a></p>
+  <p class="topless"><a href="uniform-message/uniformMessage.send.html"
+                        title="下一章">下发统一服务消息</a></p>
   <div role="note" aria-label="source link">
     <h3>本页</h3>
     <ul class="this-page-menu">
@@ -161,7 +162,7 @@
             
   <section id="api">
 <span id="api-backend"></span><h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/api-backend/index.html">服务端API</a><a class="headerlink" href="#api" title="永久链接至标题">¶</a></h1>
-<p>版本:v2.21.0 更新:2021 年 12 月 13 日</p>
+<p>版本:v2.21.0 更新:2021 年 12 月 15 日</p>
 <section id="id1">
 <h2>登录<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h2>
 <table class="docutils align-default">
@@ -175,7 +176,7 @@
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><a class="reference internal" href="auth.code2Session.html#auth-code2session"><span class="std std-ref">auth.code2Session</span></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="auth/auth.code2Session.html#auth-code2session"><span class="std std-ref">auth.code2Session</span></a></p></td>
 <td><p>登录凭证校验</p></td>
 </tr>
 </tbody>
@@ -196,7 +197,7 @@
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><a class="reference internal" href="auth.getPaidUnionId.html#auth-getpaidunionid"><span class="std std-ref">auth.getPaidUnionId</span></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="auth/auth.getPaidUnionId.html#auth-getpaidunionid"><span class="std std-ref">auth.getPaidUnionId</span></a></p></td>
 <td><p>用户支付完成后，获取该用户的 UnionId，无需用户授权</p></td>
 </tr>
 </tbody>
@@ -217,7 +218,7 @@
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><a class="reference internal" href="auth.getAccessToken.html#auth-getaccesstoken"><span class="std std-ref">auth.getAccessToken</span></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="auth/auth.getAccessToken.html#auth-getaccesstoken"><span class="std std-ref">auth.getAccessToken</span></a></p></td>
 <td><p>获取小程序全局唯一后台接口调用凭据（access_token）</p></td>
 </tr>
 </tbody>
@@ -242,13 +243,13 @@
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><a class="reference internal" href="analysis.getDailyRetain.html#analysis-getdailyretain"><span class="std std-ref">analysis.getDailyRetain</span></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="data-analysis/analysis.getDailyRetain.html#analysis-getdailyretain"><span class="std std-ref">analysis.getDailyRetain</span></a></p></td>
 <td><p>获取用户访问小程序日留存</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="analysis.getMonthlyRetain.html#analysis-getmonthlyretain"><span class="std std-ref">analysis.getMonthlyRetain</span></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="data-analysis/analysis.getMonthlyRetain.html#analysis-getmonthlyretain"><span class="std std-ref">analysis.getMonthlyRetain</span></a></p></td>
 <td><p>获取用户访问小程序月留存</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="analysis.getWeeklyRetain.html#analysis-getweeklyretain"><span class="std std-ref">analysis.getWeeklyRetain</span></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="data-analysis/analysis.getWeeklyRetain.html#analysis-getweeklyretain"><span class="std std-ref">analysis.getWeeklyRetain</span></a></p></td>
 <td><p>获取用户访问小程序周留存</p></td>
 </tr>
 </tbody>
@@ -269,25 +270,25 @@
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><a class="reference internal" href="analysis.getDailyVisitTrend.html#analysis-getdailyvisittrend"><span class="std std-ref">analysis.getDailyVisitTrend</span></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="data-analysis/analysis.getDailyVisitTrend.html#analysis-getdailyvisittrend"><span class="std std-ref">analysis.getDailyVisitTrend</span></a></p></td>
 <td><p>获取用户访问小程序数据日趋势</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="analysis.getMonthlyVisitTrend.html#analysis-getmonthlyvisittrend"><span class="std std-ref">analysis.getMonthlyVisitTrend</span></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="data-analysis/analysis.getMonthlyVisitTrend.html#analysis-getmonthlyvisittrend"><span class="std std-ref">analysis.getMonthlyVisitTrend</span></a></p></td>
 <td><p>获取用户访问小程序数据月趋势</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="analysis.getWeeklyVisitTrend.html#analysis-getweeklyvisittrend"><span class="std std-ref">analysis.getWeeklyVisitTrend</span></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="data-analysis/analysis.getWeeklyVisitTrend.html#analysis-getweeklyvisittrend"><span class="std std-ref">analysis.getWeeklyVisitTrend</span></a></p></td>
 <td><p>获取用户访问小程序数据周趋势</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="analysis.getUserPortrait.html#analysis-getuserportrait"><span class="std std-ref">analysis.getUserPortrait</span></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="data-analysis/analysis.getUserPortrait.html#analysis-getuserportrait"><span class="std std-ref">analysis.getUserPortrait</span></a></p></td>
 <td><p>获取小程序新增或活跃用户的画像分布数据</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="analysis.getVisitDistribution.html#analysis-getvisitdistribution"><span class="std std-ref">analysis.getVisitDistribution</span></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="data-analysis/analysis.getVisitDistribution.html#analysis-getvisitdistribution"><span class="std std-ref">analysis.getVisitDistribution</span></a></p></td>
 <td><p>获取用户小程序访问分布数据</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="analysis.getVisitPage.html#analysis-getvisitpage"><span class="std std-ref">analysis.getVisitPage</span></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="data-analysis/analysis.getVisitPage.html#analysis-getvisitpage"><span class="std std-ref">analysis.getVisitPage</span></a></p></td>
 <td><p>访问页面</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="analysis.getDailySummary.html#analysis-getdailysummary"><span class="std std-ref">analysis.getDailySummary</span></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="data-analysis/analysis.getDailySummary.html#analysis-getdailysummary"><span class="std std-ref">analysis.getDailySummary</span></a></p></td>
 <td><p>获取用户访问小程序数据概况</p></td>
 </tr>
 </tbody>
@@ -309,16 +310,16 @@
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><a class="reference internal" href="customerServiceMessage.getTempMedia.html#customerservicemessage-gettempmedia"><span class="std std-ref">customerServiceMessage.getTempMedia</span></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="customer-message/customerServiceMessage.getTempMedia.html#customerservicemessage-gettempmedia"><span class="std std-ref">customerServiceMessage.getTempMedia</span></a></p></td>
 <td><p>获取客服消息内的临时素材</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="customerServiceMessage.send.html#customerservicemessage-send"><span class="std std-ref">customerServiceMessage.send</span></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="customer-message/customerServiceMessage.send.html#customerservicemessage-send"><span class="std std-ref">customerServiceMessage.send</span></a></p></td>
 <td><p>发送客服消息给用户</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="customerServiceMessage.setTyping.html#customerservicemessage-settyping"><span class="std std-ref">customerServiceMessage.setTyping</span></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="customer-message/customerServiceMessage.setTyping.html#customerservicemessage-settyping"><span class="std std-ref">customerServiceMessage.setTyping</span></a></p></td>
 <td><p>下发客服当前输入状态给用户</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="customerServiceMessage.uploadTempMedia.html#customerservicemessage-uploadtempmedia"><span class="std std-ref">customerServiceMessage.uploadTempMedia</span></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="customer-message/customerServiceMessage.uploadTempMedia.html#customerservicemessage-uploadtempmedia"><span class="std std-ref">customerServiceMessage.uploadTempMedia</span></a></p></td>
 <td><p>把媒体文件上传到微信服务器</p></td>
 </tr>
 </tbody>
@@ -339,22 +340,22 @@
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><a class="reference internal" href="templateMessage.addTemplate.html#templatemessage-addtemplate"><span class="std std-ref">templateMessage.addTemplate</span></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="template-message/templateMessage.addTemplate.html#templatemessage-addtemplate"><span class="std std-ref">templateMessage.addTemplate</span></a></p></td>
 <td><p>组合模板并添加至帐号下的个人模板库</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="templateMessage.deleteTemplate.html#templatemessage-deletetemplate"><span class="std std-ref">templateMessage.deleteTemplate</span></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="template-message/templateMessage.deleteTemplate.html#templatemessage-deletetemplate"><span class="std std-ref">templateMessage.deleteTemplate</span></a></p></td>
 <td><p>删除帐号下的某个模板</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="templateMessage.getTemplateLibraryById.html#templatemessage-gettemplatelibrarybyid"><span class="std std-ref">templateMessage.getTemplateLibraryById</span></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="template-message/templateMessage.getTemplateLibraryById.html#templatemessage-gettemplatelibrarybyid"><span class="std std-ref">templateMessage.getTemplateLibraryById</span></a></p></td>
 <td><p>获取模板库某个模板标题下关键词库</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="templateMessage.getTemplateLibraryList.html#templatemessage-gettemplatelibrarylist"><span class="std std-ref">rst:wxbpi:templateMessage.getTemplateLibraryList</span></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="template-message/templateMessage.getTemplateLibraryList.html#templatemessage-gettemplatelibrarylist"><span class="std std-ref">rst:wxbpi:templateMessage.getTemplateLibraryList</span></a></p></td>
 <td><p>获取小程序模板库标题列表</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="templateMessage.getTemplateList.html#templatemessage-gettemplatelist"><span class="std std-ref">templateMessage.getTemplateList</span></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="template-message/templateMessage.getTemplateList.html#templatemessage-gettemplatelist"><span class="std std-ref">templateMessage.getTemplateList</span></a></p></td>
 <td><p>获取帐号下已存在的模板列表</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="templateMessage.send.html#templatemessage-send"><span class="std std-ref">templateMessage.send</span></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="template-message/templateMessage.send.html#templatemessage-send"><span class="std std-ref">templateMessage.send</span></a></p></td>
 <td><p>发送模板消息</p></td>
 </tr>
 </tbody>
@@ -375,7 +376,7 @@
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><a class="reference internal" href="uniformMessage.send.html#uniformmessage-send"><span class="std std-ref">下发统一服务消息</span></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="uniform-message/uniformMessage.send.html#uniformmessage-send"><span class="std std-ref">下发统一服务消息</span></a></p></td>
 <td><p>下发小程序和公众号统一的服务消息</p></td>
 </tr>
 </tbody>
@@ -396,10 +397,10 @@
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><a class="reference internal" href="updatableMessage.createActivityId.html#updatablemessage-createactivityid"><span class="std std-ref">updatableMessage.createActivityId</span></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="updatable-message/updatableMessage.createActivityId.html#updatablemessage-createactivityid"><span class="std std-ref">updatableMessage.createActivityId</span></a></p></td>
 <td><p>创建被分享动态消息的 activity_id</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="updatableMessage.setUpdatableMsg.html#updatablemessage-setupdatablemsg"><span class="std std-ref">updatableMessage.setUpdatableMsg</span></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="updatable-message/updatableMessage.setUpdatableMsg.html#updatablemessage-setupdatablemsg"><span class="std std-ref">updatableMessage.setUpdatableMsg</span></a></p></td>
 <td><p>修改被分享的动态消息</p></td>
 </tr>
 </tbody>
@@ -420,19 +421,19 @@
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><a class="reference internal" href="pluginManager.applyPlugin.html#pluginmanager-applyplugin"><span class="std std-ref">pluginManager.applyPlugin</span></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="plugin-management/pluginManager.applyPlugin.html#pluginmanager-applyplugin"><span class="std std-ref">pluginManager.applyPlugin</span></a></p></td>
 <td><p>向插件开发者发起使用插件的申请</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="pluginManager.getPluginDevApplyList.html#pluginmanager-getplugindevapplylist"><span class="std std-ref">pluginManager.getPluginDevApplyList</span></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="plugin-management/pluginManager.getPluginDevApplyList.html#pluginmanager-getplugindevapplylist"><span class="std std-ref">pluginManager.getPluginDevApplyList</span></a></p></td>
 <td><p>获取当前所有插件使用方（供插件开发者调用）</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="pluginManager.getPluginList.html#pluginmanager-getpluginlist"><span class="std std-ref">pluginManager.getPluginList</span></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="plugin-management/pluginManager.getPluginList.html#pluginmanager-getpluginlist"><span class="std std-ref">pluginManager.getPluginList</span></a></p></td>
 <td><p>查询已添加的插件</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="pluginManager.setDevPluginApplyStatus.html#pluginmanager-setdevpluginapplystatus"><span class="std std-ref">pluginManager.setDevPluginApplyStatus</span></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="plugin-management/pluginManager.setDevPluginApplyStatus.html#pluginmanager-setdevpluginapplystatus"><span class="std std-ref">pluginManager.setDevPluginApplyStatus</span></a></p></td>
 <td><p>修改插件使用申请的状态（供插件开发者调用）</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="pluginManager.unbindPlugin.html#pluginmanager-unbindplugin"><span class="std std-ref">pluginManager.unbindPlugin</span></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="plugin-management/pluginManager.unbindPlugin.html#pluginmanager-unbindplugin"><span class="std std-ref">pluginManager.unbindPlugin</span></a></p></td>
 <td><p>删除已添加的插件</p></td>
 </tr>
 </tbody>
@@ -453,16 +454,16 @@
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><a class="reference internal" href="nearbyPoi.add.html#nearbypoi-add"><span class="std std-ref">nearbyPoi.add</span></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="nearby-poi/nearbyPoi.add.html#nearbypoi-add"><span class="std std-ref">nearbyPoi.add</span></a></p></td>
 <td><p>添加地点</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="nearbyPoi.delete.html#nearbypoi-delete"><span class="std std-ref">nearbyPoi.delete</span></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="nearby-poi/nearbyPoi.delete.html#nearbypoi-delete"><span class="std std-ref">nearbyPoi.delete</span></a></p></td>
 <td><p>删除地点</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="nearbyPoi.getList.html#nearbypoi-getlist"><span class="std std-ref">nearbyPoi.getList</span></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="nearby-poi/nearbyPoi.getList.html#nearbypoi-getlist"><span class="std std-ref">nearbyPoi.getList</span></a></p></td>
 <td><p>查看地点列表</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="nearbyPoi.setShowStatus.html#nearbypoi-setshowstatus"><span class="std std-ref">nearbyPoi.setShowStatus</span></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="nearby-poi/nearbyPoi.setShowStatus.html#nearbypoi-setshowstatus"><span class="std std-ref">nearbyPoi.setShowStatus</span></a></p></td>
 <td><p>展示/取消展示附近小程序</p></td>
 </tr>
 </tbody>
@@ -483,13 +484,13 @@
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><a class="reference internal" href="wxacode.createQRCode.html#wxacode-createqrcode"><span class="std std-ref">wxacode.createQRCode</span></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="qr-code/wxacode.createQRCode.html#wxacode-createqrcode"><span class="std std-ref">wxacode.createQRCode</span></a></p></td>
 <td><p>获取小程序二维码，适用于需要的码数量较少的业务场景</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="wxacode.get.html#wxacode-get"><span class="std std-ref">wxacode.get</span></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="qr-code/wxacode.get.html#wxacode-get"><span class="std std-ref">wxacode.get</span></a></p></td>
 <td><p>获取小程序码，适用于需要的码数量较少的业务场景</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="wxacode.getUnlimited.html#wxacode-getunlimited"><span class="std std-ref">wxacode.getUnlimited</span></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="qr-code/wxacode.getUnlimited.html#wxacode-getunlimited"><span class="std std-ref">wxacode.getUnlimited</span></a></p></td>
 <td><p>获取小程序码，适用于需要的码数量极多的业务场景</p></td>
 </tr>
 </tbody>
@@ -510,10 +511,10 @@
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><a class="reference internal" href="security.imgSecCheck.html#security-imgseccheck"><span class="std std-ref">security.imgSecCheck</span></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="sec-check/security.imgSecCheck.html#security-imgseccheck"><span class="std std-ref">security.imgSecCheck</span></a></p></td>
 <td><p>校验一张图片是否含有违法违规内容</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="security.msgSecCheck.html#security-msgseccheck"><span class="std std-ref">security.msgSecCheck</span></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="sec-check/security.msgSecCheck.html#security-msgseccheck"><span class="std std-ref">security.msgSecCheck</span></a></p></td>
 <td><p>检查一段文本是否含有违法违规内容</p></td>
 </tr>
 </tbody>
@@ -536,10 +537,10 @@
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><a class="reference internal" href="logistics.onPathUpdate.html#logistics-onpathupdate"><span class="std std-ref">运单轨迹更新事件</span></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="express/by-business/logistics.onPathUpdate.html#logistics-onpathupdate"><span class="std std-ref">运单轨迹更新事件</span></a></p></td>
 <td><p>运单轨迹更新事件</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="logistics.onAddOrder.html#logistics-addorder"><span class="std std-ref">请求下单事件</span></a> ☁️</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="express/by-business/logistics.onAddOrder.html#logistics-addorder"><span class="std std-ref">请求下单事件</span></a> ☁️</p></td>
 <td><p>生成运单</p></td>
 </tr>
 <tr class="row-even"><td><p><span class="xref std std-ref">logistics.cancelOrder</span>  ☁️</p></td>
@@ -560,7 +561,7 @@
 <tr class="row-odd"><td><p><span class="xref std std-ref">logistics.getQuota</span>  ☁️</p></td>
 <td><p>获取电子面单余额</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="logistics.updatePrinter.html#logistics-updateprinter"><span class="std std-ref">更新打印员</span></a>  ☁️</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="express/by-business/logistics.updatePrinter.html#logistics-updateprinter"><span class="std std-ref">更新打印员</span></a>  ☁️</p></td>
 <td><p>更新打印员</p></td>
 </tr>
 </tbody>
@@ -587,22 +588,22 @@
 <tr class="row-odd"><td><p><span class="xref std std-ref">logistics.onAddOrder</span></p></td>
 <td><p>请求下单事件</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="logistics.onCancelOrder.html#logistics-oncancelorder"><span class="std std-ref">取消订单事件</span></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="express/by-business/logistics.onCancelOrder.html#logistics-oncancelorder"><span class="std std-ref">取消订单事件</span></a></p></td>
 <td><p>取消订单事件</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="logistics.onCheckBusiness.html#logistics-oncheckbusiness"><span class="std std-ref">审核商户事件</span></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="express/by-business/logistics.onCheckBusiness.html#logistics-oncheckbusiness"><span class="std std-ref">审核商户事件</span></a></p></td>
 <td><p>审核商户事件</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="logistics.onGetQuota.html#logistics-ongetquota"><span class="std std-ref">查询商户余额事件</span></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="express/by-business/logistics.onGetQuota.html#logistics-ongetquota"><span class="std std-ref">查询商户余额事件</span></a></p></td>
 <td><p>查询商户余额事件</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="logistics.previewTemplate.html#logistics-previewtemplate"><span class="std std-ref">预览面单模板</span></a> ☁️</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="express/by-business/logistics.previewTemplate.html#logistics-previewtemplate"><span class="std std-ref">预览面单模板</span></a> ☁️</p></td>
 <td><p>预览面单模板</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="logistics.updateBusiness.html#logistics-updatebusiness"><span class="std std-ref">更新商户审核结果</span></a> ☁️</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="express/by-business/logistics.updateBusiness.html#logistics-updatebusiness"><span class="std std-ref">更新商户审核结果</span></a> ☁️</p></td>
 <td><p>更新商户审核结果</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="logistics.updatePath.html#logistics-updatepath"><span class="std std-ref">更新运单轨迹 logistics.updatePath</span></a> ☁️</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="express/by-business/logistics.updatePath.html#logistics-updatepath"><span class="std std-ref">更新运单轨迹 logistics.updatePath</span></a> ☁️</p></td>
 <td><p>更新运单轨迹</p></td>
 </tr>
 </tbody>
@@ -632,6 +633,45 @@
 <div class="toctree-wrapper compound">
 </div>
 </section>
+<section id="id19">
+<h2>订阅消息<a class="headerlink" href="#id19" title="永久链接至标题">¶</a></h2>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 61%" />
+<col style="width: 39%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>名称</p></th>
+<th class="head"><p>功能说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="subscribe-message/subscribeMessage.addTemplate.html#subscribemessage-addtemplate"><span class="std std-ref">subscribeMessage.addTemplate</span></a>  ☁️</p></td>
+<td><p>组合模板并添加至帐号下的个人模板库</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="subscribe-message/subscribeMessage.deleteTemplate.html#subscribemessage-deletetemplate"><span class="std std-ref">subscribeMessage.deleteTemplate</span></a>  ☁️</p></td>
+<td><p>删除帐号下的个人模板</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="subscribe-message/subscribeMessage.getCategory.html#subscribemessage-getcategory"><span class="std std-ref">subscribeMessage.getCategory</span></a>  ☁️</p></td>
+<td><p>获取小程序账号的类目</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="subscribe-message/subscribeMessage.getPubTemplateKeyWordsById.html#subscribemessage-getpubtemplatekeywordsbyid"><span class="std std-ref">subscribeMessage.getPubTemplateKeyWordsById</span></a>  ☁️</p></td>
+<td><p>获取模板标题下的关键词列表</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="subscribe-message/subscribeMessage.getPubTemplateTitleList.html#subscribemessage-getpubtemplatetitlelist"><span class="std std-ref">subscribeMessage.getPubTemplateTitleList</span></a>  ☁️</p></td>
+<td><p>获取帐号所属类目下的公共模板标题</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="subscribe-message/subscribeMessage.getTemplateList.html#subscribemessage-gettemplatelist"><span class="std std-ref">subscribeMessage.getTemplateList</span></a>  ☁️</p></td>
+<td><p>获取当前帐号下的个人模板列表</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="subscribe-message/subscribeMessage.send.html#subscribemessage-send"><span class="std std-ref">subscribeMessage.send</span></a>  ☁️</p></td>
+<td><p>发送订阅消息</p></td>
+</tr>
+</tbody>
+</table>
+<div class="toctree-wrapper compound">
+</div>
+</section>
 </section>
 
 
@@ -651,10 +691,10 @@
           <a href="../http-routingtable.html" title="微信小程序API"
              >wxapi</a> |</li>
         <li class="right" >
-          <a href="auth.code2Session.html" title="auth.code2Session"
+          <a href="uniform-message/uniformMessage.send.html" title="下发统一服务消息"
              >下一页</a> |</li>
         <li class="right" >
-          <a href="../api/IntersectionObserver.relativeToViewport.html" title="IntersectionObserver.relativeToViewport"
+          <a href="../api/wx.createIntersectionObserver.html" title="wx.createIntersectionObserver"
              >上一页</a> |</li>
 <li><a href="../index.html">主页</a>&#160;|</li>
 <li><a href="../contents.html">文档</a> &#187;</li>

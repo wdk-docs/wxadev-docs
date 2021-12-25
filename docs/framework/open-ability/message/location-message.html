@@ -1,0 +1,363 @@
+
+<!DOCTYPE html>
+
+<html lang="zh_CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>位置消息打开 &#8212; wxadev v2.21.0 文档</title>
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx13.css" />
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/translations.js"></script>
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="在 wxadev v2.21.0 文档 中搜索"
+          href="../../../_static/opensearch.xml"/>
+
+    <link rel="index" title="索引" href="../../../genindex.html" />
+    <link rel="search" title="搜索" href="../../../search.html" />
+    <link rel="next" title="客服消息" href="../customer-message/index.html" />
+    <link rel="prev" title="统一服务消息" href="uniform-message.html" />
+<link rel="canonical" href="http://www.sphinx-doc.org/en/master/framework/open-ability/message/location-message.html" />
+
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet" type="text/css" />
+ 
+<style type="text/css">
+  table.right { float: right; margin-left: 20px; }
+  table.right td { border: 1px solid #ccc; }
+  
+</style>
+<script type="text/javascript">
+  // intelligent scrolling of the sidebar content
+  $(window).scroll(function() {
+    var sb = $('.sphinxsidebarwrapper');
+    var win = $(window);
+    var sbh = sb.height();
+    var offset = $('.sphinxsidebar').position()['top'];
+    var wintop = win.scrollTop();
+    var winbot = wintop + win.innerHeight();
+    var curtop = sb.position()['top'];
+    var curbot = curtop + sbh;
+    // does sidebar fit in window?
+    if (sbh < win.innerHeight()) {
+      // yes: easy case -- always keep at the top
+      sb.css('top', $u.min([$u.max([0, wintop - offset - 10]), $(document).height() - sbh - 200]));
+    } else {
+      // no: only scroll if top/bottom edge of sidebar is at
+      // top/bottom edge of window
+      if (curtop > wintop && curbot > winbot) {
+        sb.css('top', $u.max([wintop - offset - 10, 0]));
+      } else if (curtop < wintop && curbot < winbot) {
+        sb.css('top', $u.min([winbot - sbh - offset - 20, $(document).height() - sbh - 200]));
+      }
+    }
+  });
+</script> 
+  </head><body>
+<div class="pageheader">
+  <ul>
+    <li><a href="../../../index.html">主页</a></li>
+    <li><a href="../../../basic/index.html">入门</a></li>
+    <li><a href="../../index.html">框架</a></li>
+    <li><a href="../../../component/index.html">组件</a></li>
+    <li><a href="../../../api/index.html">API</a></li>
+    <li><a href="../../../api-backend/index.html">服务端</a></li>
+    <li><a href="../../../reference/index.html">参考</a></li>
+    <li><a href="../../../contents.html">目录</a></li>
+  </ul>
+  <div>
+    <a href="../../../index.html">
+      <img src="../../../_static/wxaheader.png" alt="wxa" />
+    </a>
+  </div>
+</div>
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>导航</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="总目录"
+             accesskey="I">索引</a></li>
+        <li class="right" >
+          <a href="../../../http-routingtable.html" title="微信小程序API"
+             >wxapi</a> |</li>
+        <li class="right" >
+          <a href="../customer-message/index.html" title="客服消息"
+             accesskey="N">下一页</a> |</li>
+        <li class="right" >
+          <a href="uniform-message.html" title="统一服务消息"
+             accesskey="P">上一页</a> |</li>
+<li><a href="../../../index.html">主页</a>&#160;|</li>
+<li><a href="../../../contents.html">文档</a> &#187;</li>
+
+          <li class="nav-item nav-item-1"><a href="../../index.html" >框架</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../index.html" >开放能力</a> &#187;</li>
+          <li class="nav-item nav-item-3"><a href="index.html" accesskey="U">消息</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">位置消息打开</a></li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../../../contents.html">目录</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">位置消息打开</a><ul>
+<li><a class="reference internal" href="#id2">1. 位置消息入口声明</a></li>
+<li><a class="reference internal" href="#id3">2. 从启动参数获取位置信息</a></li>
+<li><a class="reference internal" href="#id4">3. 工具调试</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>上一个主题</h4>
+  <p class="topless"><a href="uniform-message.html"
+                        title="上一章">统一服务消息</a></p>
+  <h4>下一个主题</h4>
+  <p class="topless"><a href="../customer-message/index.html"
+                        title="下一章">客服消息</a></p>
+  <div role="note" aria-label="source link">
+    <h3>本页</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../../_sources/framework/open-ability/message/location-message.rst.txt"
+            rel="nofollow">显示源代码</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">快速搜索</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="转向" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="id1">
+<h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/location-message.html">位置消息打开</a><a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
+<p>微信客户端 7.0.9 及以上版本支持，iOS 暂不支持</p>
+<p>为了让用户更便 捷地使用小程序的打车服务，我们在位置消息详情页的菜单中，新增了打车小程序入口。</p>
+<p>打开聊天中的位置消息，点击详情页右下角绿色按钮，菜单中会展示符合条件的打车小程序，用户可以直接发起目的地为该位置的打车服务。
+小程序的注册类目为“打车（网约车）”，且有用户最近使用的记录，才可以出现在该菜单中。
+在此处点击打开小程序后，需要直接进入到发起打车页面。</p>
+<section id="id2">
+<h2>1. 位置消息入口声明<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<p>开发者需要在全局配置app.json声明支持从位置消息入口进入小程序。</p>
+<p>配置示例：</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="nt">&quot;entranceDeclare&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;locationMessage&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;path&quot;</span><span class="p">:</span> <span class="s2">&quot;pages/index/index&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;query&quot;</span><span class="p">:</span> <span class="s2">&quot;foo=bar&quot;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>配置项</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 31%" />
+<col style="width: 15%" />
+<col style="width: 11%" />
+<col style="width: 25%" />
+<col style="width: 18%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>属性</p></th>
+<th class="head"><p>类型</p></th>
+<th class="head"><p>必填</p></th>
+<th class="head"><p>描述</p></th>
+<th class="head"><p>最低版本</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>entranceDeclare</p></td>
+<td><p>Object</p></td>
+<td><p>否</p></td>
+<td><p>入口声明信息</p></td>
+<td><p>7.0.9</p></td>
+</tr>
+</tbody>
+</table>
+<p>entranceDeclare参数列表</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 21%" />
+<col style="width: 10%" />
+<col style="width: 7%" />
+<col style="width: 49%" />
+<col style="width: 12%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>属性</p></th>
+<th class="head"><p>类型</p></th>
+<th class="head"><p>必填</p></th>
+<th class="head"><p>描述</p></th>
+<th class="head"><p>最低版本</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>locationMessage</p></td>
+<td><p>Object</p></td>
+<td><p>否</p></td>
+<td><p>声明“位置消息”场景进入小程序的启动页面</p></td>
+<td><p>7.0.9</p></td>
+</tr>
+</tbody>
+</table>
+<p>locationMessage参数列表</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 12%" />
+<col style="width: 9%" />
+<col style="width: 54%" />
+<col style="width: 15%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>属性</p></th>
+<th class="head"><p>类型</p></th>
+<th class="head"><p>必填</p></th>
+<th class="head"><p>描述</p></th>
+<th class="head"><p>最低版本</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>path</p></td>
+<td><p>string</p></td>
+<td><p>否</p></td>
+<td><p>启动页路径，必须是在pages中已经定义</p></td>
+<td><p>7.0.9</p></td>
+</tr>
+<tr class="row-odd"><td><p>query</p></td>
+<td><p>string</p></td>
+<td><p>否</p></td>
+<td><p>启动页参数</p></td>
+<td><p>7.0.9</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="id3">
+<h2>2. 从启动参数获取位置信息<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
+<p>示例代码：</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="c1">//app.js</span>
+<span class="nx">App</span><span class="p">({</span>
+  <span class="nx">onLaunch</span><span class="o">:</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">options</span><span class="p">){</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">options</span><span class="p">)</span>
+    <span class="kd">var</span> <span class="nx">scene</span> <span class="o">=</span> <span class="nx">options</span><span class="p">.</span><span class="nx">scene</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">scene</span> <span class="o">==</span> <span class="mf">1146</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// 位置消息场景值</span>
+      <span class="kd">var</span> <span class="nx">location</span> <span class="o">=</span> <span class="nx">options</span><span class="p">.</span><span class="nx">locationInfo</span>
+      <span class="kd">var</span> <span class="nx">x</span> <span class="o">=</span> <span class="nx">location</span><span class="p">.</span><span class="nx">latitude</span>
+      <span class="kd">var</span> <span class="nx">y</span> <span class="o">=</span> <span class="nx">location</span><span class="p">.</span><span class="nx">longitude</span>
+      <span class="kd">var</span> <span class="nx">name</span> <span class="o">=</span> <span class="nx">location</span><span class="p">.</span><span class="nx">name</span>
+    <span class="p">}</span>
+  <span class="p">},</span>
+<span class="p">})</span>
+</pre></div>
+</div>
+<p>Object 启动参数</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 19%" />
+<col style="width: 11%" />
+<col style="width: 69%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>属性</p></th>
+<th class="head"><p>类型</p></th>
+<th class="head"><p>描述</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>scene</p></td>
+<td><p>number</p></td>
+<td><p>启动小程序的场景值，“位置消息”的启动场景值为1146</p></td>
+</tr>
+<tr class="row-odd"><td><p>locationInfo</p></td>
+<td><p>Object</p></td>
+<td><p>特殊场景的启动信息</p></td>
+</tr>
+</tbody>
+</table>
+<p>locationInfo 的结构</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 21%" />
+<col style="width: 14%" />
+<col style="width: 65%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>属性</p></th>
+<th class="head"><p>类型</p></th>
+<th class="head"><p>描述</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>latitude</p></td>
+<td><p>number</p></td>
+<td><p>纬度，范围为 -90~90，负数表示南纬</p></td>
+</tr>
+<tr class="row-odd"><td><p>longtitude</p></td>
+<td><p>number</p></td>
+<td><p>经度，范围为 -180~180，负数表示西经</p></td>
+</tr>
+<tr class="row-even"><td><p>name</p></td>
+<td><p>string</p></td>
+<td><p>POI名称</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="id4">
+<h2>3. 工具调试<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h2>
+<p>Nightly v1.02.1912062 版本已支持条件编译增加位置消息入口。选择场景值 1146: 位置消息中用小程序打车，传入POI点名称和经纬度信息后可用真机预览调试。</p>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>导航</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="总目录"
+             >索引</a></li>
+        <li class="right" >
+          <a href="../../../http-routingtable.html" title="微信小程序API"
+             >wxapi</a> |</li>
+        <li class="right" >
+          <a href="../customer-message/index.html" title="客服消息"
+             >下一页</a> |</li>
+        <li class="right" >
+          <a href="uniform-message.html" title="统一服务消息"
+             >上一页</a> |</li>
+<li><a href="../../../index.html">主页</a>&#160;|</li>
+<li><a href="../../../contents.html">文档</a> &#187;</li>
+
+          <li class="nav-item nav-item-1"><a href="../../index.html" >框架</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../index.html" >开放能力</a> &#187;</li>
+          <li class="nav-item nav-item-3"><a href="index.html" >消息</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">位置消息打开</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; 版权所有 2019, Wxadev Docs.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.1.
+    </div>
+  </body>
+</html>

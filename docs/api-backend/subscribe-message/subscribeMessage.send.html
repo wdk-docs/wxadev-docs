@@ -1,0 +1,461 @@
+
+<!DOCTYPE html>
+
+<html lang="zh_CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>subscribeMessage.send &#8212; wxadev v2.21.0 文档</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx13.css" />
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/translations.js"></script>
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="在 wxadev v2.21.0 文档 中搜索"
+          href="../../_static/opensearch.xml"/>
+
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="搜索" href="../../search.html" />
+    <link rel="next" title="开发工具" href="../../devtools/index.html" />
+    <link rel="prev" title="subscribeMessage.getTemplateList" href="subscribeMessage.getTemplateList.html" />
+<link rel="canonical" href="http://www.sphinx-doc.org/en/master/api-backend/subscribe-message/subscribeMessage.send.html" />
+
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet" type="text/css" />
+ 
+<style type="text/css">
+  table.right { float: right; margin-left: 20px; }
+  table.right td { border: 1px solid #ccc; }
+  
+</style>
+<script type="text/javascript">
+  // intelligent scrolling of the sidebar content
+  $(window).scroll(function() {
+    var sb = $('.sphinxsidebarwrapper');
+    var win = $(window);
+    var sbh = sb.height();
+    var offset = $('.sphinxsidebar').position()['top'];
+    var wintop = win.scrollTop();
+    var winbot = wintop + win.innerHeight();
+    var curtop = sb.position()['top'];
+    var curbot = curtop + sbh;
+    // does sidebar fit in window?
+    if (sbh < win.innerHeight()) {
+      // yes: easy case -- always keep at the top
+      sb.css('top', $u.min([$u.max([0, wintop - offset - 10]), $(document).height() - sbh - 200]));
+    } else {
+      // no: only scroll if top/bottom edge of sidebar is at
+      // top/bottom edge of window
+      if (curtop > wintop && curbot > winbot) {
+        sb.css('top', $u.max([wintop - offset - 10, 0]));
+      } else if (curtop < wintop && curbot < winbot) {
+        sb.css('top', $u.min([winbot - sbh - offset - 20, $(document).height() - sbh - 200]));
+      }
+    }
+  });
+</script> 
+  </head><body>
+<div class="pageheader">
+  <ul>
+    <li><a href="../../index.html">主页</a></li>
+    <li><a href="../../basic/index.html">入门</a></li>
+    <li><a href="../../framework/index.html">框架</a></li>
+    <li><a href="../../component/index.html">组件</a></li>
+    <li><a href="../../api/index.html">API</a></li>
+    <li><a href="../index.html">服务端</a></li>
+    <li><a href="../../reference/index.html">参考</a></li>
+    <li><a href="../../contents.html">目录</a></li>
+  </ul>
+  <div>
+    <a href="../../index.html">
+      <img src="../../_static/wxaheader.png" alt="wxa" />
+    </a>
+  </div>
+</div>
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>导航</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="总目录"
+             accesskey="I">索引</a></li>
+        <li class="right" >
+          <a href="../../http-routingtable.html" title="微信小程序API"
+             >wxapi</a> |</li>
+        <li class="right" >
+          <a href="../../devtools/index.html" title="开发工具"
+             accesskey="N">下一页</a> |</li>
+        <li class="right" >
+          <a href="subscribeMessage.getTemplateList.html" title="subscribeMessage.getTemplateList"
+             accesskey="P">上一页</a> |</li>
+<li><a href="../../index.html">主页</a>&#160;|</li>
+<li><a href="../../contents.html">文档</a> &#187;</li>
+
+          <li class="nav-item nav-item-1"><a href="../index.html" accesskey="U">服务端API</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">subscribeMessage.send</a></li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../../contents.html">目录</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">subscribeMessage.send</a><ul>
+<li><a class="reference internal" href="#id2">服务器端调用</a></li>
+<li><a class="reference internal" href="#id3">云调用</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>上一个主题</h4>
+  <p class="topless"><a href="subscribeMessage.getTemplateList.html"
+                        title="上一章">subscribeMessage.getTemplateList</a></p>
+  <h4>下一个主题</h4>
+  <p class="topless"><a href="../../devtools/index.html"
+                        title="下一章">开发工具</a></p>
+  <div role="note" aria-label="source link">
+    <h3>本页</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../_sources/api-backend/subscribe-message/subscribeMessage.send.rst.txt"
+            rel="nofollow">显示源代码</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">快速搜索</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="转向" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="subscribemessage-send">
+<span id="id1"></span><h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/api-backend/subscribeMessage.send.html">subscribeMessage.send</a><a class="headerlink" href="#subscribemessage-send" title="永久链接至标题">¶</a></h1>
+<section id="id2">
+<h2>服务器端调用<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<dl class="http post">
+<dt class="sig sig-object http" id="post-message-subscribe-send?access_token=ACCESS_TOKEN">
+<span class="sig-name descname"><span class="pre">POST</span> </span><span class="sig-name descname"><span class="pre">message/subscribe/send?access_token=ACCESS_TOKEN</span></span><a class="headerlink" href="#post-message-subscribe-send?access_token=ACCESS_TOKEN" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">BaseUrl</dt>
+<dd class="field-odd"><p><a class="reference internal" href="../../glossary.html#term-api"><span class="xref std std-term">api</span></a></p>
+</dd>
+<dt class="field-even">Synopsis</dt>
+<dd class="field-even"><p>发送订阅消息</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">注解</p>
+<p>本接口应在服务器端调用，详细说明参见服务端API。</p>
+</div>
+<dl class="field-list">
+<dt class="field-odd">Required</dt>
+<dd class="field-odd"><p>本接口支持云调用。需开发者工具版本 &gt;= 1.02.1904090（最新稳定版下载），wx-server-sdk &gt;= 0.4.0</p>
+</dd>
+<dt class="field-even">Query Parameters</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>access_token/cloudbase_access_token</strong> (<em>string</em>) – <em>必选</em> 接口调用凭证</p></li>
+</ul>
+</dd>
+<dt class="field-odd">Request JSON Object</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>touser</strong> (<em>string</em>) – <em>必选</em> 接收者（用户）的 openid</p></li>
+<li><p><strong>template_id</strong> (<em>string</em>) – <em>必选</em>  所需下发的订阅模板id</p></li>
+<li><p><strong>page</strong> (<em>string</em>) – 点击模板卡片后的跳转页面，仅限本小程序内的页面。支持带参数,（示例index?foo=bar）。该字段不填则模板无跳转。</p></li>
+<li><p><strong>Object</strong> (<em>data</em>) – <em>必选</em> 模板内容，格式形如 { “key1”: { “value”: any }, “key2”: { “value”: any } }</p></li>
+<li><p><strong>miniprogram_state</strong> (<em>string</em>) – 跳转小程序类型：developer为开发版；trial为体验版；formal为正式版；默认为正式版</p></li>
+<li><p><strong>lang</strong> (<em>string</em>) – 进入小程序查看”的语言类型，支持zh_CN(简体中文)、en_US(英文)、zh_HK(繁体中文)、zh_TW(繁体中文)，默认为zh_CN</p></li>
+</ul>
+</dd>
+<dt class="field-even">Response JSON Object</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>errmsg</strong> (<em>string</em>) – 错误信息</p></li>
+<li><p><strong>errcode</strong> (<em>number</em>) – <p>错误码</p>
+<ul>
+<li><p>40003 touser字段openid为空或者不正确</p></li>
+<li><p>40037 订阅模板id为空不正确</p></li>
+<li><p>43101 用户拒绝接受消息，如果用户之前曾经订阅过，则表示用户取消了订阅关系</p></li>
+<li><p>47003 模板参数不准确，可能为空或者不满足规则，errmsg会提示具体是哪个字段出错</p></li>
+<li><p>41030 page路径不正确，需要保证在现网版本小程序中存在，与app.json保持一致</p></li>
+</ul>
+</p></li>
+</ul>
+</dd>
+<dt class="field-odd">接口限制</dt>
+<dd class="field-odd"><p>次数限制：开通支付能力的是3kw/日，没开通的是1kw/日。</p>
+</dd>
+<dt class="field-even">请求示例</dt>
+<dd class="field-even"><div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;touser&quot;</span><span class="p">:</span> <span class="s2">&quot;OPENID&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;template_id&quot;</span><span class="p">:</span> <span class="s2">&quot;TEMPLATE_ID&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;page&quot;</span><span class="p">:</span> <span class="s2">&quot;index&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;miniprogram_state&quot;</span><span class="p">:</span><span class="s2">&quot;developer&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;lang&quot;</span><span class="p">:</span><span class="s2">&quot;zh_CN&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;number01&quot;</span><span class="p">:</span> <span class="p">{</span>
+          <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;339208499&quot;</span>
+      <span class="p">},</span>
+      <span class="nt">&quot;date01&quot;</span><span class="p">:</span> <span class="p">{</span>
+          <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;2015年01月05日&quot;</span>
+      <span class="p">},</span>
+      <span class="nt">&quot;site01&quot;</span><span class="p">:</span> <span class="p">{</span>
+          <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;TIT创意园&quot;</span>
+      <span class="p">}</span> <span class="p">,</span>
+      <span class="nt">&quot;site02&quot;</span><span class="p">:</span> <span class="p">{</span>
+          <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;广州市新港中路397号&quot;</span>
+      <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</dd></dl>
+
+<p>订阅消息参数值内容限制说明</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 13%" />
+<col style="width: 4%" />
+<col style="width: 42%" />
+<col style="width: 41%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>类别</p></th>
+<th class="head"><p>说明</p></th>
+<th class="head"><p>值限制</p></th>
+<th class="head"><p>说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>thing.DATA</p></td>
+<td><p>事物</p></td>
+<td><p>20个以内字符</p></td>
+<td><p>可汉字、数字、字母或符号组合</p></td>
+</tr>
+<tr class="row-odd"><td><p>number.DATA</p></td>
+<td><p>数字</p></td>
+<td><p>32位以内数字</p></td>
+<td><p>只能数字，可带小数</p></td>
+</tr>
+<tr class="row-even"><td><p>letter.DATA</p></td>
+<td><p>字母</p></td>
+<td><p>32位以内字母</p></td>
+<td><p>只能字母</p></td>
+</tr>
+<tr class="row-odd"><td><p>symbol.DATA</p></td>
+<td><p>符号</p></td>
+<td><p>5位以内符号</p></td>
+<td><p>只能符号</p></td>
+</tr>
+<tr class="row-even"><td><p>character_string.DATA</p></td>
+<td><p>字符串</p></td>
+<td><p>32位以内数字、字母或符号</p></td>
+<td><p>可数字、字母或符号组合</p></td>
+</tr>
+<tr class="row-odd"><td><p>time.DATA</p></td>
+<td><p>时间</p></td>
+<td><p>24小时制时间格式（支持+年月日），支持填时间段，两个时间点之间用“~”符号连接</p></td>
+<td><p>例如：15:01，或：2019年10月1日 15:01</p></td>
+</tr>
+<tr class="row-even"><td><p>date.DATA</p></td>
+<td><p>日期</p></td>
+<td><p>年月日格式（支持+24小时制时间），支持填时间段，两个时间点之间用“~”符号连接</p></td>
+<td><p>例如：2019年10月1日，或：2019年10月1日 15:01</p></td>
+</tr>
+<tr class="row-odd"><td><p>amount.DATA</p></td>
+<td><p>金额</p></td>
+<td><p>1个币种符号+10位以内纯数字，可带小数，结尾可带“元”</p></td>
+<td><p>可带小数</p></td>
+</tr>
+<tr class="row-even"><td><p>phone_number.DATA</p></td>
+<td><p>电话</p></td>
+<td><p>17位以内，数字、符号</p></td>
+<td><p>电话号码，例：+86-0766-66888866</p></td>
+</tr>
+<tr class="row-odd"><td><p>car_number.DATA</p></td>
+<td><p>车牌</p></td>
+<td><p>8位以内，第一位与最后一位可为汉字，其余为字母或数字</p></td>
+<td><p>车牌号码：粤A8Z888挂</p></td>
+</tr>
+<tr class="row-even"><td><p>name.DATA</p></td>
+<td><p>姓名</p></td>
+<td><p>10个以内纯汉字或20个以内纯字母或符号</p></td>
+<td><p>中文名10个汉字内；纯英文名20个字母内；中文和字母混合按中文名算，10个字内</p></td>
+</tr>
+<tr class="row-odd"><td><p>phrase.DATA</p></td>
+<td><p>汉字</p></td>
+<td><p>5个以内汉字</p></td>
+<td><p>5个以内纯汉字，例如：配送中</p></td>
+</tr>
+</tbody>
+</table>
+<p>符号表示除中文、英文、数字外的常见符号，不能带有换行等控制字符。 时间格式支持HH:MM:SS或者HH:MM。 日期包含年月日，为y年m月d日，y年m月、m月d日格式，或者用‘-’、‘/’、‘.’符号连接，如2018-01-01，2018/01/01，2018.01.01，2018-01，01-01。 每个模板参数都会以类型为前缀，例如第一个数字模板参数为number01.DATA，第二个为number02.DATA</p>
+<p>例如，模板的内容为</p>
+<ul class="simple">
+<li><p>姓名: {{name01.DATA}}</p></li>
+<li><p>金额: {{amount01.DATA}}</p></li>
+<li><p>行程: {{thing01.DATA}}</p></li>
+<li><p>日期: {{date01.DATA}}</p></li>
+</ul>
+<p>则对应的json为</p>
+<div class="highlight-JSON notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;touser&quot;</span><span class="p">:</span> <span class="s2">&quot;OPENID&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;template_id&quot;</span><span class="p">:</span> <span class="s2">&quot;TEMPLATE_ID&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;page&quot;</span><span class="p">:</span> <span class="s2">&quot;index&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;name01&quot;</span><span class="p">:</span> <span class="p">{</span>
+          <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;某某&quot;</span>
+      <span class="p">},</span>
+      <span class="nt">&quot;amount01&quot;</span><span class="p">:</span> <span class="p">{</span>
+          <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;￥100&quot;</span>
+      <span class="p">},</span>
+      <span class="nt">&quot;thing01&quot;</span><span class="p">:</span> <span class="p">{</span>
+          <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;广州至北京&quot;</span>
+      <span class="p">}</span> <span class="p">,</span>
+      <span class="nt">&quot;date01&quot;</span><span class="p">:</span> <span class="p">{</span>
+          <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;2018-01-01&quot;</span>
+      <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="id3">
+<h2>云调用<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
+<p>云调用是微信云开发提供的在云函数中调用微信开放接口的能力，需要在云函数中通过 wx-server-sdk 使用。</p>
+<p>接口方法</p>
+<p>openapi.subscribeMessage.send</p>
+<p>需在 config.json 中配置 subscribeMessage.send API 的权限，详情</p>
+<p>请求参数
+属性 类型 默认值 必填 说明
+touser string  是 接收者（用户）的 openid
+templateId string  是 所需下发的订阅模板id
+page string  否 点击模板卡片后的跳转页面，仅限本小程序内的页面。支持带参数,（示例index?foo=bar）。该字段不填则模板无跳转。
+data Object  是 模板内容，格式形如 { “key1”: { “value”: any }, “key2”: { “value”: any } }
+miniprogramState string  否 跳转小程序类型：developer为开发版；trial为体验版；formal为正式版；默认为正式版
+lang string  否 进入小程序查看”的语言类型，支持zh_CN(简体中文)、en_US(英文)、zh_HK(繁体中文)、zh_TW(繁体中文)，默认为zh_CN
+返回值
+Object
+返回的 JSON 数据包</p>
+<p>属性 类型 说明
+errCode number 错误码
+errMsg string 错误信息
+errCode 的合法值</p>
+<p>值 说明 最低版本
+0 成功
+异常
+Object
+抛出的异常</p>
+<p>属性 类型 说明
+errCode number 错误码
+errMsg string 错误信息
+errCode 的合法值</p>
+<p>值 说明 最低版本
+40003 touser字段openid为空或者不正确
+40037 订阅模板id为空不正确
+43101 用户拒绝接受消息，如果用户之前曾经订阅过，则表示用户取消了订阅关系
+47003 模板参数不准确，可能为空或者不满足规则，errmsg会提示具体是哪个字段出错
+41030 page路径不正确，需要保证在现网版本小程序中存在，与app.json保持一致
+请求示例
+const cloud = require(‘wx-server-sdk’)
+cloud.init({</p>
+<blockquote>
+<div><p>env: cloud.DYNAMIC_CURRENT_ENV,</p>
+</div></blockquote>
+<p>})
+exports.main = async (event, context) =&gt; {</p>
+<blockquote>
+<div><dl>
+<dt>try {</dt><dd><dl>
+<dt>const result = await cloud.openapi.subscribeMessage.send({</dt><dd><blockquote>
+<div><p>“touser”: ‘OPENID’,
+“page”: ‘index’,
+“lang”: ‘zh_CN’,
+“data”: {</p>
+<blockquote>
+<div><dl class="simple">
+<dt>“number01”: {</dt><dd><p>“value”: ‘339208499’</p>
+</dd>
+</dl>
+<p>},
+“date01”: {</p>
+<blockquote>
+<div><p>“value”: ‘2015年01月05日’</p>
+</div></blockquote>
+<p>},
+“site01”: {</p>
+<blockquote>
+<div><p>“value”: ‘TIT创意园’</p>
+</div></blockquote>
+<p>},
+“site02”: {</p>
+<blockquote>
+<div><p>“value”: ‘广州市新港中路397号’</p>
+</div></blockquote>
+<p>}</p>
+</div></blockquote>
+<p>},
+“templateId”: ‘TEMPLATE_ID’,
+“miniprogramState”: ‘developer’</p>
+</div></blockquote>
+<p>})</p>
+</dd>
+</dl>
+<p>return result</p>
+</dd>
+<dt>} catch (err) {</dt><dd><p>return err</p>
+</dd>
+</dl>
+<p>}</p>
+</div></blockquote>
+<p>}</p>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>导航</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="总目录"
+             >索引</a></li>
+        <li class="right" >
+          <a href="../../http-routingtable.html" title="微信小程序API"
+             >wxapi</a> |</li>
+        <li class="right" >
+          <a href="../../devtools/index.html" title="开发工具"
+             >下一页</a> |</li>
+        <li class="right" >
+          <a href="subscribeMessage.getTemplateList.html" title="subscribeMessage.getTemplateList"
+             >上一页</a> |</li>
+<li><a href="../../index.html">主页</a>&#160;|</li>
+<li><a href="../../contents.html">文档</a> &#187;</li>
+
+          <li class="nav-item nav-item-1"><a href="../index.html" >服务端API</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">subscribeMessage.send</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; 版权所有 2019, Wxadev Docs.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.1.
+    </div>
+  </body>
+</html>

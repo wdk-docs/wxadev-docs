@@ -1,0 +1,546 @@
+
+<!DOCTYPE html>
+
+<html lang="zh_CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>生成运单 &#8212; wxadev v2.21.0 文档</title>
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx13.css" />
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/translations.js"></script>
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="在 wxadev v2.21.0 文档 中搜索"
+          href="../../../_static/opensearch.xml"/>
+
+    <link rel="index" title="索引" href="../../../genindex.html" />
+    <link rel="search" title="搜索" href="../../../search.html" />
+<link rel="canonical" href="http://www.sphinx-doc.org/en/master/api-backend/express/by-business/logistics.addOrder.html" />
+
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet" type="text/css" />
+ 
+<style type="text/css">
+  table.right { float: right; margin-left: 20px; }
+  table.right td { border: 1px solid #ccc; }
+  
+</style>
+<script type="text/javascript">
+  // intelligent scrolling of the sidebar content
+  $(window).scroll(function() {
+    var sb = $('.sphinxsidebarwrapper');
+    var win = $(window);
+    var sbh = sb.height();
+    var offset = $('.sphinxsidebar').position()['top'];
+    var wintop = win.scrollTop();
+    var winbot = wintop + win.innerHeight();
+    var curtop = sb.position()['top'];
+    var curbot = curtop + sbh;
+    // does sidebar fit in window?
+    if (sbh < win.innerHeight()) {
+      // yes: easy case -- always keep at the top
+      sb.css('top', $u.min([$u.max([0, wintop - offset - 10]), $(document).height() - sbh - 200]));
+    } else {
+      // no: only scroll if top/bottom edge of sidebar is at
+      // top/bottom edge of window
+      if (curtop > wintop && curbot > winbot) {
+        sb.css('top', $u.max([wintop - offset - 10, 0]));
+      } else if (curtop < wintop && curbot < winbot) {
+        sb.css('top', $u.min([winbot - sbh - offset - 20, $(document).height() - sbh - 200]));
+      }
+    }
+  });
+</script> 
+  </head><body>
+<div class="pageheader">
+  <ul>
+    <li><a href="../../../index.html">主页</a></li>
+    <li><a href="../../../basic/index.html">入门</a></li>
+    <li><a href="../../../framework/index.html">框架</a></li>
+    <li><a href="../../../component/index.html">组件</a></li>
+    <li><a href="../../../api/index.html">API</a></li>
+    <li><a href="../../index.html">服务端</a></li>
+    <li><a href="../../../reference/index.html">参考</a></li>
+    <li><a href="../../../contents.html">目录</a></li>
+  </ul>
+  <div>
+    <a href="../../../index.html">
+      <img src="../../../_static/wxaheader.png" alt="wxa" />
+    </a>
+  </div>
+</div>
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>导航</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="总目录"
+             accesskey="I">索引</a></li>
+        <li class="right" >
+          <a href="../../../http-routingtable.html" title="微信小程序API"
+             >wxapi</a> |</li>
+<li><a href="../../../index.html">主页</a>&#160;|</li>
+<li><a href="../../../contents.html">文档</a> &#187;</li>
+
+        <li class="nav-item nav-item-this"><a href="">生成运单</a></li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div role="note" aria-label="source link">
+    <h3>本页</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../../_sources/api-backend/express/by-business/logistics.addOrder.rst.txt"
+            rel="nofollow">显示源代码</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">快速搜索</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="转向" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="logistics-addorder">
+<span id="id1"></span><h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/api-backend/logistics.addOrder.html">生成运单</a><a class="headerlink" href="#logistics-addorder" title="永久链接至标题">¶</a></h1>
+<p>logistics.addOrder
+本接口应在服务器端调用，详细说明参见服务端API。</p>
+<p>本接口支持云调用。需开发者工具版本 &gt;= 1.02.1904090（最新稳定版下载），wx-server-sdk &gt;= 0.4.0</p>
+<p>调用方式：</p>
+<p>一、HTTPS 调用
+二、云调用</p>
+<p>一、HTTPS 调用</p>
+<p>接口地址请求地址 <a class="reference internal" href="../../../glossary.html#term-api"><span class="xref std std-term">api</span></a></p>
+<dl class="http post">
+<dt class="sig sig-object http" id="post-express-business-order-add?access_token=ACCESS_TOKEN">
+<span class="sig-name descname"><span class="pre">POST</span> </span><span class="sig-name descname"><span class="pre">express/business/order/add?access_token=ACCESS_TOKEN</span></span><a class="headerlink" href="#post-express-business-order-add?access_token=ACCESS_TOKEN" title="永久链接至目标">¶</a></dt>
+<dd></dd></dl>
+
+<p>请求参数
+属性      类型      默认值     必填      说明
+access_token    string          是       接口调用凭证
+order_id        string          是       订单ID，须保证全局唯一，不超过512字节
+openid  string          是       用户 openid
+delivery_id     string          是       快递公司ID，参见getAllDelivery
+biz_id  string          是       快递客户编码或者现付编码
+custom_remark   string          否       快递备注信息，比如”易碎物品”，不超过1024字节
+sender  Object          是       发件人信息
+receiver        Object          是       收件人信息
+cargo   Object          是       包裹信息，将传递给快递公司
+shop    Object          是       商品信息，会展示到物流通知消息中
+insured Object          是       保价信息
+service Object          是       服务类型
+sender 的结构</p>
+<p>属性      类型      默认值     必填      说明
+name    string          是       发件人姓名，不超过64字节
+tel     string          否       发件人座机号码，若不填写则必须填写 mobile，不超过32字节
+mobile  string          否       发件人手机号码，若不填写则必须填写 tel，不超过32字节
+company string          否       发件人公司名称，不超过64字节
+post_code       string          否       发件人邮编，不超过10字节
+country string          否       发件人国家，不超过64字节
+province        string          是       发件人省份，比如：”广东省”，不超过64字节
+city    string          是       发件人市/地区，比如：”广州市”，不超过64字节
+area    string          是       发件人区/县，比如：”海珠区”，不超过64字节
+address string          是       发件人详细地址，比如：”XX路XX号XX大厦XX”，不超过512字节
+receiver 的结构</p>
+<p>属性      类型      默认值     必填      说明
+name    string          是       收件人姓名，不超过64字节
+tel     string          否       收件人座机号码，若不填写则必须填写 mobile，不超过32字节
+mobile  string          否       收件人手机号码，若不填写则必须填写 tel，不超过32字节
+company string          否       收件人公司名，不超过64字节
+post_code       string          否       收件人邮编，不超过10字节
+country string          否       收件人所在国家，不超过64字节
+province        string          是       收件人省份，比如：”广东省”，不超过64字节
+city    string          是       收件人地区/市，比如：”广州市”，不超过64字节
+area    string          是       收件人区/县，比如：”天河区”，不超过64字节
+address string          是       收件人详细地址，比如：”XX路XX号XX大厦XX”，不超过512字节
+cargo 的结构</p>
+<p>属性      类型      默认值     必填      说明
+count   number          是       包裹数量
+weight  number          是       包裹总重量，单位是千克(kg)
+space_x number          是       包裹长度，单位厘米(cm)
+space_y number          是       包裹宽度，单位厘米(cm)
+space_z number          是       包裹高度，单位厘米(cm)
+detail_list     Array.&lt;Object&gt;          是       包裹中商品详情列表
+cargo.detail_list 的结构</p>
+<p>属性      类型      默认值     必填      说明
+name    string          是       商品名，不超过128字节
+count   number          是       商品数量
+shop 的结构</p>
+<p>属性      类型      默认值     必填      说明
+wxa_path        string          是       商家小程序的路径，建议为订单页面
+img_url string          是       商品缩略图 url
+goods_name      string          是       商品名称
+goods_count     number          是       商品数量
+insured 的结构</p>
+<p>属性      类型      默认值     必填      说明
+use_insured     number          是       是否保价，0 表示不保价，1 表示保价
+insured_value   number          是       保价金额，单位是分，比如: 10000 表示 100 元
+service 的结构</p>
+<p>属性      类型      默认值     必填      说明
+service_type    number          是       服务类型ID，详见已经支持的快递公司基本信息
+service_name    string          是       服务名称，详见已经支持的快递公司基本信息
+返回值
+Object
+属性      类型      说明
+order_id        string  订单ID，下单成功时返回
+waybill_id      string  运单ID，下单成功时返回
+waybill_data    Array.&lt;Object&gt;  运单信息，下单成功时返回
+errcode number  微信侧错误码，下单失败时返回
+errmsg  string  微信侧错误信息，下单失败时返回
+delivery_resultcode     number  快递侧错误码，下单失败时返回
+delivery_resultmsg      string  快递侧错误信息，下单失败时返回
+waybill_data 的结构</p>
+<p>属性      类型      说明
+key     string  运单信息 key
+value   string  运单信息 value
+errcode 的合法值</p>
+<p>值       说明      最低版本
+-1      系统失败
+9300501 快递侧逻辑错误，详细原因需要看 delivery_resultcode
+9300503 delivery_id 不存在
+9300510 service_type 不存在
+9300526 字段长度不正确
+请求示例</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;order_id&quot;</span><span class="p">:</span> <span class="s2">&quot;01234567890123456789&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;openid&quot;</span><span class="p">:</span> <span class="s2">&quot;oABC123456&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;delivery_id&quot;</span><span class="p">:</span> <span class="s2">&quot;SF&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;biz_id&quot;</span><span class="p">:</span> <span class="s2">&quot;xyz&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;custom_remark&quot;</span><span class="p">:</span> <span class="s2">&quot;易碎物品&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;sender&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;张三&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;tel&quot;</span><span class="p">:</span> <span class="s2">&quot;020-88888888&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;mobile&quot;</span><span class="p">:</span> <span class="s2">&quot;18666666666&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;company&quot;</span><span class="p">:</span> <span class="s2">&quot;公司名&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;post_code&quot;</span><span class="p">:</span> <span class="s2">&quot;123456&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;中国&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;province&quot;</span><span class="p">:</span> <span class="s2">&quot;广东省&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;city&quot;</span><span class="p">:</span> <span class="s2">&quot;广州市&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;area&quot;</span><span class="p">:</span> <span class="s2">&quot;海珠区&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;address&quot;</span><span class="p">:</span> <span class="s2">&quot;XX路XX号XX大厦XX栋XX&quot;</span>
+  <span class="p">},</span>
+  <span class="nt">&quot;receiver&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;王小蒙&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;tel&quot;</span><span class="p">:</span> <span class="s2">&quot;020-77777777&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;mobile&quot;</span><span class="p">:</span> <span class="s2">&quot;18610000000&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;company&quot;</span><span class="p">:</span> <span class="s2">&quot;公司名&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;post_code&quot;</span><span class="p">:</span> <span class="s2">&quot;654321&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;country&quot;</span><span class="p">:</span> <span class="s2">&quot;中国&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;province&quot;</span><span class="p">:</span> <span class="s2">&quot;广东省&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;city&quot;</span><span class="p">:</span> <span class="s2">&quot;广州市&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;area&quot;</span><span class="p">:</span> <span class="s2">&quot;天河区&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;address&quot;</span><span class="p">:</span> <span class="s2">&quot;XX路XX号XX大厦XX栋XX&quot;</span>
+  <span class="p">},</span>
+  <span class="nt">&quot;shop&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;wxa_path&quot;</span><span class="p">:</span> <span class="s2">&quot;/index/index?from=waybill&amp;id=01234567890123456789&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;img_url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://mmbiz.qpic.cn/mmbiz_png/OiaFLUqewuIDNQnTiaCInIG8ibdosYHhQHPbXJUrqYSNIcBL60vo4LIjlcoNG1QPkeH5GWWEB41Ny895CokeAah8A/640&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;goods_name&quot;</span><span class="p">:</span> <span class="s2">&quot;一千零一夜钻石包&amp;爱马仕铂金包&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;goods_count&quot;</span><span class="p">:</span> <span class="mi">2</span>
+  <span class="p">},</span>
+  <span class="nt">&quot;cargo&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;count&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+    <span class="nt">&quot;weight&quot;</span><span class="p">:</span> <span class="mf">5.5</span><span class="p">,</span>
+    <span class="nt">&quot;space_x&quot;</span><span class="p">:</span> <span class="mf">30.5</span><span class="p">,</span>
+    <span class="nt">&quot;space_y&quot;</span><span class="p">:</span> <span class="mi">20</span><span class="p">,</span>
+    <span class="nt">&quot;space_z&quot;</span><span class="p">:</span> <span class="mi">20</span><span class="p">,</span>
+    <span class="nt">&quot;detail_list&quot;</span><span class="p">:</span> <span class="p">[</span>
+      <span class="p">{</span>
+        <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;一千零一夜钻石包&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;count&quot;</span><span class="p">:</span> <span class="mi">1</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+        <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;爱马仕铂金包&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;count&quot;</span><span class="p">:</span> <span class="mi">1</span>
+      <span class="p">}</span>
+    <span class="p">]</span>
+  <span class="p">},</span>
+  <span class="nt">&quot;insured&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;use_insured&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="nt">&quot;insured_value&quot;</span><span class="p">:</span> <span class="mi">10000</span>
+  <span class="p">},</span>
+  <span class="nt">&quot;service&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;service_type&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="nt">&quot;service_name&quot;</span><span class="p">:</span> <span class="s2">&quot;标准快递&quot;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>返回示例
+下单成功</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;order_id&quot;</span><span class="p">:</span> <span class="s2">&quot;01234567890123456789&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;waybill_id&quot;</span><span class="p">:</span> <span class="s2">&quot;123456789&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;waybill_data&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+      <span class="nt">&quot;key&quot;</span><span class="p">:</span> <span class="s2">&quot;SF_bagAddr&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;广州&quot;</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="nt">&quot;key&quot;</span><span class="p">:</span> <span class="s2">&quot;SF_mark&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;101- 07-03 509&quot;</span>
+    <span class="p">}</span>
+  <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>下单失败</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;errcode&quot;</span><span class="p">:</span> <span class="mi">9300501</span><span class="p">,</span>
+  <span class="nt">&quot;errmsg&quot;</span><span class="p">:</span> <span class="s2">&quot;delivery logic fail&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;delivery_resultcode&quot;</span><span class="p">:</span> <span class="mi">10002</span><span class="p">,</span>
+  <span class="nt">&quot;delivery_resultmsg&quot;</span><span class="p">:</span> <span class="s2">&quot;客户密码不正确&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>二、云调用
+云调用是小程序·云开发提供的在云函数中调用微信开放接口的能力，需要在云函数中通过 wx-server-sdk 使用。</p>
+<p>接口方法</p>
+<dl class="js function">
+<dt class="sig sig-object js" id="openapi.logistics.addOrder">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">openapi</span></span><span class="p"><span class="pre">.</span></span><span class="n"><span class="pre">logistics</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">addOrder</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#openapi.logistics.addOrder" title="永久链接至目标">¶</a></dt>
+<dd></dd></dl>
+
+<p>需在 config.json 中配置 logistics.addOrder API 的权限，详情</p>
+<p>请求参数
+属性      类型      默认值     必填      说明
+orderId string          是       订单ID，须保证全局唯一，不超过512字节
+openid  string          是       用户 openid
+deliveryId      string          是       快递公司ID，参见getAllDelivery
+bizId   string          是       快递客户编码或者现付编码
+customRemark    string          否       快递备注信息，比如”易碎物品”，不超过1024字节
+sender  Object          是       发件人信息
+receiver        Object          是       收件人信息
+cargo   Object          是       包裹信息，将传递给快递公司
+shop    Object          是       商品信息，会展示到物流通知消息中
+insured Object          是       保价信息
+service Object          是       服务类型
+sender 的结构</p>
+<p>属性      类型      默认值     必填      说明
+name    string          是       发件人姓名，不超过64字节
+tel     string          否       发件人座机号码，若不填写则必须填写 mobile，不超过32字节
+mobile  string          否       发件人手机号码，若不填写则必须填写 tel，不超过32字节
+company string          否       发件人公司名称，不超过64字节
+postCode        string          否       发件人邮编，不超过10字节
+country string          否       发件人国家，不超过64字节
+province        string          是       发件人省份，比如：”广东省”，不超过64字节
+city    string          是       发件人市/地区，比如：”广州市”，不超过64字节
+area    string          是       发件人区/县，比如：”海珠区”，不超过64字节
+address string          是       发件人详细地址，比如：”XX路XX号XX大厦XX”，不超过512字节
+receiver 的结构</p>
+<p>属性      类型      默认值     必填      说明
+name    string          是       收件人姓名，不超过64字节
+tel     string          否       收件人座机号码，若不填写则必须填写 mobile，不超过32字节
+mobile  string          否       收件人手机号码，若不填写则必须填写 tel，不超过32字节
+company string          否       收件人公司名，不超过64字节
+postCode        string          否       收件人邮编，不超过10字节
+country string          否       收件人所在国家，不超过64字节
+province        string          是       收件人省份，比如：”广东省”，不超过64字节
+city    string          是       收件人地区/市，比如：”广州市”，不超过64字节
+area    string          是       收件人区/县，比如：”天河区”，不超过64字节
+address string          是       收件人详细地址，比如：”XX路XX号XX大厦XX”，不超过512字节
+cargo 的结构</p>
+<p>属性      类型      默认值     必填      说明
+count   number          是       包裹数量
+weight  number          是       包裹总重量，单位是千克(kg)
+spaceX  number          是       包裹长度，单位厘米(cm)
+spaceY  number          是       包裹宽度，单位厘米(cm)
+spaceZ  number          是       包裹高度，单位厘米(cm)
+detailList      Array.&lt;Object&gt;          是       包裹中商品详情列表
+cargo.detailList 的结构</p>
+<p>属性      类型      默认值     必填      说明
+name    string          是       商品名，不超过128字节
+count   number          是       商品数量
+shop 的结构</p>
+<p>属性      类型      默认值     必填      说明
+wxaPath string          是       商家小程序的路径，建议为订单页面
+imgUrl  string          是       商品缩略图 url
+goodsName       string          是       商品名称
+goodsCount      number          是       商品数量
+insured 的结构</p>
+<p>属性      类型      默认值     必填      说明
+useInsured      number          是       是否保价，0 表示不保价，1 表示保价
+insuredValue    number          是       保价金额，单位是分，比如: 10000 表示 100 元
+service 的结构</p>
+<p>属性      类型      默认值     必填      说明
+serviceType     number          是       服务类型ID，详见已经支持的快递公司基本信息
+serviceName     string          是       服务名称，详见已经支持的快递公司基本信息
+返回值
+Object
+属性      类型      说明
+orderId string  订单ID，下单成功时返回
+waybillId       string  运单ID，下单成功时返回
+waybillData     Array.&lt;Object&gt;  运单信息，下单成功时返回
+errCode number  微信侧错误码，下单失败时返回
+errMsg  string  微信侧错误信息，下单失败时返回
+deliveryResultcode      number  快递侧错误码，下单失败时返回
+deliveryResultmsg       string  快递侧错误信息，下单失败时返回
+waybillData 的结构</p>
+<p>属性      类型      说明
+key     string  运单信息 key
+value   string  运单信息 value
+errCode 的合法值</p>
+<p>值       说明      最低版本
+0       成功
+异常
+Object
+抛出的异常</p>
+<p>属性      类型      说明
+errCode number  微信侧错误码，下单失败时返回
+errMsg  string  微信侧错误信息，下单失败时返回
+errCode 的合法值</p>
+<p>值       说明      最低版本
+-1      系统失败
+9300501 快递侧逻辑错误，详细原因需要看 delivery_resultcode
+9300503 delivery_id 不存在
+9300510 service_type 不存在
+9300526 字段长度不正确
+请求示例</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="kd">const</span> <span class="nx">cloud</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;wx-server-sdk&#39;</span><span class="p">)</span>
+<span class="nx">cloud</span><span class="p">.</span><span class="nx">init</span><span class="p">()</span>
+<span class="nx">exports</span><span class="p">.</span><span class="nx">main</span> <span class="o">=</span> <span class="k">async</span> <span class="p">(</span><span class="nx">event</span><span class="p">,</span> <span class="nx">context</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+  <span class="k">try</span> <span class="p">{</span>
+    <span class="kd">const</span> <span class="nx">result</span> <span class="o">=</span> <span class="k">await</span> <span class="nx">cloud</span><span class="p">.</span><span class="nx">openapi</span><span class="p">.</span><span class="nx">logistics</span><span class="p">.</span><span class="nx">addOrder</span><span class="p">({</span>
+      <span class="nx">openid</span><span class="o">:</span> <span class="s1">&#39;oABC123456&#39;</span><span class="p">,</span>
+      <span class="nx">sender</span><span class="o">:</span> <span class="p">{</span>
+        <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;张三&#39;</span><span class="p">,</span>
+        <span class="nx">tel</span><span class="o">:</span> <span class="s1">&#39;020-88888888&#39;</span><span class="p">,</span>
+        <span class="nx">mobile</span><span class="o">:</span> <span class="s1">&#39;18666666666&#39;</span><span class="p">,</span>
+        <span class="nx">company</span><span class="o">:</span> <span class="s1">&#39;公司名&#39;</span><span class="p">,</span>
+        <span class="nx">country</span><span class="o">:</span> <span class="s1">&#39;中国&#39;</span><span class="p">,</span>
+        <span class="nx">province</span><span class="o">:</span> <span class="s1">&#39;广东省&#39;</span><span class="p">,</span>
+        <span class="nx">city</span><span class="o">:</span> <span class="s1">&#39;广州市&#39;</span><span class="p">,</span>
+        <span class="nx">area</span><span class="o">:</span> <span class="s1">&#39;海珠区&#39;</span><span class="p">,</span>
+        <span class="nx">address</span><span class="o">:</span> <span class="s1">&#39;XX路XX号XX大厦XX栋XX&#39;</span><span class="p">,</span>
+        <span class="nx">postCode</span><span class="o">:</span> <span class="s1">&#39;123456&#39;</span>
+      <span class="p">},</span>
+      <span class="nx">receiver</span><span class="o">:</span> <span class="p">{</span>
+        <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;王小蒙&#39;</span><span class="p">,</span>
+        <span class="nx">tel</span><span class="o">:</span> <span class="s1">&#39;020-77777777&#39;</span><span class="p">,</span>
+        <span class="nx">mobile</span><span class="o">:</span> <span class="s1">&#39;18610000000&#39;</span><span class="p">,</span>
+        <span class="nx">company</span><span class="o">:</span> <span class="s1">&#39;公司名&#39;</span><span class="p">,</span>
+        <span class="nx">country</span><span class="o">:</span> <span class="s1">&#39;中国&#39;</span><span class="p">,</span>
+        <span class="nx">province</span><span class="o">:</span> <span class="s1">&#39;广东省&#39;</span><span class="p">,</span>
+        <span class="nx">city</span><span class="o">:</span> <span class="s1">&#39;广州市&#39;</span><span class="p">,</span>
+        <span class="nx">area</span><span class="o">:</span> <span class="s1">&#39;天河区&#39;</span><span class="p">,</span>
+        <span class="nx">address</span><span class="o">:</span> <span class="s1">&#39;XX路XX号XX大厦XX栋XX&#39;</span><span class="p">,</span>
+        <span class="nx">postCode</span><span class="o">:</span> <span class="s1">&#39;654321&#39;</span>
+      <span class="p">},</span>
+      <span class="nx">shop</span><span class="o">:</span> <span class="p">{</span>
+        <span class="nx">wxaPath</span><span class="o">:</span> <span class="s1">&#39;/index/index?from=waybill&amp;id=01234567890123456789&#39;</span><span class="p">,</span>
+        <span class="nx">imgUrl</span><span class="o">:</span> <span class="s1">&#39;https://mmbiz.qpic.cn/mmbiz_png/OiaFLUqewuIDNQnTiaCInIG8ibdosYHhQHPbXJUrqYSNIcBL60vo4LIjlcoNG1QPkeH5GWWEB41Ny895CokeAah8A/640&#39;</span><span class="p">,</span>
+        <span class="nx">goodsName</span><span class="o">:</span> <span class="s1">&#39;一千零一夜钻石包&amp;爱马仕铂金包&#39;</span><span class="p">,</span>
+        <span class="nx">goodsCount</span><span class="o">:</span> <span class="mf">2</span>
+      <span class="p">},</span>
+      <span class="nx">cargo</span><span class="o">:</span> <span class="p">{</span>
+        <span class="nx">count</span><span class="o">:</span> <span class="mf">2</span><span class="p">,</span>
+        <span class="nx">weight</span><span class="o">:</span> <span class="mf">5.5</span><span class="p">,</span>
+        <span class="nx">spaceX</span><span class="o">:</span> <span class="mf">30.5</span><span class="p">,</span>
+        <span class="nx">spaceY</span><span class="o">:</span> <span class="mf">20</span><span class="p">,</span>
+        <span class="nx">spaceZ</span><span class="o">:</span> <span class="mf">20</span><span class="p">,</span>
+        <span class="nx">detailList</span><span class="o">:</span> <span class="p">[</span>
+          <span class="p">{</span>
+            <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;一千零一夜钻石包&#39;</span><span class="p">,</span>
+            <span class="nx">count</span><span class="o">:</span> <span class="mf">1</span>
+          <span class="p">},</span>
+          <span class="p">{</span>
+            <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;爱马仕铂金包&#39;</span><span class="p">,</span>
+            <span class="nx">count</span><span class="o">:</span> <span class="mf">1</span>
+          <span class="p">}</span>
+        <span class="p">]</span>
+      <span class="p">},</span>
+      <span class="nx">insured</span><span class="o">:</span> <span class="p">{</span>
+        <span class="nx">useInsured</span><span class="o">:</span> <span class="mf">1</span><span class="p">,</span>
+        <span class="nx">insuredValue</span><span class="o">:</span> <span class="mf">10000</span>
+      <span class="p">},</span>
+      <span class="nx">service</span><span class="o">:</span> <span class="p">{</span>
+        <span class="nx">serviceType</span><span class="o">:</span> <span class="mf">0</span><span class="p">,</span>
+        <span class="nx">serviceName</span><span class="o">:</span> <span class="s1">&#39;标准快递&#39;</span>
+      <span class="p">},</span>
+      <span class="nx">orderId</span><span class="o">:</span> <span class="s1">&#39;01234567890123456789&#39;</span><span class="p">,</span>
+      <span class="nx">deliveryId</span><span class="o">:</span> <span class="s1">&#39;SF&#39;</span><span class="p">,</span>
+      <span class="nx">bizId</span><span class="o">:</span> <span class="s1">&#39;xyz&#39;</span><span class="p">,</span>
+      <span class="nx">customRemark</span><span class="o">:</span> <span class="s1">&#39;易碎物品&#39;</span>
+    <span class="p">})</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">result</span><span class="p">)</span>
+    <span class="k">return</span> <span class="nx">result</span>
+  <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span>
+    <span class="k">return</span> <span class="nx">err</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>返回示例
+下单成功</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;orderId&quot;</span><span class="p">:</span> <span class="s2">&quot;01234567890123456789&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;waybillId&quot;</span><span class="p">:</span> <span class="s2">&quot;123456789&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;waybillData&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+      <span class="nt">&quot;key&quot;</span><span class="p">:</span> <span class="s2">&quot;SF_bagAddr&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;广州&quot;</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="nt">&quot;key&quot;</span><span class="p">:</span> <span class="s2">&quot;SF_mark&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;value&quot;</span><span class="p">:</span> <span class="s2">&quot;101- 07-03 509&quot;</span>
+    <span class="p">}</span>
+  <span class="p">],</span>
+  <span class="nt">&quot;errMsg&quot;</span><span class="p">:</span> <span class="s2">&quot;openapi.logistics.addOrder:ok&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>下单失败</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;errCode&quot;</span><span class="p">:</span> <span class="mi">9300501</span><span class="p">,</span>
+  <span class="nt">&quot;errMsg&quot;</span><span class="p">:</span> <span class="s2">&quot;openapi.logistics.addOrder:fail delivery logic fail&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;deliveryResultcode&quot;</span><span class="p">:</span> <span class="mi">10002</span><span class="p">,</span>
+  <span class="nt">&quot;deliveryResultmsg&quot;</span><span class="p">:</span> <span class="s2">&quot;客户密码不正确&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>导航</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="总目录"
+             >索引</a></li>
+        <li class="right" >
+          <a href="../../../http-routingtable.html" title="微信小程序API"
+             >wxapi</a> |</li>
+<li><a href="../../../index.html">主页</a>&#160;|</li>
+<li><a href="../../../contents.html">文档</a> &#187;</li>
+
+        <li class="nav-item nav-item-this"><a href="">生成运单</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; 版权所有 2019, Wxadev Docs.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.1.
+    </div>
+  </body>
+</html>

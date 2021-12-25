@@ -1,0 +1,356 @@
+
+<!DOCTYPE html>
+
+<html lang="zh_CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>subscribeMessage.getPubTemplateTitleList &#8212; wxadev v2.21.0 文档</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx13.css" />
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/translations.js"></script>
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="在 wxadev v2.21.0 文档 中搜索"
+          href="../../_static/opensearch.xml"/>
+
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="搜索" href="../../search.html" />
+    <link rel="next" title="subscribeMessage.getTemplateList" href="subscribeMessage.getTemplateList.html" />
+    <link rel="prev" title="subscribeMessage.getPubTemplateKeyWordsById" href="subscribeMessage.getPubTemplateKeyWordsById.html" />
+<link rel="canonical" href="http://www.sphinx-doc.org/en/master/api-backend/subscribe-message/subscribeMessage.getPubTemplateTitleList.html" />
+
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet" type="text/css" />
+ 
+<style type="text/css">
+  table.right { float: right; margin-left: 20px; }
+  table.right td { border: 1px solid #ccc; }
+  
+</style>
+<script type="text/javascript">
+  // intelligent scrolling of the sidebar content
+  $(window).scroll(function() {
+    var sb = $('.sphinxsidebarwrapper');
+    var win = $(window);
+    var sbh = sb.height();
+    var offset = $('.sphinxsidebar').position()['top'];
+    var wintop = win.scrollTop();
+    var winbot = wintop + win.innerHeight();
+    var curtop = sb.position()['top'];
+    var curbot = curtop + sbh;
+    // does sidebar fit in window?
+    if (sbh < win.innerHeight()) {
+      // yes: easy case -- always keep at the top
+      sb.css('top', $u.min([$u.max([0, wintop - offset - 10]), $(document).height() - sbh - 200]));
+    } else {
+      // no: only scroll if top/bottom edge of sidebar is at
+      // top/bottom edge of window
+      if (curtop > wintop && curbot > winbot) {
+        sb.css('top', $u.max([wintop - offset - 10, 0]));
+      } else if (curtop < wintop && curbot < winbot) {
+        sb.css('top', $u.min([winbot - sbh - offset - 20, $(document).height() - sbh - 200]));
+      }
+    }
+  });
+</script> 
+  </head><body>
+<div class="pageheader">
+  <ul>
+    <li><a href="../../index.html">主页</a></li>
+    <li><a href="../../basic/index.html">入门</a></li>
+    <li><a href="../../framework/index.html">框架</a></li>
+    <li><a href="../../component/index.html">组件</a></li>
+    <li><a href="../../api/index.html">API</a></li>
+    <li><a href="../index.html">服务端</a></li>
+    <li><a href="../../reference/index.html">参考</a></li>
+    <li><a href="../../contents.html">目录</a></li>
+  </ul>
+  <div>
+    <a href="../../index.html">
+      <img src="../../_static/wxaheader.png" alt="wxa" />
+    </a>
+  </div>
+</div>
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>导航</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="总目录"
+             accesskey="I">索引</a></li>
+        <li class="right" >
+          <a href="../../http-routingtable.html" title="微信小程序API"
+             >wxapi</a> |</li>
+        <li class="right" >
+          <a href="subscribeMessage.getTemplateList.html" title="subscribeMessage.getTemplateList"
+             accesskey="N">下一页</a> |</li>
+        <li class="right" >
+          <a href="subscribeMessage.getPubTemplateKeyWordsById.html" title="subscribeMessage.getPubTemplateKeyWordsById"
+             accesskey="P">上一页</a> |</li>
+<li><a href="../../index.html">主页</a>&#160;|</li>
+<li><a href="../../contents.html">文档</a> &#187;</li>
+
+          <li class="nav-item nav-item-1"><a href="../index.html" accesskey="U">服务端API</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">subscribeMessage.getPubTemplateTitleList</a></li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../../contents.html">目录</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">subscribeMessage.getPubTemplateTitleList</a><ul>
+<li><a class="reference internal" href="#id2">服务器端调用</a></li>
+<li><a class="reference internal" href="#id3">云调用</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>上一个主题</h4>
+  <p class="topless"><a href="subscribeMessage.getPubTemplateKeyWordsById.html"
+                        title="上一章">subscribeMessage.getPubTemplateKeyWordsById</a></p>
+  <h4>下一个主题</h4>
+  <p class="topless"><a href="subscribeMessage.getTemplateList.html"
+                        title="下一章">subscribeMessage.getTemplateList</a></p>
+  <div role="note" aria-label="source link">
+    <h3>本页</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../_sources/api-backend/subscribe-message/subscribeMessage.getPubTemplateTitleList.rst.txt"
+            rel="nofollow">显示源代码</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">快速搜索</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="转向" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="subscribemessage-getpubtemplatetitlelist">
+<span id="id1"></span><h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/api/subscribeMessage.getPubTemplateTitleList.html">subscribeMessage.getPubTemplateTitleList</a><a class="headerlink" href="#subscribemessage-getpubtemplatetitlelist" title="永久链接至标题">¶</a></h1>
+<section id="id2">
+<h2>服务器端调用<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<dl class="http get">
+<dt class="sig sig-object http" id="get-wxaapi-newtmpl-getpubtemplatetitles?access_token=ACCESS_TOKEN">
+<span class="sig-name descname"><span class="pre">GET</span> </span><span class="sig-name descname"><span class="pre">wxaapi/newtmpl/getpubtemplatetitles?access_token=ACCESS_TOKEN</span></span><a class="headerlink" href="#get-wxaapi-newtmpl-getpubtemplatetitles?access_token=ACCESS_TOKEN" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Synopsis</dt>
+<dd class="field-odd"><p>获取帐号所属类目下的公共模板标题</p>
+</dd>
+<dt class="field-even">Note</dt>
+<dd class="field-even"><p>本接口应在服务器端调用，详细说明参见服务端API。</p>
+</dd>
+</dl>
+<dl class="field-list">
+<dt class="field-odd">Query Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>access_token/cloudbase_access_token</strong> (<em>string</em>) – <em>必选</em> 接口调用凭证</p></li>
+</ul>
+</dd>
+<dt class="field-even">Request JSON Object</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>ids</strong> (<em>string</em>) – <em>必选</em> 类目 id，多个用逗号隔开</p></li>
+<li><p><strong>start</strong> (<em>number</em>) – <em>必选</em>    用于分页，表示从 start 开始。从 0 开始计数。</p></li>
+<li><p><strong>limit</strong> (<em>number</em>) – <em>必选</em>    用于分页，表示拉取 limit 条记录。最大为 30。</p></li>
+</ul>
+</dd>
+<dt class="field-odd">Response JSON Object</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>errmsg</strong> (<em>string</em>) – 错误信息</p></li>
+<li><p><strong>errcode</strong> (<em>number</em>) – <p>错误码</p>
+<ul>
+<li><p>200016  start 参数错误</p></li>
+<li><p>200017  limit 参数错误</p></li>
+<li><p>200018  类目 ids 缺失</p></li>
+<li><p>200019  类目 ids 不合法</p></li>
+</ul>
+</p></li>
+<li><p><strong>count</strong> (<em>number</em>) – 模版标题列表总数</p></li>
+<li><p><strong>data</strong> (<em>Array.&lt;Object&gt;</em>) – <p>模板标题列表</p>
+<ul>
+<li><p>tid     number 模版标题 id</p></li>
+<li><p>title   string 模版标题</p></li>
+<li><p>type    number 模版类型，2 为一次性订阅，3 为长期订阅</p></li>
+<li><p>categoryId number       模版所属类目 id</p></li>
+</ul>
+</p></li>
+</ul>
+</dd>
+<dt class="field-even">请求示例</dt>
+<dd class="field-even"><p>参数在 URL 的 query 里面，如下： <a class="reference external" href="https://api.weixin.qq.com/wxaapi/newtmpl/getpubtemplatetitles?access_token=ACCESS_TOKEN&amp;ids=">https://api.weixin.qq.com/wxaapi/newtmpl/getpubtemplatetitles?access_token=ACCESS_TOKEN&amp;ids=</a>”2,616”&amp;start=0&amp;limit=1</p>
+<div class="highlight-JSON notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;ids&quot;</span><span class="p">:</span> <span class="s2">&quot;2,616&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;start&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+  <span class="nt">&quot;limit&quot;</span><span class="p">:</span> <span class="mi">1</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</dd>
+<dt class="field-odd">响应示例</dt>
+<dd class="field-odd"><div class="highlight-JSON notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;errcode&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+  <span class="nt">&quot;errmsg&quot;</span><span class="p">:</span> <span class="s2">&quot;ok&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;count&quot;</span><span class="p">:</span> <span class="mi">55</span><span class="p">,</span>
+  <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">[</span>
+      <span class="p">{</span>
+          <span class="nt">&quot;tid&quot;</span><span class="p">:</span> <span class="mi">99</span><span class="p">,</span>
+          <span class="nt">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;付款成功通知&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+          <span class="nt">&quot;categoryId&quot;</span><span class="p">:</span> <span class="s2">&quot;616&quot;</span>
+      <span class="p">}</span>
+  <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="id3">
+<h2>云调用<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
+<p>云调用是微信云开发提供的在云函数中调用微信开放接口的能力，需要在云函数中通过 wx-server-sdk 使用。</p>
+<p>接口方法
+openapi.subscribeMessage.getPubTemplateTitleList
+需在 config.json 中配置 subscribeMessage.getPubTemplateTitleList API 的权限，详情</p>
+<p>请求参数
+属性      类型      默认值     必填      说明
+ids     string          是       类目 id，多个用逗号隔开
+start   number          是       用于分页，表示从 start 开始。从 0 开始计数。
+limit   number          是       用于分页，表示拉取 limit 条记录。最大为 30。
+返回值
+Object
+返回的 JSON 数据包</p>
+<p>属性      类型      说明
+errCode number  错误码
+errMsg  string  错误信息
+count   number  模版标题列表总数
+data    Array.&lt;Object&gt;  模板标题列表
+errCode 的合法值</p>
+<p>值       说明      最低版本
+0       成功
+data 的结构</p>
+<p>属性      类型      说明
+tid     number  模版标题 id
+title   string  模版标题
+type    number  模版类型，2 为一次性订阅，3 为长期订阅
+categoryId      number  模版所属类目 id
+异常
+Object
+抛出的异常</p>
+<p>属性      类型      说明
+errCode number  错误码
+errMsg  string  错误信息
+errCode 的合法值</p>
+<p>值       说明      最低版本
+200016  start 参数错误
+200017  limit 参数错误
+200018  类目 ids 缺失
+200019  类目 ids 不合法
+请求示例</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="kd">const</span> <span class="nx">cloud</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;wx-server-sdk&#39;</span><span class="p">)</span>
+<span class="nx">cloud</span><span class="p">.</span><span class="nx">init</span><span class="p">({</span>
+  <span class="nx">env</span><span class="o">:</span> <span class="nx">cloud</span><span class="p">.</span><span class="nx">DYNAMIC_CURRENT_ENV</span><span class="p">,</span>
+<span class="p">})</span>
+<span class="nx">exports</span><span class="p">.</span><span class="nx">main</span> <span class="o">=</span> <span class="k">async</span> <span class="p">(</span><span class="nx">event</span><span class="p">,</span> <span class="nx">context</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+  <span class="k">try</span> <span class="p">{</span>
+    <span class="kd">const</span> <span class="nx">result</span> <span class="o">=</span> <span class="k">await</span> <span class="nx">cloud</span><span class="p">.</span><span class="nx">openapi</span><span class="p">.</span><span class="nx">subscribeMessage</span><span class="p">.</span><span class="nx">getPubTemplateTitleList</span><span class="p">({</span>
+        <span class="s2">&quot;ids&quot;</span><span class="o">:</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
+        <span class="s2">&quot;start&quot;</span><span class="o">:</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
+        <span class="s2">&quot;limit&quot;</span><span class="o">:</span> <span class="s1">&#39;&#39;</span>
+      <span class="p">})</span>
+    <span class="k">return</span> <span class="nx">result</span>
+  <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="nx">err</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>请求示例
+参数在 URL 的 query 里面，如下： <a class="reference external" href="https://api.weixin.qq.com/wxaapi/newtmpl/getpubtemplatetitles?access_token=ACCESS_TOKEN&amp;ids=">https://api.weixin.qq.com/wxaapi/newtmpl/getpubtemplatetitles?access_token=ACCESS_TOKEN&amp;ids=</a>”2,616”&amp;start=0&amp;limit=1</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="kd">const</span> <span class="nx">cloud</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;wx-server-sdk&#39;</span><span class="p">)</span>
+<span class="nx">cloud</span><span class="p">.</span><span class="nx">init</span><span class="p">({</span>
+  <span class="nx">env</span><span class="o">:</span> <span class="nx">cloud</span><span class="p">.</span><span class="nx">DYNAMIC_CURRENT_ENV</span><span class="p">,</span>
+<span class="p">})</span>
+<span class="nx">exports</span><span class="p">.</span><span class="nx">main</span> <span class="o">=</span> <span class="k">async</span> <span class="p">(</span><span class="nx">event</span><span class="p">,</span> <span class="nx">context</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+  <span class="k">try</span> <span class="p">{</span>
+    <span class="kd">const</span> <span class="nx">result</span> <span class="o">=</span> <span class="k">await</span> <span class="nx">cloud</span><span class="p">.</span><span class="nx">openapi</span><span class="p">.</span><span class="nx">subscribeMessage</span><span class="p">.</span><span class="nx">getPubTemplateTitleList</span><span class="p">({</span>
+        <span class="s2">&quot;ids&quot;</span><span class="o">:</span> <span class="s1">&#39;2,616&#39;</span><span class="p">,</span>
+        <span class="s2">&quot;start&quot;</span><span class="o">:</span> <span class="mf">0</span><span class="p">,</span>
+        <span class="s2">&quot;limit&quot;</span><span class="o">:</span> <span class="mf">1</span>
+      <span class="p">})</span>
+    <span class="k">return</span> <span class="nx">result</span>
+  <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="nx">err</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>响应示例</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;errCode&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+  <span class="nt">&quot;errMsg&quot;</span><span class="p">:</span> <span class="s2">&quot;openapi.subscribeMessage.getPubTemplateTitleList:ok&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;count&quot;</span><span class="p">:</span> <span class="mi">55</span><span class="p">,</span>
+  <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+      <span class="nt">&quot;tid&quot;</span><span class="p">:</span> <span class="mi">99</span><span class="p">,</span>
+      <span class="nt">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;付款成功通知&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+      <span class="nt">&quot;categoryId&quot;</span><span class="p">:</span> <span class="s2">&quot;616&quot;</span>
+    <span class="p">}</span>
+  <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>导航</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="总目录"
+             >索引</a></li>
+        <li class="right" >
+          <a href="../../http-routingtable.html" title="微信小程序API"
+             >wxapi</a> |</li>
+        <li class="right" >
+          <a href="subscribeMessage.getTemplateList.html" title="subscribeMessage.getTemplateList"
+             >下一页</a> |</li>
+        <li class="right" >
+          <a href="subscribeMessage.getPubTemplateKeyWordsById.html" title="subscribeMessage.getPubTemplateKeyWordsById"
+             >上一页</a> |</li>
+<li><a href="../../index.html">主页</a>&#160;|</li>
+<li><a href="../../contents.html">文档</a> &#187;</li>
+
+          <li class="nav-item nav-item-1"><a href="../index.html" >服务端API</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">subscribeMessage.getPubTemplateTitleList</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; 版权所有 2019, Wxadev Docs.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.1.
+    </div>
+  </body>
+</html>

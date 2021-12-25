@@ -1,0 +1,663 @@
+
+<!DOCTYPE html>
+
+<html lang="zh_CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Animation &#8212; wxadev v2.21.0 文档</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx13.css" />
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/translations.js"></script>
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="在 wxadev v2.21.0 文档 中搜索"
+          href="../../_static/opensearch.xml"/>
+
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="搜索" href="../../search.html" />
+<link rel="canonical" href="http://www.sphinx-doc.org/en/master/api/animation/Animation.html" />
+
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet" type="text/css" />
+ 
+<style type="text/css">
+  table.right { float: right; margin-left: 20px; }
+  table.right td { border: 1px solid #ccc; }
+  
+</style>
+<script type="text/javascript">
+  // intelligent scrolling of the sidebar content
+  $(window).scroll(function() {
+    var sb = $('.sphinxsidebarwrapper');
+    var win = $(window);
+    var sbh = sb.height();
+    var offset = $('.sphinxsidebar').position()['top'];
+    var wintop = win.scrollTop();
+    var winbot = wintop + win.innerHeight();
+    var curtop = sb.position()['top'];
+    var curbot = curtop + sbh;
+    // does sidebar fit in window?
+    if (sbh < win.innerHeight()) {
+      // yes: easy case -- always keep at the top
+      sb.css('top', $u.min([$u.max([0, wintop - offset - 10]), $(document).height() - sbh - 200]));
+    } else {
+      // no: only scroll if top/bottom edge of sidebar is at
+      // top/bottom edge of window
+      if (curtop > wintop && curbot > winbot) {
+        sb.css('top', $u.max([wintop - offset - 10, 0]));
+      } else if (curtop < wintop && curbot < winbot) {
+        sb.css('top', $u.min([winbot - sbh - offset - 20, $(document).height() - sbh - 200]));
+      }
+    }
+  });
+</script> 
+  </head><body>
+<div class="pageheader">
+  <ul>
+    <li><a href="../../index.html">主页</a></li>
+    <li><a href="../../basic/index.html">入门</a></li>
+    <li><a href="../../framework/index.html">框架</a></li>
+    <li><a href="../../component/index.html">组件</a></li>
+    <li><a href="../index.html">API</a></li>
+    <li><a href="../../api-backend/index.html">服务端</a></li>
+    <li><a href="../../reference/index.html">参考</a></li>
+    <li><a href="../../contents.html">目录</a></li>
+  </ul>
+  <div>
+    <a href="../../index.html">
+      <img src="../../_static/wxaheader.png" alt="wxa" />
+    </a>
+  </div>
+</div>
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>导航</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="总目录"
+             accesskey="I">索引</a></li>
+        <li class="right" >
+          <a href="../../http-routingtable.html" title="微信小程序API"
+             >wxapi</a> |</li>
+<li><a href="../../index.html">主页</a>&#160;|</li>
+<li><a href="../../contents.html">文档</a> &#187;</li>
+
+        <li class="nav-item nav-item-this"><a href="">Animation</a></li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../../contents.html">目录</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Animation</a><ul>
+<li><a class="reference internal" href="#id1">方法</a></li>
+<li><a class="reference internal" href="#id2">示例代码</a></li>
+</ul>
+</li>
+</ul>
+
+  <div role="note" aria-label="source link">
+    <h3>本页</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../_sources/api/animation/Animation.rst.txt"
+            rel="nofollow">显示源代码</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">快速搜索</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="转向" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="animation">
+<h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/api/Animation.html">Animation</a><a class="headerlink" href="#animation" title="永久链接至标题">¶</a></h1>
+<dl class="js class">
+<dt class="sig sig-object js" id="Animation">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="n"><span class="pre">Animation</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Animation" title="永久链接至目标">¶</a></dt>
+<dd><p>动画对象 由 <a class="reference internal" href="../wx.createAnimation.html#wx.createAnimation" title="wx.createAnimation"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.createAnimation()</span></code></a> 创建</p>
+</dd></dl>
+
+<section id="id1">
+<h2>方法<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h2>
+<dl class="js function">
+<dt class="sig sig-object js" id="Animation.export">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">Animation</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">export</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Animation.export" title="永久链接至目标">¶</a></dt>
+<dd><p>导出动画队列。export 方法每次调用后会清掉之前的动画操作。</p>
+<dl class="field-list simple">
+<dt class="field-odd">返回类型</dt>
+<dd class="field-odd"><p>Array.&lt;Object&gt;</p>
+</dd>
+<dt class="field-even">返回</dt>
+<dd class="field-even"><p>animationData</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="js function">
+<dt class="sig sig-object js" id="Animation.step">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">Animation</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">step</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">Object</span> <span class="pre">object</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Animation.step" title="永久链接至目标">¶</a></dt>
+<dd><p>表示一组动画完成。可以在一组动画中调用任意多个动画方法，一组动画中的所有动画会同时开始，一组动画完成后才会进行下一组动画。</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>duration</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">number()</span></code></span>) – 400 否 动画持续时间，单位 ms</p></li>
+<li><p><strong>timingFunction</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">string()</span></code></span>) – <p>‘linear’ 否 动画的效果</p>
+<ul>
+<li><p>’linear’ 动画从头到尾的速度是相同的</p></li>
+<li><p>’ease’ 动画以低速开始，然后加快，在结束前变慢</p></li>
+<li><p>’ease-in’ 动画以低速开始</p></li>
+<li><p>’ease-in-out’ 动画以低速开始和结束</p></li>
+<li><p>’ease-out’ 动画以低速结束</p></li>
+<li><p>’step-start’ 动画第一帧就跳至结束状态直到结束</p></li>
+<li><p>’step-end’ 动画一直保持开始状态，最后一帧跳到结束状态</p></li>
+</ul>
+</p></li>
+<li><p><strong>delay</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">number()</span></code></span>) – 0 否 动画延迟时间，单位 ms</p></li>
+<li><p><strong>transformOrigin</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">string()</span></code></span>) – ‘50% 50% 0’ 否</p></li>
+</ul>
+</dd>
+<dt class="field-even">返回类型</dt>
+<dd class="field-even"><p>Animation</p>
+</dd>
+<dt class="field-odd">返回</dt>
+<dd class="field-odd"><p>animation</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="js function">
+<dt class="sig sig-object js" id="Animation.matrix">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">Animation</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">matrix</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Animation.matrix" title="永久链接至目标">¶</a></dt>
+<dd><p>同 <a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/matrix">transform-function matrix</a></p>
+<dl class="field-list simple">
+<dt class="field-odd">返回类型</dt>
+<dd class="field-odd"><p>Animation</p>
+</dd>
+<dt class="field-even">返回</dt>
+<dd class="field-even"><p>animation</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="js function">
+<dt class="sig sig-object js" id="Animation.matrix3d">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">Animation</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">matrix3d</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Animation.matrix3d" title="永久链接至目标">¶</a></dt>
+<dd><p>同 <a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/matrix3d">transform-function matrix3d</a></p>
+<dl class="field-list simple">
+<dt class="field-odd">返回类型</dt>
+<dd class="field-odd"><p>Animation</p>
+</dd>
+<dt class="field-even">返回</dt>
+<dd class="field-even"><p>animation</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="js function">
+<dt class="sig sig-object js" id="Animation.rotate">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">Animation</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">rotate</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">number</span> <span class="pre">angle</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Animation.rotate" title="永久链接至目标">¶</a></dt>
+<dd><p>从原点顺时针旋转一个角度</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>angle</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">number()</span></code></span>) – 旋转的角度。范围 [-180, 180]</p></li>
+</ul>
+</dd>
+<dt class="field-even">返回类型</dt>
+<dd class="field-even"><p>Animation</p>
+</dd>
+<dt class="field-odd">返回</dt>
+<dd class="field-odd"><p>animation</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="js function">
+<dt class="sig sig-object js" id="Animation.rotate3d">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">Animation</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">rotate3d</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">number</span> <span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">number</span> <span class="pre">y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">number</span> <span class="pre">z</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">number</span> <span class="pre">angle</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Animation.rotate3d" title="永久链接至目标">¶</a></dt>
+<dd><p>从 X 轴顺时针旋转一个角度</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">number()</span></code></span>) – 旋转轴的 x 坐标</p></li>
+<li><p><strong>y</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">number()</span></code></span>) – 旋转轴的 y 坐标</p></li>
+<li><p><strong>z</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">number()</span></code></span>) – 旋转轴的 z 坐标</p></li>
+<li><p><strong>angle</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">number()</span></code></span>) – 旋转的角度。范围 [-180, 180]</p></li>
+</ul>
+</dd>
+<dt class="field-even">返回类型</dt>
+<dd class="field-even"><p>Animation</p>
+</dd>
+<dt class="field-odd">返回</dt>
+<dd class="field-odd"><p>animation</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="js function">
+<dt class="sig sig-object js" id="Animation.rotateX">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">Animation</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">rotateX</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">number</span> <span class="pre">angle</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Animation.rotateX" title="永久链接至目标">¶</a></dt>
+<dd><p>从 X 轴顺时针旋转一个角度</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>angle</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">number()</span></code></span>) – 旋转的角度。范围 [-180, 180]</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="js function">
+<dt class="sig sig-object js" id="Animation.rotateY">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">Animation</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">rotateY</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">number</span> <span class="pre">angle</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Animation.rotateY" title="永久链接至目标">¶</a></dt>
+<dd><p>从 Y 轴顺时针旋转一个角度</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>angle</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">number()</span></code></span>) – 旋转的角度。范围 [-180, 180]</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="js function">
+<dt class="sig sig-object js" id="Animation.rotateZ">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">Animation</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">rotateZ</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">number</span> <span class="pre">angle</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Animation.rotateZ" title="永久链接至目标">¶</a></dt>
+<dd><p>从 Z 轴顺时针旋转一个角度</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>angle</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">number()</span></code></span>) – 旋转的角度。范围 [-180, 180]</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="js function">
+<dt class="sig sig-object js" id="Animation.scale">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">Animation</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">scale</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">number</span> <span class="pre">sx</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">number</span> <span class="pre">sy</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Animation.scale" title="永久链接至目标">¶</a></dt>
+<dd><p>缩放</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>sx</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">number()</span></code></span>) – 当仅有 sx 参数时，表示在 X 轴、Y 轴同时缩放sx倍数</p></li>
+<li><p><strong>sy</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">number()</span></code></span>) – 在 Y 轴缩放 sy 倍数</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="js function">
+<dt class="sig sig-object js" id="Animation.scale3d">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">Animation</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">scale3d</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">number</span> <span class="pre">sx</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">number</span> <span class="pre">sy</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">number</span> <span class="pre">sz</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Animation.scale3d" title="永久链接至目标">¶</a></dt>
+<dd><p>缩放</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>sx</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">number()</span></code></span>) – x 轴的缩放倍数</p></li>
+<li><p><strong>sy</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">number()</span></code></span>) – y 轴的缩放倍数</p></li>
+<li><p><strong>sz</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">number()</span></code></span>) – z 轴的缩放倍数</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="js function">
+<dt class="sig sig-object js" id="Animation.scaleX">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">Animation</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">scaleX</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">number</span> <span class="pre">scale</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Animation.scaleX" title="永久链接至目标">¶</a></dt>
+<dd><p>缩放 X 轴</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>scale</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">number()</span></code></span>) – X 轴的缩放倍数</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="js function">
+<dt class="sig sig-object js" id="Animation.scaleY">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">Animation</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">scaleY</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">number</span> <span class="pre">scale</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Animation.scaleY" title="永久链接至目标">¶</a></dt>
+<dd><p>缩放 Y 轴</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>scale</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">number()</span></code></span>) – Y 轴的缩放倍数</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="js function">
+<dt class="sig sig-object js" id="Animation.scaleZ">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">Animation</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">scaleZ</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">number</span> <span class="pre">scale</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Animation.scaleZ" title="永久链接至目标">¶</a></dt>
+<dd><p>缩放 Z 轴</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>scale</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">number()</span></code></span>) – Z 轴的缩放倍数</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="js function">
+<dt class="sig sig-object js" id="Animation.skew">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">Animation</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">skew</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">number</span> <span class="pre">ax</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">number</span> <span class="pre">ay</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Animation.skew" title="永久链接至目标">¶</a></dt>
+<dd><p>对 X、Y 轴坐标进行倾斜</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>ax</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">number()</span></code></span>) – 对 X 轴坐标倾斜的角度，范围 [-180, 180]</p></li>
+<li><p><strong>ay</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">number()</span></code></span>) – 对 Y 轴坐标倾斜的角度，范围 [-180, 180]</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="js function">
+<dt class="sig sig-object js" id="Animation.skewX">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">Animation</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">skewX</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">number</span> <span class="pre">angle</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Animation.skewX" title="永久链接至目标">¶</a></dt>
+<dd><p>对 X 轴坐标进行倾斜</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>angle</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">number()</span></code></span>) – 倾斜的角度，范围 [-180, 180]</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="js function">
+<dt class="sig sig-object js" id="Animation.skewY">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">Animation</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">skewY</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">number</span> <span class="pre">angle</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Animation.skewY" title="永久链接至目标">¶</a></dt>
+<dd><p>对 Y 轴坐标进行倾斜</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>angle</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">number()</span></code></span>) – 倾斜的角度，范围 [-180, 180]</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="js function">
+<dt class="sig sig-object js" id="Animation.translate">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">Animation</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">translate</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">number</span> <span class="pre">tx</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">number</span> <span class="pre">ty</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Animation.translate" title="永久链接至目标">¶</a></dt>
+<dd><p>平移变换</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>tx</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">number()</span></code></span>) – 当仅有该参数时表示在 X 轴偏移 tx，单位 px</p></li>
+<li><p><strong>ty</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">number()</span></code></span>) – 在 Y 轴平移的距离，单位为 px</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="js function">
+<dt class="sig sig-object js" id="Animation.translate3d">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">Animation</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">translate3d</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">number</span> <span class="pre">tx</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">number</span> <span class="pre">ty</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">number</span> <span class="pre">tz</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Animation.translate3d" title="永久链接至目标">¶</a></dt>
+<dd><p>对 xyz 坐标进行平移变换</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>tx</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">number()</span></code></span>) – 在 X 轴平移的距离，单位为 px</p></li>
+<li><p><strong>ty</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">number()</span></code></span>) – 在 Y 轴平移的距离，单位为 px</p></li>
+<li><p><strong>tz</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">number()</span></code></span>) – 在 Z 轴平移的距离，单位为 px</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="js function">
+<dt class="sig sig-object js" id="Animation.translateX">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">Animation</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">translateX</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">number</span> <span class="pre">translation</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Animation.translateX" title="永久链接至目标">¶</a></dt>
+<dd><p>对 X 轴平移</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>translation</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">number()</span></code></span>) – 在 X 轴平移的距离，单位为 px</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="js function">
+<dt class="sig sig-object js" id="Animation.translateY">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">Animation</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">translateY</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">number</span> <span class="pre">translation</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Animation.translateY" title="永久链接至目标">¶</a></dt>
+<dd><p>对 Y 轴平移</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>translation</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">number()</span></code></span>) – 在 Y 轴平移的距离，单位为 px</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="js function">
+<dt class="sig sig-object js" id="Animation.translateZ">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">Animation</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">translateZ</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">number</span> <span class="pre">translation</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Animation.translateZ" title="永久链接至目标">¶</a></dt>
+<dd><p>对 Z 轴平移</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>translation</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">number()</span></code></span>) – 在 Z 轴平移的距离，单位为 px</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="js function">
+<dt class="sig sig-object js" id="Animation.opacity">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">Animation</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">opacity</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">number</span> <span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Animation.opacity" title="永久链接至目标">¶</a></dt>
+<dd><p>设置透明度</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>value</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">number()</span></code></span>) – 透明度，范围 0-1</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="js function">
+<dt class="sig sig-object js" id="Animation.backgroundColor">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">Animation</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">backgroundColor</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">string</span> <span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Animation.backgroundColor" title="永久链接至目标">¶</a></dt>
+<dd><p>设置背景色</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>value</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">string()</span></code></span>) – 颜色值</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="js function">
+<dt class="sig sig-object js" id="Animation.width">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">Animation</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">width</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">number|string</span> <span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Animation.width" title="永久链接至目标">¶</a></dt>
+<dd><p>设置宽度</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>value</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">number|string()</span></code></span>) – 长度值，如果传入 number 则默认使用 px，可传入其他自定义单位的长度值</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="js function">
+<dt class="sig sig-object js" id="Animation.height">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">Animation</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">height</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">number|string</span> <span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Animation.height" title="永久链接至目标">¶</a></dt>
+<dd><p>设置高度</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>value</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">number|string()</span></code></span>) – 长度值，如果传入 number 则默认使用 px，可传入其他自定义单位的长度值</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="js function">
+<dt class="sig sig-object js" id="Animation.left">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">Animation</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">left</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">number|string</span> <span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Animation.left" title="永久链接至目标">¶</a></dt>
+<dd><p>设置 left 值</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>value</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">number|string()</span></code></span>) – 长度值，如果传入 number 则默认使用 px，可传入其他自定义单位的长度值</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="js function">
+<dt class="sig sig-object js" id="Animation.right">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">Animation</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">right</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">number|string</span> <span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Animation.right" title="永久链接至目标">¶</a></dt>
+<dd><p>设置 right 值</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>value</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">number|string()</span></code></span>) – 长度值，如果传入 number 则默认使用 px，可传入其他自定义单位的长度值</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="js function">
+<dt class="sig sig-object js" id="Animation.top">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">Animation</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">top</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">number|string</span> <span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Animation.top" title="永久链接至目标">¶</a></dt>
+<dd><p>设置 top 值</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>value</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">number|string()</span></code></span>) – 长度值，如果传入 number 则默认使用 px，可传入其他自定义单位的长度值</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="js function">
+<dt class="sig sig-object js" id="Animation.bottom">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">Animation</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">bottom</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">number|string</span> <span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Animation.bottom" title="永久链接至目标">¶</a></dt>
+<dd><p>设置 bottom 值</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>value</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">number|string()</span></code></span>) – 长度值，如果传入 number 则默认使用 px，可传入其他自定义单位的长度值</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="id2">
+<h2>示例代码<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<p><a class="reference download external" download="" href="https://developers.weixin.qq.com/s/Swab8kmW7v2V"><code class="xref download docutils literal notranslate"><span class="pre">在开发者工具中预览效果</span></code></a></p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">view</span>
+  <span class="na">animation</span><span class="o">=</span><span class="s">&quot;{{animationData}}&quot;</span>
+  <span class="na">style</span><span class="o">=</span><span class="s">&quot;background:red;height:100rpx;width:100rpx&quot;</span>
+<span class="p">&gt;&lt;/</span><span class="nt">view</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="nx">Page</span><span class="p">({</span>
+  <span class="nx">data</span><span class="o">:</span> <span class="p">{</span>
+    <span class="nx">animationData</span><span class="o">:</span> <span class="p">{}</span>
+  <span class="p">},</span>
+  <span class="nx">onShow</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">const</span> <span class="nx">animation</span> <span class="o">=</span> <span class="nx">wx</span><span class="p">.</span><span class="nx">createAnimation</span><span class="p">({</span>
+      <span class="nx">duration</span><span class="o">:</span> <span class="mf">1000</span><span class="p">,</span>
+      <span class="nx">timingFunction</span><span class="o">:</span> <span class="s1">&#39;ease&#39;</span><span class="p">,</span>
+    <span class="p">})</span>
+
+    <span class="k">this</span><span class="p">.</span><span class="nx">animation</span> <span class="o">=</span> <span class="nx">animation</span>
+
+    <span class="nx">animation</span><span class="p">.</span><span class="nx">scale</span><span class="p">(</span><span class="mf">2</span><span class="p">,</span> <span class="mf">2</span><span class="p">).</span><span class="nx">rotate</span><span class="p">(</span><span class="mf">45</span><span class="p">).</span><span class="nx">step</span><span class="p">()</span>
+
+    <span class="k">this</span><span class="p">.</span><span class="nx">setData</span><span class="p">({</span>
+      <span class="nx">animationData</span><span class="o">:</span> <span class="nx">animation</span><span class="p">.</span><span class="k">export</span><span class="p">()</span>
+    <span class="p">})</span>
+
+    <span class="nx">setTimeout</span><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+      <span class="nx">animation</span><span class="p">.</span><span class="nx">translate</span><span class="p">(</span><span class="mf">30</span><span class="p">).</span><span class="nx">step</span><span class="p">()</span>
+      <span class="k">this</span><span class="p">.</span><span class="nx">setData</span><span class="p">({</span>
+        <span class="nx">animationData</span><span class="o">:</span> <span class="nx">animation</span><span class="p">.</span><span class="k">export</span><span class="p">()</span>
+      <span class="p">})</span>
+    <span class="p">}.</span><span class="nx">bind</span><span class="p">(</span><span class="k">this</span><span class="p">),</span> <span class="mf">1000</span><span class="p">)</span>
+  <span class="p">},</span>
+  <span class="nx">rotateAndScale</span><span class="p">()</span> <span class="p">{</span>
+    <span class="c1">// 旋转同时放大</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">animation</span><span class="p">.</span><span class="nx">rotate</span><span class="p">(</span><span class="mf">45</span><span class="p">).</span><span class="nx">scale</span><span class="p">(</span><span class="mf">2</span><span class="p">,</span> <span class="mf">2</span><span class="p">).</span><span class="nx">step</span><span class="p">()</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">setData</span><span class="p">({</span>
+      <span class="nx">animationData</span><span class="o">:</span> <span class="k">this</span><span class="p">.</span><span class="nx">animation</span><span class="p">.</span><span class="k">export</span><span class="p">()</span>
+    <span class="p">})</span>
+  <span class="p">},</span>
+  <span class="nx">rotateThenScale</span><span class="p">()</span> <span class="p">{</span>
+    <span class="c1">// 先旋转后放大</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">animation</span><span class="p">.</span><span class="nx">rotate</span><span class="p">(</span><span class="mf">45</span><span class="p">).</span><span class="nx">step</span><span class="p">()</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">animation</span><span class="p">.</span><span class="nx">scale</span><span class="p">(</span><span class="mf">2</span><span class="p">,</span> <span class="mf">2</span><span class="p">).</span><span class="nx">step</span><span class="p">()</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">setData</span><span class="p">({</span>
+      <span class="nx">animationData</span><span class="o">:</span> <span class="k">this</span><span class="p">.</span><span class="nx">animation</span><span class="p">.</span><span class="k">export</span><span class="p">()</span>
+    <span class="p">})</span>
+  <span class="p">},</span>
+  <span class="nx">rotateAndScaleThenTranslate</span><span class="p">()</span> <span class="p">{</span>
+    <span class="c1">// 先旋转同时放大，然后平移</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">animation</span><span class="p">.</span><span class="nx">rotate</span><span class="p">(</span><span class="mf">45</span><span class="p">).</span><span class="nx">scale</span><span class="p">(</span><span class="mf">2</span><span class="p">,</span> <span class="mf">2</span><span class="p">).</span><span class="nx">step</span><span class="p">()</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">animation</span><span class="p">.</span><span class="nx">translate</span><span class="p">(</span><span class="mf">100</span><span class="p">,</span> <span class="mf">100</span><span class="p">).</span><span class="nx">step</span><span class="p">({</span><span class="nx">duration</span><span class="o">:</span> <span class="mf">1000</span><span class="p">})</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">setData</span><span class="p">({</span>
+      <span class="nx">animationData</span><span class="o">:</span> <span class="k">this</span><span class="p">.</span><span class="nx">animation</span><span class="p">.</span><span class="k">export</span><span class="p">()</span>
+    <span class="p">})</span>
+  <span class="p">}</span>
+<span class="p">})</span>
+</pre></div>
+</div>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>导航</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="总目录"
+             >索引</a></li>
+        <li class="right" >
+          <a href="../../http-routingtable.html" title="微信小程序API"
+             >wxapi</a> |</li>
+<li><a href="../../index.html">主页</a>&#160;|</li>
+<li><a href="../../contents.html">文档</a> &#187;</li>
+
+        <li class="nav-item nav-item-this"><a href="">Animation</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; 版权所有 2019, Wxadev Docs.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.1.
+    </div>
+  </body>
+</html>

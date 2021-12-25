@@ -1,0 +1,359 @@
+
+<!DOCTYPE html>
+
+<html lang="zh_CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>RecorderManager.start &#8212; wxadev v2.21.0 文档</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx13.css" />
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/translations.js"></script>
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="在 wxadev v2.21.0 文档 中搜索"
+          href="../../_static/opensearch.xml"/>
+
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="搜索" href="../../search.html" />
+<link rel="canonical" href="http://www.sphinx-doc.org/en/master/api/recorder/RecorderManager.start.html" />
+
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet" type="text/css" />
+ 
+<style type="text/css">
+  table.right { float: right; margin-left: 20px; }
+  table.right td { border: 1px solid #ccc; }
+  
+</style>
+<script type="text/javascript">
+  // intelligent scrolling of the sidebar content
+  $(window).scroll(function() {
+    var sb = $('.sphinxsidebarwrapper');
+    var win = $(window);
+    var sbh = sb.height();
+    var offset = $('.sphinxsidebar').position()['top'];
+    var wintop = win.scrollTop();
+    var winbot = wintop + win.innerHeight();
+    var curtop = sb.position()['top'];
+    var curbot = curtop + sbh;
+    // does sidebar fit in window?
+    if (sbh < win.innerHeight()) {
+      // yes: easy case -- always keep at the top
+      sb.css('top', $u.min([$u.max([0, wintop - offset - 10]), $(document).height() - sbh - 200]));
+    } else {
+      // no: only scroll if top/bottom edge of sidebar is at
+      // top/bottom edge of window
+      if (curtop > wintop && curbot > winbot) {
+        sb.css('top', $u.max([wintop - offset - 10, 0]));
+      } else if (curtop < wintop && curbot < winbot) {
+        sb.css('top', $u.min([winbot - sbh - offset - 20, $(document).height() - sbh - 200]));
+      }
+    }
+  });
+</script> 
+  </head><body>
+<div class="pageheader">
+  <ul>
+    <li><a href="../../index.html">主页</a></li>
+    <li><a href="../../basic/index.html">入门</a></li>
+    <li><a href="../../framework/index.html">框架</a></li>
+    <li><a href="../../component/index.html">组件</a></li>
+    <li><a href="../index.html">API</a></li>
+    <li><a href="../../api-backend/index.html">服务端</a></li>
+    <li><a href="../../reference/index.html">参考</a></li>
+    <li><a href="../../contents.html">目录</a></li>
+  </ul>
+  <div>
+    <a href="../../index.html">
+      <img src="../../_static/wxaheader.png" alt="wxa" />
+    </a>
+  </div>
+</div>
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>导航</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="总目录"
+             accesskey="I">索引</a></li>
+        <li class="right" >
+          <a href="../../http-routingtable.html" title="微信小程序API"
+             >wxapi</a> |</li>
+<li><a href="../../index.html">主页</a>&#160;|</li>
+<li><a href="../../contents.html">文档</a> &#187;</li>
+
+        <li class="nav-item nav-item-this"><a href="">RecorderManager.start</a></li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../../contents.html">目录</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">RecorderManager.start</a><ul>
+<li><a class="reference internal" href="#id1">函数定义</a></li>
+<li><a class="reference internal" href="#samplerate">sampleRate 的合法值</a></li>
+<li><a class="reference internal" href="#numberofchannels">numberOfChannels 的合法值</a></li>
+<li><a class="reference internal" href="#format">format 的合法值</a></li>
+<li><a class="reference internal" href="#audiosource">audioSource 的合法值</a></li>
+<li><a class="reference internal" href="#id2">采样率与编码码率限制</a></li>
+</ul>
+</li>
+</ul>
+
+  <div role="note" aria-label="source link">
+    <h3>本页</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../_sources/api/recorder/RecorderManager.start.rst.txt"
+            rel="nofollow">显示源代码</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">快速搜索</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="转向" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="recordermanager-start">
+<h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/api/RecorderManager.start.html">RecorderManager.start</a><a class="headerlink" href="#recordermanager-start" title="永久链接至标题">¶</a></h1>
+<section id="id1">
+<h2>函数定义<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h2>
+<dl class="js function">
+<dt class="sig sig-object js" id="RecorderManager.start">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">RecorderManager</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">start</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">{[duration][,sampleRate][,numberOfChannels][,encodeBitRate][,format][,frameSize][,audioSource]}</span></em><span class="sig-paren">)</span><a class="headerlink" href="#RecorderManager.start" title="永久链接至目标">¶</a></dt>
+<dd><p><a class="reference internal" href="RecorderManager.html#RecorderManager" title="RecorderManager"><code class="xref js js-class docutils literal notranslate"><span class="pre">RecorderManager()</span></code></a> 开始录音</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>duration</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">number()</span></code></span>) – <code class="docutils literal notranslate"><span class="pre">60000</span></code>       录音的时长，单位 ms，最大值 600000（10 分钟）</p></li>
+<li><p><strong>sampleRate</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">number()</span></code></span>) – <code class="docutils literal notranslate"><span class="pre">8000</span></code>        采样率</p></li>
+<li><p><strong>numberOfChannels</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">number()</span></code></span>) – <code class="docutils literal notranslate"><span class="pre">2</span></code>   录音通道数</p></li>
+<li><p><strong>encodeBitRate</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">number()</span></code></span>) – <code class="docutils literal notranslate"><span class="pre">48000</span></code>       编码码率，有效值见下表格</p></li>
+<li><p><strong>format</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">string()</span></code></span>) – <code class="docutils literal notranslate"><span class="pre">aac</span></code> 音频格式</p></li>
+<li><p><strong>frameSize</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">number()</span></code></span>) – 指定帧大小，单位 KB。传入 frameSize 后，每录制指定帧大小的内容后，会回调录制的文件内容，不指定则不会回调。暂仅支持 mp3 格式。</p></li>
+<li><p><strong>audioSource</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">string()</span></code></span>) – <code class="docutils literal notranslate"><span class="pre">auto</span></code>        指定录音的音频输入源，可通过 <a class="reference internal" href="../wx.getAvailableAudioSources.html#wx.getAvailableAudioSources" title="wx.getAvailableAudioSources"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.getAvailableAudioSources()</span></code></a> 获取当前可用的音频源</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="samplerate">
+<h2>sampleRate 的合法值<a class="headerlink" href="#samplerate" title="永久链接至标题">¶</a></h2>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 32%" />
+<col style="width: 68%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>值</p></th>
+<th class="head"><p>说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>8000</p></td>
+<td><p>8000   采样率</p></td>
+</tr>
+<tr class="row-odd"><td><p>11025</p></td>
+<td><p>11025  采样率</p></td>
+</tr>
+<tr class="row-even"><td><p>12000</p></td>
+<td><p>12000  采样率</p></td>
+</tr>
+<tr class="row-odd"><td><p>16000</p></td>
+<td><p>16000  采样率</p></td>
+</tr>
+<tr class="row-even"><td><p>22050</p></td>
+<td><p>22050  采样率</p></td>
+</tr>
+<tr class="row-odd"><td><p>24000</p></td>
+<td><p>24000  采样率</p></td>
+</tr>
+<tr class="row-even"><td><p>32000</p></td>
+<td><p>32000  采样率</p></td>
+</tr>
+<tr class="row-odd"><td><p>44100</p></td>
+<td><p>44100  采样率</p></td>
+</tr>
+<tr class="row-even"><td><p>48000</p></td>
+<td><p>48000  采样率</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="numberofchannels">
+<h2>numberOfChannels 的合法值<a class="headerlink" href="#numberofchannels" title="永久链接至标题">¶</a></h2>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 24%" />
+<col style="width: 29%" />
+<col style="width: 48%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>值</p></th>
+<th class="head"><p>说明</p></th>
+<th class="head"><p>最低版本</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1</p></td>
+<td><p>1</p></td>
+<td><p>个通道</p></td>
+</tr>
+<tr class="row-odd"><td><p>2</p></td>
+<td><p>2</p></td>
+<td><p>个通道</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="format">
+<h2>format 的合法值<a class="headerlink" href="#format" title="永久链接至标题">¶</a></h2>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 24%" />
+<col style="width: 29%" />
+<col style="width: 48%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>值</p></td>
+<td><p>说明</p></td>
+<td><p>最低版本</p></td>
+</tr>
+<tr class="row-even"><td><p>mp3</p></td>
+<td><p>mp3</p></td>
+<td><p>格式</p></td>
+</tr>
+<tr class="row-odd"><td><p>aac</p></td>
+<td><p>aac</p></td>
+<td><p>格式</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="audiosource">
+<h2>audioSource 的合法值<a class="headerlink" href="#audiosource" title="永久链接至标题">¶</a></h2>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 21%" />
+<col style="width: 79%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>值</p></th>
+<th class="head"><p>说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>auto</p></td>
+<td><p>自动设置，默认使用手机麦克风，插上耳麦后自动切换使用耳机麦克风，所有平台适用</p></td>
+</tr>
+<tr class="row-odd"><td><p>buildInMic</p></td>
+<td><p>手机麦克风，仅限 iOS</p></td>
+</tr>
+<tr class="row-even"><td><p>headsetMic</p></td>
+<td><p>耳机麦克风，仅限 iOS</p></td>
+</tr>
+<tr class="row-odd"><td><p>mic</p></td>
+<td><p>麦克风（没插耳麦时是手机麦克风，插耳麦时是耳机麦克风），仅限 Android</p></td>
+</tr>
+<tr class="row-even"><td><p>camcorder</p></td>
+<td><p>同 mic，适用于录制音视频内容，仅限 Android</p></td>
+</tr>
+<tr class="row-odd"><td><p>voice_communication</p></td>
+<td><p>同 mic，适用于实时沟通，仅限 Android</p></td>
+</tr>
+<tr class="row-even"><td><p>voice_recognition</p></td>
+<td><p>同 mic，适用于语音识别，仅限 Android</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="id2">
+<h2>采样率与编码码率限制<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<p>每种采样率有对应的编码码率范围有效值，设置不合法的采样率或编码码率会导致录音失败，具体对应关系如下表。</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 67%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>采样率</p></th>
+<th class="head"><p>编码码率</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>8000</p></td>
+<td><p>16000 ~ 48000</p></td>
+</tr>
+<tr class="row-odd"><td><p>11025</p></td>
+<td><p>16000 ~ 48000</p></td>
+</tr>
+<tr class="row-even"><td><p>12000</p></td>
+<td><p>24000 ~ 64000</p></td>
+</tr>
+<tr class="row-odd"><td><p>16000</p></td>
+<td><p>24000 ~ 96000</p></td>
+</tr>
+<tr class="row-even"><td><p>22050</p></td>
+<td><p>32000 ~ 128000</p></td>
+</tr>
+<tr class="row-odd"><td><p>24000</p></td>
+<td><p>32000 ~ 128000</p></td>
+</tr>
+<tr class="row-even"><td><p>32000</p></td>
+<td><p>48000 ~ 192000</p></td>
+</tr>
+<tr class="row-odd"><td><p>44100</p></td>
+<td><p>64000 ~ 320000</p></td>
+</tr>
+<tr class="row-even"><td><p>48000</p></td>
+<td><p>64000 ~ 320000</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>导航</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="总目录"
+             >索引</a></li>
+        <li class="right" >
+          <a href="../../http-routingtable.html" title="微信小程序API"
+             >wxapi</a> |</li>
+<li><a href="../../index.html">主页</a>&#160;|</li>
+<li><a href="../../contents.html">文档</a> &#187;</li>
+
+        <li class="nav-item nav-item-this"><a href="">RecorderManager.start</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; 版权所有 2019, Wxadev Docs.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.1.
+    </div>
+  </body>
+</html>

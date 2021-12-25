@@ -18,8 +18,7 @@
    channels/index
    updatable-message
    launchApp
-   template-message
-   uniform-message
+   message/index
    customer-message/index
    qr-code
    nearby

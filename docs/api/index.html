@@ -183,31 +183,34 @@
 <li><a class="reference internal" href="#id51">发票</a></li>
 <li><a class="reference internal" href="#id52">生物认证</a></li>
 <li><a class="reference internal" href="#id53">微信运动</a></li>
+<li><a class="reference internal" href="#id54">订阅消息</a></li>
+<li><a class="reference internal" href="#id55">微信红包</a></li>
+<li><a class="reference internal" href="#id56">收藏</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#id54">设备</a><ul>
+<li><a class="reference internal" href="#id57">设备</a><ul>
 <li><a class="reference internal" href="#wi-fi">Wi-Fi</a></li>
 <li><a class="reference internal" href="#ibeacon">iBeacon</a></li>
-<li><a class="reference internal" href="#id55">联系人</a></li>
-<li><a class="reference internal" href="#id56">低功耗蓝牙</a></li>
-<li><a class="reference internal" href="#id57">蓝牙</a></li>
-<li><a class="reference internal" href="#id58">电量</a></li>
-<li><a class="reference internal" href="#id59">剪贴板</a></li>
+<li><a class="reference internal" href="#id58">联系人</a></li>
+<li><a class="reference internal" href="#id59">低功耗蓝牙</a></li>
+<li><a class="reference internal" href="#id60">蓝牙</a></li>
+<li><a class="reference internal" href="#id61">电量</a></li>
+<li><a class="reference internal" href="#id62">剪贴板</a></li>
 <li><a class="reference internal" href="#nfc">NFC</a></li>
-<li><a class="reference internal" href="#id60">网络</a></li>
-<li><a class="reference internal" href="#id61">屏幕</a></li>
-<li><a class="reference internal" href="#id62">电话</a></li>
-<li><a class="reference internal" href="#id63">加速计</a></li>
-<li><a class="reference internal" href="#id64">罗盘</a></li>
-<li><a class="reference internal" href="#id65">设备方向</a></li>
-<li><a class="reference internal" href="#id66">陀螺仪</a></li>
-<li><a class="reference internal" href="#id67">性能</a></li>
-<li><a class="reference internal" href="#id68">扫码</a></li>
-<li><a class="reference internal" href="#id69">振动</a></li>
+<li><a class="reference internal" href="#id63">网络</a></li>
+<li><a class="reference internal" href="#id64">屏幕</a></li>
+<li><a class="reference internal" href="#id65">电话</a></li>
+<li><a class="reference internal" href="#id66">加速计</a></li>
+<li><a class="reference internal" href="#id67">罗盘</a></li>
+<li><a class="reference internal" href="#id68">设备方向</a></li>
+<li><a class="reference internal" href="#id69">陀螺仪</a></li>
+<li><a class="reference internal" href="#id70">性能</a></li>
+<li><a class="reference internal" href="#id71">扫码</a></li>
+<li><a class="reference internal" href="#id72">振动</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#worker">Worker</a></li>
-<li><a class="reference internal" href="#id70">第三方平台</a></li>
+<li><a class="reference internal" href="#id73">第三方平台</a></li>
 <li><a class="reference internal" href="#wxml">WXML</a><ul>
 <li><a class="reference internal" href="#selectorquery">SelectorQuery</a></li>
 <li><a class="reference internal" href="#nodesref">NodesRef</a></li>
@@ -251,7 +254,7 @@
             
   <section id="api">
 <span id="id1"></span><h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/api/index.html">API</a><a class="headerlink" href="#api" title="永久链接至标题">¶</a></h1>
-<p>版本:v2.21.0 更新:2021 年 12 月 13 日</p>
+<p>版本:v2.21.0 更新:2021 年 12 月 15 日</p>
 <section id="id2">
 <h2>基础<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
 <table class="docutils align-default">
@@ -300,19 +303,19 @@
 <tr class="row-even"><td><p><a class="reference internal" href="wx.getUpdateManager.html#wx.getUpdateManager" title="wx.getUpdateManager"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.getUpdateManager()</span></code></a></p></td>
 <td><p>获取全局唯一的版本更新管理器，用于管理小程序更新</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="UpdateManager.html#UpdateManager" title="UpdateManager"><code class="xref js js-class docutils literal notranslate"><span class="pre">UpdateManager()</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="update/UpdateManager.html#UpdateManager" title="UpdateManager"><code class="xref js js-class docutils literal notranslate"><span class="pre">UpdateManager()</span></code></a></p></td>
 <td></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="UpdateManager.html#UpdateManager.applyUpdate" title="UpdateManager.applyUpdate"><code class="xref js js-func docutils literal notranslate"><span class="pre">UpdateManager.applyUpdate()</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="update/UpdateManager.html#UpdateManager.applyUpdate" title="UpdateManager.applyUpdate"><code class="xref js js-func docutils literal notranslate"><span class="pre">UpdateManager.applyUpdate()</span></code></a></p></td>
 <td><p>强制小程序重启并使用新版本</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="UpdateManager.html#UpdateManager.onCheckForUpdate" title="UpdateManager.onCheckForUpdate"><code class="xref js js-func docutils literal notranslate"><span class="pre">UpdateManager.onCheckForUpdate()</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="update/UpdateManager.html#UpdateManager.onCheckForUpdate" title="UpdateManager.onCheckForUpdate"><code class="xref js js-func docutils literal notranslate"><span class="pre">UpdateManager.onCheckForUpdate()</span></code></a></p></td>
 <td><p>监听向微信后台请求检查更新结果事件</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="UpdateManager.html#UpdateManager.onUpdateFailed" title="UpdateManager.onUpdateFailed"><code class="xref js js-func docutils literal notranslate"><span class="pre">UpdateManager.onUpdateFailed()</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="update/UpdateManager.html#UpdateManager.onUpdateFailed" title="UpdateManager.onUpdateFailed"><code class="xref js js-func docutils literal notranslate"><span class="pre">UpdateManager.onUpdateFailed()</span></code></a></p></td>
 <td><p>监听小程序更新失败事件</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="UpdateManager.html#UpdateManager.onUpdateReady" title="UpdateManager.onUpdateReady"><code class="xref js js-func docutils literal notranslate"><span class="pre">UpdateManager.onUpdateReady()</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="update/UpdateManager.html#UpdateManager.onUpdateReady" title="UpdateManager.onUpdateReady"><code class="xref js js-func docutils literal notranslate"><span class="pre">UpdateManager.onUpdateReady()</span></code></a></p></td>
 <td><p>监听小程序有版本更新事件</p></td>
 </tr>
 </tbody>
@@ -402,8 +405,8 @@
 <h2>调试<a class="headerlink" href="#id8" title="永久链接至标题">¶</a></h2>
 <div class="toctree-wrapper compound">
 </div>
-<table class="colwidths-auto docutils align-default" id="id71">
-<caption><span class="caption-text">LogManager</span><a class="headerlink" href="#id71" title="永久链接至表格">¶</a></caption>
+<table class="colwidths-auto docutils align-default" id="id74">
+<caption><span class="caption-text">LogManager</span><a class="headerlink" href="#id74" title="永久链接至表格">¶</a></caption>
 <thead>
 <tr class="row-odd"><th class="head"><p>名称</p></th>
 <th class="head"><p>功能说明</p></th>
@@ -416,25 +419,25 @@
 <tr class="row-odd"><td><p><a class="reference internal" href="wx.getLogManager.html#wx.getLogManager" title="wx.getLogManager"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.getLogManager()</span></code></a></p></td>
 <td><p>获取日志管理器对象</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="LogManager.html#LogManager" title="LogManager"><code class="xref js js-func docutils literal notranslate"><span class="pre">LogManager()</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="log/LogManager.html#LogManager" title="LogManager"><code class="xref js js-func docutils literal notranslate"><span class="pre">LogManager()</span></code></a></p></td>
 <td><p>日志管理器对象</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="LogManager.html#LogManager.debug" title="LogManager.debug"><code class="xref js js-func docutils literal notranslate"><span class="pre">LogManager.debug()</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="log/LogManager.html#LogManager.debug" title="LogManager.debug"><code class="xref js js-func docutils literal notranslate"><span class="pre">LogManager.debug()</span></code></a></p></td>
 <td><p>写 debug 日志</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="LogManager.html#LogManager.info" title="LogManager.info"><code class="xref js js-func docutils literal notranslate"><span class="pre">LogManager.info()</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="log/LogManager.html#LogManager.info" title="LogManager.info"><code class="xref js js-func docutils literal notranslate"><span class="pre">LogManager.info()</span></code></a></p></td>
 <td><p>写 info 日志</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="LogManager.html#LogManager.log" title="LogManager.log"><code class="xref js js-func docutils literal notranslate"><span class="pre">LogManager.log()</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="log/LogManager.html#LogManager.log" title="LogManager.log"><code class="xref js js-func docutils literal notranslate"><span class="pre">LogManager.log()</span></code></a></p></td>
 <td><p>写 log 日志</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="LogManager.html#LogManager.warn" title="LogManager.warn"><code class="xref js js-func docutils literal notranslate"><span class="pre">LogManager.warn()</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="log/LogManager.html#LogManager.warn" title="LogManager.warn"><code class="xref js js-func docutils literal notranslate"><span class="pre">LogManager.warn()</span></code></a></p></td>
 <td><p>写 warn 日志</p></td>
 </tr>
 </tbody>
 </table>
-<table class="colwidths-auto docutils align-default" id="id72">
-<caption><span class="caption-text">console</span><a class="headerlink" href="#id72" title="永久链接至表格">¶</a></caption>
+<table class="colwidths-auto docutils align-default" id="id75">
+<caption><span class="caption-text">console</span><a class="headerlink" href="#id75" title="永久链接至表格">¶</a></caption>
 <thead>
 <tr class="row-odd"><th class="head"><p>名称</p></th>
 <th class="head"><p>功能说明</p></th>
@@ -731,94 +734,94 @@
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><a class="reference internal" href="Animation.html#Animation.translateZ" title="Animation.translateZ"><code class="xref js js-func docutils literal notranslate"><span class="pre">Animation.translateZ()</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="animation/Animation.html#Animation.translateZ" title="Animation.translateZ"><code class="xref js js-func docutils literal notranslate"><span class="pre">Animation.translateZ()</span></code></a></p></td>
 <td><p>对 Z 轴平移</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="Animation.html#Animation.translateY" title="Animation.translateY"><code class="xref js js-func docutils literal notranslate"><span class="pre">Animation.translateY()</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="animation/Animation.html#Animation.translateY" title="Animation.translateY"><code class="xref js js-func docutils literal notranslate"><span class="pre">Animation.translateY()</span></code></a></p></td>
 <td><p>对 Y 轴平移</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="Animation.html#Animation.translateX" title="Animation.translateX"><code class="xref js js-func docutils literal notranslate"><span class="pre">Animation.translateX()</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="animation/Animation.html#Animation.translateX" title="Animation.translateX"><code class="xref js js-func docutils literal notranslate"><span class="pre">Animation.translateX()</span></code></a></p></td>
 <td><p>对 X 轴平移</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="Animation.html#Animation.translate3d" title="Animation.translate3d"><code class="xref js js-func docutils literal notranslate"><span class="pre">Animation.translate3d()</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="animation/Animation.html#Animation.translate3d" title="Animation.translate3d"><code class="xref js js-func docutils literal notranslate"><span class="pre">Animation.translate3d()</span></code></a></p></td>
 <td><p>对 xyz 坐标进行平移变换</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="Animation.html#Animation.translate" title="Animation.translate"><code class="xref js js-func docutils literal notranslate"><span class="pre">Animation.translate()</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="animation/Animation.html#Animation.translate" title="Animation.translate"><code class="xref js js-func docutils literal notranslate"><span class="pre">Animation.translate()</span></code></a></p></td>
 <td><p>平移变换</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="Animation.html#Animation.top" title="Animation.top"><code class="xref js js-func docutils literal notranslate"><span class="pre">Animation.top()</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="animation/Animation.html#Animation.top" title="Animation.top"><code class="xref js js-func docutils literal notranslate"><span class="pre">Animation.top()</span></code></a></p></td>
 <td><p>设置 top 值</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="Animation.html#Animation.step" title="Animation.step"><code class="xref js js-func docutils literal notranslate"><span class="pre">Animation.step()</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="animation/Animation.html#Animation.step" title="Animation.step"><code class="xref js js-func docutils literal notranslate"><span class="pre">Animation.step()</span></code></a></p></td>
 <td><p>表示一组动画完成</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="Animation.html#Animation.skewY" title="Animation.skewY"><code class="xref js js-func docutils literal notranslate"><span class="pre">Animation.skewY()</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="animation/Animation.html#Animation.skewY" title="Animation.skewY"><code class="xref js js-func docutils literal notranslate"><span class="pre">Animation.skewY()</span></code></a></p></td>
 <td><p>对 Y 轴坐标进行倾斜</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="Animation.html#Animation.skewX" title="Animation.skewX"><code class="xref js js-func docutils literal notranslate"><span class="pre">Animation.skewX()</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="animation/Animation.html#Animation.skewX" title="Animation.skewX"><code class="xref js js-func docutils literal notranslate"><span class="pre">Animation.skewX()</span></code></a></p></td>
 <td><p>对 X 轴坐标进行倾斜</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="Animation.html#Animation.skew" title="Animation.skew"><code class="xref js js-func docutils literal notranslate"><span class="pre">Animation.skew()</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="animation/Animation.html#Animation.skew" title="Animation.skew"><code class="xref js js-func docutils literal notranslate"><span class="pre">Animation.skew()</span></code></a></p></td>
 <td><p>对 X、Y 轴坐标进行倾斜</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="Animation.html#Animation.scaleZ" title="Animation.scaleZ"><code class="xref js js-func docutils literal notranslate"><span class="pre">Animation.scaleZ()</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="animation/Animation.html#Animation.scaleZ" title="Animation.scaleZ"><code class="xref js js-func docutils literal notranslate"><span class="pre">Animation.scaleZ()</span></code></a></p></td>
 <td><p>缩放 Z 轴</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="Animation.html#Animation.scaleY" title="Animation.scaleY"><code class="xref js js-func docutils literal notranslate"><span class="pre">Animation.scaleY()</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="animation/Animation.html#Animation.scaleY" title="Animation.scaleY"><code class="xref js js-func docutils literal notranslate"><span class="pre">Animation.scaleY()</span></code></a></p></td>
 <td><p>缩放 Y 轴</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="Animation.html#Animation.scaleX" title="Animation.scaleX"><code class="xref js js-func docutils literal notranslate"><span class="pre">Animation.scaleX()</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="animation/Animation.html#Animation.scaleX" title="Animation.scaleX"><code class="xref js js-func docutils literal notranslate"><span class="pre">Animation.scaleX()</span></code></a></p></td>
 <td><p>缩放 X 轴</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="Animation.html#Animation.scale3d" title="Animation.scale3d"><code class="xref js js-func docutils literal notranslate"><span class="pre">Animation.scale3d()</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="animation/Animation.html#Animation.scale3d" title="Animation.scale3d"><code class="xref js js-func docutils literal notranslate"><span class="pre">Animation.scale3d()</span></code></a></p></td>
 <td><p>缩放</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="Animation.html#Animation.scale" title="Animation.scale"><code class="xref js js-func docutils literal notranslate"><span class="pre">Animation.scale()</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="animation/Animation.html#Animation.scale" title="Animation.scale"><code class="xref js js-func docutils literal notranslate"><span class="pre">Animation.scale()</span></code></a></p></td>
 <td><p>缩放</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="Animation.html#Animation.rotateZ" title="Animation.rotateZ"><code class="xref js js-func docutils literal notranslate"><span class="pre">Animation.rotateZ()</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="animation/Animation.html#Animation.rotateZ" title="Animation.rotateZ"><code class="xref js js-func docutils literal notranslate"><span class="pre">Animation.rotateZ()</span></code></a></p></td>
 <td><p>从 Z 轴顺时针旋转一个角度</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="Animation.html#Animation.rotateY" title="Animation.rotateY"><code class="xref js js-func docutils literal notranslate"><span class="pre">Animation.rotateY()</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="animation/Animation.html#Animation.rotateY" title="Animation.rotateY"><code class="xref js js-func docutils literal notranslate"><span class="pre">Animation.rotateY()</span></code></a></p></td>
 <td><p>从 Y 轴顺时针旋转一个角度</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="Animation.html#Animation.rotateX" title="Animation.rotateX"><code class="xref js js-func docutils literal notranslate"><span class="pre">Animation.rotateX()</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="animation/Animation.html#Animation.rotateX" title="Animation.rotateX"><code class="xref js js-func docutils literal notranslate"><span class="pre">Animation.rotateX()</span></code></a></p></td>
 <td><p>从 X 轴顺时针旋转一个角度</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="Animation.html#Animation.rotate3d" title="Animation.rotate3d"><code class="xref js js-func docutils literal notranslate"><span class="pre">Animation.rotate3d()</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="animation/Animation.html#Animation.rotate3d" title="Animation.rotate3d"><code class="xref js js-func docutils literal notranslate"><span class="pre">Animation.rotate3d()</span></code></a></p></td>
 <td><p>从 X 轴顺时针旋转一个角度</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="Animation.html#Animation.rotate" title="Animation.rotate"><code class="xref js js-func docutils literal notranslate"><span class="pre">Animation.rotate()</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="animation/Animation.html#Animation.rotate" title="Animation.rotate"><code class="xref js js-func docutils literal notranslate"><span class="pre">Animation.rotate()</span></code></a></p></td>
 <td><p>从原点顺时针旋转一个角度</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="Animation.html#Animation.right" title="Animation.right"><code class="xref js js-func docutils literal notranslate"><span class="pre">Animation.right()</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="animation/Animation.html#Animation.right" title="Animation.right"><code class="xref js js-func docutils literal notranslate"><span class="pre">Animation.right()</span></code></a></p></td>
 <td><p>设置 right 值</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="Animation.html#Animation.opacity" title="Animation.opacity"><code class="xref js js-func docutils literal notranslate"><span class="pre">Animation.opacity()</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="animation/Animation.html#Animation.opacity" title="Animation.opacity"><code class="xref js js-func docutils literal notranslate"><span class="pre">Animation.opacity()</span></code></a></p></td>
 <td><p>设置透明度</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="Animation.html#Animation.matrix3d" title="Animation.matrix3d"><code class="xref js js-func docutils literal notranslate"><span class="pre">Animation.matrix3d()</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="animation/Animation.html#Animation.matrix3d" title="Animation.matrix3d"><code class="xref js js-func docutils literal notranslate"><span class="pre">Animation.matrix3d()</span></code></a></p></td>
 <td><p>同 transform-function matrix3d</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="Animation.html#Animation.matrix" title="Animation.matrix"><code class="xref js js-func docutils literal notranslate"><span class="pre">Animation.matrix()</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="animation/Animation.html#Animation.matrix" title="Animation.matrix"><code class="xref js js-func docutils literal notranslate"><span class="pre">Animation.matrix()</span></code></a></p></td>
 <td><p>同 transform-function matrix</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="Animation.html#Animation.backgroundColor" title="Animation.backgroundColor"><code class="xref js js-func docutils literal notranslate"><span class="pre">Animation.backgroundColor()</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="animation/Animation.html#Animation.backgroundColor" title="Animation.backgroundColor"><code class="xref js js-func docutils literal notranslate"><span class="pre">Animation.backgroundColor()</span></code></a></p></td>
 <td><p>设置背景色</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="Animation.html#Animation.left" title="Animation.left"><code class="xref js js-func docutils literal notranslate"><span class="pre">Animation.left()</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="animation/Animation.html#Animation.left" title="Animation.left"><code class="xref js js-func docutils literal notranslate"><span class="pre">Animation.left()</span></code></a></p></td>
 <td><p>设置 left 值</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="Animation.html#Animation.height" title="Animation.height"><code class="xref js js-func docutils literal notranslate"><span class="pre">Animation.height()</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="animation/Animation.html#Animation.height" title="Animation.height"><code class="xref js js-func docutils literal notranslate"><span class="pre">Animation.height()</span></code></a></p></td>
 <td><p>设置高度</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="Animation.html#Animation.width" title="Animation.width"><code class="xref js js-func docutils literal notranslate"><span class="pre">Animation.width()</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="animation/Animation.html#Animation.width" title="Animation.width"><code class="xref js js-func docutils literal notranslate"><span class="pre">Animation.width()</span></code></a></p></td>
 <td><p>设置宽度</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="Animation.html#Animation.export" title="Animation.export"><code class="xref js js-func docutils literal notranslate"><span class="pre">Animation.export()</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="animation/Animation.html#Animation.export" title="Animation.export"><code class="xref js js-func docutils literal notranslate"><span class="pre">Animation.export()</span></code></a></p></td>
 <td><p>导出动画队列</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="Animation.html#Animation.bottom" title="Animation.bottom"><code class="xref js js-func docutils literal notranslate"><span class="pre">Animation.bottom()</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="animation/Animation.html#Animation.bottom" title="Animation.bottom"><code class="xref js js-func docutils literal notranslate"><span class="pre">Animation.bottom()</span></code></a></p></td>
 <td><p>设置 bottom 值</p></td>
 </tr>
 </tbody>
@@ -951,13 +954,13 @@
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><a class="reference internal" href="RequestTask.html#RequestTask.abort" title="RequestTask.abort"><code class="xref js js-func docutils literal notranslate"><span class="pre">RequestTask.abort()</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="request/RequestTask.html#RequestTask.abort" title="RequestTask.abort"><code class="xref js js-func docutils literal notranslate"><span class="pre">RequestTask.abort()</span></code></a></p></td>
 <td><p>中断请求任务</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="RequestTask.html#RequestTask.offHeadersReceived" title="RequestTask.offHeadersReceived"><code class="xref js js-func docutils literal notranslate"><span class="pre">RequestTask.offHeadersReceived()</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="request/RequestTask.html#RequestTask.offHeadersReceived" title="RequestTask.offHeadersReceived"><code class="xref js js-func docutils literal notranslate"><span class="pre">RequestTask.offHeadersReceived()</span></code></a></p></td>
 <td><p>取消监听 HTTP Response Header 事件</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="RequestTask.html#RequestTask.onHeadersReceived" title="RequestTask.onHeadersReceived"><code class="xref js js-func docutils literal notranslate"><span class="pre">RequestTask.onHeadersReceived()</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="request/RequestTask.html#RequestTask.onHeadersReceived" title="RequestTask.onHeadersReceived"><code class="xref js js-func docutils literal notranslate"><span class="pre">RequestTask.onHeadersReceived()</span></code></a></p></td>
 <td><p>监听 HTTP Response Header 事件</p></td>
 </tr>
 </tbody>
@@ -999,19 +1002,19 @@
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><a class="reference internal" href="DownloadTask.html#DownloadTask.abort" title="DownloadTask.abort"><code class="xref js js-func docutils literal notranslate"><span class="pre">DownloadTask.abort()</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="download/DownloadTask.html#DownloadTask.abort" title="DownloadTask.abort"><code class="xref js js-func docutils literal notranslate"><span class="pre">DownloadTask.abort()</span></code></a></p></td>
 <td><p>中断下载任务</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="DownloadTask.html#DownloadTask.offHeadersReceived" title="DownloadTask.offHeadersReceived"><code class="xref js js-func docutils literal notranslate"><span class="pre">DownloadTask.offHeadersReceived()</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="download/DownloadTask.html#DownloadTask.offHeadersReceived" title="DownloadTask.offHeadersReceived"><code class="xref js js-func docutils literal notranslate"><span class="pre">DownloadTask.offHeadersReceived()</span></code></a></p></td>
 <td><p>取消监听 HTTP Response Header 事件</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="DownloadTask.html#DownloadTask.offProgressUpdate" title="DownloadTask.offProgressUpdate"><code class="xref js js-func docutils literal notranslate"><span class="pre">DownloadTask.offProgressUpdate()</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="download/DownloadTask.html#DownloadTask.offProgressUpdate" title="DownloadTask.offProgressUpdate"><code class="xref js js-func docutils literal notranslate"><span class="pre">DownloadTask.offProgressUpdate()</span></code></a></p></td>
 <td><p>取消监听下载进度变化事件</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="DownloadTask.html#DownloadTask.onHeadersReceived" title="DownloadTask.onHeadersReceived"><code class="xref js js-func docutils literal notranslate"><span class="pre">DownloadTask.onHeadersReceived()</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="download/DownloadTask.html#DownloadTask.onHeadersReceived" title="DownloadTask.onHeadersReceived"><code class="xref js js-func docutils literal notranslate"><span class="pre">DownloadTask.onHeadersReceived()</span></code></a></p></td>
 <td><p>监听 HTTP Response Header 事件</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="DownloadTask.html#DownloadTask.onProgressUpdate" title="DownloadTask.onProgressUpdate"><code class="xref js js-func docutils literal notranslate"><span class="pre">DownloadTask.onProgressUpdate()</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="download/DownloadTask.html#DownloadTask.onProgressUpdate" title="DownloadTask.onProgressUpdate"><code class="xref js js-func docutils literal notranslate"><span class="pre">DownloadTask.onProgressUpdate()</span></code></a></p></td>
 <td><p>监听下载进度变化事件</p></td>
 </tr>
 </tbody>
@@ -1053,19 +1056,19 @@
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><a class="reference internal" href="UploadTask.html#UploadTask.abort" title="UploadTask.abort"><code class="xref js js-func docutils literal notranslate"><span class="pre">UploadTask.abort()</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="upload/UploadTask.html#UploadTask.abort" title="UploadTask.abort"><code class="xref js js-func docutils literal notranslate"><span class="pre">UploadTask.abort()</span></code></a></p></td>
 <td><p>中断上传任务</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="UploadTask.html#UploadTask.offHeadersReceived" title="UploadTask.offHeadersReceived"><code class="xref js js-func docutils literal notranslate"><span class="pre">UploadTask.offHeadersReceived()</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="upload/UploadTask.html#UploadTask.offHeadersReceived" title="UploadTask.offHeadersReceived"><code class="xref js js-func docutils literal notranslate"><span class="pre">UploadTask.offHeadersReceived()</span></code></a></p></td>
 <td><p>取消监听 HTTP Response Header 事件</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="UploadTask.html#UploadTask.offProgressUpdate" title="UploadTask.offProgressUpdate"><code class="xref js js-func docutils literal notranslate"><span class="pre">UploadTask.offProgressUpdate()</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="upload/UploadTask.html#UploadTask.offProgressUpdate" title="UploadTask.offProgressUpdate"><code class="xref js js-func docutils literal notranslate"><span class="pre">UploadTask.offProgressUpdate()</span></code></a></p></td>
 <td><p>取消监听上传进度变化事件</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="UploadTask.html#UploadTask.onHeadersReceived" title="UploadTask.onHeadersReceived"><code class="xref js js-func docutils literal notranslate"><span class="pre">UploadTask.onHeadersReceived()</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="upload/UploadTask.html#UploadTask.onHeadersReceived" title="UploadTask.onHeadersReceived"><code class="xref js js-func docutils literal notranslate"><span class="pre">UploadTask.onHeadersReceived()</span></code></a></p></td>
 <td><p>监听 HTTP Response Header 事件</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="UploadTask.html#UploadTask.onProgressUpdate" title="UploadTask.onProgressUpdate"><code class="xref js js-func docutils literal notranslate"><span class="pre">UploadTask.onProgressUpdate()</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="upload/UploadTask.html#UploadTask.onProgressUpdate" title="UploadTask.onProgressUpdate"><code class="xref js js-func docutils literal notranslate"><span class="pre">UploadTask.onProgressUpdate()</span></code></a></p></td>
 <td><p>监听上传进度变化事件</p></td>
 </tr>
 </tbody>
@@ -1125,22 +1128,22 @@
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><a class="reference internal" href="SocketTask.html#SocketTask.close" title="SocketTask.close"><code class="xref js js-func docutils literal notranslate"><span class="pre">SocketTask.close()</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="socket/SocketTask.html#SocketTask.close" title="SocketTask.close"><code class="xref js js-func docutils literal notranslate"><span class="pre">SocketTask.close()</span></code></a></p></td>
 <td><p>关闭 WebSocket 连接</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="SocketTask.html#SocketTask.onClose" title="SocketTask.onClose"><code class="xref js js-func docutils literal notranslate"><span class="pre">SocketTask.onClose()</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="socket/SocketTask.html#SocketTask.onClose" title="SocketTask.onClose"><code class="xref js js-func docutils literal notranslate"><span class="pre">SocketTask.onClose()</span></code></a></p></td>
 <td><p>监听 WebSocket 连接关闭事件</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="SocketTask.html#SocketTask.onError" title="SocketTask.onError"><code class="xref js js-func docutils literal notranslate"><span class="pre">SocketTask.onError()</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="socket/SocketTask.html#SocketTask.onError" title="SocketTask.onError"><code class="xref js js-func docutils literal notranslate"><span class="pre">SocketTask.onError()</span></code></a></p></td>
 <td><p>监听 WebSocket 错误事件</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="SocketTask.html#SocketTask.onMessage" title="SocketTask.onMessage"><code class="xref js js-func docutils literal notranslate"><span class="pre">SocketTask.onMessage()</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="socket/SocketTask.html#SocketTask.onMessage" title="SocketTask.onMessage"><code class="xref js js-func docutils literal notranslate"><span class="pre">SocketTask.onMessage()</span></code></a></p></td>
 <td><p>监听 WebSocket 接受到服务器的消息事件</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="SocketTask.html#SocketTask.onOpen" title="SocketTask.onOpen"><code class="xref js js-func docutils literal notranslate"><span class="pre">SocketTask.onOpen()</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="socket/SocketTask.html#SocketTask.onOpen" title="SocketTask.onOpen"><code class="xref js js-func docutils literal notranslate"><span class="pre">SocketTask.onOpen()</span></code></a></p></td>
 <td><p>监听 WebSocket 连接打开事件</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="SocketTask.html#SocketTask.send" title="SocketTask.send"><code class="xref js js-func docutils literal notranslate"><span class="pre">SocketTask.send()</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="socket/SocketTask.html#SocketTask.send" title="SocketTask.send"><code class="xref js js-func docutils literal notranslate"><span class="pre">SocketTask.send()</span></code></a></p></td>
 <td><p>通过 WebSocket 连接发送数据</p></td>
 </tr>
 </tbody>
@@ -1279,25 +1282,25 @@
 <tr class="row-even"><td><p><a class="reference internal" href="wx.createMapContext.html#wx.createMapContext" title="wx.createMapContext"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.createMapContext()</span></code></a></p></td>
 <td><p>创建 map 上下文 MapContext 对象</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="MapContext.html#MapContext" title="MapContext"><code class="xref js js-func docutils literal notranslate"><span class="pre">MapContext()</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="map/MapContext.html#MapContext" title="MapContext"><code class="xref js js-func docutils literal notranslate"><span class="pre">MapContext()</span></code></a></p></td>
 <td><p>MapContext 对象</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="MapContext.html#MapContext.getCenterLocation" title="MapContext.getCenterLocation"><code class="xref js js-func docutils literal notranslate"><span class="pre">MapContext.getCenterLocation()</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="map/MapContext.html#MapContext.getCenterLocation" title="MapContext.getCenterLocation"><code class="xref js js-func docutils literal notranslate"><span class="pre">MapContext.getCenterLocation()</span></code></a></p></td>
 <td><p>获取当前地图中心的经纬度</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="MapContext.html#MapContext.getRegion" title="MapContext.getRegion"><code class="xref js js-func docutils literal notranslate"><span class="pre">MapContext.getRegion()</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="map/MapContext.html#MapContext.getRegion" title="MapContext.getRegion"><code class="xref js js-func docutils literal notranslate"><span class="pre">MapContext.getRegion()</span></code></a></p></td>
 <td><p>获取当前地图的视野范围</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="MapContext.html#MapContext.getScale" title="MapContext.getScale"><code class="xref js js-func docutils literal notranslate"><span class="pre">MapContext.getScale()</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="map/MapContext.html#MapContext.getScale" title="MapContext.getScale"><code class="xref js js-func docutils literal notranslate"><span class="pre">MapContext.getScale()</span></code></a></p></td>
 <td><p>获取当前地图的缩放级别</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="MapContext.html#MapContext.includePoints" title="MapContext.includePoints"><code class="xref js js-func docutils literal notranslate"><span class="pre">MapContext.includePoints()</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="map/MapContext.html#MapContext.includePoints" title="MapContext.includePoints"><code class="xref js js-func docutils literal notranslate"><span class="pre">MapContext.includePoints()</span></code></a></p></td>
 <td><p>缩放视野展示所有经纬度</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="MapContext.html#MapContext.moveToLocation" title="MapContext.moveToLocation"><code class="xref js js-func docutils literal notranslate"><span class="pre">MapContext.moveToLocation()</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="map/MapContext.html#MapContext.moveToLocation" title="MapContext.moveToLocation"><code class="xref js js-func docutils literal notranslate"><span class="pre">MapContext.moveToLocation()</span></code></a></p></td>
 <td><p>将地图中心移动到当前定位点</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="MapContext.html#MapContext.translateMarker" title="MapContext.translateMarker"><code class="xref js js-func docutils literal notranslate"><span class="pre">MapContext.translateMarker()</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="map/MapContext.html#MapContext.translateMarker" title="MapContext.translateMarker"><code class="xref js js-func docutils literal notranslate"><span class="pre">MapContext.translateMarker()</span></code></a></p></td>
 <td><p>平移marker，带动画</p></td>
 </tr>
 </tbody>
@@ -1361,37 +1364,37 @@
 <tr class="row-even"><td><p><a class="reference internal" href="wx.createVideoContext.html#wx.createVideoContext" title="wx.createVideoContext"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.createVideoContext()</span></code></a></p></td>
 <td><p>创建 video 上下文 VideoContext 对象</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="VideoContext.html#VideoContext" title="VideoContext"><code class="xref js js-class docutils literal notranslate"><span class="pre">VideoContext()</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="video/VideoContext.html#VideoContext" title="VideoContext"><code class="xref js js-class docutils literal notranslate"><span class="pre">VideoContext()</span></code></a></p></td>
 <td><p>通过 wx.createVideoContext() 获取</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="VideoContext.html#VideoContext.seek" title="VideoContext.seek"><code class="xref js js-func docutils literal notranslate"><span class="pre">VideoContext.seek()</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="video/VideoContext.html#VideoContext.seek" title="VideoContext.seek"><code class="xref js js-func docutils literal notranslate"><span class="pre">VideoContext.seek()</span></code></a></p></td>
 <td><p>跳转到指定位置</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="VideoContext.html#VideoContext.exitFullScreen" title="VideoContext.exitFullScreen"><code class="xref js js-func docutils literal notranslate"><span class="pre">VideoContext.exitFullScreen()</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="video/VideoContext.html#VideoContext.exitFullScreen" title="VideoContext.exitFullScreen"><code class="xref js js-func docutils literal notranslate"><span class="pre">VideoContext.exitFullScreen()</span></code></a></p></td>
 <td><p>退出全屏</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="VideoContext.html#VideoContext.hideStatusBar" title="VideoContext.hideStatusBar"><code class="xref js js-func docutils literal notranslate"><span class="pre">VideoContext.hideStatusBar()</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="video/VideoContext.html#VideoContext.hideStatusBar" title="VideoContext.hideStatusBar"><code class="xref js js-func docutils literal notranslate"><span class="pre">VideoContext.hideStatusBar()</span></code></a></p></td>
 <td><p>隐藏状态栏，仅在iOS全屏下有效</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="VideoContext.html#VideoContext.pause" title="VideoContext.pause"><code class="xref js js-func docutils literal notranslate"><span class="pre">VideoContext.pause()</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="video/VideoContext.html#VideoContext.pause" title="VideoContext.pause"><code class="xref js js-func docutils literal notranslate"><span class="pre">VideoContext.pause()</span></code></a></p></td>
 <td><p>暂停视频</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="VideoContext.html#VideoContext.play" title="VideoContext.play"><code class="xref js js-func docutils literal notranslate"><span class="pre">VideoContext.play()</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="video/VideoContext.html#VideoContext.play" title="VideoContext.play"><code class="xref js js-func docutils literal notranslate"><span class="pre">VideoContext.play()</span></code></a></p></td>
 <td><p>播放视频</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="VideoContext.html#VideoContext.playbackRate" title="VideoContext.playbackRate"><code class="xref js js-func docutils literal notranslate"><span class="pre">VideoContext.playbackRate()</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="video/VideoContext.html#VideoContext.playbackRate" title="VideoContext.playbackRate"><code class="xref js js-func docutils literal notranslate"><span class="pre">VideoContext.playbackRate()</span></code></a></p></td>
 <td><p>设置倍速播放</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="VideoContext.html#VideoContext.requestFullScreen" title="VideoContext.requestFullScreen"><code class="xref js js-func docutils literal notranslate"><span class="pre">VideoContext.requestFullScreen()</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="video/VideoContext.html#VideoContext.requestFullScreen" title="VideoContext.requestFullScreen"><code class="xref js js-func docutils literal notranslate"><span class="pre">VideoContext.requestFullScreen()</span></code></a></p></td>
 <td><p>进入全屏</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="VideoContext.html#VideoContext.sendDanmu" title="VideoContext.sendDanmu"><code class="xref js js-func docutils literal notranslate"><span class="pre">VideoContext.sendDanmu()</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="video/VideoContext.html#VideoContext.sendDanmu" title="VideoContext.sendDanmu"><code class="xref js js-func docutils literal notranslate"><span class="pre">VideoContext.sendDanmu()</span></code></a></p></td>
 <td><p>发送弹幕</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="VideoContext.html#VideoContext.showStatusBar" title="VideoContext.showStatusBar"><code class="xref js js-func docutils literal notranslate"><span class="pre">VideoContext.showStatusBar()</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="video/VideoContext.html#VideoContext.showStatusBar" title="VideoContext.showStatusBar"><code class="xref js js-func docutils literal notranslate"><span class="pre">VideoContext.showStatusBar()</span></code></a></p></td>
 <td><p>显示状态栏，仅在iOS全屏下有效</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="VideoContext.html#VideoContext.stop" title="VideoContext.stop"><code class="xref js js-func docutils literal notranslate"><span class="pre">VideoContext.stop()</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="video/VideoContext.html#VideoContext.stop" title="VideoContext.stop"><code class="xref js js-func docutils literal notranslate"><span class="pre">VideoContext.stop()</span></code></a></p></td>
 <td><p>停止视频</p></td>
 </tr>
 </tbody>
@@ -1415,85 +1418,85 @@
 <tr class="row-even"><td><p><a class="reference internal" href="wx.getAvailableAudioSources.html#wx.getAvailableAudioSources" title="wx.getAvailableAudioSources"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.getAvailableAudioSources()</span></code></a></p></td>
 <td><p>获取当前支持的音频输入源</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="InnerAudioContext.html#wx.createInnerAudioContext" title="wx.createInnerAudioContext"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.createInnerAudioContext()</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="audio/InnerAudioContext.html#wx.createInnerAudioContext" title="wx.createInnerAudioContext"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.createInnerAudioContext()</span></code></a></p></td>
 <td><p>创建内部 audio 上下文 InnerAudioContext 对象</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="wx.setInnerAudioOption.html#wx.setInnerAudioOption" title="wx.setInnerAudioOption"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.setInnerAudioOption()</span></code></a></p></td>
 <td><p>设置 InnerAudioContext 的播放选项</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="InnerAudioContext.html#InnerAudioContext.destroy" title="InnerAudioContext.destroy"><code class="xref js js-func docutils literal notranslate"><span class="pre">InnerAudioContext.destroy()</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="audio/InnerAudioContext.html#InnerAudioContext.destroy" title="InnerAudioContext.destroy"><code class="xref js js-func docutils literal notranslate"><span class="pre">InnerAudioContext.destroy()</span></code></a></p></td>
 <td><p>销毁当前实例</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="InnerAudioContext.html#InnerAudioContext.offCanplay" title="InnerAudioContext.offCanplay"><code class="xref js js-func docutils literal notranslate"><span class="pre">InnerAudioContext.offCanplay()</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="audio/InnerAudioContext.html#InnerAudioContext.offCanplay" title="InnerAudioContext.offCanplay"><code class="xref js js-func docutils literal notranslate"><span class="pre">InnerAudioContext.offCanplay()</span></code></a></p></td>
 <td><p>取消监听音频进入可以播放状态的事件</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="InnerAudioContext.html#InnerAudioContext.offEnded" title="InnerAudioContext.offEnded"><code class="xref js js-func docutils literal notranslate"><span class="pre">InnerAudioContext.offEnded()</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="audio/InnerAudioContext.html#InnerAudioContext.offEnded" title="InnerAudioContext.offEnded"><code class="xref js js-func docutils literal notranslate"><span class="pre">InnerAudioContext.offEnded()</span></code></a></p></td>
 <td><p>取消监听音频自然播放至结束的事件</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="InnerAudioContext.html#InnerAudioContext.offError" title="InnerAudioContext.offError"><code class="xref js js-func docutils literal notranslate"><span class="pre">InnerAudioContext.offError()</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="audio/InnerAudioContext.html#InnerAudioContext.offError" title="InnerAudioContext.offError"><code class="xref js js-func docutils literal notranslate"><span class="pre">InnerAudioContext.offError()</span></code></a></p></td>
 <td><p>取消监听音频播放错误事件</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="InnerAudioContext.html#InnerAudioContext.offPause" title="InnerAudioContext.offPause"><code class="xref js js-func docutils literal notranslate"><span class="pre">InnerAudioContext.offPause()</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="audio/InnerAudioContext.html#InnerAudioContext.offPause" title="InnerAudioContext.offPause"><code class="xref js js-func docutils literal notranslate"><span class="pre">InnerAudioContext.offPause()</span></code></a></p></td>
 <td><p>取消监听音频暂停事件</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="InnerAudioContext.html#InnerAudioContext.offPlay" title="InnerAudioContext.offPlay"><code class="xref js js-func docutils literal notranslate"><span class="pre">InnerAudioContext.offPlay()</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="audio/InnerAudioContext.html#InnerAudioContext.offPlay" title="InnerAudioContext.offPlay"><code class="xref js js-func docutils literal notranslate"><span class="pre">InnerAudioContext.offPlay()</span></code></a></p></td>
 <td><p>取消监听音频播放事件</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="InnerAudioContext.html#InnerAudioContext.offSeeked" title="InnerAudioContext.offSeeked"><code class="xref js js-func docutils literal notranslate"><span class="pre">InnerAudioContext.offSeeked()</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="audio/InnerAudioContext.html#InnerAudioContext.offSeeked" title="InnerAudioContext.offSeeked"><code class="xref js js-func docutils literal notranslate"><span class="pre">InnerAudioContext.offSeeked()</span></code></a></p></td>
 <td><p>取消监听音频完成跳转操作的事件</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="InnerAudioContext.html#InnerAudioContext.offSeeking" title="InnerAudioContext.offSeeking"><code class="xref js js-func docutils literal notranslate"><span class="pre">InnerAudioContext.offSeeking()</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="audio/InnerAudioContext.html#InnerAudioContext.offSeeking" title="InnerAudioContext.offSeeking"><code class="xref js js-func docutils literal notranslate"><span class="pre">InnerAudioContext.offSeeking()</span></code></a></p></td>
 <td><p>取消监听音频进行跳转操作的事件</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="InnerAudioContext.html#InnerAudioContext.offStop" title="InnerAudioContext.offStop"><code class="xref js js-func docutils literal notranslate"><span class="pre">InnerAudioContext.offStop()</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="audio/InnerAudioContext.html#InnerAudioContext.offStop" title="InnerAudioContext.offStop"><code class="xref js js-func docutils literal notranslate"><span class="pre">InnerAudioContext.offStop()</span></code></a></p></td>
 <td><p>取消监听音频停止事件</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="InnerAudioContext.html#InnerAudioContext.offTimeUpdate" title="InnerAudioContext.offTimeUpdate"><code class="xref js js-func docutils literal notranslate"><span class="pre">InnerAudioContext.offTimeUpdate()</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="audio/InnerAudioContext.html#InnerAudioContext.offTimeUpdate" title="InnerAudioContext.offTimeUpdate"><code class="xref js js-func docutils literal notranslate"><span class="pre">InnerAudioContext.offTimeUpdate()</span></code></a></p></td>
 <td><p>取消监听音频播放进度更新事件</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="InnerAudioContext.html#InnerAudioContext.offWaiting" title="InnerAudioContext.offWaiting"><code class="xref js js-func docutils literal notranslate"><span class="pre">InnerAudioContext.offWaiting()</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="audio/InnerAudioContext.html#InnerAudioContext.offWaiting" title="InnerAudioContext.offWaiting"><code class="xref js js-func docutils literal notranslate"><span class="pre">InnerAudioContext.offWaiting()</span></code></a></p></td>
 <td><p>取消监听音频加载中事件</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="InnerAudioContext.html#InnerAudioContext.onCanplay" title="InnerAudioContext.onCanplay"><code class="xref js js-func docutils literal notranslate"><span class="pre">InnerAudioContext.onCanplay()</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="audio/InnerAudioContext.html#InnerAudioContext.onCanplay" title="InnerAudioContext.onCanplay"><code class="xref js js-func docutils literal notranslate"><span class="pre">InnerAudioContext.onCanplay()</span></code></a></p></td>
 <td><p>监听音频进入可以播放状态的事件</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="InnerAudioContext.html#InnerAudioContext.onEnded" title="InnerAudioContext.onEnded"><code class="xref js js-func docutils literal notranslate"><span class="pre">InnerAudioContext.onEnded()</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="audio/InnerAudioContext.html#InnerAudioContext.onEnded" title="InnerAudioContext.onEnded"><code class="xref js js-func docutils literal notranslate"><span class="pre">InnerAudioContext.onEnded()</span></code></a></p></td>
 <td><p>监听音频自然播放至结束的事件</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="InnerAudioContext.html#InnerAudioContext.onError" title="InnerAudioContext.onError"><code class="xref js js-func docutils literal notranslate"><span class="pre">InnerAudioContext.onError()</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="audio/InnerAudioContext.html#InnerAudioContext.onError" title="InnerAudioContext.onError"><code class="xref js js-func docutils literal notranslate"><span class="pre">InnerAudioContext.onError()</span></code></a></p></td>
 <td><p>监听音频播放错误事件</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="InnerAudioContext.html#InnerAudioContext.onPause" title="InnerAudioContext.onPause"><code class="xref js js-func docutils literal notranslate"><span class="pre">InnerAudioContext.onPause()</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="audio/InnerAudioContext.html#InnerAudioContext.onPause" title="InnerAudioContext.onPause"><code class="xref js js-func docutils literal notranslate"><span class="pre">InnerAudioContext.onPause()</span></code></a></p></td>
 <td><p>监听音频暂停事件</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="InnerAudioContext.html#InnerAudioContext.onPlay" title="InnerAudioContext.onPlay"><code class="xref js js-func docutils literal notranslate"><span class="pre">InnerAudioContext.onPlay()</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="audio/InnerAudioContext.html#InnerAudioContext.onPlay" title="InnerAudioContext.onPlay"><code class="xref js js-func docutils literal notranslate"><span class="pre">InnerAudioContext.onPlay()</span></code></a></p></td>
 <td><p>监听音频播放事件</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="InnerAudioContext.html#InnerAudioContext.onSeeked" title="InnerAudioContext.onSeeked"><code class="xref js js-func docutils literal notranslate"><span class="pre">InnerAudioContext.onSeeked()</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="audio/InnerAudioContext.html#InnerAudioContext.onSeeked" title="InnerAudioContext.onSeeked"><code class="xref js js-func docutils literal notranslate"><span class="pre">InnerAudioContext.onSeeked()</span></code></a></p></td>
 <td><p>监听音频完成跳转操作的事件</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="InnerAudioContext.html#InnerAudioContext.onSeeking" title="InnerAudioContext.onSeeking"><code class="xref js js-func docutils literal notranslate"><span class="pre">InnerAudioContext.onSeeking()</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="audio/InnerAudioContext.html#InnerAudioContext.onSeeking" title="InnerAudioContext.onSeeking"><code class="xref js js-func docutils literal notranslate"><span class="pre">InnerAudioContext.onSeeking()</span></code></a></p></td>
 <td><p>监听音频进行跳转操作的事件</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="InnerAudioContext.html#InnerAudioContext.onStop" title="InnerAudioContext.onStop"><code class="xref js js-func docutils literal notranslate"><span class="pre">InnerAudioContext.onStop()</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="audio/InnerAudioContext.html#InnerAudioContext.onStop" title="InnerAudioContext.onStop"><code class="xref js js-func docutils literal notranslate"><span class="pre">InnerAudioContext.onStop()</span></code></a></p></td>
 <td><p>监听音频停止事件</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="InnerAudioContext.html#InnerAudioContext.onTimeUpdate" title="InnerAudioContext.onTimeUpdate"><code class="xref js js-func docutils literal notranslate"><span class="pre">InnerAudioContext.onTimeUpdate()</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="audio/InnerAudioContext.html#InnerAudioContext.onTimeUpdate" title="InnerAudioContext.onTimeUpdate"><code class="xref js js-func docutils literal notranslate"><span class="pre">InnerAudioContext.onTimeUpdate()</span></code></a></p></td>
 <td><p>监听音频播放进度更新事件</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="InnerAudioContext.html#InnerAudioContext.onWaiting" title="InnerAudioContext.onWaiting"><code class="xref js js-func docutils literal notranslate"><span class="pre">InnerAudioContext.onWaiting()</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="audio/InnerAudioContext.html#InnerAudioContext.onWaiting" title="InnerAudioContext.onWaiting"><code class="xref js js-func docutils literal notranslate"><span class="pre">InnerAudioContext.onWaiting()</span></code></a></p></td>
 <td><p>监听音频加载中事件</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="InnerAudioContext.html#InnerAudioContext.pause" title="InnerAudioContext.pause"><code class="xref js js-func docutils literal notranslate"><span class="pre">InnerAudioContext.pause()</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="audio/InnerAudioContext.html#InnerAudioContext.pause" title="InnerAudioContext.pause"><code class="xref js js-func docutils literal notranslate"><span class="pre">InnerAudioContext.pause()</span></code></a></p></td>
 <td><p>暂停</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="InnerAudioContext.html#InnerAudioContext.play" title="InnerAudioContext.play"><code class="xref js js-func docutils literal notranslate"><span class="pre">InnerAudioContext.play()</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="audio/InnerAudioContext.html#InnerAudioContext.play" title="InnerAudioContext.play"><code class="xref js js-func docutils literal notranslate"><span class="pre">InnerAudioContext.play()</span></code></a></p></td>
 <td><p>播放</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="InnerAudioContext.html#InnerAudioContext.seek" title="InnerAudioContext.seek"><code class="xref js js-func docutils literal notranslate"><span class="pre">InnerAudioContext.seek()</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="audio/InnerAudioContext.html#InnerAudioContext.seek" title="InnerAudioContext.seek"><code class="xref js js-func docutils literal notranslate"><span class="pre">InnerAudioContext.seek()</span></code></a></p></td>
 <td><p>跳转到指定位置</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="InnerAudioContext.html#InnerAudioContext.stop" title="InnerAudioContext.stop"><code class="xref js js-func docutils literal notranslate"><span class="pre">InnerAudioContext.stop()</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="audio/InnerAudioContext.html#InnerAudioContext.stop" title="InnerAudioContext.stop"><code class="xref js js-func docutils literal notranslate"><span class="pre">InnerAudioContext.stop()</span></code></a></p></td>
 <td><p>停止</p></td>
 </tr>
 </tbody>
@@ -1516,58 +1519,58 @@
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><a class="reference internal" href="BackgroundAudioManager.html#wx.getBackgroundAudioManager" title="wx.getBackgroundAudioManager"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.getBackgroundAudioManager()</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="audio/BackgroundAudioManager.html#wx.getBackgroundAudioManager" title="wx.getBackgroundAudioManager"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.getBackgroundAudioManager()</span></code></a></p></td>
 <td><p>获取全局唯一的背景音频管理器</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="BackgroundAudioManager.html#BackgroundAudioManager" title="BackgroundAudioManager"><code class="xref js js-func docutils literal notranslate"><span class="pre">BackgroundAudioManager()</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="audio/BackgroundAudioManager.html#BackgroundAudioManager" title="BackgroundAudioManager"><code class="xref js js-func docutils literal notranslate"><span class="pre">BackgroundAudioManager()</span></code></a></p></td>
 <td><p>全局唯一的背景音频管理器</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="BackgroundAudioManager.html#BackgroundAudioManager.onCanplay" title="BackgroundAudioManager.onCanplay"><code class="xref js js-func docutils literal notranslate"><span class="pre">BackgroundAudioManager.onCanplay()</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="audio/BackgroundAudioManager.html#BackgroundAudioManager.onCanplay" title="BackgroundAudioManager.onCanplay"><code class="xref js js-func docutils literal notranslate"><span class="pre">BackgroundAudioManager.onCanplay()</span></code></a></p></td>
 <td><p>监听背景音频进入可播放状态事件</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="BackgroundAudioManager.html#BackgroundAudioManager.onEnded" title="BackgroundAudioManager.onEnded"><code class="xref js js-func docutils literal notranslate"><span class="pre">BackgroundAudioManager.onEnded()</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="audio/BackgroundAudioManager.html#BackgroundAudioManager.onEnded" title="BackgroundAudioManager.onEnded"><code class="xref js js-func docutils literal notranslate"><span class="pre">BackgroundAudioManager.onEnded()</span></code></a></p></td>
 <td><p>监听背景音频自然播放结束事件</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="BackgroundAudioManager.html#BackgroundAudioManager.onError" title="BackgroundAudioManager.onError"><code class="xref js js-func docutils literal notranslate"><span class="pre">BackgroundAudioManager.onError()</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="audio/BackgroundAudioManager.html#BackgroundAudioManager.onError" title="BackgroundAudioManager.onError"><code class="xref js js-func docutils literal notranslate"><span class="pre">BackgroundAudioManager.onError()</span></code></a></p></td>
 <td><p>监听背景音频播放错误事件</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="BackgroundAudioManager.html#BackgroundAudioManager.onNext" title="BackgroundAudioManager.onNext"><code class="xref js js-func docutils literal notranslate"><span class="pre">BackgroundAudioManager.onNext()</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="audio/BackgroundAudioManager.html#BackgroundAudioManager.onNext" title="BackgroundAudioManager.onNext"><code class="xref js js-func docutils literal notranslate"><span class="pre">BackgroundAudioManager.onNext()</span></code></a></p></td>
 <td><p>监听用户在系统音乐播放面板点击下一曲事件（仅iOS）</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="BackgroundAudioManager.html#BackgroundAudioManager.onPause" title="BackgroundAudioManager.onPause"><code class="xref js js-func docutils literal notranslate"><span class="pre">BackgroundAudioManager.onPause()</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="audio/BackgroundAudioManager.html#BackgroundAudioManager.onPause" title="BackgroundAudioManager.onPause"><code class="xref js js-func docutils literal notranslate"><span class="pre">BackgroundAudioManager.onPause()</span></code></a></p></td>
 <td><p>监听背景音频暂停事件</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="BackgroundAudioManager.html#BackgroundAudioManager.onPlay" title="BackgroundAudioManager.onPlay"><code class="xref js js-func docutils literal notranslate"><span class="pre">BackgroundAudioManager.onPlay()</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="audio/BackgroundAudioManager.html#BackgroundAudioManager.onPlay" title="BackgroundAudioManager.onPlay"><code class="xref js js-func docutils literal notranslate"><span class="pre">BackgroundAudioManager.onPlay()</span></code></a></p></td>
 <td><p>监听背景音频播放事件</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="BackgroundAudioManager.html#BackgroundAudioManager.onPrev" title="BackgroundAudioManager.onPrev"><code class="xref js js-func docutils literal notranslate"><span class="pre">BackgroundAudioManager.onPrev()</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="audio/BackgroundAudioManager.html#BackgroundAudioManager.onPrev" title="BackgroundAudioManager.onPrev"><code class="xref js js-func docutils literal notranslate"><span class="pre">BackgroundAudioManager.onPrev()</span></code></a></p></td>
 <td><p>监听用户在系统音乐播放面板点击上一曲事件（仅iOS）</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="BackgroundAudioManager.html#BackgroundAudioManager.onSeeked" title="BackgroundAudioManager.onSeeked"><code class="xref js js-func docutils literal notranslate"><span class="pre">BackgroundAudioManager.onSeeked()</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="audio/BackgroundAudioManager.html#BackgroundAudioManager.onSeeked" title="BackgroundAudioManager.onSeeked"><code class="xref js js-func docutils literal notranslate"><span class="pre">BackgroundAudioManager.onSeeked()</span></code></a></p></td>
 <td><p>监听背景音频完成跳转操作事件</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="BackgroundAudioManager.html#BackgroundAudioManager.onSeeking" title="BackgroundAudioManager.onSeeking"><code class="xref js js-func docutils literal notranslate"><span class="pre">BackgroundAudioManager.onSeeking()</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="audio/BackgroundAudioManager.html#BackgroundAudioManager.onSeeking" title="BackgroundAudioManager.onSeeking"><code class="xref js js-func docutils literal notranslate"><span class="pre">BackgroundAudioManager.onSeeking()</span></code></a></p></td>
 <td><p>监听背景音频开始跳转操作事件</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="BackgroundAudioManager.html#BackgroundAudioManager.onStop" title="BackgroundAudioManager.onStop"><code class="xref js js-func docutils literal notranslate"><span class="pre">BackgroundAudioManager.onStop()</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="audio/BackgroundAudioManager.html#BackgroundAudioManager.onStop" title="BackgroundAudioManager.onStop"><code class="xref js js-func docutils literal notranslate"><span class="pre">BackgroundAudioManager.onStop()</span></code></a></p></td>
 <td><p>监听背景音频停止事件</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="BackgroundAudioManager.html#BackgroundAudioManager.onTimeUpdate" title="BackgroundAudioManager.onTimeUpdate"><code class="xref js js-func docutils literal notranslate"><span class="pre">BackgroundAudioManager.onTimeUpdate()</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="audio/BackgroundAudioManager.html#BackgroundAudioManager.onTimeUpdate" title="BackgroundAudioManager.onTimeUpdate"><code class="xref js js-func docutils literal notranslate"><span class="pre">BackgroundAudioManager.onTimeUpdate()</span></code></a></p></td>
 <td><p>监听背景音频播放进度更新事件</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="BackgroundAudioManager.html#BackgroundAudioManager.onWaiting" title="BackgroundAudioManager.onWaiting"><code class="xref js js-func docutils literal notranslate"><span class="pre">BackgroundAudioManager.onWaiting()</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="audio/BackgroundAudioManager.html#BackgroundAudioManager.onWaiting" title="BackgroundAudioManager.onWaiting"><code class="xref js js-func docutils literal notranslate"><span class="pre">BackgroundAudioManager.onWaiting()</span></code></a></p></td>
 <td><p>监听音频加载中事件</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="BackgroundAudioManager.html#BackgroundAudioManager.pause" title="BackgroundAudioManager.pause"><code class="xref js js-func docutils literal notranslate"><span class="pre">BackgroundAudioManager.pause()</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="audio/BackgroundAudioManager.html#BackgroundAudioManager.pause" title="BackgroundAudioManager.pause"><code class="xref js js-func docutils literal notranslate"><span class="pre">BackgroundAudioManager.pause()</span></code></a></p></td>
 <td><p>暂停音乐</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="BackgroundAudioManager.html#BackgroundAudioManager.play" title="BackgroundAudioManager.play"><code class="xref js js-func docutils literal notranslate"><span class="pre">BackgroundAudioManager.play()</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="audio/BackgroundAudioManager.html#BackgroundAudioManager.play" title="BackgroundAudioManager.play"><code class="xref js js-func docutils literal notranslate"><span class="pre">BackgroundAudioManager.play()</span></code></a></p></td>
 <td><p>播放音乐</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="BackgroundAudioManager.html#BackgroundAudioManager.seek" title="BackgroundAudioManager.seek"><code class="xref js js-func docutils literal notranslate"><span class="pre">BackgroundAudioManager.seek()</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="audio/BackgroundAudioManager.html#BackgroundAudioManager.seek" title="BackgroundAudioManager.seek"><code class="xref js js-func docutils literal notranslate"><span class="pre">BackgroundAudioManager.seek()</span></code></a></p></td>
 <td><p>跳转到指定位置</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="BackgroundAudioManager.html#BackgroundAudioManager.stop" title="BackgroundAudioManager.stop"><code class="xref js js-func docutils literal notranslate"><span class="pre">BackgroundAudioManager.stop()</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="audio/BackgroundAudioManager.html#BackgroundAudioManager.stop" title="BackgroundAudioManager.stop"><code class="xref js js-func docutils literal notranslate"><span class="pre">BackgroundAudioManager.stop()</span></code></a></p></td>
 <td><p>停止音乐</p></td>
 </tr>
 </tbody>
@@ -1577,8 +1580,8 @@
 <h3>实时音视频<a class="headerlink" href="#id33" title="永久链接至标题">¶</a></h3>
 <div class="toctree-wrapper compound">
 </div>
-<table class="docutils align-default" id="id73">
-<caption><span class="caption-text">LivePusherContext</span><a class="headerlink" href="#id73" title="永久链接至表格">¶</a></caption>
+<table class="docutils align-default" id="id76">
+<caption><span class="caption-text">LivePusherContext</span><a class="headerlink" href="#id76" title="永久链接至表格">¶</a></caption>
 <colgroup>
 <col style="width: 45%" />
 <col style="width: 55%" />
@@ -1592,46 +1595,46 @@
 <tr class="row-even"><td><p><a class="reference internal" href="wx.createLivePusherContext.html#wx.createLivePusherContext" title="wx.createLivePusherContext"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.createLivePusherContext()</span></code></a></p></td>
 <td><p>创建 live-pusher 上下文 LivePusherContext 对象</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="LivePusherContext.html#LivePusherContext.pause" title="LivePusherContext.pause"><code class="xref js js-func docutils literal notranslate"><span class="pre">LivePusherContext.pause()</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="live/LivePusherContext.html#LivePusherContext.pause" title="LivePusherContext.pause"><code class="xref js js-func docutils literal notranslate"><span class="pre">LivePusherContext.pause()</span></code></a></p></td>
 <td><p>暂停推流</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="LivePusherContext.html#LivePusherContext.pauseBGM" title="LivePusherContext.pauseBGM"><code class="xref js js-func docutils literal notranslate"><span class="pre">LivePusherContext.pauseBGM()</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="live/LivePusherContext.html#LivePusherContext.pauseBGM" title="LivePusherContext.pauseBGM"><code class="xref js js-func docutils literal notranslate"><span class="pre">LivePusherContext.pauseBGM()</span></code></a></p></td>
 <td><p>暂停背景音</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="LivePusherContext.html#LivePusherContext.playBGM" title="LivePusherContext.playBGM"><code class="xref js js-func docutils literal notranslate"><span class="pre">LivePusherContext.playBGM()</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="live/LivePusherContext.html#LivePusherContext.playBGM" title="LivePusherContext.playBGM"><code class="xref js js-func docutils literal notranslate"><span class="pre">LivePusherContext.playBGM()</span></code></a></p></td>
 <td><p>播放背景音</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="LivePusherContext.html#LivePusherContext.resume" title="LivePusherContext.resume"><code class="xref js js-func docutils literal notranslate"><span class="pre">LivePusherContext.resume()</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="live/LivePusherContext.html#LivePusherContext.resume" title="LivePusherContext.resume"><code class="xref js js-func docutils literal notranslate"><span class="pre">LivePusherContext.resume()</span></code></a></p></td>
 <td><p>恢复推流</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="LivePusherContext.html#LivePusherContext.resumeBGM" title="LivePusherContext.resumeBGM"><code class="xref js js-func docutils literal notranslate"><span class="pre">LivePusherContext.resumeBGM()</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="live/LivePusherContext.html#LivePusherContext.resumeBGM" title="LivePusherContext.resumeBGM"><code class="xref js js-func docutils literal notranslate"><span class="pre">LivePusherContext.resumeBGM()</span></code></a></p></td>
 <td><p>恢复背景音</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="LivePusherContext.html#LivePusherContext.setBGMVolume" title="LivePusherContext.setBGMVolume"><code class="xref js js-func docutils literal notranslate"><span class="pre">LivePusherContext.setBGMVolume()</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="live/LivePusherContext.html#LivePusherContext.setBGMVolume" title="LivePusherContext.setBGMVolume"><code class="xref js js-func docutils literal notranslate"><span class="pre">LivePusherContext.setBGMVolume()</span></code></a></p></td>
 <td><p>设置背景音音量</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="LivePusherContext.html#LivePusherContext.snapshot" title="LivePusherContext.snapshot"><code class="xref js js-func docutils literal notranslate"><span class="pre">LivePusherContext.snapshot()</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="live/LivePusherContext.html#LivePusherContext.snapshot" title="LivePusherContext.snapshot"><code class="xref js js-func docutils literal notranslate"><span class="pre">LivePusherContext.snapshot()</span></code></a></p></td>
 <td><p>快照</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="LivePusherContext.html#LivePusherContext.start" title="LivePusherContext.start"><code class="xref js js-func docutils literal notranslate"><span class="pre">LivePusherContext.start()</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="live/LivePusherContext.html#LivePusherContext.start" title="LivePusherContext.start"><code class="xref js js-func docutils literal notranslate"><span class="pre">LivePusherContext.start()</span></code></a></p></td>
 <td><p>播放推流</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="LivePusherContext.html#LivePusherContext.stop" title="LivePusherContext.stop"><code class="xref js js-func docutils literal notranslate"><span class="pre">LivePusherContext.stop()</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="live/LivePusherContext.html#LivePusherContext.stop" title="LivePusherContext.stop"><code class="xref js js-func docutils literal notranslate"><span class="pre">LivePusherContext.stop()</span></code></a></p></td>
 <td><p>停止推流</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="LivePusherContext.html#LivePusherContext.stopBGM" title="LivePusherContext.stopBGM"><code class="xref js js-func docutils literal notranslate"><span class="pre">LivePusherContext.stopBGM()</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="live/LivePusherContext.html#LivePusherContext.stopBGM" title="LivePusherContext.stopBGM"><code class="xref js js-func docutils literal notranslate"><span class="pre">LivePusherContext.stopBGM()</span></code></a></p></td>
 <td><p>停止背景音</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="LivePusherContext.html#LivePusherContext.switchCamera" title="LivePusherContext.switchCamera"><code class="xref js js-func docutils literal notranslate"><span class="pre">LivePusherContext.switchCamera()</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="live/LivePusherContext.html#LivePusherContext.switchCamera" title="LivePusherContext.switchCamera"><code class="xref js js-func docutils literal notranslate"><span class="pre">LivePusherContext.switchCamera()</span></code></a></p></td>
 <td><p>切换前后摄像头</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="LivePusherContext.html#LivePusherContext.toggleTorch" title="LivePusherContext.toggleTorch"><code class="xref js js-func docutils literal notranslate"><span class="pre">LivePusherContext.toggleTorch()</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="live/LivePusherContext.html#LivePusherContext.toggleTorch" title="LivePusherContext.toggleTorch"><code class="xref js js-func docutils literal notranslate"><span class="pre">LivePusherContext.toggleTorch()</span></code></a></p></td>
 <td><p>切换</p></td>
 </tr>
 </tbody>
 </table>
-<table class="docutils align-default" id="id74">
-<caption><span class="caption-text">LivePlayerContext</span><a class="headerlink" href="#id74" title="永久链接至表格">¶</a></caption>
+<table class="docutils align-default" id="id77">
+<caption><span class="caption-text">LivePlayerContext</span><a class="headerlink" href="#id77" title="永久链接至表格">¶</a></caption>
 <colgroup>
 <col style="width: 48%" />
 <col style="width: 52%" />
@@ -1645,25 +1648,25 @@
 <tr class="row-even"><td><p><a class="reference internal" href="wx.createLivePlayerContext.html#wx.createLivePlayerContext" title="wx.createLivePlayerContext"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.createLivePlayerContext()</span></code></a></p></td>
 <td><p>创建 live-player 上下文 LivePlayerContext 对象</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="LivePlayerContext.html#LivePlayerContext.exitFullScreen" title="LivePlayerContext.exitFullScreen"><code class="xref js js-func docutils literal notranslate"><span class="pre">LivePlayerContext.exitFullScreen()</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="live/LivePlayerContext.html#LivePlayerContext.exitFullScreen" title="LivePlayerContext.exitFullScreen"><code class="xref js js-func docutils literal notranslate"><span class="pre">LivePlayerContext.exitFullScreen()</span></code></a></p></td>
 <td><p>退出全屏</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="LivePlayerContext.html#LivePlayerContext.mute" title="LivePlayerContext.mute"><code class="xref js js-func docutils literal notranslate"><span class="pre">LivePlayerContext.mute()</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="live/LivePlayerContext.html#LivePlayerContext.mute" title="LivePlayerContext.mute"><code class="xref js js-func docutils literal notranslate"><span class="pre">LivePlayerContext.mute()</span></code></a></p></td>
 <td><p>静音</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="LivePlayerContext.html#LivePlayerContext.pause" title="LivePlayerContext.pause"><code class="xref js js-func docutils literal notranslate"><span class="pre">LivePlayerContext.pause()</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="live/LivePlayerContext.html#LivePlayerContext.pause" title="LivePlayerContext.pause"><code class="xref js js-func docutils literal notranslate"><span class="pre">LivePlayerContext.pause()</span></code></a></p></td>
 <td><p>暂停</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="LivePlayerContext.html#LivePlayerContext.play" title="LivePlayerContext.play"><code class="xref js js-func docutils literal notranslate"><span class="pre">LivePlayerContext.play()</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="live/LivePlayerContext.html#LivePlayerContext.play" title="LivePlayerContext.play"><code class="xref js js-func docutils literal notranslate"><span class="pre">LivePlayerContext.play()</span></code></a></p></td>
 <td><p>播放</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="LivePlayerContext.html#LivePlayerContext.requestFullScreen" title="LivePlayerContext.requestFullScreen"><code class="xref js js-func docutils literal notranslate"><span class="pre">LivePlayerContext.requestFullScreen()</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="live/LivePlayerContext.html#LivePlayerContext.requestFullScreen" title="LivePlayerContext.requestFullScreen"><code class="xref js js-func docutils literal notranslate"><span class="pre">LivePlayerContext.requestFullScreen()</span></code></a></p></td>
 <td><p>进入全屏</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="LivePlayerContext.html#LivePlayerContext.resume" title="LivePlayerContext.resume"><code class="xref js js-func docutils literal notranslate"><span class="pre">LivePlayerContext.resume()</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="live/LivePlayerContext.html#LivePlayerContext.resume" title="LivePlayerContext.resume"><code class="xref js js-func docutils literal notranslate"><span class="pre">LivePlayerContext.resume()</span></code></a></p></td>
 <td><p>恢复</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="LivePlayerContext.html#LivePlayerContext.stop" title="LivePlayerContext.stop"><code class="xref js js-func docutils literal notranslate"><span class="pre">LivePlayerContext.stop()</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="live/LivePlayerContext.html#LivePlayerContext.stop" title="LivePlayerContext.stop"><code class="xref js js-func docutils literal notranslate"><span class="pre">LivePlayerContext.stop()</span></code></a></p></td>
 <td><p>停止</p></td>
 </tr>
 </tbody>
@@ -1682,46 +1685,46 @@
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><a class="reference internal" href="RecorderManager.html#wx.getRecorderManager" title="wx.getRecorderManager"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.getRecorderManager()</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="recorder/RecorderManager.html#wx.getRecorderManager" title="wx.getRecorderManager"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.getRecorderManager()</span></code></a></p></td>
 <td><p>获取全局唯一的录音管理器 RecorderManager</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="RecorderManager.html#RecorderManager" title="RecorderManager"><code class="xref js js-class docutils literal notranslate"><span class="pre">RecorderManager()</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="recorder/RecorderManager.html#RecorderManager" title="RecorderManager"><code class="xref js js-class docutils literal notranslate"><span class="pre">RecorderManager()</span></code></a></p></td>
 <td></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="RecorderManager.html#RecorderManager.onError" title="RecorderManager.onError"><code class="xref js js-func docutils literal notranslate"><span class="pre">RecorderManager.onError()</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="recorder/RecorderManager.html#RecorderManager.onError" title="RecorderManager.onError"><code class="xref js js-func docutils literal notranslate"><span class="pre">RecorderManager.onError()</span></code></a></p></td>
 <td><p>监听录音错误事件</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="RecorderManager.html#RecorderManager.onFrameRecorded" title="RecorderManager.onFrameRecorded"><code class="xref js js-func docutils literal notranslate"><span class="pre">RecorderManager.onFrameRecorded()</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="recorder/RecorderManager.html#RecorderManager.onFrameRecorded" title="RecorderManager.onFrameRecorded"><code class="xref js js-func docutils literal notranslate"><span class="pre">RecorderManager.onFrameRecorded()</span></code></a></p></td>
 <td><p>监听已录制完指定帧大小的文件事件</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="RecorderManager.html#RecorderManager.onInterruptionBegin" title="RecorderManager.onInterruptionBegin"><code class="xref js js-func docutils literal notranslate"><span class="pre">RecorderManager.onInterruptionBegin()</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="recorder/RecorderManager.html#RecorderManager.onInterruptionBegin" title="RecorderManager.onInterruptionBegin"><code class="xref js js-func docutils literal notranslate"><span class="pre">RecorderManager.onInterruptionBegin()</span></code></a></p></td>
 <td><p>监听录音因为受到系统占用而被中断开始事件</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="RecorderManager.html#RecorderManager.onInterruptionEnd" title="RecorderManager.onInterruptionEnd"><code class="xref js js-func docutils literal notranslate"><span class="pre">RecorderManager.onInterruptionEnd()</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="recorder/RecorderManager.html#RecorderManager.onInterruptionEnd" title="RecorderManager.onInterruptionEnd"><code class="xref js js-func docutils literal notranslate"><span class="pre">RecorderManager.onInterruptionEnd()</span></code></a></p></td>
 <td><p>监听录音中断结束事件</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="RecorderManager.html#RecorderManager.onPause" title="RecorderManager.onPause"><code class="xref js js-func docutils literal notranslate"><span class="pre">RecorderManager.onPause()</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="recorder/RecorderManager.html#RecorderManager.onPause" title="RecorderManager.onPause"><code class="xref js js-func docutils literal notranslate"><span class="pre">RecorderManager.onPause()</span></code></a></p></td>
 <td><p>监听录音暂停事件</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="RecorderManager.html#RecorderManager.onResume" title="RecorderManager.onResume"><code class="xref js js-func docutils literal notranslate"><span class="pre">RecorderManager.onResume()</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="recorder/RecorderManager.html#RecorderManager.onResume" title="RecorderManager.onResume"><code class="xref js js-func docutils literal notranslate"><span class="pre">RecorderManager.onResume()</span></code></a></p></td>
 <td><p>监听录音继续事件</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="RecorderManager.html#RecorderManager.onStart" title="RecorderManager.onStart"><code class="xref js js-func docutils literal notranslate"><span class="pre">RecorderManager.onStart()</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="recorder/RecorderManager.html#RecorderManager.onStart" title="RecorderManager.onStart"><code class="xref js js-func docutils literal notranslate"><span class="pre">RecorderManager.onStart()</span></code></a></p></td>
 <td><p>监听录音开始事件</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="RecorderManager.html#RecorderManager.onStop" title="RecorderManager.onStop"><code class="xref js js-func docutils literal notranslate"><span class="pre">RecorderManager.onStop()</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="recorder/RecorderManager.html#RecorderManager.onStop" title="RecorderManager.onStop"><code class="xref js js-func docutils literal notranslate"><span class="pre">RecorderManager.onStop()</span></code></a></p></td>
 <td><p>监听录音结束事件</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="RecorderManager.html#RecorderManager.pause" title="RecorderManager.pause"><code class="xref js js-func docutils literal notranslate"><span class="pre">RecorderManager.pause()</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="recorder/RecorderManager.html#RecorderManager.pause" title="RecorderManager.pause"><code class="xref js js-func docutils literal notranslate"><span class="pre">RecorderManager.pause()</span></code></a></p></td>
 <td><p>暂停录音</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="RecorderManager.html#RecorderManager.resume" title="RecorderManager.resume"><code class="xref js js-func docutils literal notranslate"><span class="pre">RecorderManager.resume()</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="recorder/RecorderManager.html#RecorderManager.resume" title="RecorderManager.resume"><code class="xref js js-func docutils literal notranslate"><span class="pre">RecorderManager.resume()</span></code></a></p></td>
 <td><p>继续录音</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="RecorderManager.start.html#RecorderManager.start" title="RecorderManager.start"><code class="xref js js-func docutils literal notranslate"><span class="pre">RecorderManager.start()</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="recorder/RecorderManager.start.html#RecorderManager.start" title="RecorderManager.start"><code class="xref js js-func docutils literal notranslate"><span class="pre">RecorderManager.start()</span></code></a></p></td>
 <td><p>开始录音</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="RecorderManager.html#RecorderManager.stop" title="RecorderManager.stop"><code class="xref js js-func docutils literal notranslate"><span class="pre">RecorderManager.stop()</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="recorder/RecorderManager.html#RecorderManager.stop" title="RecorderManager.stop"><code class="xref js js-func docutils literal notranslate"><span class="pre">RecorderManager.stop()</span></code></a></p></td>
 <td><p>停止录音</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="wx.stopRecord.html#wx.stopRecord" title="wx.stopRecord"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.stopRecord()</span></code></a></p></td>
@@ -1751,16 +1754,16 @@
 <tr class="row-even"><td><p><a class="reference internal" href="wx.createCameraContext.html#wx.createCameraContext" title="wx.createCameraContext"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.createCameraContext()</span></code></a></p></td>
 <td><p>创建 camera 上下文 CameraContext 对象</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="CameraContext.html#CameraContext" title="CameraContext"><code class="xref js js-class docutils literal notranslate"><span class="pre">CameraContext()</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="camera/CameraContext.html#CameraContext" title="CameraContext"><code class="xref js js-class docutils literal notranslate"><span class="pre">CameraContext()</span></code></a></p></td>
 <td><p>CameraContext 实例</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="CameraContext.html#CameraContext.startRecord" title="CameraContext.startRecord"><code class="xref js js-func docutils literal notranslate"><span class="pre">CameraContext.startRecord()</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="camera/CameraContext.html#CameraContext.startRecord" title="CameraContext.startRecord"><code class="xref js js-func docutils literal notranslate"><span class="pre">CameraContext.startRecord()</span></code></a></p></td>
 <td><p>开始录像</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="CameraContext.html#CameraContext.stopRecord" title="CameraContext.stopRecord"><code class="xref js js-func docutils literal notranslate"><span class="pre">CameraContext.stopRecord()</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="camera/CameraContext.html#CameraContext.stopRecord" title="CameraContext.stopRecord"><code class="xref js js-func docutils literal notranslate"><span class="pre">CameraContext.stopRecord()</span></code></a></p></td>
 <td><p>结束录像</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="CameraContext.html#CameraContext.takePhoto" title="CameraContext.takePhoto"><code class="xref js js-func docutils literal notranslate"><span class="pre">CameraContext.takePhoto()</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="camera/CameraContext.html#CameraContext.takePhoto" title="CameraContext.takePhoto"><code class="xref js js-func docutils literal notranslate"><span class="pre">CameraContext.takePhoto()</span></code></a></p></td>
 <td><p>拍摄照片</p></td>
 </tr>
 </tbody>
@@ -1891,13 +1894,13 @@
 <tr class="row-even"><td><p><a class="reference internal" href="wx.createCanvasContext.html#wx.createCanvasContext" title="wx.createCanvasContext"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.createCanvasContext()</span></code></a></p></td>
 <td><p>创建 canvas 的绘图上下文 CanvasContext 对象</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="wx.canvasToTempFilePath.html#wx.canvasToTempFilePath" title="wx.canvasToTempFilePath"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.canvasToTempFilePath()</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="canvas/wx.canvasToTempFilePath.html#wx.canvasToTempFilePath" title="wx.canvasToTempFilePath"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.canvasToTempFilePath()</span></code></a></p></td>
 <td><p>把当前画布指定区域的内容导出生成指定大小的图片</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="wx.canvasPutImageData.html#wx.canvasPutImageData" title="wx.canvasPutImageData"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.canvasPutImageData()</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="canvas/wx.canvasPutImageData.html#wx.canvasPutImageData" title="wx.canvasPutImageData"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.canvasPutImageData()</span></code></a></p></td>
 <td><p>将像素数据绘制到画布</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="wx.canvasGetImageData.html#wx.canvasGetImageData" title="wx.canvasGetImageData"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.canvasGetImageData()</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="canvas/wx.canvasGetImageData.html#wx.canvasGetImageData" title="wx.canvasGetImageData"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.canvasGetImageData()</span></code></a></p></td>
 <td><p>获取 canvas 区域隐含的像素数据</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="Color.html#color"><span class="std std-ref">Color</span></a></p></td>
@@ -1939,25 +1942,25 @@
 <tr class="row-odd"><td><p>名称</p></td>
 <td><p>功能说明</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="CanvasContext.html#CanvasContext.arc" title="CanvasContext.arc"><code class="xref js js-func docutils literal notranslate"><span class="pre">CanvasContext.arc()</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="canvas/CanvasContext.html#CanvasContext.arc" title="CanvasContext.arc"><code class="xref js js-func docutils literal notranslate"><span class="pre">CanvasContext.arc()</span></code></a></p></td>
 <td><p>创建一条弧线</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="CanvasContext.html#CanvasContext.arcTo" title="CanvasContext.arcTo"><code class="xref js js-func docutils literal notranslate"><span class="pre">CanvasContext.arcTo()</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="canvas/CanvasContext.html#CanvasContext.arcTo" title="CanvasContext.arcTo"><code class="xref js js-func docutils literal notranslate"><span class="pre">CanvasContext.arcTo()</span></code></a></p></td>
 <td><p>根据控制点和半径绘制圆弧路径</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="CanvasContext.html#CanvasContext.beginPath" title="CanvasContext.beginPath"><code class="xref js js-func docutils literal notranslate"><span class="pre">CanvasContext.beginPath()</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="canvas/CanvasContext.html#CanvasContext.beginPath" title="CanvasContext.beginPath"><code class="xref js js-func docutils literal notranslate"><span class="pre">CanvasContext.beginPath()</span></code></a></p></td>
 <td><p>开始创建一个路径</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="CanvasContext.html#CanvasContext.bezierCurveTo" title="CanvasContext.bezierCurveTo"><code class="xref js js-func docutils literal notranslate"><span class="pre">CanvasContext.bezierCurveTo()</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="canvas/CanvasContext.html#CanvasContext.bezierCurveTo" title="CanvasContext.bezierCurveTo"><code class="xref js js-func docutils literal notranslate"><span class="pre">CanvasContext.bezierCurveTo()</span></code></a></p></td>
 <td><p>创建三次方贝塞尔曲线路径</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="CanvasContext.html#CanvasContext.clearRect" title="CanvasContext.clearRect"><code class="xref js js-func docutils literal notranslate"><span class="pre">CanvasContext.clearRect()</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="canvas/CanvasContext.html#CanvasContext.clearRect" title="CanvasContext.clearRect"><code class="xref js js-func docutils literal notranslate"><span class="pre">CanvasContext.clearRect()</span></code></a></p></td>
 <td><p>清除画布上在该矩形区域内的内容</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="CanvasContext.html#CanvasContext.clip" title="CanvasContext.clip"><code class="xref js js-func docutils literal notranslate"><span class="pre">CanvasContext.clip()</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="canvas/CanvasContext.html#CanvasContext.clip" title="CanvasContext.clip"><code class="xref js js-func docutils literal notranslate"><span class="pre">CanvasContext.clip()</span></code></a></p></td>
 <td><p>从原始画布中剪切任意形状和尺寸</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="CanvasContext.html#CanvasContext.closePath" title="CanvasContext.closePath"><code class="xref js js-func docutils literal notranslate"><span class="pre">CanvasContext.closePath()</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="canvas/CanvasContext.html#CanvasContext.closePath" title="CanvasContext.closePath"><code class="xref js js-func docutils literal notranslate"><span class="pre">CanvasContext.closePath()</span></code></a></p></td>
 <td><p>关闭一个路径</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="xref js js-func docutils literal notranslate"><span class="pre">CanvasContext.createCircularGradient()</span></code></p></td>
@@ -1966,103 +1969,103 @@
 <tr class="row-even"><td><p><code class="xref js js-func docutils literal notranslate"><span class="pre">CanvasContext.createLinearGradient()</span></code></p></td>
 <td><p>创建一个线性的渐变颜色</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="CanvasContext.html#CanvasContext.createPattern" title="CanvasContext.createPattern"><code class="xref js js-func docutils literal notranslate"><span class="pre">CanvasContext.createPattern()</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="canvas/CanvasContext.html#CanvasContext.createPattern" title="CanvasContext.createPattern"><code class="xref js js-func docutils literal notranslate"><span class="pre">CanvasContext.createPattern()</span></code></a></p></td>
 <td><p>对指定的图像创建模式的方法，可在指定的方向上重复元图像</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="CanvasContext.html#CanvasContext.draw" title="CanvasContext.draw"><code class="xref js js-func docutils literal notranslate"><span class="pre">CanvasContext.draw()</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="canvas/CanvasContext.html#CanvasContext.draw" title="CanvasContext.draw"><code class="xref js js-func docutils literal notranslate"><span class="pre">CanvasContext.draw()</span></code></a></p></td>
 <td><p>将之前在绘图上下文中的描述（路径、变形、样式）画到 canvas 中</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="CanvasContext.html#CanvasContext.drawImage" title="CanvasContext.drawImage"><code class="xref js js-func docutils literal notranslate"><span class="pre">CanvasContext.drawImage()</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="canvas/CanvasContext.html#CanvasContext.drawImage" title="CanvasContext.drawImage"><code class="xref js js-func docutils literal notranslate"><span class="pre">CanvasContext.drawImage()</span></code></a></p></td>
 <td><p>绘制图像到画布</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="CanvasContext.html#CanvasContext.fill" title="CanvasContext.fill"><code class="xref js js-func docutils literal notranslate"><span class="pre">CanvasContext.fill()</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="canvas/CanvasContext.html#CanvasContext.fill" title="CanvasContext.fill"><code class="xref js js-func docutils literal notranslate"><span class="pre">CanvasContext.fill()</span></code></a></p></td>
 <td><p>对当前路径中的内容进行填充</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="CanvasContext.html#CanvasContext.fillRect" title="CanvasContext.fillRect"><code class="xref js js-func docutils literal notranslate"><span class="pre">CanvasContext.fillRect()</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="canvas/CanvasContext.html#CanvasContext.fillRect" title="CanvasContext.fillRect"><code class="xref js js-func docutils literal notranslate"><span class="pre">CanvasContext.fillRect()</span></code></a></p></td>
 <td><p>填充一个矩形</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="CanvasContext.html#CanvasContext.fillText" title="CanvasContext.fillText"><code class="xref js js-func docutils literal notranslate"><span class="pre">CanvasContext.fillText()</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="canvas/CanvasContext.html#CanvasContext.fillText" title="CanvasContext.fillText"><code class="xref js js-func docutils literal notranslate"><span class="pre">CanvasContext.fillText()</span></code></a></p></td>
 <td><p>在画布上绘制被填充的文本</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="CanvasContext.html#CanvasContext.lineTo" title="CanvasContext.lineTo"><code class="xref js js-func docutils literal notranslate"><span class="pre">CanvasContext.lineTo()</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="canvas/CanvasContext.html#CanvasContext.lineTo" title="CanvasContext.lineTo"><code class="xref js js-func docutils literal notranslate"><span class="pre">CanvasContext.lineTo()</span></code></a></p></td>
 <td><p>增加一个新点，然后创建一条从上次指定点到目标点的线</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="CanvasContext.html#CanvasContext.measureText" title="CanvasContext.measureText"><code class="xref js js-func docutils literal notranslate"><span class="pre">CanvasContext.measureText()</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="canvas/CanvasContext.html#CanvasContext.measureText" title="CanvasContext.measureText"><code class="xref js js-func docutils literal notranslate"><span class="pre">CanvasContext.measureText()</span></code></a></p></td>
 <td><p>测量文本尺寸信息</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="xref js js-func docutils literal notranslate"><span class="pre">CanvasContext.moveTo()</span></code></p></td>
 <td><p>把路径移动到画布中的指定点，不创建线条</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="CanvasContext.html#CanvasContext.quadraticCurveTo" title="CanvasContext.quadraticCurveTo"><code class="xref js js-func docutils literal notranslate"><span class="pre">CanvasContext.quadraticCurveTo()</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="canvas/CanvasContext.html#CanvasContext.quadraticCurveTo" title="CanvasContext.quadraticCurveTo"><code class="xref js js-func docutils literal notranslate"><span class="pre">CanvasContext.quadraticCurveTo()</span></code></a></p></td>
 <td><p>创建二次贝塞尔曲线路径</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="CanvasContext.html#CanvasContext.rect" title="CanvasContext.rect"><code class="xref js js-func docutils literal notranslate"><span class="pre">CanvasContext.rect()</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="canvas/CanvasContext.html#CanvasContext.rect" title="CanvasContext.rect"><code class="xref js js-func docutils literal notranslate"><span class="pre">CanvasContext.rect()</span></code></a></p></td>
 <td><p>创建一个矩形路径</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="CanvasContext.html#CanvasContext.restore" title="CanvasContext.restore"><code class="xref js js-func docutils literal notranslate"><span class="pre">CanvasContext.restore()</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="canvas/CanvasContext.html#CanvasContext.restore" title="CanvasContext.restore"><code class="xref js js-func docutils literal notranslate"><span class="pre">CanvasContext.restore()</span></code></a></p></td>
 <td><p>恢复之前保存的绘图上下文</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="CanvasContext.html#CanvasContext.rotate" title="CanvasContext.rotate"><code class="xref js js-func docutils literal notranslate"><span class="pre">CanvasContext.rotate()</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="canvas/CanvasContext.html#CanvasContext.rotate" title="CanvasContext.rotate"><code class="xref js js-func docutils literal notranslate"><span class="pre">CanvasContext.rotate()</span></code></a></p></td>
 <td><p>以原点为中心顺时针旋转当前坐标轴</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="CanvasContext.html#CanvasContext.save" title="CanvasContext.save"><code class="xref js js-func docutils literal notranslate"><span class="pre">CanvasContext.save()</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="canvas/CanvasContext.html#CanvasContext.save" title="CanvasContext.save"><code class="xref js js-func docutils literal notranslate"><span class="pre">CanvasContext.save()</span></code></a></p></td>
 <td><p>保存绘图上下文</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="CanvasContext.html#CanvasContext.scale" title="CanvasContext.scale"><code class="xref js js-func docutils literal notranslate"><span class="pre">CanvasContext.scale()</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="canvas/CanvasContext.html#CanvasContext.scale" title="CanvasContext.scale"><code class="xref js js-func docutils literal notranslate"><span class="pre">CanvasContext.scale()</span></code></a></p></td>
 <td><p>在调用后，之后创建的路径其横纵坐标会被缩放</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="CanvasContext.html#CanvasContext.setFillStyle" title="CanvasContext.setFillStyle"><code class="xref js js-func docutils literal notranslate"><span class="pre">CanvasContext.setFillStyle()</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="canvas/CanvasContext.html#CanvasContext.setFillStyle" title="CanvasContext.setFillStyle"><code class="xref js js-func docutils literal notranslate"><span class="pre">CanvasContext.setFillStyle()</span></code></a></p></td>
 <td><p>设置填充色</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="CanvasContext.html#CanvasContext.setFontSize" title="CanvasContext.setFontSize"><code class="xref js js-func docutils literal notranslate"><span class="pre">CanvasContext.setFontSize()</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="canvas/CanvasContext.html#CanvasContext.setFontSize" title="CanvasContext.setFontSize"><code class="xref js js-func docutils literal notranslate"><span class="pre">CanvasContext.setFontSize()</span></code></a></p></td>
 <td><p>设置字体的字号</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="CanvasContext.html#CanvasContext.setGlobalAlpha" title="CanvasContext.setGlobalAlpha"><code class="xref js js-func docutils literal notranslate"><span class="pre">CanvasContext.setGlobalAlpha()</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="canvas/CanvasContext.html#CanvasContext.setGlobalAlpha" title="CanvasContext.setGlobalAlpha"><code class="xref js js-func docutils literal notranslate"><span class="pre">CanvasContext.setGlobalAlpha()</span></code></a></p></td>
 <td><p>设置全局画笔透明度</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="CanvasContext.html#CanvasContext.setLineCap" title="CanvasContext.setLineCap"><code class="xref js js-func docutils literal notranslate"><span class="pre">CanvasContext.setLineCap()</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="canvas/CanvasContext.html#CanvasContext.setLineCap" title="CanvasContext.setLineCap"><code class="xref js js-func docutils literal notranslate"><span class="pre">CanvasContext.setLineCap()</span></code></a></p></td>
 <td><p>设置线条的端点样式</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="CanvasContext.html#CanvasContext.setLineDash" title="CanvasContext.setLineDash"><code class="xref js js-func docutils literal notranslate"><span class="pre">CanvasContext.setLineDash()</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="canvas/CanvasContext.html#CanvasContext.setLineDash" title="CanvasContext.setLineDash"><code class="xref js js-func docutils literal notranslate"><span class="pre">CanvasContext.setLineDash()</span></code></a></p></td>
 <td><p>设置虚线样式</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="CanvasContext.html#CanvasContext.setLineJoin" title="CanvasContext.setLineJoin"><code class="xref js js-func docutils literal notranslate"><span class="pre">CanvasContext.setLineJoin()</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="canvas/CanvasContext.html#CanvasContext.setLineJoin" title="CanvasContext.setLineJoin"><code class="xref js js-func docutils literal notranslate"><span class="pre">CanvasContext.setLineJoin()</span></code></a></p></td>
 <td><p>设置线条的交点样式</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="CanvasContext.html#CanvasContext.setLineWidth" title="CanvasContext.setLineWidth"><code class="xref js js-func docutils literal notranslate"><span class="pre">CanvasContext.setLineWidth()</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="canvas/CanvasContext.html#CanvasContext.setLineWidth" title="CanvasContext.setLineWidth"><code class="xref js js-func docutils literal notranslate"><span class="pre">CanvasContext.setLineWidth()</span></code></a></p></td>
 <td><p>设置线条的宽度</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="CanvasContext.html#CanvasContext.setMiterLimit" title="CanvasContext.setMiterLimit"><code class="xref js js-func docutils literal notranslate"><span class="pre">CanvasContext.setMiterLimit()</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="canvas/CanvasContext.html#CanvasContext.setMiterLimit" title="CanvasContext.setMiterLimit"><code class="xref js js-func docutils literal notranslate"><span class="pre">CanvasContext.setMiterLimit()</span></code></a></p></td>
 <td><p>设置最大斜接长度</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="CanvasContext.html#CanvasContext.setShadow" title="CanvasContext.setShadow"><code class="xref js js-func docutils literal notranslate"><span class="pre">CanvasContext.setShadow()</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="canvas/CanvasContext.html#CanvasContext.setShadow" title="CanvasContext.setShadow"><code class="xref js js-func docutils literal notranslate"><span class="pre">CanvasContext.setShadow()</span></code></a></p></td>
 <td><p>设定阴影样式</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="CanvasContext.html#CanvasContext.setStrokeStyle" title="CanvasContext.setStrokeStyle"><code class="xref js js-func docutils literal notranslate"><span class="pre">CanvasContext.setStrokeStyle()</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="canvas/CanvasContext.html#CanvasContext.setStrokeStyle" title="CanvasContext.setStrokeStyle"><code class="xref js js-func docutils literal notranslate"><span class="pre">CanvasContext.setStrokeStyle()</span></code></a></p></td>
 <td><p>设置描边颜色</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="CanvasContext.html#CanvasContext.setTextAlign" title="CanvasContext.setTextAlign"><code class="xref js js-func docutils literal notranslate"><span class="pre">CanvasContext.setTextAlign()</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="canvas/CanvasContext.html#CanvasContext.setTextAlign" title="CanvasContext.setTextAlign"><code class="xref js js-func docutils literal notranslate"><span class="pre">CanvasContext.setTextAlign()</span></code></a></p></td>
 <td><p>设置文字的对齐</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="CanvasContext.html#CanvasContext.setTextBaseline" title="CanvasContext.setTextBaseline"><code class="xref js js-func docutils literal notranslate"><span class="pre">CanvasContext.setTextBaseline()</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="canvas/CanvasContext.html#CanvasContext.setTextBaseline" title="CanvasContext.setTextBaseline"><code class="xref js js-func docutils literal notranslate"><span class="pre">CanvasContext.setTextBaseline()</span></code></a></p></td>
 <td><p>设置文字的竖直对齐</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="CanvasContext.html#CanvasContext.setTransform" title="CanvasContext.setTransform"><code class="xref js js-func docutils literal notranslate"><span class="pre">CanvasContext.setTransform()</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="canvas/CanvasContext.html#CanvasContext.setTransform" title="CanvasContext.setTransform"><code class="xref js js-func docutils literal notranslate"><span class="pre">CanvasContext.setTransform()</span></code></a></p></td>
 <td><p>使用矩阵重新设置（覆盖）当前变换的方法</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="CanvasContext.html#CanvasContext.stroke" title="CanvasContext.stroke"><code class="xref js js-func docutils literal notranslate"><span class="pre">CanvasContext.stroke()</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="canvas/CanvasContext.html#CanvasContext.stroke" title="CanvasContext.stroke"><code class="xref js js-func docutils literal notranslate"><span class="pre">CanvasContext.stroke()</span></code></a></p></td>
 <td><p>画出当前路径的边框</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="CanvasContext.html#CanvasContext.strokeRect" title="CanvasContext.strokeRect"><code class="xref js js-func docutils literal notranslate"><span class="pre">CanvasContext.strokeRect()</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="canvas/CanvasContext.html#CanvasContext.strokeRect" title="CanvasContext.strokeRect"><code class="xref js js-func docutils literal notranslate"><span class="pre">CanvasContext.strokeRect()</span></code></a></p></td>
 <td><p>画一个矩形(非填充)</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="CanvasContext.html#CanvasContext.strokeText" title="CanvasContext.strokeText"><code class="xref js js-func docutils literal notranslate"><span class="pre">CanvasContext.strokeText()</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="canvas/CanvasContext.html#CanvasContext.strokeText" title="CanvasContext.strokeText"><code class="xref js js-func docutils literal notranslate"><span class="pre">CanvasContext.strokeText()</span></code></a></p></td>
 <td><p>给定的 (x, y) 位置绘制文本描边的方法</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="CanvasContext.html#CanvasContext.transform" title="CanvasContext.transform"><code class="xref js js-func docutils literal notranslate"><span class="pre">CanvasContext.transform()</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="canvas/CanvasContext.html#CanvasContext.transform" title="CanvasContext.transform"><code class="xref js js-func docutils literal notranslate"><span class="pre">CanvasContext.transform()</span></code></a></p></td>
 <td><p>使用矩阵多次叠加当前变换的方法</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="CanvasContext.html#CanvasContext.translate" title="CanvasContext.translate"><code class="xref js js-func docutils literal notranslate"><span class="pre">CanvasContext.translate()</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="canvas/CanvasContext.html#CanvasContext.translate" title="CanvasContext.translate"><code class="xref js js-func docutils literal notranslate"><span class="pre">CanvasContext.translate()</span></code></a></p></td>
 <td><p>对当前坐标系的原点 (0, 0) 进行变换</p></td>
 </tr>
 </tbody>
@@ -2146,89 +2149,89 @@
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><a class="reference internal" href="FileSystemManager.html#FileSystemManager.access" title="FileSystemManager.access"><code class="xref js js-func docutils literal notranslate"><span class="pre">FileSystemManager.access()</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="file/FileSystemManager.html#FileSystemManager.access" title="FileSystemManager.access"><code class="xref js js-func docutils literal notranslate"><span class="pre">FileSystemManager.access()</span></code></a></p></td>
 <td><p>判断文件/目录是否存在</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="xref js js-func docutils literal notranslate"><span class="pre">FileSystemManager.accessSync()</span></code></p></td>
-<td><p><a class="reference internal" href="FileSystemManager.html#FileSystemManager.access" title="FileSystemManager.access"><code class="xref js js-func docutils literal notranslate"><span class="pre">FileSystemManager.access()</span></code></a> 的同步版本</p></td>
+<td><p><a class="reference internal" href="file/FileSystemManager.html#FileSystemManager.access" title="FileSystemManager.access"><code class="xref js js-func docutils literal notranslate"><span class="pre">FileSystemManager.access()</span></code></a> 的同步版本</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="FileSystemManager.html#FileSystemManager.appendFile" title="FileSystemManager.appendFile"><code class="xref js js-func docutils literal notranslate"><span class="pre">FileSystemManager.appendFile()</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="file/FileSystemManager.html#FileSystemManager.appendFile" title="FileSystemManager.appendFile"><code class="xref js js-func docutils literal notranslate"><span class="pre">FileSystemManager.appendFile()</span></code></a></p></td>
 <td><p>在文件结尾追加内容</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="xref js js-func docutils literal notranslate"><span class="pre">FileSystemManager.appendFileSync()</span></code></p></td>
-<td><p><a class="reference internal" href="FileSystemManager.html#FileSystemManager.appendFile" title="FileSystemManager.appendFile"><code class="xref js js-func docutils literal notranslate"><span class="pre">FileSystemManager.appendFile()</span></code></a> 的同步版本</p></td>
+<td><p><a class="reference internal" href="file/FileSystemManager.html#FileSystemManager.appendFile" title="FileSystemManager.appendFile"><code class="xref js js-func docutils literal notranslate"><span class="pre">FileSystemManager.appendFile()</span></code></a> 的同步版本</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="FileSystemManager.html#FileSystemManager.copyFile" title="FileSystemManager.copyFile"><code class="xref js js-func docutils literal notranslate"><span class="pre">FileSystemManager.copyFile()</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="file/FileSystemManager.html#FileSystemManager.copyFile" title="FileSystemManager.copyFile"><code class="xref js js-func docutils literal notranslate"><span class="pre">FileSystemManager.copyFile()</span></code></a></p></td>
 <td><p>复制文件</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="xref js js-func docutils literal notranslate"><span class="pre">FileSystemManager.copyFileSync()</span></code></p></td>
-<td><p><a class="reference internal" href="FileSystemManager.html#FileSystemManager.copyFile" title="FileSystemManager.copyFile"><code class="xref js js-func docutils literal notranslate"><span class="pre">FileSystemManager.copyFile()</span></code></a> 的同步版本</p></td>
+<td><p><a class="reference internal" href="file/FileSystemManager.html#FileSystemManager.copyFile" title="FileSystemManager.copyFile"><code class="xref js js-func docutils literal notranslate"><span class="pre">FileSystemManager.copyFile()</span></code></a> 的同步版本</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="FileSystemManager.html#FileSystemManager.getFileInfo" title="FileSystemManager.getFileInfo"><code class="xref js js-func docutils literal notranslate"><span class="pre">FileSystemManager.getFileInfo()</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="file/FileSystemManager.html#FileSystemManager.getFileInfo" title="FileSystemManager.getFileInfo"><code class="xref js js-func docutils literal notranslate"><span class="pre">FileSystemManager.getFileInfo()</span></code></a></p></td>
 <td><p>获取该小程序下的 本地临时文件 或 本地缓存文件 信息</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="FileSystemManager.html#FileSystemManager.getSavedFileList" title="FileSystemManager.getSavedFileList"><code class="xref js js-func docutils literal notranslate"><span class="pre">FileSystemManager.getSavedFileList()</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="file/FileSystemManager.html#FileSystemManager.getSavedFileList" title="FileSystemManager.getSavedFileList"><code class="xref js js-func docutils literal notranslate"><span class="pre">FileSystemManager.getSavedFileList()</span></code></a></p></td>
 <td><p>获取该小程序下已保存的本地缓存文件列表</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="FileSystemManager.html#FileSystemManager.mkdir" title="FileSystemManager.mkdir"><code class="xref js js-func docutils literal notranslate"><span class="pre">FileSystemManager.mkdir()</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="file/FileSystemManager.html#FileSystemManager.mkdir" title="FileSystemManager.mkdir"><code class="xref js js-func docutils literal notranslate"><span class="pre">FileSystemManager.mkdir()</span></code></a></p></td>
 <td><p>创建目录</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="xref js js-func docutils literal notranslate"><span class="pre">FileSystemManager.mkdirSync()</span></code></p></td>
-<td><p><a class="reference internal" href="FileSystemManager.html#FileSystemManager.mkdir" title="FileSystemManager.mkdir"><code class="xref js js-func docutils literal notranslate"><span class="pre">FileSystemManager.mkdir()</span></code></a> 的同步版本</p></td>
+<td><p><a class="reference internal" href="file/FileSystemManager.html#FileSystemManager.mkdir" title="FileSystemManager.mkdir"><code class="xref js js-func docutils literal notranslate"><span class="pre">FileSystemManager.mkdir()</span></code></a> 的同步版本</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="FileSystemManager.html#FileSystemManager.readdir" title="FileSystemManager.readdir"><code class="xref js js-func docutils literal notranslate"><span class="pre">FileSystemManager.readdir()</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="file/FileSystemManager.html#FileSystemManager.readdir" title="FileSystemManager.readdir"><code class="xref js js-func docutils literal notranslate"><span class="pre">FileSystemManager.readdir()</span></code></a></p></td>
 <td><p>读取目录内文件列表</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="xref js js-func docutils literal notranslate"><span class="pre">FileSystemManager.readdirSync()</span></code></p></td>
-<td><p><a class="reference internal" href="FileSystemManager.html#FileSystemManager.readdir" title="FileSystemManager.readdir"><code class="xref js js-func docutils literal notranslate"><span class="pre">FileSystemManager.readdir()</span></code></a> 的同步版本</p></td>
+<td><p><a class="reference internal" href="file/FileSystemManager.html#FileSystemManager.readdir" title="FileSystemManager.readdir"><code class="xref js js-func docutils literal notranslate"><span class="pre">FileSystemManager.readdir()</span></code></a> 的同步版本</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="FileSystemManager.html#FileSystemManager.readFile" title="FileSystemManager.readFile"><code class="xref js js-func docutils literal notranslate"><span class="pre">FileSystemManager.readFile()</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="file/FileSystemManager.html#FileSystemManager.readFile" title="FileSystemManager.readFile"><code class="xref js js-func docutils literal notranslate"><span class="pre">FileSystemManager.readFile()</span></code></a></p></td>
 <td><p>读取本地文件内容</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="xref js js-func docutils literal notranslate"><span class="pre">FileSystemManager.readFileSync()</span></code></p></td>
-<td><p><a class="reference internal" href="FileSystemManager.html#FileSystemManager.readFile" title="FileSystemManager.readFile"><code class="xref js js-func docutils literal notranslate"><span class="pre">FileSystemManager.readFile()</span></code></a> 的同步版本</p></td>
+<td><p><a class="reference internal" href="file/FileSystemManager.html#FileSystemManager.readFile" title="FileSystemManager.readFile"><code class="xref js js-func docutils literal notranslate"><span class="pre">FileSystemManager.readFile()</span></code></a> 的同步版本</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="FileSystemManager.html#FileSystemManager.removeSavedFile" title="FileSystemManager.removeSavedFile"><code class="xref js js-func docutils literal notranslate"><span class="pre">FileSystemManager.removeSavedFile()</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="file/FileSystemManager.html#FileSystemManager.removeSavedFile" title="FileSystemManager.removeSavedFile"><code class="xref js js-func docutils literal notranslate"><span class="pre">FileSystemManager.removeSavedFile()</span></code></a></p></td>
 <td><p>删除该小程序下已保存的本地缓存文件</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="FileSystemManager.html#FileSystemManager.rename" title="FileSystemManager.rename"><code class="xref js js-func docutils literal notranslate"><span class="pre">FileSystemManager.rename()</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="file/FileSystemManager.html#FileSystemManager.rename" title="FileSystemManager.rename"><code class="xref js js-func docutils literal notranslate"><span class="pre">FileSystemManager.rename()</span></code></a></p></td>
 <td><p>重命名文件</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="xref js js-func docutils literal notranslate"><span class="pre">FileSystemManager.renameSync()</span></code></p></td>
-<td><p><a class="reference internal" href="FileSystemManager.html#FileSystemManager.rename" title="FileSystemManager.rename"><code class="xref js js-func docutils literal notranslate"><span class="pre">FileSystemManager.rename()</span></code></a> 的同步版本</p></td>
+<td><p><a class="reference internal" href="file/FileSystemManager.html#FileSystemManager.rename" title="FileSystemManager.rename"><code class="xref js js-func docutils literal notranslate"><span class="pre">FileSystemManager.rename()</span></code></a> 的同步版本</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="FileSystemManager.html#FileSystemManager.rmdir" title="FileSystemManager.rmdir"><code class="xref js js-func docutils literal notranslate"><span class="pre">FileSystemManager.rmdir()</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="file/FileSystemManager.html#FileSystemManager.rmdir" title="FileSystemManager.rmdir"><code class="xref js js-func docutils literal notranslate"><span class="pre">FileSystemManager.rmdir()</span></code></a></p></td>
 <td><p>删除目录</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="xref js js-func docutils literal notranslate"><span class="pre">FileSystemManager.rmdirSync()</span></code></p></td>
-<td><p><a class="reference internal" href="FileSystemManager.html#FileSystemManager.rmdir" title="FileSystemManager.rmdir"><code class="xref js js-func docutils literal notranslate"><span class="pre">FileSystemManager.rmdir()</span></code></a> 的同步版本</p></td>
+<td><p><a class="reference internal" href="file/FileSystemManager.html#FileSystemManager.rmdir" title="FileSystemManager.rmdir"><code class="xref js js-func docutils literal notranslate"><span class="pre">FileSystemManager.rmdir()</span></code></a> 的同步版本</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="FileSystemManager.html#FileSystemManager.saveFile" title="FileSystemManager.saveFile"><code class="xref js js-func docutils literal notranslate"><span class="pre">FileSystemManager.saveFile()</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="file/FileSystemManager.html#FileSystemManager.saveFile" title="FileSystemManager.saveFile"><code class="xref js js-func docutils literal notranslate"><span class="pre">FileSystemManager.saveFile()</span></code></a></p></td>
 <td><p>保存临时文件到本地</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="xref js js-func docutils literal notranslate"><span class="pre">FileSystemManager.saveFileSync()</span></code></p></td>
-<td><p><a class="reference internal" href="FileSystemManager.html#FileSystemManager.saveFile" title="FileSystemManager.saveFile"><code class="xref js js-func docutils literal notranslate"><span class="pre">FileSystemManager.saveFile()</span></code></a> 的同步版本</p></td>
+<td><p><a class="reference internal" href="file/FileSystemManager.html#FileSystemManager.saveFile" title="FileSystemManager.saveFile"><code class="xref js js-func docutils literal notranslate"><span class="pre">FileSystemManager.saveFile()</span></code></a> 的同步版本</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="FileSystemManager.html#FileSystemManager.stat" title="FileSystemManager.stat"><code class="xref js js-func docutils literal notranslate"><span class="pre">FileSystemManager.stat()</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="file/FileSystemManager.html#FileSystemManager.stat" title="FileSystemManager.stat"><code class="xref js js-func docutils literal notranslate"><span class="pre">FileSystemManager.stat()</span></code></a></p></td>
 <td><p>获取文件 Stats 对象</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="xref js js-func docutils literal notranslate"><span class="pre">FileSystemManager.statSync()</span></code></p></td>
-<td><p><a class="reference internal" href="FileSystemManager.html#FileSystemManager.stat" title="FileSystemManager.stat"><code class="xref js js-func docutils literal notranslate"><span class="pre">FileSystemManager.stat()</span></code></a> 的同步版本</p></td>
+<td><p><a class="reference internal" href="file/FileSystemManager.html#FileSystemManager.stat" title="FileSystemManager.stat"><code class="xref js js-func docutils literal notranslate"><span class="pre">FileSystemManager.stat()</span></code></a> 的同步版本</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="FileSystemManager.html#FileSystemManager.unlink" title="FileSystemManager.unlink"><code class="xref js js-func docutils literal notranslate"><span class="pre">FileSystemManager.unlink()</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="file/FileSystemManager.html#FileSystemManager.unlink" title="FileSystemManager.unlink"><code class="xref js js-func docutils literal notranslate"><span class="pre">FileSystemManager.unlink()</span></code></a></p></td>
 <td><p>删除文件</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="xref js js-func docutils literal notranslate"><span class="pre">FileSystemManager.unlinkSync()</span></code></p></td>
-<td><p><a class="reference internal" href="FileSystemManager.html#FileSystemManager.unlink" title="FileSystemManager.unlink"><code class="xref js js-func docutils literal notranslate"><span class="pre">FileSystemManager.unlink()</span></code></a> 的同步版本</p></td>
+<td><p><a class="reference internal" href="file/FileSystemManager.html#FileSystemManager.unlink" title="FileSystemManager.unlink"><code class="xref js js-func docutils literal notranslate"><span class="pre">FileSystemManager.unlink()</span></code></a> 的同步版本</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="FileSystemManager.html#FileSystemManager.unzip" title="FileSystemManager.unzip"><code class="xref js js-func docutils literal notranslate"><span class="pre">FileSystemManager.unzip()</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="file/FileSystemManager.html#FileSystemManager.unzip" title="FileSystemManager.unzip"><code class="xref js js-func docutils literal notranslate"><span class="pre">FileSystemManager.unzip()</span></code></a></p></td>
 <td><p>解压文件</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="FileSystemManager.html#FileSystemManager.writeFile" title="FileSystemManager.writeFile"><code class="xref js js-func docutils literal notranslate"><span class="pre">FileSystemManager.writeFile()</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="file/FileSystemManager.html#FileSystemManager.writeFile" title="FileSystemManager.writeFile"><code class="xref js js-func docutils literal notranslate"><span class="pre">FileSystemManager.writeFile()</span></code></a></p></td>
 <td><p>写文件</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="xref js js-func docutils literal notranslate"><span class="pre">FileSystemManager.writeFileSync()</span></code></p></td>
-<td><p><a class="reference internal" href="FileSystemManager.html#FileSystemManager.writeFile" title="FileSystemManager.writeFile"><code class="xref js js-func docutils literal notranslate"><span class="pre">FileSystemManager.writeFile()</span></code></a> 的同步版本</p></td>
+<td><p><a class="reference internal" href="file/FileSystemManager.html#FileSystemManager.writeFile" title="FileSystemManager.writeFile"><code class="xref js js-func docutils literal notranslate"><span class="pre">FileSystemManager.writeFile()</span></code></a> 的同步版本</p></td>
 </tr>
 </tbody>
 </table>
@@ -2242,8 +2245,8 @@
 <h3>登录<a class="headerlink" href="#id40" title="永久链接至标题">¶</a></h3>
 <table class="docutils align-default">
 <colgroup>
-<col style="width: 45%" />
-<col style="width: 55%" />
+<col style="width: 27%" />
+<col style="width: 73%" />
 </colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>名称</p></th>
@@ -2251,10 +2254,13 @@
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><a class="reference internal" href="wx.login.html#wx.login" title="wx.login"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.login()</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="login/wx.pluginLogin.html#wx.pluginLogin" title="wx.pluginLogin"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.pluginLogin()</span></code></a></p></td>
+<td><p>该接口仅在小程序插件中可调用,调用接口获得插件用户标志凭证（code）</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="login/wx.login.html#wx.login" title="wx.login"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.login()</span></code></a></p></td>
 <td><p>调用接口获取登录凭证（code）</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="wx.checkSession.html#wx.checkSession" title="wx.checkSession"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.checkSession()</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="login/wx.checkSession.html#wx.checkSession" title="wx.checkSession"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.checkSession()</span></code></a></p></td>
 <td><p>检查登录态是否过期</p></td>
 </tr>
 </tbody>
@@ -2299,7 +2305,7 @@
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><a class="reference internal" href="wx.getAccountInfoSync.html#wx.getAccountInfoSync" title="wx.getAccountInfoSync"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.getAccountInfoSync()</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="account-info/wx.getAccountInfoSync.html#wx.getAccountInfoSync" title="wx.getAccountInfoSync"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.getAccountInfoSync()</span></code></a></p></td>
 <td><p>获取当前帐号信息</p></td>
 </tr>
 </tbody>
@@ -2320,10 +2326,10 @@
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><a class="reference internal" href="wx.getUserInfo.html#wx.getUserInfo" title="wx.getUserInfo"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.getUserInfo()</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="user-info/wx.getUserInfo.html#wx.getUserInfo" title="wx.getUserInfo"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.getUserInfo()</span></code></a></p></td>
 <td><p>获取用户信息</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="UserInfo.html#UserInfo" title="UserInfo"><code class="xref js js-class docutils literal notranslate"><span class="pre">UserInfo()</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="user-info/UserInfo.html#UserInfo" title="UserInfo"><code class="xref js js-class docutils literal notranslate"><span class="pre">UserInfo()</span></code></a></p></td>
 <td><p>用户信息</p></td>
 </tr>
 </tbody>
@@ -2559,9 +2565,71 @@
 <div class="toctree-wrapper compound">
 </div>
 </section>
-</section>
 <section id="id54">
-<h2>设备<a class="headerlink" href="#id54" title="永久链接至标题">¶</a></h2>
+<h3>订阅消息<a class="headerlink" href="#id54" title="永久链接至标题">¶</a></h3>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 38%" />
+<col style="width: 62%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>名称</p></th>
+<th class="head"><p>功能说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="subscribe-message/wx.requestSubscribeMessage.html#wx.requestSubscribeMessage" title="wx.requestSubscribeMessage"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.requestSubscribeMessage()</span></code></a></p></td>
+<td><p>调起客户端小程序订阅消息界面，返回用户订阅消息的操作结果</p></td>
+</tr>
+</tbody>
+</table>
+<div class="toctree-wrapper compound">
+</div>
+</section>
+<section id="id55">
+<h3>微信红包<a class="headerlink" href="#id55" title="永久链接至标题">¶</a></h3>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 55%" />
+<col style="width: 45%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>名称</p></th>
+<th class="head"><p>功能说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.showRedPackage()</span></code></p></td>
+<td><p>拉取h5领取红包封面页</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="id56">
+<h3>收藏<a class="headerlink" href="#id56" title="永久链接至标题">¶</a></h3>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 76%" />
+<col style="width: 24%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>名称</p></th>
+<th class="head"><p>功能说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.addVideoToFavorites()</span></code></p></td>
+<td><p>收藏视频</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.addFileToFavorites()</span></code></p></td>
+<td><p>收藏文件</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="id57">
+<h2>设备<a class="headerlink" href="#id57" title="永久链接至标题">¶</a></h2>
 <section id="wi-fi">
 <h3>Wi-Fi<a class="headerlink" href="#wi-fi" title="永久链接至标题">¶</a></h3>
 <table class="docutils align-default">
@@ -2599,7 +2667,7 @@
 <tr class="row-odd"><td><p><a class="reference internal" href="wx.connectWifi.html#wx.connectWifi" title="wx.connectWifi"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.connectWifi()</span></code></a></p></td>
 <td><p>连接 Wi-Fi</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="WifiInfo.html#WifiInfo" title="WifiInfo"><code class="xref js js-class docutils literal notranslate"><span class="pre">WifiInfo()</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="wifi/WifiInfo.html#WifiInfo" title="WifiInfo"><code class="xref js js-class docutils literal notranslate"><span class="pre">WifiInfo()</span></code></a></p></td>
 <td><p>Wifi 信息</p></td>
 </tr>
 </tbody>
@@ -2641,8 +2709,8 @@
 </div>
 <p>IBeaconInfo</p>
 </section>
-<section id="id55">
-<h3>联系人<a class="headerlink" href="#id55" title="永久链接至标题">¶</a></h3>
+<section id="id58">
+<h3>联系人<a class="headerlink" href="#id58" title="永久链接至标题">¶</a></h3>
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 56%" />
@@ -2662,8 +2730,8 @@
 <div class="toctree-wrapper compound">
 </div>
 </section>
-<section id="id56">
-<h3>低功耗蓝牙<a class="headerlink" href="#id56" title="永久链接至标题">¶</a></h3>
+<section id="id59">
+<h3>低功耗蓝牙<a class="headerlink" href="#id59" title="永久链接至标题">¶</a></h3>
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 45%" />
@@ -2707,8 +2775,8 @@
 <div class="toctree-wrapper compound">
 </div>
 </section>
-<section id="id57">
-<h3>蓝牙<a class="headerlink" href="#id57" title="永久链接至标题">¶</a></h3>
+<section id="id60">
+<h3>蓝牙<a class="headerlink" href="#id60" title="永久链接至标题">¶</a></h3>
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 49%" />
@@ -2752,8 +2820,8 @@
 <div class="toctree-wrapper compound">
 </div>
 </section>
-<section id="id58">
-<h3>电量<a class="headerlink" href="#id58" title="永久链接至标题">¶</a></h3>
+<section id="id61">
+<h3>电量<a class="headerlink" href="#id61" title="永久链接至标题">¶</a></h3>
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 45%" />
@@ -2776,8 +2844,8 @@
 <div class="toctree-wrapper compound">
 </div>
 </section>
-<section id="id59">
-<h3>剪贴板<a class="headerlink" href="#id59" title="永久链接至标题">¶</a></h3>
+<section id="id62">
+<h3>剪贴板<a class="headerlink" href="#id62" title="永久链接至标题">¶</a></h3>
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 57%" />
@@ -2833,8 +2901,8 @@
 <div class="toctree-wrapper compound">
 </div>
 </section>
-<section id="id60">
-<h3>网络<a class="headerlink" href="#id60" title="永久链接至标题">¶</a></h3>
+<section id="id63">
+<h3>网络<a class="headerlink" href="#id63" title="永久链接至标题">¶</a></h3>
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 61%" />
@@ -2857,8 +2925,8 @@
 <div class="toctree-wrapper compound">
 </div>
 </section>
-<section id="id61">
-<h3>屏幕<a class="headerlink" href="#id61" title="永久链接至标题">¶</a></h3>
+<section id="id64">
+<h3>屏幕<a class="headerlink" href="#id64" title="永久链接至标题">¶</a></h3>
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 59%" />
@@ -2887,8 +2955,8 @@
 <div class="toctree-wrapper compound">
 </div>
 </section>
-<section id="id62">
-<h3>电话<a class="headerlink" href="#id62" title="永久链接至标题">¶</a></h3>
+<section id="id65">
+<h3>电话<a class="headerlink" href="#id65" title="永久链接至标题">¶</a></h3>
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 72%" />
@@ -2908,8 +2976,8 @@
 <div class="toctree-wrapper compound">
 </div>
 </section>
-<section id="id63">
-<h3>加速计<a class="headerlink" href="#id63" title="永久链接至标题">¶</a></h3>
+<section id="id66">
+<h3>加速计<a class="headerlink" href="#id66" title="永久链接至标题">¶</a></h3>
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 63%" />
@@ -2935,8 +3003,8 @@
 <div class="toctree-wrapper compound">
 </div>
 </section>
-<section id="id64">
-<h3>罗盘<a class="headerlink" href="#id64" title="永久链接至标题">¶</a></h3>
+<section id="id67">
+<h3>罗盘<a class="headerlink" href="#id67" title="永久链接至标题">¶</a></h3>
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 56%" />
@@ -2962,8 +3030,8 @@
 <div class="toctree-wrapper compound">
 </div>
 </section>
-<section id="id65">
-<h3>设备方向<a class="headerlink" href="#id65" title="永久链接至标题">¶</a></h3>
+<section id="id68">
+<h3>设备方向<a class="headerlink" href="#id68" title="永久链接至标题">¶</a></h3>
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 62%" />
@@ -2989,8 +3057,8 @@
 <div class="toctree-wrapper compound">
 </div>
 </section>
-<section id="id66">
-<h3>陀螺仪<a class="headerlink" href="#id66" title="永久链接至标题">¶</a></h3>
+<section id="id69">
+<h3>陀螺仪<a class="headerlink" href="#id69" title="永久链接至标题">¶</a></h3>
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 56%" />
@@ -3016,8 +3084,8 @@
 <div class="toctree-wrapper compound">
 </div>
 </section>
-<section id="id67">
-<h3>性能<a class="headerlink" href="#id67" title="永久链接至标题">¶</a></h3>
+<section id="id70">
+<h3>性能<a class="headerlink" href="#id70" title="永久链接至标题">¶</a></h3>
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 56%" />
@@ -3037,8 +3105,8 @@
 <div class="toctree-wrapper compound">
 </div>
 </section>
-<section id="id68">
-<h3>扫码<a class="headerlink" href="#id68" title="永久链接至标题">¶</a></h3>
+<section id="id71">
+<h3>扫码<a class="headerlink" href="#id71" title="永久链接至标题">¶</a></h3>
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 43%" />
@@ -3050,7 +3118,7 @@
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><a class="reference internal" href="wx.scanCode.html#wx.scanCode" title="wx.scanCode"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.scanCode()</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="device/scan/wx.scanCode.html#wx.scanCode" title="wx.scanCode"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.scanCode()</span></code></a></p></td>
 <td><p>调起客户端扫码界面进行扫码</p></td>
 </tr>
 </tbody>
@@ -3058,8 +3126,8 @@
 <div class="toctree-wrapper compound">
 </div>
 </section>
-<section id="id69">
-<h3>振动<a class="headerlink" href="#id69" title="永久链接至标题">¶</a></h3>
+<section id="id72">
+<h3>振动<a class="headerlink" href="#id72" title="永久链接至标题">¶</a></h3>
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 42%" />
@@ -3099,16 +3167,16 @@
 <tr class="row-even"><td><p><a class="reference internal" href="wx.createWorker.html#wx.createWorker" title="wx.createWorker"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.createWorker()</span></code></a></p></td>
 <td><p>创建一个 Worker 线程</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="Worker.html#Worker" title="Worker"><code class="xref js js-class docutils literal notranslate"><span class="pre">Worker()</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="worker/Worker.html#Worker" title="Worker"><code class="xref js js-class docutils literal notranslate"><span class="pre">Worker()</span></code></a></p></td>
 <td><p>Worker 线程</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="Worker.html#Worker.onMessage" title="Worker.onMessage"><code class="xref js js-func docutils literal notranslate"><span class="pre">Worker.onMessage()</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="worker/Worker.html#Worker.onMessage" title="Worker.onMessage"><code class="xref js js-func docutils literal notranslate"><span class="pre">Worker.onMessage()</span></code></a></p></td>
 <td><p>监听主线程/Worker 线程向当前线程发送的消息的事件</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="Worker.html#Worker.postMessage" title="Worker.postMessage"><code class="xref js js-func docutils literal notranslate"><span class="pre">Worker.postMessage()</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="worker/Worker.html#Worker.postMessage" title="Worker.postMessage"><code class="xref js js-func docutils literal notranslate"><span class="pre">Worker.postMessage()</span></code></a></p></td>
 <td><p>向主线程/Worker 线程发送的消息</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="Worker.html#Worker.terminate" title="Worker.terminate"><code class="xref js js-func docutils literal notranslate"><span class="pre">Worker.terminate()</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="worker/Worker.html#Worker.terminate" title="Worker.terminate"><code class="xref js js-func docutils literal notranslate"><span class="pre">Worker.terminate()</span></code></a></p></td>
 <td><p>结束当前 Worker 线程</p></td>
 </tr>
 </tbody>
@@ -3116,8 +3184,8 @@
 <div class="toctree-wrapper compound">
 </div>
 </section>
-<section id="id70">
-<h2>第三方平台<a class="headerlink" href="#id70" title="永久链接至标题">¶</a></h2>
+<section id="id73">
+<h2>第三方平台<a class="headerlink" href="#id73" title="永久链接至标题">¶</a></h2>
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 45%" />
@@ -3176,19 +3244,19 @@
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><a class="reference internal" href="SelectorQuery.html#SelectorQuery.exec" title="SelectorQuery.exec"><code class="xref js js-func docutils literal notranslate"><span class="pre">SelectorQuery.exec()</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="selector/SelectorQuery.html#SelectorQuery.exec" title="SelectorQuery.exec"><code class="xref js js-func docutils literal notranslate"><span class="pre">SelectorQuery.exec()</span></code></a></p></td>
 <td><p>执行所有的请求</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="SelectorQuery.html#SelectorQuery.in" title="SelectorQuery.in"><code class="xref js js-func docutils literal notranslate"><span class="pre">SelectorQuery.in()</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="selector/SelectorQuery.html#SelectorQuery.in" title="SelectorQuery.in"><code class="xref js js-func docutils literal notranslate"><span class="pre">SelectorQuery.in()</span></code></a></p></td>
 <td><p>将选择器的选取范围更改为自定义组件 component 内</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="SelectorQuery.html#SelectorQuery.select" title="SelectorQuery.select"><code class="xref js js-func docutils literal notranslate"><span class="pre">SelectorQuery.select()</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="selector/SelectorQuery.html#SelectorQuery.select" title="SelectorQuery.select"><code class="xref js js-func docutils literal notranslate"><span class="pre">SelectorQuery.select()</span></code></a></p></td>
 <td><p>在当前页面下选择第一个匹配选择器 selector 的节点</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="SelectorQuery.html#SelectorQuery.selectAll" title="SelectorQuery.selectAll"><code class="xref js js-func docutils literal notranslate"><span class="pre">SelectorQuery.selectAll()</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="selector/SelectorQuery.html#SelectorQuery.selectAll" title="SelectorQuery.selectAll"><code class="xref js js-func docutils literal notranslate"><span class="pre">SelectorQuery.selectAll()</span></code></a></p></td>
 <td><p>在当前页面下选择匹配选择器 selector 的所有节点</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="SelectorQuery.html#SelectorQuery.selectViewport" title="SelectorQuery.selectViewport"><code class="xref js js-func docutils literal notranslate"><span class="pre">SelectorQuery.selectViewport()</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="selector/SelectorQuery.html#SelectorQuery.selectViewport" title="SelectorQuery.selectViewport"><code class="xref js js-func docutils literal notranslate"><span class="pre">SelectorQuery.selectViewport()</span></code></a></p></td>
 <td><p>选择显示区域</p></td>
 </tr>
 </tbody>
@@ -3209,16 +3277,16 @@
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><a class="reference internal" href="NodesRef.html#NodesRef.boundingClientRect" title="NodesRef.boundingClientRect"><code class="xref js js-func docutils literal notranslate"><span class="pre">NodesRef.boundingClientRect()</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="nodes/NodesRef.html#NodesRef.boundingClientRect" title="NodesRef.boundingClientRect"><code class="xref js js-func docutils literal notranslate"><span class="pre">NodesRef.boundingClientRect()</span></code></a></p></td>
 <td><p>添加节点的布局位置的查询请求</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="NodesRef.html#NodesRef.context" title="NodesRef.context"><code class="xref js js-func docutils literal notranslate"><span class="pre">NodesRef.context()</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="nodes/NodesRef.html#NodesRef.context" title="NodesRef.context"><code class="xref js js-func docutils literal notranslate"><span class="pre">NodesRef.context()</span></code></a></p></td>
 <td><p>添加节点的 Context 对象查询请求</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="NodesRef.html#NodesRef.fields" title="NodesRef.fields"><code class="xref js js-func docutils literal notranslate"><span class="pre">NodesRef.fields()</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="nodes/NodesRef.html#NodesRef.fields" title="NodesRef.fields"><code class="xref js js-func docutils literal notranslate"><span class="pre">NodesRef.fields()</span></code></a></p></td>
 <td><p>获取节点的相关信息</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="NodesRef.html#NodesRef.scrollOffset" title="NodesRef.scrollOffset"><code class="xref js js-func docutils literal notranslate"><span class="pre">NodesRef.scrollOffset()</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="nodes/NodesRef.html#NodesRef.scrollOffset" title="NodesRef.scrollOffset"><code class="xref js js-func docutils literal notranslate"><span class="pre">NodesRef.scrollOffset()</span></code></a></p></td>
 <td><p>添加节点的滚动位置查询请求</p></td>
 </tr>
 </tbody>
@@ -3239,16 +3307,16 @@
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p><a class="reference internal" href="IntersectionObserver.html#IntersectionObserver.disconnect" title="IntersectionObserver.disconnect"><code class="xref js js-func docutils literal notranslate"><span class="pre">IntersectionObserver.disconnect()</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="IntersectionObserver/IntersectionObserver.html#IntersectionObserver.disconnect" title="IntersectionObserver.disconnect"><code class="xref js js-func docutils literal notranslate"><span class="pre">IntersectionObserver.disconnect()</span></code></a></p></td>
 <td><p>停止监听</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="IntersectionObserver.html#IntersectionObserver.observe" title="IntersectionObserver.observe"><code class="xref js js-func docutils literal notranslate"><span class="pre">IntersectionObserver.observe()</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="IntersectionObserver/IntersectionObserver.html#IntersectionObserver.observe" title="IntersectionObserver.observe"><code class="xref js js-func docutils literal notranslate"><span class="pre">IntersectionObserver.observe()</span></code></a></p></td>
 <td><p>指定目标节点并开始监听相交状态变化情况</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="IntersectionObserver.html#IntersectionObserver.relativeTo" title="IntersectionObserver.relativeTo"><code class="xref js js-func docutils literal notranslate"><span class="pre">IntersectionObserver.relativeTo()</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="IntersectionObserver/IntersectionObserver.html#IntersectionObserver.relativeTo" title="IntersectionObserver.relativeTo"><code class="xref js js-func docutils literal notranslate"><span class="pre">IntersectionObserver.relativeTo()</span></code></a></p></td>
 <td><p>使用选择器指定一个节点，作为参照区域之一</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="IntersectionObserver.html#IntersectionObserver.relativeToViewport" title="IntersectionObserver.relativeToViewport"><code class="xref js js-func docutils literal notranslate"><span class="pre">IntersectionObserver.relativeToViewport()</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="IntersectionObserver/IntersectionObserver.html#IntersectionObserver.relativeToViewport" title="IntersectionObserver.relativeToViewport"><code class="xref js js-func docutils literal notranslate"><span class="pre">IntersectionObserver.relativeToViewport()</span></code></a></p></td>
 <td><p>指定页面显示区域作为参照区域之一</p></td>
 </tr>
 </tbody>

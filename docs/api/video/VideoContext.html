@@ -1,0 +1,345 @@
+
+<!DOCTYPE html>
+
+<html lang="zh_CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>VideoContext ☁️ &#8212; wxadev v2.21.0 文档</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx13.css" />
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/translations.js"></script>
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="在 wxadev v2.21.0 文档 中搜索"
+          href="../../_static/opensearch.xml"/>
+
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="搜索" href="../../search.html" />
+<link rel="canonical" href="http://www.sphinx-doc.org/en/master/api/video/VideoContext.html" />
+
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet" type="text/css" />
+ 
+<style type="text/css">
+  table.right { float: right; margin-left: 20px; }
+  table.right td { border: 1px solid #ccc; }
+  
+</style>
+<script type="text/javascript">
+  // intelligent scrolling of the sidebar content
+  $(window).scroll(function() {
+    var sb = $('.sphinxsidebarwrapper');
+    var win = $(window);
+    var sbh = sb.height();
+    var offset = $('.sphinxsidebar').position()['top'];
+    var wintop = win.scrollTop();
+    var winbot = wintop + win.innerHeight();
+    var curtop = sb.position()['top'];
+    var curbot = curtop + sbh;
+    // does sidebar fit in window?
+    if (sbh < win.innerHeight()) {
+      // yes: easy case -- always keep at the top
+      sb.css('top', $u.min([$u.max([0, wintop - offset - 10]), $(document).height() - sbh - 200]));
+    } else {
+      // no: only scroll if top/bottom edge of sidebar is at
+      // top/bottom edge of window
+      if (curtop > wintop && curbot > winbot) {
+        sb.css('top', $u.max([wintop - offset - 10, 0]));
+      } else if (curtop < wintop && curbot < winbot) {
+        sb.css('top', $u.min([winbot - sbh - offset - 20, $(document).height() - sbh - 200]));
+      }
+    }
+  });
+</script> 
+  </head><body>
+<div class="pageheader">
+  <ul>
+    <li><a href="../../index.html">主页</a></li>
+    <li><a href="../../basic/index.html">入门</a></li>
+    <li><a href="../../framework/index.html">框架</a></li>
+    <li><a href="../../component/index.html">组件</a></li>
+    <li><a href="../index.html">API</a></li>
+    <li><a href="../../api-backend/index.html">服务端</a></li>
+    <li><a href="../../reference/index.html">参考</a></li>
+    <li><a href="../../contents.html">目录</a></li>
+  </ul>
+  <div>
+    <a href="../../index.html">
+      <img src="../../_static/wxaheader.png" alt="wxa" />
+    </a>
+  </div>
+</div>
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>导航</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="总目录"
+             accesskey="I">索引</a></li>
+        <li class="right" >
+          <a href="../../http-routingtable.html" title="微信小程序API"
+             >wxapi</a> |</li>
+<li><a href="../../index.html">主页</a>&#160;|</li>
+<li><a href="../../contents.html">文档</a> &#187;</li>
+
+        <li class="nav-item nav-item-this"><a href="">VideoContext ☁️</a></li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../../contents.html">目录</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">VideoContext ☁️</a><ul>
+<li><a class="reference internal" href="#id1">方法</a></li>
+<li><a class="reference internal" href="#id2">示例代码</a></li>
+</ul>
+</li>
+</ul>
+
+  <div role="note" aria-label="source link">
+    <h3>本页</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../_sources/api/video/VideoContext.rst.txt"
+            rel="nofollow">显示源代码</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">快速搜索</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="转向" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="videocontext">
+<h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/api/VideoContext.html">VideoContext ☁️</a><a class="headerlink" href="#videocontext" title="永久链接至标题">¶</a></h1>
+<dl class="js function">
+<dt class="sig sig-object js" id="wx.createVideoContext">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">wx</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">createVideoContext</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">this</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#wx.createVideoContext" title="永久链接至目标">¶</a></dt>
+<dd><p>创建 video 上下文 <a class="reference internal" href="#VideoContext" title="VideoContext"><code class="xref js js-class docutils literal notranslate"><span class="pre">VideoContext()</span></code></a> 对象。</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>id</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">string()</span></code></span>) – <a class="reference internal" href="../../component/video.html#video"><span class="std std-ref">&lt;video&gt;</span></a> 组件的 id</p></li>
+<li><p><strong>this</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">object()</span></code></span>) – 在自定义组件下，当前组件实例的this，以操作组件内 <a class="reference internal" href="../../component/video.html#video"><span class="std std-ref">&lt;video&gt;</span></a> 组件</p></li>
+</ul>
+</dd>
+<dt class="field-even">返回</dt>
+<dd class="field-even"><p><a class="reference internal" href="#VideoContext" title="VideoContext"><code class="xref js js-class docutils literal notranslate"><span class="pre">VideoContext()</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="js class">
+<dt class="sig sig-object js" id="VideoContext">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="n"><span class="pre">VideoContext</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#VideoContext" title="永久链接至目标">¶</a></dt>
+<dd><p>VideoContext 实例，可通过 <a class="reference internal" href="../wx.createVideoContext.html#wx.createVideoContext" title="wx.createVideoContext"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.createVideoContext()</span></code></a> 获取。</p>
+<p>videoContext 通过 id 跟一个 <a class="reference internal" href="../../component/video.html#video"><span class="std std-ref">&lt;video&gt;</span></a> 组件绑定，对应操作的 <a class="reference internal" href="../../component/video.html#video"><span class="std std-ref">&lt;video&gt;</span></a> 组件。</p>
+</dd></dl>
+
+<section id="id1">
+<h2>方法<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h2>
+<dl class="js function">
+<dt class="sig sig-object js" id="VideoContext.play">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">VideoContext</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">play</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#VideoContext.play" title="永久链接至目标">¶</a></dt>
+<dd><p>播放视频</p>
+</dd></dl>
+
+<dl class="js function">
+<dt class="sig sig-object js" id="VideoContext.pause">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">VideoContext</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">pause</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#VideoContext.pause" title="永久链接至目标">¶</a></dt>
+<dd><p>暂停视频</p>
+</dd></dl>
+
+<dl class="js function">
+<dt class="sig sig-object js" id="VideoContext.stop">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">VideoContext</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">stop</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#VideoContext.stop" title="永久链接至目标">¶</a></dt>
+<dd><p>停止视频</p>
+</dd></dl>
+
+<dl class="js function">
+<dt class="sig sig-object js" id="VideoContext.seek">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">VideoContext</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">seek</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">position</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#VideoContext.seek" title="永久链接至目标">¶</a></dt>
+<dd><p>跳转到指定位置</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>position</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">number()</span></code></span>) – 跳转到的位置，单位 s</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="js function">
+<dt class="sig sig-object js" id="VideoContext.sendDanmu">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">VideoContext</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">sendDanmu</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">{text[,color]}</span></em><span class="sig-paren">)</span><a class="headerlink" href="#VideoContext.sendDanmu" title="永久链接至目标">¶</a></dt>
+<dd><p>发送弹幕</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>text</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">string()</span></code></span>) – 弹幕文字</p></li>
+<li><p><strong>color</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">string()</span></code></span>) – 弹幕颜色</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="js function">
+<dt class="sig sig-object js" id="VideoContext.playbackRate">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">VideoContext</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">playbackRate</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rate</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#VideoContext.playbackRate" title="永久链接至目标">¶</a></dt>
+<dd><p>设置倍速播放</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>rate</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">number()</span></code></span>) – 倍率，支持 0.5/0.8/1.0/1.25/1.5，2.6.3 起支持 2.0 倍速</p></li>
+</ul>
+</dd>
+</dl>
+<div class="versionadded">
+<p><span class="versionmodified added">1.4.0 新版功能: </span>低版本需做 <a class="reference internal" href="../../framework/compatibility.html#compatibility"><span class="std std-ref">兼容处理</span></a> 。</p>
+</div>
+</dd></dl>
+
+<dl class="js function">
+<dt class="sig sig-object js" id="VideoContext.requestFullScreen">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">VideoContext</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">requestFullScreen</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">{[direction]}</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#VideoContext.requestFullScreen" title="永久链接至目标">¶</a></dt>
+<dd><p>进入全屏</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>direction</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">number()</span></code></span>) – <p>设置全屏时视频的方向，不指定则根据宽高比自动判断, 合法值:</p>
+<ul>
+<li><p><em>0</em>      正常竖向</p></li>
+<li><p><em>90</em>     屏幕逆时针90度</p></li>
+<li><p><em>-90</em>    屏幕顺时针90度</p></li>
+</ul>
+</p></li>
+</ul>
+</dd>
+</dl>
+<div class="versionadded">
+<p><span class="versionmodified added">1.4.0 新版功能: </span>低版本需做 <a class="reference internal" href="../../framework/compatibility.html#compatibility"><span class="std std-ref">兼容处理</span></a> 。</p>
+</div>
+<div class="versionadded">
+<p><span class="versionmodified added">1.7.0 新版功能: </span>参数 direction</p>
+</div>
+</dd></dl>
+
+<dl class="js function">
+<dt class="sig sig-object js" id="VideoContext.exitFullScreen">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">VideoContext</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">exitFullScreen</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#VideoContext.exitFullScreen" title="永久链接至目标">¶</a></dt>
+<dd><p>退出全屏</p>
+<div class="versionadded">
+<p><span class="versionmodified added">1.4.0 新版功能: </span>低版本需做 <a class="reference internal" href="../../framework/compatibility.html#compatibility"><span class="std std-ref">兼容处理</span></a> 。</p>
+</div>
+</dd></dl>
+
+<dl class="js function">
+<dt class="sig sig-object js" id="VideoContext.showStatusBar">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">VideoContext</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">showStatusBar</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#VideoContext.showStatusBar" title="永久链接至目标">¶</a></dt>
+<dd><p>显示状态栏，仅在iOS的全屏下有效</p>
+<div class="versionadded">
+<p><span class="versionmodified added">2.1.0 新版功能: </span>低版本需做 <a class="reference internal" href="../../framework/compatibility.html#compatibility"><span class="std std-ref">兼容处理</span></a> 。</p>
+</div>
+</dd></dl>
+
+<dl class="js function">
+<dt class="sig sig-object js" id="VideoContext.hideStatusBar">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">VideoContext</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">hideStatusBar</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#VideoContext.hideStatusBar" title="永久链接至目标">¶</a></dt>
+<dd><p>隐藏状态栏，仅在iOS的全屏下有效</p>
+<div class="versionadded">
+<p><span class="versionmodified added">2.1.0 新版功能: </span>低版本需做 <a class="reference internal" href="../../framework/compatibility.html#compatibility"><span class="std std-ref">兼容处理</span></a> 。</p>
+</div>
+</dd></dl>
+
+</section>
+<section id="id2">
+<h2>示例代码<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<p>在开发者工具中预览效果</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">view</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;section tc&quot;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">video</span>
+    <span class="na">id</span><span class="o">=</span><span class="s">&quot;myVideo&quot;</span>
+    <span class="na">src</span><span class="o">=</span><span class="s">&quot;http://wxsnsdy.tc.qq.com/105/20210/snsdyvideodownload?filekey=30280201010421301f0201690402534804102ca905ce620b1241b726bc41dcff44e00204012882540400&amp;bizid=1023&amp;hy=SH&amp;fileparam=302c020101042530230204136ffd93020457e3c4ff02024ef202031e8d7f02030f42400204045a320a0201000400&quot;</span>
+    <span class="na">enable-danmu</span>
+    <span class="na">danmu-btn</span>
+    <span class="na">controls</span>
+  <span class="p">&gt;&lt;/</span><span class="nt">video</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">view</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;btn-area&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">bindblur</span><span class="o">=</span><span class="s">&quot;bindInputBlur&quot;</span> <span class="p">/&gt;</span>
+    <span class="p">&lt;</span><span class="nt">button</span> <span class="na">bindtap</span><span class="o">=</span><span class="s">&quot;bindSendDanmu&quot;</span><span class="p">&gt;</span>发送弹幕<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">view</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">view</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="kd">function</span> <span class="nx">getRandomColor</span><span class="p">()</span> <span class="p">{</span>
+  <span class="kd">const</span> <span class="nx">rgb</span> <span class="o">=</span> <span class="p">[]</span>
+  <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="mf">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="mf">3</span><span class="p">;</span> <span class="o">++</span><span class="nx">i</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">let</span> <span class="nx">color</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">floor</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">()</span> <span class="o">*</span> <span class="mf">256</span><span class="p">).</span><span class="nx">toString</span><span class="p">(</span><span class="mf">16</span><span class="p">)</span>
+    <span class="nx">color</span> <span class="o">=</span> <span class="nx">color</span><span class="p">.</span><span class="nx">length</span> <span class="o">==</span> <span class="mf">1</span> <span class="o">?</span> <span class="s1">&#39;0&#39;</span> <span class="o">+</span> <span class="nx">color</span> <span class="o">:</span> <span class="nx">color</span>
+    <span class="nx">rgb</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">color</span><span class="p">)</span>
+  <span class="p">}</span>
+  <span class="k">return</span> <span class="s1">&#39;#&#39;</span> <span class="o">+</span> <span class="nx">rgb</span><span class="p">.</span><span class="nx">join</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="nx">Page</span><span class="p">({</span>
+  <span class="nx">onReady</span><span class="p">(</span><span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">videoContext</span> <span class="o">=</span> <span class="nx">wx</span><span class="p">.</span><span class="nx">createVideoContext</span><span class="p">(</span><span class="s1">&#39;myVideo&#39;</span><span class="p">)</span>
+  <span class="p">},</span>
+  <span class="nx">inputValue</span><span class="o">:</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
+  <span class="nx">bindInputBlur</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">inputValue</span> <span class="o">=</span> <span class="nx">e</span><span class="p">.</span><span class="nx">detail</span><span class="p">.</span><span class="nx">value</span>
+  <span class="p">},</span>
+  <span class="nx">bindSendDanmu</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">videoContext</span><span class="p">.</span><span class="nx">sendDanmu</span><span class="p">({</span>
+      <span class="nx">text</span><span class="o">:</span> <span class="k">this</span><span class="p">.</span><span class="nx">inputValue</span><span class="p">,</span>
+      <span class="nx">color</span><span class="o">:</span> <span class="nx">getRandomColor</span><span class="p">()</span>
+    <span class="p">})</span>
+  <span class="p">}</span>
+<span class="p">})</span>
+</pre></div>
+</div>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>导航</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="总目录"
+             >索引</a></li>
+        <li class="right" >
+          <a href="../../http-routingtable.html" title="微信小程序API"
+             >wxapi</a> |</li>
+<li><a href="../../index.html">主页</a>&#160;|</li>
+<li><a href="../../contents.html">文档</a> &#187;</li>
+
+        <li class="nav-item nav-item-this"><a href="">VideoContext ☁️</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; 版权所有 2019, Wxadev Docs.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.1.
+    </div>
+  </body>
+</html>

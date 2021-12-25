@@ -1,0 +1,362 @@
+
+<!DOCTYPE html>
+
+<html lang="zh_CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>RecorderManager &#8212; wxadev v2.21.0 文档</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx13.css" />
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/translations.js"></script>
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="在 wxadev v2.21.0 文档 中搜索"
+          href="../../_static/opensearch.xml"/>
+
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="搜索" href="../../search.html" />
+<link rel="canonical" href="http://www.sphinx-doc.org/en/master/api/recorder/RecorderManager.html" />
+
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet" type="text/css" />
+ 
+<style type="text/css">
+  table.right { float: right; margin-left: 20px; }
+  table.right td { border: 1px solid #ccc; }
+  
+</style>
+<script type="text/javascript">
+  // intelligent scrolling of the sidebar content
+  $(window).scroll(function() {
+    var sb = $('.sphinxsidebarwrapper');
+    var win = $(window);
+    var sbh = sb.height();
+    var offset = $('.sphinxsidebar').position()['top'];
+    var wintop = win.scrollTop();
+    var winbot = wintop + win.innerHeight();
+    var curtop = sb.position()['top'];
+    var curbot = curtop + sbh;
+    // does sidebar fit in window?
+    if (sbh < win.innerHeight()) {
+      // yes: easy case -- always keep at the top
+      sb.css('top', $u.min([$u.max([0, wintop - offset - 10]), $(document).height() - sbh - 200]));
+    } else {
+      // no: only scroll if top/bottom edge of sidebar is at
+      // top/bottom edge of window
+      if (curtop > wintop && curbot > winbot) {
+        sb.css('top', $u.max([wintop - offset - 10, 0]));
+      } else if (curtop < wintop && curbot < winbot) {
+        sb.css('top', $u.min([winbot - sbh - offset - 20, $(document).height() - sbh - 200]));
+      }
+    }
+  });
+</script> 
+  </head><body>
+<div class="pageheader">
+  <ul>
+    <li><a href="../../index.html">主页</a></li>
+    <li><a href="../../basic/index.html">入门</a></li>
+    <li><a href="../../framework/index.html">框架</a></li>
+    <li><a href="../../component/index.html">组件</a></li>
+    <li><a href="../index.html">API</a></li>
+    <li><a href="../../api-backend/index.html">服务端</a></li>
+    <li><a href="../../reference/index.html">参考</a></li>
+    <li><a href="../../contents.html">目录</a></li>
+  </ul>
+  <div>
+    <a href="../../index.html">
+      <img src="../../_static/wxaheader.png" alt="wxa" />
+    </a>
+  </div>
+</div>
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>导航</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="总目录"
+             accesskey="I">索引</a></li>
+        <li class="right" >
+          <a href="../../http-routingtable.html" title="微信小程序API"
+             >wxapi</a> |</li>
+<li><a href="../../index.html">主页</a>&#160;|</li>
+<li><a href="../../contents.html">文档</a> &#187;</li>
+
+        <li class="nav-item nav-item-this"><a href="">RecorderManager</a></li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../../contents.html">目录</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">RecorderManager</a><ul>
+<li><a class="reference internal" href="#id1">方法</a></li>
+<li><a class="reference internal" href="#id2">示例代码</a></li>
+</ul>
+</li>
+</ul>
+
+  <div role="note" aria-label="source link">
+    <h3>本页</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../_sources/api/recorder/RecorderManager.rst.txt"
+            rel="nofollow">显示源代码</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">快速搜索</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="转向" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="recordermanager">
+<h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/api/RecorderManager.html">RecorderManager</a><a class="headerlink" href="#recordermanager" title="永久链接至标题">¶</a></h1>
+<dl class="js function">
+<dt class="sig sig-object js" id="wx.getRecorderManager">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">wx</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">getRecorderManager</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#wx.getRecorderManager" title="永久链接至目标">¶</a></dt>
+<dd><p>获取全局唯一的录音管理器 <a class="reference internal" href="#RecorderManager" title="RecorderManager"><code class="xref js js-class docutils literal notranslate"><span class="pre">RecorderManager()</span></code></a></p>
+<div class="versionadded">
+<p><span class="versionmodified added">1.6.0 新版功能: </span>低版本需做 <a class="reference internal" href="../../framework/compatibility.html#compatibility"><span class="std std-ref">兼容处理</span></a> 。</p>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">返回</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#RecorderManager" title="RecorderManager"><code class="xref js js-class docutils literal notranslate"><span class="pre">RecorderManager()</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="js class">
+<dt class="sig sig-object js" id="RecorderManager">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="n"><span class="pre">RecorderManager</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#RecorderManager" title="永久链接至目标">¶</a></dt>
+<dd><p>全局唯一的录音管理器</p>
+</dd></dl>
+
+<section id="id1">
+<h2>方法<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h2>
+<div class="admonition seealso">
+<p class="admonition-title">参见</p>
+<p>开始录制 <a class="reference internal" href="RecorderManager.start.html#RecorderManager.start" title="RecorderManager.start"><code class="xref js js-func docutils literal notranslate"><span class="pre">RecorderManager.start()</span></code></a></p>
+</div>
+<dl class="js function">
+<dt class="sig sig-object js" id="RecorderManager.pause">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">RecorderManager</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">pause</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#RecorderManager.pause" title="永久链接至目标">¶</a></dt>
+<dd><p>暂停录音</p>
+</dd></dl>
+
+<dl class="js function">
+<dt class="sig sig-object js" id="RecorderManager.resume">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">RecorderManager</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">resume</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#RecorderManager.resume" title="永久链接至目标">¶</a></dt>
+<dd><p>继续录音</p>
+</dd></dl>
+
+<dl class="js function">
+<dt class="sig sig-object js" id="RecorderManager.stop">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">RecorderManager</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">stop</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#RecorderManager.stop" title="永久链接至目标">¶</a></dt>
+<dd><p>停止录音</p>
+</dd></dl>
+
+<dl class="js function">
+<dt class="sig sig-object js" id="RecorderManager.onStart">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">RecorderManager</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">onStart</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">function</span> <span class="pre">callback</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#RecorderManager.onStart" title="永久链接至目标">¶</a></dt>
+<dd><p>监听录音开始事件</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>callback</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">function()</span></code></span>) – 录音开始事件的回调函数</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="js function">
+<dt class="sig sig-object js" id="RecorderManager.onResume">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">RecorderManager</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">onResume</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">function</span> <span class="pre">callback</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#RecorderManager.onResume" title="永久链接至目标">¶</a></dt>
+<dd><p>监听录音继续事件</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>callback</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">function()</span></code></span>) – 录音开始事件的回调函数</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="js function">
+<dt class="sig sig-object js" id="RecorderManager.onPause">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">RecorderManager</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">onPause</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">function</span> <span class="pre">callback</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#RecorderManager.onPause" title="永久链接至目标">¶</a></dt>
+<dd><p>监听录音暂停事件</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>callback</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">function()</span></code></span>) – 录音暂停事件的回调函数</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="js function">
+<dt class="sig sig-object js" id="RecorderManager.onStop">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">RecorderManager</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">onStop</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">function</span> <span class="pre">callback</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#RecorderManager.onStop" title="永久链接至目标">¶</a></dt>
+<dd><p>监听录音结束事件</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>callback</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">function()</span></code></span>) – 录音结束事件的回调函数</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="js function">
+<dt class="sig sig-object js" id="RecorderManager.onFrameRecorded">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">RecorderManager</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">onFrameRecorded</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">function</span> <span class="pre">callback</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#RecorderManager.onFrameRecorded" title="永久链接至目标">¶</a></dt>
+<dd><p>监听已录制完指定帧大小的文件事件。如果设置了 frameSize，则会回调此事件。</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>callback(res)</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">function()</span></code></span>) – <p>已录制完指定帧大小的文件事件的回调函数</p>
+<ul>
+<li><p><strong>res</strong> (<em>Object</em>) -</p>
+<ul>
+<li><p><strong>frameBuffer</strong> (<em>ArrayBuffer</em>) - 录音分片数据</p></li>
+<li><p><strong>isLastFrame</strong> (<em>boolean</em>) - 当前帧是否正常录音结束前的最后一帧</p></li>
+</ul>
+</li>
+</ul>
+</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="js function">
+<dt class="sig sig-object js" id="RecorderManager.onError">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">RecorderManager</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">onError</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">function</span> <span class="pre">callback</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#RecorderManager.onError" title="永久链接至目标">¶</a></dt>
+<dd><p>监听录音错误事件</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>callback(res)</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">function()</span></code></span>) – <p>录音错误事件的回调函数</p>
+<ul>
+<li><p><strong>res</strong> (<em>Object</em>) -</p>
+<ul>
+<li><p><strong>errMsg</strong> (<em>string</em>) - 错误信息</p></li>
+</ul>
+</li>
+</ul>
+</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="js function">
+<dt class="sig sig-object js" id="RecorderManager.onInterruptionBegin">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">RecorderManager</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">onInterruptionBegin</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">function</span> <span class="pre">callback</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#RecorderManager.onInterruptionBegin" title="永久链接至目标">¶</a></dt>
+<dd><div class="versionadded">
+<p><span class="versionmodified added">2.3.0 新版功能: </span>低版本需做 <a class="reference internal" href="../../framework/compatibility.html#compatibility"><span class="std std-ref">兼容处理</span></a> 。</p>
+<p>监听录音因为受到系统占用而被中断开始事件。
+以下场景会触发此事件：微信语音聊天、微信视频聊天。此事件触发后，录音会被暂停。
+pause 事件在此事件后触发</p>
+<dl class="field-list simple">
+<dt class="field-odd">param function callback</dt>
+<dd class="field-odd"><p>录音因为受到系统占用而被中断开始事件的回调函数</p>
+</dd>
+</dl>
+</div>
+</dd></dl>
+
+<dl class="js function">
+<dt class="sig sig-object js" id="RecorderManager.onInterruptionEnd">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">RecorderManager</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">onInterruptionEnd</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">function</span> <span class="pre">callback</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#RecorderManager.onInterruptionEnd" title="永久链接至目标">¶</a></dt>
+<dd><div class="versionadded">
+<p><span class="versionmodified added">2.3.0 新版功能: </span>低版本需做 <a class="reference internal" href="../../framework/compatibility.html#compatibility"><span class="std std-ref">兼容处理</span></a> 。</p>
+<p>监听录音中断结束事件。
+在收到 interruptionBegin 事件之后，小程序内所有录音会暂停，收到此事件之后才可再次录音成功。</p>
+<dl class="field-list simple">
+<dt class="field-odd">param function callback</dt>
+<dd class="field-odd"><p>录音中断结束事件的回调函数</p>
+</dd>
+</dl>
+</div>
+</dd></dl>
+
+</section>
+<section id="id2">
+<h2>示例代码<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="kd">const</span> <span class="nx">recorderManager</span> <span class="o">=</span> <span class="nx">wx</span><span class="p">.</span><span class="nx">getRecorderManager</span><span class="p">()</span>
+
+<span class="nx">recorderManager</span><span class="p">.</span><span class="nx">onStart</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;recorder start&#39;</span><span class="p">)</span>
+<span class="p">})</span>
+<span class="nx">recorderManager</span><span class="p">.</span><span class="nx">onPause</span><span class="p">(()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;recorder pause&#39;</span><span class="p">)</span>
+<span class="p">})</span>
+<span class="nx">recorderManager</span><span class="p">.</span><span class="nx">onStop</span><span class="p">((</span><span class="nx">res</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;recorder stop&#39;</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span>
+  <span class="kd">const</span> <span class="p">{</span><span class="nx">tempFilePath</span><span class="p">}</span> <span class="o">=</span> <span class="nx">res</span>
+<span class="p">})</span>
+<span class="nx">recorderManager</span><span class="p">.</span><span class="nx">onFrameRecorded</span><span class="p">((</span><span class="nx">res</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+  <span class="kd">const</span> <span class="p">{</span><span class="nx">frameBuffer</span><span class="p">}</span> <span class="o">=</span> <span class="nx">res</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;frameBuffer.byteLength&#39;</span><span class="p">,</span> <span class="nx">frameBuffer</span><span class="p">.</span><span class="nx">byteLength</span><span class="p">)</span>
+<span class="p">})</span>
+
+<span class="kd">const</span> <span class="nx">options</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="nx">duration</span><span class="o">:</span> <span class="mf">10000</span><span class="p">,</span>
+  <span class="nx">sampleRate</span><span class="o">:</span> <span class="mf">44100</span><span class="p">,</span>
+  <span class="nx">numberOfChannels</span><span class="o">:</span> <span class="mf">1</span><span class="p">,</span>
+  <span class="nx">encodeBitRate</span><span class="o">:</span> <span class="mf">192000</span><span class="p">,</span>
+  <span class="nx">format</span><span class="o">:</span> <span class="s1">&#39;aac&#39;</span><span class="p">,</span>
+  <span class="nx">frameSize</span><span class="o">:</span> <span class="mf">50</span>
+<span class="p">}</span>
+
+<span class="nx">recorderManager</span><span class="p">.</span><span class="nx">start</span><span class="p">(</span><span class="nx">options</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>导航</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="总目录"
+             >索引</a></li>
+        <li class="right" >
+          <a href="../../http-routingtable.html" title="微信小程序API"
+             >wxapi</a> |</li>
+<li><a href="../../index.html">主页</a>&#160;|</li>
+<li><a href="../../contents.html">文档</a> &#187;</li>
+
+        <li class="nav-item nav-item-this"><a href="">RecorderManager</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; 版权所有 2019, Wxadev Docs.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.1.
+    </div>
+  </body>
+</html>

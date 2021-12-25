@@ -1,0 +1,250 @@
+
+<!DOCTYPE html>
+
+<html lang="zh_CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>运单轨迹更新事件 &#8212; wxadev v2.21.0 文档</title>
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx13.css" />
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/translations.js"></script>
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="在 wxadev v2.21.0 文档 中搜索"
+          href="../../../_static/opensearch.xml"/>
+
+    <link rel="index" title="索引" href="../../../genindex.html" />
+    <link rel="search" title="搜索" href="../../../search.html" />
+<link rel="canonical" href="http://www.sphinx-doc.org/en/master/api-backend/express/by-business/logistics.onPathUpdate.html" />
+
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet" type="text/css" />
+ 
+<style type="text/css">
+  table.right { float: right; margin-left: 20px; }
+  table.right td { border: 1px solid #ccc; }
+  
+</style>
+<script type="text/javascript">
+  // intelligent scrolling of the sidebar content
+  $(window).scroll(function() {
+    var sb = $('.sphinxsidebarwrapper');
+    var win = $(window);
+    var sbh = sb.height();
+    var offset = $('.sphinxsidebar').position()['top'];
+    var wintop = win.scrollTop();
+    var winbot = wintop + win.innerHeight();
+    var curtop = sb.position()['top'];
+    var curbot = curtop + sbh;
+    // does sidebar fit in window?
+    if (sbh < win.innerHeight()) {
+      // yes: easy case -- always keep at the top
+      sb.css('top', $u.min([$u.max([0, wintop - offset - 10]), $(document).height() - sbh - 200]));
+    } else {
+      // no: only scroll if top/bottom edge of sidebar is at
+      // top/bottom edge of window
+      if (curtop > wintop && curbot > winbot) {
+        sb.css('top', $u.max([wintop - offset - 10, 0]));
+      } else if (curtop < wintop && curbot < winbot) {
+        sb.css('top', $u.min([winbot - sbh - offset - 20, $(document).height() - sbh - 200]));
+      }
+    }
+  });
+</script> 
+  </head><body>
+<div class="pageheader">
+  <ul>
+    <li><a href="../../../index.html">主页</a></li>
+    <li><a href="../../../basic/index.html">入门</a></li>
+    <li><a href="../../../framework/index.html">框架</a></li>
+    <li><a href="../../../component/index.html">组件</a></li>
+    <li><a href="../../../api/index.html">API</a></li>
+    <li><a href="../../index.html">服务端</a></li>
+    <li><a href="../../../reference/index.html">参考</a></li>
+    <li><a href="../../../contents.html">目录</a></li>
+  </ul>
+  <div>
+    <a href="../../../index.html">
+      <img src="../../../_static/wxaheader.png" alt="wxa" />
+    </a>
+  </div>
+</div>
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>导航</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="总目录"
+             accesskey="I">索引</a></li>
+        <li class="right" >
+          <a href="../../../http-routingtable.html" title="微信小程序API"
+             >wxapi</a> |</li>
+<li><a href="../../../index.html">主页</a>&#160;|</li>
+<li><a href="../../../contents.html">文档</a> &#187;</li>
+
+        <li class="nav-item nav-item-this"><a href="">运单轨迹更新事件</a></li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div role="note" aria-label="source link">
+    <h3>本页</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../../_sources/api-backend/express/by-business/logistics.onPathUpdate.rst.txt"
+            rel="nofollow">显示源代码</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">快速搜索</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="转向" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="logistics-onpathupdate">
+<span id="id1"></span><h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/api-backend/logistics.onPathUpdate.html">运单轨迹更新事件</a><a class="headerlink" href="#logistics-onpathupdate" title="永久链接至标题">¶</a></h1>
+<p>logistics.onPathUpdate</p>
+<p>本文档描述服务器端接收的消息或事件，详细说明参见消息推送。</p>
+<p>当运单轨迹有更新时，会产生如下数据包。收到事件之后，回复success或者空串即可。</p>
+<p>一、HTTPS 调用
+消息参数
+Object
+属性      类型      说明
+ToUserName      string  小程序的原始ID
+FromUserName    string  发送者的openid
+CreateTime      number  消息创建时间（整型）
+MsgType string  固定 event
+Event   string  固定 add_express_path
+DeliveryID      string  快递公司ID
+WayBillId       string  运单ID
+Version number  轨迹版本号（整型）
+Count   number  轨迹节点数（整型）
+Actions Array.&lt;Object&gt;  轨迹列表
+Actions 的结构</p>
+<p>属性      类型      说明
+ActionTime      number  轨迹节点 Unix 时间戳
+ActionType      number  轨迹节点类型
+ActionMsg       string  轨迹节点详情
+ActionType 的合法值</p>
+<p>值       说明      最低版本
+100001  揽件阶段-揽件成功
+100002  揽件阶段-揽件失败
+100003  揽件阶段-分配业务员
+200001  运输阶段-更新运输轨迹
+300002  派送阶段-开始派送
+300003  派送阶段-签收成功
+300004  派送阶段-签收失败
+400001  异常阶段-订单取消
+400002  异常阶段-订单滞留
+消息数据包示例
+XML 格式</p>
+<dl>
+<dt>&lt;xml&gt;</dt><dd><p>&lt;ToUserName&gt;&lt;![CDATA[toUser]]&gt;&lt;/ToUserName&gt;
+&lt;FromUserName&gt;&lt;![CDATA[fromUser]]&gt;&lt;/FromUserName&gt;
+&lt;CreateTime&gt;1546924844&lt;/CreateTime&gt;
+&lt;MsgType&gt;&lt;![CDATA[event]]&gt;&lt;/MsgType&gt;
+&lt;Event&gt;&lt;![CDATA[add_express_path]]&gt;&lt;/Event&gt;
+&lt;DeliveryID&gt;&lt;![CDATA[SF]]&gt;&lt;/DeliveryID&gt;
+&lt;WayBillId&gt;&lt;![CDATA[123456789]]&gt;&lt;/WayBillId&gt;
+&lt;Version&gt;3&lt;/Version&gt;
+&lt;Count&gt;3&lt;/Count&gt;
+&lt;Actions&gt;</p>
+<blockquote>
+<div><p>&lt;ActionTime&gt;1546924840&lt;/ActionTime&gt;
+&lt;ActionType&gt;100001&lt;/ActionType&gt;
+&lt;ActionMsg&gt;&lt;![CDATA[小哥A揽件成功]]&gt;&lt;/ActionMsg&gt;</p>
+</div></blockquote>
+<p>&lt;/Actions&gt;
+&lt;Actions&gt;</p>
+<blockquote>
+<div><p>&lt;ActionTime&gt;1546924841&lt;/ActionTime&gt;
+&lt;ActionType&gt;200001&lt;/ActionType&gt;
+&lt;ActionMsg&gt;&lt;![CDATA[到达广州集包地]]&gt;&lt;/ActionMsg&gt;</p>
+</div></blockquote>
+<p>&lt;/Actions&gt;
+&lt;Actions&gt;</p>
+<blockquote>
+<div><p>&lt;ActionTime&gt;1546924842&lt;/ActionTime&gt;
+&lt;ActionType&gt;200001&lt;/ActionType&gt;
+&lt;ActionMsg&gt;&lt;![CDATA[运往目的地]]&gt;&lt;/ActionMsg&gt;</p>
+</div></blockquote>
+<p>&lt;/Actions&gt;</p>
+</dd>
+</dl>
+<p>&lt;/xml&gt;
+JSON 格式</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;ToUserName&quot;</span><span class="p">:</span> <span class="s2">&quot;toUser&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;FromUserName&quot;</span><span class="p">:</span> <span class="s2">&quot;fromUser&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;CreateTime&quot;</span><span class="p">:</span> <span class="mi">1546924844</span><span class="p">,</span>
+  <span class="nt">&quot;MsgType&quot;</span><span class="p">:</span> <span class="s2">&quot;event&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;Event&quot;</span><span class="p">:</span> <span class="s2">&quot;add_express_path&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;DeliveryID&quot;</span><span class="p">:</span> <span class="s2">&quot;SF&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;WayBillId&quot;</span><span class="p">:</span> <span class="s2">&quot;123456789&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;Version&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+  <span class="nt">&quot;Count&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+  <span class="nt">&quot;Actions&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+      <span class="nt">&quot;ActionTime&quot;</span><span class="p">:</span> <span class="mi">1546924840</span><span class="p">,</span>
+      <span class="nt">&quot;ActionType&quot;</span><span class="p">:</span> <span class="mi">100001</span><span class="p">,</span>
+      <span class="nt">&quot;ActionMsg&quot;</span><span class="p">:</span> <span class="s2">&quot;小哥A揽件成功&quot;</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="nt">&quot;ActionTime&quot;</span><span class="p">:</span> <span class="mi">1546924841</span><span class="p">,</span>
+      <span class="nt">&quot;ActionType&quot;</span><span class="p">:</span> <span class="mi">200001</span><span class="p">,</span>
+      <span class="nt">&quot;ActionMsg&quot;</span><span class="p">:</span> <span class="s2">&quot;到达广州集包地&quot;</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="nt">&quot;ActionTime&quot;</span><span class="p">:</span> <span class="mi">1546924842</span><span class="p">,</span>
+      <span class="nt">&quot;ActionType&quot;</span><span class="p">:</span> <span class="mi">200001</span><span class="p">,</span>
+      <span class="nt">&quot;ActionMsg&quot;</span><span class="p">:</span> <span class="s2">&quot;运往目的地&quot;</span>
+    <span class="p">}</span>
+  <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>导航</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="总目录"
+             >索引</a></li>
+        <li class="right" >
+          <a href="../../../http-routingtable.html" title="微信小程序API"
+             >wxapi</a> |</li>
+<li><a href="../../../index.html">主页</a>&#160;|</li>
+<li><a href="../../../contents.html">文档</a> &#187;</li>
+
+        <li class="nav-item nav-item-this"><a href="">运单轨迹更新事件</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; 版权所有 2019, Wxadev Docs.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.1.
+    </div>
+  </body>
+</html>

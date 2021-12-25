@@ -1,0 +1,310 @@
+
+<!DOCTYPE html>
+
+<html lang="zh_CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>MapContext &#8212; wxadev v2.21.0 文档</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx13.css" />
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/translations.js"></script>
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="在 wxadev v2.21.0 文档 中搜索"
+          href="../../_static/opensearch.xml"/>
+
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="搜索" href="../../search.html" />
+<link rel="canonical" href="http://www.sphinx-doc.org/en/master/api/map/MapContext.html" />
+
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet" type="text/css" />
+ 
+<style type="text/css">
+  table.right { float: right; margin-left: 20px; }
+  table.right td { border: 1px solid #ccc; }
+  
+</style>
+<script type="text/javascript">
+  // intelligent scrolling of the sidebar content
+  $(window).scroll(function() {
+    var sb = $('.sphinxsidebarwrapper');
+    var win = $(window);
+    var sbh = sb.height();
+    var offset = $('.sphinxsidebar').position()['top'];
+    var wintop = win.scrollTop();
+    var winbot = wintop + win.innerHeight();
+    var curtop = sb.position()['top'];
+    var curbot = curtop + sbh;
+    // does sidebar fit in window?
+    if (sbh < win.innerHeight()) {
+      // yes: easy case -- always keep at the top
+      sb.css('top', $u.min([$u.max([0, wintop - offset - 10]), $(document).height() - sbh - 200]));
+    } else {
+      // no: only scroll if top/bottom edge of sidebar is at
+      // top/bottom edge of window
+      if (curtop > wintop && curbot > winbot) {
+        sb.css('top', $u.max([wintop - offset - 10, 0]));
+      } else if (curtop < wintop && curbot < winbot) {
+        sb.css('top', $u.min([winbot - sbh - offset - 20, $(document).height() - sbh - 200]));
+      }
+    }
+  });
+</script> 
+  </head><body>
+<div class="pageheader">
+  <ul>
+    <li><a href="../../index.html">主页</a></li>
+    <li><a href="../../basic/index.html">入门</a></li>
+    <li><a href="../../framework/index.html">框架</a></li>
+    <li><a href="../../component/index.html">组件</a></li>
+    <li><a href="../index.html">API</a></li>
+    <li><a href="../../api-backend/index.html">服务端</a></li>
+    <li><a href="../../reference/index.html">参考</a></li>
+    <li><a href="../../contents.html">目录</a></li>
+  </ul>
+  <div>
+    <a href="../../index.html">
+      <img src="../../_static/wxaheader.png" alt="wxa" />
+    </a>
+  </div>
+</div>
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>导航</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="总目录"
+             accesskey="I">索引</a></li>
+        <li class="right" >
+          <a href="../../http-routingtable.html" title="微信小程序API"
+             >wxapi</a> |</li>
+<li><a href="../../index.html">主页</a>&#160;|</li>
+<li><a href="../../contents.html">文档</a> &#187;</li>
+
+        <li class="nav-item nav-item-this"><a href="">MapContext</a></li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../../contents.html">目录</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">MapContext</a><ul>
+<li><a class="reference internal" href="#id1">方法</a></li>
+<li><a class="reference internal" href="#id2">示例代码</a></li>
+</ul>
+</li>
+</ul>
+
+  <div role="note" aria-label="source link">
+    <h3>本页</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../_sources/api/map/MapContext.rst.txt"
+            rel="nofollow">显示源代码</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">快速搜索</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="转向" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="mapcontext">
+<h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/api/MapContext.html">MapContext</a><a class="headerlink" href="#mapcontext" title="永久链接至标题">¶</a></h1>
+<p>版本:v2.21.0 更新:2021 年 12 月 14 日</p>
+<dl class="js function">
+<dt class="sig sig-object js" id="wx.createMapContext">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">wx</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">createMapContext</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mapId</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">this</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#wx.createMapContext" title="永久链接至目标">¶</a></dt>
+<dd><p>创建 map 上下文 <a class="reference internal" href="#MapContext" title="MapContext"><code class="xref js js-class docutils literal notranslate"><span class="pre">MapContext()</span></code></a> 对象。</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>mapId</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">string()</span></code></span>) – <a class="reference internal" href="../../component/map.html#map"><span class="std std-ref">&lt;map&gt;</span></a> 组件的 id</p></li>
+<li><p><strong>this</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">object()</span></code></span>) – 在自定义组件下，当前组件实例的this，以操作组件内 <a class="reference internal" href="../../component/map.html#map"><span class="std std-ref">&lt;map&gt;</span></a> 组件</p></li>
+</ul>
+</dd>
+<dt class="field-even">返回</dt>
+<dd class="field-even"><p><a class="reference internal" href="#MapContext" title="MapContext"><code class="xref js js-class docutils literal notranslate"><span class="pre">MapContext()</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="js class">
+<dt class="sig sig-object js" id="MapContext">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="n"><span class="pre">MapContext</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#MapContext" title="永久链接至目标">¶</a></dt>
+<dd><p><a class="reference internal" href="#MapContext" title="MapContext"><code class="xref js js-class docutils literal notranslate"><span class="pre">MapContext()</span></code></a> 实例，可通过 <a class="reference internal" href="../wx.createMapContext.html#wx.createMapContext" title="wx.createMapContext"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.createMapContext()</span></code></a> 获取。</p>
+<p><a class="reference internal" href="#MapContext" title="MapContext"><code class="xref js js-class docutils literal notranslate"><span class="pre">MapContext()</span></code></a> 通过 id 跟一个 <a class="reference internal" href="../../component/map.html#map"><span class="std std-ref">&lt;map&gt;</span></a> 组件绑定，操作对应的 <a class="reference internal" href="../../component/map.html#map"><span class="std std-ref">&lt;map&gt;</span></a> 组件。</p>
+</dd></dl>
+
+<section id="id1">
+<h2>方法<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h2>
+<dl class="js function">
+<dt class="sig sig-object js" id="MapContext.getCenterLocation">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">MapContext</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">getCenterLocation</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">{[success][,</span> <span class="pre">fail][,</span> <span class="pre">complete]}</span></em><span class="sig-paren">)</span><a class="headerlink" href="#MapContext.getCenterLocation" title="永久链接至目标">¶</a></dt>
+<dd><p>获取当前地图中心的经纬度。返回的是 <cite>gcj02</cite> 坐标系，可以用于 <a class="reference internal" href="../wx.openLocation.html#wx.openLocation" title="wx.openLocation"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.openLocation()</span></code></a></p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>latitude})</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">function</span> <span class="pre">success({longitude,()</span></code></span>) – <p>接口调用成功的回调函数</p>
+<ul>
+<li><p><strong>longitude</strong>     (<em>number</em>) - 经度</p></li>
+<li><p><strong>latitude</strong>      (<em>number</em>) - 纬度</p></li>
+</ul>
+</p></li>
+<li><p><strong>fail</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">function()</span></code></span>) – 接口调用失败的回调函数</p></li>
+<li><p><strong>complete</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">function()</span></code></span>) – 接口调用结束的回调函数（调用成功、失败都会执行）</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="js function">
+<dt class="sig sig-object js" id="MapContext.moveToLocation">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">MapContext</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">moveToLocation</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#MapContext.moveToLocation" title="永久链接至目标">¶</a></dt>
+<dd><p>将地图中心移动到当前定位点。需要配合 <a class="reference internal" href="../../component/map.html#map"><span class="std std-ref">map</span></a> 组件的 <code class="docutils literal notranslate"><span class="pre">show-location</span></code> 使用</p>
+</dd></dl>
+
+<dl class="js function">
+<dt class="sig sig-object js" id="MapContext.translateMarker">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">MapContext</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">translateMarker</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">object</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#MapContext.translateMarker" title="永久链接至目标">¶</a></dt>
+<dd><p>平移marker，带动画</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>object</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">Object()</span></code></span>) – object</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="js function">
+<dt class="sig sig-object js" id="MapContext.includePoints">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">MapContext</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">includePoints</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">object</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#MapContext.includePoints" title="永久链接至目标">¶</a></dt>
+<dd><p>缩放视野展示所有经纬度</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>object</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">Object()</span></code></span>) – object</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="js function">
+<dt class="sig sig-object js" id="MapContext.getRegion">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">MapContext</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">getRegion</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#MapContext.getRegion" title="永久链接至目标">¶</a></dt>
+<dd><p>获取当前地图的视野范围</p>
+</dd></dl>
+
+<dl class="js function">
+<dt class="sig sig-object js" id="MapContext.getScale">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">MapContext</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">getScale</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#MapContext.getScale" title="永久链接至目标">¶</a></dt>
+<dd><p>获取当前地图的缩放级别</p>
+</dd></dl>
+
+</section>
+<section id="id2">
+<h2>示例代码<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<p><a class="reference download external" download="" href="https://developers.weixin.qq.com/s/3uVxpmmT6wY9"><code class="xref download docutils literal notranslate"><span class="pre">在开发者工具中预览效果</span></code></a></p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="c">&lt;!-- map.wxml --&gt;</span>
+<span class="p">&lt;</span><span class="nt">map</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;myMap&quot;</span> <span class="na">show-location</span> <span class="p">/&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;primary&quot;</span> <span class="na">bindtap</span><span class="o">=</span><span class="s">&quot;getCenterLocation&quot;</span><span class="p">&gt;</span>获取位置<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;primary&quot;</span> <span class="na">bindtap</span><span class="o">=</span><span class="s">&quot;moveToLocation&quot;</span><span class="p">&gt;</span>移动位置<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;primary&quot;</span> <span class="na">bindtap</span><span class="o">=</span><span class="s">&quot;translateMarker&quot;</span><span class="p">&gt;</span>移动标注<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;primary&quot;</span> <span class="na">bindtap</span><span class="o">=</span><span class="s">&quot;includePoints&quot;</span><span class="p">&gt;</span>缩放视野展示所有经纬度<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="c1">// map.js</span>
+<span class="nx">Page</span><span class="p">({</span>
+  <span class="nx">onReady</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// 使用 wx.createMapContext 获取 map 上下文</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">mapCtx</span> <span class="o">=</span> <span class="nx">wx</span><span class="p">.</span><span class="nx">createMapContext</span><span class="p">(</span><span class="s1">&#39;myMap&#39;</span><span class="p">)</span>
+  <span class="p">},</span>
+  <span class="nx">getCenterLocation</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">mapCtx</span><span class="p">.</span><span class="nx">getCenterLocation</span><span class="p">({</span>
+      <span class="nx">success</span><span class="p">(</span><span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">res</span><span class="p">.</span><span class="nx">longitude</span><span class="p">)</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">res</span><span class="p">.</span><span class="nx">latitude</span><span class="p">)</span>
+      <span class="p">}</span>
+    <span class="p">})</span>
+  <span class="p">},</span>
+  <span class="nx">moveToLocation</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">mapCtx</span><span class="p">.</span><span class="nx">moveToLocation</span><span class="p">()</span>
+  <span class="p">},</span>
+  <span class="nx">translateMarker</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">mapCtx</span><span class="p">.</span><span class="nx">translateMarker</span><span class="p">({</span>
+      <span class="nx">markerId</span><span class="o">:</span> <span class="mf">0</span><span class="p">,</span>
+      <span class="nx">autoRotate</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+      <span class="nx">duration</span><span class="o">:</span> <span class="mf">1000</span><span class="p">,</span>
+      <span class="nx">destination</span><span class="o">:</span> <span class="p">{</span>
+        <span class="nx">latitude</span><span class="o">:</span> <span class="mf">23.10229</span><span class="p">,</span>
+        <span class="nx">longitude</span><span class="o">:</span> <span class="mf">113.3345211</span><span class="p">,</span>
+      <span class="p">},</span>
+      <span class="nx">animationEnd</span><span class="p">()</span> <span class="p">{</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;animation end&#39;</span><span class="p">)</span>
+      <span class="p">}</span>
+    <span class="p">})</span>
+  <span class="p">},</span>
+  <span class="nx">includePoints</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">mapCtx</span><span class="p">.</span><span class="nx">includePoints</span><span class="p">({</span>
+      <span class="nx">padding</span><span class="o">:</span> <span class="p">[</span><span class="mf">10</span><span class="p">],</span>
+      <span class="nx">points</span><span class="o">:</span> <span class="p">[{</span>
+        <span class="nx">latitude</span><span class="o">:</span> <span class="mf">23.10229</span><span class="p">,</span>
+        <span class="nx">longitude</span><span class="o">:</span> <span class="mf">113.3345211</span><span class="p">,</span>
+      <span class="p">},</span> <span class="p">{</span>
+        <span class="nx">latitude</span><span class="o">:</span> <span class="mf">23.00229</span><span class="p">,</span>
+        <span class="nx">longitude</span><span class="o">:</span> <span class="mf">113.3345211</span><span class="p">,</span>
+      <span class="p">}]</span>
+    <span class="p">})</span>
+  <span class="p">}</span>
+<span class="p">})</span>
+</pre></div>
+</div>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>导航</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="总目录"
+             >索引</a></li>
+        <li class="right" >
+          <a href="../../http-routingtable.html" title="微信小程序API"
+             >wxapi</a> |</li>
+<li><a href="../../index.html">主页</a>&#160;|</li>
+<li><a href="../../contents.html">文档</a> &#187;</li>
+
+        <li class="nav-item nav-item-this"><a href="">MapContext</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; 版权所有 2019, Wxadev Docs.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.1.
+    </div>
+  </body>
+</html>

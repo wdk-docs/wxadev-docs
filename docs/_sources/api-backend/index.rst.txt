@@ -178,7 +178,7 @@
    :maxdepth: 1
    :hidden:
 
-   uniformMessage.send
+   uniform-message/uniformMessage.send
 
 动态消息
 ------------
@@ -380,3 +380,36 @@
    :hidden:
 
    soter.verifySignature
+
+订阅消息
+------------------------
+
++--------------------------------------------------------+------------------------------------+
+|                          名称                          |              功能说明              |
++========================================================+====================================+
+| :ref:`subscribeMessage.addTemplate`  ☁️                | 组合模板并添加至帐号下的个人模板库 |
++--------------------------------------------------------+------------------------------------+
+| :ref:`subscribeMessage.deleteTemplate`  ☁️             | 删除帐号下的个人模板               |
++--------------------------------------------------------+------------------------------------+
+| :ref:`subscribeMessage.getCategory`  ☁️                | 获取小程序账号的类目               |
++--------------------------------------------------------+------------------------------------+
+| :ref:`subscribeMessage.getPubTemplateKeyWordsById`  ☁️ | 获取模板标题下的关键词列表         |
++--------------------------------------------------------+------------------------------------+
+| :ref:`subscribeMessage.getPubTemplateTitleList`  ☁️    | 获取帐号所属类目下的公共模板标题   |
++--------------------------------------------------------+------------------------------------+
+| :ref:`subscribeMessage.getTemplateList`  ☁️            | 获取当前帐号下的个人模板列表       |
++--------------------------------------------------------+------------------------------------+
+| :ref:`subscribeMessage.send`  ☁️                       | 发送订阅消息                       |
++--------------------------------------------------------+------------------------------------+
+
+.. toctree::
+   :maxdepth: 1
+   :hidden:
+
+   subscribe-message/subscribeMessage.addTemplate
+   subscribe-message/subscribeMessage.deleteTemplate
+   subscribe-message/subscribeMessage.getCategory
+   subscribe-message/subscribeMessage.getPubTemplateKeyWordsById
+   subscribe-message/subscribeMessage.getPubTemplateTitleList
+   subscribe-message/subscribeMessage.getTemplateList
+   subscribe-message/subscribeMessage.send

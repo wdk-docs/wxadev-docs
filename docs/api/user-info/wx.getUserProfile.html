@@ -1,0 +1,263 @@
+
+<!DOCTYPE html>
+
+<html lang="zh_CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>wx.getUserProfile() &#8212; wxadev v2.21.0 文档</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx13.css" />
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/translations.js"></script>
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="在 wxadev v2.21.0 文档 中搜索"
+          href="../../_static/opensearch.xml"/>
+
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="搜索" href="../../search.html" />
+<link rel="canonical" href="http://www.sphinx-doc.org/en/master/api/user-info/wx.getUserProfile.html" />
+
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet" type="text/css" />
+ 
+<style type="text/css">
+  table.right { float: right; margin-left: 20px; }
+  table.right td { border: 1px solid #ccc; }
+  
+</style>
+<script type="text/javascript">
+  // intelligent scrolling of the sidebar content
+  $(window).scroll(function() {
+    var sb = $('.sphinxsidebarwrapper');
+    var win = $(window);
+    var sbh = sb.height();
+    var offset = $('.sphinxsidebar').position()['top'];
+    var wintop = win.scrollTop();
+    var winbot = wintop + win.innerHeight();
+    var curtop = sb.position()['top'];
+    var curbot = curtop + sbh;
+    // does sidebar fit in window?
+    if (sbh < win.innerHeight()) {
+      // yes: easy case -- always keep at the top
+      sb.css('top', $u.min([$u.max([0, wintop - offset - 10]), $(document).height() - sbh - 200]));
+    } else {
+      // no: only scroll if top/bottom edge of sidebar is at
+      // top/bottom edge of window
+      if (curtop > wintop && curbot > winbot) {
+        sb.css('top', $u.max([wintop - offset - 10, 0]));
+      } else if (curtop < wintop && curbot < winbot) {
+        sb.css('top', $u.min([winbot - sbh - offset - 20, $(document).height() - sbh - 200]));
+      }
+    }
+  });
+</script> 
+  </head><body>
+<div class="pageheader">
+  <ul>
+    <li><a href="../../index.html">主页</a></li>
+    <li><a href="../../basic/index.html">入门</a></li>
+    <li><a href="../../framework/index.html">框架</a></li>
+    <li><a href="../../component/index.html">组件</a></li>
+    <li><a href="../index.html">API</a></li>
+    <li><a href="../../api-backend/index.html">服务端</a></li>
+    <li><a href="../../reference/index.html">参考</a></li>
+    <li><a href="../../contents.html">目录</a></li>
+  </ul>
+  <div>
+    <a href="../../index.html">
+      <img src="../../_static/wxaheader.png" alt="wxa" />
+    </a>
+  </div>
+</div>
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>导航</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="总目录"
+             accesskey="I">索引</a></li>
+        <li class="right" >
+          <a href="../../http-routingtable.html" title="微信小程序API"
+             >wxapi</a> |</li>
+<li><a href="../../index.html">主页</a>&#160;|</li>
+<li><a href="../../contents.html">文档</a> &#187;</li>
+
+        <li class="nav-item nav-item-this"><a href="">wx.getUserProfile()</a></li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div role="note" aria-label="source link">
+    <h3>本页</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../_sources/api/user-info/wx.getUserProfile.rst.txt"
+            rel="nofollow">显示源代码</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">快速搜索</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="转向" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="wx-getuserprofile">
+<h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/api/wx.getUserProfile().html">wx.getUserProfile()</a><a class="headerlink" href="#wx-getuserprofile" title="永久链接至标题">¶</a></h1>
+<dl class="js function">
+<dt class="sig sig-object js" id="wx.getUserProfile">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">wx</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">getUserProfile</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">Object</span> <span class="pre">object</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#wx.getUserProfile" title="永久链接至目标">¶</a></dt>
+<dd><div class="versionadded">
+<p><span class="versionmodified added">基础库 新版功能: </span>2.10.4 开始支持，低版本需做兼容处理。</p>
+</div>
+</dd></dl>
+
+<p>参数
+Object object
+属性      类型      默认值     必填      说明
+lang    string  en      否       显示用户信息的语言
+合法值     说明      最低版本
+en      英文
+zh_CN   简体中文
+zh_TW   繁体中文
+desc    string          是       声明获取用户个人信息后的用途，不超过30个字符
+success function                否       接口调用成功的回调函数
+fail    function                否       接口调用失败的回调函数
+complete        function                否       接口调用结束的回调函数（调用成功、失败都会执行）
+object.success 回调函数
+参数
+Object res
+属性      类型      说明      最低版本
+userInfo        UserInfo        用户信息对象  2.10.4
+rawData string  不包括敏感信息的原始数据字符串，用于计算签名  2.10.4
+signature       string  使用 sha1( rawData + sessionkey ) 得到字符串，用于校验用户信息，详见 用户数据的签名验证和加解密 2.10.4
+encryptedData   string  包括敏感数据在内的完整用户信息的加密数据，详见 用户数据的签名验证和加解密   2.10.4
+iv      string  加密算法的初始向量，详见 用户数据的签名验证和加解密      2.10.4
+cloudID string  敏感数据对应的云 ID，开通云开发的小程序才会返回，可通过云调用直接获取开放数据，详细见云调用直接获取开放数据 2.10.4
+示例代码
+在开发者工具中预览效果</p>
+<p>Bug &amp; Tip
+tip：仅小程序中 wx.getUserInfo 接口进行调整，小游戏中不受影响；
+tip：开发者工具中仅 2.10.4 及以上版本可访问 wx.getUserProfile 接口，在真机上可参考示例代码进行判断，无需根据版本号或者 canIUse 进行条件。
+tip：wx.getUserProfile 返回的加密数据中不包含 openId 和 unionId 字段。
+bug：开发者工具中 2.10.4~2.16.1 基础库版本通过 &lt;button open-type=”getUserInfo”&gt; 会返回真实数据，真机上此区间会按照公告返回匿名数据。
+&lt;view class=”container”&gt;</p>
+<blockquote>
+<div><dl>
+<dt>&lt;view class=”userinfo”&gt;</dt><dd><dl class="simple">
+<dt>&lt;block wx:if=”{{!hasUserInfo}}”&gt;</dt><dd><p>&lt;button wx:if=”{{canIUseGetUserProfile}}” bindtap=”getUserProfile”&gt; 获取头像昵称 &lt;/button&gt;
+&lt;button wx:else open-type=”getUserInfo” bindgetuserinfo=”getUserInfo”&gt; 获取头像昵称 &lt;/button&gt;</p>
+</dd>
+</dl>
+<p>&lt;/block&gt;
+&lt;block wx:else&gt;</p>
+<blockquote>
+<div><p>&lt;image bindtap=”bindViewTap” class=”userinfo-avatar” src=”{{userInfo.avatarUrl}}” mode=”cover”&gt;&lt;/image&gt;
+&lt;text class=”userinfo-nickname”&gt;{{userInfo.nickName}}&lt;/text&gt;</p>
+</div></blockquote>
+<p>&lt;/block&gt;</p>
+</dd>
+</dl>
+<p>&lt;/view&gt;</p>
+</div></blockquote>
+<p>&lt;/view&gt;
+Page({</p>
+<blockquote>
+<div><dl class="simple">
+<dt>data: {</dt><dd><p>userInfo: {},
+hasUserInfo: false,
+canIUseGetUserProfile: false,</p>
+</dd>
+</dl>
+<p>},
+onLoad() {</p>
+<blockquote>
+<div><dl>
+<dt>if (wx.getUserProfile) {</dt><dd><dl class="simple">
+<dt>this.setData({</dt><dd><p>canIUseGetUserProfile: true</p>
+</dd>
+</dl>
+<p>})</p>
+</dd>
+</dl>
+<p>}</p>
+</div></blockquote>
+<p>},
+getUserProfile(e) {</p>
+<blockquote>
+<div><p>// 推荐使用wx.getUserProfile获取用户信息，开发者每次通过该接口获取用户个人信息均需用户确认
+// 开发者妥善保管用户快速填写的头像昵称，避免重复弹窗
+wx.getUserProfile({</p>
+<blockquote>
+<div><p>desc: ‘用于完善会员资料’, // 声明获取用户个人信息后的用途，后续会展示在弹窗中，请谨慎填写
+success: (res) =&gt; {</p>
+<blockquote>
+<div><dl class="simple">
+<dt>this.setData({</dt><dd><p>userInfo: res.userInfo,
+hasUserInfo: true</p>
+</dd>
+</dl>
+<p>})</p>
+</div></blockquote>
+<p>}</p>
+</div></blockquote>
+<p>})</p>
+</div></blockquote>
+<p>},
+getUserInfo(e) {</p>
+<blockquote>
+<div><p>// 不推荐使用getUserInfo获取用户信息，预计自2021年4月13日起，getUserInfo将不再弹出弹窗，并直接返回匿名的用户个人信息
+this.setData({</p>
+<blockquote>
+<div><p>userInfo: e.detail.userInfo,
+hasUserInfo: true</p>
+</div></blockquote>
+<p>})</p>
+</div></blockquote>
+<p>},</p>
+</div></blockquote>
+<p>})</p>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>导航</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="总目录"
+             >索引</a></li>
+        <li class="right" >
+          <a href="../../http-routingtable.html" title="微信小程序API"
+             >wxapi</a> |</li>
+<li><a href="../../index.html">主页</a>&#160;|</li>
+<li><a href="../../contents.html">文档</a> &#187;</li>
+
+        <li class="nav-item nav-item-this"><a href="">wx.getUserProfile()</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; 版权所有 2019, Wxadev Docs.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.1.
+    </div>
+  </body>
+</html>

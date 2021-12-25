@@ -1,0 +1,387 @@
+
+<!DOCTYPE html>
+
+<html lang="zh_CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>下发统一服务消息 &#8212; wxadev v2.21.0 文档</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx13.css" />
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/translations.js"></script>
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="在 wxadev v2.21.0 文档 中搜索"
+          href="../../_static/opensearch.xml"/>
+
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="搜索" href="../../search.html" />
+<link rel="canonical" href="http://www.sphinx-doc.org/en/master/api-backend/uniform-message/uniformMessage.send.html" />
+
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet" type="text/css" />
+ 
+<style type="text/css">
+  table.right { float: right; margin-left: 20px; }
+  table.right td { border: 1px solid #ccc; }
+  
+</style>
+<script type="text/javascript">
+  // intelligent scrolling of the sidebar content
+  $(window).scroll(function() {
+    var sb = $('.sphinxsidebarwrapper');
+    var win = $(window);
+    var sbh = sb.height();
+    var offset = $('.sphinxsidebar').position()['top'];
+    var wintop = win.scrollTop();
+    var winbot = wintop + win.innerHeight();
+    var curtop = sb.position()['top'];
+    var curbot = curtop + sbh;
+    // does sidebar fit in window?
+    if (sbh < win.innerHeight()) {
+      // yes: easy case -- always keep at the top
+      sb.css('top', $u.min([$u.max([0, wintop - offset - 10]), $(document).height() - sbh - 200]));
+    } else {
+      // no: only scroll if top/bottom edge of sidebar is at
+      // top/bottom edge of window
+      if (curtop > wintop && curbot > winbot) {
+        sb.css('top', $u.max([wintop - offset - 10, 0]));
+      } else if (curtop < wintop && curbot < winbot) {
+        sb.css('top', $u.min([winbot - sbh - offset - 20, $(document).height() - sbh - 200]));
+      }
+    }
+  });
+</script> 
+  </head><body>
+<div class="pageheader">
+  <ul>
+    <li><a href="../../index.html">主页</a></li>
+    <li><a href="../../basic/index.html">入门</a></li>
+    <li><a href="../../framework/index.html">框架</a></li>
+    <li><a href="../../component/index.html">组件</a></li>
+    <li><a href="../../api/index.html">API</a></li>
+    <li><a href="../index.html">服务端</a></li>
+    <li><a href="../../reference/index.html">参考</a></li>
+    <li><a href="../../contents.html">目录</a></li>
+  </ul>
+  <div>
+    <a href="../../index.html">
+      <img src="../../_static/wxaheader.png" alt="wxa" />
+    </a>
+  </div>
+</div>
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>导航</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="总目录"
+             accesskey="I">索引</a></li>
+        <li class="right" >
+          <a href="../../http-routingtable.html" title="微信小程序API"
+             >wxapi</a> |</li>
+<li><a href="../../index.html">主页</a>&#160;|</li>
+<li><a href="../../contents.html">文档</a> &#187;</li>
+
+        <li class="nav-item nav-item-this"><a href="">下发统一服务消息</a></li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../../contents.html">目录</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">下发统一服务消息</a><ul>
+<li><a class="reference internal" href="#id2">服务器端调用</a></li>
+<li><a class="reference internal" href="#id3">云调用</a></li>
+<li><a class="reference internal" href="#id4">错误码</a></li>
+</ul>
+</li>
+</ul>
+
+  <div role="note" aria-label="source link">
+    <h3>本页</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../_sources/api-backend/uniform-message/uniformMessage.send.rst.txt"
+            rel="nofollow">显示源代码</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">快速搜索</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="转向" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="uniformmessage-send">
+<span id="id1"></span><h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/api-backend/uniformMessage.send.html">下发统一服务消息</a><a class="headerlink" href="#uniformmessage-send" title="永久链接至标题">¶</a></h1>
+<p>..:: 本接口应在服务器端调用，详细说明参见服务端API。</p>
+<p>..:: 本接口支持云调用。</p>
+<section id="id2">
+<h2>服务器端调用<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<p>接口地址请求地址 <a class="reference internal" href="../../glossary.html#term-api"><span class="xref std std-term">api</span></a></p>
+<dl class="http post">
+<dt class="sig sig-object http" id="post-message-wxopen-template-uniform_send?access_token=(ACCESS_TOKEN)">
+<span class="sig-name descname"><span class="pre">POST</span> </span><span class="sig-name descname"><span class="pre">message/wxopen/template/uniform_send?access_token=</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">ACCESS_TOKEN</span></em><span class="sig-paren">)</span><a class="headerlink" href="#post-message-wxopen-template-uniform_send?access_token=(ACCESS_TOKEN)" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Synopsis</dt>
+<dd class="field-odd"><p>下发小程序和公众号统一的服务消息</p>
+</dd>
+<dt class="field-even">Mimetype</dt>
+<dd class="field-even"><p><cite>application/json</cite></p>
+</dd>
+<dt class="field-odd">Query Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>access_token</strong> (<em>string</em>) – <em>必选</em>     接口调用凭证</p></li>
+</ul>
+</dd>
+<dt class="field-even">Request JSON Object</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>touser</strong> (<em>string</em>) – <em>必选</em> 用户openid，可以是小程序的openid，也可以是mp_template_msg.appid对应的公众号的openid</p></li>
+<li><p><strong>weapp_template_msg</strong> (<em>object</em>) – <p>非必选        小程序模板消息相关的信息，可以参考小程序模板消息接口; 有此节点则优先发送小程序模板消息</p>
+<ul>
+<li><p><strong>template_id</strong> (<em>string</em>):  <em>必选</em>       小程序模板ID</p></li>
+<li><p><strong>page</strong> (<em>string</em>):  <em>必选</em>      小程序页面路径</p></li>
+<li><p><strong>form_id</strong> (<em>string</em>): <em>必选</em>    小程序模板消息formid</p></li>
+<li><p><strong>data</strong> (<em>string</em>):  <em>必选</em>      小程序模板数据</p></li>
+<li><p><strong>emphasis_keyword</strong> (<em>string</em>):        <em>必选</em>    小程序模板放大关键词</p></li>
+</ul>
+</p></li>
+<li><p><strong>mp_template_msg</strong> (<em>object</em>) – <p><em>必选</em>  公众号模板消息相关的信息，可以参考公众号模板消息接口；有此节点并且没有weapp_template_msg节点时，发送公众号模板消息</p>
+<ul>
+<li><p><strong>appid</strong> (<em>string</em>): <em>必选</em>      公众号appid，要求与小程序有绑定且同主体</p></li>
+<li><p><strong>template_id</strong> (<em>string</em>): <em>必选</em>        公众号模板id</p></li>
+<li><p><strong>url</strong> (<em>string</em>): <em>必选</em>        公众号模板消息所要跳转的url</p></li>
+<li><p><strong>miniprogram</strong> (<em>string</em>): <em>必选</em>        公众号模板消息所要跳转的小程序，小程序的必须与公众号具有绑定关系</p></li>
+<li><p><strong>data</strong> (<em>string</em>): <em>必选</em>       公众号模板消息的数据</p></li>
+</ul>
+</p></li>
+</ul>
+</dd>
+<dt class="field-odd">Response JSON Object</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>errmsg</strong> (<em>string</em>) – 错误信息</p></li>
+<li><p><strong>errcode</strong> (<em>number</em>) – 错误码</p></li>
+</ul>
+</dd>
+</dl>
+<div class="literal-block-wrapper docutils container" id="uniformmessage-send-response-example">
+<div class="code-block-caption"><span class="caption-text">响应示例</span><a class="headerlink" href="#uniformmessage-send-response-example" title="永久链接至代码">¶</a></div>
+<div class="highlight-http notranslate"><div class="highlight"><pre><span></span>HTTP/1.1 200 OK
+Vary: Accept
+Content-Type: text/javascript
+{
+  &quot;errcode&quot;: 0,
+  &quot;errmsg&quot;: &quot;ok&quot;
+}
+</pre></div>
+</div>
+</div>
+</dd></dl>
+
+</section>
+<section id="id3">
+<h2>云调用<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
+<dl class="js function">
+<dt class="sig sig-object js" id="openapi.uniformMessage.send">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">openapi</span></span><span class="p"><span class="pre">.</span></span><span class="n"><span class="pre">uniformMessage</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">send</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">{touser</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">weappTemplateMsg</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mpTemplateMsg}</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#openapi.uniformMessage.send" title="永久链接至目标">¶</a></dt>
+<dd><p>云调用是小程序·云开发提供的在云函数中调用微信开放接口的能力，需要在云函数中通过 wx-server-sdk 使用。</p>
+<dl class="field-list">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>touser</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">string()</span></code></span>) – 是       用户openid，可以是小程序的openid，也可以是mp_template_msg.appid对应的公众号的openid</p></li>
+<li><p><strong>weappTemplateMsg</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">object()</span></code></span>) – <p>否       小程序模板消息相关的信息，可以参考小程序模板消息接口; 有此节点则优先发送小程序模板消息</p>
+<ul>
+<li><p><strong>templateId</strong> (<em>string</em>):              是       小程序模板ID</p></li>
+<li><p><strong>page</strong> (<em>string</em>):            是       小程序页面路径</p></li>
+<li><p><strong>formId</strong> (<em>string</em>):          是       小程序模板消息formid</p></li>
+<li><p><strong>data</strong> (<em>string</em>):            是       小程序模板数据</p></li>
+<li><p><strong>emphasisKeyword</strong>     (<em>string</em>):             是       小程序模板放大关键词</p></li>
+</ul>
+</p></li>
+<li><p><strong>mpTemplateMsg</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">object()</span></code></span>) – <p>是       公众号模板消息相关的信息，可以参考公众号模板消息接口；有此节点并且没有weapp_template_msg节点时，发送公众号模板消息</p>
+<ul>
+<li><p><strong>appid</strong>       (<em>string</em>):             是       公众号appid，要求与小程序有绑定且同主体</p></li>
+<li><p><strong>templateId</strong>  (<em>string</em>):             是       公众号模板id</p></li>
+<li><p><strong>url</strong> (<em>string</em>):             是       公众号模板消息所要跳转的url</p></li>
+<li><p><strong>miniprogram</strong> (<em>string</em>):             是       公众号模板消息所要跳转的小程序，小程序的必须与公众号具有绑定关系</p></li>
+<li><p><strong>data</strong>        (<em>string</em>):     是       公众号模板消息的数据</p></li>
+</ul>
+</p></li>
+</ul>
+</dd>
+<dt class="field-even">返回</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><strong>errCode</strong>     (<em>number</em>):     错误码</p></li>
+<li><p><strong>errMsg</strong>      (<em>string</em>):     错误信息</p></li>
+</ul>
+</p>
+</dd>
+<dt class="field-odd">抛出</dt>
+<dd class="field-odd"><p><span><code class="xref js js-func docutils literal notranslate"><span class="pre">SomeError()</span></code></span> – <ul class="simple">
+<li><p><strong>errCode</strong>     (<em>number</em>):     错误码</p></li>
+<li><p><strong>errMsg</strong>      (<em>string</em>):     错误信息</p></li>
+</ul>
+</p>
+</dd>
+<dt class="field-even">请求示例</dt>
+<dd class="field-even"><div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="kd">const</span> <span class="nx">cloud</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;wx-server-sdk&#39;</span><span class="p">)</span>
+<span class="nx">cloud</span><span class="p">.</span><span class="nx">init</span><span class="p">()</span>
+<span class="nx">exports</span><span class="p">.</span><span class="nx">main</span> <span class="o">=</span> <span class="k">async</span> <span class="p">(</span><span class="nx">event</span><span class="p">,</span> <span class="nx">context</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+  <span class="k">try</span> <span class="p">{</span>
+    <span class="kd">const</span> <span class="nx">result</span> <span class="o">=</span> <span class="k">await</span> <span class="nx">cloud</span><span class="p">.</span><span class="nx">openapi</span><span class="p">.</span><span class="nx">uniformMessage</span><span class="p">.</span><span class="nx">send</span><span class="p">({</span>
+      <span class="nx">touser</span><span class="o">:</span> <span class="s1">&#39;OPENID&#39;</span><span class="p">,</span>
+      <span class="nx">weappTemplateMsg</span><span class="o">:</span> <span class="p">{</span>
+        <span class="nx">page</span><span class="o">:</span> <span class="s1">&#39;page/page/index&#39;</span><span class="p">,</span>
+        <span class="nx">data</span><span class="o">:</span> <span class="p">{</span>
+          <span class="nx">keyword1</span><span class="o">:</span> <span class="p">{</span>
+            <span class="nx">value</span><span class="o">:</span> <span class="s1">&#39;339208499&#39;</span>
+          <span class="p">},</span>
+          <span class="nx">keyword2</span><span class="o">:</span> <span class="p">{</span>
+            <span class="nx">value</span><span class="o">:</span> <span class="s1">&#39;2015年01月05日 12:30&#39;</span>
+          <span class="p">},</span>
+          <span class="nx">keyword3</span><span class="o">:</span> <span class="p">{</span>
+            <span class="nx">value</span><span class="o">:</span> <span class="s1">&#39;腾讯微信总部&#39;</span>
+          <span class="p">},</span>
+          <span class="nx">keyword4</span><span class="o">:</span> <span class="p">{</span>
+            <span class="nx">value</span><span class="o">:</span> <span class="s1">&#39;广州市海珠区新港中路397号&#39;</span>
+          <span class="p">}</span>
+        <span class="p">},</span>
+        <span class="nx">templateId</span><span class="o">:</span> <span class="s1">&#39;TEMPLATE_ID&#39;</span><span class="p">,</span>
+        <span class="nx">formId</span><span class="o">:</span> <span class="s1">&#39;FORMID&#39;</span><span class="p">,</span>
+        <span class="nx">emphasisKeyword</span><span class="o">:</span> <span class="s1">&#39;keyword1.DATA&#39;</span>
+      <span class="p">},</span>
+      <span class="nx">mpTemplateMsg</span><span class="o">:</span> <span class="p">{</span>
+        <span class="nx">appid</span><span class="o">:</span> <span class="s1">&#39;APPID &#39;</span><span class="p">,</span>
+        <span class="nx">url</span><span class="o">:</span> <span class="s1">&#39;http://weixin.qq.com/download&#39;</span><span class="p">,</span>
+        <span class="nx">miniprogram</span><span class="o">:</span> <span class="p">{</span>
+          <span class="nx">appid</span><span class="o">:</span> <span class="s1">&#39;xiaochengxuappid12345&#39;</span><span class="p">,</span>
+          <span class="nx">pagepath</span><span class="o">:</span> <span class="s1">&#39;index?foo=bar&#39;</span>
+        <span class="p">},</span>
+        <span class="nx">data</span><span class="o">:</span> <span class="p">{</span>
+          <span class="nx">first</span><span class="o">:</span> <span class="p">{</span>
+            <span class="nx">value</span><span class="o">:</span> <span class="s1">&#39;恭喜你购买成功！&#39;</span><span class="p">,</span>
+            <span class="nx">color</span><span class="o">:</span> <span class="s1">&#39;#173177&#39;</span>
+          <span class="p">},</span>
+          <span class="nx">keyword1</span><span class="o">:</span> <span class="p">{</span>
+            <span class="nx">value</span><span class="o">:</span> <span class="s1">&#39;巧克力&#39;</span><span class="p">,</span>
+            <span class="nx">color</span><span class="o">:</span> <span class="s1">&#39;#173177&#39;</span>
+          <span class="p">},</span>
+          <span class="nx">keyword2</span><span class="o">:</span> <span class="p">{</span>
+            <span class="nx">value</span><span class="o">:</span> <span class="s1">&#39;39.8元&#39;</span><span class="p">,</span>
+            <span class="nx">color</span><span class="o">:</span> <span class="s1">&#39;#173177&#39;</span>
+          <span class="p">},</span>
+          <span class="nx">keyword3</span><span class="o">:</span> <span class="p">{</span>
+            <span class="nx">value</span><span class="o">:</span> <span class="s1">&#39;2014年9月22日&#39;</span><span class="p">,</span>
+            <span class="nx">color</span><span class="o">:</span> <span class="s1">&#39;#173177&#39;</span>
+          <span class="p">},</span>
+          <span class="nx">remark</span><span class="o">:</span> <span class="p">{</span>
+            <span class="nx">value</span><span class="o">:</span> <span class="s1">&#39;欢迎再次购买！&#39;</span><span class="p">,</span>
+            <span class="nx">color</span><span class="o">:</span> <span class="s1">&#39;#173177&#39;</span>
+          <span class="p">}</span>
+        <span class="p">},</span>
+        <span class="nx">templateId</span><span class="o">:</span> <span class="s1">&#39;TEMPLATE_ID&#39;</span>
+      <span class="p">}</span>
+    <span class="p">})</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">result</span><span class="p">)</span>
+    <span class="k">return</span> <span class="nx">result</span>
+  <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">err</span><span class="p">)</span>
+    <span class="k">return</span> <span class="nx">err</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</dd>
+<dt class="field-odd">返回示例</dt>
+<dd class="field-odd"><div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;errCode&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+  <span class="nt">&quot;errMsg&quot;</span><span class="p">:</span> <span class="s2">&quot;openapi.uniformMessage.send:ok&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="id4">
+<h2>错误码<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h2>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 9%" />
+<col style="width: 91%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>错误码</p></th>
+<th class="head"><p>说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>40037</p></td>
+<td><p>模板id不正确，weapp_template_msg.template_id或者mp_template_msg.template_id</p></td>
+</tr>
+<tr class="row-odd"><td><p>41028</p></td>
+<td><p>weapp_template_msg.form_id过期或者不正确</p></td>
+</tr>
+<tr class="row-even"><td><p>41029</p></td>
+<td><p>weapp_template_msg.form_id已被使用</p></td>
+</tr>
+<tr class="row-odd"><td><p>41030</p></td>
+<td><p>weapp_template_msg.page不正确</p></td>
+</tr>
+<tr class="row-even"><td><p>45009</p></td>
+<td><p>接口调用超过限额</p></td>
+</tr>
+<tr class="row-odd"><td><p>40003</p></td>
+<td><p>touser不是正确的openid</p></td>
+</tr>
+<tr class="row-even"><td><p>40013</p></td>
+<td><p>appid不正确，或者不符合绑定关系要求</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>导航</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="总目录"
+             >索引</a></li>
+        <li class="right" >
+          <a href="../../http-routingtable.html" title="微信小程序API"
+             >wxapi</a> |</li>
+<li><a href="../../index.html">主页</a>&#160;|</li>
+<li><a href="../../contents.html">文档</a> &#187;</li>
+
+        <li class="nav-item nav-item-this"><a href="">下发统一服务消息</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; 版权所有 2019, Wxadev Docs.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.1.
+    </div>
+  </body>
+</html>
