@@ -4,8 +4,7 @@
 <html lang="zh_CN">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>页面渲染优化 &#8212; wxadev v2.21.0 文档</title>
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinx13.css" />
@@ -146,40 +145,40 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <section id="id1">
+  <div class="section" id="id1">
 <h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/framework/performance/tips/start_optimizeC.html">页面渲染优化</a><a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
 <p>页面渲染的优化，要让「首页渲染完成」(Page.onReady) 尽可能提前。
 但很多情况下「首页渲染完成」可能还是空白页面，因此更重要的是让用户能够更早的看到页面内容（First Paint 或 First Contentful Paint）。</p>
-<section id="id2">
+<div class="section" id="id2">
 <h2>1. 使用「按需注入」和「用时注入」<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
 <p>除了优化代码注入的耗时外，「按需注入」和「用时注入」也可以减少需要初始化的组件数量，降低实际页面渲染的耗时，使「首页渲染完成」提前。</p>
 <p>启用「按需注入」之后，部分组件代码注入会被延迟到首页渲染阶段执行，导致阶段耗时上涨，但总耗时一般会下降。</p>
-</section>
-<section id="id3">
+</div>
+<div class="section" id="id3">
 <h2>2. 启用「初始渲染缓存」<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
 <p>自基础库版本 2.11.1 起，小程序支持启用初始渲染缓存。开启后，可以在非首次启动时，使视图层不需要等待逻辑层初始化完毕，而直接提前将页面渲染结果展示给用户，这可以使「首页渲染完成」和页面对用户可见的时间大大提前。</p>
-</section>
-<section id="id4">
+</div>
+<div class="section" id="id4">
 <h2>3. 避免引用未使用的自定义组件<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h2>
 <p>在页面渲染时，会初始化在当前页面配置和全局配置通过 usingComponents 引用的自定义组件，以及组件所依赖的其他自定义组件。未使用的自定义组件会影响渲染耗时。</p>
 <p>当组件不被使用时，应及时从 usingComponents 中移除。</p>
-</section>
-<section id="id5">
+</div>
+<div class="section" id="id5">
 <h2>4. 精简首屏数据<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h2>
 <p>首页渲染的耗时与页面的复杂程度正相关。对于复杂页面，可以选择进行渐进式的渲染，根据页面内容优先级，优先展示页面的关键部分，对于非关键部分或者不可见的部分可以延迟更新。</p>
 <p>此外，与视图层渲染无关的数据应尽量不要放在 data 中，避免影响页面渲染时间。</p>
-</section>
-<section id="id6">
+</div>
+<div class="section" id="id6">
 <h2>6. 缓存请求数据<a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h2>
 <p>小程序提供了wx.setStorage、wx.getStorage等读写本地缓存的能力，数据存储在本地，返回的会比网络请求快。如果开发者基于某些原因无法采用数据预拉取与周期性更新，我们推荐优先从缓存中获取数据来渲染视图，等待网络请求返回后进行更新。</p>
-</section>
-<section id="id7">
+</div>
+<div class="section" id="id7">
 <h2>7. 骨架屏<a class="headerlink" href="#id7" title="永久链接至标题">¶</a></h2>
 <p>骨架屏通常用于在页面完全渲染之前，通过一些灰色的区块大致勾勒出轮廓，待数据加载完成后，再替换成真实的内容。</p>
 <p>建议开发者在页面数据未准备好时（例如需要通过网络获取），尽量避免展示空白页面，而是先通过骨架屏展示页面的大致结构，请求数据返回后再进行页面更新。以提升用户的等待意愿。</p>
 <p>开发者工具提供了生成骨架屏的能力，帮助开发者更便捷的维护骨架屏。</p>
-</section>
-</section>
+</div>
+</div>
 
 
             <div class="clearer"></div>
@@ -214,7 +213,7 @@
     </div>
     <div class="footer" role="contentinfo">
         &#169; 版权所有 2019, Wxadev Docs.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.1.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.2.
     </div>
   </body>
 </html>

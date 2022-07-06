@@ -4,8 +4,7 @@
 <html lang="zh_CN">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>运算符 &#8212; wxadev v2.21.0 文档</title>
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinx13.css" />
@@ -148,9 +147,9 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <section id="wxs-operator">
+  <div class="section" id="wxs-operator">
 <span id="id1"></span><h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/framework/view/wxs/04operator.html">运算符</a><a class="headerlink" href="#wxs-operator" title="永久链接至标题">¶</a></h1>
-<section id="id2">
+<div class="section" id="id2">
 <h2>基本运算符<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
 <p>示例代码：</p>
 <div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="kd">var</span> <span class="nx">a</span> <span class="o">=</span> <span class="mf">10</span><span class="p">,</span> <span class="nx">b</span> <span class="o">=</span> <span class="mf">20</span><span class="p">;</span>
@@ -172,8 +171,8 @@
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;.wxs&#39;</span> <span class="o">===</span> <span class="nx">a</span> <span class="o">+</span> <span class="nx">b</span><span class="p">);</span>
 </pre></div>
 </div>
-</section>
-<section id="id3">
+</div>
+<div class="section" id="id3">
 <h2>一元运算符<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
 <p>示例代码：</p>
 <div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="kd">var</span> <span class="nx">a</span> <span class="o">=</span> <span class="mf">10</span><span class="p">,</span> <span class="nx">b</span> <span class="o">=</span> <span class="mf">20</span><span class="p">;</span>
@@ -193,15 +192,15 @@
 <span class="c1">// 取反运算</span>
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="kc">false</span> <span class="o">===</span> <span class="o">!</span><span class="nx">a</span><span class="p">);</span>
 <span class="c1">// delete 运算</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="kc">true</span> <span class="o">===</span> <span class="ow">delete</span> <span class="nx">a</span><span class="p">.</span><span class="nx">fake</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="kc">true</span> <span class="o">===</span> <span class="k">delete</span> <span class="nx">a</span><span class="p">.</span><span class="nx">fake</span><span class="p">);</span>
 <span class="c1">// void 运算</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="kc">undefined</span> <span class="o">===</span> <span class="ow">void</span> <span class="nx">a</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="kc">undefined</span> <span class="o">===</span> <span class="k">void</span> <span class="nx">a</span><span class="p">);</span>
 <span class="c1">// typeof 运算</span>
-<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;number&quot;</span> <span class="o">===</span> <span class="ow">typeof</span> <span class="nx">a</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;number&quot;</span> <span class="o">===</span> <span class="k">typeof</span> <span class="nx">a</span><span class="p">);</span>
 </pre></div>
 </div>
-</section>
-<section id="id4">
+</div>
+<div class="section" id="id4">
 <h2>位运算符<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h2>
 <p>示例代码：</p>
 <div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="kd">var</span> <span class="nx">a</span> <span class="o">=</span> <span class="mf">10</span><span class="p">,</span> <span class="nx">b</span> <span class="o">=</span> <span class="mf">20</span><span class="p">;</span>
@@ -220,8 +219,8 @@
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="mf">11</span> <span class="o">===</span> <span class="p">(</span><span class="nx">a</span> <span class="o">|</span> <span class="mf">3</span><span class="p">));</span>
 </pre></div>
 </div>
-</section>
-<section id="id5">
+</div>
+<div class="section" id="id5">
 <h2>比较运算符<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h2>
 <p>示例代码：</p>
 <div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="kd">var</span> <span class="nx">a</span> <span class="o">=</span> <span class="mf">10</span><span class="p">,</span> <span class="nx">b</span> <span class="o">=</span> <span class="mf">20</span><span class="p">;</span>
@@ -236,8 +235,8 @@
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="kc">false</span> <span class="o">===</span> <span class="p">(</span><span class="nx">a</span> <span class="o">&gt;=</span> <span class="nx">b</span><span class="p">));</span>
 </pre></div>
 </div>
-</section>
-<section id="id6">
+</div>
+<div class="section" id="id6">
 <h2>等值运算符<a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h2>
 <p>示例代码：</p>
 <div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="kd">var</span> <span class="nx">a</span> <span class="o">=</span> <span class="mf">10</span><span class="p">,</span> <span class="nx">b</span> <span class="o">=</span> <span class="mf">20</span><span class="p">;</span>
@@ -252,8 +251,8 @@
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="kc">true</span> <span class="o">===</span> <span class="p">(</span><span class="nx">a</span> <span class="o">!==</span> <span class="nx">b</span><span class="p">));</span>
 </pre></div>
 </div>
-</section>
-<section id="id7">
+</div>
+<div class="section" id="id7">
 <h2>赋值运算符<a class="headerlink" href="#id7" title="永久链接至标题">¶</a></h2>
 <p>示例代码：</p>
 <div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="kd">var</span> <span class="nx">a</span> <span class="o">=</span> <span class="mf">10</span><span class="p">;</span>
@@ -303,8 +302,8 @@
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="mf">11</span> <span class="o">===</span> <span class="nx">a</span><span class="p">);</span>
 </pre></div>
 </div>
-</section>
-<section id="id8">
+</div>
+<div class="section" id="id8">
 <h2>二元逻辑运算符<a class="headerlink" href="#id8" title="永久链接至标题">¶</a></h2>
 <p>示例代码：</p>
 <div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="kd">var</span> <span class="nx">a</span> <span class="o">=</span> <span class="mf">10</span><span class="p">,</span> <span class="nx">b</span> <span class="o">=</span> <span class="mf">20</span><span class="p">;</span>
@@ -315,8 +314,8 @@
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="mf">10</span> <span class="o">===</span> <span class="p">(</span><span class="nx">a</span> <span class="o">||</span> <span class="nx">b</span><span class="p">));</span>
 </pre></div>
 </div>
-</section>
-<section id="id9">
+</div>
+<div class="section" id="id9">
 <h2>其他运算符<a class="headerlink" href="#id9" title="永久链接至标题">¶</a></h2>
 <p>示例代码：</p>
 <div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="kd">var</span> <span class="nx">a</span> <span class="o">=</span> <span class="mf">10</span><span class="p">,</span> <span class="nx">b</span> <span class="o">=</span> <span class="mf">20</span><span class="p">;</span>
@@ -327,8 +326,8 @@
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="mf">20</span> <span class="o">===</span> <span class="p">(</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">));</span>
 </pre></div>
 </div>
-</section>
-<section id="id10">
+</div>
+<div class="section" id="id10">
 <h2>运算符优先级<a class="headerlink" href="#id10" title="永久链接至标题">¶</a></h2>
 <table class="docutils align-default">
 <colgroup>
@@ -603,8 +602,8 @@
 </tr>
 </tbody>
 </table>
-</section>
-</section>
+</div>
+</div>
 
 
             <div class="clearer"></div>
@@ -638,7 +637,7 @@
     </div>
     <div class="footer" role="contentinfo">
         &#169; 版权所有 2019, Wxadev Docs.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.1.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.2.
     </div>
   </body>
 </html>

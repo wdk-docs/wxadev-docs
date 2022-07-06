@@ -46,6 +46,7 @@ rule	string	参数类型
   "tid": "99"
 }
 响应示例
+
 {
    "errcode": 0,
    "errmsg": "ok",

@@ -4,8 +4,7 @@
 <html lang="zh_CN">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>聊天素材支持小程序打开 &#8212; wxadev v2.21.0 文档</title>
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinx13.css" />
@@ -144,7 +143,7 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <section id="id1">
+  <div class="section" id="id1">
 <h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/material/index.html">聊天素材支持小程序打开</a><a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
 <div class="admonition note">
 <p class="admonition-title">注解</p>
@@ -162,12 +161,12 @@
 <p class="admonition-title">注解</p>
 <p>支持类型：仅小程序，小游戏暂不支持</p>
 </div>
-<section id="id2">
+<div class="section" id="id2">
 <h2>功能介绍<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
 <p>微信聊天内素材（文件、图片、视频和webview）的打开方式增加使用小程序打开的入口。用户可通过小程序处理聊天内的文件、图片、视频和webview。例如用小程序将文件存储到网盘、给图片加滤镜、进行视频剪辑或者将webview保存到笔记等。目前仅支持不带二维码的图片直接通过小程序打开。</p>
 <p>用户在打开微信聊天内的素材时，如果小程序配置了支持打开该类型的素材并审核通过，而且用户曾经使用过该小程序，则打开该类型的素材时会出现使用小程序打开的入口。</p>
-</section>
-<section id="id3">
+</div>
+<div class="section" id="id3">
 <h2>使用说明<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
 <p>开发者需要在小程序全局配置(app.json)中声明支持打开的文件类型，对一种文件类型只能声明一种处理方式。</p>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
@@ -347,27 +346,27 @@
 </tr>
 </tbody>
 </table>
-</section>
-<section id="id8">
+</div>
+<div class="section" id="id8">
 <h2>小程序启动参数<a class="headerlink" href="#id8" title="永久链接至标题">¶</a></h2>
 <p>小程序启动参数里场景值为1173，该场景下启动参数和query同一级有一个数组forwardMaterials，代表转发的文件信息，数组中每一个对象包含属性{type,name,path,size}分别代表文件类型，文件名，文件路径或url，文件大小</p>
-</section>
-<section id="id9">
+</div>
+<div class="section" id="id9">
 <h2>发布<a class="headerlink" href="#id9" title="永久链接至标题">¶</a></h2>
 <p>小程序提审时会审核声明的supportedMaterials是否合规，小程序发布上线后相应文件类型打开入口才会出现小程序。</p>
 <p>如果小程序实现的功能价值较低将不会被通过审核，包括但不限于以下情况：</p>
 <p>打开小程序后的功能与对应的素材没有任何关系：只是通过这个入口打开了自己的小程序，而并没有对素材做任何的处理。
 打开小程序后处理素材的方式过于简单：比如只是播放视频或只是查看.docx文件等通过微信聊天就能实现的简单功能。
 请开发者结合自身小程序的功能与用户需求进行适配。</p>
-</section>
-<section id="id10">
+</div>
+<div class="section" id="id10">
 <h2>调试<a class="headerlink" href="#id10" title="永久链接至标题">¶</a></h2>
 <p>体验版
 体验版小程序支持单独配置supportedMaterials，和正式版的小程序配置相互独立，上述相应的入口小程序列表也会单独展示体验版小程序。</p>
 <p>开发者工具
 开发者可在自定义编译模式下通过场景值1173调试该功能。</p>
-</section>
-</section>
+</div>
+</div>
 
 
             <div class="clearer"></div>
@@ -401,7 +400,7 @@
     </div>
     <div class="footer" role="contentinfo">
         &#169; 版权所有 2019, Wxadev Docs.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.1.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.2.
     </div>
   </body>
 </html>

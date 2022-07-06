@@ -4,8 +4,7 @@
 <html lang="zh_CN">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>template 模板 &#8212; wxadev v2.21.0 文档</title>
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinx13.css" />
@@ -143,10 +142,10 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <section id="template">
+  <div class="section" id="template">
 <span id="wxml-template"></span><h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/framework/view/wxml/template.html">template 模板</a><a class="headerlink" href="#template" title="永久链接至标题">¶</a></h1>
 <p>WXML提供模板（template），可以在模板中定义代码片段，然后在不同的地方调用。</p>
-<section id="id1">
+<div class="section" id="id1">
 <h2>定义模板<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h2>
 <p>使用 name 属性，作为模板的名字。然后在&lt;template/&gt;内定义代码片段，如：</p>
 <div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="c">&lt;!--</span>
@@ -162,8 +161,8 @@
 <span class="p">&lt;/</span><span class="nt">template</span><span class="p">&gt;</span>
 </pre></div>
 </div>
-</section>
-<section id="id2">
+</div>
+<div class="section" id="id2">
 <h2>使用模板<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
 <p>使用 is 属性，声明需要的使用的模板，然后将模板所需要的 data 传入，如：</p>
 <div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">template</span> <span class="na">is</span><span class="o">=</span><span class="s">&quot;msgItem&quot;</span> <span class="na">data</span><span class="o">=</span><span class="s">&quot;{{...item}}&quot;</span> <span class="p">/&gt;</span>
@@ -193,12 +192,12 @@
 <span class="p">&lt;/</span><span class="nt">block</span><span class="p">&gt;</span>
 </pre></div>
 </div>
-</section>
-<section id="id3">
+</div>
+<div class="section" id="id3">
 <h2>模板的作用域<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
 <p>模板拥有自己的作用域，只能使用 data 传入的数据以及模板定义文件中定义的 &lt;wxs /&gt; 模块。</p>
-</section>
-</section>
+</div>
+</div>
 
 
             <div class="clearer"></div>
@@ -233,7 +232,7 @@
     </div>
     <div class="footer" role="contentinfo">
         &#169; 版权所有 2019, Wxadev Docs.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.1.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.2.
     </div>
   </body>
 </html>

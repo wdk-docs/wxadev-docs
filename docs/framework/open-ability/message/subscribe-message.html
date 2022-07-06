@@ -4,8 +4,7 @@
 <html lang="zh_CN">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>小程序订阅消息 &#8212; wxadev v2.21.0 文档</title>
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinx13.css" />
@@ -151,9 +150,9 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <section id="id1">
+  <div class="section" id="id1">
 <h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/subscribe-message.html">小程序订阅消息</a><a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
-<section id="id2">
+<div class="section" id="id2">
 <h2>功能介绍<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
 <p>消息能力是小程序能力中的重要组成，我们为开发者提供了订阅消息能力，以便实现服务的闭环和更优的体验。</p>
 <ul class="simple">
@@ -162,8 +161,8 @@
 <li><p>订阅消息卡片跳转能力：点击查看详情可跳转至该小程序的页面</p></li>
 </ul>
 <img alt="https://res.wx.qq.com/wxdoc/dist/assets/img/request-subscribe-message.3851318e.jpg" src="https://res.wx.qq.com/wxdoc/dist/assets/img/request-subscribe-message.3851318e.jpg" />
-</section>
-<section id="id3">
+</div>
+<div class="section" id="id3">
 <h2>消息类型<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
 <ol class="arabic">
 <li><p>一次性订阅消息</p>
@@ -177,8 +176,8 @@
 <p>目前长期性订阅消息仅向政务民生、医疗、交通、金融、教育等线下公共服务开放，后期将逐步支持到其他线下公共服务业务。</p>
 </li>
 </ol>
-</section>
-<section id="id4">
+</div>
+<div class="section" id="id4">
 <h2>订阅消息语音提醒<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h2>
 <p>当前小程序订阅消息通知与微信消息的通知的提示音是一样的，对于部分订阅消息模板，增加语音提醒能力，播报预料部分字段支持开发者定义。</p>
 <p>当开发者调用 <a class="reference internal" href="../../../api/subscribe-message/wx.requestSubscribeMessage.html#wx.requestSubscribeMessage" title="wx.requestSubscribeMessage"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.requestSubscribeMessage()</span></code></a> 时仅订阅1条消息且该模板支持开启语音提醒，用户在订阅时可以选择开启语音提醒。
@@ -217,30 +216,30 @@
 <li><p>用户开启了低电量模式</p></li>
 <li><p>用户版本过低：需要iOS 8.0.6与安卓8.0.3及以上</p></li>
 </ol>
-</section>
-<section id="id5">
+</div>
+<div class="section" id="id5">
 <h2>使用说明<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h2>
-<section id="id">
+<div class="section" id="id">
 <h3>步骤一：获取模板 ID<a class="headerlink" href="#id" title="永久链接至标题">¶</a></h3>
 <p>在微信公众平台手动配置获取模板 ID：
 登录 <a class="reference external" href="https://mp.weixin.qq.com">https://mp.weixin.qq.com</a> 获取模板，如果没有合适的模板，可以申请添加新模板，审核通过后可使用。</p>
 <img alt="https://res.wx.qq.com/wxdoc/dist/assets/img/subscribe-message.b562750a.jpg" src="https://res.wx.qq.com/wxdoc/dist/assets/img/subscribe-message.b562750a.jpg" />
-</section>
-<section id="id6">
+</div>
+<div class="section" id="id6">
 <h3>步骤二：获取下发权限<a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h3>
 <p>详见小程序端消息订阅接口 <a class="reference internal" href="../../../api/subscribe-message/wx.requestSubscribeMessage.html#wx.requestSubscribeMessage" title="wx.requestSubscribeMessage"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.requestSubscribeMessage()</span></code></a></p>
-</section>
-<section id="id7">
+</div>
+<div class="section" id="id7">
 <h3>步骤三：调用接口下发订阅消息<a class="headerlink" href="#id7" title="永久链接至标题">¶</a></h3>
 <p>详见服务端消息发送接口 <code class="xref js js-func docutils literal notranslate"><span class="pre">subscribeMessage.send()</span></code></p>
-</section>
-</section>
-<section id="id8">
+</div>
+</div>
+<div class="section" id="id8">
 <h2>注意事项<a class="headerlink" href="#id8" title="永久链接至标题">¶</a></h2>
 <p>用户勾选 “总是保持以上选择，不再询问” 之后，下次订阅调用 <a class="reference internal" href="../../../api/subscribe-message/wx.requestSubscribeMessage.html#wx.requestSubscribeMessage" title="wx.requestSubscribeMessage"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.requestSubscribeMessage()</span></code></a> 不会弹窗，
 保持之前的选择，修改选择需要打开小程序设置进行修改。</p>
-</section>
-<section id="id9">
+</div>
+<div class="section" id="id9">
 <h2>订阅消息事件推送<a class="headerlink" href="#id9" title="永久链接至标题">¶</a></h2>
 <ol class="arabic">
 <li><p>当用户触发订阅消息弹框后，用户的相关行为事件结果会推送至开发者所配置的服务器地址。</p>
@@ -451,8 +450,8 @@
 </div>
 </li>
 </ol>
-</section>
-</section>
+</div>
+</div>
 
 
             <div class="clearer"></div>
@@ -487,7 +486,7 @@
     </div>
     <div class="footer" role="contentinfo">
         &#169; 版权所有 2019, Wxadev Docs.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.1.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.2.
     </div>
   </body>
 </html>

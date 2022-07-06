@@ -4,8 +4,7 @@
 <html lang="zh_CN">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>用户授权 &#8212; wxadev v2.21.0 文档</title>
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinx13.css" />
@@ -144,7 +143,7 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <section id="authorize">
+  <div class="section" id="authorize">
 <span id="id1"></span><h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/authorize.html">用户授权</a><a class="headerlink" href="#authorize" title="永久链接至标题">¶</a></h1>
 <p>部分接口需要经过用户授权同意才能调用。我们把这些接口按使用范围分成多个 scope ，
 用户选择对 scope 来进行授权，当授权给一个 scope 之后，其对应的所有接口都可以直接使用。</p>
@@ -154,20 +153,20 @@
 <li><p>如果用户已授权，可以直接调用接口；</p></li>
 <li><p>如果用户已拒绝授权，则不会出现弹窗，而是直接进入接口 fail 回调。请开发者兼容用户拒绝授权的场景。</p></li>
 </ul>
-<section id="id2">
+<div class="section" id="id2">
 <h2>获取用户授权设置<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
 <p>开发者可以使用  <a class="reference internal" href="../../../api/wx.getSetting.html#wx.getSetting" title="wx.getSetting"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.getSetting()</span></code></a> 获取用户当前的授权状态。</p>
-</section>
-<section id="id3">
+</div>
+<div class="section" id="id3">
 <h2>打开设置界面<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
 <p>用户可以在小程序设置界面(<span class="menuselection">「右上角」 - 「关于」 - 「右上角」 - 「设置」</span>)中控制对该小程序的授权状态。</p>
 <p>开发者可以调用  <a class="reference internal" href="../../../api/wx.openSetting.html#wx.openSetting" title="wx.openSetting"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.openSetting()</span></code></a> 打开设置界面，引导用户开启授权。</p>
-</section>
-<section id="id4">
+</div>
+<div class="section" id="id4">
 <h2>提前发起授权请求<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h2>
 <p>开发者可以使用  <a class="reference internal" href="../../../api/wx.authorize.html#wx.authorize" title="wx.authorize"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.authorize()</span></code></a> 在调用需授权 API 之前，提前向用户发起授权请求。</p>
-</section>
-<section id="scope">
+</div>
+<div class="section" id="scope">
 <h2>scope 列表<a class="headerlink" href="#scope" title="永久链接至标题">¶</a></h2>
 <table class="docutils align-default">
 <colgroup>
@@ -183,7 +182,7 @@
 </thead>
 <tbody>
 <tr class="row-even"><td><p><a class="reference internal" href="../../../api/AuthSetting.html#scope.userInfo" title="scope.userInfo"><code class="xref js js-data docutils literal notranslate"><span class="pre">scope.userInfo</span></code></a></p></td>
-<td><p><a class="reference internal" href="../../../api/wx.getUserInfo.html#wx.getUserInfo" title="wx.getUserInfo"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.getUserInfo()</span></code></a></p></td>
+<td><p><a class="reference internal" href="../../../api/user-info/wx.getUserInfo.html#wx.getUserInfo" title="wx.getUserInfo"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.getUserInfo()</span></code></a></p></td>
 <td><p>用户信息</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="../../../api/AuthSetting.html#scope.userLocation" title="scope.userLocation"><code class="xref js js-data docutils literal notranslate"><span class="pre">scope.userLocation</span></code></a></p></td>
@@ -227,8 +226,8 @@
 <li><p>需要授权  <a class="reference internal" href="../../../api/AuthSetting.html#scope.userLocation" title="scope.userLocation"><code class="xref js js-data docutils literal notranslate"><span class="pre">scope.userLocation</span></code></a> 时必须配置地理位置用途说明。</p></li>
 </ol>
 </div>
-</section>
-</section>
+</div>
+</div>
 
 
             <div class="clearer"></div>
@@ -263,7 +262,7 @@
     </div>
     <div class="footer" role="contentinfo">
         &#169; 版权所有 2019, Wxadev Docs.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.1.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.2.
     </div>
   </body>
 </html>

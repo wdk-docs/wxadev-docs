@@ -4,8 +4,7 @@
 <html lang="zh_CN">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>开发前须知 &#8212; wxadev v2.21.0 文档</title>
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx13.css" />
@@ -144,26 +143,26 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <section id="id1">
+  <div class="section" id="id1">
 <h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/dev_wxwork/index.html">开发前须知</a><a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
-<section id="id2">
+<div class="section" id="id2">
 <h2>概述<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
 <p>企业微信移动客户端从2.5.8版本开始，已内置微信小程序基础库，开发者无需适配（部分接口需要适配），即可将微信小程序移植到企业微信上运行，同时开发者也可以针对企业微信提供的扩展接口开发出更适用于企业内部场景的小程序。</p>
 <p>本质上企业微信小程序是微信小程序的一个扩展子集，微信小程序的大部分能力都可以在企业微信上运行，同时企业微信扩展了部分和企业相关的能力以满足更多的场景需求。所以一个小程序如果需要同时运行在微信和企业微信端，对于开发者来说需要针对企业微信的环境适配部分不兼容的能力，针对微信环境适配企业微信专有的部分接口能力。</p>
 <p>如何获取环境变量可参考文档：<a class="reference internal" href="../../api/wx.getSystemInfo.html#wx.getSystemInfo" title="wx.getSystemInfo"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.getSystemInfo()</span></code></a></p>
-</section>
-<section id="id3">
+</div>
+<div class="section" id="id3">
 <h2>企业微信小程序能力扩展<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
 <p>在微信小程序中可以通过获取用户的openid来唯一标识一个用户，在企业微信小程序中可以通过获取用户的userid来唯一标识一个员工。同时企业微信小程序还提供了和员工企业身份相配套的session生成以及验证的接口、员工基础信息获取的相关接口，除此以外企业微信还扩展了一些企业微信特有的接口能力，更多接口请参考开发文档：<a class="reference internal" href="../api/index.html#qywx-api"><span class="std std-ref">接口</span></a></p>
-</section>
-<section id="id4">
+</div>
+<div class="section" id="id4">
 <h2>企业微信关联小程序<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h2>
 <p>由于目前企业微信和微信之间的消息可以互通，使得互通消息中的小程序可以天然的运行在微信和企业微信两个运行环境中。
 默认情况下，按照微信已有的流程开发的小程序可以直接在两个运行环境中运行，但是如果小程序有调用企业微信的专有接口，
 如获取员工相关的信息，那么此小程序需要在企业微信管理端进行一次绑定关联操作（一个小程序可绑定多个企业），
 <a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/dev_wxwork/dev-doc/qywx-api.html">了解详细步骤</a></p>
-</section>
-<section id="id5">
+</div>
+<div class="section" id="id5">
 <h2>多企业关联同一个小程序<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h2>
 <p>企业微信允许多个企业关联同一个小程序，但是开发者在开发过程中需要注意以下几点：</p>
 <p>小程序被关联到多个企业即会有多组 <em>[CorpId, Secret]</em> ，
@@ -172,16 +171,16 @@
 判断返回的用户CorpId和access_token与第一步中的CorpId是否一致，
 如果不一致，则调用wx.qy.login重新进行一遍登录流程，此时使用返回的[CorpId, Secret]来调用jscode2session接口
 如果没有使用这种流程，调用企业微信通讯录相关的接口时，会报错 “not allow to cross corp”。</p>
-</section>
-<section id="id6">
+</div>
+<div class="section" id="id6">
 <h2>第三方小程序(服务商)<a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h2>
 <p>企业微信的第三方服务商也可以开发小程序，并关联到第三方应用中，发布之后即可通过企业授权安装使用。第三方小程序的登录流程与企业有些差异，详见第三方小程序。</p>
 <div class="admonition attention">
 <p class="admonition-title">注意</p>
 <p>企业开发者请忽略这个章节</p>
 </div>
-</section>
-</section>
+</div>
+</div>
 
 
             <div class="clearer"></div>
@@ -215,7 +214,7 @@
     </div>
     <div class="footer" role="contentinfo">
         &#169; 版权所有 2019, Wxadev Docs.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.1.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.2.
     </div>
   </body>
 </html>

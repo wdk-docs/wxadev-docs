@@ -4,8 +4,7 @@
 <html lang="zh_CN">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>第三方小程序（服务商） &#8212; wxadev v2.21.0 文档</title>
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx13.css" />
@@ -141,11 +140,11 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <section id="id1">
+  <div class="section" id="id1">
 <h1>第三方小程序（服务商）<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
 <p>企业微信的第三方服务商也可以开发小程序并关联到第三方应用，发布之后即可让企业授权安装并使用（参见第三方应用授权安装流程）</p>
 <p>第三方小程序的登录流程与企业自建应用有些差异，主要差异是jscode2session接口调用方式有所区别，详见下文</p>
-<section id="id2">
+<div class="section" id="id2">
 <h2>第三方小程序登录流程示意图<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
 <img alt="https://p.qpic.cn/pic_wework/3685288192/9f993793ca07f7b6a9f4359d7ba58998ced701fabcda2bdf/0?t=19042222" src="https://p.qpic.cn/pic_wework/3685288192/9f993793ca07f7b6a9f4359d7ba58998ced701fabcda2bdf/0?t=19042222" />
 <p>图片描述</p>
@@ -153,16 +152,16 @@
 <p>小程序调用 wx.qy.login() 获取 临时登录凭证code ，并回传到服务商服务器。
 服务商服务器以code换取 用户唯一标识 userid 、用户所在企业corpid 和 会话密钥 session_key。
 此步骤以后服务商后台可以根据用户标识来生成自定义登录态，用于后续业务逻辑中前后端交互时识别用户身份。</p>
-</section>
-<section id="id3">
+</div>
+<div class="section" id="id3">
 <h2>第三方登录凭证校验<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
 <p>接口地址请求地址 <a class="reference internal" href="../../glossary.html#term-qyapi"><span class="xref std std-term">qyapi</span></a></p>
 <div class="admonition attention">
 <p class="admonition-title">注意</p>
 <p>第三方请求jscode2session的url与企业自建应用不同，url中增加了/service/，参数为suite_access_token，而非access_token，请开发者注意区分。</p>
 </div>
-</section>
-</section>
+</div>
+</div>
 
 
             <div class="clearer"></div>
@@ -196,7 +195,7 @@
     </div>
     <div class="footer" role="contentinfo">
         &#169; 版权所有 2019, Wxadev Docs.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.1.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.2.
     </div>
   </body>
 </html>

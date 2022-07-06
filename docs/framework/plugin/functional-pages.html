@@ -4,8 +4,7 @@
 <html lang="zh_CN">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>插件功能页 &#8212; wxadev v2.21.0 文档</title>
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx13.css" />
@@ -143,7 +142,7 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <section id="id1">
+  <div class="section" id="id1">
 <h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/framework/plugin/functional-pages.html">插件功能页</a><a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
 <p>某些接口不能在插件中直接调用（如 wx.login），但插件开发者可以使用插件功能页的方式来实现功能。目前，插件功能页包括：</p>
 <p>获取用户信息，包括 openid 和昵称等（相当于 wx.login 和 wx.getUserInfo 的功能），详见用户信息功能页；
@@ -155,7 +154,7 @@
 开始开发之前，我们需要知道，插件功能页是指 插件所有者小程序 中的一个特殊页面。</p>
 <p>插件所有者小程序，指的是与插件 AppID 相同的小程序。例如，“小程序示例”小程序开发了一个“小程序示例插件”，
 那么无论这个插件被哪个小程序使用，这个插件的 插件所有者小程序 都是“小程序示例”。下文中会继续使用 插件所有者小程序 这个说法。</p>
-<section id="id2">
+<div class="section" id="id2">
 <h2>激活功能页特性<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
 <p>要在插件中调用插件功能页，需要先激活插件所有者小程序的功能页特性。
 具体来说，在插件所有者小程序的 app.json 文件中添加 functionalPages 定义段，并令其值为 true ，例如：</p>
@@ -179,8 +178,8 @@
 但也同时使得插件功能页目录 functional-pages/ （支付功能页会使用其中的文件）
 不能 require 这个目录以外的文件（反之亦然：这个目录以外的文件也不能调用这个目录内的）。</p>
 <p>注意，新增或改变这个字段时，需要这个小程序发布新版本，才能在正式环境中使用插件功能页。</p>
-</section>
-<section id="id3">
+</div>
+<div class="section" id="id3">
 <h2>跳转到功能页<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
 <p>功能页不能使用 wx.navigateTo 来进行跳转，而是需要一个名为 &lt;functional-page-navigator&gt; 的组件。
 以获取用户信息为例，可以在插件中放置如下的 &lt;functional-page-navigator&gt;：</p>
@@ -200,8 +199,8 @@
 <div class="versionadded">
 <p><span class="versionmodified added">2.4.0 新版功能: </span>支持插件所有者小程序跳转到自己的功能页。在基础库版本低于 2.4.0 时，点击跳转到自己的功能页的 &lt;functional-page-navigator&gt; 将没有任何反应。</p>
 </div>
-</section>
-<section id="id4">
+</div>
+<div class="section" id="id4">
 <h2>真机开发测试的常规步骤<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h2>
 <p>目前，功能页的跳转目前不支持在开发者工具中调试，请在真机上测试。初次进行真机开发测试时，通常步骤如下：</p>
 <p>在开发者工具上打开插件所有者小程序项目，并点击“预览”；
@@ -217,8 +216,8 @@
 <li><p>确保所有的 functional-page-navigator 组件属性设置为 version=”release” 。</p></li>
 </ul>
 </div>
-</section>
-<section id="faq">
+</div>
+<div class="section" id="faq">
 <h2>功能页常见问题 FAQ<a class="headerlink" href="#faq" title="永久链接至标题">¶</a></h2>
 <dl class="simple">
 <dt>… 如何正确编辑插件所有者小程序？</dt><dd><p>应该在开发者工具的“小程序”类型项目中编辑，而不是在“插件”类型的项目中编辑。
@@ -261,8 +260,8 @@
 <li><p>在微信版本 6.6.7 中，功能页被拉起时会触发 App 的部分生命周期并使得功能页启动时间变得比较长。在后续的微信版本中这一行为会发生变更，使 App 生命周期不再被触发。</p></li>
 </ul>
 </div>
-</section>
-</section>
+</div>
+</div>
 
 
             <div class="clearer"></div>
@@ -296,7 +295,7 @@
     </div>
     <div class="footer" role="contentinfo">
         &#169; 版权所有 2019, Wxadev Docs.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.1.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.2.
     </div>
   </body>
 </html>

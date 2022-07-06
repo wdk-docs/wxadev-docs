@@ -4,8 +4,7 @@
 <html lang="zh_CN">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>自定义 tabBar &#8212; wxadev v2.21.0 文档</title>
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx13.css" />
@@ -146,7 +145,7 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <section id="tabbar">
+  <div class="section" id="tabbar">
 <h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/framework/ability/custom-tabbar.html">自定义 tabBar</a><a class="headerlink" href="#tabbar" title="永久链接至标题">¶</a></h1>
 <blockquote>
 <div><div class="versionadded">
@@ -162,9 +161,9 @@
 <li><p>与 tabBar 样式相关的接口，如 <code class="xref js js-func docutils literal notranslate"><span class="pre">wx.setTabBarItem()</span></code> 等将失效。</p></li>
 <li><p>每个 tab 页下的自定义 tabBar 组件实例是不同的，可通过自定义组件下的 getTabBar 接口，获取当前页面的自定义 tabBar 组件实例。</p></li>
 </ul>
-<section id="id1">
+<div class="section" id="id1">
 <h2>使用流程<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h2>
-<section id="id2">
+<div class="section" id="id2">
 <h3>1. 配置信息<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h3>
 <ul class="simple">
 <li><p>在 app.json 中的 tabBar 项指定 custom 字段，同时其余 tabBar 相关配置也补充完整。</p></li>
@@ -192,8 +191,8 @@
 <span class="p">}</span>
 </pre></div>
 </div>
-</section>
-<section id="id3">
+</div>
+<div class="section" id="id3">
 <h3>2. 添加 tabBar 代码文件<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h3>
 <p>在代码根目录下添加入口文件:</p>
 <div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="nx">custom</span><span class="o">-</span><span class="nx">tab</span><span class="o">-</span><span class="nx">bar</span><span class="o">/</span><span class="nx">index</span><span class="p">.</span><span class="nx">js</span>
@@ -202,18 +201,18 @@
 <span class="nx">custom</span><span class="o">-</span><span class="nx">tab</span><span class="o">-</span><span class="nx">bar</span><span class="o">/</span><span class="nx">index</span><span class="p">.</span><span class="nx">wxss</span>
 </pre></div>
 </div>
-</section>
-<section id="id4">
+</div>
+<div class="section" id="id4">
 <h3>3. 编写 tabBar 代码<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h3>
 <p>用自定义组件的方式编写即可，该自定义组件完全接管 tabBar 的渲染。
 另外，自定义组件新增 getTabBar 接口，可获取当前页面下的自定义 tabBar 组件实例。</p>
-</section>
-</section>
-<section id="id5">
+</div>
+</div>
+<div class="section" id="id5">
 <h2>示例代码<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h2>
 <p><a class="reference download external" download="" href="https://developers.weixin.qq.com/s/jiSARvmF7i55"><code class="xref download docutils literal notranslate"><span class="pre">在开发者工具中预览效果</span></code></a></p>
-</section>
-</section>
+</div>
+</div>
 
 
             <div class="clearer"></div>
@@ -247,7 +246,7 @@
     </div>
     <div class="footer" role="contentinfo">
         &#169; 版权所有 2019, Wxadev Docs.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.1.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.2.
     </div>
   </body>
 </html>

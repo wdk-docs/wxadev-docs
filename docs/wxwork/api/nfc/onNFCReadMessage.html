@@ -4,8 +4,7 @@
 <html lang="zh_CN">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>onNFCReadMessage &#8212; wxadev v2.21.0 文档</title>
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinx13.css" />
@@ -133,7 +132,7 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <section id="onnfcreadmessage">
+  <div class="section" id="onnfcreadmessage">
 <h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/dev_wxwork/dev-doc/qywx-api/nfc/onNFCReadMessage.html">onNFCReadMessage</a><a class="headerlink" href="#onnfcreadmessage" title="永久链接至标题">¶</a></h1>
 <dl class="js function">
 <dt class="sig sig-object js" id="onNFCReadMessage">
@@ -167,17 +166,17 @@
 <dt class="field-odd">示例</dt>
 <dd class="field-odd"><div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="nx">Page</span><span class="p">({</span>
   <span class="nx">onNFCReadMessage</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nb">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">e</span><span class="p">))</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">e</span><span class="p">))</span>
     <span class="k">if</span> <span class="p">(</span><span class="nx">e</span><span class="p">.</span><span class="nx">messageType</span> <span class="o">==</span> <span class="mf">1</span><span class="p">)</span> <span class="p">{</span>
       <span class="nx">wx</span><span class="p">.</span><span class="nx">showModal</span><span class="p">({</span>
         <span class="nx">title</span><span class="o">:</span> <span class="s1">&#39;NFC-Id&#39;</span><span class="p">,</span>
-        <span class="nx">content</span><span class="o">:</span> <span class="nb">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">e</span><span class="p">),</span>
+        <span class="nx">content</span><span class="o">:</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">e</span><span class="p">),</span>
       <span class="p">})</span>
     <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nx">e</span><span class="p">.</span><span class="nx">messageType</span> <span class="o">==</span> <span class="mf">2</span><span class="p">)</span> <span class="p">{</span>
       <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Auto-Stop&#39;</span><span class="p">)</span>
       <span class="nx">wx</span><span class="p">.</span><span class="nx">showModal</span><span class="p">({</span>
         <span class="nx">title</span><span class="o">:</span> <span class="s1">&#39;NFC-Auto-Stop&#39;</span><span class="p">,</span>
-        <span class="nx">content</span><span class="o">:</span> <span class="nb">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">e</span><span class="p">),</span>
+        <span class="nx">content</span><span class="o">:</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">e</span><span class="p">),</span>
       <span class="p">})</span>
     <span class="p">}</span>
   <span class="p">}</span>
@@ -188,7 +187,7 @@
 </dl>
 </dd></dl>
 
-</section>
+</div>
 
 
             <div class="clearer"></div>
@@ -223,7 +222,7 @@
     </div>
     <div class="footer" role="contentinfo">
         &#169; 版权所有 2019, Wxadev Docs.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.1.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.2.
     </div>
   </body>
 </html>

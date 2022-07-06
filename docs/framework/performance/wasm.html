@@ -4,8 +4,7 @@
 <html lang="zh_CN">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>WXWebAssembly &#8212; wxadev v2.21.0 文档</title>
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx13.css" />
@@ -142,16 +141,16 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <section id="wxwebassembly">
+  <div class="section" id="wxwebassembly">
 <h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/framework/performance/wasm.html">WXWebAssembly</a><a class="headerlink" href="#wxwebassembly" title="永久链接至标题">¶</a></h1>
 <p>WXWebAssembly 类似于 Web 标准 WebAssembly，能够在一定程度上提高小程序的性能。</p>
 <p>从基础库 v2.13.0 开始，小程序可以在全局访问并使用 WXWebAssembly 对象。</p>
 <p>从基础库 v2.15.0 开始，小程序支持在 Worker 内使用 WXWebAssembly。</p>
-<section id="wxwebassembly-instantiate-path-imports">
+<div class="section" id="wxwebassembly-instantiate-path-imports">
 <h2>WXWebAssembly.instantiate(path, imports)<a class="headerlink" href="#wxwebassembly-instantiate-path-imports" title="永久链接至标题">¶</a></h2>
 <p>和标准 WebAssembly.instantiate 类似，差别是第一个参数只接受一个字符串类型的代码包路径，指向代码包内 .wasm 文件</p>
-</section>
-<section id="webassembly">
+</div>
+<div class="section" id="webassembly">
 <h2>与 WebAssembly 的异同<a class="headerlink" href="#webassembly" title="永久链接至标题">¶</a></h2>
 <ol class="arabic simple">
 <li><p>WXWebAssembly.instantiate(path, imports) 方法，path为代码包内路径（支持.wasm和.wasm.br后缀）</p></li>
@@ -160,8 +159,8 @@
 <li><p>支持 WXWebAssembly.Global</p></li>
 <li><p>export 支持函数、Memory、Table，iOS 平台暂不支持 Global</p></li>
 </ol>
-</section>
-<section id="id1">
+</div>
+<div class="section" id="id1">
 <h2>其他说明<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h2>
 <ul class="simple">
 <li><p>关于 WebAssembly 的文档可以参考 <a class="reference external" href="https://webassembly.org/">https://webassembly.org/</a></p></li>
@@ -174,8 +173,8 @@
 <li><p>小程序插件从基础库 v2.18.1 开始支持 WXWebAssembly</p></li>
 <li><p>在 Worker 内使用 WXWebAssembly 时，.wasm 文件需要放置在 worker 目录外，因为 worker 目录只会打包 .js 文件，非 .js 文件会被忽略</p></li>
 </ul>
-</section>
-</section>
+</div>
+</div>
 
 
             <div class="clearer"></div>
@@ -209,7 +208,7 @@
     </div>
     <div class="footer" role="contentinfo">
         &#169; 版权所有 2019, Wxadev Docs.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.1.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.2.
     </div>
   </body>
 </html>

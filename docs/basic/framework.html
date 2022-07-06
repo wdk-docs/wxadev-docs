@@ -4,8 +4,7 @@
 <html lang="zh_CN">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>宿主环境 &#8212; wxadev v2.21.0 文档</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx13.css" />
@@ -142,19 +141,19 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <section id="id1">
+  <div class="section" id="id1">
 <h1>宿主环境<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
 <p>我们称微信客户端给小程序所提供的环境为宿主环境。小程序借助宿主环境提供的能力，可以完成许多普通网页无法完成的功能。</p>
 <p>上一章中我们把小程序涉及到的文件类型阐述了一遍，我们结合 QuickStart 这个项目来讲一下这些文件是怎么配合工作的。</p>
-<section id="id2">
+<div class="section" id="id2">
 <h2>渲染层和逻辑层<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
 <p>首先，我们来简单了解下小程序的运行环境。小程序的运行环境分成渲染层和逻辑层，其中 WXML 模板和 WXSS 样式工作在渲染层，JS 脚本工作在逻辑层。</p>
 <p>小程序的渲染层和逻辑层分别由2个线程管理：渲染层的界面使用了WebView 进行渲染；逻辑层采用JsCore线程运行JS脚本。
 一个小程序存在多个界面，所以渲染层存在多个WebView线程，这两个线程的通信会经由微信客户端（下文中也会采用Native来代指微信客户端）做中转，逻辑层发送网络请求也经由Native转发，小程序的通信模型下图所示。</p>
 <img alt="https://developers.weixin.qq.com/miniprogram/dev/image/quickstart/basic/4-1.png?t=19041921" src="https://developers.weixin.qq.com/miniprogram/dev/image/quickstart/basic/4-1.png?t=19041921" />
 <p>有关渲染层和逻辑层的详细文档参考 <a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/framework/MINA.html">小程序框架</a>  。</p>
-</section>
-<section id="id4">
+</div>
+<div class="section" id="id4">
 <h2>程序与页面<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h2>
 <p>微信客户端在打开小程序之前，会把整个小程序的代码包下载到本地。</p>
 <p>紧接着通过 app.json 的 pages 字段就可以知道你当前小程序的所有页面路径:</p>
@@ -193,8 +192,8 @@
 于是就得到了你看到的小程序的样子。</p>
 <p>在渲染完界面之后，页面实例就会收到一个 onLoad 的回调，你可以在这个回调处理你的逻辑。</p>
 <p>有关于 Page 构造器更多详细的文档参考 注册页面 Page 。</p>
-</section>
-<section id="id5">
+</div>
+<div class="section" id="id5">
 <h2>组件<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h2>
 <p>小程序提供了丰富的基础组件给开发者，开发者可以像搭积木一样，组合各种组件拼合成自己的小程序。</p>
 <p>就像 HTML 的 div, p 等标签一样，在小程序里边，你只需要在 WXML 写上对应的组件标签名字就可以把该组件显示在界面上，例如，
@@ -213,8 +212,8 @@
 </div>
 <p>当然你也可以通过 style 或者 class 来控制组件的外层样式，以便适应你的界面宽度高度等等。</p>
 <p>更多的组件可以参考 小程序的组件。</p>
-</section>
-<section id="api">
+</div>
+<div class="section" id="api">
 <h2>API<a class="headerlink" href="#api" title="永久链接至标题">¶</a></h2>
 <p>为了让开发者可以很方便的调起微信提供的能力，例如获取用户信息、微信支付等等，小程序提供了很多 API 给开发者去使用。</p>
 <p>要获取用户的地理位置时，只需要：</p>
@@ -238,8 +237,8 @@
 <p>需要注意的是：多数 API 的回调都是异步，你需要处理好代码逻辑的异步问题。</p>
 <p>更多的 API 能力见 小程序的API。</p>
 <p>通过这个章节你已经大概了解了小程序运行的一些基本概念，当你开发完一个小程序之后，你就需要发布你的小程序。在下个章节，你会知道发布前需要做什么准备。</p>
-</section>
-</section>
+</div>
+</div>
 
 
             <div class="clearer"></div>
@@ -272,7 +271,7 @@
     </div>
     <div class="footer" role="contentinfo">
         &#169; 版权所有 2019, Wxadev Docs.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.1.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.2.
     </div>
   </body>
 </html>

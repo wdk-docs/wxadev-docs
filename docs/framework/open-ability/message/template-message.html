@@ -4,8 +4,7 @@
 <html lang="zh_CN">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>模板消息(已作废) &#8212; wxadev v2.21.0 文档</title>
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinx13.css" />
@@ -147,7 +146,7 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <section id="id1">
+  <div class="section" id="id1">
 <h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/template-message.html">模板消息(已作废)</a><a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
 <p>微信6.5.2及以上版本支持</p>
 <p>基于微信的通知渠道，我们为开发者提供了可以高效触达用户的模板消息能力，以便实现服务的闭环并提供更佳的体验。</p>
@@ -156,7 +155,7 @@
 <li><p>模板下发条件：用户本人在微信体系内与页面有交互行为后触发，详见 下发条件说明</p></li>
 <li><p>模板跳转能力：点击查看详情仅能跳转下发模板的该帐号的各个页面</p></li>
 </ul>
-<section id="id2">
+<div class="section" id="id2">
 <h2>使用说明<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
 <p>步骤一：获取模板 ID
 ~~~~~~~~~~~~~~~~~~~~~~·</p>
@@ -169,12 +168,12 @@
 <img alt="https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/image/mp-notice.jpg?t=19041921" src="https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/image/mp-notice.jpg?t=19041921" />
 <p>步骤二：页面的 &lt;form/&gt; 组件，属性 report-submit 为 true 时，可以声明为需要发送模板消息，此时点击按钮提交表单可以获取 formId，用于发送模板消息。或者当用户完成 支付行为，可以获取 prepay_id 用于发送模板消息。</p>
 <p>步骤三：调用接口下发模板消息（详见 templateMessage.send ）</p>
-</section>
-<section id="id3">
+</div>
+<div class="section" id="id3">
 <h2>使用效果<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
 <img alt="https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/image/notice.png?t=19041921" src="https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/image/notice.png?t=19041921" />
-</section>
-<section id="id4">
+</div>
+<div class="section" id="id4">
 <h2>模板消息管理<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h2>
 <ol class="arabic simple">
 <li><p>获取小程序模板库标题列表</p></li>
@@ -183,8 +182,8 @@
 <li><p>获取帐号下已存在的模板列表</p></li>
 <li><p>删除帐号下的某个模板</p></li>
 </ol>
-</section>
-<section id="id5">
+</div>
+<div class="section" id="id5">
 <h2>下发条件说明<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h2>
 <ol class="arabic simple">
 <li><p>支付</p></li>
@@ -198,8 +197,8 @@
 <blockquote>
 <div><p>当用户在小程序内发生过提交表单行为且该表单声明为要发模板消息的，开发者需要向用户提供服务时，可允许开发者向用户在7天内推送有限条数的模板消息（1次提交表单可下发1条，多次提交下发条数独立，相互不影响）</p>
 </div></blockquote>
-</section>
-<section id="id6">
+</div>
+<div class="section" id="id6">
 <h2>审核说明<a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h2>
 <ol class="arabic simple">
 <li><p>标题</p></li>
@@ -226,8 +225,8 @@
 <li><p>关键词不能太过宽泛，需要具有限制性，例如：“内容”这个就太宽泛，不能审核通过</p></li>
 </ul>
 </div></blockquote>
-</section>
-<section id="id7">
+</div>
+<div class="section" id="id7">
 <h2>违规说明<a class="headerlink" href="#id7" title="永久链接至标题">¶</a></h2>
 <p>除不能违反运营规范外，还不能违反以下规则，包括但不限于：</p>
 <ol class="arabic simple">
@@ -235,8 +234,8 @@
 <li><p>不允许恶意骚扰，下发对用户造成骚扰的模板</p></li>
 <li><p>不允许恶意营销，下发营销目的模板</p></li>
 </ol>
-</section>
-<section id="id8">
+</div>
+<div class="section" id="id8">
 <h2>处罚说明<a class="headerlink" href="#id8" title="永久链接至标题">¶</a></h2>
 <p>根据违规情况给予相应梯度的处罚，一般处罚规则如下：</p>
 <ul class="simple">
@@ -246,8 +245,8 @@
 <li><p>第四次违规，永久封禁接口</p></li>
 </ul>
 <p>处罚结果及原因以站内信形式告知</p>
-</section>
-</section>
+</div>
+</div>
 
 
             <div class="clearer"></div>
@@ -282,7 +281,7 @@
     </div>
     <div class="footer" role="contentinfo">
         &#169; 版权所有 2019, Wxadev Docs.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.1.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.2.
     </div>
   </body>
 </html>

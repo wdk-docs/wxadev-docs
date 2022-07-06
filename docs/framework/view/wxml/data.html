@@ -4,8 +4,7 @@
 <html lang="zh_CN">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>数据绑定 &#8212; wxadev v2.21.0 文档</title>
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinx13.css" />
@@ -160,13 +159,13 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <section id="wxml-data">
+  <div class="section" id="wxml-data">
 <span id="id1"></span><h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/framework/view/wxml/data.html">数据绑定</a><a class="headerlink" href="#wxml-data" title="永久链接至标题">¶</a></h1>
 <p>WXML 中的动态数据均来自对应 Page 的 data。</p>
-<section id="id2">
+<div class="section" id="id2">
 <h2>简单绑定<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
 <p>数据绑定使用 <a class="reference external" href="https://mustache.github.io/">Mustache</a> 语法（双大括号）将变量包起来，可以作用于：</p>
-<section id="id3">
+<div class="section" id="id3">
 <h3>内容<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h3>
 <div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">view</span><span class="p">&gt;</span>{{ message }}<span class="p">&lt;/</span><span class="nt">view</span><span class="p">&gt;</span>
 </pre></div>
@@ -178,8 +177,8 @@
 <span class="p">})</span>
 </pre></div>
 </div>
-</section>
-<section id="id4">
+</div>
+<div class="section" id="id4">
 <h3>组件属性(需要在双引号之内)<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h3>
 <div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">view</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;item-{{id}}&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">view</span><span class="p">&gt;</span>
 </pre></div>
@@ -191,8 +190,8 @@
 <span class="p">})</span>
 </pre></div>
 </div>
-</section>
-<section id="id5">
+</div>
+<div class="section" id="id5">
 <h3>控制属性(需要在双引号之内)<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h3>
 <div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">view</span> <span class="na">wx:if</span><span class="o">=</span><span class="s">&quot;{{condition}}&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">view</span><span class="p">&gt;</span>
 </pre></div>
@@ -204,8 +203,8 @@
 <span class="p">})</span>
 </pre></div>
 </div>
-</section>
-<section id="id6">
+</div>
+<div class="section" id="id6">
 <h3>关键字(需要在双引号之内)<a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h3>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">true</span></code>：boolean 类型的 true，代表真值。</p></li>
@@ -218,18 +217,18 @@
 <p class="admonition-title">警告</p>
 <p>不要直接写 <code class="docutils literal notranslate"><span class="pre">checked=&quot;false&quot;</span></code> ，其计算结果是一个字符串，转成 <code class="docutils literal notranslate"><span class="pre">boolean</span></code> 类型后代表真值。</p>
 </div>
-</section>
-</section>
-<section id="id7">
+</div>
+</div>
+<div class="section" id="id7">
 <h2>运算<a class="headerlink" href="#id7" title="永久链接至标题">¶</a></h2>
 <p>可以在 {{}} 内进行简单的运算，支持的有如下几种方式：</p>
-<section id="id8">
+<div class="section" id="id8">
 <h3>三元运算<a class="headerlink" href="#id8" title="永久链接至标题">¶</a></h3>
 <div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">view</span> <span class="na">hidden</span><span class="o">=</span><span class="s">&quot;{{flag ? true : false}}&quot;</span><span class="p">&gt;</span>Hidden<span class="p">&lt;/</span><span class="nt">view</span><span class="p">&gt;</span>
 </pre></div>
 </div>
-</section>
-<section id="id9">
+</div>
+<div class="section" id="id9">
 <h3>算数运算<a class="headerlink" href="#id9" title="永久链接至标题">¶</a></h3>
 <div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">view</span><span class="p">&gt;</span>{{a + b}} + {{c}} + d<span class="p">&lt;/</span><span class="nt">view</span><span class="p">&gt;</span>
 </pre></div>
@@ -244,14 +243,14 @@
 </pre></div>
 </div>
 <p>view中的内容为 <code class="code docutils literal notranslate"><span class="pre">3</span> <span class="pre">+</span> <span class="pre">3</span> <span class="pre">+</span> <span class="pre">d</span></code> 。</p>
-</section>
-<section id="id10">
+</div>
+<div class="section" id="id10">
 <h3>逻辑判断<a class="headerlink" href="#id10" title="永久链接至标题">¶</a></h3>
 <div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">view</span> <span class="na">wx:if</span><span class="o">=</span><span class="s">&quot;{{length &gt; 5}}&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">view</span><span class="p">&gt;</span>
 </pre></div>
 </div>
-</section>
-<section id="id11">
+</div>
+<div class="section" id="id11">
 <h3>字符串运算<a class="headerlink" href="#id11" title="永久链接至标题">¶</a></h3>
 <div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">view</span><span class="p">&gt;</span>{{&quot;hello&quot; + name}}<span class="p">&lt;/</span><span class="nt">view</span><span class="p">&gt;</span>
 </pre></div>
@@ -263,8 +262,8 @@
 <span class="p">})</span>
 </pre></div>
 </div>
-</section>
-<section id="id12">
+</div>
+<div class="section" id="id12">
 <h3>数据路径运算<a class="headerlink" href="#id12" title="永久链接至标题">¶</a></h3>
 <div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">view</span><span class="p">&gt;</span>{{object.key}} {{array[0]}}<span class="p">&lt;/</span><span class="nt">view</span><span class="p">&gt;</span>
 </pre></div>
@@ -279,12 +278,12 @@
 <span class="p">})</span>
 </pre></div>
 </div>
-</section>
-</section>
-<section id="id13">
+</div>
+</div>
+<div class="section" id="id13">
 <h2>组合<a class="headerlink" href="#id13" title="永久链接至标题">¶</a></h2>
 <p>也可以在 Mustache 内直接进行组合，构成新的对象或者数组。</p>
-<section id="id14">
+<div class="section" id="id14">
 <h3>数组<a class="headerlink" href="#id14" title="永久链接至标题">¶</a></h3>
 <div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">view</span> <span class="na">wx:for</span><span class="o">=</span><span class="s">&quot;{{[zero, 1, 2, 3, 4]}}&quot;</span><span class="p">&gt;</span>{{item}}<span class="p">&lt;/</span><span class="nt">view</span><span class="p">&gt;</span>
 </pre></div>
@@ -297,8 +296,8 @@
 </pre></div>
 </div>
 <p>最终组合成数组[0, 1, 2, 3, 4]。</p>
-</section>
-<section id="id15">
+</div>
+<div class="section" id="id15">
 <h3>对象<a class="headerlink" href="#id15" title="永久链接至标题">¶</a></h3>
 <div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">template</span> <span class="na">is</span><span class="o">=</span><span class="s">&quot;objectCombine&quot;</span> <span class="na">data</span><span class="o">=</span><span class="s">&quot;{{for: a, bar: b}}&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">template</span><span class="p">&gt;</span>
 </pre></div>
@@ -382,9 +381,9 @@
 &lt;/view&gt;
 </pre></div>
 </div>
-</section>
-</section>
-</section>
+</div>
+</div>
+</div>
 
 
             <div class="clearer"></div>
@@ -419,7 +418,7 @@
     </div>
     <div class="footer" role="contentinfo">
         &#169; 版权所有 2019, Wxadev Docs.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.1.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.2.
     </div>
   </body>
 </html>

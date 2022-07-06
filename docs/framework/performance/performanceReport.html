@@ -4,8 +4,7 @@
 <html lang="zh_CN">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>小程序测速 &#8212; wxadev v2.21.0 文档</title>
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx13.css" />
@@ -144,10 +143,10 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <section id="id1">
+  <div class="section" id="id1">
 <h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/framework/performance/performanceReport.html">小程序测速</a><a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
 <p>为帮助开发者优化小程序性能，我们推出了”小程序测速”功能。”小程序测速”可以简单方便地统计小程序内某一事件的实时耗时情况，并可根据地域、运营商、操作系统、网络类型、机型等关键维度进行实时交叉分析。从基础库2.9.2开始，开发者通过“测速上报”接口上报某一指标的耗时情况后，可在小程序管理后台”开发 -运维中心 -小程序测速” 查看各指标耗时趋势，并支持分钟级数据实时查看。</p>
-<section id="id">
+<div class="section" id="id">
 <h2>新建监控 ID<a class="headerlink" href="#id" title="永久链接至标题">¶</a></h2>
 <p>为了实现对某一指标的耗时监控，开发者需要先定义监控指标。在小程序管理后台（mp.weixin.qq.com）的 ：”开发 -运维中心 -小程序测速”中新建监控 ID，并填写监控指标的名称和解释。</p>
 <p>img</p>
@@ -157,8 +156,8 @@
 <p>img</p>
 <p>新建后，可以看到上报需要使用的监控 ID 。</p>
 <p>img</p>
-</section>
-<section id="id2">
+</div>
+<div class="section" id="id2">
 <h2>测速上报<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
 <p>开发者定义监控ID后，需要在小程序代码中调用 wx.reportPerformance 接口上报耗时数值，才可实现耗时监控：</p>
 <p>上报方法1： 使用 canIUse 进行判断</p>
@@ -177,16 +176,16 @@ if (compareVersion(sdkVersion, &#39;2.9.2&#39;) &gt;= 0) {
 </div>
 <p>​id 和 val 均为 uint32 类型，其中 id 为小程序管理后台定义的监控 ID，val 为本次要上报的耗时数值（由开发者自行计算）。接口调用需要基础库的版本号高于 2.9.2，否则在一些低版本基础库可能报错。</p>
 <p>(compareVersion 定义)</p>
-</section>
-<section id="id3">
+</div>
+<div class="section" id="id3">
 <h2>数据观察<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
 <p>完成代码上报后，可在小程序管理后台”开发 -运维中心 -小程序测速” 查看各指标耗时趋势。目前线上数据约有15分钟数据时延，上报数据保留 7 天，可按照 1 分钟 - 1 小时等不同的时间粒度进行聚合。</p>
 <p>每个指标可以观察到两条曲线，分别为平均值曲线和上报次数曲线。</p>
 <p>​ img</p>
 <p>​同时对于不同维度的数据，我们提供了交叉对比功能，以帮助大家快速便捷的完成分析，注意交叉对比的曲线数最多不能超过10条。 img</p>
 <p>​对于网络请求类指标，我们提供了区域地图，以帮助大家快速的定位区域资源问题。 img</p>
-</section>
-<section id="id4">
+</div>
+<div class="section" id="id4">
 <h2>自定义维度(可选功能)<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h2>
 <p>对于更复杂的用户场景，用户可能需要将测速数据根据url、页面等维度进行细分，所以我们提供了自定义维度，用户可以将一些业务层面的维度字符串填入至自定义维度中，以方便业务分析。 目前每个指标的自定义纬度值的数量需要限制在50以内（超限制的数据会被丢弃），自定义维度值的长度需要限制在256字节内（超限制的值会被截断）。自定义维度的使用效果如下： img
 想要使用自定义维度，只需要给wx.reportPerformance加上第三个参数dimensions，即可上报自定义维度：</p>
@@ -194,8 +193,8 @@ if (compareVersion(sdkVersion, &#39;2.9.2&#39;) &gt;= 0) {
 <span class="p">(</span><span class="nx">wx</span><span class="p">.</span><span class="nx">reportPerformance</span> <span class="nx">文档</span><span class="p">)</span>
 </pre></div>
 </div>
-</section>
-<section id="q-a">
+</div>
+<div class="section" id="q-a">
 <h2>Q&amp;A<a class="headerlink" href="#q-a" title="永久链接至标题">¶</a></h2>
 <dl class="simple">
 <dt>… Q<span class="classifier">测速系统可以在哪些场景发挥作用？</span></dt><dd><p>A : 可以测量网络类指标（如网络调用/云调用耗时、网络数据读写速度等）和非网络类指标（页面切换加载速度、组件渲染速度等）。可以查看这些指标在不同维度下的数量分布和性能差异。在一些计算视频首屏时延、帧率等场景也可以发挥作用。</p>
@@ -207,8 +206,8 @@ if (compareVersion(sdkVersion, &#39;2.9.2&#39;) &gt;= 0) {
 <dt>… Q： 我可以定义多少指标 ID？</dt><dd><p>A ： 单个小程序每个类别可以定义 20 个 ID。</p>
 </dd>
 </dl>
-</section>
-</section>
+</div>
+</div>
 
 
             <div class="clearer"></div>
@@ -242,7 +241,7 @@ if (compareVersion(sdkVersion, &#39;2.9.2&#39;) &gt;= 0) {
     </div>
     <div class="footer" role="contentinfo">
         &#169; 版权所有 2019, Wxadev Docs.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.1.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.2.
     </div>
   </body>
 </html>

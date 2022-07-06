@@ -1,3 +1,5 @@
+.. _share_updatable-message:
+
 :wxfrwk:`动态消息 <open-ability/share/updatable-message>`
 =========================================================
 
@@ -48,7 +50,7 @@
 一、创建 activity_id
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-每条动态消息可以理解为一个活动，活动发起前需要通过 updatableMessage.createActivityId 接口创建 activity_id。后续转发动态消息以及更新动态消息都需要传入这个 activity_id。
+每条动态消息可以理解为一个活动，活动发起前需要通过 :ref:`updatableMessage.createActivityId` 接口创建 activity_id。后续转发动态消息以及更新动态消息都需要传入这个 activity_id。
 
 活动的默认有效期是 24 小时。活动结束后，消息内容会变成统一的样式：
 
@@ -59,7 +61,7 @@
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
-通过调用 wx.updateShareMenu 接口，传入 isUpdatableMessage: true，以及 templateInfo、activityId 参数。其中 activityId 从步骤一中获得。
+通过调用 :func:`wx.updateShareMenu` 接口，传入 isUpdatableMessage: true，以及 templateInfo、activityId 参数。其中 activityId 从步骤一中获得。
 
 .. code:: js
 
@@ -81,7 +83,7 @@
 三、修改动态消息内容
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-动态消息发出去之后，可以通过 updatableMessage.setUpdatableMsg 修改消息内容。
+动态消息发出去之后，可以通过 :ref:`updatableMessage.setUpdatableMsg` 修改消息内容。
 
 低版本兼容
 ------------

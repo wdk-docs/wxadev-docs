@@ -4,8 +4,7 @@
 <html lang="zh_CN">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>文件系统 &#8212; wxadev v2.21.0 文档</title>
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx13.css" />
@@ -150,7 +149,7 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <section id="id1">
+  <div class="section" id="id1">
 <h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/framework/ability/file-system.html">文件系统</a><a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
 <p>文件系统是小程序提供的一套以小程序和用户维度隔离的存储以及一套相应的管理接口。
 通过 <code class="xref js js-func docutils literal notranslate"><span class="pre">wx.getFileSystemManager()</span></code> 可以获取到全局唯一的文件系统管理器，
@@ -173,20 +172,20 @@
 除非用户主动删除小程序，否则不会被删除。跟本地缓存文件共计，
 普通小程序最多可存储 10MB，游戏类目的小程序最多可存储 50MB。</p></li>
 </ol>
-<section id="id2">
+<div class="section" id="id2">
 <h2>代码包文件<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
 <p>由于代码包文件大小限制，代码包文件适用于放置首次加载时需要的文件，对于内容较大或需要动态替换的文件，不推荐用添加到代码包中，推荐在小游戏启动之后再用下载接口下载到本地。</p>
-<section id="id3">
+<div class="section" id="id3">
 <h3>访问代码包文件<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h3>
 <p>代码包文件的访问方式是从项目根目录开始写文件路径，不支持相对路径的写法。</p>
 <img alt="https://developers.weixin.qq.com/miniprogram/dev/framework/ability/image/code-package.png?t=19043020" src="https://developers.weixin.qq.com/miniprogram/dev/framework/ability/image/code-package.png?t=19043020" />
-</section>
-<section id="id4">
+</div>
+<div class="section" id="id4">
 <h3>修改代码包文件<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h3>
 <p>代码包内的文件无法在运行后动态修改或删除，修改代码包文件需要重新发布版本。</p>
-</section>
-</section>
-<section id="id5">
+</div>
+</div>
+<div class="section" id="id5">
 <h2>本地文件<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h2>
 <p>本地文件指的是小程序被用户添加到手机后，会有一块独立的文件存储区域，以用户维度隔离。即同一台手机，每个微信用户不能访问到其他登录用户的文件，同一个用户不同 appId 之间的文件也不能互相访问。 本地文件沙盒.png</p>
 <img alt="https://developers.weixin.qq.com/miniprogram/dev/framework/ability/image/file-sandbox.png?t=19043020" src="https://developers.weixin.qq.com/miniprogram/dev/framework/ability/image/file-sandbox.png?t=19043020" />
@@ -198,7 +197,7 @@
 开发者无需关注这个差异，也不应在代码中去硬编码完整文件路径。
 </pre></div>
 </div>
-<section id="id6">
+<div class="section" id="id6">
 <h3>本地临时文件<a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h3>
 <p>本地临时文件只能通过调用特定接口产生，不能直接写入内容。本地临时文件产生后，仅在当前生命周期内有效，重启之后即不可用。
 因此，不可把本地临时文件路径存储起来下次使用。如果需要下次在使用，
@@ -212,8 +211,8 @@
 <span class="p">})</span>
 </pre></div>
 </div>
-</section>
-<section id="id7">
+</div>
+<div class="section" id="id7">
 <h3>本地缓存文件<a class="headerlink" href="#id7" title="永久链接至标题">¶</a></h3>
 <p>本地缓存文件只能通过调用特定接口产生，不能直接写入内容。
 本地缓存文件产生后，重启之后仍可用。
@@ -232,8 +231,8 @@
 <p>本地缓存文件是最初的设计，1.7.0 版本开始，提供了功能更完整的本地用户文件，
 可以完全覆盖本地缓存文件的功能，如果不需要兼容低于 1.7.0 版本，可以不使用本地缓存文件。</p>
 </div>
-</section>
-<section id="id8">
+</div>
+<div class="section" id="id8">
 <h3>本地用户文件<a class="headerlink" href="#id8" title="永久链接至标题">¶</a></h3>
 <div class="versionadded">
 <p><span class="versionmodified added">1.7.0 新版功能.</span></p>
@@ -278,9 +277,9 @@
 </tr>
 </tbody>
 </table>
-</section>
-</section>
-</section>
+</div>
+</div>
+</div>
 
 
             <div class="clearer"></div>
@@ -314,7 +313,7 @@
     </div>
     <div class="footer" role="contentinfo">
         &#169; 版权所有 2019, Wxadev Docs.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.1.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.2.
     </div>
   </body>
 </html>

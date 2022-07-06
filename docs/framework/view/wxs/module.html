@@ -4,8 +4,7 @@
 <html lang="zh_CN">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>模块 &#8212; wxadev v2.21.0 文档</title>
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinx13.css" />
@@ -151,20 +150,20 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <section id="wxs-module">
+  <div class="section" id="wxs-module">
 <span id="id1"></span><h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/framework/view/wxs/01wxs-module.html">模块</a><a class="headerlink" href="#wxs-module" title="永久链接至标题">¶</a></h1>
-<aside class="sidebar">
+<div class="sidebar">
 <p class="sidebar-title">菜单</p>
 <p>边栏例子</p>
-</aside>
+</div>
 <p>WXS 代码可以编写在 wxml 文件中的 &lt;wxs&gt; 标签内，或以 .wxs 为后缀名的文件内。</p>
-<section id="id2">
+<div class="section" id="id2">
 <h2>模块<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
 <p>每一个 .wxs 文件和 &lt;wxs&gt; 标签都是一个单独的模块。</p>
 <p>每个模块都有自己独立的作用域。即在一个模块里面定义的变量与函数，默认为私有的，对其他模块不可见。</p>
 <p>一个模块要想对外暴露其内部的私有变量与函数，只能通过 <code class="docutils literal notranslate"><span class="pre">module.exports</span></code> 实现。</p>
-</section>
-<section id="wxs">
+</div>
+<div class="section" id="wxs">
 <h2>.wxs 文件<a class="headerlink" href="#wxs" title="永久链接至标题">¶</a></h2>
 <p>在微信开发者工具里面，<code class="docutils literal notranslate"><span class="pre">右键</span></code> 可以直接创建 <code class="docutils literal notranslate"><span class="pre">.wxs</span></code> 文件，在其中直接编写 WXS 脚本。</p>
 <p>示例代码：</p>
@@ -182,11 +181,11 @@
 </div>
 <p>上述例子在 <em>/pages/comm.wxs</em> 的文件里面编写了 WXS 代码。
 该 <code class="docutils literal notranslate"><span class="pre">.wxs</span></code> 文件可以被其他的 <code class="docutils literal notranslate"><span class="pre">.wxs</span></code> 文件 或 WXML 中的 <code class="docutils literal notranslate"><span class="pre">&lt;wxs&gt;</span></code> 标签引用。</p>
-</section>
-<section id="module">
+</div>
+<div class="section" id="module">
 <h2>module 对象<a class="headerlink" href="#module" title="永久链接至标题">¶</a></h2>
 <p>每个 wxs 模块均有一个内置的 <code class="docutils literal notranslate"><span class="pre">module</span></code> 对象。</p>
-<section id="id3">
+<div class="section" id="id3">
 <h3>属性<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h3>
 <ul class="simple">
 <li><p>exports: 通过该属性，可以对外共享本模块的私有变量与函数。</p></li>
@@ -214,12 +213,12 @@
 </div>
 <p>页面输出:</p>
 <div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="nx">some</span> <span class="nx">msg</span>
-<span class="s1">&#39;hello world&#39;</span> <span class="kr">from</span> <span class="nx">tools</span><span class="p">.</span><span class="nx">wxs</span>
+<span class="s1">&#39;hello world&#39;</span> <span class="nx">from</span> <span class="nx">tools</span><span class="p">.</span><span class="nx">wxs</span>
 </pre></div>
 </div>
-</section>
-</section>
-<section id="require">
+</div>
+</div>
+<div class="section" id="require">
 <h2>require函数<a class="headerlink" href="#require" title="永久链接至标题">¶</a></h2>
 <p>在 <code class="docutils literal notranslate"><span class="pre">.wxs</span></code> 模块中引用其他 <code class="docutils literal notranslate"><span class="pre">wxs</span></code> 文件模块，可以使用 <code class="docutils literal notranslate"><span class="pre">require</span></code> 函数。</p>
 <p>引用的时候，要注意如下几点：</p>
@@ -257,13 +256,13 @@
 </pre></div>
 </div>
 <p>控制台输出:</p>
-<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;hello world&#39;</span> <span class="kr">from</span> <span class="nx">tools</span><span class="p">.</span><span class="nx">wxs</span>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;hello world&#39;</span> <span class="nx">from</span> <span class="nx">tools</span><span class="p">.</span><span class="nx">wxs</span>
 <span class="nx">logic</span><span class="p">.</span><span class="nx">wxs</span>
 <span class="nx">some</span> <span class="nx">msg</span>
 </pre></div>
 </div>
-</section>
-<section id="id4">
+</div>
+<div class="section" id="id4">
 <h2>&lt;wxs&gt; 标签<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h2>
 <table class="docutils align-default">
 <colgroup>
@@ -292,7 +291,7 @@
 </tr>
 </tbody>
 </table>
-<section id="id5">
+<div class="section" id="id5">
 <h3>module 属性<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h3>
 <p>module 属性是当前 &lt;wxs&gt; 标签的模块名。在单个 wxml 文件内，建议其值唯一。
 有重复模块名则按照先后顺序覆盖（后者覆盖前者）。不同文件之间的 wxs 模块名不会相互覆盖。</p>
@@ -316,8 +315,8 @@
 </pre></div>
 </div>
 <p>上面例子声明了一个名字为 foo 的模块，将 some_msg 变量暴露出来，供当前页面使用。</p>
-</section>
-<section id="src">
+</div>
+<div class="section" id="src">
 <h3>src 属性<a class="headerlink" href="#src" title="永久链接至标题">¶</a></h3>
 <p>src 属性可以用来引用其他的 wxs 文件模块。</p>
 <p>引用的时候，要注意如下几点：</p>
@@ -351,8 +350,8 @@
 </pre></div>
 </div>
 <p>页面输出:</p>
-<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;hello world&#39;</span> <span class="kr">from</span> <span class="nx">comm</span><span class="p">.</span><span class="nx">wxs</span>
-<span class="s1">&#39;hello wrold&#39;</span> <span class="kr">from</span> <span class="nx">js</span>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;hello world&#39;</span> <span class="nx">from</span> <span class="nx">comm</span><span class="p">.</span><span class="nx">wxs</span>
+<span class="s1">&#39;hello wrold&#39;</span> <span class="nx">from</span> <span class="nx">js</span>
 </pre></div>
 </div>
 <p>上述例子在文件 /page/index/index.wxml 中通过 &lt;wxs&gt; 标签引用了 /page/comm.wxs 模块。</p>
@@ -363,9 +362,9 @@
 <li><p>&lt;template&gt; 标签中，只能使用定义该 &lt;template&gt; 的 WXML 文件中定义的 &lt;wxs&gt; 模块。</p></li>
 </ul>
 </div>
-</section>
-</section>
-</section>
+</div>
+</div>
+</div>
 
 
             <div class="clearer"></div>
@@ -399,7 +398,7 @@
     </div>
     <div class="footer" role="contentinfo">
         &#169; 版权所有 2019, Wxadev Docs.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.1.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.2.
     </div>
   </body>
 </html>

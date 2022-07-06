@@ -4,8 +4,7 @@
 <html lang="zh_CN">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>服务端API &#8212; wxadev v2.21.0 文档</title>
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx13.css" />
@@ -142,19 +141,19 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <section id="api">
+  <div class="section" id="api">
 <span id="backend-api"></span><h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/framework/server-ability/backend-api.html">服务端API</a><a class="headerlink" href="#api" title="永久链接至标题">¶</a></h1>
 <p>小程序还提供了一系列在后端服务器使用 HTTPS 请求调用的 API，帮助开发者在后台完成各类数据分析、管理和查询等操作。
 如 getAccessToken，code2Session 等。详细介绍请参考 <a class="reference internal" href="../../api/index.html#api"><span class="std std-ref">API</span></a> 文档  。</p>
-<section id="access-token">
+<div class="section" id="access-token">
 <h2>access_token<a class="headerlink" href="#access-token" title="永久链接至标题">¶</a></h2>
 <p>access_token 是小程序全局唯一后台接口调用凭据，调用绝大多数后台接口时都需使用。
 开发者可以通过 getAccessToken 接口获取并进行妥善保存。</p>
 <p>为了 access_token 的安全性，后端 API 不能直接在小程序内通过 <a class="reference internal" href="../../api/wx.request.html#wx.request" title="wx.request"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.request()</span></code></a> 调用，
 即 api.weixin.qq.com 不能被配置为服务器域名。
 开发者应在后端服务器使用getAccessToken获取 access_token，并调用相关 API；</p>
-</section>
-<section id="id1">
+</div>
+<div class="section" id="id1">
 <h2>请求参数说明<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h2>
 <ul class="simple">
 <li><p>对于 GET 请求，请求参数应以 QueryString 的形式写在 URL 中。</p></li>
@@ -162,15 +161,15 @@
 （一般只有 access_token，如有额外参数会在文档里的 URL 中体现），
 其他参数如无特殊说明均以 JSON 字符串格式写在 POST 请求的 body 中。</p></li>
 </ul>
-</section>
-<section id="id2">
+</div>
+<div class="section" id="id2">
 <h2>返回参数说明<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
 <div class="admonition attention">
 <p class="admonition-title">注意</p>
 <p>当API调用成功时，部分接口不会返回 errcode 和 errmsg，只有调用失败时才会返回。</p>
 </div>
-</section>
-</section>
+</div>
+</div>
 
 
             <div class="clearer"></div>
@@ -204,7 +203,7 @@
     </div>
     <div class="footer" role="contentinfo">
         &#169; 版权所有 2019, Wxadev Docs.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.1.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.2.
     </div>
   </body>
 </html>

@@ -4,8 +4,7 @@
 <html lang="zh_CN">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>updatableMessage.createActivityId &#8212; wxadev v2.21.0 文档</title>
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx13.css" />
@@ -91,6 +90,15 @@
     </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
+  <h3><a href="../../contents.html">目录</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">updatableMessage.createActivityId</a><ul>
+<li><a class="reference internal" href="#id2">服务器端调用</a></li>
+<li><a class="reference internal" href="#id3">云调用</a></li>
+</ul>
+</li>
+</ul>
+
   <div role="note" aria-label="source link">
     <h3>本页</h3>
     <ul class="this-page-menu">
@@ -116,9 +124,68 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <section id="updatablemessage-createactivityid">
+  <div class="section" id="updatablemessage-createactivityid">
 <span id="id1"></span><h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/api-backend/updatableMessage.createActivityId.html">updatableMessage.createActivityId</a><a class="headerlink" href="#updatablemessage-createactivityid" title="永久链接至标题">¶</a></h1>
-</section>
+<p>本接口应在服务器端调用，详细说明参见 <a class="reference internal" href="../index.html#api-backend"><span class="std std-ref">服务端API</span></a>。</p>
+<p>本接口支持云调用。需开发者工具版本 &gt;= 1.02.1904090（最新稳定版下载），wx-server-sdk &gt;= 0.4.0</p>
+<div class="section" id="id2">
+<h2>服务器端调用<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<dl class="http get">
+<dt class="sig sig-object http" id="get-message-wxopen-activityid-create?access_token=(ACCESS_TOKEN)&amp;unionid=(UNIONID)">
+<span class="sig-name descname"><span class="pre">GET</span> </span><span class="sig-name descname"><span class="pre">message/wxopen/activityid/create?access_token=</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">ACCESS_TOKEN</span></em><span class="sig-paren">)</span><span class="sig-name descname"><span class="pre">&amp;unionid=</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">UNIONID</span></em><span class="sig-paren">)</span><a class="headerlink" href="#get-message-wxopen-activityid-create?access_token=(ACCESS_TOKEN)&unionid=(UNIONID)" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Synopsis</dt>
+<dd class="field-odd"><p>创建被分享动态消息或私密消息的 activity_id。详见 <a class="reference internal" href="../../framework/open-ability/share/updatable-message.html#share-updatable-message"><span class="std std-ref">动态消息</span></a>。</p>
+</dd>
+<dt class="field-even">Parameters</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>cloudbase_access_token</strong> (<em>string access_token /</em>) – 是       接口调用凭证</p></li>
+<li><p><strong>unionid</strong> (<em>string</em>) – 否       为私密消息创建activity_id时，指定分享者为unionid用户。其余用户不能用此activity_id分享私密消息。openid与unionid填一个即可。私密消息暂不支持云函数生成activity id。</p></li>
+<li><p><strong>openid</strong> (<em>string</em>) – 否       为私密消息创建activity_id时，指定分享者为openid用户。其余用户不能用此activity_id分享私密消息。openid与unionid填一个即可。私密消息暂不支持云函数生成activity id。</p></li>
+</ul>
+</dd>
+<dt class="field-odd">Request JSON Object</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>activity_id</strong> (<em>string</em>) – 动态消息的 ID</p></li>
+<li><p><strong>expiration_time</strong> (<em>number</em>) – activity_id 的过期时间戳。默认24小时后过期。</p></li>
+<li><p><strong>errcode</strong> (<em>number</em>) – 错误码 0   请求成功 -1 系统繁忙。此时请开发者稍候再试 42001   access_token 过期</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="id3">
+<h2>云调用<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
+<p>云调用是微信云开发提供的在云函数中调用微信开放接口的能力，需要在云函数中通过 wx-server-sdk 使用。</p>
+<p>接口方法
+openapi.updatableMessage.createActivityId
+需在 config.json 中配置 updatableMessage.createActivityId API 的权限，详情</p>
+<p>请求参数
+属性      类型      默认值     必填      说明
+unionid string          否       为私密消息创建activity_id时，指定分享者为unionid用户。其余用户不能用此activity_id分享私密消息。openid与unionid填一个即可。私密消息暂不支持云函数生成activity id。
+openid  string          否       为私密消息创建activity_id时，指定分享者为openid用户。其余用户不能用此activity_id分享私密消息。openid与unionid填一个即可。私密消息暂不支持云函数生成activity id。
+返回值
+Object
+返回的 JSON 数据包</p>
+<p>属性      类型      说明
+activityId      string  动态消息的 ID
+expirationTime  number  activity_id 的过期时间戳。默认24小时后过期。
+errCode number  错误码
+errCode 的合法值</p>
+<p>值       说明      最低版本
+0       成功
+异常
+Object
+抛出的异常</p>
+<p>属性      类型      说明
+errCode number  错误码
+errCode 的合法值</p>
+<p>值       说明      最低版本
+-1      系统繁忙。此时请开发者稍候再试
+42001   access_token 过期</p>
+</div>
+</div>
 
 
             <div class="clearer"></div>
@@ -144,7 +211,7 @@
     </div>
     <div class="footer" role="contentinfo">
         &#169; 版权所有 2019, Wxadev Docs.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.1.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.2.
     </div>
   </body>
 </html>

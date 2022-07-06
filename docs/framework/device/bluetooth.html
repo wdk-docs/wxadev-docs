@@ -4,8 +4,7 @@
 <html lang="zh_CN">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>蓝牙 &#8212; wxadev v2.21.0 文档</title>
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx13.css" />
@@ -142,33 +141,33 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <section id="id1">
+  <div class="section" id="id1">
 <h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/framework/device/bluetooth.html">蓝牙</a><a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
 <div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="nx">iOS</span> <span class="nx">微信客户端</span> <span class="mf">6.5.6</span> <span class="nx">版本</span> <span class="nx">Android</span> <span class="mf">6.5.7</span> <span class="nx">版本开始支持</span>
 </pre></div>
 </div>
 <p>蓝牙适配器模块生效周期为调用 <a class="reference internal" href="../../api/wx.openBluetoothAdapter.html#wx.openBluetoothAdapter" title="wx.openBluetoothAdapter"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.openBluetoothAdapter()</span></code></a> 至调用 <a class="reference internal" href="../../api/wx.closeBluetoothAdapter.html#wx.closeBluetoothAdapter" title="wx.closeBluetoothAdapter"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.closeBluetoothAdapter()</span></code></a> 或小程序被销毁为止。</p>
 <p>在小程序蓝牙适配器模块生效期间，开发者才能够正常调用蓝牙相关的小程序 API，并收到蓝牙模块相关的事件回调。</p>
-<section id="id2">
+<div class="section" id="id2">
 <h2>注意<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
 <ul class="simple">
 <li><p>由于系统限制，Android 上获取到的 deviceId 为设备 MAC 地址，iOS 上则为设备 uuid。因此 deviceId 不能硬编码到代码中。</p></li>
 <li><p>目前不支持在开发者工具上进行蓝牙功能的调试，需要使用真机才能正常调用小程序蓝牙接口。</p></li>
 </ul>
-</section>
-<section id="ble">
+</div>
+<div class="section" id="ble">
 <h2>低功耗蓝牙（BLE）注意事项<a class="headerlink" href="#ble" title="永久链接至标题">¶</a></h2>
 <ul class="simple">
 <li><p>iOS 上对特征值的 read、write、notify操作，由于系统需要获取特征值实例，
 传入的 serviceId 与 characteristicId 必须由 <a class="reference internal" href="../../api/wx.getBLEDeviceServices.html#wx.getBLEDeviceServices" title="wx.getBLEDeviceServices"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.getBLEDeviceServices()</span></code></a> 与 <a class="reference internal" href="../../api/wx.getBLEDeviceCharacteristics.html#wx.getBLEDeviceCharacteristics" title="wx.getBLEDeviceCharacteristics"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.getBLEDeviceCharacteristics()</span></code></a> 中获取到后才能使用。
 建议双平台统一在建立连接后先执行 <a class="reference internal" href="../../api/wx.getBLEDeviceServices.html#wx.getBLEDeviceServices" title="wx.getBLEDeviceServices"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.getBLEDeviceServices()</span></code></a> 与 <a class="reference internal" href="../../api/wx.getBLEDeviceCharacteristics.html#wx.getBLEDeviceCharacteristics" title="wx.getBLEDeviceCharacteristics"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.getBLEDeviceCharacteristics()</span></code></a> 后再进行与蓝牙设备的数据交互。</p></li>
 </ul>
-</section>
-<section id="id3">
+</div>
+<div class="section" id="id3">
 <h2>示例代码<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
 <p><a class="reference download external" download="" href="https://developers.weixin.qq.com/s/OF4Y9Gme6rZ4"><code class="xref download docutils literal notranslate"><span class="pre">在开发者工具中预览效果</span></code></a></p>
-</section>
-</section>
+</div>
+</div>
 
 
             <div class="clearer"></div>
@@ -202,7 +201,7 @@
     </div>
     <div class="footer" role="contentinfo">
         &#169; 版权所有 2019, Wxadev Docs.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.1.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.2.
     </div>
   </body>
 </html>

@@ -4,8 +4,7 @@
 <html lang="zh_CN">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>数据监听器 &#8212; wxadev v2.21.0 文档</title>
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx13.css" />
@@ -141,10 +140,10 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <section id="id1">
+  <div class="section" id="id1">
 <h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/framework/custom-component/observer.html">数据监听器</a><a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
 <p>数据监听器可以用于监听和响应任何属性和数据字段的变化。从小程序基础库版本 2.6.1 开始支持。</p>
-<section id="id2">
+<div class="section" id="id2">
 <h2>使用数据监听器<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
 <p>有时，在一些数据字段被 setData 设置时，需要执行一些操作。</p>
 <p>例如， this.data.sum 永远是 this.data.numberA 与 this.data.numberB 的和。此时，可以使用数据监听器进行如下实现。</p>
@@ -167,8 +166,8 @@
 </pre></div>
 </div>
 <p>在开发者工具中预览效果</p>
-</section>
-<section id="id3">
+</div>
+<div class="section" id="id3">
 <h2>监听字段语法<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
 <p>数据监听器支持监听属性或内部数据的变化，可以同时监听多个。一次 setData 最多触发每个监听器一次。</p>
 <p>同时，监听器可以监听子数据字段，如下例所示。</p>
@@ -230,8 +229,8 @@ Component({
 <p>数据监听器监听的是 setData 涉及到的数据字段，即使这些数据字段的值没有发生变化，数据监听器依然会被触发。
 如果在数据监听器函数中使用 setData 设置本身监听的数据字段，可能会导致死循环，需要特别留意。
 数据监听器和属性的 observer 相比，数据监听器更强大且通常具有更好的性能。</p>
-</section>
-</section>
+</div>
+</div>
 
 
             <div class="clearer"></div>
@@ -265,7 +264,7 @@ Component({
     </div>
     <div class="footer" role="contentinfo">
         &#169; 版权所有 2019, Wxadev Docs.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.1.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.2.
     </div>
   </body>
 </html>

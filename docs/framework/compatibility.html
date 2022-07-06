@@ -4,8 +4,7 @@
 <html lang="zh_CN">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>兼容处理 &#8212; wxadev v2.21.0 文档</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx13.css" />
@@ -145,13 +144,13 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <section id="compatibility">
+  <div class="section" id="compatibility">
 <span id="id1"></span><h1>兼容处理<a class="headerlink" href="#compatibility" title="永久链接至标题">¶</a></h1>
-<section id="id2">
+<div class="section" id="id2">
 <h2>兼容处理<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
 <p>小程序的功能不断的增加，但是旧版本的微信客户端并不支持新功能，所以在使用这些新能力的时候需要做兼容。</p>
 <p>开发者可以通过以下方式进行低版本的兼容：</p>
-<section id="id3">
+<div class="section" id="id3">
 <h3>1. 版本号比较<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h3>
 <blockquote>
 <div><p>微信客户端和小程序基础库的版本号风格为 Major.Minor.Patch（主版本号.次版本号.修订版本号）。</p>
@@ -202,8 +201,8 @@
 </pre></div>
 </div>
 </div></blockquote>
-</section>
-<section id="api">
+</div>
+<div class="section" id="api">
 <h3>2. API 存在判断<a class="headerlink" href="#api" title="永久链接至标题">¶</a></h3>
 <blockquote>
 <div><p>对于新增的 API，可以通过判断该API是否存在来判断是否支持用户使用的基础库版本。例如：</p>
@@ -219,8 +218,8 @@
 </pre></div>
 </div>
 </div></blockquote>
-</section>
-<section id="wx-caniuse">
+</div>
+<div class="section" id="wx-caniuse">
 <h3>3. <a class="reference internal" href="../api/wx.canIUse.html#wx.canIUse" title="wx.canIUse"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.canIUse()</span></code></a><a class="headerlink" href="#wx-caniuse" title="永久链接至标题">¶</a></h3>
 <blockquote>
 <div><p>除了直接通过版本号判断，也可以通过 wx.canIUse 来判断是否可以在该基础库版本下直接使用。例如：</p>
@@ -251,9 +250,9 @@
 </div>
 <p>canIUse 的数据文件随基础库进行更新，新版本中的新功能可能出现遗漏的情况，建议开发者在使用时提前测试。</p>
 </div></blockquote>
-</section>
-</section>
-<section id="id4">
+</div>
+</div>
+<div class="section" id="id4">
 <h2>设置最低基础库版本<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h2>
 <p>需要 iOS 6.5.8 / 安卓 6.5.7 及以上版本微信客户端支持</p>
 <p>为便于开发者解决低版本基础库无法兼容小程序的新功能的问题，开发者可设置小程序最低基础库版本要求。</p>
@@ -262,8 +261,8 @@
 <img alt="https://developers.weixin.qq.com/miniprogram/dev/framework/image/least-version-config.png?t=19041921" src="https://developers.weixin.qq.com/miniprogram/dev/framework/image/least-version-config.png?t=19041921" />
 <p>设置后，若用户基础库版本低于设置值，则无法正常打开小程序，并提示用户更新客户端版本。</p>
 <img alt="https://developers.weixin.qq.com/miniprogram/dev/framework/image/least-version-tips.jpg?t=19041921" src="https://developers.weixin.qq.com/miniprogram/dev/framework/image/least-version-tips.jpg?t=19041921" />
-</section>
-</section>
+</div>
+</div>
 
 
             <div class="clearer"></div>
@@ -296,7 +295,7 @@
     </div>
     <div class="footer" role="contentinfo">
         &#169; 版权所有 2019, Wxadev Docs.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.1.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.2.
     </div>
   </body>
 </html>

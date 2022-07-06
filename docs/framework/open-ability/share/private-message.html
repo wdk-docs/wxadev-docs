@@ -4,8 +4,7 @@
 <html lang="zh_CN">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>小程序私密消息 &#8212; wxadev v2.21.0 文档</title>
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinx13.css" />
@@ -150,16 +149,16 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <section id="id1">
+  <div class="section" id="id1">
 <h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/share/private-message.html">小程序私密消息</a><a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
-<section id="id2">
+<div class="section" id="id2">
 <h2>功能介绍<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
 <p>小程序私密消息功能是这样一种能力：当分享者分享小程序卡片给其他用户或者微信群后，
 其他用户点击此小程序卡片时，开发者可以鉴别出点击卡片的用户是否被分享者分享过小程序卡片。</p>
-</section>
-<section id="id3">
+</div>
+<div class="section" id="id3">
 <h2>使用说明<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
-<section id="id4">
+<div class="section" id="id4">
 <h3>1. 分享<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h3>
 <p>创建业务活动后、分享小程序消息前，需要通过后台接口 createActivityId 创建activityId，建立一个activityId与一个业务活动id唯一关联。</p>
 <p>然后通过 wx.updateShareMenu 接口声明本次分享的消息为私密消息，私密消息具有不可二次转发性。</p>
@@ -174,14 +173,14 @@
 <span class="p">})</span>
 </pre></div>
 </div>
-</section>
-<section id="id5">
+</div>
+<div class="section" id="id5">
 <h3>2. 验证<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h3>
 <p>从群聊、单聊消息卡片进入小程序时，通过 <code class="docutils literal notranslate"><span class="pre">wx.authPrivateMessage</span></code> 接口可以验证当前用户是否是私密消息的接收者，
 即验证这条消息是否是A直接转发给B或者A转发给B所在的群。</p>
 <p>该接口使用前，需要通过 <code class="docutils literal notranslate"><span class="pre">wx.login()</span></code> 接口登录小程序。</p>
-</section>
-<section id="id6">
+</div>
+<div class="section" id="id6">
 <h3>接口参数<a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h3>
 <table class="docutils align-default">
 <colgroup>
@@ -202,8 +201,8 @@
 </tr>
 </tbody>
 </table>
-</section>
-<section id="success">
+</div>
+<div class="section" id="success">
 <h3>success回调<a class="headerlink" href="#success" title="永久链接至标题">¶</a></h3>
 <table class="docutils align-default">
 <colgroup>
@@ -232,9 +231,9 @@
 </tr>
 </tbody>
 </table>
-</section>
-</section>
-<section id="id7">
+</div>
+</div>
+<div class="section" id="id7">
 <h2>注意事项<a class="headerlink" href="#id7" title="永久链接至标题">¶</a></h2>
 <ul class="simple">
 <li><p>若返回的valid字段为false，表示此次验证不通过。</p></li>
@@ -242,8 +241,8 @@
 <li><p>当私密消息分享给群时，是按鉴别时刻用户是否在群里作为判断。</p></li>
 <li><p>activityId创建后7天内分享有效，120天内验证有效。</p></li>
 </ul>
-</section>
-<section id="id8">
+</div>
+<div class="section" id="id8">
 <h2>示例代码<a class="headerlink" href="#id8" title="永久链接至标题">¶</a></h2>
 <div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="nx">wx</span><span class="p">.</span><span class="nx">authPrivateMessage</span><span class="p">({</span>
   <span class="nx">shareTicket</span><span class="o">:</span> <span class="s1">&#39;xxxxxx&#39;</span><span class="p">,</span>
@@ -263,8 +262,8 @@
 <span class="p">})</span>
 </pre></div>
 </div>
-</section>
-</section>
+</div>
+</div>
 
 
             <div class="clearer"></div>
@@ -299,7 +298,7 @@
     </div>
     <div class="footer" role="contentinfo">
         &#169; 版权所有 2019, Wxadev Docs.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.1.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.2.
     </div>
   </body>
 </html>

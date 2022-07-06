@@ -4,8 +4,7 @@
 <html lang="zh_CN">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>创建自定义组件(Component) &#8212; wxadev v2.21.0 文档</title>
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx13.css" />
@@ -132,7 +131,7 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <section id="component">
+  <div class="section" id="component">
 <h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/reference/api/Component.html">创建自定义组件(Component)</a><a class="headerlink" href="#component" title="永久链接至标题">¶</a></h1>
 <dl class="js class">
 <dt class="sig sig-object js" id="Component">
@@ -301,7 +300,7 @@ Bug &amp; Tips:
 从基础库 2.0.9 开始，对象类型的属性和 data 字段中可以包含函数类型的子字段，即可以通过对象类型的属性字段来传递函数。低于这一版本的基础库不支持这一特性。
 bug : 对于 type 为 Object 或 Array 的属性，如果通过该组件自身的 this.setData 来改变属性值的一个子字段，则依旧会触发属性 observer ，且 observer 接收到的 newVal 是变化的那个子字段的值， oldVal 为空， changedPath 包含子字段的字段名相关信息。
 bug : 位于 slot 中的自定义组件没有触发 pageLifetimes 中声明的页面生命周期，此问题在 2.5.2 中修复。</p>
-</section>
+</div>
 
 
             <div class="clearer"></div>
@@ -335,7 +334,7 @@ bug : 位于 slot 中的自定义组件没有触发 pageLifetimes 中声明的�
     </div>
     <div class="footer" role="contentinfo">
         &#169; 版权所有 2019, Wxadev Docs.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.1.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.2.
     </div>
   </body>
 </html>

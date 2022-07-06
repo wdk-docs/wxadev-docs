@@ -4,8 +4,7 @@
 <html lang="zh_CN">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>wx.getUserInfo &#8212; wxadev v2.21.0 文档</title>
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx13.css" />
@@ -116,7 +115,7 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <section id="wx-getuserinfo">
+  <div class="section" id="wx-getuserinfo">
 <h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/api/wx.getUserInfo.html">wx.getUserInfo</a><a class="headerlink" href="#wx-getuserinfo" title="永久链接至标题">¶</a></h1>
 <dl class="js function">
 <dt class="sig sig-object js" id="wx.getUserInfo">
@@ -143,7 +142,7 @@
 </p></li>
 <li><p><strong>cloudID})</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">function</span> <span class="pre">success({userInfo,</span> <span class="pre">rawData,</span> <span class="pre">signature,</span> <span class="pre">encryptedData,</span> <span class="pre">iv,()</span></code></span>) – <p>接口调用成功的回调函数</p>
 <ul>
-<li><p><strong>userInfo</strong> <a class="reference internal" href="../UserInfo.html#UserInfo" title="UserInfo"><code class="xref js js-data docutils literal notranslate"><span class="pre">UserInfo</span></code></a> - 用户信息对象，不包含 openid 等敏感信息</p></li>
+<li><p><strong>userInfo</strong> <a class="reference internal" href="UserInfo.html#UserInfo" title="UserInfo"><code class="xref js js-data docutils literal notranslate"><span class="pre">UserInfo</span></code></a> - 用户信息对象，不包含 openid 等敏感信息</p></li>
 <li><p><strong>rawData</strong> (<em>string</em>) - 不包括敏感信息的原始数据字符串，用于计算签名</p></li>
 <li><p><strong>signature</strong> (<em>string</em>) - 使用 <code class="docutils literal notranslate"><span class="pre">sha1(</span> <span class="pre">rawData</span> <span class="pre">+</span> <span class="pre">sessionkey</span> <span class="pre">)</span></code> 得到字符串，用于校验用户信息，详见 <a class="reference internal" href="../../framework/open-ability/user/signature.html#signature"><span class="std std-ref">用户数据的签名验证和加解密</span></a></p></li>
 <li><p><strong>encryptedData</strong> (<em>string</em>) - 包括敏感数据在内的完整用户信息的加密数据，详见 用户数据的签名验证和加解密</p></li>
@@ -243,7 +242,7 @@
 </dl>
 </dd></dl>
 
-</section>
+</div>
 
 
             <div class="clearer"></div>
@@ -269,7 +268,7 @@
     </div>
     <div class="footer" role="contentinfo">
         &#169; 版权所有 2019, Wxadev Docs.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.1.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.2.
     </div>
   </body>
 </html>

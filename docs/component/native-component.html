@@ -4,8 +4,7 @@
 <html lang="zh_CN">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>原生组件 &#8212; wxadev v2.21.0 文档</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx13.css" />
@@ -141,9 +140,9 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <section id="native-component">
+  <div class="section" id="native-component">
 <span id="id1"></span><h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/component/native-component.html">原生组件</a><a class="headerlink" href="#native-component" title="永久链接至标题">¶</a></h1>
-<section id="id2">
+<div class="section" id="id2">
 <h2>概述<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
 <p>小程序中的部分组件是由客户端创建的原生组件，这些组件有：</p>
 <ul class="simple">
@@ -156,8 +155,8 @@
 <li><p>textarea</p></li>
 <li><p>video</p></li>
 </ul>
-</section>
-<section id="nc-limit">
+</div>
+<div class="section" id="nc-limit">
 <span id="id3"></span><h2>原生组件的使用限制<a class="headerlink" href="#nc-limit" title="永久链接至标题">¶</a></h2>
 <p>由于原生组件脱离在 WebView 渲染流程外，因此在使用时有以下限制：</p>
 <ul class="simple">
@@ -181,12 +180,12 @@
 <li><p>原生组件的事件监听不能使用 bind:eventname 的写法，只支持 bindeventname。原生组件也不支持 catch 和 capture 的事件绑定方式。</p></li>
 <li><p>原生组件会遮挡 vConsole 弹出的调试面板。 在工具上，原生组件是用web组件模拟的，因此很多情况并不能很好的还原真机的表现，建议开发者在使用到原生组件时尽量在真机上进行调试。</p></li>
 </ul>
-</section>
-<section id="cover-view-cover-image">
+</div>
+<div class="section" id="cover-view-cover-image">
 <h2>cover-view 与 cover-image<a class="headerlink" href="#cover-view-cover-image" title="永久链接至标题">¶</a></h2>
 <p>为了解决原生组件层级最高的限制。小程序专门提供了 cover-view 和 cover-image 组件，可以覆盖在部分原生组件上面。这两个组件也是原生组件，但是使用限制与其他原生组件有所不同。</p>
-</section>
-</section>
+</div>
+</div>
 
 
             <div class="clearer"></div>
@@ -219,7 +218,7 @@
     </div>
     <div class="footer" role="contentinfo">
         &#169; 版权所有 2019, Wxadev Docs.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.1.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.2.
     </div>
   </body>
 </html>

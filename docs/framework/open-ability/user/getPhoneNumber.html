@@ -4,8 +4,7 @@
 <html lang="zh_CN">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>获取手机号 &#8212; wxadev v2.21.0 文档</title>
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinx13.css" />
@@ -143,28 +142,28 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <section id="id1">
+  <div class="section" id="id1">
 <h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/getPhoneNumber.html">获取手机号</a><a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
-<p>获取微信用户绑定的手机号，需先调用 <a class="reference internal" href="../../../api/wx.login.html#wx.login" title="wx.login"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.login()</span></code></a> 接口。</p>
+<p>获取微信用户绑定的手机号，需先调用 <a class="reference internal" href="../../../api/login/wx.login.html#wx.login" title="wx.login"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.login()</span></code></a> 接口。</p>
 <p>因为需要用户主动触发才能发起获取手机号接口，所以该功能不由 API 来调用，需用 <a class="reference internal" href="../../../component/button.html#button"><span class="std std-ref">&lt;button&gt;</span></a> 组件的点击来触发。</p>
 <div class="admonition attention">
 <p class="admonition-title">注意</p>
 <p>目前该接口针对非个人开发者，且完成了认证的小程序开放（不包含海外主体）。
 需谨慎使用，若用户举报较多或被发现在不必要场景下使用，微信有权永久回收该小程序的该接口权限。</p>
 </div>
-<section id="id2">
+<div class="section" id="id2">
 <h2>使用方法<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
 <p>需要将 <a class="reference internal" href="../../../component/button.html#button"><span class="std std-ref">&lt;button&gt;</span></a> 组件 <code class="docutils literal notranslate"><span class="pre">open-type</span></code> 的值设置为 <code class="docutils literal notranslate"><span class="pre">getPhoneNumber</span></code> ，当用户点击并同意之后，
 可以通过 bindgetphonenumber 事件回调获取到微信服务器返回的加密数据，
 然后在第三方服务端结合 session_key 以及 app_id 进行解密获取手机号。</p>
 <div class="admonition attention">
 <p class="admonition-title">注意</p>
-<p>在回调中调用 <a class="reference internal" href="../../../api/wx.login.html#wx.login" title="wx.login"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.login()</span></code></a> 登录，可能会刷新登录态。
+<p>在回调中调用 <a class="reference internal" href="../../../api/login/wx.login.html#wx.login" title="wx.login"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.login()</span></code></a> 登录，可能会刷新登录态。
 此时服务器使用 code 换取的 sessionKey 不是加密时使用的 sessionKey，
 导致解密失败。建议开发者提前进行 login；或者在回调中先使用 checkSession 进行登录态检查，避免 login 刷新登录态。</p>
 </div>
-</section>
-<section id="id3">
+</div>
+<div class="section" id="id3">
 <h2>代码示例<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
 <div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">button</span> <span class="na">open-type</span><span class="o">=</span><span class="s">&quot;getPhoneNumber&quot;</span> <span class="na">bindgetphonenumber</span><span class="o">=</span><span class="s">&quot;getPhoneNumber&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
 </pre></div>
@@ -178,8 +177,8 @@
 <span class="p">})</span>
 </pre></div>
 </div>
-</section>
-<section id="id4">
+</div>
+<div class="section" id="id4">
 <h2>返回参数说明<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h2>
 <table class="docutils align-default">
 <colgroup>
@@ -246,8 +245,8 @@
 </tr>
 </tbody>
 </table>
-</section>
-</section>
+</div>
+</div>
 
 
             <div class="clearer"></div>
@@ -282,7 +281,7 @@
     </div>
     <div class="footer" role="contentinfo">
         &#169; 版权所有 2019, Wxadev Docs.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.1.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.2.
     </div>
   </body>
 </html>

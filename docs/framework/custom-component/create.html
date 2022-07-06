@@ -4,8 +4,7 @@
 <html lang="zh_CN">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>自定义组件 &#8212; wxadev v2.21.0 文档</title>
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx13.css" />
@@ -142,11 +141,11 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <section id="custom-component">
+  <div class="section" id="custom-component">
 <span id="id1"></span><h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/framework/custom-component/index.html">自定义组件</a><a class="headerlink" href="#custom-component" title="永久链接至标题">¶</a></h1>
 <p>从小程序基础库版本 1.6.3 开始，小程序支持简洁的组件化编程。所有自定义组件相关特性都需要基础库版本 1.6.3 或更高。</p>
 <p>开发者可以将页面内的功能模块抽象成自定义组件，以便在不同的页面中重复使用；也可以将复杂的页面拆分成多个低耦合的模块，有助于代码维护。自定义组件在使用时与基础组件非常相似。</p>
-<section id="id2">
+<div class="section" id="id2">
 <h2>创建自定义组件<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
 <p>类似于页面，一个自定义组件由 json wxml wxss js 4个文件组成。要编写一个自定义组件，首先需要在 json 文件中进行自定义组件声明（将 component 字段设为 true 可这一组文件设为自定义组件）：</p>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
@@ -195,8 +194,8 @@
 <span class="p">})</span>
 </pre></div>
 </div>
-</section>
-<section id="id3">
+</div>
+<div class="section" id="id3">
 <h2>使用自定义组件<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
 <p>使用已注册的自定义组件前，首先要在页面的 json 文件中进行引用声明。此时需要提供每个自定义组件的标签名和对应的自定义组件文件路径：</p>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
@@ -217,8 +216,8 @@
 </pre></div>
 </div>
 <p>自定义组件的 wxml 节点结构在与数据结合之后，将被插入到引用位置内。</p>
-</section>
-<section id="id4">
+</div>
+<div class="section" id="id4">
 <h2>细节注意事项<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h2>
 <p>一些需要注意的细节：</p>
 <ul class="simple">
@@ -233,8 +232,8 @@
 <li><p>出于性能考虑，使用 usingComponents 时， setData 内容不会被直接深复制，即 this.setData({ field: obj }) 后 this.data.field === obj 。（深复制会在这个值被组件间传递时发生。）</p></li>
 <li><p>如果页面比较复杂，新增或删除 usingComponents 定义段时建议重新测试一下。</p></li>
 </ul>
-</section>
-</section>
+</div>
+</div>
 
 
             <div class="clearer"></div>
@@ -268,7 +267,7 @@
     </div>
     <div class="footer" role="contentinfo">
         &#169; 版权所有 2019, Wxadev Docs.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.1.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.2.
     </div>
   </body>
 </html>

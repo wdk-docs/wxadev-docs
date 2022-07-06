@@ -4,8 +4,7 @@
 <html lang="zh_CN">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>自定义组件扩展 &#8212; wxadev v2.21.0 文档</title>
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx13.css" />
@@ -143,35 +142,35 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <section id="id1">
+  <div class="section" id="id1">
 <h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/framework/custom-component/extend.html">自定义组件扩展</a><a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
 <p>为了更好定制自定义组件的功能，可以使用自定义组件扩展机制。从小程序基础库版本 2.2.3 开始支持。</p>
-<section id="id2">
+<div class="section" id="id2">
 <h2>扩展后的效果<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
 <p>为了更好的理解扩展后的效果，先举一个例子：</p>
 <p>在开发者工具中预览效果</p>
 <div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="c1">// behavior.js</span>
 <span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="nx">Behavior</span><span class="p">({</span>
   <span class="nx">definitionFilter</span><span class="p">(</span><span class="nx">defFields</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nx">defFields</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="kr">from</span> <span class="o">=</span> <span class="s1">&#39;behavior&#39;</span>
+    <span class="nx">defFields</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">from</span> <span class="o">=</span> <span class="s1">&#39;behavior&#39;</span>
   <span class="p">},</span>
 <span class="p">})</span>
 
 <span class="c1">// component.js</span>
 <span class="nx">Component</span><span class="p">({</span>
   <span class="nx">data</span><span class="o">:</span> <span class="p">{</span>
-    <span class="kr">from</span><span class="o">:</span> <span class="s1">&#39;component&#39;</span>
+    <span class="nx">from</span><span class="o">:</span> <span class="s1">&#39;component&#39;</span>
   <span class="p">},</span>
   <span class="nx">behaviors</span><span class="o">:</span> <span class="p">[</span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;behavior.js&#39;</span><span class="p">)],</span>
   <span class="nx">ready</span><span class="p">()</span> <span class="p">{</span>
-    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="kr">from</span><span class="p">)</span> <span class="c1">// 此处会发现输出 behavior 而不是 component</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">from</span><span class="p">)</span> <span class="c1">// 此处会发现输出 behavior 而不是 component</span>
   <span class="p">}</span>
 <span class="p">})</span>
 </pre></div>
 </div>
 <p>通过例子可以发现，自定义组件的扩展其实就是提供了修改自定义组件定义段的能力，上述例子就是修改了自定义组件中的 data 定义段里的内容。</p>
-</section>
-<section id="id3">
+</div>
+<div class="section" id="id3">
 <h2>使用扩展<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
 <p>Behavior 构造器提供了新的定义段 definitionFilter ，用于支持自定义组件扩展。 definitionFilter 是一个函数，在被调用时会注入两个参数，第一个参数是使用该 behavior 的 component/behavior 的定义对象，第二个参数是该 behavior 所使用的 behavior 的 definitionFilter 函数列表。</p>
 <p>以下举个例子来说明：</p>
@@ -207,8 +206,8 @@
 简单概括，definitionFilter 函数可以理解为当 A 使用了 B 时，A 声明就会调用 B 的 definitionFilter 函数并传入 A 的定义对象让 B 去过滤。此时如果 B 还使用了 C 和 D ，那么 B 可以自行决定要不要调用 C 和 D 的 definitionFilter 函数去过滤 A 的定义对象。</p>
 <p>代码示例：</p>
 <p>在开发者工具中预览效果</p>
-</section>
-<section id="id4">
+</div>
+<div class="section" id="id4">
 <h2>真实案例<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h2>
 <p>下面利用扩展简单实现自定义组件的计算属性功能:</p>
 <div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="c1">// behavior.js</span>
@@ -282,12 +281,12 @@
 </div>
 <p>实现原理很简单，对已有的 setData 进行二次封装，在每次 setData 的时候计算出 computed 里各字段的值，然后设到 data 中，已达到计算属性的效果。</p>
 <p>此实现只是作为一个简单案例来展示，请勿直接在生产环境中使用。</p>
-</section>
-<section id="id5">
+</div>
+<div class="section" id="id5">
 <h2>官方扩展包<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h2>
 <p>computed</p>
-</section>
-</section>
+</div>
+</div>
 
 
             <div class="clearer"></div>
@@ -321,7 +320,7 @@
     </div>
     <div class="footer" role="contentinfo">
         &#169; 版权所有 2019, Wxadev Docs.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.1.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.2.
     </div>
   </body>
 </html>

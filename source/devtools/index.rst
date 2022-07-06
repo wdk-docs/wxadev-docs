@@ -10,21 +10,24 @@
 使用小程序调试，开发者可以完成小程序的 API 和页面的开发调试、代码查看和编辑、小程序预览和发布等功能。
 为了更好的开发体验，我们从视觉、交互、性能等方面对开发者工具进行升级，推出了 1.0.0 版本。
 
-.. image:: https://developers.weixin.qq.com/miniprogram/dev/devtools/image/devtools2/main.png?t=19041222
+.. image:: https://res.wx.qq.com/wxdoc/dist/assets/img/main.0e6611d0.png
 
 .. toctree::
-   :maxdepth: 3
+   :maxdepth: 2
    :glob:
 
    page
    settings
    edit
+   projectconfig
    debug
    ext
    sandbox
    audits
    notsupport
    download
-   change/index
    devtools
    npm
+   compilets
+   codecompile
+   change/index

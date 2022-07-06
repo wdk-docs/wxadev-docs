@@ -4,8 +4,7 @@
 <html lang="zh_CN">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>组件间通信与事件 &#8212; wxadev v2.21.0 文档</title>
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx13.css" />
@@ -142,16 +141,16 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <section id="id1">
+  <div class="section" id="id1">
 <h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/framework/custom-component/event.html">组件间通信与事件</a><a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
-<section id="id2">
+<div class="section" id="id2">
 <h2>组件间通信<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
 <p>组件间的基本通信方式有以下几种。</p>
 <p>WXML 数据绑定：用于父组件向子组件的指定属性设置数据，仅能设置 JSON 兼容数据（自基础库版本 2.0.9 开始，还可以在数据中包含函数）。具体在 组件模板和样式 章节中介绍。
 事件：用于子组件向父组件传递数据，可以传递任意数据。
 如果以上两种方式不足以满足需要，父组件还可以通过 this.selectComponent 方法获取子组件实例对象，这样就可以直接访问组件的任意数据和方法。</p>
-</section>
-<section id="id3">
+</div>
+<div class="section" id="id3">
 <h2>监听事件<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
 <p>事件系统是组件间通信的主要方式之一。自定义组件可以触发任意的事件，引用组件的页面可以监听这些事件。关于事件的基本概念和用法，参见 事件 。</p>
 <p>监听自定义组件事件的方法与监听基础组件事件的方法完全一致：</p>
@@ -169,8 +168,8 @@
 <span class="p">})</span>
 </pre></div>
 </div>
-</section>
-<section id="id4">
+</div>
+<div class="section" id="id4">
 <h2>触发事件<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h2>
 <p>自定义组件触发事件时，需要使用 triggerEvent 方法，指定事件名、detail对象和事件选项：</p>
 <p>代码示例：</p>
@@ -221,8 +220,8 @@ capturePhase    Boolean 否       false   事件是否拥有捕获阶段
 <span class="p">})</span>
 </pre></div>
 </div>
-</section>
-</section>
+</div>
+</div>
 
 
             <div class="clearer"></div>
@@ -256,7 +255,7 @@ capturePhase    Boolean 否       false   事件是否拥有捕获阶段
     </div>
     <div class="footer" role="contentinfo">
         &#169; 版权所有 2019, Wxadev Docs.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.1.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.2.
     </div>
   </body>
 </html>

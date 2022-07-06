@@ -4,8 +4,7 @@
 <html lang="zh_CN">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>UnionID 机制 &#8212; wxadev v2.21.0 文档</title>
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinx13.css" />
@@ -142,12 +141,12 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <section id="unionid">
+  <div class="section" id="unionid">
 <h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/union-id.html">UnionID 机制</a><a class="headerlink" href="#unionid" title="永久链接至标题">¶</a></h1>
 <p>如果开发者拥有多个移动应用、网站应用、和公众帐号（包括小程序），可通过 UnionID 来区分用户的唯一性，
 因为只要是同一个微信开放平台帐号下的移动应用、网站应用和公众帐号（包括小程序），用户的 UnionID 是唯一的。
 换句话说，同一用户，对同一个微信开放平台下的不同应用，unionid是相同的。</p>
-<section id="id1">
+<div class="section" id="id1">
 <h2>UnionID获取途径<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h2>
 <p>绑定了开发者帐号的小程序，可以通过以下途径获取 UnionID。</p>
 <ol class="arabic simple">
@@ -163,13 +162,13 @@
 <li><p>小程序端调用云函数时，如果开发者帐号下存在同主体的公众号或移动应用，
 并且该用户已经授权登录过该公众号或移动应用，也可在云函数中通过 #. cloud.getWXContext 获取 UnionID。</p></li>
 </ol>
-</section>
-<section id="id2">
+</div>
+<div class="section" id="id2">
 <h2>微信开放平台绑定小程序流程<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
 <p>登录 <a class="reference external" href="https://open.weixin.qq.com/">微信开放平台</a> — 管理中心 — 小程序 — 绑定小程序</p>
 <img alt="https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/image/union_bind.png?t=19041921" src="https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/image/union_bind.png?t=19041921" />
-</section>
-</section>
+</div>
+</div>
 
 
             <div class="clearer"></div>
@@ -204,7 +203,7 @@
     </div>
     <div class="footer" role="contentinfo">
         &#169; 版权所有 2019, Wxadev Docs.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.1.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.2.
     </div>
   </body>
 </html>

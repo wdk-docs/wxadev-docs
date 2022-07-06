@@ -4,8 +4,7 @@
 <html lang="zh_CN">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>开发工具 &#8212; wxadev v2.21.0 文档</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx13.css" />
@@ -130,20 +129,38 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <section id="id1">
+  <div class="section" id="id1">
 <h1>开发工具<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
-<p>版本:v2.21.0 更新:2021 年 12 月 15 日</p>
+<p>版本:v2.21.0 更新:2021 年 12 月 25 日</p>
 <p>为了帮助开发者简单和高效地开发和调试微信小程序，我们在原有的公众号网页调试工具的基础上，
 推出了全新的 微信开发者工具，集成了公众号网页调试和小程序调试两种开发模式。</p>
 <p>使用公众号网页调试，开发者可以调试微信网页授权和微信JS-SDK 详情
 使用小程序调试，开发者可以完成小程序的 API 和页面的开发调试、代码查看和编辑、小程序预览和发布等功能。
 为了更好的开发体验，我们从视觉、交互、性能等方面对开发者工具进行升级，推出了 1.0.0 版本。</p>
-<img alt="https://developers.weixin.qq.com/miniprogram/dev/devtools/image/devtools2/main.png?t=19041222" src="https://developers.weixin.qq.com/miniprogram/dev/devtools/image/devtools2/main.png?t=19041222" />
+<img alt="https://res.wx.qq.com/wxdoc/dist/assets/img/main.0e6611d0.png" src="https://res.wx.qq.com/wxdoc/dist/assets/img/main.0e6611d0.png" />
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="page.html">界面</a></li>
 <li class="toctree-l1"><a class="reference internal" href="settings.html">设置页</a></li>
-<li class="toctree-l1"><a class="reference internal" href="edit.html">编辑区</a></li>
+<li class="toctree-l1"><a class="reference internal" href="edit.html">编辑区</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="edit.html#id2">文件格式</a></li>
+<li class="toctree-l2"><a class="reference internal" href="edit.html#id3">文件支持</a></li>
+<li class="toctree-l2"><a class="reference internal" href="edit.html#id4">文件操作</a></li>
+<li class="toctree-l2"><a class="reference internal" href="edit.html#id5">自动保存</a></li>
+<li class="toctree-l2"><a class="reference internal" href="edit.html#id6">实时预览</a></li>
+<li class="toctree-l2"><a class="reference internal" href="edit.html#id7">自动补全</a></li>
+<li class="toctree-l2"><a class="reference internal" href="edit.html#id8">代码模板支持</a></li>
+<li class="toctree-l2"><a class="reference internal" href="edit.html#typescript">TypeScript 支持</a></li>
+<li class="toctree-l2"><a class="reference internal" href="edit.html#git">Git 状态展示</a></li>
+<li class="toctree-l2"><a class="reference internal" href="edit.html#id9">目录树</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="projectconfig.html">项目配置文件</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="projectconfig.html#packoptions">packOptions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="projectconfig.html#debugoptions">debugOptions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="projectconfig.html#watchoptions">watchOptions</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="debug.html">调试</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ext.html">第三方平台开发</a></li>
 <li class="toctree-l1"><a class="reference internal" href="sandbox.html">测试号</a></li>
@@ -162,111 +179,6 @@
 <li class="toctree-l2"><a class="reference internal" href="download.html#id4">全部更新日志</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="change/index.html">更新日志</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="change/nightly.html">开发版 Nightly Build 更新日志</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="change/nightly.html#id1">2019.04.12</a></li>
-<li class="toctree-l3"><a class="reference internal" href="change/nightly.html#id2">2019.04.11</a></li>
-<li class="toctree-l3"><a class="reference internal" href="change/nightly.html#id3">2019.04.04</a></li>
-<li class="toctree-l3"><a class="reference internal" href="change/nightly.html#id4">2019.04.03</a></li>
-<li class="toctree-l3"><a class="reference internal" href="change/nightly.html#id5">2019.04.01</a></li>
-<li class="toctree-l3"><a class="reference internal" href="change/nightly.html#id6">2019.03.29</a></li>
-<li class="toctree-l3"><a class="reference internal" href="change/nightly.html#id7">2019.03.28</a></li>
-<li class="toctree-l3"><a class="reference internal" href="change/nightly.html#id8">2019.03.26</a></li>
-<li class="toctree-l3"><a class="reference internal" href="change/nightly.html#id9">2019.03.25</a></li>
-<li class="toctree-l3"><a class="reference internal" href="change/nightly.html#id10">2019.03.19</a></li>
-<li class="toctree-l3"><a class="reference internal" href="change/nightly.html#id11">2019.03.12</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="change/rc.html">预发布版 RC Build 更新日志</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="change/rc.html#id1">2019.04.09</a></li>
-<li class="toctree-l3"><a class="reference internal" href="change/rc.html#id2">2019.03.25</a></li>
-<li class="toctree-l3"><a class="reference internal" href="change/rc.html#id3">2019.03.21</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="change/stable.html">稳定版 Stable Build 更新日志</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="change/stable.html#id1">2019.02.01</a></li>
-<li class="toctree-l3"><a class="reference internal" href="change/stable.html#id2">2019.01.23</a></li>
-<li class="toctree-l3"><a class="reference internal" href="change/stable.html#id3">2019.01.22</a></li>
-<li class="toctree-l3"><a class="reference internal" href="change/stable.html#id4">2019.01.17</a></li>
-<li class="toctree-l3"><a class="reference internal" href="change/stable.html#id5">2018.12.27</a></li>
-<li class="toctree-l3"><a class="reference internal" href="change/stable.html#id6">2018.12.26</a></li>
-<li class="toctree-l3"><a class="reference internal" href="change/stable.html#id7">2018.12.18</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="change/upnwjs.html">微信开发者工具内核升级版公测</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="change/upnwjs.html#id2">2019.04.02</a></li>
-<li class="toctree-l3"><a class="reference internal" href="change/upnwjs.html#id3">2019.03.21</a></li>
-<li class="toctree-l3"><a class="reference internal" href="change/upnwjs.html#id4">2019.02.19</a></li>
-<li class="toctree-l3"><a class="reference internal" href="change/upnwjs.html#id5">2018.12.26</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="change/uplog.html">开发者工具更新日志</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="change/uplog.html#id2">2019.02.01</a></li>
-<li class="toctree-l3"><a class="reference internal" href="change/uplog.html#id3">2019.01.23</a></li>
-<li class="toctree-l3"><a class="reference internal" href="change/uplog.html#id4">2019.01.22</a></li>
-<li class="toctree-l3"><a class="reference internal" href="change/uplog.html#id5">2019.01.17</a></li>
-<li class="toctree-l3"><a class="reference internal" href="change/uplog.html#id6">2018.12.27</a></li>
-<li class="toctree-l3"><a class="reference internal" href="change/uplog.html#id7">2018.12.26</a></li>
-<li class="toctree-l3"><a class="reference internal" href="change/uplog.html#id8">2018.12.18</a></li>
-<li class="toctree-l3"><a class="reference internal" href="change/uplog.html#id9">2018.11.29</a></li>
-<li class="toctree-l3"><a class="reference internal" href="change/uplog.html#id10">2018.11.28</a></li>
-<li class="toctree-l3"><a class="reference internal" href="change/uplog.html#id11">2018.11.15</a></li>
-<li class="toctree-l3"><a class="reference internal" href="change/uplog.html#id12">2018.11.14</a></li>
-<li class="toctree-l3"><a class="reference internal" href="change/uplog.html#id13">2018.10.25</a></li>
-<li class="toctree-l3"><a class="reference internal" href="change/uplog.html#id14">2018.10.19</a></li>
-<li class="toctree-l3"><a class="reference internal" href="change/uplog.html#id15">2018.09.26</a></li>
-<li class="toctree-l3"><a class="reference internal" href="change/uplog.html#id16">2018.09.11</a></li>
-<li class="toctree-l3"><a class="reference internal" href="change/uplog.html#id17">2018.09.10</a></li>
-<li class="toctree-l3"><a class="reference internal" href="change/uplog.html#id18">2018.08.30</a></li>
-<li class="toctree-l3"><a class="reference internal" href="change/uplog.html#id19">2018.08.08</a></li>
-<li class="toctree-l3"><a class="reference internal" href="change/uplog.html#id20">2018.08.01</a></li>
-<li class="toctree-l3"><a class="reference internal" href="change/uplog.html#id21">2018.07.20</a></li>
-<li class="toctree-l3"><a class="reference internal" href="change/uplog.html#id22">2018.07.12</a></li>
-<li class="toctree-l3"><a class="reference internal" href="change/uplog.html#id23">2018.06.12</a></li>
-<li class="toctree-l3"><a class="reference internal" href="change/uplog.html#id24">2018.06.08</a></li>
-<li class="toctree-l3"><a class="reference internal" href="change/uplog.html#id25">2018.05.18</a></li>
-<li class="toctree-l3"><a class="reference internal" href="change/uplog.html#id26">2018.05.15</a></li>
-<li class="toctree-l3"><a class="reference internal" href="change/uplog.html#id27">2018.04.25</a></li>
-<li class="toctree-l3"><a class="reference internal" href="change/uplog.html#id28">2018.04.12</a></li>
-<li class="toctree-l3"><a class="reference internal" href="change/uplog.html#id29">2018.04.08</a></li>
-<li class="toctree-l3"><a class="reference internal" href="change/uplog.html#id30">2018.04.12</a></li>
-<li class="toctree-l3"><a class="reference internal" href="change/uplog.html#id31">2018.04.08</a></li>
-<li class="toctree-l3"><a class="reference internal" href="change/uplog.html#id32">2018.03.21</a></li>
-<li class="toctree-l3"><a class="reference internal" href="change/uplog.html#id33">2018.03.15</a></li>
-<li class="toctree-l3"><a class="reference internal" href="change/uplog.html#id34">2018.03.13</a></li>
-<li class="toctree-l3"><a class="reference internal" href="change/uplog.html#id35">2018.02.27</a></li>
-<li class="toctree-l3"><a class="reference internal" href="change/uplog.html#id36">2018.02.08</a></li>
-<li class="toctree-l3"><a class="reference internal" href="change/uplog.html#id37">2018.02.01</a></li>
-<li class="toctree-l3"><a class="reference internal" href="change/uplog.html#id38">2017.12.15</a></li>
-<li class="toctree-l3"><a class="reference internal" href="change/uplog.html#id39">2017.11.30</a></li>
-<li class="toctree-l3"><a class="reference internal" href="change/uplog.html#id40">2017.11.16</a></li>
-<li class="toctree-l3"><a class="reference internal" href="change/uplog.html#id41">2017.11.02</a></li>
-<li class="toctree-l3"><a class="reference internal" href="change/uplog.html#id42">2017.10.19</a></li>
-<li class="toctree-l3"><a class="reference internal" href="change/uplog.html#id43">2017.10.18</a></li>
-<li class="toctree-l3"><a class="reference internal" href="change/uplog.html#id44">2017.10.16</a></li>
-<li class="toctree-l3"><a class="reference internal" href="change/uplog.html#id45">2017.10.13</a></li>
-<li class="toctree-l3"><a class="reference internal" href="change/uplog.html#id46">2017.09.25</a></li>
-<li class="toctree-l3"><a class="reference internal" href="change/uplog.html#id47">2017.09.13</a></li>
-<li class="toctree-l3"><a class="reference internal" href="change/uplog.html#id48">2017.09.06</a></li>
-<li class="toctree-l3"><a class="reference internal" href="change/uplog.html#id49">2017.09.01</a></li>
-<li class="toctree-l3"><a class="reference internal" href="change/uplog.html#id50">2017.08.31</a></li>
-<li class="toctree-l3"><a class="reference internal" href="change/uplog.html#id51">2017.08.30</a></li>
-<li class="toctree-l3"><a class="reference internal" href="change/uplog.html#id52">2017.08.21</a></li>
-<li class="toctree-l3"><a class="reference internal" href="change/uplog.html#id53">2017.08.18</a></li>
-<li class="toctree-l3"><a class="reference internal" href="change/uplog.html#id54">2017.06.22</a></li>
-<li class="toctree-l3"><a class="reference internal" href="change/uplog.html#id55">2017.05.26</a></li>
-<li class="toctree-l3"><a class="reference internal" href="change/uplog.html#id56">2017.05.19</a></li>
-<li class="toctree-l3"><a class="reference internal" href="change/uplog.html#id57">2017.05.09</a></li>
-<li class="toctree-l3"><a class="reference internal" href="change/uplog.html#id58">2017.05.08</a></li>
-<li class="toctree-l3"><a class="reference internal" href="change/uplog.html#id59">2017.03.29</a></li>
-<li class="toctree-l3"><a class="reference internal" href="change/uplog.html#id60">2017.03.28</a></li>
-<li class="toctree-l3"><a class="reference internal" href="change/uplog.html#id61">2017.02.06</a></li>
-<li class="toctree-l3"><a class="reference internal" href="change/uplog.html#id62">2017.01.04</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="change/beta.html">change/beta</a></li>
-</ul>
-</li>
 <li class="toctree-l1"><a class="reference internal" href="devtools.html">概览</a></li>
 <li class="toctree-l1"><a class="reference internal" href="npm.html">npm 支持</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="npm.html#id2">使用 npm 包</a></li>
@@ -277,9 +189,32 @@
 <li class="toctree-l2"><a class="reference internal" href="npm.html#id6">自定义组件相关示例</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="compilets.html">原生支持 TypeScript</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="compilets.html#id1">开始使用</a></li>
+<li class="toctree-l2"><a class="reference internal" href="compilets.html#id4">功能说明</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="codecompile.html">代码编译 TypeScript</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="codecompile.html#js-es5">将 JS 代码编译成 ES5</a></li>
+<li class="toctree-l2"><a class="reference internal" href="codecompile.html#id1">样式补全</a></li>
+<li class="toctree-l2"><a class="reference internal" href="codecompile.html#id2">压缩代码</a></li>
+<li class="toctree-l2"><a class="reference internal" href="codecompile.html#id3">代码保护</a></li>
+<li class="toctree-l2"><a class="reference internal" href="codecompile.html#id4">启用多核心编译</a></li>
+<li class="toctree-l2"><a class="reference internal" href="codecompile.html#id5">原生支持编译 TypeScript</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="change/index.html">更新日志</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="change/nightly.html">开发版 Nightly Build 更新日志</a></li>
+<li class="toctree-l2"><a class="reference internal" href="change/rc.html">预发布版 RC Build 更新日志</a></li>
+<li class="toctree-l2"><a class="reference internal" href="change/stable.html">稳定版 Stable Build 更新日志</a></li>
+<li class="toctree-l2"><a class="reference internal" href="change/upnwjs.html">微信开发者工具内核升级版公测</a></li>
+<li class="toctree-l2"><a class="reference internal" href="change/uplog.html">开发者工具更新日志</a></li>
+<li class="toctree-l2"><a class="reference internal" href="change/beta.html">change/beta</a></li>
+</ul>
+</li>
 </ul>
 </div>
-</section>
+</div>
 
 
             <div class="clearer"></div>
@@ -311,7 +246,7 @@
     </div>
     <div class="footer" role="contentinfo">
         &#169; 版权所有 2019, Wxadev Docs.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.1.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.2.
     </div>
   </body>
 </html>

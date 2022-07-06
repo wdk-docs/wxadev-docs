@@ -4,8 +4,7 @@
 <html lang="zh_CN">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>小程序加密网络通道 &#8212; wxadev v2.21.0 文档</title>
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinx13.css" />
@@ -142,15 +141,15 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <section id="id1">
+  <div class="section" id="id1">
 <h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/user-encryptkey.html">小程序加密网络通道</a><a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
 <p>从基础库 2.17.3 开始支持</p>
-<section id="id2">
+<div class="section" id="id2">
 <h2>功能介绍<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
 <p>为了避免小程序与开发者后台通信时数据被截取和篡改，微信侧维护了一个用户维度的可靠key，用于小程序和后台通信时进行加密和签名。</p>
 <p>开发者可以分别通过小程序前端和微信后台提供的接口，获取用户的加密 key。</p>
-</section>
-<section id="id3">
+</div>
+<div class="section" id="id3">
 <h2>使用说明<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
 <p>在小程序中开发者可以使用UserCryptoManager.getLatestUserKey获取获取用户最新的加密密钥信息。</p>
 <p>前端调用示例</p>
@@ -176,8 +175,8 @@
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>curl -X POST <span class="s2">&quot;https://api.weixin.qq.com/wxa/business/getuserencryptkey?access_token=ACCESS_TOKEN&amp;openid=OPENID&amp;signature=SIGNATURE&amp;sig_method=hmac_sha256&quot;</span>
 </pre></div>
 </div>
-</section>
-</section>
+</div>
+</div>
 
 
             <div class="clearer"></div>
@@ -212,7 +211,7 @@
     </div>
     <div class="footer" role="contentinfo">
         &#169; 版权所有 2019, Wxadev Docs.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.1.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.2.
     </div>
   </body>
 </html>

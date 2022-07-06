@@ -4,8 +4,7 @@
 <html lang="zh_CN">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>组件间关系 &#8212; wxadev v2.21.0 文档</title>
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx13.css" />
@@ -142,9 +141,9 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <section id="id1">
+  <div class="section" id="id1">
 <h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/framework/custom-component/relations.html">组件间关系</a><a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
-<section id="id2">
+<div class="section" id="id2">
 <h2>定义和使用组件间关系<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
 <p>有时需要实现这样的组件：</p>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;custom-ul&gt;</span>
@@ -201,8 +200,8 @@
 </pre></div>
 </div>
 <p>注意：必须在两个组件定义中都加入relations定义，否则不会生效。</p>
-</section>
-<section id="id3">
+</div>
+<div class="section" id="id3">
 <h2>关联一类组件<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
 <p>在开发者工具中预览效果</p>
 <p>有时，需要关联的是一类组件，如：</p>
@@ -255,8 +254,8 @@
 <span class="p">})</span>
 </pre></div>
 </div>
-</section>
-<section id="relations">
+</div>
+<div class="section" id="relations">
 <h2>relations 定义段<a class="headerlink" href="#relations" title="永久链接至标题">¶</a></h2>
 <p>relations 定义段包含目标组件路径及其对应选项，可包含的选项见下表。</p>
 <p>选项      类型      是否必填    描述
@@ -265,8 +264,8 @@ linked  Function        否       关系生命周期函数，当关系被建立�
 linkChanged     Function        否       关系生命周期函数，当关系在页面节点树中发生改变时触发，触发时机在组件moved生命周期之后
 unlinked        Function        否       关系生命周期函数，当关系脱离页面节点树时触发，触发时机在组件detached生命周期之后
 target  String  否       如果这一项被设置，则它表示关联的目标节点所应具有的behavior，所有拥有这一behavior的组件节点都会被关联</p>
-</section>
-</section>
+</div>
+</div>
 
 
             <div class="clearer"></div>
@@ -300,7 +299,7 @@ target  String  否       如果这一项被设置，则它表示关联的目标
     </div>
     <div class="footer" role="contentinfo">
         &#169; 版权所有 2019, Wxadev Docs.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.1.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.2.
     </div>
   </body>
 </html>

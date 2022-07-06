@@ -4,8 +4,7 @@
 <html lang="zh_CN">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>场景值 &#8212; wxadev v2.21.0 文档</title>
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx13.css" />
@@ -141,13 +140,13 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <section id="app-service-scene">
+  <div class="section" id="app-service-scene">
 <span id="id1"></span><h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/framework/app-service/scene.html">场景值</a><a class="headerlink" href="#app-service-scene" title="永久链接至标题">¶</a></h1>
-<p>更新: 2021 年 12 月 14 日</p>
+<p>更新: 2021 年 12 月 25 日</p>
 <p>基础库 1.1.0 低版本需做 <a class="reference internal" href="../compatibility.html#compatibility"><span class="std std-ref">兼容处理</span></a> 。</p>
 <p>场景值用来描述用户进入小程序的路径。完整场景值的含义请查看 <a class="reference internal" href="../../reference/scene.html#scene-list"><span class="std std-ref">场景值列表</span></a> 。</p>
 <p>由于 Android 系统限制，目前还无法获取到按 <kbd class="kbd docutils literal notranslate">Home</kbd> 键退出到桌面，然后从桌面再次进小程序的场景值，对于这种情况，会保留上一次的场景值。</p>
-<section id="id2">
+<div class="section" id="id2">
 <h2>获取场景值<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
 <p>开发者可以通过下列方式获取场景值：</p>
 <ul class="simple">
@@ -155,8 +154,8 @@
 或 <a class="reference internal" href="../../api/wx.getLaunchOptionsSync.html#wx.getLaunchOptionsSync" title="wx.getLaunchOptionsSync"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.getLaunchOptionsSync()</span></code></a> 中获取上述场景值。</p></li>
 <li><p>对于小游戏，可以在 <a class="reference internal" href="../../api/wx.getLaunchOptionsSync.html#wx.getLaunchOptionsSync" title="wx.getLaunchOptionsSync"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.getLaunchOptionsSync()</span></code></a> 和 <code class="xref js js-func docutils literal notranslate"><span class="pre">wx.onShow()</span></code> 中获取上述场景值</p></li>
 </ul>
-</section>
-<section id="id3">
+</div>
+<div class="section" id="id3">
 <h2>返回来源信息的场景<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
 <p>部分场景值下还可以获取来源应用、公众号或小程序的appId。获取方式请参考对应API的参考文档。</p>
 <table class="docutils align-default">
@@ -198,8 +197,8 @@
 </tr>
 </tbody>
 </table>
-</section>
-</section>
+</div>
+</div>
 
 
             <div class="clearer"></div>
@@ -233,7 +232,7 @@
     </div>
     <div class="footer" role="contentinfo">
         &#169; 版权所有 2019, Wxadev Docs.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.1.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.2.
     </div>
   </body>
 </html>

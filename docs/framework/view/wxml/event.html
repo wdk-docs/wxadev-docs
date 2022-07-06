@@ -4,8 +4,7 @@
 <html lang="zh_CN">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>bindtap 事件 &#8212; wxadev v2.21.0 文档</title>
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinx13.css" />
@@ -164,9 +163,9 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <section id="bindtap">
+  <div class="section" id="bindtap">
 <span id="wxml-event"></span><h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/framework/view/wxml/event.html">bindtap 事件</a><a class="headerlink" href="#bindtap" title="永久链接至标题">¶</a></h1>
-<section id="id1">
+<div class="section" id="id1">
 <h2>什么是事件<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h2>
 <ul class="simple">
 <li><p>事件是视图层到逻辑层的通讯方式。</p></li>
@@ -174,8 +173,8 @@
 <li><p>事件可以绑定在组件上，当达到触发事件，就会执行逻辑层中对应的事件处理函数。</p></li>
 <li><p>事件对象可以携带额外信息，如 id, dataset, touches。</p></li>
 </ul>
-</section>
-<section id="id2">
+</div>
+<div class="section" id="id2">
 <h2>事件的使用方式<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
 <ul class="simple">
 <li><p>在组件中绑定一个事件处理函数。</p></li>
@@ -235,8 +234,8 @@
 <span class="p">}</span>
 </pre></div>
 </div>
-</section>
-<section id="wxs">
+</div>
+<div class="section" id="wxs">
 <h2>使用WXS函数响应事件<a class="headerlink" href="#wxs" title="永久链接至标题">¶</a></h2>
 <div class="versionadded">
 <p><span class="versionmodified added">2.4.4 新版功能: </span>低版本需做 <a class="reference internal" href="../../compatibility.html#compatibility"><span class="std std-ref">兼容处理</span></a> 。</p>
@@ -251,7 +250,7 @@
 </div>
 <p>test.wxs文件实现tapName函数</p>
 <div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="kd">function</span> <span class="nx">tapName</span><span class="p">(</span><span class="nx">event</span><span class="p">,</span> <span class="nx">ownerInstance</span><span class="p">)</span> <span class="p">{</span>
-  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;tap wechat&#39;</span><span class="p">,</span> <span class="nb">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">event</span><span class="p">))</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;tap wechat&#39;</span><span class="p">,</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">event</span><span class="p">))</span>
 <span class="p">}</span>
 <span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="p">{</span>
   <span class="nx">tapName</span><span class="o">:</span> <span class="nx">tapName</span>
@@ -259,10 +258,10 @@
 </pre></div>
 </div>
 <p>ownerInstance包含了一些方法，可以设置组件的样式和class，具体包含的方法以及为什么要用WXS函数响应事件，请点击查看详情。</p>
-</section>
-<section id="id3">
+</div>
+<div class="section" id="id3">
 <h2>事件详解<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
-<section id="id4">
+<div class="section" id="id4">
 <h3>事件分类<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h3>
 <p>事件分为冒泡事件和非冒泡事件：</p>
 <ul class="simple">
@@ -338,9 +337,9 @@
 <p>除上表之外的其他组件自定义事件如无特殊声明都是非冒泡事件，
 如&lt;form/&gt;的submit事件，&lt;input/&gt;的input事件，&lt;scroll-view/&gt;的scroll事件，(详见各个组件)</p>
 </div>
-</section>
-</section>
-<section id="id5">
+</div>
+</div>
+<div class="section" id="id5">
 <h2>事件绑定和冒泡<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h2>
 <p>事件绑定的写法同组件的属性，以 key、value 的形式。</p>
 <ul class="simple">
@@ -363,8 +362,8 @@ bind事件绑定不会阻止冒泡事件向上冒泡，catch事件绑定可以�
 <span class="p">&lt;/</span><span class="nt">view</span><span class="p">&gt;</span>
 </pre></div>
 </div>
-</section>
-<section id="id6">
+</div>
+<div class="section" id="id6">
 <h2>事件的捕获阶段<a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h2>
 <p>自基础库版本 1.5.0 起，触摸类事件支持捕获阶段。捕获阶段位于冒泡阶段之前，且在捕获阶段中，
 事件到达节点的顺序与冒泡阶段恰好相反。需要在捕获阶段监听事件时，可以采用capture-bind、capture-catch关键字，
@@ -403,8 +402,8 @@ bind事件绑定不会阻止冒泡事件向上冒泡，catch事件绑定可以�
 <span class="p">&lt;/</span><span class="nt">view</span><span class="p">&gt;</span>
 </pre></div>
 </div>
-</section>
-<section id="id7">
+</div>
+<div class="section" id="id7">
 <h2>事件对象<a class="headerlink" href="#id7" title="永久链接至标题">¶</a></h2>
 <p>如无特殊说明，当组件触发事件时，逻辑层绑定该事件的处理函数会收到一个事件对象。</p>
 <p>BaseEvent 基础事件对象属性列表：</p>
@@ -484,15 +483,15 @@ bind事件绑定不会阻止冒泡事件向上冒泡，catch事件绑定可以�
 </tbody>
 </table>
 <p>特殊事件： &lt;canvas&gt; 中的触摸事件不可冒泡，所以没有 currentTarget。</p>
-<section id="type">
+<div class="section" id="type">
 <h3>type<a class="headerlink" href="#type" title="永久链接至标题">¶</a></h3>
 <p>代表事件的类型。</p>
-</section>
-<section id="timestamp">
+</div>
+<div class="section" id="timestamp">
 <h3>timeStamp<a class="headerlink" href="#timestamp" title="永久链接至标题">¶</a></h3>
 <p>页面打开到触发事件所经过的毫秒数。</p>
-</section>
-<section id="target">
+</div>
+<div class="section" id="target">
 <h3>target<a class="headerlink" href="#target" title="永久链接至标题">¶</a></h3>
 <p>触发事件的源组件。</p>
 <table class="docutils align-default">
@@ -522,8 +521,8 @@ bind事件绑定不会阻止冒泡事件向上冒泡，catch事件绑定可以�
 </tr>
 </tbody>
 </table>
-</section>
-<section id="currenttarget">
+</div>
+<div class="section" id="currenttarget">
 <h3>currentTarget<a class="headerlink" href="#currenttarget" title="永久链接至标题">¶</a></h3>
 <p>事件绑定的当前组件。</p>
 <table class="docutils align-default">
@@ -559,8 +558,8 @@ bind事件绑定不会阻止冒泡事件向上冒泡，catch事件绑定可以�
 handleTap3 收到的事件对象 target 和 currentTarget 都是 inner，</p>
 </div>
 <p>而 handleTap2 收到的事件对象 target 就是 inner，currentTarget 就是 middle。</p>
-</section>
-<section id="dataset">
+</div>
+<div class="section" id="dataset">
 <h3>dataset<a class="headerlink" href="#dataset" title="永久链接至标题">¶</a></h3>
 <p>在组件中可以定义数据，这些数据将会通过事件传递给 SERVICE。
 书写方式： 以data-开头，多个单词由连字符-链接，不能有大写(大写会自动转成小写)如data-element-type，
@@ -574,13 +573,13 @@ handleTap3 收到的事件对象 target 和 currentTarget 都是 inner，</p>
 <span class="p">})</span>
 </pre></div>
 </div>
-</section>
-<section id="touches">
+</div>
+<div class="section" id="touches">
 <h3>touches<a class="headerlink" href="#touches" title="永久链接至标题">¶</a></h3>
 <p>touches 是一个数组，每个元素为一个 Touch 对象（canvas 触摸事件中携带的 touches 是 CanvasTouch 数组）。
 表示当前停留在屏幕上的触摸点。</p>
-</section>
-<section id="touch">
+</div>
+<div class="section" id="touch">
 <h3>Touch 对象<a class="headerlink" href="#touch" title="永久链接至标题">¶</a></h3>
 <table class="docutils align-default">
 <colgroup>
@@ -609,8 +608,8 @@ handleTap3 收到的事件对象 target 和 currentTarget 都是 inner，</p>
 </tr>
 </tbody>
 </table>
-</section>
-<section id="canvastouch">
+</div>
+<div class="section" id="canvastouch">
 <h3>CanvasTouch 对象<a class="headerlink" href="#canvastouch" title="永久链接至标题">¶</a></h3>
 <table class="docutils align-default">
 <colgroup>
@@ -635,19 +634,19 @@ handleTap3 收到的事件对象 target 和 currentTarget 都是 inner，</p>
 </tr>
 </tbody>
 </table>
-<section id="changedtouches">
+<div class="section" id="changedtouches">
 <h4>changedTouches<a class="headerlink" href="#changedtouches" title="永久链接至标题">¶</a></h4>
 <p>changedTouches 数据格式同 touches。 表示有变化的触摸点，如从无变有（touchstart），
 位置变化（touchmove），从有变无（touchend、touchcancel）。</p>
-</section>
-</section>
-<section id="detail">
+</div>
+</div>
+<div class="section" id="detail">
 <h3>detail<a class="headerlink" href="#detail" title="永久链接至标题">¶</a></h3>
 <p>自定义事件所携带的数据，如表单组件的提交事件会携带用户的输入，媒体的错误事件会携带错误信息，详见组件定义中各个事件的定义。</p>
 <p>点击事件的detail 带有的 x, y 同 pageX, pageY 代表距离文档左上角的距离。</p>
-</section>
-</section>
-</section>
+</div>
+</div>
+</div>
 
 
             <div class="clearer"></div>
@@ -682,7 +681,7 @@ handleTap3 收到的事件对象 target 和 currentTarget 都是 inner，</p>
     </div>
     <div class="footer" role="contentinfo">
         &#169; 版权所有 2019, Wxadev Docs.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.1.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.2.
     </div>
   </body>
 </html>

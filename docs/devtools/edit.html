@@ -4,8 +4,7 @@
 <html lang="zh_CN">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>编辑区 &#8212; wxadev v2.21.0 文档</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx13.css" />
@@ -20,7 +19,7 @@
 
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜索" href="../search.html" />
-    <link rel="next" title="调试" href="debug.html" />
+    <link rel="next" title="项目配置文件" href="projectconfig.html" />
     <link rel="prev" title="设置页" href="settings.html" />
 <link rel="canonical" href="http://www.sphinx-doc.org/en/master/devtools/edit.html" />
 
@@ -86,7 +85,7 @@
           <a href="../http-routingtable.html" title="微信小程序API"
              >wxapi</a> |</li>
         <li class="right" >
-          <a href="debug.html" title="调试"
+          <a href="projectconfig.html" title="项目配置文件"
              accesskey="N">下一页</a> |</li>
         <li class="right" >
           <a href="settings.html" title="设置页"
@@ -100,12 +99,29 @@
     </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
+  <h3><a href="../contents.html">目录</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">编辑区</a><ul>
+<li><a class="reference internal" href="#id2">文件格式</a></li>
+<li><a class="reference internal" href="#id3">文件支持</a></li>
+<li><a class="reference internal" href="#id4">文件操作</a></li>
+<li><a class="reference internal" href="#id5">自动保存</a></li>
+<li><a class="reference internal" href="#id6">实时预览</a></li>
+<li><a class="reference internal" href="#id7">自动补全</a></li>
+<li><a class="reference internal" href="#id8">代码模板支持</a></li>
+<li><a class="reference internal" href="#typescript">TypeScript 支持</a></li>
+<li><a class="reference internal" href="#git">Git 状态展示</a></li>
+<li><a class="reference internal" href="#id9">目录树</a></li>
+</ul>
+</li>
+</ul>
+
   <h4>上一个主题</h4>
   <p class="topless"><a href="settings.html"
                         title="上一章">设置页</a></p>
   <h4>下一个主题</h4>
-  <p class="topless"><a href="debug.html"
-                        title="下一章">调试</a></p>
+  <p class="topless"><a href="projectconfig.html"
+                        title="下一章">项目配置文件</a></p>
   <div role="note" aria-label="source link">
     <h3>本页</h3>
     <ul class="this-page-menu">
@@ -131,72 +147,160 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <section id="dt-edit">
+  <div class="section" id="dt-edit">
 <span id="id1"></span><h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/devtools/edit.html">编辑区</a><a class="headerlink" href="#dt-edit" title="永久链接至标题">¶</a></h1>
 <p>编辑区可以对当前项目进行代码编写和文件的添加、删除以及重命名等基本操作。</p>
-<p>文件格式
-因 iOS 下仅支持 UTF8 编码格式，最新版本的开发者工具会在上传代码时候对代码文件做一次编码格式校验。</p>
-<p>文件支持
-工具目前提供了 5 种文件的编辑：wxml、wxss、js、json、wxs 以及图片文件的预览。</p>
-<p>文件操作
-新建页面有两种方式</p>
+<div class="section" id="id2">
+<h2>文件格式<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<p>因 iOS 下仅支持 UTF8 编码格式，最新版本的开发者工具会在上传代码时候对代码文件做一次编码格式校验。</p>
+</div>
+<div class="section" id="id3">
+<h2>文件支持<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
+<p>工具目前提供了 5 种文件的编辑：wxml、wxss、js、json、wxs 以及图片文件的预览。</p>
+</div>
+<div class="section" id="id4">
+<h2>文件操作<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h2>
+<p>新建页面有两种方式</p>
 <p>在目录树上右键，选择新建 Page，将自动生成页面所需要的 wxml、wxss、js、json</p>
 <p>在 app.json 的 pages 字段，添加需要新建的页面的路径，将会自动生成该页面所需要的文件</p>
-<p>自动保存
-编辑代码后，工具会自动帮助用户保存当前的代码编辑状态，直接关闭工具或者切换到别的项目，并不会丢失已经编辑的文件状态，但需要注意的是，只有用户主动保存文件，修改内容才会真实的写到硬盘上。</p>
+</div>
+<div class="section" id="id5">
+<h2>自动保存<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h2>
+<p>编辑代码后，工具会自动帮助用户保存当前的代码编辑状态，直接关闭工具或者切换到别的项目，并不会丢失已经编辑的文件状态，但需要注意的是，只有用户主动保存文件，修改内容才会真实的写到硬盘上。</p>
 <p>如果设置中开启了 “修改文件时自动保存”（设置-编辑设置-修改文件自动保存），工具在修改文件时会自动保存到硬盘中，无需手动保存的效果。</p>
 <p>设置中开启 “编译时自动保存所有文件”（设置-编译设置-编译时自动保存所有文件），在点击编译时自动保存所有文件的效果。</p>
-<p>实时预览
-如果设置中开启了 “文件保存时自动编译小程序”（设置-编辑设置-保存时自动编译小程序），那么当 wxml、wxss、js、json 文件修改时，可以通过模拟器实时预览编辑的情况：</p>
-<p>注意：如果同时开启了 ”修改文件时自动保存“ 的设置，编译动作会有一定的延迟，来避免频繁的编译，手动点击编译按钮将立即编译。</p>
-<p>自动补全
-同大部分编辑器一样，工具提供了较为完善的自动补全</p>
+</div>
+<div class="section" id="id6">
+<h2>实时预览<a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h2>
+<p>如果设置中开启了 “文件保存时自动编译小程序”（设置-编辑设置-保存时自动编译小程序），那么当 wxml、wxss、js、json 文件修改时，可以通过模拟器实时预览编辑的情况：</p>
+<div class="admonition note">
+<p class="admonition-title">注解</p>
+<p>如果同时开启了 ”修改文件时自动保存“ 的设置，编译动作会有一定的延迟，来避免频繁的编译，手动点击编译按钮将立即编译。</p>
+</div>
+</div>
+<div class="section" id="id7">
+<h2>自动补全<a class="headerlink" href="#id7" title="永久链接至标题">¶</a></h2>
+<p>同大部分编辑器一样，工具提供了较为完善的自动补全</p>
 <p>js 文件编辑会帮助开发补全所有的 API 及相关的注释解释，并提供代码模板支持
 wxml 文件编辑会帮助开发者直接写出相关的标签和标签中的属性
 json 文件编辑会帮助开发者补全相关的配置，并给出实时的提示
 js 补全</p>
-<p>代码模板支持</p>
+</div>
+<div class="section" id="id8">
+<h2>代码模板支持<a class="headerlink" href="#id8" title="永久链接至标题">¶</a></h2>
 <p>json 补全</p>
 <p>3</p>
 <p>wxml 补全</p>
 <p>3</p>
-<p>TypeScript 支持
-如果项目需要使用 TypeScript 语言开发，开发者工具在创建项目选择快速启动模板时，提供了使用 TypeScript 语言的 QuickStart 项目，可以选择创建此项目并进行后续开发。</p>
-<p>要构建并使用 TypeScript 项目，可能需要安装 npm。通过配置编译前的预置命令，可以实现在编译前运行 tsc 以将其编译到 js 文件。</p>
+</div>
+<div class="section" id="typescript">
+<h2>TypeScript 支持<a class="headerlink" href="#typescript" title="永久链接至标题">¶</a></h2>
+<p>如果项目需要使用 TypeScript 语言开发，开发者工具在创建项目选择快速启动模板时，提供了使用 TypeScript 语言的 QuickStart 项目，可以选择创建此项目并进行后续开发。</p>
+<p>如果你使用的是 1.05.2108130 之前的版本，要构建并使用 TypeScript 项目，可能需要安装 npm。通过配置编译前的预置命令，可以实现在编译前运行 tsc 以将其编译到 js 文件。 从 1.05.2109101 版本开始，我们优化了对 TypeScript 项目的编译支持，详细请查看</p>
 <p>如需配置 TypeScript 编译选项，请参考 tsconfig.json 的配置。</p>
-<p>注：小程序仅支持运行 JS 文件，因此所有的 TS 文件都默认不会被打包上传。</p>
-<p>Git 状态展示
-如果所在的小程序工程目录（project.config.json 所在目录）存在 Git 仓库，编辑器可以展示目前的 Git 状态。</p>
-<p>目录树
-如图所示，当某些文件存在变动时，目录树的文件右侧将展示相应的图标来表明这一状态。当某一处于收起状态的目录下存在有变动的文件时，此目录的右侧亦会展示一个圆点图标表明此情况。</p>
+<div class="admonition note">
+<p class="admonition-title">注解</p>
+<p>小程序仅支持运行 JS 文件，因此所有的 TS 文件都默认不会被打包上传。</p>
+</div>
+</div>
+<div class="section" id="git">
+<h2>Git 状态展示<a class="headerlink" href="#git" title="永久链接至标题">¶</a></h2>
+<p>如果所在的小程序工程目录（project.config.json 所在目录）存在 Git 仓库，编辑器可以展示目前的 Git 状态。</p>
+</div>
+<div class="section" id="id9">
+<h2>目录树<a class="headerlink" href="#id9" title="永久链接至标题">¶</a></h2>
+<p>如图所示，当某些文件存在变动时，目录树的文件右侧将展示相应的图标来表明这一状态。当某一处于收起状态的目录下存在有变动的文件时，此目录的右侧亦会展示一个圆点图标表明此情况。</p>
 <p>文件图标状态的含义如下：</p>
-<p>图标      含义
-U       文件未追踪（Untracked）
-A       新文件（Added, Staged）
-M       文件有修改（Modified）
-+M      文件有修改（Modified, Staged）
-C       文件有冲突（Conflict）
-D       文件被删除（Deleted）
-文件夹目录图标状态的含义如下：</p>
-<p>图标      含义
-小红点     目录下至少存在一个删除状态的文件
-小橙点     目录下至少存在一个冲突状态的文件
-小蓝点     目录下至少存在一个未追踪状态的文件
-小绿点     目录下至少存在一个修改状态的文件
-如果某一文件存在修改（Modified），可以右键点击此文件，并选择 “与上一版本比较”，则可以查看当前工作区文件与 HEAD 版本的比较。</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 16%" />
+<col style="width: 84%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>图标</p></th>
+<th class="head"><p>含义</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>U</p></td>
+<td><p>文件未追踪（Untracked）</p></td>
+</tr>
+<tr class="row-odd"><td><p>A</p></td>
+<td><p>新文件（Added, Staged）</p></td>
+</tr>
+<tr class="row-even"><td><p>M</p></td>
+<td><p>文件有修改（Modified）</p></td>
+</tr>
+<tr class="row-odd"><td><p>+M</p></td>
+<td><p>文件有修改（Modified, Staged）</p></td>
+</tr>
+<tr class="row-even"><td><p>C</p></td>
+<td><p>文件有冲突（Conflict）</p></td>
+</tr>
+<tr class="row-odd"><td><p>D</p></td>
+<td><p>文件被删除（Deleted）</p></td>
+</tr>
+</tbody>
+</table>
+<p>文件夹目录图标状态的含义如下：</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 18%" />
+<col style="width: 82%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>图标</p></th>
+<th class="head"><p>含义</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>小红点</p></td>
+<td><p>目录下至少存在一个删除状态的文件</p></td>
+</tr>
+<tr class="row-odd"><td><p>小橙点</p></td>
+<td><p>目录下至少存在一个冲突状态的文件</p></td>
+</tr>
+<tr class="row-even"><td><p>小蓝点</p></td>
+<td><p>目录下至少存在一个未追踪状态的文件</p></td>
+</tr>
+<tr class="row-odd"><td><p>小绿点</p></td>
+<td><p>目录下至少存在一个修改状态的文件</p></td>
+</tr>
+</tbody>
+</table>
+<p>如果某一文件存在修改（Modified），可以右键点击此文件，并选择 “与上一版本比较”，则可以查看当前工作区文件与 HEAD 版本的比较。</p>
 <p>文件编辑
 存在 Git 仓库时，状态栏会展示此 Git 仓库目前的分支信息。例如，下图表明目前 Git 仓库处于 v2 分支。</p>
 <p>同时，编辑文件内容时，将会在所编辑代码左侧实时显示相对于上一版本内容的比较。</p>
 <p>样式说明如下：</p>
 <p>文件夹目录图标状态的含义如下：</p>
-<p>样式      含义
-蓝色线条    此处的代码有变动
-绿色线条    此处的代码是新增的
-红色三角箭头  此处有代码被删除
-Windows 风格回车设置
-如需忽略 Windows 风格的回车符，可以前往 “设置” - “编辑”，并勾选 “Git 比较文件内容时，忽略 Windows 风格回车符”。</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 41%" />
+<col style="width: 59%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>样式</p></th>
+<th class="head"><p>含义</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>蓝色线条</p></td>
+<td><p>此处的代码有变动</p></td>
+</tr>
+<tr class="row-odd"><td><p>绿色线条</p></td>
+<td><p>此处的代码是新增的</p></td>
+</tr>
+<tr class="row-even"><td><p>红色三角箭头</p></td>
+<td><p>此处有代码被删除</p></td>
+</tr>
+</tbody>
+</table>
+<p>Windows 风格回车设置</p>
+<p>如需忽略 Windows 风格的回车符，可以前往 “设置” - “编辑”，并勾选 “Git 比较文件内容时，忽略 Windows 风格回车符”。</p>
 <p>勾选后，在编辑文件进行内容比较时，所有 Windows 风格的回车符将被当作 Unix 风格的回车符对待。</p>
-</section>
+</div>
+</div>
 
 
             <div class="clearer"></div>
@@ -215,7 +319,7 @@ Windows 风格回车设置
           <a href="../http-routingtable.html" title="微信小程序API"
              >wxapi</a> |</li>
         <li class="right" >
-          <a href="debug.html" title="调试"
+          <a href="projectconfig.html" title="项目配置文件"
              >下一页</a> |</li>
         <li class="right" >
           <a href="settings.html" title="设置页"
@@ -229,7 +333,7 @@ Windows 风格回车设置
     </div>
     <div class="footer" role="contentinfo">
         &#169; 版权所有 2019, Wxadev Docs.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.1.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.2.
     </div>
   </body>
 </html>

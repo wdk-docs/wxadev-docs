@@ -4,8 +4,7 @@
 <html lang="zh_CN">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>动态消息 &#8212; wxadev v2.21.0 文档</title>
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinx13.css" />
@@ -152,17 +151,17 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <section id="id1">
-<h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/share/updatable-message.html">动态消息</a><a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
+  <div class="section" id="share-updatable-message">
+<span id="id1"></span><h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/share/updatable-message.html">动态消息</a><a class="headerlink" href="#share-updatable-message" title="永久链接至标题">¶</a></h1>
 <p>从基础库 2.4.0 开始，支持转发动态消息。动态消息对比普通消息，有以下特点：</p>
 <ol class="arabic simple">
 <li><p>消息发出去之后，开发者可以通过后台接口修改部分消息内容。</p></li>
 <li><p>消息有对应的提醒按钮，用户点击提醒按钮可以订阅提醒，开发者可以通过后台修改消息状态并推送一次提醒消息给订阅了提醒的用户</p></li>
 </ol>
-<section id="id2">
+<div class="section" id="id2">
 <h2>消息属性<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
 <p>动态消息有状态、文字内容、文字颜色。</p>
-<section id="id3">
+<div class="section" id="id3">
 <h3>状态<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h3>
 <p>消息有两个状态，分别有其对应的文字内容和颜色。其中状态 0 可以转移到状态 0 和 1，状态 1 无法再转移。</p>
 <table class="docutils align-default">
@@ -192,8 +191,8 @@
 </tr>
 </tbody>
 </table>
-</section>
-<section id="id4">
+</div>
+<div class="section" id="id4">
 <h3>状态参数<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h3>
 <p>每个状态转移的时候可以携带参数，具体参数说明如下。</p>
 <table class="docutils align-default">
@@ -227,20 +226,20 @@
 </tr>
 </tbody>
 </table>
-</section>
-</section>
-<section id="id5">
+</div>
+</div>
+<div class="section" id="id5">
 <h2>使用方法<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h2>
-<section id="activity-id">
+<div class="section" id="activity-id">
 <h3>一、创建 activity_id<a class="headerlink" href="#activity-id" title="永久链接至标题">¶</a></h3>
-<p>每条动态消息可以理解为一个活动，活动发起前需要通过 updatableMessage.createActivityId 接口创建 activity_id。后续转发动态消息以及更新动态消息都需要传入这个 activity_id。</p>
+<p>每条动态消息可以理解为一个活动，活动发起前需要通过 <a class="reference internal" href="../../../api-backend/updatable-message/updatableMessage.createActivityId.html#updatablemessage-createactivityid"><span class="std std-ref">updatableMessage.createActivityId</span></a> 接口创建 activity_id。后续转发动态消息以及更新动态消息都需要传入这个 activity_id。</p>
 <p>活动的默认有效期是 24 小时。活动结束后，消息内容会变成统一的样式：</p>
 <p>文字内容：“已结束”
 文字颜色：#00ff00</p>
-</section>
-<section id="id6">
+</div>
+<div class="section" id="id6">
 <h3>二、在转发之前声明消息类型为动态消息<a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h3>
-<p>通过调用 wx.updateShareMenu 接口，传入 isUpdatableMessage: true，以及 templateInfo、activityId 参数。其中 activityId 从步骤一中获得。</p>
+<p>通过调用 <a class="reference internal" href="../../../api/wx.updateShareMenu.html#wx.updateShareMenu" title="wx.updateShareMenu"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.updateShareMenu()</span></code></a> 接口，传入 isUpdatableMessage: true，以及 templateInfo、activityId 参数。其中 activityId 从步骤一中获得。</p>
 <div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="nx">wx</span><span class="p">.</span><span class="nx">updateShareMenu</span><span class="p">({</span>
   <span class="nx">withShareTicket</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
   <span class="nx">isUpdatableMessage</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
@@ -257,17 +256,17 @@
 <span class="p">})</span>
 </pre></div>
 </div>
-</section>
-<section id="id7">
+</div>
+<div class="section" id="id7">
 <h3>三、修改动态消息内容<a class="headerlink" href="#id7" title="永久链接至标题">¶</a></h3>
-<p>动态消息发出去之后，可以通过 updatableMessage.setUpdatableMsg 修改消息内容。</p>
-</section>
-</section>
-<section id="id8">
+<p>动态消息发出去之后，可以通过 <a class="reference internal" href="../../../api-backend/updatable-message/updatableMessage.setUpdatableMsg.html#updatablemessage-setupdatablemsg"><span class="std std-ref">updatableMessage.setUpdatableMsg</span></a> 修改消息内容。</p>
+</div>
+</div>
+<div class="section" id="id8">
 <h2>低版本兼容<a class="headerlink" href="#id8" title="永久链接至标题">¶</a></h2>
 <p>对于不支持动态消息的客户端版本，收到动态消息后会展示成普通消息</p>
-</section>
-</section>
+</div>
+</div>
 
 
             <div class="clearer"></div>
@@ -302,7 +301,7 @@
     </div>
     <div class="footer" role="contentinfo">
         &#169; 版权所有 2019, Wxadev Docs.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.1.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.2.
     </div>
   </body>
 </html>

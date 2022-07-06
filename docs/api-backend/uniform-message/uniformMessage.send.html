@@ -4,8 +4,7 @@
 <html lang="zh_CN">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>下发统一服务消息 &#8212; wxadev v2.21.0 文档</title>
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx13.css" />
@@ -20,6 +19,8 @@
 
     <link rel="index" title="索引" href="../../genindex.html" />
     <link rel="search" title="搜索" href="../../search.html" />
+    <link rel="next" title="subscribeMessage.addTemplate" href="../subscribe-message/subscribeMessage.addTemplate.html" />
+    <link rel="prev" title="服务端API" href="../index.html" />
 <link rel="canonical" href="http://www.sphinx-doc.org/en/master/api-backend/uniform-message/uniformMessage.send.html" />
 
 <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet" type="text/css" />
@@ -83,9 +84,16 @@
         <li class="right" >
           <a href="../../http-routingtable.html" title="微信小程序API"
              >wxapi</a> |</li>
+        <li class="right" >
+          <a href="../subscribe-message/subscribeMessage.addTemplate.html" title="subscribeMessage.addTemplate"
+             accesskey="N">下一页</a> |</li>
+        <li class="right" >
+          <a href="../index.html" title="服务端API"
+             accesskey="P">上一页</a> |</li>
 <li><a href="../../index.html">主页</a>&#160;|</li>
 <li><a href="../../contents.html">文档</a> &#187;</li>
 
+          <li class="nav-item nav-item-1"><a href="../index.html" accesskey="U">服务端API</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">下发统一服务消息</a></li> 
       </ul>
     </div>
@@ -101,6 +109,12 @@
 </li>
 </ul>
 
+  <h4>上一个主题</h4>
+  <p class="topless"><a href="../index.html"
+                        title="上一章">服务端API</a></p>
+  <h4>下一个主题</h4>
+  <p class="topless"><a href="../subscribe-message/subscribeMessage.addTemplate.html"
+                        title="下一章">subscribeMessage.addTemplate</a></p>
   <div role="note" aria-label="source link">
     <h3>本页</h3>
     <ul class="this-page-menu">
@@ -126,11 +140,11 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <section id="uniformmessage-send">
+  <div class="section" id="uniformmessage-send">
 <span id="id1"></span><h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/api-backend/uniformMessage.send.html">下发统一服务消息</a><a class="headerlink" href="#uniformmessage-send" title="永久链接至标题">¶</a></h1>
 <p>..:: 本接口应在服务器端调用，详细说明参见服务端API。</p>
 <p>..:: 本接口支持云调用。</p>
-<section id="id2">
+<div class="section" id="id2">
 <h2>服务器端调用<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
 <p>接口地址请求地址 <a class="reference internal" href="../../glossary.html#term-api"><span class="xref std std-term">api</span></a></p>
 <dl class="http post">
@@ -178,6 +192,68 @@
 </ul>
 </dd>
 </dl>
+<div class="literal-block-wrapper docutils container" id="uniformmessage-send-request-example">
+<div class="code-block-caption"><span class="caption-text">请求示例</span><a class="headerlink" href="#uniformmessage-send-request-example" title="永久链接至代码">¶</a></div>
+<div class="highlight-http notranslate"><div class="highlight"><pre><span></span><span class="hll"><span class="linenos"> 1</span>POST message/wxopen/template/uniform_send HTTP/1.1
+</span><span class="hll"><span class="linenos"> 2</span>Host: https://api.weixin.qq.com/cgi-bin/
+</span><span class="linenos"> 3</span>Accept: application/json, text/javascript
+<span class="linenos"> 4</span>{
+<span class="linenos"> 5</span>  &quot;touser&quot;: &quot;OPENID&quot;,
+<span class="linenos"> 6</span>  &quot;weapp_template_msg&quot;: {
+<span class="linenos"> 7</span>    &quot;template_id&quot;: &quot;TEMPLATE_ID&quot;,
+<span class="linenos"> 8</span>    &quot;page&quot;: &quot;page/page/index&quot;,
+<span class="linenos"> 9</span>    &quot;form_id&quot;: &quot;FORMID&quot;,
+<span class="linenos">10</span>    &quot;data&quot;: {
+<span class="linenos">11</span>      &quot;keyword1&quot;: {
+<span class="linenos">12</span>        &quot;value&quot;: &quot;339208499&quot;
+<span class="linenos">13</span>      },
+<span class="linenos">14</span>      &quot;keyword2&quot;: {
+<span class="linenos">15</span>        &quot;value&quot;: &quot;2015年01月05日 12:30&quot;
+<span class="linenos">16</span>      },
+<span class="linenos">17</span>      &quot;keyword3&quot;: {
+<span class="linenos">18</span>        &quot;value&quot;: &quot;腾讯微信总部&quot;
+<span class="linenos">19</span>      },
+<span class="linenos">20</span>      &quot;keyword4&quot;: {
+<span class="linenos">21</span>        &quot;value&quot;: &quot;广州市海珠区新港中路397号&quot;
+<span class="linenos">22</span>      }
+<span class="linenos">23</span>    },
+<span class="linenos">24</span>    &quot;emphasis_keyword&quot;: &quot;keyword1.DATA&quot;
+<span class="linenos">25</span>  },
+<span class="linenos">26</span>  &quot;mp_template_msg&quot;: {
+<span class="linenos">27</span>    &quot;appid&quot;: &quot;APPID &quot;,
+<span class="linenos">28</span>    &quot;template_id&quot;: &quot;TEMPLATE_ID&quot;,
+<span class="linenos">29</span>    &quot;url&quot;: &quot;http://weixin.qq.com/download&quot;,
+<span class="linenos">30</span>    &quot;miniprogram&quot;: {
+<span class="linenos">31</span>      &quot;appid&quot;: &quot;xiaochengxuappid12345&quot;,
+<span class="linenos">32</span>      &quot;pagepath&quot;: &quot;index?foo=bar&quot;
+<span class="linenos">33</span>    },
+<span class="linenos">34</span>    &quot;data&quot;: {
+<span class="linenos">35</span>      &quot;first&quot;: {
+<span class="linenos">36</span>        &quot;value&quot;: &quot;恭喜你购买成功！&quot;,
+<span class="linenos">37</span>        &quot;color&quot;: &quot;#173177&quot;
+<span class="linenos">38</span>      },
+<span class="linenos">39</span>      &quot;keyword1&quot;: {
+<span class="linenos">40</span>        &quot;value&quot;: &quot;巧克力&quot;,
+<span class="linenos">41</span>        &quot;color&quot;: &quot;#173177&quot;
+<span class="linenos">42</span>      },
+<span class="linenos">43</span>      &quot;keyword2&quot;: {
+<span class="linenos">44</span>        &quot;value&quot;: &quot;39.8元&quot;,
+<span class="linenos">45</span>        &quot;color&quot;: &quot;#173177&quot;
+<span class="linenos">46</span>      },
+<span class="linenos">47</span>      &quot;keyword3&quot;: {
+<span class="linenos">48</span>        &quot;value&quot;: &quot;2014年9月22日&quot;,
+<span class="linenos">49</span>        &quot;color&quot;: &quot;#173177&quot;
+<span class="linenos">50</span>      },
+<span class="linenos">51</span>      &quot;remark&quot;: {
+<span class="linenos">52</span>        &quot;value&quot;: &quot;欢迎再次购买！&quot;,
+<span class="linenos">53</span>        &quot;color&quot;: &quot;#173177&quot;
+<span class="linenos">54</span>      }
+<span class="linenos">55</span>    }
+<span class="linenos">56</span>  }
+<span class="linenos">57</span>}
+</pre></div>
+</div>
+</div>
 <div class="literal-block-wrapper docutils container" id="uniformmessage-send-response-example">
 <div class="code-block-caption"><span class="caption-text">响应示例</span><a class="headerlink" href="#uniformmessage-send-response-example" title="永久链接至代码">¶</a></div>
 <div class="highlight-http notranslate"><div class="highlight"><pre><span></span>HTTP/1.1 200 OK
@@ -192,8 +268,8 @@ Content-Type: text/javascript
 </div>
 </dd></dl>
 
-</section>
-<section id="id3">
+</div>
+<div class="section" id="id3">
 <h2>云调用<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
 <dl class="js function">
 <dt class="sig sig-object js" id="openapi.uniformMessage.send">
@@ -317,8 +393,8 @@ Content-Type: text/javascript
 </dl>
 </dd></dl>
 
-</section>
-<section id="id4">
+</div>
+<div class="section" id="id4">
 <h2>错误码<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h2>
 <table class="docutils align-default">
 <colgroup>
@@ -354,8 +430,8 @@ Content-Type: text/javascript
 </tr>
 </tbody>
 </table>
-</section>
-</section>
+</div>
+</div>
 
 
             <div class="clearer"></div>
@@ -373,15 +449,22 @@ Content-Type: text/javascript
         <li class="right" >
           <a href="../../http-routingtable.html" title="微信小程序API"
              >wxapi</a> |</li>
+        <li class="right" >
+          <a href="../subscribe-message/subscribeMessage.addTemplate.html" title="subscribeMessage.addTemplate"
+             >下一页</a> |</li>
+        <li class="right" >
+          <a href="../index.html" title="服务端API"
+             >上一页</a> |</li>
 <li><a href="../../index.html">主页</a>&#160;|</li>
 <li><a href="../../contents.html">文档</a> &#187;</li>
 
+          <li class="nav-item nav-item-1"><a href="../index.html" >服务端API</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">下发统一服务消息</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
         &#169; 版权所有 2019, Wxadev Docs.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.1.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.2.
     </div>
   </body>
 </html>

@@ -4,8 +4,7 @@
 <html lang="zh_CN">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>updatableMessage.setUpdatableMsg &#8212; wxadev v2.21.0 文档</title>
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx13.css" />
@@ -91,6 +90,16 @@
     </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
+  <h3><a href="../../contents.html">目录</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">updatableMessage.setUpdatableMsg</a><ul>
+<li><a class="reference internal" href="#id2">服务器端调用</a></li>
+<li><a class="reference internal" href="#id3">消息状态</a></li>
+<li><a class="reference internal" href="#id4">云调用</a></li>
+</ul>
+</li>
+</ul>
+
   <div role="note" aria-label="source link">
     <h3>本页</h3>
     <ul class="this-page-menu">
@@ -116,9 +125,195 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <section id="updatablemessage-setupdatablemsg">
+  <div class="section" id="updatablemessage-setupdatablemsg">
 <span id="id1"></span><h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/api-backend/updatableMessage.setUpdatableMsg.html">updatableMessage.setUpdatableMsg</a><a class="headerlink" href="#updatablemessage-setupdatablemsg" title="永久链接至标题">¶</a></h1>
-</section>
+<p>本接口应在服务器端调用，详细说明参见服务端API <a class="reference internal" href="../index.html#api-backend"><span class="std std-ref">服务端API</span></a> 。</p>
+<p>本接口支持 <a class="reference internal" href="../../wxcloud/index.html#wxcloud"><span class="std std-ref">云开发</span></a> 。需开发者工具版本 &gt;= 1.02.1904090（最新稳定版下载），wx-server-sdk &gt;= 0.4.0</p>
+<div class="section" id="id2">
+<h2>服务器端调用<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<dl class="http post">
+<dt class="sig sig-object http" id="post-message-wxopen-updatablemsg-send?access_token=(ACCESS_TOKEN)">
+<span class="sig-name descname"><span class="pre">POST</span> </span><span class="sig-name descname"><span class="pre">message/wxopen/updatablemsg/send?access_token=</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">ACCESS_TOKEN</span></em><span class="sig-paren">)</span><a class="headerlink" href="#post-message-wxopen-updatablemsg-send?access_token=(ACCESS_TOKEN)" title="永久链接至目标">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Synopsis</dt>
+<dd class="field-odd"><p>修改被分享的动态消息。详见 <a class="reference internal" href="../../framework/open-ability/share/updatable-message.html#share-updatable-message"><span class="std std-ref">动态消息</span></a> 。</p>
+</dd>
+<dt class="field-even">Mimetype</dt>
+<dd class="field-even"><p><cite>application/json</cite></p>
+</dd>
+<dt class="field-odd">Query Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>access_token/cloudbase_access_token</strong> (<em>string</em>) – <em>必选</em> 接口调用凭证</p></li>
+</ul>
+</dd>
+<dt class="field-even">Request JSON Object</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>activity_id</strong> (<em>string</em>) – <em>必选</em> 动态消息的 ID，通过 updatableMessage.createActivityId 接口获取</p></li>
+<li><p><strong>target_state</strong> (<em>number</em>) – <em>必选</em> 动态消息修改后的状态: 0 未开始 1 已开始</p></li>
+<li><p><strong>template_info</strong> (<em>Object</em>) – <p><em>必选</em> 动态消息对应的模板信息</p>
+<ul>
+<li><p><strong>parameter_list</strong> (<em>Array.&lt;Object&gt;</em>)  <em>必选</em> 模板中需要修改的参数</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><strong>name</strong> (<em>string</em>)  <em>必选</em> 要修改的参数名</p>
+<ul>
+<li><p><em>member_count</em> target_state = 0 时必填，文字内容模板中 member_count 的值</p></li>
+<li><p><em>room_limit</em> target_state = 0 时必填，文字内容模板中 room_limit 的值</p></li>
+<li><p><em>path</em> target_state = 1 时必填，点击「进入」启动小程序时使用的路径。对于小游戏，没有页面的概念，可以用于传递查询字符串（query），如 “?foo=bar”</p></li>
+<li><p><em>version_type</em> target_state = 1 时必填，点击「进入」启动小程序时使用的版本。有效参数值为：develop（开发版），trial（体验版），release（正式版）</p></li>
+</ul>
+</li>
+<li><p><strong>value</strong> (<em>string</em>)  是 修改后的参数值</p></li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+</p></li>
+</ul>
+</dd>
+<dt class="field-odd">Response JSON Object</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>errcode</strong> (<em>number</em>) – <p>错误码</p>
+<ul>
+<li><p><em>0</em> 请求成功</p></li>
+<li><p><em>-1</em> 系统繁忙。此时请开发者稍候再试</p></li>
+<li><p><em>42001</em> access_token 过期</p></li>
+<li><p><em>44002</em> post 数据为空</p></li>
+<li><p><em>47001</em> post 数据中参数缺失</p></li>
+<li><p><em>47501</em> 参数 activity_id 错误</p></li>
+<li><p><em>47502</em> 参数 target_state 错误</p></li>
+<li><p><em>47503</em> 参数 version_type 错误</p></li>
+<li><p><em>47504</em> activity_id 过期</p></li>
+</ul>
+</p></li>
+<li><p><strong>errmsg</strong> (<em>string</em>) – 错误信息</p></li>
+</ul>
+</dd>
+</dl>
+<div class="literal-block-wrapper docutils container" id="updatablemsg-send-example">
+<div class="code-block-caption"><span class="caption-text">请求示例</span><a class="headerlink" href="#updatablemsg-send-example" title="永久链接至代码">¶</a></div>
+<div class="highlight-http notranslate"><div class="highlight"><pre><span></span><span class="hll"><span class="linenos"> 1</span>POST message/wxopen/updatablemsg/send HTTP/1.1
+</span><span class="hll"><span class="linenos"> 2</span>Host: https://api.weixin.qq.com/cgi-bin/
+</span><span class="linenos"> 3</span>Accept: application/json, text/javascript
+<span class="linenos"> 4</span>{
+<span class="linenos"> 5</span>  &quot;activity_id&quot;: &quot;966_NGiqxxxxxxxxx...xxxxxxxxE33BlwX&quot;,
+<span class="linenos"> 6</span>  &quot;target_state&quot;: 0,
+<span class="linenos"> 7</span>  &quot;template_info&quot;: {
+<span class="linenos"> 8</span>    &quot;parameter_list&quot;: [
+<span class="linenos"> 9</span>      {
+<span class="linenos">10</span>        &quot;name&quot;: &quot;member_count&quot;,
+<span class="linenos">11</span>        &quot;value&quot;: &quot;2&quot;
+<span class="linenos">12</span>      },
+<span class="linenos">13</span>      {
+<span class="linenos">14</span>        &quot;name&quot;:&quot;room_limit&quot;,
+<span class="linenos">15</span>        &quot;value&quot;: &quot;5&quot;
+<span class="linenos">16</span>      }
+<span class="linenos">17</span>    ]
+<span class="linenos">18</span>  }
+<span class="linenos">19</span>}
+</pre></div>
+</div>
+</div>
+</dd></dl>
+
+</div>
+<div class="section" id="id3">
+<h2>消息状态<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
+<p>消息有两个状态（target_state），分别有其对应的文字内容和颜色。文字内容模板和颜色不支持变更。</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 7%" />
+<col style="width: 65%" />
+<col style="width: 11%" />
+<col style="width: 17%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>状态</p></th>
+<th class="head"><p>文字内容</p></th>
+<th class="head"><p>颜色 允</p></th>
+<th class="head"><p>许转移的状态</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>“成员正在加入，当前 {member_count}/{room_limit} 人”</p></td>
+<td><p>#FA9D39</p></td>
+<td><p>0, 1</p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p>“已开始”</p></td>
+<td><p>#CCCCCC</p></td>
+<td><p>无</p></td>
+</tr>
+</tbody>
+</table>
+<p>活动的默认有效期是 24 小时。活动结束后，消息内容会变成统一的样式：</p>
+<ul class="simple">
+<li><p>文字内容：“已结束”</p></li>
+<li><p>文字颜色：#00ff00</p></li>
+</ul>
+</div>
+<div class="section" id="id4">
+<h2>云调用<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h2>
+<dl class="js function">
+<dt class="sig sig-object js" id="openapi.updatableMessage.setUpdatableMsg">
+<span class="sig-prename descclassname"><span class="n"><span class="pre">openapi</span></span><span class="p"><span class="pre">.</span></span><span class="n"><span class="pre">updatableMessage</span></span><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">setUpdatableMsg</span></span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">{activityId</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">targetState</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">templateInfo}</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#openapi.updatableMessage.setUpdatableMsg" title="永久链接至目标">¶</a></dt>
+<dd><p>云调用是微信云开发提供的在云函数中调用微信开放接口的能力，需要在云函数中通过 wx-server-sdk 使用。</p>
+<p>:: 需在 config.json 中配置 updatableMessage.setUpdatableMsg API 的权限，详情</p>
+<dl class="field-list simple">
+<dt class="field-odd">参数</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>activityId</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">string()</span></code></span>) – 是 动态消息的 ID，通过 updatableMessage.createActivityId 接口获取</p></li>
+<li><p><strong>targetState</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">number()</span></code></span>) – 是 动态消息修改后的状态（具体含义见后文）: 0 未开始 1 已开始</p></li>
+<li><p><strong>templateInfo</strong> (<span><code class="xref js js-func docutils literal notranslate"><span class="pre">Object()</span></code></span>) – <p>是 动态消息对应的模板信息</p>
+<ul>
+<li><p>parameterList Array.&lt;Object&gt;  是 模板中需要修改的参数</p>
+<ul>
+<li><p>name string  是 要修改的参数名</p>
+<ul>
+<li><p>member_count target_state = 0 时必填，文字内容模板中 member_count 的值</p></li>
+<li><p>room_limit target_state = 0 时必填，文字内容模板中 room_limit 的值</p></li>
+<li><p>path target_state = 1 时必填，点击「进入」启动小程序时使用的路径。对于小游戏，没有页面的概念，可以用于传递查询字符串（query），如 “?foo=bar”</p></li>
+<li><p>version_type target_state = 1 时必填，点击「进入」启动小程序时使用的版本。有效参数值为：develop（开发版），trial（体验版），release（正式版）</p></li>
+</ul>
+</li>
+<li><p>value string  是 修改后的参数值</p></li>
+</ul>
+</li>
+</ul>
+</p></li>
+</ul>
+</dd>
+<dt class="field-even">返回</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><strong>errCode</strong>     (<em>number</em>):     错误码 0 成功</p></li>
+<li><p><strong>errMsg</strong>      (<em>string</em>):     错误信息</p></li>
+</ul>
+</p>
+</dd>
+<dt class="field-odd">抛出</dt>
+<dd class="field-odd"><p><span><code class="xref js js-func docutils literal notranslate"><span class="pre">{errCode,errMsg}()</span></code></span> – <ul class="simple">
+<li><p><strong>errCode</strong>     (<em>number</em>):     错误码</p></li>
+<li><p><strong>errMsg</strong>      (<em>string</em>):     错误信息</p>
+<ul>
+<li><p>-1 系统繁忙。此时请开发者稍候再试</p></li>
+<li><p>42001 access_token 过期</p></li>
+<li><p>44002 post 数据为空</p></li>
+<li><p>47001 post 数据中参数缺失</p></li>
+<li><p>47501 参数 activity_id 错误</p></li>
+<li><p>47502 参数 target_state 错误</p></li>
+<li><p>47503 参数 version_type 错误</p></li>
+<li><p>47504 activity_id 过期</p></li>
+</ul>
+</li>
+</ul>
+</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+</div>
 
 
             <div class="clearer"></div>
@@ -144,7 +339,7 @@
     </div>
     <div class="footer" role="contentinfo">
         &#169; 版权所有 2019, Wxadev Docs.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.1.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.2.
     </div>
   </body>
 </html>

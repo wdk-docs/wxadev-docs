@@ -4,8 +4,7 @@
 <html lang="zh_CN">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>多线程 Worker &#8212; wxadev v2.21.0 文档</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx13.css" />
@@ -139,7 +138,7 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <section id="worker">
+  <div class="section" id="worker">
 <h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/framework/workers.html">多线程 Worker</a><a class="headerlink" href="#worker" title="永久链接至标题">¶</a></h1>
 <p>一些异步处理的任务，可以放置于 Worker 中运行，待运行结束后，
 再把结果返回到小程序主线程。
@@ -148,7 +147,7 @@ Worker 运行于一个单独的全局上下文与线程中，不能直接调用�
 双方使用 <a class="reference internal" href="../api/worker/Worker.html#Worker.postMessage" title="Worker.postMessage"><code class="xref js js-func docutils literal notranslate"><span class="pre">Worker.postMessage()</span></code></a> 来发送数据，
 <a class="reference internal" href="../api/worker/Worker.html#Worker.onMessage" title="Worker.onMessage"><code class="xref js js-func docutils literal notranslate"><span class="pre">Worker.onMessage()</span></code></a> 来接收数据，
 传输的数据并不是直接共享，而是被复制的。</p>
-<section id="id1">
+<div class="section" id="id1">
 <h2>使用流程<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h2>
 <p>在开发者工具中预览效果</p>
 <ol class="arabic simple">
@@ -230,8 +229,8 @@ Worker 运行于一个单独的全局上下文与线程中，不能直接调用�
 <li><p>Workers 之间不支持发送消息</p></li>
 </ul>
 </div>
-</section>
-</section>
+</div>
+</div>
 
 
             <div class="clearer"></div>
@@ -264,7 +263,7 @@ Worker 运行于一个单独的全局上下文与线程中，不能直接调用�
     </div>
     <div class="footer" role="contentinfo">
         &#169; 版权所有 2019, Wxadev Docs.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.1.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.2.
     </div>
   </body>
 </html>

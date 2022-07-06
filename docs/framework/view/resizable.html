@@ -4,8 +4,7 @@
 <html lang="zh_CN">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>响应显示区域变化 &#8212; wxadev v2.21.0 文档</title>
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx13.css" />
@@ -145,12 +144,12 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <section id="id1">
+  <div class="section" id="id1">
 <h1>响应显示区域变化<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
-<section id="id2">
+<div class="section" id="id2">
 <h2>显示区域尺寸<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
 <p>显示区域指小程序界面中可以自由布局展示的区域。在默认情况下，小程序显示区域的尺寸自页面初始化起就不会发生变化。但以下两种方式都可以改变这一默认行为。</p>
-<section id="id3">
+<div class="section" id="id3">
 <h3>在手机上启用屏幕旋转支持<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h3>
 <div class="versionadded">
 <p><span class="versionmodified added">2.4.0 新版功能: </span>小程序在手机上支持屏幕旋转。</p>
@@ -168,8 +167,8 @@
 <div class="versionchanged">
 <p><span class="versionmodified changed">在 2.5.0 版更改: </span><em>pageOrientation</em> 还可以被设置为 <cite>landscape</cite> ，表示固定为横屏显示。</p>
 </div>
-</section>
-<section id="ipad">
+</div>
+<div class="section" id="ipad">
 <h3>在 iPad 上启用屏幕旋转支持<a class="headerlink" href="#ipad" title="永久链接至标题">¶</a></h3>
 <div class="versionchanged">
 <p><span class="versionmodified changed">在 2.3.0 版更改: </span>在 iPad 上运行的小程序可以支持屏幕旋转。使小程序支持 iPad 屏幕旋转的方法是：在 <cite>app.json</cite> 中添加 <code class="docutils literal notranslate"><span class="pre">&quot;resizable&quot;:</span> <span class="pre">true</span></code>。</p>
@@ -195,8 +194,8 @@
 <span class="p">}</span>
 </pre></div>
 </div>
-</section>
-<section id="id4">
+</div>
+<div class="section" id="id4">
 <h3>屏幕旋转事件<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h3>
 <p>有时，仅仅使用 media query 无法控制一些精细的布局变化。此时可以使用 js 作为辅助。</p>
 <p>在 js 中读取页面的显示区域尺寸，可以使用 selectorQuery.selectViewport 。</p>
@@ -226,9 +225,9 @@
 <p class="admonition-title">警告</p>
 <p>Bug： Android 微信版本 6.7.3 中， live-pusher 组件在屏幕旋转时方向异常。</p>
 </div>
-</section>
-</section>
-</section>
+</div>
+</div>
+</div>
 
 
             <div class="clearer"></div>
@@ -262,7 +261,7 @@
     </div>
     <div class="footer" role="contentinfo">
         &#169; 版权所有 2019, Wxadev Docs.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.1.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.2.
     </div>
   </body>
 </html>

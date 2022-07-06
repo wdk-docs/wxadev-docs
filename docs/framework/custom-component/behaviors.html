@@ -4,8 +4,7 @@
 <html lang="zh_CN">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>behaviors &#8212; wxadev v2.21.0 文档</title>
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx13.css" />
@@ -142,12 +141,12 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <section id="behaviors">
+  <div class="section" id="behaviors">
 <h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/framework/custom-component/behaviors.html">behaviors</a><a class="headerlink" href="#behaviors" title="永久链接至标题">¶</a></h1>
 <p>behaviors 是用于组件间代码共享的特性，类似于一些编程语言中的“mixins”或“traits”。</p>
 <p>每个 behavior 可以包含一组属性、数据、生命周期函数和方法。组件引用它时，它的属性、数据和方法会被合并到组件中，生命周期函数也会在对应时机被调用。 每个组件可以引用多个 behavior ，behavior 也可以引用其他 behavior 。</p>
 <p>详细的参数含义和使用请参考 Behavior 参考文档。</p>
-<section id="id1">
+<div class="section" id="id1">
 <h2>组件中使用<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h2>
 <p>组件引用时，在 behaviors 定义段中将它们逐个列出即可。</p>
 <p>代码示例：</p>
@@ -172,15 +171,15 @@
 </pre></div>
 </div>
 <p>在上例中， my-component 组件定义中加入了 my-behavior ，而 my-behavior 中包含有 myBehaviorProperty 属性、 myBehaviorData 数据字段、 myBehaviorMethod 方法和一个 attached 生命周期函数。这将使得 my-component 中最终包含 myBehaviorProperty 、 myProperty 两个属性， myBehaviorData 、 myData 两个数据字段，和 myBehaviorMethod 、 myMethod 两个方法。当组件触发 attached 生命周期时，会依次触发 my-behavior 中的 attached 生命周期函数和 my-component 中的 attached 生命周期函数。</p>
-</section>
-<section id="id2">
+</div>
+<div class="section" id="id2">
 <h2>字段的覆盖和组合规则<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
 <p>组件和它引用的 behavior 中可以包含同名的字段，对这些字段的处理方法如下：</p>
 <p>如果有同名的属性或方法，组件本身的属性或方法会覆盖 behavior 中的属性或方法，如果引用了多个 behavior ，在定义段中靠后 behavior 中的属性或方法会覆盖靠前的属性或方法；
 如果有同名的数据字段，如果数据是对象类型，会进行对象合并，如果是非对象类型则会进行相互覆盖；
 生命周期函数不会相互覆盖，而是在对应触发时机被逐个调用。如果同一个 behavior 被一个组件多次引用，它定义的生命周期函数只会被执行一次。</p>
-</section>
-<section id="id3">
+</div>
+<div class="section" id="id3">
 <h2>内置 behaviors<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
 <p>自定义组件可以通过引用内置的 behavior 来获得内置组件的一些行为。</p>
 <p>代码示例：</p>
@@ -221,8 +220,8 @@ wx://component-export
 <div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="k">this</span><span class="p">.</span><span class="nx">selectComponent</span><span class="p">(</span><span class="s1">&#39;#the-id&#39;</span><span class="p">)</span> <span class="c1">// 等于 { myField: &#39;myValue&#39; }</span>
 </pre></div>
 </div>
-</section>
-</section>
+</div>
+</div>
 
 
             <div class="clearer"></div>
@@ -256,7 +255,7 @@ wx://component-export
     </div>
     <div class="footer" role="contentinfo">
         &#169; 版权所有 2019, Wxadev Docs.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.1.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.2.
     </div>
   </body>
 </html>

@@ -4,8 +4,7 @@
 <html lang="zh_CN">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Worker &#8212; wxadev v2.21.0 文档</title>
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx13.css" />
@@ -125,7 +124,7 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <section id="worker">
+  <div class="section" id="worker">
 <h1><a class="reference external" href="https://developers.weixin.qq.com/miniprogram/dev/api/Worker.html">Worker</a><a class="headerlink" href="#worker" title="永久链接至标题">¶</a></h1>
 <dl class="js function">
 <dt class="sig sig-object js" id="wx.createWorker">
@@ -152,7 +151,7 @@
 <dd><p>Worker 实例，主线程中可通过 <a class="reference internal" href="../wx.createWorker.html#wx.createWorker" title="wx.createWorker"><code class="xref js js-func docutils literal notranslate"><span class="pre">wx.createWorker()</span></code></a> 接口获取，worker 线程中可通过全局变量 worker 获取。</p>
 </dd></dl>
 
-<section id="id1">
+<div class="section" id="id1">
 <h2>方法<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h2>
 <dl class="js function">
 <dt class="sig sig-object js" id="Worker.postMessage">
@@ -206,8 +205,8 @@
 </dl>
 </dd></dl>
 
-</section>
-<section id="id2">
+</div>
+<div class="section" id="id2">
 <h2>示例代码<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
 <p>运行以下代码需先进行基础配置，详细请查阅 多线程 文档了解基础知识和配置方法。</p>
 <div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="kd">const</span> <span class="nx">worker</span> <span class="o">=</span> <span class="nx">wx</span><span class="p">.</span><span class="nx">createWorker</span><span class="p">(</span><span class="s1">&#39;workers/request/index.js&#39;</span><span class="p">)</span> <span class="c1">// 文件名指定 worker 的入口文件路径，绝对路径</span>
@@ -223,8 +222,8 @@
 <span class="nx">worker</span><span class="p">.</span><span class="nx">terminate</span><span class="p">()</span>
 </pre></div>
 </div>
-</section>
-</section>
+</div>
+</div>
 
 
             <div class="clearer"></div>
@@ -250,7 +249,7 @@
     </div>
     <div class="footer" role="contentinfo">
         &#169; 版权所有 2019, Wxadev Docs.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.1.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.3.2.
     </div>
   </body>
 </html>
